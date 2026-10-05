@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.0",
+  "course_id": "circuits",
+  "license": "MIT OR CC-BY-4.0",
+  "modules": [
+    {
+      "module_id": "circuits-module-1",
+      "lesson_id": "circuits-1",
+      "reading": "modules/01-dc-network-analysis-and-equivalent-circuits.md",
+      "source_ids": [
+        "circuits",
+        "signals"
+      ],
+      "relationship": "curriculum-comparator",
+      "original_content": true,
+      "license": "MIT OR CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "circuits-module-2",
+      "lesson_id": "circuits-2",
+      "reading": "modules/02-operational-amplifiers-and-analog-front-ends.md",
+      "source_ids": [
+        "circuits",
+        "signals"
+      ],
+      "relationship": "curriculum-comparator",
+      "original_content": true,
+      "license": "MIT OR CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "circuits-module-3",
+      "lesson_id": "circuits-3",
+      "reading": "modules/03-filters-sampling-and-anti-aliasing.md",
+      "source_ids": [
+        "circuits",
+        "signals"
+      ],
+      "relationship": "curriculum-comparator",
+      "original_content": true,
+      "license": "MIT OR CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "circuits-module-4",
+      "lesson_id": "circuits-4",
+      "reading": "modules/04-sensors-calibration-and-uncertainty.md",
+      "source_ids": [
+        "circuits",
+        "signals"
+      ],
+      "relationship": "curriculum-comparator",
+      "original_content": true,
+      "license": "MIT OR CC-BY-4.0",
+      "modifications": []
+    }
+  ]
+}

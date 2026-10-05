@@ -1,0 +1,3 @@
+# Translation, biocompatibility, and failure analysis
+
+Biocompatibility is the ability of a material to perform with an appropriate host response for a specific application; it does not mean biologically inert. Inflammation, thrombosis, fibrosis, infection, wear, and mechanical mismatch are context-dependent risks. Translational evidence moves from material characterization through cell assays, animal models, manufacturing controls, and clinically meaningful endpoints. Sterilization, shelf life, batch consistency, and regulatory testing can change material performance and must be part of design control.

@@ -1,0 +1,35 @@
+{
+  "schema_version": "1.0",
+  "course_id": "calculus-3",
+  "cases": [
+    {
+      "id": "calculus-3:case",
+      "prompt": "A tissue has oxygen flux J=−D∇C through an irregular boundary. Explain how you would choose a surface orientation, compute total oxygen transfer, and check whether a divergence-theorem formulation is valid.",
+      "mode": "self-assessment",
+      "objective_ids": [],
+      "rubric": [
+        {
+          "id": "calculus-3-case-criterion-1",
+          "criterion": "Defines the outward normal and sign convention",
+          "points": 0,
+          "levels": []
+        },
+        {
+          "id": "calculus-3-case-criterion-2",
+          "criterion": "Sets up ∫S J·n dA over the physical boundary",
+          "points": 0,
+          "levels": []
+        },
+        {
+          "id": "calculus-3-case-criterion-3",
+          "criterion": "Checks smoothness/closed-surface conditions and relates net flux to volume sources or sinks",
+          "points": 0,
+          "levels": []
+        }
+      ],
+      "limitations": [
+        "This preserved three-criterion checklist is self-assessment, not an analytic grading rubric or an institutional grade."
+      ]
+    }
+  ]
+}

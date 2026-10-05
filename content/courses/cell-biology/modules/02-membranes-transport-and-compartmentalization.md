@@ -1,0 +1,3 @@
+# Membranes, transport, and compartmentalization
+
+A membrane's permeability depends on solute size, charge, lipid partitioning, and available transport proteins. Passive transport follows an electrochemical potential gradient. For an ion, the chemical term depends on concentration and the electrical term on membrane voltage; the Nernst equation gives the voltage at which those terms balance. Pumps couple an unfavorable transport step to ATP hydrolysis or another favorable gradient. Distinguish transport rate from equilibrium: a channel changes kinetics, not the equilibrium free-energy difference.

@@ -1,0 +1,35 @@
+{
+  "schema_version": "1.0",
+  "course_id": "genetics",
+  "cases": [
+    {
+      "id": "genetics:case",
+      "prompt": "A GWAS locus is associated with slower wound closure. Propose a two-step follow-up that could identify a causal cell type and variant-to-gene mechanism; name one confounder your design must address.",
+      "mode": "self-assessment",
+      "objective_ids": [],
+      "rubric": [
+        {
+          "id": "genetics-case-criterion-1",
+          "criterion": "Prioritizes a relevant cell type or tissue using expression/chromatin evidence",
+          "points": 0,
+          "levels": []
+        },
+        {
+          "id": "genetics-case-criterion-2",
+          "criterion": "Uses allele-specific or perturbation/rescue evidence to connect variant to gene/function",
+          "points": 0,
+          "levels": []
+        },
+        {
+          "id": "genetics-case-criterion-3",
+          "criterion": "Names confounding such as ancestry, cell composition, batch, or linkage disequilibrium",
+          "points": 0,
+          "levels": []
+        }
+      ],
+      "limitations": [
+        "This preserved three-criterion checklist is self-assessment, not an analytic grading rubric or an institutional grade."
+      ]
+    }
+  ]
+}

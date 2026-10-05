@@ -1,0 +1,35 @@
+{
+  "schema_version": "1.0",
+  "course_id": "general-chemistry-1",
+  "cases": [
+    {
+      "id": "general-chemistry-1:case",
+      "prompt": "A 0.50 L buffer-preparation vessel contains 0.050 mol weak acid and 0.030 mol conjugate base. After adding a small amount of strong acid, pH falls more than predicted. Give two chemical or experimental causes and one measurement that distinguishes them.",
+      "mode": "self-assessment",
+      "objective_ids": [],
+      "rubric": [
+        {
+          "id": "general-chemistry-1-case-criterion-1",
+          "criterion": "Accounts for stoichiometric neutralization of conjugate base",
+          "points": 0,
+          "levels": []
+        },
+        {
+          "id": "general-chemistry-1-case-criterion-2",
+          "criterion": "Names a nonideal cause such as ionic-strength/activity effects, wrong pKa/temperature, or concentration error",
+          "points": 0,
+          "levels": []
+        },
+        {
+          "id": "general-chemistry-1-case-criterion-3",
+          "criterion": "Proposes a discriminating calibration or composition measurement",
+          "points": 0,
+          "levels": []
+        }
+      ],
+      "limitations": [
+        "This preserved three-criterion checklist is self-assessment, not an analytic grading rubric or an institutional grade."
+      ]
+    }
+  ]
+}

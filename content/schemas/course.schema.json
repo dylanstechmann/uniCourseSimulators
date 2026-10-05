@@ -1,0 +1,122 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:lattice-courselab:schema:course:1.0",
+  "title": "Lattice CourseLab course manifest",
+  "description": "Authored course inventory. Maturity is validated independently; this schema alone does not establish semester equivalence.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "id", "title", "description", "domain", "level", "maturity", "version", "license", "content_origin", "prerequisites", "outcomes", "lesson_objectives", "duration", "workload", "modules", "assessments", "grading_policy", "retrieval_cards", "case_rubrics", "source_map", "syllabus", "review", "accessibility", "history", "limitations", "intentionally_omitted"],
+  "properties": {
+    "schema_version": {"const": "1.0"},
+    "id": {"$ref": "#/$defs/id"},
+    "legacy_code": {"type": "string", "minLength": 1},
+    "title": {"type": "string", "minLength": 5},
+    "description": {"type": "string", "minLength": 20},
+    "domain": {"type": "string", "minLength": 2},
+    "level": {"type": "string", "minLength": 2},
+    "maturity": {"enum": ["catalog-only", "outlined", "partial", "beta", "complete", "externally reviewed"]},
+    "version": {"type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"},
+    "license": {"type": "string", "minLength": 1},
+    "content_origin": {
+      "type": "object", "additionalProperties": false,
+      "required": ["kind", "source_path", "source_sha256", "migration_version"],
+      "properties": {
+        "kind": {"enum": ["legacy-prototype", "original", "licensed-adaptation"]},
+        "source_path": {"type": ["string", "null"]},
+        "source_sha256": {"type": ["string", "null"], "pattern": "^[a-f0-9]{64}$"},
+        "migration_version": {"type": ["string", "null"]},
+        "modifications": {"type": "array", "items": {"type": "string", "minLength": 1}}
+      }
+    },
+    "prerequisites": {
+      "type": "object", "additionalProperties": false, "required": ["course_ids", "knowledge"],
+      "properties": {
+        "course_ids": {"type": "array", "uniqueItems": true, "items": {"$ref": "#/$defs/id"}},
+        "recommended_course_ids": {"type": "array", "uniqueItems": true, "items": {"$ref": "#/$defs/id"}},
+        "concurrent_course_ids": {"type": "array", "uniqueItems": true, "items": {"$ref": "#/$defs/id"}},
+        "knowledge": {"type": "array", "items": {"type": "string", "minLength": 3}},
+        "statement": {"type": "string", "minLength": 1}
+      }
+    },
+    "outcomes": {"type": "array", "uniqueItems": true, "items": {"$ref": "#/$defs/objective"}},
+    "lesson_objectives": {"type": "array", "uniqueItems": true, "items": {"$ref": "#/$defs/objective"}},
+    "duration": {
+      "type": "object", "additionalProperties": false, "required": ["instructional_weeks", "equivalent_structure", "weeks"],
+      "properties": {
+        "instructional_weeks": {"type": ["integer", "null"], "minimum": 1, "maximum": 52},
+        "equivalent_structure": {"type": ["string", "null"]},
+        "weeks": {"type": "array", "items": {
+          "type": "object", "additionalProperties": false, "required": ["week", "title", "lesson_ids", "assessment_ids"],
+          "properties": {"week": {"type": "integer", "minimum": 1}, "title": {"type": "string", "minLength": 3}, "lesson_ids": {"type": "array", "uniqueItems": true, "items": {"$ref": "#/$defs/id"}}, "assessment_ids": {"type": "array", "uniqueItems": true, "items": {"$ref": "#/$defs/id"}}}
+        }}
+      }
+    },
+    "workload": {
+      "type": "object", "additionalProperties": false, "required": ["estimated_total_hours", "estimated_hours_per_week", "basis"],
+      "properties": {
+        "estimated_total_hours": {"type": ["number", "null"], "exclusiveMinimum": 0},
+        "estimated_hours_per_week": {"type": ["number", "null"], "exclusiveMinimum": 0},
+        "basis": {"type": "string", "minLength": 10}
+      }
+    },
+    "modules": {"type": "array", "items": {
+      "type": "object", "additionalProperties": false, "required": ["id", "title", "lessons", "source_ids"],
+      "properties": {
+        "id": {"$ref": "#/$defs/id"}, "title": {"type": "string", "minLength": 3},
+        "source_ids": {"type": "array", "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+        "lessons": {"type": "array", "items": {"$ref": "#/$defs/lesson"}}
+      }
+    }},
+    "assessments": {"type": "array", "items": {"$ref": "#/$defs/assessment"}},
+    "grading_policy": {
+      "type": "object", "additionalProperties": false, "required": ["mode", "categories", "attempt_policy", "solution_release", "late_policy", "appeals"],
+      "properties": {
+        "mode": {"enum": ["formative-only", "graded-course"]},
+        "categories": {"type": "array", "items": {"type": "object", "additionalProperties": false, "required": ["id", "weight"], "properties": {"id": {"$ref": "#/$defs/id"}, "weight": {"type": "number", "minimum": 0, "maximum": 1}}}},
+        "attempt_policy": {"type": "string", "minLength": 5},
+        "solution_release": {"type": "string", "minLength": 5},
+        "late_policy": {"type": "string", "minLength": 5},
+        "appeals": {"type": "string", "minLength": 5}
+      }
+    },
+    "retrieval_cards": {"$ref": "#/$defs/path"},
+    "case_rubrics": {"$ref": "#/$defs/path"},
+    "source_map": {"$ref": "#/$defs/path"},
+    "syllabus": {"$ref": "#/$defs/path"},
+    "review": {
+      "type": "object", "additionalProperties": false, "required": ["status", "reviewed_version", "reviewers"],
+      "properties": {
+        "status": {"enum": ["unreviewed", "internal", "external"]},
+        "reviewed_version": {"type": ["string", "null"]},
+        "reviewers": {"type": "array", "items": {"type": "object", "additionalProperties": false, "required": ["name", "qualification", "reviewed_at", "evidence"], "properties": {"name": {"type": "string", "minLength": 3}, "qualification": {"type": "string", "minLength": 5}, "reviewed_at": {"type": "string", "format": "date"}, "evidence": {"$ref": "#/$defs/path"}}}}
+      }
+    },
+    "accessibility": {
+      "type": "object", "additionalProperties": false, "required": ["language", "reading_format", "math_format", "diagram_policy", "known_issues", "review_status"],
+      "properties": {
+        "language": {"type": "string", "minLength": 2}, "reading_format": {"enum": ["markdown", "mdx"]},
+        "math_format": {"enum": ["unicode-text", "latex-with-text-alternative", "mathml"]},
+        "diagram_policy": {"type": "string", "minLength": 10},
+        "known_issues": {"type": "array", "items": {"type": "string", "minLength": 1}},
+        "review_status": {"enum": ["unreviewed", "reviewed"]}
+      }
+    },
+    "history": {"type": "array", "minItems": 1, "items": {"type": "object", "additionalProperties": false, "required": ["version", "date", "summary"], "properties": {"version": {"type": "string", "minLength": 1}, "date": {"type": "string", "format": "date"}, "summary": {"type": "string", "minLength": 10}}}},
+    "limitations": {"type": "array", "items": {"type": "string", "minLength": 10}},
+    "intentionally_omitted": {"type": "array", "items": {"type": "string", "minLength": 5}},
+    "validation_evidence": {"type": "object", "additionalProperties": false, "properties": {"report": {"$ref": "#/$defs/path"}, "checks": {"type": "object", "additionalProperties": false, "properties": {"broken_links": {"type": "boolean"}, "numerical_recalculation": {"type": "boolean"}, "unit_tolerance": {"type": "boolean"}, "grader_mutation": {"type": "boolean"}, "accessibility": {"type": "boolean"}, "frontend_tests": {"type": "boolean"}, "backend_tests": {"type": "boolean"}}}}}
+  },
+  "$defs": {
+    "id": {"type": "string", "pattern": "^[a-z0-9][a-z0-9._:-]*$"},
+    "path": {"type": "string", "minLength": 1},
+    "objective": {"type": "object", "additionalProperties": false, "required": ["id", "description", "bloom"], "properties": {"id": {"$ref": "#/$defs/id"}, "description": {"type": "string", "minLength": 10}, "bloom": {"enum": ["remember", "understand", "apply", "analyze", "evaluate", "create"]}, "course_outcome_ids": {"type": "array", "uniqueItems": true, "items": {"$ref": "#/$defs/id"}}}},
+    "lesson": {
+      "type": "object", "additionalProperties": false, "required": ["id", "title", "reading", "objectives", "worked_example", "question_ids", "card_ids"],
+      "properties": {"id": {"$ref": "#/$defs/id"}, "title": {"type": "string", "minLength": 3}, "reading": {"$ref": "#/$defs/path"}, "objectives": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"$ref": "#/$defs/id"}}, "worked_example": {"type": "string", "minLength": 10}, "question_ids": {"type": "array", "uniqueItems": true, "items": {"$ref": "#/$defs/id"}}, "card_ids": {"type": "array", "uniqueItems": true, "items": {"$ref": "#/$defs/id"}}}
+    },
+    "assessment": {
+      "type": "object", "additionalProperties": false, "required": ["id", "type", "mode", "path", "objective_ids", "question_ids", "points"],
+      "properties": {"id": {"$ref": "#/$defs/id"}, "type": {"enum": ["practice", "homework", "lab", "simulation", "data-analysis", "design", "midterm", "final", "project", "case"]}, "mode": {"enum": ["practice", "graded", "self-assessment"]}, "path": {"$ref": "#/$defs/path"}, "objective_ids": {"type": "array", "uniqueItems": true, "items": {"$ref": "#/$defs/id"}}, "question_ids": {"type": "array", "uniqueItems": true, "items": {"$ref": "#/$defs/id"}}, "points": {"type": "number", "minimum": 0}}
+    }
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0",
+  "course_id": "cell-biology",
+  "cards": [
+    {
+      "id": "cell-biology-0-0",
+      "lesson_id": "cell-biology-1",
+      "front": "Hydrophobic effect",
+      "back": "The tendency of nonpolar surfaces to minimize contact with water; an emergent solvent effect, not a covalent attraction.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "cell-biology-0-1",
+      "lesson_id": "cell-biology-1",
+      "front": "Ionic strength",
+      "back": "A measure of dissolved ion concentration that affects electrostatic screening in solution.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "cell-biology-1-0",
+      "lesson_id": "cell-biology-2",
+      "front": "Electrochemical gradient",
+      "back": "The combined chemical-potential and electrical-potential difference that drives ion movement.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "cell-biology-1-1",
+      "lesson_id": "cell-biology-2",
+      "front": "Primary active transport",
+      "back": "Transport directly coupled to an energy source such as ATP hydrolysis.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "cell-biology-2-0",
+      "lesson_id": "cell-biology-3",
+      "front": "Vmax",
+      "back": "The limiting rate in the Michaelis-Menten model at saturating substrate.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "cell-biology-2-1",
+      "lesson_id": "cell-biology-3",
+      "front": "Catalyst",
+      "back": "A substance that changes reaction rate by lowering activation barriers without changing the reaction's equilibrium.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "cell-biology-3-0",
+      "lesson_id": "cell-biology-4",
+      "front": "Rescue experiment",
+      "back": "Reintroduction of a functional perturbation-resistant gene or product to test whether a phenotype is caused by a specific loss.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "cell-biology-3-1",
+      "lesson_id": "cell-biology-4",
+      "front": "Negative control",
+      "back": "A comparison condition lacking the active perturbation, used to estimate background or nonspecific effects.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    }
+  ]
+}

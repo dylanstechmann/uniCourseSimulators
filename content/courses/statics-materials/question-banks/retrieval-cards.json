@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0",
+  "course_id": "statics-materials",
+  "cards": [
+    {
+      "id": "statics-materials-0-0",
+      "lesson_id": "statics-materials-1",
+      "front": "Resultant load",
+      "back": "A single force equivalent to a distributed load for force and moment balance.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "statics-materials-0-1",
+      "lesson_id": "statics-materials-1",
+      "front": "Static determinacy",
+      "back": "Whether equilibrium equations are sufficient to solve all support reactions without deformation compatibility.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "statics-materials-1-0",
+      "lesson_id": "statics-materials-2",
+      "front": "Normal stress",
+      "back": "Axial force divided by cross-sectional area, with sign convention for tension or compression.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "statics-materials-1-1",
+      "lesson_id": "statics-materials-2",
+      "front": "Engineering strain",
+      "back": "Change in length divided by original length for a uniaxial specimen.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "statics-materials-2-0",
+      "lesson_id": "statics-materials-3",
+      "front": "Neutral axis",
+      "back": "The line in a bent beam where longitudinal normal strain and stress are zero in the elementary model.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "statics-materials-2-1",
+      "lesson_id": "statics-materials-3",
+      "front": "Polar second moment J",
+      "back": "A geometric section property governing torsional response of a shaft.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "statics-materials-3-0",
+      "lesson_id": "statics-materials-4",
+      "front": "Factor of safety",
+      "back": "Allowable capacity divided by modeled demand under a specified failure mode.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "statics-materials-3-1",
+      "lesson_id": "statics-materials-4",
+      "front": "Fatigue",
+      "back": "Progressive damage under repeated or fluctuating loading, potentially below monotonic strength.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    }
+  ]
+}

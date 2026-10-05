@@ -1,0 +1,3 @@
+# Adhesion, cytoskeleton, and force transmission
+
+Integrins bind extracellular matrix ligands and connect through focal-adhesion proteins to actin, myosin, and intracellular signaling pathways. Adhesion maturation, force loading, and cytoskeletal tension affect cell spreading and mechanosensitive signaling. Ligand identity and density, tether mobility, substrate stiffness, and topography can change independently, so experiments must avoid confounding them. Traction-force microscopy infers cellular forces from substrate deformation and requires a calibrated elastic model and regularized inverse solution.

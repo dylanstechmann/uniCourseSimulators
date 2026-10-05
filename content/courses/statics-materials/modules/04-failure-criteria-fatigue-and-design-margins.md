@@ -1,0 +1,3 @@
+# Failure criteria, fatigue, and design margins
+
+A design criterion specifies what failure means: yielding, fracture, fatigue crack growth, excessive deflection, leakage, or loss of biological function. A factor of safety compares allowable capacity with the modeled demand and does not replace uncertainty analysis. Repeated loading can cause fatigue below monotonic yield stress. Surface finish, sterilization, corrosion, defects, and interface conditions alter reliability. For implants, mechanical acceptance must be connected to biological and clinical performance, not treated as a single material number.

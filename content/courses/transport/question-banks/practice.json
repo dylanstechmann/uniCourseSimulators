@@ -1,0 +1,131 @@
+{
+  "schema_version": "1.0",
+  "course_id": "transport",
+  "license": "MIT OR CC-BY-4.0",
+  "questions": [
+    {
+      "id": "transport-1:check",
+      "type": "numeric",
+      "prompt": "A reactor receives 2 L/min at 5 g/L and exits at the same flow. There is no reaction. At steady state, what is the outlet concentration in g/L?",
+      "points": 1,
+      "objective_ids": [
+        "transport-1-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 5,
+        "unit": "g/L",
+        "tolerance": 0.075,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "At steady state with no reaction, species inflow equals species outflow.",
+        "solution": "The outlet concentration equals the inlet concentration, 5 g/L; the flow changes mass rate, not the steady concentration.",
+        "lesson_ids": [
+          "transport-1"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "legacy-prototype",
+        "legacy_id": "transport-1:check",
+        "modifications": []
+      }
+    },
+    {
+      "id": "transport-2:check",
+      "type": "numeric",
+      "prompt": "For D=1×10⁻⁹ m²/s and a characteristic length L=100 μm, estimate L²/D in seconds.",
+      "points": 1,
+      "objective_ids": [
+        "transport-2-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 10,
+        "unit": "s",
+        "tolerance": 0.15,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Convert 100 μm to 1×10⁻⁴ m, then square and divide by D.",
+        "solution": "(1×10⁻⁴ m)²/(1×10⁻⁹ m²/s)=10 s.",
+        "lesson_ids": [
+          "transport-2"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "legacy-prototype",
+        "legacy_id": "transport-2:check",
+        "modifications": []
+      }
+    },
+    {
+      "id": "transport-3:check",
+      "type": "numeric",
+      "prompt": "A flow has ρ=1000 kg/m³, U=0.02 m/s, L=0.5 mm, and μ=0.001 Pa·s. What is Re?",
+      "points": 1,
+      "objective_ids": [
+        "transport-3-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 10,
+        "unit": "",
+        "tolerance": 0.15,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use Re=ρUL/μ and convert millimeters to meters.",
+        "solution": "Re=1000×0.02×0.0005/0.001=10.",
+        "lesson_ids": [
+          "transport-3"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "legacy-prototype",
+        "legacy_id": "transport-3:check",
+        "modifications": []
+      }
+    },
+    {
+      "id": "transport-4:check",
+      "type": "numeric",
+      "prompt": "A slab has thickness 0.02 m, conductivity 0.5 W/(m·K), and area 0.10 m². What is its conductive thermal resistance in K/W?",
+      "points": 1,
+      "objective_ids": [
+        "transport-4-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0.4,
+        "unit": "K/W",
+        "tolerance": 0.01,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use Rth=L/(kA).",
+        "solution": "Rth=0.02/(0.5×0.10)=0.4 K/W.",
+        "lesson_ids": [
+          "transport-4"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "legacy-prototype",
+        "legacy_id": "transport-4:check",
+        "modifications": []
+      }
+    }
+  ]
+}

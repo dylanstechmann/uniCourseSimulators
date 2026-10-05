@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0",
+  "course_id": "geroscience",
+  "cards": [
+    {
+      "id": "geroscience-0-0",
+      "lesson_id": "geroscience-1",
+      "front": "Healthspan",
+      "back": "The period of life spent in good functional health, defined by specified measures.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "geroscience-0-1",
+      "lesson_id": "geroscience-1",
+      "front": "Surrogate endpoint",
+      "back": "A biomarker intended to stand in for a clinical or functional outcome; it requires validation for that purpose.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "geroscience-1-0",
+      "lesson_id": "geroscience-2",
+      "front": "Cellular senescence",
+      "back": "A durable cell-cycle arrest state with context-dependent molecular and secretory features.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "geroscience-1-1",
+      "lesson_id": "geroscience-2",
+      "front": "SASP",
+      "back": "Senescence-associated secretory phenotype; a variable set of secreted factors, not a universal fixed signature.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "geroscience-2-0",
+      "lesson_id": "geroscience-3",
+      "front": "Stem-cell niche",
+      "back": "The local and systemic environment that regulates stem-cell maintenance and function.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "geroscience-2-1",
+      "lesson_id": "geroscience-3",
+      "front": "Lineage tracing",
+      "back": "A method that follows descendants of defined cells over time to infer contribution and fate.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "geroscience-3-0",
+      "lesson_id": "geroscience-4",
+      "front": "Competing risk",
+      "back": "An event that prevents the outcome of interest from occurring or being observed, such as death before a functional endpoint.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "geroscience-3-1",
+      "lesson_id": "geroscience-4",
+      "front": "Intent-to-treat",
+      "back": "Analysis that retains participants or experimental units in their assigned groups regardless of adherence, under a prespecified strategy.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    }
+  ]
+}

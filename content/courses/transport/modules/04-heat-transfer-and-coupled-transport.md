@@ -1,0 +1,3 @@
+# Heat transfer and coupled transport
+
+Heat can move by conduction, convection, and radiation; in aqueous biological systems, conduction and convection usually dominate at moderate scales. Fourier's law links heat flux to temperature gradient, while convective transfer scales with a heat-transfer coefficient and area. Thermal resistance networks can simplify layered constructs. Heat, solute, and charge transport share mathematical structures but have different constitutive coefficients and boundary conditions. Scaling identifies when a term can be neglected without implying it is universally unimportant.

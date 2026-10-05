@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0",
+  "course_id": "differential-equations",
+  "cards": [
+    {
+      "id": "differential-equations-0-0",
+      "lesson_id": "differential-equations-1",
+      "front": "Equilibrium",
+      "back": "A state where the derivative is zero under the model.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "differential-equations-0-1",
+      "lesson_id": "differential-equations-1",
+      "front": "Time constant",
+      "back": "For a first-order exponential process, τ=1/k; it sets the characteristic response timescale.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "differential-equations-1-0",
+      "lesson_id": "differential-equations-2",
+      "front": "Damping ratio ζ",
+      "back": "A dimensionless ratio indicating underdamped, critically damped, or overdamped behavior.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "differential-equations-1-1",
+      "lesson_id": "differential-equations-2",
+      "front": "Natural frequency",
+      "back": "The characteristic angular frequency of an unforced system before damping effects are considered.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "differential-equations-2-0",
+      "lesson_id": "differential-equations-3",
+      "front": "Jacobian",
+      "back": "Matrix of first partial derivatives of a vector field, used for local linearization.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "differential-equations-2-1",
+      "lesson_id": "differential-equations-3",
+      "front": "Nullcline",
+      "back": "A set where one state derivative is zero; intersections can identify equilibria.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "differential-equations-3-0",
+      "lesson_id": "differential-equations-4",
+      "front": "Forward Euler",
+      "back": "An explicit first-order method that advances a state using its current derivative.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "differential-equations-3-1",
+      "lesson_id": "differential-equations-4",
+      "front": "Stiff system",
+      "back": "A system with widely separated timescales that can make explicit integration inefficient or unstable.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    }
+  ]
+}

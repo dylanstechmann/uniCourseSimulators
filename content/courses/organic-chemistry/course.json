@@ -1,0 +1,337 @@
+{
+  "schema_version": "1.0",
+  "id": "organic-chemistry",
+  "legacy_code": "CHEM 231",
+  "title": "Organic Chemistry I for Life Sciences",
+  "description": "Structure, stereochemistry, substitution, elimination, and carbonyl chemistry taught through mechanism and reactivity rather than reaction memorization.",
+  "domain": "Chemistry",
+  "level": "Year 2",
+  "maturity": "partial",
+  "version": "0.1.0",
+  "license": "MIT OR CC-BY-4.0",
+  "content_origin": {
+    "kind": "legacy-prototype",
+    "source_path": "src/data/courses.js",
+    "source_sha256": "a77a7cb7f5be2ffa12068877042ac775c6d9b79b83ac2f316fe4f26a0d3d783b",
+    "migration_version": "1.0",
+    "modifications": [
+      "Clarified the typical E2 answer option as anti-periplanar; atypical syn elimination is not presented as equally typical."
+    ]
+  },
+  "prerequisites": {
+    "course_ids": [
+      "general-chemistry-1",
+      "general-chemistry-2"
+    ],
+    "recommended_course_ids": [],
+    "concurrent_course_ids": [],
+    "knowledge": [],
+    "statement": "General Chemistry I and II"
+  },
+  "outcomes": [
+    {
+      "id": "organic-chemistry-outcome-1",
+      "description": "Draw valid resonance contributors and predict nucleophile/electrophile roles.",
+      "bloom": "apply"
+    },
+    {
+      "id": "organic-chemistry-outcome-2",
+      "description": "Use substrate, nucleophile, solvent, and leaving group to distinguish mechanisms.",
+      "bloom": "apply"
+    },
+    {
+      "id": "organic-chemistry-outcome-3",
+      "description": "Track stereochemistry and regiochemistry.",
+      "bloom": "analyze"
+    },
+    {
+      "id": "organic-chemistry-outcome-4",
+      "description": "Relate functional-group reactivity to biomolecular synthesis and degradation.",
+      "bloom": "analyze"
+    }
+  ],
+  "lesson_objectives": [
+    {
+      "id": "organic-chemistry-1-objective-1",
+      "description": "Rank acidity using conjugate-base stabilization.",
+      "bloom": "understand",
+      "course_outcome_ids": []
+    },
+    {
+      "id": "organic-chemistry-1-objective-2",
+      "description": "Use resonance without moving atoms or violating valence.",
+      "bloom": "apply",
+      "course_outcome_ids": []
+    },
+    {
+      "id": "organic-chemistry-2-objective-1",
+      "description": "Predict how substrate structure and solvent affect substitution.",
+      "bloom": "apply",
+      "course_outcome_ids": []
+    },
+    {
+      "id": "organic-chemistry-2-objective-2",
+      "description": "Connect mechanism to stereochemical outcome and rate law.",
+      "bloom": "analyze",
+      "course_outcome_ids": []
+    },
+    {
+      "id": "organic-chemistry-3-objective-1",
+      "description": "Distinguish E1 and E2 pathways.",
+      "bloom": "analyze",
+      "course_outcome_ids": []
+    },
+    {
+      "id": "organic-chemistry-3-objective-2",
+      "description": "Predict alkene products while stating regioselectivity assumptions.",
+      "bloom": "apply",
+      "course_outcome_ids": []
+    },
+    {
+      "id": "organic-chemistry-4-objective-1",
+      "description": "Explain why carbonyl carbon is electrophilic.",
+      "bloom": "understand",
+      "course_outcome_ids": []
+    },
+    {
+      "id": "organic-chemistry-4-objective-2",
+      "description": "Predict addition versus substitution from the carbonyl derivative.",
+      "bloom": "apply",
+      "course_outcome_ids": []
+    }
+  ],
+  "duration": {
+    "instructional_weeks": null,
+    "equivalent_structure": null,
+    "weeks": []
+  },
+  "workload": {
+    "estimated_total_hours": null,
+    "estimated_hours_per_week": null,
+    "basis": "Not measured. Legacy nominal credit and display-time labels are not retained as workload estimates."
+  },
+  "modules": [
+    {
+      "id": "organic-chemistry-module-1",
+      "title": "Structure, resonance, and acid-base reactivity",
+      "source_ids": [
+        "organic",
+        "chemistry"
+      ],
+      "lessons": [
+        {
+          "id": "organic-chemistry-1",
+          "title": "Structure, resonance, and acid-base reactivity",
+          "reading": "modules/01-structure-resonance-and-acid-base-reactivity.md",
+          "objectives": [
+            "organic-chemistry-1-objective-1",
+            "organic-chemistry-1-objective-2"
+          ],
+          "worked_example": "A carboxylate conjugate base distributes negative charge over two oxygens, making a carboxylic acid more acidic than a typical alcohol whose alkoxide charge is localized.",
+          "question_ids": [
+            "organic-chemistry-1:check"
+          ],
+          "card_ids": [
+            "organic-chemistry-0-0",
+            "organic-chemistry-0-1"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "organic-chemistry-module-2",
+      "title": "Substitution mechanisms: SN1 and SN2",
+      "source_ids": [
+        "organic",
+        "chemistry"
+      ],
+      "lessons": [
+        {
+          "id": "organic-chemistry-2",
+          "title": "Substitution mechanisms: SN1 and SN2",
+          "reading": "modules/02-substitution-mechanisms-sn1-and-sn2.md",
+          "objectives": [
+            "organic-chemistry-2-objective-1",
+            "organic-chemistry-2-objective-2"
+          ],
+          "worked_example": "A primary alkyl halide with a strong nucleophile in a polar aprotic solvent favors SN2; a tertiary substrate blocks backside attack and may favor ionization when a stable carbocation can form.",
+          "question_ids": [
+            "organic-chemistry-2:check"
+          ],
+          "card_ids": [
+            "organic-chemistry-1-0",
+            "organic-chemistry-1-1"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "organic-chemistry-module-3",
+      "title": "Elimination, alkenes, and stereochemical control",
+      "source_ids": [
+        "organic",
+        "chemistry"
+      ],
+      "lessons": [
+        {
+          "id": "organic-chemistry-3",
+          "title": "Elimination, alkenes, and stereochemical control",
+          "reading": "modules/03-elimination-alkenes-and-stereochemical-control.md",
+          "objectives": [
+            "organic-chemistry-3-objective-1",
+            "organic-chemistry-3-objective-2"
+          ],
+          "worked_example": "In a cyclohexane chair, E2 requires a trans-diaxial beta hydrogen and leaving group; ring flip can expose the reactive conformation.",
+          "question_ids": [
+            "organic-chemistry-3:check"
+          ],
+          "card_ids": [
+            "organic-chemistry-2-0",
+            "organic-chemistry-2-1"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "organic-chemistry-module-4",
+      "title": "Carbonyl chemistry and acyl transfer",
+      "source_ids": [
+        "organic",
+        "chemistry"
+      ],
+      "lessons": [
+        {
+          "id": "organic-chemistry-4",
+          "title": "Carbonyl chemistry and acyl transfer",
+          "reading": "modules/04-carbonyl-chemistry-and-acyl-transfer.md",
+          "objectives": [
+            "organic-chemistry-4-objective-1",
+            "organic-chemistry-4-objective-2"
+          ],
+          "worked_example": "An ester plus hydroxide forms a tetrahedral intermediate; collapse expels an alkoxide, followed by proton transfer to give a carboxylate under basic conditions.",
+          "question_ids": [
+            "organic-chemistry-4:check"
+          ],
+          "card_ids": [
+            "organic-chemistry-3-0",
+            "organic-chemistry-3-1"
+          ]
+        }
+      ]
+    }
+  ],
+  "assessments": [
+    {
+      "id": "organic-chemistry-1-practice",
+      "type": "practice",
+      "mode": "practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "organic-chemistry-1-objective-1"
+      ],
+      "question_ids": [
+        "organic-chemistry-1:check"
+      ],
+      "points": 1
+    },
+    {
+      "id": "organic-chemistry-2-practice",
+      "type": "practice",
+      "mode": "practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "organic-chemistry-2-objective-1"
+      ],
+      "question_ids": [
+        "organic-chemistry-2:check"
+      ],
+      "points": 1
+    },
+    {
+      "id": "organic-chemistry-3-practice",
+      "type": "practice",
+      "mode": "practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "organic-chemistry-3-objective-1"
+      ],
+      "question_ids": [
+        "organic-chemistry-3:check"
+      ],
+      "points": 1
+    },
+    {
+      "id": "organic-chemistry-4-practice",
+      "type": "practice",
+      "mode": "practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "organic-chemistry-4-objective-1"
+      ],
+      "question_ids": [
+        "organic-chemistry-4:check"
+      ],
+      "points": 1
+    },
+    {
+      "id": "organic-chemistry-case",
+      "type": "case",
+      "mode": "self-assessment",
+      "path": "rubrics/case-studio.json",
+      "objective_ids": [],
+      "question_ids": [],
+      "points": 0
+    }
+  ],
+  "grading_policy": {
+    "mode": "formative-only",
+    "categories": [],
+    "attempt_policy": "Unlimited formative retries; no summative grade is awarded.",
+    "solution_release": "Public practice solutions may be shown after an attempt. They are not production exam keys.",
+    "late_policy": "No deadlines or late penalties exist in this partial package.",
+    "appeals": "No instructor review workflow is implemented; report ambiguous practice items to repository maintainers."
+  },
+  "retrieval_cards": "question-banks/retrieval-cards.json",
+  "case_rubrics": "rubrics/case-studio.json",
+  "source_map": "source-map.json",
+  "syllabus": "syllabus.md",
+  "review": {
+    "status": "unreviewed",
+    "reviewed_version": null,
+    "reviewers": []
+  },
+  "accessibility": {
+    "language": "en",
+    "reading_format": "markdown",
+    "math_format": "unicode-text",
+    "diagram_policy": "The seed package contains no imported diagrams; newly authored diagrams require descriptions and individual license tracking.",
+    "known_issues": [
+      "Unicode equations require structured mathematical alternatives and assistive-technology review."
+    ],
+    "review_status": "unreviewed"
+  },
+  "history": [
+    {
+      "version": "0.1.0",
+      "date": "2026-10-05",
+      "summary": "Preserved original compact prototype content in separate manifests and readings; labeled partial without semester or credit equivalency."
+    },
+    {
+      "version": "0.1.0",
+      "date": "2026-10-05",
+      "summary": "Clarified the typical E2 answer option as anti-periplanar; atypical syn elimination is not presented as equally typical."
+    }
+  ],
+  "limitations": [
+    "Four compact legacy units are preserved; this package is not equivalent to a full university semester.",
+    "There is no authored 12–15 week schedule, substantive homework sequence, laboratory sequence, midterm, cumulative final, or graded integrative project.",
+    "The single formative check per lesson does not demonstrate comprehensive outcome coverage or mastery; association with the first lesson objective is provisional.",
+    "Bloom labels and structured prerequisite edges are initial authoring classifications awaiting subject-matter review.",
+    "Question answers and solution feedback are intentionally public practice authoring specifications, not restricted exam keys.",
+    "Numerical specifications preserve the prototype's tolerance and optional unit entry; significant-figure and dimensional checks have not been authored.",
+    "Total workload and weekly duration are unknown; former nominal credit values and hardcoded reading times do not establish workload."
+  ],
+  "intentionally_omitted": [
+    "Full instructional sequence and summative assessments are not authored yet; this is a preserved seed inventory."
+  ]
+}

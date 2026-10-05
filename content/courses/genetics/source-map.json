@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.0",
+  "course_id": "genetics",
+  "license": "MIT OR CC-BY-4.0",
+  "modules": [
+    {
+      "module_id": "genetics-module-1",
+      "lesson_id": "genetics-1",
+      "reading": "modules/01-segregation-penetrance-and-probability.md",
+      "source_ids": [
+        "biology",
+        "molecular"
+      ],
+      "relationship": "curriculum-comparator",
+      "original_content": true,
+      "license": "MIT OR CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "genetics-module-2",
+      "lesson_id": "genetics-2",
+      "reading": "modules/02-linkage-and-recombination-mapping.md",
+      "source_ids": [
+        "biology",
+        "molecular"
+      ],
+      "relationship": "curriculum-comparator",
+      "original_content": true,
+      "license": "MIT OR CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "genetics-module-3",
+      "lesson_id": "genetics-3",
+      "reading": "modules/03-gene-regulation-and-causal-perturbation.md",
+      "source_ids": [
+        "biology",
+        "molecular"
+      ],
+      "relationship": "curriculum-comparator",
+      "original_content": true,
+      "license": "MIT OR CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "genetics-module-4",
+      "lesson_id": "genetics-4",
+      "reading": "modules/04-genomics-association-and-variant-interpretation.md",
+      "source_ids": [
+        "biology",
+        "molecular"
+      ],
+      "relationship": "curriculum-comparator",
+      "original_content": true,
+      "license": "MIT OR CC-BY-4.0",
+      "modifications": []
+    }
+  ]
+}

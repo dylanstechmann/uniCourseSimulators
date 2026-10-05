@@ -1,0 +1,35 @@
+{
+  "schema_version": "1.0",
+  "course_id": "circuits",
+  "cases": [
+    {
+      "id": "circuits:case",
+      "prompt": "A biopotential channel clips during movement and drifts at rest. Diagnose two distinct circuit/interface causes and propose a staged bench test before changing the electrode protocol.",
+      "mode": "self-assessment",
+      "objective_ids": [],
+      "rubric": [
+        {
+          "id": "circuits-case-criterion-1",
+          "criterion": "Separates saturation/common-mode/range issue from baseline drift/polarization issue",
+          "points": 0,
+          "levels": []
+        },
+        {
+          "id": "circuits-case-criterion-2",
+          "criterion": "Uses a known differential/common-mode signal or electrode-equivalent network",
+          "points": 0,
+          "levels": []
+        },
+        {
+          "id": "circuits-case-criterion-3",
+          "criterion": "Checks gain, input range, bias return, filter cutoff, and recovery without a subject",
+          "points": 0,
+          "levels": []
+        }
+      ],
+      "limitations": [
+        "This preserved three-criterion checklist is self-assessment, not an analytic grading rubric or an institutional grade."
+      ]
+    }
+  ]
+}

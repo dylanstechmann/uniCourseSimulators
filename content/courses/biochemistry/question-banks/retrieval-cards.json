@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0",
+  "course_id": "biochemistry",
+  "cards": [
+    {
+      "id": "biochemistry-0-0",
+      "lesson_id": "biochemistry-1",
+      "front": "Dissociation constant Kd",
+      "back": "At equilibrium in a simple binding model, the ligand concentration associated with half occupancy.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "biochemistry-0-1",
+      "lesson_id": "biochemistry-1",
+      "front": "Cooperativity",
+      "back": "A change in one binding event's effect on the affinity of additional sites in a multisite system.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "biochemistry-1-0",
+      "lesson_id": "biochemistry-2",
+      "front": "kcat",
+      "back": "Turnover number: catalytic cycles per enzyme molecule per unit time at substrate saturation.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "biochemistry-1-1",
+      "lesson_id": "biochemistry-2",
+      "front": "Competitive inhibition",
+      "back": "Inhibition that raises apparent Km in the simple model while preserving Vmax at saturating substrate.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "biochemistry-2-0",
+      "lesson_id": "biochemistry-3",
+      "front": "Proton motive force",
+      "back": "An electrochemical proton gradient across a membrane that can power transport and ATP synthesis.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "biochemistry-2-1",
+      "lesson_id": "biochemistry-3",
+      "front": "Redox carrier",
+      "back": "A molecule such as NAD⁺/NADH that transfers electrons between metabolic reactions.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "biochemistry-3-0",
+      "lesson_id": "biochemistry-4",
+      "front": "Metabolic flux",
+      "back": "The rate at which material flows through a reaction or pathway.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "biochemistry-3-1",
+      "lesson_id": "biochemistry-4",
+      "front": "Isotope tracing",
+      "back": "Use of labeled atoms to follow molecular transformations and estimate pathway flow.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    }
+  ]
+}

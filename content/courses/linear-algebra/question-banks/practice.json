@@ -1,0 +1,132 @@
+{
+  "schema_version": "1.0",
+  "course_id": "linear-algebra",
+  "license": "MIT OR CC-BY-4.0",
+  "questions": [
+    {
+      "id": "linear-algebra-1:check",
+      "type": "numeric",
+      "prompt": "Solve x+y=7 and x−y=1. What is x?",
+      "points": 1,
+      "objective_ids": [
+        "linear-algebra-1-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 4,
+        "unit": "",
+        "tolerance": 0.06,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Add the equations to eliminate y.",
+        "solution": "Adding gives 2x=8, so x=4 and y=3.",
+        "lesson_ids": [
+          "linear-algebra-1"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "legacy-prototype",
+        "legacy_id": "linear-algebra-1:check",
+        "modifications": []
+      }
+    },
+    {
+      "id": "linear-algebra-2:check",
+      "type": "numeric",
+      "prompt": "A planar vector (3,0) is rotated counterclockwise by 90°. What is its new y-coordinate?",
+      "points": 1,
+      "objective_ids": [
+        "linear-algebra-2-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 3,
+        "unit": "",
+        "tolerance": 0.045,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Apply R=[[0,−1],[1,0]] to the vector.",
+        "solution": "R[3,0]ᵀ = [0,3]ᵀ, so the new y-coordinate is 3.",
+        "lesson_ids": [
+          "linear-algebra-2"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "legacy-prototype",
+        "legacy_id": "linear-algebra-2:check",
+        "modifications": []
+      }
+    },
+    {
+      "id": "linear-algebra-3:check",
+      "type": "single_choice",
+      "prompt": "For a continuous-time linear system ẋ=Ax, what condition guarantees asymptotic stability of the origin?",
+      "options": [
+        "Every eigenvalue has negative real part",
+        "Every eigenvalue is positive",
+        "The trace is zero",
+        "Every matrix entry is negative"
+      ],
+      "points": 1,
+      "objective_ids": [
+        "linear-algebra-3-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0
+      },
+      "feedback": {
+        "hint": "The modal solutions contain exponential factors e^(λt).",
+        "solution": "All eigenvalues with negative real parts produce decaying modes, which is the continuous-time asymptotic-stability condition for a linear system.",
+        "lesson_ids": [
+          "linear-algebra-3"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "legacy-prototype",
+        "legacy_id": "linear-algebra-3:check",
+        "modifications": []
+      }
+    },
+    {
+      "id": "linear-algebra-4:check",
+      "type": "numeric",
+      "prompt": "The points (0,2) and (2,6) lie on a line y=a+bx. What is slope b?",
+      "points": 1,
+      "objective_ids": [
+        "linear-algebra-4-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 2,
+        "unit": "",
+        "tolerance": 0.03,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Compute change in y divided by change in x.",
+        "solution": "b=(6−2)/(2−0)=2.",
+        "lesson_ids": [
+          "linear-algebra-4"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "legacy-prototype",
+        "legacy_id": "linear-algebra-4:check",
+        "modifications": []
+      }
+    }
+  ]
+}

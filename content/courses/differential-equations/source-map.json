@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.0",
+  "course_id": "differential-equations",
+  "license": "MIT OR CC-BY-4.0",
+  "modules": [
+    {
+      "module_id": "differential-equations-module-1",
+      "lesson_id": "differential-equations-1",
+      "reading": "modules/01-first-order-models-and-time-constants.md",
+      "source_ids": [
+        "diffeqs",
+        "engineeringMath",
+        "numerical"
+      ],
+      "relationship": "curriculum-comparator",
+      "original_content": true,
+      "license": "MIT OR CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "differential-equations-module-2",
+      "lesson_id": "differential-equations-2",
+      "reading": "modules/02-second-order-systems-and-mechanical-response.md",
+      "source_ids": [
+        "diffeqs",
+        "engineeringMath",
+        "numerical"
+      ],
+      "relationship": "curriculum-comparator",
+      "original_content": true,
+      "license": "MIT OR CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "differential-equations-module-3",
+      "lesson_id": "differential-equations-3",
+      "reading": "modules/03-coupled-systems-equilibria-and-stability.md",
+      "source_ids": [
+        "diffeqs",
+        "engineeringMath",
+        "numerical"
+      ],
+      "relationship": "curriculum-comparator",
+      "original_content": true,
+      "license": "MIT OR CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "differential-equations-module-4",
+      "lesson_id": "differential-equations-4",
+      "reading": "modules/04-numerical-odes-and-error-control.md",
+      "source_ids": [
+        "diffeqs",
+        "engineeringMath",
+        "numerical"
+      ],
+      "relationship": "curriculum-comparator",
+      "original_content": true,
+      "license": "MIT OR CC-BY-4.0",
+      "modifications": []
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "schema_version": "1.0",
+  "course_id": "physics-mechanics",
+  "cases": [
+    {
+      "id": "physics-mechanics:case",
+      "prompt": "A tendon specimen's apparent modulus doubles when pull direction changes. Explain why this need not be a measurement error and propose the metadata needed to compare the values across labs.",
+      "mode": "self-assessment",
+      "objective_ids": [],
+      "rubric": [
+        {
+          "id": "physics-mechanics-case-criterion-1",
+          "criterion": "Identifies anisotropy or orientation-dependent fiber recruitment",
+          "points": 0,
+          "levels": []
+        },
+        {
+          "id": "physics-mechanics-case-criterion-2",
+          "criterion": "Mentions nonlinear/viscoelastic behavior or preload/strain-rate effects",
+          "points": 0,
+          "levels": []
+        },
+        {
+          "id": "physics-mechanics-case-criterion-3",
+          "criterion": "Specifies orientation, geometry, hydration, temperature, strain rate, and modulus definition",
+          "points": 0,
+          "levels": []
+        }
+      ],
+      "limitations": [
+        "This preserved three-criterion checklist is self-assessment, not an analytic grading rubric or an institutional grade."
+      ]
+    }
+  ]
+}

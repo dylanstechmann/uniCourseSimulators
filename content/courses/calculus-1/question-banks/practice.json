@@ -1,0 +1,131 @@
+{
+  "schema_version": "1.0",
+  "course_id": "calculus-1",
+  "license": "MIT OR CC-BY-4.0",
+  "questions": [
+    {
+      "id": "calculus-1-1:check",
+      "type": "numeric",
+      "prompt": "For f(x) = x², what is f′(3)?",
+      "points": 1,
+      "objective_ids": [
+        "calculus-1-1-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 6,
+        "unit": "",
+        "tolerance": 0.09,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the limit definition or the power rule after establishing the derivative.",
+        "solution": "f′(x)=2x, so f′(3)=6. It is the local rate of change of the output per unit input.",
+        "lesson_ids": [
+          "calculus-1-1"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "legacy-prototype",
+        "legacy_id": "calculus-1-1:check",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-1-2:check",
+      "type": "numeric",
+      "prompt": "If y = (3x + 1)⁴, compute dy/dx at x = 1.",
+      "points": 1,
+      "objective_ids": [
+        "calculus-1-2-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 768,
+        "unit": "",
+        "tolerance": 11.52,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Apply the chain rule: 4(3x+1)³·3, then set x = 1.",
+        "solution": "dy/dx = 12(3x+1)³. At x=1 this is 12×4³ = 768.",
+        "lesson_ids": [
+          "calculus-1-2"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "legacy-prototype",
+        "legacy_id": "calculus-1-2:check",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-1-3:check",
+      "type": "numeric",
+      "prompt": "A positive rectangular construct has fixed perimeter 20 cm. What side length (cm) gives the maximum area?",
+      "points": 1,
+      "objective_ids": [
+        "calculus-1-3-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 5,
+        "unit": "cm",
+        "tolerance": 0.075,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Let sides be x and 10−x; maximize A=x(10−x) on 0<x<10.",
+        "solution": "A=10x−x², so A′=10−2x=0 at x=5 cm. This is the maximum; the square maximizes area for fixed perimeter.",
+        "lesson_ids": [
+          "calculus-1-3"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "legacy-prototype",
+        "legacy_id": "calculus-1-3:check",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-1-4:check",
+      "type": "numeric",
+      "prompt": "A measured uptake rate is constant at 1.8 mg/min for 5 minutes. How much material is accumulated in mg?",
+      "points": 1,
+      "objective_ids": [
+        "calculus-1-4-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 9,
+        "unit": "mg",
+        "tolerance": 0.135,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Integrate the constant rate over the time interval.",
+        "solution": "Accumulated amount = 1.8 mg/min × 5 min = 9 mg.",
+        "lesson_ids": [
+          "calculus-1-4"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "legacy-prototype",
+        "legacy_id": "calculus-1-4:check",
+        "modifications": []
+      }
+    }
+  ]
+}

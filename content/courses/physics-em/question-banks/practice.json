@@ -1,0 +1,131 @@
+{
+  "schema_version": "1.0",
+  "course_id": "physics-em",
+  "license": "MIT OR CC-BY-4.0",
+  "questions": [
+    {
+      "id": "physics-em-1:check",
+      "type": "numeric",
+      "prompt": "A 10 μF capacitor is charged to 3 V. How much energy is stored in μJ?",
+      "points": 1,
+      "objective_ids": [
+        "physics-em-1-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 45,
+        "unit": "μJ",
+        "tolerance": 0.6749999999999999,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use U=½CV² and convert farads to microfarads consistently.",
+        "solution": "U=½×10 μF×9 V²=45 μJ.",
+        "lesson_ids": [
+          "physics-em-1"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "legacy-prototype",
+        "legacy_id": "physics-em-1:check",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physics-em-2:check",
+      "type": "numeric",
+      "prompt": "A 2 kΩ resistor is in series with a 5 μF capacitor. What is the RC time constant in milliseconds?",
+      "points": 1,
+      "objective_ids": [
+        "physics-em-2-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 10,
+        "unit": "ms",
+        "tolerance": 0.15,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Convert kΩ and μF so the product is in seconds.",
+        "solution": "τ=2000 Ω×5×10⁻⁶ F=0.010 s=10 ms.",
+        "lesson_ids": [
+          "physics-em-2"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "legacy-prototype",
+        "legacy_id": "physics-em-2:check",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physics-em-3:check",
+      "type": "numeric",
+      "prompt": "A 50-turn coil experiences a flux change of 0.004 Wb per turn in 0.02 s. What is the induced emf magnitude in volts?",
+      "points": 1,
+      "objective_ids": [
+        "physics-em-3-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 10,
+        "unit": "V",
+        "tolerance": 0.15,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use |ε|=N|ΔΦ/Δt|.",
+        "solution": "|ε|=50×0.004/0.02=10 V.",
+        "lesson_ids": [
+          "physics-em-3"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "legacy-prototype",
+        "legacy_id": "physics-em-3:check",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physics-em-4:check",
+      "type": "numeric",
+      "prompt": "A 1 MΩ source drives a 9 MΩ input through a simple divider. What fraction of source voltage appears at the input?",
+      "points": 1,
+      "objective_ids": [
+        "physics-em-4-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0.9,
+        "unit": "fraction",
+        "tolerance": 0.0135,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use Vout/Vin=Rin/(Rsource+Rin).",
+        "solution": "9/(1+9)=0.90, so 90% of the source voltage appears at the input.",
+        "lesson_ids": [
+          "physics-em-4"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "legacy-prototype",
+        "legacy_id": "physics-em-4:check",
+        "modifications": []
+      }
+    }
+  ]
+}

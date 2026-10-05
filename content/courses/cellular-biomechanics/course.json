@@ -1,0 +1,332 @@
+{
+  "schema_version": "1.0",
+  "id": "cellular-biomechanics",
+  "legacy_code": "BME 340",
+  "title": "Cellular Biomechanics & Mechanobiology",
+  "description": "Connect forces, matrix mechanics, cell adhesion, mechanotransduction, and quantitative assays across molecular-to-tissue scales.",
+  "domain": "Bioengineering",
+  "level": "Year 3",
+  "maturity": "partial",
+  "version": "0.1.0",
+  "license": "MIT OR CC-BY-4.0",
+  "content_origin": {
+    "kind": "legacy-prototype",
+    "source_path": "src/data/courses.js",
+    "source_sha256": "a77a7cb7f5be2ffa12068877042ac775c6d9b79b83ac2f316fe4f26a0d3d783b",
+    "migration_version": "1.0",
+    "modifications": []
+  },
+  "prerequisites": {
+    "course_ids": [
+      "cell-biology",
+      "physics-mechanics"
+    ],
+    "recommended_course_ids": [
+      "differential-equations"
+    ],
+    "concurrent_course_ids": [],
+    "knowledge": [],
+    "statement": "Cell biology; Physics: Mechanics; Differential Equations recommended"
+  },
+  "outcomes": [
+    {
+      "id": "cellular-biomechanics-outcome-1",
+      "description": "Translate boundary conditions into stress and strain measures.",
+      "bloom": "understand"
+    },
+    {
+      "id": "cellular-biomechanics-outcome-2",
+      "description": "Interpret viscoelastic and nonlinear material behavior.",
+      "bloom": "analyze"
+    },
+    {
+      "id": "cellular-biomechanics-outcome-3",
+      "description": "Connect integrin/cytoskeletal signaling to mechanical context.",
+      "bloom": "analyze"
+    },
+    {
+      "id": "cellular-biomechanics-outcome-4",
+      "description": "Design an experiment that separates stiffness from ligand density.",
+      "bloom": "create"
+    }
+  ],
+  "lesson_objectives": [
+    {
+      "id": "cellular-biomechanics-1-objective-1",
+      "description": "Distinguish force, stress, displacement, and strain.",
+      "bloom": "analyze",
+      "course_outcome_ids": []
+    },
+    {
+      "id": "cellular-biomechanics-1-objective-2",
+      "description": "Select a constitutive model appropriate to the time and strain regime.",
+      "bloom": "evaluate",
+      "course_outcome_ids": []
+    },
+    {
+      "id": "cellular-biomechanics-2-objective-1",
+      "description": "Trace a force path from extracellular matrix to nucleus.",
+      "bloom": "analyze",
+      "course_outcome_ids": []
+    },
+    {
+      "id": "cellular-biomechanics-2-objective-2",
+      "description": "Predict how adhesion geometry changes local signaling.",
+      "bloom": "apply",
+      "course_outcome_ids": []
+    },
+    {
+      "id": "cellular-biomechanics-3-objective-1",
+      "description": "Distinguish a mechanical input from a molecular readout.",
+      "bloom": "analyze",
+      "course_outcome_ids": []
+    },
+    {
+      "id": "cellular-biomechanics-3-objective-2",
+      "description": "Use perturbation and rescue to support a pathway mechanism.",
+      "bloom": "apply",
+      "course_outcome_ids": []
+    },
+    {
+      "id": "cellular-biomechanics-4-objective-1",
+      "description": "Separate matrix mechanics from ligand presentation and geometry.",
+      "bloom": "analyze",
+      "course_outcome_ids": []
+    },
+    {
+      "id": "cellular-biomechanics-4-objective-2",
+      "description": "Choose analysis that respects nested replicates and batch structure.",
+      "bloom": "evaluate",
+      "course_outcome_ids": []
+    }
+  ],
+  "duration": {
+    "instructional_weeks": null,
+    "equivalent_structure": null,
+    "weeks": []
+  },
+  "workload": {
+    "estimated_total_hours": null,
+    "estimated_hours_per_week": null,
+    "basis": "Not measured. Legacy nominal credit and display-time labels are not retained as workload estimates."
+  },
+  "modules": [
+    {
+      "id": "cellular-biomechanics-module-1",
+      "title": "Stress, strain, and constitutive behavior",
+      "source_ids": [
+        "biomaterials",
+        "transport"
+      ],
+      "lessons": [
+        {
+          "id": "cellular-biomechanics-1",
+          "title": "Stress, strain, and constitutive behavior",
+          "reading": "modules/01-stress-strain-and-constitutive-behavior.md",
+          "objectives": [
+            "cellular-biomechanics-1-objective-1",
+            "cellular-biomechanics-1-objective-2"
+          ],
+          "worked_example": "A standard linear solid can relax toward a nonzero long-time modulus, unlike a Maxwell element that relaxes fully under an ideal step strain.",
+          "question_ids": [
+            "cellular-biomechanics-1:check"
+          ],
+          "card_ids": [
+            "cellular-biomechanics-0-0",
+            "cellular-biomechanics-0-1"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cellular-biomechanics-module-2",
+      "title": "Adhesion, cytoskeleton, and force transmission",
+      "source_ids": [
+        "biomaterials",
+        "transport"
+      ],
+      "lessons": [
+        {
+          "id": "cellular-biomechanics-2",
+          "title": "Adhesion, cytoskeleton, and force transmission",
+          "reading": "modules/02-adhesion-cytoskeleton-and-force-transmission.md",
+          "objectives": [
+            "cellular-biomechanics-2-objective-1",
+            "cellular-biomechanics-2-objective-2"
+          ],
+          "worked_example": "A stiffer substrate can increase traction only under conditions where cells can engage and remodel adhesions; stiffness alone does not specify cell fate.",
+          "question_ids": [
+            "cellular-biomechanics-2:check"
+          ],
+          "card_ids": [
+            "cellular-biomechanics-1-0",
+            "cellular-biomechanics-1-1"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cellular-biomechanics-module-3",
+      "title": "Mechanotransduction and mechanosensitive pathways",
+      "source_ids": [
+        "biomaterials",
+        "transport"
+      ],
+      "lessons": [
+        {
+          "id": "cellular-biomechanics-3",
+          "title": "Mechanotransduction and mechanosensitive pathways",
+          "reading": "modules/03-mechanotransduction-and-mechanosensitive-pathways.md",
+          "objectives": [
+            "cellular-biomechanics-3-objective-1",
+            "cellular-biomechanics-3-objective-2"
+          ],
+          "worked_example": "If inhibiting a mechanosensitive channel blocks calcium entry and a downstream transcriptional response, channel-specific rescue or an orthogonal perturbation strengthens the causal chain.",
+          "question_ids": [
+            "cellular-biomechanics-3:check"
+          ],
+          "card_ids": [
+            "cellular-biomechanics-2-0",
+            "cellular-biomechanics-2-1"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cellular-biomechanics-module-4",
+      "title": "Experimental design for cell mechanics",
+      "source_ids": [
+        "biomaterials",
+        "transport"
+      ],
+      "lessons": [
+        {
+          "id": "cellular-biomechanics-4",
+          "title": "Experimental design for cell mechanics",
+          "reading": "modules/04-experimental-design-for-cell-mechanics.md",
+          "objectives": [
+            "cellular-biomechanics-4-objective-1",
+            "cellular-biomechanics-4-objective-2"
+          ],
+          "worked_example": "A 2×2 stiffness-by-ligand-density design estimates both main effects and interaction, provided each combination is independently fabricated and randomized across runs.",
+          "question_ids": [
+            "cellular-biomechanics-4:check"
+          ],
+          "card_ids": [
+            "cellular-biomechanics-3-0",
+            "cellular-biomechanics-3-1"
+          ]
+        }
+      ]
+    }
+  ],
+  "assessments": [
+    {
+      "id": "cellular-biomechanics-1-practice",
+      "type": "practice",
+      "mode": "practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "cellular-biomechanics-1-objective-1"
+      ],
+      "question_ids": [
+        "cellular-biomechanics-1:check"
+      ],
+      "points": 1
+    },
+    {
+      "id": "cellular-biomechanics-2-practice",
+      "type": "practice",
+      "mode": "practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "cellular-biomechanics-2-objective-1"
+      ],
+      "question_ids": [
+        "cellular-biomechanics-2:check"
+      ],
+      "points": 1
+    },
+    {
+      "id": "cellular-biomechanics-3-practice",
+      "type": "practice",
+      "mode": "practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "cellular-biomechanics-3-objective-1"
+      ],
+      "question_ids": [
+        "cellular-biomechanics-3:check"
+      ],
+      "points": 1
+    },
+    {
+      "id": "cellular-biomechanics-4-practice",
+      "type": "practice",
+      "mode": "practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "cellular-biomechanics-4-objective-1"
+      ],
+      "question_ids": [
+        "cellular-biomechanics-4:check"
+      ],
+      "points": 1
+    },
+    {
+      "id": "cellular-biomechanics-case",
+      "type": "case",
+      "mode": "self-assessment",
+      "path": "rubrics/case-studio.json",
+      "objective_ids": [],
+      "question_ids": [],
+      "points": 0
+    }
+  ],
+  "grading_policy": {
+    "mode": "formative-only",
+    "categories": [],
+    "attempt_policy": "Unlimited formative retries; no summative grade is awarded.",
+    "solution_release": "Public practice solutions may be shown after an attempt. They are not production exam keys.",
+    "late_policy": "No deadlines or late penalties exist in this partial package.",
+    "appeals": "No instructor review workflow is implemented; report ambiguous practice items to repository maintainers."
+  },
+  "retrieval_cards": "question-banks/retrieval-cards.json",
+  "case_rubrics": "rubrics/case-studio.json",
+  "source_map": "source-map.json",
+  "syllabus": "syllabus.md",
+  "review": {
+    "status": "unreviewed",
+    "reviewed_version": null,
+    "reviewers": []
+  },
+  "accessibility": {
+    "language": "en",
+    "reading_format": "markdown",
+    "math_format": "unicode-text",
+    "diagram_policy": "The seed package contains no imported diagrams; newly authored diagrams require descriptions and individual license tracking.",
+    "known_issues": [
+      "Unicode equations require structured mathematical alternatives and assistive-technology review."
+    ],
+    "review_status": "unreviewed"
+  },
+  "history": [
+    {
+      "version": "0.1.0",
+      "date": "2026-10-05",
+      "summary": "Preserved original compact prototype content in separate manifests and readings; labeled partial without semester or credit equivalency."
+    }
+  ],
+  "limitations": [
+    "Four compact legacy units are preserved; this package is not equivalent to a full university semester.",
+    "There is no authored 12–15 week schedule, substantive homework sequence, laboratory sequence, midterm, cumulative final, or graded integrative project.",
+    "The single formative check per lesson does not demonstrate comprehensive outcome coverage or mastery; association with the first lesson objective is provisional.",
+    "Bloom labels and structured prerequisite edges are initial authoring classifications awaiting subject-matter review.",
+    "Question answers and solution feedback are intentionally public practice authoring specifications, not restricted exam keys.",
+    "Numerical specifications preserve the prototype's tolerance and optional unit entry; significant-figure and dimensional checks have not been authored.",
+    "Total workload and weekly duration are unknown; former nominal credit values and hardcoded reading times do not establish workload."
+  ],
+  "intentionally_omitted": [
+    "Full instructional sequence and summative assessments are not authored yet; this is a preserved seed inventory."
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0",
+  "course_id": "physiology",
+  "cards": [
+    {
+      "id": "physiology-0-0",
+      "lesson_id": "physiology-1",
+      "front": "Negative feedback",
+      "back": "Control in which a response reduces the deviation that elicited it.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "physiology-0-1",
+      "lesson_id": "physiology-1",
+      "front": "Steady state",
+      "back": "A condition where state variables are constant in time because net rates of change are zero; flows may continue.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "physiology-1-0",
+      "lesson_id": "physiology-2",
+      "front": "Reversal potential",
+      "back": "The membrane voltage at which the net current carried by a particular ion is zero.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "physiology-1-1",
+      "lesson_id": "physiology-2",
+      "front": "Conductance",
+      "back": "A measure of how readily charge flows; in I = g(V − E), it scales current for a given driving force.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "physiology-2-0",
+      "lesson_id": "physiology-3",
+      "front": "Perfusion",
+      "back": "Blood flow through a tissue's microvasculature.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "physiology-2-1",
+      "lesson_id": "physiology-3",
+      "front": "Ventilation-perfusion mismatch",
+      "back": "A spatial imbalance between air reaching alveoli and blood reaching their capillaries.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "physiology-3-0",
+      "lesson_id": "physiology-4",
+      "front": "Clearance",
+      "back": "The virtual volume of plasma cleared of a substance per unit time, calculated from urine and plasma concentrations.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "physiology-3-1",
+      "lesson_id": "physiology-4",
+      "front": "Compensation",
+      "back": "A response that helps maintain a regulated variable while potentially changing system load or reserve.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    }
+  ]
+}

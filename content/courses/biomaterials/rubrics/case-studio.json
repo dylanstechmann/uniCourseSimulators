@@ -1,0 +1,35 @@
+{
+  "schema_version": "1.0",
+  "course_id": "biomaterials",
+  "cases": [
+    {
+      "id": "biomaterials:case",
+      "prompt": "A degradable vascular scaffold supports initial patency but later develops neointimal narrowing. Build a failure-analysis plan that separates mechanical collapse, degradation chemistry, and biological response, and name a functional endpoint.",
+      "mode": "self-assessment",
+      "objective_ids": [],
+      "rubric": [
+        {
+          "id": "biomaterials-case-criterion-1",
+          "criterion": "Measures lumen/geometry and time-resolved mechanical support",
+          "points": 0,
+          "levels": []
+        },
+        {
+          "id": "biomaterials-case-criterion-2",
+          "criterion": "Characterizes degradation products and local chemistry",
+          "points": 0,
+          "levels": []
+        },
+        {
+          "id": "biomaterials-case-criterion-3",
+          "criterion": "Separates host-cell response with appropriate controls and reports flow/patency function",
+          "points": 0,
+          "levels": []
+        }
+      ],
+      "limitations": [
+        "This preserved three-criterion checklist is self-assessment, not an analytic grading rubric or an institutional grade."
+      ]
+    }
+  ]
+}

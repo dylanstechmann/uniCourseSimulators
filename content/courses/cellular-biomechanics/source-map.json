@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.0",
+  "course_id": "cellular-biomechanics",
+  "license": "MIT OR CC-BY-4.0",
+  "modules": [
+    {
+      "module_id": "cellular-biomechanics-module-1",
+      "lesson_id": "cellular-biomechanics-1",
+      "reading": "modules/01-stress-strain-and-constitutive-behavior.md",
+      "source_ids": [
+        "biomaterials",
+        "transport"
+      ],
+      "relationship": "curriculum-comparator",
+      "original_content": true,
+      "license": "MIT OR CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "cellular-biomechanics-module-2",
+      "lesson_id": "cellular-biomechanics-2",
+      "reading": "modules/02-adhesion-cytoskeleton-and-force-transmission.md",
+      "source_ids": [
+        "biomaterials",
+        "transport"
+      ],
+      "relationship": "curriculum-comparator",
+      "original_content": true,
+      "license": "MIT OR CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "cellular-biomechanics-module-3",
+      "lesson_id": "cellular-biomechanics-3",
+      "reading": "modules/03-mechanotransduction-and-mechanosensitive-pathways.md",
+      "source_ids": [
+        "biomaterials",
+        "transport"
+      ],
+      "relationship": "curriculum-comparator",
+      "original_content": true,
+      "license": "MIT OR CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "cellular-biomechanics-module-4",
+      "lesson_id": "cellular-biomechanics-4",
+      "reading": "modules/04-experimental-design-for-cell-mechanics.md",
+      "source_ids": [
+        "biomaterials",
+        "transport"
+      ],
+      "relationship": "curriculum-comparator",
+      "original_content": true,
+      "license": "MIT OR CC-BY-4.0",
+      "modifications": []
+    }
+  ]
+}

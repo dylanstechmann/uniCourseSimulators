@@ -1,0 +1,35 @@
+{
+  "schema_version": "1.0",
+  "course_id": "physiology",
+  "cases": [
+    {
+      "id": "physiology:case",
+      "prompt": "A patient has normal resting arterial pressure but reduced renal perfusion and elevated sympathetic activity. Explain how a compensated value can coexist with impaired reserve, and propose one measurement that tests your explanation.",
+      "mode": "self-assessment",
+      "objective_ids": [],
+      "rubric": [
+        {
+          "id": "physiology-case-criterion-1",
+          "criterion": "Identifies a feedback response that preserves pressure",
+          "points": 0,
+          "levels": []
+        },
+        {
+          "id": "physiology-case-criterion-2",
+          "criterion": "Explains a cost or reduced reserve under challenge",
+          "points": 0,
+          "levels": []
+        },
+        {
+          "id": "physiology-case-criterion-3",
+          "criterion": "Proposes a perturbation or independent readout such as orthostatic response, renal flow, or hormone level",
+          "points": 0,
+          "levels": []
+        }
+      ],
+      "limitations": [
+        "This preserved three-criterion checklist is self-assessment, not an analytic grading rubric or an institutional grade."
+      ]
+    }
+  ]
+}

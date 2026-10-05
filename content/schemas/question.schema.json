@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:lattice-courselab:schema:question:1.0",
+  "title": "Lattice CourseLab assessment item",
+  "description": "Deterministic grading specification. Public practice authoring keys are explicitly public; restricted assessments must be provisioned server-side separately.",
+  "type": "object", "additionalProperties": false,
+  "required": ["id", "type", "prompt", "points", "objective_ids", "solution_spec", "feedback", "visibility"],
+  "properties": {
+    "id": {"type": "string", "pattern": "^[a-z0-9][a-z0-9._:-]*$"},
+    "type": {"enum": ["single_choice", "multiple_select", "numeric", "symbolic", "structured", "graph", "table", "data_interpretation", "python", "file_upload", "design"]},
+    "prompt": {"type": "string", "minLength": 15},
+    "options": {"type": "array", "minItems": 2, "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+    "points": {"type": "number", "exclusiveMinimum": 0},
+    "objective_ids": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+    "solution_spec": {"type": "object", "minProperties": 1},
+    "feedback": {"type": "object", "additionalProperties": false, "required": ["hint", "solution"], "properties": {"hint": {"type": "string", "minLength": 10}, "solution": {"type": "string", "minLength": 10}, "misconception_ids": {"type": "array", "items": {"type": "string"}}, "lesson_ids": {"type": "array", "items": {"type": "string"}}}},
+    "visibility": {"enum": ["public-practice-authoring", "restricted-server-assessment"]},
+    "randomization": {"type": "object", "additionalProperties": false, "required": ["seeded", "parameters"], "properties": {"seeded": {"const": true}, "parameters": {"type": "object", "minProperties": 1}, "generator_id": {"type": "string", "minLength": 3}}},
+    "provenance": {"type": "object", "properties": {"kind": {"enum": ["legacy-prototype", "original", "licensed-adaptation"]}, "legacy_id": {"type": "string"}, "modifications": {"type": "array", "items": {"type": "string"}}}}
+  },
+  "allOf": [
+    {"if": {"properties": {"type": {"const": "single_choice"}}}, "then": {"required": ["options"], "properties": {"solution_spec": {"required": ["answer"], "properties": {"answer": {"type": "integer", "minimum": 0}}}}}},
+    {"if": {"properties": {"type": {"const": "multiple_select"}}}, "then": {"required": ["options"], "properties": {"solution_spec": {"required": ["answer", "partial_credit"], "properties": {"answer": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "integer", "minimum": 0}}, "partial_credit": {"type": "string", "minLength": 3}}}}}},
+    {"if": {"properties": {"type": {"const": "numeric"}}}, "then": {"properties": {"solution_spec": {"required": ["answer", "unit", "tolerance"], "properties": {"answer": {"type": "number"}, "unit": {"type": "string"}, "tolerance": {"type": "number", "minimum": 0}, "relative_tolerance": {"type": "number", "minimum": 0, "maximum": 1}, "significant_figures": {"type": ["integer", "null"], "minimum": 1}, "dimensions": {"type": ["object", "null"]}, "unit_required": {"type": "boolean"}}}}}},
+    {"if": {"properties": {"type": {"const": "symbolic"}}}, "then": {"properties": {"solution_spec": {"required": ["expression", "variables", "assumptions"], "properties": {"expression": {"type": "string", "minLength": 1}, "variables": {"type": "array", "minItems": 1, "items": {"type": "string"}}, "assumptions": {"type": "object"}}}}}},
+    {"if": {"properties": {"type": {"enum": ["structured", "graph", "table", "data_interpretation", "design"]}}}, "then": {"properties": {"solution_spec": {"required": ["rubric"], "properties": {"rubric": {"type": "array", "minItems": 1, "items": {"type": "object", "required": ["id", "criterion", "points", "evidence"], "properties": {"id": {"type": "string"}, "criterion": {"type": "string", "minLength": 10}, "points": {"type": "number", "exclusiveMinimum": 0}, "evidence": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 3}}}}}, "provisional": {"type": "boolean"}}}}}},
+    {"if": {"properties": {"type": {"const": "python"}}}, "then": {"properties": {"solution_spec": {"required": ["runner_profile", "test_suite_ref", "timeout_seconds", "memory_mb", "cpu_limit", "allowed_dependencies"], "properties": {"runner_profile": {"type": "string", "minLength": 3}, "test_suite_ref": {"type": "string", "minLength": 3}, "timeout_seconds": {"type": "integer", "minimum": 1, "maximum": 60}, "memory_mb": {"type": "integer", "minimum": 16, "maximum": 1024}, "cpu_limit": {"type": "number", "exclusiveMinimum": 0, "maximum": 2}, "allowed_dependencies": {"type": "array", "uniqueItems": true, "items": {"type": "string"}}}}}}},
+    {"if": {"properties": {"type": {"const": "file_upload"}}}, "then": {"properties": {"solution_spec": {"required": ["accepted_media_types", "max_bytes", "validation_spec", "rubric"], "properties": {"accepted_media_types": {"type": "array", "minItems": 1, "items": {"type": "string"}}, "max_bytes": {"type": "integer", "minimum": 1, "maximum": 10485760}, "validation_spec": {"type": "object", "minProperties": 1}, "rubric": {"type": "array", "minItems": 1, "items": {"type": "object"}}}}}}}
+  ]
+}

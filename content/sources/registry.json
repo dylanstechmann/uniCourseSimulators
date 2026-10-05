@@ -1,0 +1,821 @@
+{
+  "schema_version": "1.0",
+  "sources": [
+    {
+      "id": "biology",
+      "title": "MIT OCW 7.01SC — Fundamentals of Biology",
+      "institution": "Massachusetts Institute of Technology / MIT OpenCourseWare",
+      "url": "https://ocw.mit.edu/courses/7-01sc-fundamentals-of-biology-fall-2011/",
+      "accessed_at": "2026-10-05",
+      "license": "CC-BY-NC-SA-4.0",
+      "reuse_mode": "link-only-comparator",
+      "permissions": {
+        "linking": true,
+        "quotation": false,
+        "adaptation": false,
+        "redistribution": false
+      },
+      "attribution_requirements": [
+        "For a comparator link, display the course title, institution, and source URL without implying endorsement.",
+        "Any future approved adaptation must identify the original faculty author(s), course title and term, exact asset URL, CC BY-NC-SA 4.0 link, and modifications. Preserve every required asset-specific credit."
+      ],
+      "third_party_notes": "Asset-level rights have not been cleared. Some OCW assets are excluded from the Creative Commons license or carry additional credits; inspect each proposed asset before reuse. External MITx-linked resources have their own terms. No source asset, assessment, figure, or instructional prose is imported by this record.",
+      "mapped_courses": [
+        "cell-biology",
+        "genetics",
+        "physiology",
+        "biochemistry",
+        "statistics",
+        "geroscience"
+      ],
+      "mapped_modules": [],
+      "version": "fall 2011; landing page accessed 2026-10-05",
+      "checksum": null,
+      "imported_assets": [],
+      "rights_notes": "Permission flags record this repository's selected link-only use, not the complete legal permissions of all source material. Applicable unexcluded OCW content may permit reuse under CC BY-NC-SA 4.0 after asset review; excluded material does not inherit that license. Comparator mapping does not establish equivalent scope, credit, endorsement, or review."
+    },
+    {
+      "id": "molecular",
+      "title": "MIT OCW 7.28x — Molecular Biology",
+      "institution": "Massachusetts Institute of Technology / MIT OpenCourseWare",
+      "url": "https://ocw.mit.edu/courses/res-7-008-7-28x-molecular-biology/",
+      "accessed_at": "2026-10-05",
+      "license": "CC-BY-NC-SA-4.0",
+      "reuse_mode": "link-only-comparator",
+      "permissions": {
+        "linking": true,
+        "quotation": false,
+        "adaptation": false,
+        "redistribution": false
+      },
+      "attribution_requirements": [
+        "For a comparator link, display the course title, institution, and source URL without implying endorsement.",
+        "Any future approved adaptation must identify the original faculty author(s), course title and term, exact asset URL, CC BY-NC-SA 4.0 link, and modifications. Preserve every required asset-specific credit."
+      ],
+      "third_party_notes": "Asset-level rights have not been cleared. Some OCW assets are excluded from the Creative Commons license or carry additional credits; inspect each proposed asset before reuse. External MITx-linked resources have their own terms. No source asset, assessment, figure, or instructional prose is imported by this record.",
+      "mapped_courses": [
+        "cell-biology",
+        "genetics",
+        "geroscience"
+      ],
+      "mapped_modules": [],
+      "version": "Spring 2023; landing page accessed 2026-10-05",
+      "checksum": null,
+      "imported_assets": [],
+      "rights_notes": "Permission flags record this repository's selected link-only use, not the complete legal permissions of all source material. Applicable unexcluded OCW content may permit reuse under CC BY-NC-SA 4.0 after asset review; excluded material does not inherit that license. Comparator mapping does not establish equivalent scope, credit, endorsement, or review."
+    },
+    {
+      "id": "chemistry",
+      "title": "MIT OCW 5.111SC — Principles of Chemical Science",
+      "institution": "Massachusetts Institute of Technology / MIT OpenCourseWare",
+      "url": "https://ocw.mit.edu/courses/5-111sc-principles-of-chemical-science-fall-2014/",
+      "accessed_at": "2026-10-05",
+      "license": "CC-BY-NC-SA-4.0",
+      "reuse_mode": "link-only-comparator",
+      "permissions": {
+        "linking": true,
+        "quotation": false,
+        "adaptation": false,
+        "redistribution": false
+      },
+      "attribution_requirements": [
+        "For a comparator link, display the course title, institution, and source URL without implying endorsement.",
+        "Any future approved adaptation must identify the original faculty author(s), course title and term, exact asset URL, CC BY-NC-SA 4.0 link, and modifications. Preserve every required asset-specific credit."
+      ],
+      "third_party_notes": "Asset-level rights have not been cleared. Some OCW assets are excluded from the Creative Commons license or carry additional credits; inspect each proposed asset before reuse. External MITx-linked resources have their own terms. No source asset, assessment, figure, or instructional prose is imported by this record.",
+      "mapped_courses": [
+        "general-chemistry-1",
+        "general-chemistry-2",
+        "organic-chemistry"
+      ],
+      "mapped_modules": [],
+      "version": "fall 2014; landing page accessed 2026-10-05",
+      "checksum": null,
+      "imported_assets": [],
+      "rights_notes": "Permission flags record this repository's selected link-only use, not the complete legal permissions of all source material. Applicable unexcluded OCW content may permit reuse under CC BY-NC-SA 4.0 after asset review; excluded material does not inherit that license. Comparator mapping does not establish equivalent scope, credit, endorsement, or review."
+    },
+    {
+      "id": "organic",
+      "title": "MIT OCW 5.12 — Organic Chemistry I",
+      "institution": "Massachusetts Institute of Technology / MIT OpenCourseWare",
+      "url": "https://ocw.mit.edu/courses/5-12-organic-chemistry-i-spring-2003/",
+      "accessed_at": "2026-10-05",
+      "license": "CC-BY-NC-SA-4.0",
+      "reuse_mode": "link-only-comparator",
+      "permissions": {
+        "linking": true,
+        "quotation": false,
+        "adaptation": false,
+        "redistribution": false
+      },
+      "attribution_requirements": [
+        "For a comparator link, display the course title, institution, and source URL without implying endorsement.",
+        "Any future approved adaptation must identify the original faculty author(s), course title and term, exact asset URL, CC BY-NC-SA 4.0 link, and modifications. Preserve every required asset-specific credit."
+      ],
+      "third_party_notes": "Asset-level rights have not been cleared. Some OCW assets are excluded from the Creative Commons license or carry additional credits; inspect each proposed asset before reuse. External MITx-linked resources have their own terms. No source asset, assessment, figure, or instructional prose is imported by this record.",
+      "mapped_courses": [
+        "organic-chemistry"
+      ],
+      "mapped_modules": [],
+      "version": "spring 2003; landing page accessed 2026-10-05",
+      "checksum": null,
+      "imported_assets": [],
+      "rights_notes": "Permission flags record this repository's selected link-only use, not the complete legal permissions of all source material. Applicable unexcluded OCW content may permit reuse under CC BY-NC-SA 4.0 after asset review; excluded material does not inherit that license. Comparator mapping does not establish equivalent scope, credit, endorsement, or review."
+    },
+    {
+      "id": "biochemistry",
+      "title": "MIT OCW 5.07SC — Biological Chemistry I",
+      "institution": "Massachusetts Institute of Technology / MIT OpenCourseWare",
+      "url": "https://ocw.mit.edu/courses/5-07sc-biological-chemistry-i-fall-2013/",
+      "accessed_at": "2026-10-05",
+      "license": "CC-BY-NC-SA-4.0",
+      "reuse_mode": "link-only-comparator",
+      "permissions": {
+        "linking": true,
+        "quotation": false,
+        "adaptation": false,
+        "redistribution": false
+      },
+      "attribution_requirements": [
+        "For a comparator link, display the course title, institution, and source URL without implying endorsement.",
+        "Any future approved adaptation must identify the original faculty author(s), course title and term, exact asset URL, CC BY-NC-SA 4.0 link, and modifications. Preserve every required asset-specific credit."
+      ],
+      "third_party_notes": "Asset-level rights have not been cleared. Some OCW assets are excluded from the Creative Commons license or carry additional credits; inspect each proposed asset before reuse. External MITx-linked resources have their own terms. No source asset, assessment, figure, or instructional prose is imported by this record.",
+      "mapped_courses": [
+        "general-chemistry-2",
+        "biochemistry",
+        "geroscience"
+      ],
+      "mapped_modules": [],
+      "version": "fall 2013; landing page accessed 2026-10-05",
+      "checksum": null,
+      "imported_assets": [],
+      "rights_notes": "Permission flags record this repository's selected link-only use, not the complete legal permissions of all source material. Applicable unexcluded OCW content may permit reuse under CC BY-NC-SA 4.0 after asset review; excluded material does not inherit that license. Comparator mapping does not establish equivalent scope, credit, endorsement, or review."
+    },
+    {
+      "id": "calculus",
+      "title": "MIT OCW 18.01SC — Single Variable Calculus",
+      "institution": "Massachusetts Institute of Technology / MIT OpenCourseWare",
+      "url": "https://ocw.mit.edu/courses/18-01sc-single-variable-calculus-fall-2010/",
+      "accessed_at": "2026-10-05",
+      "license": "CC-BY-NC-SA-4.0",
+      "reuse_mode": "link-only-comparator",
+      "permissions": {
+        "linking": true,
+        "quotation": false,
+        "adaptation": false,
+        "redistribution": false
+      },
+      "attribution_requirements": [
+        "For a comparator link, display the course title, institution, and source URL without implying endorsement.",
+        "Any future approved adaptation must identify the original faculty author(s), course title and term, exact asset URL, CC BY-NC-SA 4.0 link, and modifications. Preserve every required asset-specific credit."
+      ],
+      "third_party_notes": "Asset-level rights have not been cleared. Some OCW assets are excluded from the Creative Commons license or carry additional credits; inspect each proposed asset before reuse. External MITx-linked resources have their own terms. No source asset, assessment, figure, or instructional prose is imported by this record.",
+      "mapped_courses": [
+        "calculus-1",
+        "calculus-2"
+      ],
+      "mapped_modules": [],
+      "version": "fall 2010; landing page accessed 2026-10-05",
+      "checksum": null,
+      "imported_assets": [],
+      "rights_notes": "Permission flags record this repository's selected link-only use, not the complete legal permissions of all source material. Applicable unexcluded OCW content may permit reuse under CC BY-NC-SA 4.0 after asset review; excluded material does not inherit that license. Comparator mapping does not establish equivalent scope, credit, endorsement, or review."
+    },
+    {
+      "id": "multivariable",
+      "title": "MIT OCW 18.02SC — Multivariable Calculus",
+      "institution": "Massachusetts Institute of Technology / MIT OpenCourseWare",
+      "url": "https://ocw.mit.edu/courses/18-02sc-multivariable-calculus-fall-2010/",
+      "accessed_at": "2026-10-05",
+      "license": "CC-BY-NC-SA-4.0",
+      "reuse_mode": "link-only-comparator",
+      "permissions": {
+        "linking": true,
+        "quotation": false,
+        "adaptation": false,
+        "redistribution": false
+      },
+      "attribution_requirements": [
+        "For a comparator link, display the course title, institution, and source URL without implying endorsement.",
+        "Any future approved adaptation must identify the original faculty author(s), course title and term, exact asset URL, CC BY-NC-SA 4.0 link, and modifications. Preserve every required asset-specific credit."
+      ],
+      "third_party_notes": "Asset-level rights have not been cleared. Some OCW assets are excluded from the Creative Commons license or carry additional credits; inspect each proposed asset before reuse. External MITx-linked resources have their own terms. No source asset, assessment, figure, or instructional prose is imported by this record.",
+      "mapped_courses": [
+        "calculus-3"
+      ],
+      "mapped_modules": [],
+      "version": "fall 2010; landing page accessed 2026-10-05",
+      "checksum": null,
+      "imported_assets": [],
+      "rights_notes": "Permission flags record this repository's selected link-only use, not the complete legal permissions of all source material. Applicable unexcluded OCW content may permit reuse under CC BY-NC-SA 4.0 after asset review; excluded material does not inherit that license. Comparator mapping does not establish equivalent scope, credit, endorsement, or review."
+    },
+    {
+      "id": "diffeqs",
+      "title": "MIT OCW 18.03SC — Differential Equations",
+      "institution": "Massachusetts Institute of Technology / MIT OpenCourseWare",
+      "url": "https://ocw.mit.edu/courses/18-03sc-differential-equations-fall-2011/",
+      "accessed_at": "2026-10-05",
+      "license": "CC-BY-NC-SA-4.0",
+      "reuse_mode": "link-only-comparator",
+      "permissions": {
+        "linking": true,
+        "quotation": false,
+        "adaptation": false,
+        "redistribution": false
+      },
+      "attribution_requirements": [
+        "For a comparator link, display the course title, institution, and source URL without implying endorsement.",
+        "Any future approved adaptation must identify the original faculty author(s), course title and term, exact asset URL, CC BY-NC-SA 4.0 link, and modifications. Preserve every required asset-specific credit."
+      ],
+      "third_party_notes": "Asset-level rights have not been cleared. Some OCW assets are excluded from the Creative Commons license or carry additional credits; inspect each proposed asset before reuse. External MITx-linked resources have their own terms. No source asset, assessment, figure, or instructional prose is imported by this record.",
+      "mapped_courses": [
+        "differential-equations"
+      ],
+      "mapped_modules": [],
+      "version": "fall 2011; landing page accessed 2026-10-05",
+      "checksum": null,
+      "imported_assets": [],
+      "rights_notes": "Permission flags record this repository's selected link-only use, not the complete legal permissions of all source material. Applicable unexcluded OCW content may permit reuse under CC BY-NC-SA 4.0 after asset review; excluded material does not inherit that license. Comparator mapping does not establish equivalent scope, credit, endorsement, or review."
+    },
+    {
+      "id": "engineeringMath",
+      "title": "MIT OCW 2.087 — Engineering Math: Differential Equations and Linear Algebra",
+      "institution": "Massachusetts Institute of Technology / MIT OpenCourseWare",
+      "url": "https://ocw.mit.edu/courses/2-087-engineering-math-differential-equations-and-linear-algebra-fall-2014/",
+      "accessed_at": "2026-10-05",
+      "license": "CC-BY-NC-SA-4.0",
+      "reuse_mode": "link-only-comparator",
+      "permissions": {
+        "linking": true,
+        "quotation": false,
+        "adaptation": false,
+        "redistribution": false
+      },
+      "attribution_requirements": [
+        "For a comparator link, display the course title, institution, and source URL without implying endorsement.",
+        "Any future approved adaptation must identify the original faculty author(s), course title and term, exact asset URL, CC BY-NC-SA 4.0 link, and modifications. Preserve every required asset-specific credit."
+      ],
+      "third_party_notes": "Asset-level rights have not been cleared. Some OCW assets are excluded from the Creative Commons license or carry additional credits; inspect each proposed asset before reuse. External MITx-linked resources have their own terms. No source asset, assessment, figure, or instructional prose is imported by this record.",
+      "mapped_courses": [
+        "calculus-1",
+        "linear-algebra",
+        "differential-equations",
+        "physics-mechanics",
+        "programming",
+        "transport"
+      ],
+      "mapped_modules": [],
+      "version": "fall 2014; landing page accessed 2026-10-05",
+      "checksum": null,
+      "imported_assets": [],
+      "rights_notes": "Permission flags record this repository's selected link-only use, not the complete legal permissions of all source material. Applicable unexcluded OCW content may permit reuse under CC BY-NC-SA 4.0 after asset review; excluded material does not inherit that license. Comparator mapping does not establish equivalent scope, credit, endorsement, or review."
+    },
+    {
+      "id": "linearAlgebra",
+      "title": "MIT OCW 18.06SC — Linear Algebra",
+      "institution": "Massachusetts Institute of Technology / MIT OpenCourseWare",
+      "url": "https://ocw.mit.edu/courses/18-06sc-linear-algebra-fall-2011/",
+      "accessed_at": "2026-10-05",
+      "license": "CC-BY-NC-SA-4.0",
+      "reuse_mode": "link-only-comparator",
+      "permissions": {
+        "linking": true,
+        "quotation": false,
+        "adaptation": false,
+        "redistribution": false
+      },
+      "attribution_requirements": [
+        "For a comparator link, display the course title, institution, and source URL without implying endorsement.",
+        "Any future approved adaptation must identify the original faculty author(s), course title and term, exact asset URL, CC BY-NC-SA 4.0 link, and modifications. Preserve every required asset-specific credit."
+      ],
+      "third_party_notes": "Asset-level rights have not been cleared. Some OCW assets are excluded from the Creative Commons license or carry additional credits; inspect each proposed asset before reuse. External MITx-linked resources have their own terms. No source asset, assessment, figure, or instructional prose is imported by this record.",
+      "mapped_courses": [
+        "linear-algebra"
+      ],
+      "mapped_modules": [],
+      "version": "fall 2011; landing page accessed 2026-10-05",
+      "checksum": null,
+      "imported_assets": [],
+      "rights_notes": "Permission flags record this repository's selected link-only use, not the complete legal permissions of all source material. Applicable unexcluded OCW content may permit reuse under CC BY-NC-SA 4.0 after asset review; excluded material does not inherit that license. Comparator mapping does not establish equivalent scope, credit, endorsement, or review."
+    },
+    {
+      "id": "numerical",
+      "title": "MIT OCW 2.086 — Numerical Computation for Mechanical Engineers",
+      "institution": "Massachusetts Institute of Technology / MIT OpenCourseWare",
+      "url": "https://ocw.mit.edu/courses/2-086-numerical-computation-for-mechanical-engineers-fall-2012/",
+      "accessed_at": "2026-10-05",
+      "license": "CC-BY-NC-SA-4.0",
+      "reuse_mode": "link-only-comparator",
+      "permissions": {
+        "linking": true,
+        "quotation": false,
+        "adaptation": false,
+        "redistribution": false
+      },
+      "attribution_requirements": [
+        "For a comparator link, display the course title, institution, and source URL without implying endorsement.",
+        "Any future approved adaptation must identify the original faculty author(s), course title and term, exact asset URL, CC BY-NC-SA 4.0 link, and modifications. Preserve every required asset-specific credit."
+      ],
+      "third_party_notes": "Asset-level rights have not been cleared. Some OCW assets are excluded from the Creative Commons license or carry additional credits; inspect each proposed asset before reuse. External MITx-linked resources have their own terms. No source asset, assessment, figure, or instructional prose is imported by this record.",
+      "mapped_courses": [
+        "differential-equations",
+        "programming",
+        "robotics"
+      ],
+      "mapped_modules": [],
+      "version": "fall 2012; landing page accessed 2026-10-05",
+      "checksum": null,
+      "imported_assets": [],
+      "rights_notes": "Permission flags record this repository's selected link-only use, not the complete legal permissions of all source material. Applicable unexcluded OCW content may permit reuse under CC BY-NC-SA 4.0 after asset review; excluded material does not inherit that license. Comparator mapping does not establish equivalent scope, credit, endorsement, or review."
+    },
+    {
+      "id": "mechanics",
+      "title": "MIT OCW 8.01SC — Classical Mechanics",
+      "institution": "Massachusetts Institute of Technology / MIT OpenCourseWare",
+      "url": "https://ocw.mit.edu/courses/8-01sc-classical-mechanics-fall-2016/",
+      "accessed_at": "2026-10-05",
+      "license": "CC-BY-NC-SA-4.0",
+      "reuse_mode": "link-only-comparator",
+      "permissions": {
+        "linking": true,
+        "quotation": false,
+        "adaptation": false,
+        "redistribution": false
+      },
+      "attribution_requirements": [
+        "For a comparator link, display the course title, institution, and source URL without implying endorsement.",
+        "Any future approved adaptation must identify the original faculty author(s), course title and term, exact asset URL, CC BY-NC-SA 4.0 link, and modifications. Preserve every required asset-specific credit."
+      ],
+      "third_party_notes": "Asset-level rights have not been cleared. Some OCW assets are excluded from the Creative Commons license or carry additional credits; inspect each proposed asset before reuse. External MITx-linked resources have their own terms. No source asset, assessment, figure, or instructional prose is imported by this record.",
+      "mapped_courses": [
+        "physics-mechanics",
+        "statics-materials"
+      ],
+      "mapped_modules": [],
+      "version": "fall 2016; landing page accessed 2026-10-05",
+      "checksum": null,
+      "imported_assets": [],
+      "rights_notes": "Permission flags record this repository's selected link-only use, not the complete legal permissions of all source material. Applicable unexcluded OCW content may permit reuse under CC BY-NC-SA 4.0 after asset review; excluded material does not inherit that license. Comparator mapping does not establish equivalent scope, credit, endorsement, or review."
+    },
+    {
+      "id": "circuits",
+      "title": "MIT OCW 6.002 — Circuits and Electronics",
+      "institution": "Massachusetts Institute of Technology / MIT OpenCourseWare",
+      "url": "https://ocw.mit.edu/courses/6-002-circuits-and-electronics-spring-2007/",
+      "accessed_at": "2026-10-05",
+      "license": "CC-BY-NC-SA-4.0",
+      "reuse_mode": "link-only-comparator",
+      "permissions": {
+        "linking": true,
+        "quotation": false,
+        "adaptation": false,
+        "redistribution": false
+      },
+      "attribution_requirements": [
+        "For a comparator link, display the course title, institution, and source URL without implying endorsement.",
+        "Any future approved adaptation must identify the original faculty author(s), course title and term, exact asset URL, CC BY-NC-SA 4.0 link, and modifications. Preserve every required asset-specific credit."
+      ],
+      "third_party_notes": "Asset-level rights have not been cleared. Some OCW assets are excluded from the Creative Commons license or carry additional credits; inspect each proposed asset before reuse. External MITx-linked resources have their own terms. No source asset, assessment, figure, or instructional prose is imported by this record.",
+      "mapped_courses": [
+        "physics-em",
+        "circuits"
+      ],
+      "mapped_modules": [],
+      "version": "spring 2007; landing page accessed 2026-10-05",
+      "checksum": null,
+      "imported_assets": [],
+      "rights_notes": "Permission flags record this repository's selected link-only use, not the complete legal permissions of all source material. Applicable unexcluded OCW content may permit reuse under CC BY-NC-SA 4.0 after asset review; excluded material does not inherit that license. Comparator mapping does not establish equivalent scope, credit, endorsement, or review."
+    },
+    {
+      "id": "signals",
+      "title": "MIT OCW 6.003 — Signals and Systems",
+      "institution": "Massachusetts Institute of Technology / MIT OpenCourseWare",
+      "url": "https://ocw.mit.edu/courses/6-003-signals-and-systems-fall-2011/",
+      "accessed_at": "2026-10-05",
+      "license": "CC-BY-NC-SA-4.0",
+      "reuse_mode": "link-only-comparator",
+      "permissions": {
+        "linking": true,
+        "quotation": false,
+        "adaptation": false,
+        "redistribution": false
+      },
+      "attribution_requirements": [
+        "For a comparator link, display the course title, institution, and source URL without implying endorsement.",
+        "Any future approved adaptation must identify the original faculty author(s), course title and term, exact asset URL, CC BY-NC-SA 4.0 link, and modifications. Preserve every required asset-specific credit."
+      ],
+      "third_party_notes": "Asset-level rights have not been cleared. Some OCW assets are excluded from the Creative Commons license or carry additional credits; inspect each proposed asset before reuse. External MITx-linked resources have their own terms. No source asset, assessment, figure, or instructional prose is imported by this record.",
+      "mapped_courses": [
+        "circuits",
+        "signals-control",
+        "robotics"
+      ],
+      "mapped_modules": [],
+      "version": "fall 2011; landing page accessed 2026-10-05",
+      "checksum": null,
+      "imported_assets": [],
+      "rights_notes": "Permission flags record this repository's selected link-only use, not the complete legal permissions of all source material. Applicable unexcluded OCW content may permit reuse under CC BY-NC-SA 4.0 after asset review; excluded material does not inherit that license. Comparator mapping does not establish equivalent scope, credit, endorsement, or review."
+    },
+    {
+      "id": "control",
+      "title": "MIT OCW 2.004 — Systems, Modeling, and Control II",
+      "institution": "Massachusetts Institute of Technology / MIT OpenCourseWare",
+      "url": "https://ocw.mit.edu/courses/2-004-systems-modeling-and-control-ii-fall-2007/",
+      "accessed_at": "2026-10-05",
+      "license": "CC-BY-NC-SA-4.0",
+      "reuse_mode": "link-only-comparator",
+      "permissions": {
+        "linking": true,
+        "quotation": false,
+        "adaptation": false,
+        "redistribution": false
+      },
+      "attribution_requirements": [
+        "For a comparator link, display the course title, institution, and source URL without implying endorsement.",
+        "Any future approved adaptation must identify the original faculty author(s), course title and term, exact asset URL, CC BY-NC-SA 4.0 link, and modifications. Preserve every required asset-specific credit."
+      ],
+      "third_party_notes": "Asset-level rights have not been cleared. Some OCW assets are excluded from the Creative Commons license or carry additional credits; inspect each proposed asset before reuse. External MITx-linked resources have their own terms. No source asset, assessment, figure, or instructional prose is imported by this record.",
+      "mapped_courses": [
+        "signals-control"
+      ],
+      "mapped_modules": [],
+      "version": "fall 2007; landing page accessed 2026-10-05",
+      "checksum": null,
+      "imported_assets": [],
+      "rights_notes": "Permission flags record this repository's selected link-only use, not the complete legal permissions of all source material. Applicable unexcluded OCW content may permit reuse under CC BY-NC-SA 4.0 after asset review; excluded material does not inherit that license. Comparator mapping does not establish equivalent scope, credit, endorsement, or review."
+    },
+    {
+      "id": "statistics",
+      "title": "MIT OCW 18.05 — Introduction to Probability and Statistics",
+      "institution": "Massachusetts Institute of Technology / MIT OpenCourseWare",
+      "url": "https://ocw.mit.edu/courses/18-05-introduction-to-probability-and-statistics-spring-2022/",
+      "accessed_at": "2026-10-05",
+      "license": "CC-BY-NC-SA-4.0",
+      "reuse_mode": "link-only-comparator",
+      "permissions": {
+        "linking": true,
+        "quotation": false,
+        "adaptation": false,
+        "redistribution": false
+      },
+      "attribution_requirements": [
+        "For a comparator link, display the course title, institution, and source URL without implying endorsement.",
+        "Any future approved adaptation must identify the original faculty author(s), course title and term, exact asset URL, CC BY-NC-SA 4.0 link, and modifications. Preserve every required asset-specific credit."
+      ],
+      "third_party_notes": "Asset-level rights have not been cleared. Some OCW assets are excluded from the Creative Commons license or carry additional credits; inspect each proposed asset before reuse. External MITx-linked resources have their own terms. No source asset, assessment, figure, or instructional prose is imported by this record.",
+      "mapped_courses": [
+        "statistics"
+      ],
+      "mapped_modules": [],
+      "version": "spring 2022; landing page accessed 2026-10-05",
+      "checksum": null,
+      "imported_assets": [],
+      "rights_notes": "Permission flags record this repository's selected link-only use, not the complete legal permissions of all source material. Applicable unexcluded OCW content may permit reuse under CC BY-NC-SA 4.0 after asset review; excluded material does not inherit that license. Comparator mapping does not establish equivalent scope, credit, endorsement, or review."
+    },
+    {
+      "id": "physicsEM",
+      "title": "MIT OCW 8.02 — Physics II: Electricity and Magnetism",
+      "institution": "Massachusetts Institute of Technology / MIT OpenCourseWare",
+      "url": "https://ocw.mit.edu/courses/8-02-physics-ii-electricity-and-magnetism-spring-2007/",
+      "accessed_at": "2026-10-05",
+      "license": "CC-BY-NC-SA-4.0",
+      "reuse_mode": "link-only-comparator",
+      "permissions": {
+        "linking": true,
+        "quotation": false,
+        "adaptation": false,
+        "redistribution": false
+      },
+      "attribution_requirements": [
+        "For a comparator link, display the course title, institution, and source URL without implying endorsement.",
+        "Any future approved adaptation must identify the original faculty author(s), course title and term, exact asset URL, CC BY-NC-SA 4.0 link, and modifications. Preserve every required asset-specific credit."
+      ],
+      "third_party_notes": "Asset-level rights have not been cleared. Some OCW assets are excluded from the Creative Commons license or carry additional credits; inspect each proposed asset before reuse. External MITx-linked resources have their own terms. No source asset, assessment, figure, or instructional prose is imported by this record.",
+      "mapped_courses": [
+        "physics-em"
+      ],
+      "mapped_modules": [],
+      "version": "spring 2007; landing page accessed 2026-10-05",
+      "checksum": null,
+      "imported_assets": [],
+      "rights_notes": "Permission flags record this repository's selected link-only use, not the complete legal permissions of all source material. Applicable unexcluded OCW content may permit reuse under CC BY-NC-SA 4.0 after asset review; excluded material does not inherit that license. Comparator mapping does not establish equivalent scope, credit, endorsement, or review."
+    },
+    {
+      "id": "solidMechanics",
+      "title": "MIT OCW 2.001 — Mechanics & Materials I",
+      "institution": "Massachusetts Institute of Technology / MIT OpenCourseWare",
+      "url": "https://ocw.mit.edu/courses/2-001-mechanics-materials-i-fall-2006/",
+      "accessed_at": "2026-10-05",
+      "license": "CC-BY-NC-SA-4.0",
+      "reuse_mode": "link-only-comparator",
+      "permissions": {
+        "linking": true,
+        "quotation": false,
+        "adaptation": false,
+        "redistribution": false
+      },
+      "attribution_requirements": [
+        "For a comparator link, display the course title, institution, and source URL without implying endorsement.",
+        "Any future approved adaptation must identify the original faculty author(s), course title and term, exact asset URL, CC BY-NC-SA 4.0 link, and modifications. Preserve every required asset-specific credit."
+      ],
+      "third_party_notes": "Asset-level rights have not been cleared. Some OCW assets are excluded from the Creative Commons license or carry additional credits; inspect each proposed asset before reuse. External MITx-linked resources have their own terms. No source asset, assessment, figure, or instructional prose is imported by this record.",
+      "mapped_courses": [
+        "statics-materials"
+      ],
+      "mapped_modules": [],
+      "version": "fall 2006; landing page accessed 2026-10-05",
+      "checksum": null,
+      "imported_assets": [],
+      "rights_notes": "Permission flags record this repository's selected link-only use, not the complete legal permissions of all source material. Applicable unexcluded OCW content may permit reuse under CC BY-NC-SA 4.0 after asset review; excluded material does not inherit that license. Comparator mapping does not establish equivalent scope, credit, endorsement, or review."
+    },
+    {
+      "id": "robotics",
+      "title": "MIT OCW 2.12 — Introduction to Robotics",
+      "institution": "Massachusetts Institute of Technology / MIT OpenCourseWare",
+      "url": "https://ocw.mit.edu/courses/2-12-introduction-to-robotics-fall-2005/",
+      "accessed_at": "2026-10-05",
+      "license": "CC-BY-NC-SA-4.0",
+      "reuse_mode": "link-only-comparator",
+      "permissions": {
+        "linking": true,
+        "quotation": false,
+        "adaptation": false,
+        "redistribution": false
+      },
+      "attribution_requirements": [
+        "For a comparator link, display the course title, institution, and source URL without implying endorsement.",
+        "Any future approved adaptation must identify the original faculty author(s), course title and term, exact asset URL, CC BY-NC-SA 4.0 link, and modifications. Preserve every required asset-specific credit."
+      ],
+      "third_party_notes": "Asset-level rights have not been cleared. Some OCW assets are excluded from the Creative Commons license or carry additional credits; inspect each proposed asset before reuse. External MITx-linked resources have their own terms. No source asset, assessment, figure, or instructional prose is imported by this record.",
+      "mapped_courses": [
+        "robotics"
+      ],
+      "mapped_modules": [],
+      "version": "fall 2005; landing page accessed 2026-10-05",
+      "checksum": null,
+      "imported_assets": [],
+      "rights_notes": "Permission flags record this repository's selected link-only use, not the complete legal permissions of all source material. Applicable unexcluded OCW content may permit reuse under CC BY-NC-SA 4.0 after asset review; excluded material does not inherit that license. Comparator mapping does not establish equivalent scope, credit, endorsement, or review."
+    },
+    {
+      "id": "transport",
+      "title": "MIT OCW 20.330J — Fields, Forces and Flows in Biological Systems",
+      "institution": "Massachusetts Institute of Technology / MIT OpenCourseWare",
+      "url": "https://ocw.mit.edu/courses/20-330j-fields-forces-and-flows-in-biological-systems-spring-2007/",
+      "accessed_at": "2026-10-05",
+      "license": "CC-BY-NC-SA-4.0",
+      "reuse_mode": "link-only-comparator",
+      "permissions": {
+        "linking": true,
+        "quotation": false,
+        "adaptation": false,
+        "redistribution": false
+      },
+      "attribution_requirements": [
+        "For a comparator link, display the course title, institution, and source URL without implying endorsement.",
+        "Any future approved adaptation must identify the original faculty author(s), course title and term, exact asset URL, CC BY-NC-SA 4.0 link, and modifications. Preserve every required asset-specific credit."
+      ],
+      "third_party_notes": "Asset-level rights have not been cleared. Some OCW assets are excluded from the Creative Commons license or carry additional credits; inspect each proposed asset before reuse. External MITx-linked resources have their own terms. No source asset, assessment, figure, or instructional prose is imported by this record.",
+      "mapped_courses": [
+        "physiology",
+        "calculus-3",
+        "transport",
+        "cellular-biomechanics",
+        "bioreactors"
+      ],
+      "mapped_modules": [],
+      "version": "spring 2007; landing page accessed 2026-10-05",
+      "checksum": null,
+      "imported_assets": [],
+      "rights_notes": "Permission flags record this repository's selected link-only use, not the complete legal permissions of all source material. Applicable unexcluded OCW content may permit reuse under CC BY-NC-SA 4.0 after asset review; excluded material does not inherit that license. Comparator mapping does not establish equivalent scope, credit, endorsement, or review."
+    },
+    {
+      "id": "biomaterials",
+      "title": "MIT OCW 20.441J — Biomaterials-Tissue Interactions",
+      "institution": "Massachusetts Institute of Technology / MIT OpenCourseWare",
+      "url": "https://ocw.mit.edu/courses/20-441j-biomaterials-tissue-interactions-fall-2009/",
+      "accessed_at": "2026-10-05",
+      "license": "CC-BY-NC-SA-4.0",
+      "reuse_mode": "link-only-comparator",
+      "permissions": {
+        "linking": true,
+        "quotation": false,
+        "adaptation": false,
+        "redistribution": false
+      },
+      "attribution_requirements": [
+        "For a comparator link, display the course title, institution, and source URL without implying endorsement.",
+        "Any future approved adaptation must identify the original faculty author(s), course title and term, exact asset URL, CC BY-NC-SA 4.0 link, and modifications. Preserve every required asset-specific credit."
+      ],
+      "third_party_notes": "Asset-level rights have not been cleared. Some OCW assets are excluded from the Creative Commons license or carry additional credits; inspect each proposed asset before reuse. External MITx-linked resources have their own terms. No source asset, assessment, figure, or instructional prose is imported by this record.",
+      "mapped_courses": [
+        "cellular-biomechanics",
+        "biomaterials"
+      ],
+      "mapped_modules": [],
+      "version": "fall 2009; landing page accessed 2026-10-05",
+      "checksum": null,
+      "imported_assets": [],
+      "rights_notes": "Permission flags record this repository's selected link-only use, not the complete legal permissions of all source material. Applicable unexcluded OCW content may permit reuse under CC BY-NC-SA 4.0 after asset review; excluded material does not inherit that license. Comparator mapping does not establish equivalent scope, credit, endorsement, or review."
+    },
+    {
+      "id": "tissueEngineering",
+      "title": "MIT OCW HST.535 — Principles and Practice of Tissue Engineering",
+      "institution": "Massachusetts Institute of Technology / MIT OpenCourseWare",
+      "url": "https://ocw.mit.edu/courses/hst-535-principles-and-practice-of-tissue-engineering-fall-2004/",
+      "accessed_at": "2026-10-05",
+      "license": "CC-BY-NC-SA-4.0",
+      "reuse_mode": "link-only-comparator",
+      "permissions": {
+        "linking": true,
+        "quotation": false,
+        "adaptation": false,
+        "redistribution": false
+      },
+      "attribution_requirements": [
+        "For a comparator link, display the course title, institution, and source URL without implying endorsement.",
+        "Any future approved adaptation must identify the original faculty author(s), course title and term, exact asset URL, CC BY-NC-SA 4.0 link, and modifications. Preserve every required asset-specific credit."
+      ],
+      "third_party_notes": "Asset-level rights have not been cleared. Some OCW assets are excluded from the Creative Commons license or carry additional credits; inspect each proposed asset before reuse. External MITx-linked resources have their own terms. No source asset, assessment, figure, or instructional prose is imported by this record.",
+      "mapped_courses": [
+        "biomaterials",
+        "bioreactors"
+      ],
+      "mapped_modules": [],
+      "version": "fall 2004; landing page accessed 2026-10-05",
+      "checksum": null,
+      "imported_assets": [],
+      "rights_notes": "Permission flags record this repository's selected link-only use, not the complete legal permissions of all source material. Applicable unexcluded OCW content may permit reuse under CC BY-NC-SA 4.0 after asset review; excluded material does not inherit that license. Comparator mapping does not establish equivalent scope, credit, endorsement, or review."
+    },
+    {
+      "id": "jhu-rsct-catalog-2026-27",
+      "title": "Regenerative and Stem Cell Technologies, Master of Science — Academic Catalogue",
+      "institution": "Johns Hopkins University",
+      "url": "https://e-catalogue.jhu.edu/arts-sciences/advanced-academic-programs/programs/center-biotechnology-education/regenerative-stem-cell-technologies/",
+      "accessed_at": "2026-10-05",
+      "license": "All rights reserved; no open reuse license established",
+      "reuse_mode": "link-only-comparator",
+      "permissions": {
+        "linking": true,
+        "quotation": false,
+        "adaptation": false,
+        "redistribution": false
+      },
+      "attribution_requirements": [
+        "Identify Johns Hopkins University, the source page title, URL, and access date when documenting the curriculum comparator.",
+        "Write original explanations and assessments. Do not imply affiliation, endorsement, admission eligibility, transferable credit, or prerequisite equivalency."
+      ],
+      "third_party_notes": "The user-supplied URL ending in regenerative-stem-cell-technologies-master-science/ was inaccessible. This is the verified current canonical catalogue page. Public topic and prerequisite facts inform an original knowledge map; no catalogue prose is copied.",
+      "mapped_courses": [
+        "organic-chemistry",
+        "biochemistry",
+        "cell-biology",
+        "genetics",
+        "biomaterials",
+        "bioreactors",
+        "geroscience"
+      ],
+      "mapped_modules": [],
+      "version": "2026-27 edition",
+      "checksum": null,
+      "imported_assets": [],
+      "rights_notes": "Selected project use is linking and factual curriculum alignment only. No affirmative permission to reproduce source prose or assets was established. The public page footer reserves copyright."
+    },
+    {
+      "id": "jhu-rsct-degree-courses",
+      "title": "Regenerative and Stem Cell Technologies Degree Details and Courses",
+      "institution": "Johns Hopkins University",
+      "url": "https://advanced.jhu.edu/academics/graduate/ms-regenerative-stem-cell-technologies/degree-details-and-courses/",
+      "accessed_at": "2026-10-05",
+      "license": "All rights reserved; no open reuse license established",
+      "reuse_mode": "link-only-comparator",
+      "permissions": {
+        "linking": true,
+        "quotation": false,
+        "adaptation": false,
+        "redistribution": false
+      },
+      "attribution_requirements": [
+        "Identify Johns Hopkins University, the source page title, URL, and access date when documenting the curriculum comparator.",
+        "Write original explanations and assessments. Do not imply affiliation, endorsement, admission eligibility, transferable credit, or prerequisite equivalency."
+      ],
+      "third_party_notes": "Public advanced subject areas and subject dependencies inform an original knowledge map. Institutional course descriptions, images, laboratory materials, and assessments are not imported.",
+      "mapped_courses": [
+        "cell-biology",
+        "genetics",
+        "biomaterials",
+        "bioreactors",
+        "geroscience"
+      ],
+      "mapped_modules": [],
+      "version": "Web page accessed 2026-10-05; revision date not stated",
+      "checksum": null,
+      "imported_assets": [],
+      "rights_notes": "Selected project use is linking and factual curriculum alignment only. No affirmative permission to reproduce source prose or assets was established. The public page footer reserves copyright."
+    },
+    {
+      "id": "jhu-rsct-admissions",
+      "title": "Regenerative and Stem Cell Technologies Admission and Application Requirements",
+      "institution": "Johns Hopkins University",
+      "url": "https://advanced.jhu.edu/academics/graduate/ms-regenerative-stem-cell-technologies/admission-application-requirements/",
+      "accessed_at": "2026-10-05",
+      "license": "All rights reserved; no open reuse license established",
+      "reuse_mode": "link-only-comparator",
+      "permissions": {
+        "linking": true,
+        "quotation": false,
+        "adaptation": false,
+        "redistribution": false
+      },
+      "attribution_requirements": [
+        "Identify Johns Hopkins University, the source page title, URL, and access date when documenting the curriculum comparator.",
+        "Write original explanations and assessments. Do not imply affiliation, endorsement, admission eligibility, transferable credit, or prerequisite equivalency."
+      ],
+      "third_party_notes": "The four public prerequisite subject areas are recorded as knowledge-map references. CourseLab completion is not evidence of admissions eligibility or institutional prerequisite equivalency.",
+      "mapped_courses": [
+        "organic-chemistry",
+        "biochemistry",
+        "cell-biology"
+      ],
+      "mapped_modules": [],
+      "version": "Web page accessed 2026-10-05; revision date not stated",
+      "checksum": null,
+      "imported_assets": [],
+      "rights_notes": "Selected project use is linking and factual curriculum alignment only. No affirmative permission to reproduce source prose or assets was established. The public page footer reserves copyright."
+    },
+    {
+      "id": "mit-ocw-terms-2026-08-11",
+      "title": "MIT OpenCourseWare Privacy and Terms of Use",
+      "institution": "Massachusetts Institute of Technology / MIT OpenCourseWare",
+      "url": "https://ocw.mit.edu/pages/privacy-and-terms-of-use/",
+      "accessed_at": "2026-10-05",
+      "license": "CC-BY-NC-SA-4.0",
+      "reuse_mode": "link-only-comparator",
+      "permissions": {
+        "linking": true,
+        "quotation": false,
+        "adaptation": false,
+        "redistribution": false
+      },
+      "attribution_requirements": [
+        "Identify the official policy title, MIT OpenCourseWare, URL, access date, and stated revision when documenting reuse decisions."
+      ],
+      "third_party_notes": "Current terms specify CC BY-NC-SA 4.0 for applicable OCW material, with attribution, modifications, noncommercial use, ShareAlike, and no implied endorsement. MIT name/logo restrictions and current AI-training provisions require separate attention. This entry records policy; it imports no content.",
+      "mapped_courses": [],
+      "mapped_modules": [],
+      "version": "Displayed update date 08/11/2026",
+      "checksum": null,
+      "imported_assets": [],
+      "rights_notes": "The policy is linked, not republished. Its general OCW license statement does not clear rights for individual assets. Permission flags describe selected project use."
+    },
+    {
+      "id": "mit-ocw-attribution",
+      "title": "How do I properly cite my reuse of OCW content?",
+      "institution": "Massachusetts Institute of Technology / MIT OpenCourseWare",
+      "url": "https://mitocw.zendesk.com/hc/en-us/articles/4414774195355-How-do-I-properly-cite-my-reuse-of-OCW-content",
+      "accessed_at": "2026-10-05",
+      "license": "CC-BY-NC-SA-4.0",
+      "reuse_mode": "link-only-comparator",
+      "permissions": {
+        "linking": true,
+        "quotation": false,
+        "adaptation": false,
+        "redistribution": false
+      },
+      "attribution_requirements": [
+        "Identify the official policy title, MIT OpenCourseWare, URL, access date, and stated revision when documenting reuse decisions."
+      ],
+      "third_party_notes": "Official guidance requires original faculty author(s), course title, term, institution/OCW reference, license, and a license copy or link accompanying reused material. This entry is a policy link.",
+      "mapped_courses": [],
+      "mapped_modules": [],
+      "version": "Updated 2022-03-31",
+      "checksum": null,
+      "imported_assets": [],
+      "rights_notes": "The policy is linked, not republished. Its general OCW license statement does not clear rights for individual assets. Permission flags describe selected project use."
+    },
+    {
+      "id": "mit-ocw-third-party-exclusions",
+      "title": "How is all rights reserved content different from the rest of OCW content?",
+      "institution": "Massachusetts Institute of Technology / MIT OpenCourseWare",
+      "url": "https://mitocw.zendesk.com/hc/en-us/articles/4414756181403-How-is-all-rights-reserved-content-different-from-the-rest-of-OCW-content",
+      "accessed_at": "2026-10-05",
+      "license": "CC-BY-NC-SA-4.0",
+      "reuse_mode": "link-only-comparator",
+      "permissions": {
+        "linking": true,
+        "quotation": false,
+        "adaptation": false,
+        "redistribution": false
+      },
+      "attribution_requirements": [
+        "Identify the official policy title, MIT OpenCourseWare, URL, access date, and stated revision when documenting reuse decisions."
+      ],
+      "third_party_notes": "All-rights-reserved content is excluded from OCW's Creative Commons license. Permitted third-party assets can require special credit. Project policy prohibits importing excluded assets; it does not rely on source publishers' fair-use determinations.",
+      "mapped_courses": [],
+      "mapped_modules": [],
+      "version": "Updated 2025-06-23",
+      "checksum": null,
+      "imported_assets": [],
+      "rights_notes": "The policy is linked, not republished. Its general OCW license statement does not clear rights for individual assets. Permission flags describe selected project use."
+    }
+  ]
+}

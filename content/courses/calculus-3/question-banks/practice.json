@@ -1,0 +1,132 @@
+{
+  "schema_version": "1.0",
+  "course_id": "calculus-3",
+  "license": "MIT OR CC-BY-4.0",
+  "questions": [
+    {
+      "id": "calculus-3-1:check",
+      "type": "numeric",
+      "prompt": "For f(x,y)=x²+3y², what is ∂f/∂y at (1,−1)?",
+      "points": 1,
+      "objective_ids": [
+        "calculus-3-1-objective-1"
+      ],
+      "solution_spec": {
+        "answer": -6,
+        "unit": "",
+        "tolerance": 0.09,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Differentiate with respect to y while holding x constant: 6y.",
+        "solution": "∂f/∂y=6y; at y=−1 this equals −6.",
+        "lesson_ids": [
+          "calculus-3-1"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "legacy-prototype",
+        "legacy_id": "calculus-3-1:check",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-3-2:check",
+      "type": "numeric",
+      "prompt": "What is the maximum of f=x+y subject to x²+y²=1? Enter a decimal.",
+      "points": 1,
+      "objective_ids": [
+        "calculus-3-2-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 1.4142,
+        "unit": "",
+        "tolerance": 0.01,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "The gradient of x+y points along (1,1); normalize that vector to the unit circle.",
+        "solution": "At x=y=1/√2, f=√2≈1.4142.",
+        "lesson_ids": [
+          "calculus-3-2"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "legacy-prototype",
+        "legacy_id": "calculus-3-2:check",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-3-3:check",
+      "type": "numeric",
+      "prompt": "Evaluate ∫₀²π∫₀¹ r dr dθ, the area of the unit disk.",
+      "points": 1,
+      "objective_ids": [
+        "calculus-3-3-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 3.1416,
+        "unit": "",
+        "tolerance": 0.01,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Integrate r from 0 to 1, then the resulting constant from 0 to 2π.",
+        "solution": "The integral is 2π×(1/2)=π≈3.1416.",
+        "lesson_ids": [
+          "calculus-3-3"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "legacy-prototype",
+        "legacy_id": "calculus-3-3:check",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-3-4:check",
+      "type": "single_choice",
+      "prompt": "Which theorem relates outward flux across a closed surface to the volume integral of divergence?",
+      "options": [
+        "Fundamental theorem of calculus",
+        "Divergence theorem",
+        "Chain rule",
+        "Mean value theorem"
+      ],
+      "points": 1,
+      "objective_ids": [
+        "calculus-3-4-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 1
+      },
+      "feedback": {
+        "hint": "This theorem connects a closed boundary to the volume it encloses.",
+        "solution": "The divergence theorem states that outward flux through a closed surface equals the volume integral of divergence over its interior.",
+        "lesson_ids": [
+          "calculus-3-4"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "legacy-prototype",
+        "legacy_id": "calculus-3-4:check",
+        "modifications": []
+      }
+    }
+  ]
+}

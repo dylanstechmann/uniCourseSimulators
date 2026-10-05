@@ -1,0 +1,133 @@
+{
+  "schema_version": "1.0",
+  "course_id": "biochemistry",
+  "license": "MIT OR CC-BY-4.0",
+  "questions": [
+    {
+      "id": "biochemistry-1:check",
+      "type": "numeric",
+      "prompt": "A protein has Kd = 4 μM. In a simple 1:1 model, what fraction of sites is occupied at free ligand concentration 12 μM? Enter a fraction from 0 to 1.",
+      "points": 1,
+      "objective_ids": [
+        "biochemistry-1-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0.75,
+        "unit": "fraction",
+        "tolerance": 0.01125,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use θ = [L]/(Kd + [L]).",
+        "solution": "θ = 12/(4 + 12) = 0.75, or 75% occupancy under the simple equilibrium model.",
+        "lesson_ids": [
+          "biochemistry-1"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "legacy-prototype",
+        "legacy_id": "biochemistry-1:check",
+        "modifications": []
+      }
+    },
+    {
+      "id": "biochemistry-2:check",
+      "type": "single_choice",
+      "prompt": "In a simple competitive-inhibition model, what happens as inhibitor concentration increases?",
+      "options": [
+        "Apparent Km increases; Vmax is unchanged",
+        "Km decreases; Vmax increases",
+        "Both Km and Vmax decrease by the same factor",
+        "The enzyme's equilibrium constant changes"
+      ],
+      "points": 1,
+      "objective_ids": [
+        "biochemistry-2-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0
+      },
+      "feedback": {
+        "hint": "The inhibitor competes with substrate for binding but can be outcompeted at high substrate.",
+        "solution": "Competitive inhibition raises apparent Km while leaving Vmax unchanged in the ideal model, because saturating substrate can outcompete inhibitor.",
+        "lesson_ids": [
+          "biochemistry-2"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "legacy-prototype",
+        "legacy_id": "biochemistry-2:check",
+        "modifications": []
+      }
+    },
+    {
+      "id": "biochemistry-3:check",
+      "type": "numeric",
+      "prompt": "A glycolytic pathway processes 5 mol glucose. How many mol of net ATP are formed directly in glycolysis?",
+      "points": 1,
+      "objective_ids": [
+        "biochemistry-3-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 10,
+        "unit": "mol ATP",
+        "tolerance": 0.15,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Glycolysis nets 2 ATP per glucose molecule.",
+        "solution": "5 mol glucose × 2 mol ATP/mol glucose = 10 mol ATP; this excludes downstream oxidative phosphorylation.",
+        "lesson_ids": [
+          "biochemistry-3"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "legacy-prototype",
+        "legacy_id": "biochemistry-3:check",
+        "modifications": []
+      }
+    },
+    {
+      "id": "biochemistry-4:check",
+      "type": "single_choice",
+      "prompt": "A metabolite concentration is unchanged after a perturbation. What can be concluded about pathway flux?",
+      "options": [
+        "Flux is unchanged",
+        "Flux is zero",
+        "The steady pool size alone does not determine flux",
+        "All upstream and downstream enzymes are unchanged"
+      ],
+      "points": 1,
+      "objective_ids": [
+        "biochemistry-4-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 2
+      },
+      "feedback": {
+        "hint": "A pool is a state; fluxes are rates in and out that can change together.",
+        "solution": "A constant concentration only shows that net accumulation is near zero at that time. Production and consumption can both increase or decrease while the pool stays constant.",
+        "lesson_ids": [
+          "biochemistry-4"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "legacy-prototype",
+        "legacy_id": "biochemistry-4:check",
+        "modifications": []
+      }
+    }
+  ]
+}

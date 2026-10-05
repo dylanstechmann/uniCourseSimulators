@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0",
+  "course_id": "circuits",
+  "cards": [
+    {
+      "id": "circuits-0-0",
+      "lesson_id": "circuits-1",
+      "front": "Thevenin equivalent",
+      "back": "A two-terminal model consisting of a voltage source in series with an equivalent resistance.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "circuits-0-1",
+      "lesson_id": "circuits-1",
+      "front": "Nodal analysis",
+      "back": "A method that solves unknown node voltages using current conservation at each node.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "circuits-1-0",
+      "lesson_id": "circuits-2",
+      "front": "Common-mode rejection ratio",
+      "back": "The ratio of differential gain to common-mode gain, often reported in decibels.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "circuits-1-1",
+      "lesson_id": "circuits-2",
+      "front": "Input-referred noise",
+      "back": "Output noise referred back to the input by dividing by the relevant gain.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "circuits-2-0",
+      "lesson_id": "circuits-3",
+      "front": "Cutoff frequency",
+      "back": "The characteristic frequency of a filter, defined by a specified response criterion such as −3 dB.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "circuits-2-1",
+      "lesson_id": "circuits-3",
+      "front": "Aliasing",
+      "back": "Frequency ambiguity caused by sampling that makes out-of-band components appear at lower frequencies.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "circuits-3-0",
+      "lesson_id": "circuits-4",
+      "front": "Calibration",
+      "back": "Estimation of a measurement system's relationship to known reference values.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "circuits-3-1",
+      "lesson_id": "circuits-4",
+      "front": "Cross-sensitivity",
+      "back": "A sensor response to a variable other than the intended measurand.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    }
+  ]
+}

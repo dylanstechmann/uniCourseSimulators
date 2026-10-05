@@ -1,0 +1,132 @@
+{
+  "schema_version": "1.0",
+  "course_id": "differential-equations",
+  "license": "MIT OR CC-BY-4.0",
+  "questions": [
+    {
+      "id": "differential-equations-1:check",
+      "type": "numeric",
+      "prompt": "For ẋ = −0.25x with x(0)=8, what is x(4)? Give a value to two decimals.",
+      "points": 1,
+      "objective_ids": [
+        "differential-equations-1-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 2.94,
+        "unit": "",
+        "tolerance": 0.0441,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use x(t)=x₀e^(−kt).",
+        "solution": "x(4)=8e^(−0.25×4)=8e^(−1)≈2.94.",
+        "lesson_ids": [
+          "differential-equations-1"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "legacy-prototype",
+        "legacy_id": "differential-equations-1:check",
+        "modifications": []
+      }
+    },
+    {
+      "id": "differential-equations-2:check",
+      "type": "numeric",
+      "prompt": "For m=2 kg and k=50 N/m, compute the undamped natural frequency ωn in rad/s.",
+      "points": 1,
+      "objective_ids": [
+        "differential-equations-2-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 5,
+        "unit": "rad/s",
+        "tolerance": 0.075,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use ωn=√(k/m).",
+        "solution": "ωn=√(50/2)=√25=5 rad/s.",
+        "lesson_ids": [
+          "differential-equations-2"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "legacy-prototype",
+        "legacy_id": "differential-equations-2:check",
+        "modifications": []
+      }
+    },
+    {
+      "id": "differential-equations-3:check",
+      "type": "single_choice",
+      "prompt": "A two-state continuous system has Jacobian eigenvalues −2 and +0.1 at an equilibrium. What can be concluded locally?",
+      "options": [
+        "The equilibrium is asymptotically stable",
+        "The equilibrium is unstable",
+        "The system is periodic",
+        "The equilibrium is globally stable"
+      ],
+      "points": 1,
+      "objective_ids": [
+        "differential-equations-3-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 1
+      },
+      "feedback": {
+        "hint": "One growing linearized mode is enough to make the equilibrium unstable.",
+        "solution": "The positive eigenvalue creates a locally growing perturbation, so the equilibrium is unstable. This does not by itself specify the global trajectory.",
+        "lesson_ids": [
+          "differential-equations-3"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "legacy-prototype",
+        "legacy_id": "differential-equations-3:check",
+        "modifications": []
+      }
+    },
+    {
+      "id": "differential-equations-4:check",
+      "type": "numeric",
+      "prompt": "For ẋ=2, x₀=3, apply one forward-Euler step with h=0.25. What is x₁?",
+      "points": 1,
+      "objective_ids": [
+        "differential-equations-4-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 3.5,
+        "unit": "",
+        "tolerance": 0.0525,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Compute x₁=x₀+h f(x₀).",
+        "solution": "x₁=3+0.25×2=3.5.",
+        "lesson_ids": [
+          "differential-equations-4"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "legacy-prototype",
+        "legacy_id": "differential-equations-4:check",
+        "modifications": []
+      }
+    }
+  ]
+}

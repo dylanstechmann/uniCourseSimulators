@@ -1,3 +1,7 @@
+> Historical prototype scope map. These are partial seeds, not university-equivalent courses. Current source/license policy is in content/SOURCES_AND_LICENSES.md and the broader catalog remains milestone 4.
+
+> Historical prototype scope map. These are partial seeds, not university-equivalent courses. Current source/license policy is in content/SOURCES_AND_LICENSES.md and the broader catalog remains milestone 4.
+
 # Curriculum alignment and quality guide
 
 **Review basis:** official MIT OpenCourseWare syllabi and course-resource pages accessed October 5, 2026. Links point to source course pages; Lattice does not reproduce their lecture text, problem statements, or solution keys.
@@ -48,4 +52,3 @@ Quality checks used when authoring the release:
 The catalog intentionally spans all requested prerequisite areas, but its four units per course are a compact launch core. Before calling any course a full semester replacement, expand it with a week-by-week syllabus, multiple problem-set items per objective, lab/data exercises, cumulative exams, and feedback from subject-matter instructors. The advanced geroscience, physiology, and tissue-culture sequences need especially careful specialist review because direct OCW comparators are broader or adjacent rather than one-to-one matches.
 
 The MIT OCW courses above commonly include multiple lectures, problem sets, exams, and/or projects. Lattice provides immediate feedback for its own practice items and points learners to the source courses for further depth; its local score is formative and is not an MIT score, institutional grade, or credit award.
-

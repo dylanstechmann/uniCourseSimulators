@@ -1,0 +1,35 @@
+{
+  "schema_version": "1.0",
+  "course_id": "linear-algebra",
+  "cases": [
+    {
+      "id": "linear-algebra:case",
+      "prompt": "Two sensors estimate the same tissue displacement but their design matrix has nearly collinear columns. Explain why a tiny residual can coexist with unreliable parameter estimates, and propose one diagnostic or redesign.",
+      "mode": "self-assessment",
+      "objective_ids": [],
+      "rubric": [
+        {
+          "id": "linear-algebra-case-criterion-1",
+          "criterion": "Identifies ill-conditioning/collinearity",
+          "points": 0,
+          "levels": []
+        },
+        {
+          "id": "linear-algebra-case-criterion-2",
+          "criterion": "Connects it to large parameter changes under small noise",
+          "points": 0,
+          "levels": []
+        },
+        {
+          "id": "linear-algebra-case-criterion-3",
+          "criterion": "Suggests condition number, uncertainty analysis, or a more informative sensor geometry",
+          "points": 0,
+          "levels": []
+        }
+      ],
+      "limitations": [
+        "This preserved three-criterion checklist is self-assessment, not an analytic grading rubric or an institutional grade."
+      ]
+    }
+  ]
+}

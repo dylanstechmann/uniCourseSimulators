@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0",
+  "course_id": "physics-em",
+  "cards": [
+    {
+      "id": "physics-em-0-0",
+      "lesson_id": "physics-em-1",
+      "front": "Electric potential",
+      "back": "Electric potential energy per unit charge at a point.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "physics-em-0-1",
+      "lesson_id": "physics-em-1",
+      "front": "Capacitance",
+      "back": "Charge stored per voltage difference, C=Q/V in a linear capacitor.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "physics-em-1-0",
+      "lesson_id": "physics-em-2",
+      "front": "Kirchhoff's current law",
+      "back": "At a circuit node, total current entering equals total current leaving.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "physics-em-1-1",
+      "lesson_id": "physics-em-2",
+      "front": "Time constant τ",
+      "back": "For a first-order RC circuit, the product RC that sets the exponential response timescale.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "physics-em-2-0",
+      "lesson_id": "physics-em-3",
+      "front": "Magnetic flux",
+      "back": "The surface integral of magnetic field through an oriented area.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "physics-em-2-1",
+      "lesson_id": "physics-em-3",
+      "front": "Lenz's law",
+      "back": "The induced current direction opposes the change in magnetic flux that produced it.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "physics-em-3-0",
+      "lesson_id": "physics-em-4",
+      "front": "Input impedance",
+      "back": "The effective impedance seen by a source at an instrument input; finite values can load the source.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "physics-em-3-1",
+      "lesson_id": "physics-em-4",
+      "front": "Common-mode rejection",
+      "back": "An amplifier's ability to suppress voltage shared by both inputs while amplifying their difference.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    }
+  ]
+}

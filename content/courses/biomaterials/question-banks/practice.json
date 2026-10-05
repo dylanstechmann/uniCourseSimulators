@@ -1,0 +1,136 @@
+{
+  "schema_version": "1.0",
+  "course_id": "biomaterials",
+  "license": "MIT OR CC-BY-4.0",
+  "questions": [
+    {
+      "id": "biomaterials-1:check",
+      "type": "single_choice",
+      "prompt": "Why can equal amounts of adsorbed protein produce different cell responses on two materials?",
+      "options": [
+        "Adsorbed proteins can differ in conformation, orientation, or accessible binding sites",
+        "Cells only sense bulk density",
+        "Protein amount fixes protein activity",
+        "Surface chemistry cannot affect cells"
+      ],
+      "points": 1,
+      "objective_ids": [
+        "biomaterials-1-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0
+      },
+      "feedback": {
+        "hint": "Quantity is not the same as biological presentation.",
+        "solution": "Surface chemistry can alter protein conformation, orientation, and epitope accessibility even when total adsorbed mass is similar.",
+        "lesson_ids": [
+          "biomaterials-1"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "legacy-prototype",
+        "legacy_id": "biomaterials-1:check",
+        "modifications": []
+      }
+    },
+    {
+      "id": "biomaterials-2:check",
+      "type": "numeric",
+      "prompt": "A scaffold loses 15% of its remaining mass each week under a simplified first-order model. If initial mass is 100 mg and the same fraction is lost each week, what mass remains after one week?",
+      "points": 1,
+      "objective_ids": [
+        "biomaterials-2-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 85,
+        "unit": "mg",
+        "tolerance": 1.275,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Multiply the initial mass by the fraction retained, 1−0.15.",
+        "solution": "100 mg×0.85=85 mg. Repeated weekly fractional loss would compound as 100×0.85ⁿ.",
+        "lesson_ids": [
+          "biomaterials-2"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "legacy-prototype",
+        "legacy_id": "biomaterials-2:check",
+        "modifications": [
+          "Replaced 'initial mass' with 'remaining mass' to make constant fractional loss agree with the stated first-order model."
+        ]
+      }
+    },
+    {
+      "id": "biomaterials-3:check",
+      "type": "single_choice",
+      "prompt": "Which evidence most directly supports functional cartilage regeneration?",
+      "options": [
+        "A single chondrogenic transcript is elevated",
+        "The construct bears relevant load, forms appropriate matrix, and integrates with host tissue",
+        "The scaffold has a blue dye",
+        "More cells were seeded initially"
+      ],
+      "points": 1,
+      "objective_ids": [
+        "biomaterials-3-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 1
+      },
+      "feedback": {
+        "hint": "Look for a functional outcome aligned with the target tissue.",
+        "solution": "Functionally relevant mechanical performance, tissue composition, and integration collectively support regeneration more strongly than one marker alone.",
+        "lesson_ids": [
+          "biomaterials-3"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "legacy-prototype",
+        "legacy_id": "biomaterials-3:check",
+        "modifications": []
+      }
+    },
+    {
+      "id": "biomaterials-4:check",
+      "type": "single_choice",
+      "prompt": "What is the best definition of biocompatibility?",
+      "options": [
+        "No immune cell ever contacts the material",
+        "Appropriate material performance with a host response suited to the application",
+        "The material never degrades",
+        "The same response in every tissue"
+      ],
+      "points": 1,
+      "objective_ids": [
+        "biomaterials-4-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 1
+      },
+      "feedback": {
+        "hint": "Biological response is judged in the context of a specific use.",
+        "solution": "Biocompatibility is application-specific: a material must perform with an appropriate host response for its intended purpose.",
+        "lesson_ids": [
+          "biomaterials-4"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "legacy-prototype",
+        "legacy_id": "biomaterials-4:check",
+        "modifications": []
+      }
+    }
+  ]
+}

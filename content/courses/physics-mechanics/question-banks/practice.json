@@ -1,0 +1,131 @@
+{
+  "schema_version": "1.0",
+  "course_id": "physics-mechanics",
+  "license": "MIT OR CC-BY-4.0",
+  "questions": [
+    {
+      "id": "physics-mechanics-1:check",
+      "type": "numeric",
+      "prompt": "A 3 kg cart experiences a net horizontal force of 12 N. What is its acceleration in m/s²?",
+      "points": 1,
+      "objective_ids": [
+        "physics-mechanics-1-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 4,
+        "unit": "m/s²",
+        "tolerance": 0.06,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use ΣF=ma.",
+        "solution": "a=12/3=4 m/s².",
+        "lesson_ids": [
+          "physics-mechanics-1"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "legacy-prototype",
+        "legacy_id": "physics-mechanics-1:check",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physics-mechanics-2:check",
+      "type": "numeric",
+      "prompt": "A 2 kg object moving at 3 m/s has what kinetic energy in joules?",
+      "points": 1,
+      "objective_ids": [
+        "physics-mechanics-2-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 9,
+        "unit": "J",
+        "tolerance": 0.135,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use K=½mv².",
+        "solution": "K=½×2×3²=9 J.",
+        "lesson_ids": [
+          "physics-mechanics-2"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "legacy-prototype",
+        "legacy_id": "physics-mechanics-2:check",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physics-mechanics-3:check",
+      "type": "numeric",
+      "prompt": "A 0.10 kg cart moving at 5 m/s sticks to a stationary 0.40 kg cart. What is their shared speed in m/s?",
+      "points": 1,
+      "objective_ids": [
+        "physics-mechanics-3-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 1,
+        "unit": "m/s",
+        "tolerance": 0.015,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Conserve momentum: m₁v₁+m₂v₂=(m₁+m₂)v_f.",
+        "solution": "v_f=(0.10×5)/(0.10+0.40)=1 m/s.",
+        "lesson_ids": [
+          "physics-mechanics-3"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "legacy-prototype",
+        "legacy_id": "physics-mechanics-3:check",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physics-mechanics-4:check",
+      "type": "numeric",
+      "prompt": "A 30 N force acts perpendicular to a hinge at a 0.20 m moment arm. What is the torque magnitude in N·m?",
+      "points": 1,
+      "objective_ids": [
+        "physics-mechanics-4-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 6,
+        "unit": "N·m",
+        "tolerance": 0.09,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Torque magnitude is rF sin θ; here θ=90°.",
+        "solution": "τ=0.20×30=6 N·m.",
+        "lesson_ids": [
+          "physics-mechanics-4"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "legacy-prototype",
+        "legacy_id": "physics-mechanics-4:check",
+        "modifications": []
+      }
+    }
+  ]
+}

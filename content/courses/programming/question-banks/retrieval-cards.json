@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0",
+  "course_id": "programming",
+  "cards": [
+    {
+      "id": "programming-0-0",
+      "lesson_id": "programming-1",
+      "front": "Pure function",
+      "back": "A function whose output depends only on its explicit inputs and that has no hidden side effects.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "programming-0-1",
+      "lesson_id": "programming-1",
+      "front": "Data provenance",
+      "back": "The documented origin, transformations, and history of a data object.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "programming-1-0",
+      "lesson_id": "programming-2",
+      "front": "Step size",
+      "back": "The time or spatial increment used by a numerical discretization.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "programming-1-1",
+      "lesson_id": "programming-2",
+      "front": "Convergence check",
+      "back": "A comparison across refined numerical settings to assess whether the computed solution approaches a stable value.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "programming-2-0",
+      "lesson_id": "programming-3",
+      "front": "Data leakage",
+      "back": "Information from validation or test data unintentionally influencing model fitting or feature selection.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "programming-2-1",
+      "lesson_id": "programming-3",
+      "front": "Cross-validation",
+      "back": "Repeated partitioning of data into fit and held-out subsets to estimate predictive performance.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "programming-3-0",
+      "lesson_id": "programming-4",
+      "front": "Heteroskedasticity",
+      "back": "Nonconstant variance of model residuals across fitted values or predictors.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "programming-3-1",
+      "lesson_id": "programming-4",
+      "front": "Paired design",
+      "back": "A design where each unit contributes multiple linked measurements, enabling within-unit comparisons.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    }
+  ]
+}

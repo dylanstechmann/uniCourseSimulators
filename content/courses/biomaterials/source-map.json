@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.0",
+  "course_id": "biomaterials",
+  "license": "MIT OR CC-BY-4.0",
+  "modules": [
+    {
+      "module_id": "biomaterials-module-1",
+      "lesson_id": "biomaterials-1",
+      "reading": "modules/01-material-properties-at-the-biological-interface.md",
+      "source_ids": [
+        "biomaterials",
+        "tissueEngineering"
+      ],
+      "relationship": "curriculum-comparator",
+      "original_content": true,
+      "license": "MIT OR CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "biomaterials-module-2",
+      "lesson_id": "biomaterials-2",
+      "reading": "modules/02-scaffold-architecture-degradation-and-mechanics.md",
+      "source_ids": [
+        "biomaterials",
+        "tissueEngineering"
+      ],
+      "relationship": "curriculum-comparator",
+      "original_content": true,
+      "license": "MIT OR CC-BY-4.0",
+      "modifications": [
+        "Replaced 'initial mass' with 'remaining mass' to make constant fractional loss agree with the stated first-order model."
+      ]
+    },
+    {
+      "module_id": "biomaterials-module-3",
+      "lesson_id": "biomaterials-3",
+      "reading": "modules/03-cells-signals-and-tissue-specific-strategies.md",
+      "source_ids": [
+        "biomaterials",
+        "tissueEngineering"
+      ],
+      "relationship": "curriculum-comparator",
+      "original_content": true,
+      "license": "MIT OR CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "biomaterials-module-4",
+      "lesson_id": "biomaterials-4",
+      "reading": "modules/04-translation-biocompatibility-and-failure-analysis.md",
+      "source_ids": [
+        "biomaterials",
+        "tissueEngineering"
+      ],
+      "relationship": "curriculum-comparator",
+      "original_content": true,
+      "license": "MIT OR CC-BY-4.0",
+      "modifications": []
+    }
+  ]
+}

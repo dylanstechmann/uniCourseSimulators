@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0",
+  "course_id": "calculus-3",
+  "cards": [
+    {
+      "id": "calculus-3-0-0",
+      "lesson_id": "calculus-3-1",
+      "front": "Gradient",
+      "back": "Vector of first partial derivatives; it points toward steepest local increase for a differentiable scalar field.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "calculus-3-0-1",
+      "lesson_id": "calculus-3-1",
+      "front": "Directional derivative",
+      "back": "The local rate of change of a scalar field along a specified unit direction.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "calculus-3-1-0",
+      "lesson_id": "calculus-3-2",
+      "front": "Lagrange multiplier",
+      "back": "A scalar relating objective and constraint gradients at a regular constrained optimum.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "calculus-3-1-1",
+      "lesson_id": "calculus-3-2",
+      "front": "Hessian",
+      "back": "Matrix of second partial derivatives used to assess local curvature.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "calculus-3-2-0",
+      "lesson_id": "calculus-3-3",
+      "front": "Jacobian determinant",
+      "back": "The local area or volume scaling factor introduced by a coordinate transformation.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "calculus-3-2-1",
+      "lesson_id": "calculus-3-3",
+      "front": "Volume density",
+      "back": "A quantity per unit volume that is integrated over a region to obtain a total.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "calculus-3-3-0",
+      "lesson_id": "calculus-3-4",
+      "front": "Divergence",
+      "back": "A scalar measure of local source or sink strength of a vector field.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "calculus-3-3-1",
+      "lesson_id": "calculus-3-4",
+      "front": "Flux integral",
+      "back": "A surface integral of the field component normal to an oriented boundary.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    }
+  ]
+}

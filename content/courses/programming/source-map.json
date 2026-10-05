@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.0",
+  "course_id": "programming",
+  "license": "MIT OR CC-BY-4.0",
+  "modules": [
+    {
+      "module_id": "programming-module-1",
+      "lesson_id": "programming-1",
+      "reading": "modules/01-data-structures-units-and-reproducible-code.md",
+      "source_ids": [
+        "numerical",
+        "engineeringMath"
+      ],
+      "relationship": "curriculum-comparator",
+      "original_content": true,
+      "license": "MIT OR CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "programming-module-2",
+      "lesson_id": "programming-2",
+      "reading": "modules/02-numerical-integration-and-differential-models.md",
+      "source_ids": [
+        "numerical",
+        "engineeringMath"
+      ],
+      "relationship": "curriculum-comparator",
+      "original_content": true,
+      "license": "MIT OR CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "programming-module-3",
+      "lesson_id": "programming-3",
+      "reading": "modules/03-regression-uncertainty-and-validation.md",
+      "source_ids": [
+        "numerical",
+        "engineeringMath"
+      ],
+      "relationship": "curriculum-comparator",
+      "original_content": true,
+      "license": "MIT OR CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "programming-module-4",
+      "lesson_id": "programming-4",
+      "reading": "modules/04-visualization-and-uncertainty-communication.md",
+      "source_ids": [
+        "numerical",
+        "engineeringMath"
+      ],
+      "relationship": "curriculum-comparator",
+      "original_content": true,
+      "license": "MIT OR CC-BY-4.0",
+      "modifications": []
+    }
+  ]
+}

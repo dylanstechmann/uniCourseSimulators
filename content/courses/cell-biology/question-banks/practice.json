@@ -1,0 +1,134 @@
+{
+  "schema_version": "1.0",
+  "course_id": "cell-biology",
+  "license": "MIT OR CC-BY-4.0",
+  "questions": [
+    {
+      "id": "cell-biology-1:check",
+      "type": "single_choice",
+      "prompt": "Which change most directly makes a soluble protein surface less favorable in water?",
+      "options": [
+        "Replacing exposed polar residues with nonpolar residues",
+        "Adding ionizable side chains at neutral pH",
+        "Increasing the number of backbone hydrogen bonds",
+        "Reducing the protein's molecular mass without changing sequence"
+      ],
+      "points": 1,
+      "objective_ids": [
+        "cell-biology-1-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0
+      },
+      "feedback": {
+        "hint": "Think about which groups can make favorable interactions with water.",
+        "solution": "Nonpolar surface area disrupts water's hydrogen-bond network. Exposing more nonpolar residues raises the free-energy cost of hydration and can promote aggregation or burial in a folded state.",
+        "lesson_ids": [
+          "cell-biology-1"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "legacy-prototype",
+        "legacy_id": "cell-biology-1:check",
+        "modifications": []
+      }
+    },
+    {
+      "id": "cell-biology-2:check",
+      "type": "single_choice",
+      "prompt": "Opening a selective K⁺ channel changes membrane potential. Which statement is most accurate?",
+      "options": [
+        "K⁺ moves until its electrochemical potential difference is zero",
+        "K⁺ must move until both sides have equal K⁺ concentrations",
+        "ATP is consumed by each K⁺ passing through the channel",
+        "The channel changes the total amount of K⁺ in the cell without flux"
+      ],
+      "points": 1,
+      "objective_ids": [
+        "cell-biology-2-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0
+      },
+      "feedback": {
+        "hint": "Balance the concentration and electrical contributions; equal concentrations are not required.",
+        "solution": "At electrochemical equilibrium the chemical and electrical contributions cancel. An ion channel is passive and does not itself hydrolyze ATP; a concentration difference can remain at the Nernst potential.",
+        "lesson_ids": [
+          "cell-biology-2"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "legacy-prototype",
+        "legacy_id": "cell-biology-2:check",
+        "modifications": []
+      }
+    },
+    {
+      "id": "cell-biology-3:check",
+      "type": "numeric",
+      "prompt": "An enzyme has Vmax = 120 μmol·min⁻¹ and Km = 3 mM. What rate is predicted at [S] = 6 mM? Enter the numerical value in μmol·min⁻¹.",
+      "points": 1,
+      "objective_ids": [
+        "cell-biology-3-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 80,
+        "unit": "μmol/min",
+        "tolerance": 1.2,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Substitute [S] and Km into v = Vmax[S]/(Km + [S]).",
+        "solution": "v = 120 × 6/(3 + 6) = 80 μmol·min⁻¹. The substrate concentration is twice Km, so the enzyme is approaching saturation but is not at Vmax.",
+        "lesson_ids": [
+          "cell-biology-3"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "legacy-prototype",
+        "legacy_id": "cell-biology-3:check",
+        "modifications": []
+      }
+    },
+    {
+      "id": "cell-biology-4:check",
+      "type": "single_choice",
+      "prompt": "A PCR band is absent in a treated sample. Which control most directly shows the PCR itself could detect the target?",
+      "options": [
+        "A positive control containing target template",
+        "A second untreated sample with no template",
+        "A loading dye-only lane",
+        "A replicate of the treated sample"
+      ],
+      "points": 1,
+      "objective_ids": [
+        "cell-biology-4-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0
+      },
+      "feedback": {
+        "hint": "Choose a condition expected to produce the signal if the assay works.",
+        "solution": "A positive control with target template tests reagent and assay performance. A no-template control is useful for contamination but cannot establish that target amplification is possible.",
+        "lesson_ids": [
+          "cell-biology-4"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "legacy-prototype",
+        "legacy_id": "cell-biology-4:check",
+        "modifications": []
+      }
+    }
+  ]
+}

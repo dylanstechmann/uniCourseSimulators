@@ -1,0 +1,35 @@
+{
+  "schema_version": "1.0",
+  "course_id": "statistics",
+  "cases": [
+    {
+      "id": "statistics:case",
+      "prompt": "A pilot reports p=0.04 for one of 18 measured biomarkers, with no pre-specified primary endpoint and three technical replicates per sample. Write a cautious interpretation and a confirmatory redesign.",
+      "mode": "self-assessment",
+      "objective_ids": [],
+      "rubric": [
+        {
+          "id": "statistics-case-criterion-1",
+          "criterion": "Does not interpret p as probability the null is true",
+          "points": 0,
+          "levels": []
+        },
+        {
+          "id": "statistics-case-criterion-2",
+          "criterion": "Notes multiplicity and that technical replicates do not increase biological n",
+          "points": 0,
+          "levels": []
+        },
+        {
+          "id": "statistics-case-criterion-3",
+          "criterion": "Proposes pre-specified primary outcome, powered biological replication, randomization/blinding, and multiplicity plan",
+          "points": 0,
+          "levels": []
+        }
+      ],
+      "limitations": [
+        "This preserved three-criterion checklist is self-assessment, not an analytic grading rubric or an institutional grade."
+      ]
+    }
+  ]
+}

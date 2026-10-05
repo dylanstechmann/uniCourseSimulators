@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.0",
+  "course_id": "transport",
+  "license": "MIT OR CC-BY-4.0",
+  "modules": [
+    {
+      "module_id": "transport-module-1",
+      "lesson_id": "transport-1",
+      "reading": "modules/01-control-volumes-and-conservation.md",
+      "source_ids": [
+        "transport",
+        "engineeringMath"
+      ],
+      "relationship": "curriculum-comparator",
+      "original_content": true,
+      "license": "MIT OR CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "transport-module-2",
+      "lesson_id": "transport-2",
+      "reading": "modules/02-diffusion-reaction-and-characteristic-length.md",
+      "source_ids": [
+        "transport",
+        "engineeringMath"
+      ],
+      "relationship": "curriculum-comparator",
+      "original_content": true,
+      "license": "MIT OR CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "transport-module-3",
+      "lesson_id": "transport-3",
+      "reading": "modules/03-fluid-mechanics-and-microvascular-flow.md",
+      "source_ids": [
+        "transport",
+        "engineeringMath"
+      ],
+      "relationship": "curriculum-comparator",
+      "original_content": true,
+      "license": "MIT OR CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "transport-module-4",
+      "lesson_id": "transport-4",
+      "reading": "modules/04-heat-transfer-and-coupled-transport.md",
+      "source_ids": [
+        "transport",
+        "engineeringMath"
+      ],
+      "relationship": "curriculum-comparator",
+      "original_content": true,
+      "license": "MIT OR CC-BY-4.0",
+      "modifications": []
+    }
+  ]
+}

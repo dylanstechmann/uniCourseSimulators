@@ -1,0 +1,137 @@
+{
+  "schema_version": "1.0",
+  "course_id": "organic-chemistry",
+  "license": "MIT OR CC-BY-4.0",
+  "questions": [
+    {
+      "id": "organic-chemistry-1:check",
+      "type": "single_choice",
+      "prompt": "Which conjugate base is most stabilized by resonance?",
+      "options": [
+        "CH₃O⁻",
+        "CH₃CO₂⁻",
+        "CH₃CH₂⁻",
+        "NH₂⁻"
+      ],
+      "points": 1,
+      "objective_ids": [
+        "organic-chemistry-1-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 1
+      },
+      "feedback": {
+        "hint": "Look for equivalent or near-equivalent atoms that can share charge through π bonding.",
+        "solution": "The acetate ion delocalizes negative charge over two oxygen atoms. The other listed anions lack comparable resonance stabilization.",
+        "lesson_ids": [
+          "organic-chemistry-1"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "legacy-prototype",
+        "legacy_id": "organic-chemistry-1:check",
+        "modifications": []
+      }
+    },
+    {
+      "id": "organic-chemistry-2:check",
+      "type": "single_choice",
+      "prompt": "A tertiary alkyl halide in water undergoes substitution. Which pathway is generally more plausible?",
+      "options": [
+        "SN2, because the tertiary center is unhindered",
+        "SN1, because ionization can form a stabilized carbocation",
+        "Neither pathway can occur in a protic solvent",
+        "A radical chain is required"
+      ],
+      "points": 1,
+      "objective_ids": [
+        "organic-chemistry-2-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 1
+      },
+      "feedback": {
+        "hint": "Tertiary substitution centers are strongly sterically hindered for backside attack.",
+        "solution": "SN1 is generally favored for a tertiary center in a polar protic solvent because carbocation formation is stabilized and SN2 is sterically hindered. The actual pathway depends on the full substrate and conditions.",
+        "lesson_ids": [
+          "organic-chemistry-2"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "legacy-prototype",
+        "legacy_id": "organic-chemistry-2:check",
+        "modifications": []
+      }
+    },
+    {
+      "id": "organic-chemistry-3:check",
+      "type": "single_choice",
+      "prompt": "Which geometric arrangement is required for a typical concerted E2 elimination?",
+      "options": [
+        "Anti-periplanar C–H and C–leaving-group bonds",
+        "Any arrangement because the carbocation rotates",
+        "A tetrahedral carbon with no beta hydrogen",
+        "An aromatic ring with all sigma bonds fixed"
+      ],
+      "points": 1,
+      "objective_ids": [
+        "organic-chemistry-3-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0
+      },
+      "feedback": {
+        "hint": "E2 forms the π bond as the C–H and C–leaving-group bonds break together.",
+        "solution": "The required orbital alignment is usually anti-periplanar; in a cyclohexane chair this is trans-diaxial.",
+        "lesson_ids": [
+          "organic-chemistry-3"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "legacy-prototype",
+        "legacy_id": "organic-chemistry-3:check",
+        "modifications": [
+          "Clarified the typical E2 answer option as anti-periplanar; atypical syn elimination is not presented as equally typical."
+        ]
+      }
+    },
+    {
+      "id": "organic-chemistry-4:check",
+      "type": "single_choice",
+      "prompt": "Why are acid chlorides generally more reactive toward nucleophilic acyl substitution than amides?",
+      "options": [
+        "Chloride is a better leaving group and donates less by resonance",
+        "Amide carbonyl carbon is more electrophilic",
+        "Amides have no carbonyl resonance",
+        "Chloride prevents nucleophilic attack"
+      ],
+      "points": 1,
+      "objective_ids": [
+        "organic-chemistry-4-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0
+      },
+      "feedback": {
+        "hint": "Compare leaving-group basicity and resonance donation into the carbonyl.",
+        "solution": "Chloride is a weaker base and better leaving group than an amide anion, while nitrogen donates strongly by resonance and reduces amide carbonyl electrophilicity.",
+        "lesson_ids": [
+          "organic-chemistry-4"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "legacy-prototype",
+        "legacy_id": "organic-chemistry-4:check",
+        "modifications": []
+      }
+    }
+  ]
+}

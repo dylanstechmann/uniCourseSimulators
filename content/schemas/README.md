@@ -1,0 +1,15 @@
+# Content contract version 1.0
+
+These JSON Schemas use Draft 2020-12 and are application-independent authoring contracts. A valid manifest describes what exists. It does not establish course completeness, institutional equivalency, or review approval.
+
+`course.schema.json` requires maturity, durable identities, prerequisites, Bloom-style outcomes, workload, schedule, modules, assessment references, grading policy, sources, accessibility, history, review, and explicit limitations. `question.schema.json` discriminates choice, multiple-select, numerical, symbolic, structured, graph/table/data interpretation, Python, upload, and design specifications. Types describe the authoring contract; they are not a claim that the legacy frontend can grade those types. `question-bank.schema.json` groups public practice items. `source.schema.json` validates the source registry and conservative project-use permissions.
+
+All content paths are relative to their course directory. The validator rejects absolute paths, parent-directory escape, external symlinks, missing files, unresolved references, prerequisite cycles, empty and duplicate material, placeholders, and incomplete answer specifications. Source IDs refer to `content/sources/registry.json`. Objective IDs must be durable and unique within the course.
+
+Migrated seeds retain all legacy IDs, questions, retrieval cards, and case criteria. Their compact readings are accepted only while they are `partial`, have verified `legacy-prototype` provenance, and match the expected legacy reading paths. They produce explicit depth warnings. Newly authored short content receives no migration exception.
+
+The six maturity labels are `catalog-only`, `outlined`, `partial`, `beta`, `complete`, and `externally reviewed`. Catalog records can have empty instructional inventories, but limitations must explain them. `complete` and `externally reviewed` require the validator's full-course gate, independently recorded validation evidence, and real review records for the specified version. A reviewer record must refer to a readable evidence document; inventing one is prohibited. Automated metadata checks cannot establish a reviewer's actual qualification or authenticity.
+
+All migrated keys are marked `public-practice-authoring`: they were already publicly delivered by the prototype and remain intentionally inspectable formative material. Restricted production exam keys must be provisioned outside publicly distributed content and frontend bundles. Do not commit secret keys, learner submissions, or production answer specifications.
+
+Run `python tools/validate_content.py` from the repository root. `--json` provides machine-readable errors, warnings, and inventory counts. `--check-links` additionally checks registered HTTPS references with a bounded timeout. Link checks require network availability; their results must be recorded before claiming a full quality gate passed.

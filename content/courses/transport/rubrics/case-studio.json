@@ -1,0 +1,35 @@
+{
+  "schema_version": "1.0",
+  "course_id": "transport",
+  "cases": [
+    {
+      "id": "transport:case",
+      "prompt": "A perfused construct has adequate inlet oxygen but a hypoxic center. Explain how flow, diffusion distance, and cellular consumption jointly determine the gradient; propose two design changes and one measurement that could falsify your model.",
+      "mode": "self-assessment",
+      "objective_ids": [],
+      "rubric": [
+        {
+          "id": "transport-case-criterion-1",
+          "criterion": "Connects advective delivery at channels to diffusion into tissue",
+          "points": 0,
+          "levels": []
+        },
+        {
+          "id": "transport-case-criterion-2",
+          "criterion": "Relates diffusion length/time to consumption demand",
+          "points": 0,
+          "levels": []
+        },
+        {
+          "id": "transport-case-criterion-3",
+          "criterion": "Suggests geometry/perfusion/cell-density changes and direct spatial oxygen measurement",
+          "points": 0,
+          "levels": []
+        }
+      ],
+      "limitations": [
+        "This preserved three-criterion checklist is self-assessment, not an analytic grading rubric or an institutional grade."
+      ]
+    }
+  ]
+}

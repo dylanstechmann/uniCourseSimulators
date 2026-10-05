@@ -1,0 +1,35 @@
+{
+  "schema_version": "1.0",
+  "course_id": "differential-equations",
+  "cases": [
+    {
+      "id": "differential-equations:case",
+      "prompt": "A fitted cell-population model reproduces the first 24 hours but predicts negative cell counts later. Give two model or numerical causes and a validation change that would reveal the failure earlier.",
+      "mode": "self-assessment",
+      "objective_ids": [],
+      "rubric": [
+        {
+          "id": "differential-equations-case-criterion-1",
+          "criterion": "Names model-structure mismatch or extrapolation beyond fit domain",
+          "points": 0,
+          "levels": []
+        },
+        {
+          "id": "differential-equations-case-criterion-2",
+          "criterion": "Names numerical step-size/stability or missing nonnegativity constraints",
+          "points": 0,
+          "levels": []
+        },
+        {
+          "id": "differential-equations-case-criterion-3",
+          "criterion": "Suggests longer-horizon or step-refinement/independent-data validation",
+          "points": 0,
+          "levels": []
+        }
+      ],
+      "limitations": [
+        "This preserved three-criterion checklist is self-assessment, not an analytic grading rubric or an institutional grade."
+      ]
+    }
+  ]
+}

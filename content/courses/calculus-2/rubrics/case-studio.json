@@ -1,0 +1,35 @@
+{
+  "schema_version": "1.0",
+  "course_id": "calculus-2",
+  "cases": [
+    {
+      "id": "calculus-2:case",
+      "prompt": "A modeled tissue concentration is c(r)=c₀(1−r²/R²) in a cylindrical cross-section. Explain how the radial Jacobian changes the total amount integral and compare it with the center-concentration × area approximation.",
+      "mode": "self-assessment",
+      "objective_ids": [],
+      "rubric": [
+        {
+          "id": "calculus-2-case-criterion-1",
+          "criterion": "Uses dA=2πr dr or r dr dθ",
+          "points": 0,
+          "levels": []
+        },
+        {
+          "id": "calculus-2-case-criterion-2",
+          "criterion": "Sets radial bounds 0 to R and integrates the profile",
+          "points": 0,
+          "levels": []
+        },
+        {
+          "id": "calculus-2-case-criterion-3",
+          "criterion": "Notes that center concentration times area overestimates because concentration falls toward the edge",
+          "points": 0,
+          "levels": []
+        }
+      ],
+      "limitations": [
+        "This preserved three-criterion checklist is self-assessment, not an analytic grading rubric or an institutional grade."
+      ]
+    }
+  ]
+}

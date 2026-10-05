@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:lattice-courselab:schema:source-registry:1.0",
+  "title": "Lattice CourseLab source registry",
+  "description": "Permission booleans describe the project's affirmed use, not every possible permission in a source license. Comparator-only records grant only linking here.",
+  "type": "object", "additionalProperties": false,
+  "required": ["schema_version", "sources"],
+  "properties": {
+    "schema_version": {"const": "1.0"},
+    "sources": {"type": "array", "minItems": 1, "items": {
+      "type": "object", "additionalProperties": false,
+      "required": ["id", "title", "institution", "url", "accessed_at", "license", "reuse_mode", "permissions", "attribution_requirements", "third_party_notes", "mapped_courses", "version", "checksum", "imported_assets"],
+      "properties": {
+        "id": {"type": "string", "minLength": 1}, "title": {"type": "string", "minLength": 5}, "institution": {"type": "string", "minLength": 2},
+        "url": {"type": "string", "format": "uri", "pattern": "^https://"}, "accessed_at": {"type": "string", "format": "date"},
+        "license": {"type": "string", "minLength": 2}, "reuse_mode": {"enum": ["link-only-comparator", "original", "adapted", "redistributed"]},
+        "permissions": {"type": "object", "additionalProperties": false, "required": ["linking", "quotation", "adaptation", "redistribution"], "properties": {"linking": {"type": "boolean"}, "quotation": {"type": "boolean"}, "adaptation": {"type": "boolean"}, "redistribution": {"type": "boolean"}}},
+        "attribution_requirements": {"type": "array", "items": {"type": "string", "minLength": 5}}, "third_party_notes": {"type": "string", "minLength": 10}, "rights_notes": {"type": "string"},
+        "mapped_courses": {"type": "array", "uniqueItems": true, "items": {"type": "string", "minLength": 1}}, "mapped_modules": {"type": "array", "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+        "version": {"type": ["string", "null"]}, "checksum": {"type": ["string", "null"]}, "imported_assets": {"type": "array", "items": {"type": "object", "required": ["path", "license", "attribution"], "properties": {"path": {"type": "string"}, "license": {"type": "string"}, "attribution": {"type": "string"}, "modifications": {"type": "string"}}}}
+      }
+    }}
+  }
+}

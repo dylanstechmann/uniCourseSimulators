@@ -1,0 +1,132 @@
+{
+  "schema_version": "1.0",
+  "course_id": "general-chemistry-2",
+  "license": "MIT OR CC-BY-4.0",
+  "questions": [
+    {
+      "id": "general-chemistry-2-1:check",
+      "type": "numeric",
+      "prompt": "A buffer has pKa = 7.2 and [A⁻]/[HA] = 10. What is its approximate pH?",
+      "points": 1,
+      "objective_ids": [
+        "general-chemistry-2-1-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 8.2,
+        "unit": "pH",
+        "tolerance": 0.12299999999999998,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use pH = pKa + log₁₀(base/acid).",
+        "solution": "pH = 7.2 + log₁₀(10) = 8.2.",
+        "lesson_ids": [
+          "general-chemistry-2-1"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "legacy-prototype",
+        "legacy_id": "general-chemistry-2-1:check",
+        "modifications": []
+      }
+    },
+    {
+      "id": "general-chemistry-2-2:check",
+      "type": "numeric",
+      "prompt": "A first-order reaction has k = 0.35 min⁻¹. What is its half-life in minutes?",
+      "points": 1,
+      "objective_ids": [
+        "general-chemistry-2-2-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 1.98,
+        "unit": "min",
+        "tolerance": 0.029699999999999997,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use t½ = ln 2/k.",
+        "solution": "t½ = 0.693/0.35 = 1.98 min.",
+        "lesson_ids": [
+          "general-chemistry-2-2"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "legacy-prototype",
+        "legacy_id": "general-chemistry-2-2:check",
+        "modifications": []
+      }
+    },
+    {
+      "id": "general-chemistry-2-3:check",
+      "type": "numeric",
+      "prompt": "A cell transfers n = 2 electrons and has E°cell = 0.30 V. Using F = 96,485 C/mol, calculate ΔG° in kJ/mol.",
+      "points": 1,
+      "objective_ids": [
+        "general-chemistry-2-3-objective-1"
+      ],
+      "solution_spec": {
+        "answer": -57.9,
+        "unit": "kJ/mol",
+        "tolerance": 0.8684999999999999,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use ΔG° = −nFE°, then convert joules to kilojoules.",
+        "solution": "ΔG° = −2 × 96,485 × 0.30 J/mol = −57,891 J/mol ≈ −57.9 kJ/mol.",
+        "lesson_ids": [
+          "general-chemistry-2-3"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "legacy-prototype",
+        "legacy_id": "general-chemistry-2-3:check",
+        "modifications": []
+      }
+    },
+    {
+      "id": "general-chemistry-2-4:check",
+      "type": "single_choice",
+      "prompt": "Why can the same metal ion show different redox behavior in two proteins?",
+      "options": [
+        "The protein environment changes ligand field, electrostatics, and access to substrates",
+        "A protein makes conservation of charge unnecessary",
+        "All metal ions have a fixed potential independent of coordination",
+        "Proteins eliminate thermal motion"
+      ],
+      "points": 1,
+      "objective_ids": [
+        "general-chemistry-2-4-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0
+      },
+      "feedback": {
+        "hint": "Consider how the coordination sphere changes the energetic cost of each oxidation state.",
+        "solution": "Ligands and local electrostatics stabilize oxidation states differently and control substrate access, thereby tuning redox potential and reaction kinetics.",
+        "lesson_ids": [
+          "general-chemistry-2-4"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "legacy-prototype",
+        "legacy_id": "general-chemistry-2-4:check",
+        "modifications": []
+      }
+    }
+  ]
+}

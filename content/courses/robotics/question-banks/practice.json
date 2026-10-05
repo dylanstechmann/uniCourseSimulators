@@ -1,0 +1,134 @@
+{
+  "schema_version": "1.0",
+  "course_id": "robotics",
+  "license": "MIT OR CC-BY-4.0",
+  "questions": [
+    {
+      "id": "robotics-1:check",
+      "type": "numeric",
+      "prompt": "A point at (1,0) is rotated 90° counterclockwise about the origin. What is its y-coordinate?",
+      "points": 1,
+      "objective_ids": [
+        "robotics-1-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 1,
+        "unit": "",
+        "tolerance": 0.015,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Apply the 2D rotation matrix to (1,0).",
+        "solution": "The rotated point is (0,1), so y=1.",
+        "lesson_ids": [
+          "robotics-1"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "legacy-prototype",
+        "legacy_id": "robotics-1:check",
+        "modifications": []
+      }
+    },
+    {
+      "id": "robotics-2:check",
+      "type": "numeric",
+      "prompt": "A planar arm has two 0.5 m links and both joints at 0°. What is the end-effector x-position in meters?",
+      "points": 1,
+      "objective_ids": [
+        "robotics-2-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 1,
+        "unit": "m",
+        "tolerance": 0.015,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "At 0° both links extend along +x, so add their lengths.",
+        "solution": "x=0.5+0.5=1.0 m.",
+        "lesson_ids": [
+          "robotics-2"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "legacy-prototype",
+        "legacy_id": "robotics-2:check",
+        "modifications": []
+      }
+    },
+    {
+      "id": "robotics-3:check",
+      "type": "numeric",
+      "prompt": "A joint supplies 0.8 N·m at 3 rad/s. What is mechanical power in watts?",
+      "points": 1,
+      "objective_ids": [
+        "robotics-3-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 2.4,
+        "unit": "W",
+        "tolerance": 0.036,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Multiply torque by angular velocity using P=τω; N·m × rad/s gives watts.",
+        "solution": "P=0.8×3=2.4 W.",
+        "lesson_ids": [
+          "robotics-3"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "legacy-prototype",
+        "legacy_id": "robotics-3:check",
+        "modifications": [
+          "Expanded the power hint to state the calculation method and units without changing the question or answer."
+        ]
+      }
+    },
+    {
+      "id": "robotics-4:check",
+      "type": "single_choice",
+      "prompt": "Why does feedback remain necessary after a collision-free path is planned?",
+      "options": [
+        "The plan cannot account for every disturbance, calibration error, or state-estimation error",
+        "Feedback makes geometry unnecessary",
+        "A path plan determines actual forces exactly",
+        "It is needed only to increase motor speed"
+      ],
+      "points": 1,
+      "objective_ids": [
+        "robotics-4-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0
+      },
+      "feedback": {
+        "hint": "Execution occurs with real sensors, loads, and disturbances, not an exact mathematical model.",
+        "solution": "A plan is based on estimated state and a model. Feedback uses new measurements to correct disturbances and estimation or actuation errors.",
+        "lesson_ids": [
+          "robotics-4"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "legacy-prototype",
+        "legacy_id": "robotics-4:check",
+        "modifications": []
+      }
+    }
+  ]
+}

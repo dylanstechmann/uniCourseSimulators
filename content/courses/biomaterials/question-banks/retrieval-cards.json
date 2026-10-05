@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0",
+  "course_id": "biomaterials",
+  "cards": [
+    {
+      "id": "biomaterials-0-0",
+      "lesson_id": "biomaterials-1",
+      "front": "Protein corona",
+      "back": "The layer of biomolecules adsorbed onto a material in a biological environment.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "biomaterials-0-1",
+      "lesson_id": "biomaterials-1",
+      "front": "Surface characterization",
+      "back": "Measurement of near-surface chemistry, topography, charge, or energy rather than only bulk properties.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "biomaterials-1-0",
+      "lesson_id": "biomaterials-2",
+      "front": "Interconnectivity",
+      "back": "The extent to which pores form connected pathways for cell ingress and transport.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "biomaterials-1-1",
+      "lesson_id": "biomaterials-2",
+      "front": "Load transfer",
+      "back": "The changing share of mechanical support carried by scaffold and newly formed tissue.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "biomaterials-2-0",
+      "lesson_id": "biomaterials-3",
+      "front": "Potency",
+      "back": "The demonstrated capacity of a cell product to produce a defined biological function under specified conditions.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "biomaterials-2-1",
+      "lesson_id": "biomaterials-3",
+      "front": "Functional endpoint",
+      "back": "An outcome measuring a tissue or device performance relevant to the intended use.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "biomaterials-3-0",
+      "lesson_id": "biomaterials-4",
+      "front": "Biocompatibility",
+      "back": "Appropriate performance with an appropriate host response for a specific application.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "biomaterials-3-1",
+      "lesson_id": "biomaterials-4",
+      "front": "Design control",
+      "back": "A documented process linking requirements, risks, verification, validation, and changes to a device or material.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    }
+  ]
+}

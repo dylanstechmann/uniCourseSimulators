@@ -1,0 +1,35 @@
+{
+  "schema_version": "1.0",
+  "course_id": "calculus-1",
+  "cases": [
+    {
+      "id": "calculus-1:case",
+      "prompt": "A concentration sensor reports C(t)=C₀e^(−kt) after washout. Explain how a semilog plot estimates k, identify the units of k, and state one reason measured points may deviate from a straight line.",
+      "mode": "self-assessment",
+      "objective_ids": [],
+      "rubric": [
+        {
+          "id": "calculus-1-case-criterion-1",
+          "criterion": "Takes ln(C/C₀)=−kt and identifies slope −k",
+          "points": 0,
+          "levels": []
+        },
+        {
+          "id": "calculus-1-case-criterion-2",
+          "criterion": "States k has inverse-time units",
+          "points": 0,
+          "levels": []
+        },
+        {
+          "id": "calculus-1-case-criterion-3",
+          "criterion": "Names a plausible model or measurement limitation such as background offset, multiple compartments, sensor lag, or non-first-order clearance",
+          "points": 0,
+          "levels": []
+        }
+      ],
+      "limitations": [
+        "This preserved three-criterion checklist is self-assessment, not an analytic grading rubric or an institutional grade."
+      ]
+    }
+  ]
+}

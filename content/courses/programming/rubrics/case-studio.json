@@ -1,0 +1,35 @@
+{
+  "schema_version": "1.0",
+  "course_id": "programming",
+  "cases": [
+    {
+      "id": "programming:case",
+      "prompt": "A classifier has 99% accuracy on a dataset with 1% positive cases. Explain why this is not sufficient evidence of usefulness and specify at least three additional metrics or validation checks.",
+      "mode": "self-assessment",
+      "objective_ids": [],
+      "rubric": [
+        {
+          "id": "programming-case-criterion-1",
+          "criterion": "Notes a majority-class classifier reaches 99% accuracy",
+          "points": 0,
+          "levels": []
+        },
+        {
+          "id": "programming-case-criterion-2",
+          "criterion": "Adds sensitivity/recall, precision, PR-AUC, calibration, or decision threshold",
+          "points": 0,
+          "levels": []
+        },
+        {
+          "id": "programming-case-criterion-3",
+          "criterion": "Requests held-out/temporal/external validation and leakage review",
+          "points": 0,
+          "levels": []
+        }
+      ],
+      "limitations": [
+        "This preserved three-criterion checklist is self-assessment, not an analytic grading rubric or an institutional grade."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,332 @@
+{
+  "schema_version": "1.0",
+  "id": "physiology",
+  "legacy_code": "BIO 230",
+  "title": "Human Physiology for Engineers",
+  "description": "Quantitative homeostasis across excitable, cardiovascular, respiratory, renal, and endocrine systems, with emphasis on feedback and transport.",
+  "domain": "Life sciences",
+  "level": "Year 2",
+  "maturity": "partial",
+  "version": "0.1.0",
+  "license": "MIT OR CC-BY-4.0",
+  "content_origin": {
+    "kind": "legacy-prototype",
+    "source_path": "src/data/courses.js",
+    "source_sha256": "a77a7cb7f5be2ffa12068877042ac775c6d9b79b83ac2f316fe4f26a0d3d783b",
+    "migration_version": "1.0",
+    "modifications": []
+  },
+  "prerequisites": {
+    "course_ids": [
+      "cell-biology",
+      "physics-mechanics"
+    ],
+    "recommended_course_ids": [
+      "calculus-1"
+    ],
+    "concurrent_course_ids": [],
+    "knowledge": [],
+    "statement": "Cell biology; Physics: Mechanics; calculus recommended"
+  },
+  "outcomes": [
+    {
+      "id": "physiology-outcome-1",
+      "description": "Use mass and energy balance to describe homeostasis.",
+      "bloom": "apply"
+    },
+    {
+      "id": "physiology-outcome-2",
+      "description": "Interpret pressure-flow and resistance relationships.",
+      "bloom": "analyze"
+    },
+    {
+      "id": "physiology-outcome-3",
+      "description": "Connect membrane transport to organ-level function.",
+      "bloom": "analyze"
+    },
+    {
+      "id": "physiology-outcome-4",
+      "description": "Predict responses to controlled perturbations.",
+      "bloom": "apply"
+    }
+  ],
+  "lesson_objectives": [
+    {
+      "id": "physiology-1-objective-1",
+      "description": "Represent a regulated variable, sensor, controller, and effector.",
+      "bloom": "apply",
+      "course_outcome_ids": []
+    },
+    {
+      "id": "physiology-1-objective-2",
+      "description": "Distinguish negative from positive feedback.",
+      "bloom": "analyze",
+      "course_outcome_ids": []
+    },
+    {
+      "id": "physiology-2-objective-1",
+      "description": "Interpret membrane voltage as an electrical state variable.",
+      "bloom": "analyze",
+      "course_outcome_ids": []
+    },
+    {
+      "id": "physiology-2-objective-2",
+      "description": "Relate ionic conductance to current and reversal potential.",
+      "bloom": "analyze",
+      "course_outcome_ids": []
+    },
+    {
+      "id": "physiology-3-objective-1",
+      "description": "Use pressure-flow resistance analogies with stated assumptions.",
+      "bloom": "apply",
+      "course_outcome_ids": []
+    },
+    {
+      "id": "physiology-3-objective-2",
+      "description": "Distinguish ventilation, perfusion, and diffusion limitation.",
+      "bloom": "analyze",
+      "course_outcome_ids": []
+    },
+    {
+      "id": "physiology-4-objective-1",
+      "description": "Use clearance and balance concepts to interpret kidney function.",
+      "bloom": "apply",
+      "course_outcome_ids": []
+    },
+    {
+      "id": "physiology-4-objective-2",
+      "description": "Predict how hormonal feedback changes transport or set points.",
+      "bloom": "apply",
+      "course_outcome_ids": []
+    }
+  ],
+  "duration": {
+    "instructional_weeks": null,
+    "equivalent_structure": null,
+    "weeks": []
+  },
+  "workload": {
+    "estimated_total_hours": null,
+    "estimated_hours_per_week": null,
+    "basis": "Not measured. Legacy nominal credit and display-time labels are not retained as workload estimates."
+  },
+  "modules": [
+    {
+      "id": "physiology-module-1",
+      "title": "Homeostasis and feedback",
+      "source_ids": [
+        "biology",
+        "transport"
+      ],
+      "lessons": [
+        {
+          "id": "physiology-1",
+          "title": "Homeostasis and feedback",
+          "reading": "modules/01-homeostasis-and-feedback.md",
+          "objectives": [
+            "physiology-1-objective-1",
+            "physiology-1-objective-2"
+          ],
+          "worked_example": "If a circulating solute enters at 5 μmol/min and is cleared with first-order rate constant 0.1 min⁻¹, the steady concentration in a well-mixed 1 L compartment is 50 μmol/L.",
+          "question_ids": [
+            "physiology-1:check"
+          ],
+          "card_ids": [
+            "physiology-0-0",
+            "physiology-0-1"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "physiology-module-2",
+      "title": "Excitable cells and electrophysiology",
+      "source_ids": [
+        "biology",
+        "transport"
+      ],
+      "lessons": [
+        {
+          "id": "physiology-2",
+          "title": "Excitable cells and electrophysiology",
+          "reading": "modules/02-excitable-cells-and-electrophysiology.md",
+          "objectives": [
+            "physiology-2-objective-1",
+            "physiology-2-objective-2"
+          ],
+          "worked_example": "If Vm = −60 mV, EK = −90 mV, and gK = 2 nS, then outward-positive IK = 2 nS × 30 mV = 60 pA.",
+          "question_ids": [
+            "physiology-2:check"
+          ],
+          "card_ids": [
+            "physiology-1-0",
+            "physiology-1-1"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "physiology-module-3",
+      "title": "Cardiovascular and respiratory transport",
+      "source_ids": [
+        "biology",
+        "transport"
+      ],
+      "lessons": [
+        {
+          "id": "physiology-3",
+          "title": "Cardiovascular and respiratory transport",
+          "reading": "modules/03-cardiovascular-and-respiratory-transport.md",
+          "objectives": [
+            "physiology-3-objective-1",
+            "physiology-3-objective-2"
+          ],
+          "worked_example": "Doubling vessel radius at fixed length and viscosity lowers ideal Poiseuille resistance by a factor of 16; real vessels also change tone and geometry.",
+          "question_ids": [
+            "physiology-3:check"
+          ],
+          "card_ids": [
+            "physiology-2-0",
+            "physiology-2-1"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "physiology-module-4",
+      "title": "Renal, endocrine, and integrated regulation",
+      "source_ids": [
+        "biology",
+        "transport"
+      ],
+      "lessons": [
+        {
+          "id": "physiology-4",
+          "title": "Renal, endocrine, and integrated regulation",
+          "reading": "modules/04-renal-endocrine-and-integrated-regulation.md",
+          "objectives": [
+            "physiology-4-objective-1",
+            "physiology-4-objective-2"
+          ],
+          "worked_example": "If urinary concentration is 50 mg/L, urine flow is 1 mL/min, and plasma concentration is 2 mg/L, clearance is 25 mL/min.",
+          "question_ids": [
+            "physiology-4:check"
+          ],
+          "card_ids": [
+            "physiology-3-0",
+            "physiology-3-1"
+          ]
+        }
+      ]
+    }
+  ],
+  "assessments": [
+    {
+      "id": "physiology-1-practice",
+      "type": "practice",
+      "mode": "practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "physiology-1-objective-1"
+      ],
+      "question_ids": [
+        "physiology-1:check"
+      ],
+      "points": 1
+    },
+    {
+      "id": "physiology-2-practice",
+      "type": "practice",
+      "mode": "practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "physiology-2-objective-1"
+      ],
+      "question_ids": [
+        "physiology-2:check"
+      ],
+      "points": 1
+    },
+    {
+      "id": "physiology-3-practice",
+      "type": "practice",
+      "mode": "practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "physiology-3-objective-1"
+      ],
+      "question_ids": [
+        "physiology-3:check"
+      ],
+      "points": 1
+    },
+    {
+      "id": "physiology-4-practice",
+      "type": "practice",
+      "mode": "practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "physiology-4-objective-1"
+      ],
+      "question_ids": [
+        "physiology-4:check"
+      ],
+      "points": 1
+    },
+    {
+      "id": "physiology-case",
+      "type": "case",
+      "mode": "self-assessment",
+      "path": "rubrics/case-studio.json",
+      "objective_ids": [],
+      "question_ids": [],
+      "points": 0
+    }
+  ],
+  "grading_policy": {
+    "mode": "formative-only",
+    "categories": [],
+    "attempt_policy": "Unlimited formative retries; no summative grade is awarded.",
+    "solution_release": "Public practice solutions may be shown after an attempt. They are not production exam keys.",
+    "late_policy": "No deadlines or late penalties exist in this partial package.",
+    "appeals": "No instructor review workflow is implemented; report ambiguous practice items to repository maintainers."
+  },
+  "retrieval_cards": "question-banks/retrieval-cards.json",
+  "case_rubrics": "rubrics/case-studio.json",
+  "source_map": "source-map.json",
+  "syllabus": "syllabus.md",
+  "review": {
+    "status": "unreviewed",
+    "reviewed_version": null,
+    "reviewers": []
+  },
+  "accessibility": {
+    "language": "en",
+    "reading_format": "markdown",
+    "math_format": "unicode-text",
+    "diagram_policy": "The seed package contains no imported diagrams; newly authored diagrams require descriptions and individual license tracking.",
+    "known_issues": [
+      "Unicode equations require structured mathematical alternatives and assistive-technology review."
+    ],
+    "review_status": "unreviewed"
+  },
+  "history": [
+    {
+      "version": "0.1.0",
+      "date": "2026-10-05",
+      "summary": "Preserved original compact prototype content in separate manifests and readings; labeled partial without semester or credit equivalency."
+    }
+  ],
+  "limitations": [
+    "Four compact legacy units are preserved; this package is not equivalent to a full university semester.",
+    "There is no authored 12–15 week schedule, substantive homework sequence, laboratory sequence, midterm, cumulative final, or graded integrative project.",
+    "The single formative check per lesson does not demonstrate comprehensive outcome coverage or mastery; association with the first lesson objective is provisional.",
+    "Bloom labels and structured prerequisite edges are initial authoring classifications awaiting subject-matter review.",
+    "Question answers and solution feedback are intentionally public practice authoring specifications, not restricted exam keys.",
+    "Numerical specifications preserve the prototype's tolerance and optional unit entry; significant-figure and dimensional checks have not been authored.",
+    "Total workload and weekly duration are unknown; former nominal credit values and hardcoded reading times do not establish workload."
+  ],
+  "intentionally_omitted": [
+    "Full instructional sequence and summative assessments are not authored yet; this is a preserved seed inventory."
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "schema_version": "1.0",
+  "course_id": "robotics",
+  "cases": [
+    {
+      "id": "robotics:case",
+      "prompt": "A two-link arm reaches a target in simulation but stalls near full extension on hardware. Explain the Jacobian/dynamics issue, identify two measurements needed, and propose a safer task-space plan.",
+      "mode": "self-assessment",
+      "objective_ids": [],
+      "rubric": [
+        {
+          "id": "robotics-case-criterion-1",
+          "criterion": "Identifies near-singular Jacobian and amplified joint velocity/torque demands",
+          "points": 0,
+          "levels": []
+        },
+        {
+          "id": "robotics-case-criterion-2",
+          "criterion": "Requests joint position/velocity/current or torque and calibration/load data",
+          "points": 0,
+          "levels": []
+        },
+        {
+          "id": "robotics-case-criterion-3",
+          "criterion": "Proposes avoiding the singular region, reducing speed, or using constrained redundancy with safety monitoring",
+          "points": 0,
+          "levels": []
+        }
+      ],
+      "limitations": [
+        "This preserved three-criterion checklist is self-assessment, not an analytic grading rubric or an institutional grade."
+      ]
+    }
+  ]
+}

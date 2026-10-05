@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0",
+  "course_id": "general-chemistry-1",
+  "cards": [
+    {
+      "id": "general-chemistry-1-0-0",
+      "lesson_id": "general-chemistry-1-1",
+      "front": "Formal charge",
+      "back": "A bookkeeping assignment: valence electrons minus nonbonding electrons minus half the bonding electrons.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "general-chemistry-1-0-1",
+      "lesson_id": "general-chemistry-1-1",
+      "front": "Dipole moment",
+      "back": "A vector measure of separated positive and negative charge in a bond or molecule.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "general-chemistry-1-1-0",
+      "lesson_id": "general-chemistry-1-2",
+      "front": "Limiting reagent",
+      "back": "The reactant consumed first under the balanced stoichiometric ratio; it limits theoretical product.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "general-chemistry-1-1-1",
+      "lesson_id": "general-chemistry-1-2",
+      "front": "Molarity",
+      "back": "Moles of solute divided by final solution volume in liters.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "general-chemistry-1-2-0",
+      "lesson_id": "general-chemistry-1-3",
+      "front": "State function",
+      "back": "A property whose change depends only on initial and final states, not the path taken.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "general-chemistry-1-2-1",
+      "lesson_id": "general-chemistry-1-3",
+      "front": "Hess's law",
+      "back": "Reaction enthalpies add when chemical equations are added, because enthalpy is a state function.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "general-chemistry-1-3-0",
+      "lesson_id": "general-chemistry-1-4",
+      "front": "Reaction quotient Q",
+      "back": "The mass-action expression evaluated at the current composition.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "general-chemistry-1-3-1",
+      "lesson_id": "general-chemistry-1-4",
+      "front": "Equilibrium constant K",
+      "back": "The value of the reaction quotient at equilibrium for a specified temperature and standard-state convention.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    }
+  ]
+}

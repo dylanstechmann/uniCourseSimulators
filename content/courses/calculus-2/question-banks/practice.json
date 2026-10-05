@@ -1,0 +1,134 @@
+{
+  "schema_version": "1.0",
+  "course_id": "calculus-2",
+  "license": "MIT OR CC-BY-4.0",
+  "questions": [
+    {
+      "id": "calculus-2-1:check",
+      "type": "numeric",
+      "prompt": "Evaluate ∫₀∞ 4e^(−2t) dt.",
+      "points": 1,
+      "objective_ids": [
+        "calculus-2-1-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 2,
+        "unit": "",
+        "tolerance": 0.03,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "The antiderivative is −2e^(−2t); evaluate it at infinity and zero.",
+        "solution": "The integral is 4 × (1/2) = 2; exponential decay with positive rate is integrable.",
+        "lesson_ids": [
+          "calculus-2-1"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "legacy-prototype",
+        "legacy_id": "calculus-2-1:check",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-2-2:check",
+      "type": "single_choice",
+      "prompt": "Which statement is sufficient to establish convergence of Σₙ₌₁∞ 1/n²?",
+      "options": [
+        "The terms tend to zero",
+        "It is a p-series with p = 2 > 1",
+        "The terms are positive",
+        "The partial sums initially increase"
+      ],
+      "points": 1,
+      "objective_ids": [
+        "calculus-2-2-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 1
+      },
+      "feedback": {
+        "hint": "Use a test that gives a conclusion, not only a necessary condition.",
+        "solution": "The p-series test proves convergence for p>1. Terms tending to zero is necessary but alone does not establish convergence.",
+        "lesson_ids": [
+          "calculus-2-2"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "legacy-prototype",
+        "legacy_id": "calculus-2-2:check",
+        "modifications": [
+          "Corrected the geometric-series tail arithmetic; the original approximation and exact sum are preserved."
+        ]
+      }
+    },
+    {
+      "id": "calculus-2-3:check",
+      "type": "numeric",
+      "prompt": "A force F(x)=4x N acts from x=0 to 3 m. How much work is done in joules?",
+      "points": 1,
+      "objective_ids": [
+        "calculus-2-3-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 18,
+        "unit": "J",
+        "tolerance": 0.27,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Integrate 4x from 0 to 3; work has units N·m.",
+        "solution": "W=[2x²]₀³=18 N·m=18 J.",
+        "lesson_ids": [
+          "calculus-2-3"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "legacy-prototype",
+        "legacy_id": "calculus-2-3:check",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-2-4:check",
+      "type": "numeric",
+      "prompt": "Using 1+x+x²/2 to approximate eˣ at x=0.2, what value do you obtain?",
+      "points": 1,
+      "objective_ids": [
+        "calculus-2-4-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 1.22,
+        "unit": "",
+        "tolerance": 0.0183,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Substitute x=0.2 into the quadratic Taylor polynomial.",
+        "solution": "1+0.2+(0.2)²/2=1+0.2+0.02=1.22.",
+        "lesson_ids": [
+          "calculus-2-4"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "legacy-prototype",
+        "legacy_id": "calculus-2-4:check",
+        "modifications": []
+      }
+    }
+  ]
+}

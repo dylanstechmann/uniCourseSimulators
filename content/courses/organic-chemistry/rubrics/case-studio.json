@@ -1,0 +1,35 @@
+{
+  "schema_version": "1.0",
+  "course_id": "organic-chemistry",
+  "cases": [
+    {
+      "id": "organic-chemistry:case",
+      "prompt": "A proposed synthesis forms an amide from a carboxylic acid and amine in water at neutral pH. Explain why this is not a sufficient mechanism and name one activation strategy plus a control for product identity.",
+      "mode": "self-assessment",
+      "objective_ids": [],
+      "rubric": [
+        {
+          "id": "organic-chemistry-case-criterion-1",
+          "criterion": "Recognizes poor leaving-group/acid-base competition in unactivated condensation",
+          "points": 0,
+          "levels": []
+        },
+        {
+          "id": "organic-chemistry-case-criterion-2",
+          "criterion": "Proposes activation such as an activated ester, carbodiimide, or acyl enzyme",
+          "points": 0,
+          "levels": []
+        },
+        {
+          "id": "organic-chemistry-case-criterion-3",
+          "criterion": "Names an analytical confirmation such as LC-MS, NMR, or a diagnostic hydrolysis comparison",
+          "points": 0,
+          "levels": []
+        }
+      ],
+      "limitations": [
+        "This preserved three-criterion checklist is self-assessment, not an analytic grading rubric or an institutional grade."
+      ]
+    }
+  ]
+}

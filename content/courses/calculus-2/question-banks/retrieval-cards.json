@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0",
+  "course_id": "calculus-2",
+  "cards": [
+    {
+      "id": "calculus-2-0-0",
+      "lesson_id": "calculus-2-1",
+      "front": "Improper integral",
+      "back": "An integral defined using a limit because of an infinite interval or an unbounded integrand.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "calculus-2-0-1",
+      "lesson_id": "calculus-2-1",
+      "front": "Area under the curve (AUC)",
+      "back": "An accumulated exposure measure given by integrating concentration over time.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "calculus-2-1-0",
+      "lesson_id": "calculus-2-2",
+      "front": "p-series",
+      "back": "A series Σ1/nᵖ; it converges exactly when p>1.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "calculus-2-1-1",
+      "lesson_id": "calculus-2-2",
+      "front": "Taylor remainder",
+      "back": "A bound or expression for the error left after truncating a Taylor expansion.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "calculus-2-2-0",
+      "lesson_id": "calculus-2-3",
+      "front": "Work integral",
+      "back": "Accumulated mechanical energy transfer W=∫F·dx along a displacement.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "calculus-2-2-1",
+      "lesson_id": "calculus-2-3",
+      "front": "Average value",
+      "back": "The integral of a function over an interval divided by interval length.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "calculus-2-3-0",
+      "lesson_id": "calculus-2-4",
+      "front": "Radius of convergence",
+      "back": "Distance from a power-series center within which the series converges; endpoints need separate tests.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "calculus-2-3-1",
+      "lesson_id": "calculus-2-4",
+      "front": "Taylor remainder",
+      "back": "The error between a function and its finite Taylor polynomial, bounded using higher derivatives.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    }
+  ]
+}

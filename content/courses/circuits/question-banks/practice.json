@@ -1,0 +1,131 @@
+{
+  "schema_version": "1.0",
+  "course_id": "circuits",
+  "license": "MIT OR CC-BY-4.0",
+  "questions": [
+    {
+      "id": "circuits-1:check",
+      "type": "numeric",
+      "prompt": "A 12 V ideal source feeds a 2 kΩ and 4 kΩ series pair. What is the current in mA?",
+      "points": 1,
+      "objective_ids": [
+        "circuits-1-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 2,
+        "unit": "mA",
+        "tolerance": 0.03,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Add series resistances, then use I=V/R.",
+        "solution": "I=12 V/6 kΩ=2 mA.",
+        "lesson_ids": [
+          "circuits-1"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "legacy-prototype",
+        "legacy_id": "circuits-1:check",
+        "modifications": []
+      }
+    },
+    {
+      "id": "circuits-2:check",
+      "type": "numeric",
+      "prompt": "A non-inverting amplifier has Rf=40 kΩ and Rg=10 kΩ. What is its ideal closed-loop gain?",
+      "points": 1,
+      "objective_ids": [
+        "circuits-2-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 5,
+        "unit": "",
+        "tolerance": 0.075,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use Av=1+Rf/Rg.",
+        "solution": "Av=1+40/10=5.",
+        "lesson_ids": [
+          "circuits-2"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "legacy-prototype",
+        "legacy_id": "circuits-2:check",
+        "modifications": []
+      }
+    },
+    {
+      "id": "circuits-3:check",
+      "type": "numeric",
+      "prompt": "An RC low-pass uses R=1 kΩ and C=10 μF. Estimate the cutoff frequency in Hz.",
+      "points": 1,
+      "objective_ids": [
+        "circuits-3-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 15.9,
+        "unit": "Hz",
+        "tolerance": 0.3,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use fc=1/(2πRC) with SI units.",
+        "solution": "RC=0.01 s; fc=1/(2π×0.01)≈15.9 Hz.",
+        "lesson_ids": [
+          "circuits-3"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "legacy-prototype",
+        "legacy_id": "circuits-3:check",
+        "modifications": []
+      }
+    },
+    {
+      "id": "circuits-4:check",
+      "type": "numeric",
+      "prompt": "A calibrated sensor has V=0.50x+0.10 V. If measured V=2.10 V, what is x?",
+      "points": 1,
+      "objective_ids": [
+        "circuits-4-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 4,
+        "unit": "units",
+        "tolerance": 0.06,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Rearrange the calibration: x=(V−0.10)/0.50.",
+        "solution": "x=(2.10−0.10)/0.50=4 units.",
+        "lesson_ids": [
+          "circuits-4"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "legacy-prototype",
+        "legacy_id": "circuits-4:check",
+        "modifications": []
+      }
+    }
+  ]
+}

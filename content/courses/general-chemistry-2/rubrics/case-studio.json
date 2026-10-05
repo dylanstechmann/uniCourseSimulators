@@ -1,0 +1,35 @@
+{
+  "schema_version": "1.0",
+  "course_id": "general-chemistry-2",
+  "cases": [
+    {
+      "id": "general-chemistry-2:case",
+      "prompt": "An enzyme assay shows a metal-dependent rate increase. Outline a control set that separates metal cofactor rescue from nonspecific ionic-strength or precipitation effects.",
+      "mode": "self-assessment",
+      "objective_ids": [],
+      "rubric": [
+        {
+          "id": "general-chemistry-2-case-criterion-1",
+          "criterion": "Uses metal-depleted/apo-enzyme and defined metal add-back",
+          "points": 0,
+          "levels": []
+        },
+        {
+          "id": "general-chemistry-2-case-criterion-2",
+          "criterion": "Includes a matched inert-salt or ionic-strength control",
+          "points": 0,
+          "levels": []
+        },
+        {
+          "id": "general-chemistry-2-case-criterion-3",
+          "criterion": "Checks soluble metal/enzyme or turbidity and includes activity blanks",
+          "points": 0,
+          "levels": []
+        }
+      ],
+      "limitations": [
+        "This preserved three-criterion checklist is self-assessment, not an analytic grading rubric or an institutional grade."
+      ]
+    }
+  ]
+}

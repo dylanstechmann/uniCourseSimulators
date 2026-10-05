@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.0",
+  "course_id": "physics-mechanics",
+  "license": "MIT OR CC-BY-4.0",
+  "modules": [
+    {
+      "module_id": "physics-mechanics-module-1",
+      "lesson_id": "physics-mechanics-1",
+      "reading": "modules/01-kinematics-and-force-balance.md",
+      "source_ids": [
+        "mechanics",
+        "engineeringMath"
+      ],
+      "relationship": "curriculum-comparator",
+      "original_content": true,
+      "license": "MIT OR CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "physics-mechanics-module-2",
+      "lesson_id": "physics-mechanics-2",
+      "reading": "modules/02-work-energy-and-power.md",
+      "source_ids": [
+        "mechanics",
+        "engineeringMath"
+      ],
+      "relationship": "curriculum-comparator",
+      "original_content": true,
+      "license": "MIT OR CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "physics-mechanics-module-3",
+      "lesson_id": "physics-mechanics-3",
+      "reading": "modules/03-momentum-collisions-and-impulse.md",
+      "source_ids": [
+        "mechanics",
+        "engineeringMath"
+      ],
+      "relationship": "curriculum-comparator",
+      "original_content": true,
+      "license": "MIT OR CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "physics-mechanics-module-4",
+      "lesson_id": "physics-mechanics-4",
+      "reading": "modules/04-rotation-torque-and-material-response.md",
+      "source_ids": [
+        "mechanics",
+        "engineeringMath"
+      ],
+      "relationship": "curriculum-comparator",
+      "original_content": true,
+      "license": "MIT OR CC-BY-4.0",
+      "modifications": []
+    }
+  ]
+}

@@ -1,0 +1,3 @@
+# Genomics, association, and variant interpretation
+
+Genome-wide association studies test many variants, so significance thresholds account for multiple comparisons. A locus may tag a causal variant through linkage disequilibrium; ancestry structure and relatedness can confound association. Effect size, confidence interval, replication, and biological plausibility all matter. Functional follow-up should prioritize a mechanism: tissue-specific expression, chromatin interaction, allele-specific transcription, or perturbation in a relevant model. Predictive association does not by itself establish a treatment target.

@@ -1,0 +1,134 @@
+{
+  "schema_version": "1.0",
+  "course_id": "programming",
+  "license": "MIT OR CC-BY-4.0",
+  "questions": [
+    {
+      "id": "programming-1:check",
+      "type": "single_choice",
+      "prompt": "Which code practice most improves reproducibility of a data analysis?",
+      "options": [
+        "Overwrite raw measurements after filtering",
+        "Record the exact input data, parameters, and code version",
+        "Use hidden global variables to avoid repeated inputs",
+        "Round values before all calculations"
+      ],
+      "points": 1,
+      "objective_ids": [
+        "programming-1-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 1
+      },
+      "feedback": {
+        "hint": "A later analyst needs enough provenance to recreate the result.",
+        "solution": "Recording raw inputs, parameters, and code version provides an auditable path from data to result. Destructive edits and hidden state make reproduction harder.",
+        "lesson_ids": [
+          "programming-1"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "legacy-prototype",
+        "legacy_id": "programming-1:check",
+        "modifications": []
+      }
+    },
+    {
+      "id": "programming-2:check",
+      "type": "numeric",
+      "prompt": "For ẋ=3, x₀=2, and one Euler step of h=0.4, what is x₁?",
+      "points": 1,
+      "objective_ids": [
+        "programming-2-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 3.2,
+        "unit": "",
+        "tolerance": 0.048,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use x₁=x₀+h·3.",
+        "solution": "x₁=2+0.4×3=3.2.",
+        "lesson_ids": [
+          "programming-2"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "legacy-prototype",
+        "legacy_id": "programming-2:check",
+        "modifications": []
+      }
+    },
+    {
+      "id": "programming-3:check",
+      "type": "single_choice",
+      "prompt": "Why must scaling be learned separately inside each cross-validation training fold?",
+      "options": [
+        "To prevent information from held-out observations leaking into the fitted pipeline",
+        "To increase the test-set sample size",
+        "To force all residuals to zero",
+        "To guarantee causal inference"
+      ],
+      "points": 1,
+      "objective_ids": [
+        "programming-3-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0
+      },
+      "feedback": {
+        "hint": "Any preprocessing informed by held-out data weakens the independence of validation.",
+        "solution": "Learning scaling parameters using held-out data leaks information into training. Fit preprocessing within each fold, then apply it unchanged to that fold's held-out observations.",
+        "lesson_ids": [
+          "programming-3"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "legacy-prototype",
+        "legacy_id": "programming-3:check",
+        "modifications": []
+      }
+    },
+    {
+      "id": "programming-4:check",
+      "type": "single_choice",
+      "prompt": "A paired study measures each donor before and after treatment. Which display best preserves the pairing?",
+      "options": [
+        "Plot each donor's two values connected by a line",
+        "Show only one bar per condition",
+        "Pool every cell and ignore donor identity",
+        "Use a pie chart of the two means"
+      ],
+      "points": 1,
+      "objective_ids": [
+        "programming-4-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0
+      },
+      "feedback": {
+        "hint": "The visual should retain which observations belong to the same donor.",
+        "solution": "Connecting each donor's measurements preserves within-donor pairing and reveals direction and variability of individual responses.",
+        "lesson_ids": [
+          "programming-4"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "legacy-prototype",
+        "legacy_id": "programming-4:check",
+        "modifications": []
+      }
+    }
+  ]
+}

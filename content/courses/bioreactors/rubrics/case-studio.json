@@ -1,0 +1,35 @@
+{
+  "schema_version": "1.0",
+  "course_id": "bioreactors",
+  "cases": [
+    {
+      "id": "bioreactors:case",
+      "prompt": "A scaled-up perfusion culture has normal bulk dissolved oxygen but a gradient in viability across the vessel. Propose a scale-down experiment and sampling plan that separates mixing limitation from cell-line instability.",
+      "mode": "self-assessment",
+      "objective_ids": [],
+      "rubric": [
+        {
+          "id": "bioreactors-case-criterion-1",
+          "criterion": "Reproduces mixing/oxygen gradients at smaller scale and includes matched well-mixed control",
+          "points": 0,
+          "levels": []
+        },
+        {
+          "id": "bioreactors-case-criterion-2",
+          "criterion": "Samples spatially or temporally for oxygen, metabolites, and viability with calibrated methods",
+          "points": 0,
+          "levels": []
+        },
+        {
+          "id": "bioreactors-case-criterion-3",
+          "criterion": "Uses matched passage/seed bank and independent replicate cultures to test cell-line stability",
+          "points": 0,
+          "levels": []
+        }
+      ],
+      "limitations": [
+        "This preserved three-criterion checklist is self-assessment, not an analytic grading rubric or an institutional grade."
+      ]
+    }
+  ]
+}

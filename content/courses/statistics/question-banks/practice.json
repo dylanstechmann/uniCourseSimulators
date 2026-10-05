@@ -1,0 +1,133 @@
+{
+  "schema_version": "1.0",
+  "course_id": "statistics",
+  "license": "MIT OR CC-BY-4.0",
+  "questions": [
+    {
+      "id": "statistics-1:check",
+      "type": "numeric",
+      "prompt": "An experiment has sample SD 10 and n=25 independent biological replicates. What is the standard error?",
+      "points": 1,
+      "objective_ids": [
+        "statistics-1-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 2,
+        "unit": "",
+        "tolerance": 0.03,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Compute s/√n.",
+        "solution": "SE=10/√25=2 units.",
+        "lesson_ids": [
+          "statistics-1"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "legacy-prototype",
+        "legacy_id": "statistics-1:check",
+        "modifications": []
+      }
+    },
+    {
+      "id": "statistics-2:check",
+      "type": "single_choice",
+      "prompt": "A 95% confidence interval for a mean difference is [1, 5]. Which interpretation is best?",
+      "options": [
+        "The fixed mean difference has 95% probability of lying in this realized interval",
+        "The method would cover the true difference in about 95% of repeated samples under its assumptions",
+        "There is a 95% chance the effect is biologically important",
+        "The null hypothesis is exactly 5% likely"
+      ],
+      "points": 1,
+      "objective_ids": [
+        "statistics-2-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 1
+      },
+      "feedback": {
+        "hint": "A frequentist interval describes the long-run behavior of the procedure.",
+        "solution": "The 95% refers to repeated-sampling coverage under assumptions. It does not assign a probability to the fixed parameter after the interval is observed.",
+        "lesson_ids": [
+          "statistics-2"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "legacy-prototype",
+        "legacy_id": "statistics-2:check",
+        "modifications": []
+      }
+    },
+    {
+      "id": "statistics-3:check",
+      "type": "numeric",
+      "prompt": "For 10 independent null tests each at α=0.05, what is the probability of at least one false positive? Enter percent, rounded to a whole number.",
+      "points": 1,
+      "objective_ids": [
+        "statistics-3-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 40,
+        "unit": "%",
+        "tolerance": 1.2,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use 1−(1−α)ⁿ and multiply by 100.",
+        "solution": "1−0.95¹⁰≈0.401, or about 40%. Independence is assumed for this calculation.",
+        "lesson_ids": [
+          "statistics-3"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "legacy-prototype",
+        "legacy_id": "statistics-3:check",
+        "modifications": []
+      }
+    },
+    {
+      "id": "statistics-4:check",
+      "type": "single_choice",
+      "prompt": "A study measures 100 cells from each of 4 animals per group. What is the primary biological sample size per group?",
+      "options": [
+        "400",
+        "100",
+        "4",
+        "40,000"
+      ],
+      "points": 1,
+      "objective_ids": [
+        "statistics-4-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 2
+      },
+      "feedback": {
+        "hint": "Cells are nested within animals; identify the independent unit assigned to treatment.",
+        "solution": "If treatment was assigned by animal, the primary biological sample size is 4 animals per group. Cell-level observations are nested and require a hierarchical analysis.",
+        "lesson_ids": [
+          "statistics-4"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "legacy-prototype",
+        "legacy_id": "statistics-4:check",
+        "modifications": []
+      }
+    }
+  ]
+}

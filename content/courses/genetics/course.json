@@ -1,0 +1,329 @@
+{
+  "schema_version": "1.0",
+  "id": "genetics",
+  "legacy_code": "BIO 220",
+  "title": "Genetics & Genomics",
+  "description": "Move from Mendelian segregation to modern genome-scale inference, keeping recombination, gene regulation, and experimental design in view.",
+  "domain": "Life sciences",
+  "level": "Year 2",
+  "maturity": "partial",
+  "version": "0.1.0",
+  "license": "MIT OR CC-BY-4.0",
+  "content_origin": {
+    "kind": "legacy-prototype",
+    "source_path": "src/data/courses.js",
+    "source_sha256": "a77a7cb7f5be2ffa12068877042ac775c6d9b79b83ac2f316fe4f26a0d3d783b",
+    "migration_version": "1.0",
+    "modifications": []
+  },
+  "prerequisites": {
+    "course_ids": [
+      "cell-biology"
+    ],
+    "recommended_course_ids": [],
+    "concurrent_course_ids": [],
+    "knowledge": [],
+    "statement": "Foundations of Cell & Molecular Biology"
+  },
+  "outcomes": [
+    {
+      "id": "genetics-outcome-1",
+      "description": "Calculate genotype probabilities under explicit assumptions.",
+      "bloom": "apply"
+    },
+    {
+      "id": "genetics-outcome-2",
+      "description": "Interpret linkage and recombination data.",
+      "bloom": "analyze"
+    },
+    {
+      "id": "genetics-outcome-3",
+      "description": "Distinguish association from causal variant evidence.",
+      "bloom": "analyze"
+    },
+    {
+      "id": "genetics-outcome-4",
+      "description": "Design a controlled gene-expression experiment.",
+      "bloom": "create"
+    }
+  ],
+  "lesson_objectives": [
+    {
+      "id": "genetics-1-objective-1",
+      "description": "Apply segregation rules to pedigrees.",
+      "bloom": "apply",
+      "course_outcome_ids": []
+    },
+    {
+      "id": "genetics-1-objective-2",
+      "description": "Distinguish genotype frequency from phenotype frequency.",
+      "bloom": "analyze",
+      "course_outcome_ids": []
+    },
+    {
+      "id": "genetics-2-objective-1",
+      "description": "Estimate recombination frequency from progeny counts.",
+      "bloom": "apply",
+      "course_outcome_ids": []
+    },
+    {
+      "id": "genetics-2-objective-2",
+      "description": "Explain why recombination fraction is a distance proxy with limits.",
+      "bloom": "understand",
+      "course_outcome_ids": []
+    },
+    {
+      "id": "genetics-3-objective-1",
+      "description": "Interpret cis-regulatory and trans-acting effects.",
+      "bloom": "analyze",
+      "course_outcome_ids": []
+    },
+    {
+      "id": "genetics-3-objective-2",
+      "description": "Choose perturbations that distinguish correlation from mechanism.",
+      "bloom": "evaluate",
+      "course_outcome_ids": []
+    },
+    {
+      "id": "genetics-4-objective-1",
+      "description": "Read an association effect with its uncertainty and population context.",
+      "bloom": "understand",
+      "course_outcome_ids": []
+    },
+    {
+      "id": "genetics-4-objective-2",
+      "description": "Separate statistical association from functional causation.",
+      "bloom": "analyze",
+      "course_outcome_ids": []
+    }
+  ],
+  "duration": {
+    "instructional_weeks": null,
+    "equivalent_structure": null,
+    "weeks": []
+  },
+  "workload": {
+    "estimated_total_hours": null,
+    "estimated_hours_per_week": null,
+    "basis": "Not measured. Legacy nominal credit and display-time labels are not retained as workload estimates."
+  },
+  "modules": [
+    {
+      "id": "genetics-module-1",
+      "title": "Segregation, penetrance, and probability",
+      "source_ids": [
+        "biology",
+        "molecular"
+      ],
+      "lessons": [
+        {
+          "id": "genetics-1",
+          "title": "Segregation, penetrance, and probability",
+          "reading": "modules/01-segregation-penetrance-and-probability.md",
+          "objectives": [
+            "genetics-1-objective-1",
+            "genetics-1-objective-2"
+          ],
+          "worked_example": "For two heterozygous parents Aa × Aa, the child genotype probabilities are 1/4 AA, 1/2 Aa, and 1/4 aa. A recessive phenotype with full penetrance has probability 1/4 only if both parents are carriers.",
+          "question_ids": [
+            "genetics-1:check"
+          ],
+          "card_ids": [
+            "genetics-0-0",
+            "genetics-0-1"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "genetics-module-2",
+      "title": "Linkage and recombination mapping",
+      "source_ids": [
+        "biology",
+        "molecular"
+      ],
+      "lessons": [
+        {
+          "id": "genetics-2",
+          "title": "Linkage and recombination mapping",
+          "reading": "modules/02-linkage-and-recombination-mapping.md",
+          "objectives": [
+            "genetics-2-objective-1",
+            "genetics-2-objective-2"
+          ],
+          "worked_example": "If 180 of 1,000 offspring are recombinant in a testcross, r = 0.18 and the loci are approximately 18 cM apart for a short interval.",
+          "question_ids": [
+            "genetics-2:check"
+          ],
+          "card_ids": [
+            "genetics-1-0",
+            "genetics-1-1"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "genetics-module-3",
+      "title": "Gene regulation and causal perturbation",
+      "source_ids": [
+        "biology",
+        "molecular"
+      ],
+      "lessons": [
+        {
+          "id": "genetics-3",
+          "title": "Gene regulation and causal perturbation",
+          "reading": "modules/03-gene-regulation-and-causal-perturbation.md",
+          "objectives": [
+            "genetics-3-objective-1",
+            "genetics-3-objective-2"
+          ],
+          "worked_example": "If editing a promoter lowers RNA and protein, a promoter-independent cDNA rescue that restores phenotype supports a causal link between reduced gene product and phenotype, while not excluding every downstream effect.",
+          "question_ids": [
+            "genetics-3:check"
+          ],
+          "card_ids": [
+            "genetics-2-0",
+            "genetics-2-1"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "genetics-module-4",
+      "title": "Genomics, association, and variant interpretation",
+      "source_ids": [
+        "biology",
+        "molecular"
+      ],
+      "lessons": [
+        {
+          "id": "genetics-4",
+          "title": "Genomics, association, and variant interpretation",
+          "reading": "modules/04-genomics-association-and-variant-interpretation.md",
+          "objectives": [
+            "genetics-4-objective-1",
+            "genetics-4-objective-2"
+          ],
+          "worked_example": "A replicated association with a noncoding SNP narrows a region, not necessarily a gene. Fine-mapping and cell-type-specific perturbation can distinguish plausible regulatory mechanisms.",
+          "question_ids": [
+            "genetics-4:check"
+          ],
+          "card_ids": [
+            "genetics-3-0",
+            "genetics-3-1"
+          ]
+        }
+      ]
+    }
+  ],
+  "assessments": [
+    {
+      "id": "genetics-1-practice",
+      "type": "practice",
+      "mode": "practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "genetics-1-objective-1"
+      ],
+      "question_ids": [
+        "genetics-1:check"
+      ],
+      "points": 1
+    },
+    {
+      "id": "genetics-2-practice",
+      "type": "practice",
+      "mode": "practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "genetics-2-objective-1"
+      ],
+      "question_ids": [
+        "genetics-2:check"
+      ],
+      "points": 1
+    },
+    {
+      "id": "genetics-3-practice",
+      "type": "practice",
+      "mode": "practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "genetics-3-objective-1"
+      ],
+      "question_ids": [
+        "genetics-3:check"
+      ],
+      "points": 1
+    },
+    {
+      "id": "genetics-4-practice",
+      "type": "practice",
+      "mode": "practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "genetics-4-objective-1"
+      ],
+      "question_ids": [
+        "genetics-4:check"
+      ],
+      "points": 1
+    },
+    {
+      "id": "genetics-case",
+      "type": "case",
+      "mode": "self-assessment",
+      "path": "rubrics/case-studio.json",
+      "objective_ids": [],
+      "question_ids": [],
+      "points": 0
+    }
+  ],
+  "grading_policy": {
+    "mode": "formative-only",
+    "categories": [],
+    "attempt_policy": "Unlimited formative retries; no summative grade is awarded.",
+    "solution_release": "Public practice solutions may be shown after an attempt. They are not production exam keys.",
+    "late_policy": "No deadlines or late penalties exist in this partial package.",
+    "appeals": "No instructor review workflow is implemented; report ambiguous practice items to repository maintainers."
+  },
+  "retrieval_cards": "question-banks/retrieval-cards.json",
+  "case_rubrics": "rubrics/case-studio.json",
+  "source_map": "source-map.json",
+  "syllabus": "syllabus.md",
+  "review": {
+    "status": "unreviewed",
+    "reviewed_version": null,
+    "reviewers": []
+  },
+  "accessibility": {
+    "language": "en",
+    "reading_format": "markdown",
+    "math_format": "unicode-text",
+    "diagram_policy": "The seed package contains no imported diagrams; newly authored diagrams require descriptions and individual license tracking.",
+    "known_issues": [
+      "Unicode equations require structured mathematical alternatives and assistive-technology review."
+    ],
+    "review_status": "unreviewed"
+  },
+  "history": [
+    {
+      "version": "0.1.0",
+      "date": "2026-10-05",
+      "summary": "Preserved original compact prototype content in separate manifests and readings; labeled partial without semester or credit equivalency."
+    }
+  ],
+  "limitations": [
+    "Four compact legacy units are preserved; this package is not equivalent to a full university semester.",
+    "There is no authored 12–15 week schedule, substantive homework sequence, laboratory sequence, midterm, cumulative final, or graded integrative project.",
+    "The single formative check per lesson does not demonstrate comprehensive outcome coverage or mastery; association with the first lesson objective is provisional.",
+    "Bloom labels and structured prerequisite edges are initial authoring classifications awaiting subject-matter review.",
+    "Question answers and solution feedback are intentionally public practice authoring specifications, not restricted exam keys.",
+    "Numerical specifications preserve the prototype's tolerance and optional unit entry; significant-figure and dimensional checks have not been authored.",
+    "Total workload and weekly duration are unknown; former nominal credit values and hardcoded reading times do not establish workload."
+  ],
+  "intentionally_omitted": [
+    "Full instructional sequence and summative assessments are not authored yet; this is a preserved seed inventory."
+  ]
+}

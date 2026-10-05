@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.0",
+  "course_id": "statistics",
+  "license": "MIT OR CC-BY-4.0",
+  "modules": [
+    {
+      "module_id": "statistics-module-1",
+      "lesson_id": "statistics-1",
+      "reading": "modules/01-probability-distributions-and-sampling.md",
+      "source_ids": [
+        "statistics",
+        "biology"
+      ],
+      "relationship": "curriculum-comparator",
+      "original_content": true,
+      "license": "MIT OR CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "statistics-module-2",
+      "lesson_id": "statistics-2",
+      "reading": "modules/02-estimation-confidence-intervals-and-effect-sizes.md",
+      "source_ids": [
+        "statistics",
+        "biology"
+      ],
+      "relationship": "curriculum-comparator",
+      "original_content": true,
+      "license": "MIT OR CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "statistics-module-3",
+      "lesson_id": "statistics-3",
+      "reading": "modules/03-hypothesis-tests-and-multiple-comparisons.md",
+      "source_ids": [
+        "statistics",
+        "biology"
+      ],
+      "relationship": "curriculum-comparator",
+      "original_content": true,
+      "license": "MIT OR CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "statistics-module-4",
+      "lesson_id": "statistics-4",
+      "reading": "modules/04-experimental-design-regression-and-reproducibility.md",
+      "source_ids": [
+        "statistics",
+        "biology"
+      ],
+      "relationship": "curriculum-comparator",
+      "original_content": true,
+      "license": "MIT OR CC-BY-4.0",
+      "modifications": []
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "schema_version": "1.0",
+  "course_id": "statics-materials",
+  "cases": [
+    {
+      "id": "statics-materials:case",
+      "prompt": "A porous scaffold meets a yield-strength target but collapses under cyclic perfusion. Identify two failure mechanisms missed by a one-time compression test and propose an accelerated but interpretable test plan.",
+      "mode": "self-assessment",
+      "objective_ids": [],
+      "rubric": [
+        {
+          "id": "statics-materials-case-criterion-1",
+          "criterion": "Identifies fatigue, creep, degradation, buckling, or strut damage",
+          "points": 0,
+          "levels": []
+        },
+        {
+          "id": "statics-materials-case-criterion-2",
+          "criterion": "Includes relevant wet/37°C or degradation environment",
+          "points": 0,
+          "levels": []
+        },
+        {
+          "id": "statics-materials-case-criterion-3",
+          "criterion": "Specifies cyclic loading, controls, measured stiffness/porosity/flow, and stopping criteria",
+          "points": 0,
+          "levels": []
+        }
+      ],
+      "limitations": [
+        "This preserved three-criterion checklist is self-assessment, not an analytic grading rubric or an institutional grade."
+      ]
+    }
+  ]
+}

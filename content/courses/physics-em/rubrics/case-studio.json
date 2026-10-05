@@ -1,0 +1,35 @@
+{
+  "schema_version": "1.0",
+  "course_id": "physics-em",
+  "cases": [
+    {
+      "id": "physics-em:case",
+      "prompt": "A high-impedance microelectrode records a smaller signal after connecting a digitizer. Explain loading with a divider model and give two circuit or measurement changes that test whether the loss is electrical rather than biological.",
+      "mode": "self-assessment",
+      "objective_ids": [],
+      "rubric": [
+        {
+          "id": "physics-em-case-criterion-1",
+          "criterion": "Models electrode/source impedance in series with finite input impedance",
+          "points": 0,
+          "levels": []
+        },
+        {
+          "id": "physics-em-case-criterion-2",
+          "criterion": "Predicts attenuation from the divider",
+          "points": 0,
+          "levels": []
+        },
+        {
+          "id": "physics-em-case-criterion-3",
+          "criterion": "Suggests higher input impedance, buffer amplifier, impedance sweep, or dummy-signal control",
+          "points": 0,
+          "levels": []
+        }
+      ],
+      "limitations": [
+        "This preserved three-criterion checklist is self-assessment, not an analytic grading rubric or an institutional grade."
+      ]
+    }
+  ]
+}

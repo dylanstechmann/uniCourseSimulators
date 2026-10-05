@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.0",
+  "course_id": "calculus-1",
+  "license": "MIT OR CC-BY-4.0",
+  "modules": [
+    {
+      "module_id": "calculus-1-module-1",
+      "lesson_id": "calculus-1-1",
+      "reading": "modules/01-limits-continuity-and-approximation.md",
+      "source_ids": [
+        "calculus",
+        "engineeringMath"
+      ],
+      "relationship": "curriculum-comparator",
+      "original_content": true,
+      "license": "MIT OR CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "calculus-1-module-2",
+      "lesson_id": "calculus-1-2",
+      "reading": "modules/02-derivative-rules-and-chain-rule.md",
+      "source_ids": [
+        "calculus",
+        "engineeringMath"
+      ],
+      "relationship": "curriculum-comparator",
+      "original_content": true,
+      "license": "MIT OR CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "calculus-1-module-3",
+      "lesson_id": "calculus-1-3",
+      "reading": "modules/03-optimization-and-related-rates.md",
+      "source_ids": [
+        "calculus",
+        "engineeringMath"
+      ],
+      "relationship": "curriculum-comparator",
+      "original_content": true,
+      "license": "MIT OR CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "calculus-1-module-4",
+      "lesson_id": "calculus-1-4",
+      "reading": "modules/04-definite-integrals-and-the-fundamental-theorem.md",
+      "source_ids": [
+        "calculus",
+        "engineeringMath"
+      ],
+      "relationship": "curriculum-comparator",
+      "original_content": true,
+      "license": "MIT OR CC-BY-4.0",
+      "modifications": []
+    }
+  ]
+}

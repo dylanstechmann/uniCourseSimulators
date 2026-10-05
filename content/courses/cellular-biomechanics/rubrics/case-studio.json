@@ -1,0 +1,35 @@
+{
+  "schema_version": "1.0",
+  "course_id": "cellular-biomechanics",
+  "cases": [
+    {
+      "id": "cellular-biomechanics:case",
+      "prompt": "A stiff hydrogel increases a differentiation marker, but stiffness was raised by increasing crosslinker that also reduced ligand mobility. Describe a redesigned experiment and one material characterization needed before interpreting the cell result.",
+      "mode": "self-assessment",
+      "objective_ids": [],
+      "rubric": [
+        {
+          "id": "cellular-biomechanics-case-criterion-1",
+          "criterion": "Vary stiffness and ligand mobility/density independently or use orthogonal chemistry",
+          "points": 0,
+          "levels": []
+        },
+        {
+          "id": "cellular-biomechanics-case-criterion-2",
+          "criterion": "Characterize modulus and viscoelastic relaxation at culture conditions",
+          "points": 0,
+          "levels": []
+        },
+        {
+          "id": "cellular-biomechanics-case-criterion-3",
+          "criterion": "Includes matched ligand/adhesion controls and independent biological replicates",
+          "points": 0,
+          "levels": []
+        }
+      ],
+      "limitations": [
+        "This preserved three-criterion checklist is self-assessment, not an analytic grading rubric or an institutional grade."
+      ]
+    }
+  ]
+}

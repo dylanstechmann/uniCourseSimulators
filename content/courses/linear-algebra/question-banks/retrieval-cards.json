@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0",
+  "course_id": "linear-algebra",
+  "cards": [
+    {
+      "id": "linear-algebra-0-0",
+      "lesson_id": "linear-algebra-1",
+      "front": "Rank",
+      "back": "The number of linearly independent rows or columns in a matrix.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "linear-algebra-0-1",
+      "lesson_id": "linear-algebra-1",
+      "front": "Condition number",
+      "back": "A measure of how strongly solution error may amplify input or measurement error.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "linear-algebra-1-0",
+      "lesson_id": "linear-algebra-2",
+      "front": "Span",
+      "back": "All linear combinations of a set of vectors.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "linear-algebra-1-1",
+      "lesson_id": "linear-algebra-2",
+      "front": "Basis",
+      "back": "A linearly independent set that spans the vector space.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "linear-algebra-2-0",
+      "lesson_id": "linear-algebra-3",
+      "front": "Eigenvalue",
+      "back": "A scalar λ for which Av=λv for some nonzero vector v.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "linear-algebra-2-1",
+      "lesson_id": "linear-algebra-3",
+      "front": "Asymptotic stability",
+      "back": "Small perturbations decay back toward an equilibrium as time increases.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "linear-algebra-3-0",
+      "lesson_id": "linear-algebra-4",
+      "front": "Least squares",
+      "back": "Parameter estimation that minimizes the sum of squared residuals.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "linear-algebra-3-1",
+      "lesson_id": "linear-algebra-4",
+      "front": "Residual",
+      "back": "Observed value minus model-predicted value.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    }
+  ]
+}

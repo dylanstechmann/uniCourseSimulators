@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0",
+  "course_id": "statistics",
+  "cards": [
+    {
+      "id": "statistics-0-0",
+      "lesson_id": "statistics-1",
+      "front": "Standard deviation",
+      "back": "The spread of observations around their mean in a sample or population model.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "statistics-0-1",
+      "lesson_id": "statistics-1",
+      "front": "Standard error",
+      "back": "The uncertainty scale of an estimator across repeated samples; for a mean, approximately s/√n under independence.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "statistics-1-0",
+      "lesson_id": "statistics-2",
+      "front": "Estimand",
+      "back": "The precisely defined quantity a study aims to estimate, such as a treatment effect in a target population.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "statistics-1-1",
+      "lesson_id": "statistics-2",
+      "front": "Effect size",
+      "back": "A quantitative measure of the magnitude of a difference or association.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "statistics-2-0",
+      "lesson_id": "statistics-3",
+      "front": "p-value",
+      "back": "Probability under a specified null model of data at least as extreme as observed, subject to the test assumptions.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "statistics-2-1",
+      "lesson_id": "statistics-3",
+      "front": "False discovery rate",
+      "back": "The expected fraction of false positives among rejected hypotheses under a specified multiple-testing procedure.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "statistics-3-0",
+      "lesson_id": "statistics-4",
+      "front": "Pseudoreplication",
+      "back": "Treating non-independent subsamples as independent experimental replicates.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "statistics-3-1",
+      "lesson_id": "statistics-4",
+      "front": "Blocking",
+      "back": "Grouping experimental units by a nuisance factor so treatment comparisons are made within more homogeneous groups.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    }
+  ]
+}

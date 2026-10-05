@@ -1,0 +1,134 @@
+{
+  "schema_version": "1.0",
+  "course_id": "genetics",
+  "license": "MIT OR CC-BY-4.0",
+  "questions": [
+    {
+      "id": "genetics-1:check",
+      "type": "single_choice",
+      "prompt": "Two carrier parents have a recessive condition allele. With full penetrance and independent conceptions, what is the probability their next child is affected?",
+      "options": [
+        "1/2",
+        "1/4",
+        "1/8",
+        "3/4"
+      ],
+      "points": 1,
+      "objective_ids": [
+        "genetics-1-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 1
+      },
+      "feedback": {
+        "hint": "Enumerate the four equally likely allele combinations.",
+        "solution": "Aa × Aa yields AA, Aa, Aa, and aa; one of four offspring genotypes is affected aa. The probability for each conception remains 1/4.",
+        "lesson_ids": [
+          "genetics-1"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "legacy-prototype",
+        "legacy_id": "genetics-1:check",
+        "modifications": []
+      }
+    },
+    {
+      "id": "genetics-2:check",
+      "type": "numeric",
+      "prompt": "In a testcross, 72 of 400 progeny are recombinant. What is the recombination frequency as a percent?",
+      "points": 1,
+      "objective_ids": [
+        "genetics-2-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 18,
+        "unit": "%",
+        "tolerance": 0.27,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Divide recombinant progeny by total progeny, then multiply by 100.",
+        "solution": "r = 72/400 = 0.18, or 18%. For a short interval, this approximates 18 cM.",
+        "lesson_ids": [
+          "genetics-2"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "legacy-prototype",
+        "legacy_id": "genetics-2:check",
+        "modifications": []
+      }
+    },
+    {
+      "id": "genetics-3:check",
+      "type": "single_choice",
+      "prompt": "A promoter variant changes expression only from the chromosome carrying it in a heterozygote. This pattern most strongly suggests a:",
+      "options": [
+        "Cis-regulatory effect",
+        "Trans-acting effect",
+        "Mitochondrial inheritance effect",
+        "Random sequencing artifact by definition"
+      ],
+      "points": 1,
+      "objective_ids": [
+        "genetics-3-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0
+      },
+      "feedback": {
+        "hint": "Ask whether the effect follows one linked allele or alters a diffusible regulator.",
+        "solution": "An allele-specific effect confined to the chromosome carrying the variant is the defining pattern of a cis-regulatory effect.",
+        "lesson_ids": [
+          "genetics-3"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "legacy-prototype",
+        "legacy_id": "genetics-3:check",
+        "modifications": []
+      }
+    },
+    {
+      "id": "genetics-4:check",
+      "type": "single_choice",
+      "prompt": "A significant SNP is associated with a phenotype but lies in a large linkage-disequilibrium block. What is the strongest conclusion?",
+      "options": [
+        "The SNP is the causal variant",
+        "The region contains one or more variants associated with the phenotype",
+        "The nearest gene is the mechanism",
+        "The association proves a treatment will work"
+      ],
+      "points": 1,
+      "objective_ids": [
+        "genetics-4-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 1
+      },
+      "feedback": {
+        "hint": "Association identifies a signal; causal assignment needs additional evidence.",
+        "solution": "The associated region is implicated, but correlated variants can share the signal. Fine-mapping, replication, and functional evidence are required before naming a causal variant or gene.",
+        "lesson_ids": [
+          "genetics-4"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "legacy-prototype",
+        "legacy_id": "genetics-4:check",
+        "modifications": []
+      }
+    }
+  ]
+}

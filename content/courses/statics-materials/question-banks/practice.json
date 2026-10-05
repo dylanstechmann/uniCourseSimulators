@@ -1,0 +1,132 @@
+{
+  "schema_version": "1.0",
+  "course_id": "statics-materials",
+  "license": "MIT OR CC-BY-4.0",
+  "questions": [
+    {
+      "id": "statics-materials-1:check",
+      "type": "numeric",
+      "prompt": "A simply supported beam spans 4 m and carries a 600 N point load at midspan. What vertical reaction acts at either support?",
+      "points": 1,
+      "objective_ids": [
+        "statics-materials-1-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 300,
+        "unit": "N",
+        "tolerance": 4.5,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use symmetry and vertical-force equilibrium.",
+        "solution": "The reactions are equal; 2R=600 N, so R=300 N at each support.",
+        "lesson_ids": [
+          "statics-materials-1"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "legacy-prototype",
+        "legacy_id": "statics-materials-1:check",
+        "modifications": []
+      }
+    },
+    {
+      "id": "statics-materials-2:check",
+      "type": "numeric",
+      "prompt": "A 50 mm² rod carries 500 N axial tension. What is the average stress in MPa?",
+      "points": 1,
+      "objective_ids": [
+        "statics-materials-2-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 10,
+        "unit": "MPa",
+        "tolerance": 0.15,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Compute F/A and note 1 N/mm² = 1 MPa.",
+        "solution": "σ=500 N/50 mm²=10 N/mm²=10 MPa.",
+        "lesson_ids": [
+          "statics-materials-2"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "legacy-prototype",
+        "legacy_id": "statics-materials-2:check",
+        "modifications": []
+      }
+    },
+    {
+      "id": "statics-materials-3:check",
+      "type": "single_choice",
+      "prompt": "In elementary beam bending, where is the magnitude of normal stress greatest?",
+      "options": [
+        "At the neutral axis",
+        "At the outermost fiber farthest from the neutral axis",
+        "Uniformly across the section",
+        "Only at a pin support"
+      ],
+      "points": 1,
+      "objective_ids": [
+        "statics-materials-3-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 1
+      },
+      "feedback": {
+        "hint": "Use σ=My/I and ask where |y| is largest.",
+        "solution": "Bending stress magnitude is proportional to distance from the neutral axis, so it is greatest at the extreme fibers.",
+        "lesson_ids": [
+          "statics-materials-3"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "legacy-prototype",
+        "legacy_id": "statics-materials-3:check",
+        "modifications": []
+      }
+    },
+    {
+      "id": "statics-materials-4:check",
+      "type": "numeric",
+      "prompt": "A part has a specified allowable stress of 120 MPa and a calculated maximum stress of 40 MPa. What is the factor of safety?",
+      "points": 1,
+      "objective_ids": [
+        "statics-materials-4-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 3,
+        "unit": "",
+        "tolerance": 0.045,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Divide allowable stress by calculated stress.",
+        "solution": "FoS=120/40=3 for this stated failure criterion.",
+        "lesson_ids": [
+          "statics-materials-4"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "legacy-prototype",
+        "legacy_id": "statics-materials-4:check",
+        "modifications": []
+      }
+    }
+  ]
+}

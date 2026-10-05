@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.0",
+  "course_id": "statics-materials",
+  "license": "MIT OR CC-BY-4.0",
+  "modules": [
+    {
+      "module_id": "statics-materials-module-1",
+      "lesson_id": "statics-materials-1",
+      "reading": "modules/01-free-body-diagrams-and-equilibrium.md",
+      "source_ids": [
+        "solidMechanics",
+        "mechanics"
+      ],
+      "relationship": "curriculum-comparator",
+      "original_content": true,
+      "license": "MIT OR CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "statics-materials-module-2",
+      "lesson_id": "statics-materials-2",
+      "reading": "modules/02-axial-load-stress-and-strain.md",
+      "source_ids": [
+        "solidMechanics",
+        "mechanics"
+      ],
+      "relationship": "curriculum-comparator",
+      "original_content": true,
+      "license": "MIT OR CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "statics-materials-module-3",
+      "lesson_id": "statics-materials-3",
+      "reading": "modules/03-torsion-and-bending.md",
+      "source_ids": [
+        "solidMechanics",
+        "mechanics"
+      ],
+      "relationship": "curriculum-comparator",
+      "original_content": true,
+      "license": "MIT OR CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "statics-materials-module-4",
+      "lesson_id": "statics-materials-4",
+      "reading": "modules/04-failure-criteria-fatigue-and-design-margins.md",
+      "source_ids": [
+        "solidMechanics",
+        "mechanics"
+      ],
+      "relationship": "curriculum-comparator",
+      "original_content": true,
+      "license": "MIT OR CC-BY-4.0",
+      "modifications": []
+    }
+  ]
+}

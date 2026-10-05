@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0",
+  "course_id": "signals-control",
+  "cards": [
+    {
+      "id": "signals-control-0-0",
+      "lesson_id": "signals-control-1",
+      "front": "Impulse response",
+      "back": "The output of an LTI system to a unit impulse; it determines all input-output behavior through convolution.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "signals-control-0-1",
+      "lesson_id": "signals-control-1",
+      "front": "Pole",
+      "back": "A value of the transform variable where a system transfer function's denominator is zero.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "signals-control-1-0",
+      "lesson_id": "signals-control-2",
+      "front": "Bandwidth",
+      "back": "The frequency range over which performance meets a stated gain, phase, or error criterion.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "signals-control-1-1",
+      "lesson_id": "signals-control-2",
+      "front": "Phase lag",
+      "back": "The phase delay of a system output relative to a sinusoidal input at a given frequency.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "signals-control-2-0",
+      "lesson_id": "signals-control-3",
+      "front": "Closed-loop transfer",
+      "back": "The input-output relationship after feedback is connected; for negative unity feedback it is G/(1+G).",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "signals-control-2-1",
+      "lesson_id": "signals-control-3",
+      "front": "Robustness",
+      "back": "The ability to maintain acceptable stability and performance despite uncertainty and unmodeled effects.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "signals-control-3-0",
+      "lesson_id": "signals-control-4",
+      "front": "Integral windup",
+      "back": "Excessive accumulation of the integral controller state while an actuator is saturated.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "signals-control-3-1",
+      "lesson_id": "signals-control-4",
+      "front": "Sample-and-hold",
+      "back": "A digital implementation that samples a signal and holds the value between updates.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    }
+  ]
+}

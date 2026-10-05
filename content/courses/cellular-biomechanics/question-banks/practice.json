@@ -1,0 +1,135 @@
+{
+  "schema_version": "1.0",
+  "course_id": "cellular-biomechanics",
+  "license": "MIT OR CC-BY-4.0",
+  "questions": [
+    {
+      "id": "cellular-biomechanics-1:check",
+      "type": "single_choice",
+      "prompt": "Which test measures stress relaxation?",
+      "options": [
+        "Apply a fixed strain and record stress versus time",
+        "Apply a fixed stress and record strain versus time",
+        "Hold both stress and strain at zero",
+        "Measure only specimen mass"
+      ],
+      "points": 1,
+      "objective_ids": [
+        "cellular-biomechanics-1-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0
+      },
+      "feedback": {
+        "hint": "Relaxation asks how force response changes while deformation is held fixed.",
+        "solution": "Stress relaxation is measured by imposing a step or fixed strain and recording the time-dependent stress response.",
+        "lesson_ids": [
+          "cellular-biomechanics-1"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "legacy-prototype",
+        "legacy_id": "cellular-biomechanics-1:check",
+        "modifications": []
+      }
+    },
+    {
+      "id": "cellular-biomechanics-2:check",
+      "type": "single_choice",
+      "prompt": "In traction-force microscopy, cell force is inferred primarily from:",
+      "options": [
+        "Substrate displacement and a mechanical model",
+        "Cell color alone",
+        "The number of microscope pixels",
+        "The bulk media pH"
+      ],
+      "points": 1,
+      "objective_ids": [
+        "cellular-biomechanics-2-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0
+      },
+      "feedback": {
+        "hint": "The method observes a deformation field and solves an inverse mechanics problem.",
+        "solution": "Substrate displacements are converted to traction stresses using the substrate's calibrated mechanical properties and a suitable inverse model.",
+        "lesson_ids": [
+          "cellular-biomechanics-2"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "legacy-prototype",
+        "legacy_id": "cellular-biomechanics-2:check",
+        "modifications": []
+      }
+    },
+    {
+      "id": "cellular-biomechanics-3:check",
+      "type": "single_choice",
+      "prompt": "A transcription factor enters nuclei on a stiff gel. Which next experiment best tests whether the factor is required for the downstream phenotype?",
+      "options": [
+        "Knock down the factor and quantify phenotype with a rescue condition",
+        "Increase gel stiffness again",
+        "Measure the factor's mRNA once",
+        "Replace the microscope objective"
+      ],
+      "points": 1,
+      "objective_ids": [
+        "cellular-biomechanics-3-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0
+      },
+      "feedback": {
+        "hint": "Test necessity with a targeted perturbation and evaluate whether specific restoration rescues function.",
+        "solution": "Loss-of-function followed by a specific rescue tests necessity and helps distinguish an off-target effect from a causal role.",
+        "lesson_ids": [
+          "cellular-biomechanics-3"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "legacy-prototype",
+        "legacy_id": "cellular-biomechanics-3:check",
+        "modifications": []
+      }
+    },
+    {
+      "id": "cellular-biomechanics-4:check",
+      "type": "single_choice",
+      "prompt": "Why include both low and high ligand density at each of two gel stiffnesses?",
+      "options": [
+        "To estimate stiffness, ligand-density, and interaction effects separately",
+        "To guarantee every cell has identical behavior",
+        "To remove the need for biological replicates",
+        "To make calibration unnecessary"
+      ],
+      "points": 1,
+      "objective_ids": [
+        "cellular-biomechanics-4-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0
+      },
+      "feedback": {
+        "hint": "Crossing the factors prevents one experimental variable from standing in for the other.",
+        "solution": "A factorial design varies stiffness and ligand density independently, allowing estimation of their main effects and interaction.",
+        "lesson_ids": [
+          "cellular-biomechanics-4"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "legacy-prototype",
+        "legacy_id": "cellular-biomechanics-4:check",
+        "modifications": []
+      }
+    }
+  ]
+}

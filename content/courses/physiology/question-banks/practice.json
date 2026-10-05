@@ -1,0 +1,132 @@
+{
+  "schema_version": "1.0",
+  "course_id": "physiology",
+  "license": "MIT OR CC-BY-4.0",
+  "questions": [
+    {
+      "id": "physiology-1:check",
+      "type": "numeric",
+      "prompt": "A 2 L well-mixed compartment receives solute at 12 μmol/min. First-order clearance is k = 0.3 min⁻¹. What is the steady concentration in μmol/L?",
+      "points": 1,
+      "objective_ids": [
+        "physiology-1-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 20,
+        "unit": "μmol/L",
+        "tolerance": 0.3,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "At steady state, input = k·V·C. Solve for C.",
+        "solution": "C* = input/(kV) = 12/(0.3×2) = 20 μmol/L.",
+        "lesson_ids": [
+          "physiology-1"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "legacy-prototype",
+        "legacy_id": "physiology-1:check",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physiology-2:check",
+      "type": "numeric",
+      "prompt": "A membrane has gNa = 4 nS, Vm = −50 mV, and ENa = +50 mV. Using I = g(Vm − E), what is INa in pA?",
+      "points": 1,
+      "objective_ids": [
+        "physiology-2-objective-1"
+      ],
+      "solution_spec": {
+        "answer": -400,
+        "unit": "pA",
+        "tolerance": 6,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "The driving force is −50 − (+50) = −100 mV; 1 nS·mV = 1 pA.",
+        "solution": "INa = 4 nS × (−100 mV) = −400 pA under this convention; the negative sign indicates inward positive charge.",
+        "lesson_ids": [
+          "physiology-2"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "legacy-prototype",
+        "legacy_id": "physiology-2:check",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physiology-3:check",
+      "type": "single_choice",
+      "prompt": "For ideal laminar flow in a rigid tube, doubling the radius at fixed pressure drop changes volumetric flow by a factor of:",
+      "options": [
+        "2",
+        "4",
+        "8",
+        "16"
+      ],
+      "points": 1,
+      "objective_ids": [
+        "physiology-3-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 3
+      },
+      "feedback": {
+        "hint": "Poiseuille flow depends on the fourth power of radius.",
+        "solution": "Q ∝ r⁴, so doubling r multiplies flow by 2⁴ = 16 under the model assumptions.",
+        "lesson_ids": [
+          "physiology-3"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "legacy-prototype",
+        "legacy_id": "physiology-3:check",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physiology-4:check",
+      "type": "numeric",
+      "prompt": "A solute has urine concentration 24 mg/L, urine flow 1.5 mL/min, and plasma concentration 3 mg/L. Compute clearance in mL/min.",
+      "points": 1,
+      "objective_ids": [
+        "physiology-4-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 12,
+        "unit": "mL/min",
+        "tolerance": 0.18,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use Cx = Ux·V̇/Px.",
+        "solution": "Cx = 24 × 1.5 / 3 = 12 mL/min.",
+        "lesson_ids": [
+          "physiology-4"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "legacy-prototype",
+        "legacy_id": "physiology-4:check",
+        "modifications": []
+      }
+    }
+  ]
+}

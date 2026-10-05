@@ -1,0 +1,133 @@
+{
+  "schema_version": "1.0",
+  "course_id": "bioreactors",
+  "license": "MIT OR CC-BY-4.0",
+  "questions": [
+    {
+      "id": "bioreactors-1:check",
+      "type": "numeric",
+      "prompt": "A culture doubles every 30 hours. What is its exponential growth rate μ in h⁻¹?",
+      "points": 1,
+      "objective_ids": [
+        "bioreactors-1-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0.0231,
+        "unit": "h⁻¹",
+        "tolerance": 0.0005,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use μ=ln2/td and convert td to hours.",
+        "solution": "μ=0.693/30=0.0231 h⁻¹.",
+        "lesson_ids": [
+          "bioreactors-1"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "legacy-prototype",
+        "legacy_id": "bioreactors-1:check",
+        "modifications": []
+      }
+    },
+    {
+      "id": "bioreactors-2:check",
+      "type": "numeric",
+      "prompt": "A culture has 2×10⁶ cells/mL consuming 1×10⁻¹⁶ mol O₂/(cell·s). What is volumetric demand in mmol/(L·h)?",
+      "points": 1,
+      "objective_ids": [
+        "bioreactors-2-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0.72,
+        "unit": "mmol/(L·h)",
+        "tolerance": 0.02,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Convert cells/mL to cells/L, then mol/s to mmol/h.",
+        "solution": "2×10⁹ cells/L × 1×10⁻¹⁶ mol/(cell·s)=2×10⁻⁷ mol/(L·s). Multiply by 3600 and 1000 to get 0.72 mmol/(L·h).",
+        "lesson_ids": [
+          "bioreactors-2"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "legacy-prototype",
+        "legacy_id": "bioreactors-2:check",
+        "modifications": []
+      }
+    },
+    {
+      "id": "bioreactors-3:check",
+      "type": "single_choice",
+      "prompt": "Why is constant tip speed alone insufficient to guarantee equivalent scale-up?",
+      "options": [
+        "It does not preserve mixing, power input, oxygen transfer, and local stress simultaneously",
+        "Tip speed has no units",
+        "Cells cannot experience flow",
+        "It always decreases vessel volume"
+      ],
+      "points": 1,
+      "objective_ids": [
+        "bioreactors-3-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0
+      },
+      "feedback": {
+        "hint": "Scale-up objectives are coupled; one preserved variable does not fix all transport conditions.",
+        "solution": "Equal tip speed does not ensure equal mixing time, power per volume, gas transfer, or local shear; the limiting process must be identified.",
+        "lesson_ids": [
+          "bioreactors-3"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "legacy-prototype",
+        "legacy_id": "bioreactors-3:check",
+        "modifications": []
+      }
+    },
+    {
+      "id": "bioreactors-4:check",
+      "type": "single_choice",
+      "prompt": "Which statement best distinguishes a process parameter from a quality attribute?",
+      "options": [
+        "Agitation rate is a process parameter; potency is a product quality attribute",
+        "Both are synonyms for cell count",
+        "Potency is always an instrument setting",
+        "A process parameter can never affect product quality"
+      ],
+      "points": 1,
+      "objective_ids": [
+        "bioreactors-4-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0
+      },
+      "feedback": {
+        "hint": "One describes how the process is run; the other describes the resulting product or function.",
+        "solution": "Agitation rate is a controlled process condition; potency is a measurable characteristic of the resulting cell or tissue product.",
+        "lesson_ids": [
+          "bioreactors-4"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "legacy-prototype",
+        "legacy_id": "bioreactors-4:check",
+        "modifications": []
+      }
+    }
+  ]
+}

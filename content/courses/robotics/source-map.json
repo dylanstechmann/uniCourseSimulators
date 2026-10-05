@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.0",
+  "course_id": "robotics",
+  "license": "MIT OR CC-BY-4.0",
+  "modules": [
+    {
+      "module_id": "robotics-module-1",
+      "lesson_id": "robotics-1",
+      "reading": "modules/01-frames-rotations-and-homogeneous-transforms.md",
+      "source_ids": [
+        "robotics",
+        "signals",
+        "numerical"
+      ],
+      "relationship": "curriculum-comparator",
+      "original_content": true,
+      "license": "MIT OR CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "robotics-module-2",
+      "lesson_id": "robotics-2",
+      "reading": "modules/02-forward-and-inverse-kinematics.md",
+      "source_ids": [
+        "robotics",
+        "signals",
+        "numerical"
+      ],
+      "relationship": "curriculum-comparator",
+      "original_content": true,
+      "license": "MIT OR CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "robotics-module-3",
+      "lesson_id": "robotics-3",
+      "reading": "modules/03-robot-dynamics-actuators-and-energy.md",
+      "source_ids": [
+        "robotics",
+        "signals",
+        "numerical"
+      ],
+      "relationship": "curriculum-comparator",
+      "original_content": true,
+      "license": "MIT OR CC-BY-4.0",
+      "modifications": [
+        "Expanded the power hint to state the calculation method and units without changing the question or answer."
+      ]
+    },
+    {
+      "module_id": "robotics-module-4",
+      "lesson_id": "robotics-4",
+      "reading": "modules/04-planning-sensing-and-closed-loop-execution.md",
+      "source_ids": [
+        "robotics",
+        "signals",
+        "numerical"
+      ],
+      "relationship": "curriculum-comparator",
+      "original_content": true,
+      "license": "MIT OR CC-BY-4.0",
+      "modifications": []
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "schema_version": "1.0",
+  "course_id": "geroscience",
+  "cases": [
+    {
+      "id": "geroscience:case",
+      "prompt": "A senolytic reduces marker-positive cells and improves grip strength in one mouse cohort but raises mortality in another strain. Outline a replication and mechanism study that could support or refute a tissue-specific benefit-risk claim.",
+      "mode": "self-assessment",
+      "objective_ids": [],
+      "rubric": [
+        {
+          "id": "geroscience-case-criterion-1",
+          "criterion": "Pre-specifies strain/sex/tissue strata and functional plus survival/toxicity endpoints",
+          "points": 0,
+          "levels": []
+        },
+        {
+          "id": "geroscience-case-criterion-2",
+          "criterion": "Uses multiple senescence-state measures and cell-target engagement",
+          "points": 0,
+          "levels": []
+        },
+        {
+          "id": "geroscience-case-criterion-3",
+          "criterion": "Includes randomized blinded replication, exposure/safety measures, and appropriate interaction analysis",
+          "points": 0,
+          "levels": []
+        }
+      ],
+      "limitations": [
+        "This preserved three-criterion checklist is self-assessment, not an analytic grading rubric or an institutional grade."
+      ]
+    }
+  ]
+}

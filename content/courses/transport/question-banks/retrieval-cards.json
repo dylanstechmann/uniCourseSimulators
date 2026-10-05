@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0",
+  "course_id": "transport",
+  "cards": [
+    {
+      "id": "transport-0-0",
+      "lesson_id": "transport-1",
+      "front": "Control volume",
+      "back": "A defined region in space across whose boundary mass, energy, and momentum may flow.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "transport-0-1",
+      "lesson_id": "transport-1",
+      "front": "Steady state",
+      "back": "A condition where stored quantities do not change with time, though through-flows can persist.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "transport-1-0",
+      "lesson_id": "transport-2",
+      "front": "Fick's first law",
+      "back": "Diffusive flux is proportional to the negative concentration gradient, J=−D∇C.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "transport-1-1",
+      "lesson_id": "transport-2",
+      "front": "Damköhler number",
+      "back": "A dimensionless comparison of reaction and transport timescales; convention depends on the process being modeled.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "transport-2-0",
+      "lesson_id": "transport-3",
+      "front": "Reynolds number",
+      "back": "Dimensionless ratio of inertial to viscous effects, Re=ρUL/μ.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "transport-2-1",
+      "lesson_id": "transport-3",
+      "front": "Poiseuille flow",
+      "back": "The ideal laminar pressure-driven flow of a Newtonian fluid through a straight circular tube.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "transport-3-0",
+      "lesson_id": "transport-4",
+      "front": "Thermal conductivity",
+      "back": "A material coefficient relating conductive heat flux to temperature gradient.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "transport-3-1",
+      "lesson_id": "transport-4",
+      "front": "Thermal resistance",
+      "back": "Temperature drop per heat-transfer rate for a specified geometry and boundary model.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    }
+  ]
+}

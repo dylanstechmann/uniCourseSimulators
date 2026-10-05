@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.0",
+  "course_id": "bioreactors",
+  "license": "MIT OR CC-BY-4.0",
+  "modules": [
+    {
+      "module_id": "bioreactors-module-1",
+      "lesson_id": "bioreactors-1",
+      "reading": "modules/01-growth-kinetics-and-process-mass-balance.md",
+      "source_ids": [
+        "transport",
+        "tissueEngineering"
+      ],
+      "relationship": "curriculum-comparator",
+      "original_content": true,
+      "license": "MIT OR CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "bioreactors-module-2",
+      "lesson_id": "bioreactors-2",
+      "reading": "modules/02-oxygen-transfer-and-consumption.md",
+      "source_ids": [
+        "transport",
+        "tissueEngineering"
+      ],
+      "relationship": "curriculum-comparator",
+      "original_content": true,
+      "license": "MIT OR CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "bioreactors-module-3",
+      "lesson_id": "bioreactors-3",
+      "reading": "modules/03-mixing-shear-and-scale-up.md",
+      "source_ids": [
+        "transport",
+        "tissueEngineering"
+      ],
+      "relationship": "curriculum-comparator",
+      "original_content": true,
+      "license": "MIT OR CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "bioreactors-module-4",
+      "lesson_id": "bioreactors-4",
+      "reading": "modules/04-process-monitoring-control-and-quality.md",
+      "source_ids": [
+        "transport",
+        "tissueEngineering"
+      ],
+      "relationship": "curriculum-comparator",
+      "original_content": true,
+      "license": "MIT OR CC-BY-4.0",
+      "modifications": []
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0",
+  "course_id": "organic-chemistry",
+  "cards": [
+    {
+      "id": "organic-chemistry-0-0",
+      "lesson_id": "organic-chemistry-1",
+      "front": "Conjugate base",
+      "back": "The species formed when an acid donates a proton.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "organic-chemistry-0-1",
+      "lesson_id": "organic-chemistry-1",
+      "front": "Resonance",
+      "back": "A representation of electron delocalization using multiple Lewis contributors with unchanged atomic positions.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "organic-chemistry-1-0",
+      "lesson_id": "organic-chemistry-2",
+      "front": "SN2",
+      "back": "A concerted bimolecular nucleophilic substitution with backside attack and inversion at a stereogenic center.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "organic-chemistry-1-1",
+      "lesson_id": "organic-chemistry-2",
+      "front": "Leaving group",
+      "back": "A substituent that departs with the bonding electron pair during a reaction.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "organic-chemistry-2-0",
+      "lesson_id": "organic-chemistry-3",
+      "front": "Antiperiplanar",
+      "back": "A dihedral angle near 180° between bonds that align for concerted elimination.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "organic-chemistry-2-1",
+      "lesson_id": "organic-chemistry-3",
+      "front": "Regioselectivity",
+      "back": "Preference for forming one constitutional isomer over another.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "organic-chemistry-3-0",
+      "lesson_id": "organic-chemistry-4",
+      "front": "Nucleophilic acyl substitution",
+      "back": "Addition to a carbonyl followed by elimination of a leaving group at an acyl carbon.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "organic-chemistry-3-1",
+      "lesson_id": "organic-chemistry-4",
+      "front": "Tetrahedral intermediate",
+      "back": "The intermediate formed after nucleophilic addition converts trigonal-planar carbonyl carbon to tetrahedral geometry.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    }
+  ]
+}

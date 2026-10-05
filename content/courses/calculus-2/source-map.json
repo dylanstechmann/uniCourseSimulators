@@ -1,0 +1,57 @@
+{
+  "schema_version": "1.0",
+  "course_id": "calculus-2",
+  "license": "MIT OR CC-BY-4.0",
+  "modules": [
+    {
+      "module_id": "calculus-2-module-1",
+      "lesson_id": "calculus-2-1",
+      "reading": "modules/01-integration-techniques-and-improper-integrals.md",
+      "source_ids": [
+        "calculus"
+      ],
+      "relationship": "curriculum-comparator",
+      "original_content": true,
+      "license": "MIT OR CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "calculus-2-module-2",
+      "lesson_id": "calculus-2-2",
+      "reading": "modules/02-sequences-series-and-approximation-error.md",
+      "source_ids": [
+        "calculus"
+      ],
+      "relationship": "curriculum-comparator",
+      "original_content": true,
+      "license": "MIT OR CC-BY-4.0",
+      "modifications": [
+        "Corrected the geometric-series tail arithmetic; the original approximation and exact sum are preserved."
+      ]
+    },
+    {
+      "module_id": "calculus-2-module-3",
+      "lesson_id": "calculus-2-3",
+      "reading": "modules/03-applications-of-integration-work-and-accumulation.md",
+      "source_ids": [
+        "calculus"
+      ],
+      "relationship": "curriculum-comparator",
+      "original_content": true,
+      "license": "MIT OR CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "calculus-2-module-4",
+      "lesson_id": "calculus-2-4",
+      "reading": "modules/04-power-series-and-taylor-error.md",
+      "source_ids": [
+        "calculus"
+      ],
+      "relationship": "curriculum-comparator",
+      "original_content": true,
+      "license": "MIT OR CC-BY-4.0",
+      "modifications": []
+    }
+  ]
+}

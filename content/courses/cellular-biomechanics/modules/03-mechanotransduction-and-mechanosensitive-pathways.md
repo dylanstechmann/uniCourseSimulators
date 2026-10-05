@@ -1,0 +1,3 @@
+# Mechanotransduction and mechanosensitive pathways
+
+Mechanotransduction converts forces or deformation into biochemical signals through channels, adhesion complexes, cytoskeletal tension, and nuclear processes. A pathway marker changing with stiffness is correlation unless a perturbation tests necessity or sufficiency. Use orthogonal readouts, time courses, matched ligand presentation, and cell-state controls. Mechanistic claims should identify the applied stimulus, transmitted force, molecular sensor, intermediate signal, and functional outcome, while recognizing parallel pathways and adaptation.

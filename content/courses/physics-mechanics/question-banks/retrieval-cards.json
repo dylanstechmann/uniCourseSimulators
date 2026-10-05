@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0",
+  "course_id": "physics-mechanics",
+  "cards": [
+    {
+      "id": "physics-mechanics-0-0",
+      "lesson_id": "physics-mechanics-1",
+      "front": "Free-body diagram",
+      "back": "A diagram of external forces and moments acting on a chosen system.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "physics-mechanics-0-1",
+      "lesson_id": "physics-mechanics-1",
+      "front": "Net force",
+      "back": "The vector sum of external forces that determines translational acceleration.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "physics-mechanics-1-0",
+      "lesson_id": "physics-mechanics-2",
+      "front": "Work",
+      "back": "Energy transfer through force acting along a displacement.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "physics-mechanics-1-1",
+      "lesson_id": "physics-mechanics-2",
+      "front": "Power",
+      "back": "Rate of energy transfer, such as mechanical force times velocity in one-dimensional motion.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "physics-mechanics-2-0",
+      "lesson_id": "physics-mechanics-3",
+      "front": "Impulse",
+      "back": "The time integral of force, equal to momentum change.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "physics-mechanics-2-1",
+      "lesson_id": "physics-mechanics-3",
+      "front": "Inelastic collision",
+      "back": "A collision in which total momentum is conserved for an isolated system but kinetic energy is not.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "physics-mechanics-3-0",
+      "lesson_id": "physics-mechanics-4",
+      "front": "Torque",
+      "back": "The rotational effect of a force about a specified point or axis.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "physics-mechanics-3-1",
+      "lesson_id": "physics-mechanics-4",
+      "front": "Young's modulus",
+      "back": "The slope of a linear stress-strain relation in a specified regime and test direction.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    }
+  ]
+}

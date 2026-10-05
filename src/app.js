@@ -1,33 +1,12 @@
-import { allCards, courseById, courses, references } from "./data/courses.js";
+import { allCards, courseById, courses, references } from "./data/courses.js?v=0.2.0";
 import { pathways } from "./data/pathways.js";
+import { STORAGE_KEY, loadGuestState } from "./state.js";
 
-const STORAGE_KEY = "lattice-academy:v1";
 const totalUnits = courses.reduce((total, item) => total + item.modules.length, 0);
 const domains = ["All courses", ...new Set(courses.map((item) => item.domain))];
 const appRoot = document.querySelector("#app");
 
-const freshState = () => ({
-  completed: {},
-  visited: {},
-  answers: {},
-  notes: {},
-  capstoneDrafts: {},
-  rubricChecks: {},
-  cardSchedule: {},
-  bookmarks: [],
-  lastCourseId: "cell-biology",
-});
-
-function loadState() {
-  try {
-    const stored = JSON.parse(localStorage.getItem(STORAGE_KEY) || "null");
-    return stored && typeof stored === "object" ? { ...freshState(), ...stored } : freshState();
-  } catch {
-    return freshState();
-  }
-}
-
-let state = loadState();
+let state = loadGuestState(localStorage);
 let route = parseRoute();
 let domainFilter = "All courses";
 let query = "";
@@ -111,7 +90,7 @@ function render() {
             <div class="topbar-meta"><span class="online-dot" aria-hidden="true"></span> LOCAL WORKSPACE</div>
           </div>
         </header>
-        <main class="page-content" id="main-content">
+        <main class="page-content" id="main-content" tabindex="-1">
           ${renderPage()}
           ${renderFooter()}
         </main>
@@ -126,20 +105,20 @@ function renderSidebar() {
     ["study", "✳", "Study room"], ["tools", "⌘", "Lab tools"],
   ];
   return `<aside class="sidebar" aria-label="Main navigation">
-    <a class="brand" href="#home" aria-label="Lattice Academy home">
+    <a class="brand" href="#home" aria-label="Lattice CourseLab home">
       <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none"><path d="M5 7h4v14h7v4H5zm13 0h4v6h6v4h-6v8h-4z" fill="currentColor"/><circle cx="27" cy="7" r="2.5" fill="#b6d978"/></svg></span>
-      <span class="brand-wordmark"><span class="brand-name">Lattice</span><span class="brand-sub">Bioengineering academy</span></span>
+      <span class="brand-wordmark"><span class="brand-name">Lattice CourseLab</span><span class="brand-sub">Interactive course studio</span></span>
     </a>
     <div class="nav-label">Workspace</div>
     <nav class="primary-nav">
-      ${nav.map(([page, icon, label]) => `<button class="nav-button ${route.page === page ? "active" : ""}" data-page="${page}" ${route.page === page ? 'aria-current="page"' : ""}><span class="nav-icon" aria-hidden="true">${icon}</span><span>${label}</span>${page === "study" && dueCards().length ? `<span class="nav-count">${dueCards().length}</span>` : ""}</button>`).join("")}
+      ${nav.map(([page, icon, label]) => `<button aria-label="${label}" class="nav-button ${route.page === page ? "active" : ""}" data-page="${page}" ${route.page === page ? 'aria-current="page"' : ""}><span class="nav-icon" aria-hidden="true">${icon}</span><span>${label}</span>${page === "study" && dueCards().length ? `<span class="nav-count">${dueCards().length}</span>` : ""}</button>`).join("")}
     </nav>
     <div class="sidebar-divider"></div>
     <div class="nav-label">Study tracks</div>
     <div class="path-nav">${pathways.map((path) => `<button class="path-shortcut" data-page="pathways"><span class="path-glyph" aria-hidden="true">${path.icon}</span>${esc(path.short)}</button>`).join("")}</div>
     <div class="sidebar-spacer"></div>
     <div class="offline-note"><div class="offline-note-title"><span aria-hidden="true">●</span> Progress stays here</div><p>Notes, scores, and review cards save in this browser. No account required.</p></div>
-    <div class="sidebar-foot"><span>OPEN LEARNING STUDIO</span><span>v1.0</span></div>
+    <div class="sidebar-foot"><span>OPEN LEARNING STUDIO</span><span>v0.2</span></div>
   </aside>`;
 }
 
@@ -177,12 +156,12 @@ function renderHome() {
   const started = courses.filter((item) => item.modules.some((unit) => state.visited[unit.id] || state.completed[unit.id]));
   const suggestions = (started.length ? started : courses.filter((item) => ["cell-biology", "general-chemistry-1", "calculus-1"].includes(item.id))).slice(0, 3);
   const cards = dueCards().length;
-  return `<section class="welcome-line"><div class="welcome-copy"><div class="eyebrow">A connected course studio</div><h1>Learn the systems behind better health.</h1><p>Build a rigorous foundation in biology, chemistry, mathematics, and engineering—then connect it to robotics, tissue design, and the science of aging.</p></div><div class="date-chip"><span aria-hidden="true">◷</span> SELF-PACED · UNIVERSITY LEVEL</div></section>
-    <section class="hero-card"><div class="hero-copy"><div class="hero-kicker">A better way to connect the disciplines</div><h2>Start with the fundamentals.<br/>Follow the question further.</h2><p>Short lectures, worked examples, auto-graded checks, and study tools help you move from core science to real engineering decisions.</p><div class="hero-actions"><button class="button button-primary" data-page="catalog">Explore all ${courses.length} courses <span aria-hidden="true">→</span></button><button class="hero-link" data-page="pathways">View learning paths</button></div></div><div class="hero-art">${renderHeroArt()}</div></section>
+  return `<section class="welcome-line"><div class="welcome-copy"><div class="eyebrow">A connected course studio</div><h1>Lattice CourseLab</h1><p>Interactive, source-grounded courses across science, mathematics, engineering, computing, and biomedicine.</p></div><div class="date-chip"><span aria-hidden="true">◷</span> SELF-PACED · PARTIAL CONTENT</div></section>
+    <section class="hero-card"><div class="hero-copy"><div class="hero-kicker">A better way to connect the disciplines</div><h2>Start with the fundamentals.<br/>Follow the question further.</h2><p>Preserved lesson seeds, worked examples, practice checks, and study tools. Every current package is partial; none meets the full-course standard yet.</p><div class="hero-actions"><button class="button button-primary" data-page="catalog">Explore all ${courses.length} courses <span aria-hidden="true">→</span></button><button class="hero-link" data-page="pathways">View learning paths</button></div></div><div class="hero-art">${renderHeroArt()}</div></section>
     <section class="metric-row" aria-label="Learning progress">
-      <div class="metric-card"><div class="metric-label">Lessons mastered</div><div class="metric-number">${Object.keys(state.completed).length}<span>/ ${totalUnits}</span></div></div>
+      <div class="metric-card"><div class="metric-label">Practice checks passed</div><div class="metric-number">${Object.keys(state.completed).length}<span>/ ${totalUnits}</span></div></div>
       <div class="metric-card"><div class="metric-label">Checks answered</div><div class="metric-number">${stats.attempts}<span>graded</span></div></div>
-      <div class="metric-card"><div class="metric-label">Recent accuracy</div><div class="metric-number">${stats.attempts ? `${stats.accuracy}%` : "—"}<span>${stats.attempts ? `${stats.correct} correct` : "start a check"}</span></div></div>
+      <div class="metric-card"><div class="metric-label">Latest-item accuracy</div><div class="metric-number">${stats.attempts ? `${stats.accuracy}%` : "—"}<span>${stats.attempts ? `${stats.correct} correct` : "start a check"}</span></div></div>
       <div class="metric-card"><div class="metric-label">Cards ready</div><div class="metric-number">${cards}<span>for review</span></div></div>
     </section>
     <section><div class="section-heading"><div><h2>${started.length ? "Pick up where you left off" : "A good place to begin"}</h2><p>Build momentum one focused lesson at a time.</p></div><button class="text-link" data-page="catalog">Browse the catalog →</button></div>
@@ -206,7 +185,7 @@ function renderContinueCard(item) {
 
 function renderCatalog() {
   const filtered = filteredCourses();
-  return `<section class="page-intro"><div><div class="eyebrow">Build your course plan</div><h1>Course catalog</h1><p>${courses.length} structured, original courses move from foundational science through quantitative engineering to tissue design, robotics, and geroscience.</p></div><span class="pill pill-lime">${totalUnits} interactive lessons</span></section>
+  return `<section class="page-intro"><div><div class="eyebrow">Build your course plan</div><h1>Course catalog</h1><p>${courses.length} partial course packages preserve the prototype teaching material. Full-semester lessons, homework, laboratories, and exams remain to be authored.</p></div><span class="pill pill-lime">${totalUnits} interactive lessons</span></section>
     <div class="catalog-toolbar" role="group" aria-label="Filter courses by subject">${domains.map((domain) => `<button class="filter-chip ${domainFilter === domain ? "active" : ""}" data-domain="${esc(domain)}" aria-pressed="${domainFilter === domain}">${esc(domain)}</button>`).join("")}<span class="catalog-count">${filtered.length} courses</span></div>
     <div class="course-grid-wrap">${renderCourseGrid(filtered)}</div>`;
 }
@@ -225,7 +204,7 @@ function renderCourseGrid(items) {
   return items.map((item) => `<article class="course-card" tabindex="0" role="button" data-open-course="${item.id}" aria-label="Open ${esc(item.code)} ${esc(item.title)}">
     <div class="course-card-top"><span class="course-code">${esc(item.code)}</span><span class="pill ${domainPill(item.domain)}">${esc(item.domain)}</span></div>
     <h3>${esc(item.title)}</h3><p class="course-card-summary">${esc(item.summary)}</p>
-    <div class="course-meta"><span>${esc(item.level)}</span><span>${item.credits} credits</span><span>${item.modules.length} units</span></div>
+    <div class="course-meta"><span>${esc(item.level)}</span><span>Partial</span><span>${item.modules.length} units</span></div>
     <div class="course-card-progress"><div class="progress-track"><div class="progress-fill" style="width:${percentForCourse(item)}%"></div></div><span class="course-code">${percentForCourse(item)}%</span></div>
   </article>`).join("");
 }
@@ -249,7 +228,7 @@ function renderPathway(path) {
       const item = courseById[id];
       return item ? `<button class="pathway-course-chip" data-open-course="${item.id}" title="${esc(item.code)}">${esc(item.code)} · ${esc(item.title)}</button>` : "";
     }).join("")}</div></div>`).join("")}</div>
-    <div class="pathway-progress"><span>${done} of ${ids.length} courses complete</span><div class="progress-track"><div class="progress-fill" style="width:${pct}%"></div></div><span>${pct}%</span></div></article>`;
+    <div class="pathway-progress"><span>${done} of ${ids.length} course practice check sets passed</span><div class="progress-track"><div class="progress-fill" style="width:${pct}%"></div></div><span>${pct}%</span></div></article>`;
 }
 
 function renderCourse(courseId, moduleIndex, tab) {
@@ -260,7 +239,7 @@ function renderCourse(courseId, moduleIndex, tab) {
   const completed = item.modules.filter((part) => state.completed[part.id]).length;
   return `<section class="course-heading">
       <div class="course-heading-top"><button data-page="catalog">Course catalog</button><span>›</span><span>${esc(item.code)}</span><span>·</span><span>${esc(item.domain)}</span></div>
-      <div class="course-title-row"><div><span class="pill ${domainPill(item.domain)}">${esc(item.level)} · ${item.credits} credits</span><h1>${esc(item.title)}</h1><p>${esc(item.summary)}</p></div><div class="course-stat-box"><strong>${completed}/${item.modules.length}</strong><span>units completed</span></div></div>
+      <div class="course-title-row"><div><span class="pill ${domainPill(item.domain)}">${esc(item.level)} · Partial</span><h1>${esc(item.title)}</h1><p>${esc(item.summary)}</p></div><div class="course-stat-box"><strong>${completed}/${item.modules.length}</strong><span>practice checks passed</span></div></div>
     </section>
     <div class="course-toolbar"><div class="tabs" role="tablist" aria-label="Course sections">${[["learn", "Learn"], ["map", "Syllabus"], ["exam", "Case studio"]].map(([key, label]) => `<button class="tab-button ${tab === key ? "active" : ""}" role="tab" aria-selected="${tab === key}" data-course-tab="${key}">${label}</button>`).join("")}</div>
       <button class="button button-secondary button-small" data-bookmark="${item.id}" aria-pressed="${state.bookmarks.includes(item.id)}">${state.bookmarks.includes(item.id) ? "★ Saved" : "☆ Save course"}</button></div>
@@ -269,9 +248,9 @@ function renderCourse(courseId, moduleIndex, tab) {
 }
 
 function renderLessonWorkspace(item, index, unit) {
-  return `<div class="course-workspace"><aside class="module-rail" aria-label="Course units"><div class="module-rail-heading">Course units · ${item.modules.length}</div><div class="module-rail-inner">${item.modules.map((part, partIndex) => `<button class="module-button ${partIndex === index ? "active" : ""} ${state.completed[part.id] ? "done" : ""}" data-module-index="${partIndex}" aria-current="${partIndex === index ? "step" : "false"}"><span class="module-index">${state.completed[part.id] ? "✓" : String(partIndex + 1).padStart(2, "0")}</span><span class="module-text"><strong>${esc(part.title)}</strong><small>LESSON · ${String(20 + partIndex * 5)} MIN</small></span></button>`).join("")}</div></aside>
+  return `<div class="course-workspace"><aside class="module-rail" aria-label="Course units"><div class="module-rail-heading">Course units · ${item.modules.length}</div><div class="module-rail-inner">${item.modules.map((part, partIndex) => `<button class="module-button ${partIndex === index ? "active" : ""} ${state.completed[part.id] ? "done" : ""}" data-module-index="${partIndex}" aria-current="${partIndex === index ? "step" : "false"}"><span class="module-index">${state.completed[part.id] ? "✓" : String(partIndex + 1).padStart(2, "0")}</span><span class="module-text"><strong>${esc(part.title)}</strong><small>PRESERVED LESSON SEED</small></span></button>`).join("")}</div></aside>
     <div class="lesson-panel">
-      <article class="lesson-card"><div class="lesson-topline"><span class="pill pill-lime">Unit ${String(index + 1).padStart(2, "0")}</span><span class="pill">Foundational lecture</span>${state.completed[unit.id] ? '<span class="pill pill-lime">Mastered</span>' : ""}</div>
+      <article class="lesson-card"><div class="lesson-topline"><span class="pill pill-lime">Unit ${String(index + 1).padStart(2, "0")}</span><span class="pill">Partial lesson seed</span>${state.completed[unit.id] ? '<span class="pill pill-lime">Practice check passed</span>' : ""}</div>
         <h2>${esc(unit.title)}</h2><div class="objectives"><div class="objectives-title">Learning objectives</div><ul class="objective-list">${unit.objectives.map((objective) => `<li>${esc(objective)}</li>`).join("")}</ul></div>
         <div class="lesson-copy">${prose(unit.notes)}</div><div class="worked-example"><div class="worked-label">Worked example</div><p>${esc(unit.workedExample)}</p></div>
         <div class="lesson-footer"><span>ORIGINAL COURSE NOTES · CHECK THE MODEL'S ASSUMPTIONS</span><div class="footer-actions"><button class="button button-quiet button-small" data-page="study">Open study room ↗</button><button class="button button-quiet button-small" data-page="tools">Lab tools ↗</button></div></div>
@@ -289,12 +268,12 @@ function renderQuestion(unit, q, key, heading, subtitle) {
   const choices = q.type === "choice" ? `<fieldset class="choice-list" ${submitted ? "disabled" : ""}><legend class="visually-hidden">${esc(q.prompt)}</legend>${q.choices.map((answer, index) => `<label class="choice-option ${String(selection) === String(index) ? "selected" : ""}"><input type="radio" name="${esc(key)}" value="${index}" ${String(selection) === String(index) ? "checked" : ""} ${submitted ? "disabled" : ""}/><span class="choice-letter">${String.fromCharCode(65 + index)}</span><span>${esc(answer)}</span></label>`).join("")}</fieldset>` : `<div class="numeric-row"><input class="answer-input" type="text" inputmode="decimal" autocomplete="off" id="answer-${esc(key)}" aria-label="Your numerical answer" placeholder="Type a number" value="${submitted ? esc(selection) : ""}" ${submitted ? "disabled" : ""}/><span class="unit-label">${esc(q.unit || "numeric answer")}</span></div>`;
   let feedback = "";
   if (result) {
-    feedback = `<div class="feedback ${result.correct ? "correct" : "incorrect"}" role="status"><strong>${result.correct ? "Correct — principle applied." : "Not quite — use the worked clue."}</strong><p>${esc(result.correct ? q.solution : q.hint)}</p>${!result.correct ? `<p><b>Reasoning:</b> ${esc(q.solution)}</p>` : ""}</div>`;
+    feedback = `<div class="feedback ${result.correct ? "correct" : "incorrect"}" role="status"><strong>${result.correct ? "Correct result — reasoning not assessed." : "Not quite — use the worked clue."}</strong><p>${esc(result.correct ? q.solution : q.hint)}</p>${!result.correct ? `<p><b>Reasoning:</b> ${esc(q.solution)}</p>` : ""}</div>`;
   }
   const actionButton = submitted ? result.correct ? "Completed" : "Try again" : "Check answer";
   return `<article class="learning-card"><div class="learning-card-header"><div><div class="eyebrow">Practice · auto-graded</div><h3>${esc(heading)}</h3><p>${esc(subtitle)}</p></div><span class="question-points">1 POINT</span></div>
     <div class="question-prompt">${esc(q.prompt)}</div>${choices}
-    ${feedback}<div class="question-actions"><button class="button ${result?.correct ? "button-secondary" : "button-primary"} button-small" data-grade="${esc(key)}" data-unit="${unit.id}" ${result?.correct ? "disabled" : ""}>${actionButton}</button>${!submitted ? '<span class="hint-text">A hint appears after your first attempt.</span>' : result.correct ? '<span class="hint-text">This unit is marked complete.</span>' : `<button class="button button-quiet button-small" data-reset-answer="${esc(key)}">Clear and retry</button>`}</div>
+    ${feedback}<div class="question-actions"><button class="button ${result?.correct ? "button-secondary" : "button-primary"} button-small" data-grade="${esc(key)}" data-unit="${unit.id}" ${result?.correct ? "disabled" : ""}>${actionButton}</button>${!submitted ? '<span class="hint-text">A hint appears after your first attempt.</span>' : result.correct ? '<span class="hint-text">This practice check passed; it does not establish mastery.</span>' : `<button class="button button-quiet button-small" data-reset-answer="${esc(key)}">Clear and retry</button>`}</div>
   </article>`;
 }
 
@@ -384,7 +363,7 @@ function renderToolResult(toolId) {
       detail.textContent = "The target concentration exceeds the stock; use a more concentrated stock or a different preparation method.";
       return;
     }
-    value = c2 * v2 / c1; units = "mL stock"; aux = Number.isFinite(value) && value <= v2 ? `Bring ${formatNum(v2 - value, 3)} mL stock to ${formatNum(v2, 3)} mL final volume.` : "Target cannot exceed the stock concentration.";
+    value = c2 * v2 / c1; units = "mL stock"; aux = Number.isFinite(value) && value <= v2 ? `Use ${formatNum(value, 3)} mL stock and bring to ${formatNum(v2, 3)} mL final volume with diluent (about ${formatNum(v2 - value, 3)} mL).` : "Target cannot exceed the stock concentration.";
   } else if (toolId === "buffer") {
     const pka = read("pka"), ratio = read("ratio");
     value = pka + Math.log10(ratio); units = "estimated pH"; aux = "Assumes an ideal dilute buffer and both species present.";
@@ -564,4 +543,3 @@ appRoot.addEventListener("change", handleChange);
 appRoot.addEventListener("keydown", handleKeydown);
 window.addEventListener("hashchange", () => { route = parseRoute(); render(); });
 render();
-

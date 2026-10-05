@@ -1,0 +1,135 @@
+{
+  "schema_version": "1.0",
+  "course_id": "geroscience",
+  "license": "MIT OR CC-BY-4.0",
+  "questions": [
+    {
+      "id": "geroscience-1:check",
+      "type": "single_choice",
+      "prompt": "An intervention shifts a molecular aging biomarker but does not improve tissue function. What is the strongest conclusion?",
+      "options": [
+        "The intervention has proven rejuvenation",
+        "The biomarker changed; functional benefit remains unestablished",
+        "The biomarker must be invalid",
+        "The study proves lifespan extension"
+      ],
+      "points": 1,
+      "objective_ids": [
+        "geroscience-1-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 1
+      },
+      "feedback": {
+        "hint": "Keep the measured endpoint separate from outcomes that were not tested.",
+        "solution": "Only the measured biomarker change is established. Functional, clinical, or lifespan benefits require their own evidence and appropriate design.",
+        "lesson_ids": [
+          "geroscience-1"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "legacy-prototype",
+        "legacy_id": "geroscience-1:check",
+        "modifications": []
+      }
+    },
+    {
+      "id": "geroscience-2:check",
+      "type": "single_choice",
+      "prompt": "Why is one marker insufficient to identify senescent cells across tissues?",
+      "options": [
+        "Markers can be shared with other stressed, differentiated, or lysosomal states",
+        "Senescence has no measurable features",
+        "Every tissue has identical cell composition",
+        "A single marker proves causal function"
+      ],
+      "points": 1,
+      "objective_ids": [
+        "geroscience-2-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0
+      },
+      "feedback": {
+        "hint": "Biological states overlap in their observable features.",
+        "solution": "Markers such as p16 or lysosomal activity can occur in other contexts and vary by tissue; a convergent panel and functional evidence are needed.",
+        "lesson_ids": [
+          "geroscience-2"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "legacy-prototype",
+        "legacy_id": "geroscience-2:check",
+        "modifications": []
+      }
+    },
+    {
+      "id": "geroscience-3:check",
+      "type": "single_choice",
+      "prompt": "Which result most directly supports restored stem-cell self-renewal?",
+      "options": [
+        "Transient increase in a proliferation marker",
+        "Serial functional regeneration with lineage evidence and appropriate controls",
+        "Higher total DNA content in bulk tissue",
+        "One post-treatment image"
+      ],
+      "points": 1,
+      "objective_ids": [
+        "geroscience-3-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 1
+      },
+      "feedback": {
+        "hint": "Self-renewal is a persistent functional property, not a snapshot count.",
+        "solution": "Serial functional regeneration with lineage evidence tests sustained renewal and contribution more directly than a transient marker or bulk abundance.",
+        "lesson_ids": [
+          "geroscience-3"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "legacy-prototype",
+        "legacy_id": "geroscience-3:check",
+        "modifications": []
+      }
+    },
+    {
+      "id": "geroscience-4:check",
+      "type": "single_choice",
+      "prompt": "Why report toxicity and all randomized animals alongside functional benefit?",
+      "options": [
+        "To reveal selection and competing harms that can bias an efficacy estimate",
+        "To guarantee the treatment works",
+        "To increase the p-value",
+        "Because randomization makes missing data irrelevant"
+      ],
+      "points": 1,
+      "objective_ids": [
+        "geroscience-4-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0
+      },
+      "feedback": {
+        "hint": "Treatment-related dropout can change who remains available for analysis.",
+        "solution": "If toxicity changes survival or follow-up, survivor-only analysis can be biased. Accounting for all randomized animals and harms preserves a more complete treatment comparison.",
+        "lesson_ids": [
+          "geroscience-4"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "legacy-prototype",
+        "legacy_id": "geroscience-4:check",
+        "modifications": []
+      }
+    }
+  ]
+}

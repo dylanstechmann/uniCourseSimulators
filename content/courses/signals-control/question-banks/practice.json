@@ -1,0 +1,134 @@
+{
+  "schema_version": "1.0",
+  "course_id": "signals-control",
+  "license": "MIT OR CC-BY-4.0",
+  "questions": [
+    {
+      "id": "signals-control-1:check",
+      "type": "single_choice",
+      "prompt": "For G(s)=1/(s+4), where is the pole?",
+      "options": [
+        "s=+4",
+        "s=−4",
+        "s=0",
+        "There is no pole"
+      ],
+      "points": 1,
+      "objective_ids": [
+        "signals-control-1-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 1
+      },
+      "feedback": {
+        "hint": "Set the denominator equal to zero.",
+        "solution": "s+4=0 gives a pole at s=−4, corresponding to a decaying continuous-time mode.",
+        "lesson_ids": [
+          "signals-control-1"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "legacy-prototype",
+        "legacy_id": "signals-control-1:check",
+        "modifications": []
+      }
+    },
+    {
+      "id": "signals-control-2:check",
+      "type": "numeric",
+      "prompt": "A first-order low-pass has τ=0.05 s. Estimate its cutoff frequency in Hz.",
+      "points": 1,
+      "objective_ids": [
+        "signals-control-2-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 3.18,
+        "unit": "Hz",
+        "tolerance": 0.08,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use fc=1/(2πτ).",
+        "solution": "fc=1/(2π×0.05)≈3.18 Hz.",
+        "lesson_ids": [
+          "signals-control-2"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "legacy-prototype",
+        "legacy_id": "signals-control-2:check",
+        "modifications": []
+      }
+    },
+    {
+      "id": "signals-control-3:check",
+      "type": "single_choice",
+      "prompt": "In negative unity feedback, what is the closed-loop transfer function from reference to output?",
+      "options": [
+        "G/(1−G)",
+        "G/(1+G)",
+        "1/G",
+        "1+G"
+      ],
+      "points": 1,
+      "objective_ids": [
+        "signals-control-3-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 1
+      },
+      "feedback": {
+        "hint": "Write the error as reference minus output and solve the loop equation.",
+        "solution": "With y=Ge and e=r−y, y=G(r−y), so y/r=G/(1+G).",
+        "lesson_ids": [
+          "signals-control-3"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "legacy-prototype",
+        "legacy_id": "signals-control-3:check",
+        "modifications": []
+      }
+    },
+    {
+      "id": "signals-control-4:check",
+      "type": "single_choice",
+      "prompt": "Which PID term is most directly responsible for eliminating a constant steady-state error in many systems?",
+      "options": [
+        "Proportional",
+        "Integral",
+        "Derivative",
+        "Sampling"
+      ],
+      "points": 1,
+      "objective_ids": [
+        "signals-control-4-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 1
+      },
+      "feedback": {
+        "hint": "A constant error accumulates over time in one of the terms.",
+        "solution": "Integral action accumulates error, continuing to adjust the control input until a constant offset is removed, provided the loop is stable and not persistently saturated.",
+        "lesson_ids": [
+          "signals-control-4"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "legacy-prototype",
+        "legacy_id": "signals-control-4:check",
+        "modifications": []
+      }
+    }
+  ]
+}

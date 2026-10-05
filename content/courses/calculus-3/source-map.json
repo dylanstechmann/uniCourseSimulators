@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.0",
+  "course_id": "calculus-3",
+  "license": "MIT OR CC-BY-4.0",
+  "modules": [
+    {
+      "module_id": "calculus-3-module-1",
+      "lesson_id": "calculus-3-1",
+      "reading": "modules/01-vectors-partial-derivatives-and-gradients.md",
+      "source_ids": [
+        "multivariable",
+        "transport"
+      ],
+      "relationship": "curriculum-comparator",
+      "original_content": true,
+      "license": "MIT OR CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "calculus-3-module-2",
+      "lesson_id": "calculus-3-2",
+      "reading": "modules/02-multivariable-optimization-and-constraints.md",
+      "source_ids": [
+        "multivariable",
+        "transport"
+      ],
+      "relationship": "curriculum-comparator",
+      "original_content": true,
+      "license": "MIT OR CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "calculus-3-module-3",
+      "lesson_id": "calculus-3-3",
+      "reading": "modules/03-multiple-integrals-and-coordinate-transforms.md",
+      "source_ids": [
+        "multivariable",
+        "transport"
+      ],
+      "relationship": "curriculum-comparator",
+      "original_content": true,
+      "license": "MIT OR CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "calculus-3-module-4",
+      "lesson_id": "calculus-3-4",
+      "reading": "modules/04-line-integrals-flux-and-integral-theorems.md",
+      "source_ids": [
+        "multivariable",
+        "transport"
+      ],
+      "relationship": "curriculum-comparator",
+      "original_content": true,
+      "license": "MIT OR CC-BY-4.0",
+      "modifications": []
+    }
+  ]
+}

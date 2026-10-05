@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0",
+  "course_id": "cellular-biomechanics",
+  "cards": [
+    {
+      "id": "cellular-biomechanics-0-0",
+      "lesson_id": "cellular-biomechanics-1",
+      "front": "Creep",
+      "back": "Time-dependent strain increase under a sustained applied stress.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "cellular-biomechanics-0-1",
+      "lesson_id": "cellular-biomechanics-1",
+      "front": "Stress relaxation",
+      "back": "Time-dependent stress decrease under a sustained imposed strain.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "cellular-biomechanics-1-0",
+      "lesson_id": "cellular-biomechanics-2",
+      "front": "Focal adhesion",
+      "back": "A dynamic protein assembly linking integrins to the actin cytoskeleton and signaling machinery.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "cellular-biomechanics-1-1",
+      "lesson_id": "cellular-biomechanics-2",
+      "front": "Traction-force microscopy",
+      "back": "An imaging method that estimates cell-generated forces from substrate deformation.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "cellular-biomechanics-2-0",
+      "lesson_id": "cellular-biomechanics-3",
+      "front": "Mechanotransduction",
+      "back": "Conversion of mechanical cues into biochemical or gene-regulatory responses.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "cellular-biomechanics-2-1",
+      "lesson_id": "cellular-biomechanics-3",
+      "front": "Necessity test",
+      "back": "A perturbation showing that a component is required for an outcome under specified conditions.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "cellular-biomechanics-3-0",
+      "lesson_id": "cellular-biomechanics-4",
+      "front": "Factorial design",
+      "back": "A design that crosses levels of multiple factors to estimate main effects and interactions.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "cellular-biomechanics-3-1",
+      "lesson_id": "cellular-biomechanics-4",
+      "front": "Biological replicate",
+      "back": "An independent biological unit, such as a donor or independently cultured sample, relevant to the inference.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    }
+  ]
+}

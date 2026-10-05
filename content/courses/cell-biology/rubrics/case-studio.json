@@ -1,0 +1,35 @@
+{
+  "schema_version": "1.0",
+  "course_id": "cell-biology",
+  "cases": [
+    {
+      "id": "cell-biology:case",
+      "prompt": "A membrane-protein mutant reaches the cell surface at normal abundance but abolishes solute flux. Design the shortest evidence chain that distinguishes loss of pore function from loss of protein delivery, and state one remaining alternative explanation.",
+      "mode": "self-assessment",
+      "objective_ids": [],
+      "rubric": [
+        {
+          "id": "cell-biology-case-criterion-1",
+          "criterion": "Uses a direct localization/abundance control",
+          "points": 0,
+          "levels": []
+        },
+        {
+          "id": "cell-biology-case-criterion-2",
+          "criterion": "Measures transport with matched expression and a suitable negative control",
+          "points": 0,
+          "levels": []
+        },
+        {
+          "id": "cell-biology-case-criterion-3",
+          "criterion": "Names an alternative such as altered gating, selectivity, membrane potential, or cell viability",
+          "points": 0,
+          "levels": []
+        }
+      ],
+      "limitations": [
+        "This preserved three-criterion checklist is self-assessment, not an analytic grading rubric or an institutional grade."
+      ]
+    }
+  ]
+}

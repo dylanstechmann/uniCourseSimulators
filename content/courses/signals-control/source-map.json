@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.0",
+  "course_id": "signals-control",
+  "license": "MIT OR CC-BY-4.0",
+  "modules": [
+    {
+      "module_id": "signals-control-module-1",
+      "lesson_id": "signals-control-1",
+      "reading": "modules/01-lti-systems-convolution-and-transfer-functions.md",
+      "source_ids": [
+        "signals",
+        "control"
+      ],
+      "relationship": "curriculum-comparator",
+      "original_content": true,
+      "license": "MIT OR CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "signals-control-module-2",
+      "lesson_id": "signals-control-2",
+      "reading": "modules/02-frequency-response-and-filtering.md",
+      "source_ids": [
+        "signals",
+        "control"
+      ],
+      "relationship": "curriculum-comparator",
+      "original_content": true,
+      "license": "MIT OR CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "signals-control-module-3",
+      "lesson_id": "signals-control-3",
+      "reading": "modules/03-feedback-stability-and-robustness.md",
+      "source_ids": [
+        "signals",
+        "control"
+      ],
+      "relationship": "curriculum-comparator",
+      "original_content": true,
+      "license": "MIT OR CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "signals-control-module-4",
+      "lesson_id": "signals-control-4",
+      "reading": "modules/04-controller-design-and-sampled-implementation.md",
+      "source_ids": [
+        "signals",
+        "control"
+      ],
+      "relationship": "curriculum-comparator",
+      "original_content": true,
+      "license": "MIT OR CC-BY-4.0",
+      "modifications": []
+    }
+  ]
+}

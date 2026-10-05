@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.0",
+  "course_id": "general-chemistry-2",
+  "license": "MIT OR CC-BY-4.0",
+  "modules": [
+    {
+      "module_id": "general-chemistry-2-module-1",
+      "lesson_id": "general-chemistry-2-1",
+      "reading": "modules/01-acid-base-equilibria-and-buffers.md",
+      "source_ids": [
+        "chemistry",
+        "biochemistry"
+      ],
+      "relationship": "curriculum-comparator",
+      "original_content": true,
+      "license": "MIT OR CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "general-chemistry-2-module-2",
+      "lesson_id": "general-chemistry-2-2",
+      "reading": "modules/02-kinetics-and-reaction-mechanisms.md",
+      "source_ids": [
+        "chemistry",
+        "biochemistry"
+      ],
+      "relationship": "curriculum-comparator",
+      "original_content": true,
+      "license": "MIT OR CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "general-chemistry-2-module-3",
+      "lesson_id": "general-chemistry-2-3",
+      "reading": "modules/03-redox-and-electrochemical-cells.md",
+      "source_ids": [
+        "chemistry",
+        "biochemistry"
+      ],
+      "relationship": "curriculum-comparator",
+      "original_content": true,
+      "license": "MIT OR CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "general-chemistry-2-module-4",
+      "lesson_id": "general-chemistry-2-4",
+      "reading": "modules/04-coordination-chemistry-and-biologically-relevant-metals.md",
+      "source_ids": [
+        "chemistry",
+        "biochemistry"
+      ],
+      "relationship": "curriculum-comparator",
+      "original_content": true,
+      "license": "MIT OR CC-BY-4.0",
+      "modifications": []
+    }
+  ]
+}

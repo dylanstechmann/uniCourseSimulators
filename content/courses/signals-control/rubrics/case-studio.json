@@ -1,0 +1,35 @@
+{
+  "schema_version": "1.0",
+  "course_id": "signals-control",
+  "cases": [
+    {
+      "id": "signals-control:case",
+      "prompt": "A controller tracks a set point quickly but oscillates after a sensor filter is added. Explain the phase mechanism and outline a safe retuning sequence that preserves a measured stability margin.",
+      "mode": "self-assessment",
+      "objective_ids": [],
+      "rubric": [
+        {
+          "id": "signals-control-case-criterion-1",
+          "criterion": "Recognizes filter adds phase lag and changes loop crossover/margins",
+          "points": 0,
+          "levels": []
+        },
+        {
+          "id": "signals-control-case-criterion-2",
+          "criterion": "Proposes reducing gain or redesigning bandwidth/lead compensation",
+          "points": 0,
+          "levels": []
+        },
+        {
+          "id": "signals-control-case-criterion-3",
+          "criterion": "Requires step/frequency testing with saturation and disturbance monitoring before deployment",
+          "points": 0,
+          "levels": []
+        }
+      ],
+      "limitations": [
+        "This preserved three-criterion checklist is self-assessment, not an analytic grading rubric or an institutional grade."
+      ]
+    }
+  ]
+}

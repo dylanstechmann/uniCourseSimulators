@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.0",
+  "course_id": "physics-em",
+  "license": "MIT OR CC-BY-4.0",
+  "modules": [
+    {
+      "module_id": "physics-em-module-1",
+      "lesson_id": "physics-em-1",
+      "reading": "modules/01-electric-fields-potential-and-capacitance.md",
+      "source_ids": [
+        "physicsEM",
+        "circuits"
+      ],
+      "relationship": "curriculum-comparator",
+      "original_content": true,
+      "license": "MIT OR CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "physics-em-module-2",
+      "lesson_id": "physics-em-2",
+      "reading": "modules/02-current-resistance-and-rc-transients.md",
+      "source_ids": [
+        "physicsEM",
+        "circuits"
+      ],
+      "relationship": "curriculum-comparator",
+      "original_content": true,
+      "license": "MIT OR CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "physics-em-module-3",
+      "lesson_id": "physics-em-3",
+      "reading": "modules/03-magnetic-forces-and-induction.md",
+      "source_ids": [
+        "physicsEM",
+        "circuits"
+      ],
+      "relationship": "curriculum-comparator",
+      "original_content": true,
+      "license": "MIT OR CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "physics-em-module-4",
+      "lesson_id": "physics-em-4",
+      "reading": "modules/04-electrodes-impedance-and-measurement.md",
+      "source_ids": [
+        "physicsEM",
+        "circuits"
+      ],
+      "relationship": "curriculum-comparator",
+      "original_content": true,
+      "license": "MIT OR CC-BY-4.0",
+      "modifications": []
+    }
+  ]
+}

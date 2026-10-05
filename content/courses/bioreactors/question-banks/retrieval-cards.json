@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0",
+  "course_id": "bioreactors",
+  "cards": [
+    {
+      "id": "bioreactors-0-0",
+      "lesson_id": "bioreactors-1",
+      "front": "Specific growth rate μ",
+      "back": "Fractional exponential increase in biomass or viable cell concentration per unit time.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "bioreactors-0-1",
+      "lesson_id": "bioreactors-1",
+      "front": "Doubling time",
+      "back": "Time required for an exponentially growing population to double, td=ln2/μ.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "bioreactors-1-0",
+      "lesson_id": "bioreactors-2",
+      "front": "kLa",
+      "back": "The volumetric gas-liquid mass-transfer coefficient, combining interfacial area and liquid-film transfer.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "bioreactors-1-1",
+      "lesson_id": "bioreactors-2",
+      "front": "Oxygen uptake rate",
+      "back": "The rate at which a cell population consumes oxygen per cell or per culture volume.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "bioreactors-2-0",
+      "lesson_id": "bioreactors-3",
+      "front": "Power per volume",
+      "back": "Mechanical power input normalized by culture volume, often used as one scale-up criterion.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "bioreactors-2-1",
+      "lesson_id": "bioreactors-3",
+      "front": "Scale-down model",
+      "back": "A smaller system designed to reproduce important gradients or stresses observed in a larger process.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "bioreactors-3-0",
+      "lesson_id": "bioreactors-4",
+      "front": "Critical process parameter",
+      "back": "A process variable whose variability can affect a critical quality attribute and therefore requires monitoring or control.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "bioreactors-3-1",
+      "lesson_id": "bioreactors-4",
+      "front": "Critical quality attribute",
+      "back": "A measurable property that must remain within an appropriate limit or range to ensure product quality.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    }
+  ]
+}

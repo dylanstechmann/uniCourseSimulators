@@ -1,0 +1,3 @@
+# Gene expression and experimental logic
+
+The central information flow is DNA → RNA → protein, with important exceptions such as reverse transcription. Transcription produces RNA from a template strand; ribosomes decode mRNA codons into a polypeptide. Expression is controlled at multiple stages, including chromatin accessibility, transcription initiation, RNA processing, translation, and protein turnover. An experiment should specify a hypothesis, perturbation, readout, comparison group, and controls. A negative result is interpretable only if the assay's ability to detect a known positive is established.

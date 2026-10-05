@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.0",
+  "course_id": "geroscience",
+  "license": "MIT OR CC-BY-4.0",
+  "modules": [
+    {
+      "module_id": "geroscience-module-1",
+      "lesson_id": "geroscience-1",
+      "reading": "modules/01-aging-as-a-systems-process.md",
+      "source_ids": [
+        "biology",
+        "molecular",
+        "biochemistry"
+      ],
+      "relationship": "curriculum-comparator",
+      "original_content": true,
+      "license": "MIT OR CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "geroscience-module-2",
+      "lesson_id": "geroscience-2",
+      "reading": "modules/02-senescence-inflammation-and-tissue-context.md",
+      "source_ids": [
+        "biology",
+        "molecular",
+        "biochemistry"
+      ],
+      "relationship": "curriculum-comparator",
+      "original_content": true,
+      "license": "MIT OR CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "geroscience-module-3",
+      "lesson_id": "geroscience-3",
+      "reading": "modules/03-stem-cells-niches-and-regenerative-capacity.md",
+      "source_ids": [
+        "biology",
+        "molecular",
+        "biochemistry"
+      ],
+      "relationship": "curriculum-comparator",
+      "original_content": true,
+      "license": "MIT OR CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "geroscience-module-4",
+      "lesson_id": "geroscience-4",
+      "reading": "modules/04-intervention-evidence-and-translational-design.md",
+      "source_ids": [
+        "biology",
+        "molecular",
+        "biochemistry"
+      ],
+      "relationship": "curriculum-comparator",
+      "original_content": true,
+      "license": "MIT OR CC-BY-4.0",
+      "modifications": []
+    }
+  ]
+}

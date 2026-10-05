@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0",
+  "course_id": "genetics",
+  "cards": [
+    {
+      "id": "genetics-0-0",
+      "lesson_id": "genetics-1",
+      "front": "Penetrance",
+      "back": "The probability that a genotype produces its associated phenotype under specified conditions.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "genetics-0-1",
+      "lesson_id": "genetics-1",
+      "front": "Expressivity",
+      "back": "The degree or form in which a genotype-associated phenotype appears among affected individuals.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "genetics-1-0",
+      "lesson_id": "genetics-2",
+      "front": "Testcross",
+      "back": "A cross to a homozygous recessive tester used to reveal the gametes produced by an individual of unknown or heterozygous genotype.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "genetics-1-1",
+      "lesson_id": "genetics-2",
+      "front": "Centimorgan",
+      "back": "A mapping unit corresponding approximately to a 1% recombination frequency for short intervals.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "genetics-2-0",
+      "lesson_id": "genetics-3",
+      "front": "Cis-regulatory element",
+      "back": "A DNA sequence that influences expression of a gene on the same DNA molecule.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "genetics-2-1",
+      "lesson_id": "genetics-3",
+      "front": "Rescue",
+      "back": "Restoration of a phenotype by reintroducing the implicated function after a perturbation.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "genetics-3-0",
+      "lesson_id": "genetics-4",
+      "front": "Linkage disequilibrium",
+      "back": "Nonrandom association of alleles at different loci in a population.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "genetics-3-1",
+      "lesson_id": "genetics-4",
+      "front": "Fine-mapping",
+      "back": "Statistical and functional methods used to narrow an associated region to likely causal variants.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    }
+  ]
+}

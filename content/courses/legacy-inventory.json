@@ -1,0 +1,635 @@
+{
+  "schema_version": "1.0",
+  "migration_version": "1.0",
+  "source_path": "src/data/courses.js",
+  "source_sha256": "a77a7cb7f5be2ffa12068877042ac775c6d9b79b83ac2f316fe4f26a0d3d783b",
+  "course_ids": [
+    "cell-biology",
+    "genetics",
+    "physiology",
+    "general-chemistry-1",
+    "general-chemistry-2",
+    "organic-chemistry",
+    "biochemistry",
+    "calculus-1",
+    "calculus-2",
+    "calculus-3",
+    "linear-algebra",
+    "differential-equations",
+    "statistics",
+    "physics-mechanics",
+    "physics-em",
+    "programming",
+    "statics-materials",
+    "circuits",
+    "transport",
+    "signals-control",
+    "robotics",
+    "cellular-biomechanics",
+    "biomaterials",
+    "geroscience",
+    "bioreactors"
+  ],
+  "readings": [
+    {
+      "course_id": "cell-biology",
+      "lesson_id": "cell-biology-1",
+      "reading": "modules/01-molecular-structure-and-noncovalent-forces.md",
+      "sha256": "94644068d7322d0d36283b7dfbd4bba4f9912e6f7f79080ceba6224c02dbe7f9"
+    },
+    {
+      "course_id": "cell-biology",
+      "lesson_id": "cell-biology-2",
+      "reading": "modules/02-membranes-transport-and-compartmentalization.md",
+      "sha256": "5d1c3d439e5dd0bd5943c4c230a76697a84dd56b2d08f8222178dfe41072c4aa"
+    },
+    {
+      "course_id": "cell-biology",
+      "lesson_id": "cell-biology-3",
+      "reading": "modules/03-enzymes-and-cellular-energetics.md",
+      "sha256": "22a5c8917cf25959432577418a398962173a37f33fe9a75ceb6a5ed58bcb91ac"
+    },
+    {
+      "course_id": "cell-biology",
+      "lesson_id": "cell-biology-4",
+      "reading": "modules/04-gene-expression-and-experimental-logic.md",
+      "sha256": "e98dcd9c9145deaeeadb5b378644f12f75dc14b25232b88b3da67152b9889bb4"
+    },
+    {
+      "course_id": "genetics",
+      "lesson_id": "genetics-1",
+      "reading": "modules/01-segregation-penetrance-and-probability.md",
+      "sha256": "9eab29c94bfe8b54d5d29a2556ada8fffa7586113cc21e87e3f8527bd4ce566c"
+    },
+    {
+      "course_id": "genetics",
+      "lesson_id": "genetics-2",
+      "reading": "modules/02-linkage-and-recombination-mapping.md",
+      "sha256": "c03333a0da0434250bbf88357f1a9fc1217713d7fd022e75049818e0706714d4"
+    },
+    {
+      "course_id": "genetics",
+      "lesson_id": "genetics-3",
+      "reading": "modules/03-gene-regulation-and-causal-perturbation.md",
+      "sha256": "98caa28c04323ec506b2e11a3789ad964636fe0e2811a4b938fe47f3b5bf940a"
+    },
+    {
+      "course_id": "genetics",
+      "lesson_id": "genetics-4",
+      "reading": "modules/04-genomics-association-and-variant-interpretation.md",
+      "sha256": "6e71b8be2e29d53bc5c8f2013bc0c0cee1b72fd1776a6908c578b001048d2ddf"
+    },
+    {
+      "course_id": "physiology",
+      "lesson_id": "physiology-1",
+      "reading": "modules/01-homeostasis-and-feedback.md",
+      "sha256": "7a133e49a6032e3f4812a47e7b5fd082e9f1b3a5cb2baf6503587ba440667036"
+    },
+    {
+      "course_id": "physiology",
+      "lesson_id": "physiology-2",
+      "reading": "modules/02-excitable-cells-and-electrophysiology.md",
+      "sha256": "66d603aafc2a0e4823ac3374193a9e34f82e037cf05bbb0c18f9ef71762d4793"
+    },
+    {
+      "course_id": "physiology",
+      "lesson_id": "physiology-3",
+      "reading": "modules/03-cardiovascular-and-respiratory-transport.md",
+      "sha256": "c03ca907b784a10a6d67bc9e74644f5015bd1da1768b37cda086d667f6f633f7"
+    },
+    {
+      "course_id": "physiology",
+      "lesson_id": "physiology-4",
+      "reading": "modules/04-renal-endocrine-and-integrated-regulation.md",
+      "sha256": "48db17498ae4f953f66a3c2eb59de340cad9019ccaca79a52fa52ee935c94717"
+    },
+    {
+      "course_id": "general-chemistry-1",
+      "lesson_id": "general-chemistry-1-1",
+      "reading": "modules/01-atoms-bonding-and-molecular-shape.md",
+      "sha256": "551a35787998c392c7d2982f5ac13e571872392fce756760f43e16171368ea23"
+    },
+    {
+      "course_id": "general-chemistry-1",
+      "lesson_id": "general-chemistry-1-2",
+      "reading": "modules/02-stoichiometry-and-solution-concentration.md",
+      "sha256": "4d46d1ed12af6c4e90720d6340c149fbac08d282da4f221b1c9226a7be1bb776"
+    },
+    {
+      "course_id": "general-chemistry-1",
+      "lesson_id": "general-chemistry-1-3",
+      "reading": "modules/03-thermochemistry-and-state-functions.md",
+      "sha256": "d0c171b2258c6707903607187695196548d631ed0df2450d9e30b6507dde0b21"
+    },
+    {
+      "course_id": "general-chemistry-1",
+      "lesson_id": "general-chemistry-1-4",
+      "reading": "modules/04-chemical-equilibrium.md",
+      "sha256": "2dbc09e80e022dff0c9b275dd81c754c9b1354115c56076bce20e901d109446e"
+    },
+    {
+      "course_id": "general-chemistry-2",
+      "lesson_id": "general-chemistry-2-1",
+      "reading": "modules/01-acid-base-equilibria-and-buffers.md",
+      "sha256": "5464d27cc48520a7f0ce68cf07872f477f6c8c307799917e6aba42bf5b88b521"
+    },
+    {
+      "course_id": "general-chemistry-2",
+      "lesson_id": "general-chemistry-2-2",
+      "reading": "modules/02-kinetics-and-reaction-mechanisms.md",
+      "sha256": "229feabcaf59bb750068da182a195847ff8b40b28e00672c8502ebda2e73b4a6"
+    },
+    {
+      "course_id": "general-chemistry-2",
+      "lesson_id": "general-chemistry-2-3",
+      "reading": "modules/03-redox-and-electrochemical-cells.md",
+      "sha256": "475a4ab9b7eaa9b9ec674c1eb47526ed8b5bf7b208d6fc6c2fb7a4ca2891f731"
+    },
+    {
+      "course_id": "general-chemistry-2",
+      "lesson_id": "general-chemistry-2-4",
+      "reading": "modules/04-coordination-chemistry-and-biologically-relevant-metals.md",
+      "sha256": "fa622f8c44616c8cd97b48154201b7896566fc0daaf69bc58e3e902d37165d05"
+    },
+    {
+      "course_id": "organic-chemistry",
+      "lesson_id": "organic-chemistry-1",
+      "reading": "modules/01-structure-resonance-and-acid-base-reactivity.md",
+      "sha256": "421a3d95c9242a85acd3bf938cafe3e9ae144531d9a11628aa0c0ecfed2cf68b"
+    },
+    {
+      "course_id": "organic-chemistry",
+      "lesson_id": "organic-chemistry-2",
+      "reading": "modules/02-substitution-mechanisms-sn1-and-sn2.md",
+      "sha256": "89fa544c85bad88ba416126b813254d31587150ce006a55783e81e2465834872"
+    },
+    {
+      "course_id": "organic-chemistry",
+      "lesson_id": "organic-chemistry-3",
+      "reading": "modules/03-elimination-alkenes-and-stereochemical-control.md",
+      "sha256": "be18cc972cc671eaecdf2eb1c32b25ed58add2a99473f15435a073b0e5b061b6"
+    },
+    {
+      "course_id": "organic-chemistry",
+      "lesson_id": "organic-chemistry-4",
+      "reading": "modules/04-carbonyl-chemistry-and-acyl-transfer.md",
+      "sha256": "5a4a1b8f2b04a81ed76f24d5be1134abc14004bc1084077710d009f48043d867"
+    },
+    {
+      "course_id": "biochemistry",
+      "lesson_id": "biochemistry-1",
+      "reading": "modules/01-protein-structure-and-molecular-recognition.md",
+      "sha256": "da87126046f6770349ff642d6c5b3bda4d7d46a669302fce8ca4ae5a0a688580"
+    },
+    {
+      "course_id": "biochemistry",
+      "lesson_id": "biochemistry-2",
+      "reading": "modules/02-enzyme-mechanisms-and-inhibition.md",
+      "sha256": "ddb21de8dba87fbb1524d04142a4097fc6c86dac8092cce444f834a51b3f9600"
+    },
+    {
+      "course_id": "biochemistry",
+      "lesson_id": "biochemistry-3",
+      "reading": "modules/03-bioenergetics-and-central-carbon-metabolism.md",
+      "sha256": "1b24d3209e868f6587846b0260205db8a259349393b77f5428549bce2da8b570"
+    },
+    {
+      "course_id": "biochemistry",
+      "lesson_id": "biochemistry-4",
+      "reading": "modules/04-pathway-regulation-and-metabolic-integration.md",
+      "sha256": "10bb13ae24718c4e9594befee502ae6e7e55e4946c8954b6c595f5d76eb4cb16"
+    },
+    {
+      "course_id": "calculus-1",
+      "lesson_id": "calculus-1-1",
+      "reading": "modules/01-limits-continuity-and-approximation.md",
+      "sha256": "2fbb67f925775fe4cfaebd862560f9f17ffd9b57096e06b327d55b12ef5014cd"
+    },
+    {
+      "course_id": "calculus-1",
+      "lesson_id": "calculus-1-2",
+      "reading": "modules/02-derivative-rules-and-chain-rule.md",
+      "sha256": "7f71474cf9476807c934f583d3774539b9b8cbdce89f706f81d35a0904a11173"
+    },
+    {
+      "course_id": "calculus-1",
+      "lesson_id": "calculus-1-3",
+      "reading": "modules/03-optimization-and-related-rates.md",
+      "sha256": "54f4bf6ec30fe8cab4eb77135be67d997a13730842b3cb4b7675c68fe1ad486a"
+    },
+    {
+      "course_id": "calculus-1",
+      "lesson_id": "calculus-1-4",
+      "reading": "modules/04-definite-integrals-and-the-fundamental-theorem.md",
+      "sha256": "4e66479a3f49e51dabf0b960171321229f0bd4bc2be76b767af25d88b433e78d"
+    },
+    {
+      "course_id": "calculus-2",
+      "lesson_id": "calculus-2-1",
+      "reading": "modules/01-integration-techniques-and-improper-integrals.md",
+      "sha256": "f5234f660adae71565b1ac76a6a45e16aaaf34729d3bdc49f7837bd96e364772"
+    },
+    {
+      "course_id": "calculus-2",
+      "lesson_id": "calculus-2-2",
+      "reading": "modules/02-sequences-series-and-approximation-error.md",
+      "sha256": "2503456f624d2c424a4c9fe1e14fd24ed21f47b2d509b2d17399881c480a9950"
+    },
+    {
+      "course_id": "calculus-2",
+      "lesson_id": "calculus-2-3",
+      "reading": "modules/03-applications-of-integration-work-and-accumulation.md",
+      "sha256": "d4db37c3a499366e77ee4706b1c10cf6750217c9b7527e0746ca0cb974719c3e"
+    },
+    {
+      "course_id": "calculus-2",
+      "lesson_id": "calculus-2-4",
+      "reading": "modules/04-power-series-and-taylor-error.md",
+      "sha256": "aef70e5449332406a8726f403e71f2a6878759c0486fb95b18bb3366ea2b1fee"
+    },
+    {
+      "course_id": "calculus-3",
+      "lesson_id": "calculus-3-1",
+      "reading": "modules/01-vectors-partial-derivatives-and-gradients.md",
+      "sha256": "9c2235c9f1bcf7282e622c7c96d2866712191c8c709f0b20b62e0d6fbac08ca9"
+    },
+    {
+      "course_id": "calculus-3",
+      "lesson_id": "calculus-3-2",
+      "reading": "modules/02-multivariable-optimization-and-constraints.md",
+      "sha256": "04daba2a79518d5ea7e96e376b8ef79ef03e38ada67f5a089595f18f06651c6a"
+    },
+    {
+      "course_id": "calculus-3",
+      "lesson_id": "calculus-3-3",
+      "reading": "modules/03-multiple-integrals-and-coordinate-transforms.md",
+      "sha256": "6339a750808a9cac32b39e6d01add7327988eef9054ead70f1dd34338f545a44"
+    },
+    {
+      "course_id": "calculus-3",
+      "lesson_id": "calculus-3-4",
+      "reading": "modules/04-line-integrals-flux-and-integral-theorems.md",
+      "sha256": "d52a784da53945b562202c1d2b6ff7177e0dd3eceac7a75f6a3f2726b511eed5"
+    },
+    {
+      "course_id": "linear-algebra",
+      "lesson_id": "linear-algebra-1",
+      "reading": "modules/01-linear-systems-elimination-and-rank.md",
+      "sha256": "9a12acebb5a40b9ddf6f49140745c052f3f310360ef4d42d907883a639b1f187"
+    },
+    {
+      "course_id": "linear-algebra",
+      "lesson_id": "linear-algebra-2",
+      "reading": "modules/02-vector-spaces-bases-and-coordinate-transforms.md",
+      "sha256": "3336cdca19ac5b8047fe151412131a1679a0a9b2c0380626256a682f89b7cf4d"
+    },
+    {
+      "course_id": "linear-algebra",
+      "lesson_id": "linear-algebra-3",
+      "reading": "modules/03-eigenvalues-and-linear-dynamical-systems.md",
+      "sha256": "5fc36546b2ecb57ba7e31520b2368d16a325824e8ce135b56785907df68a9e70"
+    },
+    {
+      "course_id": "linear-algebra",
+      "lesson_id": "linear-algebra-4",
+      "reading": "modules/04-least-squares-and-data-fitting.md",
+      "sha256": "6f0af3ccd7bfc8ad89cdb725986d7017cd4185b45bab21ca391fe4e986ca2b5e"
+    },
+    {
+      "course_id": "differential-equations",
+      "lesson_id": "differential-equations-1",
+      "reading": "modules/01-first-order-models-and-time-constants.md",
+      "sha256": "8c9d6a24f7d38f768bf92b6a06298569b8abc132f29038c9fba2fe1930e7b817"
+    },
+    {
+      "course_id": "differential-equations",
+      "lesson_id": "differential-equations-2",
+      "reading": "modules/02-second-order-systems-and-mechanical-response.md",
+      "sha256": "d8b249f7e1a8b270dab85e55edf83858c8458007ed08156f2db39228b06c9d56"
+    },
+    {
+      "course_id": "differential-equations",
+      "lesson_id": "differential-equations-3",
+      "reading": "modules/03-coupled-systems-equilibria-and-stability.md",
+      "sha256": "0b712ee17fa0a18c99a5404a1e9efe12c98b205f7b4c2942ed30c97ab8595734"
+    },
+    {
+      "course_id": "differential-equations",
+      "lesson_id": "differential-equations-4",
+      "reading": "modules/04-numerical-odes-and-error-control.md",
+      "sha256": "5f7d20cfefc6f84b2124cf9ea042b1ce1749de4e77e2fe590cd80358a8068986"
+    },
+    {
+      "course_id": "statistics",
+      "lesson_id": "statistics-1",
+      "reading": "modules/01-probability-distributions-and-sampling.md",
+      "sha256": "ce7e8b60e7a0048627ad01326b25eb3edd83e73fa283f629b1afddf3c035fed9"
+    },
+    {
+      "course_id": "statistics",
+      "lesson_id": "statistics-2",
+      "reading": "modules/02-estimation-confidence-intervals-and-effect-sizes.md",
+      "sha256": "9d46188a5317514e6ed9e745bba563f1a00f412798998d10a41cb1204afc0ff9"
+    },
+    {
+      "course_id": "statistics",
+      "lesson_id": "statistics-3",
+      "reading": "modules/03-hypothesis-tests-and-multiple-comparisons.md",
+      "sha256": "a05b36b771f9ab688d8816d473733d4c757912b9e41665f968ec4d95487e3bbe"
+    },
+    {
+      "course_id": "statistics",
+      "lesson_id": "statistics-4",
+      "reading": "modules/04-experimental-design-regression-and-reproducibility.md",
+      "sha256": "afc61e0ef1408a12c0462ded4fbdbc54e19c16a43b08f2a71aa976613549b87e"
+    },
+    {
+      "course_id": "physics-mechanics",
+      "lesson_id": "physics-mechanics-1",
+      "reading": "modules/01-kinematics-and-force-balance.md",
+      "sha256": "f1efd27d4435242862bb8b6057aa4ee1fc629e917d2a38295df6279c1e101ca6"
+    },
+    {
+      "course_id": "physics-mechanics",
+      "lesson_id": "physics-mechanics-2",
+      "reading": "modules/02-work-energy-and-power.md",
+      "sha256": "4d86592db50bc19a73bb4067f2716c3accc0c1653d4eae279ec9ea9d36ed8e1e"
+    },
+    {
+      "course_id": "physics-mechanics",
+      "lesson_id": "physics-mechanics-3",
+      "reading": "modules/03-momentum-collisions-and-impulse.md",
+      "sha256": "c6c28b87293e50bfafc28d55727db1addd7181fa6afae488cd2f292e9dc74097"
+    },
+    {
+      "course_id": "physics-mechanics",
+      "lesson_id": "physics-mechanics-4",
+      "reading": "modules/04-rotation-torque-and-material-response.md",
+      "sha256": "89b84649f9f37872c6b1ebf0f631c3e6677c95428119710be21ac4cf8487b26f"
+    },
+    {
+      "course_id": "physics-em",
+      "lesson_id": "physics-em-1",
+      "reading": "modules/01-electric-fields-potential-and-capacitance.md",
+      "sha256": "f9003f03878be0cc74d9eea0f42319fdb85db6916de47674c946d2f564b0fcad"
+    },
+    {
+      "course_id": "physics-em",
+      "lesson_id": "physics-em-2",
+      "reading": "modules/02-current-resistance-and-rc-transients.md",
+      "sha256": "de0cc78ccd8b766ff84ae86a96cfcc8f51aafa9ff99b444a4b4c608c6382a841"
+    },
+    {
+      "course_id": "physics-em",
+      "lesson_id": "physics-em-3",
+      "reading": "modules/03-magnetic-forces-and-induction.md",
+      "sha256": "e2c2d8b056736e19fcda6f2e6f522c2208d7583b845ef58616b192497264fd32"
+    },
+    {
+      "course_id": "physics-em",
+      "lesson_id": "physics-em-4",
+      "reading": "modules/04-electrodes-impedance-and-measurement.md",
+      "sha256": "47878cf55a96c62cb9a945f3b432c92076e84a617e1b115813f1d04547823dec"
+    },
+    {
+      "course_id": "programming",
+      "lesson_id": "programming-1",
+      "reading": "modules/01-data-structures-units-and-reproducible-code.md",
+      "sha256": "a858bbcf63478b0347b57b113c4b465c3295551975cc5e6029154ebdd61e08a4"
+    },
+    {
+      "course_id": "programming",
+      "lesson_id": "programming-2",
+      "reading": "modules/02-numerical-integration-and-differential-models.md",
+      "sha256": "264ae031ef17e8086d9542d0ed5d3356769426943e75e0320b01678fb174294f"
+    },
+    {
+      "course_id": "programming",
+      "lesson_id": "programming-3",
+      "reading": "modules/03-regression-uncertainty-and-validation.md",
+      "sha256": "0125930f6e6e91e6ac2575080f6dc9243ebd4795cc77d57ba997d64c3c8c5494"
+    },
+    {
+      "course_id": "programming",
+      "lesson_id": "programming-4",
+      "reading": "modules/04-visualization-and-uncertainty-communication.md",
+      "sha256": "50cbf9865a7b3a9711c736df4aad85132b0456876a3edf81e8fbc43187b7e62d"
+    },
+    {
+      "course_id": "statics-materials",
+      "lesson_id": "statics-materials-1",
+      "reading": "modules/01-free-body-diagrams-and-equilibrium.md",
+      "sha256": "7dd818b3bf2901b2b1098078827168aa447f65655375da1244d26f360499a213"
+    },
+    {
+      "course_id": "statics-materials",
+      "lesson_id": "statics-materials-2",
+      "reading": "modules/02-axial-load-stress-and-strain.md",
+      "sha256": "54388e2f484766c0021f39099112a9624ac7a0ac28088827ca50029c51d4cf6e"
+    },
+    {
+      "course_id": "statics-materials",
+      "lesson_id": "statics-materials-3",
+      "reading": "modules/03-torsion-and-bending.md",
+      "sha256": "ec639e357ec7f99d311740bc702f8944177a3b7f6649ff2273d719563050fd05"
+    },
+    {
+      "course_id": "statics-materials",
+      "lesson_id": "statics-materials-4",
+      "reading": "modules/04-failure-criteria-fatigue-and-design-margins.md",
+      "sha256": "23de301a39a5c9ce795c3dedeabd919b078164864c847dc2d2f2d4dc0e8213ff"
+    },
+    {
+      "course_id": "circuits",
+      "lesson_id": "circuits-1",
+      "reading": "modules/01-dc-network-analysis-and-equivalent-circuits.md",
+      "sha256": "7c2645c3f77c79d0ec198f1c02676d6077232605a81823f51d65491a127b9049"
+    },
+    {
+      "course_id": "circuits",
+      "lesson_id": "circuits-2",
+      "reading": "modules/02-operational-amplifiers-and-analog-front-ends.md",
+      "sha256": "4cf67de7d68845a3ae350ea48c55f85120acdd7354101b4c131069475f3c301c"
+    },
+    {
+      "course_id": "circuits",
+      "lesson_id": "circuits-3",
+      "reading": "modules/03-filters-sampling-and-anti-aliasing.md",
+      "sha256": "d52f8202a85cd712ba68a877238eab5757edfe041fe78a740dd32a71f02a249e"
+    },
+    {
+      "course_id": "circuits",
+      "lesson_id": "circuits-4",
+      "reading": "modules/04-sensors-calibration-and-uncertainty.md",
+      "sha256": "e2a992592272598b196e39d2aab6486dc1816d0a90c4100acbc53f3c483d927e"
+    },
+    {
+      "course_id": "transport",
+      "lesson_id": "transport-1",
+      "reading": "modules/01-control-volumes-and-conservation.md",
+      "sha256": "94c38e3d1d132ce2cb3b0c5fa59116c251a377ebe25696c86285cb656adc7b2c"
+    },
+    {
+      "course_id": "transport",
+      "lesson_id": "transport-2",
+      "reading": "modules/02-diffusion-reaction-and-characteristic-length.md",
+      "sha256": "08a0b518b5684ff5d5a20a3f40cd6f55c13d5dea56a3e7c7a7d592537f3e38eb"
+    },
+    {
+      "course_id": "transport",
+      "lesson_id": "transport-3",
+      "reading": "modules/03-fluid-mechanics-and-microvascular-flow.md",
+      "sha256": "cf52c75312669db38b9c885a1c643a05a5eca672e9fea72a46addf702cffcd0c"
+    },
+    {
+      "course_id": "transport",
+      "lesson_id": "transport-4",
+      "reading": "modules/04-heat-transfer-and-coupled-transport.md",
+      "sha256": "43af8960f2266f08a75240c9d502b30ba21b41a9eff71c58f50a86109cf91097"
+    },
+    {
+      "course_id": "signals-control",
+      "lesson_id": "signals-control-1",
+      "reading": "modules/01-lti-systems-convolution-and-transfer-functions.md",
+      "sha256": "ba5be4d8d97f916093c2397b28479c976ab5a40ea7f11e650640e41c2997f477"
+    },
+    {
+      "course_id": "signals-control",
+      "lesson_id": "signals-control-2",
+      "reading": "modules/02-frequency-response-and-filtering.md",
+      "sha256": "5983179501dd56f757d0f96e729c715d6136cbd815d8a0305bfbaaa85d8687c1"
+    },
+    {
+      "course_id": "signals-control",
+      "lesson_id": "signals-control-3",
+      "reading": "modules/03-feedback-stability-and-robustness.md",
+      "sha256": "7396be4db206fcd661a301951c29ff9561cbafefc6d8ea7e9786285f218f428b"
+    },
+    {
+      "course_id": "signals-control",
+      "lesson_id": "signals-control-4",
+      "reading": "modules/04-controller-design-and-sampled-implementation.md",
+      "sha256": "3a214ffdf239a28ee74b7b96e39d7d0ec9fa71d24f9a545042063d49d768b891"
+    },
+    {
+      "course_id": "robotics",
+      "lesson_id": "robotics-1",
+      "reading": "modules/01-frames-rotations-and-homogeneous-transforms.md",
+      "sha256": "3ad5b916bd6b92eaa7869ba651bd29546784c37b34f60664af8c60ec71e6c06b"
+    },
+    {
+      "course_id": "robotics",
+      "lesson_id": "robotics-2",
+      "reading": "modules/02-forward-and-inverse-kinematics.md",
+      "sha256": "014a01934ed7cff4ae457318313b3b48f72484cbab3111822ab3d318d53d1193"
+    },
+    {
+      "course_id": "robotics",
+      "lesson_id": "robotics-3",
+      "reading": "modules/03-robot-dynamics-actuators-and-energy.md",
+      "sha256": "5660781293dc9529848366eab57a1f57635f61e77bdee956199b160050d9b889"
+    },
+    {
+      "course_id": "robotics",
+      "lesson_id": "robotics-4",
+      "reading": "modules/04-planning-sensing-and-closed-loop-execution.md",
+      "sha256": "a6c67eab46b321e218dcacd415bbf434dfa2c974191bfaf1a36c935253633e65"
+    },
+    {
+      "course_id": "cellular-biomechanics",
+      "lesson_id": "cellular-biomechanics-1",
+      "reading": "modules/01-stress-strain-and-constitutive-behavior.md",
+      "sha256": "588ca42990d46e5fc3c35aef72051d49ba8cc27089cf535a5db4a7987136b4de"
+    },
+    {
+      "course_id": "cellular-biomechanics",
+      "lesson_id": "cellular-biomechanics-2",
+      "reading": "modules/02-adhesion-cytoskeleton-and-force-transmission.md",
+      "sha256": "133affe47abf42ae4d158e8153f3e44cf6f6385def47bb4f8c0345742089e898"
+    },
+    {
+      "course_id": "cellular-biomechanics",
+      "lesson_id": "cellular-biomechanics-3",
+      "reading": "modules/03-mechanotransduction-and-mechanosensitive-pathways.md",
+      "sha256": "7c031d66f9b6ce75f2d667e13c5cca25b19a7a7a349bfd862798d550d60dece6"
+    },
+    {
+      "course_id": "cellular-biomechanics",
+      "lesson_id": "cellular-biomechanics-4",
+      "reading": "modules/04-experimental-design-for-cell-mechanics.md",
+      "sha256": "786fb58aee912b7753b9572d078fa52c37a7e5fc9602f3afc14fd5522ac764cf"
+    },
+    {
+      "course_id": "biomaterials",
+      "lesson_id": "biomaterials-1",
+      "reading": "modules/01-material-properties-at-the-biological-interface.md",
+      "sha256": "a661d809be1c11ffa79eaf407343b91ac6e300c205feddca5df4e40cb91fac6a"
+    },
+    {
+      "course_id": "biomaterials",
+      "lesson_id": "biomaterials-2",
+      "reading": "modules/02-scaffold-architecture-degradation-and-mechanics.md",
+      "sha256": "6cf0c70d418012c66069986b8a0b1db2ada6dcc410dbd6e2ac2e40fca97d42c8"
+    },
+    {
+      "course_id": "biomaterials",
+      "lesson_id": "biomaterials-3",
+      "reading": "modules/03-cells-signals-and-tissue-specific-strategies.md",
+      "sha256": "70695728c11fca635664c3ab22c4b787c59d74bf7c1a367e4b5f8f39d8653643"
+    },
+    {
+      "course_id": "biomaterials",
+      "lesson_id": "biomaterials-4",
+      "reading": "modules/04-translation-biocompatibility-and-failure-analysis.md",
+      "sha256": "9be038ae084a9ed1d4451a0e353df14d26e30ad76a3ed11899c65eb50c6ab997"
+    },
+    {
+      "course_id": "geroscience",
+      "lesson_id": "geroscience-1",
+      "reading": "modules/01-aging-as-a-systems-process.md",
+      "sha256": "a4c766b956d0663d1df782f649ff2563db443619a5f527779decd014305084a1"
+    },
+    {
+      "course_id": "geroscience",
+      "lesson_id": "geroscience-2",
+      "reading": "modules/02-senescence-inflammation-and-tissue-context.md",
+      "sha256": "a5cfd9b0682114e6ce36d3ac27c5cf66ac3b21178de6d20c6ce612d2fbdf7406"
+    },
+    {
+      "course_id": "geroscience",
+      "lesson_id": "geroscience-3",
+      "reading": "modules/03-stem-cells-niches-and-regenerative-capacity.md",
+      "sha256": "fdcba17260b3d3e399a5d4b2a5f91b7556ad09fef25f21b93d2d84d1fd3cd6dd"
+    },
+    {
+      "course_id": "geroscience",
+      "lesson_id": "geroscience-4",
+      "reading": "modules/04-intervention-evidence-and-translational-design.md",
+      "sha256": "6e49139cad75cc5c7ed47724466c7a13b729d461ec744ec5eec06581d0a01db1"
+    },
+    {
+      "course_id": "bioreactors",
+      "lesson_id": "bioreactors-1",
+      "reading": "modules/01-growth-kinetics-and-process-mass-balance.md",
+      "sha256": "ee8035f49f2cc671bc0982945d8291744ea3e0727061d94900c5a1143a1f53da"
+    },
+    {
+      "course_id": "bioreactors",
+      "lesson_id": "bioreactors-2",
+      "reading": "modules/02-oxygen-transfer-and-consumption.md",
+      "sha256": "abc6f333d1c303979db2b76177d18e37974980e85b31d88fb5447aa005271556"
+    },
+    {
+      "course_id": "bioreactors",
+      "lesson_id": "bioreactors-3",
+      "reading": "modules/03-mixing-shear-and-scale-up.md",
+      "sha256": "a2d18d474d636c4e888cb327dd3337b65712fd6468d26c1fe2c26cf86eb28b15"
+    },
+    {
+      "course_id": "bioreactors",
+      "lesson_id": "bioreactors-4",
+      "reading": "modules/04-process-monitoring-control-and-quality.md",
+      "sha256": "40143b4ff5f5ab4fcce1104bfd8c4586d3cf7c2923626ef7e6e3870017c51d0e"
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0",
+  "course_id": "calculus-1",
+  "cards": [
+    {
+      "id": "calculus-1-0-0",
+      "lesson_id": "calculus-1-1",
+      "front": "Limit",
+      "back": "The value a function approaches as its input approaches a specified point.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "calculus-1-0-1",
+      "lesson_id": "calculus-1-1",
+      "front": "Linearization",
+      "back": "A first-order local approximation f(a+h) ≈ f(a) + f′(a)h.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "calculus-1-1-0",
+      "lesson_id": "calculus-1-2",
+      "front": "Chain rule",
+      "back": "The derivative rule for nested functions: d f(g(x))/dx = f′(g(x))g′(x).",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "calculus-1-1-1",
+      "lesson_id": "calculus-1-2",
+      "front": "Marginal sensitivity",
+      "back": "The local derivative of an output with respect to a modeled input.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "calculus-1-2-0",
+      "lesson_id": "calculus-1-3",
+      "front": "Critical point",
+      "back": "An interior candidate for an extremum where a derivative is zero or undefined.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "calculus-1-2-1",
+      "lesson_id": "calculus-1-3",
+      "front": "Feasible domain",
+      "back": "The set of inputs that satisfy a model's physical and design constraints.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "calculus-1-3-0",
+      "lesson_id": "calculus-1-4",
+      "front": "Definite integral",
+      "back": "The signed accumulation of a quantity over an interval.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "calculus-1-3-1",
+      "lesson_id": "calculus-1-4",
+      "front": "Fundamental theorem of calculus",
+      "back": "The result linking derivatives and integrals: accumulation can be evaluated using an antiderivative.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    }
+  ]
+}

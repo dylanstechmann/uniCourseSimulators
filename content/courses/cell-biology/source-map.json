@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.0",
+  "course_id": "cell-biology",
+  "license": "MIT OR CC-BY-4.0",
+  "modules": [
+    {
+      "module_id": "cell-biology-module-1",
+      "lesson_id": "cell-biology-1",
+      "reading": "modules/01-molecular-structure-and-noncovalent-forces.md",
+      "source_ids": [
+        "biology",
+        "molecular"
+      ],
+      "relationship": "curriculum-comparator",
+      "original_content": true,
+      "license": "MIT OR CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "cell-biology-module-2",
+      "lesson_id": "cell-biology-2",
+      "reading": "modules/02-membranes-transport-and-compartmentalization.md",
+      "source_ids": [
+        "biology",
+        "molecular"
+      ],
+      "relationship": "curriculum-comparator",
+      "original_content": true,
+      "license": "MIT OR CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "cell-biology-module-3",
+      "lesson_id": "cell-biology-3",
+      "reading": "modules/03-enzymes-and-cellular-energetics.md",
+      "source_ids": [
+        "biology",
+        "molecular"
+      ],
+      "relationship": "curriculum-comparator",
+      "original_content": true,
+      "license": "MIT OR CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "cell-biology-module-4",
+      "lesson_id": "cell-biology-4",
+      "reading": "modules/04-gene-expression-and-experimental-logic.md",
+      "source_ids": [
+        "biology",
+        "molecular"
+      ],
+      "relationship": "curriculum-comparator",
+      "original_content": true,
+      "license": "MIT OR CC-BY-4.0",
+      "modifications": []
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "schema_version": "1.0",
+  "course_id": "biochemistry",
+  "cases": [
+    {
+      "id": "biochemistry:case",
+      "prompt": "A mitochondrial inhibitor reduces ATP and increases lactate. Propose a carbon/electron-flow explanation and one experiment that distinguishes impaired oxidative phosphorylation from a primary glycolytic defect.",
+      "mode": "self-assessment",
+      "objective_ids": [],
+      "rubric": [
+        {
+          "id": "biochemistry-case-criterion-1",
+          "criterion": "Connects electron transport inhibition to NADH reoxidation and proton motive force/ATP",
+          "points": 0,
+          "levels": []
+        },
+        {
+          "id": "biochemistry-case-criterion-2",
+          "criterion": "Explains increased glycolytic dependence and lactate as a redox outlet",
+          "points": 0,
+          "levels": []
+        },
+        {
+          "id": "biochemistry-case-criterion-3",
+          "criterion": "Chooses a discriminating measurement such as oxygen consumption, NADH/NAD⁺, isotope tracing, or rescue with an electron acceptor",
+          "points": 0,
+          "levels": []
+        }
+      ],
+      "limitations": [
+        "This preserved three-criterion checklist is self-assessment, not an analytic grading rubric or an institutional grade."
+      ]
+    }
+  ]
+}

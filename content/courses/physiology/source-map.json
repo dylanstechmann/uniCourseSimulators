@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.0",
+  "course_id": "physiology",
+  "license": "MIT OR CC-BY-4.0",
+  "modules": [
+    {
+      "module_id": "physiology-module-1",
+      "lesson_id": "physiology-1",
+      "reading": "modules/01-homeostasis-and-feedback.md",
+      "source_ids": [
+        "biology",
+        "transport"
+      ],
+      "relationship": "curriculum-comparator",
+      "original_content": true,
+      "license": "MIT OR CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "physiology-module-2",
+      "lesson_id": "physiology-2",
+      "reading": "modules/02-excitable-cells-and-electrophysiology.md",
+      "source_ids": [
+        "biology",
+        "transport"
+      ],
+      "relationship": "curriculum-comparator",
+      "original_content": true,
+      "license": "MIT OR CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "physiology-module-3",
+      "lesson_id": "physiology-3",
+      "reading": "modules/03-cardiovascular-and-respiratory-transport.md",
+      "source_ids": [
+        "biology",
+        "transport"
+      ],
+      "relationship": "curriculum-comparator",
+      "original_content": true,
+      "license": "MIT OR CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "physiology-module-4",
+      "lesson_id": "physiology-4",
+      "reading": "modules/04-renal-endocrine-and-integrated-regulation.md",
+      "source_ids": [
+        "biology",
+        "transport"
+      ],
+      "relationship": "curriculum-comparator",
+      "original_content": true,
+      "license": "MIT OR CC-BY-4.0",
+      "modifications": []
+    }
+  ]
+}

@@ -1,3 +1,5 @@
+> Historical static reader behavior only. All packages are partial, practice results do not establish mastery, and browser data is unverified. See AUTOGRADER_DESIGN.md for the server migration.
+
 # Assessment and study tools
 
 ## Automatically graded checks
@@ -27,4 +29,3 @@ When adding a course or changing a problem:
 ## Current limitations
 
 The launch build does not provide server-backed accounts, instructor dashboards, exportable grades, timed exams, randomized parameter variants, collaborative annotation, or laboratory safety supervision. A local browser score is not a proctored or credit-bearing result. Specialized experimental cases should be reviewed by instructors before use in a formal course.
-

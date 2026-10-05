@@ -1,0 +1,3 @@
+# Intervention evidence and translational design
+
+Geroscience interventions may target nutrient sensing, senescence, inflammation, proteostasis, or tissue-specific repair. A successful model study needs randomization, blinding, dose and exposure data, sex-aware analysis, safety monitoring, and prespecified functional endpoints. Survival analyses require appropriate censoring and competing-risk considerations. Cross-species translation is uncertain because lifespan, immune biology, drug exposure, and disease burden differ. Mechanistic claims should be proportionate to causal evidence and replicated independently.

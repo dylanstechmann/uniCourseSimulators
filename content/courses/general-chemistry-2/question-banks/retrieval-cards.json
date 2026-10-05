@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0",
+  "course_id": "general-chemistry-2",
+  "cards": [
+    {
+      "id": "general-chemistry-2-0-0",
+      "lesson_id": "general-chemistry-2-1",
+      "front": "Buffer capacity",
+      "back": "The amount of strong acid or base a solution can absorb per pH change.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "general-chemistry-2-0-1",
+      "lesson_id": "general-chemistry-2-1",
+      "front": "pKa",
+      "back": "−log₁₀ Ka; a useful reference point where conjugate acid and base concentrations are equal in an ideal buffer.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "general-chemistry-2-1-0",
+      "lesson_id": "general-chemistry-2-2",
+      "front": "Rate-determining step",
+      "back": "A mechanistic step that constrains the overall reaction rate under specified conditions.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "general-chemistry-2-1-1",
+      "lesson_id": "general-chemistry-2-2",
+      "front": "Activation energy Ea",
+      "back": "The energy barrier parameter that governs the temperature sensitivity of a rate constant in Arrhenius behavior.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "general-chemistry-2-2-0",
+      "lesson_id": "general-chemistry-2-3",
+      "front": "Cathode",
+      "back": "The electrode at which reduction occurs.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "general-chemistry-2-2-1",
+      "lesson_id": "general-chemistry-2-3",
+      "front": "Nernst equation",
+      "back": "A relation that adjusts electrode potential for nonstandard activities and temperature.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "general-chemistry-2-3-0",
+      "lesson_id": "general-chemistry-2-4",
+      "front": "Coordination number",
+      "back": "The number of donor atoms directly bonded to a central metal in a complex.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "general-chemistry-2-3-1",
+      "lesson_id": "general-chemistry-2-4",
+      "front": "Bioavailability",
+      "back": "The fraction of an element present in a form accessible for uptake or biochemical use.",
+      "objective_ids": [],
+      "license": "MIT OR CC-BY-4.0"
+    }
+  ]
+}
