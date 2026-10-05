@@ -38,6 +38,10 @@ export function Assessment({
       setError("Select at least one option before submitting.");
       return;
     }
+    if (question.type === "symbolic" && !value.trim()) {
+      setError("Enter an algebraic expression before submitting.");
+      return;
+    }
     if (
       question.type === "numeric" &&
       (!value.trim() || !Number.isFinite(Number(value)))
@@ -126,7 +130,7 @@ export function Assessment({
                 ))}
               </div>
             </>
-          ) : (
+          ) : question.type === "numeric" ? (
             <div className="input-grid">
               <div>
                 <label htmlFor={`${question.id}-value`}>Numerical value</label>
@@ -172,6 +176,30 @@ export function Assessment({
               ) : (
                 <p className="muted">This quantity is dimensionless.</p>
               )}
+            </div>
+          ) : (
+            <div>
+              <label htmlFor={`${question.id}-value`}>
+                Algebraic expression
+              </label>
+              <input
+                id={`${question.id}-value`}
+                name="value"
+                type="text"
+                inputMode="text"
+                value={value}
+                onChange={(event) => setValue(event.target.value)}
+                required
+                maxLength={256}
+                autoComplete="off"
+                autoCapitalize="off"
+                spellCheck={false}
+                aria-describedby={`${question.id}-expression-help`}
+              />
+              <small id={`${question.id}-expression-help`}>
+                Use explicit multiplication (2*x) and ^ or ** for powers.
+                Arithmetic expressions only; function calls are not supported.
+              </small>
             </div>
           )}
           <button className="primary" type="submit">

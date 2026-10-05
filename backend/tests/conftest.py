@@ -23,10 +23,13 @@ def content_root(tmp_path):
         "level": "Year 1", "maturity": "partial", "version": "0.1.0", "limitations": ["Fixture only"],
         "prerequisites": {"course_ids": [], "statement": "Foundational biology"},
         "outcomes": [{"id": "outcome", "description": "Compare controls", "bloom": "analyze"}],
-        "lesson_objectives": [{"id": "objective", "description": "Compare controls", "bloom": "analyze"}],
+        "lesson_objectives": [
+            {"id": "objective", "description": "Compare controls", "bloom": "analyze"},
+            {"id": "symbolic-objective", "description": "Differentiate a rational function", "bloom": "apply"},
+        ],
         "modules": [{"id": "module", "title": "Controls", "source_ids": ["fixture"], "lessons": [{
             "id": "lesson-one", "title": "Experiment", "reading": "modules/one.md", "objectives": ["objective"],
-            "question_ids": ["choice", "numeric", "multi"], "worked_example": "Match the delivery procedure between groups."
+            "question_ids": ["choice", "numeric", "multi", "symbolic"], "worked_example": "Match the delivery procedure between groups."
         }]}], "syllabus": "syllabus.md", "license": "CC-BY-4.0", "review": {"status": "unreviewed"},
     }
     (directory / "course.json").write_text(json.dumps(manifest))
@@ -46,6 +49,12 @@ def content_root(tmp_path):
          "points": 3, "objective_ids": ["objective"],
          "solution_spec": {"answer": [0, 1, 2], "partial_credit": "correct-minus-incorrect-clamped-v1"},
          "feedback": {"hint": "Consider vehicle effects and assay performance.", "solution": "Vehicle, no-target and positive-standard controls test distinct failure modes.", "lesson_ids": ["lesson-one"]}},
+        {"id": "symbolic", "type": "symbolic", "prompt": "Enter the derivative as a simplified rational expression.",
+         "visibility": "public-practice-authoring", "points": 1, "objective_ids": ["symbolic-objective"],
+         "solution_spec": {"expression": "(x^2 + 2*x - 1)/(x + 1)^2", "variables": ["x"],
+                            "assumptions": {"x": {"real": True}}},
+         "feedback": {"hint": "Use the quotient rule.", "solution": "Simplify the quotient-rule numerator.",
+                      "lesson_ids": ["lesson-one"]}},
     ]}
     (directory / "question-banks" / "practice.json").write_text(json.dumps(questions))
     return root

@@ -2,7 +2,7 @@
 
 ## Current boundary
 
-The static reader exposes practice answers and has no secure grade record. The backend milestone covers existing choice/numeric formative practice on the server. That foundation is not the complete requested modular grading system.
+The static reader exposes practice answers and has no secure grade record. The backend milestone covers the migrated choice/numeric and one bounded symbolic formative item on the server. That foundation is not the complete requested modular grading system.
 
 ## Grade authority
 
@@ -16,7 +16,7 @@ Layer feedback as diagnosis, targeted hint, misconception, next step, policy-con
 | --- | --- |
 | Choice/multiple select | Explicit shape and partial-credit policy |
 | Numeric | Unit conversion/dimensions, tolerance, significant figures, independent recalculation |
-| Symbolic | Bounded SymPy parsing, equivalence/domain assumptions |
+| Symbolic | Bounded rational-expression equivalence using SymPy; implemented for formative practice |
 | Structured concepts | Evidence-linked rubric; reject keyword-only responses |
 | Graph/table/data | Schema/numeric checks, uncertainty and interpretation |
 | CSV upload | Size/column/type checks, safe parsing, no executable files |
@@ -33,7 +33,13 @@ Adversarial tests cover alternate forms, wrong units, near misses, invalid conce
 
 ## Enabled implementation
 
-The deterministic grader supports single-choice, multiple-select and Decimal-based finite numeric checks with authored absolute tolerance. Multiple-select answers define either all-or-nothing or the clamped equal-share rule: score = points × max(0, correct selected − incorrect selected) / number of keyed correct choices. Learners see the policy before submitting. Empty, repeated, non-integer, out-of-range and unsupported-policy responses fail closed. This rule is transparent but is not a validated universal grading policy.
+The global grader policy identifier is `practice-v6`, which adds symbolic practice; historical attempts keep their recorded versions.
+
+The global grader policy identifier is `practice-v6`, which adds symbolic practice; historical attempts keep their recorded versions.
+
+The deterministic grader supports single-choice, multiple-select, bounded symbolic rational expressions, and Decimal-based finite numeric checks with authored absolute tolerance. Multiple-select answers define either all-or-nothing or the clamped equal-share rule: score = points × max(0, correct selected − incorrect selected) / number of keyed correct choices. Learners see the policy before submitting. Empty, repeated, non-integer, out-of-range and unsupported-policy responses fail closed. This rule is transparent but is not a validated universal grading policy.
+
+Symbolic answers use a deliberately restricted expression language parsed from an AST. It accepts declared variable names, finite base-10 integer/decimal literals, parentheses, unary signs, addition, subtraction, multiplication, division, and integer powers from −8 through 8 (`^` or `**`). Decimal literals become exact rationals. Calls, attributes, subscripts, imports, assignments, comparisons, undeclared names, and other Python syntax are rejected; the service never calls `eval`, `sympify` or `parse_expr` on learner text. Bounds include 256 characters, 64 AST nodes, depth 14, eight declared variables, 128 estimated numerator/denominator terms, degree 64, 512 SymPy operations and limited numeric literal size. Authored assumptions are restricted to typed boolean flags for `real`, `positive`, `nonnegative`, `nonzero` and `integer`. SymPy `cancel` compares rational functions; this intentionally treats expressions as equivalent over their common domain and does not prove that a learner stated domain restrictions. Trigonometric, logarithmic, radical, matrix and general symbolic-calculus expressions are unsupported. Correct symbolic results receive full credit with reasoning explicitly unassessed; incorrect but valid expressions receive no partial credit.
 
 For numeric items, deterministic conversion uses an intentionally constrained parser and explicit unit table. It supports common SI and biology units, liter and molar concentration units, selected derived SI units, products, quotients, parentheses, and bounded integer powers. For example, `μmol/min`, `mmol/(L·h)`, `m/s²`, `N`, and `kJ/mol` are parsed into SI scale and seven base dimensions. Micro-symbol variants normalize; SI symbol/prefix case remains significant (`mV` differs from `MV`, `ms` from `mS`). An answer is converted into the authored unit before applying that unit's absolute tolerance. Optional dimension exponents can be authored using the seven documented bases and are checked against the unit expression. A conflicting inline and unit-field answer is rejected unless the expressions are equivalent. When unit entry is optional and absent, the learner's number is interpreted in the authored unit, retaining the prototype's explicitly disclosed legacy policy.
 

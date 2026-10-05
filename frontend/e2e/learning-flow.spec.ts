@@ -200,3 +200,31 @@ test("public lesson DTOs contain no answer specifications or solution fields", a
   expect((await request.get("/legacy/src/data/courses.js")).status()).toBe(404);
   expect((await request.get("/.env")).status()).toBe(404);
 });
+
+test("symbolic calculus practice accepts an equivalent expression and saves feedback", async ({
+  page,
+}) => {
+  await page.goto("/#/account");
+  await page.getByRole("button", { name: "Start guest session" }).click();
+  await page.getByRole("link", { name: "Course catalog", exact: true }).click();
+  await page.getByRole("link", { name: /Calculus I:/ }).click();
+  await page.getByRole("button", { name: "Enroll in partial course" }).click();
+
+  const lessons = page.getByRole("navigation", { name: "Lessons" });
+  await lessons.getByRole("link").nth(1).click();
+  const practice = page.locator(
+    '[data-question-id="calculus-1-2:symbolic-quotient-derivative"]',
+  );
+  await practice
+    .getByLabel("Algebraic expression")
+    .fill("((2*x)*(x + 1) - (x^2 + 1))/(x + 1)^2");
+  await practice
+    .getByRole("button", { name: "Submit practice response" })
+    .click();
+  await expect(
+    practice.getByRole("region", { name: "Submission feedback" }),
+  ).toContainText("1 / 1 practice points");
+  await expect(
+    practice.getByText(/Reasoning has not been assessed/),
+  ).toBeVisible();
+});

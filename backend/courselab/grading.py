@@ -8,13 +8,14 @@ from decimal import Decimal, DecimalException
 from fractions import Fraction
 
 from .schemas import AttemptRequest, Feedback, GradeResult
+from .symbolic import SymbolicExpressionError, matches_expected, prepare_answer
 from .units import UnitParseError, dimensions_from_spec, parse_unit
 
 NUMBER = re.compile(
     r"^([+-]?(?:\d+\.?\d*|\.\d+)(?:[eE][+-]?\d+)?)\s*"
     r"((?:(?:[A-Za-zμµΩω°%]|1/[A-Za-z])[A-Za-z0-9μµΩω°%·/⁻¹²³^*(). _-]*)?)$"
 )
-GRADING_POLICY_VERSION = "practice-v5"
+GRADING_POLICY_VERSION = "practice-v6"
 
 
 class GradingUnavailable(ValueError):
@@ -182,6 +183,22 @@ def grade(question: dict, request: AttemptRequest) -> GradeResult:
                 diagnosis = "unit_mistake"
             except DecimalException:
                 diagnosis = "malformed_response"
+    elif question["type"] == "symbolic":
+        try:
+            symbols, expected = prepare_answer(
+                spec.get("expression"), spec.get("variables"), spec.get("assumptions")
+            )
+        except SymbolicExpressionError as exc:
+            raise GradingUnavailable("Authored symbolic grading specification is invalid") from exc
+        try:
+            correct = matches_expected(str(request.response), symbols, expected)
+            diagnosis = "correct_result" if correct else "symbolic_mismatch"
+        except (SymbolicExpressionError, ArithmeticError, RecursionError, ValueError, TypeError):
+            diagnosis = "malformed_response"
+        except Exception:
+            # SymPy errors fail closed. Learner-controlled expressions never turn
+            # an internal symbolic limitation into a passing grade or API crash.
+            diagnosis = "malformed_response"
     else:
         raise GradingUnavailable("Unsupported question type: not enabled for server grading")
     if correct:
@@ -197,7 +214,8 @@ def grade(question: dict, request: AttemptRequest) -> GradeResult:
             next_step=("Explain why the result follows from the mechanism; this check did not assess reasoning."
                        if correct else "Check that the units are dimensionally compatible and convert the quantity into the requested unit."
                        if diagnosis == "unit_mistake" else "Report exactly the requested number of significant figures; use a decimal point or scientific notation to make trailing zeros explicit."
-                       if diagnosis == "significant_figures_mistake" else "Revisit the linked lesson and check your assumptions before another attempt."),
+                       if diagnosis == "significant_figures_mistake" else "Check the algebraic form, signs, powers, and declared variables; this practice check accepts equivalent rational expressions."
+                       if diagnosis == "symbolic_mismatch" else "Revisit the linked lesson and check your assumptions before another attempt."),
         ),
         grading_policy_version=GRADING_POLICY_VERSION,
     )

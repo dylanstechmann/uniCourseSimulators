@@ -14,6 +14,16 @@ const numericQuestion: Question = {
   learning_objective_ids: ["rate"],
   assessment_role: "formative",
 };
+const symbolicQuestion: Question = {
+  id: "quotient-derivative",
+  type: "symbolic",
+  prompt:
+    "Differentiate the rational function and enter a simplified expression.",
+  options: [],
+  points: 1,
+  learning_objective_ids: ["quotient-rule"],
+  assessment_role: "formative",
+};
 const multipleQuestion: Question = {
   id: "membrane-assembly",
   type: "multiple_select",
@@ -109,6 +119,20 @@ describe("formative assessment submission", () => {
     expect(
       screen.queryByText(/sound reasoning confirmed/i),
     ).not.toBeInTheDocument();
+  });
+  it("collects an algebraic expression and sends it to the deterministic grader", async () => {
+    const submit = vi.fn().mockResolvedValue(attempt);
+    render(
+      <Assessment question={symbolicQuestion} enabled onSubmit={submit} />,
+    );
+    await userEvent.type(
+      screen.getByLabelText("Algebraic expression"),
+      "(x^2 + 2*x - 1)/(x + 1)^2",
+    );
+    await userEvent.click(
+      screen.getByRole("button", { name: "Submit practice response" }),
+    );
+    expect(submit).toHaveBeenCalledWith("(x^2 + 2*x - 1)/(x + 1)^2", undefined);
   });
   it("shows the significant-figure requirement before numeric practice", () => {
     render(

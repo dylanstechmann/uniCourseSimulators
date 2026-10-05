@@ -73,7 +73,7 @@ class AttemptRequest(StrictModel):
 
 class PublicQuestion(BaseModel):
     id: str
-    type: Literal["single_choice", "multiple_select", "numeric"]
+    type: Literal["single_choice", "multiple_select", "numeric", "symbolic"]
     prompt: str
     options: list[str] = Field(default_factory=list)
     unit: str | None = None

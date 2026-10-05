@@ -37,7 +37,8 @@ def check(root: Path) -> tuple[int, int]:
             for variant_id in variant_ids(question) or [None]:
                 resolved = resolve_variant(question, variant_id)
                 spec = resolved["solution_spec"]
-                result = grade(resolved, AttemptRequest(response=spec["answer"], unit=spec.get("unit")))
+                expected = spec["expression"] if resolved["type"] == "symbolic" else spec["answer"]
+                result = grade(resolved, AttemptRequest(response=expected, unit=spec.get("unit")))
                 assert result.correct, (
                     f"Practice specification not gradeable: {summary.id}/{question['id']}/{variant_id}"
                 )

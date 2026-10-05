@@ -58,7 +58,7 @@ export interface Course extends CourseSummary {
 }
 export interface Question {
   id: string;
-  type: "single_choice" | "multiple_select" | "numeric";
+  type: "single_choice" | "multiple_select" | "numeric" | "symbolic";
   prompt: string;
   options: string[];
   unit?: string;

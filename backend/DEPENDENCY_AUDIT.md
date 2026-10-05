@@ -31,3 +31,5 @@ cd /workspace/lattice-courselab-backend-wt/backend
 ```
 
 An audit describes advisories known to the queried database at the time of the run. It does not prove that the application, dependency graph or container operating-system packages are free of vulnerabilities. Re-run on dependency changes and routinely in CI. The container base image requires its own image/OS vulnerability scan.
+
+After adding SymPy 1.14.0 for bounded rational-expression grading, the backend dependency graph was audited again on 2026-10-05 with `uv run --project backend --with pip-audit pip-audit -r backend/requirements.txt`. `pip-audit` reported no known vulnerabilities. The resolver printed transitive-version normalization warnings during setup; the audit completed successfully without advisory findings.

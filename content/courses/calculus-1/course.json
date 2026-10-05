@@ -7,7 +7,7 @@
   "domain": "Mathematics",
   "level": "Year 1",
   "maturity": "partial",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "license": "MIT OR CC-BY-4.0",
   "content_origin": {
     "kind": "legacy-prototype",
@@ -153,7 +153,8 @@
           ],
           "worked_example": "If response R(c) = 100c/(2+c) and concentration c(t) changes in time, dR/dt = (200/(2+c)²)·dc/dt.",
           "question_ids": [
-            "calculus-1-2:check"
+            "calculus-1-2:check",
+            "calculus-1-2:symbolic-quotient-derivative"
           ],
           "card_ids": [
             "calculus-1-1-0",
@@ -240,7 +241,8 @@
         "calculus-1-2-objective-1"
       ],
       "question_ids": [
-        "calculus-1-2:check"
+        "calculus-1-2:check",
+        "calculus-1-2:symbolic-quotient-derivative"
       ],
       "points": 1
     },
@@ -312,12 +314,17 @@
       "version": "0.1.0",
       "date": "2026-10-05",
       "summary": "Preserved original compact prototype content in separate manifests and readings; labeled partial without semester or credit equivalency."
+    },
+    {
+      "version": "0.1.1",
+      "date": "2026-10-05",
+      "summary": "Added one original quotient-rule item to exercise bounded symbolic-expression grading; the course remains partial."
     }
   ],
   "limitations": [
     "Four compact legacy units are preserved; this package is not equivalent to a full university semester.",
     "There is no authored 12–15 week schedule, substantive homework sequence, laboratory sequence, midterm, cumulative final, or graded integrative project.",
-    "The single formative check per lesson does not demonstrate comprehensive outcome coverage or mastery; association with the first lesson objective is provisional.",
+    "One or two compact formative checks per lesson do not demonstrate comprehensive outcome coverage or mastery; objective associations remain provisional.",
     "Bloom labels and structured prerequisite edges are initial authoring classifications awaiting subject-matter review.",
     "Question answers and solution feedback are intentionally public practice authoring specifications, not restricted exam keys.",
     "Numerical specifications preserve the prototype's tolerance and optional unit entry; significant-figure and dimensional checks have not been authored.",
