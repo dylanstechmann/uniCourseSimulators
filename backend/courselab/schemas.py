@@ -76,6 +76,7 @@ class PublicQuestion(BaseModel):
     prompt: str
     options: list[str] = Field(default_factory=list)
     unit: str | None = None
+    significant_figures: int | None = Field(default=None, ge=1, le=12)
     points: float = 1
     selection: Literal["single", "multiple"] = "single"
     partial_credit_policy: str | None = None

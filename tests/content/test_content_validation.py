@@ -197,6 +197,16 @@ def test_incomplete_or_invalid_answer_specifications_fail(repository, course, ch
     assert codes(validate_repository(repository)) & {"schema", "answer-spec"}
 
 
+def test_significant_figure_policy_is_bounded_by_schema(repository, course):
+    path, _ = course
+    bank_path = path.parent / "question-banks/practice.json"
+    bank = read(bank_path)
+    numeric = next(question for question in bank["questions"] if question["type"] == "numeric")
+    numeric["solution_spec"]["significant_figures"] = 13
+    write(bank_path, bank)
+    assert "schema" in codes(validate_repository(repository))
+
+
 def test_restricted_production_answer_key_cannot_enter_public_package(
     repository, course
 ):

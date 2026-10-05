@@ -39,7 +39,7 @@ def content_root(tmp_path):
         {"id": "numeric", "type": "numeric", "prompt": "Report the calculated rate.", "points": 1,
          "visibility": "public-practice-authoring",
          "objective_ids": ["objective"], "solution_spec": {"answer": 80, "unit": "μmol/min",
-         "tolerance": 1.2, "relative_tolerance": 0.01, "unit_required": True}, "feedback": {"hint": "Keep the rate units.",
+         "tolerance": 1.2, "relative_tolerance": 0.01, "significant_figures": 2, "unit_required": True}, "feedback": {"hint": "Keep the rate units.",
          "solution": "PRIVATE_TEST_SENTINEL", "lesson_ids": ["lesson-one"]}},
         {"id": "multi", "type": "multiple_select", "prompt": "Which controls separate these explanations? Select all that apply.",
          "visibility": "public-practice-authoring", "options": ["Vehicle", "No-target", "Positive standard", "Untreated only"],

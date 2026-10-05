@@ -62,6 +62,7 @@ export interface Question {
   prompt: string;
   options: string[];
   unit?: string;
+  significant_figures?: number | null;
   points: number;
   selection?: "single" | "multiple";
   partial_credit_policy?: string | null;

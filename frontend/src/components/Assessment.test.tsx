@@ -99,6 +99,51 @@ describe("formative assessment submission", () => {
       screen.queryByText(/sound reasoning confirmed/i),
     ).not.toBeInTheDocument();
   });
+  it("shows the significant-figure requirement before numeric practice", () => {
+    render(
+      <Assessment
+        question={{ ...numericQuestion, significant_figures: 3 }}
+        enabled
+        onSubmit={vi.fn()}
+      />,
+    );
+    expect(
+      screen.getByText(/Report exactly 3 significant figures/),
+    ).toBeInTheDocument();
+  });
+  it("explains when an in-tolerance result uses the wrong precision", async () => {
+    const submit = vi.fn().mockResolvedValue({
+      ...attempt,
+      score: 0,
+      result: {
+        ...attempt.result,
+        score: 0,
+        correct: false,
+        feedback: {
+          ...attempt.result.feedback,
+          diagnosis: "significant_figures_mistake",
+          next_step: "Report exactly 2 significant figures.",
+        },
+      },
+    });
+    render(
+      <Assessment
+        question={{ ...numericQuestion, significant_figures: 2 }}
+        enabled
+        onSubmit={submit}
+      />,
+    );
+    await userEvent.type(screen.getByLabelText("Numerical value"), "82.0");
+    await userEvent.type(screen.getByLabelText("Unit"), "µmol/min");
+    await userEvent.click(
+      screen.getByRole("button", { name: "Submit practice response" }),
+    );
+    expect(
+      await screen.findByText(
+        /within tolerance, but its written precision does not match/,
+      ),
+    ).toBeInTheDocument();
+  });
   it("prevents submission when not enrolled", () => {
     const submit = vi.fn();
     render(

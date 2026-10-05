@@ -145,7 +145,7 @@ def test_multiple_select_api_persists_partial_credit_and_private_question_digest
     assert result["score"] == 2 and result["max_score"] == 3
     assert result["response"]["response"] == [1, 0]
     assert result["result"]["feedback"]["diagnosis"] == "partially_correct_selection"
-    assert result["result"]["grading_policy_version"] == "practice-v4"
+    assert result["result"]["grading_policy_version"] == "practice-v5"
     history = enrolled.get("/api/v1/attempts").json()
     assert len(history) == 1
     assert "question_spec_sha256" not in result
@@ -256,11 +256,18 @@ def test_injection_cannot_inspect_keys_or_execute(enrolled):
     assert enrolled.post("/api/v1/runner", json={"code": "while True: pass"}).status_code == 404
 
 
-def test_numeric_api_records_relative_tolerance_grader_v4(enrolled):
+def test_numeric_api_records_tolerance_and_significant_figure_grader_v5(enrolled):
+    public_question = enrolled.get("/api/v1/courses/test-course/lessons/lesson-one").json()["questions"][1]
+    assert public_question["significant_figures"] == 2
+    assert "solution_spec" not in public_question
     boundary = submit(enrolled, question="numeric", response="82 μmol/min")
     assert boundary.status_code == 201
     assert boundary.json()["score"] == 1
-    assert boundary.json()["result"]["grading_policy_version"] == "practice-v4"
+    assert boundary.json()["result"]["grading_policy_version"] == "practice-v5"
+    precision_mismatch = submit(enrolled, question="numeric", response="82.0 μmol/min")
+    assert precision_mismatch.status_code == 201
+    assert precision_mismatch.json()["score"] == 0
+    assert precision_mismatch.json()["result"]["feedback"]["diagnosis"] == "significant_figures_mistake"
     near_miss = submit(enrolled, question="numeric", response="82.01 μmol/min")
     assert near_miss.status_code == 201
     assert near_miss.json()["score"] == 0

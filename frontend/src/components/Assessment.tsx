@@ -122,17 +122,30 @@ export function Assessment({
             </>
           ) : (
             <div className="input-grid">
-              <label>
-                Numerical value
+              <div>
+                <label htmlFor={`${question.id}-value`}>Numerical value</label>
                 <input
+                  id={`${question.id}-value`}
                   name="value"
                   inputMode="decimal"
                   value={value}
                   onChange={(event) => setValue(event.target.value)}
                   required
                   autoComplete="off"
+                  aria-describedby={
+                    question.significant_figures
+                      ? `${question.id}-precision-help`
+                      : undefined
+                  }
                 />
-              </label>
+                {question.significant_figures ? (
+                  <small id={`${question.id}-precision-help`}>
+                    Report exactly {question.significant_figures} significant
+                    figures. Use a decimal point or scientific notation to make
+                    trailing zeros explicit.
+                  </small>
+                ) : null}
+              </div>
               {question.unit ? (
                 <div>
                   <label htmlFor={`${question.id}-unit`}>Unit</label>

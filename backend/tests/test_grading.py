@@ -1,7 +1,7 @@
 import pytest
 from pydantic import ValidationError
 
-from courselab.grading import grade, question_spec_digest
+from courselab.grading import count_significant_figures, grade, question_spec_digest
 from courselab.schemas import AttemptRequest
 
 
@@ -70,12 +70,52 @@ def test_no_arbitrary_code_or_other_question_types():
         grade({"type": "python", "solution_spec": {}}, AttemptRequest(response="while True: pass"))
 
 
-@pytest.mark.parametrize("field,value", [("significant_figures", 3), ("dimensions", "amount/time")])
+@pytest.mark.parametrize("field,value", [("dimensions", "amount/time")])
 def test_unsupported_authored_requirement_cannot_silently_grade(field, value):
     item = numeric()
     item["solution_spec"][field] = value
     with pytest.raises(ValueError, match="not enabled|Authored dimensions"):
         grade(item, AttemptRequest(response="80 μmol/min"))
+
+
+@pytest.mark.parametrize(("response", "figures", "correct", "diagnosis"), [
+    ("8.0e1 μmol/min", 2, True, "correct_result_reasoning_not_assessed"),
+    ("80. μmol/min", 2, True, "correct_result_reasoning_not_assessed"),
+    ("80 μmol/min", 2, False, "significant_figures_mistake"),
+    ("8e1 μmol/min", 2, False, "significant_figures_mistake"),
+    ("8.00e1 μmol/min", 2, False, "significant_figures_mistake"),
+    ("81.2 μmol/min", 2, False, "significant_figures_mistake"),
+    ("81.21 μmol/min", 2, False, "numerical_mismatch"),
+])
+def test_significant_figure_requirement_is_checked_after_numeric_tolerance(response, figures, correct, diagnosis):
+    item = numeric()
+    item["solution_spec"]["significant_figures"] = figures
+    result = grade(item, AttemptRequest(response=response))
+    assert result.correct is correct
+    assert result.score == (1 if correct else 0)
+    assert result.feedback.diagnosis == diagnosis
+
+
+@pytest.mark.parametrize(("value", "expected"), [
+    ("1.20", 3), ("0.00120", 3), ("8.0e1", 2), ("1200", 2), ("1200.", 4),
+    ("0", 1), ("0.00", 2), ("00012.0", 3),
+])
+def test_significant_figure_count(value, expected):
+    assert count_significant_figures(value) == expected
+
+
+@pytest.mark.parametrize("value", [True, 0, 13, 2.5, "2"])
+def test_invalid_significant_figure_policy_fails_closed(value):
+    item = numeric()
+    item["solution_spec"]["significant_figures"] = value
+    with pytest.raises(ValueError, match="significant_figures must be an integer"):
+        grade(item, AttemptRequest(response="80 μmol/min"))
+
+
+def test_maximum_significant_figure_requirement_is_enforceable():
+    item = numeric()
+    item["solution_spec"]["significant_figures"] = 12
+    assert grade(item, AttemptRequest(response="8.00000000000e1 μmol/min")).correct
 
 
 @pytest.mark.parametrize("authored_unit,answer,response,unit", [

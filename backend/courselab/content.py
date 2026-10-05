@@ -131,6 +131,7 @@ class ContentRepository:
             questions=[PublicQuestion(
                 id=question["id"], type=question["type"], prompt=question["prompt"],
                 options=question.get("options", []), unit=question.get("solution_spec", {}).get("unit"),
+                significant_figures=question.get("solution_spec", {}).get("significant_figures"),
                 points=question.get("points", 1), learning_objective_ids=question.get("objective_ids", []),
                 selection="multiple" if question["type"] == "multiple_select" else "single",
                 partial_credit_policy=(question.get("solution_spec", {}).get("partial_credit")

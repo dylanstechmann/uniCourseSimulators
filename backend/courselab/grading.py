@@ -14,11 +14,26 @@ NUMBER = re.compile(
     r"^([+-]?(?:\d+\.?\d*|\.\d+)(?:[eE][+-]?\d+)?)\s*"
     r"((?:(?:[A-Za-zμµΩω°%]|1/[A-Za-z])[A-Za-z0-9μµΩω°%·/⁻¹²³^*(). _-]*)?)$"
 )
-GRADING_POLICY_VERSION = "practice-v4"
+GRADING_POLICY_VERSION = "practice-v5"
 
 
 class GradingUnavailable(ValueError):
     """An authored requirement is not implemented; do not award a silent grade."""
+
+
+def count_significant_figures(number: str) -> int:
+    """Count precision encoded lexically in a decimal/scientific-notation answer."""
+    mantissa = re.split(r"[eE]", number, maxsplit=1)[0].lstrip("+-")
+    if "." in mantissa:
+        digits = mantissa.replace(".", "").lstrip("0")
+        if digits:
+            return len(digits)
+        decimal_places = len(mantissa.split(".", maxsplit=1)[1])
+        return decimal_places or 1
+    digits = mantissa.lstrip("0")
+    if not digits:
+        return 1
+    return len(digits.rstrip("0"))
 
 
 def question_spec_digest(question: dict) -> str:
@@ -85,8 +100,11 @@ def grade(question: dict, request: AttemptRequest) -> GradeResult:
         except DecimalException:
             diagnosis = "malformed_response"
     elif question["type"] == "numeric":
-        if spec.get("significant_figures") is not None:
-            raise GradingUnavailable("Significant-figure grading is not enabled")
+        significant_figures = spec.get("significant_figures")
+        if significant_figures is not None and (
+            type(significant_figures) is not int or not 1 <= significant_figures <= 12
+        ):
+            raise GradingUnavailable("significant_figures must be an integer from 1 through 12")
         match = NUMBER.fullmatch(str(request.response).strip())
         if not match:
             diagnosis = "malformed_response"
@@ -153,6 +171,10 @@ def grade(question: dict, request: AttemptRequest) -> GradeResult:
                             allowed_error = Fraction(tolerance) + Fraction(relative_tolerance) * abs(Fraction(answer))
                             correct = abs(value_in_expected_unit - Fraction(answer)) <= allowed_error
                             diagnosis = "correct_result" if correct else "numerical_mismatch"
+                            if correct and significant_figures is not None:
+                                if count_significant_figures(match[1]) != significant_figures:
+                                    correct = False
+                                    diagnosis = "significant_figures_mistake"
                     except DecimalException:
                         diagnosis = "malformed_response"
             except UnitParseError:
@@ -174,7 +196,8 @@ def grade(question: dict, request: AttemptRequest) -> GradeResult:
             misconception=None, lesson_id=lesson_ids[0] if lesson_ids else None,
             next_step=("Explain why the result follows from the mechanism; this check did not assess reasoning."
                        if correct else "Check that the units are dimensionally compatible and convert the quantity into the requested unit."
-                       if diagnosis == "unit_mistake" else "Revisit the linked lesson and check your assumptions before another attempt."),
+                       if diagnosis == "unit_mistake" else "Report exactly the requested number of significant figures; use a decimal point or scientific notation to make trailing zeros explicit."
+                       if diagnosis == "significant_figures_mistake" else "Revisit the linked lesson and check your assumptions before another attempt."),
         ),
         grading_policy_version=GRADING_POLICY_VERSION,
     )

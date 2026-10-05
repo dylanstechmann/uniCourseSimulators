@@ -6,6 +6,8 @@ const diagnoses: Record<string, string> = {
   incorrect_result:
     "The result does not match this question’s answer specification.",
   numerical_mismatch: "The numerical result is outside the accepted tolerance.",
+  significant_figures_mistake:
+    "The value is within tolerance, but its written precision does not match the required significant figures.",
   unit_mistake: "The supplied unit is inconsistent with the expected quantity.",
   malformed_response:
     "The response could not be interpreted in the required format.",
