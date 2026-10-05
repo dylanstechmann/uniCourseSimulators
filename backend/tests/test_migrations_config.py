@@ -1,6 +1,7 @@
+import json
 from pathlib import Path
 
-from sqlalchemy import inspect
+from sqlalchemy import create_engine, inspect, text
 
 from alembic import command
 from alembic.config import Config
@@ -22,6 +23,41 @@ def test_alembic_upgrade_matches_metadata(tmp_path, monkeypatch):
     command.check(config)
     command.downgrade(config, "base")
     assert inspect(engine).get_table_names() == ["alembic_version"]
+    engine.dispose()
+
+
+def test_digest_migration_preserves_unpinned_existing_attempts(tmp_path, monkeypatch):
+    url = f"sqlite:///{tmp_path}/legacy-attempt.db"
+    monkeypatch.setenv("DATABASE_URL", url)
+    backend = Path(__file__).resolve().parents[1]
+    config = Config(str(backend / "alembic.ini"))
+    config.set_main_option("script_location", str(backend / "alembic"))
+    command.upgrade(config, "0001")
+    engine = create_engine(url)
+    with engine.begin() as connection:
+        connection.execute(text(
+            "INSERT INTO users (id, email, password_hash, is_guest, created_at) "
+            "VALUES ('u1', NULL, NULL, 1, '2026-10-05 00:00:00')"
+        ))
+        connection.execute(text(
+            "INSERT INTO attempts (id, user_id, course_id, question_id, content_version, "
+            "grading_policy_version, response, score, max_score, result, objective_ids, created_at) "
+            "VALUES ('a1', 'u1', 'cell-biology', 'cell-biology-1:check', '0.1.0', "
+            "'practice-v1', :response, 1, 1, :result, :objectives, '2026-10-05 00:00:00')"
+        ), {
+            "response": json.dumps({"response": 0}),
+            "result": json.dumps({"score": 1}),
+            "objectives": json.dumps(["outcome"]),
+        })
+    command.upgrade(config, "head")
+    with engine.connect() as connection:
+        old = connection.execute(text(
+            "SELECT content_version, grading_policy_version, question_spec_sha256 "
+            "FROM attempts WHERE id='a1'"
+        )).one()
+    assert old == ("0.1.0", "practice-v1", None)
+    assert "question_spec_sha256" in {column["name"] for column in inspect(engine).get_columns("attempts")}
+    command.downgrade(config, "base")
     engine.dispose()
 
 

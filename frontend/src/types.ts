@@ -58,11 +58,13 @@ export interface Course extends CourseSummary {
 }
 export interface Question {
   id: string;
-  type: "single_choice" | "numeric";
+  type: "single_choice" | "multiple_select" | "numeric";
   prompt: string;
   options: string[];
   unit?: string;
   points: number;
+  selection?: "single" | "multiple";
+  partial_credit_policy?: string | null;
   learning_objective_ids: string[];
   assessment_role: "formative";
 }
@@ -105,7 +107,7 @@ export interface Attempt {
   course_id: string;
   question_id: string;
   content_version: string;
-  response: { response: string | number; unit?: string };
+  response: { response: string | number | number[]; unit?: string };
   score: number;
   max_score: number;
   result: {

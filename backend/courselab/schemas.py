@@ -41,12 +41,18 @@ class BookmarkRequest(StrictModel):
 
 
 class AttemptRequest(StrictModel):
-    response: str | float = Field(union_mode="left_to_right")
+    response: str | float | list[int] = Field(union_mode="left_to_right")
     unit: str | None = Field(default=None, max_length=100)
 
     @field_validator("response", mode="before")
     @classmethod
     def valid_type(cls, value):
+        if isinstance(value, list):
+            if not 1 <= len(value) <= 100 or any(type(item) is not int for item in value):
+                raise ValueError("Selections must contain 1–100 integer option indexes")
+            if len(set(value)) != len(value):
+                raise ValueError("An option can only be selected once")
+            return value
         if isinstance(value, bool) or not isinstance(value, (str, float, int)):
             raise ValueError("Response must be text or a finite number")
         return value
@@ -54,6 +60,8 @@ class AttemptRequest(StrictModel):
     @field_validator("response")
     @classmethod
     def bounded_response(cls, value):
+        if isinstance(value, list):
+            return value
         if isinstance(value, str):
             if not value.strip() or len(value) > 10000:
                 raise ValueError("Response must contain 1–10000 characters")
@@ -64,11 +72,13 @@ class AttemptRequest(StrictModel):
 
 class PublicQuestion(BaseModel):
     id: str
-    type: str
+    type: Literal["single_choice", "multiple_select", "numeric"]
     prompt: str
     options: list[str] = Field(default_factory=list)
     unit: str | None = None
     points: float = 1
+    selection: Literal["single", "multiple"] = "single"
+    partial_credit_policy: str | None = None
     learning_objective_ids: list[str] = Field(default_factory=list)
     assessment_role: Literal["formative"] = "formative"
 

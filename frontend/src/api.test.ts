@@ -51,4 +51,40 @@ describe("API session and ownership boundaries", () => {
     await expect(api.courses()).rejects.toThrow("Request failed (503)");
     vi.unstubAllGlobals();
   });
+  it("updates a selected enrollment version without using the new-course enroll route", async () => {
+    const fetchMock = vi
+      .fn()
+      .mockResolvedValueOnce(
+        new Response(
+          JSON.stringify({
+            user: { id: "guest", email: null, is_guest: true },
+            csrf_token: "migration-csrf",
+          }),
+          { status: 200 },
+        ),
+      )
+      .mockResolvedValueOnce(
+        new Response(
+          JSON.stringify({
+            course_id: "cell-biology",
+            content_version: "0.2.0",
+            created_at: "2026-10-05",
+          }),
+          { status: 200 },
+        ),
+      );
+    vi.stubGlobal("fetch", fetchMock);
+    await api.session();
+    await api.upgradeEnrollment("cell-biology");
+    expect(fetchMock).toHaveBeenLastCalledWith(
+      "/api/v1/enrollments/cell-biology/version",
+      expect.objectContaining({
+        method: "PUT",
+        credentials: "include",
+        headers: expect.objectContaining({ "X-CSRF-Token": "migration-csrf" }),
+        body: "{}",
+      }),
+    );
+    vi.unstubAllGlobals();
+  });
 });

@@ -19,23 +19,27 @@ export function CourseWorkspace({
   id,
   lessonId,
   showGradebook,
+  enrollmentVersion,
   catalog,
   enrolled,
   hasSession,
   bookmarked,
   sources,
   onEnroll,
+  onUpgrade,
   onBookmark,
 }: {
   id: string;
   lessonId?: string;
   showGradebook: boolean;
+  enrollmentVersion?: string;
   catalog: CourseSummary[];
   enrolled: boolean;
   hasSession: boolean;
   bookmarked: boolean;
   sources: Source[];
   onEnroll: () => Promise<void>;
+  onUpgrade: () => Promise<void>;
   onBookmark: (saved: boolean) => Promise<void>;
 }) {
   const [course, setCourse] = useState<Course | null>(null);
@@ -80,7 +84,11 @@ export function CourseWorkspace({
   }, [id, lessonId]);
   useEffect(() => {
     let active = true;
-    if (!enrolled) {
+    if (
+      !enrolled ||
+      !course ||
+      (enrollmentVersion && enrollmentVersion !== course.version)
+    ) {
       setProgress([]);
       setNotes([]);
       setAttempts([]);
@@ -107,7 +115,7 @@ export function CourseWorkspace({
     return () => {
       active = false;
     };
-  }, [id, enrolled]);
+  }, [id, enrolled, course, enrollmentVersion]);
   async function enroll() {
     setBusy(true);
     setError("");
@@ -130,9 +138,20 @@ export function CourseWorkspace({
       setBusy(false);
     }
   }
+  async function upgrade() {
+    setBusy(true);
+    setError("");
+    try {
+      await onUpgrade();
+    } catch (error) {
+      setError(errorMessage(error));
+    } finally {
+      setBusy(false);
+    }
+  }
   async function submit(
     question: string,
-    response: string | number,
+    response: string | number | number[],
     unit?: string,
   ) {
     const attempt = await api.attempt(id, question, response, unit);
@@ -184,6 +203,9 @@ export function CourseWorkspace({
         )}
       </>
     );
+  const needsVersionReview = Boolean(
+    enrolled && enrollmentVersion && enrollmentVersion !== course.version,
+  );
   return (
     <>
       <div className="section-heading">
@@ -219,6 +241,23 @@ export function CourseWorkspace({
         </div>
       </div>
       <p className="lead">{course.description}</p>
+      {needsVersionReview && (
+        <aside className="notice" aria-label="Course content update">
+          <strong>Course content updated</strong>
+          <p>
+            Your saved attempts and reading marks remain attached to version{" "}
+            {enrollmentVersion}. Review the current partial package and update
+            your enrollment to continue saving work.
+          </p>
+          <button
+            className="primary"
+            onClick={upgrade}
+            disabled={!hasSession || busy}
+          >
+            Update enrollment to version {course.version}
+          </button>
+        </aside>
+      )}
       {!hasSession && (
         <p className="notice">
           <a href="#/account">Start a guest session or sign in</a> to enroll and
@@ -286,7 +325,7 @@ export function CourseWorkspace({
         </aside>
         <div className="workspace-main">
           {showGradebook ? (
-            enrolled && gradebook ? (
+            enrolled && !needsVersionReview && gradebook ? (
               <GradebookView
                 gradebook={gradebook}
                 attempts={attempts}
@@ -296,9 +335,11 @@ export function CourseWorkspace({
               <section className="card">
                 <h2>Practice gradebook</h2>
                 <p>
-                  {enrolled
-                    ? "Loading saved practice evidence…"
-                    : "Enroll to view your practice attempts and gradebook."}
+                  {needsVersionReview
+                    ? "Update your enrollment to access current practice tools. Prior attempts and feedback remain available after the update."
+                    : enrolled
+                      ? "Loading saved practice evidence…"
+                      : "Enroll to view your practice attempts and gradebook."}
                 </p>
               </section>
             )
@@ -307,7 +348,12 @@ export function CourseWorkspace({
               <LessonStudy
                 key={lesson.id}
                 lesson={lesson}
-                enabled={enrolled}
+                enabled={enrolled && !needsVersionReview}
+                disabledMessage={
+                  needsVersionReview
+                    ? "Update your enrollment before saving new attempts or reading progress."
+                    : undefined
+                }
                 note={notes.find((item) => item.lesson_id === lessonId)}
                 completed={progress.some(
                   (item) => item.lesson_id === lessonId && item.completed,

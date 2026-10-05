@@ -85,7 +85,7 @@ def test_preserved_inventory_is_honest_partial(repository):
     assert result.inventory == {
         "courses": 25,
         "lessons": 100,
-        "questions": 100,
+        "questions": 101,
         "cards": 200,
         "cases": 25,
     }

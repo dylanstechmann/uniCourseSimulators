@@ -1,6 +1,6 @@
 # Foundations of Cell and Molecular Biology
 
-**Maturity: partial. Version: 0.1.0.**
+**Maturity: partial. Version: 0.2.0.**
 
 From molecular structure to cell behavior: build a mechanistic model of how living systems store information, capture energy, and maintain boundaries.
 
@@ -24,7 +24,7 @@ High-school biology and chemistry. Structured required, recommended, and concurr
 
 ## Assessment and study policy
 
-Each unit includes one public formative check and two retrieval cards. A course case includes a self-assessment checklist. These are practice activities, with unlimited retries and no institutional grade, university credit, or transferable credit. Workload has not been measured.
+The four units include five public formative questions, including an original multiple-select item with a published equal-share penalty formula. Each unit includes two retrieval cards. A course case includes a self-assessment checklist. These are practice activities, with unlimited retries and no institutional grade, university credit, or transferable credit. Workload has not been measured.
 
 ## Schedule and current limitations
 

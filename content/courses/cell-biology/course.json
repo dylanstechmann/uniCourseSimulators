@@ -7,7 +7,7 @@
   "domain": "Life sciences",
   "level": "Year 1",
   "maturity": "partial",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "license": "MIT OR CC-BY-4.0",
   "content_origin": {
     "kind": "legacy-prototype",
@@ -128,7 +128,8 @@
           ],
           "worked_example": "A phospholipid has a charged or polar headgroup and nonpolar acyl chains. In water, the hydrophobic effect favors bilayers with the tails shielded; it does not require a special covalent bond between lipids.",
           "question_ids": [
-            "cell-biology-1:check"
+            "cell-biology-1:check",
+            "cell-biology-1:check-all"
           ],
           "card_ids": [
             "cell-biology-0-0",
@@ -229,9 +230,10 @@
         "cell-biology-1-objective-1"
       ],
       "question_ids": [
-        "cell-biology-1:check"
+        "cell-biology-1:check",
+        "cell-biology-1:check-all"
       ],
-      "points": 1
+      "points": 4
     },
     {
       "id": "cell-biology-2-practice",
@@ -311,6 +313,11 @@
   },
   "history": [
     {
+      "version": "0.2.0",
+      "date": "2026-10-05",
+      "summary": "Added one original multiple-select practice item with transparent partial credit and explicit learner enrollment updates between content versions."
+    },
+    {
       "version": "0.1.0",
       "date": "2026-10-05",
       "summary": "Preserved original compact prototype content in separate manifests and readings; labeled partial without semester or credit equivalency."
@@ -324,7 +331,7 @@
   "limitations": [
     "Four compact legacy units are preserved; this package is not equivalent to a full university semester.",
     "There is no authored 12–15 week schedule, substantive homework sequence, laboratory sequence, midterm, cumulative final, or graded integrative project.",
-    "The single formative check per lesson does not demonstrate comprehensive outcome coverage or mastery; association with the first lesson objective is provisional.",
+    "Five formative checks across four short lessons do not demonstrate comprehensive outcome coverage or mastery; objective associations are provisional.",
     "Bloom labels and structured prerequisite edges are initial authoring classifications awaiting subject-matter review.",
     "Question answers and solution feedback are intentionally public practice authoring specifications, not restricted exam keys.",
     "Numerical specifications preserve the prototype's tolerance and optional unit entry; significant-figure and dimensional checks have not been authored.",

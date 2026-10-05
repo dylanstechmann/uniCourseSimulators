@@ -12,9 +12,11 @@ Implemented and tested: React/TypeScript, FastAPI/Pydantic, PostgreSQL SQLAlchem
 
 Milestone 2 does not implement weighted university grades, objective mastery, exams or a full-semester calendar. Those require authored assessments and grading policy as well as software. Current gradebook values are formative evidence only.
 
-## 3 — Full grading and instructor feedback
+## 3 — Full grading and instructor feedback (in progress)
 
-Next highest priority: beyond choice/numeric foundations, implement multiple select; unit conversion/dimensions/significant figures; bounded SymPy; structured, graph/table/data, upload and design rubrics; partial credit; seeded variants; category weights; objective mastery policies; appeals/audited overrides; layered misconception feedback; credential-safe optional providers; and an actually isolated code worker. Pin question/rubric/package digests and variant seeds so regrading can reproduce an attempt. Add adversarial/mutation tests for every plugin. Code stays disabled until isolation is demonstrated; never mount a Docker socket in the API or worker.
+Implemented increment: deterministic multiple-select with explicit all-or-nothing and clamped equal-share correct-minus-incorrect policies, learner-facing scoring rules, response-shape/duplicate/index checks, an original biology practice item, SHA-256 question-specification digests for new attempts, grader policy v2, and an explicit package-version update path preserving previous attempt records. Alembic migration 0002 adds a nullable digest; historical attempts remain unpinned and retain practice-v1. Unit, API, component, browser and migration-preservation tests cover this slice.
+
+Remaining: unit conversion/dimensions/significant figures; bounded SymPy; structured, graph/table/data, upload and design rubrics; seeded variants; category weights; objective mastery policies; appeals/audited overrides; evidence-linked misconception feedback; credential-safe optional providers; and an actually isolated code worker. Digests detect specification changes but do not archive old packages; versioned content archiving and regrading still need design. Add adversarial/mutation tests for every plugin. Code stays disabled until isolation is demonstrated; never mount a Docker socket in the API or worker.
 
 ## 4 — Broad catalog and graph
 

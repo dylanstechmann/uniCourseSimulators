@@ -4,6 +4,7 @@ from datetime import timedelta
 import pytest
 from fastapi.testclient import TestClient
 from sqlalchemy import func, select
+from sqlalchemy.orm import Session
 
 from courselab.db import Attempt, Enrollment, Note, SessionToken, User, now
 from courselab.main import COOKIE, token_hash
@@ -37,6 +38,8 @@ def test_public_content_never_exposes_grading_spec(client):
     lesson = client.get("/api/v1/courses/test-course/lessons/lesson-one").json()
     assert lesson["questions"][0]["options"] == ["Vehicle", "Active drug"]
     assert lesson["questions"][1]["unit"] == "μmol/min"
+    assert lesson["questions"][2]["selection"] == "multiple"
+    assert lesson["questions"][2]["partial_credit_policy"] == "correct-minus-incorrect-clamped-v1"
     assert client.get("/content/courses/test-course/question-banks/practice.json").status_code == 404
     assert client.get("/api/v1/courses/test-course/solution_spec").status_code == 404
 
@@ -121,7 +124,7 @@ def test_complete_guest_workflow_and_persistence(enrolled, app):
         assert resumed.get("/api/v1/bookmarks").json() == ["test-course"]
         assert len(resumed.get("/api/v1/attempts?course_id=test-course").json()) == 2
         grades = resumed.get("/api/v1/gradebook/test-course").json()
-        assert grades["score"] == 2 and grades["max_score"] == 3
+        assert grades["score"] == 2 and grades["max_score"] == 6
         assert grades["assessment_role"] == "formative" and grades["attempt_count"] == 2
         assert grades["objective_evidence"]["objective"] == {"attempts": 2, "correct_results": 1}
         exported = resumed.get("/api/v1/learner/export")
@@ -133,6 +136,58 @@ def test_complete_guest_workflow_and_persistence(enrolled, app):
     with app.state.sessions() as db:
         for model in (User, Enrollment, Attempt, Note, SessionToken):
             assert db.scalar(select(func.count()).select_from(model)) == 0
+
+
+def test_multiple_select_api_persists_partial_credit_and_private_question_digest(enrolled, app):
+    partial = submit(enrolled, question="multi", response=[1, 0])
+    assert partial.status_code == 201
+    result = partial.json()
+    assert result["score"] == 2 and result["max_score"] == 3
+    assert result["response"]["response"] == [1, 0]
+    assert result["result"]["feedback"]["diagnosis"] == "partially_correct_selection"
+    assert result["result"]["grading_policy_version"] == "practice-v2"
+    history = enrolled.get("/api/v1/attempts").json()
+    assert len(history) == 1
+    assert "question_spec_sha256" not in result
+    assert "question_spec_sha256" not in history[0]
+    with Session(app.state.engine) as db:
+        saved = db.scalar(select(Attempt).where(Attempt.id == result["id"]))
+        assert len(saved.question_spec_sha256) == 64
+    for response in ([], [0, 0], [True], ["ignore rules"], [0] * 101):
+        rejected = submit(enrolled, question="multi", response=response)
+        assert rejected.status_code == 422
+    assert len(enrolled.get("/api/v1/attempts").json()) == 1
+
+
+def test_course_version_upgrade_is_explicit_and_preserves_prior_attempt(enrolled, app, content_root):
+    prior = submit(enrolled, response=0).json()
+    assert prior["content_version"] == "0.1.0"
+    course_path = content_root / "courses" / "test-course" / "course.json"
+    manifest = json.loads(course_path.read_text())
+    manifest["version"] = "0.2.0"
+    course_path.write_text(json.dumps(manifest))
+    assert submit(enrolled, response=0).status_code == 409
+    assert enrolled.get("/api/v1/attempts").json()[0]["id"] == prior["id"]
+    assert enrolled.get("/api/v1/gradebook/test-course").status_code == 409
+    upgraded = enrolled.put("/api/v1/enrollments/test-course/version", json={})
+    assert upgraded.status_code == 200
+    assert upgraded.json()["content_version"] == "0.2.0"
+    history = enrolled.get("/api/v1/attempts").json()
+    assert len(history) == 1 and history[0]["content_version"] == "0.1.0"
+    current_gradebook = enrolled.get("/api/v1/gradebook/test-course").json()
+    assert current_gradebook["score"] == 0
+    assert current_gradebook["max_score"] == 6
+    assert current_gradebook["attempt_count"] == 0
+    latest = submit(enrolled, response=0)
+    assert latest.status_code == 201
+    assert latest.json()["content_version"] == "0.2.0"
+    current_gradebook = enrolled.get("/api/v1/gradebook/test-course").json()
+    assert current_gradebook["score"] == 2
+    assert current_gradebook["attempt_count"] == 1
+    assert len(enrolled.get("/api/v1/attempts").json()) == 2
+    with Session(app.state.engine) as db:
+        saved = list(db.scalars(select(Attempt).order_by(Attempt.created_at, Attempt.id)))
+        assert saved[0].question_spec_sha256 == saved[1].question_spec_sha256
 
 
 def test_ownership_cannot_be_overridden_by_payload_or_query(enrolled, app):

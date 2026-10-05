@@ -19,7 +19,7 @@ from sqlalchemy.orm import Session
 from .config import Settings
 from .content import ContentInvalid, ContentMissing, ContentRepository
 from .db import Attempt, Bookmark, Enrollment, Note, Progress, SessionToken, User, database, now
-from .grading import GradingUnavailable, grade
+from .grading import GradingUnavailable, grade, question_spec_digest
 from .schemas import (
     AttemptRequest,
     BookmarkRequest,
@@ -275,6 +275,22 @@ def create_app(settings: Settings | None = None) -> FastAPI:
         return {"course_id": existing.course_id, "content_version": existing.content_version,
                 "created_at": timestamp(existing.created_at)}
 
+    @app.put("/api/v1/enrollments/{course_id}/version")
+    def upgrade_enrollment(course_id: str, request: Request, db: DB):
+        identity = require_identity(request, db)
+        require_csrf(request, identity)
+        manifest = content.manifest(course_id)
+        enrollment = db.scalar(select(Enrollment).where(
+            Enrollment.user_id == identity[0].id, Enrollment.course_id == course_id
+        ))
+        if not enrollment:
+            raise HTTPException(403, "Enroll in this course before updating its version")
+        # This explicit operation preserves every prior attempt and its original version.
+        enrollment.content_version = manifest["version"]
+        db.commit()
+        return {"course_id": enrollment.course_id, "content_version": enrollment.content_version,
+                "created_at": timestamp(enrollment.created_at)}
+
     @app.get("/api/v1/enrollments")
     def enrollments(request: Request, db: DB):
         user, _ = require_identity(request, db)
@@ -363,6 +379,8 @@ def create_app(settings: Settings | None = None) -> FastAPI:
         result = grade(question, body)
         item = Attempt(user_id=identity[0].id, course_id=course_id, question_id=question_id,
                        content_version=enrollment.content_version, response=body.model_dump(),
+                       grading_policy_version=result.grading_policy_version,
+                       question_spec_sha256=question_spec_digest(question),
                        score=result.score, max_score=result.max_score, result=result.model_dump(),
                        objective_ids=question.get("objective_ids", []))
         db.add(item)
@@ -380,10 +398,19 @@ def create_app(settings: Settings | None = None) -> FastAPI:
     @app.get("/api/v1/gradebook/{course_id}")
     def gradebook(course_id: str, request: Request, db: DB):
         user, _ = require_identity(request, db)
-        enrolled(db, user, course_id)
+        enrollment = enrolled(db, user, course_id)
         questions = content.questions(course_id)
-        rows = list(db.scalars(select(Attempt).where(Attempt.user_id == user.id,
-                              Attempt.course_id == course_id).order_by(Attempt.created_at, Attempt.id)))
+        rows = list(
+            db.scalars(
+                select(Attempt)
+                .where(
+                    Attempt.user_id == user.id,
+                    Attempt.course_id == course_id,
+                    Attempt.content_version == enrollment.content_version,
+                )
+                .order_by(Attempt.created_at, Attempt.id)
+            )
+        )
         best, objectives = {}, defaultdict(lambda: {"attempts": 0, "correct_results": 0})
         for item in rows:
             best[item.question_id] = max(best.get(item.question_id, 0), item.score)

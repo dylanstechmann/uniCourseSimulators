@@ -9,6 +9,10 @@ const diagnoses: Record<string, string> = {
   unit_mistake: "The supplied unit is inconsistent with the expected quantity.",
   malformed_response:
     "The response could not be interpreted in the required format.",
+  partially_correct_selection:
+    "Partially correct selection. Review which features explain the mechanism.",
+  incorrect_selection:
+    "The selected set does not match the answer specification.",
 };
 
 export function FeedbackView({ attempt }: { attempt: Attempt }) {

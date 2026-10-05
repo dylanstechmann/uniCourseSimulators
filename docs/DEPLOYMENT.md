@@ -35,9 +35,9 @@ docker compose exec -T api alembic current
 docker compose run --rm migrate
 ```
 
-The second command runs `alembic upgrade head` using the same image, database and secret as the API. For an application update, take and verify a backup, stop API/web writes, build the reviewed version, apply its migrations, and restart the application. Read each migration before applying it to valuable data. A downgrade is not a general data-recovery mechanism; some future changes may be irreversible. The initial revision's upgrade/downgrade/schema comparison is covered by backend tests.
+The second command runs `alembic upgrade head` using the same image, database and secret as the API. Revision 0002 adds an optional question-specification digest to attempts; old rows are preserved and marked unpinned. For an application update, take and verify a backup, stop API/web writes, build the reviewed version, apply its migrations, and restart the application. Read each migration before applying it to valuable data. A downgrade is not a general data-recovery mechanism; some future changes may be irreversible. The initial and digest revisions' upgrade/downgrade/schema comparison is covered by backend tests.
 
-Content is copied into the API image at `/content`. Rebuild when course packages change. Enrollments record their course version; a changed version blocks new version-dependent operations until an explicit enrollment migration exists. Do not rewrite published content under an unchanged version to bypass that boundary.
+Content is copied into the API image at `/content`. Rebuild when course packages change. Enrollments record their course version; a changed version blocks version-dependent operations until the learner uses the explicit `PUT /api/v1/enrollments/{course_id}/version` action. This updates the enrollment pointer and preserves earlier attempts with their original course version. Do not rewrite published content under an unchanged version to bypass that boundary.
 
 ## Production example, domain and HTTPS
 

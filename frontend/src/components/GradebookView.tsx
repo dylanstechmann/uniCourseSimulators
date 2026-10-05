@@ -81,7 +81,10 @@ export function GradebookView({
                 <tr key={attempt.id}>
                   <th scope="row">{attempt.question_id}</th>
                   <td>
-                    {attempt.response.response} {attempt.response.unit || ""}
+                    {Array.isArray(attempt.response.response)
+                      ? attempt.response.response.join(", ")
+                      : attempt.response.response}{" "}
+                    {attempt.response.unit || ""}
                   </td>
                   <td>
                     {attempt.score} / {attempt.max_score}

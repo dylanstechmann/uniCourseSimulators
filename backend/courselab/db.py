@@ -94,6 +94,7 @@ class Attempt(Base):
     question_id: Mapped[str] = mapped_column(String(100))
     content_version: Mapped[str] = mapped_column(String(100))
     grading_policy_version: Mapped[str] = mapped_column(String(100), default="practice-v1")
+    question_spec_sha256: Mapped[str | None] = mapped_column(String(64), nullable=True)
     response: Mapped[dict] = mapped_column(JSON)
     score: Mapped[float] = mapped_column(Float)
     max_score: Mapped[float] = mapped_column(Float)

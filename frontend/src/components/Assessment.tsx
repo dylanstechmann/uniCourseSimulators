@@ -6,15 +6,21 @@ import { FeedbackView } from "./FeedbackView";
 export function Assessment({
   question,
   enabled,
+  disabledMessage,
   previousAttempt,
   onSubmit,
 }: {
   question: Question;
   enabled: boolean;
+  disabledMessage?: string;
   previousAttempt?: Attempt;
-  onSubmit: (response: string | number, unit?: string) => Promise<Attempt>;
+  onSubmit: (
+    response: string | number | number[],
+    unit?: string,
+  ) => Promise<Attempt>;
 }) {
   const [choice, setChoice] = useState<number | null>(null);
+  const [selected, setSelected] = useState<number[]>([]);
   const [value, setValue] = useState("");
   const [unit, setUnit] = useState("");
   const [attempt, setAttempt] = useState<Attempt | undefined>();
@@ -25,6 +31,10 @@ export function Assessment({
     setError("");
     if (question.type === "single_choice" && choice === null) {
       setError("Select an answer before submitting.");
+      return;
+    }
+    if (question.type === "multiple_select" && selected.length === 0) {
+      setError("Select at least one option before submitting.");
       return;
     }
     if (
@@ -42,7 +52,11 @@ export function Assessment({
     try {
       setAttempt(
         await onSubmit(
-          question.type === "single_choice" ? choice! : value.trim(),
+          question.type === "single_choice"
+            ? choice!
+            : question.type === "multiple_select"
+              ? [...selected].sort((a, b) => a - b)
+              : value.trim(),
           unit.trim() || undefined,
         ),
       );
@@ -76,6 +90,36 @@ export function Assessment({
                 </label>
               ))}
             </div>
+          ) : question.type === "multiple_select" ? (
+            <>
+              <p className="muted">
+                Select all that apply.{" "}
+                {question.partial_credit_policy ===
+                "correct-minus-incorrect-clamped-v1"
+                  ? "Each correct selection earns equal credit; each incorrect selection subtracts one equal share, to a minimum of zero."
+                  : "Credit requires selecting exactly the complete set."}
+              </p>
+              <div className="choices">
+                {question.options.map((option, index) => (
+                  <label key={index} className="choice">
+                    <input
+                      type="checkbox"
+                      name={question.id}
+                      value={index}
+                      checked={selected.includes(index)}
+                      onChange={() =>
+                        setSelected((previous) =>
+                          previous.includes(index)
+                            ? previous.filter((item) => item !== index)
+                            : [...previous, index],
+                        )
+                      }
+                    />
+                    <span>{option}</span>
+                  </label>
+                ))}
+              </div>
+            </>
           ) : (
             <div className="input-grid">
               <label>
@@ -117,8 +161,8 @@ export function Assessment({
         </fieldset>
         {!enabled && (
           <p className="muted">
-            Enroll with a guest session or account to save attempts and receive
-            feedback.
+            {disabledMessage ||
+              "Enroll with a guest session or account to save attempts and receive feedback."}
           </p>
         )}
         {error && (

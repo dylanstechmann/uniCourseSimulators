@@ -14,6 +14,22 @@ const numericQuestion: Question = {
   learning_objective_ids: ["rate"],
   assessment_role: "formative",
 };
+const multipleQuestion: Question = {
+  id: "membrane-assembly",
+  type: "multiple_select",
+  prompt:
+    "Which statements explain bilayer assembly in water? Select all that apply.",
+  options: [
+    "Hydrophobic tails are shielded.",
+    "Polar headgroups remain hydrated.",
+    "Covalent bonds are required.",
+  ],
+  selection: "multiple",
+  partial_credit_policy: "correct-minus-incorrect-clamped-v1",
+  points: 3,
+  learning_objective_ids: ["membrane"],
+  assessment_role: "formative",
+};
 const attempt: Attempt = {
   id: "attempt-1",
   course_id: "cell-biology",
@@ -96,5 +112,42 @@ describe("formative assessment submission", () => {
       screen.getByRole("button", { name: "Submit practice response" }),
     ).toBeDisabled();
     expect(screen.getByLabelText("Numerical value")).toBeDisabled();
+  });
+  it("requires a selection and submits multiple choices with transparent partial credit", async () => {
+    const submit = vi.fn().mockResolvedValue({
+      ...attempt,
+      question_id: multipleQuestion.id,
+      response: { response: [0, 1] },
+      score: 2,
+      max_score: 3,
+      result: {
+        ...attempt.result,
+        score: 2,
+        max_score: 3,
+        correct: false,
+        feedback: {
+          ...attempt.result.feedback,
+          diagnosis: "partially_correct_selection",
+        },
+      },
+    });
+    const { container } = render(
+      <Assessment question={multipleQuestion} enabled onSubmit={submit} />,
+    );
+    fireEvent.submit(container.querySelector("form")!);
+    expect(screen.getByRole("alert")).toHaveTextContent("Select at least one");
+    expect(submit).not.toHaveBeenCalled();
+    expect(
+      screen.getByText(/each incorrect selection subtracts one equal share/),
+    ).toBeInTheDocument();
+    await userEvent.click(screen.getByLabelText(multipleQuestion.options[0]));
+    await userEvent.click(screen.getByLabelText(multipleQuestion.options[1]));
+    await userEvent.click(
+      screen.getByRole("button", { name: "Submit practice response" }),
+    );
+    expect(submit).toHaveBeenCalledWith([0, 1], undefined);
+    expect(
+      await screen.findByText("2 / 3 practice points"),
+    ).toBeInTheDocument();
   });
 });

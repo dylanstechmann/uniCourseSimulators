@@ -37,13 +37,37 @@ test("guest enrollment, feedback, notes, progress, account upgrade and deletion 
     .getByRole("link")
     .first();
   await lessonLink.click();
-  await page.getByRole("radio").first().check();
-  await page.getByRole("button", { name: "Submit practice response" }).click();
+  const bilayerPractice = page
+    .getByRole("region", { name: "Formative practice" })
+    .filter({
+      hasText: "Which statements best explain how amphipathic phospholipids",
+    });
+  await bilayerPractice
+    .getByRole("checkbox", { name: /Nonpolar acyl chains/ })
+    .check();
+  await bilayerPractice
+    .getByRole("checkbox", { name: /Polar headgroups/ })
+    .check();
+  await bilayerPractice
+    .getByRole("button", { name: "Submit practice response" })
+    .click();
   await expect(
-    page.getByRole("region", { name: "Submission feedback" }),
+    bilayerPractice.getByRole("region", { name: "Submission feedback" }),
+  ).toContainText("2 / 3 practice points");
+  const structurePractice = page
+    .getByRole("region", { name: "Formative practice" })
+    .filter({ hasText: "Which change most directly makes a soluble protein" });
+  await structurePractice.getByRole("radio").first().check();
+  await structurePractice
+    .getByRole("button", { name: "Submit practice response" })
+    .click();
+  await expect(
+    structurePractice.getByRole("region", { name: "Submission feedback" }),
   ).toBeVisible();
   await expect(
-    page.getByText(/does not establish sound reasoning or learning mastery/),
+    structurePractice.getByText(
+      /does not establish sound reasoning or learning mastery/,
+    ),
   ).toBeVisible();
   await page
     .getByLabel("Your private note")
@@ -66,8 +90,15 @@ test("guest enrollment, feedback, notes, progress, account upgrade and deletion 
   await expect(
     page.getByRole("button", { name: "Remove bookmark" }),
   ).toBeVisible();
+  const savedFeedback = page.getByRole("region", {
+    name: "Submission feedback",
+  });
+  await expect(savedFeedback).toHaveCount(2);
   await expect(
-    page.getByRole("region", { name: "Submission feedback" }),
+    savedFeedback.filter({ hasText: "1 / 1 practice points" }),
+  ).toBeVisible();
+  await expect(
+    savedFeedback.filter({ hasText: "2 / 3 practice points" }),
   ).toBeVisible();
   const lessonAccessibility = await new AxeBuilder({ page })
     .withTags(["wcag2a", "wcag2aa", "wcag21a", "wcag21aa"])
@@ -79,7 +110,7 @@ test("guest enrollment, feedback, notes, progress, account upgrade and deletion 
   await expect(
     page.getByRole("heading", { name: "Attempt and feedback history" }),
   ).toBeVisible();
-  await expect(page.getByRole("table").last().getByRole("row")).toHaveCount(2);
+  await expect(page.getByRole("table").last().getByRole("row")).toHaveCount(3);
   await page
     .getByRole("link", { name: "Account and data", exact: true })
     .click();

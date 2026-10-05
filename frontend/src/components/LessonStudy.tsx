@@ -7,6 +7,7 @@ import { MarkdownReader } from "./MarkdownReader";
 export function LessonStudy({
   lesson,
   enabled,
+  disabledMessage,
   note,
   completed,
   attempts,
@@ -17,13 +18,14 @@ export function LessonStudy({
 }: {
   lesson: Lesson;
   enabled: boolean;
+  disabledMessage?: string;
   note?: Note;
   completed: boolean;
   attempts: Attempt[];
   sources: Source[];
   onAttempt: (
     question: string,
-    response: string | number,
+    response: string | number | number[],
     unit?: string,
   ) => Promise<Attempt>;
   onSaveNote: (body: string) => Promise<void>;
@@ -116,6 +118,7 @@ export function LessonStudy({
           key={question.id}
           question={question}
           enabled={enabled}
+          disabledMessage={disabledMessage}
           previousAttempt={[...attempts]
             .reverse()
             .find((attempt) => attempt.question_id === question.id)}
@@ -142,7 +145,8 @@ export function LessonStudy({
         </button>
         {!enabled && (
           <p className="muted">
-            Enroll to save notes to your account or guest session.
+            {disabledMessage ||
+              "Enroll to save notes to your account or guest session."}
           </p>
         )}
         {status && <p role="status">{status}</p>}

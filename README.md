@@ -15,7 +15,7 @@ An independent open-source learning platform under development. It does **not co
 | complete | 0 | All full-course gates satisfied |
 | externally reviewed | 0 | Qualified named reviewer examined a specified version |
 
-**No current package meets the complete-course standard.** The 100 short lesson seeds, 100 formative questions, 200 cards and 25 self-assessed cases are useful practice material. They are not semester courses. Foundations of Cell and Molecular Biology remains partial; its requested 14-week vertical slice is planned. No instructor review is fabricated.
+**No current package meets the complete-course standard.** The 100 short lesson seeds, 101 formative questions, 200 cards and 25 self-assessed cases are useful practice material. They are not semester courses. Foundations of Cell and Molecular Biology remains partial; its requested 14-week vertical slice is planned. No instructor review is fabricated.
 
 See [the audit](docs/CURRENT_STATE_AUDIT.md), [quality standard](docs/CONTENT_QUALITY_STANDARD.md), and [remaining work](docs/ROADMAP.md).
 
@@ -69,7 +69,7 @@ Open http://localhost:8080. Startup generates a database credential in a private
 - Learner JSON export and confirmed account deletion, keyboard focus/skip link, larger text/high-contrast controls and safe Markdown rendering.
 - Docker development/production examples, reverse proxy, CI and automated content/security-boundary tests.
 
-Only choice and absolute-tolerance numerical graders are enabled. Supplied units are checked as authored symbols; conversions, dimensions, significant figures, seeded variants, other response types, exams, appeals and overrides remain milestone 3. Unsupported specifications fail explicitly. Code execution and LLM providers are disabled. The broad eight-pathway catalog and deep 14-week biology course remain milestones 4–5; see [the roadmap](docs/ROADMAP.md).
+Single-choice, multiple-select and absolute-tolerance numerical formative graders are enabled. Multiple-select policies are explicit and show learners their partial-credit formula; new attempts pin a SHA-256 question-specification digest. Supplied numeric units are checked as authored symbols; conversions, dimensions, significant figures, seeded variants, rubrics, exams, appeals and overrides remain unfinished milestone 3 work. Course-version changes prompt learners to update enrollment while preserving historical attempts. Unsupported specifications fail explicitly. Code execution and LLM providers are disabled. The broad eight-pathway catalog and deep 14-week biology course remain milestones 4–5; see [the roadmap](docs/ROADMAP.md).
 
 ## Preserved local study tools
 

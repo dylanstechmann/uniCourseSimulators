@@ -1,7 +1,7 @@
 import pytest
 from pydantic import ValidationError
 
-from courselab.grading import grade
+from courselab.grading import grade, question_spec_digest
 from courselab.schemas import AttemptRequest
 
 
@@ -92,3 +92,54 @@ def test_recalculated_item_and_mutated_key():
     assert grade(item, AttemptRequest(response=f"{expected} μmol/min")).correct
     item["solution_spec"]["answer"] = 90
     assert not grade(item, AttemptRequest(response=f"{expected} μmol/min")).correct
+
+
+def multi(policy="correct-minus-incorrect-clamped-v1"):
+    return {"type": "multiple_select", "options": ["A", "B", "C", "D"],
+            "points": 3, "solution_spec": {"answer": [0, 1, 2], "partial_credit": policy},
+            "feedback": {"hint": "Compare each feature with the mechanism."}}
+
+
+@pytest.mark.parametrize("response,score,diagnosis", [
+    ([2, 0, 1], 3, "correct_result_reasoning_not_assessed"),
+    ([0, 1], 2, "partially_correct_selection"),
+    ([0, 1, 3], 1, "partially_correct_selection"),
+    ([3], 0, "incorrect_selection"),
+])
+def test_multiple_select_partial_credit_is_order_independent_and_bounded(response, score, diagnosis):
+    result = grade(multi(), AttemptRequest(response=response))
+    assert result.score == score
+    assert result.max_score == 3
+    assert result.correct is (score == 3)
+    assert result.feedback.diagnosis == diagnosis
+    assert not result.feedback.reasoning_assessed
+
+
+def test_multiple_select_all_or_nothing_policy():
+    item = multi("all-or-nothing")
+    assert grade(item, AttemptRequest(response=[0, 1, 2])).score == 3
+    assert grade(item, AttemptRequest(response=[0, 1])).score == 0
+    item["solution_spec"]["partial_credit"] = "guessed-keyword-policy"
+    with pytest.raises(ValueError, match="not enabled"):
+        grade(item, AttemptRequest(response=[0]))
+
+
+@pytest.mark.parametrize("response", [[], [0, 0], [True], ["0"], [0] * 101])
+def test_multiple_select_rejects_empty_duplicate_and_coerced_selections(response):
+    with pytest.raises(ValidationError):
+        AttemptRequest(response=response)
+
+
+def test_multiple_select_rejects_indexes_outside_authored_options():
+    result = grade(multi(), AttemptRequest(response=[0, 8]))
+    assert result.score == 0
+    assert result.feedback.diagnosis == "malformed_response"
+
+
+def test_question_spec_digest_pins_order_independent_authored_configuration_and_policy():
+    item = multi()
+    digest = question_spec_digest(item)
+    assert len(digest) == 64
+    assert digest == question_spec_digest(dict(reversed(list(item.items()))))
+    changed = {**item, "points": 4}
+    assert question_spec_digest(changed) != digest

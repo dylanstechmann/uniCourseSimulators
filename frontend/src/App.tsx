@@ -89,6 +89,13 @@ export default function App() {
       enrollment,
     ]);
   }
+  async function upgradeEnrollment(course_id: string) {
+    const enrollment = await api.upgradeEnrollment(course_id);
+    setEnrollments((previous) => [
+      ...previous.filter((item) => item.course_id !== course_id),
+      enrollment,
+    ]);
+  }
   async function bookmark(id: string, saved: boolean) {
     await api.bookmark(id, saved);
     setBookmarks((previous) =>
@@ -224,11 +231,16 @@ export default function App() {
               lessonId={lessonId}
               showGradebook={segments[2] === "gradebook"}
               catalog={courses}
+              enrollmentVersion={
+                enrollments.find((item) => item.course_id === courseId)
+                  ?.content_version
+              }
               enrolled={enrollments.some((item) => item.course_id === courseId)}
               hasSession={sessionReady && !!session.user}
               bookmarked={bookmarks.includes(courseId)}
               sources={sources}
               onEnroll={() => enroll(courseId)}
+              onUpgrade={() => upgradeEnrollment(courseId)}
               onBookmark={(saved) => bookmark(courseId, saved)}
             />
           ) : page === "learning" ? (

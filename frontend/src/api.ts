@@ -83,6 +83,8 @@ export const api = {
   enrollments: () => request<Enrollment[]>("/enrollments"),
   enroll: (course_id: string) =>
     request<Enrollment>("/enrollments", "POST", { course_id }),
+  upgradeEnrollment: (id: string) =>
+    request<Enrollment>(`/enrollments/${encode(id)}/version`, "PUT", {}),
   progress: (id: string) => request<Progress[]>(`/progress/${encode(id)}`),
   setProgress: (id: string, lesson: string, completed: boolean) =>
     request<Progress>(`/progress/${encode(id)}/${encode(lesson)}`, "PATCH", {
@@ -97,7 +99,7 @@ export const api = {
   attempt: (
     id: string,
     question: string,
-    response: string | number,
+    response: string | number | number[],
     unit?: string,
   ) =>
     request<Attempt>(
