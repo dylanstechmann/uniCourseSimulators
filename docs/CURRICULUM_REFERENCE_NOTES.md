@@ -34,9 +34,10 @@ of meeting institutional requirements.
 
 CourseLab's sequencing and explanations will be authored independently. Source
 catalogues reserve copyright; no descriptions, laboratory protocols, figures,
-or paid university course materials are reproduced. The source registry uses
-stable existing CourseLab IDs where relevant; a later curriculum milestone
-will add separate outlined advanced subjects and a prerequisite graph.
+or paid university course materials are reproduced. The curriculum map now
+lists these advanced areas as catalog-only nodes with explicit planning
+dependencies and source IDs. No instructional content or university review is
+implied by those entries.
 
 ## MIT OpenCourseWare comparator use
 

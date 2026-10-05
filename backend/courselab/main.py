@@ -37,6 +37,7 @@ from .schemas import (
     NoteRequest,
     ProgressRequest,
     PublicCourse,
+    PublicCurriculum,
     PublicLesson,
 )
 from .variants import VariantTokenError, issue_variant_token, verify_variant_token
@@ -253,6 +254,10 @@ def create_app(settings: Settings | None = None) -> FastAPI:
     @app.get("/api/v1/courses", response_model=list[CourseSummary])
     def courses():
         return content.catalog()
+
+    @app.get("/api/v1/curriculum", response_model=PublicCurriculum)
+    def curriculum():
+        return content.curriculum()
 
     @app.get("/api/v1/sources")
     def sources():

@@ -25,6 +25,46 @@ export interface CourseSummary {
   lesson_count: number;
   limitations: string[];
 }
+export interface CurriculumNode {
+  id: string;
+  title: string;
+  domain: string;
+  level: string;
+  maturity: Maturity;
+  description: string;
+  prerequisites: {
+    course_ids: string[];
+    recommended_course_ids: string[];
+    concurrent_course_ids: string[];
+    knowledge: string[];
+    statement: string;
+  };
+  package_id: string | null;
+  related_package_ids: string[];
+  relation_note: string | null;
+}
+export interface CurriculumPathway {
+  id: string;
+  title: string;
+  description: string;
+  course_ids: string[];
+  source_ids: string[];
+  sequence_note: string;
+}
+export interface CurriculumMap {
+  schema_version: string;
+  description: string;
+  nodes: CurriculumNode[];
+  pathways: CurriculumPathway[];
+  alignment_maps: {
+    id: string;
+    title: string;
+    source_ids: string[];
+    foundational_nodes: string[];
+    advanced_nodes: string[];
+    disclaimer: string;
+  }[];
+}
 export interface LearningObjective {
   id: string;
   description: string;
@@ -191,4 +231,5 @@ export interface Source {
   title: string;
   url: string;
   institution: string;
+  license?: string;
 }

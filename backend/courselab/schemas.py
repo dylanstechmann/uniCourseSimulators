@@ -169,6 +169,45 @@ class CourseSummary(BaseModel):
     limitations: list[str]
 
 
+class CurriculumNode(BaseModel):
+    id: str
+    title: str
+    domain: str
+    level: str
+    maturity: Literal["catalog-only", "outlined", "partial", "beta", "complete", "externally reviewed"]
+    description: str
+    prerequisites: Prerequisites
+    package_id: str | None = None
+    related_package_ids: list[str] = Field(default_factory=list)
+    relation_note: str | None = None
+
+
+class CurriculumPathway(BaseModel):
+    id: str
+    title: str
+    description: str
+    course_ids: list[str]
+    source_ids: list[str] = Field(default_factory=list)
+    sequence_note: str
+
+
+class CurriculumAlignment(BaseModel):
+    id: str
+    title: str
+    source_ids: list[str]
+    foundational_nodes: list[str]
+    advanced_nodes: list[str]
+    disclaimer: str
+
+
+class PublicCurriculum(BaseModel):
+    schema_version: str
+    description: str
+    nodes: list[CurriculumNode]
+    pathways: list[CurriculumPathway]
+    alignment_maps: list[CurriculumAlignment]
+
+
 class PublicCourse(CourseSummary):
     prerequisites: Prerequisites
     outcomes: list[Objective]

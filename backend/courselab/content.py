@@ -17,6 +17,7 @@ from .schemas import (
     Objective,
     Prerequisites,
     PublicCourse,
+    PublicCurriculum,
     PublicLesson,
     PublicQuestion,
     PublicRetrievalCard,
@@ -71,6 +72,31 @@ class ContentRepository:
         for path in sorted((self.root / "courses").glob("*/course.json")):
             items.append(self._summary(self.manifest(path.parent.name)))
         return items
+
+    def curriculum(self) -> PublicCurriculum:
+        """Return a prerequisite/pathway map with explicit course maturity."""
+        map_path = self.root / "curriculum-map.json"
+        if not map_path.is_file():
+            raise ContentInvalid("Curriculum map is unavailable")
+        source = json.loads(map_path.read_text(encoding="utf-8"))
+        nodes = []
+        for path in sorted((self.root / "courses").glob("*/course.json")):
+            manifest = self.manifest(path.parent.name)
+            nodes.append({
+                "id": manifest["id"], "title": manifest["title"],
+                "domain": manifest["domain"], "level": manifest["level"],
+                "maturity": manifest["maturity"], "description": manifest["description"],
+                "prerequisites": manifest["prerequisites"], "package_id": manifest["id"],
+                "related_package_ids": [], "relation_note": None,
+            })
+        for item in source["catalog_only"]:
+            nodes.append({
+                **item, "package_id": None,
+            })
+        return PublicCurriculum(
+            schema_version=source["schema_version"], description=source["description"],
+            nodes=nodes, pathways=source["pathways"], alignment_maps=source["alignment_maps"],
+        )
 
     def sources(self) -> list[dict]:
         registry = self.root / "sources" / "registry.json"

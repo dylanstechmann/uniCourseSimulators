@@ -48,6 +48,20 @@ def test_public_content_never_exposes_grading_spec(client):
     assert client.get("/api/v1/courses/test-course/solution_spec").status_code == 404
 
 
+def test_curriculum_endpoint_labels_planned_nodes_and_prerequisite_edges(client):
+    response = client.get("/api/v1/curriculum")
+    assert response.status_code == 200
+    data = response.json()
+    nodes = {node["id"]: node for node in data["nodes"]}
+    assert nodes["test-course"]["maturity"] == "partial"
+    assert nodes["test-course"]["package_id"] == "test-course"
+    assert nodes["fixture-extension"]["maturity"] == "catalog-only"
+    assert nodes["fixture-extension"]["package_id"] is None
+    assert nodes["fixture-extension"]["prerequisites"]["course_ids"] == ["test-course"]
+    assert data["pathways"][0]["course_ids"] == ["test-course", "fixture-extension"]
+    assert "solution_spec" not in response.text and "PRIVATE_TEST_SENTINEL" not in response.text
+
+
 def test_seeded_variant_round_trip_and_attempt_pinning(enrolled, app):
     root = app.state.settings.content_root / "courses" / "test-course"
     manifest_path = root / "course.json"

@@ -13,6 +13,7 @@ ORIGIN = "http://localhost:8080"
 @pytest.fixture
 def content_root(tmp_path):
     root = tmp_path / "content"
+    root.mkdir(parents=True)
     directory = root / "courses" / "test-course"
     (directory / "modules").mkdir(parents=True)
     (directory / "question-banks").mkdir()
@@ -36,6 +37,27 @@ def content_root(tmp_path):
         "retrieval_cards": "question-banks/retrieval-cards.json",
     }
     (directory / "course.json").write_text(json.dumps(manifest))
+    (root / "curriculum-map.json").write_text(json.dumps({
+        "schema_version": "1.0",
+        "description": "A synthetic fixture map used to test learner-facing prerequisite and pathway data.",
+        "catalog_only": [{
+            "id": "fixture-extension", "title": "Fixture Extension", "domain": "Life sciences",
+            "level": "Year 2", "maturity": "catalog-only",
+            "description": "A test-only catalog topic used to verify that planned study areas are not exposed as authored courses.",
+            "prerequisites": {"course_ids": ["test-course"], "recommended_course_ids": [],
+                              "concurrent_course_ids": [], "knowledge": [],
+                              "statement": "Complete the synthetic fixture course before exploring this planning node."},
+            "related_package_ids": ["test-course"],
+            "relation_note": "The synthetic partial package only demonstrates the learner-facing link contract.",
+        }],
+        "pathways": [{
+            "id": "fixture-pathway", "title": "Fixture pathway",
+            "description": "A synthetic learning sequence used only by API tests.",
+            "course_ids": ["test-course", "fixture-extension"], "source_ids": [],
+            "sequence_note": "A fixture sequence that makes no university-equivalency claim.",
+        }],
+        "alignment_maps": [],
+    }))
     (directory / "question-banks" / "retrieval-cards.json").write_text(json.dumps({
         "course_id": "test-course", "cards": [{
             "id": "control-card", "lesson_id": "lesson-one",

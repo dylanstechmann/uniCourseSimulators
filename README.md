@@ -10,12 +10,14 @@ An independent open-source learning platform under development. It does **not co
 | --- | ---: | --- |
 | catalog-only | 0 | Catalog metadata only |
 | outlined | 0 | Structured plan without developed teaching |
-| partial | 25 | Preserved prototype notes, four lessons and four checks each |
+| partial | 25 | Prototype packages with short readings and formative checks; depth varies |
 | beta | 0 | Developed course awaiting required review/gates |
 | complete | 0 | All full-course gates satisfied |
 | externally reviewed | 0 | Qualified named reviewer examined a specified version |
 
 **No current package meets the complete-course standard.** The 101 short lesson seeds, 103 formative questions, 202 cards and 25 self-assessed cases are useful practice material. They are not semester courses. Foundations of Cell and Molecular Biology remains partial; its requested 14-week vertical slice is planned. No instructor review is fabricated.
+
+The curriculum map adds **37 catalog-only subject nodes** and **8 pathway maps** beside the 25 partial course packages. Catalog-only entries describe planned study areas and dependencies; they contain no authored lessons and cannot be enrolled in. Mapped prerequisite order is planning guidance and does not establish university equivalency.
 
 See [the audit](docs/CURRENT_STATE_AUDIT.md), [quality standard](docs/CONTENT_QUALITY_STANDARD.md), and [remaining work](docs/ROADMAP.md).
 
@@ -69,7 +71,7 @@ Open http://localhost:8080. Startup generates a database credential in a private
 - Learner JSON export and confirmed account deletion, keyboard focus/skip link, larger text/high-contrast controls and safe Markdown rendering.
 - Docker development/production examples, reverse proxy, CI and automated content/security-boundary tests.
 
-Single-choice, multiple-select, numeric, bounded symbolic-expression, and one narrow data-interpretation formative grader are enabled. Numeric grading supports a constrained set of exact unit conversions, dimensional checks, absolute and relative tolerances, and optional significant-figure requirements. Symbolic grading compares algebraically equivalent rational expressions through a restricted arithmetic grammar; it does not execute Python or accept arbitrary SymPy syntax. Multiple-select policies are explicit and show learners their partial-credit formula; the composite data item displays per-field credit and never grades prose or keyword overlap. New attempts pin a SHA-256 question-specification digest. Numeric parameter generation, general graph/table/data rubrics, exams, appeals and overrides remain unfinished milestone 3 work. Course-version changes prompt learners to update enrollment while preserving historical attempts. Unsupported specifications fail explicitly. Code execution and LLM providers are disabled. The broad eight-pathway catalog and deep 14-week biology course remain milestones 4–5; see [the roadmap](docs/ROADMAP.md).
+Single-choice, multiple-select, numeric, bounded symbolic-expression, and one narrow data-interpretation formative grader are enabled. Numeric grading supports a constrained set of exact unit conversions, dimensional checks, absolute and relative tolerances, and optional significant-figure requirements. Symbolic grading compares algebraically equivalent rational expressions through a restricted arithmetic grammar; it does not execute Python or accept arbitrary SymPy syntax. Multiple-select policies are explicit and show learners their partial-credit formula; the composite data item displays per-field credit and never grades prose or keyword overlap. New attempts pin a SHA-256 question-specification digest. Numeric parameter generation, general graph/table/data rubrics, exams, appeals and overrides remain unfinished milestone 3 work. Course-version changes prompt learners to update enrollment while preserving historical attempts. Unsupported specifications fail explicitly. Code execution and LLM providers are disabled. The eight pathway maps and broad catalog layer are implemented as planning aids; the deep 14-week biology course remains milestone 5 work. See [the roadmap](docs/ROADMAP.md).
 
 ## Preserved local study tools
 

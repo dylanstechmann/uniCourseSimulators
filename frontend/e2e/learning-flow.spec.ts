@@ -9,11 +9,52 @@ test("catalog communicates maturity and has no automated accessibility violation
     page.getByRole("heading", { name: "Course catalog", exact: true }),
   ).toBeVisible();
   await expect(
-    page.getByText(/Four short lessons do not constitute a semester course/),
+    page.getByText(/prototype material with uneven depth/),
   ).toBeVisible();
   await expect(
-    page.getByText("partial", { exact: true }).first(),
+    page.locator(".course-grid .maturity-partial").first(),
   ).toBeVisible();
+  const accessibility = await new AxeBuilder({ page })
+    .withTags(["wcag2a", "wcag2aa", "wcag21a", "wcag21aa"])
+    .analyze();
+  expect(accessibility.violations).toEqual([]);
+});
+
+test("curriculum explorer exposes prerequisite chains and the JHU topic map honestly", async ({
+  page,
+}) => {
+  await page.goto("/");
+  const summary = page.getByText(
+    "Johns Hopkins regenerative/stem-cell prerequisite knowledge map",
+    { exact: true },
+  );
+  await expect(summary).toBeVisible();
+  await summary.click();
+  const openPathway = page.locator(".pathway-card[open]");
+  await expect(
+    openPathway.getByRole("heading", {
+      name: "Molecular Biology",
+      exact: true,
+    }),
+  ).toBeVisible();
+  await expect(
+    openPathway.getByText("catalog-only", { exact: true }).first(),
+  ).toBeVisible();
+  await expect(
+    openPathway
+      .getByText(/Original lessons and assessments have not been authored/)
+      .first(),
+  ).toBeVisible();
+  await expect(
+    page.getByRole("link", {
+      name: /Regenerative and Stem Cell Technologies.*Academic Catalogue/,
+    }),
+  ).toHaveAttribute("href", /e-catalogue\.jhu\.edu/);
+  await expect(
+    page.getByRole("link", {
+      name: /Open available partial package: Organic Chemistry I for Life Sciences/,
+    }),
+  ).toHaveAttribute("href", "#/course/organic-chemistry");
   const accessibility = await new AxeBuilder({ page })
     .withTags(["wcag2a", "wcag2aa", "wcag21a", "wcag21aa"])
     .analyze();

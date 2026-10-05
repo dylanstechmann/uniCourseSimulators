@@ -1,6 +1,12 @@
 import { useEffect, useRef, useState } from "react";
 import { api, errorMessage } from "./api";
-import type { CourseSummary, Enrollment, Session, Source } from "./types";
+import type {
+  CourseSummary,
+  CurriculumMap,
+  Enrollment,
+  Session,
+  Source,
+} from "./types";
 import { AccountPanel } from "./components/AccountPanel";
 import { CourseCatalog } from "./components/CourseCatalog";
 import { CourseWorkspace } from "./components/CourseWorkspace";
@@ -24,6 +30,7 @@ export default function App() {
   });
   const [sessionReady, setSessionReady] = useState(false);
   const [courses, setCourses] = useState<CourseSummary[]>([]);
+  const [curriculum, setCurriculum] = useState<CurriculumMap | null>(null);
   const [sources, setSources] = useState<Source[]>([]);
   const [enrollments, setEnrollments] = useState<Enrollment[]>([]);
   const [bookmarks, setBookmarks] = useState<string[]>([]);
@@ -39,13 +46,14 @@ export default function App() {
   }, []);
   useEffect(() => {
     let active = true;
-    Promise.all([api.session(), api.courses(), api.sources()])
-      .then(([session, courses, sources]) => {
+    Promise.all([api.session(), api.courses(), api.sources(), api.curriculum()])
+      .then(([session, courses, sources, curriculum]) => {
         if (active) {
           setSession(session);
           setSessionReady(true);
           setCourses(courses);
           setSources(sources);
+          setCurriculum(curriculum);
         }
       })
       .catch((error) => {
@@ -261,6 +269,8 @@ export default function App() {
                   )}
                   enrollments={enrollments}
                   bookmarks={bookmarks}
+                  curriculum={curriculum}
+                  sources={sources}
                 />
               ) : (
                 <p>
@@ -274,6 +284,8 @@ export default function App() {
               courses={courses}
               enrollments={enrollments}
               bookmarks={bookmarks}
+              curriculum={curriculum}
+              sources={sources}
             />
           )}
         </main>

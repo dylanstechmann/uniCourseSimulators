@@ -1,0 +1,1065 @@
+{
+  "schema_version": "1.0",
+  "description": "A source-grounded planning map. Course prerequisites and pathway order are instructional planning proposals; they do not establish university equivalency, admission eligibility, transfer credit, or affiliation.",
+  "catalog_only": [
+    {
+      "id": "precalculus",
+      "title": "Precalculus and Quantitative Foundations",
+      "domain": "Mathematics",
+      "level": "Foundation",
+      "maturity": "catalog-only",
+      "description": "Build fluency with functions, trigonometry, vectors, logarithms, and algebraic models used before calculus-based science and engineering.",
+      "prerequisites": {
+        "course_ids": [],
+        "recommended_course_ids": [],
+        "concurrent_course_ids": [],
+        "knowledge": [
+          "Algebra and geometry"
+        ],
+        "statement": "Preparation: Algebra and geometry. This planning entry does not establish any university's admission or course-equivalency rules."
+      },
+      "related_package_ids": [],
+      "relation_note": null
+    },
+    {
+      "id": "numerical-methods",
+      "title": "Numerical Methods for Scientific Computing",
+      "domain": "Computing",
+      "level": "Year 2",
+      "maturity": "catalog-only",
+      "description": "Study floating-point error, root finding, linear systems, interpolation, numerical differentiation and integration, and reproducible simulation.",
+      "prerequisites": {
+        "course_ids": [
+          "programming",
+          "calculus-2",
+          "linear-algebra"
+        ],
+        "recommended_course_ids": [
+          "statistics"
+        ],
+        "concurrent_course_ids": [],
+        "knowledge": [],
+        "statement": "Recommended sequence: Programming and Numerical Methods; Calculus II; Linear Algebra; Probability and Statistics (recommended). These project-planned dependencies do not establish any university's admission or course-equivalency rules."
+      },
+      "related_package_ids": [],
+      "relation_note": null
+    },
+    {
+      "id": "statics",
+      "title": "Engineering Statics",
+      "domain": "Mechanical engineering",
+      "level": "Year 2",
+      "maturity": "catalog-only",
+      "description": "Model force and moment equilibrium in particles, rigid bodies, trusses, frames, and biomedical structures with explicit free-body diagrams.",
+      "prerequisites": {
+        "course_ids": [
+          "physics-mechanics",
+          "calculus-1"
+        ],
+        "recommended_course_ids": [],
+        "concurrent_course_ids": [],
+        "knowledge": [],
+        "statement": "Recommended sequence: Classical Mechanics; Calculus I. These project-planned dependencies do not establish any university's admission or course-equivalency rules."
+      },
+      "related_package_ids": [
+        "statics-materials"
+      ],
+      "relation_note": "This partial prototype package groups related topics; this catalog entry does not split or claim full-course coverage from that package."
+    },
+    {
+      "id": "dynamics",
+      "title": "Engineering Dynamics",
+      "domain": "Mechanical engineering",
+      "level": "Year 2",
+      "maturity": "catalog-only",
+      "description": "Analyze particle and rigid-body kinematics, work-energy, impulse-momentum, and rotational motion using coordinate choices and physical checks.",
+      "prerequisites": {
+        "course_ids": [
+          "physics-mechanics",
+          "calculus-1"
+        ],
+        "recommended_course_ids": [
+          "statics"
+        ],
+        "concurrent_course_ids": [],
+        "knowledge": [],
+        "statement": "Recommended sequence: Classical Mechanics; Calculus I; Engineering Statics (recommended). These project-planned dependencies do not establish any university's admission or course-equivalency rules."
+      },
+      "related_package_ids": [],
+      "relation_note": null
+    },
+    {
+      "id": "mechanics-of-materials",
+      "title": "Mechanics of Materials",
+      "domain": "Mechanical engineering",
+      "level": "Year 2",
+      "maturity": "catalog-only",
+      "description": "Relate axial, bending, torsional, and combined loads to stress, strain, deformation, failure criteria, and design margins.",
+      "prerequisites": {
+        "course_ids": [
+          "statics"
+        ],
+        "recommended_course_ids": [
+          "materials-science"
+        ],
+        "concurrent_course_ids": [],
+        "knowledge": [],
+        "statement": "Recommended sequence: Engineering Statics; Materials Science for Engineers (recommended). These project-planned dependencies do not establish any university's admission or course-equivalency rules."
+      },
+      "related_package_ids": [
+        "statics-materials"
+      ],
+      "relation_note": "This partial prototype package groups related topics; this catalog entry does not split or claim full-course coverage from that package."
+    },
+    {
+      "id": "thermodynamics",
+      "title": "Engineering Thermodynamics",
+      "domain": "Mechanical engineering",
+      "level": "Year 2",
+      "maturity": "catalog-only",
+      "description": "Apply conservation of mass and energy, state properties, entropy balances, and idealized cycles while stating model assumptions.",
+      "prerequisites": {
+        "course_ids": [
+          "general-chemistry-2",
+          "calculus-2"
+        ],
+        "recommended_course_ids": [],
+        "concurrent_course_ids": [],
+        "knowledge": [],
+        "statement": "Recommended sequence: General Chemistry II; Calculus II. These project-planned dependencies do not establish any university's admission or course-equivalency rules."
+      },
+      "related_package_ids": [
+        "transport"
+      ],
+      "relation_note": "This partial prototype package groups related topics; this catalog entry does not split or claim full-course coverage from that package."
+    },
+    {
+      "id": "fluid-mechanics",
+      "title": "Fluid Mechanics",
+      "domain": "Mechanical engineering",
+      "level": "Year 3",
+      "maturity": "catalog-only",
+      "description": "Use hydrostatics, control-volume conservation, dimensional reasoning, viscous-flow models, and pressure-flow relations in biological and engineered systems.",
+      "prerequisites": {
+        "course_ids": [
+          "physics-mechanics",
+          "calculus-2"
+        ],
+        "recommended_course_ids": [
+          "thermodynamics"
+        ],
+        "concurrent_course_ids": [],
+        "knowledge": [],
+        "statement": "Recommended sequence: Classical Mechanics; Calculus II; Engineering Thermodynamics (recommended). These project-planned dependencies do not establish any university's admission or course-equivalency rules."
+      },
+      "related_package_ids": [
+        "transport"
+      ],
+      "relation_note": "This partial prototype package groups related topics; this catalog entry does not split or claim full-course coverage from that package."
+    },
+    {
+      "id": "heat-mass-transfer",
+      "title": "Heat and Mass Transfer",
+      "domain": "Mechanical engineering",
+      "level": "Year 3",
+      "maturity": "catalog-only",
+      "description": "Compare conduction, convection, diffusion, and interfacial transfer through governing balances, boundary conditions, and characteristic scales.",
+      "prerequisites": {
+        "course_ids": [
+          "differential-equations",
+          "thermodynamics",
+          "fluid-mechanics"
+        ],
+        "recommended_course_ids": [],
+        "concurrent_course_ids": [],
+        "knowledge": [],
+        "statement": "Recommended sequence: Differential Equations; Engineering Thermodynamics; Fluid Mechanics. These project-planned dependencies do not establish any university's admission or course-equivalency rules."
+      },
+      "related_package_ids": [
+        "transport"
+      ],
+      "relation_note": "This partial prototype package groups related topics; this catalog entry does not split or claim full-course coverage from that package."
+    },
+    {
+      "id": "materials-science",
+      "title": "Materials Science for Engineers",
+      "domain": "Materials science",
+      "level": "Year 2",
+      "maturity": "catalog-only",
+      "description": "Connect atomic structure and processing to mechanical, electrical, thermal, degradation, and biological-interface properties of engineering materials.",
+      "prerequisites": {
+        "course_ids": [
+          "general-chemistry-2"
+        ],
+        "recommended_course_ids": [
+          "physics-mechanics"
+        ],
+        "concurrent_course_ids": [],
+        "knowledge": [],
+        "statement": "Recommended sequence: General Chemistry II; Classical Mechanics (recommended). These project-planned dependencies do not establish any university's admission or course-equivalency rules."
+      },
+      "related_package_ids": [],
+      "relation_note": null
+    },
+    {
+      "id": "circuits-1",
+      "title": "Electrical Circuits I",
+      "domain": "Electrical engineering",
+      "level": "Year 2",
+      "maturity": "catalog-only",
+      "description": "Analyze resistive networks and first-order transient circuits with Kirchhoff laws, equivalent circuits, energy conservation, and measurement uncertainty.",
+      "prerequisites": {
+        "course_ids": [
+          "physics-em"
+        ],
+        "recommended_course_ids": [
+          "calculus-1"
+        ],
+        "concurrent_course_ids": [],
+        "knowledge": [],
+        "statement": "Recommended sequence: Electricity and Magnetism; Calculus I (recommended). These project-planned dependencies do not establish any university's admission or course-equivalency rules."
+      },
+      "related_package_ids": [
+        "circuits"
+      ],
+      "relation_note": "This partial prototype package groups related topics; this catalog entry does not split or claim full-course coverage from that package."
+    },
+    {
+      "id": "circuits-2",
+      "title": "Electrical Circuits II",
+      "domain": "Electrical engineering",
+      "level": "Year 2",
+      "maturity": "catalog-only",
+      "description": "Extend network analysis to second-order dynamics, frequency response, operational amplifiers, impedance, and practical circuit measurement.",
+      "prerequisites": {
+        "course_ids": [
+          "circuits-1"
+        ],
+        "recommended_course_ids": [
+          "signals-and-systems"
+        ],
+        "concurrent_course_ids": [],
+        "knowledge": [],
+        "statement": "Recommended sequence: Electrical Circuits I; Signals and Systems (recommended). These project-planned dependencies do not establish any university's admission or course-equivalency rules."
+      },
+      "related_package_ids": [],
+      "relation_note": null
+    },
+    {
+      "id": "analog-electronics",
+      "title": "Analog Electronics",
+      "domain": "Electrical engineering",
+      "level": "Year 3",
+      "maturity": "catalog-only",
+      "description": "Reason about semiconductor devices, biasing, amplification, bandwidth, noise, and safe interface circuits for physical sensors.",
+      "prerequisites": {
+        "course_ids": [
+          "circuits-1"
+        ],
+        "recommended_course_ids": [
+          "calculus-2"
+        ],
+        "concurrent_course_ids": [],
+        "knowledge": [],
+        "statement": "Recommended sequence: Electrical Circuits I; Calculus II (recommended). These project-planned dependencies do not establish any university's admission or course-equivalency rules."
+      },
+      "related_package_ids": [
+        "circuits"
+      ],
+      "relation_note": "This partial prototype package groups related topics; this catalog entry does not split or claim full-course coverage from that package."
+    },
+    {
+      "id": "digital-electronics",
+      "title": "Digital Logic and Computer Interfaces",
+      "domain": "Electrical and computer engineering",
+      "level": "Year 2",
+      "maturity": "catalog-only",
+      "description": "Design combinational and sequential logic, timing-safe state machines, and digital interfaces using explicit Boolean and hardware assumptions.",
+      "prerequisites": {
+        "course_ids": [
+          "circuits-1"
+        ],
+        "recommended_course_ids": [
+          "programming"
+        ],
+        "concurrent_course_ids": [],
+        "knowledge": [],
+        "statement": "Recommended sequence: Electrical Circuits I; Programming and Numerical Methods (recommended). These project-planned dependencies do not establish any university's admission or course-equivalency rules."
+      },
+      "related_package_ids": [],
+      "relation_note": null
+    },
+    {
+      "id": "signals-and-systems",
+      "title": "Signals and Systems",
+      "domain": "Electrical engineering",
+      "level": "Year 3",
+      "maturity": "catalog-only",
+      "description": "Represent continuous and discrete signals, linear time-invariant systems, convolution, transforms, sampling, and filtering with stated conditions.",
+      "prerequisites": {
+        "course_ids": [
+          "differential-equations",
+          "linear-algebra"
+        ],
+        "recommended_course_ids": [
+          "circuits-1"
+        ],
+        "concurrent_course_ids": [],
+        "knowledge": [],
+        "statement": "Recommended sequence: Differential Equations; Linear Algebra; Electrical Circuits I (recommended). These project-planned dependencies do not establish any university's admission or course-equivalency rules."
+      },
+      "related_package_ids": [
+        "signals-control"
+      ],
+      "relation_note": "This partial prototype package groups related topics; this catalog entry does not split or claim full-course coverage from that package."
+    },
+    {
+      "id": "feedback-control",
+      "title": "Feedback Control Systems",
+      "domain": "Electrical engineering",
+      "level": "Year 3",
+      "maturity": "catalog-only",
+      "description": "Model dynamic plants and evaluate stability, transient response, robustness, and feedback-controller design against measurable specifications.",
+      "prerequisites": {
+        "course_ids": [
+          "signals-and-systems",
+          "differential-equations",
+          "linear-algebra"
+        ],
+        "recommended_course_ids": [
+          "circuits-1"
+        ],
+        "concurrent_course_ids": [],
+        "knowledge": [],
+        "statement": "Recommended sequence: Signals and Systems; Differential Equations; Linear Algebra; Electrical Circuits I (recommended). These project-planned dependencies do not establish any university's admission or course-equivalency rules."
+      },
+      "related_package_ids": [
+        "signals-control"
+      ],
+      "relation_note": "This partial prototype package groups related topics; this catalog entry does not split or claim full-course coverage from that package."
+    },
+    {
+      "id": "instrumentation-and-sensors",
+      "title": "Instrumentation and Sensors",
+      "domain": "Biomedical engineering",
+      "level": "Year 3",
+      "maturity": "catalog-only",
+      "description": "Plan calibrated measurements by tracing sensor physics, analog conditioning, sampling, uncertainty, safety, and experimental controls.",
+      "prerequisites": {
+        "course_ids": [
+          "circuits-1"
+        ],
+        "recommended_course_ids": [
+          "analog-electronics",
+          "statistics"
+        ],
+        "concurrent_course_ids": [],
+        "knowledge": [],
+        "statement": "Recommended sequence: Electrical Circuits I; Analog Electronics (recommended); Probability and Statistics (recommended). These project-planned dependencies do not establish any university's admission or course-equivalency rules."
+      },
+      "related_package_ids": [
+        "circuits"
+      ],
+      "relation_note": "This partial prototype package groups related topics; this catalog entry does not split or claim full-course coverage from that package."
+    },
+    {
+      "id": "embedded-systems",
+      "title": "Embedded Systems",
+      "domain": "Electrical and computer engineering",
+      "level": "Year 3",
+      "maturity": "catalog-only",
+      "description": "Build resource-bounded microcontroller systems that connect sensors and actuators through timing, state, testing, and safe-failure analysis.",
+      "prerequisites": {
+        "course_ids": [
+          "digital-electronics",
+          "programming",
+          "circuits-2"
+        ],
+        "recommended_course_ids": [],
+        "concurrent_course_ids": [],
+        "knowledge": [],
+        "statement": "Recommended sequence: Digital Logic and Computer Interfaces; Programming and Numerical Methods; Electrical Circuits II. These project-planned dependencies do not establish any university's admission or course-equivalency rules."
+      },
+      "related_package_ids": [],
+      "relation_note": null
+    },
+    {
+      "id": "mechanical-design",
+      "title": "Mechanical Design",
+      "domain": "Mechanical engineering",
+      "level": "Year 3",
+      "maturity": "catalog-only",
+      "description": "Translate requirements into component concepts, load cases, material selections, tolerances, safety factors, prototypes, and verification plans.",
+      "prerequisites": {
+        "course_ids": [
+          "statics",
+          "mechanics-of-materials"
+        ],
+        "recommended_course_ids": [
+          "materials-science"
+        ],
+        "concurrent_course_ids": [],
+        "knowledge": [],
+        "statement": "Recommended sequence: Engineering Statics; Mechanics of Materials; Materials Science for Engineers (recommended). These project-planned dependencies do not establish any university's admission or course-equivalency rules."
+      },
+      "related_package_ids": [
+        "robotics"
+      ],
+      "relation_note": "This partial prototype package groups related topics; this catalog entry does not split or claim full-course coverage from that package."
+    },
+    {
+      "id": "robotics-mechatronics",
+      "title": "Robotics and Mechatronics",
+      "domain": "Mechanical engineering",
+      "level": "Year 3",
+      "maturity": "catalog-only",
+      "description": "Integrate kinematics, actuation, sensors, embedded computation, feedback, uncertainty, and task-level verification in robotic systems.",
+      "prerequisites": {
+        "course_ids": [
+          "calculus-3",
+          "linear-algebra",
+          "dynamics",
+          "embedded-systems",
+          "feedback-control"
+        ],
+        "recommended_course_ids": [
+          "mechanical-design"
+        ],
+        "concurrent_course_ids": [],
+        "knowledge": [],
+        "statement": "Recommended sequence: Calculus III; Linear Algebra; Engineering Dynamics; Embedded Systems; Feedback Control Systems; Mechanical Design (recommended). These project-planned dependencies do not establish any university's admission or course-equivalency rules."
+      },
+      "related_package_ids": [
+        "robotics"
+      ],
+      "relation_note": "This partial prototype package groups related topics; this catalog entry does not split or claim full-course coverage from that package."
+    },
+    {
+      "id": "engineering-design-experimental-methods",
+      "title": "Engineering Design and Experimental Methods",
+      "domain": "Engineering",
+      "level": "Year 2",
+      "maturity": "catalog-only",
+      "description": "Frame engineering needs, compare alternatives, design controlled experiments, quantify uncertainty, and document reproducible verification decisions.",
+      "prerequisites": {
+        "course_ids": [
+          "statistics",
+          "programming"
+        ],
+        "recommended_course_ids": [
+          "physics-mechanics"
+        ],
+        "concurrent_course_ids": [],
+        "knowledge": [],
+        "statement": "Recommended sequence: Probability and Statistics; Programming and Numerical Methods; Classical Mechanics (recommended). These project-planned dependencies do not establish any university's admission or course-equivalency rules."
+      },
+      "related_package_ids": [],
+      "relation_note": null
+    },
+    {
+      "id": "physical-chemistry",
+      "title": "Physical Chemistry",
+      "domain": "Chemistry",
+      "level": "Year 3",
+      "maturity": "catalog-only",
+      "description": "Use thermodynamics, kinetics, quantum models, and molecular statistical reasoning to explain chemical behavior and evaluate approximation limits.",
+      "prerequisites": {
+        "course_ids": [
+          "general-chemistry-2",
+          "calculus-2"
+        ],
+        "recommended_course_ids": [
+          "physics-em"
+        ],
+        "concurrent_course_ids": [],
+        "knowledge": [],
+        "statement": "Recommended sequence: General Chemistry II; Calculus II; Electricity and Magnetism (recommended). These project-planned dependencies do not establish any university's admission or course-equivalency rules."
+      },
+      "related_package_ids": [],
+      "relation_note": null
+    },
+    {
+      "id": "analytical-chemistry",
+      "title": "Analytical Chemistry",
+      "domain": "Chemistry",
+      "level": "Year 2",
+      "maturity": "catalog-only",
+      "description": "Select and validate quantitative chemical measurements through calibration, separations, spectroscopy, uncertainty, detection limits, and controls.",
+      "prerequisites": {
+        "course_ids": [
+          "general-chemistry-2"
+        ],
+        "recommended_course_ids": [
+          "statistics"
+        ],
+        "concurrent_course_ids": [],
+        "knowledge": [],
+        "statement": "Recommended sequence: General Chemistry II; Probability and Statistics (recommended). These project-planned dependencies do not establish any university's admission or course-equivalency rules."
+      },
+      "related_package_ids": [],
+      "relation_note": null
+    },
+    {
+      "id": "molecular-biology",
+      "title": "Molecular Biology",
+      "domain": "Life sciences",
+      "level": "Year 2",
+      "maturity": "catalog-only",
+      "description": "Explain genome organization, replication, transcription, translation, regulation, and perturbation experiments while distinguishing mechanisms from association.",
+      "prerequisites": {
+        "course_ids": [
+          "cell-biology",
+          "biochemistry"
+        ],
+        "recommended_course_ids": [],
+        "concurrent_course_ids": [],
+        "knowledge": [],
+        "statement": "Recommended sequence: Foundations of Cell and Molecular Biology; Biochemistry I: Proteins, Enzymes & Metabolism. These project-planned dependencies do not establish any university's admission or course-equivalency rules."
+      },
+      "related_package_ids": [],
+      "relation_note": null
+    },
+    {
+      "id": "developmental-biology",
+      "title": "Developmental Biology",
+      "domain": "Life sciences",
+      "level": "Year 3",
+      "maturity": "catalog-only",
+      "description": "Analyze how spatial and temporal signaling, gene regulation, cell behavior, and tissue interactions shape development and repair.",
+      "prerequisites": {
+        "course_ids": [
+          "cell-biology",
+          "molecular-biology"
+        ],
+        "recommended_course_ids": [
+          "genetics"
+        ],
+        "concurrent_course_ids": [],
+        "knowledge": [],
+        "statement": "Recommended sequence: Foundations of Cell and Molecular Biology; Molecular Biology; Genetics & Genomics (recommended). These project-planned dependencies do not establish any university's admission or course-equivalency rules."
+      },
+      "related_package_ids": [],
+      "relation_note": null
+    },
+    {
+      "id": "microbiology",
+      "title": "Microbiology",
+      "domain": "Life sciences",
+      "level": "Year 2",
+      "maturity": "catalog-only",
+      "description": "Study microbial structure, growth, genetics, host interactions, and experimental design across representative cellular microorganisms.",
+      "prerequisites": {
+        "course_ids": [
+          "cell-biology"
+        ],
+        "recommended_course_ids": [
+          "biochemistry"
+        ],
+        "concurrent_course_ids": [],
+        "knowledge": [],
+        "statement": "Recommended sequence: Foundations of Cell and Molecular Biology; Biochemistry I: Proteins, Enzymes & Metabolism (recommended). These project-planned dependencies do not establish any university's admission or course-equivalency rules."
+      },
+      "related_package_ids": [],
+      "relation_note": null
+    },
+    {
+      "id": "immunology",
+      "title": "Immunology",
+      "domain": "Life sciences",
+      "level": "Year 3",
+      "maturity": "catalog-only",
+      "description": "Compare innate and adaptive immune mechanisms, cellular communication, tolerance, and evidence used to evaluate immune interventions.",
+      "prerequisites": {
+        "course_ids": [
+          "cell-biology",
+          "molecular-biology"
+        ],
+        "recommended_course_ids": [
+          "physiology"
+        ],
+        "concurrent_course_ids": [],
+        "knowledge": [],
+        "statement": "Recommended sequence: Foundations of Cell and Molecular Biology; Molecular Biology; Human Physiology (recommended). These project-planned dependencies do not establish any university's admission or course-equivalency rules."
+      },
+      "related_package_ids": [],
+      "relation_note": null
+    },
+    {
+      "id": "stem-cell-biology",
+      "title": "Stem Cell Biology",
+      "domain": "Life sciences",
+      "level": "Year 3",
+      "maturity": "catalog-only",
+      "description": "Evaluate stem-cell identity, potency, niche signals, lineage choices, culture conditions, and evidence for functional cell states.",
+      "prerequisites": {
+        "course_ids": [
+          "cell-biology",
+          "molecular-biology",
+          "developmental-biology"
+        ],
+        "recommended_course_ids": [
+          "genetics"
+        ],
+        "concurrent_course_ids": [],
+        "knowledge": [],
+        "statement": "Recommended sequence: Foundations of Cell and Molecular Biology; Molecular Biology; Developmental Biology; Genetics & Genomics (recommended). These project-planned dependencies do not establish any university's admission or course-equivalency rules."
+      },
+      "related_package_ids": [],
+      "relation_note": null
+    },
+    {
+      "id": "regenerative-medicine",
+      "title": "Regenerative Medicine",
+      "domain": "Biomedical engineering",
+      "level": "Year 4",
+      "maturity": "catalog-only",
+      "description": "Compare regenerative strategies by mechanism, cell source, material context, functional endpoints, translation constraints, and evidence quality.",
+      "prerequisites": {
+        "course_ids": [
+          "stem-cell-biology",
+          "biomaterials",
+          "physiology"
+        ],
+        "recommended_course_ids": [
+          "bioreactors"
+        ],
+        "concurrent_course_ids": [],
+        "knowledge": [],
+        "statement": "Recommended sequence: Stem Cell Biology; Biomaterials & Tissue Engineering; Human Physiology; Bioreactors & Tissue Culture Engineering (recommended). These project-planned dependencies do not establish any university's admission or course-equivalency rules."
+      },
+      "related_package_ids": [],
+      "relation_note": null
+    },
+    {
+      "id": "gene-therapy",
+      "title": "Gene Therapy",
+      "domain": "Biomedical science",
+      "level": "Year 4",
+      "maturity": "catalog-only",
+      "description": "Compare gene-delivery platforms, expression control, biodistribution, immune response, manufacturing, and safety evidence without inferring clinical efficacy from mechanism alone.",
+      "prerequisites": {
+        "course_ids": [
+          "molecular-biology",
+          "genetics",
+          "biochemistry"
+        ],
+        "recommended_course_ids": [],
+        "concurrent_course_ids": [],
+        "knowledge": [],
+        "statement": "Recommended sequence: Molecular Biology; Genetics & Genomics; Biochemistry I: Proteins, Enzymes & Metabolism. These project-planned dependencies do not establish any university's admission or course-equivalency rules."
+      },
+      "related_package_ids": [],
+      "relation_note": null
+    },
+    {
+      "id": "bioethics",
+      "title": "Bioethics in Regenerative and Translational Science",
+      "domain": "Biomedical science",
+      "level": "Year 3",
+      "maturity": "catalog-only",
+      "description": "Evaluate consent, justice, governance, uncertainty, animal and human research protections, and responsible communication in biotechnology decisions.",
+      "prerequisites": {
+        "course_ids": [],
+        "recommended_course_ids": [],
+        "concurrent_course_ids": [],
+        "knowledge": [
+          "Introductory biology and a willingness to compare stakeholder perspectives"
+        ],
+        "statement": "Preparation: Introductory biology and a willingness to compare stakeholder perspectives. This planning entry does not establish any university's admission or course-equivalency rules."
+      },
+      "related_package_ids": [],
+      "relation_note": null
+    },
+    {
+      "id": "tissue-engineered-drug-discovery",
+      "title": "Tissue-Engineered Systems for Drug Discovery",
+      "domain": "Biomedical engineering",
+      "level": "Year 4",
+      "maturity": "catalog-only",
+      "description": "Assess engineered tissue models by biological validity, transport, assay design, controls, reproducibility, and limits on predicting human response.",
+      "prerequisites": {
+        "course_ids": [
+          "biomaterials",
+          "cell-biology",
+          "bioreactors",
+          "statistics"
+        ],
+        "recommended_course_ids": [
+          "physiology"
+        ],
+        "concurrent_course_ids": [],
+        "knowledge": [],
+        "statement": "Recommended sequence: Biomaterials & Tissue Engineering; Foundations of Cell and Molecular Biology; Bioreactors & Tissue Culture Engineering; Probability and Statistics; Human Physiology (recommended). These project-planned dependencies do not establish any university's admission or course-equivalency rules."
+      },
+      "related_package_ids": [
+        "biomaterials",
+        "bioreactors"
+      ],
+      "relation_note": "This partial prototype package groups related topics; this catalog entry does not split or claim full-course coverage from that package."
+    },
+    {
+      "id": "biotherapeutic-manufacturing",
+      "title": "Biotherapeutic Manufacturing",
+      "domain": "Bioprocess engineering",
+      "level": "Year 4",
+      "maturity": "catalog-only",
+      "description": "Map cell-line development, upstream culture, downstream recovery, process controls, quality attributes, and scale-up risks for biotherapeutics.",
+      "prerequisites": {
+        "course_ids": [
+          "biochemistry",
+          "cell-biology",
+          "bioreactors"
+        ],
+        "recommended_course_ids": [
+          "statistics"
+        ],
+        "concurrent_course_ids": [],
+        "knowledge": [],
+        "statement": "Recommended sequence: Biochemistry I: Proteins, Enzymes & Metabolism; Foundations of Cell and Molecular Biology; Bioreactors & Tissue Culture Engineering; Probability and Statistics (recommended). These project-planned dependencies do not establish any university's admission or course-equivalency rules."
+      },
+      "related_package_ids": [],
+      "relation_note": null
+    },
+    {
+      "id": "cell-culture-stem-cell-lab",
+      "title": "Cell-Culture and Stem-Cell Laboratory Concepts",
+      "domain": "Life sciences laboratory",
+      "level": "Year 3",
+      "maturity": "catalog-only",
+      "description": "Plan aseptic culture workflows, cell-state monitoring, controls, passage records, contamination response, and ethical limits for stem-cell laboratory work.",
+      "prerequisites": {
+        "course_ids": [
+          "cell-biology",
+          "stem-cell-biology"
+        ],
+        "recommended_course_ids": [
+          "bioreactors"
+        ],
+        "concurrent_course_ids": [],
+        "knowledge": [],
+        "statement": "Recommended sequence: Foundations of Cell and Molecular Biology; Stem Cell Biology; Bioreactors & Tissue Culture Engineering (recommended). These project-planned dependencies do not establish any university's admission or course-equivalency rules."
+      },
+      "related_package_ids": [],
+      "relation_note": null
+    },
+    {
+      "id": "medicinal-chemistry",
+      "title": "Medicinal Chemistry",
+      "domain": "Chemistry",
+      "level": "Year 3",
+      "maturity": "catalog-only",
+      "description": "Relate chemical structure, physicochemical properties, target engagement, selectivity, metabolism, and assay evidence during early lead optimization.",
+      "prerequisites": {
+        "course_ids": [
+          "organic-chemistry",
+          "biochemistry"
+        ],
+        "recommended_course_ids": [
+          "analytical-chemistry"
+        ],
+        "concurrent_course_ids": [],
+        "knowledge": [],
+        "statement": "Recommended sequence: Organic Chemistry I; Biochemistry I: Proteins, Enzymes & Metabolism; Analytical Chemistry (recommended). These project-planned dependencies do not establish any university's admission or course-equivalency rules."
+      },
+      "related_package_ids": [],
+      "relation_note": null
+    },
+    {
+      "id": "pharmacology",
+      "title": "Pharmacology",
+      "domain": "Biomedical science",
+      "level": "Year 3",
+      "maturity": "catalog-only",
+      "description": "Interpret dose-response, target engagement, pharmacokinetics, pharmacodynamics, safety signals, and experimental limits across therapeutic interventions.",
+      "prerequisites": {
+        "course_ids": [
+          "physiology",
+          "biochemistry"
+        ],
+        "recommended_course_ids": [
+          "statistics"
+        ],
+        "concurrent_course_ids": [],
+        "knowledge": [],
+        "statement": "Recommended sequence: Human Physiology; Biochemistry I: Proteins, Enzymes & Metabolism; Probability and Statistics (recommended). These project-planned dependencies do not establish any university's admission or course-equivalency rules."
+      },
+      "related_package_ids": [],
+      "relation_note": null
+    },
+    {
+      "id": "drug-discovery-translation",
+      "title": "Drug Discovery and Translational Science",
+      "domain": "Biomedical science",
+      "level": "Year 4",
+      "maturity": "catalog-only",
+      "description": "Trace target validation, assay selection, lead development, preclinical evidence, manufacturing, and clinical translation with explicit go/no-go criteria.",
+      "prerequisites": {
+        "course_ids": [
+          "medicinal-chemistry",
+          "pharmacology",
+          "statistics",
+          "engineering-design-experimental-methods"
+        ],
+        "recommended_course_ids": [
+          "biotherapeutic-manufacturing"
+        ],
+        "concurrent_course_ids": [],
+        "knowledge": [],
+        "statement": "Recommended sequence: Medicinal Chemistry; Pharmacology; Probability and Statistics; Engineering Design and Experimental Methods; Biotherapeutic Manufacturing (recommended). These project-planned dependencies do not establish any university's admission or course-equivalency rules."
+      },
+      "related_package_ids": [],
+      "relation_note": null
+    },
+    {
+      "id": "biomedical-engineering-design",
+      "title": "Biomedical Engineering Design",
+      "domain": "Biomedical engineering",
+      "level": "Year 4",
+      "maturity": "catalog-only",
+      "description": "Synthesize biological requirements, engineering models, standards-aware risk analysis, stakeholder needs, experiments, and verification into a documented design.",
+      "prerequisites": {
+        "course_ids": [
+          "instrumentation-and-sensors",
+          "materials-science",
+          "transport",
+          "statistics"
+        ],
+        "recommended_course_ids": [
+          "cellular-biomechanics",
+          "engineering-design-experimental-methods"
+        ],
+        "concurrent_course_ids": [],
+        "knowledge": [],
+        "statement": "Recommended sequence: Instrumentation and Sensors; Materials Science for Engineers; Thermodynamics and Transport; Probability and Statistics; Cellular Biomechanics & Mechanobiology (recommended); Engineering Design and Experimental Methods (recommended). These project-planned dependencies do not establish any university's admission or course-equivalency rules."
+      },
+      "related_package_ids": [],
+      "relation_note": null
+    }
+  ],
+  "pathways": [
+    {
+      "id": "science-mathematics-foundation",
+      "title": "Science and Mathematics Foundation",
+      "description": "Build the quantitative, physical-science, chemical, computational, and life-science base used by later biomedical engineering study.",
+      "course_ids": [
+        "precalculus",
+        "calculus-1",
+        "calculus-2",
+        "calculus-3",
+        "linear-algebra",
+        "differential-equations",
+        "statistics",
+        "programming",
+        "numerical-methods",
+        "general-chemistry-1",
+        "general-chemistry-2",
+        "organic-chemistry",
+        "biochemistry",
+        "physics-mechanics",
+        "physics-em",
+        "cell-biology"
+      ],
+      "source_ids": [],
+      "sequence_note": "Project-authored study sequence for exploration. Follow the node prerequisite links; local university requirements may differ."
+    },
+    {
+      "id": "electrical-computer-engineering",
+      "title": "Electrical and Computer Engineering",
+      "description": "Progress from calculus-based circuit models to electronics, signals, feedback, sensing, digital computation, and embedded system integration.",
+      "course_ids": [
+        "calculus-1",
+        "calculus-2",
+        "differential-equations",
+        "linear-algebra",
+        "physics-em",
+        "circuits-1",
+        "circuits-2",
+        "analog-electronics",
+        "digital-electronics",
+        "signals-and-systems",
+        "feedback-control",
+        "instrumentation-and-sensors",
+        "embedded-systems",
+        "engineering-design-experimental-methods"
+      ],
+      "source_ids": [],
+      "sequence_note": "Project-authored study sequence for exploration. Follow the node prerequisite links; local university requirements may differ."
+    },
+    {
+      "id": "mechanical-engineering-robotics",
+      "title": "Mechanical Engineering and Robotics",
+      "description": "Connect mechanics, materials, thermal and fluid transport, mechanical design, and sensing/control in a robotics sequence.",
+      "course_ids": [
+        "calculus-1",
+        "calculus-2",
+        "linear-algebra",
+        "physics-mechanics",
+        "statics",
+        "dynamics",
+        "mechanics-of-materials",
+        "materials-science",
+        "thermodynamics",
+        "fluid-mechanics",
+        "heat-mass-transfer",
+        "circuits-1",
+        "embedded-systems",
+        "signals-and-systems",
+        "feedback-control",
+        "mechanical-design",
+        "robotics-mechatronics",
+        "engineering-design-experimental-methods"
+      ],
+      "source_ids": [],
+      "sequence_note": "Project-authored study sequence for exploration. Follow the node prerequisite links; local university requirements may differ."
+    },
+    {
+      "id": "biomedical-engineering",
+      "title": "Biomedical Engineering",
+      "description": "Combine life-science foundations with quantitative modeling, transport, instrumentation, materials, physiology, and experimental design.",
+      "course_ids": [
+        "calculus-1",
+        "calculus-2",
+        "differential-equations",
+        "statistics",
+        "programming",
+        "general-chemistry-1",
+        "general-chemistry-2",
+        "organic-chemistry",
+        "biochemistry",
+        "cell-biology",
+        "physics-mechanics",
+        "physics-em",
+        "statics-materials",
+        "transport",
+        "materials-science",
+        "instrumentation-and-sensors",
+        "physiology",
+        "cellular-biomechanics",
+        "biomaterials",
+        "bioreactors",
+        "biomedical-engineering-design"
+      ],
+      "source_ids": [],
+      "sequence_note": "Project-authored study sequence for exploration. Follow the node prerequisite links; local university requirements may differ."
+    },
+    {
+      "id": "tissue-regenerative-medicine",
+      "title": "Tissue Engineering and Regenerative Medicine",
+      "description": "Move from cell and molecular mechanisms through stem-cell biology, biomaterials, bioreactors, tissue-model evaluation, and translational constraints.",
+      "course_ids": [
+        "cell-biology",
+        "molecular-biology",
+        "biochemistry",
+        "genetics",
+        "developmental-biology",
+        "physiology",
+        "stem-cell-biology",
+        "biomaterials",
+        "bioreactors",
+        "cell-culture-stem-cell-lab",
+        "tissue-engineered-drug-discovery",
+        "gene-therapy",
+        "regenerative-medicine",
+        "bioethics"
+      ],
+      "source_ids": [],
+      "sequence_note": "Project-authored study sequence for exploration. Follow the node prerequisite links; local university requirements may differ."
+    },
+    {
+      "id": "geroscience-aging",
+      "title": "Geroscience and Aging Biology",
+      "description": "Study aging as a systems problem by combining cell biology, molecular mechanisms, genetics, physiology, quantitative evidence, and regenerative hypotheses.",
+      "course_ids": [
+        "cell-biology",
+        "molecular-biology",
+        "biochemistry",
+        "genetics",
+        "physiology",
+        "statistics",
+        "engineering-design-experimental-methods",
+        "geroscience",
+        "stem-cell-biology",
+        "regenerative-medicine",
+        "bioethics"
+      ],
+      "source_ids": [],
+      "sequence_note": "Project-authored study sequence for exploration. Follow the node prerequisite links; local university requirements may differ."
+    },
+    {
+      "id": "drug-discovery-translational-science",
+      "title": "Drug Discovery and Translational Science",
+      "description": "Connect chemical and biological target knowledge to assay quality, pharmacology, engineered tissue models, manufacturing, and translational decisions.",
+      "course_ids": [
+        "general-chemistry-1",
+        "general-chemistry-2",
+        "organic-chemistry",
+        "analytical-chemistry",
+        "physical-chemistry",
+        "biochemistry",
+        "cell-biology",
+        "molecular-biology",
+        "statistics",
+        "programming",
+        "medicinal-chemistry",
+        "pharmacology",
+        "tissue-engineered-drug-discovery",
+        "biotherapeutic-manufacturing",
+        "drug-discovery-translation",
+        "bioethics"
+      ],
+      "source_ids": [],
+      "sequence_note": "Project-authored study sequence for exploration. Follow the node prerequisite links; local university requirements may differ."
+    },
+    {
+      "id": "jhu-regenerative-stem-cell-prerequisites",
+      "title": "Johns Hopkins regenerative/stem-cell prerequisite knowledge map",
+      "description": "Map foundational and advanced subject areas named in public Johns Hopkins program materials to independently authored CourseLab catalog topics. This is a curriculum-alignment aid only.",
+      "course_ids": [
+        "organic-chemistry",
+        "biochemistry",
+        "molecular-biology",
+        "cell-biology",
+        "developmental-biology",
+        "gene-therapy",
+        "regenerative-medicine",
+        "bioethics",
+        "stem-cell-biology",
+        "tissue-engineered-drug-discovery",
+        "biotherapeutic-manufacturing",
+        "cell-culture-stem-cell-lab"
+      ],
+      "source_ids": [
+        "jhu-rsct-catalog-2026-27",
+        "jhu-rsct-degree-courses"
+      ],
+      "sequence_note": "Project-authored study sequence for exploration. Follow the node prerequisite links; local university requirements may differ."
+    }
+  ],
+  "alignment_maps": [
+    {
+      "id": "jhu-regenerative-stem-cell-technologies",
+      "title": "Johns Hopkins regenerative and stem-cell technologies topic alignment",
+      "source_ids": [
+        "jhu-rsct-catalog-2026-27",
+        "jhu-rsct-degree-courses"
+      ],
+      "foundational_nodes": [
+        "organic-chemistry",
+        "biochemistry",
+        "molecular-biology",
+        "cell-biology"
+      ],
+      "advanced_nodes": [
+        "developmental-biology",
+        "gene-therapy",
+        "regenerative-medicine",
+        "bioethics",
+        "stem-cell-biology",
+        "tissue-engineered-drug-discovery",
+        "biotherapeutic-manufacturing",
+        "cell-culture-stem-cell-lab"
+      ],
+      "disclaimer": "References public Johns Hopkins catalog descriptions for topic alignment only. CourseLab is not affiliated with Johns Hopkins University; this map does not establish equivalency, admission eligibility, transfer credit, or reuse permission. Instructional content is original and independently authored."
+    }
+  ]
+}

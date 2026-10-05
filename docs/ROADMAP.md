@@ -24,7 +24,9 @@ The `practice-v7` increment adds a narrow data-interpretation composite: a separ
 
 ## 4 — Broad catalog and graph
 
-Eight pathways and separate engineering subject entries with acyclic dependencies. Expand sciences/biology/chemistry/computing/regeneration/aging/translation as catalog-only or outlined. Map official JHU references without copied text/equivalency. Test graph/provenance and visualization.
+Implemented increment: 37 distinct catalog-only topic nodes and eight required pathway maps now sit beside the 25 partial packages. The graph separates mechanics, thermal/fluid, circuits, electronics, controls, sensing, embedded, mechanical design, robotics and experimental-method subjects; additional chemistry, molecular/developmental biology, regenerative, stem-cell, drug-discovery and manufacturing topics are catalog-only. The required JHU topic map links public catalog references and preserves the no-copy/no-equivalency caveat. A versioned JSON schema and validator reject unresolved references, duplicated nodes/descriptions, placeholder entries, missing pathways and dependency cycles across package and catalog edges. The React catalog has an accessible expandable pathway explorer backed by a public curriculum API. These map entries remain planning metadata, not enrollable instruction.
+
+Remaining: verify and refine edges with qualified subject-matter review; align advanced subject boundaries to the public references; complete broader catalog gaps as reviewable map increments; check external links when the source pages permit it; and replace project planning assumptions with locally reviewed recommendations. No university has validated these pathways.
 
 ## 5 — Deep Cell and Molecular Biology
 

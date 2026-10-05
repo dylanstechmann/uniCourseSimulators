@@ -1,0 +1,242 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:lattice-courselab:schema:curriculum-map:1.0",
+  "title": "Lattice CourseLab curriculum map",
+  "description": "Course packages and catalog-only nodes connected in project-authored pathways; the map makes no university equivalency or credit claim.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "description",
+    "catalog_only",
+    "pathways",
+    "alignment_maps"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0"
+    },
+    "description": {
+      "type": "string",
+      "minLength": 80
+    },
+    "catalog_only": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/catalogNode"
+      }
+    },
+    "pathways": {
+      "type": "array",
+      "minItems": 8,
+      "items": {
+        "$ref": "#/$defs/pathway"
+      }
+    },
+    "alignment_maps": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/alignment"
+      }
+    }
+  },
+  "$defs": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9-]*$"
+    },
+    "catalogNode": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "title",
+        "domain",
+        "level",
+        "maturity",
+        "description",
+        "prerequisites",
+        "related_package_ids",
+        "relation_note"
+      ],
+      "properties": {
+        "id": {
+          "$ref": "#/$defs/id"
+        },
+        "title": {
+          "type": "string",
+          "minLength": 5
+        },
+        "domain": {
+          "type": "string",
+          "minLength": 2
+        },
+        "level": {
+          "type": "string",
+          "minLength": 2
+        },
+        "maturity": {
+          "const": "catalog-only"
+        },
+        "description": {
+          "type": "string",
+          "minLength": 100
+        },
+        "prerequisites": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "course_ids",
+            "recommended_course_ids",
+            "concurrent_course_ids",
+            "knowledge",
+            "statement"
+          ],
+          "properties": {
+            "course_ids": {
+              "type": "array",
+              "uniqueItems": true,
+              "items": {
+                "$ref": "#/$defs/id"
+              }
+            },
+            "recommended_course_ids": {
+              "type": "array",
+              "uniqueItems": true,
+              "items": {
+                "$ref": "#/$defs/id"
+              }
+            },
+            "concurrent_course_ids": {
+              "type": "array",
+              "uniqueItems": true,
+              "items": {
+                "$ref": "#/$defs/id"
+              }
+            },
+            "knowledge": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 3
+              }
+            },
+            "statement": {
+              "type": "string",
+              "minLength": 40
+            }
+          }
+        },
+        "related_package_ids": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "$ref": "#/$defs/id"
+          }
+        },
+        "relation_note": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 30
+        }
+      }
+    },
+    "pathway": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "title",
+        "description",
+        "course_ids",
+        "source_ids",
+        "sequence_note"
+      ],
+      "properties": {
+        "id": {
+          "$ref": "#/$defs/id"
+        },
+        "title": {
+          "type": "string",
+          "minLength": 8
+        },
+        "description": {
+          "type": "string",
+          "minLength": 40
+        },
+        "course_ids": {
+          "type": "array",
+          "minItems": 5,
+          "uniqueItems": true,
+          "items": {
+            "$ref": "#/$defs/id"
+          }
+        },
+        "source_ids": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "$ref": "#/$defs/id"
+          }
+        },
+        "sequence_note": {
+          "type": "string",
+          "minLength": 50
+        }
+      }
+    },
+    "alignment": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "title",
+        "source_ids",
+        "foundational_nodes",
+        "advanced_nodes",
+        "disclaimer"
+      ],
+      "properties": {
+        "id": {
+          "$ref": "#/$defs/id"
+        },
+        "title": {
+          "type": "string",
+          "minLength": 8
+        },
+        "source_ids": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "$ref": "#/$defs/id"
+          }
+        },
+        "foundational_nodes": {
+          "type": "array",
+          "minItems": 4,
+          "uniqueItems": true,
+          "items": {
+            "$ref": "#/$defs/id"
+          }
+        },
+        "advanced_nodes": {
+          "type": "array",
+          "minItems": 8,
+          "uniqueItems": true,
+          "items": {
+            "$ref": "#/$defs/id"
+          }
+        },
+        "disclaimer": {
+          "type": "string",
+          "minLength": 150
+        }
+      }
+    }
+  }
+}

@@ -20,6 +20,8 @@ SQLAlchemy/Alembic own durable users, sessions, enrollment, immutable attempts, 
 
 Learner DTOs expose prompts, allowed response shapes, readings, rubrics and provenance; exclude assessment solution specifications and unreleased solution feedback. Frontend assets contain no content banks. The API reads content separately and records course and grading-policy versions. New attempts also pin an exact question-specification digest. For formative authored variants, the API issues a signed token containing a random seed and context; deterministic keyed selection returns the same authored variant when submitted. Attempts store the variant ID with the resolved-spec digest. Immutable course/rubric archives remain necessary for full historical regrading; a digest alone cannot restore retired content.
 
+`content/curriculum-map.json` stores eight pathway sequences and catalog-only nodes independently from course packages. The API merges package manifests with planned nodes in `/api/v1/curriculum`; it labels each maturity and includes explicit prerequisite edges. The React catalog uses native expandable sections to show the sequence, dependencies, related partial packages, and source links. Catalog-only nodes cannot be enrolled. The validator checks the combined graph and the required engineering/JHU coverage; this planning map is not a university-reviewed curriculum.
+
 No submitted Python runs in the API; no Docker socket is mounted. Optional feedback providers are future extensions and cannot mutate deterministic scores. Credentials come from server secrets.
 
 ## Compatibility

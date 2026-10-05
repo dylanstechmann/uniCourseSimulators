@@ -1,6 +1,7 @@
 import type {
   Attempt,
   Course,
+  CurriculumMap,
   CourseSummary,
   Enrollment,
   Gradebook,
@@ -76,6 +77,7 @@ export const api = {
     csrfToken = null;
   },
   courses: () => request<CourseSummary[]>("/courses"),
+  curriculum: () => request<CurriculumMap>("/curriculum"),
   course: (id: string) => request<Course>(`/courses/${encode(id)}`),
   lesson: (id: string, lesson: string) =>
     request<Lesson>(`/courses/${encode(id)}/lessons/${encode(lesson)}`),

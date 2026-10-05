@@ -230,7 +230,11 @@ def check_refs(
             report.error("reference", path, f"Unknown {kind} reference: {reference}")
 
 
-def validate_graph(courses: dict[str, dict[str, Any]], report: Report) -> None:
+def validate_graph(
+    courses: dict[str, dict[str, Any]],
+    report: Report,
+    extra_node_ids: set[str] | None = None,
+) -> None:
     graph = {}
     for course_id, course in courses.items():
         prerequisites = course["prerequisites"]
@@ -241,7 +245,13 @@ def validate_graph(courses: dict[str, dict[str, Any]], report: Report) -> None:
             + prerequisites.get("recommended_course_ids", [])
             + prerequisites.get("concurrent_course_ids", [])
         )
-        check_refs(edges, set(courses), "prerequisite course", course_id, report)
+        check_refs(
+            edges,
+            set(courses) | (extra_node_ids or set()),
+            "prerequisite course",
+            course_id,
+            report,
+        )
         graph[course_id] = [edge for edge in edges if edge in courses]
     visited, active = set(), set()
 
@@ -259,6 +269,176 @@ def validate_graph(courses: dict[str, dict[str, Any]], report: Report) -> None:
 
     for course_id in graph:
         visit(course_id, [])
+
+
+def validate_curriculum_map(
+    root: Path,
+    courses: dict[str, dict[str, Any]],
+    source_ids: set[str],
+    validators: dict[str, Draft202012Validator],
+    report: Report,
+) -> set[str]:
+    """Validate planning nodes and pathways without treating catalog entries as courses."""
+    path = root / "content/curriculum-map.json"
+    document = load_json(path, report)
+    if document is None or not apply_schema(
+        document, "curriculum-map.schema.json", path, validators, report
+    ):
+        return set()
+
+    catalog_nodes = document["catalog_only"]
+    catalog_ids = unique_ids(catalog_nodes, "catalog node", path, report)
+    duplicates = catalog_ids & set(courses)
+    for course_id in sorted(duplicates):
+        report.error(
+            "duplicate-curriculum-node",
+            path,
+            f"Catalog-only node {course_id} duplicates a course package ID.",
+        )
+    all_ids = set(courses) | catalog_ids
+    graph: dict[str, list[str]] = {}
+    for course_id, course in courses.items():
+        prerequisites = course["prerequisites"]
+        edges = (
+            prerequisites["course_ids"]
+            + prerequisites.get("recommended_course_ids", [])
+            + prerequisites.get("concurrent_course_ids", [])
+        )
+        check_refs(edges, all_ids, "curriculum prerequisite", course_id, report)
+        graph[course_id] = [edge for edge in edges if edge in all_ids]
+    description_signatures: dict[str, str] = {}
+    for node in catalog_nodes:
+        node_id = node["id"]
+        prerequisites = node["prerequisites"]
+        edges = (
+            prerequisites["course_ids"]
+            + prerequisites["recommended_course_ids"]
+            + prerequisites["concurrent_course_ids"]
+        )
+        check_refs(edges, all_ids, "curriculum prerequisite", node_id, report)
+        check_refs(
+            node["related_package_ids"],
+            set(courses),
+            "related partial package",
+            node_id,
+            report,
+        )
+        graph[node_id] = [edge for edge in edges if edge in all_ids]
+        signature = normalize(node["description"])
+        if signature in description_signatures:
+            report.error(
+                "duplicate-curriculum-description",
+                path,
+                f"Catalog entries {description_signatures[signature]} and {node_id} repeat the same description.",
+            )
+        description_signatures[signature] = node_id
+        if PLACEHOLDER.search(node["description"]):
+            report.error(
+                "placeholder-curriculum-entry",
+                path,
+                f"Catalog entry {node_id} contains placeholder text.",
+            )
+
+    visited, active = set(), set()
+
+    def visit(node_id: str, chain: list[str]) -> None:
+        if node_id in active:
+            report.error(
+                "curriculum-prerequisite-cycle",
+                path,
+                " -> ".join(chain + [node_id]),
+            )
+            return
+        if node_id in visited:
+            return
+        active.add(node_id)
+        for dependency in graph.get(node_id, []):
+            visit(dependency, chain + [node_id])
+        active.remove(node_id)
+        visited.add(node_id)
+
+    for node_id in graph:
+        visit(node_id, [])
+
+    pathways = document["pathways"]
+    pathway_ids = unique_ids(pathways, "pathway", path, report)
+    pathways_by_id = {item["id"]: item for item in pathways}
+    required_pathways = {
+        "science-mathematics-foundation",
+        "electrical-computer-engineering",
+        "mechanical-engineering-robotics",
+        "biomedical-engineering",
+        "tissue-regenerative-medicine",
+        "geroscience-aging",
+        "drug-discovery-translational-science",
+        "jhu-regenerative-stem-cell-prerequisites",
+    }
+    for missing in sorted(required_pathways - pathway_ids):
+        report.error("required-pathway", path, f"Required pathway is missing: {missing}.")
+
+    required_topics = {
+        "calculus-1", "calculus-2", "calculus-3", "linear-algebra", "differential-equations",
+        "statistics", "numerical-methods", "physics-mechanics", "physics-em", "statics", "dynamics",
+        "mechanics-of-materials", "thermodynamics", "fluid-mechanics", "heat-mass-transfer",
+        "materials-science", "circuits-1", "circuits-2", "analog-electronics", "digital-electronics",
+        "signals-and-systems", "feedback-control", "instrumentation-and-sensors", "embedded-systems",
+        "mechanical-design", "robotics-mechatronics", "engineering-design-experimental-methods",
+    }
+    for missing in sorted(required_topics - all_ids):
+        report.error("required-curriculum-topic", path, f"Required subject node is missing: {missing}.")
+    for pathway in pathways:
+        check_refs(pathway["course_ids"], all_ids, "pathway node", pathway["id"], report)
+        check_refs(pathway["source_ids"], source_ids, "pathway source", pathway["id"], report)
+
+    alignments = document["alignment_maps"]
+    alignment_ids = unique_ids(alignments, "curriculum alignment", path, report)
+    if "jhu-regenerative-stem-cell-technologies" not in alignment_ids:
+        report.error("required-curriculum-alignment", path, "The JHU regenerative/stem-cell topic map is missing.")
+    for alignment in alignments:
+        check_refs(alignment["source_ids"], source_ids, "alignment source", alignment["id"], report)
+        check_refs(
+            alignment["foundational_nodes"] + alignment["advanced_nodes"],
+            all_ids,
+            "alignment node",
+            alignment["id"],
+            report,
+        )
+        if alignment["id"] == "jhu-regenerative-stem-cell-technologies":
+            required_foundations = {
+                "organic-chemistry",
+                "biochemistry",
+                "molecular-biology",
+                "cell-biology",
+            }
+            required_advanced = {
+                "developmental-biology",
+                "gene-therapy",
+                "regenerative-medicine",
+                "bioethics",
+                "stem-cell-biology",
+                "tissue-engineered-drug-discovery",
+                "biotherapeutic-manufacturing",
+                "cell-culture-stem-cell-lab",
+            }
+            if not required_foundations <= set(alignment["foundational_nodes"]):
+                report.error("jhu-curriculum-map", path, "JHU foundational topics are incomplete.")
+            if not required_advanced <= set(alignment["advanced_nodes"]):
+                report.error("jhu-curriculum-map", path, "JHU advanced topic mapping is incomplete.")
+            jhu_pathway = pathways_by_id.get("jhu-regenerative-stem-cell-prerequisites")
+            required_map_nodes = required_foundations | required_advanced
+            if jhu_pathway and not required_map_nodes <= set(jhu_pathway["course_ids"]):
+                report.error(
+                    "jhu-curriculum-map",
+                    path,
+                    "The JHU pathway sequence must include all foundational and advanced mapped topics.",
+                )
+            if any(term in alignment["disclaimer"].casefold() for term in ("equivalent", "transfer credit")) is False:
+                report.error(
+                    "jhu-curriculum-disclaimer",
+                    path,
+                    "The JHU map must explicitly disclaim equivalency and transfer credit.",
+                )
+    return catalog_ids
 
 
 def legacy_reading_allowed(
@@ -1003,7 +1183,8 @@ def validate_repository(
             root / "content/courses",
             "No valid course manifests were found.",
         )
-    validate_graph(courses, report)
+    catalog_ids = validate_curriculum_map(root, courses, sources, validators, report)
+    validate_graph(courses, report, catalog_ids)
     if source_document and isinstance(source_document, dict):
         for source in source_document.get("sources", []):
             if isinstance(source, dict):

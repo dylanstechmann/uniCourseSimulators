@@ -3,7 +3,7 @@ import userEvent from "@testing-library/user-event";
 import { afterEach, describe, expect, it, vi } from "vitest";
 import App from "./App";
 import { api } from "./api";
-import type { Course } from "./types";
+import type { Course, CurriculumMap } from "./types";
 
 afterEach(() => {
   window.location.hash = "";
@@ -42,6 +42,13 @@ describe("reader keyboard navigation", () => {
     });
     vi.spyOn(api, "courses").mockResolvedValue([course]);
     vi.spyOn(api, "sources").mockResolvedValue([]);
+    vi.spyOn(api, "curriculum").mockResolvedValue({
+      schema_version: "1.0",
+      description: "A planning map for this route test.",
+      nodes: [],
+      pathways: [],
+      alignment_maps: [],
+    } satisfies CurriculumMap);
     vi.spyOn(api, "course").mockResolvedValue(course);
     const scroll = vi.fn();
     Object.defineProperty(Element.prototype, "scrollIntoView", {

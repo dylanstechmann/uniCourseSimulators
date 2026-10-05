@@ -26,12 +26,22 @@ def write(path: Path, value):
 def repository(tmp_path: Path):
     for name in ("courses", "schemas"):
         shutil.copytree(ROOT / "content" / name, tmp_path / "content" / name)
+    shutil.copy2(ROOT / "content/curriculum-map.json", tmp_path / "content/curriculum-map.json")
     source_ids = sorted(
         {
             source
             for path in (tmp_path / "content/courses").glob("*/course.json")
             for module in read(path)["modules"]
             for source in module["source_ids"]
+        }
+    )
+    curriculum = read(tmp_path / "content/curriculum-map.json")
+    source_ids = sorted(
+        set(source_ids)
+        | {
+            source_id
+            for item in curriculum["pathways"] + curriculum["alignment_maps"]
+            for source_id in item["source_ids"]
         }
     )
     registry = {
@@ -99,6 +109,64 @@ def test_preserved_inventory_is_honest_partial(repository):
         and read(path)["review"]["status"] == "unreviewed"
         for path in (repository / "content/courses").glob("*/course.json")
     )
+
+
+def test_curriculum_map_has_eight_pathways_and_separated_engineering_subjects(repository):
+    result = validate_repository(repository)
+    assert result.ok, result.errors
+    curriculum = read(repository / "content/curriculum-map.json")
+    assert len(curriculum["pathways"]) == 8
+    by_id = {item["id"]: item for item in curriculum["catalog_only"]}
+    for node_id in (
+        "numerical-methods",
+        "statics",
+        "dynamics",
+        "mechanics-of-materials",
+        "thermodynamics",
+        "fluid-mechanics",
+        "heat-mass-transfer",
+        "materials-science",
+        "circuits-1",
+        "circuits-2",
+        "analog-electronics",
+        "digital-electronics",
+        "signals-and-systems",
+        "feedback-control",
+        "instrumentation-and-sensors",
+        "embedded-systems",
+        "mechanical-design",
+        "robotics-mechatronics",
+        "engineering-design-experimental-methods",
+    ):
+        assert by_id[node_id]["maturity"] == "catalog-only"
+        assert len(by_id[node_id]["description"]) >= 100
+
+
+def test_curriculum_graph_rejects_cycles_across_packages_and_catalog(repository):
+    curriculum_path = repository / "content/curriculum-map.json"
+    curriculum = read(curriculum_path)
+    next(node for node in curriculum["catalog_only"] if node["id"] == "precalculus")[
+        "prerequisites"
+    ]["course_ids"] = ["calculus-1"]
+    write(curriculum_path, curriculum)
+
+    course_path = repository / "content/courses/calculus-1/course.json"
+    course = read(course_path)
+    course["prerequisites"]["course_ids"] = ["precalculus"]
+    write(course_path, course)
+
+    assert "curriculum-prerequisite-cycle" in codes(validate_repository(repository))
+
+
+def test_unknown_catalog_prerequisite_is_rejected(repository):
+    curriculum_path = repository / "content/curriculum-map.json"
+    curriculum = read(curriculum_path)
+    next(node for node in curriculum["catalog_only"] if node["id"] == "precalculus")[
+        "prerequisites"
+    ]["course_ids"] = ["unlisted-subject"]
+    write(curriculum_path, curriculum)
+
+    assert "reference" in codes(validate_repository(repository))
 
 
 @pytest.mark.parametrize("maturity", ["complete", "externally reviewed"])
