@@ -14,7 +14,7 @@ NUMBER = re.compile(
     r"^([+-]?(?:\d+\.?\d*|\.\d+)(?:[eE][+-]?\d+)?)\s*"
     r"((?:(?:[A-Za-zμµΩω°%]|1/[A-Za-z])[A-Za-z0-9μµΩω°%·/⁻¹²³^*(). _-]*)?)$"
 )
-GRADING_POLICY_VERSION = "practice-v3"
+GRADING_POLICY_VERSION = "practice-v4"
 
 
 class GradingUnavailable(ValueError):
@@ -37,8 +37,6 @@ def grade(question: dict, request: AttemptRequest) -> GradeResult:
     spec = question["solution_spec"]
     if question.get("randomization") is not None:
         raise GradingUnavailable("Randomized question generation is not enabled")
-    if spec.get("relative_tolerance") not in (None, 0, 0.0):
-        raise GradingUnavailable("Relative tolerance grading is not enabled")
     correct = False
     diagnosis = "incorrect_result"
     points = float(question.get("points", 1))
@@ -128,6 +126,13 @@ def grade(question: dict, request: AttemptRequest) -> GradeResult:
                         value = Decimal(match[1])
                         answer = Decimal(str(spec["answer"]))
                         tolerance = Decimal(str(spec.get("tolerance", 0)))
+                        relative_tolerance = Decimal(str(spec.get("relative_tolerance") or 0))
+                        if (
+                            not relative_tolerance.is_finite()
+                            or relative_tolerance < 0
+                            or relative_tolerance > 1
+                        ):
+                            raise ValueError("relative_tolerance must be finite and between 0 and 1")
                         if (
                             not value.is_finite()
                             or not answer.is_finite()
@@ -141,9 +146,12 @@ def grade(question: dict, request: AttemptRequest) -> GradeResult:
                             diagnosis = "malformed_response"
                         else:
                             # Convert the learner's number and the authored absolute
-                            # tolerance into the question's authored unit.
+                            # tolerance into the question's authored unit. This
+                            # policy adds relative tolerance × |key| to the absolute
+                            # tolerance, so it remains meaningful for a zero key.
                             value_in_expected_unit = Fraction(value) * supplied.scale / expected.scale
-                            correct = abs(value_in_expected_unit - Fraction(answer)) <= Fraction(tolerance)
+                            allowed_error = Fraction(tolerance) + Fraction(relative_tolerance) * abs(Fraction(answer))
+                            correct = abs(value_in_expected_unit - Fraction(answer)) <= allowed_error
                             diagnosis = "correct_result" if correct else "numerical_mismatch"
                     except DecimalException:
                         diagnosis = "malformed_response"

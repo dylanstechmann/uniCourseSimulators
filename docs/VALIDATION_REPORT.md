@@ -2,13 +2,13 @@
 
 ## Scope and result
 
-2026-10-05; synthetic local learner data only. Milestones 1 and 2 are implemented. Milestone 3 is in progress; this increment adds exact, constrained SI/biological unit conversion and dimension checks to the numeric grader, following the earlier multiple-select partial-credit and grading-specification digest work. All 25 preserved course packages are **partial**; zero are beta, complete or externally reviewed. No instructor review, semester equivalence, university credit, security certification or public production deployment is asserted.
+2026-10-05; synthetic local learner data only. Milestones 1 and 2 are implemented. Milestone 3 is in progress; current numeric-grader increments add exact, constrained SI/biological unit conversion, dimension checks, and bounded relative tolerance alongside earlier multiple-select partial credit and grading-specification digests. All 25 preserved course packages are **partial**; zero are beta, complete or externally reviewed. No instructor review, semester equivalence, university credit, security certification or public production deployment is asserted.
 
-All suites passed in the latest integrated M3 increment: **154 tests** (36 content/security, 100 backend, 11 frontend, 4 legacy, 3 browser). Offline content validation passed with 125 disclosed depth/coverage warnings. Live-link validation is **not fully passed**: two JHU pages returned HTTP 403.
+All suites passed in the latest integrated M3 increment: **159 tests** (36 content/security, 105 backend, 11 frontend, 4 legacy, 3 browser). Offline content validation passed with 125 disclosed depth/coverage warnings. Live-link validation is **not fully passed**: two JHU pages returned HTTP 403.
 
 ## Milestone 3 incremental validation
 
-The implementation now includes multiple-select partial credit, version-pinned question digests, explicit package-version updates, and numeric grader v3. The numeric implementation parses a bounded, documented subset of SI and biological units into exact rational scales and seven base dimensions, converts learner values into the authored unit before applying absolute tolerance, and checks optional author-provided dimensions. Contextual `pH`, `units`, and `mol ATP` labels are exact-label-only and cannot be composed; unknown and affine units fail closed. Numeric input length, decimal magnitudes, unit expression length, token count, and exponents are bounded. Nonzero relative tolerance and significant figures remain unsupported. The digest is omitted from learner DTOs because it fingerprints answer-bearing content. The public lesson DTO exposes response/scoring metadata but never answer keys. Historical attempts remain unchanged with a null digest.
+The implementation now includes multiple-select partial credit, version-pinned question digests, explicit package-version updates, and numeric grader v4. The numeric implementation parses a bounded, documented subset of SI and biological units into exact rational scales and seven base dimensions, converts learner values into the authored unit, combines absolute and bounded relative tolerance against the authored answer, and checks optional author-provided dimensions. Contextual `pH`, `units`, and `mol ATP` labels are exact-label-only and cannot be composed; unknown and affine units fail closed. Numeric input length, decimal magnitudes, unit expression length, token count, exponents, and relative tolerance are bounded. Significant figures remain unsupported. The digest is omitted from learner DTOs because it fingerprints answer-bearing content. The public lesson DTO exposes response/scoring metadata but never answer keys. Historical attempts remain unchanged with their recorded grader version and null digest where previously absent.
 
 Commands run from the repository root or its `frontend`/`backend` subdirectory as applicable:
 
@@ -20,6 +20,7 @@ cd frontend && npm run lint && npm run test && npm run build && npm audit --audi
 E2E_BASE_URL=http://web npm run test:e2e
 python tools/validate_content.py
 python tools/check_security.py --bundle frontend/dist
+PYTHONPATH=backend python -m courselab.check_content content
 npm run test:legacy
 docker compose up --build -d --wait --wait-timeout 180
 docker compose exec -T api alembic current
@@ -30,7 +31,7 @@ docker compose exec -T api python -c "import urllib.request; print(urllib.reques
 | --- | --- |
 | Content/security pytest | 36 passed |
 | Ruff | All checks passed |
-| Backend pytest | 100 passed; one upstream Starlette TestClient/httpx deprecation warning |
+| Backend pytest | 105 passed; one upstream Starlette TestClient/httpx deprecation warning |
 | Frontend lint/format | Passed |
 | Vitest | 11 passed across 6 files |
 | TypeScript/Vite build | Passed; 202 modules |
@@ -44,7 +45,7 @@ docker compose exec -T api python -c "import urllib.request; print(urllib.reques
 | Docker Compose/PostgreSQL | Services healthy; migration `0002 (head)`; health status `ok`; local-only origins restored |
 | GitHub Actions | [CourseLab validation on commit `d68998c`](https://github.com/dylanstechmann/lattice-biomed-academy/actions/runs/37354616723) completed successfully; both jobs passed |
 
-The migration test confirms preexisting attempts survive with no invented specification digest. Numeric grader tests recalculate conversion and absolute-tolerance boundaries for rates, compound concentration/time units, lengths, acceleration, percentages and derived units; they also check dimensions, exact-label contextual units, unknown/affine units, malformed/incompatible units, alternate micro symbols, exponent bounds, and SI case distinctions. The deployed-content integration check grades all 101 published practice specifications and verifies learner DTOs omit solution data. A version-upgrade API test verifies old attempts remain in history, are excluded from the new-version aggregate, and only current-version work contributes to that gradebook. For browser tests, the workspace container joined the app network and temporarily added `http://web` to its allowed-origin list; the application was then recreated with only documented localhost origins. The end-to-end flow persisted guest enrollment, lesson practice, feedback, notes and progress and verified that public lesson DTOs omit answer specifications. These checks do not amount to a penetration test or prove code-execution isolation; the arbitrary-code runner and LLM feedback providers remain disabled.
+The migration test confirms preexisting attempts survive with no invented specification digest. Numeric grader tests recalculate conversion and absolute/relative-tolerance boundaries for rates, compound concentration/time units, lengths, acceleration, percentages and derived units; they also check negative/zero answers, invalid tolerance specs, dimensions, exact-label contextual units, unknown/affine units, malformed/incompatible units, alternate micro symbols, exponent bounds, and SI case distinctions. The deployed-content integration check grades all 101 published practice specifications and verifies learner DTOs omit solution data. A version-upgrade API test verifies old attempts remain in history, are excluded from the new-version aggregate, and only current-version work contributes to that gradebook. For browser tests, the workspace container joined the app network and temporarily added `http://web` to its allowed-origin list; the application was then recreated with only documented localhost origins. The end-to-end flow persisted guest enrollment, lesson practice, feedback, notes and progress and verified that public lesson DTOs omit answer specifications. These checks do not amount to a penetration test or prove code-execution isolation; the arbitrary-code runner and LLM feedback providers remain disabled.
 
 The historical Milestone 1 and 2 validation record follows. Its counts describe the state before this M3 increment.
 
@@ -156,4 +157,4 @@ All exited 0. Both active/restored databases contained 2 synthetic users, 2 atte
 
 GitHub Actions configuration runs content/security, backend/frontend lint/tests/builds, Compose and browser flows with diagnostics. The earlier milestone 2 snapshot had no remote run result; the successful follow-on run for the milestone 3 increment is linked above.
 
-Milestone 3 remains in progress: wider unit coverage, significant figures and nonzero relative tolerance, advanced deterministic graders and rubrics, seeded variants, weighted categories, appeals/overrides, richer feedback, provider interfaces and an isolated code worker still need implementation and verification. Code execution and LLM providers remain disabled. Eight pathways, a visual graph, full original 14-week biology, remaining recalculation/mutation/accessibility gates and actual qualified review remain milestones 4–6. [ROADMAP.md](ROADMAP.md) records exact work and production hardening gaps.
+Milestone 3 remains in progress: wider unit coverage, significant figures, advanced deterministic graders and rubrics, seeded variants, weighted categories, appeals/overrides, richer feedback, provider interfaces and an isolated code worker still need implementation and verification. Code execution and LLM providers remain disabled. Eight pathways, a visual graph, full original 14-week biology, remaining recalculation/mutation/accessibility gates and actual qualified review remain milestones 4–6. [ROADMAP.md](ROADMAP.md) records exact work and production hardening gaps.

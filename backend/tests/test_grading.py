@@ -70,7 +70,7 @@ def test_no_arbitrary_code_or_other_question_types():
         grade({"type": "python", "solution_spec": {}}, AttemptRequest(response="while True: pass"))
 
 
-@pytest.mark.parametrize("field,value", [("significant_figures", 3), ("dimensions", "amount/time"), ("relative_tolerance", 0.01)])
+@pytest.mark.parametrize("field,value", [("significant_figures", 3), ("dimensions", "amount/time")])
 def test_unsupported_authored_requirement_cannot_silently_grade(field, value):
     item = numeric()
     item["solution_spec"][field] = value
@@ -98,6 +98,31 @@ def test_tolerance_is_interpreted_in_authored_unit_after_conversion():
     item["solution_spec"].update(answer=1, unit="m", tolerance=0.01)
     assert grade(item, AttemptRequest(response="100.9 cm")).correct
     assert not grade(item, AttemptRequest(response="101.01 cm")).correct
+
+
+def test_relative_tolerance_adds_to_absolute_tolerance_after_conversion():
+    item = numeric()
+    item["solution_spec"].update(answer=100, unit="m", tolerance=0.1, relative_tolerance=0.01)
+    assert grade(item, AttemptRequest(response="101.1 m")).correct
+    assert not grade(item, AttemptRequest(response="101.101 m")).correct
+    assert grade(item, AttemptRequest(response="10110 cm")).correct
+
+
+def test_relative_tolerance_is_well_defined_for_negative_and_zero_keys():
+    item = numeric()
+    item["solution_spec"].update(answer=-100, unit="m", tolerance=0, relative_tolerance=0.01)
+    assert grade(item, AttemptRequest(response="-99 m")).correct
+    item["solution_spec"].update(answer=0, tolerance=0.1, relative_tolerance=0.5)
+    assert grade(item, AttemptRequest(response="0.1 m")).correct
+    assert not grade(item, AttemptRequest(response="0.1001 m")).correct
+
+
+@pytest.mark.parametrize("value", [-0.01, 1.01, "NaN"])
+def test_invalid_relative_tolerance_cannot_silently_grade(value):
+    item = numeric()
+    item["solution_spec"]["relative_tolerance"] = value
+    with pytest.raises(ValueError, match="malformed_response|relative_tolerance"):
+        grade(item, AttemptRequest(response="80 μmol/min"))
 
 
 def test_compound_units_compare_dimensions_and_preserve_prefix_case():
