@@ -180,6 +180,25 @@ def test_duplicate_question_ids_fail(repository, course):
     assert "duplicate-id" in codes(validate_repository(repository))
 
 
+def test_duplicate_variant_ids_fail(repository):
+    path = repository / "content/courses/cell-biology/question-banks/practice.json"
+    bank = read(path)
+    variants = bank["questions"][0]["randomization"]["variants"]
+    variants[1]["id"] = variants[0]["id"]
+    write(path, bank)
+    assert "variant-id" in codes(validate_repository(repository))
+
+
+def test_variant_override_must_be_a_valid_standalone_question(repository):
+    path = repository / "content/courses/cell-biology/question-banks/practice.json"
+    bank = read(path)
+    bank["questions"][0]["randomization"]["variants"][0]["solution_spec"]["answer"] = 99
+    write(path, bank)
+    result = validate_repository(repository)
+    assert not result.ok
+    assert "answer-spec" in codes(result)
+
+
 @pytest.mark.parametrize(
     "change", ["missing-answer", "negative-tolerance", "out-of-range-choice"]
 )

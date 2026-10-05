@@ -7,7 +7,7 @@
   "domain": "Life sciences",
   "level": "Year 1",
   "maturity": "partial",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "license": "MIT OR CC-BY-4.0",
   "content_origin": {
     "kind": "legacy-prototype",
@@ -312,6 +312,11 @@
     "review_status": "unreviewed"
   },
   "history": [
+    {
+      "version": "0.3.0",
+      "date": "2026-10-05",
+      "summary": "Added three authored, reproducibly selected forms of the first formative item; attempts pin the selected variant specification."
+    },
     {
       "version": "0.2.0",
       "date": "2026-10-05",

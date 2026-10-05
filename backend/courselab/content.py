@@ -7,6 +7,7 @@ frontend static asset or through a learner content response.
 
 import json
 import re
+from collections.abc import Callable
 from pathlib import Path
 
 from .schemas import (
@@ -119,7 +120,25 @@ class ContentRepository:
                 return item
         raise ContentMissing("Question not found")
 
-    def lesson(self, course_id: str, lesson_id: str) -> PublicLesson:
+    def public_question(
+        self, question: dict, variant_id: str | None = None, variant_token: str | None = None
+    ) -> PublicQuestion:
+        """Build a whitelisted learner DTO; never return the authored grader spec."""
+        return PublicQuestion(
+            id=question["id"], type=question["type"], prompt=question["prompt"],
+            options=question.get("options", []), unit=question.get("solution_spec", {}).get("unit"),
+            significant_figures=question.get("solution_spec", {}).get("significant_figures"),
+            points=question.get("points", 1), learning_objective_ids=question.get("objective_ids", []),
+            selection="multiple" if question["type"] == "multiple_select" else "single",
+            partial_credit_policy=(question.get("solution_spec", {}).get("partial_credit")
+                                   if question["type"] == "multiple_select" else None),
+            variant_id=variant_id, variant_token=variant_token,
+        )
+
+    def lesson(
+        self, course_id: str, lesson_id: str,
+        public_question_factory: Callable[[dict], PublicQuestion] | None = None,
+    ) -> PublicLesson:
         module, lesson = self.lesson_record(course_id, lesson_id)
         available = {question["id"]: question for question in self.questions(course_id)}
         questions = [available[question_id] for question_id in lesson.get("question_ids", [])
@@ -128,13 +147,7 @@ class ContentRepository:
             id=lesson["id"], title=lesson["title"], markdown=self._read(course_id, lesson["reading"]),
             learning_objective_ids=lesson.get("objectives", []), worked_example=lesson.get("worked_example"),
             source_ids=module.get("source_ids", []),
-            questions=[PublicQuestion(
-                id=question["id"], type=question["type"], prompt=question["prompt"],
-                options=question.get("options", []), unit=question.get("solution_spec", {}).get("unit"),
-                significant_figures=question.get("solution_spec", {}).get("significant_figures"),
-                points=question.get("points", 1), learning_objective_ids=question.get("objective_ids", []),
-                selection="multiple" if question["type"] == "multiple_select" else "single",
-                partial_credit_policy=(question.get("solution_spec", {}).get("partial_credit")
-                                       if question["type"] == "multiple_select" else None),
-            ) for question in questions],
+            questions=[public_question_factory(question) if public_question_factory else
+                       self.public_question(question, "base" if question.get("randomization") else None)
+                       for question in questions],
         )

@@ -12,6 +12,7 @@ x-api: &api
     CONTENT_ROOT: /content
     COOKIE_SECURE: "false"
     ALLOWED_ORIGINS: ${ALLOWED_ORIGINS:-http://localhost:8080,http://127.0.0.1:8080}
+    VARIANT_TOKEN_SECRET: ${VARIANT_TOKEN_SECRET:-}
   volumes:
     - credentials:/run/courselab:ro
   networks: [database, application]

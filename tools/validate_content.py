@@ -567,6 +567,50 @@ def validate_course(
                 question["id"],
                 "Complete-course numerical items require explicit dimensions, significant figures, and unit-entry policy.",
             )
+        randomization = question.get("randomization")
+        if randomization:
+            seen_variant_ids = {"base"}
+            variant_schema = validators.get("question.schema.json")
+            for variant in randomization.get("variants", []):
+                variant_id = variant.get("id", "<missing-id>")
+                if variant_id in seen_variant_ids:
+                    report.error(
+                        "variant-id", course_path,
+                        f"Question {question['id']} repeats variant identifier {variant_id}.",
+                    )
+                seen_variant_ids.add(variant_id)
+                resolved = {key: value for key, value in question.items() if key != "randomization"}
+                resolved.update({key: value for key, value in variant.items() if key != "id"})
+                if variant_schema:
+                    for error in variant_schema.iter_errors(resolved):
+                        report.error(
+                            "variant-schema", course_path,
+                            f"Question {question['id']} variant {variant_id}: {error.message}",
+                        )
+                check_text(variant["prompt"], f"{question['id']}/{variant_id}", report, minimum_words=5)
+                variant_key = normalize(variant["prompt"])
+                if variant_key in seen_questions:
+                    report.error(
+                        "duplicate-question", question["id"],
+                        f"Variant prompt duplicates {seen_questions[variant_key]}.",
+                    )
+                else:
+                    seen_questions[variant_key] = f"{question['id']}/{variant_id}"
+                variant_solution = variant["solution_spec"]
+                if question["type"] in {"single_choice", "multiple_select"}:
+                    answer = variant_solution["answer"]
+                    if question["type"] == "single_choice":
+                        answers = [answer]
+                    else:
+                        answers = answer if isinstance(answer, list) else []
+                    if not answers or any(
+                        type(index) is not int or index < 0 or index >= len(resolved["options"])
+                        for index in answers
+                    ):
+                        report.error(
+                            "answer-spec", question["id"],
+                            f"Variant {variant_id} has a choice answer outside its option array.",
+                        )
         if question["visibility"] == "restricted-server-assessment":
             report.error(
                 "restricted-key",

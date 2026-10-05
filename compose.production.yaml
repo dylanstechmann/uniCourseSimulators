@@ -12,6 +12,7 @@ x-api: &api
     CONTENT_ROOT: /content
     COOKIE_SECURE: "true"
     ALLOWED_ORIGINS: https://${COURSELAB_DOMAIN:?Set COURSELAB_DOMAIN}
+    VARIANT_TOKEN_SECRET: ${VARIANT_TOKEN_SECRET:?Set a stable random VARIANT_TOKEN_SECRET}
   secrets: [db-password]
   networks: [database, application]
   read_only: true

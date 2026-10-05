@@ -17,6 +17,7 @@ export function Assessment({
   onSubmit: (
     response: string | number | number[],
     unit?: string,
+    variantToken?: string | null,
   ) => Promise<Attempt>;
 }) {
   const [choice, setChoice] = useState<number | null>(null);
@@ -50,16 +51,17 @@ export function Assessment({
     }
     setBusy(true);
     try {
-      setAttempt(
-        await onSubmit(
-          question.type === "single_choice"
-            ? choice!
-            : question.type === "multiple_select"
-              ? [...selected].sort((a, b) => a - b)
-              : value.trim(),
-          unit.trim() || undefined,
-        ),
-      );
+      const response =
+        question.type === "single_choice"
+          ? choice!
+          : question.type === "multiple_select"
+            ? [...selected].sort((a, b) => a - b)
+            : value.trim();
+      const normalizedUnit = unit.trim() || undefined;
+      const pendingAttempt = question.variant_token
+        ? onSubmit(response, normalizedUnit, question.variant_token)
+        : onSubmit(response, normalizedUnit);
+      setAttempt(await pendingAttempt);
     } catch (error) {
       setError(errorMessage(error));
     } finally {
@@ -67,7 +69,11 @@ export function Assessment({
     }
   }
   return (
-    <section className="assessment card" aria-label="Formative practice">
+    <section
+      className="assessment card"
+      aria-label="Formative practice"
+      data-question-id={question.id}
+    >
       <span className="eyebrow">
         Formative practice · {question.points} points
       </span>

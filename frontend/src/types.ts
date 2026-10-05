@@ -66,6 +66,8 @@ export interface Question {
   points: number;
   selection?: "single" | "multiple";
   partial_credit_policy?: string | null;
+  variant_id?: string | null;
+  variant_token?: string | null;
   learning_objective_ids: string[];
   assessment_role: "formative";
 }
@@ -108,7 +110,11 @@ export interface Attempt {
   course_id: string;
   question_id: string;
   content_version: string;
-  response: { response: string | number | number[]; unit?: string };
+  response: {
+    response: string | number | number[];
+    unit?: string;
+    variant_id?: string;
+  };
   score: number;
   max_score: number;
   result: {

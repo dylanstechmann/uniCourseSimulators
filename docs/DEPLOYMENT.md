@@ -43,14 +43,17 @@ Content is copied into the API image at `/content`. Rebuild when course packages
 
 Use a host with Docker/Compose, a DNS hostname controlled by the operator, and network access suitable for certificate issuance. Set the hostname's A/AAAA records to that host, permit inbound TCP 80/443, and keep PostgreSQL/API ports unpublished. `COURSELAB_DOMAIN` must be the hostname alone, with no scheme, path or GitHub URL. The example does not depend on a particular cloud provider.
 
-Create an untracked `.env.production` containing the intended `COURSELAB_DOMAIN` and an absolute `DB_PASSWORD_FILE` outside the checkout. Generate a fresh secret only when initializing a new deployment. A Linux host example below creates an operator-private directory and permits the API's uid 10001 to read the secret without printing it:
+Create an untracked `.env.production` containing the intended `COURSELAB_DOMAIN`, an absolute `DB_PASSWORD_FILE` outside the checkout, and a stable random `VARIANT_TOKEN_SECRET` of at least 32 bytes. Generate a fresh secret only when initializing a new deployment and keep it stable across API restarts so unexpired practice variant tokens remain usable. A Linux host example below creates an operator-private directory and permits the API's uid 10001 to read the database secret without printing it:
 
 ```sh
 sudo install -d -m 0700 /srv/courselab-secrets
 sudo sh -c 'umask 077; test ! -e /srv/courselab-secrets/db-password && openssl rand -base64 32 > /srv/courselab-secrets/db-password'
 sudo chown 10001:10001 /srv/courselab-secrets/db-password
 sudo chmod 0440 /srv/courselab-secrets/db-password
+openssl rand -hex 32
 ```
+
+Store the generated `openssl` output as `VARIANT_TOKEN_SECRET` in `.env.production`; never commit it.
 
 Set `DB_PASSWORD_FILE` to that file. Run subsequent production Docker commands as the host administrator (using `sudo` where needed), because the example secret directory is accessible only to that administrator. File-backed Compose secrets use host file permissions; uid/gid/mode remapping is not supported for that form. [Docker Compose secrets](https://docs.docker.com/reference/compose-file/services/#secrets). Check readability as the API's container user before starting; the following command reads without displaying the value:
 

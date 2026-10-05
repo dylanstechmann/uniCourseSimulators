@@ -6,7 +6,7 @@ The static reader exposes practice answers and has no secure grade record. The b
 
 ## Grade authority
 
-Implemented immutable attempts record learner, course/question IDs, course version, grader-policy version, response, score, diagnosis, time and a SHA-256 digest of the exact authored question specification plus grader-policy version. Alembic migration 0002 leaves historical attempts unpinned (`question_spec_sha256=null`) while new attempts record a digest. The digest is server-side only and omitted from learner attempt DTOs because hashes of answer-bearing specifications could be guessed offline. A digest verifies equality; it cannot reconstruct a retired specification without an immutable package archive. Randomized variant seeds are not implemented. Deterministic grading or explicit analytic rubrics determine scores. A correct value/selection cannot alone establish sound reasoning. Self-assessment and provisional design feedback are separate from grades.
+Implemented immutable attempts record learner, course/question IDs, course version, grader-policy version, response, score, diagnosis, time and a SHA-256 digest of the resolved authored question specification plus grader-policy version and selected variant ID. Alembic migration 0002 leaves historical attempts unpinned (`question_spec_sha256=null`) while new attempts record a digest. The digest is server-side only and omitted from learner attempt DTOs because hashes of answer-bearing specifications could be guessed offline. A digest verifies equality; it cannot reconstruct a retired specification without an immutable package archive. Authored formative variants use a server-signed, seven-day token containing a random seed; a keyed HMAC selects the same authored form on replay. Tokens bind course, package version and question ID. Current implementation selects among finite, explicitly written forms; it does not generate numeric parameter variants. Deterministic grading or explicit analytic rubrics determine scores. A correct value/selection cannot alone establish sound reasoning. Self-assessment and provisional design feedback are separate from grades.
 
 Layer feedback as diagnosis, targeted hint, misconception, next step, policy-controlled solution, exact lesson/source links. Planned diagnoses distinguish arithmetic, units/dimensions, misapplied equations, unsupported biology, correlation/causation, missing controls, overgeneralization, weak reasoning and promising incomplete approaches. Reasoning claims need response evidence.
 
@@ -23,7 +23,7 @@ Layer feedback as diagnosis, targeted hint, misconception, next step, policy-con
 | Code | Separate isolated worker using pytest; never API execution |
 | Design | Transparent provisional rubric, manual review/appeal |
 
-Seeded variants must recompute reproducible specifications. Overrides append actor/reason/time audit events and retain original attempts. Weights and release policies are explicit. Legacy packages offer practice evidence only, not semester grades.
+Future generated parameter variants must recompute reproducible specifications and pass independent recalculation tests. Current authored alternatives must have unique IDs, validate as complete standalone questions after overrides, and have distinct non-placeholder prompts. Overrides append actor/reason/time audit events and retain original attempts. Weights and release policies are explicit. Legacy packages offer practice evidence only, not semester grades.
 
 ## Feedback providers: planned
 

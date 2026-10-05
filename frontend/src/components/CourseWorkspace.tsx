@@ -153,8 +153,15 @@ export function CourseWorkspace({
     question: string,
     response: string | number | number[],
     unit?: string,
+    variantToken?: string | null,
   ) {
-    const attempt = await api.attempt(id, question, response, unit);
+    const attempt = await api.attempt(
+      id,
+      question,
+      response,
+      unit,
+      variantToken,
+    );
     setAttempts((previous) => [...previous, attempt]);
     setGradebook(await api.gradebook(id));
     return attempt;

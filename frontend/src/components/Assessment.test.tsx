@@ -30,6 +30,17 @@ const multipleQuestion: Question = {
   learning_objective_ids: ["membrane"],
   assessment_role: "formative",
 };
+const variantQuestion: Question = {
+  id: "variant-control",
+  type: "single_choice",
+  prompt: "Which comparison preserves the delivery procedure?",
+  options: ["Non-targeting sequence", "Untreated cells"],
+  points: 1,
+  learning_objective_ids: ["controls"],
+  assessment_role: "formative",
+  variant_id: "non-targeting-control",
+  variant_token: "signed-variant-token",
+};
 const attempt: Attempt = {
   id: "attempt-1",
   course_id: "cell-biology",
@@ -194,5 +205,18 @@ describe("formative assessment submission", () => {
     expect(
       await screen.findByText("2 / 3 practice points"),
     ).toBeInTheDocument();
+  });
+  it("submits the signed token for the displayed authored variant", async () => {
+    const submit = vi.fn().mockResolvedValue({
+      ...attempt,
+      question_id: variantQuestion.id,
+      response: { response: 0, variant_id: variantQuestion.variant_id },
+    });
+    render(<Assessment question={variantQuestion} enabled onSubmit={submit} />);
+    await userEvent.click(screen.getByLabelText("Non-targeting sequence"));
+    await userEvent.click(
+      screen.getByRole("button", { name: "Submit practice response" }),
+    );
+    expect(submit).toHaveBeenCalledWith(0, undefined, "signed-variant-token");
   });
 });

@@ -43,6 +43,7 @@ class BookmarkRequest(StrictModel):
 class AttemptRequest(StrictModel):
     response: str | float | list[int] = Field(union_mode="left_to_right")
     unit: str | None = Field(default=None, max_length=100)
+    variant_token: str | None = Field(default=None, max_length=2048)
 
     @field_validator("response", mode="before")
     @classmethod
@@ -80,6 +81,8 @@ class PublicQuestion(BaseModel):
     points: float = 1
     selection: Literal["single", "multiple"] = "single"
     partial_credit_policy: str | None = None
+    variant_id: str | None = None
+    variant_token: str | None = None
     learning_objective_ids: list[str] = Field(default_factory=list)
     assessment_role: Literal["formative"] = "formative"
 

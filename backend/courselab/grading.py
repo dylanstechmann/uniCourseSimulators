@@ -36,10 +36,10 @@ def count_significant_figures(number: str) -> int:
     return len(digits.rstrip("0"))
 
 
-def question_spec_digest(question: dict) -> str:
+def question_spec_digest(question: dict, variant_id: str | None = None) -> str:
     """Fingerprint the exact authored question and the deterministic grader version."""
     payload = json.dumps(
-        {"policy": GRADING_POLICY_VERSION, "question": question},
+        {"policy": GRADING_POLICY_VERSION, "question": question, "variant_id": variant_id},
         sort_keys=True,
         separators=(",", ":"),
         ensure_ascii=False,

@@ -54,7 +54,7 @@ describe("practice gradebook API contract", () => {
       course_id: "cell-biology",
       question_id: "cell-biology-q-1",
       content_version: "0.1",
-      response: { response: 0 },
+      response: { response: 0, variant_id: "surface-residue-substitution" },
       score: 1,
       max_score: 1,
       result: {
@@ -93,6 +93,14 @@ describe("practice gradebook API contract", () => {
     ).toBeInTheDocument();
     const attemptsTable = screen.getAllByRole("table")[1];
     expect(within(attemptsTable).getAllByRole("row")).toHaveLength(2);
+    expect(
+      within(attemptsTable).getByRole("rowheader", {
+        name: /Variant: surface-residue-substitution/,
+      }),
+    ).toBeInTheDocument();
+    expect(
+      within(attemptsTable).getByText("Feedback details"),
+    ).toBeInTheDocument();
     expect(
       within(attemptsTable).getByRole("link", {
         name: "Review lesson and feedback",

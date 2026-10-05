@@ -1,6 +1,7 @@
 """Configuration contains no checked-in database or provider credentials."""
 
 import os
+import secrets
 from dataclasses import dataclass, field
 from pathlib import Path
 
@@ -18,6 +19,9 @@ class Settings:
     body_limit: int = 65536
     rate_limit: int = 120
     auth_rate_limit: int = 30
+    # An ephemeral default is sufficient for local development. Deployments can
+    # set VARIANT_TOKEN_SECRET to keep active practice variants valid on restart.
+    variant_token_secret: bytes = field(default_factory=lambda: secrets.token_bytes(32), repr=False)
 
     @classmethod
     def from_environment(cls) -> "Settings":
@@ -32,6 +36,9 @@ class Settings:
                 host=os.getenv("DB_HOST", "db"), port=int(os.getenv("DB_PORT", "5432")),
                 database=os.getenv("DB_NAME", "courselab"),
             ).render_as_string(hide_password=False)
+        variant_secret = os.getenv("VARIANT_TOKEN_SECRET") or None
+        if variant_secret is not None and len(variant_secret.encode("utf-8")) < 32:
+            raise ValueError("VARIANT_TOKEN_SECRET must contain at least 32 bytes")
         return cls(
             database_url=database_url or "sqlite:///./courselab-development.db",
             content_root=Path(os.getenv("CONTENT_ROOT", "../content")).resolve(),
@@ -41,4 +48,7 @@ class Settings:
                 ).split(",") if origin.strip()
             ),
             cookie_secure=os.getenv("COOKIE_SECURE", "true").lower() == "true",
+            variant_token_secret=(
+                variant_secret.encode("utf-8") if variant_secret is not None else secrets.token_bytes(32)
+            ),
         )

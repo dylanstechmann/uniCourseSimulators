@@ -7,7 +7,9 @@ from sqlalchemy import func, select
 from sqlalchemy.orm import Session
 
 from courselab.db import Attempt, Enrollment, Note, SessionToken, User, now
+from courselab.grading import question_spec_digest
 from courselab.main import COOKIE, token_hash
+from courselab.variants import verify_variant_token
 
 
 def enroll(client):
@@ -42,6 +44,66 @@ def test_public_content_never_exposes_grading_spec(client):
     assert lesson["questions"][2]["partial_credit_policy"] == "correct-minus-incorrect-clamped-v1"
     assert client.get("/content/courses/test-course/question-banks/practice.json").status_code == 404
     assert client.get("/api/v1/courses/test-course/solution_spec").status_code == 404
+
+
+def test_seeded_variant_round_trip_and_attempt_pinning(enrolled, app):
+    root = app.state.settings.content_root / "courses" / "test-course"
+    manifest_path = root / "course.json"
+    bank_path = root / "question-banks" / "practice.json"
+    manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+    bank = json.loads(bank_path.read_text(encoding="utf-8"))
+    manifest["modules"][0]["lessons"][0]["question_ids"].append("variant-choice")
+    bank["questions"].append({
+        "id": "variant-choice", "type": "single_choice",
+        "prompt": "Which control best distinguishes a delivery effect from a target effect?",
+        "options": ["A non-targeting control", "A vehicle control"], "points": 1,
+        "objective_ids": ["objective"], "visibility": "public-practice-authoring",
+        "solution_spec": {"answer": 0},
+        "feedback": {"hint": "Match the delivery procedure.", "solution": "The non-targeting control tests delivery-related effects.",
+                     "lesson_ids": ["lesson-one"]},
+        "randomization": {"seeded": True, "generator_id": "authored-variants-v1", "variants": [
+            {"id": "vehicle-match", "prompt": "Which comparison isolates the effect of the targeting sequence?",
+             "options": ["Targeting sequence vs non-targeting sequence", "Targeting sequence vs untreated"],
+             "solution_spec": {"answer": 0},
+             "feedback": {"hint": "Keep the delivery and sequence background matched.",
+                          "solution": "A non-targeting sequence controls for delivery while removing the intended target match.",
+                          "lesson_ids": ["lesson-one"]}}
+        ]},
+    })
+    manifest_path.write_text(json.dumps(manifest), encoding="utf-8")
+    bank_path.write_text(json.dumps(bank), encoding="utf-8")
+
+    lesson = enrolled.get("/api/v1/courses/test-course/lessons/lesson-one").json()
+    public_question = next(item for item in lesson["questions"] if item["id"] == "variant-choice")
+    forbidden_keys(public_question)
+    assert public_question["variant_token"]
+    assert public_question["variant_id"] in {"base", "vehicle-match"}
+    assert "solution_spec" not in public_question
+    assert "answer" not in public_question
+
+    authored = app.state.content.question("test-course", "variant-choice")
+    resolved, variant_id = verify_variant_token(
+        authored, "test-course", "0.1.0", public_question["variant_token"],
+        app.state.settings.variant_token_secret,
+    )
+    assert variant_id == public_question["variant_id"]
+    response = submit(enrolled, "variant-choice", resolved["solution_spec"]["answer"],
+                      variant_token=public_question["variant_token"])
+    assert response.status_code == 201
+    attempt = response.json()
+    assert attempt["result"]["correct"] is True
+    assert attempt["response"]["variant_id"] == variant_id
+    with app.state.sessions() as db:
+        saved = db.get(Attempt, attempt["id"])
+        assert saved.question_spec_sha256 == question_spec_digest(resolved, variant_id)
+
+    token_payload, token_signature = public_question["variant_token"].split(".")
+    replacement = "A" if token_signature[0] != "A" else "B"
+    tampered = f"{token_payload}.{replacement}{token_signature[1:]}"
+    rejected = submit(enrolled, "variant-choice", 0, variant_token=tampered)
+    assert rejected.status_code == 422
+    wrong_question = submit(enrolled, "choice", 0, variant_token=public_question["variant_token"])
+    assert wrong_question.status_code == 422
 
 
 def test_authentication_required(client):

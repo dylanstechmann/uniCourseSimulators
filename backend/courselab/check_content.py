@@ -10,6 +10,7 @@ from pathlib import Path
 from .content import ContentRepository
 from .grading import grade
 from .schemas import AttemptRequest
+from .variants import resolve_variant, variant_ids
 
 
 def learner_keys(value):
@@ -33,11 +34,15 @@ def check(root: Path) -> tuple[int, int]:
             for lesson in module.lessons:
                 learner_keys(repo.lesson(summary.id, lesson.id).model_dump())
         for question in repo.questions(summary.id):
-            spec = question["solution_spec"]
-            result = grade(question, AttemptRequest(response=spec["answer"], unit=spec.get("unit")))
-            assert result.correct, f"Practice specification not gradeable: {summary.id}/{question['id']}"
-            learner_keys(result.model_dump())
-            count += 1
+            for variant_id in variant_ids(question) or [None]:
+                resolved = resolve_variant(question, variant_id)
+                spec = resolved["solution_spec"]
+                result = grade(resolved, AttemptRequest(response=spec["answer"], unit=spec.get("unit")))
+                assert result.correct, (
+                    f"Practice specification not gradeable: {summary.id}/{question['id']}/{variant_id}"
+                )
+                learner_keys(result.model_dump())
+                count += 1
     return len(catalog), count
 
 

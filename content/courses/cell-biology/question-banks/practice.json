@@ -20,6 +20,56 @@
       "solution_spec": {
         "answer": 0
       },
+      "randomization": {
+        "seeded": true,
+        "generator_id": "authored-variants-v1",
+        "variants": [
+          {
+            "id": "surface-residue-substitution",
+            "prompt": "A soluble enzyme acquires a surface mutation. Which substitution is most likely to make hydration of that surface less favorable?",
+            "options": [
+              "Replace several exposed polar residues with leucine",
+              "Replace exposed leucine residues with serine",
+              "Add ionizable side chains that are charged at the buffer pH",
+              "Add polar side chains that can hydrogen-bond with water"
+            ],
+            "solution_spec": {
+              "answer": 0
+            },
+            "feedback": {
+              "hint": "Compare the ability of each side chain to make favorable interactions with water.",
+              "solution": "Leucine is nonpolar. Replacing exposed polar residues with leucine increases nonpolar surface area and makes hydration less favorable; the effect on aggregation depends on the rest of the protein and conditions.",
+              "lesson_ids": [
+                "cell-biology-1"
+              ],
+              "misconception_ids": []
+            }
+          },
+          {
+            "id": "surface-area-prediction",
+            "prompt": "A folded cytosolic protein is engineered to expose a larger nonpolar surface area. Which prediction follows most directly from the hydrophobic effect?",
+            "options": [
+              "Water forms more hydrogen bonds directly with the nonpolar surface",
+              "Hydration is less favorable, which can favor burial or association of that surface",
+              "The exposed groups must form new covalent bonds with neighboring proteins",
+              "Solubility is determined by protein molecular mass alone"
+            ],
+            "solution_spec": {
+              "answer": 1
+            },
+            "feedback": {
+              "hint": "Focus on solvent interactions and distinguish a thermodynamic tendency from a guaranteed cellular outcome.",
+              "solution": "Water cannot make the usual hydrogen-bond interactions with a nonpolar surface. Increasing exposed nonpolar area makes hydration less favorable and can favor burial or association, though it does not by itself prove aggregation in a particular cell.",
+              "lesson_ids": [
+                "cell-biology-1"
+              ],
+              "misconception_ids": [
+                "hydrophobic-effect-is-a-covalent-bond"
+              ]
+            }
+          }
+        ]
+      },
       "feedback": {
         "hint": "Think about which groups can make favorable interactions with water.",
         "solution": "Nonpolar surface area disrupts water's hydrogen-bond network. Exposing more nonpolar residues raises the free-energy cost of hydration and can promote aggregation or burial in a folded state.",

@@ -79,7 +79,15 @@ export function GradebookView({
             <tbody>
               {attempts.map((attempt) => (
                 <tr key={attempt.id}>
-                  <th scope="row">{attempt.question_id}</th>
+                  <th scope="row">
+                    {attempt.question_id}
+                    {attempt.response.variant_id ? (
+                      <>
+                        <br />
+                        <small>Variant: {attempt.response.variant_id}</small>
+                      </>
+                    ) : null}
+                  </th>
                   <td>
                     {Array.isArray(attempt.response.response)
                       ? attempt.response.response.join(", ")
@@ -92,6 +100,18 @@ export function GradebookView({
                   <td>
                     {attempt.result.feedback.diagnosis.replaceAll("_", " ")}
                     <br />
+                    <details>
+                      <summary>Feedback details</summary>
+                      {attempt.result.feedback.hint ? (
+                        <p>
+                          <strong>Hint:</strong> {attempt.result.feedback.hint}
+                        </p>
+                      ) : null}
+                      <p>
+                        <strong>Next step:</strong>{" "}
+                        {attempt.result.feedback.next_step}
+                      </p>
+                    </details>
                     <a
                       href={`#/course/${encodeURIComponent(course.id)}/lesson/${encodeURIComponent(attempt.result.feedback.lesson_id)}`}
                     >

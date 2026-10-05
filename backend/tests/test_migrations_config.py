@@ -1,6 +1,7 @@
 import json
 from pathlib import Path
 
+import pytest
 from sqlalchemy import create_engine, inspect, text
 
 from alembic import command
@@ -79,3 +80,14 @@ def test_database_url_wins_for_ci(monkeypatch):
     monkeypatch.setenv("DATABASE_URL", "sqlite:///:memory:")
     monkeypatch.setenv("DATABASE_PASSWORD_FILE", "/not/read/when/url/provided")
     assert Settings.from_environment().database_url == "sqlite:///:memory:"
+
+
+def test_variant_token_secret_is_private_and_has_a_minimum_length(monkeypatch):
+    secret = "a" * 32
+    monkeypatch.setenv("VARIANT_TOKEN_SECRET", secret)
+    settings = Settings.from_environment()
+    assert settings.variant_token_secret == secret.encode()
+    assert secret not in repr(settings)
+    monkeypatch.setenv("VARIANT_TOKEN_SECRET", "too-short")
+    with pytest.raises(ValueError, match="at least 32 bytes"):
+        Settings.from_environment()

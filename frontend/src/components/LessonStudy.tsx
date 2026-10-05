@@ -27,6 +27,7 @@ export function LessonStudy({
     question: string,
     response: string | number | number[],
     unit?: string,
+    variantToken?: string | null,
   ) => Promise<Attempt>;
   onSaveNote: (body: string) => Promise<void>;
   onProgress: (completed: boolean) => Promise<void>;
@@ -121,8 +122,15 @@ export function LessonStudy({
           disabledMessage={disabledMessage}
           previousAttempt={[...attempts]
             .reverse()
-            .find((attempt) => attempt.question_id === question.id)}
-          onSubmit={(response, unit) => onAttempt(question.id, response, unit)}
+            .find(
+              (attempt) =>
+                attempt.question_id === question.id &&
+                (attempt.response.variant_id ?? null) ===
+                  (question.variant_id ?? null),
+            )}
+          onSubmit={(response, unit, variantToken) =>
+            onAttempt(question.id, response, unit, variantToken)
+          }
         />
       ))}
       <section className="card">

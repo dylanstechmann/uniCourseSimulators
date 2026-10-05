@@ -101,11 +101,16 @@ export const api = {
     question: string,
     response: string | number | number[],
     unit?: string,
+    variantToken?: string | null,
   ) =>
     request<Attempt>(
       `/courses/${encode(id)}/questions/${encode(question)}/attempts`,
       "POST",
-      { response, ...(unit ? { unit } : {}) },
+      {
+        response,
+        ...(unit ? { unit } : {}),
+        ...(variantToken ? { variant_token: variantToken } : {}),
+      },
     ),
   attempts: (id: string) =>
     request<Attempt[]>(`/attempts?course_id=${encode(id)}`),

@@ -31,6 +31,7 @@ from .schemas import (
     PublicCourse,
     PublicLesson,
 )
+from .variants import VariantTokenError, issue_variant_token, verify_variant_token
 
 COOKIE = "courselab_session"
 PASSWORDS = PasswordHasher(time_cost=3, memory_cost=65536, parallelism=2)
@@ -255,7 +256,15 @@ def create_app(settings: Settings | None = None) -> FastAPI:
 
     @app.get("/api/v1/courses/{course_id}/lessons/{lesson_id}", response_model=PublicLesson)
     def lesson(course_id: str, lesson_id: str):
-        return content.lesson(course_id, lesson_id)
+        version = content.manifest(course_id)["version"]
+
+        def public_question(question: dict):
+            token, variant_id, resolved = issue_variant_token(
+                question, course_id, version, settings.variant_token_secret
+            )
+            return content.public_question(resolved, variant_id, token)
+
+        return content.lesson(course_id, lesson_id, public_question)
 
     @app.post("/api/v1/enrollments", status_code=201)
     def enroll(body: EnrollmentRequest, request: Request, db: DB):
@@ -376,13 +385,25 @@ def create_app(settings: Settings | None = None) -> FastAPI:
         require_csrf(request, identity)
         enrollment = enrolled(db, identity[0], course_id)
         question = content.question(course_id, question_id)
-        result = grade(question, body)
+        try:
+            resolved_question, variant_id = verify_variant_token(
+                question, course_id, enrollment.content_version, body.variant_token,
+                settings.variant_token_secret,
+            )
+        except VariantTokenError as exc:
+            raise HTTPException(422, "Question variant token is invalid or expired") from exc
+        result = grade(resolved_question, body)
+        stored_response = {"response": body.response}
+        if body.unit is not None:
+            stored_response["unit"] = body.unit
+        if variant_id is not None:
+            stored_response["variant_id"] = variant_id
         item = Attempt(user_id=identity[0].id, course_id=course_id, question_id=question_id,
-                       content_version=enrollment.content_version, response=body.model_dump(),
+                       content_version=enrollment.content_version, response=stored_response,
                        grading_policy_version=result.grading_policy_version,
-                       question_spec_sha256=question_spec_digest(question),
+                       question_spec_sha256=question_spec_digest(resolved_question, variant_id),
                        score=result.score, max_score=result.max_score, result=result.model_dump(),
-                       objective_ids=question.get("objective_ids", []))
+                       objective_ids=resolved_question.get("objective_ids", []))
         db.add(item)
         db.commit()
         return attempt_view(item)
