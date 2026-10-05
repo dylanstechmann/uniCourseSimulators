@@ -135,9 +135,28 @@ export interface Gradebook {
   score: number;
   max_score: number;
   attempt_count: number;
+  objective_evidence_policy: {
+    version: "practice-evidence-v1";
+    minimum_distinct_items: number;
+    minimum_item_coverage: number;
+    minimum_performance: number;
+  };
   objective_evidence: Record<
     string,
-    { attempts: number; correct_results: number }
+    {
+      attempts: number;
+      correct_results: number;
+      attempted_items: number;
+      item_count: number;
+      best_score: number;
+      best_possible_score: number;
+      performance: number | null;
+      status:
+        | "no_evidence"
+        | "insufficient_evidence"
+        | "needs_practice"
+        | "provisional_practice_mastery";
+    }
   >;
   limitations: string;
 }

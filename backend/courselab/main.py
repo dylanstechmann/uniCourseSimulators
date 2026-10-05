@@ -19,6 +19,13 @@ from sqlalchemy.orm import Session
 from .config import Settings
 from .content import ContentInvalid, ContentMissing, ContentRepository
 from .db import Attempt, Bookmark, Enrollment, Note, Progress, SessionToken, User, database, now
+from .evidence import (
+    MIN_DISTINCT_ITEMS,
+    MIN_ITEM_COVERAGE,
+    MIN_PERFORMANCE,
+    POLICY_VERSION,
+    objective_evidence,
+)
 from .grading import GradingUnavailable, grade, question_spec_digest
 from .schemas import (
     AttemptRequest,
@@ -26,6 +33,7 @@ from .schemas import (
     CourseSummary,
     Credentials,
     EnrollmentRequest,
+    GradebookResponse,
     NoteRequest,
     ProgressRequest,
     PublicCourse,
@@ -416,7 +424,7 @@ def create_app(settings: Settings | None = None) -> FastAPI:
             query = query.where(Attempt.course_id == course_id)
         return [attempt_view(item) for item in db.scalars(query)]
 
-    @app.get("/api/v1/gradebook/{course_id}")
+    @app.get("/api/v1/gradebook/{course_id}", response_model=GradebookResponse)
     def gradebook(course_id: str, request: Request, db: DB):
         user, _ = require_identity(request, db)
         enrollment = enrolled(db, user, course_id)
@@ -432,16 +440,18 @@ def create_app(settings: Settings | None = None) -> FastAPI:
                 .order_by(Attempt.created_at, Attempt.id)
             )
         )
-        best, objectives = {}, defaultdict(lambda: {"attempts": 0, "correct_results": 0})
+        best = {}
         for item in rows:
             best[item.question_id] = max(best.get(item.question_id, 0), item.score)
-            for objective_id in item.objective_ids:
-                objectives[objective_id]["attempts"] += 1
-                objectives[objective_id]["correct_results"] += int(item.result["correct"])
         return {"course_id": course_id, "assessment_role": "formative", "aggregation": "best practice result per question",
                 "score": sum(best.values()), "max_score": sum(float(item.get("points", 1)) for item in questions),
-                "attempt_count": len(rows), "objective_evidence": dict(objectives),
-                "limitations": "Correct results on short practice items do not establish reasoning, mastery, credit, or course completion."}
+                "attempt_count": len(rows),
+                "objective_evidence_policy": {"version": POLICY_VERSION,
+                    "minimum_distinct_items": MIN_DISTINCT_ITEMS,
+                    "minimum_item_coverage": MIN_ITEM_COVERAGE,
+                    "minimum_performance": MIN_PERFORMANCE},
+                "objective_evidence": objective_evidence(questions, rows),
+                "limitations": "The provisional practice indicator requires at least 3 distinct tagged items, 80% of available tagged-item coverage, and 80% best points on attempted items. It is a study signal from short formative checks; it does not establish reasoning, transfer, course mastery, credit, or course completion."}
 
     @app.get("/api/v1/learner/export")
     def export(request: Request, db: DB):

@@ -12,8 +12,23 @@ describe("practice gradebook API contract", () => {
       score: 1,
       max_score: 4,
       attempt_count: 1,
+      objective_evidence_policy: {
+        version: "practice-evidence-v1",
+        minimum_distinct_items: 3,
+        minimum_item_coverage: 0.8,
+        minimum_performance: 0.8,
+      },
       objective_evidence: {
-        "cell-biology-lo-1": { attempts: 1, correct_results: 1 },
+        "cell-biology-lo-1": {
+          attempts: 1,
+          correct_results: 1,
+          attempted_items: 1,
+          item_count: 3,
+          best_score: 1,
+          best_possible_score: 1,
+          performance: 1,
+          status: "insufficient_evidence",
+        },
       },
       limitations:
         "Practice results do not establish reasoning, mastery, or course completion.",
@@ -91,6 +106,11 @@ describe("practice gradebook API contract", () => {
         name: "Relate macromolecular structure to function.",
       }),
     ).toBeInTheDocument();
+    expect(within(evidenceTable).getByText("1 / 3")).toBeInTheDocument();
+    expect(
+      within(evidenceTable).getByText("insufficient evidence"),
+    ).toBeInTheDocument();
+    expect(screen.getByText(/at least 3 distinct items/)).toBeInTheDocument();
     const attemptsTable = screen.getAllByRole("table")[1];
     expect(within(attemptsTable).getAllByRole("row")).toHaveLength(2);
     expect(

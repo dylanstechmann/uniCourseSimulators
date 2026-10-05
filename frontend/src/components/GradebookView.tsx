@@ -26,17 +26,34 @@ export function GradebookView({
         mastery certification, or transferable credit.
       </p>
       <p className="muted">{gradebook.limitations}</p>
-      <h3>Evidence by learning objective</h3>
+      <h3>Practice evidence by learning objective</h3>
+      <p>
+        Provisional indicator rule: at least{" "}
+        {gradebook.objective_evidence_policy.minimum_distinct_items} distinct
+        items, at least{" "}
+        {Math.round(
+          gradebook.objective_evidence_policy.minimum_item_coverage * 100,
+        )}
+        % of tagged items attempted, and at least{" "}
+        {Math.round(
+          gradebook.objective_evidence_policy.minimum_performance * 100,
+        )}
+        % best points. This is a study signal, not a mastery certification.
+      </p>
       <div className="table-scroll">
         <table>
           <caption>
-            Result checks only; reasoning and transfer have not been assessed.
+            Best result per distinct formative question; retries do not count as
+            new items.
           </caption>
           <thead>
             <tr>
               <th scope="col">Objective</th>
               <th scope="col">Attempts</th>
               <th scope="col">Correct results</th>
+              <th scope="col">Distinct items</th>
+              <th scope="col">Best points on attempted items</th>
+              <th scope="col">Practice indicator</th>
             </tr>
           </thead>
           <tbody>
@@ -49,6 +66,15 @@ export function GradebookView({
                   </th>
                   <td>{evidence.attempts}</td>
                   <td>{evidence.correct_results}</td>
+                  <td>
+                    {evidence.attempted_items} / {evidence.item_count}
+                  </td>
+                  <td>
+                    {evidence.performance === null
+                      ? "—"
+                      : `${evidence.best_score} / ${evidence.best_possible_score} (${Math.round(evidence.performance * 100)}%)`}
+                  </td>
+                  <td>{evidence.status.replaceAll("_", " ")}</td>
                 </tr>
               ),
             )}
@@ -57,6 +83,12 @@ export function GradebookView({
       </div>
       {Object.keys(gradebook.objective_evidence).length === 0 && (
         <p>No practice evidence recorded yet.</p>
+      )}
+      {Object.keys(gradebook.objective_evidence).length > 0 && (
+        <p className="muted">
+          Correct-result counts reflect attempt history; repeated attempts do
+          not increase distinct-item coverage.
+        </p>
       )}
       <h3>Attempt and feedback history</h3>
       {attempts.length === 0 ? (

@@ -107,6 +107,13 @@ test("guest enrollment, feedback, notes, progress, account upgrade and deletion 
   await expect(
     page.getByRole("heading", { name: "Attempt and feedback history" }),
   ).toBeVisible();
+  await expect(
+    page.getByRole("table").first().getByText("insufficient evidence").first(),
+  ).toBeVisible();
+  const gradebookAccessibility = await new AxeBuilder({ page })
+    .withTags(["wcag2a", "wcag2aa", "wcag21a", "wcag21aa"])
+    .analyze();
+  expect(gradebookAccessibility.violations).toEqual([]);
   await expect(page.getByRole("table").last().getByRole("row")).toHaveCount(3);
   await expect(
     page

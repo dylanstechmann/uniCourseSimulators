@@ -188,7 +188,17 @@ def test_complete_guest_workflow_and_persistence(enrolled, app):
         grades = resumed.get("/api/v1/gradebook/test-course").json()
         assert grades["score"] == 2 and grades["max_score"] == 6
         assert grades["assessment_role"] == "formative" and grades["attempt_count"] == 2
-        assert grades["objective_evidence"]["objective"] == {"attempts": 2, "correct_results": 1}
+        evidence = grades["objective_evidence"]["objective"]
+        assert evidence == {
+            "attempts": 2,
+            "correct_results": 1,
+            "attempted_items": 1,
+            "item_count": 3,
+            "best_score": 2,
+            "best_possible_score": 2,
+            "performance": 1,
+            "status": "insufficient_evidence",
+        }
         exported = resumed.get("/api/v1/learner/export")
         assert exported.json()["notes"][0]["body"] == text
         assert "PRIVATE_TEST_SENTINEL" not in exported.text
@@ -219,6 +229,43 @@ def test_multiple_select_api_persists_partial_credit_and_private_question_digest
         rejected = submit(enrolled, question="multi", response=response)
         assert rejected.status_code == 422
     assert len(enrolled.get("/api/v1/attempts").json()) == 1
+
+
+def test_objective_indicator_requires_distinct_items_and_uses_best_attempt(enrolled):
+    assert submit(enrolled, question="choice", response=1).status_code == 201
+    assert submit(enrolled, question="choice", response=0).status_code == 201
+    assert submit(enrolled, question="numeric", response="8.0e1 μmol/min").status_code == 201
+    assert submit(enrolled, question="multi", response=[0, 1, 2]).status_code == 201
+
+    gradebook = enrolled.get("/api/v1/gradebook/test-course").json()
+    evidence = gradebook["objective_evidence"]["objective"]
+    assert gradebook["objective_evidence_policy"] == {
+        "version": "practice-evidence-v1",
+        "minimum_distinct_items": 3,
+        "minimum_item_coverage": 0.8,
+        "minimum_performance": 0.8,
+    }
+    assert evidence == {
+        "attempts": 4,
+        "correct_results": 3,
+        "attempted_items": 3,
+        "item_count": 3,
+        "best_score": 6,
+        "best_possible_score": 6,
+        "performance": 1,
+        "status": "provisional_practice_mastery",
+    }
+
+
+def test_objective_indicator_marks_low_performance_for_practice(enrolled):
+    assert submit(enrolled, question="choice", response=1).status_code == 201
+    assert submit(enrolled, question="numeric", response="70 μmol/min").status_code == 201
+    assert submit(enrolled, question="multi", response=[3]).status_code == 201
+    evidence = enrolled.get("/api/v1/gradebook/test-course").json()["objective_evidence"]["objective"]
+    assert evidence["attempted_items"] == evidence["item_count"] == 3
+    assert evidence["best_score"] == 0
+    assert evidence["performance"] == 0
+    assert evidence["status"] == "needs_practice"
 
 
 def test_course_version_upgrade_is_explicit_and_preserves_prior_attempt(enrolled, app, content_root):

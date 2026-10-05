@@ -65,7 +65,7 @@ Open http://localhost:8080. Startup generates a database credential in a private
 - FastAPI/Pydantic with PostgreSQL SQLAlchemy/Alembic, server guest sessions, account registration/login/logout and guest-to-account preservation.
 - Enrollment, notes, bookmarks and learner-marked reading progress stored on the server.
 - Immutable choice/numerical **formative practice** attempts with diagnosis, hints, next steps and lesson links. Correct results do not establish sound reasoning or mastery.
-- Practice gradebook, attempt/feedback history and raw objective evidence. Best practice checks are not weighted semester grades.
+- Practice gradebook, attempt/feedback history and an objective-level study indicator based on distinct items, published thresholds and best formative scores. It does not certify mastery or calculate weighted semester grades.
 - Learner JSON export and confirmed account deletion, keyboard focus/skip link, larger text/high-contrast controls and safe Markdown rendering.
 - Docker development/production examples, reverse proxy, CI and automated content/security-boundary tests.
 

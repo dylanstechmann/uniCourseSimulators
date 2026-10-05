@@ -164,3 +164,35 @@ class GradeResult(BaseModel):
     feedback: Feedback
     grading_policy_version: str = "practice-v1"
     assessment_role: Literal["formative"] = "formative"
+
+
+class ObjectiveEvidence(BaseModel):
+    attempts: int = Field(ge=0)
+    correct_results: int = Field(ge=0)
+    attempted_items: int = Field(ge=0)
+    item_count: int = Field(ge=0)
+    best_score: float = Field(ge=0)
+    best_possible_score: float = Field(ge=0)
+    performance: float | None = Field(default=None, ge=0, le=1)
+    status: Literal[
+        "no_evidence", "insufficient_evidence", "needs_practice", "provisional_practice_mastery"
+    ]
+
+
+class ObjectiveEvidencePolicy(BaseModel):
+    version: Literal["practice-evidence-v1"] = "practice-evidence-v1"
+    minimum_distinct_items: int = Field(default=3, ge=1)
+    minimum_item_coverage: float = Field(default=0.8, ge=0, le=1)
+    minimum_performance: float = Field(default=0.8, ge=0, le=1)
+
+
+class GradebookResponse(BaseModel):
+    course_id: str
+    assessment_role: Literal["formative"] = "formative"
+    aggregation: str
+    score: float = Field(ge=0)
+    max_score: float = Field(ge=0)
+    attempt_count: int = Field(ge=0)
+    objective_evidence_policy: ObjectiveEvidencePolicy
+    objective_evidence: dict[str, ObjectiveEvidence]
+    limitations: str
