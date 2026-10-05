@@ -5,7 +5,16 @@ import { resolve, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), "..");
-const sourcePath = resolve(root, "src/data/courses.js");
+const outputIndex = process.argv.indexOf("--output");
+if (outputIndex >= 0 && !process.argv[outputIndex + 1]) throw new Error("--output requires a fresh directory path");
+const outputRoot = resolve(root, outputIndex >= 0 ? process.argv[outputIndex + 1] : "content/courses");
+try {
+  await access(outputRoot);
+  throw new Error("Refusing to overwrite migrated packages. Use --output with a fresh directory for a preservation rehearsal.");
+} catch (error) {
+  if (error.code !== "ENOENT") throw error;
+}
+const sourcePath = resolve(root, "legacy/src/data/courses.js");
 const sourceText = await readFile(sourcePath, "utf8");
 const sourceHash = createHash("sha256").update(sourceText).digest("hex");
 const { courses } = await import(`data:text/javascript;base64,${Buffer.from(sourceText).toString("base64")}`);
@@ -50,7 +59,7 @@ const json = async (path, value) => { await mkdir(dirname(path), { recursive: tr
 const legacyReadings = [];
 
 for (const original of courses) {
-  const courseRoot = resolve(root, "content/courses", original.id);
+  const courseRoot = resolve(outputRoot, original.id);
   try {
     await access(resolve(courseRoot, "course.json"));
     const previous = JSON.parse(await readFile(resolve(courseRoot, "course.json"), "utf8"));
@@ -159,5 +168,5 @@ for (const original of courses) {
   await json(resolve(courseRoot, "source-map.json"), { schema_version: "1.0", course_id: original.id, license, modules: sourceModules });
   await writeFile(resolve(courseRoot, "syllabus.md"), `# ${courseTitle}\n\n**Maturity: partial. Version: 0.1.0.**\n\n${original.summary}\n\n## Prerequisites\n\n${original.prerequisites}. Structured required, recommended, and concurrent relationships appear in the manifest and remain subject to author review. This package establishes no university prerequisite equivalency.\n\n## Authored outcomes\n\n${original.outcomes.map((o) => `- ${o}`).join("\n")}\n\n## Existing units\n\n${original.modules.map((m, i) => `${i + 1}. ${m.title}`).join("\n")}\n\n## Assessment and study policy\n\nEach unit includes one public formative check and two retrieval cards. A course case includes a self-assessment checklist. These are practice activities, with unlimited retries and no institutional grade, university credit, or transferable credit. Workload has not been measured.\n\n## Schedule and current limitations\n\nNo full-semester calendar or 14-week structure has been authored. No substantive homework sets, laboratories, midterm, final, or graded cumulative project are included. The four short readings preserve useful prototype explanations. They require substantial expansion and qualified human review before this course can meet the complete-course quality standard.\n\n## Sources and licensing\n\nRead source-map.json for module provenance and content/SOURCES_AND_LICENSES.md for the software/content license boundary. Listed source courses are public curriculum comparators; no affiliation or equivalency is implied.\n`, "utf8");
 }
-await json(resolve(root, "content/courses/legacy-inventory.json"), { schema_version: "1.0", migration_version: "1.0", source_path: "src/data/courses.js", source_sha256: sourceHash, course_ids: courses.map((course) => course.id), readings: legacyReadings });
+await json(resolve(outputRoot, "legacy-inventory.json"), { schema_version: "1.0", migration_version: "1.0", source_path: "src/data/courses.js", source_sha256: sourceHash, course_ids: courses.map((course) => course.id), readings: legacyReadings });
 console.log(`Preserved ${courses.length} partial course packages, ${courses.reduce((n, c) => n + c.modules.length, 0)} lessons and questions, ${courses.reduce((n, c) => n + c.modules.reduce((a, m) => a + m.cards.length, 0), 0)} cards, and ${courses.length} self-assessed cases.`);

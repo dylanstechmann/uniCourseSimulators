@@ -8,11 +8,13 @@ Completed and tested: observed baseline, audit, rename, retained state migration
 
 ## 2 — Full-stack reader and durable state
 
-React/TypeScript, FastAPI/Pydantic, PostgreSQL SQLAlchemy/Alembic, one-command Docker, guest/accounts, enrollment, lessons, practice submission/feedback, notes/bookmarks, export/delete, immutable attempts and persistence. Preserve legacy study/calculators; never silently trust editable browser scores. Test ownership, CSRF, malformed data, DTO solutions, migrations and E2E.
+Implemented and tested: React/TypeScript, FastAPI/Pydantic, PostgreSQL SQLAlchemy/Alembic, one-command Docker, guest/accounts and guest-to-account conversion, enrollment, lessons, deterministic choice/numeric practice submission and feedback, notes/bookmarks, export/delete, immutable attempts and practice gradebook. Ownership, CSRF, malformed data, public DTO exclusions, migrations, unit tests, browser flows and basic automated accessibility checks are covered. See the validation report for exact commands and operational evidence. Preserved study tools/calculators are in `legacy/`; editable browser scores are never imported as server grades.
+
+Milestone 2 does not implement weighted university grades, objective mastery, exams or a full-semester calendar. Those require authored assessments and grading policy as well as software. Current gradebook values are formative evidence only.
 
 ## 3 — Full grading and instructor feedback
 
-Beyond choice/numeric foundations: multiple select; units/dimensions/significant figures; bounded SymPy; structured rubrics; graph/table/data; uploads; seeded variants; category weights; objective mastery evidence; appeals/audited overrides; layered misconception feedback; credential-safe optional providers; actually isolated code worker. Adversarial/mutation tests for every plugin. Code stays disabled until isolation is demonstrated.
+Next highest priority: beyond choice/numeric foundations, implement multiple select; unit conversion/dimensions/significant figures; bounded SymPy; structured, graph/table/data, upload and design rubrics; partial credit; seeded variants; category weights; objective mastery policies; appeals/audited overrides; layered misconception feedback; credential-safe optional providers; and an actually isolated code worker. Pin question/rubric/package digests and variant seeds so regrading can reproduce an attempt. Add adversarial/mutation tests for every plugin. Code stays disabled until isolation is demonstrated; never mount a Docker socket in the API or worker.
 
 ## 4 — Broad catalog and graph
 
@@ -24,7 +26,9 @@ Original 14-week syllabus; substantial lessons (two weekly where appropriate), e
 
 ## 6 — Full gates and deployment
 
-Live links; recalculation/unit/tolerance/mutation tests; accessibility; frontend/backend/Playwright; private-solution/secret scanning; review evidence; GitHub Actions; production Compose/reverse proxy/HTTPS; backup/restore rehearsal. Start full Compose and exercise enrollment, reading, grading/feedback/persistence. Record exact results and failures.
+Already delivered early: schema/structural depth/provenance/review-status gates, duplicate checks, CI configuration, local Compose, production Compose/Caddy example, deployment/backup instructions, frontend/backend/Playwright suites, basic axe checks and bundle/secret scans. These foundations do not constitute all full-course quality gates.
+
+Remaining: independent recalculation for every numeric item; dimensional/tolerance and grader mutation coverage; a real completion-evidence pipeline combining test artifacts and actual human review; broader accessibility/manual assistive-technology and exam/appeal flows; resolution of the two JHU HTTP 403 live-link probes; and production operation hardening. A successful local restore rehearsal does not establish an off-host encrypted backup/disaster-recovery process. Public HTTPS deployment, separate least-privilege application/migration database roles, distributed throttling, recovery/retention policies and resource limits need operator review and validation. No complete or externally reviewed badge is allowed without its evidence.
 
 ## Preserved migration backlog
 

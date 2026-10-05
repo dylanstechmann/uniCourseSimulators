@@ -49,25 +49,69 @@ See [the audit](docs/CURRENT_STATE_AUDIT.md), [quality standard](docs/CONTENT_QU
 | [Probability, Biostatistics & Experimental Design](content/courses/statistics/course.json) | Quantitative methods | partial |
 | [Thermodynamics & Transport in Bioengineering](content/courses/transport/course.json) | Bioengineering | partial |
 
-## Run the preserved reader
+## Run locally
 
-Until the full-stack milestone is integrated, serve this repository over HTTP:
+Install Docker with Compose, then from the repository root:
 
 ```sh
-python -m http.server 4173
+docker compose up --build
 ```
 
-Open http://localhost:4173. Browser notes and checks are local guest data. Previous valid storage is copied to a CourseLab key; the previous data and backup remain. Browser checks are unverified, and a correct result does not establish reasoning or mastery.
+Open http://localhost:8080. Startup generates a database credential in a private Docker volume, starts PostgreSQL, applies Alembic migrations and serves the React reader through a same-origin API proxy. No API key, database password, cloud account or `.env` is required for development. `.env.example` documents optional settings. Ports bind to localhost; HTTP cookies are a development setting. Production needs HTTPS and operator-supplied secrets.
 
-## Content and application boundaries
+## Tested learning system
 
-- `content/courses/`: original Markdown, manifests, public authoring question specifications, cards, and rubrics. No third-party instructional assets imported.
-- `content/schemas/`: documented JSON Schema contracts.
-- `src/`: preserved prototype reader with public practice answers; unsuitable for secure exams.
-- `tools/validate_content.py`: schema, reference, provenance, duplicate, depth and maturity validation.
-- `docs/`: audit, architecture, authoring, grading, curriculum, deployment, and validation reports.
+- React/TypeScript reader with public catalog, explicit maturity/limitations, syllabus, lesson objectives and prerequisite lists.
+- FastAPI/Pydantic with PostgreSQL SQLAlchemy/Alembic, server guest sessions, account registration/login/logout and guest-to-account preservation.
+- Enrollment, notes, bookmarks and learner-marked reading progress stored on the server.
+- Immutable choice/numerical **formative practice** attempts with diagnosis, hints, next steps and lesson links. Correct results do not establish sound reasoning or mastery.
+- Practice gradebook, attempt/feedback history and raw objective evidence. Best practice checks are not weighted semester grades.
+- Learner JSON export and confirmed account deletion, keyboard focus/skip link, larger text/high-contrast controls and safe Markdown rendering.
+- Docker development/production examples, reverse proxy, CI and automated content/security-boundary tests.
 
-Target architecture: React/TypeScript, FastAPI, PostgreSQL, SQLAlchemy/Alembic, server grading, Docker Compose and CI. Documentation distinguishes implementation from plans. Migration retains teaching content and useful study behavior.
+Only choice and absolute-tolerance numerical graders are enabled. Supplied units are checked as authored symbols; conversions, dimensions, significant figures, seeded variants, other response types, exams, appeals and overrides remain milestone 3. Unsupported specifications fail explicitly. Code execution and LLM providers are disabled. The broad eight-pathway catalog and deep 14-week biology course remain milestones 4–5; see [the roadmap](docs/ROADMAP.md).
+
+## Preserved local study tools
+
+The six calculators, cards, case self-assessment and previous browser notebook remain in `legacy/` while their React equivalents are developed. To use them separately:
+
+```sh
+python -m http.server 4173 --directory legacy
+```
+
+Open http://localhost:4173. Valid previous storage is copied to a CourseLab key with a retained backup. Browser scores stay unverified; they are not silently imported as server grades. The default web image does not serve the legacy reader or authoring answers. The separate local reader intentionally exposes its public practice solutions and is unsuitable for secure exams.
+
+## Repository boundaries and checks
+
+| Directory | Purpose |
+| --- | --- |
+| `frontend/` | React/TypeScript application, Vitest and Playwright |
+| `backend/` | FastAPI, SQLAlchemy, Alembic and Pytest |
+| `content/` | Original Markdown, schemas, manifests, public authoring specifications and provenance |
+| `legacy/` | Preserved static teaching/study reader |
+| `tools/` | Content validation and credential/bundle checks |
+| `docs/` | Audit, design, quality, deployment and validation evidence |
+
+No third-party instructional assets have been imported. Public repository authoring solutions remain discoverable; a production operator must store restricted exam keys privately. Learner DTOs and default frontend bundles exclude assessment answer specifications and unreleased solution feedback. Educational worked examples remain public readings.
+
+```sh
+pip install -r requirements-dev.txt -r backend/requirements.txt
+python tools/validate_content.py
+python -m pytest tests -q
+npm run test:legacy
+cd backend
+python -m pytest -q
+ruff check .
+cd ../frontend
+npm ci
+npm run lint
+npm test
+npm run build
+npx playwright install --with-deps chromium
+npm run test:e2e
+```
+
+Start Compose before E2E. Run `python tools/check_security.py --bundle frontend/dist` from the root after building. `python tools/validate_content.py --check-links` performs network probes; two JHU pages currently deny the automated client with HTTP 403, so live-link validation is **not fully passed**. Offline schema/content validation passes with explicit depth/coverage warnings. Detailed commands, test counts and boundaries are in [VALIDATION_REPORT.md](docs/VALIDATION_REPORT.md). Production guidance: [DEPLOYMENT.md](docs/DEPLOYMENT.md).
 
 ## Contributing and licensing
 

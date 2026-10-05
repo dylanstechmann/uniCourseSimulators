@@ -1,0 +1,73 @@
+# Example; complete an operator security/deployment review before public use.
+name: lattice-courselab-production
+x-api: &api
+  build:
+    context: .
+    dockerfile: backend/Dockerfile
+  environment:
+    DATABASE_PASSWORD_FILE: /run/secrets/db-password
+    DB_HOST: db
+    DB_NAME: courselab
+    DB_USER: courselab
+    CONTENT_ROOT: /content
+    COOKIE_SECURE: "true"
+    ALLOWED_ORIGINS: https://${COURSELAB_DOMAIN:?Set COURSELAB_DOMAIN}
+  secrets: [db-password]
+  networks: [database, application]
+  read_only: true
+  tmpfs: [/tmp:size=64m,noexec,nosuid]
+  security_opt: [no-new-privileges:true]
+  cap_drop: [ALL]
+services:
+  db:
+    image: postgres:17-alpine
+    environment:
+      POSTGRES_DB: courselab
+      POSTGRES_USER: courselab
+      POSTGRES_PASSWORD_FILE: /run/secrets/db-password
+    secrets: [db-password]
+    volumes: [database:/var/lib/postgresql/data]
+    networks: [database]
+    healthcheck:
+      test: [CMD-SHELL, "pg_isready -U courselab -d courselab"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+    restart: unless-stopped
+  migrate:
+    <<: *api
+    command: [alembic, upgrade, head]
+    depends_on:
+      db: {condition: service_healthy}
+  api:
+    <<: *api
+    depends_on:
+      migrate: {condition: service_completed_successfully}
+    restart: unless-stopped
+  web:
+    build: ./frontend
+    networks: [application]
+    depends_on: [api]
+    restart: unless-stopped
+  proxy:
+    image: caddy:2-alpine
+    environment:
+      COURSELAB_DOMAIN: ${COURSELAB_DOMAIN:?Set COURSELAB_DOMAIN}
+    ports: ["80:80", "443:443"]
+    volumes:
+      - ./deploy/Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy-data:/data
+      - caddy-config:/config
+    networks: [application]
+    depends_on: [web]
+    restart: unless-stopped
+networks:
+  database: {internal: true}
+  application: {}
+volumes:
+  database: {}
+  caddy-data: {}
+  caddy-config: {}
+secrets:
+  db-password:
+    file: ${DB_PASSWORD_FILE:?Set DB_PASSWORD_FILE to untracked secret}

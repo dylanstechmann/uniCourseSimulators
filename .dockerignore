@@ -1,0 +1,16 @@
+.git
+.env
+.env.*
+**/node_modules
+**/dist
+**/.venv
+**/__pycache__
+**/.pytest_cache
+**/.ruff_cache
+legacy
+docs
+secrets
+backups
+learner-exports
+test-results
+playwright-report

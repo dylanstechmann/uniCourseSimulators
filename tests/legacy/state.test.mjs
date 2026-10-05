@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {freshState, sanitizeState, loadGuestState, STORAGE_KEY, BACKUP_KEY} from '../../src/state.js';
+import {freshState, sanitizeState, loadGuestState, STORAGE_KEY, BACKUP_KEY} from '../../legacy/src/state.js';
 
 const storage = (initial = {}) => {
   const data = new Map(Object.entries(initial));

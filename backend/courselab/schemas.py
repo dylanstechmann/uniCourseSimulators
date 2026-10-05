@@ -1,0 +1,152 @@
+"""Public schemas intentionally contain no hidden grading specifications."""
+
+import math
+import re
+from typing import Literal
+
+from pydantic import BaseModel, ConfigDict, Field, field_validator
+
+
+class StrictModel(BaseModel):
+    model_config = ConfigDict(extra="forbid")
+
+
+class Credentials(StrictModel):
+    email: str = Field(min_length=3, max_length=254)
+    password: str = Field(min_length=12, max_length=256)
+
+    @field_validator("email")
+    @classmethod
+    def valid_email(cls, value):
+        value = value.strip().lower()
+        if not re.fullmatch(r"[^\s@]+@[^\s@]+\.[^\s@]+", value):
+            raise ValueError("Enter a valid email address")
+        return value
+
+
+class EnrollmentRequest(StrictModel):
+    course_id: str = Field(min_length=1, max_length=100)
+
+
+class ProgressRequest(StrictModel):
+    completed: bool
+
+
+class NoteRequest(StrictModel):
+    body: str = Field(max_length=20000)
+
+
+class BookmarkRequest(StrictModel):
+    saved: bool
+
+
+class AttemptRequest(StrictModel):
+    response: str | float = Field(union_mode="left_to_right")
+    unit: str | None = Field(default=None, max_length=100)
+
+    @field_validator("response", mode="before")
+    @classmethod
+    def valid_type(cls, value):
+        if isinstance(value, bool) or not isinstance(value, (str, float, int)):
+            raise ValueError("Response must be text or a finite number")
+        return value
+
+    @field_validator("response")
+    @classmethod
+    def bounded_response(cls, value):
+        if isinstance(value, str):
+            if not value.strip() or len(value) > 10000:
+                raise ValueError("Response must contain 1–10000 characters")
+        elif not math.isfinite(value):
+            raise ValueError("Response must be finite")
+        return value
+
+
+class PublicQuestion(BaseModel):
+    id: str
+    type: str
+    prompt: str
+    options: list[str] = Field(default_factory=list)
+    unit: str | None = None
+    points: float = 1
+    learning_objective_ids: list[str] = Field(default_factory=list)
+    assessment_role: Literal["formative"] = "formative"
+
+
+class PublicLesson(BaseModel):
+    id: str
+    title: str
+    markdown: str
+    learning_objective_ids: list[str] = Field(default_factory=list)
+    questions: list[PublicQuestion] = Field(default_factory=list)
+    source_ids: list[str] = Field(default_factory=list)
+    worked_example: str | None = None
+
+
+class Objective(BaseModel):
+    id: str
+    description: str
+    bloom: str
+
+
+class Prerequisites(BaseModel):
+    course_ids: list[str] = Field(default_factory=list)
+    recommended_course_ids: list[str] = Field(default_factory=list)
+    concurrent_course_ids: list[str] = Field(default_factory=list)
+    knowledge: list[str] = Field(default_factory=list)
+    statement: str = ""
+
+
+class LessonSummary(BaseModel):
+    id: str
+    title: str
+    learning_objective_ids: list[str] = Field(default_factory=list)
+
+
+class ModuleSummary(BaseModel):
+    id: str
+    title: str
+    source_ids: list[str] = Field(default_factory=list)
+    lessons: list[LessonSummary]
+
+
+class CourseSummary(BaseModel):
+    id: str
+    title: str
+    description: str
+    domain: str
+    level: str
+    maturity: Literal["catalog-only", "outlined", "partial", "beta", "complete", "externally reviewed"]
+    version: str
+    lesson_count: int
+    limitations: list[str]
+
+
+class PublicCourse(CourseSummary):
+    prerequisites: Prerequisites
+    outcomes: list[Objective]
+    lesson_objectives: list[Objective]
+    modules: list[ModuleSummary]
+    syllabus_markdown: str
+    license: str
+    review_status: str
+    assessment_policy: str = "Formative practice only; no credit or university prerequisite equivalency."
+
+
+class Feedback(BaseModel):
+    diagnosis: str
+    hint: str | None = None
+    misconception: str | None = None
+    next_step: str
+    lesson_id: str | None = None
+    reasoning_assessed: bool = False
+    provisional: bool = False
+
+
+class GradeResult(BaseModel):
+    score: float
+    max_score: float
+    correct: bool
+    feedback: Feedback
+    grading_policy_version: str = "practice-v1"
+    assessment_role: Literal["formative"] = "formative"
