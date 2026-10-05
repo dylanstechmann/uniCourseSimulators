@@ -41,6 +41,7 @@ docker compose exec -T api python -c "import urllib.request; print(urllib.reques
 | Content validator | 25 courses, 100 lessons, 101 questions, 200 cards, 25 cases; 0 errors and 125 explicit warnings |
 | Source/bundle boundary scan | 357 files; 0 findings |
 | Docker Compose/PostgreSQL | Services healthy; migration `0002 (head)`; health status `ok`; local-only origins restored |
+| GitHub Actions | [CourseLab validation on commit `d68998c`](https://github.com/dylanstechmann/lattice-biomed-academy/actions/runs/37354616723) completed successfully; both jobs passed |
 
 The migration test confirms preexisting attempts survive with no invented specification digest. A version-upgrade API test verifies old attempts remain in history, are excluded from the new-version aggregate, and only current-version work contributes to that gradebook. For browser tests, the workspace container joined the app network and temporarily added `http://web` to its allowed-origin list; the application was then rebuilt/recreated with only the documented localhost origins. The live app was rebuilt and started with PostgreSQL; the browser flow submitted 2/3 partial credit and a separate 1/1 choice response, then verified both feedback records persisted. The public lesson endpoint and static-file boundary checks expose no answer/solution specifications. These checks do not amount to a penetration test or prove code-execution isolation; the arbitrary-code runner and LLM feedback providers remain disabled.
 
@@ -152,6 +153,6 @@ All exited 0. Both active/restored databases contained 2 synthetic users, 2 atte
 
 `node tools/migrate_prototype.mjs` correctly refused an overwrite (expected exit 1). Rehearsals require `--output` with a fresh directory. Git whitespace checks passed.
 
-GitHub Actions configuration runs content/security, backend/frontend lint/tests/builds, Compose and browser flows with diagnostics. A successful remote Actions run is not asserted without its actual result.
+GitHub Actions configuration runs content/security, backend/frontend lint/tests/builds, Compose and browser flows with diagnostics. The earlier milestone 2 snapshot had no remote run result; the successful follow-on run for the milestone 3 increment is linked above.
 
 Milestone 3 remains in progress: advanced deterministic graders and rubrics, unit/dimensional rules, seeded variants, weighted categories, appeals/overrides, richer feedback, provider interfaces and an isolated code worker still need implementation and verification. Code execution and LLM providers remain disabled. Eight pathways, a visual graph, full original 14-week biology, remaining recalculation/mutation/accessibility gates and actual qualified review remain milestones 4–6. [ROADMAP.md](ROADMAP.md) records exact work and production hardening gaps.
