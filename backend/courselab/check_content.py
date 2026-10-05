@@ -15,7 +15,7 @@ from .variants import resolve_variant, variant_ids
 
 def learner_keys(value):
     if isinstance(value, dict):
-        assert not {"solution_spec", "answer", "solution"}.intersection(value)
+        assert not {"solution_spec", "field_specs", "answer", "solution"}.intersection(value)
         for item in value.values():
             learner_keys(item)
     elif isinstance(value, list):
@@ -37,7 +37,17 @@ def check(root: Path) -> tuple[int, int]:
             for variant_id in variant_ids(question) or [None]:
                 resolved = resolve_variant(question, variant_id)
                 spec = resolved["solution_spec"]
-                expected = spec["expression"] if resolved["type"] == "symbolic" else spec["answer"]
+                if resolved["type"] == "symbolic":
+                    expected = spec["expression"]
+                elif resolved["type"] == "data_interpretation":
+                    expected = {}
+                    for field_spec in spec["field_specs"]:
+                        value = str(field_spec["answer"])
+                        if field_spec["type"] == "numeric" and field_spec.get("unit_required"):
+                            value += f" {field_spec['unit']}"
+                        expected[field_spec["id"]] = value
+                else:
+                    expected = spec["answer"]
                 result = grade(resolved, AttemptRequest(response=expected, unit=spec.get("unit")))
                 assert result.correct, (
                     f"Practice specification not gradeable: {summary.id}/{question['id']}/{variant_id}"

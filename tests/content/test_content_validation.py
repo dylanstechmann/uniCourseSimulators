@@ -84,9 +84,9 @@ def test_preserved_inventory_is_honest_partial(repository):
     assert result.ok, result.errors
     assert result.inventory == {
         "courses": 25,
-        "lessons": 100,
-        "questions": 102,
-        "cards": 200,
+        "lessons": 101,
+        "questions": 103,
+        "cards": 202,
         "cases": 25,
     }
     assert sum(warning["code"] == "legacy-depth" for warning in result.warnings) == 100

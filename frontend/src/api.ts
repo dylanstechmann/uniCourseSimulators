@@ -99,7 +99,7 @@ export const api = {
   attempt: (
     id: string,
     question: string,
-    response: string | number | number[],
+    response: string | number | number[] | Record<string, string>,
     unit?: string,
     variantToken?: string | null,
   ) =>

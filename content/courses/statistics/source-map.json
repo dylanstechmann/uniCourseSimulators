@@ -54,6 +54,20 @@
       "original_content": true,
       "license": "MIT OR CC-BY-4.0",
       "modifications": []
+    },
+    {
+      "module_id": "statistics-module-5",
+      "lesson_id": "statistics-5",
+      "reading": "modules/05-descriptive-evidence-and-causal-limits.md",
+      "source_ids": [
+        "statistics"
+      ],
+      "relationship": "curriculum-comparator",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": [
+        "Original explanation; MIT OCW 18.05 is linked only as a curriculum comparator. No source text or assessment was adapted."
+      ]
     }
   ]
 }

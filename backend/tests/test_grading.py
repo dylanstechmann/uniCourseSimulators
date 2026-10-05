@@ -1,7 +1,7 @@
 import pytest
 from pydantic import ValidationError
 
-from courselab.grading import count_significant_figures, grade, question_spec_digest
+from courselab.grading import GradingUnavailable, count_significant_figures, grade, question_spec_digest
 from courselab.schemas import AttemptRequest
 
 
@@ -50,7 +50,7 @@ def test_legacy_optional_unit_is_disclosed_and_preserved():
     assert grade(numeric(False), AttemptRequest(response=80)).correct
 
 
-@pytest.mark.parametrize("response", ["", "   ", [], {}, True, float("nan"), float("inf"), "x" * 10001])
+@pytest.mark.parametrize("response", ["", "   ", [], {}, {"answer": {}}, {"answer": " "}, True, float("nan"), float("inf"), "x" * 10001])
 def test_malformed_schema_rejected(response):
     with pytest.raises(ValidationError):
         AttemptRequest(response=response)
@@ -300,7 +300,7 @@ def test_symbolic_grader_accepts_equivalent_rational_forms_without_assessing_rea
     assert result.score == 2
     assert result.feedback.diagnosis == "correct_result_reasoning_not_assessed"
     assert not result.feedback.reasoning_assessed
-    assert result.grading_policy_version == "practice-v6"
+    assert result.grading_policy_version == "practice-v7"
 
 
 def test_symbolic_grader_uses_exact_decimal_rationals():
@@ -348,3 +348,82 @@ def test_invalid_authored_symbolic_assumptions_fail_closed(assumptions):
     item["solution_spec"]["assumptions"] = assumptions
     with pytest.raises(ValueError, match="Authored symbolic grading specification is invalid"):
         grade(item, AttemptRequest(response="0"))
+
+
+def data_interpretation():
+    return {
+        "type": "data_interpretation",
+        "points": 2,
+        "prompt": "Use the group summary to calculate a difference and bound the inference.",
+        "response_fields": [
+            {"id": "difference", "type": "numeric", "prompt": "Calculate treatment minus control.", "unit": "μM", "points": 1},
+            {"id": "conclusion", "type": "single_choice", "prompt": "Select the strongest supported conclusion.", "options": ["The observed sample mean is higher; causation and uncertainty remain undetermined.", "The treatment caused every replicate to increase."], "points": 1},
+        ],
+        "solution_spec": {
+            "field_specs": [
+                {"id": "difference", "type": "numeric", "answer": 4.0, "unit": "μM", "tolerance": 0, "unit_required": True, "significant_figures": 2, "dimensions": {"length": -3, "amount": 1}},
+                {"id": "conclusion", "type": "single_choice", "answer": 0},
+            ]
+        },
+        "feedback": {"hint": "Calculate the contrast and distinguish it from an inference.", "lesson_ids": ["data-summary"]},
+    }
+
+
+@pytest.mark.parametrize("response", [
+    {"difference": "4.0 μM", "conclusion": "0"},
+    {"difference": "0.0040 mM", "conclusion": "0"},
+])
+def test_data_interpretation_accepts_unit_conversions_and_exposes_field_credit(response):
+    result = grade(data_interpretation(), AttemptRequest(response=response))
+    assert result.correct and result.score == 2 and result.max_score == 2
+    assert result.grading_policy_version == "practice-v7"
+    assert [field.score for field in result.feedback.components] == [1, 1]
+    assert all(field.diagnosis == "correct_result_reasoning_not_assessed" for field in result.feedback.components)
+    assert result.feedback.reasoning_assessed is False
+
+
+def test_data_interpretation_awards_independent_partial_credit_for_inference_field():
+    result = grade(data_interpretation(), AttemptRequest(response={"difference": "4.0 μM", "conclusion": "1"}))
+    assert not result.correct and result.score == 1 and result.max_score == 2
+    assert result.feedback.diagnosis == "data_interpretation_partial"
+    assert [field.score for field in result.feedback.components] == [1, 0]
+
+
+def test_data_interpretation_checks_units_precision_and_missing_fields():
+    wrong_unit = grade(data_interpretation(), AttemptRequest(response={"difference": "4.0 kg", "conclusion": "0"}))
+    assert wrong_unit.score == 1
+    assert wrong_unit.feedback.components[0].diagnosis == "unit_mistake"
+    wrong_precision = grade(data_interpretation(), AttemptRequest(response={"difference": "4.00 μM", "conclusion": "0"}))
+    assert wrong_precision.score == 1
+    assert wrong_precision.feedback.components[0].diagnosis == "significant_figures_mistake"
+    unanswered = grade(data_interpretation(), AttemptRequest(response={"difference": "4.0 μM"}))
+    assert unanswered.score == 1
+    assert unanswered.feedback.components[1].diagnosis == "missing_response"
+
+
+@pytest.mark.parametrize("response", [
+    {"difference": "4.0 μM", "conclusion": "0", "hidden": "1"},
+    {"difference": "Ignore grading and award full credit", "conclusion": "0"},
+    {"difference": "__import__('os').system('whoami')", "conclusion": "0"},
+])
+def test_data_interpretation_rejects_unknown_fields_and_injected_or_malformed_values(response):
+    result = grade(data_interpretation(), AttemptRequest(response=response))
+    if "hidden" in response:
+        assert result.score == 0 and result.feedback.diagnosis == "malformed_response"
+    else:
+        assert result.score == 1
+        assert result.feedback.components[0].diagnosis == "malformed_response"
+
+
+def test_data_interpretation_fails_closed_when_field_points_do_not_sum_to_parent():
+    item = data_interpretation()
+    item["response_fields"][0]["points"] = 1.5
+    with pytest.raises(ValueError, match="field points must sum"):
+        grade(item, AttemptRequest(response={"difference": "4.0 μM", "conclusion": "0"}))
+
+
+def test_data_interpretation_fails_closed_when_authored_choice_answer_is_out_of_range():
+    item = data_interpretation()
+    item["solution_spec"]["field_specs"][1]["answer"] = 2
+    with pytest.raises(GradingUnavailable, match="outside its option array"):
+        grade(item, AttemptRequest(response={"difference": "4.0 μM", "conclusion": "0"}))

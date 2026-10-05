@@ -123,7 +123,11 @@ export function GradebookView({
                   <td>
                     {Array.isArray(attempt.response.response)
                       ? attempt.response.response.join(", ")
-                      : attempt.response.response}{" "}
+                      : typeof attempt.response.response === "object"
+                        ? Object.entries(attempt.response.response)
+                            .map(([field, value]) => `${field}: ${value}`)
+                            .join("; ")
+                        : attempt.response.response}{" "}
                     {attempt.response.unit || ""}
                   </td>
                   <td>

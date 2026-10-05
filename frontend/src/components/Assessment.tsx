@@ -15,7 +15,7 @@ export function Assessment({
   disabledMessage?: string;
   previousAttempt?: Attempt;
   onSubmit: (
-    response: string | number | number[],
+    response: string | number | number[] | Record<string, string>,
     unit?: string,
     variantToken?: string | null,
   ) => Promise<Attempt>;
@@ -24,6 +24,9 @@ export function Assessment({
   const [selected, setSelected] = useState<number[]>([]);
   const [value, setValue] = useState("");
   const [unit, setUnit] = useState("");
+  const [fieldResponses, setFieldResponses] = useState<Record<string, string>>(
+    {},
+  );
   const [attempt, setAttempt] = useState<Attempt | undefined>();
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState("");
@@ -53,14 +56,28 @@ export function Assessment({
       setError("Enter the unit for this quantity.");
       return;
     }
+    const structuredResponse = Object.fromEntries(
+      Object.entries(fieldResponses)
+        .map(([fieldId, answer]) => [fieldId, answer.trim()])
+        .filter(([, answer]) => answer !== ""),
+    );
+    if (
+      question.type === "data_interpretation" &&
+      Object.keys(structuredResponse).length === 0
+    ) {
+      setError("Enter or select at least one field before submitting.");
+      return;
+    }
     setBusy(true);
     try {
-      const response =
-        question.type === "single_choice"
-          ? choice!
-          : question.type === "multiple_select"
-            ? [...selected].sort((a, b) => a - b)
-            : value.trim();
+      const response: string | number | number[] | Record<string, string> =
+        question.type === "data_interpretation"
+          ? structuredResponse
+          : question.type === "single_choice"
+            ? choice!
+            : question.type === "multiple_select"
+              ? [...selected].sort((a, b) => a - b)
+              : value.trim();
       const normalizedUnit = unit.trim() || undefined;
       const pendingAttempt = question.variant_token
         ? onSubmit(response, normalizedUnit, question.variant_token)
@@ -130,6 +147,68 @@ export function Assessment({
                 ))}
               </div>
             </>
+          ) : question.type === "data_interpretation" ? (
+            <div className="stack">
+              <p className="muted">
+                Each field is scored independently. Unanswered fields receive no
+                credit; open-ended reasoning is not graded.
+              </p>
+              {(question.response_fields ?? []).map((field) => (
+                <div key={field.id} className="input-grid">
+                  {field.type === "numeric" ? (
+                    <div>
+                      <label htmlFor={`${question.id}-${field.id}`}>
+                        {field.prompt} · {field.points} points
+                      </label>
+                      <input
+                        id={`${question.id}-${field.id}`}
+                        name={field.id}
+                        type="text"
+                        inputMode="text"
+                        value={fieldResponses[field.id] ?? ""}
+                        onChange={(event) =>
+                          setFieldResponses((previous) => ({
+                            ...previous,
+                            [field.id]: event.target.value,
+                          }))
+                        }
+                        maxLength={1000}
+                        autoComplete="off"
+                        aria-describedby={`${question.id}-${field.id}-help`}
+                      />
+                      <small id={`${question.id}-${field.id}-help`}>
+                        Include a unit compatible with{" "}
+                        {field.unit || "the requested quantity"}.
+                      </small>
+                    </div>
+                  ) : (
+                    <div>
+                      <label htmlFor={`${question.id}-${field.id}`}>
+                        {field.prompt} · {field.points} points
+                      </label>
+                      <select
+                        id={`${question.id}-${field.id}`}
+                        name={field.id}
+                        value={fieldResponses[field.id] ?? ""}
+                        onChange={(event) =>
+                          setFieldResponses((previous) => ({
+                            ...previous,
+                            [field.id]: event.target.value,
+                          }))
+                        }
+                      >
+                        <option value="">Choose an answer</option>
+                        {field.options.map((option, index) => (
+                          <option key={index} value={index}>
+                            {option}
+                          </option>
+                        ))}
+                      </select>
+                    </div>
+                  )}
+                </div>
+              ))}
+            </div>
           ) : question.type === "numeric" ? (
             <div className="input-grid">
               <div>

@@ -23,7 +23,7 @@ def submit(client, question="choice", response=0, **extra):
 
 def forbidden_keys(value):
     if isinstance(value, dict):
-        assert not {"answer", "expression", "solution_spec", "solution", "password_hash", "token_hash"}.intersection(value)
+        assert not {"answer", "expression", "solution_spec", "field_specs", "solution", "password_hash", "token_hash"}.intersection(value)
         for item in value.values():
             forbidden_keys(item)
     elif isinstance(value, list):
@@ -39,6 +39,8 @@ def test_public_content_never_exposes_grading_spec(client):
         assert "PRIVATE_TEST_SENTINEL" not in response.text
     lesson = client.get("/api/v1/courses/test-course/lessons/lesson-one").json()
     assert lesson["questions"][0]["options"] == ["Vehicle", "Active drug"]
+    assert lesson["retrieval_cards"][0]["front"] == "What does a vehicle control match?"
+    assert lesson["retrieval_cards"][0]["back"] == "It controls for effects of the delivery vehicle."
     assert lesson["questions"][1]["unit"] == "μmol/min"
     assert lesson["questions"][2]["selection"] == "multiple"
     assert lesson["questions"][2]["partial_credit_policy"] == "correct-minus-incorrect-clamped-v1"
@@ -186,7 +188,7 @@ def test_complete_guest_workflow_and_persistence(enrolled, app):
         assert resumed.get("/api/v1/bookmarks").json() == ["test-course"]
         assert len(resumed.get("/api/v1/attempts?course_id=test-course").json()) == 2
         grades = resumed.get("/api/v1/gradebook/test-course").json()
-        assert grades["score"] == 2 and grades["max_score"] == 7
+        assert grades["score"] == 2 and grades["max_score"] == 9
         assert grades["assessment_role"] == "formative" and grades["attempt_count"] == 2
         evidence = grades["objective_evidence"]["objective"]
         assert evidence == {
@@ -217,7 +219,7 @@ def test_multiple_select_api_persists_partial_credit_and_private_question_digest
     assert result["score"] == 2 and result["max_score"] == 3
     assert result["response"]["response"] == [1, 0]
     assert result["result"]["feedback"]["diagnosis"] == "partially_correct_selection"
-    assert result["result"]["grading_policy_version"] == "practice-v6"
+    assert result["result"]["grading_policy_version"] == "practice-v7"
     history = enrolled.get("/api/v1/attempts").json()
     assert len(history) == 1
     assert "question_spec_sha256" not in result
@@ -247,7 +249,7 @@ def test_symbolic_practice_hides_key_and_persists_equivalent_response(enrolled, 
     attempt = response.json()
     assert attempt["result"]["correct"] is True
     assert attempt["score"] == 1
-    assert attempt["result"]["grading_policy_version"] == "practice-v6"
+    assert attempt["result"]["grading_policy_version"] == "practice-v7"
     assert attempt["response"]["response"].startswith("((2*x)")
     forbidden_keys(attempt)
     with Session(app.state.engine) as db:
@@ -258,6 +260,45 @@ def test_symbolic_practice_hides_key_and_persists_equivalent_response(enrolled, 
     assert injection.status_code == 201
     assert injection.json()["score"] == 0
     assert injection.json()["result"]["feedback"]["diagnosis"] == "malformed_response"
+
+
+def test_data_interpretation_api_hides_specs_and_persists_component_scores(enrolled):
+    lesson = enrolled.get("/api/v1/courses/test-course/lessons/lesson-one").json()
+    question = next(item for item in lesson["questions"] if item["id"] == "data")
+    assert question["type"] == "data_interpretation"
+    assert [field["id"] for field in question["response_fields"]] == ["difference", "interpretation"]
+    assert question["response_fields"][0]["unit"] == "μM"
+    forbidden_keys(question)
+
+    correct = submit(enrolled, question="data", response={"difference": "4.0 μM", "interpretation": "0"})
+    assert correct.status_code == 201
+    result = correct.json()
+    assert result["score"] == 2 and result["max_score"] == 2
+    assert result["result"]["correct"] is True
+    assert result["result"]["grading_policy_version"] == "practice-v7"
+    assert [field["score"] for field in result["result"]["feedback"]["components"]] == [1, 1]
+    assert result["response"]["response"] == {"difference": "4.0 μM", "interpretation": "0"}
+    forbidden_keys(result)
+
+    partial = submit(enrolled, question="data", response={"difference": "4.0 μM", "interpretation": "1"})
+    assert partial.status_code == 201
+    assert partial.json()["score"] == 1
+    assert partial.json()["result"]["feedback"]["diagnosis"] == "data_interpretation_partial"
+
+    wrong_unit = submit(enrolled, question="data", response={"difference": "4.0 kg", "interpretation": "0"})
+    assert wrong_unit.status_code == 201
+    assert wrong_unit.json()["score"] == 1
+    assert wrong_unit.json()["result"]["feedback"]["components"][0]["diagnosis"] == "unit_mistake"
+
+    missing = submit(enrolled, question="data", response={"difference": "4.0 μM"})
+    assert missing.status_code == 201
+    assert missing.json()["score"] == 1
+    assert missing.json()["result"]["feedback"]["components"][1]["diagnosis"] == "missing_response"
+
+    malformed = submit(enrolled, question="data", response={"difference": "4.0 μM", "interpretation": "0", "hidden": "1"})
+    assert malformed.status_code == 201
+    assert malformed.json()["score"] == 0
+    assert malformed.json()["result"]["feedback"]["diagnosis"] == "malformed_response"
 
 
 def test_objective_indicator_requires_distinct_items_and_uses_best_attempt(enrolled):
@@ -314,7 +355,7 @@ def test_course_version_upgrade_is_explicit_and_preserves_prior_attempt(enrolled
     assert len(history) == 1 and history[0]["content_version"] == "0.1.0"
     current_gradebook = enrolled.get("/api/v1/gradebook/test-course").json()
     assert current_gradebook["score"] == 0
-    assert current_gradebook["max_score"] == 7
+    assert current_gradebook["max_score"] == 9
     assert current_gradebook["attempt_count"] == 0
     latest = submit(enrolled, response=0)
     assert latest.status_code == 201
@@ -401,7 +442,7 @@ def test_numeric_api_records_tolerance_and_significant_figure_grader_v5(enrolled
     boundary = submit(enrolled, question="numeric", response="82 μmol/min")
     assert boundary.status_code == 201
     assert boundary.json()["score"] == 1
-    assert boundary.json()["result"]["grading_policy_version"] == "practice-v6"
+    assert boundary.json()["result"]["grading_policy_version"] == "practice-v7"
     precision_mismatch = submit(enrolled, question="numeric", response="82.0 μmol/min")
     assert precision_mismatch.status_code == 201
     assert precision_mismatch.json()["score"] == 0

@@ -15,7 +15,7 @@ An independent open-source learning platform under development. It does **not co
 | complete | 0 | All full-course gates satisfied |
 | externally reviewed | 0 | Qualified named reviewer examined a specified version |
 
-**No current package meets the complete-course standard.** The 100 short lesson seeds, 101 formative questions, 200 cards and 25 self-assessed cases are useful practice material. They are not semester courses. Foundations of Cell and Molecular Biology remains partial; its requested 14-week vertical slice is planned. No instructor review is fabricated.
+**No current package meets the complete-course standard.** The 101 short lesson seeds, 103 formative questions, 202 cards and 25 self-assessed cases are useful practice material. They are not semester courses. Foundations of Cell and Molecular Biology remains partial; its requested 14-week vertical slice is planned. No instructor review is fabricated.
 
 See [the audit](docs/CURRENT_STATE_AUDIT.md), [quality standard](docs/CONTENT_QUALITY_STANDARD.md), and [remaining work](docs/ROADMAP.md).
 
@@ -63,13 +63,13 @@ Open http://localhost:8080. Startup generates a database credential in a private
 
 - React/TypeScript reader with public catalog, explicit maturity/limitations, syllabus, lesson objectives and prerequisite lists.
 - FastAPI/Pydantic with PostgreSQL SQLAlchemy/Alembic, server guest sessions, account registration/login/logout and guest-to-account preservation.
-- Enrollment, notes, bookmarks and learner-marked reading progress stored on the server.
-- Immutable choice/numerical/symbolic **formative practice** attempts with diagnosis, hints, next steps and lesson links. Correct results do not establish sound reasoning or mastery.
+- Enrollment, notes, bookmarks and learner-marked reading progress stored on the server; lesson pages include self-assessment retrieval cards with revealable answers.
+- Immutable choice, numeric, symbolic, and one composite data-interpretation **formative practice** attempt with diagnosis, hints, next steps, lesson links, and independent field scores. The data item gives separate points for a unit-aware calculation and an evidence-bounded choice; it does not grade free-form reasoning. Correct results do not establish sound reasoning or mastery.
 - Practice gradebook, attempt/feedback history and an objective-level study indicator based on distinct items, published thresholds and best formative scores. It does not certify mastery or calculate weighted semester grades.
 - Learner JSON export and confirmed account deletion, keyboard focus/skip link, larger text/high-contrast controls and safe Markdown rendering.
 - Docker development/production examples, reverse proxy, CI and automated content/security-boundary tests.
 
-Single-choice, multiple-select, numeric, and bounded symbolic-expression formative graders are enabled. Numeric grading supports a constrained set of exact unit conversions, dimensional checks, absolute and relative tolerances, and optional significant-figure requirements. Symbolic grading compares algebraically equivalent rational expressions through a restricted arithmetic grammar; it does not execute Python or accept arbitrary SymPy syntax. Multiple-select policies are explicit and show learners their partial-credit formula; new attempts pin a SHA-256 question-specification digest. Seeded variants, advanced rubrics, exams, appeals and overrides remain unfinished milestone 3 work. Course-version changes prompt learners to update enrollment while preserving historical attempts. Unsupported specifications fail explicitly. Code execution and LLM providers are disabled. The broad eight-pathway catalog and deep 14-week biology course remain milestones 4–5; see [the roadmap](docs/ROADMAP.md).
+Single-choice, multiple-select, numeric, bounded symbolic-expression, and one narrow data-interpretation formative grader are enabled. Numeric grading supports a constrained set of exact unit conversions, dimensional checks, absolute and relative tolerances, and optional significant-figure requirements. Symbolic grading compares algebraically equivalent rational expressions through a restricted arithmetic grammar; it does not execute Python or accept arbitrary SymPy syntax. Multiple-select policies are explicit and show learners their partial-credit formula; the composite data item displays per-field credit and never grades prose or keyword overlap. New attempts pin a SHA-256 question-specification digest. Numeric parameter generation, general graph/table/data rubrics, exams, appeals and overrides remain unfinished milestone 3 work. Course-version changes prompt learners to update enrollment while preserving historical attempts. Unsupported specifications fail explicitly. Code execution and LLM providers are disabled. The broad eight-pathway catalog and deep 14-week biology course remain milestones 4–5; see [the roadmap](docs/ROADMAP.md).
 
 ## Preserved local study tools
 

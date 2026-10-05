@@ -24,6 +24,35 @@ const symbolicQuestion: Question = {
   learning_objective_ids: ["quotient-rule"],
   assessment_role: "formative",
 };
+const dataInterpretationQuestion: Question = {
+  id: "group-summary",
+  type: "data_interpretation",
+  prompt: "Compare the reported means and interpret the evidence.",
+  options: [],
+  points: 2,
+  learning_objective_ids: ["causal-limits"],
+  assessment_role: "formative",
+  response_fields: [
+    {
+      id: "difference",
+      type: "numeric",
+      prompt: "Calculate treatment minus control and include its unit.",
+      options: [],
+      unit: "μM",
+      points: 1,
+    },
+    {
+      id: "conclusion",
+      type: "single_choice",
+      prompt: "Select the strongest supported conclusion.",
+      options: [
+        "Descriptive difference only",
+        "Treatment caused every increase",
+      ],
+      points: 1,
+    },
+  ],
+};
 const multipleQuestion: Question = {
   id: "membrane-assembly",
   type: "multiple_select",
@@ -133,6 +162,74 @@ describe("formative assessment submission", () => {
       screen.getByRole("button", { name: "Submit practice response" }),
     );
     expect(submit).toHaveBeenCalledWith("(x^2 + 2*x - 1)/(x + 1)^2", undefined);
+  });
+  it("submits structured data fields and shows independent field-level scoring", async () => {
+    const submit = vi.fn().mockResolvedValue({
+      ...attempt,
+      question_id: dataInterpretationQuestion.id,
+      response: { response: { difference: "4.0 μM", conclusion: "1" } },
+      score: 1,
+      max_score: 2,
+      result: {
+        ...attempt.result,
+        correct: false,
+        score: 1,
+        max_score: 2,
+        feedback: {
+          ...attempt.result.feedback,
+          diagnosis: "data_interpretation_partial",
+          components: [
+            {
+              field_id: "difference",
+              label: "Calculate treatment minus control and include its unit.",
+              score: 1,
+              max_score: 1,
+              diagnosis: "correct_result_reasoning_not_assessed",
+            },
+            {
+              field_id: "conclusion",
+              label: "Select the strongest supported conclusion.",
+              score: 0,
+              max_score: 1,
+              diagnosis: "incorrect_result",
+            },
+          ],
+        },
+      },
+    });
+    const { container } = render(
+      <Assessment
+        question={dataInterpretationQuestion}
+        enabled
+        onSubmit={submit}
+      />,
+    );
+    fireEvent.submit(container.querySelector("form")!);
+    expect(screen.getByRole("alert")).toHaveTextContent("at least one field");
+    await userEvent.type(
+      screen.getByLabelText(/Calculate treatment minus control/),
+      "4.0 μM",
+    );
+    await userEvent.selectOptions(
+      screen.getByLabelText(/Select the strongest supported conclusion/),
+      "1",
+    );
+    await userEvent.click(
+      screen.getByRole("button", { name: "Submit practice response" }),
+    );
+    expect(submit).toHaveBeenCalledWith(
+      { difference: "4.0 μM", conclusion: "1" },
+      undefined,
+    );
+    expect(
+      await screen.findByText(/Some fields are correct/),
+    ).toBeInTheDocument();
+    expect(screen.getByLabelText("Field-level scoring")).toHaveTextContent(
+      "1 / 1 point",
+    );
+    expect(screen.getByLabelText("Field-level scoring")).toHaveTextContent(
+      "0 / 1 point",
+    );
   });
   it("shows the significant-figure requirement before numeric practice", () => {
     render(

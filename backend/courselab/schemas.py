@@ -41,13 +41,26 @@ class BookmarkRequest(StrictModel):
 
 
 class AttemptRequest(StrictModel):
-    response: str | float | list[int] = Field(union_mode="left_to_right")
+    response: str | float | list[int] | dict[str, str] = Field(union_mode="left_to_right")
     unit: str | None = Field(default=None, max_length=100)
     variant_token: str | None = Field(default=None, max_length=2048)
 
     @field_validator("response", mode="before")
     @classmethod
     def valid_type(cls, value):
+        if isinstance(value, dict):
+            if not 1 <= len(value) <= 20:
+                raise ValueError("Structured responses must contain 1–20 fields")
+            if any(
+                not isinstance(key, str)
+                or not re.fullmatch(r"[a-z][a-z0-9_-]{0,63}", key)
+                or not isinstance(item, str)
+                or not item.strip()
+                or len(item) > 1000
+                for key, item in value.items()
+            ):
+                raise ValueError("Structured response fields must have valid IDs and nonempty text values")
+            return value
         if isinstance(value, list):
             if not 1 <= len(value) <= 100 or any(type(item) is not int for item in value):
                 raise ValueError("Selections must contain 1–100 integer option indexes")
@@ -61,6 +74,8 @@ class AttemptRequest(StrictModel):
     @field_validator("response")
     @classmethod
     def bounded_response(cls, value):
+        if isinstance(value, dict):
+            return value
         if isinstance(value, list):
             return value
         if isinstance(value, str):
@@ -71,9 +86,18 @@ class AttemptRequest(StrictModel):
         return value
 
 
+class PublicResponseField(BaseModel):
+    id: str
+    type: Literal["single_choice", "numeric"]
+    prompt: str
+    options: list[str] = Field(default_factory=list)
+    unit: str | None = None
+    points: float = Field(gt=0)
+
+
 class PublicQuestion(BaseModel):
     id: str
-    type: Literal["single_choice", "multiple_select", "numeric", "symbolic"]
+    type: Literal["single_choice", "multiple_select", "numeric", "symbolic", "data_interpretation"]
     prompt: str
     options: list[str] = Field(default_factory=list)
     unit: str | None = None
@@ -81,10 +105,18 @@ class PublicQuestion(BaseModel):
     points: float = 1
     selection: Literal["single", "multiple"] = "single"
     partial_credit_policy: str | None = None
+    response_fields: list[PublicResponseField] = Field(default_factory=list)
     variant_id: str | None = None
     variant_token: str | None = None
     learning_objective_ids: list[str] = Field(default_factory=list)
     assessment_role: Literal["formative"] = "formative"
+
+
+class PublicRetrievalCard(BaseModel):
+    id: str
+    front: str
+    back: str
+    learning_objective_ids: list[str] = Field(default_factory=list)
 
 
 class PublicLesson(BaseModel):
@@ -93,6 +125,7 @@ class PublicLesson(BaseModel):
     markdown: str
     learning_objective_ids: list[str] = Field(default_factory=list)
     questions: list[PublicQuestion] = Field(default_factory=list)
+    retrieval_cards: list[PublicRetrievalCard] = Field(default_factory=list)
     source_ids: list[str] = Field(default_factory=list)
     worked_example: str | None = None
 
@@ -147,6 +180,14 @@ class PublicCourse(CourseSummary):
     assessment_policy: str = "Formative practice only; no credit or university prerequisite equivalency."
 
 
+class FeedbackComponent(BaseModel):
+    field_id: str
+    label: str
+    score: float = Field(ge=0)
+    max_score: float = Field(gt=0)
+    diagnosis: str
+
+
 class Feedback(BaseModel):
     diagnosis: str
     hint: str | None = None
@@ -155,6 +196,7 @@ class Feedback(BaseModel):
     lesson_id: str | None = None
     reasoning_assessed: bool = False
     provisional: bool = False
+    components: list[FeedbackComponent] = Field(default_factory=list)
 
 
 class GradeResult(BaseModel):

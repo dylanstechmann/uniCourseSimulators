@@ -65,6 +65,26 @@
       "back": "Grouping experimental units by a nuisance factor so treatment comparisons are made within more homogeneous groups.",
       "objective_ids": [],
       "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "statistics-4-0",
+      "lesson_id": "statistics-5",
+      "front": "The vehicle mean is 10.0 μM and the compound mean is 14.0 μM. What is the compound-minus-vehicle sample contrast?",
+      "back": "The observed contrast is +4.0 μM. It summarizes the two samples; it does not imply that every compound replicate was higher.",
+      "objective_ids": [
+        "statistics-5-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "statistics-4-1",
+      "lesson_id": "statistics-5",
+      "front": "Why are two group means alone insufficient to establish statistical uncertainty or causation?",
+      "back": "Uncertainty needs replicate-level variability and dependence information. Causal interpretation also needs assignment details; the means alone provide neither.",
+      "objective_ids": [
+        "statistics-5-objective-1"
+      ],
+      "license": "CC-BY-4.0"
     }
   ]
 }

@@ -151,7 +151,7 @@ export function CourseWorkspace({
   }
   async function submit(
     question: string,
-    response: string | number | number[],
+    response: string | number | number[] | Record<string, string>,
     unit?: string,
     variantToken?: string | null,
   ) {

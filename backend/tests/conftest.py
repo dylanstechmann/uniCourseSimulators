@@ -26,13 +26,24 @@ def content_root(tmp_path):
         "lesson_objectives": [
             {"id": "objective", "description": "Compare controls", "bloom": "analyze"},
             {"id": "symbolic-objective", "description": "Differentiate a rational function", "bloom": "apply"},
+            {"id": "data-objective", "description": "Interpret a descriptive data summary", "bloom": "analyze"},
         ],
         "modules": [{"id": "module", "title": "Controls", "source_ids": ["fixture"], "lessons": [{
             "id": "lesson-one", "title": "Experiment", "reading": "modules/one.md", "objectives": ["objective"],
-            "question_ids": ["choice", "numeric", "multi", "symbolic"], "worked_example": "Match the delivery procedure between groups."
+            "question_ids": ["choice", "numeric", "multi", "symbolic", "data"],
+            "card_ids": ["control-card"], "worked_example": "Match the delivery procedure between groups."
         }]}], "syllabus": "syllabus.md", "license": "CC-BY-4.0", "review": {"status": "unreviewed"},
+        "retrieval_cards": "question-banks/retrieval-cards.json",
     }
     (directory / "course.json").write_text(json.dumps(manifest))
+    (directory / "question-banks" / "retrieval-cards.json").write_text(json.dumps({
+        "course_id": "test-course", "cards": [{
+            "id": "control-card", "lesson_id": "lesson-one",
+            "front": "What does a vehicle control match?",
+            "back": "It controls for effects of the delivery vehicle.",
+            "objective_ids": ["objective"], "license": "CC-BY-4.0",
+        }],
+    }))
     questions = {"course_id": "test-course", "questions": [
         {"id": "choice", "type": "single_choice", "prompt": "Select a negative control.",
          "visibility": "public-practice-authoring",
@@ -55,6 +66,16 @@ def content_root(tmp_path):
                             "assumptions": {"x": {"real": True}}},
          "feedback": {"hint": "Use the quotient rule.", "solution": "Simplify the quotient-rule numerator.",
                       "lesson_ids": ["lesson-one"]}},
+        {"id": "data", "type": "data_interpretation", "prompt": "Compare the two group summaries and select the strongest conclusion supported by the data.",
+         "visibility": "public-practice-authoring", "points": 2, "objective_ids": ["data-objective"],
+         "response_fields": [
+             {"id": "difference", "type": "numeric", "prompt": "Calculate the treatment minus vehicle sample mean.", "unit": "μM", "points": 1},
+             {"id": "interpretation", "type": "single_choice", "prompt": "Choose the strongest supported conclusion.",
+              "options": ["The sample means differ by 4.0 μM; the summary alone does not establish causation or uncertainty.", "The treatment caused every replicate to increase."], "points": 1}],
+         "solution_spec": {"field_specs": [
+             {"id": "difference", "type": "numeric", "answer": 4.0, "unit": "μM", "tolerance": 0, "unit_required": True, "significant_figures": 2, "dimensions": {"length": -3, "amount": 1}},
+             {"id": "interpretation", "type": "single_choice", "answer": 0}]},
+         "feedback": {"hint": "Calculate the contrast and distinguish it from an inference.", "solution": "A descriptive contrast does not establish causation.", "lesson_ids": ["lesson-one"]}},
     ]}
     (directory / "question-banks" / "practice.json").write_text(json.dumps(questions))
     return root

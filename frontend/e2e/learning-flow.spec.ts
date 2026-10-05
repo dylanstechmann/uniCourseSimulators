@@ -228,3 +228,62 @@ test("symbolic calculus practice accepts an equivalent expression and saves feed
     practice.getByText(/Reasoning has not been assessed/),
   ).toBeVisible();
 });
+
+test("data interpretation awards transparent field credit and reloads saved feedback", async ({
+  page,
+}) => {
+  await page.goto("/#/account");
+  await page.getByRole("button", { name: "Start guest session" }).click();
+  await page.getByRole("link", { name: "Course catalog", exact: true }).click();
+  await page.getByRole("link", { name: /Probability, Biostatistics/ }).click();
+  await page.getByRole("button", { name: "Enroll in partial course" }).click();
+
+  await page
+    .getByRole("navigation", { name: "Lessons" })
+    .getByRole("link", {
+      name: /Descriptive differences and inferential limits/,
+    })
+    .click();
+  const retrieval = page.getByRole("region", { name: "Retrieval practice" });
+  await expect(retrieval).toContainText(
+    "compound-minus-vehicle sample contrast",
+  );
+  const firstCard = retrieval.locator("details").first();
+  await expect(firstCard).not.toHaveAttribute("open", "");
+  await firstCard.getByText("Reveal answer").click();
+  await expect(firstCard).toHaveAttribute("open", "");
+  await expect(firstCard).toContainText(
+    "does not imply that every compound replicate was higher",
+  );
+  const practice = page.locator(
+    '[data-question-id="statistics-5:group-summary"]',
+  );
+  await practice.getByLabel(/Calculate compound minus vehicle/).fill("4.0 μM");
+  await practice
+    .getByLabel(/Which conclusion is best supported/)
+    .selectOption("1");
+  await practice
+    .getByRole("button", { name: "Submit practice response" })
+    .click();
+  await expect(
+    practice.getByRole("region", { name: "Submission feedback" }),
+  ).toContainText("1 / 2 practice points");
+  await expect(practice.getByLabel("Field-level scoring")).toContainText(
+    "1 / 1 point",
+  );
+  await expect(practice.getByLabel("Field-level scoring")).toContainText(
+    "0 / 1 point",
+  );
+  await expect(practice.getByText(/Some fields are correct/)).toBeVisible();
+  const accessibility = await new AxeBuilder({ page })
+    .withTags(["wcag2a", "wcag2aa", "wcag21a", "wcag21aa"])
+    .analyze();
+  expect(accessibility.violations).toEqual([]);
+
+  await page.reload();
+  await expect(
+    page
+      .locator('[data-question-id="statistics-5:group-summary"]')
+      .getByRole("region", { name: "Submission feedback" }),
+  ).toContainText("1 / 2 practice points");
+});

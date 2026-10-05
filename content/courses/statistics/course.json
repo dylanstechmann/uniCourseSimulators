@@ -7,7 +7,7 @@
   "domain": "Quantitative methods",
   "level": "Year 2",
   "maturity": "partial",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "license": "MIT OR CC-BY-4.0",
   "content_origin": {
     "kind": "legacy-prototype",
@@ -97,6 +97,14 @@
       "description": "Assess model residuals and distinguish replication levels.",
       "bloom": "evaluate",
       "course_outcome_ids": []
+    },
+    {
+      "id": "statistics-5-objective-1",
+      "description": "Distinguish an observed descriptive mean difference from evidence of a causal or population-level effect.",
+      "bloom": "analyze",
+      "course_outcome_ids": [
+        "statistics-outcome-3"
+      ]
     }
   ],
   "duration": {
@@ -217,6 +225,31 @@
           ]
         }
       ]
+    },
+    {
+      "id": "statistics-module-5",
+      "title": "Descriptive evidence and limits of inference",
+      "source_ids": [
+        "statistics"
+      ],
+      "lessons": [
+        {
+          "id": "statistics-5",
+          "title": "Descriptive differences and inferential limits",
+          "reading": "modules/05-descriptive-evidence-and-causal-limits.md",
+          "objectives": [
+            "statistics-5-objective-1"
+          ],
+          "worked_example": "For means of 14.0 μM and 10.0 μM, calculate compound minus vehicle to obtain +4.0 μM. This describes the observed samples only; assignment and replicate-level variation are needed before making causal or uncertainty claims.",
+          "question_ids": [
+            "statistics-5:group-summary"
+          ],
+          "card_ids": [
+            "statistics-4-0",
+            "statistics-4-1"
+          ]
+        }
+      ]
     }
   ],
   "assessments": [
@@ -273,6 +306,19 @@
       "points": 1
     },
     {
+      "id": "statistics-5-practice",
+      "type": "practice",
+      "mode": "practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "statistics-5-objective-1"
+      ],
+      "question_ids": [
+        "statistics-5:group-summary"
+      ],
+      "points": 2
+    },
+    {
       "id": "statistics-case",
       "type": "case",
       "mode": "self-assessment",
@@ -314,15 +360,20 @@
       "version": "0.1.0",
       "date": "2026-10-05",
       "summary": "Preserved original compact prototype content in separate manifests and readings; labeled partial without semester or credit equivalency."
+    },
+    {
+      "version": "0.1.1",
+      "date": "2026-10-05",
+      "summary": "Added an original descriptive-data lesson and a deterministic two-field calculation-and-interpretation practice item. The package remains partial."
     }
   ],
   "limitations": [
-    "Four compact legacy units are preserved; this package is not equivalent to a full university semester.",
+    "Four compact legacy units are preserved alongside one supplemental original unit; this package is not equivalent to a full university semester.",
     "There is no authored 12–15 week schedule, substantive homework sequence, laboratory sequence, midterm, cumulative final, or graded integrative project.",
     "The single formative check per lesson does not demonstrate comprehensive outcome coverage or mastery; association with the first lesson objective is provisional.",
     "Bloom labels and structured prerequisite edges are initial authoring classifications awaiting subject-matter review.",
     "Question answers and solution feedback are intentionally public practice authoring specifications, not restricted exam keys.",
-    "Numerical specifications preserve the prototype's tolerance and optional unit entry; significant-figure and dimensional checks have not been authored.",
+    "Legacy numerical specifications preserve the prototype's tolerance and optional unit entry; they do not all enforce significant-figure or dimensional checks.",
     "Total workload and weekly duration are unknown; former nominal credit values and hardcoded reading times do not establish workload."
   ],
   "intentionally_omitted": [

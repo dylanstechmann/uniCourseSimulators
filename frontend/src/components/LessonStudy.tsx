@@ -25,7 +25,7 @@ export function LessonStudy({
   sources: Source[];
   onAttempt: (
     question: string,
-    response: string | number | number[],
+    response: string | number | number[] | Record<string, string>,
     unit?: string,
     variantToken?: string | null,
   ) => Promise<Attempt>;
@@ -77,6 +77,29 @@ export function LessonStudy({
           <section className="worked-example">
             <h3>Worked example</h3>
             <MarkdownReader>{lesson.worked_example}</MarkdownReader>
+          </section>
+        )}
+        {lesson.retrieval_cards.length > 0 && (
+          <section
+            className="retrieval-practice"
+            aria-label="Retrieval practice"
+          >
+            <h3>Retrieval practice · self-assessment</h3>
+            <p className="muted">
+              Try to recall the answer before revealing it. These cards are
+              practice and do not affect your grade.
+            </p>
+            <ol>
+              {lesson.retrieval_cards.map((card) => (
+                <li key={card.id}>
+                  <h4>{card.front}</h4>
+                  <details aria-label={`Answer for card ${card.id}`}>
+                    <summary>Reveal answer</summary>
+                    <MarkdownReader>{card.back}</MarkdownReader>
+                  </details>
+                </li>
+              ))}
+            </ol>
           </section>
         )}
         <section className="sources">

@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import math
 import re
 from collections import Counter
 from dataclasses import dataclass, field
@@ -554,6 +555,66 @@ def validate_course(
                     question["id"],
                     "Symbolic assumptions may only name declared variables.",
                 )
+        if question["type"] == "data_interpretation":
+            fields = question.get("response_fields", [])
+            field_specs = solution.get("field_specs", [])
+            field_ids = [field.get("id") for field in fields if isinstance(field, dict)]
+            spec_ids = [field.get("id") for field in field_specs if isinstance(field, dict)]
+            if (
+                len(field_ids) != len(fields)
+                or len(spec_ids) != len(field_specs)
+                or len(field_ids) != len(set(field_ids))
+                or len(spec_ids) != len(set(spec_ids))
+                or set(field_ids) != set(spec_ids)
+            ):
+                report.error(
+                    "answer-spec",
+                    question["id"],
+                    "Data-interpretation response fields and answer specifications must have unique matching IDs.",
+                )
+            else:
+                specifications = {field["id"]: field for field in field_specs}
+                for field in fields:
+                    spec = specifications[field["id"]]
+                    if field.get("type") != spec.get("type"):
+                        report.error(
+                            "answer-spec",
+                            question["id"],
+                            f"Data-interpretation field {field['id']} has mismatched response and answer types.",
+                        )
+                    if field.get("type") == "single_choice":
+                        options = field.get("options", [])
+                        answer = spec.get("answer")
+                        if type(answer) is not int or answer < 0 or answer >= len(options):
+                            report.error(
+                                "answer-spec",
+                                question["id"],
+                                f"Data-interpretation choice field {field['id']} has an answer outside its option array.",
+                            )
+                    if field.get("type") == "numeric":
+                        check_text(field.get("prompt", ""), f"{question['id']}/{field['id']}", report, minimum_words=5)
+                field_points = sum(
+                    field.get("points", 0)
+                    for field in fields
+                    if isinstance(field.get("points"), (int, float))
+                    and not isinstance(field.get("points"), bool)
+                )
+                if not math.isclose(field_points, question.get("points", 0), rel_tol=0, abs_tol=1e-8):
+                    report.error(
+                        "answer-spec",
+                        question["id"],
+                        "Data-interpretation field points must sum to the parent question points.",
+                    )
+                if any(
+                    field.get("type") == "single_choice"
+                    and (not isinstance(field.get("options"), list) or len(field["options"]) < 2)
+                    for field in fields
+                ):
+                    report.error(
+                        "answer-spec",
+                        question["id"],
+                        "Each data-interpretation choice field requires at least two public options.",
+                    )
         if question["type"] in {"single_choice", "multiple_select"}:
             answers = (
                 [solution["answer"]]

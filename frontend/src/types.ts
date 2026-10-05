@@ -58,7 +58,12 @@ export interface Course extends CourseSummary {
 }
 export interface Question {
   id: string;
-  type: "single_choice" | "multiple_select" | "numeric" | "symbolic";
+  type:
+    | "single_choice"
+    | "multiple_select"
+    | "numeric"
+    | "symbolic"
+    | "data_interpretation";
   prompt: string;
   options: string[];
   unit?: string;
@@ -66,6 +71,14 @@ export interface Question {
   points: number;
   selection?: "single" | "multiple";
   partial_credit_policy?: string | null;
+  response_fields?: {
+    id: string;
+    type: "single_choice" | "numeric";
+    prompt: string;
+    options: string[];
+    unit?: string | null;
+    points: number;
+  }[];
   variant_id?: string | null;
   variant_token?: string | null;
   learning_objective_ids: string[];
@@ -79,6 +92,12 @@ export interface Lesson {
   source_ids: string[];
   worked_example: string;
   questions: Question[];
+  retrieval_cards: {
+    id: string;
+    front: string;
+    back: string;
+    learning_objective_ids: string[];
+  }[];
 }
 export interface Enrollment {
   course_id: string;
@@ -104,6 +123,13 @@ export interface Feedback {
   lesson_id: string;
   reasoning_assessed: boolean;
   provisional: boolean;
+  components?: {
+    field_id: string;
+    label: string;
+    score: number;
+    max_score: number;
+    diagnosis: string;
+  }[];
 }
 export interface Attempt {
   id: string;
@@ -111,7 +137,7 @@ export interface Attempt {
   question_id: string;
   content_version: string;
   response: {
-    response: string | number | number[];
+    response: string | number | number[] | Record<string, string>;
     unit?: string;
     variant_id?: string;
   };

@@ -19,6 +19,7 @@ from .schemas import (
     PublicCourse,
     PublicLesson,
     PublicQuestion,
+    PublicRetrievalCard,
 )
 
 
@@ -120,6 +121,29 @@ class ContentRepository:
                 return item
         raise ContentMissing("Question not found")
 
+    def retrieval_cards(self, course_id: str, lesson_id: str) -> list[PublicRetrievalCard]:
+        """Publish only the learner-facing fields for cards assigned to this lesson."""
+        manifest = self.manifest(course_id)
+        package = json.loads(self._read(course_id, manifest["retrieval_cards"]))
+        if package.get("course_id") != course_id:
+            raise ContentInvalid("Retrieval-card course mismatch")
+        _, lesson = self.lesson_record(course_id, lesson_id)
+        cards_by_id = {}
+        for card in package["cards"]:
+            if card["id"] in cards_by_id:
+                raise ContentInvalid("Retrieval-card IDs must be unique")
+            cards_by_id[card["id"]] = card
+        selected = []
+        for card_id in lesson.get("card_ids", []):
+            card = cards_by_id.get(card_id)
+            if card is None or card.get("lesson_id") != lesson_id:
+                raise ContentInvalid("Lesson retrieval-card reference is invalid")
+            selected.append(PublicRetrievalCard(
+                id=card["id"], front=card["front"], back=card["back"],
+                learning_objective_ids=card.get("objective_ids", []),
+            ))
+        return selected
+
     def public_question(
         self, question: dict, variant_id: str | None = None, variant_token: str | None = None
     ) -> PublicQuestion:
@@ -132,6 +156,14 @@ class ContentRepository:
             selection="multiple" if question["type"] == "multiple_select" else "single",
             partial_credit_policy=(question.get("solution_spec", {}).get("partial_credit")
                                    if question["type"] == "multiple_select" else None),
+            response_fields=[
+                {
+                    "id": field["id"], "type": field["type"], "prompt": field["prompt"],
+                    "options": field.get("options", []), "unit": field.get("unit"),
+                    "points": field["points"],
+                }
+                for field in question.get("response_fields", [])
+            ],
             variant_id=variant_id, variant_token=variant_token,
         )
 
@@ -147,6 +179,7 @@ class ContentRepository:
             id=lesson["id"], title=lesson["title"], markdown=self._read(course_id, lesson["reading"]),
             learning_objective_ids=lesson.get("objectives", []), worked_example=lesson.get("worked_example"),
             source_ids=module.get("source_ids", []),
+            retrieval_cards=self.retrieval_cards(course_id, lesson["id"]),
             questions=[public_question_factory(question) if public_question_factory else
                        self.public_question(question, "base" if question.get("randomization") else None)
                        for question in questions],
