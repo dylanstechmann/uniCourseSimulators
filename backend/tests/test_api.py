@@ -145,7 +145,7 @@ def test_multiple_select_api_persists_partial_credit_and_private_question_digest
     assert result["score"] == 2 and result["max_score"] == 3
     assert result["response"]["response"] == [1, 0]
     assert result["result"]["feedback"]["diagnosis"] == "partially_correct_selection"
-    assert result["result"]["grading_policy_version"] == "practice-v2"
+    assert result["result"]["grading_policy_version"] == "practice-v3"
     history = enrolled.get("/api/v1/attempts").json()
     assert len(history) == 1
     assert "question_spec_sha256" not in result

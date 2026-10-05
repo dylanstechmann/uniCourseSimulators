@@ -5,23 +5,20 @@ import json
 import math
 import re
 from decimal import Decimal, DecimalException
+from fractions import Fraction
 
 from .schemas import AttemptRequest, Feedback, GradeResult
+from .units import UnitParseError, dimensions_from_spec, parse_unit
 
 NUMBER = re.compile(
     r"^([+-]?(?:\d+\.?\d*|\.\d+)(?:[eE][+-]?\d+)?)\s*"
     r"((?:(?:[A-Za-zμµΩω°%]|1/[A-Za-z])[A-Za-z0-9μµΩω°%·/⁻¹²³^*(). _-]*)?)$"
 )
-GRADING_POLICY_VERSION = "practice-v2"
+GRADING_POLICY_VERSION = "practice-v3"
 
 
 class GradingUnavailable(ValueError):
     """An authored requirement is not implemented; do not award a silent grade."""
-
-
-def unit_text(value: str | None) -> str:
-    # SI prefixes and symbols are case-sensitive (mV != MV, ms != mS).
-    return (value or "").replace("μ", "u").replace("µ", "u").replace("·", "").replace(" ", "")
 
 
 def question_spec_digest(question: dict) -> str:
@@ -90,32 +87,71 @@ def grade(question: dict, request: AttemptRequest) -> GradeResult:
         except DecimalException:
             diagnosis = "malformed_response"
     elif question["type"] == "numeric":
-        if spec.get("significant_figures") is not None or spec.get("dimensions") is not None:
-            raise GradingUnavailable("Dimensional conversion and significant-figure grading are not enabled")
+        if spec.get("significant_figures") is not None:
+            raise GradingUnavailable("Significant-figure grading is not enabled")
         match = NUMBER.fullmatch(str(request.response).strip())
         if not match:
             diagnosis = "malformed_response"
         else:
             supplied_unit = request.unit if request.unit is not None else match[2]
-            expected_unit = unit_text(spec.get("unit"))
-            # Conflicting typed/unit-field responses are not silently normalized.
-            if request.unit is not None and match[2] and unit_text(request.unit) != unit_text(match[2]):
-                diagnosis = "unit_mistake"
-            elif (supplied_unit and unit_text(supplied_unit) != expected_unit) or (
-                spec.get("unit_required", False) and expected_unit and not supplied_unit
-            ):
-                diagnosis = "unit_mistake"
-            else:
+            authored_unit = spec.get("unit") or ""
+            try:
+                expected = parse_unit(authored_unit)
+            except UnitParseError as exc:
+                raise GradingUnavailable(f"Authored unit is unsupported: {authored_unit}") from exc
+            if spec.get("dimensions") is not None:
                 try:
-                    value = Decimal(match[1])
-                    answer = Decimal(str(spec["answer"]))
-                    tolerance = Decimal(str(spec.get("tolerance", 0)))
-                    if not answer.is_finite() or not tolerance.is_finite() or tolerance < 0:
-                        raise ValueError("Invalid authored numeric specification")
-                    correct = value.is_finite() and abs(value - answer) <= tolerance
-                    diagnosis = "correct_result" if correct else "numerical_mismatch"
-                except DecimalException:
-                    diagnosis = "malformed_response"
+                    authored_dimensions = dimensions_from_spec(spec["dimensions"])
+                except UnitParseError as exc:
+                    raise GradingUnavailable("Authored dimensions are invalid or unsupported") from exc
+                if authored_dimensions != expected.dimensions:
+                    raise GradingUnavailable("Authored dimensions do not match the authored unit")
+            try:
+                if request.unit is not None and match[2]:
+                    field_unit = parse_unit(request.unit)
+                    inline_unit = parse_unit(match[2])
+                    if field_unit != inline_unit:
+                        diagnosis = "unit_mistake"
+                        supplied = None
+                    else:
+                        supplied = field_unit
+                else:
+                    supplied = parse_unit(supplied_unit) if supplied_unit else expected
+                if supplied is None:
+                    pass
+                elif (spec.get("unit_required", False) and authored_unit and not supplied_unit):
+                    diagnosis = "unit_mistake"
+                elif supplied.dimensions != expected.dimensions or supplied.context != expected.context:
+                    diagnosis = "unit_mistake"
+                else:
+                    try:
+                        value = Decimal(match[1])
+                        answer = Decimal(str(spec["answer"]))
+                        tolerance = Decimal(str(spec.get("tolerance", 0)))
+                        if (
+                            not value.is_finite()
+                            or not answer.is_finite()
+                            or not tolerance.is_finite()
+                            or tolerance < 0
+                            or len(match[1]) > 128
+                            or abs(value.adjusted()) > 100
+                            or abs(answer.adjusted()) > 100
+                            or (tolerance != 0 and abs(tolerance.adjusted()) > 100)
+                        ):
+                            diagnosis = "malformed_response"
+                        else:
+                            # Convert the learner's number and the authored absolute
+                            # tolerance into the question's authored unit.
+                            value_in_expected_unit = Fraction(value) * supplied.scale / expected.scale
+                            correct = abs(value_in_expected_unit - Fraction(answer)) <= Fraction(tolerance)
+                            diagnosis = "correct_result" if correct else "numerical_mismatch"
+                    except DecimalException:
+                        diagnosis = "malformed_response"
+            except UnitParseError:
+                # Unknown or malformed learner units cannot receive credit.
+                diagnosis = "unit_mistake"
+            except DecimalException:
+                diagnosis = "malformed_response"
     else:
         raise GradingUnavailable("Unsupported question type: not enabled for server grading")
     if correct:
@@ -129,7 +165,8 @@ def grade(question: dict, request: AttemptRequest) -> GradeResult:
             diagnosis=diagnosis, hint=None if correct else authored.get("hint"),
             misconception=None, lesson_id=lesson_ids[0] if lesson_ids else None,
             next_step=("Explain why the result follows from the mechanism; this check did not assess reasoning."
-                       if correct else "Revisit the linked lesson and check your assumptions before another attempt."),
+                       if correct else "Check that the units are dimensionally compatible and convert the quantity into the requested unit."
+                       if diagnosis == "unit_mistake" else "Revisit the linked lesson and check your assumptions before another attempt."),
         ),
         grading_policy_version=GRADING_POLICY_VERSION,
     )
