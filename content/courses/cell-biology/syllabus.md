@@ -1,8 +1,8 @@
 # Foundations of Cell and Molecular Biology
 
-**Maturity: partial. Version: 0.13.0.**
+**Maturity: partial. Version: 0.14.0.**
 
-This original course package develops mechanistic reasoning from molecular structure to cell behavior. It is still not a completed 14-week university course: weeks 1–7 have two original lessons each, while weeks 4 and 7 retain short prototype readings in addition; week 8 has an ungraded cumulative practice set; weeks 9–12 have original lesson pairs and formative practice; weeks 13–14 remain outlines. No semester equivalency, university credit, or prerequisite equivalency is claimed.
+This original course package develops mechanistic reasoning from molecular structure to cell behavior. It is still not a completed 14-week university course: weeks 1–7 have two original lessons each, while weeks 4 and 7 retain short prototype readings in addition; week 8 has an ungraded cumulative practice set; weeks 9–13 have original lesson pairs and formative practice; week 14 remains an outline. No semester equivalency, university credit, or prerequisite equivalency is claimed.
 
 ## Prerequisites
 
@@ -21,7 +21,7 @@ These are intended outcomes. Current assessment coverage is incomplete and does 
 
 ## Proposed 14-week scope
 
-The full proposal and objective-to-assessment crosswalk are in [assessment-crosswalk.md](assessment-crosswalk.md). Weeks 1–7 each have two original lessons; week 4 also retains its short enzyme prototype, and week 7 retains the compact gene-expression prototype. Week 8 offers a 12-question ungraded cumulative review. Week 9 adds two original lessons and an eight-question formative set; week 10 adds two lessons on inheritance and variant evidence with seven formative questions; week 11 adds two lessons on receptor signaling and perturbation with seven formative questions; week 12 adds two lessons on cytoskeletal systems, matrix mechanics, and mechanobiology with seven formative questions. Week 8 is not a midterm; no summative exam package or secure exam key exists. Weeks 13–14 remain outlines. The manifest's 14-week value records proposed scope, not completed instructional time. The [misconception catalog](misconceptions.md) and [instructor-style feedback templates](feedback-templates.md) cover selected formative topics; they do not diagnose free-form reasoning.
+The full proposal and objective-to-assessment crosswalk are in [assessment-crosswalk.md](assessment-crosswalk.md). Weeks 1–7 each have two original lessons; week 4 also retains its short enzyme prototype, and week 7 retains the compact gene-expression prototype. Week 8 offers a 12-question ungraded cumulative review. Week 9 adds two original lessons and an eight-question formative set; weeks 10–13 each add two lessons and seven formative questions on inheritance, signaling, matrix mechanics, and cell-cycle/cell-state evidence. Week 8 is not a midterm; no summative exam package or secure exam key exists. Week 14 remains an outline. The manifest's 14-week value records proposed scope, not completed instructional time. The [misconception catalog](misconceptions.md) and [instructor-style feedback templates](feedback-templates.md) cover selected formative topics; they do not diagnose free-form reasoning.
 
 | Week | Proposed focus | Current content state |
 | --- | --- | --- |
@@ -37,12 +37,12 @@ The full proposal and objective-to-assessment crosswalk are in [assessment-cross
 | 10 | Variation, inheritance, and genotype-to-phenotype reasoning | Two original lessons, synthetic family and isogenic-cell data, seven-question formative practice, and retrieval cards; no homework or lab |
 | 11 | Receptors, signaling networks, feedback, and perturbation | Two original lessons, an explicitly synthetic phospho-ERK time course, seven formative questions, and retrieval cards; no homework or lab |
 | 12 | Cytoskeleton, adhesion, extracellular matrix, and mechanobiology | Two original lessons, an explicitly synthetic hydrogel-mechanics dataset, seven formative questions, and retrieval cards; no homework or lab |
-| 13 | Cell-cycle control, mitosis, senescence, and cell death | Outline only |
+| 13 | Cell-cycle control, mitosis, senescence, and cell death | Two original lessons, explicitly synthetic cell-cycle and cell-state datasets, seven formative questions, and retrieval cards; no homework or lab |
 | 14 | Development, cell fate, stem-cell concepts, and integrative project/final | Outline only |
 
 ## Assessment and study policy
 
-All currently delivered items are public formative practice. Learners may retry them, inspect feedback, and use retrieval cards; this package has no weighted course grade, deadlines, midterm, cumulative final, or graded project. Week 8 contains a 12-question cumulative formative review of weeks 1–7. Week 9 provides eight questions on RNA processing, translation, and protein turnover; week 10 provides seven on inheritance and variant evidence; week 11 provides seven on receptor signaling and perturbation; week 12 provides seven on cytoskeletal and matrix mechanics. These are self-paced practice, not exams, and give immediate per-question feedback. The proposal includes eight homework sets, three data or virtual-lab activities, a midterm, a cumulative final, and an integrative experimental-design project. None is yet authored as a complete summative assessment package, validated, or enabled. See the crosswalk for the complete planned assessment sequence and current evidence gaps.
+All currently delivered items are public formative practice. Learners may retry them, inspect feedback, and use retrieval cards; this package has no weighted course grade, deadlines, midterm, cumulative final, or graded project. Week 8 contains a 12-question cumulative formative review of weeks 1–7. Week 9 provides eight questions on RNA processing, translation, and protein turnover; weeks 10–13 each provide seven questions on their selected topics. These are self-paced practice, not exams, and give immediate per-question feedback. The proposal includes eight homework sets, three data or virtual-lab activities, a midterm, a cumulative final, and an integrative experimental-design project. None is yet authored as a complete summative assessment package, validated, or enabled. See the crosswalk for the complete planned assessment sequence and current evidence gaps.
 
 Workload and weekly study hours have not been measured. No calendar dates or grading weights are configured. Human review of an individual saved practice or graded attempt is a narrow platform feature and does not provide course-level instructor grading or academic review.
 
@@ -52,8 +52,8 @@ New instructional explanations and examples are original and released under CC B
 
 ## Known limitations
 
-- Seven teaching weeks now have developed two-lesson sequences, but this does not provide the planned homework, full laboratory/data work, summative exams, workload evidence, or instructor review; weeks 4 and 7 retain additional compact prototype readings.
-- Week 8 contains formative review only; it is not a midterm or exam. Weeks 9–12 lessons use original synthetic examples and formative checks; weeks 13–14 remain planning scope. The week-6 density-model illustration, UV lesion time course, week-7 chromatin/ChIP-qPCR/reporter tables, week-9 RNA/protein tables, week-10 pedigree/isogenic-cell tables, and week-11 phospho-ERK time course, and week-12 hydrogel stiffness table are explicitly synthetic teaching examples, not measurements copied from the cited sources.
+- Weeks 1–7 and 9–13 have developed two-lesson sequences, but this does not provide the planned homework, full laboratory/data work, summative exams, workload evidence, or instructor review; weeks 4 and 7 retain additional compact prototype readings.
+- Week 8 contains formative review only; it is not a midterm or exam. Weeks 9–13 lessons use original synthetic examples and formative checks; week 14 remains planning scope. The week-6 density-model illustration, UV lesion time course, week-7 chromatin/ChIP-qPCR/reporter tables, week-9 RNA/protein tables, week-10 pedigree/isogenic-cell tables, week-11 phospho-ERK time course, week-12 hydrogel stiffness table, and week-13 cell-cycle/cell-state comparisons are explicitly synthetic teaching examples, not measurements copied from the cited sources.
 - The week-7 evidence exercises introduce accessibility, occupancy, and reporter inference; they do not constitute a full genomics, chromatin, or gene-regulation course.
 - No authored 12–15 week homework/lab/exam sequence or cumulative project exists.
 - The course is unreviewed. Workload, objective coverage, scientific accuracy, accessibility, and assessments require independent review.

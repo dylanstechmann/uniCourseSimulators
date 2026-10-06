@@ -132,3 +132,15 @@ These templates guide feedback for the current public formative material. The so
 ### Cytoskeletal or adhesion image treated as a complete mechanism
 
 > The image measures **[structure/localization]** at **[time and condition]**. The proposed linkage from **[ECM/cell-cell ligand]** through **[integrin/cadherin and adaptor]** to **[filament or signal]** includes **[measured and inferred steps]**. Add **[target engagement, matched adhesion, force, or orthogonal control]** before extending the claim to **[unmeasured mechanism or tissue outcome]**.
+
+### DNA-content gate treated as a unique cell-cycle phase
+
+> The histogram supports **[DNA-content distribution]** in **[stated gate and collection time]**. A 4N-like signal does not distinguish G2 from mitosis or report spindle attachment. Pair it with **[EdU pulse, mitotic marker or imaging]**, report viability/doublet controls, and keep the phase assignment within what these assays resolve.
+
+### Low EdU treated as proof of senescence
+
+> The short pulse shows **[fraction labeled in the named denominator]** at **[time]**. Reduced labeling is compatible with **[slower cycling, reversible quiescence, persistent arrest, cell loss, or another tested alternative]**; it does not diagnose senescence alone. Remove the stimulus, apply **[defined mitogen challenge]**, track viable-cell recovery, and combine markers from **[independent categories]** before naming a persistent state.
+
+### Apoptosis-associated marker treated as a complete death diagnosis
+
+> **[Annexin-V, active caspase, or membrane-integrity]** reports **[measured event]** at **[collection time]**. It does not alone identify the initiating route or count all cells lost. Compare **[vehicle and validated positive control]**, retain detached cells, report **[explicit denominator and cell recovery]**, and use a time-resolved orthogonal readout.

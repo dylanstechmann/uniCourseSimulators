@@ -1733,7 +1733,9 @@
       ],
       "mapped_modules": [
         "cell-biology-module-23",
-        "cell-biology-module-24"
+        "cell-biology-module-24",
+        "cell-biology-module-25",
+        "cell-biology-module-26"
       ],
       "version": "MITx cell-biology course scope; accessed 2026-10-06",
       "checksum": null,
@@ -1889,6 +1891,151 @@
       "checksum": null,
       "imported_assets": [],
       "rights_notes": "This record documents link-only use and does not clear linked course or book content for reuse."
+    },
+    {
+      "id": "ncbi-mboc-cell-cycle-control",
+      "title": "Components of the Cell-Cycle Control System - Molecular Biology of the Cell",
+      "institution": "NIH / NCBI Bookshelf",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK26824/",
+      "accessed_at": "2026-10-06",
+      "license": "Third-party reuse rights not cleared for this package; link-only scientific reference selected",
+      "reuse_mode": "link-only-reference",
+      "permissions": {
+        "linking": true,
+        "quotation": false,
+        "adaptation": false,
+        "redistribution": false
+      },
+      "attribution_requirements": [
+        "Identify Components of the Cell-Cycle Control System - Molecular Biology of the Cell, NIH / NCBI, and the exact URL."
+      ],
+      "third_party_notes": "Used only as a link-only scientific reference. No source text, figure, table, problem, or dataset is copied or adapted.",
+      "mapped_courses": [
+        "cell-biology"
+      ],
+      "mapped_modules": [
+        "cell-biology-module-25"
+      ],
+      "version": "Molecular Biology of the Cell, 4th edition, chapter; accessed 2026-10-06",
+      "checksum": null,
+      "imported_assets": [],
+      "rights_notes": "This record documents link-only use and does not clear linked content for reuse."
+    },
+    {
+      "id": "ncbi-cell-cycle-checkpoints",
+      "title": "The Eukaryotic Cell Cycle - The Cell",
+      "institution": "NIH / NCBI Bookshelf",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK9876/",
+      "accessed_at": "2026-10-06",
+      "license": "Third-party reuse rights not cleared for this package; link-only scientific reference selected",
+      "reuse_mode": "link-only-reference",
+      "permissions": {
+        "linking": true,
+        "quotation": false,
+        "adaptation": false,
+        "redistribution": false
+      },
+      "attribution_requirements": [
+        "Identify The Eukaryotic Cell Cycle - The Cell, NIH / NCBI, and the exact URL."
+      ],
+      "third_party_notes": "Used only as a link-only scientific reference. No source text, figure, table, problem, or dataset is copied or adapted.",
+      "mapped_courses": [
+        "cell-biology"
+      ],
+      "mapped_modules": [
+        "cell-biology-module-25"
+      ],
+      "version": "The Cell, 4th edition, chapter; accessed 2026-10-06",
+      "checksum": null,
+      "imported_assets": [],
+      "rights_notes": "This record documents link-only use and does not clear linked content for reuse."
+    },
+    {
+      "id": "ncbi-mboc-apoptosis",
+      "title": "Programmed Cell Death (Apoptosis) - Molecular Biology of the Cell",
+      "institution": "NIH / NCBI Bookshelf",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK26873/",
+      "accessed_at": "2026-10-06",
+      "license": "Third-party reuse rights not cleared for this package; link-only scientific reference selected",
+      "reuse_mode": "link-only-reference",
+      "permissions": {
+        "linking": true,
+        "quotation": false,
+        "adaptation": false,
+        "redistribution": false
+      },
+      "attribution_requirements": [
+        "Identify Programmed Cell Death (Apoptosis) - Molecular Biology of the Cell, NIH / NCBI, and the exact URL."
+      ],
+      "third_party_notes": "Used only as a link-only scientific reference. No source text, figure, table, problem, or dataset is copied or adapted.",
+      "mapped_courses": [
+        "cell-biology"
+      ],
+      "mapped_modules": [
+        "cell-biology-module-26"
+      ],
+      "version": "Molecular Biology of the Cell, 4th edition, chapter; accessed 2026-10-06",
+      "checksum": null,
+      "imported_assets": [],
+      "rights_notes": "This record documents link-only use and does not clear linked content for reuse."
+    },
+    {
+      "id": "pubmed-guide-senescence",
+      "title": "A guide to assessing cellular senescence in vitro and in vivo",
+      "institution": "NIH / National Library of Medicine PubMed",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/32961620/",
+      "accessed_at": "2026-10-06",
+      "license": "Third-party reuse rights not cleared for this package; link-only scientific reference selected",
+      "reuse_mode": "link-only-reference",
+      "permissions": {
+        "linking": true,
+        "quotation": false,
+        "adaptation": false,
+        "redistribution": false
+      },
+      "attribution_requirements": [
+        "Identify A guide to assessing cellular senescence in vitro and in vivo, NIH / NCBI, and the exact URL."
+      ],
+      "third_party_notes": "Used only as a link-only scientific reference. No source text, figure, table, problem, or dataset is copied or adapted.",
+      "mapped_courses": [
+        "cell-biology"
+      ],
+      "mapped_modules": [
+        "cell-biology-module-26"
+      ],
+      "version": "Nature Protocols article record; PMID 32961620; accessed 2026-10-06",
+      "checksum": null,
+      "imported_assets": [],
+      "rights_notes": "This record documents link-only use and does not clear linked content for reuse."
+    },
+    {
+      "id": "pubmed-cell-senescence-consensus",
+      "title": "Cellular Senescence: Defining a Path Forward",
+      "institution": "NIH / National Library of Medicine PubMed",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/31675495/",
+      "accessed_at": "2026-10-06",
+      "license": "Third-party reuse rights not cleared for this package; link-only scientific reference selected",
+      "reuse_mode": "link-only-reference",
+      "permissions": {
+        "linking": true,
+        "quotation": false,
+        "adaptation": false,
+        "redistribution": false
+      },
+      "attribution_requirements": [
+        "Identify Cellular Senescence: Defining a Path Forward, NIH / NCBI, and the exact URL."
+      ],
+      "third_party_notes": "Used only as a link-only scientific reference. No source text, figure, table, problem, or dataset is copied or adapted.",
+      "mapped_courses": [
+        "cell-biology"
+      ],
+      "mapped_modules": [
+        "cell-biology-module-26"
+      ],
+      "version": "Cell article record; PMID 31675495; DOI 10.1016/j.cell.2019.10.005; accessed 2026-10-06",
+      "checksum": null,
+      "imported_assets": [],
+      "rights_notes": "This record documents link-only use and does not clear linked content for reuse."
     }
   ]
 }

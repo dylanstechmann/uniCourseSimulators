@@ -935,6 +935,66 @@ test("week 12 mechanics practice separates modulus, matrix controls, and cell ou
   ).toContainText("4 / 4 practice points");
 });
 
+test("week 13 cell-cycle and cell-fate practice separates arrest, senescence, and apoptosis evidence", async ({
+  page,
+}) => {
+  await page.goto("/#/account");
+  await page.getByRole("button", { name: "Start guest session" }).click();
+  await page.getByRole("link", { name: "Course catalog", exact: true }).click();
+  await page.getByRole("link", { name: /Foundations of Cell/ }).click();
+  await page.getByRole("button", { name: "Enroll in partial course" }).click();
+  await page.getByRole("link", { name: "Practice gradebook" }).click();
+
+  const row = page.getByRole("row", {
+    name: /Week 13: cell-cycle control, senescence, and cell death practice/,
+  });
+  await row.getByRole("button", { name: "Open practice set" }).click();
+  await expect(
+    page.getByRole("heading", {
+      name: "Week 13: cell-cycle control, senescence, and cell death practice",
+    }),
+  ).toBeVisible();
+  await expect(
+    page.getByText(/7 questions · 13 practice points/),
+  ).toBeVisible();
+
+  const phase = page.locator(
+    '[data-question-id="cell-biology-25:phase-snapshot"]',
+  );
+  await phase.getByLabel("Numerical value").fill("25");
+  await phase.getByLabel("Unit").fill("%");
+  await phase.getByRole("button", { name: "Submit practice response" }).click();
+  await expect(
+    phase.getByRole("region", { name: "Submission feedback" }),
+  ).toContainText("1 / 1 practice points");
+
+  const damage = page.locator(
+    '[data-question-id="cell-biology-25:damage-time-course"]',
+  );
+  await damage.getByLabel(/Measured pattern/).selectOption("0");
+  await damage.getByLabel(/Inference boundary/).selectOption("1");
+  await damage.getByLabel(/Next experiment/).selectOption("2");
+  await damage
+    .getByRole("button", { name: "Submit practice response" })
+    .click();
+  await expect(
+    damage.getByRole("region", { name: "Submission feedback" }),
+  ).toContainText("3 / 3 practice points");
+
+  const senescence = page.locator(
+    '[data-question-id="cell-biology-26:senescence-marker-panel"]',
+  );
+  await senescence.getByLabel(/State interpretation/).selectOption("0");
+  await senescence.getByLabel(/Marker limitation/).selectOption("2");
+  await senescence.getByLabel(/Follow-up/).selectOption("1");
+  await senescence
+    .getByRole("button", { name: "Submit practice response" })
+    .click();
+  await expect(
+    senescence.getByRole("region", { name: "Submission feedback" }),
+  ).toContainText("3 / 3 practice points");
+});
+
 test("structured experimental criteria receive deterministic partial credit and persist", async ({
   page,
 }) => {

@@ -4204,6 +4204,457 @@
         "kind": "original",
         "modifications": []
       }
+    },
+    {
+      "id": "cell-biology-25:phase-snapshot",
+      "type": "numeric",
+      "prompt": "A 20-minute EdU pulse labels 60 of 240 viable singlets in the stated cytometry gate. What percentage of this gated population incorporated nucleotide during the pulse? Report a percentage.",
+      "points": 1,
+      "objective_ids": [
+        "cell-biology-25-objective-2"
+      ],
+      "feedback": {
+        "hint": "Use labeled cells divided by the stated viable-singlet denominator, then multiply by 100.",
+        "solution": "60/240 × 100% = 25%. This is the fraction of the gated population labeled during the pulse; it is not a direct measurement of the full cell-cycle duration.",
+        "lesson_ids": [
+          "cell-biology-25"
+        ],
+        "misconception_ids": [
+          "dna-content-identifies-all-cell-cycle-phases"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      },
+      "solution_spec": {
+        "answer": 25,
+        "unit": "%",
+        "tolerance": 0.25,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      }
+    },
+    {
+      "id": "cell-biology-25:spindle-checkpoint",
+      "type": "single_choice",
+      "prompt": "In the simplified mammalian spindle-assembly checkpoint model, what is a likely response while kinetochores remain unattached?",
+      "points": 1,
+      "objective_ids": [
+        "cell-biology-25-objective-1"
+      ],
+      "feedback": {
+        "hint": "Track the connection from an unattached kinetochore to APC/C activity and securin stability.",
+        "solution": "Unattached kinetochores can restrain APC/C–Cdc20. This delays securin destruction, separase activation, and anaphase; the checkpoint is not a universal genome-sequence inspection.",
+        "lesson_ids": [
+          "cell-biology-25"
+        ],
+        "misconception_ids": [
+          "one-checkpoint-controls-all-damage"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      },
+      "options": [
+        "The checkpoint proves that every DNA base has been copied correctly and immediately starts cytokinesis.",
+        "Checkpoint signaling restrains APC/C–Cdc20, delaying securin and cyclin-B destruction and therefore delaying anaphase onset.",
+        "The checkpoint converts every unattached kinetochore into a DNA-damage sensor that permanently activates p53.",
+        "It accelerates separase activation so unaligned sister chromatids can separate early."
+      ],
+      "solution_spec": {
+        "answer": 1
+      }
+    },
+    {
+      "id": "cell-biology-25:damage-time-course",
+      "type": "structured",
+      "prompt": "Interpret the explicitly synthetic damage-response table in the lesson. Select one response for each criterion.",
+      "points": 3,
+      "objective_ids": [
+        "cell-biology-25-objective-2",
+        "cell-biology-25-objective-3"
+      ],
+      "feedback": {
+        "hint": "Separate the measured distribution, a candidate checkpoint model, and the perturbation needed to test that model.",
+        "solution": "The synthetic table is compatible with reduced DNA synthesis and a shifted distribution, but does not identify p53, prove stable arrest, or rule out population changes. A matched p53 perturbation with target engagement, time course, EdU, DNA content, and viability tests a narrower causal contribution.",
+        "lesson_ids": [
+          "cell-biology-25"
+        ],
+        "misconception_ids": [
+          "one-checkpoint-controls-all-damage",
+          "dna-content-identifies-all-cell-cycle-phases"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      },
+      "response_fields": [
+        {
+          "id": "measured-pattern",
+          "type": "single_choice",
+          "prompt": "Measured pattern · Which summary fits the table?",
+          "options": [
+            "The later samples show a higher G1-like fraction and lower EdU labeling, with viability broadly similar in this small synthetic comparison.",
+            "Every treated cell completed S phase, and the assay proves all cells are permanently senescent.",
+            "The table shows that viability collapsed before any change in DNA synthesis."
+          ],
+          "points": 1
+        },
+        {
+          "id": "bounded-inference",
+          "type": "single_choice",
+          "prompt": "Inference boundary · What does this observation not establish?",
+          "options": [
+            "That the listed means are different numerical values.",
+            "That p53 caused the shift or that the cells entered a stable senescence-like state.",
+            "That the EdU-positive fraction is lower at the 24-hour collection than in vehicle."
+          ],
+          "points": 1
+        },
+        {
+          "id": "discriminating-test",
+          "type": "single_choice",
+          "prompt": "Next experiment · Which follow-up most directly tests a p53-dependent checkpoint contribution?",
+          "options": [
+            "Repeat the same endpoint once without matched controls.",
+            "Measure only SA-β-gal at the same time point.",
+            "Perturb p53 in matched cells, verify target engagement, and collect a controlled time course with EdU, DNA content, cell number, and viability."
+          ],
+          "points": 1
+        }
+      ],
+      "solution_spec": {
+        "field_specs": [
+          {
+            "id": "measured-pattern",
+            "type": "single_choice",
+            "answer": 0
+          },
+          {
+            "id": "bounded-inference",
+            "type": "single_choice",
+            "answer": 1
+          },
+          {
+            "id": "discriminating-test",
+            "type": "single_choice",
+            "answer": 2
+          }
+        ],
+        "rubric": [
+          {
+            "id": "measured-pattern",
+            "criterion": "Describe only the reported pattern",
+            "points": 1,
+            "evidence": [
+              "Names the lower EdU fraction and higher G1-like fraction without changing the stated viability result."
+            ]
+          },
+          {
+            "id": "bounded-inference",
+            "criterion": "Bound the causal claim",
+            "points": 1,
+            "evidence": [
+              "Does not name a specific pathway or durable cell state from this summary alone."
+            ]
+          },
+          {
+            "id": "discriminating-test",
+            "criterion": "Choose a discriminating perturbation",
+            "points": 1,
+            "evidence": [
+              "Uses a targeted perturbation with engagement and time-resolved cell-cycle and survival readouts."
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "cell-biology-25:edu-relative-reduction",
+      "type": "numeric",
+      "prompt": "In the synthetic table, the EdU-positive fraction is 27% in vehicle and 11% after 24 hours of damage. What is the relative percentage decrease from vehicle? Report a percentage, not percentage points.",
+      "points": 1,
+      "objective_ids": [
+        "cell-biology-25-objective-2"
+      ],
+      "feedback": {
+        "hint": "Use (vehicle − treated) divided by vehicle, then multiply by 100.",
+        "solution": "(27 − 11)/27 × 100% = 59.26…%, approximately 59.3% relative decrease. The absolute change is 16 percentage points; that is a different quantity.",
+        "lesson_ids": [
+          "cell-biology-25"
+        ],
+        "misconception_ids": [
+          "percentage-points-confused-with-percent-change"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      },
+      "solution_spec": {
+        "answer": 59.3,
+        "unit": "%",
+        "tolerance": 0.6,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      }
+    },
+    {
+      "id": "cell-biology-26:apoptosis-pathway",
+      "type": "single_choice",
+      "prompt": "Which option correctly matches core steps in the intrinsic mitochondrial apoptosis route?",
+      "points": 1,
+      "objective_ids": [
+        "cell-biology-26-objective-2"
+      ],
+      "feedback": {
+        "hint": "Follow the order from mitochondrial permeabilization to apoptosome-associated initiator caspase and then executioner caspases.",
+        "solution": "The simplified intrinsic route links BAX/BAK-dependent mitochondrial permeabilization to cytochrome c, APAF-1, caspase-9, and downstream effector caspases. Assays of later steps do not by themselves identify the original trigger.",
+        "lesson_ids": [
+          "cell-biology-26"
+        ],
+        "misconception_ids": [
+          "apoptosis-equals-all-cell-death"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      },
+      "options": [
+        "BAX/BAK-dependent mitochondrial permeabilization can release cytochrome c; an APAF-1 complex promotes initiator caspase-9 activation and downstream effector-caspase activity.",
+        "SA-β-gal directly activates p16, which cleaves every caspase and proves apoptosis in any tissue.",
+        "Caspase-3 is the only initiator in both routes and is activated by EdU incorporation.",
+        "Annexin-V binding alone identifies the initiating mitochondrial signal and the number of cells lost."
+      ],
+      "solution_spec": {
+        "answer": 0
+      }
+    },
+    {
+      "id": "cell-biology-26:senescence-marker-panel",
+      "type": "structured",
+      "prompt": "Use the synthetic cell-state table in the lesson. Select the strongest interpretation and the most informative follow-up for each criterion.",
+      "points": 3,
+      "objective_ids": [
+        "cell-biology-26-objective-1",
+        "cell-biology-26-objective-3"
+      ],
+      "feedback": {
+        "hint": "Compare the response after mitogen re-addition, then consider several markers and the recovered-cell denominator together.",
+        "solution": "The synthetic withdrawal group largely re-enters DNA synthesis after refeeding. The persistent-damage group remains low in EdU and has multiple associated features, but the table cannot classify every cell or establish a universal state. No single marker is definitive; recovery, viable-cell counts, and additional orthogonal measurements strengthen interpretation.",
+        "lesson_ids": [
+          "cell-biology-26"
+        ],
+        "misconception_ids": [
+          "quiescence-equals-senescence",
+          "senescence-single-marker"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      },
+      "response_fields": [
+        {
+          "id": "state-interpretation",
+          "type": "single_choice",
+          "prompt": "State interpretation · What does the joint pattern support?",
+          "options": [
+            "The withdrawal group shows substantial EdU recovery after refeeding; the persistent-damage group has low EdU plus several senescence-associated features in the stated conditions.",
+            "One SA-β-gal value proves every cell in the damage group is senescent.",
+            "Every EdU-negative cell is apoptotic, even when viability is high."
+          ],
+          "points": 1
+        },
+        {
+          "id": "marker-limit",
+          "type": "single_choice",
+          "prompt": "Marker limitation · Why is SA-β-gal alone insufficient?",
+          "options": [
+            "It directly measures the number of divisions completed by every cell.",
+            "A single assay always separates senescence from differentiation and quiescence.",
+            "Its signal is not unique to senescence across cell types and conditions, so it needs orthogonal evidence and context."
+          ],
+          "points": 1
+        },
+        {
+          "id": "recovery-test",
+          "type": "single_choice",
+          "prompt": "Follow-up · Which design best tests recovery capacity?",
+          "options": [
+            "Repeat β-galactosidase staining immediately with no recovery period.",
+            "Remove the stimulus, apply a standardized mitogen challenge, and track EdU entry, viable-cell recovery, and independent culture replicates over time.",
+            "Count image fields from one culture as independent biological replicates."
+          ],
+          "points": 1
+        }
+      ],
+      "solution_spec": {
+        "field_specs": [
+          {
+            "id": "state-interpretation",
+            "type": "single_choice",
+            "answer": 0
+          },
+          {
+            "id": "marker-limit",
+            "type": "single_choice",
+            "answer": 2
+          },
+          {
+            "id": "recovery-test",
+            "type": "single_choice",
+            "answer": 1
+          }
+        ],
+        "rubric": [
+          {
+            "id": "state-interpretation",
+            "criterion": "Integrate longitudinal and orthogonal evidence",
+            "points": 1,
+            "evidence": [
+              "Uses recovery after refeeding and multiple measurements, not one marker, to distinguish the conditions."
+            ]
+          },
+          {
+            "id": "marker-limit",
+            "criterion": "State the single-marker limitation",
+            "points": 1,
+            "evidence": [
+              "Recognizes that no single marker is universally specific across contexts."
+            ]
+          },
+          {
+            "id": "recovery-test",
+            "criterion": "Choose a recovery-capacity measurement",
+            "points": 1,
+            "evidence": [
+              "Combines stimulus removal, a defined challenge, cell-cycle entry, viability, and biological replication."
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "cell-biology-26:cell-fate-time-course-controls",
+      "type": "structured",
+      "prompt": "A culture shows reduced EdU and increased active caspase signal after a treatment. Choose a design that can separate apoptosis-associated evidence from a persistent non-proliferating state.",
+      "points": 3,
+      "objective_ids": [
+        "cell-biology-25-objective-3",
+        "cell-biology-26-objective-2",
+        "cell-biology-26-objective-3"
+      ],
+      "feedback": {
+        "hint": "Keep early apoptosis readouts, later recovery, viable-cell counts, and marker evidence in distinct measurement categories.",
+        "solution": "A time course with positive and vehicle controls, retention of detached cells, and explicit viable-cell denominators can distinguish some assay-level patterns. It still does not prove that all non-dividing cells share one state or that a culture marker establishes organismal aging.",
+        "lesson_ids": [
+          "cell-biology-25",
+          "cell-biology-26"
+        ],
+        "misconception_ids": [
+          "quiescence-equals-senescence",
+          "senescence-single-marker",
+          "apoptosis-equals-all-cell-death"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      },
+      "response_fields": [
+        {
+          "id": "time-order",
+          "type": "single_choice",
+          "prompt": "Time order · What is the strongest sampling plan?",
+          "options": [
+            "Collect one late endpoint only, after detached cells have been discarded.",
+            "Measure early caspase and membrane-asymmetry signals, later membrane integrity and cell recovery, and a separate post-washout mitogen challenge.",
+            "Measure SA-β-gal once and infer the initiating cell-death pathway."
+          ],
+          "points": 1
+        },
+        {
+          "id": "assay-controls",
+          "type": "single_choice",
+          "prompt": "Controls · Which control plan best supports assay interpretation?",
+          "options": [
+            "Use matched vehicle and a validated apoptosis-positive control, preserve detached cells, and report viable-cell recovery and denominators.",
+            "Use only a technical replicate of the treated culture.",
+            "Treat a no-primary-antibody sample as a substitute for every biological control."
+          ],
+          "points": 1
+        },
+        {
+          "id": "claim-scope",
+          "type": "single_choice",
+          "prompt": "Claim boundary · What is justified by these assays?",
+          "options": [
+            "The culture has organism-level accelerated aging.",
+            "All cells with low EdU are apoptotic.",
+            "The pattern supports testing apoptosis and persistent arrest as distinct possibilities; pathway, cell-state, and tissue-level claims need separate evidence."
+          ],
+          "points": 1
+        }
+      ],
+      "solution_spec": {
+        "field_specs": [
+          {
+            "id": "time-order",
+            "type": "single_choice",
+            "answer": 1
+          },
+          {
+            "id": "assay-controls",
+            "type": "single_choice",
+            "answer": 0
+          },
+          {
+            "id": "claim-scope",
+            "type": "single_choice",
+            "answer": 2
+          }
+        ],
+        "rubric": [
+          {
+            "id": "time-order",
+            "criterion": "Separate temporal readouts",
+            "points": 1,
+            "evidence": [
+              "Collects early death-associated and later recovery/cell-state measurements rather than one endpoint."
+            ]
+          },
+          {
+            "id": "assay-controls",
+            "criterion": "Select matched assay controls",
+            "points": 1,
+            "evidence": [
+              "Includes vehicle, a positive control, cell recovery, and explicit denominators."
+            ]
+          },
+          {
+            "id": "claim-scope",
+            "criterion": "Bound claims to measured evidence",
+            "points": 1,
+            "evidence": [
+              "Separates assay-level observations from pathway, state, and organism-level claims."
+            ]
+          }
+        ]
+      }
     }
   ]
 }

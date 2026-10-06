@@ -4,30 +4,34 @@
 
 2026-10-06; synthetic local learner data only. Milestones 1 and 2 are implemented. Milestone 3 remains partial; deterministic graders and prototype graded-assignment and review workflows are described below. A Milestone 4 curriculum-map increment is implemented and tested, while subject-matter review and map refinement remain. All 25 course packages are **partial**; zero are beta, complete or externally reviewed. Human score review is limited to saved attempts and does not constitute course-content review. No semester equivalence, university credit, security certification or public production deployment is asserted.
 
-## Current increment: week-12 cytoskeleton, matrix, and mechanobiology (2026-10-06)
+## Current increment: week-13 cell-cycle and cell-fate evidence (2026-10-06)
 
-Foundations of Cell and Molecular Biology advanced from 0.12.0 to **0.13.0** and remains `partial`. Week 12 adds two original lessons on cytoskeletal/adhesion systems and matrix mechanics/mechanotransduction; six mapped objectives; seven deterministic public formative questions worth 13 practice points; four retrieval cards; misconception and layered-feedback entries; and six link-only MIT OCW/NCBI Bookshelf provenance records. The substrate-stiffness dataset is labeled synthetic and keeps its measurements, inference limits, and plausible confounders explicit. Practice checks stress units, distinguishes matrix from cell-cell junctions, and evaluates replicate units, controls, and association-versus-mechanism claims. The material does not claim a complete lab or graded coursework.
+Foundations of Cell and Molecular Biology advanced from 0.13.0 to **0.14.0** and remains `partial`. Week 13 adds two original lessons on cell-cycle/checkpoint control and quiescence/senescence/apoptosis; six mapped objectives; seven deterministic public formative questions worth 13 practice points; four retrieval cards; five misconception entries; layered feedback; and six link-only MIT OCW, NCBI Bookshelf, and PubMed source records. Both datasets are explicitly synthetic. The lessons distinguish DNA-content, EdU, and mitotic readouts; use denominators for cell fractions; and separate reversible recovery, senescence-associated markers, and apoptosis measurements without claiming one marker or assay identifies a complete cell state. This is formative practice, not a complete lab or graded coursework.
 
-Content validation passes for 25 packages, 121 lessons, 169 questions, 243 cards, and 25 cases, with 0 errors and 123 disclosed depth/objective warnings. The complete root suite passed **64 tests with 1 skipped**, backend passed **223** with one upstream Starlette/httpx deprecation warning, frontend unit tests passed **31**, Playwright passed **15**, and legacy-state tests passed **7**. Docker Compose services are healthy; the database volume was preserved; Alembic is `0007 (head)`; and `/api/v1/health` reports `ok`. The learner integration validator supports 173 practice specifications. Week-12 browser coverage enrolls a guest, opens lessons and version-pinned practice, submits numeric and structured data/control responses, and confirms saved feedback. Frontend lint/format and production build pass (206 modules), Ruff passes, and the security-boundary scan reports 0 findings across 407 source files. All authored answers remain public practice specifications; no exam key was added.
+Content validation passes for 25 packages, 123 lessons, 176 questions, 247 cards, and 25 cases, with 0 errors and 123 disclosed depth/objective warnings. Focused week-13/scope checks passed **2 tests**; the complete root suite passed **65 tests with 1 skipped**, backend passed **223** with one upstream Starlette/httpx deprecation warning, frontend unit tests passed **31**, Playwright passed **16**, and legacy-state tests passed **7**. Docker Compose rebuilt successfully with its existing database volume preserved; API, database, and web services are healthy; Alembic is `0007 (head)`; and `/api/v1/health` reports `ok`. The learner integration validator supports 180 practice specifications. Week-13 browser coverage submits a unit-bearing EdU fraction and two structured cell-cycle/cell-state interpretations and confirms deterministic feedback. Frontend lint/format and production build pass (206 modules), Ruff passes, and the security-boundary scan reports 0 findings across 409 source files. All authored answers remain public practice specifications; no exam key was added.
 
 | Current command/check | Result |
 | --- | --- |
-| `python tools/validate_content.py` | PASS: 25 packages, 121 lessons, 169 questions, 243 cards, 25 cases; 0 errors; 123 disclosed warnings |
-| `backend/.venv/Scripts/python.exe -m pytest tests -q` | 64 passed, 1 skipped |
+| `python tools/validate_content.py` | PASS: 25 packages, 123 lessons, 176 questions, 247 cards, 25 cases; 0 errors; 123 disclosed warnings |
+| `backend/.venv/Scripts/python.exe -m pytest tests -q` | 65 passed, 1 skipped |
 | `cd backend; .venv/Scripts/python.exe -m pytest tests -q` | 223 passed; one upstream Starlette/httpx deprecation warning |
 | `backend/.venv/Scripts/ruff.exe check backend tools tests` | PASS |
 | `cd frontend; npm test -- --run` | 31 passed |
 | `cd frontend; npm run lint; npm run build` | PASS: formatting/lint and TypeScript/Vite production build (206 modules) |
-| `cd frontend; npm run test:e2e` | 15 passed, including week-12 numeric and structured practice submissions |
+| `cd frontend; npm run test:e2e` | 16 passed, including week-13 numeric and structured practice submissions |
 | `npm run test:legacy` | 7 passed |
 | `docker compose up --build -d --wait --wait-timeout 180` | PASS: API, database, and web healthy; existing data volume preserved |
-| `docker compose exec -T api python -m courselab.check_content /content` | PASS: 25 packages / 173 supported practice specifications |
+| `docker compose exec -T api python -m courselab.check_content /content` | PASS: 25 packages / 180 supported practice specifications |
 | `docker compose exec -T api alembic current` and `/api/v1/health` | PASS: `0007 (head)`; health `ok` |
-| `python tools/check_security.py --bundle frontend/dist` | PASS; 0 findings across 407 source files |
+| `python tools/check_security.py --bundle frontend/dist` | PASS; 0 findings across 409 source files |
 
-Weeks 13–14 remain outlines. The eight homework packages, three full data/virtual-lab activities, summative midterm/final, integrative project, measured workload, comprehensive objective coverage, and independent scientific/accessibility reviews remain incomplete; the course stays partial.
+Week 14 remains an outline. The eight homework packages, three full data/virtual-lab activities, summative midterm/final, integrative project, measured workload, comprehensive objective coverage, and independent scientific/accessibility reviews remain incomplete; the course stays partial.
 
-The week-12 validation completed on the checked-out development tree. The latest hosted GitHub Actions result cited below is for an earlier commit; the week-12 workflow will run after this increment is published.
+The week-12 commit `2f0fb1c` passed hosted GitHub Actions run `37540473521`. CI is configured on pushes; check the repository Actions page for the workflow associated with this week-13 increment.
+
+## Previous increment: week-12 cytoskeleton, matrix, and mechanobiology (2026-10-06)
+
+Week 12 advanced the package to version 0.13.0 with two original lessons, six objectives, seven formative questions, four retrieval cards, a synthetic hydrogel-mechanics dataset, and link-only sources. Its 64-pass/1-skip root suite, 223 backend tests, 31 frontend tests, 15 browser tests, 407-file security scan, 173-specification integration check, and healthy Compose stack passed. Hosted Actions run `37540473521` completed successfully for commit `2f0fb1c66d4e40fe2c4efa462643b6c9750f00ea`.
 
 ## Previous increment: week-10 inheritance and variant evidence (2026-10-06)
 

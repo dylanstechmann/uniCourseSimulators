@@ -7,7 +7,7 @@
   "domain": "Life sciences",
   "level": "Year 1",
   "maturity": "partial",
-  "version": "0.13.0",
+  "version": "0.14.0",
   "license": "MIT OR CC-BY-4.0",
   "content_origin": {
     "kind": "legacy-prototype",
@@ -532,6 +532,60 @@
       "course_outcome_ids": [
         "cell-biology-outcome-4"
       ]
+    },
+    {
+      "id": "cell-biology-25-objective-1",
+      "description": "Relate cyclin-dependent kinase activity and selected checkpoint signals to mammalian cell-cycle transitions while distinguishing a model from direct measurement.",
+      "bloom": "analyze",
+      "course_outcome_ids": [
+        "cell-biology-outcome-3",
+        "cell-biology-outcome-4"
+      ]
+    },
+    {
+      "id": "cell-biology-25-objective-2",
+      "description": "Distinguish DNA-content, nucleotide-incorporation, and mitotic-marker readouts and calculate a stated cell fraction or relative change with its denominator.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "cell-biology-outcome-2",
+        "cell-biology-outcome-4"
+      ]
+    },
+    {
+      "id": "cell-biology-25-objective-3",
+      "description": "Evaluate a synthetic DNA-damage time course and propose controls that test cell-cycle arrest without conflating it with cell death or a single signaling mechanism.",
+      "bloom": "evaluate",
+      "course_outcome_ids": [
+        "cell-biology-outcome-3",
+        "cell-biology-outcome-4"
+      ]
+    },
+    {
+      "id": "cell-biology-26-objective-1",
+      "description": "Distinguish reversible quiescence from persistent senescence-associated arrest using longitudinal and orthogonal evidence while recognizing marker limitations.",
+      "bloom": "evaluate",
+      "course_outcome_ids": [
+        "cell-biology-outcome-3",
+        "cell-biology-outcome-4"
+      ]
+    },
+    {
+      "id": "cell-biology-26-objective-2",
+      "description": "Trace core intrinsic mitochondrial and extrinsic death-receptor routes to caspase activation and interpret apoptosis-associated measurements with their limits.",
+      "bloom": "analyze",
+      "course_outcome_ids": [
+        "cell-biology-outcome-3",
+        "cell-biology-outcome-4"
+      ]
+    },
+    {
+      "id": "cell-biology-26-objective-3",
+      "description": "Analyze synthetic cell-state evidence and design measurements that separate reduced proliferation, senescence-associated features, apoptosis, and viable-cell loss.",
+      "bloom": "create",
+      "course_outcome_ids": [
+        "cell-biology-outcome-2",
+        "cell-biology-outcome-4"
+      ]
     }
   ],
   "duration": {
@@ -673,9 +727,14 @@
       },
       {
         "week": 13,
-        "title": "Cell-cycle control, senescence, and cell death",
-        "lesson_ids": [],
-        "assessment_ids": []
+        "title": "Cell-cycle control, mitosis, senescence, and cell death",
+        "lesson_ids": [
+          "cell-biology-25",
+          "cell-biology-26"
+        ],
+        "assessment_ids": [
+          "cell-biology-week13-practice"
+        ]
       },
       {
         "week": 14,
@@ -1418,6 +1477,70 @@
           ]
         }
       ]
+    },
+    {
+      "id": "cell-biology-module-25",
+      "title": "Cell-cycle control, checkpoints, and mitosis",
+      "source_ids": [
+        "mit-7.06x-cell-biology",
+        "ncbi-mboc-cell-cycle-control",
+        "ncbi-cell-cycle-checkpoints"
+      ],
+      "lessons": [
+        {
+          "id": "cell-biology-25",
+          "title": "Cell-cycle control, checkpoints, and mitosis",
+          "reading": "modules/12a-cell-cycle-checkpoints-and-mitosis.md",
+          "objectives": [
+            "cell-biology-25-objective-1",
+            "cell-biology-25-objective-2",
+            "cell-biology-25-objective-3"
+          ],
+          "worked_example": "A 20-minute EdU pulse labels 60 of 240 viable singlets: 60/240 = 25% of the gated population incorporated nucleotide during the pulse. This does not identify the exact cell-cycle duration or prove which checkpoint pathway acted.",
+          "question_ids": [
+            "cell-biology-25:phase-snapshot",
+            "cell-biology-25:spindle-checkpoint",
+            "cell-biology-25:damage-time-course",
+            "cell-biology-25:edu-relative-reduction"
+          ],
+          "card_ids": [
+            "cell-biology-25-0",
+            "cell-biology-25-1"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cell-biology-module-26",
+      "title": "Quiescence, senescence, apoptosis, and cell-fate evidence",
+      "source_ids": [
+        "mit-7.06x-cell-biology",
+        "ncbi-mboc-apoptosis",
+        "pubmed-guide-senescence",
+        "pubmed-cell-senescence-consensus"
+      ],
+      "lessons": [
+        {
+          "id": "cell-biology-26",
+          "title": "Quiescence, senescence, apoptosis, and cell-fate evidence",
+          "reading": "modules/12b-senescence-apoptosis-and-cell-fate.md",
+          "objectives": [
+            "cell-biology-26-objective-1",
+            "cell-biology-26-objective-2",
+            "cell-biology-26-objective-3"
+          ],
+          "worked_example": "Low EdU after stress supports reduced DNA synthesis in the sampled cells, not a unique cell-state diagnosis. Rechallenge, orthogonal arrest and damage markers, caspase measurements, and viable-cell recovery answer separate questions and need explicit denominators.",
+          "question_ids": [
+            "cell-biology-26:apoptosis-pathway",
+            "cell-biology-26:senescence-marker-panel",
+            "cell-biology-26:cell-fate-time-course-controls"
+          ],
+          "card_ids": [
+            "cell-biology-26-0",
+            "cell-biology-26-1"
+          ]
+        }
+      ]
     }
   ],
   "assessments": [
@@ -1753,6 +1876,32 @@
         "cell-biology-24:stress-relaxation"
       ],
       "points": 13
+    },
+    {
+      "id": "cell-biology-week13-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Week 13: cell-cycle control, senescence, and cell death practice",
+      "path": "question-banks/practice.json",
+      "week": 13,
+      "objective_ids": [
+        "cell-biology-25-objective-1",
+        "cell-biology-25-objective-2",
+        "cell-biology-25-objective-3",
+        "cell-biology-26-objective-1",
+        "cell-biology-26-objective-2",
+        "cell-biology-26-objective-3"
+      ],
+      "question_ids": [
+        "cell-biology-25:phase-snapshot",
+        "cell-biology-25:spindle-checkpoint",
+        "cell-biology-25:damage-time-course",
+        "cell-biology-25:edu-relative-reduction",
+        "cell-biology-26:apoptosis-pathway",
+        "cell-biology-26:senescence-marker-panel",
+        "cell-biology-26:cell-fate-time-course-controls"
+      ],
+      "points": 13
     }
   ],
   "grading_policy": {
@@ -1867,11 +2016,16 @@
       "version": "0.1.0",
       "date": "2026-10-05",
       "summary": "Normalized the course title to Foundations of Cell and Molecular Biology; the stable ID is unchanged."
+    },
+    {
+      "version": "0.14.0",
+      "date": "2026-10-06",
+      "summary": "Developed two original week-13 lessons on cell-cycle control/mitosis and quiescence/senescence/apoptosis; added explicitly synthetic cell-cycle and cell-state datasets, seven deterministic formative questions, four retrieval cards, six mapped objectives, and link-only provenance. The course remains partial; no homework, lab, midterm, final, or project was represented as complete."
     }
   ],
   "limitations": [
-    "Weeks 1-7 each have two original lessons; weeks 4 and 7 retain compact prototype readings. Weeks 9-12 now add eight original lessons, but the package still lacks the planned homework sequence, full laboratory/data assignments, summative exams, workload evidence, and instructor review.",
-    "Week 8 is an ungraded cumulative practice set, not an exam or midterm. Weeks 9-12 have original lesson pairs and formative practice sets; weeks 13-14 remain outlines. Substantive homework, full data/virtual-lab activities, summative exams, a cumulative project, workload evidence, and independent review are still missing.",
+    "Weeks 1-7 each have two original lessons; weeks 4 and 7 retain compact prototype readings. Weeks 9-13 now add ten original lessons, but the package still lacks the planned homework sequence, full laboratory/data assignments, summative exams, workload evidence, and instructor review.",
+    "Week 8 is an ungraded cumulative practice set, not an exam or midterm. Weeks 9-13 have original lesson pairs and formative practice sets; week 14 remains an outline. Substantive homework, full data/virtual-lab activities, summative exams, a cumulative project, workload evidence, and independent review are still missing.",
     "Current formative checks across the developed lessons do not demonstrate comprehensive outcome coverage or mastery; some lesson objectives remain unassessed.",
     "Bloom labels and structured prerequisite edges are initial authoring classifications awaiting subject-matter review.",
     "Question answers and solution feedback are intentionally public practice authoring specifications, not restricted exam keys.",

@@ -490,6 +490,47 @@
         "cell-biology-24-objective-3"
       ],
       "license": "CC-BY-4.0"
+    },
+    {
+      "id": "cell-biology-25-0",
+      "lesson_id": "cell-biology-25",
+      "front": "Short EdU pulse",
+      "back": "Labels cells incorporating nucleotide during the stated pulse. It estimates the labeled fraction in the named gate, not a complete cell-cycle duration or checkpoint mechanism.",
+      "objective_ids": [
+        "cell-biology-25-objective-2"
+      ],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "cell-biology-25-1",
+      "lesson_id": "cell-biology-25",
+      "front": "DNA-content limitation",
+      "back": "A 4N-like DNA-content gate can include G2 and mitotic cells; it does not alone distinguish those states, verify spindle attachment, or prove successful cytokinesis.",
+      "objective_ids": [
+        "cell-biology-25-objective-2"
+      ],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "cell-biology-26-0",
+      "lesson_id": "cell-biology-26",
+      "front": "Quiescence and senescence evidence",
+      "back": "Recovery after a defined mitogen challenge can distinguish a reversible pause from persistent arrest in the tested conditions; combine it with orthogonal markers, viability, and cell-recovery evidence.",
+      "objective_ids": [
+        "cell-biology-26-objective-1",
+        "cell-biology-26-objective-3"
+      ],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "cell-biology-26-1",
+      "lesson_id": "cell-biology-26",
+      "front": "Apoptosis pathway evidence",
+      "back": "Intrinsic mitochondrial and extrinsic receptor pathways can activate initiator and then effector caspases. A caspase or Annexin-V readout is evidence about a measured step, not a complete diagnosis or death count.",
+      "objective_ids": [
+        "cell-biology-26-objective-2"
+      ],
+      "license": "MIT OR CC-BY-4.0"
     }
   ]
 }

@@ -338,6 +338,35 @@
       "original_content": true,
       "license": "CC-BY-4.0",
       "modifications": []
+    },
+    {
+      "module_id": "cell-biology-module-25",
+      "lesson_id": "cell-biology-25",
+      "reading": "modules/12a-cell-cycle-checkpoints-and-mitosis.md",
+      "source_ids": [
+        "mit-7.06x-cell-biology",
+        "ncbi-mboc-cell-cycle-control",
+        "ncbi-cell-cycle-checkpoints"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-cell-cycle-data-and-link-only-curriculum-and-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "cell-biology-module-26",
+      "lesson_id": "cell-biology-26",
+      "reading": "modules/12b-senescence-apoptosis-and-cell-fate.md",
+      "source_ids": [
+        "mit-7.06x-cell-biology",
+        "ncbi-mboc-apoptosis",
+        "pubmed-guide-senescence",
+        "pubmed-cell-senescence-consensus"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-cell-state-data-and-link-only-curriculum-and-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
     }
   ]
 }
