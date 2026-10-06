@@ -7,9 +7,9 @@ are references, not evidence that a uniStemCourseSimulators course has equivalen
 
 The machine-readable registry is [sources/registry.json](sources/registry.json).
 It preserves the prototype's 22 MIT reference IDs and the existing Johns
-Hopkins and MIT reuse-policy records. The week-3 biology package adds one
-link-only MIT course comparator and five link-only primary research references.
-Existing records were accessed on 2026-10-05; the new week-3 references were
+Hopkins and MIT reuse-policy records. The biology package adds two link-only
+MIT course comparators and seven link-only research references for weeks 3–4.
+Existing records were accessed on 2026-10-05; the new week-3 and week-4 references were
 checked on 2026-10-06. An access date is not a claim that every asset or every
 outbound link on a source page has been checked.
 

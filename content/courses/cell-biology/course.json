@@ -7,7 +7,7 @@
   "domain": "Life sciences",
   "level": "Year 1",
   "maturity": "partial",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "license": "MIT OR CC-BY-4.0",
   "content_origin": {
     "kind": "legacy-prototype",
@@ -188,11 +188,43 @@
       "course_outcome_ids": [
         "cell-biology-outcome-4"
       ]
+    },
+    {
+      "id": "cell-biology-9-objective-1",
+      "description": "Distinguish enzyme effects on activation barriers and reaction rates from effects on reaction free energy and equilibrium, and evaluate when a coupled reaction can be thermodynamically favorable.",
+      "bloom": "analyze",
+      "course_outcome_ids": [
+        "cell-biology-outcome-2"
+      ]
+    },
+    {
+      "id": "cell-biology-9-objective-2",
+      "description": "Apply the steady-state single-substrate model to relate active-enzyme concentration, turnover, substrate concentration, Km, and initial rate while stating its assumptions.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "cell-biology-outcome-2"
+      ]
+    },
+    {
+      "id": "cell-biology-10-objective-1",
+      "description": "Calculate initial rates from a specified single-substrate model and interpret apparent kinetic parameters using units and uncertainty.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "cell-biology-outcome-2"
+      ]
+    },
+    {
+      "id": "cell-biology-10-objective-2",
+      "description": "Evaluate reversible-inhibition patterns and assay controls while distinguishing model consistency from proof of molecular binding mechanism.",
+      "bloom": "evaluate",
+      "course_outcome_ids": [
+        "cell-biology-outcome-4"
+      ]
     }
   ],
   "duration": {
     "instructional_weeks": 14,
-    "equivalent_structure": "Proposed undergraduate 14-week scope only. Weeks 1 through 3 have six developed lessons. Compact legacy readings remain in weeks 4 and 7; weeks 5 through 6 and 8 through 14 have no authored lesson sequences or summative assessments. Workload is not measured, so this plan is not evidence of semester equivalence.",
+    "equivalent_structure": "Proposed undergraduate 14-week scope only. Weeks 1 through 4 now contain eight developed lessons, with the original short enzyme capsule retained as a separate introduction within week 4. Week 7 has a compact legacy capsule; weeks 5 through 6 and 8 through 14 have no authored lesson sequences or summative assessments. Workload is not measured, so this plan is not evidence of semester equivalence.",
     "weeks": [
       {
         "week": 1,
@@ -232,7 +264,9 @@
         "week": 4,
         "title": "Enzyme kinetics, free energy, and cellular energetics",
         "lesson_ids": [
-          "cell-biology-3"
+          "cell-biology-3",
+          "cell-biology-9",
+          "cell-biology-10"
         ],
         "assessment_ids": [
           "cell-biology-3-practice"
@@ -537,6 +571,65 @@
           ]
         }
       ]
+    },
+    {
+      "id": "cell-biology-module-9",
+      "title": "Enzyme catalysis and free-energy reasoning",
+      "source_ids": [
+        "mit-5.07sc-enzymes",
+        "johnson-goody-2011"
+      ],
+      "lessons": [
+        {
+          "id": "cell-biology-9",
+          "title": "Enzyme catalysis, reaction mechanisms, and free energy",
+          "reading": "modules/04a-enzyme-catalysis-and-free-energy.md",
+          "objectives": [
+            "cell-biology-9-objective-1",
+            "cell-biology-9-objective-2"
+          ],
+          "worked_example": "For 50 nM measured active enzyme with kcat = 6 s^-1, Vmax = 300 nM s^-1 and at [S] = Km the simple model predicts v0 = 150 nM s^-1. A physically coupled pair of reactions with ΔG values +12 and -21 kJ mol^-1 has net ΔG = -9 kJ mol^-1 under those conditions; the sum alone does not show that an uncoupled cell process uses this mechanism.",
+          "question_ids": [
+            "cell-biology-9:equilibrium",
+            "cell-biology-9:coupling-energy",
+            "cell-biology-9:rate-at-km"
+          ],
+          "card_ids": [
+            "cell-biology-8-0",
+            "cell-biology-8-1"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cell-biology-module-10",
+      "title": "Initial rates and enzyme inhibition",
+      "source_ids": [
+        "mit-5.07sc-enzymes",
+        "briggs-haldane-1925",
+        "johnson-goody-2011"
+      ],
+      "lessons": [
+        {
+          "id": "cell-biology-10",
+          "title": "Initial-rate evidence and reversible enzyme inhibition",
+          "reading": "modules/04b-initial-rates-and-enzyme-inhibition.md",
+          "objectives": [
+            "cell-biology-10-objective-1",
+            "cell-biology-10-objective-2"
+          ],
+          "worked_example": "For a synthetic control with Vmax = 120 nM s^-1 and Km = 20 μM, at [S] = 40 μM the model predicts 80 nM s^-1. A competitive-like inhibitor with α = 3 predicts Km,app = 60 μM and 48 nM s^-1 at that substrate concentration. The rate pattern supports a simple model but does not prove a binding site.",
+          "question_ids": [
+            "cell-biology-10:rate-prediction",
+            "cell-biology-10:kinetic-inference",
+            "cell-biology-10:km-vs-binding"
+          ],
+          "card_ids": [
+            "cell-biology-9-0",
+            "cell-biology-9-1"
+          ]
+        }
+      ]
     }
   ],
   "assessments": [
@@ -583,12 +676,22 @@
       "mode": "practice",
       "path": "question-banks/practice.json",
       "objective_ids": [
-        "cell-biology-3-objective-1"
+        "cell-biology-3-objective-1",
+        "cell-biology-9-objective-1",
+        "cell-biology-9-objective-2",
+        "cell-biology-10-objective-1",
+        "cell-biology-10-objective-2"
       ],
       "question_ids": [
-        "cell-biology-3:check"
+        "cell-biology-3:check",
+        "cell-biology-9:equilibrium",
+        "cell-biology-9:coupling-energy",
+        "cell-biology-9:rate-at-km",
+        "cell-biology-10:rate-prediction",
+        "cell-biology-10:kinetic-inference",
+        "cell-biology-10:km-vs-binding"
       ],
-      "points": 1
+      "points": 9
     },
     {
       "id": "cell-biology-4-practice",
@@ -676,6 +779,11 @@
   },
   "history": [
     {
+      "version": "0.6.0",
+      "date": "2026-10-06",
+      "summary": "Developed two original week-4 enzyme lessons with mechanistic and kinetic worked examples, synthetic initial-rate data, six formative questions, four retrieval cards, and link-only provenance; the course remains partial."
+    },
+    {
       "version": "0.5.0",
       "date": "2026-10-06",
       "summary": "Developed two week-3 lessons on organelle targeting and vesicle sorting, added source-registry records, synthetic experimental practice, and retrieval cards; the course remains partial."
@@ -717,12 +825,12 @@
     }
   ],
   "limitations": [
-    "The proposed 14-week scope is not 14 weeks of instruction: weeks 1 through 3 have two original lessons each, while compact enzyme and gene-expression prototypes remain in weeks 4 and 7.",
+    "The proposed 14-week scope is not 14 weeks of instruction: weeks 1 through 4 have two original lessons each, and week 4 also retains a short prototype capsule; week 7 retains a compact gene-expression prototype.",
     "There is no authored substantive homework sequence, three-activity laboratory sequence, midterm, cumulative final, or integrative project.",
-    "Current formative checks across eight lessons do not demonstrate comprehensive outcome coverage or mastery; some lesson objectives remain unassessed.",
+    "Current formative checks across the developed lessons do not demonstrate comprehensive outcome coverage or mastery; some lesson objectives remain unassessed.",
     "Bloom labels and structured prerequisite edges are initial authoring classifications awaiting subject-matter review.",
     "Question answers and solution feedback are intentionally public practice authoring specifications, not restricted exam keys.",
-    "Numerical specifications preserve the prototype's tolerance and optional unit entry; significant-figure and dimensional checks have not been authored.",
+    "Week-4 numeric examples require units and include dimensional checks, but legacy numerical specifications elsewhere still need unit, tolerance, and significant-figure review.",
     "Total workload and weekly study hours are unknown; former nominal credit values and hardcoded reading times do not establish workload.",
     "The CSV practice item checks four numeric summary cells only; it does not grade scripts, arbitrary data analysis, uncertainty analysis, or causal reasoning."
   ],

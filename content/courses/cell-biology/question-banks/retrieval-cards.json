@@ -162,6 +162,47 @@
         "cell-biology-8-objective-1"
       ],
       "license": "CC-BY-4.0"
+    },
+    {
+      "id": "cell-biology-8-0",
+      "lesson_id": "cell-biology-9",
+      "front": "Catalyst and equilibrium",
+      "back": "A catalyst lowers an activation barrier and can accelerate both reaction directions; it does not change the net reaction ΔG or equilibrium constant under the same conditions.",
+      "objective_ids": [
+        "cell-biology-9-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "cell-biology-8-1",
+      "lesson_id": "cell-biology-9",
+      "front": "Michaelis constant Km",
+      "back": "For the simple steady-state mechanism Km = (k-1 + kcat)/k1. It is generally a kinetic parameter, not automatically the substrate binding dissociation constant.",
+      "objective_ids": [
+        "cell-biology-9-objective-2",
+        "cell-biology-10-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "cell-biology-9-0",
+      "lesson_id": "cell-biology-10",
+      "front": "Competitive-like kinetic pattern",
+      "back": "In the simple reversible competitive model, apparent Km rises while Vmax is unchanged; this pattern is consistent with but does not prove binding at the substrate site.",
+      "objective_ids": [
+        "cell-biology-10-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "cell-biology-9-1",
+      "lesson_id": "cell-biology-10",
+      "front": "Initial-rate control for optical interference",
+      "back": "A known product standard measured with inhibitor and no enzyme, compared with matched vehicle, can test whether the compound distorts the optical product signal.",
+      "objective_ids": [
+        "cell-biology-10-objective-2"
+      ],
+      "license": "CC-BY-4.0"
     }
   ]
 }

@@ -4,7 +4,32 @@
 
 2026-10-06; synthetic local learner data only. Milestones 1 and 2 are implemented. Milestone 3 remains partial; deterministic graders and prototype graded-assignment and review workflows are described below. A Milestone 4 curriculum-map increment is implemented and tested, while subject-matter review and map refinement remain. All 25 course packages are **partial**; zero are beta, complete or externally reviewed. Human score review is limited to saved attempts and does not constitute course-content review. No semester equivalence, university credit, security certification or public production deployment is asserted.
 
-## Current increment: cell-biology weeks 1–3 and trafficking lessons
+## Current increment: week-4 enzyme mechanisms and kinetic inference
+
+Foundations of Cell and Molecular Biology advanced from version 0.5.0 to **0.6.0** while remaining `partial`. Week 4 now has two substantial original lessons alongside the retained short prototype capsule: catalytic mechanisms/free-energy coupling, then initial-rate fitting and reversible-inhibitor patterns. Six new deterministic formative items cover equilibrium, coupled ΔG, Vmax at Km, model-based rate prediction, inhibitor-pattern/assay controls, and Km versus binding affinity. Four retrieval cards, misconception entries, layered-feedback templates, source records and independent numerical recalculation tests were added. The inhibitor table is explicitly synthetic and is not presented as published data.
+
+The scope comparator is MIT OCW 5.07SC Biological Chemistry I, whose undergraduate Module I includes sessions on enzyme catalysis and enzyme kinetics/inhibition; it is linked only. Briggs and Haldane (1925) and Johnson and Goody (2011) are linked as research references. No source text, figure, problem, or dataset was copied or adapted. The course remains unreviewed.
+
+Weeks 1–4 now each have two developed lessons; week 4 retains one additional compact prototype reading. Week 7 still has one compact gene-expression capsule; weeks 5–6 and 8–14 remain without authored lesson sequences. The eight proposed homework sets, three data/lab activities, midterm, cumulative final and integrative project are still absent. All 120 questions remain formative; no course grade or semester-equivalence claim is enabled.
+
+Validation on 2026-10-06: root **54 passed, 1 skipped**; backend **221 passed** (one upstream Starlette/httpx deprecation warning); frontend **30 unit tests passed**, lint/format and TypeScript/Vite build passed (205 modules); Playwright **10 passed**, including enrollment, week-4 lesson reading, numeric unit checks, inhibitor rubric scoring and saved feedback; legacy storage tests **7 passed**. Content validation reports 25 packages, 107 lessons, 120 questions, 215 cards and 25 cases: 0 errors and 123 explicit depth/objective warnings (98 legacy-depth, 25 objective-coverage). The API/content check passes for 25 packages and 122 supported practice specifications. Ruff and `git diff --check` pass. Source and bundle security-boundary scans found 0 issues across 391 files. Rebuilt Compose services are healthy, Alembic is `0007 (head)`, and `/api/v1/health` is `ok`; programming and LLM providers remain disabled. Existing database volumes were preserved.
+
+| Command/check | Result |
+| --- | --- |
+| `python tools/validate_content.py` | PASS: 25 packages, 107 lessons, 120 questions, 215 cards, 25 cases; 0 errors; 123 disclosed depth/objective warnings |
+| `python -m pytest tests/content -q` | 54 passed, 1 skipped |
+| `cd backend; python -m pytest tests -q` | 221 passed; 1 upstream deprecation warning |
+| `ruff check backend tools tests`; `git diff --check` | PASS |
+| Frontend `npm run lint`, `npm test -- --run`, `npm run build` | PASS; 30 unit tests; 205 modules built |
+| `npm run test:e2e` against `http://localhost:8080` | 10 passed, including week-4 numerical and structured-inference submissions |
+| `node tests/legacy/state.test.mjs` | 7 passed |
+| `python -m courselab.check_content ../content` | PASS: 25 packages / 122 supported practice specifications |
+| `python tools/check_security.py` and `python tools/check_security.py --bundle frontend/dist` | PASS: 391 files, 0 findings |
+| `docker compose up --build -d --wait --wait-timeout 180`; Alembic and health queries | PASS: database, API, and web healthy; `0007 (head)`; health `ok` |
+
+These checks verify the current software paths and authored package structure; they do not establish full-course quality, mastery, course-level human grading, or institutional equivalency.
+
+## Previous increment: cell-biology weeks 1–3 and trafficking lessons
 
 Foundations of Cell and Molecular Biology advanced from version 0.4.0 to **0.5.0** while remaining `partial`. Week 3 now has two substantial original lessons: organelle compartments and protein targeting, followed by protein sorting and vesicle traffic. Both lessons include worked reasoning, explicitly synthetic experimental datasets, controls, limits on causal inference, formative questions and retrieval cards. The source map links one MIT OCW scope comparator and five primary articles as link-only references; no source text, figure or data was adapted. The source schema and validator now distinguish link-only research references and prohibit treating them as adaptation permissions.
 

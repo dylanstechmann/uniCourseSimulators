@@ -95,9 +95,9 @@ def test_preserved_inventory_is_honest_partial(repository):
     assert result.ok, result.errors
     assert result.inventory == {
         "courses": 25,
-        "lessons": 105,
-        "questions": 114,
-        "cards": 211,
+        "lessons": 107,
+        "questions": 120,
+        "cards": 215,
         "cases": 25,
     }
     assert sum(warning["code"] == "legacy-depth" for warning in result.warnings) == 98
@@ -299,9 +299,9 @@ def test_structured_rubric_item_is_counted_while_course_remains_partial(reposito
     result = validate_repository(repository)
     assert result.ok, result.errors
     manifest = read(course[0])
-    assert manifest["version"] == "0.5.0"
+    assert manifest["version"] == "0.6.0"
     assert manifest["maturity"] == "partial"
-    assert result.inventory["questions"] == 114
+    assert result.inventory["questions"] == 120
     question = next(
         item
         for item in read(course[0].parent / "question-banks/practice.json")["questions"]
@@ -322,7 +322,7 @@ def test_graph_plot_item_is_counted_while_statistics_course_remains_partial(repo
     assert manifest["maturity"] == "partial"
     assert graph["id"] == "statistics-5:concentration-graph"
     assert len(graph["graph_spec"]["points"]) == 3
-    assert result.inventory["questions"] == 114
+    assert result.inventory["questions"] == 120
 
 
 def test_cell_biology_scope_does_not_claim_unwritten_weeks(repository):
@@ -331,20 +331,21 @@ def test_cell_biology_scope_does_not_claim_unwritten_weeks(repository):
     course_root = repository / "content/courses/cell-biology"
     manifest = read(course_root / "course.json")
     weeks = manifest["duration"]["weeks"]
-    assert manifest["version"] == "0.5.0"
+    assert manifest["version"] == "0.6.0"
     assert manifest["maturity"] == "partial"
     assert len(weeks) == 14
     assert [week["week"] for week in weeks if week["lesson_ids"]] == [1, 2, 3, 4, 7]
     assert len(weeks[0]["lesson_ids"]) == len(weeks[1]["lesson_ids"]) == 2
     assert len(weeks[2]["lesson_ids"]) == 2
-    assert len(weeks[3]["lesson_ids"]) == len(weeks[6]["lesson_ids"]) == 1
+    assert len(weeks[3]["lesson_ids"]) == 3
+    assert len(weeks[6]["lesson_ids"]) == 1
     assert all(not week["lesson_ids"] for week in weeks[4:6] + weeks[7:])
     assert manifest["grading_policy"]["mode"] == "formative-only"
 
     source_map = read(course_root / "source-map.json")
     mapped_ids = [item["module_id"] for item in source_map["modules"]]
     assert len(mapped_ids) == len(set(mapped_ids)) == len(manifest["modules"])
-    assert "Weeks 1–3" in (course_root / "syllabus.md").read_text(encoding="utf-8")
+    assert "Weeks 1–4" in (course_root / "syllabus.md").read_text(encoding="utf-8")
     assert "no instructional sequences or assessment specifications" in (
         course_root / "assessment-crosswalk.md"
     ).read_text(encoding="utf-8")
@@ -356,6 +357,8 @@ def test_cell_biology_scope_does_not_claim_unwritten_weeks(repository):
         "cell-biology-6",
         "cell-biology-7",
         "cell-biology-8",
+        "cell-biology-9",
+        "cell-biology-10",
     ):
         lesson = next(
             lesson
@@ -365,6 +368,22 @@ def test_cell_biology_scope_does_not_claim_unwritten_weeks(repository):
         )
         reading = (course_root / lesson["reading"]).read_text(encoding="utf-8")
         assert len(reading.split()) >= 450
+
+
+def test_week4_enzyme_numeric_keys_are_independently_recalculated(repository):
+    bank = read(
+        repository / "content/courses/cell-biology/question-banks/practice.json"
+    )
+    questions = {item["id"]: item for item in bank["questions"]}
+    assert questions["cell-biology-9:coupling-energy"]["solution_spec"]["answer"] == (
+        12.0 - 21.0
+    )
+    assert questions["cell-biology-9:rate-at-km"]["solution_spec"]["answer"] == (
+        (4 * 20) / 2
+    )
+    assert questions["cell-biology-10:rate-prediction"]["solution_spec"]["answer"] == (
+        120 * 40 / (20 + 40)
+    )
 
 
 def test_graph_expected_mean_is_recalculated_from_source_replicates(repository):

@@ -109,6 +109,33 @@
       "original_content": true,
       "license": "CC-BY-4.0",
       "modifications": []
+    },
+    {
+      "module_id": "cell-biology-module-9",
+      "lesson_id": "cell-biology-9",
+      "reading": "modules/04a-enzyme-catalysis-and-free-energy.md",
+      "source_ids": [
+        "mit-5.07sc-enzymes",
+        "johnson-goody-2011"
+      ],
+      "relationship": "original-content-with-link-only-comparator-and-research-reference",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "cell-biology-module-10",
+      "lesson_id": "cell-biology-10",
+      "reading": "modules/04b-initial-rates-and-enzyme-inhibition.md",
+      "source_ids": [
+        "mit-5.07sc-enzymes",
+        "briggs-haldane-1925",
+        "johnson-goody-2011"
+      ],
+      "relationship": "original-content-with-link-only-comparator-and-research-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
     }
   ]
 }

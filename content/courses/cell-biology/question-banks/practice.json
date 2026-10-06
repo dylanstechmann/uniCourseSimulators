@@ -197,7 +197,11 @@
         "cell-biology-1-objective-2"
       ],
       "solution_spec": {
-        "answer": [0, 1, 3],
+        "answer": [
+          0,
+          1,
+          3
+        ],
         "partial_credit": "correct-minus-incorrect-clamped-v1"
       },
       "feedback": {
@@ -277,43 +281,72 @@
       ],
       "solution_spec": {
         "field_specs": [
-          {"id": "delivery-control", "type": "single_choice", "answer": 0},
-          {"id": "promoter-occupancy", "type": "single_choice", "answer": 0},
-          {"id": "motif-dependence", "type": "single_choice", "answer": 0},
-          {"id": "inference-scope", "type": "single_choice", "answer": 0}
+          {
+            "id": "delivery-control",
+            "type": "single_choice",
+            "answer": 0
+          },
+          {
+            "id": "promoter-occupancy",
+            "type": "single_choice",
+            "answer": 0
+          },
+          {
+            "id": "motif-dependence",
+            "type": "single_choice",
+            "answer": 0
+          },
+          {
+            "id": "inference-scope",
+            "type": "single_choice",
+            "answer": 0
+          }
         ],
         "rubric": [
           {
             "id": "delivery-control",
             "criterion": "Control fidelity",
             "points": 1,
-            "evidence": ["The control matches delivery reagent and timing while omitting the target sequence."]
+            "evidence": [
+              "The control matches delivery reagent and timing while omitting the target sequence."
+            ]
           },
           {
             "id": "promoter-occupancy",
             "criterion": "Direct promoter occupancy",
             "points": 1,
-            "evidence": ["Locus enrichment is compared against an assay control; expression change alone does not show binding."]
+            "evidence": [
+              "Locus enrichment is compared against an assay control; expression change alone does not show binding."
+            ]
           },
           {
             "id": "motif-dependence",
             "criterion": "Cis-regulatory dependence",
             "points": 1,
-            "evidence": ["Matched intact and motif-mutated constructs isolate the candidate binding site."]
+            "evidence": [
+              "Matched intact and motif-mutated constructs isolate the candidate binding site."
+            ]
           },
           {
             "id": "inference-scope",
             "criterion": "Evidence-bounded causal claim",
             "points": 1,
-            "evidence": ["The conclusion is limited to the tested cells and conditions."]
+            "evidence": [
+              "The conclusion is limited to the tested cells and conditions."
+            ]
           }
         ]
       },
       "feedback": {
         "hint": "Separate a delivery control, a binding assay, a motif-dependence test, and the scope of the causal claim.",
         "solution": "A matched non-targeting oligonucleotide tests delivery effects. Controlled promoter enrichment addresses occupancy, a motif-mutant reporter tests cis-regulatory dependence, and rescue strengthens attribution in the tested system without establishing a universal rule.",
-        "lesson_ids": ["cell-biology-4"],
-        "misconception_ids": ["correlation-proves-direct-regulation", "universal-claim-from-one-system"]
+        "lesson_ids": [
+          "cell-biology-4"
+        ],
+        "misconception_ids": [
+          "correlation-proves-direct-regulation",
+          "universal-claim-from-one-system"
+        ]
       },
       "visibility": "public-practice-authoring",
       "provenance": {
@@ -354,7 +387,15 @@
               "tolerance": 0,
               "relative_tolerance": 0,
               "unit_required": false,
-              "calculation": {"operation": "count", "values": [4.8, 5.2, 5.0, 5.0]}
+              "calculation": {
+                "operation": "count",
+                "values": [
+                  4.8,
+                  5.2,
+                  5.0,
+                  5.0
+                ]
+              }
             },
             {
               "id": "vehicle-mean-signal",
@@ -366,7 +407,15 @@
               "tolerance": 0.005,
               "relative_tolerance": 0,
               "unit_required": false,
-              "calculation": {"operation": "mean", "values": [4.8, 5.2, 5.0, 5.0]}
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  4.8,
+                  5.2,
+                  5.0,
+                  5.0
+                ]
+              }
             },
             {
               "id": "inhibitor-replicate-count",
@@ -378,7 +427,15 @@
               "tolerance": 0,
               "relative_tolerance": 0,
               "unit_required": false,
-              "calculation": {"operation": "count", "values": [2.6, 2.8, 2.7, 2.9]}
+              "calculation": {
+                "operation": "count",
+                "values": [
+                  2.6,
+                  2.8,
+                  2.7,
+                  2.9
+                ]
+              }
             },
             {
               "id": "inhibitor-mean-signal",
@@ -390,7 +447,15 @@
               "tolerance": 0.005,
               "relative_tolerance": 0,
               "unit_required": false,
-              "calculation": {"operation": "mean", "values": [2.6, 2.8, 2.7, 2.9]}
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  2.6,
+                  2.8,
+                  2.7,
+                  2.9
+                ]
+              }
             }
           ]
         },
@@ -594,14 +659,47 @@
       ],
       "solution_spec": {
         "field_specs": [
-          { "id": "prediction", "type": "single_choice", "answer": 0 },
-          { "id": "measurement", "type": "single_choice", "answer": 0 },
-          { "id": "scope", "type": "single_choice", "answer": 0 }
+          {
+            "id": "prediction",
+            "type": "single_choice",
+            "answer": 0
+          },
+          {
+            "id": "measurement",
+            "type": "single_choice",
+            "answer": 0
+          },
+          {
+            "id": "scope",
+            "type": "single_choice",
+            "answer": 0
+          }
         ],
         "rubric": [
-          { "id": "prediction", "criterion": "Bounded mechanistic prediction", "points": 1, "evidence": ["Destabilization is presented as plausible rather than inevitable."] },
-          { "id": "measurement", "criterion": "Mechanism-discriminating measurements", "points": 1, "evidence": ["Abundance, folding or solubility, and activity at matched protein amount are distinguished."] },
-          { "id": "scope", "criterion": "Evidence-bounded inference", "points": 1, "evidence": ["The claim is limited to the tested measurement and system."] }
+          {
+            "id": "prediction",
+            "criterion": "Bounded mechanistic prediction",
+            "points": 1,
+            "evidence": [
+              "Destabilization is presented as plausible rather than inevitable."
+            ]
+          },
+          {
+            "id": "measurement",
+            "criterion": "Mechanism-discriminating measurements",
+            "points": 1,
+            "evidence": [
+              "Abundance, folding or solubility, and activity at matched protein amount are distinguished."
+            ]
+          },
+          {
+            "id": "scope",
+            "criterion": "Evidence-bounded inference",
+            "points": 1,
+            "evidence": [
+              "The claim is limited to the tested measurement and system."
+            ]
+          }
         ]
       },
       "feedback": {
@@ -704,14 +802,47 @@
       ],
       "solution_spec": {
         "field_specs": [
-          { "id": "protection-inference", "type": "single_choice", "answer": 0 },
-          { "id": "integrity-control", "type": "single_choice", "answer": 0 },
-          { "id": "inference-boundary", "type": "single_choice", "answer": 0 }
+          {
+            "id": "protection-inference",
+            "type": "single_choice",
+            "answer": 0
+          },
+          {
+            "id": "integrity-control",
+            "type": "single_choice",
+            "answer": 0
+          },
+          {
+            "id": "inference-boundary",
+            "type": "single_choice",
+            "answer": 0
+          }
         ],
         "rubric": [
-          { "id": "protection-inference", "criterion": "Localization evidence", "points": 1, "evidence": ["Infers membrane-enclosed lumenal access from protection and matched marker behavior."] },
-          { "id": "integrity-control", "criterion": "Membrane-integrity control", "points": 1, "evidence": ["Uses detergent to test whether membrane disruption removes protection."] },
-          { "id": "inference-boundary", "criterion": "Bounded mechanistic inference", "points": 1, "evidence": ["Does not identify an unmeasured molecular import step."] }
+          {
+            "id": "protection-inference",
+            "criterion": "Localization evidence",
+            "points": 1,
+            "evidence": [
+              "Infers membrane-enclosed lumenal access from protection and matched marker behavior."
+            ]
+          },
+          {
+            "id": "integrity-control",
+            "criterion": "Membrane-integrity control",
+            "points": 1,
+            "evidence": [
+              "Uses detergent to test whether membrane disruption removes protection."
+            ]
+          },
+          {
+            "id": "inference-boundary",
+            "criterion": "Bounded mechanistic inference",
+            "points": 1,
+            "evidence": [
+              "Does not identify an unmeasured molecular import step."
+            ]
+          }
         ]
       },
       "feedback": {
@@ -791,6 +922,284 @@
         ],
         "misconception_ids": [
           "kdel-means-physical-immobility"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "cell-biology-9:equilibrium",
+      "type": "single_choice",
+      "prompt": "A catalyst is added to a reversible reaction in a closed system. Which statement is correct under the same conditions?",
+      "options": [
+        "It can accelerate approach to equilibrium without changing the equilibrium constant.",
+        "It makes the forward reaction favorable by changing the reaction ΔG°.",
+        "It speeds the forward reaction but must slow the reverse reaction.",
+        "It changes the equilibrium ratio whenever it lowers an activation barrier."
+      ],
+      "points": 1,
+      "objective_ids": [
+        "cell-biology-9-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0
+      },
+      "feedback": {
+        "hint": "Separate the barrier crossed on the way to equilibrium from the free-energy difference between reactants and products.",
+        "solution": "A catalyst provides a lower-barrier pathway and can accelerate both forward and reverse reactions. It does not change the reaction free-energy difference or equilibrium constant.",
+        "lesson_ids": [
+          "cell-biology-9"
+        ],
+        "misconception_ids": [
+          "catalyst-changes-equilibrium"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "cell-biology-9:coupling-energy",
+      "type": "numeric",
+      "prompt": "A cellular transformation has ΔG = +12.0 kJ/mol and a second reaction has ΔG = -21.0 kJ/mol under the stated conditions. If one event of each is physically coupled in a 1:1 mechanism, what is the net ΔG? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "cell-biology-9-objective-1"
+      ],
+      "solution_spec": {
+        "answer": -9.0,
+        "unit": "kJ/mol",
+        "tolerance": 0.05,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": {
+          "length": 2,
+          "mass": 1,
+          "time": -2,
+          "amount": -1
+        }
+      },
+      "feedback": {
+        "hint": "Add the two free-energy changes only because the prompt states that the reaction events are physically coupled.",
+        "solution": "The net change is +12.0 + (-21.0) = -9.0 kJ/mol for the coupled process. Summing unrelated reactions would not establish cellular coupling.",
+        "lesson_ids": [
+          "cell-biology-9"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "cell-biology-9:rate-at-km",
+      "type": "numeric",
+      "prompt": "An enzyme preparation contains 20 nM active sites and has kcat = 4 s^-1. Under the simple model, what initial rate is predicted when [S] = Km? Enter a value in nM/s.",
+      "points": 1,
+      "objective_ids": [
+        "cell-biology-9-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 40,
+        "unit": "nM/s",
+        "tolerance": 0.4,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": {
+          "amount": 1,
+          "length": -3,
+          "time": -1
+        }
+      },
+      "feedback": {
+        "hint": "First calculate Vmax = kcat × active-enzyme concentration; at [S] = Km the rate is half that value.",
+        "solution": "Vmax = 4 s^-1 × 20 nM = 80 nM/s. At [S] = Km, v0 = Vmax/2 = 40 nM/s.",
+        "lesson_ids": [
+          "cell-biology-9"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "cell-biology-10:rate-prediction",
+      "type": "numeric",
+      "prompt": "A synthetic control dataset is modeled with Vmax = 120 nM/s and Km = 20 μM. What initial rate does the Michaelis–Menten equation predict at [S] = 40 μM? Enter a value in nM/s.",
+      "points": 1,
+      "objective_ids": [
+        "cell-biology-10-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 80,
+        "unit": "nM/s",
+        "tolerance": 0.8,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": {
+          "amount": 1,
+          "length": -3,
+          "time": -1
+        }
+      },
+      "feedback": {
+        "hint": "Substitute the substrate concentration into v0 = Vmax[S]/(Km + [S]); keep the substrate units matched.",
+        "solution": "v0 = 120 × 40/(20 + 40) = 80 nM/s. This is a model prediction at the specified conditions, not an additional measurement.",
+        "lesson_ids": [
+          "cell-biology-10"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "cell-biology-10:kinetic-inference",
+      "type": "structured",
+      "prompt": "Evaluate the synthetic initial-rate comparison in the week-4 lesson. Select one response for each criterion.",
+      "response_fields": [
+        {
+          "id": "kinetic-pattern",
+          "type": "single_choice",
+          "prompt": "Kinetic pattern · Which simple model pattern best matches lower rates at matched [S] with increasing convergence at high [S]?",
+          "options": [
+            "A competitive-like pattern: apparent Km rises while the limiting Vmax may remain similar.",
+            "A pure uncompetitive pattern: both apparent Km and Vmax rise by the same factor.",
+            "An obligatory irreversible pattern: the data prove permanent enzyme destruction.",
+            "No model can compare rates measured at different substrate concentrations."
+          ],
+          "points": 1
+        },
+        {
+          "id": "assay-control",
+          "type": "single_choice",
+          "prompt": "Detector control · Which test directly checks whether the compound distorts the optical product readout?",
+          "options": [
+            "Add inhibitor to a known product standard without enzyme and compare signal recovery with the matched vehicle.",
+            "Measure only a later endpoint at a single substrate concentration.",
+            "Increase enzyme concentration without checking the signal calibrator.",
+            "Replace the matched vehicle control with an untreated well."
+          ],
+          "points": 1
+        },
+        {
+          "id": "inference-boundary",
+          "type": "single_choice",
+          "prompt": "Inference boundary · What conclusion is justified by this synthetic curve pattern alone?",
+          "options": [
+            "It is consistent with a competitive-like kinetic model, but does not prove a physical binding site or exclude alternatives.",
+            "The inhibitor must occupy the substrate-binding pocket in every cell type.",
+            "The unchanged high-substrate rate is directly measured as an exact Vmax.",
+            "The inhibitor cannot affect enzyme conformation or product release."
+          ],
+          "points": 1
+        }
+      ],
+      "points": 3,
+      "objective_ids": [
+        "cell-biology-10-objective-1",
+        "cell-biology-10-objective-2"
+      ],
+      "solution_spec": {
+        "field_specs": [
+          {
+            "id": "kinetic-pattern",
+            "type": "single_choice",
+            "answer": 0
+          },
+          {
+            "id": "assay-control",
+            "type": "single_choice",
+            "answer": 0
+          },
+          {
+            "id": "inference-boundary",
+            "type": "single_choice",
+            "answer": 0
+          }
+        ],
+        "rubric": [
+          {
+            "id": "kinetic-pattern",
+            "criterion": "Model-pattern interpretation",
+            "points": 1,
+            "evidence": [
+              "Identifies competitive-like behavior as increased apparent Km with a similar possible limiting Vmax, while describing it as a model pattern."
+            ]
+          },
+          {
+            "id": "assay-control",
+            "criterion": "Detector-interference control",
+            "points": 1,
+            "evidence": [
+              "Uses a known product standard plus inhibitor without enzyme and compares signal recovery to matched vehicle."
+            ]
+          },
+          {
+            "id": "inference-boundary",
+            "criterion": "Mechanistic inference limit",
+            "points": 1,
+            "evidence": [
+              "States that curve shape is consistent with, but does not prove, a binding-site mechanism or exclude alternatives."
+            ]
+          }
+        ]
+      },
+      "feedback": {
+        "hint": "Separate a rate-pattern description from a direct binding claim. Then choose the control that isolates the detector rather than the enzyme.",
+        "solution": "The synthetic values are compatible with a competitive-like pattern, but the curve does not locate the inhibitor physically. A product standard with inhibitor and no enzyme tests optical interference against matched vehicle. Broader substrate and inhibitor ranges, parameter uncertainty, and orthogonal binding or recovery experiments would strengthen a mechanistic claim.",
+        "lesson_ids": [
+          "cell-biology-10"
+        ],
+        "misconception_ids": [
+          "inhibitor-pattern-proves-binding-site",
+          "rate-change-proves-catalytic-mechanism"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "cell-biology-10:km-vs-binding",
+      "type": "single_choice",
+      "prompt": "For the simple steady-state mechanism E + S ⇌ ES → E + P, which statement about Km is most accurate?",
+      "options": [
+        "Km is a kinetic parameter; it equals the ES dissociation constant only under additional rapid-equilibrium conditions.",
+        "Km is always the equilibrium dissociation constant for substrate binding.",
+        "Km is identical to kcat/Km and therefore has units of inverse time.",
+        "Km is the concentration of enzyme at which the substrate is half depleted."
+      ],
+      "points": 1,
+      "objective_ids": [
+        "cell-biology-10-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0
+      },
+      "feedback": {
+        "hint": "Recall how k-1 and kcat both appear in the steady-state expression for Km.",
+        "solution": "Km = (k-1 + kcat)/k1 for the simple mechanism. It approaches the dissociation constant only when product-forming chemistry is sufficiently slow relative to ES dissociation.",
+        "lesson_ids": [
+          "cell-biology-10"
+        ],
+        "misconception_ids": [
+          "km-always-equals-binding-affinity"
         ]
       },
       "visibility": "public-practice-authoring",

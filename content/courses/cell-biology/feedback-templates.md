@@ -45,6 +45,18 @@ These templates guide feedback for the current public formative material. The so
 
 > The readout is interpretable only if **[assay property or background]** is checked. Add **[specific positive, negative, vehicle, loading, or delivery control]** and state which failure it would reveal.
 
+### Enzyme rate confused with thermodynamic favorability
+
+> The response correctly identifies **[observed rate change]**, but a rate increase alone does not show that the reaction became more favorable or that its equilibrium changed. Separate the activation barrier from net ΔG, then state whether a physically coupled reaction or a new condition was measured.
+
+### Kinetic parameter treated as a direct binding measurement
+
+> The fitted **[Km or apparent Km]** describes the stated kinetic model and conditions. It equals a binding dissociation constant only under additional assumptions. Write the mechanism and rate constants used, check the substrate range and fit uncertainty, then limit the claim to the parameter actually estimated.
+
+### Inhibitor pattern treated as a proven molecular mechanism
+
+> The curve is **[consistent with the named simple model pattern]**, but rate data alone do not identify a physical binding site. Check **[vehicle, optical interference, enzyme stability, and tested concentration range]**, then propose an orthogonal binding or recovery test that distinguishes the alternatives.
+
 ### Membrane-enclosure result mistaken for a complete localization mechanism
 
 > Your protease-protection pattern supports **[membrane-enclosed access under the tested conditions]** because **[marker and detergent controls]**. It does not yet identify **[the exact targeting/import step or compartment]**. Next, add **[an orthogonal marker, matched synthesis measurement, or time-course]** and limit the claim to what that test resolves.

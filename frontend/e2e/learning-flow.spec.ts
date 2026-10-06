@@ -365,6 +365,74 @@ test("the developed cell-biology weeks expose original lessons and deterministic
   await expect(
     kdel.getByRole("region", { name: "Submission feedback" }),
   ).toContainText("1 / 1 practice points");
+
+  await lessons
+    .getByRole("link", {
+      name: /Enzyme catalysis, reaction mechanisms, and free energy/,
+    })
+    .click();
+  await expect(
+    page.getByRole("heading", {
+      name: "Enzyme catalysis, reaction mechanisms, and free energy",
+      level: 1,
+    }),
+  ).toBeVisible();
+  const equilibrium = page.locator(
+    '[data-question-id="cell-biology-9:equilibrium"]',
+  );
+  await equilibrium.getByRole("radio").first().check();
+  await equilibrium
+    .getByRole("button", { name: "Submit practice response" })
+    .click();
+  await expect(
+    equilibrium.getByRole("region", { name: "Submission feedback" }),
+  ).toContainText("1 / 1 practice points");
+
+  const coupling = page.locator(
+    '[data-question-id="cell-biology-9:coupling-energy"]',
+  );
+  await coupling.getByLabel("Numerical value").fill("-9.0");
+  await coupling.getByLabel("Unit").fill("kJ/mol");
+  await coupling
+    .getByRole("button", { name: "Submit practice response" })
+    .click();
+  await expect(
+    coupling.getByRole("region", { name: "Submission feedback" }),
+  ).toContainText("1 / 1 practice points");
+
+  await lessons
+    .getByRole("link", {
+      name: /Initial-rate evidence and reversible enzyme inhibition/,
+    })
+    .click();
+  await expect(
+    page.getByRole("heading", {
+      name: "Initial-rate evidence and reversible enzyme inhibition",
+      level: 1,
+    }),
+  ).toBeVisible();
+  const rate = page.locator(
+    '[data-question-id="cell-biology-10:rate-prediction"]',
+  );
+  await rate.getByLabel("Numerical value").fill("80");
+  await rate.getByLabel("Unit").fill("nM/s");
+  await rate.getByRole("button", { name: "Submit practice response" }).click();
+  await expect(
+    rate.getByRole("region", { name: "Submission feedback" }),
+  ).toContainText("1 / 1 practice points");
+
+  const inference = page.locator(
+    '[data-question-id="cell-biology-10:kinetic-inference"]',
+  );
+  await inference.getByLabel(/Kinetic pattern/).selectOption("0");
+  await inference.getByLabel(/Detector control/).selectOption("0");
+  await inference.getByLabel(/Inference boundary/).selectOption("0");
+  await inference
+    .getByRole("button", { name: "Submit practice response" })
+    .click();
+  await expect(
+    inference.getByRole("region", { name: "Submission feedback" }),
+  ).toContainText("3 / 3 practice points");
 });
 
 test("structured experimental criteria receive deterministic partial credit and persist", async ({
