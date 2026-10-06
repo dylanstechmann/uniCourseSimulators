@@ -7,7 +7,7 @@
   "domain": "Life sciences",
   "level": "Year 1",
   "maturity": "partial",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "license": "MIT OR CC-BY-4.0",
   "content_origin": {
     "kind": "legacy-prototype",
@@ -97,6 +97,14 @@
       "description": "Identify the purpose of positive, negative, and loading controls.",
       "bloom": "understand",
       "course_outcome_ids": []
+    },
+    {
+      "id": "cell-biology-4-objective-3",
+      "description": "Summarize replicate-level data without turning a descriptive contrast into a causal conclusion.",
+      "bloom": "analyze",
+      "course_outcome_ids": [
+        "cell-biology-outcome-4"
+      ]
     }
   ],
   "duration": {
@@ -206,12 +214,14 @@
           "reading": "modules/04-gene-expression-and-experimental-logic.md",
           "objectives": [
             "cell-biology-4-objective-1",
-            "cell-biology-4-objective-2"
+            "cell-biology-4-objective-2",
+            "cell-biology-4-objective-3"
           ],
           "worked_example": "In a knockdown experiment, a non-targeting RNA control tests for delivery or off-target effects; a rescue with a perturbation-resistant construct strengthens causal attribution.",
           "question_ids": [
             "cell-biology-4:check",
-            "cell-biology-4:experimental-logic-structured"
+            "cell-biology-4:experimental-logic-structured",
+            "cell-biology-4:csv-summary-table"
           ],
           "card_ids": [
             "cell-biology-3-0",
@@ -268,13 +278,15 @@
       "mode": "practice",
       "path": "question-banks/practice.json",
       "objective_ids": [
-        "cell-biology-4-objective-1"
+        "cell-biology-4-objective-1",
+        "cell-biology-4-objective-3"
       ],
       "question_ids": [
         "cell-biology-4:check",
-        "cell-biology-4:experimental-logic-structured"
+        "cell-biology-4:experimental-logic-structured",
+        "cell-biology-4:csv-summary-table"
       ],
-      "points": 5
+      "points": 9
     },
     {
       "id": "cell-biology-case",
@@ -315,6 +327,11 @@
   },
   "history": [
     {
+      "version": "0.3.2",
+      "date": "2026-10-05",
+      "summary": "Added an original, size-limited CSV summary-table exercise with deterministic numeric-cell checks; the package remains partial."
+    },
+    {
       "version": "0.3.1",
       "date": "2026-10-05",
       "summary": "Added an original four-criterion structured experimental-reasoning practice item with deterministic rubric scoring; the course remains partial."
@@ -343,11 +360,12 @@
   "limitations": [
     "Four compact legacy units are preserved; this package is not equivalent to a full university semester.",
     "There is no authored 12–15 week schedule, substantive homework sequence, laboratory sequence, midterm, cumulative final, or graded integrative project.",
-    "Six formative checks across four short lessons do not demonstrate comprehensive outcome coverage or mastery; objective associations are provisional.",
+    "Seven formative checks across four short lessons do not demonstrate comprehensive outcome coverage or mastery; objective associations are provisional.",
     "Bloom labels and structured prerequisite edges are initial authoring classifications awaiting subject-matter review.",
     "Question answers and solution feedback are intentionally public practice authoring specifications, not restricted exam keys.",
     "Numerical specifications preserve the prototype's tolerance and optional unit entry; significant-figure and dimensional checks have not been authored.",
-    "Total workload and weekly duration are unknown; former nominal credit values and hardcoded reading times do not establish workload."
+    "Total workload and weekly duration are unknown; former nominal credit values and hardcoded reading times do not establish workload.",
+    "The CSV practice item checks four numeric summary cells only; it does not grade scripts, arbitrary data analysis, uncertainty analysis, or causal reasoning."
   ],
   "intentionally_omitted": [
     "Full instructional sequence and summative assessments are not authored yet; this is a preserved seed inventory."

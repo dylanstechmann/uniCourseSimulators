@@ -190,6 +190,14 @@ class ContentRepository:
                 }
                 for field in question.get("response_fields", [])
             ],
+            accepted_media_types=(
+                question.get("solution_spec", {}).get("accepted_media_types", [])
+                if question["type"] == "file_upload" else []
+            ),
+            max_upload_bytes=(
+                question.get("solution_spec", {}).get("max_bytes")
+                if question["type"] == "file_upload" else None
+            ),
             variant_id=variant_id, variant_token=variant_token,
         )
 

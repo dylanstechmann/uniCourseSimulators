@@ -3,6 +3,27 @@ import { errorMessage } from "../api";
 import type { Appeal, Attempt, Question } from "../types";
 import { FeedbackView } from "./FeedbackView";
 
+function fileAsBase64(file: File): Promise<string> {
+  return new Promise((resolve, reject) => {
+    const reader = new FileReader();
+    reader.onload = () => {
+      if (typeof reader.result !== "string") {
+        reject(new Error("The selected file could not be read."));
+        return;
+      }
+      const separator = reader.result.indexOf(",");
+      if (separator < 0) {
+        reject(new Error("The selected file could not be encoded."));
+        return;
+      }
+      resolve(reader.result.slice(separator + 1));
+    };
+    reader.onerror = () =>
+      reject(reader.error ?? new Error("The selected file could not be read."));
+    reader.readAsDataURL(file);
+  });
+}
+
 export function Assessment({
   question,
   enabled,
@@ -29,6 +50,7 @@ export function Assessment({
   const [fieldResponses, setFieldResponses] = useState<Record<string, string>>(
     {},
   );
+  const [uploadFile, setUploadFile] = useState<File | null>(null);
   const [attempt, setAttempt] = useState<Attempt | undefined>();
   const [busy, setBusy] = useState(false);
   const [appealReason, setAppealReason] = useState("");
@@ -61,6 +83,20 @@ export function Assessment({
       setError("Enter the unit for this quantity.");
       return;
     }
+    if (question.type === "file_upload" && !uploadFile) {
+      setError("Choose a CSV file before submitting.");
+      return;
+    }
+    if (
+      question.type === "file_upload" &&
+      uploadFile &&
+      uploadFile.size > (question.max_upload_bytes ?? 32768)
+    ) {
+      setError(
+        `The selected file is larger than ${question.max_upload_bytes ?? 32768} bytes.`,
+      );
+      return;
+    }
     const structuredResponse = Object.fromEntries(
       Object.entries(fieldResponses)
         .map(([fieldId, answer]) => [fieldId, answer.trim()])
@@ -76,15 +112,21 @@ export function Assessment({
     }
     setBusy(true);
     try {
-      const response: string | number | number[] | Record<string, string> =
+      let response: string | number | number[] | Record<string, string>;
+      if (
         question.type === "data_interpretation" ||
         question.type === "structured"
-          ? structuredResponse
-          : question.type === "single_choice"
-            ? choice!
-            : question.type === "multiple_select"
-              ? [...selected].sort((a, b) => a - b)
-              : value.trim();
+      ) {
+        response = structuredResponse;
+      } else if (question.type === "single_choice") {
+        response = choice!;
+      } else if (question.type === "multiple_select") {
+        response = [...selected].sort((a, b) => a - b);
+      } else if (question.type === "file_upload" && uploadFile) {
+        response = { content_base64: await fileAsBase64(uploadFile) };
+      } else {
+        response = value.trim();
+      }
       const normalizedUnit = unit.trim() || undefined;
       const pendingAttempt = question.variant_token
         ? onSubmit(response, normalizedUnit, question.variant_token)
@@ -292,6 +334,29 @@ export function Assessment({
               ) : (
                 <p className="muted">This quantity is dimensionless.</p>
               )}
+            </div>
+          ) : question.type === "file_upload" ? (
+            <div>
+              <label htmlFor={`${question.id}-file`}>CSV file upload</label>
+              <input
+                id={`${question.id}-file`}
+                name="csv-file"
+                type="file"
+                accept={(question.accepted_media_types?.length
+                  ? question.accepted_media_types
+                  : ["text/csv"]
+                ).join(",")}
+                onChange={(event) =>
+                  setUploadFile(event.target.files?.[0] ?? null)
+                }
+                aria-required="true"
+                aria-describedby={`${question.id}-upload-help`}
+              />
+              <small id={`${question.id}-upload-help`}>
+                Upload UTF-8 CSV, up to {question.max_upload_bytes ?? 32768}{" "}
+                bytes. The file is parsed as data; uploaded content is never
+                executed.
+              </small>
             </div>
           ) : (
             <div>

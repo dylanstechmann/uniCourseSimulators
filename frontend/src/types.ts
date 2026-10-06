@@ -105,7 +105,8 @@ export interface Question {
     | "numeric"
     | "symbolic"
     | "structured"
-    | "data_interpretation";
+    | "data_interpretation"
+    | "file_upload";
   prompt: string;
   options: string[];
   unit?: string;
@@ -121,6 +122,8 @@ export interface Question {
     unit?: string | null;
     points: number;
   }[];
+  accepted_media_types?: string[];
+  max_upload_bytes?: number | null;
   variant_id?: string | null;
   variant_token?: string | null;
   learning_objective_ids: string[];

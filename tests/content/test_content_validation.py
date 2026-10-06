@@ -95,7 +95,7 @@ def test_preserved_inventory_is_honest_partial(repository):
     assert result.inventory == {
         "courses": 25,
         "lessons": 101,
-        "questions": 104,
+        "questions": 105,
         "cards": 202,
         "cases": 25,
     }
@@ -298,9 +298,9 @@ def test_structured_rubric_item_is_counted_while_course_remains_partial(reposito
     result = validate_repository(repository)
     assert result.ok, result.errors
     manifest = read(course[0])
-    assert manifest["version"] == "0.3.1"
+    assert manifest["version"] == "0.3.2"
     assert manifest["maturity"] == "partial"
-    assert result.inventory["questions"] == 104
+    assert result.inventory["questions"] == 105
     question = next(
         item
         for item in read(course[0].parent / "question-banks/practice.json")["questions"]
@@ -475,6 +475,23 @@ def test_nonfinite_numbers_are_not_valid_json_answer_keys(repository, course):
     bank["questions"][2]["solution_spec"]["answer"] = float("nan")
     write(bank_path, bank)
     assert "json" in codes(validate_repository(repository))
+
+
+def test_csv_numeric_outputs_are_independently_recalculated(repository, course):
+    path, _ = course
+    bank_path = path.parent / "question-banks/practice.json"
+    bank = read(bank_path)
+    upload = next(
+        item for item in bank["questions"] if item["type"] == "file_upload"
+    )
+    mean = next(
+        item
+        for item in upload["solution_spec"]["validation_spec"]["checks"]
+        if item["id"] == "vehicle-mean-signal"
+    )
+    mean["answer"] = 12.5
+    write(bank_path, bank)
+    assert "numerical-recalculation" in codes(validate_repository(repository))
 
 
 def test_malformed_retrieval_records_return_errors(repository, course):

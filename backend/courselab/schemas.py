@@ -6,6 +6,9 @@ from typing import Literal
 
 from pydantic import BaseModel, ConfigDict, Field, field_validator
 
+MAX_CSV_UPLOAD_BYTES = 32 * 1024
+MAX_CSV_UPLOAD_BASE64_CHARS = ((MAX_CSV_UPLOAD_BYTES + 2) // 3) * 4
+
 
 class StrictModel(BaseModel):
     model_config = ConfigDict(extra="forbid")
@@ -82,6 +85,14 @@ class AttemptRequest(StrictModel):
     @classmethod
     def valid_type(cls, value):
         if isinstance(value, dict):
+            if set(value) == {"content_base64"}:
+                content = value["content_base64"]
+                if (
+                    not isinstance(content, str)
+                    or not 1 <= len(content) <= MAX_CSV_UPLOAD_BASE64_CHARS
+                ):
+                    raise ValueError("CSV upload encoding must contain at most 32 KiB of data")
+                return value
             if not 1 <= len(value) <= 20:
                 raise ValueError("Structured responses must contain 1–20 fields")
             if any(
@@ -130,7 +141,10 @@ class PublicResponseField(BaseModel):
 
 class PublicQuestion(BaseModel):
     id: str
-    type: Literal["single_choice", "multiple_select", "numeric", "symbolic", "structured", "data_interpretation"]
+    type: Literal[
+        "single_choice", "multiple_select", "numeric", "symbolic", "structured",
+        "data_interpretation", "file_upload",
+    ]
     prompt: str
     options: list[str] = Field(default_factory=list)
     unit: str | None = None
@@ -139,6 +153,8 @@ class PublicQuestion(BaseModel):
     selection: Literal["single", "multiple"] = "single"
     partial_credit_policy: str | None = None
     response_fields: list[PublicResponseField] = Field(default_factory=list)
+    accepted_media_types: list[str] = Field(default_factory=list)
+    max_upload_bytes: int | None = Field(default=None, ge=1, le=MAX_CSV_UPLOAD_BYTES)
     variant_id: str | None = None
     variant_token: str | None = None
     learning_objective_ids: list[str] = Field(default_factory=list)

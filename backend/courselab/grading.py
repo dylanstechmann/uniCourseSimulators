@@ -1,13 +1,23 @@
 """Deterministic seed practice graders. No inference of reasoning or keyword grading."""
 
+import base64
+import binascii
+import csv
 import hashlib
+import io
 import json
 import math
 import re
 from decimal import Decimal, DecimalException
 from fractions import Fraction
 
-from .schemas import AttemptRequest, Feedback, FeedbackComponent, GradeResult
+from .schemas import (
+    MAX_CSV_UPLOAD_BYTES,
+    AttemptRequest,
+    Feedback,
+    FeedbackComponent,
+    GradeResult,
+)
 from .symbolic import SymbolicExpressionError, matches_expected, prepare_answer
 from .units import UnitParseError, dimensions_from_spec, parse_unit
 
@@ -15,7 +25,9 @@ NUMBER = re.compile(
     r"^([+-]?(?:\d+\.?\d*|\.\d+)(?:[eE][+-]?\d+)?)\s*"
     r"((?:(?:[A-Za-zμµΩω°%]|1/[A-Za-z])[A-Za-z0-9μµΩω°%·/⁻¹²³^*(). _-]*)?)$"
 )
-GRADING_POLICY_VERSION = "practice-v8"
+GRADING_POLICY_VERSION = "practice-v9"
+MAX_CSV_UPLOAD_COLUMNS = 20
+MAX_CSV_UPLOAD_ROWS = 50
 
 
 class GradingUnavailable(ValueError):
@@ -208,6 +220,209 @@ def _grade_fielded_response(question: dict, request: AttemptRequest, points: flo
     )
 
 
+def _grade_csv_upload(question: dict, request: AttemptRequest, points: float) -> GradeResult:
+    """Parse bounded UTF-8 CSV as inert data and grade authored numeric cells."""
+    spec = question.get("solution_spec", {})
+    validation = spec.get("validation_spec")
+    rubric = spec.get("rubric")
+    checks = validation.get("checks") if isinstance(validation, dict) else None
+    columns = validation.get("columns") if isinstance(validation, dict) else None
+    key_column = validation.get("key_column") if isinstance(validation, dict) else None
+    max_bytes = spec.get("max_bytes")
+    accepted = spec.get("accepted_media_types")
+    if (
+        accepted != ["text/csv"]
+        or isinstance(max_bytes, bool)
+        or not isinstance(max_bytes, int)
+        or not 1 <= max_bytes <= MAX_CSV_UPLOAD_BYTES
+        or not isinstance(validation, dict)
+        or validation.get("format") != "csv-numeric-table-v1"
+        or validation.get("delimiter") != ","
+        or not isinstance(columns, list)
+        or not 2 <= len(columns) <= MAX_CSV_UPLOAD_COLUMNS
+        or any(not isinstance(column, str) or not re.fullmatch(r"[a-z][a-z0-9_]{0,63}", column) for column in columns)
+        or len(columns) != len(set(columns))
+        or key_column not in columns
+        or not isinstance(checks, list)
+        or not 1 <= len(checks) <= MAX_CSV_UPLOAD_ROWS
+        or not isinstance(rubric, list)
+        or len(rubric) != len(checks)
+    ):
+        raise GradingUnavailable("CSV upload specification is invalid or exceeds supported limits")
+
+    checks_by_id = {}
+    expected_row_ids = set()
+    checked_cells = set()
+    for check in checks:
+        if (
+            not isinstance(check, dict)
+            or not isinstance(check.get("id"), str)
+            or not re.fullmatch(r"[a-z][a-z0-9_-]{0,63}", check["id"])
+            or not isinstance(check.get("row_id"), str)
+            or not re.fullmatch(r"[a-z][a-z0-9_-]{0,63}", check["row_id"])
+            or not isinstance(check.get("column"), str)
+            or check.get("column") not in columns
+            or check.get("column") == key_column
+            or check.get("type") != "numeric"
+            or isinstance(check.get("answer"), bool)
+            or not isinstance(check.get("answer"), (int, float))
+            or not math.isfinite(check["answer"])
+            or not isinstance(check.get("unit"), str)
+            or isinstance(check.get("tolerance"), bool)
+            or not isinstance(check.get("tolerance"), (int, float))
+            or not math.isfinite(check["tolerance"])
+            or check["tolerance"] < 0
+            or isinstance(check.get("relative_tolerance", 0), bool)
+            or not isinstance(check.get("relative_tolerance", 0), (int, float))
+            or not math.isfinite(check.get("relative_tolerance", 0))
+            or not 0 <= check.get("relative_tolerance", 0) <= 1
+            or not isinstance(check.get("unit_required", False), bool)
+            or (check.get("unit_required", False) and not check.get("unit"))
+        ):
+            raise GradingUnavailable("CSV numeric cell specifications are invalid")
+        if check["id"] in checks_by_id or (check["row_id"], check["column"]) in checked_cells:
+            raise GradingUnavailable("CSV check IDs and target cells must be unique")
+        checks_by_id[check["id"]] = check
+        expected_row_ids.add(check["row_id"])
+        checked_cells.add((check["row_id"], check["column"]))
+
+    rubric_by_id = {}
+    for criterion in rubric:
+        if (
+            not isinstance(criterion, dict)
+            or not isinstance(criterion.get("id"), str)
+            or criterion.get("id") not in checks_by_id
+            or criterion.get("id") in rubric_by_id
+            or not isinstance(criterion.get("criterion"), str)
+            or len(criterion["criterion"].strip()) < 10
+            or not isinstance(criterion.get("evidence"), list)
+            or not criterion["evidence"]
+            or any(not isinstance(item, str) or len(item.strip()) < 3 for item in criterion["evidence"])
+            or isinstance(criterion.get("points"), bool)
+            or not isinstance(criterion.get("points"), (int, float))
+            or not math.isfinite(criterion["points"])
+            or criterion["points"] <= 0
+        ):
+            raise GradingUnavailable("CSV analytic rubric is invalid")
+        rubric_by_id[criterion["id"]] = criterion
+    if set(rubric_by_id) != set(checks_by_id):
+        raise GradingUnavailable("Each CSV numeric check must map to one analytic criterion")
+    rubric_points = sum(float(item["points"]) for item in rubric)
+    if not math.isclose(rubric_points, points, rel_tol=0, abs_tol=1e-8):
+        raise GradingUnavailable("CSV rubric points must sum to the question total")
+
+    response = request.response
+    if not isinstance(response, dict) or set(response) != {"content_base64"}:
+        return _csv_upload_result(question, points, "malformed_upload")
+    encoded = response["content_base64"]
+    if not isinstance(encoded, str) or len(encoded) > ((MAX_CSV_UPLOAD_BYTES + 2) // 3) * 4:
+        return _csv_upload_result(question, points, "malformed_upload")
+    try:
+        payload = base64.b64decode(encoded, validate=True)
+        if not payload or len(payload) > max_bytes:
+            return _csv_upload_result(question, points, "malformed_upload")
+        text = payload.decode("utf-8-sig")
+        if "\x00" in text:
+            return _csv_upload_result(question, points, "malformed_upload")
+        parsed = []
+        for index, row in enumerate(
+            csv.reader(io.StringIO(text, newline=""), delimiter=",", strict=True)
+        ):
+            if index > MAX_CSV_UPLOAD_ROWS:
+                return _csv_upload_result(question, points, "malformed_upload")
+            parsed.append(row)
+    except (binascii.Error, UnicodeDecodeError, csv.Error, ValueError):
+        return _csv_upload_result(question, points, "malformed_upload")
+    if not parsed or parsed[0] != columns:
+        return _csv_upload_result(question, points, "malformed_upload")
+
+    table = {}
+    for row in parsed[1:]:
+        if not row or all(not value.strip() for value in row):
+            continue
+        if (
+            len(row) != len(columns)
+            or any(len(value) > 1000 for value in row)
+            or len(table) >= len(expected_row_ids)
+        ):
+            return _csv_upload_result(question, points, "malformed_upload")
+        row_id = row[columns.index(key_column)].strip()
+        if row_id not in expected_row_ids or row_id in table:
+            return _csv_upload_result(question, points, "malformed_upload")
+        table[row_id] = dict(zip(columns, (value.strip() for value in row), strict=True))
+
+    components = []
+    score = 0.0
+    authored_feedback = question.get("feedback", {})
+    lesson_ids = authored_feedback.get("lesson_ids", [])
+    for check in checks:
+        criterion = rubric_by_id[check["id"]]
+        row = table.get(check["row_id"])
+        value = row.get(check["column"], "") if row else ""
+        if not value:
+            components.append(FeedbackComponent(
+                field_id=check["id"], label=criterion["criterion"], score=0,
+                max_score=float(criterion["points"]), diagnosis="missing_response",
+            ))
+            continue
+        child_question = {
+            "type": "numeric",
+            "points": criterion["points"],
+            "solution_spec": {
+                "answer": check["answer"],
+                "unit": check["unit"],
+                "tolerance": check["tolerance"],
+                "relative_tolerance": check.get("relative_tolerance", 0),
+                "unit_required": check.get("unit_required", False),
+            },
+            "feedback": {"hint": authored_feedback.get("hint"), "lesson_ids": lesson_ids},
+        }
+        child_result = grade(child_question, AttemptRequest(response=value))
+        component_score = child_result.score
+        score += component_score
+        components.append(FeedbackComponent(
+            field_id=check["id"], label=criterion["criterion"],
+            score=component_score, max_score=float(criterion["points"]),
+            diagnosis=child_result.feedback.diagnosis,
+        ))
+    correct = math.isclose(score, points, rel_tol=0, abs_tol=1e-8)
+    diagnosis = (
+        "csv_results_complete" if correct
+        else "csv_results_partial" if score > 0
+        else "csv_results_incomplete" if all(item.diagnosis == "missing_response" for item in components)
+        else "csv_results_incorrect"
+    )
+    return _csv_upload_result(question, points, diagnosis, components, score)
+
+
+def _csv_upload_result(
+    question: dict,
+    points: float,
+    diagnosis: str,
+    components: list[FeedbackComponent] | None = None,
+    score: float = 0.0,
+) -> GradeResult:
+    authored = question.get("feedback", {})
+    lesson_ids = authored.get("lesson_ids", [])
+    correct = math.isclose(score, points, rel_tol=0, abs_tol=1e-8)
+    return GradeResult(
+        score=score, max_score=points, correct=correct,
+        feedback=Feedback(
+            diagnosis=diagnosis,
+            hint=None if correct else authored.get("hint"),
+            misconception=None if correct else authored.get("misconception"),
+            lesson_id=lesson_ids[0] if lesson_ids else None,
+            next_step=(
+                "The requested numeric table cells meet their deterministic checks; interpretation beyond the output table was not assessed."
+                if correct else
+                "Check the UTF-8 CSV header, one unique row per condition, the required numeric outputs, and their units. The upload is parsed as data only."
+            ),
+            components=components or [],
+        ),
+        grading_policy_version=GRADING_POLICY_VERSION,
+    )
+
+
 def count_significant_figures(number: str) -> int:
     """Count precision encoded lexically in a decimal/scientific-notation answer."""
     mantissa = re.split(r"[eE]", number, maxsplit=1)[0].lstrip("+-")
@@ -247,6 +462,8 @@ def grade(question: dict, request: AttemptRequest) -> GradeResult:
         raise ValueError("Question points must be positive and finite")
     if question["type"] in {"data_interpretation", "structured"}:
         return _grade_fielded_response(question, request, points)
+    if question["type"] == "file_upload":
+        return _grade_csv_upload(question, request, points)
     if question["type"] == "multiple_select":
         if not isinstance(request.response, list):
             diagnosis = "malformed_response"

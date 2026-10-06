@@ -23,7 +23,19 @@ def submit(client, question="choice", response=0, **extra):
 
 def forbidden_keys(value):
     if isinstance(value, dict):
-        assert not {"answer", "expression", "solution_spec", "field_specs", "solution", "password_hash", "token_hash"}.intersection(value)
+        assert not {
+            "answer",
+            "expression",
+            "solution_spec",
+            "field_specs",
+            "solution",
+            "rubric",
+            "validation_spec",
+            "checks",
+            "calculation",
+            "password_hash",
+            "token_hash",
+        }.intersection(value)
         for item in value.values():
             forbidden_keys(item)
     elif isinstance(value, list):
@@ -233,7 +245,7 @@ def test_multiple_select_api_persists_partial_credit_and_private_question_digest
     assert result["score"] == 2 and result["max_score"] == 3
     assert result["response"]["response"] == [1, 0]
     assert result["result"]["feedback"]["diagnosis"] == "partially_correct_selection"
-    assert result["result"]["grading_policy_version"] == "practice-v8"
+    assert result["result"]["grading_policy_version"] == "practice-v9"
     history = enrolled.get("/api/v1/attempts").json()
     assert len(history) == 1
     assert "question_spec_sha256" not in result
@@ -263,7 +275,7 @@ def test_symbolic_practice_hides_key_and_persists_equivalent_response(enrolled, 
     attempt = response.json()
     assert attempt["result"]["correct"] is True
     assert attempt["score"] == 1
-    assert attempt["result"]["grading_policy_version"] == "practice-v8"
+    assert attempt["result"]["grading_policy_version"] == "practice-v9"
     assert attempt["response"]["response"].startswith("((2*x)")
     forbidden_keys(attempt)
     with Session(app.state.engine) as db:
@@ -289,7 +301,7 @@ def test_data_interpretation_api_hides_specs_and_persists_component_scores(enrol
     result = correct.json()
     assert result["score"] == 2 and result["max_score"] == 2
     assert result["result"]["correct"] is True
-    assert result["result"]["grading_policy_version"] == "practice-v8"
+    assert result["result"]["grading_policy_version"] == "practice-v9"
     assert [field["score"] for field in result["result"]["feedback"]["components"]] == [1, 1]
     assert result["response"]["response"] == {"difference": "4.0 μM", "interpretation": "0"}
     forbidden_keys(result)
@@ -498,7 +510,7 @@ def test_numeric_api_records_tolerance_and_significant_figure_grader_v5(enrolled
     boundary = submit(enrolled, question="numeric", response="82 μmol/min")
     assert boundary.status_code == 201
     assert boundary.json()["score"] == 1
-    assert boundary.json()["result"]["grading_policy_version"] == "practice-v8"
+    assert boundary.json()["result"]["grading_policy_version"] == "practice-v9"
     precision_mismatch = submit(enrolled, question="numeric", response="82.0 μmol/min")
     assert precision_mismatch.status_code == 201
     assert precision_mismatch.json()["score"] == 0

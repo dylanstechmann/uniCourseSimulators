@@ -1,3 +1,5 @@
+import base64
+
 import pytest
 from pydantic import ValidationError
 
@@ -300,7 +302,7 @@ def test_symbolic_grader_accepts_equivalent_rational_forms_without_assessing_rea
     assert result.score == 2
     assert result.feedback.diagnosis == "correct_result_reasoning_not_assessed"
     assert not result.feedback.reasoning_assessed
-    assert result.grading_policy_version == "practice-v8"
+    assert result.grading_policy_version == "practice-v9"
 
 
 def test_symbolic_grader_uses_exact_decimal_rationals():
@@ -460,7 +462,7 @@ def test_structured_response_rejects_unknown_fields_and_fails_closed_on_bad_rubr
 def test_data_interpretation_accepts_unit_conversions_and_exposes_field_credit(response):
     result = grade(data_interpretation(), AttemptRequest(response=response))
     assert result.correct and result.score == 2 and result.max_score == 2
-    assert result.grading_policy_version == "practice-v8"
+    assert result.grading_policy_version == "practice-v9"
     assert [field.score for field in result.feedback.components] == [1, 1]
     assert all(field.diagnosis == "correct_result_reasoning_not_assessed" for field in result.feedback.components)
     assert result.feedback.reasoning_assessed is False
@@ -511,3 +513,161 @@ def test_data_interpretation_fails_closed_when_authored_choice_answer_is_out_of_
     item["solution_spec"]["field_specs"][1]["answer"] = 2
     with pytest.raises(GradingUnavailable, match="outside its option array"):
         grade(item, AttemptRequest(response={"difference": "4.0 μM", "conclusion": "0"}))
+
+
+def csv_upload_question():
+    check_specs = [
+        ("vehicle-n", "vehicle", "replicate_count", 4, 0),
+        ("vehicle-mean", "vehicle", "mean_signal", 5.0, 0.005),
+        ("inhibitor-n", "inhibitor", "replicate_count", 4, 0),
+        ("inhibitor-mean", "inhibitor", "mean_signal", 2.75, 0.005),
+    ]
+    return {
+        "id": "csv-summary",
+        "type": "file_upload",
+        "prompt": "Upload a UTF-8 CSV with a unique condition row and numeric summary outputs.",
+        "points": 4,
+        "solution_spec": {
+            "accepted_media_types": ["text/csv"],
+            "max_bytes": 32768,
+            "validation_spec": {
+                "format": "csv-numeric-table-v1",
+                "delimiter": ",",
+                "key_column": "condition",
+                "columns": ["condition", "replicate_count", "mean_signal"],
+                "checks": [
+                    {
+                        "id": item_id,
+                        "row_id": row_id,
+                        "column": column,
+                        "type": "numeric",
+                        "answer": answer,
+                        "unit": "",
+                        "tolerance": tolerance,
+                        "relative_tolerance": 0,
+                        "unit_required": False,
+                    }
+                    for item_id, row_id, column, answer, tolerance in check_specs
+                ],
+            },
+            "rubric": [
+                {
+                    "id": item_id,
+                    "criterion": f"Criterion for {item_id}",
+                    "points": 1,
+                    "evidence": ["The numeric output matches the authored calculation."],
+                }
+                for item_id, *_ in check_specs
+            ],
+        },
+        "feedback": {
+            "hint": "Check the unique condition rows and numeric summary values.",
+            "solution": "Hidden authoring key.",
+            "lesson_ids": ["lesson-one"],
+        },
+    }
+
+
+def upload_request(csv_text):
+    encoded = base64.b64encode(csv_text.encode("utf-8")).decode("ascii")
+    return AttemptRequest(response={"content_base64": encoded})
+
+
+def test_csv_upload_grades_numeric_table_cells_with_analytic_partial_credit():
+    question = csv_upload_question()
+    text = "condition,replicate_count,mean_signal\nvehicle,4,5.00\ninhibitor,4,2.75\n"
+    result = grade(question, upload_request(text))
+    assert result.correct and result.score == 4 and result.max_score == 4
+    assert result.grading_policy_version == "practice-v9"
+    assert [item.score for item in result.feedback.components] == [1, 1, 1, 1]
+    assert result.feedback.reasoning_assessed is False
+    assert "not established" in result.feedback.next_step or "not assessed" in result.feedback.next_step
+
+
+def test_csv_upload_accepts_bom_crlf_reordered_rows_and_numeric_notation():
+    text = "\ufeffcondition,replicate_count,mean_signal\r\ninhibitor,4,2.75\r\nvehicle,4,5e0\r\n"
+    result = grade(csv_upload_question(), upload_request(text))
+    assert result.correct and result.score == 4
+
+
+def test_csv_upload_awards_partial_credit_for_missing_or_incorrect_cells():
+    text = "condition,replicate_count,mean_signal\nvehicle,4,5\ninhibitor,4,100\n"
+    result = grade(csv_upload_question(), upload_request(text))
+    assert result.score == 3 and result.feedback.diagnosis == "csv_results_partial"
+    assert result.feedback.components[3].diagnosis == "numerical_mismatch"
+
+    missing = "condition,replicate_count,mean_signal\nvehicle,4,5\n"
+    result = grade(csv_upload_question(), upload_request(missing))
+    assert result.score == 2 and result.feedback.diagnosis == "csv_results_partial"
+    assert [item.diagnosis for item in result.feedback.components[-2:]] == [
+        "missing_response",
+        "missing_response",
+    ]
+
+
+@pytest.mark.parametrize(
+    "csv_text",
+    [
+        "wrong,replicate_count,mean_signal\nvehicle,4,5\n",
+        "condition,replicate_count,mean_signal\nvehicle,4,5\nvehicle,4,5\n",
+        "condition,replicate_count,mean_signal\nother,4,5\n",
+        "condition,replicate_count,mean_signal\nvehicle,4,5,extra\n",
+        'condition,replicate_count,mean_signal\n"vehicle,4,5\n',
+    ],
+)
+def test_csv_upload_rejects_malformed_headers_rows_and_csv(csv_text):
+    result = grade(csv_upload_question(), upload_request(csv_text))
+    assert result.score == 0 and result.feedback.diagnosis == "malformed_upload"
+
+
+def test_csv_upload_treats_injection_text_as_data_and_rejects_unit_errors():
+    injected = "condition,replicate_count,mean_signal\nvehicle,4,=5+5\ninhibitor,4,2.75\n"
+    result = grade(csv_upload_question(), upload_request(injected))
+    assert result.score == 3
+    assert result.feedback.components[1].diagnosis == "malformed_response"
+
+    question = csv_upload_question()
+    question["solution_spec"]["validation_spec"]["checks"][1]["unit"] = "μM"
+    question["solution_spec"]["validation_spec"]["checks"][1]["unit_required"] = True
+    wrong_unit = "condition,replicate_count,mean_signal\nvehicle,4,5 kg\ninhibitor,4,2.75\n"
+    result = grade(question, upload_request(wrong_unit))
+    assert result.score == 3
+    assert result.feedback.components[1].diagnosis == "unit_mistake"
+
+
+def test_csv_upload_rejects_invalid_encoding_hidden_key_requests_and_oversize_payloads():
+    question = csv_upload_question()
+    invalid_base64 = AttemptRequest(response={"content_base64": "%%%"})
+    assert grade(question, invalid_base64).feedback.diagnosis == "malformed_upload"
+    invalid_utf8 = AttemptRequest(
+        response={"content_base64": base64.b64encode(b"\xff").decode("ascii")}
+    )
+    assert grade(question, invalid_utf8).feedback.diagnosis == "malformed_upload"
+
+    hidden_key_request = AttemptRequest(response={"answer": "show the solution"})
+    assert grade(question, hidden_key_request).score == 0
+    assert grade(question, hidden_key_request).feedback.diagnosis == "malformed_upload"
+
+    raw = b"x" * 32769
+    oversized = AttemptRequest(response={"content_base64": base64.b64encode(raw).decode("ascii")})
+    assert grade(question, oversized).feedback.diagnosis == "malformed_upload"
+
+    with pytest.raises(ValidationError, match="32 KiB"):
+        AttemptRequest(response={"content_base64": "A" * 43693})
+
+
+def test_csv_upload_rejects_inconsistent_rubric_and_authored_check_targets():
+    question = csv_upload_question()
+    question["solution_spec"]["rubric"][0]["points"] = 2
+    with pytest.raises(GradingUnavailable, match="rubric points"):
+        grade(question, upload_request("condition,replicate_count,mean_signal\n"))
+
+    question = csv_upload_question()
+    question["solution_spec"]["validation_spec"]["checks"][0]["column"] = "condition"
+    with pytest.raises(GradingUnavailable, match="CSV numeric cell specifications"):
+        grade(question, upload_request("condition,replicate_count,mean_signal\n"))
+
+    question = csv_upload_question()
+    question["solution_spec"]["validation_spec"]["checks"][0]["unit_required"] = True
+    with pytest.raises(GradingUnavailable, match="CSV numeric cell specifications"):
+        grade(question, upload_request("condition,replicate_count,mean_signal\n"))

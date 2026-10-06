@@ -824,6 +824,112 @@ def validate_course(
                                 question["id"],
                                 "Structured rubric criterion points must match response-field points.",
                             )
+        if question["type"] == "file_upload":
+            validation = solution.get("validation_spec", {})
+            checks = (
+                validation.get("checks", [])
+                if isinstance(validation, dict) and isinstance(validation.get("checks", []), list)
+                else []
+            )
+            rubric = solution.get("rubric", [])
+            if not isinstance(rubric, list):
+                rubric = []
+            check_ids = [
+                item.get("id") for item in checks
+                if isinstance(item, dict) and isinstance(item.get("id"), str)
+            ]
+            rubric_ids = [
+                item.get("id") for item in rubric
+                if isinstance(item, dict) and isinstance(item.get("id"), str)
+            ]
+            target_cells = [
+                (item.get("row_id"), item.get("column"))
+                for item in checks
+                if isinstance(item, dict)
+                and isinstance(item.get("row_id"), str)
+                and isinstance(item.get("column"), str)
+            ]
+            columns = (
+                validation.get("columns", [])
+                if isinstance(validation, dict) and isinstance(validation.get("columns", []), list)
+                else []
+            )
+            key_column = validation.get("key_column") if isinstance(validation, dict) else None
+            if (
+                len(check_ids) != len(checks)
+                or len(check_ids) != len(set(check_ids))
+                or len(rubric_ids) != len(rubric)
+                or len(rubric_ids) != len(set(rubric_ids))
+                or set(check_ids) != set(rubric_ids)
+                or len(target_cells) != len(checks)
+                or len(target_cells) != len(set(target_cells))
+                or any(column not in columns or column == key_column for _, column in target_cells)
+            ):
+                report.error(
+                    "answer-spec",
+                    question["id"],
+                    "CSV numeric checks must map uniquely to rubric criteria and non-key output columns.",
+                )
+            else:
+                rubric_points = sum(
+                    item.get("points", 0)
+                    for item in rubric
+                    if isinstance(item, dict)
+                    and isinstance(item.get("points"), (int, float))
+                    and not isinstance(item.get("points"), bool)
+                )
+                if not math.isclose(
+                    rubric_points, question.get("points", 0), rel_tol=0, abs_tol=1e-8
+                ):
+                    report.error(
+                        "answer-spec",
+                        question["id"],
+                        "CSV rubric points must sum to the parent question points.",
+                    )
+                for check in checks:
+                    calculation = check.get("calculation") if isinstance(check, dict) else None
+                    values = calculation.get("values") if isinstance(calculation, dict) else None
+                    operation = calculation.get("operation") if isinstance(calculation, dict) else None
+                    if (
+                        operation not in {"count", "mean"}
+                        or not isinstance(values, list)
+                        or not values
+                        or any(
+                            isinstance(value, bool)
+                            or not isinstance(value, (int, float))
+                            or not math.isfinite(value)
+                            for value in values
+                        )
+                        or not isinstance(check, dict)
+                        or not isinstance(check.get("answer"), (int, float))
+                        or isinstance(check.get("answer"), bool)
+                        or not math.isfinite(check["answer"])
+                        or not isinstance(check.get("unit"), str)
+                        or not isinstance(check.get("unit_required", False), bool)
+                        or (check.get("unit_required", False) and not check.get("unit"))
+                        or isinstance(check.get("tolerance"), bool)
+                        or not isinstance(check.get("tolerance"), (int, float))
+                        or not math.isfinite(check.get("tolerance", 0))
+                        or check.get("tolerance", 0) < 0
+                        or isinstance(check.get("relative_tolerance", 0), bool)
+                        or not isinstance(check.get("relative_tolerance", 0), (int, float))
+                        or not math.isfinite(check.get("relative_tolerance", 0))
+                        or not 0 <= check.get("relative_tolerance", 0) <= 1
+                    ):
+                        report.error(
+                            "answer-spec",
+                            f"{question['id']}/{check.get('id', '<invalid>') if isinstance(check, dict) else '<invalid>'}",
+                            "CSV numeric checks require finite, independently recalculable source values.",
+                        )
+                        continue
+                    recalculated = len(values) if operation == "count" else math.fsum(values) / len(values)
+                    allowed_error = check.get("tolerance", 0) + check.get("relative_tolerance", 0) * abs(check["answer"])
+                    if abs(recalculated - check["answer"]) > allowed_error:
+                        report.error(
+                            "numerical-recalculation",
+                            f"{question['id']}/{check['id']}",
+                            f"Authored answer {check['answer']} does not match independently recalculated {operation} {recalculated} within tolerance.",
+                        )
         if question["type"] in {"single_choice", "multiple_select"}:
             answers = (
                 [solution["answer"]]

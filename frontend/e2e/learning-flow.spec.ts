@@ -293,6 +293,19 @@ test("public lesson DTOs contain no answer specifications or solution fields", a
   ).toBe(404);
   expect((await request.get("/legacy/src/data/courses.js")).status()).toBe(404);
   expect((await request.get("/.env")).status()).toBe(404);
+
+  const experimentLesson = await request.get(
+    "/api/v1/courses/cell-biology/lessons/cell-biology-4",
+  );
+  expect(experimentLesson.ok()).toBeTruthy();
+  const uploadQuestion = (await experimentLesson.json()).questions.find(
+    (question: { type: string }) => question.type === "file_upload",
+  );
+  expect(uploadQuestion.accepted_media_types).toEqual(["text/csv"]);
+  expect(uploadQuestion.max_upload_bytes).toBe(32768);
+  expect(uploadQuestion).not.toHaveProperty("validation_spec");
+  expect(uploadQuestion).not.toHaveProperty("rubric");
+  expect(uploadQuestion).not.toHaveProperty("solution_spec");
 });
 
 test("symbolic calculus practice accepts an equivalent expression and saves feedback", async ({
@@ -499,4 +512,54 @@ test("data interpretation awards transparent field credit and reloads saved feed
       .locator('[data-question-id="statistics-5:group-summary"]')
       .getByRole("region", { name: "Submission feedback" }),
   ).toContainText("1 / 2 practice points");
+});
+
+test("CSV analysis upload receives cell-level partial credit and persists safely", async ({
+  page,
+}) => {
+  await page.goto("/#/account");
+  await page.getByRole("button", { name: "Start guest session" }).click();
+  await page.getByRole("link", { name: "Course catalog", exact: true }).click();
+  await page.getByRole("link", { name: /Foundations of Cell/ }).click();
+  await page.getByRole("button", { name: "Enroll in partial course" }).click();
+  await page
+    .getByRole("navigation", { name: "Lessons" })
+    .getByRole("link", { name: /Gene expression and experimental logic/ })
+    .click();
+
+  const practice = page.locator(
+    '[data-question-id="cell-biology-4:csv-summary-table"]',
+  );
+  await expect(practice).toContainText("Upload a UTF-8 CSV");
+  await practice.getByLabel("CSV file upload").setInputFiles({
+    name: "summary.csv",
+    mimeType: "text/csv",
+    buffer: Buffer.from(
+      "condition,replicate_count,mean_signal\nvehicle,4,5.00\ninhibitor,4,100\n",
+    ),
+  });
+  await practice
+    .getByRole("button", { name: "Submit practice response" })
+    .click();
+  await expect(
+    practice.getByRole("region", { name: "Submission feedback" }),
+  ).toContainText("3 / 4 practice points");
+  await expect(practice.getByLabel("Field-level scoring")).toContainText(
+    "Vehicle mean signal",
+  );
+  await expect(
+    practice.getByRole("region", { name: "Submission feedback" }),
+  ).toContainText("Some uploaded CSV results met");
+  await expect(practice).toContainText("uploaded content is never executed");
+  const accessibility = await new AxeBuilder({ page })
+    .withTags(["wcag2a", "wcag2aa", "wcag21a", "wcag21aa"])
+    .analyze();
+  expect(accessibility.violations).toEqual([]);
+
+  await page.reload();
+  await expect(
+    page
+      .locator('[data-question-id="cell-biology-4:csv-summary-table"]')
+      .getByRole("region", { name: "Submission feedback" }),
+  ).toContainText("3 / 4 practice points");
 });

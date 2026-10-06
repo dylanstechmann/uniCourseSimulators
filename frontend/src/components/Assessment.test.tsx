@@ -78,6 +78,17 @@ const structuredQuestion: Question = {
     },
   ],
 };
+const fileUploadQuestion: Question = {
+  id: "csv-summary",
+  type: "file_upload",
+  prompt: "Upload a UTF-8 CSV with unique condition rows and numeric results.",
+  options: [],
+  points: 4,
+  accepted_media_types: ["text/csv"],
+  max_upload_bytes: 32768,
+  learning_objective_ids: ["summarize-data"],
+  assessment_role: "formative",
+};
 const multipleQuestion: Question = {
   id: "membrane-assembly",
   type: "multiple_select",
@@ -325,6 +336,54 @@ describe("formative assessment submission", () => {
     expect(
       screen.getByText(/Free-form reasoning was not assessed/),
     ).toBeInTheDocument();
+  });
+  it("encodes a size-bounded CSV file as data for the server grader", async () => {
+    const submit = vi.fn().mockResolvedValue(attempt);
+    render(
+      <Assessment question={fileUploadQuestion} enabled onSubmit={submit} />,
+    );
+    const input = screen.getByLabelText("CSV file upload");
+    const csv = "condition,mean_signal\nvehicle,5\n";
+    await userEvent.upload(
+      input,
+      new File([csv], "summary.csv", { type: "text/csv" }),
+      { applyAccept: false },
+    );
+    expect(input).toHaveProperty("files.length", 1);
+    await userEvent.click(
+      screen.getByRole("button", { name: "Submit practice response" }),
+    );
+    const bytes = new TextEncoder().encode(csv);
+    const expectedBase64 = btoa(
+      Array.from(bytes, (byte) => String.fromCharCode(byte)).join(""),
+    );
+    expect(submit).toHaveBeenCalledWith(
+      { content_base64: expectedBase64 },
+      undefined,
+    );
+    expect(
+      screen.getByText(/parsed as data; uploaded content is never executed/),
+    ).toBeInTheDocument();
+  });
+  it("rejects an over-size CSV before sending it", async () => {
+    const submit = vi.fn();
+    render(
+      <Assessment
+        question={{ ...fileUploadQuestion, max_upload_bytes: 4 }}
+        enabled
+        onSubmit={submit}
+      />,
+    );
+    await userEvent.upload(
+      screen.getByLabelText("CSV file upload"),
+      new File(["12345"], "large.csv", { type: "text/csv" }),
+      { applyAccept: false },
+    );
+    await userEvent.click(
+      screen.getByRole("button", { name: "Submit practice response" }),
+    );
+    expect(screen.getByRole("alert")).toHaveTextContent("larger than 4 bytes");
+    expect(submit).not.toHaveBeenCalled();
   });
   it("shows the significant-figure requirement before numeric practice", () => {
     render(

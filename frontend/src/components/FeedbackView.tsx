@@ -15,6 +15,16 @@ const diagnoses: Record<string, string> = {
     "Some structured analytic criteria met their deterministic checks.",
   structured_rubric_incorrect:
     "The structured responses did not meet the analytic rubric criteria.",
+  csv_results_complete:
+    "The uploaded CSV contains the expected numeric results for every rubric criterion.",
+  csv_results_partial:
+    "Some uploaded CSV results met their deterministic checks.",
+  csv_results_incomplete:
+    "The CSV table is valid, but one or more required result cells are missing.",
+  csv_results_incorrect:
+    "The uploaded table is valid, but its numeric results do not meet the rubric checks.",
+  malformed_upload:
+    "The file could not be scored. Check the required UTF-8 CSV format, header, and unique row labels.",
   missing_response: "No response was submitted for this field.",
   numerical_mismatch: "The numerical result is outside the accepted tolerance.",
   significant_figures_mistake:

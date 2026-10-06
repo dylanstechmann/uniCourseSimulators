@@ -5,6 +5,9 @@ a complete-course content quality gate. The root content validator owns those.
 """
 
 import argparse
+import base64
+import csv
+import io
 from pathlib import Path
 
 from .content import ContentRepository
@@ -15,7 +18,16 @@ from .variants import resolve_variant, variant_ids
 
 def learner_keys(value):
     if isinstance(value, dict):
-        assert not {"solution_spec", "field_specs", "answer", "solution"}.intersection(value)
+        assert not {
+            "solution_spec",
+            "field_specs",
+            "answer",
+            "solution",
+            "rubric",
+            "validation_spec",
+            "checks",
+            "calculation",
+        }.intersection(value)
         for item in value.values():
             learner_keys(item)
     elif isinstance(value, list):
@@ -50,6 +62,23 @@ def check(root: Path) -> tuple[int, int]:
                     expected = {
                         field_spec["id"]: str(field_spec["answer"])
                         for field_spec in spec["field_specs"]
+                    }
+                elif resolved["type"] == "file_upload":
+                    validation = spec["validation_spec"]
+                    key_column = validation["key_column"]
+                    rows = {}
+                    for check in validation["checks"]:
+                        row = rows.setdefault(check["row_id"], {key_column: check["row_id"]})
+                        value = str(check["answer"])
+                        if check.get("unit_required") and check.get("unit"):
+                            value += f" {check['unit']}"
+                        row[check["column"]] = value
+                    output = io.StringIO(newline="")
+                    writer = csv.DictWriter(output, fieldnames=validation["columns"])
+                    writer.writeheader()
+                    writer.writerows(rows.values())
+                    expected = {
+                        "content_base64": base64.b64encode(output.getvalue().encode("utf-8")).decode("ascii")
                     }
                 else:
                     expected = spec["answer"]

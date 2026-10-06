@@ -320,6 +320,131 @@
         "kind": "original",
         "modifications": []
       }
+    },
+    {
+      "id": "cell-biology-4:csv-summary-table",
+      "type": "file_upload",
+      "prompt": "From this original two-condition dataset (normalized signal): vehicle = 4.8, 5.2, 5.0, 5.0; inhibitor = 2.6, 2.8, 2.7, 2.9. Upload a UTF-8 CSV with exactly these columns in order: condition, replicate_count, mean_signal. Include one row each named vehicle and inhibitor. Compute the replicate count and arithmetic mean, rounding means to two decimal places. This formative check scores the submitted summary cells only; it does not grade a causal interpretation.",
+      "points": 4,
+      "objective_ids": [
+        "cell-biology-4-objective-3"
+      ],
+      "solution_spec": {
+        "accepted_media_types": [
+          "text/csv"
+        ],
+        "max_bytes": 32768,
+        "validation_spec": {
+          "format": "csv-numeric-table-v1",
+          "delimiter": ",",
+          "key_column": "condition",
+          "columns": [
+            "condition",
+            "replicate_count",
+            "mean_signal"
+          ],
+          "checks": [
+            {
+              "id": "vehicle-replicate-count",
+              "row_id": "vehicle",
+              "column": "replicate_count",
+              "type": "numeric",
+              "answer": 4,
+              "unit": "",
+              "tolerance": 0,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {"operation": "count", "values": [4.8, 5.2, 5.0, 5.0]}
+            },
+            {
+              "id": "vehicle-mean-signal",
+              "row_id": "vehicle",
+              "column": "mean_signal",
+              "type": "numeric",
+              "answer": 5,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {"operation": "mean", "values": [4.8, 5.2, 5.0, 5.0]}
+            },
+            {
+              "id": "inhibitor-replicate-count",
+              "row_id": "inhibitor",
+              "column": "replicate_count",
+              "type": "numeric",
+              "answer": 4,
+              "unit": "",
+              "tolerance": 0,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {"operation": "count", "values": [2.6, 2.8, 2.7, 2.9]}
+            },
+            {
+              "id": "inhibitor-mean-signal",
+              "row_id": "inhibitor",
+              "column": "mean_signal",
+              "type": "numeric",
+              "answer": 2.75,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {"operation": "mean", "values": [2.6, 2.8, 2.7, 2.9]}
+            }
+          ]
+        },
+        "rubric": [
+          {
+            "id": "vehicle-replicate-count",
+            "criterion": "Vehicle replicate count",
+            "points": 1,
+            "evidence": [
+              "The vehicle summary row reports all four supplied replicates."
+            ]
+          },
+          {
+            "id": "vehicle-mean-signal",
+            "criterion": "Vehicle mean signal",
+            "points": 1,
+            "evidence": [
+              "The vehicle mean is the arithmetic average of the four supplied values."
+            ]
+          },
+          {
+            "id": "inhibitor-replicate-count",
+            "criterion": "Inhibitor replicate count",
+            "points": 1,
+            "evidence": [
+              "The inhibitor summary row reports all four supplied replicates."
+            ]
+          },
+          {
+            "id": "inhibitor-mean-signal",
+            "criterion": "Inhibitor mean signal",
+            "points": 1,
+            "evidence": [
+              "The inhibitor mean is the arithmetic average of the four supplied values."
+            ]
+          }
+        ]
+      },
+      "feedback": {
+        "hint": "Group the replicate observations by condition, then report the number of observations and arithmetic mean for each group.",
+        "solution": "The vehicle count is 4 and its mean is 5.00. The inhibitor count is 4 and its mean is 2.75. These two descriptive means alone do not establish statistical significance or a causal effect.",
+        "lesson_ids": [
+          "cell-biology-4"
+        ],
+        "misconception_ids": [
+          "mean-as-causal-proof",
+          "replicates-confused-with-independent-experiments"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
     }
   ]
 }
