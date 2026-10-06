@@ -27,7 +27,7 @@ Validation passes for 25 packages, 126 lessons, 187 questions, 251 cards, and 25
 
 The eight homework sets, two remaining lab activities, summative midterm/final, cumulative project, measured workload, comprehensive objective coverage, and independent scientific/accessibility reviews remain incomplete. The course stays partial; the virtual lab does not satisfy the missing homework, exams, or capstone.
 
-After the current browser suite, the local synthetic database remained at 82 users, 82 enrollments, 90 attempts, and 6 progress records. Week 12 passed hosted GitHub Actions run `37540473521`. Week 14 was published at commit `a372fb31eb1d706ddc94f5e09a9c81266ad82629`; hosted run `37544794562` completed successfully. CI for the current lab increment will run on publication.
+After the current browser suite, the local synthetic database remained at 82 users, 82 enrollments, 90 attempts, and 6 progress records. The lab increment was published at commit `f485075f025e7bd97d4562ed62d1cf82cb49c79e`; [hosted GitHub Actions run `37547670931`](https://github.com/dylanstechmann/uniStemCourseSimulators/actions/runs/37547670931) completed successfully. Week 12 passed hosted run `37540473521`. Week 14 was published at commit `a372fb31eb1d706ddc94f5e09a9c81266ad82629`; hosted run `37544794562` completed successfully.
 
 ## Previous increment: week-14 potency and integrative study design (2026-10-06)
 
