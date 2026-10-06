@@ -130,7 +130,7 @@ class PublicResponseField(BaseModel):
 
 class PublicQuestion(BaseModel):
     id: str
-    type: Literal["single_choice", "multiple_select", "numeric", "symbolic", "data_interpretation"]
+    type: Literal["single_choice", "multiple_select", "numeric", "symbolic", "structured", "data_interpretation"]
     prompt: str
     options: list[str] = Field(default_factory=list)
     unit: str | None = None

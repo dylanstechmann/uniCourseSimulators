@@ -735,7 +735,7 @@ def validate_course(
                     question["id"],
                     "Symbolic assumptions may only name declared variables.",
                 )
-        if question["type"] == "data_interpretation":
+        if question["type"] in {"data_interpretation", "structured"}:
             fields = question.get("response_fields", [])
             field_specs = solution.get("field_specs", [])
             field_ids = [field.get("id") for field in fields if isinstance(field, dict)]
@@ -795,6 +795,35 @@ def validate_course(
                         question["id"],
                         "Each data-interpretation choice field requires at least two public options.",
                     )
+                if question["type"] == "structured":
+                    rubric = solution.get("rubric", [])
+                    rubric_ids = [item.get("id") for item in rubric if isinstance(item, dict)]
+                    if (
+                        len(rubric_ids) != len(rubric)
+                        or len(rubric_ids) != len(set(rubric_ids))
+                        or set(rubric_ids) != set(field_ids)
+                    ):
+                        report.error(
+                            "answer-spec",
+                            question["id"],
+                            "Structured rubric criteria must have unique IDs matching each response field.",
+                        )
+                    else:
+                        criteria = {item["id"]: item for item in rubric}
+                        if any(
+                            not math.isclose(
+                                criteria[field["id"]].get("points", 0),
+                                field.get("points", 0),
+                                rel_tol=0,
+                                abs_tol=1e-8,
+                            )
+                            for field in fields
+                        ):
+                            report.error(
+                                "answer-spec",
+                                question["id"],
+                                "Structured rubric criterion points must match response-field points.",
+                            )
         if question["type"] in {"single_choice", "multiple_select"}:
             answers = (
                 [solution["answer"]]

@@ -46,6 +46,11 @@ def check(root: Path) -> tuple[int, int]:
                         if field_spec["type"] == "numeric" and field_spec.get("unit_required"):
                             value += f" {field_spec['unit']}"
                         expected[field_spec["id"]] = value
+                elif resolved["type"] == "structured":
+                    expected = {
+                        field_spec["id"]: str(field_spec["answer"])
+                        for field_spec in spec["field_specs"]
+                    }
                 else:
                     expected = spec["answer"]
                 result = grade(resolved, AttemptRequest(response=expected, unit=spec.get("unit")))

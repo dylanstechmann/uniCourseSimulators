@@ -9,6 +9,12 @@ const diagnoses: Record<string, string> = {
     "Some fields are correct. Calculation and interpretation receive separate credit.",
   data_interpretation_incorrect:
     "The submitted fields do not match the answer specification.",
+  structured_rubric_complete:
+    "All structured analytic criteria met their deterministic checks.",
+  structured_rubric_partial:
+    "Some structured analytic criteria met their deterministic checks.",
+  structured_rubric_incorrect:
+    "The structured responses did not meet the analytic rubric criteria.",
   missing_response: "No response was submitted for this field.",
   numerical_mismatch: "The numerical result is outside the accepted tolerance.",
   significant_figures_mistake:

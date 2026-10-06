@@ -53,6 +53,31 @@ const dataInterpretationQuestion: Question = {
     },
   ],
 };
+const structuredQuestion: Question = {
+  id: "experimental-logic",
+  type: "structured",
+  prompt: "Construct a controlled experimental inference.",
+  options: [],
+  points: 2,
+  learning_objective_ids: ["controls"],
+  assessment_role: "formative",
+  response_fields: [
+    {
+      id: "control",
+      type: "single_choice",
+      prompt: "Control fidelity · Select the matched control.",
+      options: ["Matched non-targeting control", "Untreated cells"],
+      points: 1,
+    },
+    {
+      id: "claim",
+      type: "single_choice",
+      prompt: "Inference boundary · Select the supported claim.",
+      options: ["Tested system only", "Universal causal claim"],
+      points: 1,
+    },
+  ],
+};
 const multipleQuestion: Question = {
   id: "membrane-assembly",
   type: "multiple_select",
@@ -232,6 +257,74 @@ describe("formative assessment submission", () => {
     expect(screen.getByLabelText("Field-level scoring")).toHaveTextContent(
       "0 / 1 point",
     );
+  });
+  it("submits analytic rubric fields separately and identifies prose as ungraded", async () => {
+    const submit = vi.fn().mockResolvedValue({
+      ...attempt,
+      question_id: structuredQuestion.id,
+      score: 2,
+      max_score: 2,
+      result: {
+        ...attempt.result,
+        correct: true,
+        score: 2,
+        max_score: 2,
+        feedback: {
+          ...attempt.result.feedback,
+          diagnosis: "structured_rubric_complete",
+          next_step:
+            "Each structured analytic criterion met its deterministic check. Free-form reasoning was not assessed.",
+          components: [
+            {
+              field_id: "control",
+              label: "Control fidelity",
+              score: 1,
+              max_score: 1,
+              diagnosis: "correct_result_reasoning_not_assessed",
+            },
+            {
+              field_id: "claim",
+              label: "Inference boundary",
+              score: 1,
+              max_score: 1,
+              diagnosis: "correct_result_reasoning_not_assessed",
+            },
+          ],
+        },
+      },
+    });
+    render(
+      <Assessment question={structuredQuestion} enabled onSubmit={submit} />,
+    );
+    expect(
+      screen.getByText(/Each analytic criterion is scored separately/),
+    ).toBeInTheDocument();
+    await userEvent.selectOptions(
+      screen.getByLabelText(/Control fidelity/),
+      "0",
+    );
+    await userEvent.selectOptions(
+      screen.getByLabelText(/Inference boundary/),
+      "0",
+    );
+    await userEvent.click(
+      screen.getByRole("button", { name: "Submit practice response" }),
+    );
+    expect(submit).toHaveBeenCalledWith(
+      { control: "0", claim: "0" },
+      undefined,
+    );
+    expect(
+      await screen.findByText(
+        "All structured analytic criteria met their deterministic checks.",
+      ),
+    ).toBeInTheDocument();
+    expect(screen.getByLabelText("Field-level scoring")).toHaveTextContent(
+      "Control fidelity",
+    );
+    expect(
+      screen.getByText(/Free-form reasoning was not assessed/),
+    ).toBeInTheDocument();
   });
   it("shows the significant-figure requirement before numeric practice", () => {
     render(

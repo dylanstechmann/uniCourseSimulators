@@ -67,7 +67,8 @@ export function Assessment({
         .filter(([, answer]) => answer !== ""),
     );
     if (
-      question.type === "data_interpretation" &&
+      (question.type === "data_interpretation" ||
+        question.type === "structured") &&
       Object.keys(structuredResponse).length === 0
     ) {
       setError("Enter or select at least one field before submitting.");
@@ -76,7 +77,8 @@ export function Assessment({
     setBusy(true);
     try {
       const response: string | number | number[] | Record<string, string> =
-        question.type === "data_interpretation"
+        question.type === "data_interpretation" ||
+        question.type === "structured"
           ? structuredResponse
           : question.type === "single_choice"
             ? choice!
@@ -180,11 +182,13 @@ export function Assessment({
                 ))}
               </div>
             </>
-          ) : question.type === "data_interpretation" ? (
+          ) : question.type === "data_interpretation" ||
+            question.type === "structured" ? (
             <div className="stack">
               <p className="muted">
-                Each field is scored independently. Unanswered fields receive no
-                credit; open-ended reasoning is not graded.
+                {question.type === "structured"
+                  ? "Each analytic criterion is scored separately from its structured response. Unanswered criteria receive no credit; free-form prose is not scored."
+                  : "Each field is scored independently. Unanswered fields receive no credit; open-ended reasoning is not graded."}
               </p>
               {(question.response_fields ?? []).map((field) => (
                 <div key={field.id} className="input-grid">

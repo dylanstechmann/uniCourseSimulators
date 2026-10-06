@@ -209,6 +209,59 @@ test("guest enrollment, feedback, notes, progress, account upgrade and deletion 
   ).toBeVisible();
 });
 
+test("structured experimental criteria receive deterministic partial credit and persist", async ({
+  page,
+}) => {
+  await page.goto("/#/account");
+  await page.getByRole("button", { name: "Start guest session" }).click();
+  await page.getByRole("link", { name: "Course catalog", exact: true }).click();
+  await page.getByRole("link", { name: /Foundations of Cell/ }).click();
+  await page.getByRole("button", { name: "Enroll in partial course" }).click();
+  await page
+    .getByRole("navigation", { name: "Lessons" })
+    .getByRole("link", { name: /Gene expression and experimental logic/ })
+    .click();
+
+  const practice = page.locator(
+    '[data-question-id="cell-biology-4:experimental-logic-structured"]',
+  );
+  await expect(practice).toContainText(
+    "Each analytic criterion is scored separately",
+  );
+  await practice.getByLabel(/Control fidelity/).selectOption("0");
+  await practice.getByLabel(/Direct occupancy/).selectOption("0");
+  await practice.getByLabel(/Cis-regulatory test/).selectOption("1");
+  await practice.getByLabel(/Inference boundary/).selectOption("0");
+  await practice
+    .getByRole("button", { name: "Submit practice response" })
+    .click();
+  await expect(
+    practice.getByRole("region", { name: "Submission feedback" }),
+  ).toContainText("3 / 4 practice points");
+  await expect(practice.getByLabel("Field-level scoring")).toContainText(
+    "Direct promoter occupancy",
+  );
+  await expect(
+    practice.getByRole("region", { name: "Submission feedback" }),
+  ).toContainText("Some structured analytic criteria met");
+  await expect(
+    practice.getByRole("region", { name: "Submission feedback" }),
+  ).toContainText("free-form reasoning is not scored");
+  const accessibility = await new AxeBuilder({ page })
+    .withTags(["wcag2a", "wcag2aa", "wcag21a", "wcag21aa"])
+    .analyze();
+  expect(accessibility.violations).toEqual([]);
+
+  await page.reload();
+  await expect(
+    page
+      .locator(
+        '[data-question-id="cell-biology-4:experimental-logic-structured"]',
+      )
+      .getByRole("region", { name: "Submission feedback" }),
+  ).toContainText("3 / 4 practice points");
+});
+
 test("public lesson DTOs contain no answer specifications or solution fields", async ({
   request,
 }) => {
@@ -362,21 +415,15 @@ test("learner appeal receives an audited manual adjustment", async ({
           attempt.appeal.status === "adjusted",
       ),
     ).toBeTruthy();
-    const updatedPractice = page.locator(
-      '[data-question-id="cell-biology-1:check"]',
-    );
-    await expect(
-      updatedPractice.getByRole("heading", { name: "Human review · adjusted" }),
-    ).toBeVisible();
-    await expect(
-      updatedPractice.getByLabel("Submission feedback"),
-    ).toContainText("1 / 1 practice points after human review");
     await page
       .getByRole("link", { name: "Practice gradebook", exact: true })
       .click();
     await expect(
       page.getByText("1 / 1 (manual review; automatic 0)"),
     ).toBeVisible();
+    await expect(
+      page.getByRole("row").filter({ hasText: "cell-biology-1:check" }),
+    ).toContainText("Review: adjusted");
 
     await reviewerPage
       .getByRole("link", { name: "Account and data", exact: true })

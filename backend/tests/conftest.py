@@ -28,10 +28,11 @@ def content_root(tmp_path):
             {"id": "objective", "description": "Compare controls", "bloom": "analyze"},
             {"id": "symbolic-objective", "description": "Differentiate a rational function", "bloom": "apply"},
             {"id": "data-objective", "description": "Interpret a descriptive data summary", "bloom": "analyze"},
+            {"id": "structured-objective", "description": "Construct an evidence-bounded experimental inference", "bloom": "analyze"},
         ],
         "modules": [{"id": "module", "title": "Controls", "source_ids": ["fixture"], "lessons": [{
-            "id": "lesson-one", "title": "Experiment", "reading": "modules/one.md", "objectives": ["objective"],
-            "question_ids": ["choice", "numeric", "multi", "symbolic", "data"],
+            "id": "lesson-one", "title": "Experiment", "reading": "modules/one.md", "objectives": ["objective", "structured-objective"],
+            "question_ids": ["choice", "numeric", "multi", "symbolic", "data", "structured"],
             "card_ids": ["control-card"], "worked_example": "Match the delivery procedure between groups."
         }]}], "syllabus": "syllabus.md", "license": "CC-BY-4.0", "review": {"status": "unreviewed"},
         "retrieval_cards": "question-banks/retrieval-cards.json",
@@ -98,6 +99,25 @@ def content_root(tmp_path):
              {"id": "difference", "type": "numeric", "answer": 4.0, "unit": "μM", "tolerance": 0, "unit_required": True, "significant_figures": 2, "dimensions": {"length": -3, "amount": 1}},
              {"id": "interpretation", "type": "single_choice", "answer": 0}]},
          "feedback": {"hint": "Calculate the contrast and distinguish it from an inference.", "solution": "A descriptive contrast does not establish causation.", "lesson_ids": ["lesson-one"]}},
+        {"id": "structured", "type": "structured", "prompt": "Build an experiment-and-inference chain for the candidate regulator using the explicit rubric criteria.",
+         "visibility": "public-practice-authoring", "points": 3, "objective_ids": ["structured-objective"],
+         "response_fields": [
+             {"id": "control", "type": "single_choice", "prompt": "Select the matched delivery control.",
+              "options": ["A non-targeting oligonucleotide with the same delivery reagent and timing.", "Untreated cells with no delivery reagent."], "points": 1},
+             {"id": "binding", "type": "single_choice", "prompt": "Select direct evidence of regulator occupancy at the target promoter.",
+              "options": ["Validated promoter enrichment by ChIP-qPCR over its assay control.", "A lower bulk target-RNA measurement after depletion."], "points": 1},
+             {"id": "claim", "type": "single_choice", "prompt": "Select the conclusion bounded to the tested system.",
+              "options": ["The evidence supports a contribution in this tested system, not a universal effect.", "The regulator is necessary in every cell type and condition."], "points": 1}],
+         "solution_spec": {
+             "field_specs": [
+                 {"id": "control", "type": "single_choice", "answer": 0},
+                 {"id": "binding", "type": "single_choice", "answer": 0},
+                 {"id": "claim", "type": "single_choice", "answer": 0}],
+             "rubric": [
+                 {"id": "control", "criterion": "Control fidelity", "points": 1, "evidence": ["Delivery reagent and timing are matched with a non-targeting oligonucleotide."]},
+                 {"id": "binding", "criterion": "Direct promoter occupancy", "points": 1, "evidence": ["Target-locus enrichment is compared with the assay control."]},
+                 {"id": "claim", "criterion": "Evidence-bounded causal claim", "points": 1, "evidence": ["The conclusion is limited to the tested system and conditions."]}]},
+         "feedback": {"hint": "Separate reagent controls, promoter occupancy, and the scope of an inference.", "solution": "A matched non-targeting control addresses delivery effects; controlled locus enrichment tests occupancy; the causal claim must stay within the tested system.", "lesson_ids": ["lesson-one"]}},
     ]}
     (directory / "question-banks" / "practice.json").write_text(json.dumps(questions))
     return root

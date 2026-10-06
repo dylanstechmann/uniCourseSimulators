@@ -216,6 +216,110 @@
         "kind": "original",
         "modifications": []
       }
+    },
+    {
+      "id": "cell-biology-4:experimental-logic-structured",
+      "type": "structured",
+      "prompt": "Build an experiment-and-inference chain for a candidate transcription regulator by answering each explicit analytic criterion.",
+      "response_fields": [
+        {
+          "id": "delivery-control",
+          "type": "single_choice",
+          "prompt": "Control fidelity · Which condition controls for sequence-independent delivery effects?",
+          "options": [
+            "A non-targeting oligonucleotide delivered with the same reagent and timing.",
+            "Untreated cells with no delivery reagent.",
+            "A knockdown of an unrelated essential gene.",
+            "More replicates of the candidate-regulator knockdown alone."
+          ],
+          "points": 1
+        },
+        {
+          "id": "promoter-occupancy",
+          "type": "single_choice",
+          "prompt": "Direct occupancy · Which result tests whether the regulator occupies the target promoter?",
+          "options": [
+            "Validated promoter enrichment by ChIP-qPCR compared with an appropriate assay control.",
+            "A lower target-RNA measurement after regulator depletion.",
+            "A western blot confirming that the regulator's abundance decreased.",
+            "A single endpoint image with no locus-specific measurement."
+          ],
+          "points": 1
+        },
+        {
+          "id": "motif-dependence",
+          "type": "single_choice",
+          "prompt": "Cis-regulatory test · Which comparison asks whether the candidate motif mediates the transcription response?",
+          "options": [
+            "Matched reporter constructs with the intact versus mutated candidate binding motif.",
+            "A second endpoint measurement of the same bulk RNA sample.",
+            "An unrelated promoter reporter measured in a different cell line.",
+            "A replicate of the depleted condition without a matched reporter control."
+          ],
+          "points": 1
+        },
+        {
+          "id": "inference-scope",
+          "type": "single_choice",
+          "prompt": "Inference boundary · What claim is supported by controlled depletion, rescue, and direct-regulation evidence?",
+          "options": [
+            "The regulator contributes to expression in this tested system and condition; broader scope requires additional evidence.",
+            "The regulator is necessary in every cell type and condition.",
+            "The regulator alone is sufficient to set expression in every tissue.",
+            "The observed association proves that no other regulator contributes."
+          ],
+          "points": 1
+        }
+      ],
+      "points": 4,
+      "objective_ids": [
+        "cell-biology-4-objective-2"
+      ],
+      "solution_spec": {
+        "field_specs": [
+          {"id": "delivery-control", "type": "single_choice", "answer": 0},
+          {"id": "promoter-occupancy", "type": "single_choice", "answer": 0},
+          {"id": "motif-dependence", "type": "single_choice", "answer": 0},
+          {"id": "inference-scope", "type": "single_choice", "answer": 0}
+        ],
+        "rubric": [
+          {
+            "id": "delivery-control",
+            "criterion": "Control fidelity",
+            "points": 1,
+            "evidence": ["The control matches delivery reagent and timing while omitting the target sequence."]
+          },
+          {
+            "id": "promoter-occupancy",
+            "criterion": "Direct promoter occupancy",
+            "points": 1,
+            "evidence": ["Locus enrichment is compared against an assay control; expression change alone does not show binding."]
+          },
+          {
+            "id": "motif-dependence",
+            "criterion": "Cis-regulatory dependence",
+            "points": 1,
+            "evidence": ["Matched intact and motif-mutated constructs isolate the candidate binding site."]
+          },
+          {
+            "id": "inference-scope",
+            "criterion": "Evidence-bounded causal claim",
+            "points": 1,
+            "evidence": ["The conclusion is limited to the tested cells and conditions."]
+          }
+        ]
+      },
+      "feedback": {
+        "hint": "Separate a delivery control, a binding assay, a motif-dependence test, and the scope of the causal claim.",
+        "solution": "A matched non-targeting oligonucleotide tests delivery effects. Controlled promoter enrichment addresses occupancy, a motif-mutant reporter tests cis-regulatory dependence, and rescue strengthens attribution in the tested system without establishing a universal rule.",
+        "lesson_ids": ["cell-biology-4"],
+        "misconception_ids": ["correlation-proves-direct-regulation", "universal-claim-from-one-system"]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
     }
   ]
 }

@@ -7,7 +7,7 @@
   "domain": "Life sciences",
   "level": "Year 1",
   "maturity": "partial",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "license": "MIT OR CC-BY-4.0",
   "content_origin": {
     "kind": "legacy-prototype",
@@ -210,7 +210,8 @@
           ],
           "worked_example": "In a knockdown experiment, a non-targeting RNA control tests for delivery or off-target effects; a rescue with a perturbation-resistant construct strengthens causal attribution.",
           "question_ids": [
-            "cell-biology-4:check"
+            "cell-biology-4:check",
+            "cell-biology-4:experimental-logic-structured"
           ],
           "card_ids": [
             "cell-biology-3-0",
@@ -270,9 +271,10 @@
         "cell-biology-4-objective-1"
       ],
       "question_ids": [
-        "cell-biology-4:check"
+        "cell-biology-4:check",
+        "cell-biology-4:experimental-logic-structured"
       ],
-      "points": 1
+      "points": 5
     },
     {
       "id": "cell-biology-case",
@@ -290,7 +292,7 @@
     "attempt_policy": "Unlimited formative retries; no summative grade is awarded.",
     "solution_release": "Public practice solutions may be shown after an attempt. They are not production exam keys.",
     "late_policy": "No deadlines or late penalties exist in this partial package.",
-    "appeals": "No instructor review workflow is implemented; report ambiguous practice items to repository maintainers."
+    "appeals": "Learners may request one human review per attempt; allowlisted instructors can review current-version formative items. This workflow does not provide course-level human grading."
   },
   "retrieval_cards": "question-banks/retrieval-cards.json",
   "case_rubrics": "rubrics/case-studio.json",
@@ -312,6 +314,11 @@
     "review_status": "unreviewed"
   },
   "history": [
+    {
+      "version": "0.3.1",
+      "date": "2026-10-05",
+      "summary": "Added an original four-criterion structured experimental-reasoning practice item with deterministic rubric scoring; the course remains partial."
+    },
     {
       "version": "0.3.0",
       "date": "2026-10-05",
@@ -336,7 +343,7 @@
   "limitations": [
     "Four compact legacy units are preserved; this package is not equivalent to a full university semester.",
     "There is no authored 12–15 week schedule, substantive homework sequence, laboratory sequence, midterm, cumulative final, or graded integrative project.",
-    "Five formative checks across four short lessons do not demonstrate comprehensive outcome coverage or mastery; objective associations are provisional.",
+    "Six formative checks across four short lessons do not demonstrate comprehensive outcome coverage or mastery; objective associations are provisional.",
     "Bloom labels and structured prerequisite edges are initial authoring classifications awaiting subject-matter review.",
     "Question answers and solution feedback are intentionally public practice authoring specifications, not restricted exam keys.",
     "Numerical specifications preserve the prototype's tolerance and optional unit entry; significant-figure and dimensional checks have not been authored.",

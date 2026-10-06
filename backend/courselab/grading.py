@@ -15,53 +15,94 @@ NUMBER = re.compile(
     r"^([+-]?(?:\d+\.?\d*|\.\d+)(?:[eE][+-]?\d+)?)\s*"
     r"((?:(?:[A-Za-zμµΩω°%]|1/[A-Za-z])[A-Za-z0-9μµΩω°%·/⁻¹²³^*(). _-]*)?)$"
 )
-GRADING_POLICY_VERSION = "practice-v7"
+GRADING_POLICY_VERSION = "practice-v8"
 
 
 class GradingUnavailable(ValueError):
     """An authored requirement is not implemented; do not award a silent grade."""
 
 
-def _grade_data_interpretation(question: dict, request: AttemptRequest, points: float) -> GradeResult:
-    """Grade explicit data fields independently; never infer free-text reasoning."""
+def _grade_fielded_response(question: dict, request: AttemptRequest, points: float) -> GradeResult:
+    """Grade explicit fields and, for structured items, their analytic rubric."""
+    structured = question.get("type") == "structured"
     fields = question.get("response_fields")
     specifications = question.get("solution_spec", {}).get("field_specs")
     if not isinstance(fields, list) or not 2 <= len(fields) <= 20 or not isinstance(specifications, list):
-        raise GradingUnavailable("Data-interpretation field specifications are invalid")
+        raise GradingUnavailable("Structured response field specifications are invalid")
 
     field_by_id = {}
     for field in fields:
         if not isinstance(field, dict) or not isinstance(field.get("id"), str):
-            raise GradingUnavailable("Data-interpretation response fields are invalid")
+            raise GradingUnavailable("Structured response fields are invalid")
         field_id = field["id"]
         if field_id in field_by_id or field.get("type") not in {"numeric", "single_choice"}:
-            raise GradingUnavailable("Data-interpretation response fields are unsupported")
+            raise GradingUnavailable("Structured response fields are unsupported")
         field_points = field.get("points")
         if not isinstance(field_points, (int, float)) or isinstance(field_points, bool) or not math.isfinite(field_points) or field_points <= 0:
-            raise GradingUnavailable("Data-interpretation field points must be positive and finite")
+            raise GradingUnavailable("Structured response field points must be positive and finite")
         if not isinstance(field.get("prompt"), str) or not field["prompt"].strip():
-            raise GradingUnavailable("Data-interpretation field prompts are required")
+            raise GradingUnavailable("Structured response field prompts are required")
         if field["type"] == "single_choice" and (
             not isinstance(field.get("options"), list) or len(field["options"]) < 2
             or any(not isinstance(option, str) for option in field["options"])
         ):
-            raise GradingUnavailable("Data-interpretation choice fields require options")
+            raise GradingUnavailable("Structured response choice fields require options")
         field_by_id[field_id] = field
 
     spec_by_id = {}
     for specification in specifications:
         if not isinstance(specification, dict) or not isinstance(specification.get("id"), str):
-            raise GradingUnavailable("Data-interpretation answer fields are invalid")
+            raise GradingUnavailable("Structured response answer fields are invalid")
         field_id = specification["id"]
         if field_id in spec_by_id:
-            raise GradingUnavailable("Data-interpretation answer field IDs must be unique")
+            raise GradingUnavailable("Structured response answer field IDs must be unique")
         spec_by_id[field_id] = specification
     if set(field_by_id) != set(spec_by_id):
-        raise GradingUnavailable("Data-interpretation fields and answer specifications must match")
+        raise GradingUnavailable("Structured response fields and answer specifications must match")
+
+    rubric_by_id = {}
+    if structured:
+        rubric = question.get("solution_spec", {}).get("rubric")
+        if not isinstance(rubric, list) or not 2 <= len(rubric) <= 20:
+            raise GradingUnavailable("Structured response analytic rubric is invalid")
+        for criterion in rubric:
+            if (
+                not isinstance(criterion, dict)
+                or not isinstance(criterion.get("id"), str)
+                or not isinstance(criterion.get("criterion"), str)
+                or len(criterion["criterion"].strip()) < 10
+                or not isinstance(criterion.get("evidence"), list)
+                or not criterion["evidence"]
+                or any(not isinstance(item, str) or len(item.strip()) < 3 for item in criterion["evidence"])
+            ):
+                raise GradingUnavailable("Structured response rubric criteria and evidence are required")
+            criterion_id = criterion["id"]
+            criterion_points = criterion.get("points")
+            if (
+                criterion_id in rubric_by_id
+                or isinstance(criterion_points, bool)
+                or not isinstance(criterion_points, (int, float))
+                or not math.isfinite(criterion_points)
+                or criterion_points <= 0
+            ):
+                raise GradingUnavailable("Structured response rubric IDs and points are invalid")
+            rubric_by_id[criterion_id] = criterion
+        if set(rubric_by_id) != set(field_by_id):
+            raise GradingUnavailable("Each structured response field must map to one rubric criterion")
+        if any(
+            not math.isclose(
+                float(rubric_by_id[field_id]["points"]),
+                float(field["points"]),
+                rel_tol=0,
+                abs_tol=1e-8,
+            )
+            for field_id, field in field_by_id.items()
+        ):
+            raise GradingUnavailable("Structured response rubric points must match their response fields")
 
     maximum = sum(float(field["points"]) for field in fields)
     if not math.isclose(maximum, points, rel_tol=0, abs_tol=1e-8):
-        raise GradingUnavailable("Data-interpretation field points must sum to the question total")
+        raise GradingUnavailable("Structured response field points must sum to the question total")
 
     response = request.response
     if not isinstance(response, dict):
@@ -80,11 +121,11 @@ def _grade_data_interpretation(question: dict, request: AttemptRequest, points: 
         for field_id, field in field_by_id.items():
             field_spec = spec_by_id[field_id]
             if field_spec.get("type") != field["type"]:
-                raise GradingUnavailable("Data-interpretation field types must match their answer specifications")
+                raise GradingUnavailable("Structured response field types must match their answer specifications")
             if field["type"] == "single_choice":
                 answer = field_spec.get("answer")
                 if type(answer) is not int or not 0 <= answer < len(field["options"]):
-                    raise GradingUnavailable("Data-interpretation choice answer is outside its option array")
+                    raise GradingUnavailable("Structured response choice answer is outside its option array")
             else:
                 answer = field_spec.get("answer")
                 unit = field_spec.get("unit")
@@ -103,7 +144,7 @@ def _grade_data_interpretation(question: dict, request: AttemptRequest, points: 
                     or not 0 <= relative_tolerance <= 1
                     or not isinstance(unit_required, bool)
                 ):
-                    raise GradingUnavailable("Data-interpretation numeric answer specification is invalid")
+                    raise GradingUnavailable("Structured response numeric answer specification is invalid")
             if field_id not in response:
                 components.append(FeedbackComponent(
                     field_id=field_id, label=field["prompt"], score=0,
@@ -119,20 +160,28 @@ def _grade_data_interpretation(question: dict, request: AttemptRequest, points: 
             child_result = grade(child_question, AttemptRequest(response=response[field_id]))
             score += child_result.score
             components.append(FeedbackComponent(
-                field_id=field_id, label=field["prompt"], score=child_result.score,
+                field_id=field_id,
+                label=rubric_by_id[field_id]["criterion"] if structured else field["prompt"],
+                score=child_result.score,
                 max_score=child_result.max_score, diagnosis=child_result.feedback.diagnosis,
             ))
         correct = math.isclose(score, points, rel_tol=0, abs_tol=1e-8)
         if correct:
-            diagnosis = "correct_result_reasoning_not_assessed"
+            diagnosis = "structured_rubric_complete" if structured else "correct_result_reasoning_not_assessed"
         elif score > 0:
-            diagnosis = "data_interpretation_partial"
+            diagnosis = "structured_rubric_partial" if structured else "data_interpretation_partial"
         else:
             child_diagnoses = {component.diagnosis for component in components}
-            diagnosis = next((item for item in (
-                "unit_mistake", "malformed_response", "numerical_mismatch",
-                "significant_figures_mistake", "incorrect_selection",
-            ) if item in child_diagnoses), "data_interpretation_incorrect")
+            if structured:
+                diagnosis = next(
+                    (item for item in ("malformed_response", "unit_mistake") if item in child_diagnoses),
+                    "structured_rubric_incorrect",
+                )
+            else:
+                diagnosis = next((item for item in (
+                    "unit_mistake", "malformed_response", "numerical_mismatch",
+                    "significant_figures_mistake", "incorrect_selection",
+                ) if item in child_diagnoses), "data_interpretation_incorrect")
 
     authored = question.get("feedback", {})
     lesson_ids = authored.get("lesson_ids", [])
@@ -144,8 +193,15 @@ def _grade_data_interpretation(question: dict, request: AttemptRequest, points: 
             hint=None if correct else authored.get("hint"),
             misconception=None if correct else authored.get("misconception"),
             lesson_id=lesson_ids[0] if lesson_ids else None,
-            next_step=("Compare the computed result with the evidence limits; this item did not assess free-form reasoning."
-                       if correct else "The fields earn credit independently. Review each field-level result, then separate what the data show from what they do not establish."),
+            next_step=(
+                "Each structured analytic criterion met its deterministic check. Free-form reasoning was not assessed."
+                if correct and structured else
+                "Review the criterion-level results and revise each structured response; free-form reasoning is not scored."
+                if structured else
+                "Compare the computed result with the evidence limits; this item did not assess free-form reasoning."
+                if correct else
+                "The fields earn credit independently. Review each field-level result, then separate what the data show from what they do not establish."
+            ),
             components=components,
         ),
         grading_policy_version=GRADING_POLICY_VERSION,
@@ -189,8 +245,8 @@ def grade(question: dict, request: AttemptRequest) -> GradeResult:
     score = 0.0
     if not math.isfinite(points) or points <= 0:
         raise ValueError("Question points must be positive and finite")
-    if question["type"] == "data_interpretation":
-        return _grade_data_interpretation(question, request, points)
+    if question["type"] in {"data_interpretation", "structured"}:
+        return _grade_fielded_response(question, request, points)
     if question["type"] == "multiple_select":
         if not isinstance(request.response, list):
             diagnosis = "malformed_response"

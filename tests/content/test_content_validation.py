@@ -95,7 +95,7 @@ def test_preserved_inventory_is_honest_partial(repository):
     assert result.inventory == {
         "courses": 25,
         "lessons": 101,
-        "questions": 103,
+        "questions": 104,
         "cards": 202,
         "cases": 25,
     }
@@ -292,6 +292,40 @@ def test_significant_figure_policy_is_bounded_by_schema(repository, course):
     numeric["solution_spec"]["significant_figures"] = 13
     write(bank_path, bank)
     assert "schema" in codes(validate_repository(repository))
+
+
+def test_structured_rubric_item_is_counted_while_course_remains_partial(repository, course):
+    result = validate_repository(repository)
+    assert result.ok, result.errors
+    manifest = read(course[0])
+    assert manifest["version"] == "0.3.1"
+    assert manifest["maturity"] == "partial"
+    assert result.inventory["questions"] == 104
+    question = next(
+        item
+        for item in read(course[0].parent / "question-banks/practice.json")["questions"]
+        if item["type"] == "structured"
+    )
+    assert len(question["solution_spec"]["rubric"]) == 4
+    assert all(field["points"] == 1 for field in question["response_fields"])
+
+
+def test_structured_rubric_ids_must_map_one_to_one_to_response_fields(repository, course):
+    bank_path = course[0].parent / "question-banks/practice.json"
+    bank = read(bank_path)
+    question = next(item for item in bank["questions"] if item["type"] == "structured")
+    question["solution_spec"]["rubric"][0]["id"] = "unknown-criterion"
+    write(bank_path, bank)
+    assert "answer-spec" in codes(validate_repository(repository))
+
+
+def test_structured_rubric_points_must_match_its_response_field(repository, course):
+    bank_path = course[0].parent / "question-banks/practice.json"
+    bank = read(bank_path)
+    question = next(item for item in bank["questions"] if item["type"] == "structured")
+    question["solution_spec"]["rubric"][0]["points"] = 0.5
+    write(bank_path, bank)
+    assert "answer-spec" in codes(validate_repository(repository))
 
 
 def test_symbolic_assumptions_must_reference_declared_variables(repository, course):

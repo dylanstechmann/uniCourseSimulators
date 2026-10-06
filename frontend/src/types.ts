@@ -104,6 +104,7 @@ export interface Question {
     | "multiple_select"
     | "numeric"
     | "symbolic"
+    | "structured"
     | "data_interpretation";
   prompt: string;
   options: string[];
