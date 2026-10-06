@@ -40,7 +40,12 @@ export function GradebookView({
         )}
         % best points. This is a study signal, not a mastery certification.
       </p>
-      <div className="table-scroll">
+      <div
+        className="table-scroll"
+        role="region"
+        aria-label="Scrollable practice evidence table"
+        tabIndex={0}
+      >
         <table>
           <caption>
             Best reviewed result per distinct formative question; retries do not
@@ -94,7 +99,12 @@ export function GradebookView({
       {attempts.length === 0 ? (
         <p>No submitted attempts yet.</p>
       ) : (
-        <div className="table-scroll">
+        <div
+          className="table-scroll"
+          role="region"
+          aria-label="Scrollable attempt history table"
+          tabIndex={0}
+        >
           <table>
             <caption>
               Saved attempts for this course, including the content version.
@@ -178,3 +188,4 @@ export function GradebookView({
     </section>
   );
 }
+

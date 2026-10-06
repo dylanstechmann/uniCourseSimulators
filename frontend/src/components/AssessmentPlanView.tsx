@@ -54,7 +54,12 @@ export function AssessmentPlanView({ plan }: { plan: AssessmentPlan }) {
       {plan.assessments.length === 0 ? (
         <p>No assessment records are defined in this course version.</p>
       ) : (
-        <div className="table-scroll">
+        <div
+          className="table-scroll"
+          role="region"
+          aria-label="Scrollable assessment schedule"
+          tabIndex={0}
+        >
           <table>
             <caption>
               Versioned assessment metadata. Private answer specifications are
@@ -103,3 +108,4 @@ export function AssessmentPlanView({ plan }: { plan: AssessmentPlan }) {
     </section>
   );
 }
+
