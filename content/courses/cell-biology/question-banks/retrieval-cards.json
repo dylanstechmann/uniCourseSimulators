@@ -324,6 +324,46 @@
         "cell-biology-16-objective-2"
       ],
       "license": "CC-BY-4.0"
+    },
+    {
+      "id": "cell-biology-17-0",
+      "lesson_id": "cell-biology-17",
+      "front": "Shared transcript versus isoform-specific signal",
+      "back": "A shared-region assay can estimate signal from sequence common to its target transcripts; a splice-junction assay can distinguish specified isoforms. Neither alone measures every transcript or protein function.",
+      "objective_ids": [
+        "cell-biology-17-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "cell-biology-17-1",
+      "lesson_id": "cell-biology-17",
+      "front": "Steady-state RNA abundance",
+      "back": "A simple steady-state abundance reflects effective production divided by effective decay; changed abundance is not a direct transcription-rate measurement.",
+      "objective_ids": [
+        "cell-biology-17-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "cell-biology-18-0",
+      "lesson_id": "cell-biology-18",
+      "front": "Protein abundance at steady state",
+      "back": "For dP/dt = s - k_deg P with constant first-order removal, P_ss = s/k_deg. The same abundance can arise from different synthesis and degradation rates.",
+      "objective_ids": [
+        "cell-biology-18-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "cell-biology-18-1",
+      "lesson_id": "cell-biology-18",
+      "front": "First-order protein half-life",
+      "back": "For first-order decay, t_1/2 = ln(2)/k_deg. A corrected signal falling to one half of its starting value estimates one half-life only under the stated model and assay conditions.",
+      "objective_ids": [
+        "cell-biology-18-objective-3"
+      ],
+      "license": "CC-BY-4.0"
     }
   ]
 }

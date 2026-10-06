@@ -93,6 +93,14 @@ These templates guide feedback for the current public formative material. The so
 
 > The ChIP-qPCR result estimates **[locus enrichment relative to input]** with **[antibody and controls]**; the reporter result measures **[construct activity in its assay context]**. Neither alone establishes direct motif contact or endogenous-locus causality. Check input, IgG/mock pull-down, positive and negative loci, amplification specificity, construct normalization, and independent biological replicates; next test **[native-locus perturbation or orthogonal binding evidence]**.
 
+### RNA abundance treated as transcription or isoform identity
+
+> The **[shared-exon, junction-specific, precursor, or nascent-RNA assay]** measures **[named RNA feature]** under **[condition and normalization]**. A steady-state signal reflects production, processing, decay, recovery, and sample composition; it does not by itself report transcription rate or distinguish every isoform. Check primer/read placement, no-reverse-transcriptase controls, independent cultures, and **[nascent-RNA or decay measurement]** before assigning the change to a specific step.
+
+### Protein abundance treated as synthesis or a degradation pathway
+
+> The data show **[mRNA, nascent protein, steady-state protein, or decay signal]** in **[tested conditions]**. Under the simple model `dP/dt = s - k_deg P`, abundance can change through synthesis or removal. The measurements are **[consistent with the named alternative]**, but do not establish a direct initiation mechanism or a specific proteolysis route. Compare matched synthesis and turnover measurements, cell recovery and viability, then add **[a pathway-specific perturbation or orthogonal readout]**.
+
 ## Delivery and uncertainty rules
 
 - Quote or point to the learner's own words, numbers, or selected fields; do not invent evidence about their reasoning.

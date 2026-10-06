@@ -714,6 +714,55 @@ test("week 8 cumulative review is interactive, ungraded practice and persists fe
   ).toBeVisible();
 });
 
+test("week 9 RNA and protein practice loads and grades version-pinned content", async ({
+  page,
+}) => {
+  await page.goto("/#/account");
+  await page.getByRole("button", { name: "Start guest session" }).click();
+  await page.getByRole("link", { name: "Course catalog", exact: true }).click();
+  await page.getByRole("link", { name: /Foundations of Cell/ }).click();
+  await page.getByRole("button", { name: "Enroll in partial course" }).click();
+  await page.getByRole("link", { name: "Practice gradebook" }).click();
+
+  const row = page.getByRole("row", {
+    name: /Week 9: RNA processing, translation, and protein-turnover practice/,
+  });
+  await row.getByRole("button", { name: "Open practice set" }).click();
+  await expect(
+    page.getByRole("heading", {
+      name: "Week 9: RNA processing, translation, and protein-turnover practice",
+    }),
+  ).toBeVisible();
+  await expect(
+    page.getByText(/8 questions · 14 practice points/),
+  ).toBeVisible();
+
+  const isoform = page.locator(
+    '[data-question-id="cell-biology-17:isoform-fraction"]',
+  );
+  await isoform.getByLabel("Numerical value").fill("66.7");
+  await isoform.getByLabel("Unit").fill("%");
+  await isoform
+    .getByRole("button", { name: "Submit practice response" })
+    .click();
+  await expect(
+    isoform.getByRole("region", { name: "Submission feedback" }),
+  ).toContainText("1 / 1 practice points");
+
+  const turnover = page.locator(
+    '[data-question-id="cell-biology-18:synthesis-vs-turnover-data"]',
+  );
+  await turnover.getByLabel(/Mechanistic inference/).selectOption("0");
+  await turnover.getByLabel(/Follow-up/).selectOption("0");
+  await turnover.getByLabel(/Claim boundary/).selectOption("0");
+  await turnover
+    .getByRole("button", { name: "Submit practice response" })
+    .click();
+  await expect(
+    turnover.getByRole("region", { name: "Submission feedback" }),
+  ).toContainText("3 / 3 practice points");
+});
+
 test("structured experimental criteria receive deterministic partial credit and persist", async ({
   page,
 }) => {

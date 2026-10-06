@@ -220,6 +220,34 @@
       "original_content": true,
       "license": "CC-BY-4.0",
       "modifications": []
+    },
+    {
+      "module_id": "cell-biology-module-17",
+      "lesson_id": "cell-biology-17",
+      "reading": "modules/08a-rna-processing-and-isoform-evidence.md",
+      "source_ids": [
+        "molecular",
+        "ncbi-mboc-rna-processing",
+        "ncbi-mboc-posttranscriptional-controls"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-curriculum-and-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "cell-biology-module-18",
+      "lesson_id": "cell-biology-18",
+      "reading": "modules/08b-translation-and-protein-turnover.md",
+      "source_ids": [
+        "molecular",
+        "ncbi-mboc-rna-protein",
+        "ncbi-mboc-posttranscriptional-controls"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-curriculum-and-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
     }
   ]
 }

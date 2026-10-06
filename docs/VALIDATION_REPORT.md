@@ -4,7 +4,30 @@
 
 2026-10-06; synthetic local learner data only. Milestones 1 and 2 are implemented. Milestone 3 remains partial; deterministic graders and prototype graded-assignment and review workflows are described below. A Milestone 4 curriculum-map increment is implemented and tested, while subject-matter review and map refinement remain. All 25 course packages are **partial**; zero are beta, complete or externally reviewed. Human score review is limited to saved attempts and does not constitute course-content review. No semester equivalence, university credit, security certification or public production deployment is asserted.
 
-## Current increment: week-8 cumulative practice set (2026-10-06)
+## Current increment: week-9 RNA processing and protein regulation (2026-10-06)
+
+Foundations of Cell and Molecular Biology advanced from 0.9.1 to **0.10.0** and remains `partial`. Week 9 adds two original lessons on RNA processing/isoform evidence and translation/protein turnover; six mapped learning objectives, each tagged to at least one practice item; original, explicitly synthetic RNA and protein datasets; eight deterministic public formative questions (14 points, including seeded variants); four retrieval cards; five misconception entries; layered instructor-style feedback; and link-only provenance for MIT OCW and NCBI Bookshelf references. The practice set is not graded coursework. No homework set, virtual lab, midterm, final, or project is claimed complete.
+
+Content validation passes for 25 packages, 115 lessons, 148 questions, 231 cards, and 25 cases, with 0 errors and 123 disclosed depth/objective warnings. The focused content regression set passed 6 tests; the complete root suite passed **61 tests with 1 skipped**, backend passed **223**, frontend unit tests passed **31**, Playwright passed **12**, and legacy-state tests passed **7**. The CI content check and development Compose build passed; the API integration validator supports 152 practice specifications. Compose API, database, and web are healthy; existing database data was preserved, Alembic remains at `0007 (head)`, and the health endpoint reports `ok`. The new browser journey enrolled a guest, opened the week-9 set, submitted a numeric isoform fraction and a structured synthesis/turnover response, and verified deterministic feedback. The existing public DTO boundary test still passes. Frontend lint/format and production build pass (206 modules); Ruff passes. The security-boundary scan reports 0 findings across 401 source files. All authored answers remain explicitly public practice specifications; no exam key was added.
+
+| Current command/check | Result |
+| --- | --- |
+| `python tools/validate_content.py` | PASS: 25 packages, 115 lessons, 148 questions, 231 cards, 25 cases; 0 errors; 123 disclosed warnings |
+| `backend/.venv/Scripts/python.exe -m pytest tests -q` | 61 passed, 1 skipped |
+| `cd backend; .venv/Scripts/python.exe -m pytest tests -q` | 223 passed; one upstream Starlette/httpx deprecation warning |
+| `cd backend; .venv/Scripts/ruff.exe check .` | PASS |
+| `cd frontend; npm test -- --run` | 31 passed |
+| `cd frontend; npm run lint; npm run build` | PASS: formatting/lint and TypeScript/Vite production build (206 modules) |
+| `cd frontend; npm run test:e2e` | 12 passed, including week-9 numeric and structured practice submission |
+| `npm run test:legacy` | 7 passed |
+| `docker compose up --build -d --wait --wait-timeout 180` | PASS: API, database, and web healthy; existing data volume preserved |
+| `docker compose exec -T api python -m courselab.check_content /content` | PASS: 25 packages / 152 supported practice specifications |
+| `docker compose exec -T api alembic current` and `/api/v1/health` | PASS: `0007 (head)`; health `ok` |
+| `python tools/check_security.py --bundle frontend/dist` | PASS; 0 findings across 401 source files |
+
+The eight homework packages, three full data/virtual-lab activities, summative midterm/final, integrative project, measured workload, comprehensive objective coverage, and independent scientific/accessibility reviews remain incomplete. Weeks 10–14 are still outlines and the course remains partial.
+
+## Previous increment: week-8 cumulative practice set (2026-10-06)
 
 Foundations of Cell and Molecular Biology advanced from 0.9.0 to **0.9.1** and remains `partial`. Week 8 now contains a self-paced 12-question cumulative practice set spanning selected outcomes from weeks 1–7. It reuses the existing openly answer-bearing formative bank, totals 31 practice points, provides immediate per-question feedback, and is explicitly labeled **ungraded and not a midterm** in the syllabus, schedule, UI, README, and crosswalk. No summative exam, protected exam key, homework sequence, or new lesson was created.
 

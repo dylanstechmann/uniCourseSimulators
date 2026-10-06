@@ -39,7 +39,7 @@
       "title": "MIT OCW 7.28x — Molecular Biology",
       "institution": "Massachusetts Institute of Technology / MIT OpenCourseWare",
       "url": "https://ocw.mit.edu/courses/res-7-008-7-28x-molecular-biology/",
-      "accessed_at": "2026-10-05",
+      "accessed_at": "2026-10-06",
       "license": "CC-BY-NC-SA-4.0",
       "reuse_mode": "link-only-comparator",
       "permissions": {
@@ -62,7 +62,9 @@
         "cell-biology-module-13",
         "cell-biology-module-14",
         "cell-biology-module-15",
-        "cell-biology-module-16"
+        "cell-biology-module-16",
+        "cell-biology-module-17",
+        "cell-biology-module-18"
       ],
       "version": "Spring 2023; landing page accessed 2026-10-05",
       "checksum": null,
@@ -1439,6 +1441,94 @@
       "checksum": null,
       "imported_assets": [],
       "rights_notes": "The lesson uses the page only as a methods reference; standards are not treated as a universal protocol or course endorsement."
+    },
+    {
+      "id": "ncbi-mboc-rna-processing",
+      "title": "From DNA to RNA - Molecular Biology of the Cell, 4th edition",
+      "institution": "NCBI Bookshelf / Garland Science",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK26887/",
+      "accessed_at": "2026-10-06",
+      "license": "Copyrighted textbook; reuse rights not cleared here; link-only use selected",
+      "reuse_mode": "link-only-reference",
+      "permissions": {
+        "linking": true,
+        "quotation": false,
+        "adaptation": false,
+        "redistribution": false
+      },
+      "attribution_requirements": [
+        "Cite the chapter title, Molecular Biology of the Cell (4th edition), and exact NCBI Bookshelf URL."
+      ],
+      "third_party_notes": "This is a link-only scientific reference. No text, figure, question, or dataset is imported or adapted.",
+      "mapped_courses": [
+        "cell-biology"
+      ],
+      "mapped_modules": [
+        "cell-biology-module-17"
+      ],
+      "version": "4th edition; Bookshelf ID NBK26887",
+      "checksum": null,
+      "imported_assets": [],
+      "rights_notes": "This record documents link-only use and does not clear textbook text or figures for copying."
+    },
+    {
+      "id": "ncbi-mboc-rna-protein",
+      "title": "From RNA to Protein - Molecular Biology of the Cell, 4th edition",
+      "institution": "NCBI Bookshelf / Garland Science",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK26829/",
+      "accessed_at": "2026-10-06",
+      "license": "Copyrighted textbook; reuse rights not cleared here; link-only use selected",
+      "reuse_mode": "link-only-reference",
+      "permissions": {
+        "linking": true,
+        "quotation": false,
+        "adaptation": false,
+        "redistribution": false
+      },
+      "attribution_requirements": [
+        "Cite the chapter title, Molecular Biology of the Cell (4th edition), and exact NCBI Bookshelf URL."
+      ],
+      "third_party_notes": "This is a link-only scientific reference. No text, figure, question, or dataset is imported or adapted.",
+      "mapped_courses": [
+        "cell-biology"
+      ],
+      "mapped_modules": [
+        "cell-biology-module-18"
+      ],
+      "version": "4th edition; Bookshelf ID NBK26829",
+      "checksum": null,
+      "imported_assets": [],
+      "rights_notes": "This record documents link-only use and does not clear textbook text or figures for copying."
+    },
+    {
+      "id": "ncbi-mboc-posttranscriptional-controls",
+      "title": "Posttranscriptional Controls - Molecular Biology of the Cell, 4th edition",
+      "institution": "NCBI Bookshelf / Garland Science",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK26890/",
+      "accessed_at": "2026-10-06",
+      "license": "Copyrighted textbook; reuse rights not cleared here; link-only use selected",
+      "reuse_mode": "link-only-reference",
+      "permissions": {
+        "linking": true,
+        "quotation": false,
+        "adaptation": false,
+        "redistribution": false
+      },
+      "attribution_requirements": [
+        "Cite the chapter title, Molecular Biology of the Cell (4th edition), and exact NCBI Bookshelf URL."
+      ],
+      "third_party_notes": "This is a link-only scientific reference. No text, figure, question, or dataset is imported or adapted.",
+      "mapped_courses": [
+        "cell-biology"
+      ],
+      "mapped_modules": [
+        "cell-biology-module-17",
+        "cell-biology-module-18"
+      ],
+      "version": "4th edition; Bookshelf ID NBK26890",
+      "checksum": null,
+      "imported_assets": [],
+      "rights_notes": "This record documents link-only use and does not clear textbook text or figures for copying."
     }
   ]
 }

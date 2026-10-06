@@ -7,7 +7,7 @@
   "domain": "Life sciences",
   "level": "Year 1",
   "maturity": "partial",
-  "version": "0.9.1",
+  "version": "0.10.0",
   "license": "MIT OR CC-BY-4.0",
   "content_origin": {
     "kind": "legacy-prototype",
@@ -323,11 +323,62 @@
         "cell-biology-outcome-3",
         "cell-biology-outcome-4"
       ]
+    },
+    {
+      "id": "cell-biology-17-objective-1",
+      "description": "Explain how 5-prime capping, spliceosome-mediated intron removal, alternative splicing, and 3-prime processing shape many mature eukaryotic mRNAs.",
+      "bloom": "analyze",
+      "course_outcome_ids": [
+        "cell-biology-outcome-3"
+      ]
+    },
+    {
+      "id": "cell-biology-17-objective-2",
+      "description": "Interpret isoform-specific and shared-region RNA measurements while separating transcript production, processing, stability, and measured isoform composition.",
+      "bloom": "analyze",
+      "course_outcome_ids": [
+        "cell-biology-outcome-3",
+        "cell-biology-outcome-4"
+      ]
+    },
+    {
+      "id": "cell-biology-17-objective-3",
+      "description": "Select perturbation, assay, and reverse-transcription controls that strengthen a bounded claim about RNA processing.",
+      "bloom": "evaluate",
+      "course_outcome_ids": [
+        "cell-biology-outcome-4"
+      ]
+    },
+    {
+      "id": "cell-biology-18-objective-1",
+      "description": "Trace eukaryotic translation initiation, elongation, and termination while preserving codon frame and peptide-growth direction.",
+      "bloom": "analyze",
+      "course_outcome_ids": [
+        "cell-biology-outcome-3"
+      ]
+    },
+    {
+      "id": "cell-biology-18-objective-2",
+      "description": "Infer synthesis and degradation alternatives from matched RNA, nascent-protein, steady-state protein, and turnover measurements.",
+      "bloom": "evaluate",
+      "course_outcome_ids": [
+        "cell-biology-outcome-3",
+        "cell-biology-outcome-4"
+      ]
+    },
+    {
+      "id": "cell-biology-18-objective-3",
+      "description": "Apply a first-order protein-decay model to estimate half-life and state assumptions and measurement limits.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "cell-biology-outcome-2",
+        "cell-biology-outcome-4"
+      ]
     }
   ],
   "duration": {
     "instructional_weeks": 14,
-    "equivalent_structure": "Proposed 14-week undergraduate scope only. Weeks 1 through 7 now each contain two original lessons; weeks 4 and 7 also retain short prototype readings. Week 8 has one cumulative ungraded practice set; there is no midterm or exam package. Weeks 9 through 14 remain outlines. Workload is not measured, so this schedule is not evidence of semester equivalence.",
+    "equivalent_structure": "Proposed 14-week undergraduate scope only. Weeks 1 through 7 contain two original lessons each; weeks 4 and 7 also retain short prototype readings. Week 8 has an ungraded cumulative practice set, not a midterm. Week 9 now has two original lessons and a formative practice set; weeks 10 through 14 remain outlines. Planned workload is not measured, so this schedule is not evidence of semester equivalence.",
     "weeks": [
       {
         "week": 1,
@@ -421,8 +472,13 @@
       {
         "week": 9,
         "title": "RNA processing, translation, and protein turnover",
-        "lesson_ids": [],
-        "assessment_ids": []
+        "lesson_ids": [
+          "cell-biology-17",
+          "cell-biology-18"
+        ],
+        "assessment_ids": [
+          "cell-biology-week9-practice"
+        ]
       },
       {
         "week": 10,
@@ -930,6 +986,70 @@
           ]
         }
       ]
+    },
+    {
+      "id": "cell-biology-module-17",
+      "title": "RNA processing and isoform evidence",
+      "source_ids": [
+        "molecular",
+        "ncbi-mboc-rna-processing",
+        "ncbi-mboc-posttranscriptional-controls"
+      ],
+      "lessons": [
+        {
+          "id": "cell-biology-17",
+          "title": "RNA processing and isoform evidence",
+          "reading": "modules/08a-rna-processing-and-isoform-evidence.md",
+          "objectives": [
+            "cell-biology-17-objective-1",
+            "cell-biology-17-objective-2",
+            "cell-biology-17-objective-3"
+          ],
+          "worked_example": "In the synthetic depletion group, 60 skipped and 30 included isoform counts give 60/(60+30) = 66.7% skipped among the two measured forms; the shift does not establish a transcription or protein-function change.",
+          "question_ids": [
+            "cell-biology-17:processing-vs-transcription",
+            "cell-biology-17:isoform-evidence-controls",
+            "cell-biology-17:isoform-fraction",
+            "cell-biology-17:spliceosome-mechanism"
+          ],
+          "card_ids": [
+            "cell-biology-17-0",
+            "cell-biology-17-1"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cell-biology-module-18",
+      "title": "Translation and protein turnover",
+      "source_ids": [
+        "molecular",
+        "ncbi-mboc-rna-protein",
+        "ncbi-mboc-posttranscriptional-controls"
+      ],
+      "lessons": [
+        {
+          "id": "cell-biology-18",
+          "title": "Translation and protein turnover",
+          "reading": "modules/08b-translation-and-protein-turnover.md",
+          "objectives": [
+            "cell-biology-18-objective-1",
+            "cell-biology-18-objective-2",
+            "cell-biology-18-objective-3"
+          ],
+          "worked_example": "A background-corrected labeled protein signal that falls from 80 to 40 units over 4 hours has a 4-hour half-life under the stated first-order model; similar mRNA and half-life with lower nascent protein are consistent with reduced synthesis, not proof of a direct mechanism.",
+          "question_ids": [
+            "cell-biology-18:translation-termination",
+            "cell-biology-18:protein-half-life",
+            "cell-biology-18:synthesis-vs-turnover-data",
+            "cell-biology-18:turnover-assay-controls"
+          ],
+          "card_ids": [
+            "cell-biology-18-0",
+            "cell-biology-18-1"
+          ]
+        }
+      ]
     }
   ],
   "assessments": [
@@ -1160,6 +1280,33 @@
         "cell-biology-16:reporter-interpretation"
       ],
       "points": 31
+    },
+    {
+      "id": "cell-biology-week9-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Week 9: RNA processing, translation, and protein-turnover practice",
+      "path": "question-banks/practice.json",
+      "week": 9,
+      "objective_ids": [
+        "cell-biology-17-objective-1",
+        "cell-biology-17-objective-2",
+        "cell-biology-17-objective-3",
+        "cell-biology-18-objective-1",
+        "cell-biology-18-objective-2",
+        "cell-biology-18-objective-3"
+      ],
+      "question_ids": [
+        "cell-biology-17:processing-vs-transcription",
+        "cell-biology-17:isoform-evidence-controls",
+        "cell-biology-17:isoform-fraction",
+        "cell-biology-18:translation-termination",
+        "cell-biology-18:protein-half-life",
+        "cell-biology-18:synthesis-vs-turnover-data",
+        "cell-biology-18:turnover-assay-controls",
+        "cell-biology-17:spliceosome-mechanism"
+      ],
+      "points": 14
     }
   ],
   "grading_policy": {
@@ -1190,6 +1337,11 @@
     "review_status": "unreviewed"
   },
   "history": [
+    {
+      "version": "0.10.0",
+      "date": "2026-10-06",
+      "summary": "Developed two original week-9 lessons on eukaryotic RNA processing/isoform inference and translation/protein turnover; added synthetic datasets, eight deterministic formative questions, four retrieval cards, six mapped objectives, and link-only provenance. The course remains partial; no homework, lab, midterm, final, or project was represented as complete."
+    },
     {
       "version": "0.9.1",
       "date": "2026-10-06",
@@ -1257,8 +1409,8 @@
     }
   ],
   "limitations": [
-    "The first seven proposed teaching weeks now have two original lessons each, but this does not provide the planned homework, full laboratory/data assignments, summative exams, workload evidence, or instructor review; weeks 4 and 7 retain additional compact prototype readings.",
-    "Week 8 now offers a 12-question cumulative formative review using public practice items; it is not an exam or midterm. Weeks 9–14 remain planning scope, not lessons. The compact week-4 and week-7 prototype readings supplement but do not replace the developed lesson sequences.",
+    "Weeks 1-7 each have two original lessons; weeks 4 and 7 retain compact prototype readings. Week 9 adds two original lessons, but the package still lacks the planned homework sequence, full laboratory/data assignments, summative exams, workload evidence, and instructor review.",
+    "Week 8 is an ungraded cumulative practice set, not an exam or midterm. Week 9 now has two original lessons and a formative practice set; weeks 10-14 remain outlines. Substantive homework, full data/virtual-lab activities, summative exams, a cumulative project, workload evidence, and independent review are still missing.",
     "Current formative checks across the developed lessons do not demonstrate comprehensive outcome coverage or mastery; some lesson objectives remain unassessed.",
     "Bloom labels and structured prerequisite edges are initial authoring classifications awaiting subject-matter review.",
     "Question answers and solution feedback are intentionally public practice authoring specifications, not restricted exam keys.",

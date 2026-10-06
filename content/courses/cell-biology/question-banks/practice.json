@@ -2334,6 +2334,537 @@
         "kind": "original",
         "modifications": []
       }
+    },
+    {
+      "id": "cell-biology-17:processing-vs-transcription",
+      "type": "single_choice",
+      "prompt": "A perturbation changes the fraction of two mature RNA isoforms, while a shared-exon assay and an intron-containing precursor assay remain similar. Which conclusion is best supported?",
+      "points": 1,
+      "objective_ids": [
+        "cell-biology-17-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0
+      },
+      "feedback": {
+        "hint": "Separate the measured mature-RNA mixture from the amount of transcript entering and remaining in the RNA pool.",
+        "solution": "The data support a change in the measured isoform mixture without a large change in the shared mature signal or measured precursor. They do not identify direct action at a splice site or exclude every stability and cell-state alternative.",
+        "lesson_ids": [
+          "cell-biology-17"
+        ],
+        "misconception_ids": [
+          "mature-rna-abundance-equals-transcription",
+          "rtqpcr-total-rna-resolves-isoforms"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      },
+      "options": [
+        "The measured mature isoform composition changed; the data alone do not show that total transcription changed.",
+        "Transcription must have doubled because one isoform increased.",
+        "The protein encoded by the included isoform is necessarily more active.",
+        "The splice regulator directly binds the measured splice site because the isoform fraction changed."
+      ],
+      "randomization": {
+        "seeded": true,
+        "generator_id": "authored-variants-v1",
+        "variants": [
+          {
+            "id": "isoform-composition-v1",
+            "prompt": "A splice-factor perturbation shifts junction-specific counts between two mature isoforms, while a shared-exon signal is similar. Which statement best fits these measurements?",
+            "options": [
+              "The isoform mixture changed in the assay; this does not by itself demonstrate altered transcription or protein function.",
+              "Equal shared-exon signal proves that every RNA-processing step was unchanged.",
+              "The larger isoform count proves direct binding of the factor to that RNA sequence.",
+              "A change in one junction signal proves that cell viability fell."
+            ],
+            "solution_spec": {
+              "answer": 0
+            },
+            "feedback": {
+              "hint": "Name the RNA species measured by each assay before making a mechanistic claim.",
+              "solution": "Junction-specific assays report isoform evidence; a shared-exon assay reports a common region. Neither alone proves direct binding, transcription rate, or protein function.",
+              "lesson_ids": [
+                "cell-biology-17"
+              ],
+              "misconception_ids": [
+                "rtqpcr-total-rna-resolves-isoforms"
+              ]
+            }
+          },
+          {
+            "id": "transcript-output-vs-processing-v1",
+            "prompt": "A cell has similar intron-containing precursor signal and total shared-exon RNA after a perturbation, but exon-junction counts move in opposite directions. What does this pattern most directly suggest?",
+            "options": [
+              "A shift in the measured mature isoform composition, subject to assay and cell-state limits.",
+              "A proven increase in transcription of the entire gene.",
+              "A proven increase in total protein activity.",
+              "A direct measurement of RNA degradation rate."
+            ],
+            "solution_spec": {
+              "answer": 0
+            },
+            "feedback": {
+              "hint": "Opposing junction counts with a similar shared signal describe composition more directly than total output.",
+              "solution": "The measurements are consistent with altered isoform composition. Nascent-RNA, decay, rescue, and orthogonal sequence assays would address other possible mechanisms.",
+              "lesson_ids": [
+                "cell-biology-17"
+              ],
+              "misconception_ids": [
+                "mature-rna-abundance-equals-transcription"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "cell-biology-17:isoform-evidence-controls",
+      "type": "structured",
+      "prompt": "For the synthetic splice-factor dataset, choose an interpretation and two design checks that distinguish isoform evidence from transcription, assay artifact, and reagent-specific effects.",
+      "points": 3,
+      "objective_ids": [
+        "cell-biology-17-objective-2",
+        "cell-biology-17-objective-3"
+      ],
+      "solution_spec": {
+        "field_specs": [
+          {
+            "id": "observed-pattern",
+            "type": "single_choice",
+            "answer": 0
+          },
+          {
+            "id": "specificity-check",
+            "type": "single_choice",
+            "answer": 0
+          },
+          {
+            "id": "assay-control",
+            "type": "single_choice",
+            "answer": 0
+          }
+        ],
+        "rubric": [
+          {
+            "id": "observed-pattern",
+            "criterion": "Interpret measured isoform evidence",
+            "points": 1,
+            "evidence": [
+              "Names an isoform-composition shift and avoids inferring transcription or protein activity."
+            ]
+          },
+          {
+            "id": "specificity-check",
+            "criterion": "Address perturbation specificity",
+            "points": 1,
+            "evidence": [
+              "Selects independent perturbations and a rescue where feasible."
+            ]
+          },
+          {
+            "id": "assay-control",
+            "criterion": "Check reverse-transcription assay specificity",
+            "points": 1,
+            "evidence": [
+              "Selects a no-reverse-transcriptase control for genomic DNA contamination."
+            ]
+          }
+        ]
+      },
+      "feedback": {
+        "hint": "State what the junction and shared-region assays measure, then choose one perturbation-specificity check and one RT-PCR control.",
+        "solution": "The pattern supports a measured isoform-composition shift with similar shared and precursor signals. Independent perturbations plus rescue address reagent-specific effects; a no-reverse-transcriptase reaction tests genomic-DNA carryover.",
+        "lesson_ids": [
+          "cell-biology-17"
+        ],
+        "misconception_ids": [
+          "mature-rna-abundance-equals-transcription",
+          "rtqpcr-total-rna-resolves-isoforms"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      },
+      "response_fields": [
+        {
+          "id": "observed-pattern",
+          "type": "single_choice",
+          "prompt": "Interpretation: which statement is limited to the measured RNA evidence?",
+          "options": [
+            "The measured isoform proportions shifted while the shared mature and precursor signals were similar.",
+            "The perturbation increased transcription of the whole gene.",
+            "The altered isoform necessarily produces a more active protein."
+          ],
+          "points": 1
+        },
+        {
+          "id": "specificity-check",
+          "type": "single_choice",
+          "prompt": "Perturbation control: which design most directly addresses a reagent-specific effect?",
+          "options": [
+            "Use independent perturbation reagents and a perturbation-resistant rescue where feasible.",
+            "Add more PCR wells from the same RNA preparation.",
+            "Use only the isoform with the largest count."
+          ],
+          "points": 1
+        },
+        {
+          "id": "assay-control",
+          "type": "single_choice",
+          "prompt": "RNA assay control: which control checks for genomic DNA carried into a reverse-transcription PCR?",
+          "options": [
+            "A no-reverse-transcriptase reaction.",
+            "A positive reporter construct.",
+            "A matched IgG immunoprecipitation."
+          ],
+          "points": 1
+        }
+      ]
+    },
+    {
+      "id": "cell-biology-17:isoform-fraction",
+      "type": "numeric",
+      "prompt": "In the synthetic splice-factor depletion data, the skipped isoform has 60 measured counts and the included isoform has 30. What percentage of these two measured mature isoforms is skipped? Enter a value with unit. Round to three significant figures.",
+      "points": 1,
+      "objective_ids": [
+        "cell-biology-17-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 66.7,
+        "unit": "%",
+        "tolerance": 0.2,
+        "unit_required": true,
+        "significant_figures": 3,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Divide the skipped count by the sum of the two measured mature isoform counts, then multiply by 100.",
+        "solution": "60 / (60 + 30) x 100 = 66.7%. This is the fraction among the two measured forms, not among every RNA molecule in the cell.",
+        "lesson_ids": [
+          "cell-biology-17"
+        ],
+        "misconception_ids": [
+          "rtqpcr-total-rna-resolves-isoforms"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "cell-biology-18:translation-termination",
+      "type": "single_choice",
+      "prompt": "During eukaryotic translation, a stop codon enters the ribosomal A site. Which event most directly terminates synthesis of that polypeptide?",
+      "points": 1,
+      "objective_ids": [
+        "cell-biology-18-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0
+      },
+      "feedback": {
+        "hint": "Stop codons are recognized by a release factor rather than by an aminoacyl-tRNA carrying the next amino acid.",
+        "solution": "A release factor recognizes the stop codon and promotes release of the peptide from the tRNA. It does not add another amino acid specified by that stop codon.",
+        "lesson_ids": [
+          "cell-biology-18"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      },
+      "options": [
+        "A release factor promotes hydrolysis of the peptide-tRNA linkage and ribosome recycling.",
+        "A matching aminoacyl-tRNA adds an amino acid encoded by the stop codon.",
+        "RNA polymerase removes the final codon from the mRNA.",
+        "The ribosome moves backward by one codon and restarts elongation."
+      ]
+    },
+    {
+      "id": "cell-biology-18:protein-half-life",
+      "type": "numeric",
+      "prompt": "A background-corrected, labeled protein signal is 80 units at the start of a chase and 40 units after 4 hours. Assuming first-order decay over this interval, estimate the protein half-life. Enter a value in hours.",
+      "points": 1,
+      "objective_ids": [
+        "cell-biology-18-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 4.0,
+        "unit": "h",
+        "tolerance": 0.05,
+        "unit_required": true,
+        "significant_figures": 2,
+        "dimensions": {
+          "time": 1
+        }
+      },
+      "feedback": {
+        "hint": "A first-order half-life is the elapsed time for the background-corrected labeled signal to fall to one half of its initial value.",
+        "solution": "The signal falls from 80 to 40 units in 4 hours, exactly one half under the stated model; the estimated half-life is 4.0 h. A robust experiment would use multiple points, replicates, and a validated decay model.",
+        "lesson_ids": [
+          "cell-biology-18"
+        ],
+        "misconception_ids": [
+          "protein-abundance-equals-synthesis"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "cell-biology-18:synthesis-vs-turnover-data",
+      "type": "structured",
+      "prompt": "In the synthetic dataset, target mRNA and estimated protein half-life are similar across conditions, while nascent protein and steady-state protein fall after regulator depletion and move toward control after rescue. Select the best model-level inference, a useful follow-up, and a bounded conclusion.",
+      "points": 3,
+      "objective_ids": [
+        "cell-biology-18-objective-2",
+        "cell-biology-18-objective-3"
+      ],
+      "solution_spec": {
+        "field_specs": [
+          {
+            "id": "model-term",
+            "type": "single_choice",
+            "answer": 0
+          },
+          {
+            "id": "next-measurement",
+            "type": "single_choice",
+            "answer": 0
+          },
+          {
+            "id": "claim-boundary",
+            "type": "single_choice",
+            "answer": 0
+          }
+        ],
+        "rubric": [
+          {
+            "id": "model-term",
+            "criterion": "Separate synthesis and degradation",
+            "points": 1,
+            "evidence": [
+              "Selects lower synthesis per measured RNA while half-life is similar."
+            ]
+          },
+          {
+            "id": "next-measurement",
+            "criterion": "Choose a matched translation readout",
+            "points": 1,
+            "evidence": [
+              "Pairs ribosome-engagement evidence with target RNA."
+            ]
+          },
+          {
+            "id": "claim-boundary",
+            "criterion": "Limit the causal interpretation",
+            "points": 1,
+            "evidence": [
+              "Uses consistent-with language and does not claim direct initiation action."
+            ]
+          }
+        ]
+      },
+      "feedback": {
+        "hint": "Compare the measured RNA, synthesis, and decay dimensions separately before selecting a mechanism.",
+        "solution": "The results are consistent with reduced synthesis per measured RNA in the tested conditions. Ribosome-engagement measurements paired with target RNA may refine the mechanism. Rescue does not establish direct binding or direct action at initiation.",
+        "lesson_ids": [
+          "cell-biology-18"
+        ],
+        "misconception_ids": [
+          "translation-rate-equals-mrna-abundance",
+          "protein-abundance-equals-synthesis"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      },
+      "response_fields": [
+        {
+          "id": "model-term",
+          "type": "single_choice",
+          "prompt": "Mechanistic inference: which broad model term is most directly supported as lower?",
+          "options": [
+            "The synthesis rate per measured transcript, while the measured half-life is similar.",
+            "The first-order degradation constant, because the steady protein is lower.",
+            "The mature target mRNA abundance, because the protein is lower."
+          ],
+          "points": 1
+        },
+        {
+          "id": "next-measurement",
+          "type": "single_choice",
+          "prompt": "Follow-up: which measurement could help test ribosome engagement while retaining a matched RNA measurement?",
+          "options": [
+            "A controlled polysome profile or ribosome-footprint assay paired with target mRNA.",
+            "A larger steady-state protein gel from the same lysate only.",
+            "A promoter-only plasmid reporter with no translation readout."
+          ],
+          "points": 1
+        },
+        {
+          "id": "claim-boundary",
+          "type": "single_choice",
+          "prompt": "Claim boundary: what conclusion is warranted by the synthetic measurements?",
+          "options": [
+            "They are consistent with reduced synthesis per measured mRNA in these conditions, but do not prove direct action at initiation.",
+            "They prove that the candidate regulator physically binds the target mRNA.",
+            "They establish that the ubiquitin-proteasome pathway is inactive."
+          ],
+          "points": 1
+        }
+      ]
+    },
+    {
+      "id": "cell-biology-18:turnover-assay-controls",
+      "type": "structured",
+      "prompt": "Select the replication unit, a concern about inhibitor-based turnover measurements, and the strongest warranted interpretation of a rescue experiment.",
+      "points": 3,
+      "objective_ids": [
+        "cell-biology-18-objective-2"
+      ],
+      "solution_spec": {
+        "field_specs": [
+          {
+            "id": "replication-unit",
+            "type": "single_choice",
+            "answer": 0
+          },
+          {
+            "id": "chase-control",
+            "type": "single_choice",
+            "answer": 0
+          },
+          {
+            "id": "rescue-limit",
+            "type": "single_choice",
+            "answer": 0
+          }
+        ],
+        "rubric": [
+          {
+            "id": "replication-unit",
+            "criterion": "Identify independent biological sampling",
+            "points": 1,
+            "evidence": [
+              "Counts an independently grown and processed culture as a biological replicate."
+            ]
+          },
+          {
+            "id": "chase-control",
+            "criterion": "Interpret chase perturbations cautiously",
+            "points": 1,
+            "evidence": [
+              "Names stress signaling or viability as potential inhibitor-related confounds."
+            ]
+          },
+          {
+            "id": "rescue-limit",
+            "criterion": "Bound the rescue claim",
+            "points": 1,
+            "evidence": [
+              "States that rescue supports involvement without proving direct catalysis or universal action."
+            ]
+          }
+        ]
+      },
+      "feedback": {
+        "hint": "Keep independent cultures, treatment effects on cell state, and direct molecular evidence distinct.",
+        "solution": "Independent cultures are biological replicates. Chase inhibitors can alter stress and viability. A rescue supports involvement in the tested system but does not alone prove direct action.",
+        "lesson_ids": [
+          "cell-biology-18"
+        ],
+        "misconception_ids": [
+          "technical-wells-as-biological-n",
+          "rescue-proves-direct-catalysis"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      },
+      "response_fields": [
+        {
+          "id": "replication-unit",
+          "type": "single_choice",
+          "prompt": "Replication: what should count as the biological replicate in this cell-culture comparison?",
+          "options": [
+            "An independently grown and processed culture.",
+            "Each qPCR well from the same culture.",
+            "Each sequencing read from one culture."
+          ],
+          "points": 1
+        },
+        {
+          "id": "chase-control",
+          "type": "single_choice",
+          "prompt": "Turnover assay: what is an essential concern in an inhibitor-based chase?",
+          "options": [
+            "The inhibitor can alter stress signaling or viability, so matched controls and cell-state monitoring matter.",
+            "Any inhibitor guarantees perfectly first-order degradation.",
+            "A single endpoint identifies which protease degraded the protein."
+          ],
+          "points": 1
+        },
+        {
+          "id": "rescue-limit",
+          "type": "single_choice",
+          "prompt": "Rescue interpretation: what does restoration after factor rescue support?",
+          "options": [
+            "Involvement of the factor in the tested system, while direct molecular action still requires additional evidence.",
+            "Proof that the factor directly catalyzes translation initiation.",
+            "Proof that all cell types will show the same response."
+          ],
+          "points": 1
+        }
+      ]
+    },
+    {
+      "id": "cell-biology-17:spliceosome-mechanism",
+      "type": "single_choice",
+      "prompt": "Which action is directly performed during spliceosome-mediated processing of a typical eukaryotic pre-mRNA?",
+      "options": [
+        "The spliceosome helps recognize splice sites, remove an intron through a lariat intermediate, and ligate selected exons.",
+        "The spliceosome adds a 7-methylguanosine cap to the 5-prime end.",
+        "The spliceosome translates each codon into an amino acid.",
+        "The spliceosome appends a poly(A) tail to every eukaryotic RNA molecule."
+      ],
+      "points": 1,
+      "objective_ids": [
+        "cell-biology-17-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0
+      },
+      "feedback": {
+        "hint": "Separate intron removal and exon joining from capping, translation, and 3-prime end processing.",
+        "solution": "The spliceosome catalyzes splice-site selection and intron removal with exon ligation. Capping and polyadenylation are distinct RNA-processing operations; ribosomes perform translation.",
+        "lesson_ids": [
+          "cell-biology-17"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
     }
   ]
 }

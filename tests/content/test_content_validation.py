@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import json
+import math
 import shutil
 from copy import deepcopy
 from pathlib import Path
@@ -95,9 +96,9 @@ def test_preserved_inventory_is_honest_partial(repository):
     assert result.ok, result.errors
     assert result.inventory == {
         "courses": 25,
-        "lessons": 113,
-        "questions": 140,
-        "cards": 227,
+        "lessons": 115,
+        "questions": 148,
+        "cards": 231,
         "cases": 25,
     }
     assert sum(warning["code"] == "legacy-depth" for warning in result.warnings) == 98
@@ -299,9 +300,9 @@ def test_structured_rubric_item_is_counted_while_course_remains_partial(reposito
     result = validate_repository(repository)
     assert result.ok, result.errors
     manifest = read(course[0])
-    assert manifest["version"] == "0.9.1"
+    assert manifest["version"] == "0.10.0"
     assert manifest["maturity"] == "partial"
-    assert result.inventory["questions"] == 140
+    assert result.inventory["questions"] == 148
     question = next(
         item
         for item in read(course[0].parent / "question-banks/practice.json")["questions"]
@@ -322,7 +323,7 @@ def test_graph_plot_item_is_counted_while_statistics_course_remains_partial(repo
     assert manifest["maturity"] == "partial"
     assert graph["id"] == "statistics-5:concentration-graph"
     assert len(graph["graph_spec"]["points"]) == 3
-    assert result.inventory["questions"] == 140
+    assert result.inventory["questions"] == 148
 
 
 def test_cell_biology_scope_does_not_claim_unwritten_weeks(repository):
@@ -331,10 +332,10 @@ def test_cell_biology_scope_does_not_claim_unwritten_weeks(repository):
     course_root = repository / "content/courses/cell-biology"
     manifest = read(course_root / "course.json")
     weeks = manifest["duration"]["weeks"]
-    assert manifest["version"] == "0.9.1"
+    assert manifest["version"] == "0.10.0"
     assert manifest["maturity"] == "partial"
     assert len(weeks) == 14
-    assert [week["week"] for week in weeks if week["lesson_ids"]] == [1, 2, 3, 4, 5, 6, 7]
+    assert [week["week"] for week in weeks if week["lesson_ids"]] == [1, 2, 3, 4, 5, 6, 7, 9]
     assert len(weeks[0]["lesson_ids"]) == len(weeks[1]["lesson_ids"]) == 2
     assert len(weeks[2]["lesson_ids"]) == 2
     assert len(weeks[3]["lesson_ids"]) == 3
@@ -351,8 +352,14 @@ def test_cell_biology_scope_does_not_claim_unwritten_weeks(repository):
     assert practice_set["mode"] == "practice"
     assert len(practice_set["question_ids"]) == 12
     assert practice_set["points"] == 31
-    assert all(not week["lesson_ids"] for week in weeks[7:])
-    assert all(not week["assessment_ids"] for week in weeks[8:])
+    assert weeks[8]["lesson_ids"] == ["cell-biology-17", "cell-biology-18"]
+    assert weeks[8]["assessment_ids"] == ["cell-biology-week9-practice"]
+    week9_practice = next(item for item in manifest["assessments"] if item["id"] == weeks[8]["assessment_ids"][0])
+    assert week9_practice["mode"] == "practice"
+    assert len(week9_practice["question_ids"]) == 8
+    assert week9_practice["points"] == 14
+    assert all(not week["lesson_ids"] for week in weeks[9:])
+    assert all(not week["assessment_ids"] for week in weeks[9:])
     assert manifest["grading_policy"]["mode"] == "formative-only"
 
     source_map = read(course_root / "source-map.json")
@@ -378,6 +385,8 @@ def test_cell_biology_scope_does_not_claim_unwritten_weeks(repository):
         "cell-biology-14",
         "cell-biology-15",
         "cell-biology-16",
+        "cell-biology-17",
+        "cell-biology-18",
     ):
         lesson = next(
             lesson
@@ -728,3 +737,46 @@ def test_week6_semiconservative_hybrid_fraction_is_independently_recalculated(re
     assert question["solution_spec"]["answer"] == expected_percent
     assert question["solution_spec"]["unit"] == "%"
     assert question["solution_spec"]["tolerance"] == 0.5
+
+
+def test_week9_isoform_fraction_and_protein_half_life_are_recalculated(repository):
+    course_root = repository / "content/courses/cell-biology"
+    bank = read(course_root / "question-banks/practice.json")
+    questions = {item["id"]: item for item in bank["questions"]}
+
+    isoform_answer = round(100 * 60 / (60 + 30), 1)
+    isoform = questions["cell-biology-17:isoform-fraction"]
+    assert isoform_answer == 66.7
+    assert isoform["solution_spec"]["answer"] == isoform_answer
+    assert isoform["solution_spec"]["unit"] == "%"
+    assert isoform["solution_spec"]["significant_figures"] == 3
+
+    # The synthetic labeled signal falls exactly by one half over four hours.
+    estimated_k_deg = -math.log(40 / 80) / 4
+    half_life = math.log(2) / estimated_k_deg
+    turnover = questions["cell-biology-18:protein-half-life"]
+    assert half_life == 4
+    assert turnover["solution_spec"]["answer"] == half_life
+    assert turnover["solution_spec"]["unit"] == "h"
+    assert turnover["solution_spec"]["dimensions"] == {"time": 1}
+
+
+def test_week9_schedule_objectives_and_practice_are_mapped(repository):
+    course_root = repository / "content/courses/cell-biology"
+    manifest = read(course_root / "course.json")
+    week9 = next(item for item in manifest["duration"]["weeks"] if item["week"] == 9)
+    assessment = next(item for item in manifest["assessments"] if item["id"] == "cell-biology-week9-practice")
+    bank = read(course_root / assessment["path"])
+    questions = {item["id"]: item for item in bank["questions"]}
+
+    assert manifest["maturity"] == "partial"
+    assert manifest["version"] == "0.10.0"
+    assert week9["lesson_ids"] == ["cell-biology-17", "cell-biology-18"]
+    assert week9["assessment_ids"] == [assessment["id"]]
+    assert sum(questions[item]["points"] for item in assessment["question_ids"]) == assessment["points"] == 14
+    assert set(assessment["objective_ids"]) <= {item["id"] for item in manifest["lesson_objectives"]}
+    assert all(
+        any(objective_id in questions[item]["objective_ids"] for item in assessment["question_ids"])
+        for objective_id in assessment["objective_ids"]
+    )
+    assert all(questions[item]["visibility"] == "public-practice-authoring" for item in assessment["question_ids"])
