@@ -187,6 +187,14 @@ export interface AssessmentPlan {
     schedule_status: "practice" | "upcoming" | "open" | "closed";
   }[];
 }
+export interface PracticeAssessment {
+  course_id: string;
+  assessment_id: string;
+  title: string;
+  content_version: string;
+  points: number;
+  questions: Question[];
+}
 export interface Progress {
   lesson_id: string;
   completed: boolean;

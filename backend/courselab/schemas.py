@@ -378,6 +378,17 @@ class AssessmentQuestionsResponse(BaseModel):
     schedule_status: Literal["open", "closed"]
 
 
+class PracticeAssessmentResponse(BaseModel):
+    """Answer-free learner view of an explicitly public formative activity."""
+
+    course_id: str
+    assessment_id: str
+    title: str
+    content_version: str
+    points: float = Field(gt=0)
+    questions: list[PublicQuestion] = Field(min_length=1, max_length=100)
+
+
 class AssignmentQuestionResult(BaseModel):
     question_id: str
     score: float = Field(ge=0)

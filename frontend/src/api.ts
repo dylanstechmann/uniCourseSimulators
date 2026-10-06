@@ -16,6 +16,7 @@ import type {
   Lesson,
   Note,
   Progress,
+  PracticeAssessment,
   Session,
   Source,
 } from "./types";
@@ -100,6 +101,10 @@ export const api = {
   gradedAssessment: (id: string, assessmentId: string) =>
     request<GradedAssessment>(
       `/assessments/${encode(id)}/${encode(assessmentId)}/questions`,
+    ),
+  practiceAssessment: (id: string, assessmentId: string) =>
+    request<PracticeAssessment>(
+      `/assessments/${encode(id)}/${encode(assessmentId)}/practice-questions`,
     ),
   submitGradedAssessment: (
     id: string,

@@ -18,6 +18,7 @@ import { LessonStudy } from "./LessonStudy";
 import { MarkdownReader } from "./MarkdownReader";
 import { MaturityBadge } from "./MaturityBadge";
 import { GradedAssessment } from "./GradedAssessment";
+import { PracticeAssessmentView } from "./PracticeAssessmentView";
 
 export function CourseWorkspace({
   id,
@@ -61,6 +62,9 @@ export function CourseWorkspace({
   const [activeGradedAssessmentId, setActiveGradedAssessmentId] = useState<
     string | null
   >(null);
+  const [activePracticeAssessmentId, setActivePracticeAssessmentId] = useState<
+    string | null
+  >(null);
   const [error, setError] = useState("");
   const [busy, setBusy] = useState(false);
   useEffect(() => {
@@ -68,6 +72,7 @@ export function CourseWorkspace({
     setCourse(null);
     setError("");
     setActiveGradedAssessmentId(null);
+    setActivePracticeAssessmentId(null);
     api
       .course(id)
       .then((data) => {
@@ -408,7 +413,14 @@ export function CourseWorkspace({
                 {assessmentPlan && (
                   <AssessmentPlanView
                     plan={assessmentPlan}
-                    onOpenAssessment={setActiveGradedAssessmentId}
+                    onOpenAssessment={(assessmentId) => {
+                      setActivePracticeAssessmentId(null);
+                      setActiveGradedAssessmentId(assessmentId);
+                    }}
+                    onOpenPractice={(assessmentId) => {
+                      setActiveGradedAssessmentId(null);
+                      setActivePracticeAssessmentId(assessmentId);
+                    }}
                   />
                 )}
                 {activeGradedAssessmentId && (
@@ -420,6 +432,18 @@ export function CourseWorkspace({
                     history={gradedSubmissions}
                     onSubmitted={refreshAfterGradedSubmission}
                     onAppeal={requestGradedAppeal}
+                  />
+                )}
+                {activePracticeAssessmentId && (
+                  <PracticeAssessmentView
+                    key={activePracticeAssessmentId}
+                    courseId={id}
+                    assessmentId={activePracticeAssessmentId}
+                    enabled={enrolled && !needsVersionReview}
+                    attempts={attempts}
+                    onSubmit={submit}
+                    onAppeal={requestAppeal}
+                    onClose={() => setActivePracticeAssessmentId(null)}
                   />
                 )}
                 <GradebookView

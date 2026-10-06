@@ -4,7 +4,32 @@
 
 2026-10-06; synthetic local learner data only. Milestones 1 and 2 are implemented. Milestone 3 remains partial; deterministic graders and prototype graded-assignment and review workflows are described below. A Milestone 4 curriculum-map increment is implemented and tested, while subject-matter review and map refinement remain. All 25 course packages are **partial**; zero are beta, complete or externally reviewed. Human score review is limited to saved attempts and does not constitute course-content review. No semester equivalence, university credit, security certification or public production deployment is asserted.
 
-## Current increment: week-7 chromatin and transcription (2026-10-06)
+## Current increment: week-8 cumulative practice set (2026-10-06)
+
+Foundations of Cell and Molecular Biology advanced from 0.9.0 to **0.9.1** and remains `partial`. Week 8 now contains a self-paced 12-question cumulative practice set spanning selected outcomes from weeks 1–7. It reuses the existing openly answer-bearing formative bank, totals 31 practice points, provides immediate per-question feedback, and is explicitly labeled **ungraded and not a midterm** in the syllabus, schedule, UI, README, and crosswalk. No summative exam, protected exam key, homework sequence, or new lesson was created.
+
+The new learner endpoint requires enrollment and an assessment pinned to the selected package version. It accepts only `type: practice`, `mode: practice` records sourced from `question-banks/practice.json`; it verifies the pinned SHA-256, checks every referenced item is explicitly marked public formative practice, verifies the point total, and returns only whitelisted question DTOs. Restricted visibility, source mutation, incorrect type/source, and unknown assessment IDs fail closed. Seeded variants keep their signed course/version/question token. The course-level gradebook UI opens these practice sets and submits through the existing immutable formative-attempt workflow. The repository's authored answer specifications remain public by design and are not secure exam content.
+
+Validation on 2026-10-06: root suite **59 passed, 1 skipped**; backend **223 passed**; frontend **31 passed**; Playwright **11 passed**; legacy-state **7 passed**. Content validation reports 25 packages, 113 lessons, 140 questions, 227 cards, and 25 cases with 0 errors and 123 explicitly disclosed depth/objective warnings. API/content integration passes for 25 packages and 142 supported practice specifications. The source/bundle security scan reports 0 findings across 399 files. Frontend lint/format and TypeScript/Vite production build pass (206 modules). Development Compose is healthy, with existing data volumes preserved; Alembic remains at `0007 (head)` and `/api/v1/health` is healthy.
+
+| Current command/check | Result |
+| --- | --- |
+| `python tools/validate_content.py` | PASS: 25 packages, 113 lessons, 140 questions, 227 cards, 25 cases; 0 errors; 123 disclosed warnings |
+| `backend/.venv/Scripts/python.exe -m pytest tests -q` | 59 passed, 1 skipped |
+| `cd backend; .venv/Scripts/python.exe -m pytest tests -q` | 223 passed; one upstream Starlette/httpx deprecation warning |
+| `cd backend; .venv/Scripts/ruff.exe check .` | PASS |
+| `cd frontend; npm test` | 31 passed |
+| `cd frontend; npm run lint` and `npm run build` | PASS: formatting/lint and production bundle (206 modules) |
+| `cd frontend; npm run test:e2e` | 11 passed, including version-pinned week-8 practice, per-question grading, and reload persistence |
+| `npm run test:legacy` | 7 passed |
+| `docker compose up --build -d --wait --wait-timeout 180` | PASS: database, API, and web healthy; existing volumes preserved |
+| `docker compose exec -T api python -m courselab.check_content /content` | PASS: 25 packages / 142 supported practice specifications |
+| `docker compose exec -T api alembic current` | PASS: `0007 (head)` |
+| `python tools/check_security.py --bundle frontend/dist` | PASS; 0 findings across 399 files |
+
+The dedicated browser journey enrolled as a guest, opened the week-8 practice set, submitted a formative response, saw feedback, reloaded, reopened the set, and saw the saved feedback. An axe WCAG 2.1 A/AA scan on the loaded practice view reported zero violations. No summative-exam flow exists to test.
+
+## Previous increment: week-7 chromatin and transcription (2026-10-06)
 
 Foundations of Cell and Molecular Biology advanced from 0.8.0 to **0.9.0** and remains `partial`. Week 7 adds two original developed lessons, seven deterministic formative questions, four retrieval cards, seven misconception entries, two feedback templates, mapped lesson objectives, and per-module source provenance. The short gene-expression prototype remains supplementary. Accessibility/RNA, ChIP-qPCR, and reporter examples use explicitly synthetic data. The lessons separate input, IgG/mock, positive/negative-locus, and no-template controls and distinguish chromatin accessibility, occupancy, reporter activity, direct binding, and endogenous causal evidence.
 

@@ -7,9 +7,11 @@ function formatDate(value: string | null) {
 export function AssessmentPlanView({
   plan,
   onOpenAssessment,
+  onOpenPractice,
 }: {
   plan: AssessmentPlan;
   onOpenAssessment?: (assessmentId: string) => void;
+  onOpenPractice?: (assessmentId: string) => void;
 }) {
   return (
     <section
@@ -110,6 +112,15 @@ export function AssessmentPlanView({
                         }
                       >
                         Open assignment
+                      </button>
+                    ) : assessment.mode === "practice" &&
+                      assessment.item_count > 0 ? (
+                      <button
+                        type="button"
+                        onClick={() => onOpenPractice?.(assessment.id)}
+                        disabled={!onOpenPractice}
+                      >
+                        Open practice set
                       </button>
                     ) : (
                       "—"

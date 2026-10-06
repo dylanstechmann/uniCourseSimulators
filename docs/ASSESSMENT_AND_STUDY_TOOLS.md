@@ -1,19 +1,23 @@
-> Historical static reader behavior only. All packages are partial, practice results do not establish mastery, and browser data is unverified. See AUTOGRADER_DESIGN.md for the server migration.
-
 # Assessment and study tools
 
-## Automatically graded checks
+The current application serves lesson and course-level formative practice from the FastAPI backend. Learners can use guest sessions or accounts; enrollment pins a package version; attempts and feedback persist in PostgreSQL. The practice gradebook reports formative evidence only. No current course offers a weighted grade, credit, or a summative exam.
 
-Every lesson includes one formative item. Multiple-choice checks grade the selected option. Numerical checks accept a stated absolute tolerance and compare the entered value with the requested unit when one is supplied; unit text may be omitted, but a mismatched unit is rejected. After a first attempt, the learner sees a targeted hint and a worked explanation. A correct response marks that lesson complete. Scores are practice feedback and are saved in browser local storage.
+## Formative practice
 
-The course case studio is deliberately different: it asks for a written explanation and exposes a short checklist rubric. It is self-assessed rather than machine-graded because evidence, experimental reasoning, and design tradeoffs need more than string matching. The learner's draft and rubric state remain local.
+Lesson items and course-level practice sets use deterministic grading with answer specifications held server-side and learner responses checked against explicit rubric fields. The learner API returns a whitelisted question view; it does not return grader solutions. The authoring bank in the public repository is explicitly marked `public-practice-authoring`, so its keys are visible in source. These public practice keys are not protected exam materials and are never used to represent a summative assessment.
+
+Week 8 of Foundations of Cell and Molecular Biology includes a 12-item cumulative practice rehearsal over weeks 1–7. The UI labels it ungraded and not a midterm. Items submit individually, show immediate practice feedback, and persist like other practice attempts. The endpoint checks the enrollment-pinned source digest and only serves IDs explicitly listed in a `mode: practice`, `type: practice` manifest activity backed by `question-banks/practice.json`. It refuses other sources and does not return `solution_spec` or answer feedback.
+
+Numerical items can require units, tolerances, dimensions, and significant figures. Structured items are composed of separately scored fields; they do not grade unrestricted prose. File-upload checks parse small UTF-8 CSV data as data and never execute it. Authored variants use signed, short-lived tokens bound to course, version, and question. The production graded-assignment route is separate: it uses version-pinned private sources, deadlines and attempt policies, and answer-free learner views. No shipped course currently uses that graded route.
+
+The course case studio remains a self-assessed design task rather than an automatically graded response. Experimental reasoning, causal claims, and design tradeoffs require more than string matching.
 
 ## Study support
 
-- **Retrieval cards:** two cards are authored for each lesson. Cards can be browsed or studied from a small queue of new/due items.
-- **Review intervals:** Again schedules a one-minute return, Hard one day, Good three days, and Easy seven days. This is a transparent lightweight scheduler, not a validated adaptive-learning algorithm.
-- **Notes:** lesson notes, case drafts, bookmarks, checks, and review dates are saved per browser. No account, analytics, or server is configured.
-- **Equation tools:** dilution, buffer, enzyme-kinetics, RC, diffusion-timescale, and Ohm's-law calculators expose formulas and assumptions alongside outputs.
+- **Retrieval cards:** cards appear with developed lessons; learners can use them for self-assessment. The current reader does not yet persist a spaced-review queue.
+- **Notes and bookmarks:** server-backed learner notes and course bookmarks can be exported or deleted with account data.
+- **Progress:** marked reading state is stored separately from quiz scores and does not certify mastery.
+- **Legacy calculators:** dilution, buffer, enzyme-kinetics, RC, diffusion-timescale, and Ohm's-law tools remain under `legacy/` and are not yet integrated into the React course reader.
 
 ## Authoring and validation checklist
 
@@ -28,4 +32,4 @@ When adding a course or changing a problem:
 
 ## Current limitations
 
-The launch build does not provide server-backed accounts, instructor dashboards, exportable grades, timed exams, randomized parameter variants, collaborative annotation, or laboratory safety supervision. A local browser score is not a proctored or credit-bearing result. Specialized experimental cases should be reviewed by instructors before use in a formal course.
+The curriculum remains incomplete: all catalog packages are partial or planning-only, and no course passes the project's complete-course gate. There is no protected exam-key repository, timed exam mode, independent reviewer sign-off, full mastery model, general code-execution sandbox, collaborative annotation, or laboratory safety supervision. Practice indicators do not establish learning transfer, university equivalency, credit, or course completion. Specialized experimental activities require qualified review before formal instructional use.

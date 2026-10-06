@@ -661,6 +661,59 @@ test("the developed cell-biology weeks expose original lessons and deterministic
   ).toContainText("3 / 3 practice points");
 });
 
+test("week 8 cumulative review is interactive, ungraded practice and persists feedback", async ({
+  page,
+}) => {
+  await page.goto("/#/account");
+  await page.getByRole("button", { name: "Start guest session" }).click();
+  await page.getByRole("link", { name: "Course catalog", exact: true }).click();
+  await page.getByRole("link", { name: /Foundations of Cell/ }).click();
+  await page.getByRole("button", { name: "Enroll in partial course" }).click();
+  await page.getByRole("link", { name: "Practice gradebook" }).click();
+
+  const row = page.getByRole("row", {
+    name: /Week 8 cumulative review practice \(ungraded; not a midterm\)/,
+  });
+  await row.getByRole("button", { name: "Open practice set" }).click();
+  await expect(
+    page.getByRole("heading", {
+      name: "Week 8 cumulative review practice (ungraded; not a midterm)",
+    }),
+  ).toBeVisible();
+  await expect(
+    page.getByText(/not a midterm or other summative exam/i),
+  ).toBeVisible();
+  const accessibility = await new AxeBuilder({ page })
+    .withTags(["wcag2a", "wcag2aa", "wcag21a", "wcag21aa"])
+    .analyze();
+  expect(accessibility.violations).toEqual([]);
+
+  const question = page.locator(
+    '[data-question-id="cell-biology-1:check-all"]',
+  );
+  await question.getByRole("checkbox").first().check();
+  await question
+    .getByRole("button", { name: "Submit practice response" })
+    .click();
+  await expect(
+    question.getByRole("region", { name: "Submission feedback" }),
+  ).toContainText("practice points");
+
+  await page.reload();
+  const reloadedRow = page.getByRole("row", {
+    name: /Week 8 cumulative review practice \(ungraded; not a midterm\)/,
+  });
+  await reloadedRow.getByRole("button", { name: "Open practice set" }).click();
+  await expect(
+    page
+      .locator('[data-question-id="cell-biology-1:check-all"]')
+      .getByRole("region", { name: "Submission feedback" }),
+  ).toContainText("practice points");
+  await expect(
+    page.getByRole("button", { name: "Close practice set" }),
+  ).toBeVisible();
+});
+
 test("structured experimental criteria receive deterministic partial credit and persist", async ({
   page,
 }) => {

@@ -46,6 +46,45 @@ def test_assessment_plan_is_enrollment_scoped_and_never_returns_authoring_keys(a
     assert second.get("/api/v1/assessments/test-course").status_code == 403
 
 
+def test_public_practice_set_is_enrollment_scoped_answer_free_and_version_pinned(guest, content_root):
+    route = "/api/v1/assessments/test-course/practice-controls/practice-questions"
+    assert guest.get(route).status_code == 403
+    assert guest.post("/api/v1/enrollments", json={"course_id": "test-course"}).status_code == 201
+
+    response = guest.get(route)
+    assert response.status_code == 200
+    payload = response.json()
+    assert payload["assessment_id"] == "practice-controls"
+    assert payload["content_version"] == "0.1.0"
+    assert payload["points"] == 2
+    assert [question["id"] for question in payload["questions"]] == ["choice"]
+    assert payload["questions"][0]["assessment_role"] == "formative"
+    for hidden_key in ("solution_spec", "answer", "solution", "PRIVATE_TEST_SENTINEL"):
+        assert hidden_key not in response.text
+
+    assert guest.get(
+        "/api/v1/assessments/test-course/not-a-practice-set/practice-questions"
+    ).status_code == 404
+
+    source = content_root / "courses" / "test-course" / "question-banks" / "practice.json"
+    source.write_text(source.read_text(encoding="utf-8") + "\n", encoding="utf-8")
+    assert guest.get(route).status_code == 409
+
+
+def test_public_practice_set_refuses_unreleased_questions(guest, content_root):
+    source = content_root / "courses" / "test-course" / "question-banks" / "practice.json"
+    package = json.loads(source.read_text(encoding="utf-8"))
+    package["questions"][0]["visibility"] = "restricted"
+    source.write_text(json.dumps(package), encoding="utf-8")
+
+    assert guest.post("/api/v1/enrollments", json={"course_id": "test-course"}).status_code == 201
+    response = guest.get(
+        "/api/v1/assessments/test-course/practice-controls/practice-questions"
+    )
+    assert response.status_code == 409
+    assert "only explicit public practice items" in response.json()["detail"]
+
+
 def test_assessment_plan_pins_categories_and_keeps_prior_version_snapshot(guest, content_root):
     path = content_root / "courses" / "test-course" / "course.json"
     private_bank = path.parent / "question-banks" / "private.json"

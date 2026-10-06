@@ -70,6 +70,7 @@ from .schemas import (
     GradedSubmissionAppealResponse,
     InstructorGradedSubmissionAppealResponse,
     NoteRequest,
+    PracticeAssessmentResponse,
     ProgressRequest,
     PublicCourse,
     PublicCurriculum,
@@ -873,6 +874,93 @@ def create_app(settings: Settings | None = None) -> FastAPI:
             "attempts_used": attempts_used,
             "attempt_limit": instance.attempt_limit,
             "schedule_status": status,
+        }
+
+    @app.get(
+        "/api/v1/assessments/{course_id}/{assessment_id}/practice-questions",
+        response_model=PracticeAssessmentResponse,
+    )
+    def practice_assessment_questions(
+        course_id: str, assessment_id: str, request: Request, db: DB,
+    ):
+        """Serve only enrollment-pinned, explicitly public formative questions."""
+        user, _ = require_identity(request, db)
+        enrollment = enrolled(db, user, course_id)
+        manifest = content.manifest(course_id)
+        plan = ensure_assessment_plan(db, enrollment, manifest)
+        instance = db.scalar(select(AssessmentInstance).where(
+            AssessmentInstance.plan_id == plan.id,
+            AssessmentInstance.assessment_id == assessment_id,
+        ))
+        if (
+            not instance
+            or instance.mode != "practice"
+            or instance.assessment_type != "practice"
+            or instance.source_path != "question-banks/practice.json"
+            or instance.points <= 0
+            or not instance.question_ids
+        ):
+            raise HTTPException(404, "Public practice assessment not found")
+        try:
+            source_path = content.assessment_source_file(enrollment.course_id, instance.source_path)
+            source_bytes = source_path.read_bytes()
+        except (ContentInvalid, ContentMissing, OSError) as exc:
+            raise HTTPException(409, "The pinned practice source is unavailable") from exc
+        source_sha256 = hashlib.sha256(source_bytes).hexdigest()
+        if not secrets.compare_digest(source_sha256, instance.source_sha256):
+            raise HTTPException(409, "Practice content changed after this enrollment version was pinned")
+        try:
+            package = json.loads(source_bytes.decode("utf-8"))
+        except (UnicodeDecodeError, json.JSONDecodeError) as exc:
+            raise HTTPException(409, "The pinned practice source is invalid") from exc
+        if (
+            not isinstance(package, dict)
+            or package.get("course_id") != enrollment.course_id
+            or not isinstance(package.get("questions"), list)
+        ):
+            raise HTTPException(409, "The pinned practice source has an invalid course mapping")
+        questions_by_id = {}
+        for question in package["questions"]:
+            question_id = question.get("id") if isinstance(question, dict) else None
+            if not isinstance(question_id, str) or question_id in questions_by_id:
+                raise HTTPException(409, "The pinned practice bank has invalid question identifiers")
+            questions_by_id[question_id] = question
+        question_ids = instance.question_ids
+        if (
+            not isinstance(question_ids, list)
+            or any(not isinstance(question_id, str) for question_id in question_ids)
+            or len(question_ids) != len(set(question_ids))
+            or any(
+                question_id not in questions_by_id
+                or questions_by_id[question_id].get("visibility") != "public-practice-authoring"
+                for question_id in question_ids
+            )
+        ):
+            raise HTTPException(409, "The practice assessment must reference only explicit public practice items")
+        questions = [questions_by_id[question_id] for question_id in question_ids]
+        try:
+            question_points = sum(float(question["points"]) for question in questions)
+        except (KeyError, TypeError, ValueError) as exc:
+            raise HTTPException(409, "The pinned practice point mapping is invalid") from exc
+        if not math.isclose(question_points, float(instance.points), rel_tol=0, abs_tol=1e-8):
+            raise HTTPException(409, "Question points do not match the pinned practice total")
+        public_questions = []
+        for question in questions:
+            try:
+                token, variant_id, resolved = issue_variant_token(
+                    question, course_id, enrollment.content_version, settings.variant_token_secret,
+                )
+            except VariantTokenError as exc:
+                raise HTTPException(409, "The pinned practice variant configuration is invalid") from exc
+            public_questions.append(content.public_question(resolved, variant_id, token).model_dump())
+        db.commit()
+        return {
+            "course_id": course_id,
+            "assessment_id": instance.assessment_id,
+            "title": instance.title or instance.assessment_id.replace("-", " ").title(),
+            "content_version": enrollment.content_version,
+            "points": float(instance.points),
+            "questions": public_questions,
         }
 
     @app.post(

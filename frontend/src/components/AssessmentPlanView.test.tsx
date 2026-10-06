@@ -35,7 +35,8 @@ describe("versioned assessment plan", () => {
         },
       ],
     };
-    render(<AssessmentPlanView plan={plan} />);
+    const onOpenPractice = vi.fn();
+    render(<AssessmentPlanView plan={plan} onOpenPractice={onOpenPractice} />);
     expect(
       screen.getByRole("heading", { name: "Course assessment plan" }),
     ).toBeTruthy();
@@ -48,6 +49,8 @@ describe("versioned assessment plan", () => {
     expect(
       within(table).getAllByRole("cell", { name: "practice" }),
     ).toHaveLength(2);
+    fireEvent.click(screen.getByRole("button", { name: "Open practice set" }));
+    expect(onOpenPractice).toHaveBeenCalledWith("week-one-practice");
   });
 
   it("opens an available graded activity from its versioned schedule", () => {

@@ -299,7 +299,7 @@ def test_structured_rubric_item_is_counted_while_course_remains_partial(reposito
     result = validate_repository(repository)
     assert result.ok, result.errors
     manifest = read(course[0])
-    assert manifest["version"] == "0.9.0"
+    assert manifest["version"] == "0.9.1"
     assert manifest["maturity"] == "partial"
     assert result.inventory["questions"] == 140
     question = next(
@@ -331,7 +331,7 @@ def test_cell_biology_scope_does_not_claim_unwritten_weeks(repository):
     course_root = repository / "content/courses/cell-biology"
     manifest = read(course_root / "course.json")
     weeks = manifest["duration"]["weeks"]
-    assert manifest["version"] == "0.9.0"
+    assert manifest["version"] == "0.9.1"
     assert manifest["maturity"] == "partial"
     assert len(weeks) == 14
     assert [week["week"] for week in weeks if week["lesson_ids"]] == [1, 2, 3, 4, 5, 6, 7]
@@ -342,9 +342,17 @@ def test_cell_biology_scope_does_not_claim_unwritten_weeks(repository):
     assert len(weeks[5]["lesson_ids"]) == 2
     assert len(weeks[6]["lesson_ids"]) == 3
     assert weeks[7]["week"] == 8
-    assert "exam not authored" in weeks[7]["title"].lower()
+    assert "no midterm" in weeks[7]["title"].lower()
+    assert weeks[7]["assessment_ids"] == ["cell-biology-week8-cumulative-practice"]
+    practice_set = next(
+        item for item in manifest["assessments"]
+        if item["id"] == "cell-biology-week8-cumulative-practice"
+    )
+    assert practice_set["mode"] == "practice"
+    assert len(practice_set["question_ids"]) == 12
+    assert practice_set["points"] == 31
     assert all(not week["lesson_ids"] for week in weeks[7:])
-    assert all(not week["assessment_ids"] for week in weeks[7:])
+    assert all(not week["assessment_ids"] for week in weeks[8:])
     assert manifest["grading_policy"]["mode"] == "formative-only"
 
     source_map = read(course_root / "source-map.json")
@@ -352,8 +360,8 @@ def test_cell_biology_scope_does_not_claim_unwritten_weeks(repository):
     assert len(mapped_ids) == len(set(mapped_ids)) == len(manifest["modules"])
     assert "Weeks 1–7" in (course_root / "syllabus.md").read_text(encoding="utf-8")
     crosswalk = (course_root / "assessment-crosswalk.md").read_text(encoding="utf-8")
-    assert "Calendar reservation only" in crosswalk
-    assert "no exam questions" in crosswalk
+    assert "not a midterm" in crosswalk
+    assert "No exam questions" in crosswalk
 
     for lesson_id in (
         "cell-biology-1",
