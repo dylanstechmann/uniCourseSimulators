@@ -108,4 +108,3 @@ export function AssessmentPlanView({ plan }: { plan: AssessmentPlan }) {
     </section>
   );
 }
-
