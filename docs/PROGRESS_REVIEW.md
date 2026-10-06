@@ -18,6 +18,16 @@ Validation passed: content authoring tests 56 (1 skipped), full root suite 58 (1
 
 The next priority is to develop a coherent week 7 sequence and reconcile its calendar with the crosswalk's proposed midterm placement. Continue with substantive homework and laboratory packages only after their instruction, controls, solution specs, and independent checks are defined. Preserve `partial` maturity until the full-course gates and qualified reviews are actually satisfied.
 
+## Update after week 7 course authoring (2026-10-06)
+
+The cell-biology package advanced to version 0.9.0 and remains `partial`. Week 7 now contains two original lessons on chromatin accessibility/regulatory DNA and transcription-factor occupancy/reporter evidence, seven deterministic formative items, four retrieval cards, two feedback templates, seven new misconception entries, objective mappings, and per-module provenance. The original compact gene-expression lesson is retained as supplemental material. New examples and data are synthetic; ChIP-qPCR and reporter results are taught with separate control roles and explicit limits on occupancy, direct binding, and endogenous causal claims.
+
+The 14-week proposal now keeps weeks 1–7 as the teaching block and reserves week 8 for a proposed midterm. That is a calendar decision only: week 8 has no exam, answer key, rubric, assessment record, or release policy. Weeks 9–14 still have no authored lesson sequences. The repository now contains 25 partial packages, 113 lessons, 140 formative questions, 227 retrieval cards, and 25 self-assessed cases; zero courses meet the complete or external-review standard.
+
+Validation passed: content validation (25 packages; 0 errors and 123 disclosed depth/objective warnings), root suite 59 passed/1 skipped, backend 221 passed, frontend 30 passed, Playwright 10 passed, legacy 7 passed, lint/build, and local Compose/API integration. The API reports 142 supported practice specifications; Alembic is `0007 (head)`, health is `ok`, and the source/bundle boundary scan reports 0 findings across 397 files. See the current increment in [VALIDATION_REPORT.md](VALIDATION_REPORT.md) for commands and limits.
+
+Next, author week 8–14 instruction and the substantive homework, three data/lab activities, midterm, final, and integrative project. Week 4 and week 7 still need their planned homework/data-analysis packages. Measure learner workload and obtain independent subject-matter and accessibility reviews. Preserve `partial` maturity until the full course package passes the documented gates.
+
 ## Overall assessment
 
 The repository is a working local formative learning and practice platform. Infrastructure has progressed substantially: React/TypeScript, FastAPI, PostgreSQL, migrations, durable learner records, bounded deterministic graders and a curriculum graph exist. The central educational deliverable—a substantive university course—remains unfinished. **Zero courses are complete, beta or externally reviewed.** No credit, university equivalency, affiliation or admission eligibility is implied.

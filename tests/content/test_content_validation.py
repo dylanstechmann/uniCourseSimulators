@@ -95,9 +95,9 @@ def test_preserved_inventory_is_honest_partial(repository):
     assert result.ok, result.errors
     assert result.inventory == {
         "courses": 25,
-        "lessons": 111,
-        "questions": 133,
-        "cards": 223,
+        "lessons": 113,
+        "questions": 140,
+        "cards": 227,
         "cases": 25,
     }
     assert sum(warning["code"] == "legacy-depth" for warning in result.warnings) == 98
@@ -299,9 +299,9 @@ def test_structured_rubric_item_is_counted_while_course_remains_partial(reposito
     result = validate_repository(repository)
     assert result.ok, result.errors
     manifest = read(course[0])
-    assert manifest["version"] == "0.8.0"
+    assert manifest["version"] == "0.9.0"
     assert manifest["maturity"] == "partial"
-    assert result.inventory["questions"] == 133
+    assert result.inventory["questions"] == 140
     question = next(
         item
         for item in read(course[0].parent / "question-banks/practice.json")["questions"]
@@ -322,7 +322,7 @@ def test_graph_plot_item_is_counted_while_statistics_course_remains_partial(repo
     assert manifest["maturity"] == "partial"
     assert graph["id"] == "statistics-5:concentration-graph"
     assert len(graph["graph_spec"]["points"]) == 3
-    assert result.inventory["questions"] == 133
+    assert result.inventory["questions"] == 140
 
 
 def test_cell_biology_scope_does_not_claim_unwritten_weeks(repository):
@@ -331,7 +331,7 @@ def test_cell_biology_scope_does_not_claim_unwritten_weeks(repository):
     course_root = repository / "content/courses/cell-biology"
     manifest = read(course_root / "course.json")
     weeks = manifest["duration"]["weeks"]
-    assert manifest["version"] == "0.8.0"
+    assert manifest["version"] == "0.9.0"
     assert manifest["maturity"] == "partial"
     assert len(weeks) == 14
     assert [week["week"] for week in weeks if week["lesson_ids"]] == [1, 2, 3, 4, 5, 6, 7]
@@ -340,17 +340,20 @@ def test_cell_biology_scope_does_not_claim_unwritten_weeks(repository):
     assert len(weeks[3]["lesson_ids"]) == 3
     assert len(weeks[4]["lesson_ids"]) == 2
     assert len(weeks[5]["lesson_ids"]) == 2
-    assert len(weeks[6]["lesson_ids"]) == 1
+    assert len(weeks[6]["lesson_ids"]) == 3
+    assert weeks[7]["week"] == 8
+    assert "exam not authored" in weeks[7]["title"].lower()
     assert all(not week["lesson_ids"] for week in weeks[7:])
+    assert all(not week["assessment_ids"] for week in weeks[7:])
     assert manifest["grading_policy"]["mode"] == "formative-only"
 
     source_map = read(course_root / "source-map.json")
     mapped_ids = [item["module_id"] for item in source_map["modules"]]
     assert len(mapped_ids) == len(set(mapped_ids)) == len(manifest["modules"])
-    assert "Weeks 1–6" in (course_root / "syllabus.md").read_text(encoding="utf-8")
-    assert "no exam or assessment specifications" in (
-        course_root / "assessment-crosswalk.md"
-    ).read_text(encoding="utf-8")
+    assert "Weeks 1–7" in (course_root / "syllabus.md").read_text(encoding="utf-8")
+    crosswalk = (course_root / "assessment-crosswalk.md").read_text(encoding="utf-8")
+    assert "Calendar reservation only" in crosswalk
+    assert "no exam questions" in crosswalk
 
     for lesson_id in (
         "cell-biology-1",
@@ -365,6 +368,8 @@ def test_cell_biology_scope_does_not_claim_unwritten_weeks(repository):
         "cell-biology-12",
         "cell-biology-13",
         "cell-biology-14",
+        "cell-biology-15",
+        "cell-biology-16",
     ):
         lesson = next(
             lesson
@@ -390,6 +395,20 @@ def test_week4_enzyme_numeric_keys_are_independently_recalculated(repository):
     assert questions["cell-biology-10:rate-prediction"]["solution_spec"]["answer"] == (
         120 * 40 / (20 + 40)
     )
+
+
+def test_week7_chip_percent_input_is_independently_recalculated(repository):
+    bank = read(
+        repository / "content/courses/cell-biology/question-banks/practice.json"
+    )
+    question = next(
+        item for item in bank["questions"] if item["id"] == "cell-biology-16:chip-percent-input"
+    )
+    # Percent input = 100 × input aliquot fraction × 2^(Cq_input − Cq_IP).
+    independent_value = 100 * 0.01 * (2 ** (25 - 22))
+    assert independent_value == 8
+    assert question["solution_spec"]["answer"] == independent_value
+    assert question["solution_spec"]["unit"] == "%"
 
 
 def test_graph_expected_mean_is_recalculated_from_source_replicates(repository):

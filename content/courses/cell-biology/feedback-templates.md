@@ -85,6 +85,14 @@ These templates guide feedback for the current public formative material. The so
 
 > The assay reports **[measured lesion-associated signal]** under **[tested perturbation, time, and normalization]**. Similar starting signal and a matched rescue make a factor-dependent change more plausible, but this readout does not directly count heritable mutations or establish direct catalysis. Check **[DNA recovery, viability, cell-cycle state, and an orthogonal lesion or mutation assay]** before extending the claim.
 
+### Chromatin accessibility or histone mark treated as transcriptional causality
+
+> The data show **[accessibility/mark]** and **[RNA measurement]** in **[cell state and condition]**. Their co-variation supports an association in these samples; it does not establish that the mark caused transcription or that the nearest gene is the target. Identify the independent culture count, then propose a defined endogenous-element perturbation, matched control, target-RNA readout, and rescue or orthogonal test.
+
+### ChIP-qPCR or reporter result overinterpreted
+
+> The ChIP-qPCR result estimates **[locus enrichment relative to input]** with **[antibody and controls]**; the reporter result measures **[construct activity in its assay context]**. Neither alone establishes direct motif contact or endogenous-locus causality. Check input, IgG/mock pull-down, positive and negative loci, amplification specificity, construct normalization, and independent biological replicates; next test **[native-locus perturbation or orthogonal binding evidence]**.
+
 ## Delivery and uncertainty rules
 
 - Quote or point to the learner's own words, numbers, or selected fields; do not invent evidence about their reasoning.

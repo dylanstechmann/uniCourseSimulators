@@ -4,7 +4,32 @@
 
 2026-10-06; synthetic local learner data only. Milestones 1 and 2 are implemented. Milestone 3 remains partial; deterministic graders and prototype graded-assignment and review workflows are described below. A Milestone 4 curriculum-map increment is implemented and tested, while subject-matter review and map refinement remain. All 25 course packages are **partial**; zero are beta, complete or externally reviewed. Human score review is limited to saved attempts and does not constitute course-content review. No semester equivalence, university credit, security certification or public production deployment is asserted.
 
-## Current increment: week-6 DNA replication and repair
+## Current increment: week-7 chromatin and transcription (2026-10-06)
+
+Foundations of Cell and Molecular Biology advanced from 0.8.0 to **0.9.0** and remains `partial`. Week 7 adds two original developed lessons, seven deterministic formative questions, four retrieval cards, seven misconception entries, two feedback templates, mapped lesson objectives, and per-module source provenance. The short gene-expression prototype remains supplementary. Accessibility/RNA, ChIP-qPCR, and reporter examples use explicitly synthetic data. The lessons separate input, IgG/mock, positive/negative-locus, and no-template controls and distinguish chromatin accessibility, occupancy, reporter activity, direct binding, and endogenous causal evidence.
+
+The proposed teaching block now runs through week 7; week 8 is reserved for a proposed midterm and retrieval consolidation. No week-8 exam questions, answer key, rubric, assessment record, release policy, dates, or deadlines exist. Weeks 9–14 remain outlines. The repository inventory is 25 packages, 113 lessons, 140 formative questions, 227 retrieval cards, and 25 self-assessed cases. All packages remain partial and no external reviewer is claimed.
+
+Validation on 2026-10-06: **327 tests passed and 1 skipped** across root (59 passed, 1 skipped), backend (221), frontend unit tests (30), Playwright (10), and legacy storage (7). Content validation reports 25 packages, 113 lessons, 140 questions, 227 cards, and 25 cases: 0 errors and 123 disclosed depth/objective warnings (98 legacy-depth, 25 objective-coverage). The API/content integration check passes for 25 packages and 142 supported practice specifications. The source/bundle security-boundary scan reports 0 findings across 397 files. Frontend lint/format and the TypeScript/Vite production build passed (205 modules). Rebuilt development Compose services are healthy, Alembic is `0007 (head)`, and `/api/v1/health` is `ok`; programming and LLM providers remain disabled. Existing database/credential volumes were preserved. Playwright now submits and grades week-7 chromatin, ChIP percent-input/control, and reporter items; the answer-specification boundary test passed.
+
+| Current command/check | Result |
+| --- | --- |
+| `python tools/validate_content.py` | PASS: 25 packages, 113 lessons, 140 questions, 227 cards, 25 cases; 0 errors; 123 disclosed warnings |
+| `backend/.venv/Scripts/python.exe -m pytest tests -q` | 59 passed, 1 skipped |
+| `cd backend; .venv/Scripts/python.exe -m pytest -q` | 221 passed; one upstream Starlette/httpx deprecation warning |
+| `cd backend; .venv/Scripts/ruff.exe check .` | PASS |
+| Frontend `npm run lint`, `npm test -- --run`, and `npm run build` | PASS: 30 unit tests, TypeScript build, 205 production modules |
+| `npm run test:e2e` against rebuilt Compose | 10 passed, including week-7 lesson submissions and answer-specification DTO exclusion |
+| `npm run test:legacy` | 7 passed |
+| `docker compose exec -T api python -m courselab.check_content /content` | PASS: 25 packages / 142 supported practice specifications |
+| `docker compose exec -T api alembic current` and `/api/v1/health` | PASS: `0007 (head)`; health `ok`; programming runner and LLM feedback disabled |
+| `docker compose up --build -d --wait --wait-timeout 180` | PASS: database, API, and web healthy; existing volumes preserved |
+| `python tools/check_security.py --bundle frontend/dist` | PASS; 0 findings across 397 files |
+| `git diff --check` | PASS |
+
+New source records link to MIT OCW 7.28x as a curriculum comparator and to NCBI Bookshelf, Haring et al.'s CC BY 2.0 ChIP-qPCR methods article, and ENCODE standards as references. The project uses links/citations only and redistributes none of their text, figures, tables, or data. Live-link probing was not repeated; the prior report records two JHU pages that return HTTP 403 to the automated client.
+
+## Previous increment: week-6 DNA replication and repair
 
 Foundations of Cell and Molecular Biology advanced from version 0.7.0 to **0.8.0** while remaining `partial`. Week 6 adds two original lessons, seven deterministic formative items, four retrieval cards, misconception entries, two feedback templates, objective mappings, and per-module provenance. The lessons address strand polarity and replication, model-discriminating density predictions, lesion-specific repair candidates, and interpretation limits for perturbation and rescue evidence. The UV lesion-signal series is explicitly synthetic; it is not presented as historical measurements, mutation frequency, or proof of direct catalysis.
 

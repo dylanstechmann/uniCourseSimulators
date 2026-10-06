@@ -588,6 +588,77 @@ test("the developed cell-biology weeks expose original lessons and deterministic
   await expect(
     lesionData.getByRole("region", { name: "Submission feedback" }),
   ).toContainText("3 / 3 practice points");
+
+  await lessons
+    .getByRole("link", { name: /Chromatin accessibility and regulatory DNA/ })
+    .click();
+  await expect(
+    page.getByRole("heading", {
+      name: "Chromatin accessibility and regulatory DNA",
+      level: 1,
+    }),
+  ).toBeVisible();
+  const chromatinData = page.locator(
+    '[data-question-id="cell-biology-15:cell-state-data"]',
+  );
+  await chromatinData.getByLabel(/Accessibility pattern/).selectOption("0");
+  await chromatinData.getByLabel(/RNA pattern/).selectOption("0");
+  await chromatinData.getByLabel(/Causal boundary/).selectOption("0");
+  await chromatinData
+    .getByRole("button", { name: "Submit practice response" })
+    .click();
+  await expect(
+    chromatinData.getByRole("region", { name: "Submission feedback" }),
+  ).toContainText("3 / 3 practice points");
+
+  await lessons
+    .getByRole("link", {
+      name: /Transcription-factor occupancy and reporter evidence/,
+    })
+    .click();
+  await expect(
+    page.getByRole("heading", {
+      name: "Transcription-factor occupancy and reporter evidence",
+      level: 1,
+    }),
+  ).toBeVisible();
+  const percentInput = page.locator(
+    '[data-question-id="cell-biology-16:chip-percent-input"]',
+  );
+  await percentInput.getByLabel("Numerical value").fill("8");
+  await percentInput.getByLabel("Unit").fill("%");
+  await percentInput
+    .getByRole("button", { name: "Submit practice response" })
+    .click();
+  await expect(
+    percentInput.getByRole("region", { name: "Submission feedback" }),
+  ).toContainText("1 / 1 practice points");
+
+  const chipControls = page.locator(
+    '[data-question-id="cell-biology-16:chip-controls"]',
+  );
+  await chipControls.getByLabel(/Starting material/).selectOption("0");
+  await chipControls.getByLabel(/Nonspecific pull-down/).selectOption("0");
+  await chipControls.getByLabel(/Locus\/PCR specificity/).selectOption("0");
+  await chipControls
+    .getByRole("button", { name: "Submit practice response" })
+    .click();
+  await expect(
+    chipControls.getByRole("region", { name: "Submission feedback" }),
+  ).toContainText("3 / 3 practice points");
+
+  const reporter = page.locator(
+    '[data-question-id="cell-biology-16:reporter-interpretation"]',
+  );
+  await reporter.getByLabel(/Sequence contribution/).selectOption("0");
+  await reporter.getByLabel(/Normalization/).selectOption("0");
+  await reporter.getByLabel(/Endogenous limit/).selectOption("0");
+  await reporter
+    .getByRole("button", { name: "Submit practice response" })
+    .click();
+  await expect(
+    reporter.getByRole("region", { name: "Submission feedback" }),
+  ).toContainText("3 / 3 practice points");
 });
 
 test("structured experimental criteria receive deterministic partial credit and persist", async ({

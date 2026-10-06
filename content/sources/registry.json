@@ -60,7 +60,9 @@
       ],
       "mapped_modules": [
         "cell-biology-module-13",
-        "cell-biology-module-14"
+        "cell-biology-module-14",
+        "cell-biology-module-15",
+        "cell-biology-module-16"
       ],
       "version": "Spring 2023; landing page accessed 2026-10-05",
       "checksum": null,
@@ -1291,6 +1293,152 @@
       "checksum": null,
       "imported_assets": [],
       "rights_notes": "This record documents the project’s selected link-only use; it does not clear third-party text, figures, tables, or data for copying or adaptation."
+    },
+    {
+      "id": "ncbi-gene-switches",
+      "title": "How Genetic Switches Work — Molecular Biology of the Cell, 4th edition",
+      "institution": "NCBI Bookshelf / Garland Science",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK26872/",
+      "accessed_at": "2026-10-06",
+      "license": "Copyrighted textbook chapter; reuse rights not cleared here; link-only use selected",
+      "reuse_mode": "link-only-reference",
+      "permissions": {
+        "linking": true,
+        "quotation": false,
+        "adaptation": false,
+        "redistribution": false
+      },
+      "attribution_requirements": [
+        "Cite the chapter title, Molecular Biology of the Cell (4th edition), and exact NCBI Bookshelf URL."
+      ],
+      "third_party_notes": "No source text, figure, table, or dataset is imported or adapted.",
+      "mapped_courses": [
+        "cell-biology"
+      ],
+      "mapped_modules": [
+        "cell-biology-module-15"
+      ],
+      "version": "2002; Bookshelf ID NBK26872",
+      "checksum": null,
+      "imported_assets": [],
+      "rights_notes": "This record documents link-only use and does not clear textbook text or figures for copying."
+    },
+    {
+      "id": "ncbi-transcription-regulation",
+      "title": "Regulation of Transcription in Eukaryotes — The Cell: A Molecular Approach, 2nd edition",
+      "institution": "NCBI Bookshelf / Sinauer Associates",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK9904/",
+      "accessed_at": "2026-10-06",
+      "license": "Copyrighted textbook chapter; reuse rights not cleared here; link-only use selected",
+      "reuse_mode": "link-only-reference",
+      "permissions": {
+        "linking": true,
+        "quotation": false,
+        "adaptation": false,
+        "redistribution": false
+      },
+      "attribution_requirements": [
+        "Cite the chapter title, The Cell: A Molecular Approach (2nd edition), and exact NCBI Bookshelf URL."
+      ],
+      "third_party_notes": "No source text, figure, table, or dataset is imported or adapted.",
+      "mapped_courses": [
+        "cell-biology"
+      ],
+      "mapped_modules": [
+        "cell-biology-module-15",
+        "cell-biology-module-16"
+      ],
+      "version": "2000; Bookshelf ID NBK9904",
+      "checksum": null,
+      "imported_assets": [],
+      "rights_notes": "This record documents link-only use and does not clear textbook text or figures for copying."
+    },
+    {
+      "id": "haring-chip-qpcr-2007",
+      "title": "Chromatin immunoprecipitation: optimization, quantitative analysis and data normalization",
+      "institution": "Haring M, Offermann S, Danker T, Horst I, Peterhansel C, Stam M; Plant Methods",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2077865/",
+      "accessed_at": "2026-10-06",
+      "license": "CC-BY-2.0 article; this project selects link-only citation and imports no article material",
+      "reuse_mode": "link-only-reference",
+      "permissions": {
+        "linking": true,
+        "quotation": false,
+        "adaptation": false,
+        "redistribution": false
+      },
+      "attribution_requirements": [
+        "Cite Haring et al. (2007), Plant Methods 3:11, DOI 10.1186/1746-4811-3-11, and link to the article."
+      ],
+      "third_party_notes": "No source text, figure, table, or dataset is imported or adapted.",
+      "mapped_courses": [
+        "cell-biology"
+      ],
+      "mapped_modules": [
+        "cell-biology-module-16"
+      ],
+      "version": "2007; 3:11; DOI 10.1186/1746-4811-3-11; PMID 17892552; PMCID PMC2077865",
+      "checksum": null,
+      "imported_assets": [],
+      "rights_notes": "Although the article is CC BY 2.0, this course only links it; no text, figure, or table is adapted."
+    },
+    {
+      "id": "encode-chip-histone",
+      "title": "Histone ChIP-seq Data Standards and Processing Pipeline — ENCODE4",
+      "institution": "ENCODE Consortium",
+      "url": "https://www.encodeproject.org/chip-seq/histone-encode4/",
+      "accessed_at": "2026-10-06",
+      "license": "ENCODE page; redistribution/reuse permissions not reviewed here; link-only reference",
+      "reuse_mode": "link-only-reference",
+      "permissions": {
+        "linking": true,
+        "quotation": false,
+        "adaptation": false,
+        "redistribution": false
+      },
+      "attribution_requirements": [
+        "Attribute the ENCODE Consortium and link to the exact standards page."
+      ],
+      "third_party_notes": "No source text, figure, table, or dataset is imported or adapted.",
+      "mapped_courses": [
+        "cell-biology"
+      ],
+      "mapped_modules": [
+        "cell-biology-module-16"
+      ],
+      "version": "ENCODE4 standards page accessed 2026-10-06",
+      "checksum": null,
+      "imported_assets": [],
+      "rights_notes": "The lesson uses the page only as a methods reference; standards are not treated as a universal protocol or course endorsement."
+    },
+    {
+      "id": "encode-chip-transcription-factor",
+      "title": "Transcription Factor ChIP-seq Data Standards and Processing Pipeline — ENCODE",
+      "institution": "ENCODE Consortium",
+      "url": "https://www.encodeproject.org/chip-seq/transcription_factor/",
+      "accessed_at": "2026-10-06",
+      "license": "ENCODE page; redistribution/reuse permissions not reviewed here; link-only reference",
+      "reuse_mode": "link-only-reference",
+      "permissions": {
+        "linking": true,
+        "quotation": false,
+        "adaptation": false,
+        "redistribution": false
+      },
+      "attribution_requirements": [
+        "Attribute the ENCODE Consortium and link to the exact standards page."
+      ],
+      "third_party_notes": "No source text, figure, table, or dataset is imported or adapted.",
+      "mapped_courses": [
+        "cell-biology"
+      ],
+      "mapped_modules": [
+        "cell-biology-module-16"
+      ],
+      "version": "Standards page accessed 2026-10-06",
+      "checksum": null,
+      "imported_assets": [],
+      "rights_notes": "The lesson uses the page only as a methods reference; standards are not treated as a universal protocol or course endorsement."
     }
   ]
 }

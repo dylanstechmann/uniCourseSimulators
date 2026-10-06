@@ -1872,6 +1872,468 @@
         "kind": "original",
         "modifications": []
       }
+    },
+    {
+      "id": "cell-biology-15:chromatin-mark-inference",
+      "type": "single_choice",
+      "prompt": "In one cell state, a candidate region has increased accessibility, H3K27ac enrichment, and higher nearby RNA. Which conclusion is best supported before perturbing the region?",
+      "options": [
+        "The measurements are consistent with active regulatory chromatin in this state, but do not establish that the mark or region caused the RNA increase.",
+        "H3K27ac directly proves that RNA polymerase initiated transcription at the nearest gene.",
+        "The mark establishes that this region is an enhancer for the nearest gene in every cell type.",
+        "Higher accessibility proves that every cell in the sample expresses the gene."
+      ],
+      "points": 1,
+      "objective_ids": [
+        "cell-biology-15-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0
+      },
+      "feedback": {
+        "hint": "Separate chromatin-state association from a perturbation that tests regulatory function.",
+        "solution": "The measurements co-occur and are consistent with active regulatory chromatin in the tested state. They do not establish a causal element or target gene.",
+        "lesson_ids": [
+          "cell-biology-15"
+        ],
+        "misconception_ids": [
+          "histone-mark-proves-cause"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "cell-biology-15:cell-state-data",
+      "type": "structured",
+      "prompt": "Use the synthetic two-state table in the lesson. Select one response for each criterion.",
+      "response_fields": [
+        {
+          "id": "accessibility-pattern",
+          "type": "single_choice",
+          "prompt": "Accessibility pattern · What changes at the candidate locus while the housekeeping promoter remains similar?",
+          "options": [
+            "Candidate promoter and enhancer accessibility are higher in state A, while the housekeeping value is similar between states.",
+            "Only the housekeeping promoter changes and both candidate regions are identical.",
+            "All loci are inaccessible in both states.",
+            "The table reports absolute nucleosome counts rather than normalized insertion signal."
+          ],
+          "points": 1
+        },
+        {
+          "id": "rna-pattern",
+          "type": "single_choice",
+          "prompt": "RNA pattern · How does the candidate gene's RNA relate to the state comparison?",
+          "options": [
+            "Its normalized RNA abundance is higher in state A, co-varying with candidate accessibility.",
+            "RNA was measured only in state B.",
+            "The RNA value proves the enhancer directly contacts the promoter.",
+            "The RNA values are technical PCR wells from a single culture."
+          ],
+          "points": 1
+        },
+        {
+          "id": "causal-boundary",
+          "type": "single_choice",
+          "prompt": "Causal boundary · What next step most directly tests endogenous enhancer contribution?",
+          "options": [
+            "Perturb the endogenous element with matched non-targeting and independent perturbations, measure target and nearby RNA, and test rescue where feasible.",
+            "Repeat sequencing in the same cultures until read counts are larger.",
+            "Assign the enhancer to the nearest gene without perturbing either locus.",
+            "Treat cross-state correlation as proof of enhancer causality."
+          ],
+          "points": 1
+        }
+      ],
+      "points": 3,
+      "objective_ids": [
+        "cell-biology-15-objective-2"
+      ],
+      "solution_spec": {
+        "field_specs": [
+          {
+            "id": "accessibility-pattern",
+            "type": "single_choice",
+            "answer": 0
+          },
+          {
+            "id": "rna-pattern",
+            "type": "single_choice",
+            "answer": 0
+          },
+          {
+            "id": "causal-boundary",
+            "type": "single_choice",
+            "answer": 0
+          }
+        ],
+        "rubric": [
+          {
+            "id": "accessibility-pattern",
+            "criterion": "Accessibility Pattern",
+            "points": 1,
+            "evidence": [
+              "Identifies higher candidate promoter/enhancer signal and a similar housekeeping-promoter value."
+            ]
+          },
+          {
+            "id": "rna-pattern",
+            "criterion": "Rna Pattern",
+            "points": 1,
+            "evidence": [
+              "Notes that normalized candidate RNA is higher in state A but remains an association."
+            ]
+          },
+          {
+            "id": "causal-boundary",
+            "criterion": "Causal Boundary",
+            "points": 1,
+            "evidence": [
+              "Selects controlled endogenous perturbation and claim-matched RNA/rescue evidence."
+            ]
+          }
+        ]
+      },
+      "feedback": {
+        "hint": "Compare both candidate regions, the housekeeping control, and the biological-replicate definition before making a causal claim.",
+        "solution": "Candidate accessibility and RNA are higher in state A while housekeeping accessibility is similar. These synthetic measurements support association; controlled perturbation is needed to test contribution.",
+        "lesson_ids": [
+          "cell-biology-15"
+        ],
+        "misconception_ids": [
+          "open-chromatin-equals-transcribed",
+          "enhancer-nearest-gene-assumed",
+          "technical-wells-as-biological-n"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "cell-biology-15:accessibility-measurement",
+      "type": "single_choice",
+      "prompt": "An accessibility assay reports greater normalized transposase insertion at a candidate region in one cell state. Which statement describes the measured property most carefully?",
+      "options": [
+        "The region was more susceptible to insertion under the assay conditions; this does not itself measure RNA or prove transcription-factor occupancy.",
+        "Every nucleosome was removed and the gene was transcribed in every cell.",
+        "The candidate transcription factor directly bound the DNA bases detected by the assay.",
+        "The nearest gene is necessarily the functional target of the region."
+      ],
+      "points": 1,
+      "objective_ids": [
+        "cell-biology-15-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0
+      },
+      "feedback": {
+        "hint": "Name the assay's physical readout before inferring a mechanism.",
+        "solution": "Transposase insertion is an accessibility proxy under defined preparation and normalization. It does not directly quantify RNA, identify a bound factor, or assign a target gene.",
+        "lesson_ids": [
+          "cell-biology-15"
+        ],
+        "misconception_ids": [
+          "open-chromatin-equals-transcribed"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "cell-biology-16:chip-percent-input",
+      "type": "numeric",
+      "prompt": "A ChIP experiment saves 1% of starting chromatin as input. The input aliquot reaches threshold at Cq 25 and the immunoprecipitated sample at Cq 22. Assuming ideal doubling efficiency and the same amplicon, estimate the percent input. Enter a value with unit.",
+      "points": 1,
+      "objective_ids": [
+        "cell-biology-16-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 8,
+        "unit": "%",
+        "tolerance": 0.1,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": {
+          "length": 0,
+          "mass": 0,
+          "time": 0,
+          "amount": 0
+        }
+      },
+      "feedback": {
+        "hint": "Use 100 × input fraction × 2^(Cq input aliquot − Cq IP).",
+        "solution": "100 × 0.01 × 2^(25 − 22) = 8% input under the stated ideal-efficiency assumption.",
+        "lesson_ids": [
+          "cell-biology-16"
+        ],
+        "misconception_ids": [
+          "chip-input-igG-controls-interchangeable"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "cell-biology-16:chip-controls",
+      "type": "structured",
+      "prompt": "Choose the control that best addresses each distinct ChIP-qPCR question.",
+      "response_fields": [
+        {
+          "id": "starting-material",
+          "type": "single_choice",
+          "prompt": "Starting material · Which sample provides a pre-immunoprecipitation reference for input chromatin?",
+          "options": [
+            "An aliquot of fragmented chromatin saved before immunoprecipitation, with its fraction recorded.",
+            "A no-template qPCR well.",
+            "A promoter-only reporter plasmid.",
+            "A second technical PCR well from the IP."
+          ],
+          "points": 1
+        },
+        {
+          "id": "nonspecific-pulldown",
+          "type": "single_choice",
+          "prompt": "Nonspecific pull-down · Which control estimates recovery unrelated to the target antibody?",
+          "options": [
+            "A matched IgG or mock immunoprecipitation.",
+            "The input aliquot alone.",
+            "A known positive qPCR locus alone.",
+            "A no-template qPCR well alone."
+          ],
+          "points": 1
+        },
+        {
+          "id": "locus-and-pcr-specificity",
+          "type": "single_choice",
+          "prompt": "Locus/PCR specificity · Which set tests expected enrichment, locus specificity, and PCR contamination?",
+          "options": [
+            "A known positive locus, an unrelated negative locus, and a no-template qPCR control.",
+            "Three PCR wells from one culture and no target region.",
+            "Input and IgG only, with no locus controls or PCR blank.",
+            "A promoterless reporter and a rescue construct."
+          ],
+          "points": 1
+        }
+      ],
+      "points": 3,
+      "objective_ids": [
+        "cell-biology-16-objective-1"
+      ],
+      "solution_spec": {
+        "field_specs": [
+          {
+            "id": "starting-material",
+            "type": "single_choice",
+            "answer": 0
+          },
+          {
+            "id": "nonspecific-pulldown",
+            "type": "single_choice",
+            "answer": 0
+          },
+          {
+            "id": "locus-and-pcr-specificity",
+            "type": "single_choice",
+            "answer": 0
+          }
+        ],
+        "rubric": [
+          {
+            "id": "starting-material",
+            "criterion": "Starting Material",
+            "points": 1,
+            "evidence": [
+              "Selects pre-IP chromatin and records the saved fraction."
+            ]
+          },
+          {
+            "id": "nonspecific-pulldown",
+            "criterion": "Nonspecific Pulldown",
+            "points": 1,
+            "evidence": [
+              "Selects matched IgG or mock IP to estimate nonspecific recovery."
+            ]
+          },
+          {
+            "id": "locus-and-pcr-specificity",
+            "criterion": "Locus And Pcr Specificity",
+            "points": 1,
+            "evidence": [
+              "Includes positive/negative loci and a no-template PCR control."
+            ]
+          }
+        ]
+      },
+      "feedback": {
+        "hint": "Match each control to the stage it interrogates: starting chromatin, IP background, locus specificity, or PCR.",
+        "solution": "Input controls starting-material representation; matched IgG or mock IP estimates nonspecific recovery; positive and negative loci test locus-level behavior; no-template qPCR checks amplification contamination or artifacts.",
+        "lesson_ids": [
+          "cell-biology-16"
+        ],
+        "misconception_ids": [
+          "chip-input-igG-controls-interchangeable",
+          "chip-occupancy-proves-direct-binding"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "cell-biology-16:reporter-interpretation",
+      "type": "structured",
+      "prompt": "Interpret the synthetic reporter table while keeping the construct's limits explicit.",
+      "response_fields": [
+        {
+          "id": "wild-type-mutant",
+          "type": "single_choice",
+          "prompt": "Sequence contribution · What does the matched wild-type versus motif-disrupted comparison support?",
+          "options": [
+            "The motif contributes to reporter output in this construct and condition; mutation alone does not establish endogenous regulation.",
+            "The motif is necessary for endogenous expression in every tissue.",
+            "The mutant proves that the transcription factor directly contacts the motif.",
+            "Any difference is necessarily caused by altered cell viability."
+          ],
+          "points": 1
+        },
+        {
+          "id": "normalization-control",
+          "type": "single_choice",
+          "prompt": "Normalization · What condition is needed before a co-transfected reference reporter is used as a normalizer?",
+          "options": [
+            "The reference must be stable and not itself changed by treatment, alongside matched DNA and viability checks.",
+            "The reference must use the same enhancer and show a large treatment effect.",
+            "A technical well can replace independent transfections.",
+            "The promoter-only construct can be omitted."
+          ],
+          "points": 1
+        },
+        {
+          "id": "endogenous-limit",
+          "type": "single_choice",
+          "prompt": "Endogenous limit · Which evidence most directly strengthens a claim about the native locus?",
+          "options": [
+            "A controlled endogenous motif perturbation with matched controls, target/neighbor RNA measurement, and rescue where feasible.",
+            "A second ChIP measurement at the same locus only.",
+            "A larger plasmid copy number in the same transfection.",
+            "Assigning the nearest gene based on distance."
+          ],
+          "points": 1
+        }
+      ],
+      "points": 3,
+      "objective_ids": [
+        "cell-biology-16-objective-2"
+      ],
+      "solution_spec": {
+        "field_specs": [
+          {
+            "id": "wild-type-mutant",
+            "type": "single_choice",
+            "answer": 0
+          },
+          {
+            "id": "normalization-control",
+            "type": "single_choice",
+            "answer": 0
+          },
+          {
+            "id": "endogenous-limit",
+            "type": "single_choice",
+            "answer": 0
+          }
+        ],
+        "rubric": [
+          {
+            "id": "wild-type-mutant",
+            "criterion": "Wild Type Mutant",
+            "points": 1,
+            "evidence": [
+              "Limits the motif interpretation to contribution to the reporter construct in the tested condition."
+            ]
+          },
+          {
+            "id": "normalization-control",
+            "criterion": "Normalization Control",
+            "points": 1,
+            "evidence": [
+              "Checks that the reference is treatment-stable and considers matched DNA and viability."
+            ]
+          },
+          {
+            "id": "endogenous-limit",
+            "criterion": "Endogenous Limit",
+            "points": 1,
+            "evidence": [
+              "Chooses controlled endogenous perturbation and target/neighbor RNA with rescue where feasible."
+            ]
+          }
+        ]
+      },
+      "feedback": {
+        "hint": "Separate a construct-specific sequence effect from a native-locus mechanism.",
+        "solution": "The synthetic wild-type reporter exceeds promoter-only and motif disruption reduces signal in this construct. Reference normalization is valid only if the reference is unaffected. Native-locus perturbation and endogenous RNA/rescue are needed for a stronger gene-regulation claim.",
+        "lesson_ids": [
+          "cell-biology-16"
+        ],
+        "misconception_ids": [
+          "reporter-proves-endogenous-regulation",
+          "histone-mark-proves-cause"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "cell-biology-16:endogenous-enhancer-test",
+      "type": "single_choice",
+      "prompt": "ChIP-qPCR enrichment is observed at a distal element and the nearest gene has higher RNA in the same cell type. Which next step most directly tests whether the endogenous element contributes to that gene's transcription?",
+      "options": [
+        "Perturb the endogenous element with independent guides or edits, matched non-targeting and nearby controls, then measure target and neighboring RNA and test rescue where feasible.",
+        "Repeat ChIP-qPCR with more PCR wells from the same chromatin sample.",
+        "Assign the nearest gene as the target because the enhancer is closest.",
+        "Repeat a plasmid reporter without changing its sequence or measuring endogenous RNA."
+      ],
+      "points": 1,
+      "objective_ids": [
+        "cell-biology-16-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0
+      },
+      "feedback": {
+        "hint": "Choose an intervention on the native element and a measurement of native transcription.",
+        "solution": "Controlled endogenous perturbation followed by target and neighboring RNA measurements tests the proposed link more directly. Independent perturbations and rescue help address off-target and cell-state alternatives.",
+        "lesson_ids": [
+          "cell-biology-16"
+        ],
+        "misconception_ids": [
+          "chip-occupancy-proves-direct-binding",
+          "enhancer-nearest-gene-assumed"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
     }
   ]
 }

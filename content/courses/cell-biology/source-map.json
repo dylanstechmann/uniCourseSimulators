@@ -190,6 +190,36 @@
       "original_content": true,
       "license": "CC-BY-4.0",
       "modifications": []
+    },
+    {
+      "module_id": "cell-biology-module-15",
+      "lesson_id": "cell-biology-15",
+      "reading": "modules/07a-chromatin-accessibility-and-regulatory-dna.md",
+      "source_ids": [
+        "molecular",
+        "ncbi-gene-switches",
+        "ncbi-transcription-regulation"
+      ],
+      "relationship": "original-instruction-and-explicitly-synthetic-data-with-link-only-comparator-and-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "cell-biology-module-16",
+      "lesson_id": "cell-biology-16",
+      "reading": "modules/07b-transcription-occupancy-and-reporter-evidence.md",
+      "source_ids": [
+        "molecular",
+        "haring-chip-qpcr-2007",
+        "encode-chip-histone",
+        "encode-chip-transcription-factor",
+        "ncbi-transcription-regulation"
+      ],
+      "relationship": "original-instruction-and-explicitly-synthetic-data-with-link-only-method-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
     }
   ]
 }

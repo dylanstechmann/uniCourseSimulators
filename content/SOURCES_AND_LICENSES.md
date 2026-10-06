@@ -9,9 +9,12 @@ The machine-readable registry is [sources/registry.json](sources/registry.json).
 It preserves the prototype's 22 MIT reference IDs and the existing Johns
 Hopkins and MIT reuse-policy records. The Foundations course has five MIT
 curriculum-comparator records overall, with module-specific comparisons for
-weeks 3–6, plus thirteen link-only scientific or methods references across
-those weeks. Existing records were accessed on 2026-10-05; the new week-3
-through week-6 records were checked on 2026-10-06. An access date is not a
+weeks 3–7, plus eighteen link-only scientific, methods, or standards
+references mapped across those weeks. Existing records were accessed on
+2026-10-05; newly added records through week 7 were checked on 2026-10-06.
+The Haring et al. ChIP-qPCR article is published under CC BY 2.0; this project
+uses a bibliographic citation and link only and does not redistribute its
+text, figures, tables, or data. An access date is not a
 claim that every asset or every outbound link on a source page has been checked.
 
 ## License boundaries

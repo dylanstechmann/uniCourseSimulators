@@ -284,6 +284,46 @@
         "cell-biology-14-objective-2"
       ],
       "license": "CC-BY-4.0"
+    },
+    {
+      "id": "cell-biology-14-0",
+      "lesson_id": "cell-biology-15",
+      "front": "What does a chromatin-accessibility assay measure, and what does it not establish?",
+      "back": "It measures assay-specific susceptibility such as transposase insertion under defined conditions. It does not alone establish transcription, factor occupancy, target gene, or causation.",
+      "objective_ids": [
+        "cell-biology-15-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "cell-biology-14-1",
+      "lesson_id": "cell-biology-15",
+      "front": "Why can enhancer accessibility and nearby RNA co-vary without proving enhancer causality?",
+      "back": "Cell state changes many variables together. Perturb the endogenous element with matched controls, measure target and nearby RNA, and test rescue or an orthogonal readout.",
+      "objective_ids": [
+        "cell-biology-15-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "cell-biology-15-0",
+      "lesson_id": "cell-biology-16",
+      "front": "What is a simplified ChIP-qPCR percent-input calculation?",
+      "back": "% input = 100 × saved input fraction × 2^(Cq input aliquot − Cq IP), assuming ideal doubling and comparable amplification; state dilution and efficiency assumptions.",
+      "objective_ids": [
+        "cell-biology-16-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "cell-biology-15-1",
+      "lesson_id": "cell-biology-16",
+      "front": "What is the main claim boundary of a reporter plasmid or ChIP occupancy result?",
+      "back": "ChIP supports enrichment of cross-linked protein-associated chromatin, not necessarily direct binding or function. A reporter tests a sequence in an engineered construct, not native-locus regulation.",
+      "objective_ids": [
+        "cell-biology-16-objective-2"
+      ],
+      "license": "CC-BY-4.0"
     }
   ]
 }

@@ -7,7 +7,7 @@
   "domain": "Life sciences",
   "level": "Year 1",
   "maturity": "partial",
-  "version": "0.8.0",
+  "version": "0.9.0",
   "license": "MIT OR CC-BY-4.0",
   "content_origin": {
     "kind": "legacy-prototype",
@@ -287,11 +287,47 @@
       "course_outcome_ids": [
         "cell-biology-outcome-4"
       ]
+    },
+    {
+      "id": "cell-biology-15-objective-1",
+      "description": "Explain how nucleosome organization, remodeling, and context-dependent histone or DNA marks relate to chromatin accessibility without treating a mark as a transcriptional switch.",
+      "bloom": "analyze",
+      "course_outcome_ids": [
+        "cell-biology-outcome-3",
+        "cell-biology-outcome-4"
+      ]
+    },
+    {
+      "id": "cell-biology-15-objective-2",
+      "description": "Analyze accessibility and RNA measurements across cell states, distinguish biological from technical replication, and propose a controlled perturbation of an endogenous regulatory element.",
+      "bloom": "evaluate",
+      "course_outcome_ids": [
+        "cell-biology-outcome-3",
+        "cell-biology-outcome-4"
+      ]
+    },
+    {
+      "id": "cell-biology-16-objective-1",
+      "description": "Calculate simplified ChIP-qPCR percent input and select distinct input, nonspecific-pull-down, locus-specificity, and amplification controls.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "cell-biology-outcome-2",
+        "cell-biology-outcome-4"
+      ]
+    },
+    {
+      "id": "cell-biology-16-objective-2",
+      "description": "Interpret matched reporter constructs and distinguish occupancy, plasmid sequence activity, endogenous cis-regulatory causation, and direct binding.",
+      "bloom": "evaluate",
+      "course_outcome_ids": [
+        "cell-biology-outcome-3",
+        "cell-biology-outcome-4"
+      ]
     }
   ],
   "duration": {
     "instructional_weeks": 14,
-    "equivalent_structure": "Proposed undergraduate 14-week scope only. Weeks 1 through 6 now contain twelve developed lessons; week 4 also retains the original short enzyme capsule. Week 7 has a compact gene-expression prototype and formative item, not the proposed integrated midterm; weeks 8 through 14 have no authored lesson sequences or summative assessments. Workload is not measured, so this plan is not evidence of semester equivalence.",
+    "equivalent_structure": "Proposed 14-week undergraduate scope only. Weeks 1 through 7 now each contain two original lessons; weeks 4 and 7 also retain short prototype readings. Week 8 is reserved in the proposal for a midterm, but no exam package exists. Weeks 9 through 14 remain outlines. Workload is not measured, so this schedule is not evidence of semester equivalence.",
     "weeks": [
       {
         "week": 1,
@@ -365,51 +401,54 @@
         "week": 7,
         "title": "Chromatin, transcription, and gene regulation",
         "lesson_ids": [
-          "cell-biology-4"
+          "cell-biology-4",
+          "cell-biology-15",
+          "cell-biology-16"
         ],
         "assessment_ids": [
-          "cell-biology-4-practice"
+          "cell-biology-4-practice",
+          "cell-biology-week7-practice"
         ]
       },
       {
         "week": 8,
-        "title": "RNA processing, translation, and protein turnover",
+        "title": "Proposed midterm and retrieval consolidation (exam not authored)",
         "lesson_ids": [],
         "assessment_ids": []
       },
       {
         "week": 9,
-        "title": "Variation, inheritance, and genotype-to-phenotype reasoning",
+        "title": "RNA processing, translation, and protein turnover",
         "lesson_ids": [],
         "assessment_ids": []
       },
       {
         "week": 10,
-        "title": "Receptors, signaling networks, and feedback",
+        "title": "Variation, inheritance, and genotype-to-phenotype reasoning",
         "lesson_ids": [],
         "assessment_ids": []
       },
       {
         "week": 11,
-        "title": "Cytoskeleton, adhesion, matrix, and mechanobiology",
+        "title": "Receptors, signaling networks, feedback, and perturbation",
         "lesson_ids": [],
         "assessment_ids": []
       },
       {
         "week": 12,
-        "title": "Cell-cycle control, senescence, and cell death",
+        "title": "Cytoskeleton, adhesion, extracellular matrix, and mechanobiology",
         "lesson_ids": [],
         "assessment_ids": []
       },
       {
         "week": 13,
-        "title": "Development, cell fate, and stem-cell concepts",
+        "title": "Cell-cycle control, senescence, and cell death",
         "lesson_ids": [],
         "assessment_ids": []
       },
       {
         "week": 14,
-        "title": "Integrated experimental design and evidence synthesis",
+        "title": "Development, cell fate, stem-cell concepts, and integrative project",
         "lesson_ids": [],
         "assessment_ids": []
       }
@@ -826,6 +865,69 @@
           ]
         }
       ]
+    },
+    {
+      "id": "cell-biology-module-15",
+      "title": "Chromatin accessibility and regulatory DNA",
+      "source_ids": [
+        "molecular",
+        "ncbi-gene-switches",
+        "ncbi-transcription-regulation"
+      ],
+      "lessons": [
+        {
+          "id": "cell-biology-15",
+          "title": "Chromatin accessibility and regulatory DNA",
+          "reading": "modules/07a-chromatin-accessibility-and-regulatory-dna.md",
+          "objectives": [
+            "cell-biology-15-objective-1",
+            "cell-biology-15-objective-2"
+          ],
+          "worked_example": "Across four independent cultures per state, candidate enhancer accessibility is 78 ± 10 in state A and 19 ± 5 in state B while the gene RNA differs in the same direction. State this as an association, then propose endogenous element perturbation, matched controls, and RNA measurements before calling the enhancer causal.",
+          "question_ids": [
+            "cell-biology-15:chromatin-mark-inference",
+            "cell-biology-15:cell-state-data",
+            "cell-biology-15:accessibility-measurement"
+          ],
+          "card_ids": [
+            "cell-biology-14-0",
+            "cell-biology-14-1"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cell-biology-module-16",
+      "title": "Transcription-factor occupancy and reporter evidence",
+      "source_ids": [
+        "molecular",
+        "haring-chip-qpcr-2007",
+        "encode-chip-histone",
+        "encode-chip-transcription-factor",
+        "ncbi-transcription-regulation"
+      ],
+      "lessons": [
+        {
+          "id": "cell-biology-16",
+          "title": "Transcription-factor occupancy and reporter evidence",
+          "reading": "modules/07b-transcription-occupancy-and-reporter-evidence.md",
+          "objectives": [
+            "cell-biology-16-objective-1",
+            "cell-biology-16-objective-2"
+          ],
+          "worked_example": "For a 1% input aliquot with Cq 25 and a ChIP sample with Cq 22, ideal doubling gives 100 × 0.01 × 2^(25 − 22) = 8% input. This is an efficiency-dependent enrichment estimate, not an absolute molecule count or transcription rate.",
+          "question_ids": [
+            "cell-biology-16:chip-percent-input",
+            "cell-biology-16:chip-controls",
+            "cell-biology-16:reporter-interpretation",
+            "cell-biology-16:endogenous-enhancer-test"
+          ],
+          "card_ids": [
+            "cell-biology-15-0",
+            "cell-biology-15-1"
+          ]
+        }
+      ]
     }
   ],
   "assessments": [
@@ -991,6 +1093,30 @@
         "cell-biology-14:dsb-repair"
       ],
       "points": 11
+    },
+    {
+      "id": "cell-biology-week7-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Week 7: chromatin and transcription evidence practice",
+      "path": "question-banks/practice.json",
+      "week": 7,
+      "objective_ids": [
+        "cell-biology-15-objective-1",
+        "cell-biology-15-objective-2",
+        "cell-biology-16-objective-1",
+        "cell-biology-16-objective-2"
+      ],
+      "question_ids": [
+        "cell-biology-15:chromatin-mark-inference",
+        "cell-biology-15:cell-state-data",
+        "cell-biology-15:accessibility-measurement",
+        "cell-biology-16:chip-percent-input",
+        "cell-biology-16:chip-controls",
+        "cell-biology-16:reporter-interpretation",
+        "cell-biology-16:endogenous-enhancer-test"
+      ],
+      "points": 13
     }
   ],
   "grading_policy": {
@@ -1021,6 +1147,11 @@
     "review_status": "unreviewed"
   },
   "history": [
+    {
+      "version": "0.9.0",
+      "date": "2026-10-06",
+      "summary": "Developed two original week-7 lessons on chromatin accessibility and transcriptional regulation with synthetic accessibility, ChIP-qPCR, and reporter data; added seven formative items and four retrieval cards; moved the proposed, unauthored midterm to a separate week 8; course remains partial."
+    },
     {
       "version": "0.8.0",
       "date": "2026-10-06",
@@ -1078,8 +1209,8 @@
     }
   ],
   "limitations": [
-    "The first six proposed weeks now have developed two-lesson sequences, but this does not provide the planned homework, full laboratory/data assignments, summative exams, workload evidence, or instructor review; week 4 retains one compact capsule and week 7 remains a compact gene-expression prototype.",
-    "Weeks 8–14 are planning scope, not lessons. The week-7 capsule and formative item are not the proposed integrated midterm or a complete instructional week.",
+    "The first seven proposed teaching weeks now have two original lessons each, but this does not provide the planned homework, full laboratory/data assignments, summative exams, workload evidence, or instructor review; weeks 4 and 7 retain additional compact prototype readings.",
+    "Week 8 is reserved in the proposed calendar for an unauthored midterm; weeks 9–14 remain planning scope, not lessons. The compact week-4 and week-7 prototype readings supplement but do not replace the developed lesson sequences.",
     "Current formative checks across the developed lessons do not demonstrate comprehensive outcome coverage or mastery; some lesson objectives remain unassessed.",
     "Bloom labels and structured prerequisite edges are initial authoring classifications awaiting subject-matter review.",
     "Question answers and solution feedback are intentionally public practice authoring specifications, not restricted exam keys.",

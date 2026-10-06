@@ -1,12 +1,12 @@
 # Foundations of Cell and Molecular Biology
 
-**Maturity: partial. Version: 0.8.0.**
+**Maturity: partial. Version: 0.9.0.**
 
-This original course package is intended to develop mechanistic reasoning from molecular structure to cell behavior. It is a work in progress, not a 14-week course yet: weeks 1–6 now have twelve developed lessons, with the brief enzyme prototype retained as an additional introduction; week 7 still has a compact gene-expression capsule; weeks 8–14 lack authored lesson sequences or summative assessments. No semester equivalency, university credit, or prerequisite equivalency is claimed.
+This original course package develops mechanistic reasoning from molecular structure to cell behavior. It is still not a completed 14-week university course: weeks 1–7 have two substantial original lessons each, while weeks 4 and 7 retain short prototype readings in addition; week 8 is reserved for a proposed midterm that has not been authored, and weeks 9–14 remain outlines. No semester equivalency, university credit, or prerequisite equivalency is claimed.
 
 ## Prerequisites
 
-Required background is high-school biology and chemistry, including atoms, simple ions, chemical bonds, concentration, and introductory cell structure. Algebra is used in worked examples. A learner may review any unfamiliar chemistry first; the platform does not enforce institutional prerequisites. The course is one foundational component in the repository's public regenerative/stem-cell knowledge map, not evidence of eligibility for any program.
+Required background is high-school biology and chemistry, including atoms, simple ions, chemical bonds, concentration, and introductory cell structure. Algebra is used in worked examples. A learner may review unfamiliar chemistry first; the platform does not enforce institutional prerequisites. The course is one foundational component in the repository's public regenerative/stem-cell knowledge map, not evidence of eligibility for any program.
 
 ## Intended learning outcomes
 
@@ -21,39 +21,40 @@ These are intended outcomes. Current assessment coverage is incomplete and does 
 
 ## Proposed 14-week scope
 
-The full proposal and its objective-to-assessment crosswalk are in [assessment-crosswalk.md](assessment-crosswalk.md). Weeks 1–6 currently have two original lessons each; week 4 also retains its original compact reading. Week 7 has one compact gene-expression reading; weeks 8–14 remain outlines. The manifest's 14-week value records the proposed scope, not completed instructional time. The current [misconception catalog](misconceptions.md) and [instructor-style feedback templates](feedback-templates.md) cover selected formative topics; they do not diagnose free-form reasoning.
+The full proposal and objective-to-assessment crosswalk are in [assessment-crosswalk.md](assessment-crosswalk.md). Weeks 1–7 each have two original developed lessons; week 4 also retains its short enzyme prototype, and week 7 retains the compact gene-expression prototype. The proposed week-8 midterm has no exam package or assessment ID. Weeks 9–14 remain outlines. The manifest's 14-week value records proposed scope, not completed instructional time. The [misconception catalog](misconceptions.md) and [instructor-style feedback templates](feedback-templates.md) cover selected formative topics; they do not diagnose free-form reasoning.
 
 | Week | Proposed focus | Current content state |
 | --- | --- | --- |
 | 1 | Covalent architecture, functional groups, water, pH, and noncovalent interactions | Two original lessons and formative checks |
 | 2 | Protein sequence and structure; membrane structure and transport | Two original lessons and formative checks |
 | 3 | Organelles, compartmentalization, protein sorting, and trafficking | Two original lessons with formative practice; no full homework or lab |
-| 4 | Enzyme catalysis, initial-rate kinetics, reversible inhibition, free energy, and coupling | Two developed lessons, one retained compact prototype reading, and six formative questions; no full homework or lab |
-| 5 | Cell imaging, fractionation, and measurement limits | Two original lessons, synthetic measurement tables, and six public formative questions; no full lab or homework |
-| 6 | DNA structure, replication, repair, and genome organization | Two original lessons, qualitative density-model predictions, a synthetic lesion-assay time course, and seven public formative questions; no full homework or lab |
-| 7 | Chromatin, transcription, and gene regulation | One compact gene-expression prototype; not a full week |
-| 8 | RNA processing, translation, and protein turnover | Outline only |
-| 9 | Variation, inheritance, and genotype-to-phenotype reasoning | Outline only |
-| 10 | Receptors, signaling networks, feedback, and perturbation | Outline only |
-| 11 | Cytoskeleton, adhesion, extracellular matrix, and mechanobiology | Outline only |
-| 12 | Cell-cycle control, mitosis, senescence, and cell death | Outline only |
-| 13 | Development, cell fate, and stem-cell concepts | Outline only |
-| 14 | Integrated experimental design, evidence synthesis, and project presentation | Outline only |
+| 4 | Enzyme catalysis, initial-rate kinetics, reversible inhibition, free energy, and coupling | Two developed lessons, one retained compact prototype reading, and formative questions; no full homework or lab |
+| 5 | Cell imaging, fractionation, and measurement limits | Two original lessons, synthetic measurement tables, and public formative questions; no full lab or homework |
+| 6 | DNA structure, replication, repair, and genome organization | Two original lessons, qualitative density-model predictions, a synthetic lesion-assay time course, and public formative questions; no full homework or lab |
+| 7 | Chromatin accessibility, transcription-factor occupancy, regulatory DNA, and reporter evidence | Two original lessons, one retained compact prototype, synthetic data, and formative practice; not a complete course week |
+| 8 | Proposed midterm and retrieval consolidation | Calendar reservation only; no exam, answer specification, rubric, or assessment record |
+| 9 | RNA processing, translation, and protein turnover | Outline only |
+| 10 | Variation, inheritance, and genotype-to-phenotype reasoning | Outline only |
+| 11 | Receptors, signaling networks, feedback, and perturbation | Outline only |
+| 12 | Cytoskeleton, adhesion, extracellular matrix, and mechanobiology | Outline only |
+| 13 | Cell-cycle control, mitosis, senescence, and cell death | Outline only |
+| 14 | Development, cell fate, stem-cell concepts, and integrative project/final | Outline only |
 
 ## Assessment and study policy
 
-All currently delivered items are public formative practice. Learners may retry them, inspect feedback, and use retrieval cards; this package has no weighted course grade, deadlines, midterm, cumulative final, or graded project. The future design proposes eight homework sets, three data or virtual-lab activities, a midterm, a cumulative final, and an integrative experimental-design project. Those are not yet authored, validated, or enabled. The complete planned assessment sequence and current evidence gaps are recorded in the crosswalk.
+All currently delivered items are public formative practice. Learners may retry them, inspect feedback, and use retrieval cards; this package has no weighted course grade, deadlines, midterm, cumulative final, or graded project. The proposal includes eight homework sets, three data or virtual-lab activities, a midterm, a cumulative final, and an integrative experimental-design project. None is yet authored as a complete assessment package, validated, or enabled. The planned midterm is placed in week 8 to leave the seven-week teaching block coherent; the calendar entry is not an exam. See the crosswalk for the complete planned assessment sequence and current evidence gaps.
 
 Workload and weekly study hours have not been measured. No calendar dates or grading weights are configured. Human review of an individual saved practice or graded attempt is a narrow platform feature and does not provide course-level instructor grading or academic review.
 
 ## Sources and licensing
 
-New instructional explanations and examples are original and released under CC BY 4.0 as specified by the repository's content policy. MIT OpenCourseWare 7.01SC Fundamentals of Biology, 7.28x Molecular Biology, 7.016 Cell Trafficking and Cell Imaging, and 5.07SC Biological Chemistry I are link-only curriculum comparators. Briggs and Haldane, Johnson and Goody, Waters, Claude, and the NCBI Bookshelf chapter are link-only scientific or methods references. No source text, image, question, or assessment is reproduced or adapted, and MIT does not endorse or sponsor this course. See [source-map.json](source-map.json), the shared [source registry](../../sources/registry.json), and [content/SOURCES_AND_LICENSES.md](../../SOURCES_AND_LICENSES.md) for provenance and asset boundaries.
+New instructional explanations and examples are original and released under CC BY 4.0 as specified by the repository's content policy. MIT OpenCourseWare courses are link-only curriculum comparators. Scientific, methods, and public standards sources are linked as references; no source text, image, question, dataset, or assessment is reproduced or adapted. The ChIP-qPCR methods article is cited bibliographically under its CC BY 2.0 publication license, but its text, figures, tables, and data are not redistributed. See [source-map.json](source-map.json), the shared [source registry](../../sources/registry.json), and [content/SOURCES_AND_LICENSES.md](../../SOURCES_AND_LICENSES.md) for provenance and asset boundaries. MIT does not endorse or sponsor this course.
 
 ## Known limitations
 
-- The first six proposed weeks now have developed two-lesson sequences, but this does not provide the planned homework, laboratory/data work, summative exams, workload evidence, or instructor review; week 4 retains one compact capsule and week 7 remains a compact prototype reading.
-- Weeks 8–14 are planning scope, not lessons. The gene-expression prototype capsule does not constitute a complete week. Week 6's isotope-density illustration and UV lesion time course are explicitly synthetic teaching examples, not historical replication measurements or mutation-frequency data.
+- Seven teaching weeks now have developed two-lesson sequences, but this does not provide the planned homework, full laboratory/data work, summative exams, workload evidence, or instructor review; weeks 4 and 7 retain additional compact prototype readings.
+- Week 8 is reserved in the proposed calendar for an unauthored midterm. Weeks 9–14 are planning scope, not lessons. The week-6 density-model illustration, UV lesion time course, and week-7 chromatin, ChIP-qPCR, and reporter tables are explicitly synthetic teaching examples, not measurements copied from the cited sources.
+- The week-7 evidence exercises introduce accessibility, occupancy, and reporter inference; they do not constitute a full genomics, chromatin, or gene-regulation course.
 - No authored 12–15 week homework/lab/exam sequence or cumulative project exists.
 - The course is unreviewed. Workload, objective coverage, scientific accuracy, accessibility, and assessments require independent review.
 - Public practice answers are not protected exam keys. Practice scores and the progress indicator do not certify mastery.
