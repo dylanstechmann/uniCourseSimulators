@@ -9,10 +9,10 @@ The machine-readable registry is [sources/registry.json](sources/registry.json).
 It preserves the prototype's 22 MIT reference IDs and the existing Johns
 Hopkins and MIT reuse-policy records. The Foundations course has five MIT
 curriculum-comparator records overall, with module-specific comparisons for
-weeks 3–5, plus ten link-only scientific or methods references across those
-weeks. Existing records were accessed on 2026-10-05; the new week-3 through
-week-5 records were checked on 2026-10-06. An access date is not a claim that every asset or every
-outbound link on a source page has been checked.
+weeks 3–6, plus thirteen link-only scientific or methods references across
+those weeks. Existing records were accessed on 2026-10-05; the new week-3
+through week-6 records were checked on 2026-10-06. An access date is not a
+claim that every asset or every outbound link on a source page has been checked.
 
 ## License boundaries
 

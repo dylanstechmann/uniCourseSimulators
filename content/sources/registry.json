@@ -58,7 +58,10 @@
         "genetics",
         "geroscience"
       ],
-      "mapped_modules": [],
+      "mapped_modules": [
+        "cell-biology-module-13",
+        "cell-biology-module-14"
+      ],
       "version": "Spring 2023; landing page accessed 2026-10-05",
       "checksum": null,
       "imported_assets": [],
@@ -1200,6 +1203,94 @@
       "checksum": null,
       "imported_assets": [],
       "rights_notes": "This record authorizes link-only use selected by this project; it does not clear third-party text, figures, or data for copying or adaptation."
+    },
+    {
+      "id": "meselson-stahl-1958",
+      "title": "The replication of DNA in Escherichia coli",
+      "institution": "Matthew Meselson and Franklin W. Stahl; Proceedings of the National Academy of Sciences",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/16590258/",
+      "accessed_at": "2026-10-06",
+      "license": "Historical research article; reuse license not cleared here; link-only use selected",
+      "reuse_mode": "link-only-reference",
+      "permissions": {
+        "linking": true,
+        "quotation": false,
+        "adaptation": false,
+        "redistribution": false
+      },
+      "attribution_requirements": [
+        "Cite Meselson M and Stahl FW, 1958, PNAS 44(7):671–682, DOI 10.1073/pnas.44.7.671, and exact PubMed URL."
+      ],
+      "third_party_notes": "No text, figure, or experimental result is reproduced or adapted.",
+      "mapped_courses": [
+        "cell-biology"
+      ],
+      "mapped_modules": [
+        "cell-biology-module-13"
+      ],
+      "version": "1958; PMID 16590258; PMCID PMC528642",
+      "checksum": null,
+      "imported_assets": [],
+      "rights_notes": "This record documents the project’s selected link-only use; it does not clear third-party text, figures, tables, or data for copying or adaptation."
+    },
+    {
+      "id": "ncbi-dna-replication",
+      "title": "DNA Replication Mechanisms — Molecular Biology of the Cell, 4th edition",
+      "institution": "NCBI Bookshelf / Garland Science",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK26850/",
+      "accessed_at": "2026-10-06",
+      "license": "Copyrighted textbook chapter; reuse rights not cleared here; link-only use selected",
+      "reuse_mode": "link-only-reference",
+      "permissions": {
+        "linking": true,
+        "quotation": false,
+        "adaptation": false,
+        "redistribution": false
+      },
+      "attribution_requirements": [
+        "Cite the chapter title, Molecular Biology of the Cell (4th edition), NCBI Bookshelf URL, and displayed authors when assigning it."
+      ],
+      "third_party_notes": "No chapter text, figure, or table is copied or adapted.",
+      "mapped_courses": [
+        "cell-biology"
+      ],
+      "mapped_modules": [
+        "cell-biology-module-13",
+        "cell-biology-module-14"
+      ],
+      "version": "2002; Bookshelf ID NBK26850",
+      "checksum": null,
+      "imported_assets": [],
+      "rights_notes": "This record documents the project’s selected link-only use; it does not clear third-party text, figures, tables, or data for copying or adaptation."
+    },
+    {
+      "id": "ncbi-dna-repair",
+      "title": "DNA Repair — The Cell",
+      "institution": "NCBI Bookshelf",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK9900/",
+      "accessed_at": "2026-10-06",
+      "license": "Copyrighted textbook chapter; reuse rights not cleared here; link-only use selected",
+      "reuse_mode": "link-only-reference",
+      "permissions": {
+        "linking": true,
+        "quotation": false,
+        "adaptation": false,
+        "redistribution": false
+      },
+      "attribution_requirements": [
+        "Cite the chapter title and exact NCBI Bookshelf URL; verify displayed edition/authorship when assigning it."
+      ],
+      "third_party_notes": "No chapter text, figure, or table is copied or adapted.",
+      "mapped_courses": [
+        "cell-biology"
+      ],
+      "mapped_modules": [
+        "cell-biology-module-14"
+      ],
+      "version": "The Cell; Bookshelf ID NBK9900",
+      "checksum": null,
+      "imported_assets": [],
+      "rights_notes": "This record documents the project’s selected link-only use; it does not clear third-party text, figures, tables, or data for copying or adaptation."
     }
   ]
 }

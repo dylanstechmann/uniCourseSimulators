@@ -1487,6 +1487,391 @@
         "kind": "original",
         "modifications": []
       }
+    },
+    {
+      "id": "cell-biology-13:strand-complement",
+      "type": "single_choice",
+      "prompt": "A template is written 3′-A C G T T A G C-5′. Which complementary DNA product is written with the correct base pairing and polarity?",
+      "options": [
+        "5′-T G C A A T C G-3′",
+        "3′-T G C A A T C G-5′",
+        "5′-A G C T T A G C-3′",
+        "5′-A C G T T A G C-3′"
+      ],
+      "points": 1,
+      "objective_ids": [
+        "cell-biology-13-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0
+      },
+      "feedback": {
+        "hint": "Pair A with T and G with C, then remember the new strand runs antiparallel to the template.",
+        "solution": "The product is 5′-T G C A A T C G-3′; complementary strands are antiparallel.",
+        "lesson_ids": [
+          "cell-biology-13"
+        ],
+        "misconception_ids": [
+          "strand-polarity-reversed"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "cell-biology-13:fork-asymmetry",
+      "type": "single_choice",
+      "prompt": "At a fork moving to the right, why is one new DNA strand made continuously while the other is made as Okazaki fragments?",
+      "options": [
+        "Both products must grow 5′ to 3′, but the antiparallel templates point in opposite directions relative to fork movement.",
+        "DNA polymerase extends the leading strand 5′ to 3′ and the lagging strand 3′ to 5′.",
+        "The lagging strand is made from RNA without later DNA synthesis.",
+        "Helicase makes the parental strands parallel at each fork."
+      ],
+      "points": 1,
+      "objective_ids": [
+        "cell-biology-13-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0
+      },
+      "feedback": {
+        "hint": "Keep polymerase synthesis direction fixed and compare each template orientation with fork movement.",
+        "solution": "DNA polymerase synthesizes both strands 5′ to 3′. The antiparallel geometry makes one strand continuous toward the fork and requires repeated primers and fragments on the other.",
+        "lesson_ids": [
+          "cell-biology-13"
+        ],
+        "misconception_ids": [
+          "lagging-strand-made-3-to-5"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "cell-biology-13:density-evidence",
+      "type": "single_choice",
+      "prompt": "After two generations in light medium, which qualitative result distinguishes semiconservative copying from dispersive copying in an ideal density-labeling experiment?",
+      "options": [
+        "Separate intermediate-density and light-density DNA classes; a single intermediate class after generation one alone is not sufficient.",
+        "A single intermediate class that remains the only band at every generation.",
+        "A heavy parental class paired only with another heavy class.",
+        "A sequence change in every molecule regardless of isotope density."
+      ],
+      "points": 1,
+      "objective_ids": [
+        "cell-biology-13-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0
+      },
+      "feedback": {
+        "hint": "Compare the number of density classes after two generations, not just after the first shift.",
+        "solution": "The semiconservative model predicts intermediate and light DNA classes after the second generation. Dispersive copying predicts one class that shifts toward light; the first-generation intermediate result alone is compatible with both.",
+        "lesson_ids": [
+          "cell-biology-13"
+        ],
+        "misconception_ids": [
+          "first-generation-band-proves-model"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "cell-biology-13:hybrid-fraction",
+      "type": "numeric",
+      "prompt": "In an ideal semiconservative model, cells grown in heavy isotope are shifted to light medium for exactly two DNA replication rounds. What percentage of DNA molecules are expected to remain hybrid? Enter a value with unit.",
+      "points": 1,
+      "objective_ids": [
+        "cell-biology-13-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 50,
+        "unit": "%",
+        "tolerance": 0.5,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": {
+          "length": 0,
+          "mass": 0,
+          "time": 0,
+          "amount": 0
+        }
+      },
+      "feedback": {
+        "hint": "After the first round all molecules are hybrid; in the second, each hybrid duplex yields one hybrid and one light duplex.",
+        "solution": "After the second round, half the DNA molecules are hybrid and half are light: 50%. This is a model prediction for molecule counts, not a measured band intensity.",
+        "lesson_ids": [
+          "cell-biology-13"
+        ],
+        "misconception_ids": [
+          "semiconservative-fraction-calculated-from-strands"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "cell-biology-14:repair-pathway-match",
+      "type": "structured",
+      "prompt": "Match each lesion or error to a plausible first repair process, then keep the mechanism claim within the stated context.",
+      "response_fields": [
+        {
+          "id": "repair-bulky-lesion",
+          "type": "single_choice",
+          "prompt": "Bulky lesion · Which pathway is a leading candidate for removing a bulky, helix-distorting UV photoproduct?",
+          "options": [
+            "Nucleotide-excision repair, which removes a short DNA segment containing the lesion.",
+            "Mismatch repair, which recognizes every chemical lesion before replication.",
+            "Polymerase proofreading, which reverses all completed DNA damage.",
+            "Nonhomologous end joining, which excises a UV photoproduct."
+          ],
+          "points": 1
+        },
+        {
+          "id": "repair-oxidized-base",
+          "type": "single_choice",
+          "prompt": "Small base lesion · Which pathway commonly begins repair of an oxidized single base?",
+          "options": [
+            "Base-excision repair, initiated by a lesion-recognizing DNA glycosylase.",
+            "Homologous recombination, which uses a sister chromatid for every altered base.",
+            "Nucleotide-excision repair only after a double-strand break.",
+            "Translesion synthesis, which removes the chemical lesion from DNA."
+          ],
+          "points": 1
+        },
+        {
+          "id": "repair-replication-mismatch",
+          "type": "single_choice",
+          "prompt": "Escaped replication error · Which process can remove a mismatched base pair after it escapes immediate polymerase proofreading?",
+          "options": [
+            "Mismatch repair, which must identify and correct the newly synthesized strand.",
+            "Base-excision repair regardless of the mismatch chemistry.",
+            "Nucleotide-excision repair of every normal base pair.",
+            "DNA ligase alone, without strand selection or excision."
+          ],
+          "points": 1
+        }
+      ],
+      "points": 3,
+      "objective_ids": [
+        "cell-biology-14-objective-1"
+      ],
+      "solution_spec": {
+        "field_specs": [
+          {
+            "id": "repair-bulky-lesion",
+            "type": "single_choice",
+            "answer": 0
+          },
+          {
+            "id": "repair-oxidized-base",
+            "type": "single_choice",
+            "answer": 0
+          },
+          {
+            "id": "repair-replication-mismatch",
+            "type": "single_choice",
+            "answer": 0
+          }
+        ],
+        "rubric": [
+          {
+            "id": "repair-bulky-lesion",
+            "criterion": "Bulky UV lesion route",
+            "points": 1,
+            "evidence": [
+              "Selects nucleotide-excision repair for a bulky, helix-distorting UV photoproduct."
+            ]
+          },
+          {
+            "id": "repair-oxidized-base",
+            "criterion": "Small damaged-base route",
+            "points": 1,
+            "evidence": [
+              "Selects base-excision repair for a small oxidized base and recognizes lesion-specific glycosylase initiation."
+            ]
+          },
+          {
+            "id": "repair-replication-mismatch",
+            "criterion": "Post-replicative mismatch route",
+            "points": 1,
+            "evidence": [
+              "Selects mismatch repair for an escaped replication mismatch and notes new-strand discrimination."
+            ]
+          }
+        ]
+      },
+      "feedback": {
+        "hint": "Separate an error at the growing 3′ end from a later mismatch or a chemically modified base.",
+        "solution": "Proofreading acts at an extending polymerase; mismatch repair can act after an error escapes and targets the new strand; base-excision repair handles many small altered bases; nucleotide-excision repair handles many bulky, helix-distorting lesions. These are candidate routes, not a universal one-pathway-per-lesion rule.",
+        "lesson_ids": [
+          "cell-biology-14"
+        ],
+        "misconception_ids": [
+          "proofreading-equals-mismatch-repair",
+          "all-damage-uses-one-repair-pathway"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "cell-biology-14:lesion-removal-data",
+      "type": "structured",
+      "prompt": "Interpret the explicitly synthetic, DNA-normalized UV lesion-signal time course. Select one response for each criterion.",
+      "response_fields": [
+        {
+          "id": "starting-burden",
+          "type": "single_choice",
+          "prompt": "Starting burden · What feature makes a difference at 4 h less likely to be explained by unequal initial UV damage?",
+          "options": [
+            "The 0 h lesion-associated signals are similar across the non-targeting, depletion, and rescue groups.",
+            "The candidate-depletion group has a higher 4 h signal.",
+            "Only the 4 h sample is measured.",
+            "The rescue group is omitted from the experiment."
+          ],
+          "points": 1
+        },
+        {
+          "id": "perturbation-rescue",
+          "type": "single_choice",
+          "prompt": "Perturbation evidence · Which pattern supports a role for the candidate factor in the measured signal decline?",
+          "options": [
+            "The 4 h signal remains higher after depletion and moves toward control after a matched rescue.",
+            "All groups have exactly zero 0 h signal.",
+            "A different cell type is measured only at 4 h.",
+            "The depletion effect is inferred from the UV dose alone."
+          ],
+          "points": 1
+        },
+        {
+          "id": "claim-boundary",
+          "type": "single_choice",
+          "prompt": "Claim boundary · What does this synthetic lesion-associated signal support by itself?",
+          "options": [
+            "It is consistent with a factor-dependent change in this lesion assay, but does not establish error-free repair or a mutation frequency.",
+            "Every lesion was removed without error in every cell type.",
+            "A lower signal is a direct count of heritable mutations.",
+            "The candidate factor directly catalyzes every nucleotide-excision step."
+          ],
+          "points": 1
+        }
+      ],
+      "points": 3,
+      "objective_ids": [
+        "cell-biology-14-objective-2"
+      ],
+      "solution_spec": {
+        "field_specs": [
+          {
+            "id": "starting-burden",
+            "type": "single_choice",
+            "answer": 0
+          },
+          {
+            "id": "perturbation-rescue",
+            "type": "single_choice",
+            "answer": 0
+          },
+          {
+            "id": "claim-boundary",
+            "type": "single_choice",
+            "answer": 0
+          }
+        ],
+        "rubric": [
+          {
+            "id": "starting-burden",
+            "criterion": "Matched starting lesion burden",
+            "points": 1,
+            "evidence": [
+              "Notes that time-zero values are comparable following the matched UV exposure."
+            ]
+          },
+          {
+            "id": "perturbation-rescue",
+            "criterion": "Perturbation with rescue",
+            "points": 1,
+            "evidence": [
+              "Identifies persistent signal after depletion and a matched rescue moving the signal toward control."
+            ]
+          },
+          {
+            "id": "claim-boundary",
+            "criterion": "Lesion-assay inference boundary",
+            "points": 1,
+            "evidence": [
+              "Limits the conclusion to a factor-dependent change in the measured assay, not proof of error-free repair or a mutation rate."
+            ]
+          }
+        ]
+      },
+      "feedback": {
+        "hint": "Compare the starting signal before interpreting the four-hour contrast; then state exactly what the rescue and assay measure.",
+        "solution": "Similar time-zero values reduce one initial-burden alternative. Higher residual signal after depletion and movement toward control after rescue are consistent with a role for the factor in this assay. The signal is not itself a mutation-frequency measure, and viability, DNA recovery, cell-cycle and orthogonal lesion controls remain important.",
+        "lesson_ids": [
+          "cell-biology-14"
+        ],
+        "misconception_ids": [
+          "lesion-signal-equals-mutation-rate",
+          "rescue-proves-direct-catalysis"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "cell-biology-14:dsb-repair",
+      "type": "single_choice",
+      "prompt": "Which statement best distinguishes homologous recombination from nonhomologous end joining at a double-strand break?",
+      "options": [
+        "Homologous recombination copies from a homologous template when available; end joining reconnects ends without an extended homologous template and can involve sequence-changing end processing.",
+        "Homologous recombination requires no template, whereas end joining always copies the sister chromatid.",
+        "Both routes always restore the exact original sequence.",
+        "Nonhomologous end joining is a base-excision pathway for oxidized bases."
+      ],
+      "points": 1,
+      "objective_ids": [
+        "cell-biology-14-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0
+      },
+      "feedback": {
+        "hint": "Focus on whether an extended homologous template is used and avoid calling either route universally error-free or error-prone.",
+        "solution": "Homologous recombination uses a homologous template and is favored when a sister chromatid is available. End joining does not require that template; end processing can alter sequence, although the outcome depends on context.",
+        "lesson_ids": [
+          "cell-biology-14"
+        ],
+        "misconception_ids": [
+          "hr-always-perfect-nhej-always-mutagenic"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
     }
   ]
 }

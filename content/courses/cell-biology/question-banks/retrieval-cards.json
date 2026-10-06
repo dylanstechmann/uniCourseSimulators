@@ -244,6 +244,46 @@
         "cell-biology-12-objective-2"
       ],
       "license": "CC-BY-4.0"
+    },
+    {
+      "id": "cell-biology-12-0",
+      "lesson_id": "cell-biology-13",
+      "front": "DNA strand polarity",
+      "back": "DNA polymerase extends at a 3′ hydroxyl, so each new strand grows 5′ to 3′ while the template is read 3′ to 5′. Complementary strands are antiparallel.",
+      "objective_ids": [
+        "cell-biology-13-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "cell-biology-12-1",
+      "lesson_id": "cell-biology-13",
+      "front": "Leading and lagging synthesis",
+      "back": "Both products grow 5′ to 3′. Fork geometry allows continuous leading synthesis toward the fork and primer-dependent Okazaki fragments on the lagging strand.",
+      "objective_ids": [
+        "cell-biology-13-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "cell-biology-13-0",
+      "lesson_id": "cell-biology-14",
+      "front": "Proofreading and mismatch repair",
+      "back": "Proofreading removes a just-incorporated mismatch at an extending polymerase; mismatch repair acts later and must select the newly synthesized strand.",
+      "objective_ids": [
+        "cell-biology-14-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "cell-biology-13-1",
+      "lesson_id": "cell-biology-14",
+      "front": "Lesion removal is not mutation frequency",
+      "back": "A lesion-associated signal, DNA recovery, survival, and mutation frequency are distinct measurements. Use controls matched to each inference.",
+      "objective_ids": [
+        "cell-biology-14-objective-2"
+      ],
+      "license": "CC-BY-4.0"
     }
   ]
 }

@@ -1,8 +1,8 @@
 # Foundations of Cell and Molecular Biology
 
-**Maturity: partial. Version: 0.7.0.**
+**Maturity: partial. Version: 0.8.0.**
 
-This original course package is intended to develop mechanistic reasoning from molecular structure to cell behavior. It is a work in progress, not a 14-week course yet: weeks 1–5 now have ten developed lessons, with the brief enzyme prototype retained as an additional introduction; week 7 still has a compact gene-expression capsule; weeks 6 and 8–14 lack authored lesson sequences or summative assessments. No semester equivalency, university credit, or prerequisite equivalency is claimed.
+This original course package is intended to develop mechanistic reasoning from molecular structure to cell behavior. It is a work in progress, not a 14-week course yet: weeks 1–6 now have twelve developed lessons, with the brief enzyme prototype retained as an additional introduction; week 7 still has a compact gene-expression capsule; weeks 8–14 lack authored lesson sequences or summative assessments. No semester equivalency, university credit, or prerequisite equivalency is claimed.
 
 ## Prerequisites
 
@@ -21,7 +21,7 @@ These are intended outcomes. Current assessment coverage is incomplete and does 
 
 ## Proposed 14-week scope
 
-The full proposal and its objective-to-assessment crosswalk are in [assessment-crosswalk.md](assessment-crosswalk.md). Weeks 1–5 currently have two original lessons each; week 4 also retains its original compact reading. Week 7 has one compact gene-expression reading; weeks 6 and 8–14 remain outlines. The manifest's 14-week value records the proposed scope, not completed instructional time. The current [misconception catalog](misconceptions.md) and [instructor-style feedback templates](feedback-templates.md) cover selected formative topics; they do not diagnose free-form reasoning.
+The full proposal and its objective-to-assessment crosswalk are in [assessment-crosswalk.md](assessment-crosswalk.md). Weeks 1–6 currently have two original lessons each; week 4 also retains its original compact reading. Week 7 has one compact gene-expression reading; weeks 8–14 remain outlines. The manifest's 14-week value records the proposed scope, not completed instructional time. The current [misconception catalog](misconceptions.md) and [instructor-style feedback templates](feedback-templates.md) cover selected formative topics; they do not diagnose free-form reasoning.
 
 | Week | Proposed focus | Current content state |
 | --- | --- | --- |
@@ -30,7 +30,7 @@ The full proposal and its objective-to-assessment crosswalk are in [assessment-c
 | 3 | Organelles, compartmentalization, protein sorting, and trafficking | Two original lessons with formative practice; no full homework or lab |
 | 4 | Enzyme catalysis, initial-rate kinetics, reversible inhibition, free energy, and coupling | Two developed lessons, one retained compact prototype reading, and six formative questions; no full homework or lab |
 | 5 | Cell imaging, fractionation, and measurement limits | Two original lessons, synthetic measurement tables, and six public formative questions; no full lab or homework |
-| 6 | DNA structure, replication, repair, and genome organization | Outline only |
+| 6 | DNA structure, replication, repair, and genome organization | Two original lessons, qualitative density-model predictions, a synthetic lesion-assay time course, and seven public formative questions; no full homework or lab |
 | 7 | Chromatin, transcription, and gene regulation | One compact gene-expression prototype; not a full week |
 | 8 | RNA processing, translation, and protein turnover | Outline only |
 | 9 | Variation, inheritance, and genotype-to-phenotype reasoning | Outline only |
@@ -52,8 +52,8 @@ New instructional explanations and examples are original and released under CC B
 
 ## Known limitations
 
-- The first five proposed weeks now have developed two-lesson sequences, but this does not provide the planned homework, laboratory/data work, summative exams, workload evidence, or instructor review; week 4 retains one compact capsule and week 7 remains a compact prototype reading.
-- Weeks 6 and 8–14 are planning scope, not lessons. The gene-expression prototype capsule does not constitute a complete week.
+- The first six proposed weeks now have developed two-lesson sequences, but this does not provide the planned homework, laboratory/data work, summative exams, workload evidence, or instructor review; week 4 retains one compact capsule and week 7 remains a compact prototype reading.
+- Weeks 8–14 are planning scope, not lessons. The gene-expression prototype capsule does not constitute a complete week. Week 6's isotope-density illustration and UV lesion time course are explicitly synthetic teaching examples, not historical replication measurements or mutation-frequency data.
 - No authored 12–15 week homework/lab/exam sequence or cumulative project exists.
 - The course is unreviewed. Workload, objective coverage, scientific accuracy, accessibility, and assessments require independent review.
 - Public practice answers are not protected exam keys. Practice scores and the progress indicator do not certify mastery.

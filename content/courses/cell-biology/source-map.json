@@ -162,6 +162,34 @@
       "original_content": true,
       "license": "CC-BY-4.0",
       "modifications": []
+    },
+    {
+      "module_id": "cell-biology-module-13",
+      "lesson_id": "cell-biology-13",
+      "reading": "modules/06a-dna-structure-and-replication.md",
+      "source_ids": [
+        "molecular",
+        "meselson-stahl-1958",
+        "ncbi-dna-replication"
+      ],
+      "relationship": "original-instruction-and-qualitative-model-predictions-with-link-only-comparator-and-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "cell-biology-module-14",
+      "lesson_id": "cell-biology-14",
+      "reading": "modules/06b-dna-damage-and-repair-evidence.md",
+      "source_ids": [
+        "molecular",
+        "ncbi-dna-replication",
+        "ncbi-dna-repair"
+      ],
+      "relationship": "original-instruction-and-explicitly-synthetic-data-with-link-only-comparator-and-method-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
     }
   ]
 }

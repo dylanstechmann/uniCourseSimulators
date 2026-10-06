@@ -521,6 +521,73 @@ test("the developed cell-biology weeks expose original lessons and deterministic
   await expect(
     markerPanel.getByRole("region", { name: "Submission feedback" }),
   ).toContainText("1 / 1 practice points");
+
+  await lessons
+    .getByRole("link", { name: /DNA structure, genome organization/ })
+    .click();
+  await expect(
+    page.getByRole("heading", {
+      name: "DNA structure, genome organization, and semiconservative replication",
+      level: 1,
+    }),
+  ).toBeVisible();
+  const complement = page.locator(
+    '[data-question-id="cell-biology-13:strand-complement"]',
+  );
+  await complement.getByRole("radio").first().check();
+  await complement
+    .getByRole("button", { name: "Submit practice response" })
+    .click();
+  await expect(
+    complement.getByRole("region", { name: "Submission feedback" }),
+  ).toContainText("1 / 1 practice points");
+
+  const hybridFraction = page.locator(
+    '[data-question-id="cell-biology-13:hybrid-fraction"]',
+  );
+  await hybridFraction.getByLabel("Numerical value").fill("50");
+  await hybridFraction.getByLabel("Unit").fill("%");
+  await hybridFraction
+    .getByRole("button", { name: "Submit practice response" })
+    .click();
+  await expect(
+    hybridFraction.getByRole("region", { name: "Submission feedback" }),
+  ).toContainText("1 / 1 practice points");
+
+  await lessons
+    .getByRole("link", { name: /DNA damage, repair pathways/ })
+    .click();
+  await expect(
+    page.getByRole("heading", {
+      name: "DNA damage, repair pathways, and evidence of lesion removal",
+      level: 1,
+    }),
+  ).toBeVisible();
+  const pathways = page.locator(
+    '[data-question-id="cell-biology-14:repair-pathway-match"]',
+  );
+  await pathways.getByLabel(/Bulky lesion/).selectOption("0");
+  await pathways.getByLabel(/Small base lesion/).selectOption("0");
+  await pathways.getByLabel(/Escaped replication error/).selectOption("0");
+  await pathways
+    .getByRole("button", { name: "Submit practice response" })
+    .click();
+  await expect(
+    pathways.getByRole("region", { name: "Submission feedback" }),
+  ).toContainText("3 / 3 practice points");
+
+  const lesionData = page.locator(
+    '[data-question-id="cell-biology-14:lesion-removal-data"]',
+  );
+  await lesionData.getByLabel(/Starting burden/).selectOption("0");
+  await lesionData.getByLabel(/Perturbation evidence/).selectOption("0");
+  await lesionData.getByLabel(/Claim boundary/).selectOption("0");
+  await lesionData
+    .getByRole("button", { name: "Submit practice response" })
+    .click();
+  await expect(
+    lesionData.getByRole("region", { name: "Submission feedback" }),
+  ).toContainText("3 / 3 practice points");
 });
 
 test("structured experimental criteria receive deterministic partial credit and persist", async ({

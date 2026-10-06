@@ -4,7 +4,30 @@
 
 2026-10-06; synthetic local learner data only. Milestones 1 and 2 are implemented. Milestone 3 remains partial; deterministic graders and prototype graded-assignment and review workflows are described below. A Milestone 4 curriculum-map increment is implemented and tested, while subject-matter review and map refinement remain. All 25 course packages are **partial**; zero are beta, complete or externally reviewed. Human score review is limited to saved attempts and does not constitute course-content review. No semester equivalence, university credit, security certification or public production deployment is asserted.
 
-## Current increment: week-5 cell measurement and fractionation
+## Current increment: week-6 DNA replication and repair
+
+Foundations of Cell and Molecular Biology advanced from version 0.7.0 to **0.8.0** while remaining `partial`. Week 6 adds two original lessons, seven deterministic formative items, four retrieval cards, misconception entries, two feedback templates, objective mappings, and per-module provenance. The lessons address strand polarity and replication, model-discriminating density predictions, lesion-specific repair candidates, and interpretation limits for perturbation and rescue evidence. The UV lesion-signal series is explicitly synthetic; it is not presented as historical measurements, mutation frequency, or proof of direct catalysis.
+
+MIT OCW 7.28x Molecular Biology is a link-only curriculum comparator. Meselson and Stahl (1958) and NCBI Bookshelf replication/repair chapters are link-only scientific references. The instructional prose and questions are original; no source text, figures, table, or dataset was copied. All packages remain partial and no reviewer is fabricated.
+
+The inventory is 25 packages, 111 lessons, 133 formative questions, 223 retrieval cards, and 25 self-assessed cases. Weeks 1–6 now have two developed lessons each; week 4 retains its short prototype capsule and week 7 has one compact gene-expression reading. Weeks 8–14 remain outlines. Eight homework sets, three full data/lab activities, midterm, cumulative final, integrative project, measured workload, and independent academic/accessibility review remain unfinished.
+
+Validation on 2026-10-06: **326 tests passed and 1 skipped** across root (58 passed, 1 skipped), backend (221), frontend unit tests (30), Playwright (10), and legacy storage (7). Content-authoring tests passed (56, 1 skipped). Frontend lint/format and TypeScript/Vite build passed (205 modules). Content validation reports 25 packages, 111 lessons, 133 questions, 223 cards, and 25 cases: 0 errors and 123 disclosed depth/objective warnings (98 legacy-depth, 25 objective-coverage). The API/content integration check passes for 25 packages and 135 supported practice specifications. The security-boundary scan reports 0 findings across 396 files. Rebuilt development Compose services are healthy, Alembic is `0007 (head)`, and `/api/v1/health` is `ok`; programming and LLM providers remain disabled. Existing database volumes were preserved.
+
+| Current command/check | Result |
+| --- | --- |
+| `uv run --with jsonschema python tools/validate_content.py` | PASS: 25 packages, 111 lessons, 133 questions, 223 cards, 25 cases; 0 errors; 123 disclosed warnings |
+| `uv run --project backend --with pytest --with ruff --with jsonschema python -m pytest tests -q` | 58 passed, 1 skipped |
+| `docker compose run --rm --no-deps api pytest -q -p no:cacheprovider` | 221 passed; upstream Starlette/httpx and Python `datetime.utcnow()` deprecation warnings |
+| Frontend `npm run lint`, `npm run test`, and `npm run build` | PASS: lint/format, 30 unit tests, TypeScript build and 205 production modules |
+| Playwright `npm run test:e2e` against rebuilt Compose | 10 passed, including week-6 replication/repair submissions and deterministic feedback; guest enrollment, saved progress, and answer-key DTO boundary |
+| `docker compose exec -T api python -m courselab.check_content /content` | PASS: 25 packages / 135 supported practice specifications |
+| Compose health and migration | PASS: database, API, and web healthy; Alembic `0007 (head)`; API health `ok` |
+| `python tools/check_security.py --bundle frontend/dist` | PASS; 0 security-boundary findings across 396 files |
+
+Ruff (`backend/courselab`, `backend/tests`, and `tests`) and `git diff --check` passed. Link reachability was not re-run: the previous report records two JHU public pages returning HTTP 403 to the automated client. This does not affect offline schema/content validation.
+
+## Previous increment: week-5 cell measurement and fractionation
 
 Foundations of Cell and Molecular Biology advanced from version 0.6.0 to **0.7.0** while remaining `partial`. Week 5 adds two original lessons: conventional-light microscopy resolution, sampling, contrast, labeling controls, and colocalization limits; then differential fractionation, marker recovery, contamination, and bounded localization claims. Six deterministic practice items cover a resolution estimate, confocal contrast, colocalization inference, marker recovery, structured fraction analysis, and multi-marker design. Four spaced-retrieval cards, five misconception entries, two feedback templates, objective mappings, and source/license records were added. The bead-pair and marker-panel data are explicitly synthetic teaching data.
 
@@ -14,7 +37,7 @@ Weeks 1–5 now each have two developed lessons; week 4 retains its compact prot
 
 Validation on 2026-10-06: **325 tests passed and 1 skipped** across root (57 passed, 1 skipped), backend (221), frontend unit tests (30), Playwright (10), and legacy storage (7). Frontend lint/format and TypeScript/Vite build passed (205 modules). Content validation reports 25 packages, 109 lessons, 126 questions, 219 cards, and 25 cases: 0 errors and 123 disclosed depth/objective warnings (98 legacy-depth, 25 objective-coverage). The API/content check passes for 25 packages and 128 supported practice specifications. Ruff and `git diff --check` pass. The source/bundle security-boundary scan reports 0 findings across 393 files. Rebuilt development Compose services are healthy, Alembic is `0007 (head)`, and `/api/v1/health` is `ok`; programming and LLM providers remain disabled. Existing database volumes were preserved.
 
-| Current command/check | Result |
+| Week-5 command/check | Result |
 | --- | --- |
 | `uv run --with jsonschema --with pytest python tools/validate_content.py` | PASS: 25 packages, 109 lessons, 126 questions, 219 cards, 25 cases; 0 errors; 123 disclosed warnings |
 | `uv run --with jsonschema --with pytest python -m pytest tests -q` | 57 passed, 1 skipped |

@@ -7,7 +7,7 @@
   "domain": "Life sciences",
   "level": "Year 1",
   "maturity": "partial",
-  "version": "0.7.0",
+  "version": "0.8.0",
   "license": "MIT OR CC-BY-4.0",
   "content_origin": {
     "kind": "legacy-prototype",
@@ -254,11 +254,44 @@
       "course_outcome_ids": [
         "cell-biology-outcome-4"
       ]
+    },
+    {
+      "id": "cell-biology-13-objective-1",
+      "description": "Write an antiparallel complementary DNA strand with explicit polarity and explain how polymerase direction determines continuous and discontinuous synthesis.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "cell-biology-outcome-3"
+      ]
+    },
+    {
+      "id": "cell-biology-13-objective-2",
+      "description": "Compare semiconservative, conservative, and dispersive replication predictions across controlled isotope-density generations, naming what the evidence distinguishes.",
+      "bloom": "analyze",
+      "course_outcome_ids": [
+        "cell-biology-outcome-3",
+        "cell-biology-outcome-4"
+      ]
+    },
+    {
+      "id": "cell-biology-14-objective-1",
+      "description": "Distinguish polymerase proofreading from post-replicative mismatch repair and match lesion classes to plausible DNA repair pathways.",
+      "bloom": "analyze",
+      "course_outcome_ids": [
+        "cell-biology-outcome-3"
+      ]
+    },
+    {
+      "id": "cell-biology-14-objective-2",
+      "description": "Evaluate synthetic lesion-removal evidence using input, perturbation, rescue, and assay controls while distinguishing lesion signal from mutation frequency.",
+      "bloom": "evaluate",
+      "course_outcome_ids": [
+        "cell-biology-outcome-4"
+      ]
     }
   ],
   "duration": {
     "instructional_weeks": 14,
-    "equivalent_structure": "Proposed undergraduate 14-week scope only. Weeks 1 through 5 now contain ten developed lessons; week 4 also retains the original short enzyme capsule. Week 7 has a compact legacy capsule; weeks 6 and 8 through 14 have no authored lesson sequences or summative assessments. Workload is not measured, so this plan is not evidence of semester equivalence.",
+    "equivalent_structure": "Proposed undergraduate 14-week scope only. Weeks 1 through 6 now contain twelve developed lessons; week 4 also retains the original short enzyme capsule. Week 7 has a compact gene-expression prototype and formative item, not the proposed integrated midterm; weeks 8 through 14 have no authored lesson sequences or summative assessments. Workload is not measured, so this plan is not evidence of semester equivalence.",
     "weeks": [
       {
         "week": 1,
@@ -320,8 +353,13 @@
       {
         "week": 6,
         "title": "DNA structure, replication, repair, and genome organization",
-        "lesson_ids": [],
-        "assessment_ids": []
+        "lesson_ids": [
+          "cell-biology-13",
+          "cell-biology-14"
+        ],
+        "assessment_ids": [
+          "cell-biology-week6-practice"
+        ]
       },
       {
         "week": 7,
@@ -727,6 +765,67 @@
           ]
         }
       ]
+    },
+    {
+      "id": "cell-biology-module-13",
+      "title": "DNA structure, genome organization, and replication",
+      "source_ids": [
+        "molecular",
+        "meselson-stahl-1958",
+        "ncbi-dna-replication"
+      ],
+      "lessons": [
+        {
+          "id": "cell-biology-13",
+          "title": "DNA structure, genome organization, and semiconservative replication",
+          "reading": "modules/06a-dna-structure-and-replication.md",
+          "objectives": [
+            "cell-biology-13-objective-1",
+            "cell-biology-13-objective-2"
+          ],
+          "worked_example": "The template 3′-A C G T T A G C-5′ directs a complementary product 5′-T G C A A T C G-3′. After two ideal semiconservative generations in light medium, half of the DNA molecules remain hybrid and half are light; density labels distinguish molecule classes, not sequence correctness.",
+          "question_ids": [
+            "cell-biology-13:strand-complement",
+            "cell-biology-13:fork-asymmetry",
+            "cell-biology-13:density-evidence",
+            "cell-biology-13:hybrid-fraction"
+          ],
+          "card_ids": [
+            "cell-biology-12-0",
+            "cell-biology-12-1"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cell-biology-module-14",
+      "title": "DNA damage, repair, and inference from lesion assays",
+      "source_ids": [
+        "molecular",
+        "ncbi-dna-replication",
+        "ncbi-dna-repair"
+      ],
+      "lessons": [
+        {
+          "id": "cell-biology-14",
+          "title": "DNA damage, repair pathways, and evidence of lesion removal",
+          "reading": "modules/06b-dna-damage-and-repair-evidence.md",
+          "objectives": [
+            "cell-biology-14-objective-1",
+            "cell-biology-14-objective-2"
+          ],
+          "worked_example": "In the explicitly synthetic UV time course, initial lesion signals are comparable; after four hours, the depleted condition retains a higher signal and a matched rescue moves it toward control. This supports a factor-dependent effect in the assay, not a measured mutation rate or proof of error-free repair.",
+          "question_ids": [
+            "cell-biology-14:repair-pathway-match",
+            "cell-biology-14:lesion-removal-data",
+            "cell-biology-14:dsb-repair"
+          ],
+          "card_ids": [
+            "cell-biology-13-0",
+            "cell-biology-13-1"
+          ]
+        }
+      ]
     }
   ],
   "assessments": [
@@ -868,6 +967,30 @@
         "cell-biology-12:marker-panel"
       ],
       "points": 8
+    },
+    {
+      "id": "cell-biology-week6-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Week 6: DNA replication and repair evidence",
+      "path": "question-banks/practice.json",
+      "week": 6,
+      "objective_ids": [
+        "cell-biology-13-objective-1",
+        "cell-biology-13-objective-2",
+        "cell-biology-14-objective-1",
+        "cell-biology-14-objective-2"
+      ],
+      "question_ids": [
+        "cell-biology-13:strand-complement",
+        "cell-biology-13:fork-asymmetry",
+        "cell-biology-13:density-evidence",
+        "cell-biology-13:hybrid-fraction",
+        "cell-biology-14:repair-pathway-match",
+        "cell-biology-14:lesion-removal-data",
+        "cell-biology-14:dsb-repair"
+      ],
+      "points": 11
     }
   ],
   "grading_policy": {
@@ -898,6 +1021,11 @@
     "review_status": "unreviewed"
   },
   "history": [
+    {
+      "version": "0.8.0",
+      "date": "2026-10-06",
+      "summary": "Developed two original week-6 lessons on DNA replication and repair with qualitative density-model predictions, explicitly synthetic lesion time-course data, seven formative questions, four retrieval cards, pathway misconceptions, and link-only sources; the course remains partial."
+    },
     {
       "version": "0.7.0",
       "date": "2026-10-06",
@@ -950,8 +1078,8 @@
     }
   ],
   "limitations": [
-    "The first five proposed weeks now have developed two-lesson sequences, but this does not provide the planned homework, laboratory/data assignments, summative exams, workload evidence, or instructor review; week 4 retains one compact prototype capsule and week 7 remains a compact prototype reading.",
-    "Weeks 6 and 8–14 are planning scope, not lessons. The gene-expression prototype capsule does not constitute a complete week.",
+    "The first six proposed weeks now have developed two-lesson sequences, but this does not provide the planned homework, full laboratory/data assignments, summative exams, workload evidence, or instructor review; week 4 retains one compact capsule and week 7 remains a compact gene-expression prototype.",
+    "Weeks 8–14 are planning scope, not lessons. The week-7 capsule and formative item are not the proposed integrated midterm or a complete instructional week.",
     "Current formative checks across the developed lessons do not demonstrate comprehensive outcome coverage or mastery; some lesson objectives remain unassessed.",
     "Bloom labels and structured prerequisite edges are initial authoring classifications awaiting subject-matter review.",
     "Question answers and solution feedback are intentionally public practice authoring specifications, not restricted exam keys.",

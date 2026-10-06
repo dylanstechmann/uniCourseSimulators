@@ -77,6 +77,14 @@ These templates guide feedback for the current public formative material. The so
 
 > The data support **[measured marker distribution or normalized enrichment]** with **[stated denominator, recovery, and contaminant markers]**. A pellet is a mixture after homogenization; it does not alone establish purity, intact-cell localization, or function. Add **[input/recovery/integrity control]** and an orthogonal intact-cell measurement.
 
+### Strand polarity or replication-model inference
+
+> Your sequence **[matches or reverses]** the stated template orientation. Pair the bases first, then label the new strand antiparallel to the template. For model discrimination, compare the predicted molecule classes after **[generation]**; a first-generation intermediate class alone is shared by more than one model.
+
+### Lesion-signal change interpreted as mutation frequency
+
+> The assay reports **[measured lesion-associated signal]** under **[tested perturbation, time, and normalization]**. Similar starting signal and a matched rescue make a factor-dependent change more plausible, but this readout does not directly count heritable mutations or establish direct catalysis. Check **[DNA recovery, viability, cell-cycle state, and an orthogonal lesion or mutation assay]** before extending the claim.
+
 ## Delivery and uncertainty rules
 
 - Quote or point to the learner's own words, numbers, or selected fields; do not invent evidence about their reasoning.
