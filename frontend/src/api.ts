@@ -5,9 +5,12 @@ import type {
   CourseSummary,
   Enrollment,
   Appeal,
+  AssessmentAnswer,
   AssessmentPlan,
   InstructorAppeal,
   Gradebook,
+  GradedAssessment,
+  GradedSubmission,
   Lesson,
   Note,
   Progress,
@@ -92,6 +95,22 @@ export const api = {
     request<Enrollment>(`/enrollments/${encode(id)}/version`, "PUT", {}),
   assessmentPlan: (id: string) =>
     request<AssessmentPlan>(`/assessments/${encode(id)}`),
+  gradedAssessment: (id: string, assessmentId: string) =>
+    request<GradedAssessment>(
+      `/assessments/${encode(id)}/${encode(assessmentId)}/questions`,
+    ),
+  submitGradedAssessment: (
+    id: string,
+    assessmentId: string,
+    responses: Record<string, AssessmentAnswer>,
+  ) =>
+    request<GradedSubmission>(
+      `/assessments/${encode(id)}/${encode(assessmentId)}/submissions`,
+      "POST",
+      { responses },
+    ),
+  gradedSubmissions: (id: string) =>
+    request<GradedSubmission[]>(`/assessments/${encode(id)}/submissions`),
   progress: (id: string) => request<Progress[]>(`/progress/${encode(id)}`),
   setProgress: (id: string, lesson: string, completed: boolean) =>
     request<Progress>(`/progress/${encode(id)}/${encode(lesson)}`, "PATCH", {

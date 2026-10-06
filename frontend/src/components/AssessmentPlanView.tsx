@@ -4,7 +4,13 @@ function formatDate(value: string | null) {
   return value ? new Date(value).toLocaleString() : "Not scheduled";
 }
 
-export function AssessmentPlanView({ plan }: { plan: AssessmentPlan }) {
+export function AssessmentPlanView({
+  plan,
+  onOpenAssessment,
+}: {
+  plan: AssessmentPlan;
+  onOpenAssessment?: (assessmentId: string) => void;
+}) {
   return (
     <section
       className="card assessment-plan"
@@ -26,11 +32,17 @@ export function AssessmentPlanView({ plan }: { plan: AssessmentPlan }) {
           No course grade is configured for this package. Practice points are
           study feedback and do not count as a university course grade.
         </p>
+      ) : plan.course_grade_status === "configured_with_submissions" ? (
+        <p className="notice">
+          This version has saved graded-assignment results. The gradebook shows
+          a current-to-date percentage under this package’s configured policy;
+          that result does not establish course credit or completion.
+        </p>
       ) : (
         <p className="notice">
-          This version defines weighted grade categories, but graded submissions
-          and course-grade calculations are not available yet. No course grade
-          is being reported.
+          Weighted grade categories are configured, but no graded submissions
+          are saved yet. The course-grade percentage is not calculated until
+          there is released work.
         </p>
       )}
       {plan.categories.length > 0 && (
@@ -74,6 +86,7 @@ export function AssessmentPlanView({ plan }: { plan: AssessmentPlan }) {
                 <th scope="col">Release</th>
                 <th scope="col">Due</th>
                 <th scope="col">Status</th>
+                <th scope="col">Action</th>
               </tr>
             </thead>
             <tbody>
@@ -86,6 +99,22 @@ export function AssessmentPlanView({ plan }: { plan: AssessmentPlan }) {
                   <td>{formatDate(assessment.release_at)}</td>
                   <td>{formatDate(assessment.due_at)}</td>
                   <td>{assessment.schedule_status.replaceAll("_", " ")}</td>
+                  <td>
+                    {assessment.mode === "graded" ? (
+                      <button
+                        type="button"
+                        onClick={() => onOpenAssessment?.(assessment.id)}
+                        disabled={
+                          !onOpenAssessment ||
+                          assessment.schedule_status !== "open"
+                        }
+                      >
+                        Open assignment
+                      </button>
+                    ) : (
+                      "—"
+                    )}
+                  </td>
                 </tr>
               ))}
             </tbody>

@@ -63,6 +63,10 @@ def validate_assessment_configuration(assessments: list[dict], policy: dict) -> 
     aggregation = policy.get("category_aggregation", "points")
     if aggregation not in {"points", "assessment-average"}:
         raise ValueError("Category aggregation must be points or assessment-average")
+    if mode == "graded-course" and policy.get(
+        "late_submission_policy", "strict-deadline"
+    ) != "strict-deadline":
+        raise ValueError("Only the strict-deadline late-work policy is currently supported")
 
     assessment_ids: set[str] = set()
     category_usage: set[str] = set()

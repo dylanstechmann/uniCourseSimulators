@@ -100,6 +100,36 @@ class AssessmentInstance(Base):
     created_at: Mapped[datetime] = mapped_column(DateTime, default=now)
 
 
+class GradedSubmission(Base):
+    """Append-only, enrollment-scoped submission for a pinned graded activity."""
+    __tablename__ = "graded_submissions"
+    __table_args__ = (
+        UniqueConstraint(
+            "enrollment_id", "assessment_instance_id", "attempt_number",
+            name="uq_graded_submission_attempt",
+        ),
+        CheckConstraint("attempt_number >= 1", name="ck_graded_submission_attempt_positive"),
+        CheckConstraint("score >= 0", name="ck_graded_submission_score_nonnegative"),
+        CheckConstraint("max_score > 0", name="ck_graded_submission_max_score_positive"),
+        CheckConstraint("score <= max_score", name="ck_graded_submission_score_lte_max"),
+    )
+    id: Mapped[str] = mapped_column(String(36), primary_key=True, default=identifier)
+    enrollment_id: Mapped[str] = mapped_column(ForeignKey("enrollments.id", ondelete="CASCADE"), index=True)
+    plan_id: Mapped[str] = mapped_column(ForeignKey("assessment_plans.id", ondelete="CASCADE"), index=True)
+    assessment_instance_id: Mapped[str] = mapped_column(
+        ForeignKey("assessment_instances.id", ondelete="CASCADE"), index=True
+    )
+    content_version: Mapped[str] = mapped_column(String(100))
+    attempt_number: Mapped[int] = mapped_column()
+    source_sha256: Mapped[str] = mapped_column(String(64))
+    question_spec_sha256: Mapped[str] = mapped_column(String(64))
+    responses_json: Mapped[dict] = mapped_column(JSON)
+    results_json: Mapped[list] = mapped_column(JSON)
+    score: Mapped[float] = mapped_column(Float)
+    max_score: Mapped[float] = mapped_column(Float)
+    submitted_at: Mapped[datetime] = mapped_column(DateTime, default=now)
+
+
 class Progress(Base):
     __tablename__ = "progress"
     __table_args__ = (UniqueConstraint("user_id", "course_id", "lesson_id", name="uq_progress_lesson"),)

@@ -183,7 +183,7 @@ class PublicQuestion(BaseModel):
     variant_id: str | None = None
     variant_token: str | None = None
     learning_objective_ids: list[str] = Field(default_factory=list)
-    assessment_role: Literal["formative"] = "formative"
+    assessment_role: Literal["formative", "graded"] = "formative"
 
 
 class PublicRetrievalCard(BaseModel):
@@ -320,7 +320,9 @@ class AssessmentPlanResponse(BaseModel):
     course_id: str
     content_version: str
     grading_mode: Literal["formative-only", "graded-course"]
-    course_grade_status: Literal["not_configured", "configured_no_submissions"]
+    course_grade_status: Literal[
+        "not_configured", "configured_no_submissions", "configured_with_submissions"
+    ]
     categories: list[AssessmentCategoryView]
     category_aggregation: Literal["points", "assessment-average"]
     attempt_policy: str
@@ -347,6 +349,63 @@ class Feedback(BaseModel):
     reasoning_assessed: bool = False
     provisional: bool = False
     components: list[FeedbackComponent] = Field(default_factory=list)
+
+
+class AssessmentSubmissionRequest(StrictModel):
+    responses: dict[str, AttemptRequest]
+
+    @field_validator("responses")
+    @classmethod
+    def valid_responses(cls, value):
+        if not 1 <= len(value) <= 100:
+            raise ValueError("A submission must contain 1–100 question responses")
+        if any(not re.fullmatch(r"[a-z0-9][a-z0-9_-]{0,99}", key) for key in value):
+            raise ValueError("Question response IDs must be valid identifiers")
+        if any(item.variant_token is not None for item in value.values()):
+            raise ValueError("Assignment responses cannot include practice variant tokens")
+        return value
+
+
+class AssessmentQuestionsResponse(BaseModel):
+    course_id: str
+    assessment_id: str
+    title: str
+    content_version: str
+    points: float = Field(gt=0)
+    questions: list[PublicQuestion]
+    attempts_used: int = Field(ge=0)
+    attempt_limit: int | None = Field(default=None, ge=1)
+    schedule_status: Literal["open", "closed"]
+
+
+class AssignmentQuestionResult(BaseModel):
+    question_id: str
+    score: float = Field(ge=0)
+    max_score: float = Field(gt=0)
+    feedback: Feedback
+
+
+class AssessmentSubmissionResponse(BaseModel):
+    id: str
+    course_id: str
+    assessment_id: str
+    content_version: str
+    attempt_number: int = Field(ge=1)
+    responses: dict[str, AttemptRequest]
+    results: list[AssignmentQuestionResult]
+    score: float = Field(ge=0)
+    max_score: float = Field(gt=0)
+    score_percent: float = Field(ge=0, le=100)
+    submitted_at: str
+
+
+class CourseGradeView(BaseModel):
+    score_percent: float | None = Field(default=None, ge=0, le=100)
+    category_scores: dict[str, float | None]
+    active_weight: float = Field(ge=0, le=1)
+    policy_version: Literal["weighted-grade-v1"]
+    status: Literal["configured_no_submissions", "in_progress"]
+    explanation: str
 
 
 class GradeResult(BaseModel):
@@ -389,3 +448,4 @@ class GradebookResponse(BaseModel):
     objective_evidence_policy: ObjectiveEvidencePolicy
     objective_evidence: dict[str, ObjectiveEvidence]
     limitations: str
+    course_grade: CourseGradeView | None = None

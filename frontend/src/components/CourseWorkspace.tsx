@@ -6,6 +6,7 @@ import type {
   Course,
   CourseSummary,
   Gradebook,
+  GradedSubmission,
   Lesson,
   Note,
   Progress,
@@ -16,6 +17,7 @@ import { AssessmentPlanView } from "./AssessmentPlanView";
 import { LessonStudy } from "./LessonStudy";
 import { MarkdownReader } from "./MarkdownReader";
 import { MaturityBadge } from "./MaturityBadge";
+import { GradedAssessment } from "./GradedAssessment";
 
 export function CourseWorkspace({
   id,
@@ -53,12 +55,19 @@ export function CourseWorkspace({
   const [assessmentPlan, setAssessmentPlan] = useState<AssessmentPlan | null>(
     null,
   );
+  const [gradedSubmissions, setGradedSubmissions] = useState<
+    GradedSubmission[]
+  >([]);
+  const [activeGradedAssessmentId, setActiveGradedAssessmentId] = useState<
+    string | null
+  >(null);
   const [error, setError] = useState("");
   const [busy, setBusy] = useState(false);
   useEffect(() => {
     let active = true;
     setCourse(null);
     setError("");
+    setActiveGradedAssessmentId(null);
     api
       .course(id)
       .then((data) => {
@@ -99,6 +108,7 @@ export function CourseWorkspace({
       setAttempts([]);
       setGradebook(null);
       setAssessmentPlan(null);
+      setGradedSubmissions([]);
       return;
     }
     Promise.all([
@@ -107,16 +117,27 @@ export function CourseWorkspace({
       api.attempts(id),
       api.gradebook(id),
       api.assessmentPlan(id),
+      api.gradedSubmissions(id),
     ])
-      .then(([progress, notes, attempts, gradebook, assessmentPlan]) => {
-        if (active) {
-          setProgress(progress);
-          setNotes(notes);
-          setAttempts(attempts);
-          setGradebook(gradebook);
-          setAssessmentPlan(assessmentPlan);
-        }
-      })
+      .then(
+        ([
+          progress,
+          notes,
+          attempts,
+          gradebook,
+          assessmentPlan,
+          gradedSubmissions,
+        ]) => {
+          if (active) {
+            setProgress(progress);
+            setNotes(notes);
+            setAttempts(attempts);
+            setGradebook(gradebook);
+            setAssessmentPlan(assessmentPlan);
+            setGradedSubmissions(gradedSubmissions);
+          }
+        },
+      )
       .catch((error) => {
         if (active) setError(errorMessage(error));
       });
@@ -185,6 +206,17 @@ export function CourseWorkspace({
     );
     setGradebook(await api.gradebook(id));
     return appeal;
+  }
+  async function refreshAfterGradedSubmission(submission: GradedSubmission) {
+    setGradedSubmissions((previous) => [...previous, submission]);
+    const [nextGradebook, nextPlan, nextSubmissions] = await Promise.all([
+      api.gradebook(id),
+      api.assessmentPlan(id),
+      api.gradedSubmissions(id),
+    ]);
+    setGradebook(nextGradebook);
+    setAssessmentPlan(nextPlan);
+    setGradedSubmissions(nextSubmissions);
   }
   async function saveNote(body: string) {
     const note = await api.saveNote(id, lessonId!, body);
@@ -354,7 +386,22 @@ export function CourseWorkspace({
           {showGradebook ? (
             enrolled && !needsVersionReview && gradebook ? (
               <>
-                {assessmentPlan && <AssessmentPlanView plan={assessmentPlan} />}
+                {assessmentPlan && (
+                  <AssessmentPlanView
+                    plan={assessmentPlan}
+                    onOpenAssessment={setActiveGradedAssessmentId}
+                  />
+                )}
+                {activeGradedAssessmentId && (
+                  <GradedAssessment
+                    key={activeGradedAssessmentId}
+                    courseId={id}
+                    assessmentId={activeGradedAssessmentId}
+                    enabled={enrolled && !needsVersionReview}
+                    history={gradedSubmissions}
+                    onSubmitted={refreshAfterGradedSubmission}
+                  />
+                )}
                 <GradebookView
                   gradebook={gradebook}
                   attempts={attempts}

@@ -131,7 +131,7 @@ def test_bad_saved_grades_are_rejected(attempts, message):
         calculate_weighted_grade(assessments, policy, attempts, AS_OF)
 
 
-def test_late_attempt_is_not_silently_counted_without_a_typed_late_policy():
+def test_late_attempt_is_not_counted_after_the_strict_deadline():
     assessments, policy = course_fixture()
     attempts = {
         "hw-a": [{
@@ -140,3 +140,10 @@ def test_late_attempt_is_not_silently_counted_without_a_typed_late_policy():
     }
     with pytest.raises(ValueError, match="after its deadline"):
         calculate_weighted_grade(assessments, policy, attempts, "2026-10-08T00:00:00Z")
+
+
+def test_unsupported_late_work_policies_are_rejected():
+    assessments, policy = course_fixture()
+    policy["late_submission_policy"] = "accept-with-penalty"
+    with pytest.raises(ValueError, match="strict-deadline"):
+        validate_assessment_configuration(assessments, policy)

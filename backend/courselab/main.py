@@ -1,6 +1,8 @@
 """FastAPI learner service with server ownership and formative-only assessment."""
 
 import hashlib
+import json
+import math
 import secrets
 import time
 from collections import defaultdict, deque
@@ -12,11 +14,16 @@ from argon2.exceptions import InvalidHashError, VerificationError, VerifyMismatc
 from fastapi import Depends, FastAPI, HTTPException, Query, Request, Response
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
-from sqlalchemy import delete, select, update
+from sqlalchemy import delete, func, select, update
 from sqlalchemy.exc import IntegrityError
 from sqlalchemy.orm import Session
 
-from .assessment import canonical_digest, utc_datetime, validate_assessment_configuration
+from .assessment import (
+    calculate_weighted_grade,
+    canonical_digest,
+    utc_datetime,
+    validate_assessment_configuration,
+)
 from .config import Settings
 from .content import ContentInvalid, ContentMissing, ContentRepository
 from .db import (
@@ -27,6 +34,7 @@ from .db import (
     Attempt,
     Bookmark,
     Enrollment,
+    GradedSubmission,
     Note,
     Progress,
     SessionToken,
@@ -46,6 +54,9 @@ from .schemas import (
     AppealRequest,
     AppealReviewRequest,
     AssessmentPlanResponse,
+    AssessmentQuestionsResponse,
+    AssessmentSubmissionRequest,
+    AssessmentSubmissionResponse,
     AttemptRequest,
     BookmarkRequest,
     CourseSummary,
@@ -222,6 +233,7 @@ def create_app(settings: Settings | None = None) -> FastAPI:
         policy.setdefault("mode", "formative-only")
         policy.setdefault("categories", [])
         policy.setdefault("category_aggregation", "points")
+        policy.setdefault("late_submission_policy", "strict-deadline")
         policy.setdefault("attempt_policy", "No course grade is configured.")
         policy.setdefault("solution_release", "Not specified.")
         policy.setdefault("late_policy", "No course grade is configured.")
@@ -296,6 +308,89 @@ def create_app(settings: Settings | None = None) -> FastAPI:
             ))
         db.flush()
         return plan
+
+    def graded_assessment(
+        db: Session, enrollment: Enrollment, manifest: dict, assessment_id: str,
+    ) -> tuple[AssessmentPlan, AssessmentInstance, list[dict], int, str]:
+        """Load only an enrollment-pinned graded activity with verified source bytes."""
+        plan = ensure_assessment_plan(db, enrollment, manifest)
+        if plan.grading_mode != "graded-course":
+            raise HTTPException(404, "No graded assessments are configured for this course")
+        instance = db.scalar(select(AssessmentInstance).where(
+            AssessmentInstance.plan_id == plan.id,
+            AssessmentInstance.assessment_id == assessment_id,
+        ))
+        if not instance or instance.mode != "graded":
+            raise HTTPException(404, "Graded assessment not found")
+        try:
+            source_path = content.assessment_source_file(enrollment.course_id, instance.source_path)
+            source_bytes = source_path.read_bytes()
+        except (ContentInvalid, ContentMissing, OSError) as exc:
+            raise HTTPException(409, "The pinned assessment source is unavailable") from exc
+        source_sha256 = hashlib.sha256(source_bytes).hexdigest()
+        if not secrets.compare_digest(source_sha256, instance.source_sha256):
+            raise HTTPException(409, "Assessment content changed after this enrollment version was pinned")
+        try:
+            package = json.loads(source_bytes.decode("utf-8"))
+        except (UnicodeDecodeError, json.JSONDecodeError) as exc:
+            raise HTTPException(409, "The pinned assessment source is invalid") from exc
+        if (
+            not isinstance(package, dict)
+            or package.get("course_id") != enrollment.course_id
+            or not isinstance(package.get("questions"), list)
+        ):
+            raise HTTPException(409, "The pinned assessment source has an invalid course mapping")
+        questions_by_id = {}
+        for question in package["questions"]:
+            question_id = question.get("id") if isinstance(question, dict) else None
+            if not isinstance(question_id, str) or question_id in questions_by_id:
+                raise HTTPException(409, "The pinned assessment has invalid question identifiers")
+            questions_by_id[question_id] = question
+        question_ids = instance.question_ids
+        if (
+            not isinstance(question_ids, list)
+            or not question_ids
+            or any(not isinstance(question_id, str) for question_id in question_ids)
+            or len(question_ids) != len(set(question_ids))
+            or any(question_id not in questions_by_id for question_id in question_ids)
+        ):
+            raise HTTPException(409, "The pinned assessment question mapping is invalid")
+        questions = [questions_by_id[question_id] for question_id in question_ids]
+        try:
+            question_points = sum(float(question["points"]) for question in questions)
+        except (KeyError, TypeError, ValueError) as exc:
+            raise HTTPException(409, "The pinned assessment point mapping is invalid") from exc
+        if not math.isclose(question_points, float(instance.points), rel_tol=0, abs_tol=1e-8):
+            raise HTTPException(409, "Question points do not match the pinned assessment total")
+        attempts_used = db.scalar(select(func.count()).select_from(GradedSubmission).where(
+            GradedSubmission.enrollment_id == enrollment.id,
+            GradedSubmission.assessment_instance_id == instance.id,
+        )) or 0
+        try:
+            spec_digest = canonical_digest({
+                "grader": [question_spec_digest(question) for question in questions],
+                "source_sha256": instance.source_sha256,
+            })
+        except (TypeError, ValueError) as exc:
+            raise HTTPException(409, "The pinned assessment grading specification is invalid") from exc
+        return plan, instance, questions, int(attempts_used), spec_digest
+
+    def graded_submission_view(
+        item: GradedSubmission, instance: AssessmentInstance, course_id: str,
+    ) -> dict:
+        return {
+            "id": item.id,
+            "course_id": course_id,
+            "assessment_id": instance.assessment_id,
+            "content_version": item.content_version,
+            "attempt_number": item.attempt_number,
+            "responses": item.responses_json,
+            "results": item.results_json,
+            "score": float(item.score),
+            "max_score": float(item.max_score),
+            "score_percent": round(float(item.score) / float(item.max_score) * 100, 2),
+            "submitted_at": timestamp(item.submitted_at),
+        }
 
     def start_session(db: Session, user: User, response: Response, request: Request) -> dict:
         # Revoke the calling session when logging in or converting a guest.
@@ -505,6 +600,10 @@ def create_app(settings: Settings | None = None) -> FastAPI:
             select(AssessmentInstance).where(AssessmentInstance.plan_id == plan.id)
             .order_by(AssessmentInstance.week, AssessmentInstance.assessment_id)
         ))
+        submission_count = db.scalar(select(func.count()).select_from(GradedSubmission).where(
+            GradedSubmission.enrollment_id == enrollment.id,
+            GradedSubmission.plan_id == plan.id,
+        )) or 0
         current = now()
         visible_assessments = []
         for item in instances:
@@ -537,7 +636,8 @@ def create_app(settings: Settings | None = None) -> FastAPI:
             "content_version": plan.content_version,
             "grading_mode": plan.grading_mode,
             "course_grade_status": (
-                "configured_no_submissions" if plan.grading_mode == "graded-course" else "not_configured"
+                ("configured_with_submissions" if submission_count else "configured_no_submissions")
+                if plan.grading_mode == "graded-course" else "not_configured"
             ),
             "categories": policy["categories"],
             "category_aggregation": policy.get("category_aggregation", "points"),
@@ -547,6 +647,140 @@ def create_app(settings: Settings | None = None) -> FastAPI:
             "appeals": policy["appeals"],
             "assessments": visible_assessments,
         }
+
+    @app.get(
+        "/api/v1/assessments/{course_id}/{assessment_id}/questions",
+        response_model=AssessmentQuestionsResponse,
+    )
+    def graded_assessment_questions(course_id: str, assessment_id: str, request: Request, db: DB):
+        user, _ = require_identity(request, db)
+        enrollment = enrolled(db, user, course_id)
+        manifest = content.manifest(course_id)
+        _, instance, questions, attempts_used, _ = graded_assessment(
+            db, enrollment, manifest, assessment_id,
+        )
+        current = now()
+        if instance.release_at and current < instance.release_at:
+            raise HTTPException(409, "This assessment has not been released")
+        status = "closed" if instance.due_at and current > instance.due_at else "open"
+        db.commit()
+        return {
+            "course_id": course_id,
+            "assessment_id": instance.assessment_id,
+            "title": instance.title or instance.assessment_id.replace("-", " ").title(),
+            "content_version": enrollment.content_version,
+            "points": float(instance.points),
+            "questions": [
+                content.public_question(question)
+                .model_copy(update={"assessment_role": "graded"})
+                .model_dump()
+                for question in questions
+            ],
+            "attempts_used": attempts_used,
+            "attempt_limit": instance.attempt_limit,
+            "schedule_status": status,
+        }
+
+    @app.post(
+        "/api/v1/assessments/{course_id}/{assessment_id}/submissions",
+        status_code=201,
+        response_model=AssessmentSubmissionResponse,
+    )
+    def submit_graded_assessment(
+        course_id: str, assessment_id: str, body: AssessmentSubmissionRequest, request: Request, db: DB,
+    ):
+        identity = require_identity(request, db)
+        require_csrf(request, identity)
+        enrollment = enrolled(db, identity[0], course_id)
+        manifest = content.manifest(course_id)
+        plan, instance, questions, attempts_used, spec_digest = graded_assessment(
+            db, enrollment, manifest, assessment_id,
+        )
+        current = now()
+        if instance.release_at and current < instance.release_at:
+            raise HTTPException(409, "This assessment has not been released")
+        if instance.due_at and current > instance.due_at:
+            raise HTTPException(409, "The submission deadline has passed")
+        if instance.attempt_limit is not None and attempts_used >= instance.attempt_limit:
+            raise HTTPException(409, "The attempt limit has been reached")
+        expected_ids = {question["id"] for question in questions}
+        if set(body.responses) != expected_ids:
+            raise HTTPException(422, "Submit exactly one response for every question in this assessment")
+
+        item_results = []
+        normalized_responses = {}
+        earned = 0.0
+        try:
+            for question in questions:
+                question_id = question["id"]
+                answer = body.responses[question_id]
+                result = grade(question, answer)
+                earned += result.score
+                normalized_responses[question_id] = answer.model_dump(exclude_none=True)
+                item_results.append({
+                    "question_id": question_id,
+                    "score": result.score,
+                    "max_score": result.max_score,
+                    "feedback": result.feedback.model_dump(),
+                })
+        except (GradingUnavailable, ArithmeticError, KeyError, TypeError, ValueError) as exc:
+            raise HTTPException(409, "This assessment contains an unsupported or invalid grading specification") from exc
+
+        maximum = float(instance.points)
+        if not math.isclose(sum(result["max_score"] for result in item_results), maximum, rel_tol=0, abs_tol=1e-8):
+            raise HTTPException(409, "The assessment grading total does not match its pinned points")
+        row = GradedSubmission(
+            enrollment_id=enrollment.id,
+            plan_id=plan.id,
+            assessment_instance_id=instance.id,
+            content_version=enrollment.content_version,
+            attempt_number=attempts_used + 1,
+            source_sha256=instance.source_sha256,
+            question_spec_sha256=spec_digest,
+            responses_json=normalized_responses,
+            results_json=item_results,
+            score=earned,
+            max_score=maximum,
+            submitted_at=current,
+        )
+        db.add(row)
+        try:
+            db.commit()
+        except IntegrityError as exc:
+            db.rollback()
+            raise HTTPException(409, "A concurrent submission changed the attempt count; reload this assessment") from exc
+        db.refresh(row)
+        return graded_submission_view(row, instance, course_id)
+
+    @app.get(
+        "/api/v1/assessments/{course_id}/submissions",
+        response_model=list[AssessmentSubmissionResponse],
+    )
+    def graded_submission_history(course_id: str, request: Request, db: DB):
+        user, _ = require_identity(request, db)
+        enrollment = enrolled(db, user, course_id)
+        plan = db.scalar(select(AssessmentPlan).where(
+            AssessmentPlan.enrollment_id == enrollment.id,
+            AssessmentPlan.content_version == enrollment.content_version,
+        ))
+        if not plan:
+            return []
+        rows = list(db.scalars(
+            select(GradedSubmission)
+            .where(
+                GradedSubmission.enrollment_id == enrollment.id,
+                GradedSubmission.plan_id == plan.id,
+            )
+            .order_by(GradedSubmission.submitted_at, GradedSubmission.id)
+        ))
+        by_instance = {
+            item.id: item
+            for item in db.scalars(select(AssessmentInstance).where(AssessmentInstance.plan_id == plan.id))
+        }
+        return [
+            graded_submission_view(row, by_instance[row.assessment_instance_id], course_id)
+            for row in rows if row.assessment_instance_id in by_instance
+        ]
 
     @app.patch("/api/v1/progress/{course_id}/{lesson_id}")
     def save_progress(course_id: str, lesson_id: str, body: ProgressRequest, request: Request, db: DB):
@@ -838,10 +1072,63 @@ def create_app(settings: Settings | None = None) -> FastAPI:
         for item in rows:
             effective_score = score_overrides.get(item.id, float(item.score))
             best[item.question_id] = max(best.get(item.question_id, 0), effective_score)
+        course_grade = None
+        plan = db.scalar(select(AssessmentPlan).where(
+            AssessmentPlan.enrollment_id == enrollment.id,
+            AssessmentPlan.content_version == enrollment.content_version,
+        ))
+        if plan and plan.grading_mode == "graded-course":
+            instances = list(db.scalars(select(AssessmentInstance).where(AssessmentInstance.plan_id == plan.id)))
+            submissions = list(db.scalars(select(GradedSubmission).where(
+                GradedSubmission.enrollment_id == enrollment.id,
+                GradedSubmission.plan_id == plan.id,
+            )))
+            attempts_by_assessment = defaultdict(list)
+            for submission in submissions:
+                instance = next((item for item in instances if item.id == submission.assessment_instance_id), None)
+                if instance:
+                    attempts_by_assessment[instance.assessment_id].append({
+                        "id": submission.id,
+                        "score": submission.score,
+                        "max_score": submission.max_score,
+                        "submitted_at": timestamp(submission.submitted_at),
+                    })
+            try:
+                calculated = calculate_weighted_grade(
+                    [
+                        {
+                            "id": item.assessment_id,
+                            "mode": item.mode,
+                            "category_id": item.category_id,
+                            "points": item.points,
+                            "release_at": timestamp(item.release_at) if item.release_at else None,
+                            "due_at": timestamp(item.due_at) if item.due_at else None,
+                            "attempt_limit": item.attempt_limit,
+                            "attempt_scoring": item.attempt_scoring,
+                        }
+                        for item in instances
+                    ],
+                    plan.policy_json,
+                    dict(attempts_by_assessment),
+                    now(),
+                )
+            except (KeyError, TypeError, ValueError) as exc:
+                raise HTTPException(409, "Saved assessment results do not match the pinned grade policy") from exc
+            course_grade = {
+                **calculated,
+                "status": "in_progress" if submissions else "configured_no_submissions",
+                "explanation": (
+                    "This percentage follows the saved assessment weights and deterministic attempt rules. "
+                    "Only released work enters the current calculation; the active category weight shows "
+                    "how much of the configured grade currently has evidence. It does not establish credit, "
+                    "course equivalency, or completion."
+                ),
+            }
         return {"course_id": course_id, "assessment_role": "formative", "aggregation": "best reviewed practice result per question",
                 "score": sum(best.values()), "max_score": sum(float(item.get("points", 1)) for item in questions),
                 "attempt_count": len(rows),
                 "manual_override_count": len(score_overrides),
+                "course_grade": course_grade,
                 "objective_evidence_policy": {"version": POLICY_VERSION,
                     "minimum_distinct_items": MIN_DISTINCT_ITEMS,
                     "minimum_item_coverage": MIN_ITEM_COVERAGE,
@@ -852,10 +1139,23 @@ def create_app(settings: Settings | None = None) -> FastAPI:
     @app.get("/api/v1/learner/export")
     def export(request: Request, db: DB):
         user, _ = require_identity(request, db)
+        user_enrollments = list(db.scalars(select(Enrollment).where(Enrollment.user_id == user.id)))
+        enrollment_by_id = {item.id: item for item in user_enrollments}
+        graded_rows = list(db.scalars(select(GradedSubmission).where(
+            GradedSubmission.enrollment_id.in_(list(enrollment_by_id)) if enrollment_by_id else False
+        )))
         return {"schema_version": "1.0", "exported_at": timestamp(now()), "user": user_view(user),
                 "enrollments": [{"course_id": item.course_id, "content_version": item.content_version}
-                                for item in db.scalars(select(Enrollment).where(Enrollment.user_id == user.id))],
+                                for item in user_enrollments],
                 "attempts": [attempt_view(item, db) for item in db.scalars(select(Attempt).where(Attempt.user_id == user.id))],
+                "graded_submissions": [
+                    graded_submission_view(
+                        item, db.get(AssessmentInstance, item.assessment_instance_id),
+                        enrollment_by_id[item.enrollment_id].course_id,
+                    )
+                    for item in graded_rows
+                    if item.assessment_instance_id and item.enrollment_id in enrollment_by_id
+                ],
                 "appeals": [appeal_view(
                     appeal, db.get(Attempt, appeal.attempt_id),
                     db.scalar(select(AppealReview).where(AppealReview.appeal_id == appeal.id)),
@@ -875,6 +1175,8 @@ def create_app(settings: Settings | None = None) -> FastAPI:
         appeal_ids = select(Appeal.id).where(Appeal.user_id == identity[0].id)
         db.execute(delete(AppealReview).where(AppealReview.appeal_id.in_(appeal_ids)))
         db.execute(delete(Appeal).where(Appeal.user_id == identity[0].id))
+        enrollment_ids = select(Enrollment.id).where(Enrollment.user_id == identity[0].id)
+        db.execute(delete(GradedSubmission).where(GradedSubmission.enrollment_id.in_(enrollment_ids)))
         db.execute(update(AppealReview).where(
             AppealReview.reviewer_user_id == identity[0].id
         ).values(reviewer_user_id=None, reviewer_email="deleted instructor account"))

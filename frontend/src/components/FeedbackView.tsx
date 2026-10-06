@@ -99,11 +99,13 @@ export function FeedbackView({ attempt }: { attempt: Attempt }) {
       <p>
         <strong>Next step:</strong> {feedback.next_step}
       </p>
-      <a
-        href={`#/course/${encodeURIComponent(attempt.course_id)}/lesson/${encodeURIComponent(feedback.lesson_id)}`}
-      >
-        Review the relevant lesson
-      </a>
+      {feedback.lesson_id && (
+        <a
+          href={`#/course/${encodeURIComponent(attempt.course_id)}/lesson/${encodeURIComponent(feedback.lesson_id)}`}
+        >
+          Review the relevant lesson
+        </a>
+      )}
       {feedback.provisional && <p className="badge">Provisional feedback</p>}
     </section>
   );

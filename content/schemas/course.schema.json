@@ -74,6 +74,7 @@
         "mode": {"enum": ["formative-only", "graded-course"]},
         "categories": {"type": "array", "items": {"type": "object", "additionalProperties": false, "required": ["id", "weight"], "properties": {"id": {"$ref": "#/$defs/id"}, "title": {"type": "string", "minLength": 3}, "weight": {"type": "number", "minimum": 0, "maximum": 1}}}},
         "category_aggregation": {"enum": ["points", "assessment-average"], "default": "points"},
+        "late_submission_policy": {"enum": ["strict-deadline"], "default": "strict-deadline"},
         "attempt_policy": {"type": "string", "minLength": 5},
         "solution_release": {"type": "string", "minLength": 5},
         "late_policy": {"type": "string", "minLength": 5},

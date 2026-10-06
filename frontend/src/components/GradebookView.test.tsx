@@ -33,6 +33,14 @@ describe("practice gradebook API contract", () => {
       },
       limitations:
         "Practice results do not establish reasoning, mastery, or course completion.",
+      course_grade: {
+        score_percent: 88.5,
+        category_scores: { homework: 88.5, exams: null },
+        active_weight: 0.6,
+        policy_version: "weighted-grade-v1",
+        status: "in_progress",
+        explanation: "The current percentage uses the configured policy.",
+      },
     };
     const course: Course = {
       id: "cell-biology",
@@ -102,6 +110,13 @@ describe("practice gradebook API contract", () => {
       />,
     );
     expect(screen.getByText(gradebook.limitations)).toBeInTheDocument();
+    expect(
+      screen.getByRole("heading", { name: "Current weighted course grade" }),
+    ).toBeInTheDocument();
+    expect(
+      screen.getByText(/88.5% under the configured assessment policy/),
+    ).toBeInTheDocument();
+    expect(screen.getByText("exams: —")).toBeInTheDocument();
     expect(screen.getByText("1 / 4 practice points")).toBeInTheDocument();
     const evidenceTable = screen.getAllByRole("table")[0];
     expect(

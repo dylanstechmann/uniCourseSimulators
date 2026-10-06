@@ -134,7 +134,7 @@ export interface Question {
   variant_id?: string | null;
   variant_token?: string | null;
   learning_objective_ids: string[];
-  assessment_role: "formative";
+  assessment_role: "formative" | "graded";
 }
 export interface Lesson {
   id: string;
@@ -160,7 +160,10 @@ export interface AssessmentPlan {
   course_id: string;
   content_version: string;
   grading_mode: "formative-only" | "graded-course";
-  course_grade_status: "not_configured" | "configured_no_submissions";
+  course_grade_status:
+    | "not_configured"
+    | "configured_no_submissions"
+    | "configured_with_submissions";
   categories: { id: string; title: string | null; weight: number }[];
   category_aggregation: "points" | "assessment-average";
   attempt_policy: string;
@@ -200,7 +203,7 @@ export interface Feedback {
   hint?: string;
   misconception: string | null;
   next_step: string;
-  lesson_id: string;
+  lesson_id: string | null;
   reasoning_assessed: boolean;
   provisional: boolean;
   components?: {
@@ -293,6 +296,47 @@ export interface Gradebook {
     }
   >;
   limitations: string;
+  course_grade?: {
+    score_percent: number | null;
+    category_scores: Record<string, number | null>;
+    active_weight: number;
+    policy_version: "weighted-grade-v1";
+    status: "configured_no_submissions" | "in_progress";
+    explanation: string;
+  } | null;
+}
+export type AssessmentAnswer = {
+  response: string | number | number[] | Record<string, string>;
+  unit?: string;
+};
+export interface GradedAssessment {
+  course_id: string;
+  assessment_id: string;
+  title: string;
+  content_version: string;
+  points: number;
+  questions: Question[];
+  attempts_used: number;
+  attempt_limit: number | null;
+  schedule_status: "open" | "closed";
+}
+export interface GradedSubmission {
+  id: string;
+  course_id: string;
+  assessment_id: string;
+  content_version: string;
+  attempt_number: number;
+  responses: Record<string, AssessmentAnswer>;
+  results: {
+    question_id: string;
+    score: number;
+    max_score: number;
+    feedback: Feedback;
+  }[];
+  score: number;
+  max_score: number;
+  score_percent: number;
+  submitted_at: string;
 }
 export interface Source {
   id: string;

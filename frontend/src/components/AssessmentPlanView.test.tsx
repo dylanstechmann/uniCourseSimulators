@@ -1,5 +1,5 @@
-import { render, screen, within } from "@testing-library/react";
-import { describe, expect, it } from "vitest";
+import { fireEvent, render, screen, within } from "@testing-library/react";
+import { describe, expect, it, vi } from "vitest";
 import type { AssessmentPlan } from "../types";
 import { AssessmentPlanView } from "./AssessmentPlanView";
 
@@ -48,5 +48,45 @@ describe("versioned assessment plan", () => {
     expect(
       within(table).getAllByRole("cell", { name: "practice" }),
     ).toHaveLength(2);
+  });
+
+  it("opens an available graded activity from its versioned schedule", () => {
+    const plan: AssessmentPlan = {
+      course_id: "fixture-course",
+      content_version: "0.2.0",
+      grading_mode: "graded-course",
+      course_grade_status: "configured_no_submissions",
+      categories: [{ id: "homework", title: "Homework", weight: 1 }],
+      category_aggregation: "points",
+      attempt_policy: "Two attempts; highest score counts.",
+      solution_release: "After the due time.",
+      late_policy: "No late work.",
+      appeals: "Request manual review.",
+      assessments: [
+        {
+          id: "homework-1",
+          title: "Control analysis",
+          type: "homework",
+          mode: "graded",
+          category_id: "homework",
+          week: 1,
+          points: 2,
+          item_count: 1,
+          objective_count: 1,
+          release_at: null,
+          due_at: null,
+          attempt_limit: 2,
+          attempt_scoring: "highest",
+          schedule_status: "open",
+        },
+      ],
+    };
+    const onOpen = vi.fn();
+    render(<AssessmentPlanView plan={plan} onOpenAssessment={onOpen} />);
+    fireEvent.click(screen.getByRole("button", { name: "Open assignment" }));
+    expect(onOpen).toHaveBeenCalledWith("homework-1");
+    expect(
+      screen.getByText(/no graded submissions are saved yet/i),
+    ).toBeInTheDocument();
   });
 });
