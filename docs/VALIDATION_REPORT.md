@@ -14,6 +14,8 @@ New teaching text is original and under the repository's CC BY 4.0 content licen
 
 Validation on 2026-10-06: root **54 passed, 1 skipped**; backend **221 passed** (one upstream Starlette/httpx deprecation warning); frontend **30 unit tests passed**, lint/format and TypeScript/Vite build passed (205 modules); Playwright **10 passed**; legacy storage tests **7 passed**. Content validation reports 25 packages, 103 lessons, 110 questions, 207 cards, and 25 cases: 0 errors and 123 explicit depth/objective warnings (98 legacy-depth, 25 objective-coverage). The API/content check passes for 25 packages and 112 supported practice specifications. Ruff passes. Source and bundle security-boundary scans found 0 issues across 387 files. Rebuilt Compose services are healthy, Alembic is `0007 (head)`, and `/api/v1/health` is `ok`; programming and LLM providers remain disabled. Existing database volumes were preserved.
 
+Both GitHub Actions jobs passed after the browser assertion was narrowed to the reader's level-one heading in [run 37516239260](https://github.com/dylanstechmann/uniStemCourseSimulators/actions/runs/37516239260).
+
 | Command/check | Result |
 | --- | --- |
 | `python tools/validate_content.py` | PASS: 25 packages, 103 lessons, 110 questions, 207 cards, 25 cases; 0 errors; 123 disclosed depth/objective warnings |
