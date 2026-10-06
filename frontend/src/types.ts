@@ -301,6 +301,7 @@ export interface Gradebook {
     category_scores: Record<string, number | null>;
     active_weight: number;
     policy_version: "weighted-grade-v1";
+    manual_override_count: number;
     status: "configured_no_submissions" | "in_progress";
     explanation: string;
   } | null;
@@ -334,9 +335,37 @@ export interface GradedSubmission {
     feedback: Feedback;
   }[];
   score: number;
+  effective_score: number;
   max_score: number;
   score_percent: number;
+  effective_score_percent: number;
   submitted_at: string;
+  appeal: GradedSubmissionAppeal | null;
+}
+export interface GradedSubmissionAppeal {
+  id: string;
+  submission_id: string;
+  course_id: string;
+  assessment_id: string;
+  attempt_number: number;
+  reason: string;
+  status: "open" | "adjusted" | "upheld" | "declined";
+  decision: "adjusted" | "upheld" | "declined" | null;
+  review_note: string | null;
+  original_score: number;
+  effective_score: number;
+  max_score: number;
+  created_at: string;
+  reviewed_at: string | null;
+}
+export interface InstructorGradedSubmissionAppeal extends GradedSubmissionAppeal {
+  learner: string;
+  content_is_current: boolean;
+  assessment_title: string;
+  questions: Question[] | null;
+  responses: Record<string, AssessmentAnswer>;
+  automatic_results: GradedSubmission["results"];
+  specification_pinned: boolean;
 }
 export interface Source {
   id: string;

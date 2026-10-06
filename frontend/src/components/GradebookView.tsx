@@ -39,6 +39,13 @@ export function GradebookView({
               ),
             )}
           </ul>
+          {gradebook.course_grade.manual_override_count > 0 && (
+            <p className="muted">
+              Instructor adjustments applied to saved submissions:{" "}
+              {gradebook.course_grade.manual_override_count}. Original automatic
+              scores remain in attempt history.
+            </p>
+          )}
           <p>{gradebook.course_grade.explanation}</p>
         </section>
       )}

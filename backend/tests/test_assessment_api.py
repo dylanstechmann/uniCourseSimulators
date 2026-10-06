@@ -3,7 +3,14 @@ import json
 from fastapi.testclient import TestClient
 from sqlalchemy import select
 
-from courselab.db import AssessmentInstance, AssessmentPlan, GradedSubmission
+from courselab.db import (
+    AssessmentInstance,
+    AssessmentPlan,
+    GradedSubmission,
+    GradedSubmissionAppeal,
+    GradedSubmissionAppealReview,
+    User,
+)
 
 
 def test_assessment_plan_is_enrollment_scoped_and_never_returns_authoring_keys(app, guest):
@@ -129,6 +136,22 @@ def _configure_graded_homework(
     manifest_path.write_text(json.dumps(manifest), encoding="utf-8")
 
 
+def _provision_reviewer(app, client, email="reviewer@example.org"):
+    registration = client.post("/api/v1/auth/register", json={
+        "email": email, "password": "a-reviewer-test-password",
+    })
+    assert registration.status_code == 201
+    client.headers["X-CSRF-Token"] = registration.json()["csrf_token"]
+    user_id = registration.json()["user"]["id"]
+    with app.state.sessions() as db:
+        reviewer = db.get(User, user_id)
+        assert reviewer is not None and reviewer.is_instructor is False
+        reviewer.is_instructor = True
+        db.commit()
+    assert client.get("/api/v1/auth/session").json()["can_review"] is True
+    return user_id
+
+
 def test_graded_assignment_submissions_are_persisted_safe_and_calculated(guest, content_root):
     _configure_graded_homework(content_root)
     assert guest.post("/api/v1/enrollments", json={"course_id": "test-course"}).status_code == 201
@@ -230,6 +253,167 @@ def test_graded_assignment_deadline_closes_submission(guest, content_root):
         "/api/v1/assessments/test-course/homework-1/submissions",
         json={"responses": {"choice": {"response": 0}}},
     ).status_code == 409
+
+
+def test_graded_submission_appeal_is_audited_and_changes_only_effective_grade(guest, app, content_root):
+    _configure_graded_homework(content_root)
+    assert guest.post("/api/v1/enrollments", json={"course_id": "test-course"}).status_code == 201
+    submitted = guest.post(
+        "/api/v1/assessments/test-course/homework-1/submissions",
+        json={"responses": {"choice": {"response": 1}}},
+    )
+    assert submitted.status_code == 201
+    automatic = submitted.json()
+    assert automatic["score"] == automatic["effective_score"] == 0
+    assert automatic["appeal"] is None
+
+    reason = "The selected response is supported by the stated experimental comparison."
+    appeal_response = guest.post(
+        f"/api/v1/graded-submissions/{automatic['id']}/appeals",
+        json={"reason": reason},
+    )
+    assert appeal_response.status_code == 201
+    appeal = appeal_response.json()
+    assert appeal["status"] == "open" and appeal["effective_score"] == 0
+    assert guest.post(
+        f"/api/v1/graded-submissions/{automatic['id']}/appeals",
+        json={"reason": reason},
+    ).status_code == 409
+    own_appeals = guest.get("/api/v1/graded-appeals")
+    assert own_appeals.status_code == 200 and own_appeals.json()[0]["reason"] == reason
+    own_history = guest.get("/api/v1/assessments/test-course/submissions").json()
+    assert own_history[0]["appeal"]["status"] == "open"
+
+    stranger = TestClient(app, headers={"Origin": "http://localhost:8080"})
+    stranger_session = stranger.post("/api/v1/auth/guest", json={}).json()
+    stranger.headers["X-CSRF-Token"] = stranger_session["csrf_token"]
+    assert stranger.get("/api/v1/graded-appeals").json() == []
+    assert stranger.post(
+        f"/api/v1/graded-submissions/{automatic['id']}/appeals",
+        json={"reason": reason},
+    ).status_code == 404
+    assert stranger.get("/api/v1/instructor/graded-appeals").status_code == 403
+
+    with TestClient(app, headers={"Origin": "http://localhost:8080"}) as reviewer:
+        reviewer_id = _provision_reviewer(app, reviewer)
+        queue = reviewer.get("/api/v1/instructor/graded-appeals")
+        assert queue.status_code == 200 and len(queue.json()) == 1
+        record = queue.json()[0]
+        assert record["id"] == appeal["id"]
+        assert record["learner"] == "Guest account"
+        assert record["content_is_current"] is True
+        assert record["assessment_title"] == "Control analysis"
+        assert record["questions"][0]["prompt"] == "Select a negative control."
+        assert record["responses"]["choice"]["response"] == 1
+        assert "solution_spec" not in queue.text and "PRIVATE_TEST_SENTINEL" not in queue.text
+
+        invalid = reviewer.post(
+            f"/api/v1/instructor/graded-appeals/{appeal['id']}/review",
+            json={"decision": "adjusted", "override_score": 2.1,
+                  "review_note": "This score exceeds the maximum."},
+        )
+        assert invalid.status_code == 422
+        decision = reviewer.post(
+            f"/api/v1/instructor/graded-appeals/{appeal['id']}/review",
+            json={"decision": "adjusted", "override_score": 2,
+                  "review_note": "The learner identified the supported control comparison."},
+        )
+        assert decision.status_code == 200
+        assert decision.json()["status"] == "adjusted"
+        assert reviewer.get("/api/v1/instructor/graded-appeals").json() == []
+        assert len(reviewer.get("/api/v1/instructor/graded-appeals?status=reviewed").json()) == 1
+        assert reviewer.post(
+            f"/api/v1/instructor/graded-appeals/{appeal['id']}/review",
+            json={"decision": "adjusted", "override_score": 1,
+                  "review_note": "A second decision cannot replace the first."},
+        ).status_code == 409
+        assert reviewer.delete("/api/v1/learner").status_code == 204
+
+    history = guest.get("/api/v1/assessments/test-course/submissions").json()
+    reviewed = history[0]
+    assert reviewed["score"] == 0
+    assert reviewed["effective_score"] == 2
+    assert reviewed["score_percent"] == 0
+    assert reviewed["effective_score_percent"] == 100
+    assert reviewed["appeal"]["status"] == "adjusted"
+    assert reviewed["appeal"]["review_note"] == "The learner identified the supported control comparison."
+    gradebook = guest.get("/api/v1/gradebook/test-course").json()["course_grade"]
+    assert gradebook["score_percent"] == 100
+    assert gradebook["manual_override_count"] == 1
+    assert "automatic score" in gradebook["explanation"]
+    exported = guest.get("/api/v1/learner/export").json()
+    assert exported["graded_submission_appeals"][0]["status"] == "adjusted"
+
+    with app.state.sessions() as db:
+        saved = db.get(GradedSubmission, automatic["id"])
+        saved_appeal = db.scalar(select(GradedSubmissionAppeal))
+        review = db.scalar(select(GradedSubmissionAppealReview))
+        assert saved.score == 0 and saved.results_json[0]["score"] == 0
+        assert saved_appeal is not None and review is not None
+        assert review.reviewer_user_id is None
+        assert review.reviewer_email == "deleted instructor account"
+        assert db.get(User, reviewer_id) is None
+
+
+def test_graded_submission_appeal_requires_verified_content_and_blocks_self_review(
+    guest, app, content_root,
+):
+    _configure_graded_homework(content_root)
+    assert guest.post("/api/v1/enrollments", json={"course_id": "test-course"}).status_code == 201
+    submission = guest.post(
+        "/api/v1/assessments/test-course/homework-1/submissions",
+        json={"responses": {"choice": {"response": 1}}},
+    ).json()
+    appeal = guest.post(
+        f"/api/v1/graded-submissions/{submission['id']}/appeals",
+        json={"reason": "Please review the saved answer against its original assessment."},
+    ).json()
+
+    bank = content_root / "courses" / "test-course" / "question-banks" / "private-homework.json"
+    package = json.loads(bank.read_text(encoding="utf-8"))
+    package["questions"][0]["prompt"] = "A same-version edit must not replace the saved prompt."
+    bank.write_text(json.dumps(package), encoding="utf-8")
+    with TestClient(app, headers={"Origin": "http://localhost:8080"}) as reviewer:
+        _provision_reviewer(app, reviewer)
+        record = reviewer.get("/api/v1/instructor/graded-appeals").json()[0]
+        assert record["content_is_current"] is False
+        assert record["questions"] is None and record["responses"] == {}
+        for decision, extra in (("adjusted", {"override_score": 0}), ("upheld", {})):
+            denied = reviewer.post(
+                f"/api/v1/instructor/graded-appeals/{appeal['id']}/review",
+                json={"decision": decision, **extra, "review_note": "The saved specification cannot be verified."},
+            )
+            assert denied.status_code == 409
+        declined = reviewer.post(
+            f"/api/v1/instructor/graded-appeals/{appeal['id']}/review",
+            json={"decision": "declined", "review_note": "The original source version is unavailable."},
+        )
+        assert declined.status_code == 200
+
+
+def test_instructor_cannot_review_own_graded_submission(guest, app, content_root):
+    _configure_graded_homework(content_root)
+    with TestClient(app, headers={"Origin": "http://localhost:8080"}) as reviewer:
+        _provision_reviewer(app, reviewer)
+        assert reviewer.post("/api/v1/enrollments", json={"course_id": "test-course"}).status_code == 201
+        submission = reviewer.post(
+            "/api/v1/assessments/test-course/homework-1/submissions",
+            json={"responses": {"choice": {"response": 1}}},
+        ).json()
+        appeal = reviewer.post(
+            f"/api/v1/graded-submissions/{submission['id']}/appeals",
+            json={"reason": "This reviewer is also the learner on the submission."},
+        ).json()
+        assert all(
+            item["id"] != appeal["id"]
+            for item in reviewer.get("/api/v1/instructor/graded-appeals").json()
+        )
+        denied = reviewer.post(
+            f"/api/v1/instructor/graded-appeals/{appeal['id']}/review",
+            json={"decision": "adjusted", "override_score": 1,
+                  "review_note": "This self-review must be rejected."},
+        )
+        assert denied.status_code == 403
 
 
 def test_graded_assignment_rejects_same_version_source_edits(guest, content_root):

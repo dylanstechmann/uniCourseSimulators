@@ -4,6 +4,7 @@ import { beforeEach, describe, expect, it, vi } from "vitest";
 import { api } from "../api";
 import type {
   GradedAssessment as GradedAssessmentData,
+  GradedSubmissionAppeal,
   GradedSubmission,
 } from "../types";
 import { GradedAssessment } from "./GradedAssessment";
@@ -63,9 +64,12 @@ const submission: GradedSubmission = {
     },
   ],
   score: 2,
+  effective_score: 2,
   max_score: 2,
   score_percent: 100,
+  effective_score_percent: 100,
   submitted_at: "2026-10-06T12:00:00Z",
+  appeal: null,
 };
 
 describe("graded assignment submission", () => {
@@ -83,6 +87,9 @@ describe("graded assignment submission", () => {
         enabled
         history={[]}
         onSubmitted={onSubmitted}
+        onAppeal={vi.fn(async () => {
+          throw new Error("No appeal expected in this test");
+        })}
       />,
     );
 
@@ -104,5 +111,68 @@ describe("graded assignment submission", () => {
     expect(
       screen.getByText(/correct result reasoning not assessed/),
     ).toBeInTheDocument();
+  });
+
+  it("lets a learner request a separate human review of a saved assignment", async () => {
+    vi.mocked(api.gradedAssessment).mockResolvedValue(assessment);
+    const failed: GradedSubmission = {
+      ...submission,
+      score: 0,
+      effective_score: 0,
+      score_percent: 0,
+      effective_score_percent: 0,
+      results: [
+        {
+          ...submission.results[0],
+          score: 0,
+          feedback: {
+            ...submission.results[0].feedback,
+            diagnosis: "incorrect_result",
+          },
+        },
+      ],
+    };
+    const appeal: GradedSubmissionAppeal = {
+      id: "graded-appeal-1",
+      submission_id: failed.id,
+      course_id: "fixture-course",
+      assessment_id: "homework-1",
+      attempt_number: 1,
+      reason: "The selected answer matches the stated comparison.",
+      status: "open",
+      decision: null,
+      review_note: null,
+      original_score: 0,
+      effective_score: 0,
+      max_score: 2,
+      created_at: "2026-10-06T12:05:00Z",
+      reviewed_at: null,
+    };
+    const onAppeal = vi.fn(async () => appeal);
+    const user = userEvent.setup();
+    render(
+      <GradedAssessment
+        courseId="fixture-course"
+        assessmentId="homework-1"
+        enabled
+        history={[failed]}
+        onSubmitted={vi.fn(async () => undefined)}
+        onAppeal={onAppeal}
+      />,
+    );
+
+    await screen.findByText("Select the matched control.");
+    await user.type(
+      screen.getByLabelText("Request human review"),
+      appeal.reason,
+    );
+    await user.click(
+      screen.getByRole("button", { name: "Send for human review" }),
+    );
+
+    await waitFor(() =>
+      expect(onAppeal).toHaveBeenCalledWith(failed.id, appeal.reason),
+    );
+    expect(screen.getByText(/Automatic score: 0 \/ 2/)).toBeInTheDocument();
   });
 });

@@ -1,11 +1,13 @@
 import { useEffect, useState, type FormEvent } from "react";
 import { api, errorMessage } from "../api";
-import type { InstructorAppeal, Question } from "../types";
+import type {
+  AssessmentAnswer,
+  InstructorAppeal,
+  InstructorGradedSubmissionAppeal,
+  Question,
+} from "../types";
 
-function responseText(
-  response: InstructorAppeal["response"],
-  question: Question | null,
-) {
+function responseText(response: AssessmentAnswer, question: Question | null) {
   const value = response.response;
   if (Array.isArray(value))
     return value
@@ -16,6 +18,7 @@ function responseText(
   if (typeof value === "object") {
     if ("content_base64" in value)
       return "CSV file submitted for this attempt.";
+    if ("content_text" in value) return String(value.content_text);
     return Object.entries(value)
       .map(([key, item]) => {
         const field = question?.response_fields?.find(
@@ -212,13 +215,21 @@ function ReviewCard({
 
 export function InstructorReview() {
   const [appeals, setAppeals] = useState<InstructorAppeal[]>([]);
+  const [gradedAppeals, setGradedAppeals] = useState<
+    InstructorGradedSubmissionAppeal[]
+  >([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
   async function load() {
     setLoading(true);
     setError("");
     try {
-      setAppeals(await api.instructorAppeals());
+      const [practiceAppeals, assignmentAppeals] = await Promise.all([
+        api.instructorAppeals(),
+        api.instructorGradedAppeals(),
+      ]);
+      setAppeals(practiceAppeals);
+      setGradedAppeals(assignmentAppeals);
     } catch (problem) {
       setError(errorMessage(problem));
     } finally {
@@ -233,9 +244,8 @@ export function InstructorReview() {
       <span className="eyebrow">Authorized instructor workspace</span>
       <h1 id="review-title">Human review requests</h1>
       <p className="notice">
-        Decisions apply only to the formative practice record. The original
-        deterministic score is retained, each decision is auditable, and
-        reviewed points do not represent course credit.
+        Human decisions are stored separately from deterministic scores. Every
+        adjustment is auditable; it does not represent university credit.
       </p>
       {error ? (
         <p role="alert" className="error">
@@ -243,6 +253,7 @@ export function InstructorReview() {
         </p>
       ) : null}
       {loading ? <p role="status">Loading review requests…</p> : null}
+      <h2>Formative practice</h2>
       {!loading && appeals.length === 0 && !error ? (
         <p>No open requests.</p>
       ) : null}
@@ -253,6 +264,213 @@ export function InstructorReview() {
           onReviewed={() => void load()}
         />
       ))}
+      <h2>Graded assignments</h2>
+      {!loading && gradedAppeals.length === 0 && !error ? (
+        <p>No open requests.</p>
+      ) : null}
+      {gradedAppeals.map((appeal) => (
+        <GradedReviewCard
+          key={appeal.id}
+          appeal={appeal}
+          onReviewed={() => void load()}
+        />
+      ))}
     </section>
+  );
+}
+
+function GradedReviewCard({
+  appeal,
+  onReviewed,
+}: {
+  appeal: InstructorGradedSubmissionAppeal;
+  onReviewed: () => void;
+}) {
+  const [decision, setDecision] = useState<"adjusted" | "upheld" | "declined">(
+    "upheld",
+  );
+  const [score, setScore] = useState(appeal.original_score.toString());
+  const [note, setNote] = useState("");
+  const [busy, setBusy] = useState(false);
+  const [error, setError] = useState("");
+  async function submit(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    setBusy(true);
+    setError("");
+    try {
+      await api.reviewGradedAppeal(
+        appeal.id,
+        decision,
+        note.trim(),
+        decision === "adjusted" ? Number(score) : undefined,
+      );
+      onReviewed();
+    } catch (problem) {
+      setError(errorMessage(problem));
+    } finally {
+      setBusy(false);
+    }
+  }
+  const questionById = new Map(
+    (appeal.questions ?? []).map((question) => [question.id, question]),
+  );
+  return (
+    <article className="card instructor-appeal">
+      <div className="section-heading">
+        <div>
+          <span className="eyebrow">
+            {appeal.course_id} · {appeal.assessment_id} · attempt{" "}
+            {appeal.attempt_number}
+            {!appeal.content_is_current && " · saved content unavailable"}
+          </span>
+          <h3>
+            {appeal.assessment_title} · request from {appeal.learner}
+          </h3>
+        </div>
+        <span className="tag">
+          {appeal.original_score} / {appeal.max_score} automatic
+        </span>
+      </div>
+      {!appeal.content_is_current || !appeal.questions ? (
+        <p className="notice">
+          The saved assignment source or grading digest no longer matches. Only
+          a decline explaining this limitation can be recorded.
+        </p>
+      ) : null}
+      {appeal.questions?.map((question) => {
+        const response = appeal.responses[question.id];
+        const value = response?.response;
+        const csvText =
+          value &&
+          typeof value === "object" &&
+          !Array.isArray(value) &&
+          "content_text" in value
+            ? String(value.content_text)
+            : null;
+        return (
+          <section key={question.id} className="review-question">
+            <h4>{question.prompt}</h4>
+            {question.options.length > 0 && (
+              <ol
+                className="review-options"
+                aria-label={`${question.id} options`}
+              >
+                {question.options.map((option, index) => (
+                  <li key={`${index}-${option}`}>{option}</li>
+                ))}
+              </ol>
+            )}
+            {(question.response_fields ?? []).map((field) => (
+              <div className="review-response-field" key={field.id}>
+                <strong>{field.prompt}</strong>
+                {field.options.length > 0 && (
+                  <ul>
+                    {field.options.map((option) => (
+                      <li key={option}>{option}</li>
+                    ))}
+                  </ul>
+                )}
+              </div>
+            ))}
+            <h5>Learner response</h5>
+            {csvText !== null ? (
+              <pre className="submitted-response">{csvText}</pre>
+            ) : (
+              <p className="submitted-response">
+                {response
+                  ? responseText(
+                      response,
+                      questionById.get(question.id) ?? null,
+                    )
+                  : "No saved response."}
+              </p>
+            )}
+            {appeal.automatic_results
+              .filter((result) => result.question_id === question.id)
+              .map((result) => (
+                <p key={result.question_id}>
+                  Automatic feedback:{" "}
+                  {result.feedback.diagnosis.replaceAll("_", " ")} ·{" "}
+                  {result.score} / {result.max_score}.{" "}
+                  {result.feedback.next_step}
+                </p>
+              ))}
+          </section>
+        );
+      })}
+      <h4>Request</h4>
+      <p>{appeal.reason}</p>
+      <form className="review-form" onSubmit={submit}>
+        <fieldset>
+          <legend>Decision</legend>
+          <label>
+            <input
+              type="radio"
+              name={`graded-decision-${appeal.id}`}
+              checked={decision === "adjusted"}
+              onChange={() => setDecision("adjusted")}
+              disabled={!appeal.content_is_current}
+            />
+            Adjust graded score
+          </label>
+          <label>
+            <input
+              type="radio"
+              name={`graded-decision-${appeal.id}`}
+              checked={decision === "upheld"}
+              onChange={() => setDecision("upheld")}
+              disabled={!appeal.content_is_current}
+            />
+            Uphold automatic score
+          </label>
+          <label>
+            <input
+              type="radio"
+              name={`graded-decision-${appeal.id}`}
+              checked={decision === "declined"}
+              onChange={() => setDecision("declined")}
+            />
+            Decline request
+          </label>
+        </fieldset>
+        {decision === "adjusted" ? (
+          <label>
+            Reviewed graded score (0–{appeal.max_score})
+            <input
+              type="number"
+              min={0}
+              max={appeal.max_score}
+              step="any"
+              value={score}
+              onChange={(event) => setScore(event.target.value)}
+              required
+            />
+          </label>
+        ) : null}
+        <label>
+          Review note (visible to the learner)
+          <textarea
+            value={note}
+            onChange={(event) => setNote(event.target.value)}
+            minLength={10}
+            maxLength={4000}
+            rows={3}
+            required
+          />
+        </label>
+        <button
+          className="primary"
+          type="submit"
+          disabled={busy || note.trim().length < 10}
+        >
+          {busy ? "Recording decision…" : "Record review decision"}
+        </button>
+        {error && (
+          <p role="alert" className="error">
+            {error}
+          </p>
+        )}
+      </form>
+    </article>
   );
 }

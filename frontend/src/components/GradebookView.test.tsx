@@ -38,6 +38,7 @@ describe("practice gradebook API contract", () => {
         category_scores: { homework: 88.5, exams: null },
         active_weight: 0.6,
         policy_version: "weighted-grade-v1",
+        manual_override_count: 1,
         status: "in_progress",
         explanation: "The current percentage uses the configured policy.",
       },
@@ -146,6 +147,11 @@ describe("practice gradebook API contract", () => {
     ).toHaveAttribute("href", "#/course/cell-biology/lesson/cell-biology-1");
     expect(
       screen.getByText(/not a course grade, mastery certification/),
+    ).toBeInTheDocument();
+    expect(
+      screen.getByText(
+        /Instructor adjustments applied to saved submissions: 1/,
+      ),
     ).toBeInTheDocument();
   });
 });

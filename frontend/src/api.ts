@@ -8,6 +8,8 @@ import type {
   AssessmentAnswer,
   AssessmentPlan,
   InstructorAppeal,
+  GradedSubmissionAppeal,
+  InstructorGradedSubmissionAppeal,
   Gradebook,
   GradedAssessment,
   GradedSubmission,
@@ -111,6 +113,32 @@ export const api = {
     ),
   gradedSubmissions: (id: string) =>
     request<GradedSubmission[]>(`/assessments/${encode(id)}/submissions`),
+  requestGradedAppeal: (submissionId: string, reason: string) =>
+    request<GradedSubmissionAppeal>(
+      `/graded-submissions/${encode(submissionId)}/appeals`,
+      "POST",
+      { reason },
+    ),
+  gradedAppeals: () => request<GradedSubmissionAppeal[]>("/graded-appeals"),
+  instructorGradedAppeals: (status = "open") =>
+    request<InstructorGradedSubmissionAppeal[]>(
+      `/instructor/graded-appeals?status=${encode(status)}`,
+    ),
+  reviewGradedAppeal: (
+    appealId: string,
+    decision: "adjusted" | "upheld" | "declined",
+    review_note: string,
+    override_score?: number,
+  ) =>
+    request<InstructorGradedSubmissionAppeal>(
+      `/instructor/graded-appeals/${encode(appealId)}/review`,
+      "POST",
+      {
+        decision,
+        review_note,
+        ...(override_score !== undefined ? { override_score } : {}),
+      },
+    ),
   progress: (id: string) => request<Progress[]>(`/progress/${encode(id)}`),
   setProgress: (id: string, lesson: string, completed: boolean) =>
     request<Progress>(`/progress/${encode(id)}/${encode(lesson)}`, "PATCH", {

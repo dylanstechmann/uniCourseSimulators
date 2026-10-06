@@ -21,7 +21,7 @@ def test_alembic_upgrade_matches_metadata(tmp_path, monkeypatch):
     assert set(inspect(engine).get_table_names()) == {
         "alembic_version", "users", "sessions", "enrollments", "progress", "notes", "bookmarks",
         "attempts", "appeals", "appeal_reviews", "assessment_plans", "assessment_instances",
-        "graded_submissions",
+        "graded_submissions", "graded_submission_appeals", "graded_submission_appeal_reviews",
     }
     command.check(config)
     command.downgrade(config, "base")

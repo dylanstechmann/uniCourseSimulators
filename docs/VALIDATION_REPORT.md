@@ -2,13 +2,36 @@
 
 ## Scope and result
 
-2026-10-06; synthetic local learner data only. Milestones 1 and 2 are implemented. Milestone 3 remains partial; the deterministic graders and a prototype graded-assignment workflow are described below. A Milestone 4 curriculum-map increment is implemented and tested, while subject-matter review and map refinement remain. All 25 course packages are **partial**; zero are beta, complete or externally reviewed. The appeal workflow provides limited formative-score review, but no qualified course-content review, semester equivalence, university credit, security certification or public production deployment is asserted.
+2026-10-06; synthetic local learner data only. Milestones 1 and 2 are implemented. Milestone 3 remains partial; deterministic graders and prototype graded-assignment and review workflows are described below. A Milestone 4 curriculum-map increment is implemented and tested, while subject-matter review and map refinement remain. All 25 course packages are **partial**; zero are beta, complete or externally reviewed. Human score review is limited to saved attempts and does not constitute course-content review. No semester equivalence, university credit, security certification or public production deployment is asserted.
 
-## Current increment: deterministic graded-assignment submission and weighted gradebook
+## Current increment: graded-assignment appeals and manual review
+
+Alembic revision 0007 adds a one-appeal-per-submission learner workflow and a separate append-only instructor decision record. Learners can request a review of a graded result; authorized reviewers can uphold, decline, or adjust within the assignment's score bounds. The original deterministic score and feedback remain immutable. Adjusted results are surfaced as effective scores and feed the weighted gradebook. Instructor review reconstructs only answer-free question views and verifies the pinned course source and question digest; stale or unavailable specifications can only be declined. Self-review is blocked. Learner export, account deletion, reviewer anonymization, and gradebook override counts include these records.
+
+The graded-assignment workflow still runs only against synthetic test fixtures because **none of the 25 shipped course packages contains graded assignments**. No live catalog course awards a weighted course grade. Programming assignments remain disabled, and no historical content archive is available for regrading old versions. Course maturity is unchanged: 25 partial, 0 beta, 0 complete, 0 externally reviewed.
+
+Validation on 2026-10-06: backend **221 passed** (one upstream Starlette/httpx deprecation warning); root content/security suite **53 passed, 1 skipped**; frontend **30 unit tests passed**, lint/format and TypeScript/Vite build passed (205 modules); Playwright **9 passed** against the rebuilt Compose stack; legacy storage migration **7 passed**. Ruff passed. Content validation found 25 packages, 101 lessons, 106 questions, 203 cards and 25 cases: zero errors and 125 explicit depth/objective warnings. The API/content check passed for 25 packages and 108 practice specifications. The source/bundle security scan found zero issues in 382 files. Compose services are healthy, Alembic is at `0007 (head)`, both review tables exist, and `/api/v1/health` is `ok`; programming and LLM providers remain disabled.
+
+| Command/check | Result |
+| --- | --- |
+| `python tools/validate_content.py` | PASS: 25 packages; 0 errors; 125 disclosed depth/objective warnings |
+| `python -m pytest tests -q` | 53 passed, 1 skipped |
+| `cd backend; python -m pytest tests -q` | 221 passed; 1 upstream deprecation warning |
+| `ruff check backend tools tests` | PASS |
+| `node tests/legacy/state.test.mjs` | 7 passed |
+| Frontend `npm run lint`, `npm test -- --run`, `npm run build` | PASS; 30 unit tests; 205 modules built |
+| `npm run test:e2e` against `http://localhost:8080` | 9 passed |
+| `python -m courselab.check_content ../content` | PASS: 25 packages / 108 practice specifications |
+| `python tools/check_security.py --bundle frontend/dist` | PASS: 382 files, 0 findings |
+| `docker compose up --build -d`; `alembic current`, review-table query and `/api/v1/health` | PASS: services healthy; Alembic `0007`; both review tables exist; health `ok` |
+
+Playwright covers guest enrollment, lesson viewing, formative submission/feedback, progress and persistence, plus existing appeal flows and protection of public question views. Graded-assignment appeal, score bounds, stale-source decline, immutable automatic scores, weighted-grade updates and anonymization are covered by backend API tests and frontend component tests on synthetic fixtures. Existing user and database volumes were preserved during rebuild. These local synthetic checks do not constitute a security audit or full course-quality review.
+
+## Previous increment: deterministic graded-assignment submission and weighted gradebook
 
 Alembic revision 0006 adds append-only graded submissions tied to learner enrollment, course version, assessment and attempt number. An enrolled learner receives a whitelisted question view with no answer keys, then submits a complete response for server-side deterministic grading. The API verifies the enrollment-pinned source file hash and question mapping, enforces release time, a strict deadline and attempt limits, stores scores and criterion feedback, serves learner-owned attempt history, and includes selected results in the weighted gradebook. The React workspace provides the assignment response form, immediate feedback and refreshed gradebook. Export and account deletion include the new records.
 
-The executable submission path uses a synthetic test fixture because **none of the 25 shipped course packages currently contains graded assignments**. Consequently no live catalog course awards a weighted course grade. The supported late-work policy is a strict deadline; graded appeals/manual overrides, archived historical content and code execution are not implemented. This increment does not change course maturity: 25 partial, 0 beta, 0 complete, 0 externally reviewed.
+The executable submission path uses a synthetic test fixture because **none of the 25 shipped course packages currently contains graded assignments**. Consequently no live catalog course awards a weighted course grade. At the time of this increment, graded appeals/manual overrides, archived historical content and code execution were not implemented. This increment did not change course maturity: 25 partial, 0 beta, 0 complete, 0 externally reviewed.
 
 Validation on 2026-10-06: backend **218 passed** (one upstream Starlette/httpx deprecation warning); root content/security suite **53 passed, 1 skipped**; frontend **27 unit tests passed**, lint/format and TypeScript/Vite build passed (205 modules); Playwright **9 passed** against the rebuilt Compose stack. Ruff passed after correcting import ordering in two existing utility/test files. Content validation found 25 packages, 101 lessons, 106 questions, 203 cards and 25 cases: zero errors and 125 explicit depth/objective warnings. The API/content check passed for 25 packages and 108 practice specifications. The source/bundle security scan found zero issues in 381 files. Compose services are healthy, Alembic is at `0006 (head)`, the `graded_submissions` table exists, and `/api/v1/health` is `ok`; programming and LLM providers remain disabled. GitHub Actions passed both jobs for the graded-workflow commit in [run 37505270475](https://github.com/dylanstechmann/uniStemCourseSimulators/actions/runs/37505270475) and for its LF-normalized tree in [run 37505850315](https://github.com/dylanstechmann/uniStemCourseSimulators/actions/runs/37505850315).
 

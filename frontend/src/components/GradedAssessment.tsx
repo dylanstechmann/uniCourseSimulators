@@ -3,6 +3,7 @@ import { api, errorMessage } from "../api";
 import type {
   AssessmentAnswer,
   GradedAssessment as GradedAssessmentData,
+  GradedSubmissionAppeal,
   GradedSubmission,
   Question,
 } from "../types";
@@ -275,19 +276,46 @@ function GradedQuestion({
   );
 }
 
-function SubmissionFeedback({ submission }: { submission: GradedSubmission }) {
+function SubmissionFeedback({
+  submission,
+  onAppeal,
+}: {
+  submission: GradedSubmission;
+  onAppeal: (
+    submissionId: string,
+    reason: string,
+  ) => Promise<GradedSubmissionAppeal>;
+}) {
+  const [reason, setReason] = useState("");
+  const [busy, setBusy] = useState(false);
+  const [error, setError] = useState("");
+  async function requestReview(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    if (reason.trim().length < 20) return;
+    setBusy(true);
+    setError("");
+    try {
+      await onAppeal(submission.id, reason.trim());
+      setReason("");
+    } catch (problem) {
+      setError(errorMessage(problem));
+    } finally {
+      setBusy(false);
+    }
+  }
   return (
     <section
       className="notice"
       aria-label={`Attempt ${submission.attempt_number} results`}
     >
       <h3>
-        Attempt {submission.attempt_number}: {submission.score} /{" "}
+        Attempt {submission.attempt_number}: {submission.effective_score} /{" "}
         {submission.max_score} points
       </h3>
       <p>
-        {submission.score_percent}% on this attempt. Automatic scores follow the
-        published criteria; no model-generated scoring is used.
+        {submission.effective_score_percent}% after review. Automatic score:{" "}
+        {submission.score} / {submission.max_score}. Deterministic criteria set
+        the original score; instructor adjustments are recorded separately.
       </p>
       <ul>
         {submission.results.map((result) => (
@@ -300,6 +328,52 @@ function SubmissionFeedback({ submission }: { submission: GradedSubmission }) {
           </li>
         ))}
       </ul>
+      {submission.appeal ? (
+        <div className="appeal-status" aria-label="Assignment review status">
+          <h4>Human review · {submission.appeal.status}</h4>
+          <p>{submission.appeal.reason}</p>
+          {submission.appeal.review_note && (
+            <p>{submission.appeal.review_note}</p>
+          )}
+          {submission.appeal.status === "open" ? (
+            <p>Your request is saved for an authorized instructor to review.</p>
+          ) : submission.appeal.status === "adjusted" ? (
+            <p>
+              The reviewed score is {submission.appeal.effective_score} /{" "}
+              {submission.appeal.max_score}. The automatic score remains saved
+              as {submission.appeal.original_score}.
+            </p>
+          ) : (
+            <p>
+              The automatic score remains {submission.appeal.original_score}.
+            </p>
+          )}
+        </div>
+      ) : (
+        <form className="appeal-form" onSubmit={requestReview}>
+          <label htmlFor={`graded-${submission.id}-appeal-reason`}>
+            Request human review
+          </label>
+          <textarea
+            id={`graded-${submission.id}-appeal-reason`}
+            value={reason}
+            onChange={(event) => setReason(event.target.value)}
+            minLength={20}
+            maxLength={4000}
+            rows={3}
+            required
+            placeholder="Explain what the grader or rubric may have missed."
+          />
+          <button type="submit" disabled={busy || reason.trim().length < 20}>
+            {busy ? "Saving request…" : "Send for human review"}
+          </button>
+          {error && (
+            <p role="alert" className="error">
+              {error}
+            </p>
+          )}
+        </form>
+      )}
     </section>
   );
 }
@@ -310,12 +384,17 @@ export function GradedAssessment({
   enabled,
   history,
   onSubmitted,
+  onAppeal,
 }: {
   courseId: string;
   assessmentId: string;
   enabled: boolean;
   history: GradedSubmission[];
   onSubmitted: (submission: GradedSubmission) => Promise<void>;
+  onAppeal: (
+    submissionId: string,
+    reason: string,
+  ) => Promise<GradedSubmissionAppeal>;
 }) {
   const [assessment, setAssessment] = useState<GradedAssessmentData | null>(
     null,
@@ -425,7 +504,11 @@ export function GradedAssessment({
             </p>
           )}
           {assessmentHistory.map((submission) => (
-            <SubmissionFeedback key={submission.id} submission={submission} />
+            <SubmissionFeedback
+              key={submission.id}
+              submission={submission}
+              onAppeal={onAppeal}
+            />
           ))}
           {assessment.schedule_status === "open" && (
             <form onSubmit={submit} className="stack">
@@ -465,9 +548,8 @@ export function GradedAssessment({
             </form>
           )}
           <p className="muted">
-            Scores are deterministic and the learner can review saved attempts.
-            Manual review for graded assignments is not available in this
-            increment.
+            Original scores are deterministic. A learner may request one human
+            review per saved attempt; adjustments remain separate and auditable.
           </p>
         </>
       ) : null}

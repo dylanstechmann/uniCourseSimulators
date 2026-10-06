@@ -218,6 +218,25 @@ export function CourseWorkspace({
     setAssessmentPlan(nextPlan);
     setGradedSubmissions(nextSubmissions);
   }
+  async function requestGradedAppeal(submissionId: string, reason: string) {
+    const appeal = await api.requestGradedAppeal(submissionId, reason);
+    setGradedSubmissions((previous) =>
+      previous.map((submission) =>
+        submission.id === submissionId
+          ? {
+              ...submission,
+              appeal,
+              effective_score: appeal.effective_score,
+              effective_score_percent:
+                Math.round(
+                  (appeal.effective_score / submission.max_score) * 10000,
+                ) / 100,
+            }
+          : submission,
+      ),
+    );
+    return appeal;
+  }
   async function saveNote(body: string) {
     const note = await api.saveNote(id, lessonId!, body);
     setNotes((previous) => [
@@ -400,6 +419,7 @@ export function CourseWorkspace({
                     enabled={enrolled && !needsVersionReview}
                     history={gradedSubmissions}
                     onSubmitted={refreshAfterGradedSubmission}
+                    onAppeal={requestGradedAppeal}
                   />
                 )}
                 <GradebookView

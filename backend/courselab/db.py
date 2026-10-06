@@ -130,6 +130,52 @@ class GradedSubmission(Base):
     submitted_at: Mapped[datetime] = mapped_column(DateTime, default=now)
 
 
+class GradedSubmissionAppeal(Base):
+    """One immutable learner request for a human review of a graded submission."""
+    __tablename__ = "graded_submission_appeals"
+    __table_args__ = (UniqueConstraint("submission_id", name="uq_graded_submission_appeal_submission"),)
+    id: Mapped[str] = mapped_column(String(36), primary_key=True, default=identifier)
+    submission_id: Mapped[str] = mapped_column(
+        ForeignKey("graded_submissions.id", ondelete="CASCADE"), index=True
+    )
+    user_id: Mapped[str] = mapped_column(ForeignKey("users.id", ondelete="CASCADE"), index=True)
+    reason: Mapped[str] = mapped_column(Text)
+    created_at: Mapped[datetime] = mapped_column(DateTime, default=now)
+
+
+class GradedSubmissionAppealReview(Base):
+    """Append-only graded-submission review; the automatic score stays unchanged."""
+    __tablename__ = "graded_submission_appeal_reviews"
+    __table_args__ = (
+        UniqueConstraint("appeal_id", name="uq_graded_submission_appeal_review_appeal"),
+        CheckConstraint(
+            "decision IN ('adjusted', 'upheld', 'declined')",
+            name="ck_graded_submission_appeal_review_decision",
+        ),
+        CheckConstraint(
+            "(decision = 'adjusted' AND override_score IS NOT NULL) OR "
+            "(decision IN ('upheld', 'declined') AND override_score IS NULL)",
+            name="ck_graded_submission_appeal_review_score_matches_decision",
+        ),
+        CheckConstraint(
+            "override_score IS NULL OR override_score >= 0",
+            name="ck_graded_submission_appeal_review_score_nonnegative",
+        ),
+    )
+    id: Mapped[str] = mapped_column(String(36), primary_key=True, default=identifier)
+    appeal_id: Mapped[str] = mapped_column(
+        ForeignKey("graded_submission_appeals.id", ondelete="CASCADE"), index=True
+    )
+    reviewer_user_id: Mapped[str | None] = mapped_column(
+        ForeignKey("users.id", ondelete="SET NULL"), nullable=True, index=True
+    )
+    reviewer_email: Mapped[str] = mapped_column(String(254))
+    decision: Mapped[str] = mapped_column(String(20))
+    review_note: Mapped[str] = mapped_column(Text)
+    override_score: Mapped[float | None] = mapped_column(Float, nullable=True)
+    created_at: Mapped[datetime] = mapped_column(DateTime, default=now)
+
+
 class Progress(Base):
     __tablename__ = "progress"
     __table_args__ = (UniqueConstraint("user_id", "course_id", "lesson_id", name="uq_progress_lesson"),)

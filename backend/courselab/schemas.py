@@ -385,6 +385,23 @@ class AssignmentQuestionResult(BaseModel):
     feedback: Feedback
 
 
+class GradedSubmissionAppealResponse(BaseModel):
+    id: str
+    submission_id: str
+    course_id: str
+    assessment_id: str
+    attempt_number: int = Field(ge=1)
+    reason: str
+    status: Literal["open", "adjusted", "upheld", "declined"]
+    decision: Literal["adjusted", "upheld", "declined"] | None
+    review_note: str | None
+    original_score: float = Field(ge=0)
+    effective_score: float = Field(ge=0)
+    max_score: float = Field(gt=0)
+    created_at: str
+    reviewed_at: str | None
+
+
 class AssessmentSubmissionResponse(BaseModel):
     id: str
     course_id: str
@@ -394,9 +411,22 @@ class AssessmentSubmissionResponse(BaseModel):
     responses: dict[str, AttemptRequest]
     results: list[AssignmentQuestionResult]
     score: float = Field(ge=0)
+    effective_score: float = Field(ge=0)
     max_score: float = Field(gt=0)
     score_percent: float = Field(ge=0, le=100)
+    effective_score_percent: float = Field(ge=0, le=100)
     submitted_at: str
+    appeal: GradedSubmissionAppealResponse | None = None
+
+
+class InstructorGradedSubmissionAppealResponse(GradedSubmissionAppealResponse):
+    learner: str
+    content_is_current: bool
+    assessment_title: str
+    questions: list[PublicQuestion] | None
+    responses: dict[str, AttemptRequest]
+    automatic_results: list[AssignmentQuestionResult]
+    specification_pinned: bool
 
 
 class CourseGradeView(BaseModel):
@@ -404,6 +434,7 @@ class CourseGradeView(BaseModel):
     category_scores: dict[str, float | None]
     active_weight: float = Field(ge=0, le=1)
     policy_version: Literal["weighted-grade-v1"]
+    manual_override_count: int = Field(default=0, ge=0)
     status: Literal["configured_no_submissions", "in_progress"]
     explanation: str
 
