@@ -226,7 +226,9 @@ export interface Appeal {
 export interface InstructorAppeal extends Appeal {
   learner: string;
   content_is_current: boolean;
+  review_question: Question | null;
   question_prompt: string | null;
+  question_options: string[] | null;
   response: Attempt["response"];
   automatic_feedback: Attempt["result"];
   specification_pinned: boolean;

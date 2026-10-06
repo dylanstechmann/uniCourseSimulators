@@ -57,7 +57,11 @@ def test_digest_migration_preserves_unpinned_existing_attempts(tmp_path, monkeyp
             "SELECT content_version, grading_policy_version, question_spec_sha256 "
             "FROM attempts WHERE id='a1'"
         )).one()
+        instructor_role = connection.execute(text(
+            "SELECT is_instructor FROM users WHERE id='u1'"
+        )).scalar_one()
     assert old == ("0.1.0", "practice-v1", None)
+    assert not instructor_role
     assert "question_spec_sha256" in {column["name"] for column in inspect(engine).get_columns("attempts")}
     command.downgrade(config, "base")
     engine.dispose()
@@ -94,7 +98,7 @@ def test_variant_token_secret_is_private_and_has_a_minimum_length(monkeypatch):
         Settings.from_environment()
 
 
-def test_instructor_email_allowlist_is_normalized_and_contains_no_credentials(monkeypatch):
-    monkeypatch.setenv("INSTRUCTOR_EMAILS", " Reviewer@Example.org, second@example.org ")
+def test_self_declared_email_environment_is_not_authorization(monkeypatch):
+    monkeypatch.setenv("INSTRUCTOR_EMAILS", "reviewer@example.org")
     settings = Settings.from_environment()
-    assert settings.instructor_emails == ("reviewer@example.org", "second@example.org")
+    assert not hasattr(settings, "instructor_emails")

@@ -19,10 +19,6 @@ class Settings:
     body_limit: int = 65536
     rate_limit: int = 120
     auth_rate_limit: int = 30
-    # Instructor access is disabled unless deployment operators explicitly
-    # allowlist registered account emails. This is authorization metadata,
-    # never a credential.
-    instructor_emails: tuple[str, ...] = ()
     # An ephemeral default is sufficient for local development. Deployments can
     # set VARIANT_TOKEN_SECRET to keep active practice variants valid on restart.
     variant_token_secret: bytes = field(default_factory=lambda: secrets.token_bytes(32), repr=False)
@@ -50,11 +46,6 @@ class Settings:
                 origin.strip() for origin in os.getenv(
                     "ALLOWED_ORIGINS", "http://localhost:8080,http://127.0.0.1:8080"
                 ).split(",") if origin.strip()
-            ),
-            instructor_emails=tuple(
-                email.strip().lower()
-                for email in os.getenv("INSTRUCTOR_EMAILS", "").split(",")
-                if email.strip()
             ),
             cookie_secure=os.getenv("COOKIE_SECURE", "true").lower() == "true",
             variant_token_secret=(

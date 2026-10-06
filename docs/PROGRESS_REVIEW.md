@@ -1,6 +1,6 @@
 # Progress review: uniStemCourseSimulators
 
-Reviewed 2026-10-05 against the requested six milestones. Implementation baseline: commit `68defd74b8c98d8cac0556de3de72b8219bf987f`. This review inspected application code, manifests, readings, assessments, schemas, validator, tests and deployment configuration. Rename validation is recorded separately in [VALIDATION_REPORT.md](VALIDATION_REPORT.md). Automated passing tests demonstrate the covered behavior; they do not establish academic adequacy or production security.
+Reviewed 2026-10-06 against the requested six milestones. The content and breadth measurements below use commit `68defd74b8c98d8cac0556de3de72b8219bf987f`; the current increment changes only instructor authorization, appeal context, documentation and tests, so those content measurements are unchanged. Its review fixes passed the validation recorded in [VALIDATION_REPORT.md](VALIDATION_REPORT.md). This review inspects application code, manifests, readings, assessments, schemas, validator, tests and deployment configuration. Automated passing tests demonstrate covered behavior; they do not establish academic adequacy or production security.
 
 ## Overall assessment
 
@@ -10,17 +10,17 @@ The repository is a working local formative learning and practice platform. Infr
 | --- | --- | --- |
 | 1: Audit, identity, schemas, maturity | Substantially delivered | Maintain accurate documentation and migration compatibility |
 | 2: Full-stack reader and persistence | Delivered for local formative study | Semester calendar, scheduled assessments and richer learner tools |
-| 3: Grading and instructor feedback | Partial | Secure reviewer identity, faithful appeal reconstruction, assignment/exam model, weighted policies, broader reasoning assessment |
+| 3: Grading and instructor feedback | Partial | The current increment closes email-impersonation and same-version variant/digest review defects. Semester assignments/exams, weighted policies, broader reasoning assessment and immutable historical content remain |
 | 4: Catalog and dependencies | Planning metadata delivered | Qualified review of scope, sequencing and prerequisites |
 | 5: Full biology vertical slice | Not delivered | Original 14-week instruction and aligned semester assessment sequence |
 | 6: Full quality gates/deployment | Foundations delivered | Trusted completion evidence, academic/accessibility review, operational hardening |
 
 ## What works now
 
-- Local Docker Compose startup with private database/credential volumes, Alembic revisions through `0003`, a same-origin API proxy and a separate frontend image.
+- Local Docker Compose startup with private database/credential volumes, Alembic migrations including operator-provisioned review roles, a same-origin API proxy and a separate frontend image.
 - Public course reading; guest/account sessions and conversion; enrollment, reading marks, notes/bookmarks, immutable attempts, feedback history, practice gradebook and learner export/delete.
 - Choice/multiple-select, constrained numerical units/tolerances/significant figures, bounded rational-expression equivalence, fielded data/rubric responses, small CSV numeric tables and fixed-axis coordinate grading. These are narrowly specified formative graders, with explicit unsupported cases.
-- Append-only appeal decisions and effective practice score overrides. Their authorization/content reconstruction limitations below must be addressed before public instructor use.
+- Append-only appeal decisions and effective formative-score overrides. Instructor roles are granted only through an operator CLI after out-of-band identity review; registration cannot grant access. Variant attempts are reconstructed from their saved ID, and changes are accepted only when the current course version and question-specification digest match. Older content cannot be restored because immutable package archives do not exist.
 - Eight pathway maps and prerequisite validation across 62 nodes. The JHU map includes all four requested foundational topics and the advanced topic list, with link-only provenance and equivalency caveats.
 - Source registry, separate software/content licenses, public DTO exclusions, CSRF/ownership checks, safe Markdown, CI, backend/frontend/content tests and basic browser accessibility checks.
 
@@ -50,8 +50,8 @@ Module provenance and licensing boundaries are strengths. Current biology source
 
 | Priority | Finding and consequence | Required resolution |
 | --- | --- | --- |
-| P1 before public instructor access | Registration stores a self-declared email; reviewer authorization checks that string against `INSTRUCTOR_EMAILS`. A first registrant can claim an allowlisted address and gain review privileges. | Provision immutable account roles or verify email ownership before granting authority. Keep the allowlist empty on public installations. |
-| P1 assessment validity | Instructor queue loads the base question, ignoring the saved `variant_id`. Review decisions check course version but do not compare the stored specification digest. A variant or same-version edit can produce the wrong review context. | Reconstruct the saved variant, verify its digest, expose the actual options/rubric and fail closed when unavailable. Archive immutable content versions. |
+| Addressed in current increment | A registrant could previously claim an allowlisted email and obtain reviewer access. | `INSTRUCTOR_EMAILS` authorization is removed. All accounts default to no role; only the operator CLI changes the persisted role, and self-registration still fails closed. The operator must verify identity outside the application. |
+| Addressed for the installed package; historical limitation remains | The previous queue showed the base prompt for variant attempts and could not detect same-version edits. | The queue resolves the stored variant and checks its question-specification digest before exposing the prompt/options. Adjust/uphold fail closed on missing, stale or changed content. Old package versions are not archived, so old appeals can only be declined. |
 | P1 course delivery | API/result schemas and gradebook cover formative practice only. Best per-question scores are not category-weighted semester grades. | Add assessment instances, homework/lab/project/exam categories, release/deadline/attempt policies, protected key storage and weighted calculation. |
 | P1 before complete status | Completion evidence currently trusts manifest booleans and a nonempty execution list, without trusted artifact/result verification or content/commit binding. | Generate evidence from actual CI runners, bind it to content/software hashes and require actual human signoff. |
 | P2 learner coverage | Retrieval cards reveal answers without persisted spacing. Objectives without tagged items disappear from evidence views. Course DTO/UI omit weekly scheduling and grading policy. | Add review ratings/history/due queue, show unassessed objectives, expose typed weeks/assessment policies and learner calendar. |
@@ -64,11 +64,10 @@ Live-link probes are optional and not a mandatory CI check. Two JHU URLs denied 
 
 ## Recommended execution order
 
-1. Close the reviewer-identity and appeal reconstruction defects with adversarial regression tests.
-2. Implement the minimum graded-assessment and immutable content model required by the biology course: manifest bank resolution, assignment instances, weights, release rules and protected keys.
-3. Author the 14-week biology scope/assessment blueprint, then develop substantial weekly teaching, worked experimental examples, homework and lab activities alongside those workflows. Release honest partial increments; avoid more breadth-only seeds.
-4. Finish calendar/deadline views, spaced retrieval and objective coverage, including missing-evidence states.
-5. Build trusted quality evidence and obtain actual scientific/accessibility review before any complete badge. Finish isolated execution/provider integrations only when real assignments require them.
-6. Complete public deployment hardening and recovery rehearsal before serving valuable learner records.
+1. Implement a manifest-driven graded-assessment model: assignment instances, homework/lab/project categories, deadlines, release and attempt policies, weighted calculations, and protected assessment-key storage. Keep current practice scores clearly formative.
+2. Draft the 14-week cell/molecular-biology scope, source map and assessment crosswalk, then author substantial teaching, worked experimental examples, homework and data/lab activities in sequence. Address methods already referenced by questions (including ChIP-qPCR and reporter controls). Do not mark the package beta until its course materials meet the documented gates.
+3. Add immutable content-package archives so appeal review can load historical prompts/specifications rather than only decline after an update. Extend learner scheduling, spaced retrieval and objective coverage including unassessed objectives.
+4. Build trusted hash-bound quality evidence, independently recalculate every numerical key, broaden mutation/adversarial tests, validate instructional links, and obtain actual subject-matter/accessibility review before any complete badge.
+5. Complete production hardening and recovery rehearsal before serving valuable learner records: separate least-privilege database roles, email verification/recovery, distributed throttling, retention, resource limits and a verified off-host backup process. Implement code execution only with demonstrated isolation.
 
-The [roadmap](ROADMAP.md) tracks acceptance criteria. Existing useful content and legacy tools remain available. This rename/review increment fixes branding, storage compatibility and stale syllabus metadata; the substantive defects identified here are documented outstanding work.
+The [roadmap](ROADMAP.md) tracks acceptance criteria. Existing useful content and legacy tools remain available. Branding now matches the renamed public repository. Historical browser storage identifiers and the untracked local Compose-volume identity remain only to preserve existing learner and database data; they are not product names. No course maturity label has advanced.

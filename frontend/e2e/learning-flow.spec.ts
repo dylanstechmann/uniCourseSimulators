@@ -1,6 +1,22 @@
 import { expect, test } from "@playwright/test";
 import AxeBuilder from "@axe-core/playwright";
 
+test.afterEach(async ({ page }) => {
+  if (!page.url().startsWith("http")) return;
+  const deletionStatus = await page.evaluate(async () => {
+    const sessionResponse = await fetch("/api/v1/auth/session");
+    if (!sessionResponse.ok) return null;
+    const session = await sessionResponse.json();
+    if (!session.user || !session.csrf_token) return null;
+    const deletion = await fetch("/api/v1/learner", {
+      method: "DELETE",
+      headers: { "X-CSRF-Token": session.csrf_token },
+    });
+    return deletion.status;
+  });
+  if (deletionStatus !== null) expect(deletionStatus).toBe(204);
+});
+
 test("catalog communicates maturity and has no automated accessibility violations", async ({
   page,
 }) => {
@@ -343,7 +359,7 @@ test("symbolic calculus practice accepts an equivalent expression and saves feed
   ).toBeVisible();
 });
 
-test("learner appeal receives an audited manual adjustment", async ({
+test("self-registration cannot receive human-review access for a learner appeal", async ({
   page,
   browser,
 }) => {
@@ -395,55 +411,20 @@ test("learner appeal receives an audited manual adjustment", async ({
     await expect(
       reviewerPage.getByRole("heading", { name: "Signed in", exact: true }),
     ).toBeVisible();
-    await reviewerPage
-      .getByRole("link", { name: "Instructor review", exact: true })
-      .click();
-    await expect(
-      reviewerPage.getByRole("heading", { name: "Human review requests" }),
-    ).toBeVisible();
-    const reviewCard = reviewerPage
-      .locator(".instructor-appeal")
-      .filter({ hasText: reason });
-    await expect(reviewCard).toBeVisible();
-    const accessibility = await new AxeBuilder({ page: reviewerPage })
-      .withTags(["wcag2a", "wcag2aa", "wcag21a", "wcag21aa"])
-      .analyze();
-    expect(accessibility.violations).toEqual([]);
-    await reviewCard
-      .getByRole("radio", { name: "Adjust practice score" })
-      .check();
-    await reviewCard.getByLabel(/Reviewed practice score/).fill("1");
-    await reviewCard
-      .getByLabel("Review note (visible to the learner)")
-      .fill(
-        "The alternate control is supported by the written practice rubric.",
-      );
-    await reviewCard
-      .getByRole("button", { name: "Record review decision" })
-      .click();
-    await expect(reviewCard).toHaveCount(0);
-
-    const attemptsResponse = page.waitForResponse((response) =>
-      response.url().includes("/api/v1/attempts?course_id=cell-biology"),
-    );
-    await page.reload();
-    const refreshedAttempts = await (await attemptsResponse).json();
+    const session = await reviewerPage.evaluate(async () => {
+      const response = await fetch("/api/v1/auth/session");
+      return response.json();
+    });
+    expect(session.can_review).toBe(false);
     expect(
-      refreshedAttempts.some(
-        (attempt: { appeal?: { status?: string; reason?: string } | null }) =>
-          attempt.appeal?.reason === reason &&
-          attempt.appeal.status === "adjusted",
+      await reviewerPage.evaluate(
+        async () => (await fetch("/api/v1/instructor/appeals")).status,
       ),
-    ).toBeTruthy();
-    await page
-      .getByRole("link", { name: "Practice gradebook", exact: true })
-      .click();
+    ).toBe(403);
+    await page.reload();
     await expect(
-      page.getByText("1 / 1 (manual review; automatic 0)"),
+      page.getByRole("heading", { name: "Human review · open" }),
     ).toBeVisible();
-    await expect(
-      page.getByRole("row").filter({ hasText: "cell-biology-1:check" }),
-    ).toContainText("Review: adjusted");
 
     await reviewerPage
       .getByRole("link", { name: "Account and data", exact: true })

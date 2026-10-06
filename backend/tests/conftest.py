@@ -145,8 +145,7 @@ def content_root(tmp_path):
 @pytest.fixture
 def app(tmp_path, content_root):
     application = create_app(Settings(database_url=f"sqlite:///{tmp_path}/test.db", content_root=content_root,
-                                      cookie_secure=False, rate_limit=1000, auth_rate_limit=1000,
-                                      instructor_emails=("reviewer@example.org",)))
+                                      cookie_secure=False, rate_limit=1000, auth_rate_limit=1000))
     Base.metadata.create_all(application.state.engine)
     yield application
     application.state.engine.dispose()

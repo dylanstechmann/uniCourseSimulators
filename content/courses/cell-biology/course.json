@@ -304,7 +304,7 @@
     "attempt_policy": "Unlimited formative retries; no summative grade is awarded.",
     "solution_release": "Public practice solutions may be shown after an attempt. They are not production exam keys.",
     "late_policy": "No deadlines or late penalties exist in this partial package.",
-    "appeals": "Learners may request one human review per attempt; allowlisted instructors can review current-version formative items. This workflow does not provide course-level human grading."
+    "appeals": "Learners may request one human review per attempt; operator-provisioned reviewers can decide only when the installed question specification matches the saved attempt. This workflow does not provide course-level human grading."
   },
   "retrieval_cards": "question-banks/retrieval-cards.json",
   "case_rubrics": "rubrics/case-studio.json",

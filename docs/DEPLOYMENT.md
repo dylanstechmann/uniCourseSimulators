@@ -14,9 +14,16 @@ Open `http://localhost:8080`. No `.env` file, manually chosen database password 
 
 The database and credentials volumes persist across container recreation. Stop the foreground run with Ctrl+C, or use `docker compose down` after a detached run. Keep the volumes when learner records are needed. Removing a volume destroys its stored data; deleting only the credentials volume leaves the existing PostgreSQL password inconsistent with a newly generated secret. PostgreSQL initialization variables do not rotate an existing cluster's password.
 
-Optional local configuration comes from `.env.example`; copy it to an untracked `.env` and edit only what is needed. If `COURSELAB_PORT` changes, update `ALLOWED_ORIGINS` to the exact matching localhost/127.0.0.1 origins. Development uses `COOKIE_SECURE=false` for local HTTP. Leave `INSTRUCTOR_EMAILS` empty for public use; self-declared registration emails are not verified reviewer identities. The `.env` files, secrets, database files, backups and learner exports are excluded from Git, but an ignore rule is not a substitute for inspecting staged changes.
+Optional local configuration comes from `.env.example`; copy it to an untracked `.env` and edit only what is needed. If `COURSELAB_PORT` changes, update `ALLOWED_ORIGINS` to the exact matching localhost/127.0.0.1 origins. Development uses `COOKIE_SECURE=false` for local HTTP. No email allowlist grants review access; registration cannot assign roles. After verifying an instructor's identity and review authority out of band, an operator can provision the role from the API container using the user ID shown by `/api/v1/auth/session`:
 
-The appeal allowlist is suitable only for synthetic local testing until reviewer identity and exact saved-question reconstruction are fixed. See [PROGRESS_REVIEW.md](PROGRESS_REVIEW.md) and [SECURITY.md](../SECURITY.md).
+```sh
+docker compose exec -T api python -m courselab.manage_instructor USER_ID grant
+docker compose exec -T api python -m courselab.manage_instructor USER_ID revoke
+```
+
+The `.env` files, secrets, database files, backups and learner exports are excluded from Git, but an ignore rule is not a substitute for inspecting staged changes.
+
+Appeal adjustments/upheld decisions are permitted only while the exact installed question version, resolved variant and saved digest match. Changed or missing content can only be declined; immutable historical content archives remain future work. See [PROGRESS_REVIEW.md](PROGRESS_REVIEW.md) and [SECURITY.md](../SECURITY.md).
 
 Useful diagnostics:
 
@@ -32,11 +39,7 @@ The health endpoint checks database connectivity; it is not an assessment-qualit
 
 Fresh checkouts use the Compose project name `uni-stem-course-simulators` (production: `uni-stem-course-simulators-production`). Compose normally prefixes volumes with that identity. A new name would select new empty volumes and make existing records appear missing.
 
-Before upgrading an existing installation, record its project identity from `docker compose ls` and volume attachments from `docker inspect`. Back up and verify the database using the procedure below. Set `COMPOSE_PROJECT_NAME` to that **existing identity** in the deployment's untracked environment file; it overrides the new default `name`. For the previous development default, the compatibility setting is:
-
-```dotenv
-COMPOSE_PROJECT_NAME=lattice-courselab
-```
+Before upgrading an existing installation, record its project identity from `docker compose ls` and volume attachments from `docker inspect`. Back up and verify the database using the procedure below. Set `COMPOSE_PROJECT_NAME` to that **existing identity** in the deployment's untracked environment file; it overrides the new default `name`.
 
 Preserve both the database and credentials volumes. Do not remove volumes, regenerate an existing database password or start a second writer against the same PostgreSQL volume. The current local installation retains its identity through this untracked setting. Renaming the underlying volumes is unnecessary for the product rename; a later volume migration requires a verified database backup and controlled restore/cutover.
 
@@ -55,7 +58,7 @@ docker compose exec -T api alembic current
 docker compose run --rm migrate
 ```
 
-The second command runs `alembic upgrade head` using the same image, database and secret as the API. Revision 0002 adds an optional question-specification digest to attempts; revision 0003 adds learner appeals and append-only instructor review decisions. Old attempts are preserved and marked unpinned. For an application update, take and verify a backup, stop API/web writes, build the reviewed version, apply its migrations, and restart the application. Read each migration before applying it to valuable data. A downgrade is not a general data-recovery mechanism; some future changes may be irreversible. The initial, digest, and appeal revisions' upgrade/downgrade/schema comparison is covered by backend tests.
+The second command runs `alembic upgrade head` using the same image, database and secret as the API. Revision 0002 adds an optional question-specification digest to attempts; revision 0003 adds learner appeals and append-only instructor review decisions; revision 0004 adds an instructor role defaulting to false for all existing accounts. Old attempts are preserved and marked unpinned. For an application update, take and verify a backup, stop API/web writes, build the reviewed version, apply its migrations, and restart the application. Read each migration before applying it to valuable data. A downgrade is not a general data-recovery mechanism; some future changes may be irreversible. Upgrade/downgrade and migrated-schema comparisons are covered by backend tests.
 
 Content is copied into the API image at `/content`. Rebuild when course packages change. Enrollments record their course version; a changed version blocks version-dependent operations until the learner uses the explicit `PUT /api/v1/enrollments/{course_id}/version` action. This updates the enrollment pointer and preserves earlier attempts with their original course version. Do not rewrite published content under an unchanged version to bypass that boundary.
 

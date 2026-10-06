@@ -12,6 +12,7 @@ from sqlalchemy import (
     Text,
     UniqueConstraint,
     create_engine,
+    false,
 )
 from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column, sessionmaker
 
@@ -35,6 +36,7 @@ class User(Base):
     email: Mapped[str | None] = mapped_column(String(254), unique=True, nullable=True)
     password_hash: Mapped[str | None] = mapped_column(Text, nullable=True)
     is_guest: Mapped[bool] = mapped_column(Boolean, default=True)
+    is_instructor: Mapped[bool] = mapped_column(Boolean, default=False, server_default=false())
     created_at: Mapped[datetime] = mapped_column(DateTime, default=now)
 
 

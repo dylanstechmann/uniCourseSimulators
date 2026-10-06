@@ -9,7 +9,7 @@ from sqlalchemy.orm import Session
 from courselab.db import Appeal, AppealReview, Attempt, Enrollment, Note, SessionToken, User, now
 from courselab.grading import question_spec_digest
 from courselab.main import COOKIE, token_hash
-from courselab.variants import verify_variant_token
+from courselab.variants import _seeded_variant_id, verify_variant_token
 
 
 def enroll(client):
@@ -19,6 +19,43 @@ def enroll(client):
 def submit(client, question="choice", response=0, **extra):
     return client.post(f"/api/v1/courses/test-course/questions/{question}/attempts",
                        json={"response": response, **extra})
+
+
+def register_and_operator_provision_reviewer(app, reviewer, email="reviewer@example.org"):
+    registration = reviewer.post("/api/v1/auth/register", json={
+        "email": email, "password": "a-reviewer-test-password"
+    })
+    assert registration.status_code == 201
+    assert registration.json()["can_review"] is False
+    reviewer.headers["X-CSRF-Token"] = registration.json()["csrf_token"]
+    user_id = registration.json()["user"]["id"]
+    with app.state.sessions() as db:
+        account = db.get(User, user_id)
+        assert account is not None and account.is_instructor is False
+        # Simulate the out-of-band operator command. User supplied fields never set this role.
+        account.is_instructor = True
+        db.commit()
+    assert reviewer.get("/api/v1/auth/session").json()["can_review"] is True
+    return registration
+
+
+def test_registration_cannot_claim_instructor_access(client, app, monkeypatch):
+    monkeypatch.setenv("INSTRUCTOR_EMAILS", "claim@example.org")
+    assert client.post("/api/v1/auth/register", json={
+        "email": "claim@example.org", "password": "a-valid-long-password",
+        "is_instructor": True,
+    }).status_code == 422
+    registration = client.post("/api/v1/auth/register", json={
+        "email": "claim@example.org", "password": "a-valid-long-password",
+    })
+    assert registration.status_code == 201
+    assert registration.json()["can_review"] is False
+    assert registration.json()["user"]["email"] == "claim@example.org"
+    assert "is_instructor" not in registration.json()["user"]
+    assert client.get("/api/v1/instructor/appeals").status_code == 403
+    with app.state.sessions() as db:
+        account = db.get(User, registration.json()["user"]["id"])
+        assert account is not None and account.is_instructor is False
 
 
 def forbidden_keys(value):
@@ -590,17 +627,16 @@ def test_learner_appeal_and_audited_instructor_score_adjustment(enrolled, app):
     assert stranger.get("/api/v1/instructor/appeals").status_code == 403
 
     with TestClient(app, headers={"Origin": "http://localhost:8080"}) as reviewer:
-        registration = reviewer.post("/api/v1/auth/register", json={
-            "email": "reviewer@example.org", "password": "a-reviewer-test-password"
-        })
-        assert registration.status_code == 201
+        register_and_operator_provision_reviewer(app, reviewer)
         assert reviewer.get("/api/v1/auth/session").json()["can_review"] is True
-        reviewer.headers["X-CSRF-Token"] = registration.json()["csrf_token"]
         queue = reviewer.get("/api/v1/instructor/appeals")
         assert queue.status_code == 200
         item = queue.json()[0]
         assert item["id"] == appeal["id"]
         assert item["question_prompt"] == "Select a negative control."
+        assert item["question_options"] == ["Vehicle", "Active drug"]
+        assert item["review_question"]["prompt"] == item["question_prompt"]
+        assert item["review_question"]["options"] == item["question_options"]
         assert item["content_is_current"] is True
         assert "solution_spec" not in queue.text and "PRIVATE_TEST_SENTINEL" not in queue.text
         decision = reviewer.post(
@@ -640,10 +676,7 @@ def test_learner_appeal_and_audited_instructor_score_adjustment(enrolled, app):
 
 def test_instructor_cannot_review_own_attempt(enrolled, app):
     with TestClient(app, headers={"Origin": "http://localhost:8080"}) as reviewer:
-        registration = reviewer.post("/api/v1/auth/register", json={
-            "email": "reviewer@example.org", "password": "a-reviewer-test-password"
-        })
-        reviewer.headers["X-CSRF-Token"] = registration.json()["csrf_token"]
+        register_and_operator_provision_reviewer(app, reviewer)
         assert reviewer.post("/api/v1/enrollments", json={"course_id": "test-course"}).status_code == 201
         attempt = submit(reviewer, response=1).json()
         appeal = reviewer.post(
@@ -659,6 +692,82 @@ def test_instructor_cannot_review_own_attempt(enrolled, app):
         assert denied.status_code == 403
 
 
+def test_variant_review_uses_pinned_prompt_and_refuses_same_version_edits(enrolled, app, content_root, monkeypatch):
+    bank_path = content_root / "courses" / "test-course" / "question-banks" / "practice.json"
+    bank = json.loads(bank_path.read_text(encoding="utf-8"))
+    question = bank["questions"][0]
+    question["randomization"] = {
+        "seeded": True,
+        "generator_id": "authored-variants-v1",
+        "variants": [{
+            "id": "matched-control",
+            "prompt": "Which alternate comparison keeps the delivery procedure matched?",
+            "options": ["Vehicle-only", "A non-targeting oligonucleotide with delivery reagent"],
+            "solution_spec": {"answer": 1},
+            "feedback": {
+                "hint": "Match the delivery process.",
+                "solution": "The non-targeting oligonucleotide controls delivery effects.",
+                "lesson_ids": ["lesson-one"],
+            },
+        }],
+    }
+    bank_path.write_text(json.dumps(bank), encoding="utf-8")
+    seed = next(
+        f"variant-review-seed-{index:04d}"
+        for index in range(100)
+        if _seeded_variant_id(
+            question, "test-course", "0.1.0", f"variant-review-seed-{index:04d}",
+            app.state.settings.variant_token_secret,
+        ) == "matched-control"
+    )
+    monkeypatch.setattr("courselab.variants.secrets.token_urlsafe", lambda _: seed)
+
+    lesson = enrolled.get("/api/v1/courses/test-course/lessons/lesson-one").json()
+    public_question = next(item for item in lesson["questions"] if item["id"] == "choice")
+    assert public_question["prompt"] == "Which alternate comparison keeps the delivery procedure matched?"
+    attempt = submit(
+        enrolled, response=1, variant_token=public_question["variant_token"]
+    ).json()
+    assert attempt["result"]["correct"] is True
+    assert attempt["response"]["variant_id"] == "matched-control"
+    appeal = enrolled.post(
+        f"/api/v1/attempts/{attempt['id']}/appeals",
+        json={"reason": "The alternate control matches the delivery procedure."},
+    ).json()
+
+    with TestClient(app, headers={"Origin": "http://localhost:8080"}) as reviewer:
+        register_and_operator_provision_reviewer(app, reviewer)
+        review_item = reviewer.get("/api/v1/instructor/appeals").json()[0]
+        assert review_item["id"] == appeal["id"]
+        assert review_item["content_is_current"] is True
+        assert review_item["question_prompt"] == public_question["prompt"]
+        assert review_item["question_options"] == public_question["options"]
+        assert review_item["review_question"]["variant_id"] == "matched-control"
+        assert review_item["review_question"]["prompt"] == public_question["prompt"]
+        assert review_item["review_question"]["options"] == public_question["options"]
+        assert "solution_spec" not in json.dumps(review_item)
+
+        bank["questions"][0]["randomization"]["variants"][0]["prompt"] = (
+            "A same-version edit that must not be used to review the saved response."
+        )
+        bank_path.write_text(json.dumps(bank), encoding="utf-8")
+        changed_item = reviewer.get("/api/v1/instructor/appeals").json()[0]
+        assert changed_item["content_is_current"] is False
+        assert changed_item["question_prompt"] is None
+        assert changed_item["question_options"] is None
+        assert changed_item["review_question"] is None
+        for decision, extra in (("adjusted", {"override_score": 0}), ("upheld", {})):
+            response = reviewer.post(
+                f"/api/v1/instructor/appeals/{appeal['id']}/review",
+                json={
+                    "decision": decision,
+                    **extra,
+                    "review_note": "The original question cannot be verified.",
+                },
+            )
+            assert response.status_code == 409
+
+
 def test_stale_appeal_content_can_only_be_declined(enrolled, app, content_root):
     attempt = submit(enrolled, response=1).json()
     appeal = enrolled.post(
@@ -670,12 +779,11 @@ def test_stale_appeal_content_can_only_be_declined(enrolled, app, content_root):
     manifest["version"] = "0.2.0"
     manifest_path.write_text(json.dumps(manifest), encoding="utf-8")
     with TestClient(app, headers={"Origin": "http://localhost:8080"}) as reviewer:
-        registration = reviewer.post("/api/v1/auth/register", json={
-            "email": "reviewer@example.org", "password": "a-reviewer-test-password"
-        })
-        reviewer.headers["X-CSRF-Token"] = registration.json()["csrf_token"]
+        register_and_operator_provision_reviewer(app, reviewer)
         item = reviewer.get("/api/v1/instructor/appeals").json()[0]
         assert item["content_is_current"] is False and item["question_prompt"] is None
+        assert item["question_options"] is None
+        assert item["review_question"] is None
         adjusted = reviewer.post(
             f"/api/v1/instructor/appeals/{appeal['id']}/review",
             json={"decision": "adjusted", "override_score": 1,

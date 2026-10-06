@@ -1,13 +1,33 @@
 import { useEffect, useState, type FormEvent } from "react";
 import { api, errorMessage } from "../api";
-import type { InstructorAppeal } from "../types";
+import type { InstructorAppeal, Question } from "../types";
 
-function responseText(response: InstructorAppeal["response"]) {
+function responseText(
+  response: InstructorAppeal["response"],
+  question: Question | null,
+) {
   const value = response.response;
-  if (Array.isArray(value)) return value.join(", ");
+  if (Array.isArray(value))
+    return value
+      .map((index) => question?.options[index] ?? `Option ${index + 1}`)
+      .join(", ");
+  if (typeof value === "number" && question?.options.length)
+    return question.options[value] ?? `Option ${value + 1}`;
   if (typeof value === "object") {
+    if ("content_base64" in value)
+      return "CSV file submitted for this attempt.";
     return Object.entries(value)
-      .map(([key, item]) => `${key}: ${item}`)
+      .map(([key, item]) => {
+        const field = question?.response_fields?.find(
+          (candidate) => candidate.id === key,
+        );
+        const numericIndex = Number(item);
+        const displayValue =
+          field?.type === "single_choice" && Number.isInteger(numericIndex)
+            ? (field.options[numericIndex] ?? item)
+            : `${item}${field?.unit && !item.includes(field.unit) ? ` ${field.unit}` : ""}`;
+        return `${field?.prompt ?? key}: ${displayValue}`;
+      })
       .join("; ");
   }
   return `${value}${response.unit ? ` ${response.unit}` : ""}`;
@@ -61,17 +81,55 @@ function ReviewCard({
           {appeal.original_score} / {appeal.max_score} automatic
         </span>
       </div>
-      {appeal.content_is_current && appeal.question_prompt ? (
-        <blockquote>{appeal.question_prompt}</blockquote>
+      {appeal.content_is_current && appeal.review_question ? (
+        <>
+          <blockquote>{appeal.review_question.prompt}</blockquote>
+          {appeal.review_question.options.length ? (
+            <ol className="review-options" aria-label="Question options">
+              {appeal.review_question.options.map((option, index) => (
+                <li key={`${index}-${option}`}>{option}</li>
+              ))}
+            </ol>
+          ) : null}
+          {appeal.review_question.response_fields?.map((field) => (
+            <div className="review-response-field" key={field.id}>
+              <strong>{field.prompt}</strong>
+              {field.options.length ? (
+                <ul>
+                  {field.options.map((option) => (
+                    <li key={option}>{option}</li>
+                  ))}
+                </ul>
+              ) : field.unit ? (
+                <span> Expected unit: {field.unit}</span>
+              ) : null}
+            </div>
+          ))}
+          {appeal.review_question.graph_spec ? (
+            <p>
+              Graph axes: {appeal.review_question.graph_spec.x_axis.label} ×{" "}
+              {appeal.review_question.graph_spec.y_axis.label}. Plotted groups:{" "}
+              {appeal.review_question.graph_spec.points
+                .map((point) => point.label)
+                .join(", ")}
+              .
+            </p>
+          ) : null}
+        </>
       ) : (
         <p className="notice">
-          This attempt’s original course version is unavailable. The response
-          cannot be compared to the exact prompt; only a decline explaining this
-          limitation can be recorded.
+          The original question specification is unavailable or has changed. The
+          response cannot be compared to its exact prompt and options; only a
+          decline explaining this limitation can be recorded.
         </p>
       )}
       <h3>Learner response</h3>
-      <p className="submitted-response">{responseText(appeal.response)}</p>
+      <p className="submitted-response">
+        {responseText(
+          appeal.response,
+          appeal.content_is_current ? appeal.review_question : null,
+        )}
+      </p>
       <h3>Automatic feedback</h3>
       <p>{appeal.automatic_feedback.feedback.diagnosis.replaceAll("_", " ")}</p>
       <p>{appeal.automatic_feedback.feedback.next_step}</p>

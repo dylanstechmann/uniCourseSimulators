@@ -54,7 +54,7 @@ from .schemas import (
     PublicCurriculum,
     PublicLesson,
 )
-from .variants import VariantTokenError, issue_variant_token, verify_variant_token
+from .variants import VariantTokenError, issue_variant_token, resolve_variant, verify_variant_token
 
 COOKIE = "courselab_session"
 PASSWORDS = PasswordHasher(time_cost=3, memory_cost=65536, parallelism=2)
@@ -66,6 +66,11 @@ def token_hash(token: str) -> str:
 
 def user_view(user: User) -> dict:
     return {"id": user.id, "email": user.email, "is_guest": user.is_guest}
+
+
+def can_review(user: User) -> bool:
+    """Only an operator-provisioned, registered account may adjudicate appeals."""
+    return not user.is_guest and bool(user.email) and user.is_instructor
 
 
 def appeal_view(appeal: Appeal, attempt: Attempt, review: AppealReview | None = None) -> dict:
@@ -222,18 +227,13 @@ def create_app(settings: Settings | None = None) -> FastAPI:
                             samesite="lax", max_age=hours * 3600, path="/api")
         return {
             "user": user_view(user), "csrf_token": csrf,
-            "can_review": bool(
-                not user.is_guest and user.email and user.email.lower() in settings.instructor_emails
-            ),
+            "can_review": can_review(user),
         }
 
     def require_reviewer(request: Request, db: Session, mutation: bool = False) -> User:
         identity = require_identity(request, db)
         user = identity[0]
-        if (
-            user.is_guest or not user.email
-            or user.email.lower() not in settings.instructor_emails
-        ):
+        if not can_review(user):
             raise HTTPException(403, "Instructor review access is not enabled for this account")
         if mutation:
             require_csrf(request, identity)
@@ -253,9 +253,7 @@ def create_app(settings: Settings | None = None) -> FastAPI:
         user = identity[0]
         return {
             "user": user_view(user), "csrf_token": identity[1].csrf_token,
-            "can_review": bool(
-                not user.is_guest and user.email and user.email.lower() in settings.instructor_emails
-            ),
+            "can_review": can_review(user),
         }
 
     @app.post("/api/v1/auth/guest")
@@ -266,9 +264,7 @@ def create_app(settings: Settings | None = None) -> FastAPI:
             user = identity[0]
             return {
                 "user": user_view(user), "csrf_token": identity[1].csrf_token,
-                "can_review": bool(
-                    not user.is_guest and user.email and user.email.lower() in settings.instructor_emails
-                ),
+                "can_review": can_review(user),
             }
         user = User(is_guest=True)
         db.add(user)
@@ -532,20 +528,42 @@ def create_app(settings: Settings | None = None) -> FastAPI:
                 result.append(appeal_view(appeal, attempt, review))
         return result
 
+    def verified_review_question(attempt: Attempt) -> dict | None:
+        """Resolve the submitted variant and require its saved spec digest to match."""
+        if not attempt.question_spec_sha256 or not isinstance(attempt.response, dict):
+            return None
+        try:
+            manifest = content.manifest(attempt.course_id)
+            if manifest["version"] != attempt.content_version:
+                return None
+            question = content.question(attempt.course_id, attempt.question_id)
+            variant_id = attempt.response.get("variant_id")
+            resolved = resolve_variant(question, variant_id)
+            digest = question_spec_digest(resolved, variant_id)
+            return resolved if digest == attempt.question_spec_sha256 else None
+        except (ContentMissing, ContentInvalid, VariantTokenError, KeyError, TypeError, ValueError):
+            return None
+
     def instructor_appeal_record(appeal: Appeal, attempt: Attempt, db: Session) -> dict:
         learner = db.get(User, appeal.user_id)
         review = db.scalar(select(AppealReview).where(AppealReview.appeal_id == appeal.id))
-        try:
-            manifest = content.manifest(attempt.course_id)
-            content_is_current = manifest["version"] == attempt.content_version
-            question = content.question(attempt.course_id, attempt.question_id) if content_is_current else None
-        except (ContentMissing, ContentInvalid):
-            content_is_current, question = False, None
+        question = verified_review_question(attempt)
+        content_is_current = question is not None
+        review_question = (
+            content.public_question(
+                question,
+                variant_id=attempt.response.get("variant_id"),
+            ).model_dump()
+            if question is not None
+            else None
+        )
         return {
             **appeal_view(appeal, attempt, review),
             "learner": learner.email if learner and learner.email else "Guest account",
             "content_is_current": content_is_current,
+            "review_question": review_question,
             "question_prompt": question.get("prompt") if question else None,
+            "question_options": question.get("options") if question else None,
             "response": attempt.response,
             "automatic_feedback": attempt.result,
             "specification_pinned": bool(attempt.question_spec_sha256),
@@ -597,14 +615,10 @@ def create_app(settings: Settings | None = None) -> FastAPI:
                 raise HTTPException(422, "An adjusted decision needs a score from zero through the attempt maximum")
         elif body.override_score is not None:
             raise HTTPException(422, "Only an adjusted decision can change the score")
-        try:
-            current_version = content.manifest(attempt.course_id)["version"]
-        except (ContentMissing, ContentInvalid) as exc:
-            raise HTTPException(409, "The attempt's course package is unavailable for review") from exc
-        if current_version != attempt.content_version and body.decision != "declined":
+        if body.decision != "declined" and verified_review_question(attempt) is None:
             raise HTTPException(
                 409,
-                "The original content version is unavailable; only a decline explaining this limitation can be recorded",
+                "The original question specification cannot be verified; only a decline explaining this limitation can be recorded",
             )
         review = AppealReview(
             appeal_id=appeal.id,
