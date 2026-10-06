@@ -4,30 +4,34 @@
 
 2026-10-06; synthetic local learner data only. Milestones 1 and 2 are implemented. Milestone 3 remains partial; deterministic graders and prototype graded-assignment and review workflows are described below. A Milestone 4 curriculum-map increment is implemented and tested, while subject-matter review and map refinement remain. All 25 course packages are **partial**; zero are beta, complete or externally reviewed. Human score review is limited to saved attempts and does not constitute course-content review. No semester equivalence, university credit, security certification or public production deployment is asserted.
 
-## Current increment: week-14 potency and integrative study design (2026-10-06)
+## Current increment: first interactive data-analysis lab (2026-10-06)
 
-Foundations of Cell and Molecular Biology advanced from 0.14.0 to **0.15.0** and remains `partial`. Week 14 adds two original lessons on developmental potency/lineage evidence and integrative regenerative experiment design; six mapped objectives; seven deterministic, public formative questions worth 13 practice points; four retrieval cards; four misconception entries; layered feedback; and link-only curriculum/scientific/ethics sources. The construct fraction and matrix-by-cue table are explicitly synthetic. The lessons distinguish self-renewal, developmental potency, marker-defined identity, and measured function; calculate a 22.5% construct fraction with its denominator; and interpret a 13 percentage-point descriptive difference-in-differences without overstating statistical or mechanistic evidence. This is formative practice, not a complete lab, capstone, or graded coursework.
+Foundations of Cell and Molecular Biology advanced from 0.15.0 to **0.16.0** and remains `partial`. Week 5 now includes the first authored lab in the proposed three-activity sequence: an original 2–3 hour virtual fluorescence-data-analysis lesson, eight-row synthetic CSV, instructor rubric, and four-question formative assessment worth 13 ungraded practice points. The learner uploads per-condition counts/means, plots batch-level percentages on fixed axes, interprets imaging controls, and reports a descriptive 9-percentage-point contrast. An API change allows `lab`-typed practice assessments to use the existing answer-free, enrollment-version-pinned endpoint, still restricted to explicitly public formative items. This package does not supply microscope images, simulate equipment, execute wet-lab procedures, grade prose, or count toward a course grade.
 
-Content validation passes for 25 packages, 125 lessons, 183 questions, 251 cards, and 25 cases, with 0 errors and 123 disclosed depth/objective warnings. The focused recalculation check and full root suite passed (**66 passed, 1 skipped**); backend passed **223** with one upstream Starlette/httpx deprecation warning; frontend unit tests passed **31**; Playwright passed **17**; and legacy-state tests passed **7**. Docker Compose rebuilt with the existing database volume preserved; API, database, and web report healthy; Alembic is `0007 (head)`; and the API integration check supports 187 practice specifications. Week-14 browser coverage submits the unit-bearing construct fraction and two structured evidence/design responses and verifies deterministic feedback. The public lesson DTO boundary test passes; answer specifications are only in public-practice authoring data, and no secure exam key was added. Frontend lint/format and production build pass (206 modules), Ruff passes, and the security-boundary scan reports 0 findings across 412 source files.
+Validation passes for 25 packages, 126 lessons, 187 questions, 251 cards, and 25 cases, with 0 errors and 123 disclosed limitation/depth warnings. The complete root suite passed **67 tests with 1 skipped**; backend passed **224** with one upstream Starlette/httpx deprecation warning; frontend unit tests passed **31**; Playwright passed **18**; and legacy-state tests passed **7**. The new browser flow opens the lab in the course reader, opens its typed lab assessment from the practice gradebook, submits a CSV summary, plots both condition means, scores four evidence choices, and checks the 9-point value. Compose rebuilt while preserving the existing database volume; API, database, and web are healthy; Alembic is `0007 (head)`; and the integration validator supports 191 practice specifications. The answer-free public DTO boundary test passes; authoring keys remain explicitly public formative practice, and no secure exam key was added. Frontend lint/format and production build pass (206 modules), Ruff passes, `git diff --check` passes, and the security-boundary scan reports 0 findings across 413 source files.
 
 | Current command/check | Result |
 | --- | --- |
-| `python tools/validate_content.py` | PASS: 25 packages, 125 lessons, 183 questions, 251 cards, 25 cases; 0 errors; 123 disclosed warnings |
-| `backend/.venv/Scripts/python.exe -m pytest tests -q` | 66 passed, 1 skipped |
-| `cd backend; .venv/Scripts/python.exe -m pytest -q` | 223 passed; one upstream Starlette/httpx deprecation warning |
+| `python tools/validate_content.py` | PASS: 25 packages, 126 lessons, 187 questions, 251 cards, 25 cases; 0 errors; 123 disclosed warnings |
+| `backend/.venv/Scripts/python.exe -m pytest tests -q` | 67 passed, 1 skipped |
+| `cd backend; .venv/Scripts/python.exe -m pytest -q` | 224 passed; one upstream Starlette/httpx deprecation warning |
 | `cd backend; .venv/Scripts/ruff.exe check .` | PASS |
 | `cd frontend; npm test -- --run` | 31 passed |
 | `cd frontend; npm run lint; npm run build` | PASS: formatting/lint and TypeScript/Vite production build (206 modules) |
-| `cd frontend; npm run test:e2e` | 17 passed, including week-14 numeric and structured practice submissions |
+| `cd frontend; $env:E2E_BASE_URL='http://localhost:8080'; npm run test:e2e` | 18 passed, including upload, fixed-axis plot, and structured lab practice |
 | `npm run test:legacy` | 7 passed |
 | `docker compose up --build -d --wait --wait-timeout 180` | PASS: API, database, and web healthy; existing data volume preserved |
-| `docker compose exec -T api python -m courselab.check_content /content` | PASS: 25 packages / 187 supported practice specifications |
+| `docker compose exec -T api python -m courselab.check_content /content` | PASS: 25 packages / 191 supported practice specifications |
 | `docker compose exec -T api alembic current` and `/api/v1/health` | PASS: `0007 (head)`; health `ok` |
-| `python tools/check_security.py --bundle frontend/dist` | PASS; 0 findings across 412 source files |
+| `python tools/check_security.py --bundle frontend/dist` | PASS; 0 findings across 413 source files |
 
-The eight homework packages, three full data/virtual-lab activities, summative midterm/final, integrative project, measured workload, comprehensive objective coverage, and independent scientific/accessibility reviews remain incomplete; the course stays partial. Week 14's lesson does not satisfy the missing capstone.
+The eight homework sets, two remaining lab activities, summative midterm/final, cumulative project, measured workload, comprehensive objective coverage, and independent scientific/accessibility reviews remain incomplete. The course stays partial; the virtual lab does not satisfy the missing homework, exams, or capstone.
 
-The week-12 commit `2f0fb1c` passed hosted GitHub Actions run `37540473521`. The workflow for the week-13 commit had no reported combined status when checked; the week-14 push must also be checked on publication.
+After the current browser suite, the local synthetic database remained at 82 users, 82 enrollments, 90 attempts, and 6 progress records. Week 12 passed hosted GitHub Actions run `37540473521`. Week 14 was published at commit `a372fb31eb1d706ddc94f5e09a9c81266ad82629`; hosted run `37544794562` completed successfully. CI for the current lab increment will run on publication.
+
+## Previous increment: week-14 potency and integrative study design (2026-10-06)
+
+Version 0.15.0 added two original lessons on developmental potency/lineage evidence and integrative regenerative experiment design; six mapped objectives; seven deterministic public formative questions worth 13 practice points; four retrieval cards; misconception entries; layered feedback; and link-only curriculum/scientific/ethics sources. Explicitly synthetic examples support a 22.5% construct-fraction calculation and a 13-percentage-point descriptive contrast. The lesson bounds marker identity, function, uncertainty, and translational claims; it is not a complete capstone or graded coursework. It was published at commit `a372fb31eb1d706ddc94f5e09a9c81266ad82629`; hosted run `37544794562` completed successfully.
 
 ## Previous increment: week-13 cell-cycle and cell-fate evidence (2026-10-06)
 

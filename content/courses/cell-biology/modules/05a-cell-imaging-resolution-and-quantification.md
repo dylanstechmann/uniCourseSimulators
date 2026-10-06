@@ -66,3 +66,5 @@ Use the 244-nm ideal estimate and the bead-pair table. Which separation is below
 ## Provenance
 
 This is original explanatory text and original synthetic data under the course's CC BY 4.0 content license. MIT OpenCourseWare 7.016 Lecture 29 is linked as a curriculum comparator only. Jennifer Waters's microscopy-method article is a link-only reference; no source text, figure, image, or experimental result is reproduced or adapted.
+
+Continue with the **Virtual lab 1: quantitative fluorescence image analysis** in the course schedule. It uses synthetic batch data to practice denominator-aware image quantification, replicate structure, graphing, and inference limits. The activity and its interactive practice checks are formative and ungraded.

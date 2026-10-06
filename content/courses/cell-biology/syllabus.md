@@ -1,8 +1,8 @@
 # Foundations of Cell and Molecular Biology
 
-**Maturity: partial. Version: 0.15.0.**
+**Maturity: partial. Version: 0.16.0.**
 
-This original course package develops mechanistic reasoning from molecular structure to cell behavior. It is still not a completed 14-week university course: weeks 1–7 have two original lessons each, while weeks 4 and 7 retain short prototype readings in addition; week 8 has an ungraded cumulative practice set; weeks 9–14 have original lesson pairs and formative practice. No semester equivalency, university credit, or prerequisite equivalency is claimed.
+This original course package develops mechanistic reasoning from molecular structure to cell behavior. It is still not a completed 14-week university course: weeks 1–7 have two original topic lessons each, while weeks 4 and 7 retain short prototype readings in addition; week 5 adds one original virtual fluorescence data-analysis lab; week 8 has an ungraded cumulative practice set; weeks 9–14 have original lesson pairs and formative practice. No semester equivalency, university credit, or prerequisite equivalency is claimed.
 
 ## Prerequisites
 
@@ -21,7 +21,7 @@ These are intended outcomes. Current assessment coverage is incomplete and does 
 
 ## Proposed 14-week scope
 
-The full proposal and objective-to-assessment crosswalk are in [assessment-crosswalk.md](assessment-crosswalk.md). Weeks 1–7 each have two original lessons; week 4 also retains its short enzyme prototype, and week 7 retains the compact gene-expression prototype. Week 8 offers a 12-question ungraded cumulative review. Week 9 adds two original lessons and an eight-question formative set; weeks 10–14 each add two lessons and seven formative questions, with week 14 integrating stem-cell potency, lineage evidence, and regenerative study design. Week 8 is not a midterm; no summative exam package, capstone project, or secure exam key exists. The manifest's 14-week value records proposed scope, not completed instructional time. The [misconception catalog](misconceptions.md) and [instructor-style feedback templates](feedback-templates.md) cover selected formative topics; they do not diagnose free-form reasoning.
+The full proposal and objective-to-assessment crosswalk are in [assessment-crosswalk.md](assessment-crosswalk.md). Weeks 1–7 each have two original topic lessons; week 4 also retains its short enzyme prototype, and week 7 retains the compact gene-expression prototype. Week 5 includes a 2–3 hour virtual fluorescence-count data lab with synthetic observations and interactive, ungraded CSV, plotting, and structured-evidence checks. Week 8 offers a 12-question ungraded cumulative review. Week 9 adds two original lessons and an eight-question formative set; weeks 10–14 each add two lessons and seven formative questions, with week 14 integrating stem-cell potency, lineage evidence, and regenerative study design. Week 8 is not a midterm; no summative exam package, capstone project, or secure exam key exists. The manifest's 14-week value records proposed scope, not completed instructional time. The [misconception catalog](misconceptions.md) and [instructor-style feedback templates](feedback-templates.md) cover selected formative topics; they do not diagnose free-form reasoning.
 
 | Week | Proposed focus | Current content state |
 | --- | --- | --- |
@@ -29,7 +29,7 @@ The full proposal and objective-to-assessment crosswalk are in [assessment-cross
 | 2 | Protein sequence and structure; membrane structure and transport | Two original lessons and formative checks |
 | 3 | Organelles, compartmentalization, protein sorting, and trafficking | Two original lessons with formative practice; no full homework or lab |
 | 4 | Enzyme catalysis, initial-rate kinetics, reversible inhibition, free energy, and coupling | Two developed lessons, one retained compact prototype reading, and formative questions; no full homework or lab |
-| 5 | Cell imaging, fractionation, and measurement limits | Two original lessons, synthetic measurement tables, and public formative questions; no full lab or homework |
+| 5 | Cell imaging, fractionation, and measurement limits | Two topic lessons plus one virtual fluorescence data-analysis lab with synthetic CSV data and formative autograding; no homework |
 | 6 | DNA structure, replication, repair, and genome organization | Two original lessons, qualitative density-model predictions, a synthetic lesion-assay time course, and public formative questions; no full homework or lab |
 | 7 | Chromatin accessibility, transcription-factor occupancy, regulatory DNA, and reporter evidence | Two original lessons, one retained compact prototype, synthetic data, and formative practice; not a complete course week |
 | 8 | Cumulative review of weeks 1–7 | Twelve public formative questions; ungraded study rehearsal, not a midterm or exam |
@@ -42,7 +42,7 @@ The full proposal and objective-to-assessment crosswalk are in [assessment-cross
 
 ## Assessment and study policy
 
-All currently delivered items are public formative practice. Learners may retry them, inspect feedback, and use retrieval cards; this package has no weighted course grade, deadlines, midterm, cumulative final, or graded project. Week 8 contains a 12-question cumulative formative review of weeks 1–7. Week 9 provides eight questions on RNA processing, translation, and protein turnover; weeks 10–14 each provide seven questions on their selected topics. These are self-paced practice, not exams, and give immediate per-question feedback. The proposal includes eight homework sets, three data or virtual-lab activities, a midterm, a cumulative final, and an integrative experimental-design project. None is yet authored as a complete summative assessment package, validated, or enabled. See the crosswalk for the complete planned assessment sequence and current evidence gaps.
+All currently delivered items are public formative practice. Learners may retry them, inspect feedback, and use retrieval cards; this package has no weighted course grade, deadlines, midterm, cumulative final, or graded project. Week 5 contains one virtual fluorescence data-analysis lab with an eight-row synthetic CSV, numeric summary, fixed-axis plot, and explicit structured checks. Its 13 points are ungraded practice feedback. Week 8 contains a 12-question cumulative formative review of weeks 1–7. Week 9 provides eight questions on RNA processing, translation, and protein turnover; weeks 10–14 each provide seven questions on their selected topics. These are self-paced practice, not exams, and give immediate per-question feedback. The proposal includes eight homework sets, three data or virtual-lab activities, a midterm, a cumulative final, and an integrative experimental-design project. The two remaining labs and all substantive homework and summative packages remain unwritten. See the crosswalk for the complete planned assessment sequence and current evidence gaps.
 
 Workload and weekly study hours have not been measured. No calendar dates or grading weights are configured. Human review of an individual saved practice or graded attempt is a narrow platform feature and does not provide course-level instructor grading or academic review.
 

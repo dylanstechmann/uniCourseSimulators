@@ -397,6 +397,19 @@
       "original_content": true,
       "license": "CC-BY-4.0",
       "modifications": []
+    },
+    {
+      "module_id": "cell-biology-module-lab-01",
+      "lesson_id": "cell-biology-lab-01",
+      "reading": "labs/01-fluorescence-image-quantification.md",
+      "source_ids": [
+        "mit-7.016-cell-imaging",
+        "waters-2009-microscopy"
+      ],
+      "relationship": "original-synthetic-data-analysis-lab-with-link-only-curriculum-comparator-and-method-reference",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
     }
   ]
 }

@@ -6,6 +6,7 @@ from __future__ import annotations
 import json
 import math
 import shutil
+import csv
 from copy import deepcopy
 from pathlib import Path
 
@@ -96,8 +97,8 @@ def test_preserved_inventory_is_honest_partial(repository):
     assert result.ok, result.errors
     assert result.inventory == {
         "courses": 25,
-        "lessons": 125,
-        "questions": 183,
+        "lessons": 126,
+        "questions": 187,
         "cards": 251,
         "cases": 25,
     }
@@ -300,9 +301,9 @@ def test_structured_rubric_item_is_counted_while_course_remains_partial(reposito
     result = validate_repository(repository)
     assert result.ok, result.errors
     manifest = read(course[0])
-    assert manifest["version"] == "0.15.0"
+    assert manifest["version"] == "0.16.0"
     assert manifest["maturity"] == "partial"
-    assert result.inventory["questions"] == 183
+    assert result.inventory["questions"] == 187
     question = next(
         item
         for item in read(course[0].parent / "question-banks/practice.json")["questions"]
@@ -323,7 +324,7 @@ def test_graph_plot_item_is_counted_while_statistics_course_remains_partial(repo
     assert manifest["maturity"] == "partial"
     assert graph["id"] == "statistics-5:concentration-graph"
     assert len(graph["graph_spec"]["points"]) == 3
-    assert result.inventory["questions"] == 183
+    assert result.inventory["questions"] == 187
 
 
 def test_cell_biology_scope_does_not_claim_unwritten_weeks(repository):
@@ -332,14 +333,18 @@ def test_cell_biology_scope_does_not_claim_unwritten_weeks(repository):
     course_root = repository / "content/courses/cell-biology"
     manifest = read(course_root / "course.json")
     weeks = manifest["duration"]["weeks"]
-    assert manifest["version"] == "0.15.0"
+    assert manifest["version"] == "0.16.0"
     assert manifest["maturity"] == "partial"
     assert len(weeks) == 14
     assert [week["week"] for week in weeks if week["lesson_ids"]] == [1, 2, 3, 4, 5, 6, 7, 9, 10, 11, 12, 13, 14]
     assert len(weeks[0]["lesson_ids"]) == len(weeks[1]["lesson_ids"]) == 2
     assert len(weeks[2]["lesson_ids"]) == 2
     assert len(weeks[3]["lesson_ids"]) == 3
-    assert len(weeks[4]["lesson_ids"]) == 2
+    assert weeks[4]["lesson_ids"] == ["cell-biology-11", "cell-biology-12", "cell-biology-lab-01"]
+    assert weeks[4]["assessment_ids"] == ["cell-biology-week5-practice", "cell-biology-week5-image-quantification-lab"]
+    week5_lab = next(item for item in manifest["assessments"] if item["id"] == "cell-biology-week5-image-quantification-lab")
+    assert week5_lab["type"] == "lab" and week5_lab["mode"] == "practice"
+    assert len(week5_lab["question_ids"]) == 4 and week5_lab["points"] == 13
     assert len(weeks[5]["lesson_ids"]) == 2
     assert len(weeks[6]["lesson_ids"]) == 3
     assert weeks[7]["week"] == 8
@@ -810,7 +815,7 @@ def test_week9_schedule_objectives_and_practice_are_mapped(repository):
     questions = {item["id"]: item for item in bank["questions"]}
 
     assert manifest["maturity"] == "partial"
-    assert manifest["version"] == "0.15.0"
+    assert manifest["version"] == "0.16.0"
     assert week9["lesson_ids"] == ["cell-biology-17", "cell-biology-18"]
     assert week9["assessment_ids"] == [assessment["id"]]
     assert sum(questions[item]["points"] for item in assessment["question_ids"]) == assessment["points"] == 14
@@ -918,3 +923,46 @@ def test_week14_construct_fraction_and_factorial_contrast_are_recalculated(repos
     design = (course_root / "modules/13b-integrative-regenerative-study-design.md").read_text(encoding="utf-8")
     assert "18 / 80 × 100% = 22.5%" in potency
     assert "39 percentage points" in design and "13 percentage points" in design
+
+
+def test_virtual_imaging_lab_summary_plot_and_contrast_match_synthetic_csv(repository):
+    course_root = repository / "content/courses/cell-biology"
+    with (course_root / "labs/image-counts.csv").open(encoding="utf-8", newline="") as source:
+        observations = list(csv.DictReader(source))
+    assert len(observations) == 8
+    values = {"vehicle": [], "cue": []}
+    for row in observations:
+        values[row["condition"]].append(
+            100 * int(row["marker_positive_nuclei"]) / int(row["viable_nuclei"])
+        )
+        assert int(row["exposure_ms"]) == 40
+        assert int(row["saturated_fields"]) == 0
+    means = {
+        condition: sum(batch_values) / len(batch_values)
+        for condition, batch_values in values.items()
+    }
+    assert means == {"vehicle": 13, "cue": 22}
+
+    bank = read(course_root / "question-banks/practice.json")
+    questions = {item["id"]: item for item in bank["questions"]}
+    summary = questions["cell-biology-11:image-quantification-summary"]["solution_spec"]["validation_spec"]["checks"]
+    assert {check["id"]: check["answer"] for check in summary} == {
+        "vehicle-batch-count": 4,
+        "vehicle-marker-mean": means["vehicle"],
+        "cue-batch-count": 4,
+        "cue-marker-mean": means["cue"],
+    }
+    plot = questions["cell-biology-11:image-quantification-plot"]
+    assert [item["values"] for item in plot["graph_spec"]["observations"]] == [
+        values["vehicle"],
+        values["cue"],
+    ]
+    assert [item["y"] for item in plot["solution_spec"]["points"]] == [
+        means["vehicle"],
+        means["cue"],
+    ]
+    assert (
+        questions["cell-biology-12:image-quantification-contrast"]["solution_spec"]["answer"]
+        == means["cue"] - means["vehicle"]
+        == 9
+    )

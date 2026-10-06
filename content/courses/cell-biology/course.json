@@ -7,7 +7,7 @@
   "domain": "Life sciences",
   "level": "Year 1",
   "maturity": "partial",
-  "version": "0.15.0",
+  "version": "0.16.0",
   "license": "MIT OR CC-BY-4.0",
   "content_origin": {
     "kind": "legacy-prototype",
@@ -692,14 +692,16 @@
         ]
       },
       {
-        "week": 5,
-        "title": "Cell imaging, fractionation, and measurement limits",
-        "lesson_ids": [
-          "cell-biology-11",
-          "cell-biology-12"
+      "week": 5,
+      "title": "Cell imaging, fractionation, and measurement limits",
+      "lesson_ids": [
+        "cell-biology-11",
+        "cell-biology-12",
+        "cell-biology-lab-01"
         ],
         "assessment_ids": [
-          "cell-biology-week5-practice"
+          "cell-biology-week5-practice",
+          "cell-biology-week5-image-quantification-lab"
         ]
       },
       {
@@ -1664,6 +1666,34 @@
           ]
         }
       ]
+    },
+    {
+      "id": "cell-biology-module-lab-01",
+      "title": "Virtual laboratory: quantitative fluorescence image analysis",
+      "source_ids": [
+        "mit-7.016-cell-imaging",
+        "waters-2009-microscopy"
+      ],
+      "lessons": [
+        {
+          "id": "cell-biology-lab-01",
+          "title": "Virtual lab 1: quantitative fluorescence image analysis",
+          "reading": "labs/01-fluorescence-image-quantification.md",
+          "objectives": [
+            "cell-biology-11-objective-2",
+            "cell-biology-12-objective-1",
+            "cell-biology-12-objective-2"
+          ],
+          "worked_example": "The four synthetic vehicle batch fractions average to 13 percent; the four cue fractions average to 22 percent. Their descriptive difference is 9 percentage points. Four preparations, not the 800 sampled nuclei, are the independent replicate count per condition.",
+          "question_ids": [
+            "cell-biology-11:image-quantification-summary",
+            "cell-biology-11:image-quantification-plot",
+            "cell-biology-12:image-quantification-reasoning",
+            "cell-biology-12:image-quantification-contrast"
+          ],
+          "card_ids": []
+        }
+      ]
     }
   ],
   "assessments": [
@@ -1805,6 +1835,26 @@
         "cell-biology-12:marker-panel"
       ],
       "points": 8
+    },
+    {
+      "id": "cell-biology-week5-image-quantification-lab",
+      "type": "lab",
+      "mode": "practice",
+      "title": "Virtual lab 1: quantitative fluorescence image analysis (ungraded practice)",
+      "path": "question-banks/practice.json",
+      "week": 5,
+      "objective_ids": [
+        "cell-biology-11-objective-2",
+        "cell-biology-12-objective-1",
+        "cell-biology-12-objective-2"
+      ],
+      "question_ids": [
+        "cell-biology-11:image-quantification-summary",
+        "cell-biology-11:image-quantification-plot",
+        "cell-biology-12:image-quantification-reasoning",
+        "cell-biology-12:image-quantification-contrast"
+      ],
+      "points": 13
     },
     {
       "id": "cell-biology-week6-practice",
@@ -2175,17 +2225,22 @@
       "version": "0.15.0",
       "date": "2026-10-06",
       "summary": "Developed two original week-14 lessons on developmental potency/lineage evidence and integrative regenerative study design; added explicitly synthetic construct and matrix-by-cue examples, seven deterministic formative questions, four retrieval cards, six mapped objectives, and link-only MIT/NIH/NCBI/ISSCR provenance. The course remains partial; the capstone project, homework, full lab sequence, midterm, and final remain incomplete."
+    },
+    {
+      "version": "0.16.0",
+      "date": "2026-10-06",
+      "summary": "Added the first original virtual data-analysis lab on fluorescence image quantification, eight-row synthetic count data, a 13-point interactive practice-mode lab assessment with CSV summary, plot, and evidence checks, and explicit limitations. The course remains partial; this does not supply the remaining labs, homework, exams, or capstone."
     }
   ],
   "limitations": [
-    "Weeks 1-7 each have two original lessons; weeks 4 and 7 retain compact prototype readings. Weeks 9-14 now add twelve original lessons, but the package still lacks the planned homework sequence, full laboratory/data assignments, summative exams, workload evidence, and instructor review.",
-    "Week 8 is an ungraded cumulative practice set, not an exam or midterm. Weeks 9-14 have original lesson pairs and formative practice sets; week 8 remains practice-only with no lesson pair. Substantive homework, full data/virtual-lab activities, summative exams, a cumulative project, workload evidence, and independent review are still missing.",
+    "Weeks 1-7 each have two original lessons; weeks 4 and 7 retain compact prototype readings. Weeks 9-14 add twelve original lessons. Week 5 includes one synthetic fluorescence image-quantification data lab with a deterministic, formative interactive component; the complete planned lab sequence, homework, summative exams, workload evidence, and instructor review remain unfinished.",
+    "Week 8 is an ungraded cumulative practice set, not an exam or midterm. Weeks 9-14 have original lesson pairs and formative practice sets; week 8 remains practice-only with no lesson pair. One lab activity does not meet the planned three-lab scope; the other data/virtual-lab activities, exams, cumulative project, workload evidence, and independent review are still missing.",
     "Current formative checks across the developed lessons do not demonstrate comprehensive outcome coverage or mastery; some lesson objectives remain unassessed.",
     "Bloom labels and structured prerequisite edges are initial authoring classifications awaiting subject-matter review.",
     "Question answers and solution feedback are intentionally public practice authoring specifications, not restricted exam keys.",
     "Week-4 numeric examples require units and include dimensional checks, but legacy numerical specifications elsewhere still need unit, tolerance, and significant-figure review.",
     "Total workload and weekly study hours are unknown; former nominal credit values and hardcoded reading times do not establish workload.",
-    "The CSV practice item checks four numeric summary cells only; it does not grade scripts, arbitrary data analysis, uncertainty analysis, or causal reasoning."
+    "CSV upload checks fixed numeric summary cells only; the virtual lab does not grade arbitrary data analysis, uncertainty estimation, free-response reasoning, or causal inference."
   ],
   "intentionally_omitted": [
     "Lessons and assessments for most proposed weeks, summative course assessments, and the complete semester workflow are intentionally not represented as finished content."

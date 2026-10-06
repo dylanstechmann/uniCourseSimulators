@@ -1057,6 +1057,101 @@ test("week 14 stem-cell potency and study-design practice checks function and in
   ).toContainText("3 / 3 practice points");
 });
 
+test("week 5 virtual imaging lab delivers CSV, plot, and structured formative grading", async ({
+  page,
+}) => {
+  await page.goto("/#/account");
+  await page.getByRole("button", { name: "Start guest session" }).click();
+  await page.getByRole("link", { name: "Course catalog", exact: true }).click();
+  await page.getByRole("link", { name: /Foundations of Cell/ }).click();
+  await page.getByRole("button", { name: "Enroll in partial course" }).click();
+  await page
+    .getByRole("navigation", { name: "Lessons" })
+    .getByRole("link", { name: /Virtual lab 1: quantitative fluorescence/ })
+    .click();
+  await expect(
+    page.getByRole("heading", {
+      name: "Virtual lab 1: quantitative fluorescence image analysis",
+      level: 1,
+    }),
+  ).toBeVisible();
+  await expect(page.getByText(/wholly synthetic teaching data/)).toBeVisible();
+
+  await page.getByRole("link", { name: "Practice gradebook" }).click();
+  const row = page.getByRole("row", {
+    name: /Virtual lab 1: quantitative fluorescence image analysis \(ungraded practice\)/,
+  });
+  await row.getByRole("button", { name: "Open practice set" }).click();
+  await expect(
+    page.getByText(/4 questions · 13 practice points/),
+  ).toBeVisible();
+
+  const upload = page.locator(
+    '[data-question-id="cell-biology-11:image-quantification-summary"]',
+  );
+  await upload.getByLabel("CSV file upload").setInputFiles({
+    name: "image-summary.csv",
+    mimeType: "text/csv",
+    buffer: Buffer.from(
+      "condition,batch_count,mean_marker_positive_percent\nvehicle,4,13\ncue,4,22\n",
+    ),
+  });
+  await upload
+    .getByRole("button", { name: "Submit practice response" })
+    .click();
+  await expect(
+    upload.getByRole("region", { name: "Submission feedback" }),
+  ).toContainText("4 / 4 practice points");
+
+  const plot = page.locator(
+    '[data-question-id="cell-biology-11:image-quantification-plot"]',
+  );
+  const vehicle = plot.getByRole("group", { name: "Vehicle", exact: true });
+  await vehicle
+    .getByLabel("Condition code (0 = vehicle, 1 = cue) coordinate")
+    .fill("0");
+  await vehicle
+    .getByLabel("Mean marker-positive viable nuclei (%) coordinate")
+    .fill("13");
+  const cue = plot.getByRole("group", { name: "Cue", exact: true });
+  await cue
+    .getByLabel("Condition code (0 = vehicle, 1 = cue) coordinate")
+    .fill("1");
+  await cue
+    .getByLabel("Mean marker-positive viable nuclei (%) coordinate")
+    .fill("22");
+  await plot.getByRole("button", { name: "Submit practice response" }).click();
+  await expect(
+    plot.getByRole("region", { name: "Submission feedback" }),
+  ).toContainText("4 / 4 practice points");
+
+  const reasoning = page.locator(
+    '[data-question-id="cell-biology-12:image-quantification-reasoning"]',
+  );
+  await reasoning.getByLabel(/Measurement/).selectOption("0");
+  await reasoning.getByLabel(/Replication/).selectOption("1");
+  await reasoning.getByLabel(/Control/).selectOption("2");
+  await reasoning.getByLabel(/Inference/).selectOption("1");
+  await reasoning
+    .getByRole("button", { name: "Submit practice response" })
+    .click();
+  await expect(
+    reasoning.getByRole("region", { name: "Submission feedback" }),
+  ).toContainText("4 / 4 practice points");
+
+  const contrast = page.locator(
+    '[data-question-id="cell-biology-12:image-quantification-contrast"]',
+  );
+  await contrast.getByLabel("Numerical value").fill("9");
+  await contrast.getByLabel("Unit").fill("%");
+  await contrast
+    .getByRole("button", { name: "Submit practice response" })
+    .click();
+  await expect(
+    contrast.getByRole("region", { name: "Submission feedback" }),
+  ).toContainText("1 / 1 practice points");
+});
+
 test("structured experimental criteria receive deterministic partial credit and persist", async ({
   page,
 }) => {

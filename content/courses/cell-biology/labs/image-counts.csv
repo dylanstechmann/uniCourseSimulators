@@ -1,0 +1,9 @@
+condition,batch,viable_nuclei,marker_positive_nuclei,exposure_ms,saturated_fields
+vehicle,B01,100,12,40,0
+vehicle,B02,100,13,40,0
+vehicle,B03,100,14,40,0
+vehicle,B04,100,13,40,0
+cue,B01,100,20,40,0
+cue,B02,100,23,40,0
+cue,B03,100,22,40,0
+cue,B04,100,23,40,0

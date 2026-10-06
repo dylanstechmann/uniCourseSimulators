@@ -71,6 +71,24 @@ def test_public_practice_set_is_enrollment_scoped_answer_free_and_version_pinned
     assert guest.get(route).status_code == 409
 
 
+def test_practice_mode_lab_assessment_can_serve_only_public_formative_items(guest, content_root):
+    manifest_path = content_root / "courses" / "test-course" / "course.json"
+    manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+    manifest["assessments"][0]["type"] = "lab"
+    manifest["assessments"][0]["title"] = "Virtual lab practice"
+    manifest_path.write_text(json.dumps(manifest), encoding="utf-8")
+
+    assert guest.post("/api/v1/enrollments", json={"course_id": "test-course"}).status_code == 201
+    response = guest.get(
+        "/api/v1/assessments/test-course/practice-controls/practice-questions"
+    )
+    assert response.status_code == 200
+    payload = response.json()
+    assert payload["assessment_id"] == "practice-controls"
+    assert [question["id"] for question in payload["questions"]] == ["choice"]
+    assert "solution_spec" not in response.text
+
+
 def test_public_practice_set_refuses_unreleased_questions(guest, content_root):
     source = content_root / "courses" / "test-course" / "question-banks" / "practice.json"
     package = json.loads(source.read_text(encoding="utf-8"))

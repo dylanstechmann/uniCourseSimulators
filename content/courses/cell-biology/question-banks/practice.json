@@ -5102,6 +5102,439 @@
       "solution_spec": {
         "answer": 2
       }
+    },
+    {
+      "id": "cell-biology-11:image-quantification-summary",
+      "type": "file_upload",
+      "prompt": "Virtual lab · synthetic teaching data. Four independent culture preparations per condition each contributed 100 viable nuclei. Marker-positive counts were vehicle: 12, 13, 14, 13; cue: 20, 23, 22, 23. Calculate the marker-positive percentage within each batch, then the arithmetic mean across the four batches. Upload exactly these ordered CSV columns with one row per condition: condition,batch_count,mean_marker_positive_percent. This check scores these four summary cells only; it does not assess significance or causal reasoning.",
+      "points": 4,
+      "objective_ids": [
+        "cell-biology-11-objective-2",
+        "cell-biology-12-objective-1"
+      ],
+      "solution_spec": {
+        "accepted_media_types": [
+          "text/csv"
+        ],
+        "max_bytes": 32768,
+        "validation_spec": {
+          "format": "csv-numeric-table-v1",
+          "delimiter": ",",
+          "key_column": "condition",
+          "columns": [
+            "condition",
+            "batch_count",
+            "mean_marker_positive_percent"
+          ],
+          "checks": [
+            {
+              "id": "vehicle-batch-count",
+              "row_id": "vehicle",
+              "column": "batch_count",
+              "type": "numeric",
+              "answer": 4,
+              "unit": "",
+              "tolerance": 0,
+              "calculation": {
+                "operation": "count",
+                "values": [
+                  12,
+                  13,
+                  14,
+                  13
+                ]
+              }
+            },
+            {
+              "id": "vehicle-marker-mean",
+              "row_id": "vehicle",
+              "column": "mean_marker_positive_percent",
+              "type": "numeric",
+              "answer": 13,
+              "unit": "%",
+              "tolerance": 0.005,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  12,
+                  13,
+                  14,
+                  13
+                ]
+              }
+            },
+            {
+              "id": "cue-batch-count",
+              "row_id": "cue",
+              "column": "batch_count",
+              "type": "numeric",
+              "answer": 4,
+              "unit": "",
+              "tolerance": 0,
+              "calculation": {
+                "operation": "count",
+                "values": [
+                  20,
+                  23,
+                  22,
+                  23
+                ]
+              }
+            },
+            {
+              "id": "cue-marker-mean",
+              "row_id": "cue",
+              "column": "mean_marker_positive_percent",
+              "type": "numeric",
+              "answer": 22,
+              "unit": "%",
+              "tolerance": 0.005,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  20,
+                  23,
+                  22,
+                  23
+                ]
+              }
+            }
+          ]
+        },
+        "rubric": [
+          {
+            "id": "vehicle-batch-count",
+            "criterion": "Vehicle biological-batch count",
+            "points": 1,
+            "evidence": [
+              "The vehicle summary retains four independent preparations."
+            ]
+          },
+          {
+            "id": "vehicle-marker-mean",
+            "criterion": "Vehicle marker-positive mean",
+            "points": 1,
+            "evidence": [
+              "The four vehicle batch fractions average to 13 percent."
+            ]
+          },
+          {
+            "id": "cue-batch-count",
+            "criterion": "Cue biological-batch count",
+            "points": 1,
+            "evidence": [
+              "The cue summary retains four independent preparations."
+            ]
+          },
+          {
+            "id": "cue-marker-mean",
+            "criterion": "Cue marker-positive mean",
+            "points": 1,
+            "evidence": [
+              "The four cue batch fractions average to 22 percent."
+            ]
+          }
+        ]
+      },
+      "feedback": {
+        "hint": "Calculate a percentage for each batch before averaging the four independent batch-level percentages within condition.",
+        "solution": "Vehicle fractions are 12, 13, 14, and 13 percent, with mean 13 percent. Cue fractions are 20, 23, 22, and 23 percent, with mean 22 percent. Nuclei are nested measurements; they are not independent culture preparations.",
+        "lesson_ids": [
+          "cell-biology-11"
+        ],
+        "misconception_ids": [
+          "technical-wells-as-biological-n"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "cell-biology-11:image-quantification-plot",
+      "type": "graph",
+      "prompt": "Plot the synthetic batch-mean marker-positive percentages for vehicle and cue on the supplied axes. Retain the category mapping shown on the x-axis and label your plotted conditions.",
+      "graph_spec": {
+        "x_axis": {
+          "label": "Condition code (0 = vehicle, 1 = cue)",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "y_axis": {
+          "label": "Mean marker-positive viable nuclei (%)",
+          "minimum": 0,
+          "maximum": 30
+        },
+        "points": [
+          {
+            "id": "vehicle",
+            "label": "Vehicle"
+          },
+          {
+            "id": "cue",
+            "label": "Cue"
+          }
+        ],
+        "observations": [
+          {
+            "id": "vehicle",
+            "x": 0,
+            "values": [
+              12,
+              13,
+              14,
+              13
+            ]
+          },
+          {
+            "id": "cue",
+            "x": 1,
+            "values": [
+              20,
+              23,
+              22,
+              23
+            ]
+          }
+        ]
+      },
+      "points": 4,
+      "objective_ids": [
+        "cell-biology-11-objective-2",
+        "cell-biology-12-objective-1"
+      ],
+      "solution_spec": {
+        "points": [
+          {
+            "id": "vehicle",
+            "x": 0,
+            "y": 13,
+            "x_tolerance": 0,
+            "y_tolerance": 0.01
+          },
+          {
+            "id": "cue",
+            "x": 1,
+            "y": 22,
+            "x_tolerance": 0,
+            "y_tolerance": 0.01
+          }
+        ],
+        "rubric": [
+          {
+            "id": "vehicle_x",
+            "criterion": "Vehicle condition coordinate",
+            "points": 1,
+            "evidence": [
+              "Vehicle is mapped to category code zero."
+            ]
+          },
+          {
+            "id": "vehicle_y",
+            "criterion": "Vehicle mean coordinate",
+            "points": 1,
+            "evidence": [
+              "The vehicle batch percentages average to 13 percent."
+            ]
+          },
+          {
+            "id": "cue_x",
+            "criterion": "Cue condition coordinate",
+            "points": 1,
+            "evidence": [
+              "Cue is mapped to category code one."
+            ]
+          },
+          {
+            "id": "cue_y",
+            "criterion": "Cue mean coordinate",
+            "points": 1,
+            "evidence": [
+              "The cue batch percentages average to 22 percent."
+            ]
+          }
+        ]
+      },
+      "feedback": {
+        "hint": "Use the four culture-level percentages for each condition; do not plot each nucleus as an independent replicate.",
+        "solution": "The vehicle mean is 13 percent at condition code zero; the cue mean is 22 percent at code one. The two means do not show batch spread or estimate uncertainty.",
+        "lesson_ids": [
+          "cell-biology-11"
+        ],
+        "misconception_ids": [
+          "technical-wells-as-biological-n"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "cell-biology-12:image-quantification-reasoning",
+      "type": "structured",
+      "prompt": "Select one response for each criterion to evaluate the synthetic fluorescence comparison.",
+      "points": 4,
+      "objective_ids": [
+        "cell-biology-11-objective-2",
+        "cell-biology-12-objective-2"
+      ],
+      "response_fields": [
+        {
+          "id": "fraction-denominator",
+          "type": "single_choice",
+          "prompt": "Measurement · How should the stated outcome be calculated?",
+          "options": [
+            "Marker-positive viable nuclei divided by all sampled viable nuclei within each batch, then multiplied by 100.",
+            "Marker-positive nuclei divided by image fields, with the condition label as the denominator.",
+            "The raw number of marker-positive nuclei, without recording how many viable nuclei were sampled."
+          ],
+          "points": 1
+        },
+        {
+          "id": "biological-replicate",
+          "type": "single_choice",
+          "prompt": "Replication · What is the independent biological unit?",
+          "options": [
+            "Each of the 100 nuclei sampled from one batch.",
+            "Each independently prepared culture batch; nuclei are nested observations.",
+            "Every detector pixel in the fluorescence image."
+          ],
+          "points": 1
+        },
+        {
+          "id": "acquisition-control",
+          "type": "single_choice",
+          "prompt": "Control · Which practice best protects the comparison from image-analysis bias?",
+          "options": [
+            "Tune a separate threshold in each condition until the marker fraction differs.",
+            "Change detector exposure for each group to maximize its apparent signal.",
+            "Use matched acquisition, prespecified segmentation/threshold rules, background controls, and a saturation check."
+          ],
+          "points": 1
+        },
+        {
+          "id": "claim-boundary",
+          "type": "single_choice",
+          "prompt": "Inference · Which conclusion stays within the measured evidence?",
+          "options": [
+            "The cue created mature functional tissue and proves clinical benefit.",
+            "In these synthetic samples, the cue condition has a higher marker-positive fraction; this does not establish mature function or mechanism.",
+            "The candidate marker uniquely identifies every differentiated cell in all tissues."
+          ],
+          "points": 1
+        }
+      ],
+      "solution_spec": {
+        "field_specs": [
+          {
+            "id": "fraction-denominator",
+            "type": "single_choice",
+            "answer": 0
+          },
+          {
+            "id": "biological-replicate",
+            "type": "single_choice",
+            "answer": 1
+          },
+          {
+            "id": "acquisition-control",
+            "type": "single_choice",
+            "answer": 2
+          },
+          {
+            "id": "claim-boundary",
+            "type": "single_choice",
+            "answer": 1
+          }
+        ],
+        "rubric": [
+          {
+            "id": "fraction-denominator",
+            "criterion": "Define the viable-nucleus fraction",
+            "points": 1,
+            "evidence": [
+              "Uses marker-positive viable nuclei divided by the sampled viable-nucleus denominator."
+            ]
+          },
+          {
+            "id": "biological-replicate",
+            "criterion": "Distinguish independent culture preparations",
+            "points": 1,
+            "evidence": [
+              "Identifies the four independently prepared culture batches rather than the nested nuclei."
+            ]
+          },
+          {
+            "id": "acquisition-control",
+            "criterion": "Choose image acquisition and analysis controls",
+            "points": 1,
+            "evidence": [
+              "Uses matched acquisition, a prespecified threshold, background controls, and saturation checks."
+            ]
+          },
+          {
+            "id": "claim-boundary",
+            "criterion": "Limit the biological inference",
+            "points": 1,
+            "evidence": [
+              "Reports a marker-fraction pattern without claiming function, mechanism, or clinical effect."
+            ]
+          }
+        ]
+      },
+      "feedback": {
+        "hint": "Separate the imaging measurement, the culture-level replicate, the acquisition controls, and the biological claim.",
+        "solution": "Compute marker-positive nuclei over the sampled viable nuclei within each batch; n = 4 is the number of independent culture preparations per condition. Matched settings, prespecified thresholds, background controls, and saturation checks support comparable measurement. A marker fraction is not a functional or clinical outcome.",
+        "lesson_ids": [
+          "cell-biology-11",
+          "cell-biology-12"
+        ],
+        "misconception_ids": [
+          "technical-wells-as-biological-n",
+          "marker-equals-function-stem-cell"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "cell-biology-12:image-quantification-contrast",
+      "type": "numeric",
+      "prompt": "Using the synthetic batch means of 13% for vehicle and 22% for cue, report the cue-associated absolute difference in percentage points. Enter 9 for a 9-percentage-point increase; this quantity is not the relative percent change.",
+      "points": 1,
+      "objective_ids": [
+        "cell-biology-12-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 9,
+        "unit": "%",
+        "tolerance": 0.01,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Subtract the vehicle percentage from the cue percentage and label this absolute contrast in percentage points.",
+        "solution": "22% − 13% = 9 percentage points. Relative percent change would use the vehicle mean as a denominator and answers a different question.",
+        "lesson_ids": [
+          "cell-biology-11"
+        ],
+        "misconception_ids": [
+          "percentage-points-confused-with-percent-change"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
     }
   ]
 }

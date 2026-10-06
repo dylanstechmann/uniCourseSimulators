@@ -895,7 +895,7 @@ def create_app(settings: Settings | None = None) -> FastAPI:
         if (
             not instance
             or instance.mode != "practice"
-            or instance.assessment_type != "practice"
+            or instance.assessment_type not in {"practice", "lab", "simulation", "data-analysis"}
             or instance.source_path != "question-banks/practice.json"
             or instance.points <= 0
             or not instance.question_ids
