@@ -4,7 +4,7 @@ Finish each earliest milestone to a tested runnable state and commit separately.
 
 ## Next work after the progress review
 
-The [2026-10-06 progress review](PROGRESS_REVIEW.md) found that practice-grader development has progressed faster than course instruction. The latest increment replaces email-based reviewer access with operator-provisioned roles and verifies the exact variant/digest before appeal decisions. Prioritize these reviewable increments before adding more isolated practice types:
+The [2026-10-06 progress review](PROGRESS_REVIEW.md) found that practice-grader development has progressed faster than course instruction. The latest increments replace email-based reviewer access with operator-provisioned roles, verify the exact variant/digest before appeal decisions, and restore the attempted prompt with its feedback after reload. Prioritize these reviewable increments before adding more isolated practice types:
 
 1. **Semester assessment model:** load manifest-defined banks; persist assignment instances, assessment categories, deadlines, release/attempt rules and weighted grades. Test reproducible grade calculations, ownership, time boundaries, key separation and history before adding protected exams.
 2. **Biology scope and first developed weeks:** author a 14-week scope/assessment crosswalk, then substantial instruction and experimental worked examples paired with homework/lab workflows. Include methods required by current items (ChIP-qPCR and reporter controls). Map all outcomes and document source units/omissions. Remain partial until the full package is developed; no count-driven filler.
