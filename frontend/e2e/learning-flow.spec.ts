@@ -763,6 +763,53 @@ test("week 9 RNA and protein practice loads and grades version-pinned content", 
   ).toContainText("3 / 3 practice points");
 });
 
+test("week 10 inheritance and variant practice separates transmission and phenotype", async ({
+  page,
+}) => {
+  await page.goto("/#/account");
+  await page.getByRole("button", { name: "Start guest session" }).click();
+  await page.getByRole("link", { name: "Course catalog", exact: true }).click();
+  await page.getByRole("link", { name: /Foundations of Cell/ }).click();
+  await page.getByRole("button", { name: "Enroll in partial course" }).click();
+  await page.getByRole("link", { name: "Practice gradebook" }).click();
+
+  const row = page.getByRole("row", {
+    name: /Week 10: inheritance and genotype-to-phenotype practice/,
+  });
+  await row.getByRole("button", { name: "Open practice set" }).click();
+  await expect(
+    page.getByRole("heading", {
+      name: "Week 10: inheritance and genotype-to-phenotype practice",
+    }),
+  ).toBeVisible();
+  await expect(
+    page.getByText(/7 questions · 13 practice points/),
+  ).toBeVisible();
+
+  const risk = page.locator(
+    '[data-question-id="cell-biology-19:affected-child-risk"]',
+  );
+  await risk.getByLabel("Numerical value").fill("40.0");
+  await risk.getByLabel("Unit").fill("%");
+  await risk.getByRole("button", { name: "Submit practice response" }).click();
+  await expect(
+    risk.getByRole("region", { name: "Submission feedback" }),
+  ).toContainText("1 / 1 practice points");
+
+  const isogenic = page.locator(
+    '[data-question-id="cell-biology-20:isogenic-data"]',
+  );
+  await isogenic.getByLabel(/Data interpretation/).selectOption("0");
+  await isogenic.getByLabel(/Reversibility/).selectOption("0");
+  await isogenic.getByLabel(/Next mechanism test/).selectOption("0");
+  await isogenic
+    .getByRole("button", { name: "Submit practice response" })
+    .click();
+  await expect(
+    isogenic.getByRole("region", { name: "Submission feedback" }),
+  ).toContainText("3 / 3 practice points");
+});
+
 test("structured experimental criteria receive deterministic partial credit and persist", async ({
   page,
 }) => {

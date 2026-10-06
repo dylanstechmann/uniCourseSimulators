@@ -364,6 +364,46 @@
         "cell-biology-18-objective-3"
       ],
       "license": "CC-BY-4.0"
+    },
+    {
+      "id": "cell-biology-19-0",
+      "lesson_id": "cell-biology-19",
+      "front": "Allele transmission versus phenotype",
+      "back": "P(phenotype) depends on both genotype transmission and conditional penetrance, plus assumptions about noncarriers, age, phenotype definition, and context.",
+      "objective_ids": [
+        "cell-biology-19-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "cell-biology-19-1",
+      "lesson_id": "cell-biology-19",
+      "front": "Penetrance versus expressivity",
+      "back": "Penetrance is the probability of a defined phenotype among a specified genotype group under stated conditions and age; expressivity describes the form or degree among those expressing it.",
+      "objective_ids": [
+        "cell-biology-19-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "cell-biology-20-0",
+      "lesson_id": "cell-biology-20",
+      "front": "Variant evidence levels",
+      "back": "A sequence annotation suggests a hypothesis. RNA, protein, cellular, tissue, and organism assays test distinct links and have distinct controls and claim boundaries.",
+      "objective_ids": [
+        "cell-biology-20-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "cell-biology-20-1",
+      "lesson_id": "cell-biology-20",
+      "front": "Total activity versus specific activity",
+      "back": "A_total per culture combines protein amount and activity per protein molecule. Normalize to measured protein amount before making a specific-activity comparison.",
+      "objective_ids": [
+        "cell-biology-20-objective-2"
+      ],
+      "license": "CC-BY-4.0"
     }
   ]
 }

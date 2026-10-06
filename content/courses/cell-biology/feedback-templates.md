@@ -101,6 +101,14 @@ These templates guide feedback for the current public formative material. The so
 
 > The data show **[mRNA, nascent protein, steady-state protein, or decay signal]** in **[tested conditions]**. Under the simple model `dP/dt = s - k_deg P`, abundance can change through synthesis or removal. The measurements are **[consistent with the named alternative]**, but do not establish a direct initiation mechanism or a specific proteolysis route. Compare matched synthesis and turnover measurements, cell recovery and viability, then add **[a pathway-specific perturbation or orthogonal readout]**.
 
+### Allele transmission, penetrance, and family fraction conflated
+
+> The inheritance calculation estimates **[allele/genotype transmission]** under **[stated segregation assumptions]**. The phenotype probability also depends on **[penetrance, noncarrier risk, and assessment age]**. The family table's **[observed fraction]** describes this sampled pedigree; it is not automatically lifelong penetrance or population risk. Record **[phenotype definition, age, ascertainment, and genotypes]** before generalizing.
+
+### Variant annotation treated as a causal phenotype explanation
+
+> The annotation supports a **[sequence-level hypothesis]**. The current assays measure **[RNA/protein/cell response]** under **[conditions and denominators]**. This is **[consistent with the proposed link]**, but does not yet show **[unmeasured mechanism, tissue effect, or organism-level outcome]**. Compare independent isogenic clones, mock-edit controls, variant correction, and **[an orthogonal next assay]**; preserve the uncertainty in the final claim.
+
 ## Delivery and uncertainty rules
 
 - Quote or point to the learner's own words, numbers, or selected fields; do not invent evidence about their reasoning.

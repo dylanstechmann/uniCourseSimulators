@@ -7,7 +7,7 @@
   "domain": "Life sciences",
   "level": "Year 1",
   "maturity": "partial",
-  "version": "0.10.0",
+  "version": "0.11.0",
   "license": "MIT OR CC-BY-4.0",
   "content_origin": {
     "kind": "legacy-prototype",
@@ -374,11 +374,64 @@
         "cell-biology-outcome-2",
         "cell-biology-outcome-4"
       ]
+    },
+    {
+      "id": "cell-biology-19-objective-1",
+      "description": "Calculate allele-transmission and phenotype probabilities under an explicit Mendelian model with stated penetrance assumptions.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "cell-biology-outcome-2",
+        "cell-biology-outcome-3"
+      ]
+    },
+    {
+      "id": "cell-biology-19-objective-2",
+      "description": "Interpret pedigree evidence while distinguishing dominance, penetrance, expressivity, age, ascertainment, and sample-size limits.",
+      "bloom": "analyze",
+      "course_outcome_ids": [
+        "cell-biology-outcome-3",
+        "cell-biology-outcome-4"
+      ]
+    },
+    {
+      "id": "cell-biology-19-objective-3",
+      "description": "Evaluate genotype-phenotype associations for linkage, population structure, environment, and causal-inference alternatives.",
+      "bloom": "evaluate",
+      "course_outcome_ids": [
+        "cell-biology-outcome-4"
+      ]
+    },
+    {
+      "id": "cell-biology-20-objective-1",
+      "description": "Map variant hypotheses across DNA, RNA, protein, cell, and organism levels while naming what each assay directly measures.",
+      "bloom": "analyze",
+      "course_outcome_ids": [
+        "cell-biology-outcome-1",
+        "cell-biology-outcome-3",
+        "cell-biology-outcome-4"
+      ]
+    },
+    {
+      "id": "cell-biology-20-objective-2",
+      "description": "Interpret matched isogenic introduction and correction data using protein-normalized activity and viable-cell denominators.",
+      "bloom": "evaluate",
+      "course_outcome_ids": [
+        "cell-biology-outcome-2",
+        "cell-biology-outcome-4"
+      ]
+    },
+    {
+      "id": "cell-biology-20-objective-3",
+      "description": "Select independent-clone, editing, normalization, and orthogonal follow-up controls for a bounded variant-mechanism claim.",
+      "bloom": "create",
+      "course_outcome_ids": [
+        "cell-biology-outcome-4"
+      ]
     }
   ],
   "duration": {
     "instructional_weeks": 14,
-    "equivalent_structure": "Proposed 14-week undergraduate scope only. Weeks 1 through 7 contain two original lessons each; weeks 4 and 7 also retain short prototype readings. Week 8 has an ungraded cumulative practice set, not a midterm. Week 9 now has two original lessons and a formative practice set; weeks 10 through 14 remain outlines. Planned workload is not measured, so this schedule is not evidence of semester equivalence.",
+    "equivalent_structure": "Proposed 14-week undergraduate scope only. Weeks 1 through 7 contain original lessons; weeks 4 and 7 retain short prototype readings. Week 8 has an ungraded cumulative practice set, not a midterm. Weeks 9 and 10 each now contain two original lessons and a formative practice set; weeks 11 through 14 remain outlines. Planned workload is not measured, so this schedule is not evidence of semester equivalence.",
     "weeks": [
       {
         "week": 1,
@@ -483,8 +536,13 @@
       {
         "week": 10,
         "title": "Variation, inheritance, and genotype-to-phenotype reasoning",
-        "lesson_ids": [],
-        "assessment_ids": []
+        "lesson_ids": [
+          "cell-biology-19",
+          "cell-biology-20"
+        ],
+        "assessment_ids": [
+          "cell-biology-week10-practice"
+        ]
       },
       {
         "week": 11,
@@ -1050,6 +1108,69 @@
           ]
         }
       ]
+    },
+    {
+      "id": "cell-biology-module-19",
+      "title": "Inheritance, penetrance, and pedigree evidence",
+      "source_ids": [
+        "mit-7.01sc-genetics",
+        "ncbi-genetic-variance-phenotype",
+        "ncbi-human-genetic-variation"
+      ],
+      "lessons": [
+        {
+          "id": "cell-biology-19",
+          "title": "Inheritance, penetrance, and pedigree evidence",
+          "reading": "modules/09a-inheritance-penetrance-and-pedigree-evidence.md",
+          "objectives": [
+            "cell-biology-19-objective-1",
+            "cell-biology-19-objective-2",
+            "cell-biology-19-objective-3"
+          ],
+          "worked_example": "An A/a x a/a cross transmits A with probability 1/2. At 80% penetrance by a specified age, the simplified phenotype probability is 1/2 x 0.8 = 40%; transmission and phenotype are different probabilities.",
+          "question_ids": [
+            "cell-biology-19:transmission-vs-phenotype",
+            "cell-biology-19:affected-child-risk",
+            "cell-biology-19:pedigree-penetrance",
+            "cell-biology-19:population-stratification"
+          ],
+          "card_ids": [
+            "cell-biology-19-0",
+            "cell-biology-19-1"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cell-biology-module-20",
+      "title": "Variant mechanism and isogenic evidence",
+      "source_ids": [
+        "mit-7.01sc-genetics",
+        "ncbi-genetic-variance-phenotype",
+        "ncbi-human-genetic-variation"
+      ],
+      "lessons": [
+        {
+          "id": "cell-biology-20",
+          "title": "Variant mechanism and isogenic evidence",
+          "reading": "modules/09b-variant-mechanism-and-isogenic-evidence.md",
+          "objectives": [
+            "cell-biology-20-objective-1",
+            "cell-biology-20-objective-2",
+            "cell-biology-20-objective-3"
+          ],
+          "worked_example": "Synthetic knock-in clones have about 55 Protein X units and 54 activity units per viable cell, giving 54/55 = 0.98 activity per protein unit. The lower total activity is not evidence by itself of reduced activity per molecule.",
+          "question_ids": [
+            "cell-biology-20:variant-evidence-level",
+            "cell-biology-20:isogenic-data",
+            "cell-biology-20:follow-up-controls"
+          ],
+          "card_ids": [
+            "cell-biology-20-0",
+            "cell-biology-20-1"
+          ]
+        }
+      ]
     }
   ],
   "assessments": [
@@ -1307,6 +1428,32 @@
         "cell-biology-17:spliceosome-mechanism"
       ],
       "points": 14
+    },
+    {
+      "id": "cell-biology-week10-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Week 10: inheritance and genotype-to-phenotype practice",
+      "path": "question-banks/practice.json",
+      "week": 10,
+      "objective_ids": [
+        "cell-biology-19-objective-1",
+        "cell-biology-19-objective-2",
+        "cell-biology-19-objective-3",
+        "cell-biology-20-objective-1",
+        "cell-biology-20-objective-2",
+        "cell-biology-20-objective-3"
+      ],
+      "question_ids": [
+        "cell-biology-19:transmission-vs-phenotype",
+        "cell-biology-19:affected-child-risk",
+        "cell-biology-19:pedigree-penetrance",
+        "cell-biology-19:population-stratification",
+        "cell-biology-20:variant-evidence-level",
+        "cell-biology-20:isogenic-data",
+        "cell-biology-20:follow-up-controls"
+      ],
+      "points": 13
     }
   ],
   "grading_policy": {
@@ -1337,6 +1484,11 @@
     "review_status": "unreviewed"
   },
   "history": [
+    {
+      "version": "0.11.0",
+      "date": "2026-10-06",
+      "summary": "Developed two original week-10 lessons on inheritance/penetrance and variant mechanism/isogenic evidence; added synthetic family and cellular datasets, seven deterministic formative questions, four retrieval cards, six mapped objectives, and link-only provenance. The course remains partial; no homework, lab, midterm, final, or project was represented as complete."
+    },
     {
       "version": "0.10.0",
       "date": "2026-10-06",
@@ -1409,8 +1561,8 @@
     }
   ],
   "limitations": [
-    "Weeks 1-7 each have two original lessons; weeks 4 and 7 retain compact prototype readings. Week 9 adds two original lessons, but the package still lacks the planned homework sequence, full laboratory/data assignments, summative exams, workload evidence, and instructor review.",
-    "Week 8 is an ungraded cumulative practice set, not an exam or midterm. Week 9 now has two original lessons and a formative practice set; weeks 10-14 remain outlines. Substantive homework, full data/virtual-lab activities, summative exams, a cumulative project, workload evidence, and independent review are still missing.",
+    "Weeks 1-7 each have two original lessons; weeks 4 and 7 retain compact prototype readings. Weeks 9-10 now add four original lessons, but the package still lacks the planned homework sequence, full laboratory/data assignments, summative exams, workload evidence, and instructor review.",
+    "Week 8 is an ungraded cumulative practice set, not an exam or midterm. Weeks 9 and 10 now have original lesson pairs and formative practice sets; weeks 11-14 remain outlines. Substantive homework, full data/virtual-lab activities, summative exams, a cumulative project, workload evidence, and independent review are still missing.",
     "Current formative checks across the developed lessons do not demonstrate comprehensive outcome coverage or mastery; some lesson objectives remain unassessed.",
     "Bloom labels and structured prerequisite edges are initial authoring classifications awaiting subject-matter review.",
     "Question answers and solution feedback are intentionally public practice authoring specifications, not restricted exam keys.",

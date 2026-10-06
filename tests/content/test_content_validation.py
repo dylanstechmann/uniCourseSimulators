@@ -96,9 +96,9 @@ def test_preserved_inventory_is_honest_partial(repository):
     assert result.ok, result.errors
     assert result.inventory == {
         "courses": 25,
-        "lessons": 115,
-        "questions": 148,
-        "cards": 231,
+        "lessons": 117,
+        "questions": 155,
+        "cards": 235,
         "cases": 25,
     }
     assert sum(warning["code"] == "legacy-depth" for warning in result.warnings) == 98
@@ -300,9 +300,9 @@ def test_structured_rubric_item_is_counted_while_course_remains_partial(reposito
     result = validate_repository(repository)
     assert result.ok, result.errors
     manifest = read(course[0])
-    assert manifest["version"] == "0.10.0"
+    assert manifest["version"] == "0.11.0"
     assert manifest["maturity"] == "partial"
-    assert result.inventory["questions"] == 148
+    assert result.inventory["questions"] == 155
     question = next(
         item
         for item in read(course[0].parent / "question-banks/practice.json")["questions"]
@@ -323,7 +323,7 @@ def test_graph_plot_item_is_counted_while_statistics_course_remains_partial(repo
     assert manifest["maturity"] == "partial"
     assert graph["id"] == "statistics-5:concentration-graph"
     assert len(graph["graph_spec"]["points"]) == 3
-    assert result.inventory["questions"] == 148
+    assert result.inventory["questions"] == 155
 
 
 def test_cell_biology_scope_does_not_claim_unwritten_weeks(repository):
@@ -332,10 +332,10 @@ def test_cell_biology_scope_does_not_claim_unwritten_weeks(repository):
     course_root = repository / "content/courses/cell-biology"
     manifest = read(course_root / "course.json")
     weeks = manifest["duration"]["weeks"]
-    assert manifest["version"] == "0.10.0"
+    assert manifest["version"] == "0.11.0"
     assert manifest["maturity"] == "partial"
     assert len(weeks) == 14
-    assert [week["week"] for week in weeks if week["lesson_ids"]] == [1, 2, 3, 4, 5, 6, 7, 9]
+    assert [week["week"] for week in weeks if week["lesson_ids"]] == [1, 2, 3, 4, 5, 6, 7, 9, 10]
     assert len(weeks[0]["lesson_ids"]) == len(weeks[1]["lesson_ids"]) == 2
     assert len(weeks[2]["lesson_ids"]) == 2
     assert len(weeks[3]["lesson_ids"]) == 3
@@ -358,8 +358,14 @@ def test_cell_biology_scope_does_not_claim_unwritten_weeks(repository):
     assert week9_practice["mode"] == "practice"
     assert len(week9_practice["question_ids"]) == 8
     assert week9_practice["points"] == 14
-    assert all(not week["lesson_ids"] for week in weeks[9:])
-    assert all(not week["assessment_ids"] for week in weeks[9:])
+    assert weeks[9]["lesson_ids"] == ["cell-biology-19", "cell-biology-20"]
+    assert weeks[9]["assessment_ids"] == ["cell-biology-week10-practice"]
+    week10_practice = next(item for item in manifest["assessments"] if item["id"] == weeks[9]["assessment_ids"][0])
+    assert week10_practice["mode"] == "practice"
+    assert len(week10_practice["question_ids"]) == 7
+    assert week10_practice["points"] == 13
+    assert all(not week["lesson_ids"] for week in weeks[10:])
+    assert all(not week["assessment_ids"] for week in weeks[10:])
     assert manifest["grading_policy"]["mode"] == "formative-only"
 
     source_map = read(course_root / "source-map.json")
@@ -387,6 +393,8 @@ def test_cell_biology_scope_does_not_claim_unwritten_weeks(repository):
         "cell-biology-16",
         "cell-biology-17",
         "cell-biology-18",
+        "cell-biology-19",
+        "cell-biology-20",
     ):
         lesson = next(
             lesson
@@ -770,7 +778,7 @@ def test_week9_schedule_objectives_and_practice_are_mapped(repository):
     questions = {item["id"]: item for item in bank["questions"]}
 
     assert manifest["maturity"] == "partial"
-    assert manifest["version"] == "0.10.0"
+    assert manifest["version"] == "0.11.0"
     assert week9["lesson_ids"] == ["cell-biology-17", "cell-biology-18"]
     assert week9["assessment_ids"] == [assessment["id"]]
     assert sum(questions[item]["points"] for item in assessment["question_ids"]) == assessment["points"] == 14
@@ -780,3 +788,20 @@ def test_week9_schedule_objectives_and_practice_are_mapped(repository):
         for objective_id in assessment["objective_ids"]
     )
     assert all(questions[item]["visibility"] == "public-practice-authoring" for item in assessment["question_ids"])
+
+
+def test_week10_inheritance_probability_and_isogenic_ratio_are_recalculated(repository):
+    course_root = repository / "content/courses/cell-biology"
+    bank = read(course_root / "question-banks/practice.json")
+    questions = {item["id"]: item for item in bank["questions"]}
+
+    expected_risk = 100 * (1 / 2) * 0.80
+    risk = questions["cell-biology-19:affected-child-risk"]
+    assert expected_risk == 40.0
+    assert risk["solution_spec"]["answer"] == expected_risk
+    assert risk["solution_spec"]["unit"] == "%"
+
+    specific_activity_ratio = 54 / 55
+    lesson = (course_root / "modules/09b-variant-mechanism-and-isogenic-evidence.md").read_text(encoding="utf-8")
+    assert round(specific_activity_ratio, 2) == 0.98
+    assert "54/55 ≈ 0.98" in lesson

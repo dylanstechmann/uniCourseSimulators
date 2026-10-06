@@ -248,6 +248,34 @@
       "original_content": true,
       "license": "CC-BY-4.0",
       "modifications": []
+    },
+    {
+      "module_id": "cell-biology-module-19",
+      "lesson_id": "cell-biology-19",
+      "reading": "modules/09a-inheritance-penetrance-and-pedigree-evidence.md",
+      "source_ids": [
+        "mit-7.01sc-genetics",
+        "ncbi-genetic-variance-phenotype",
+        "ncbi-human-genetic-variation"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-family-example-and-link-only-curriculum-and-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "cell-biology-module-20",
+      "lesson_id": "cell-biology-20",
+      "reading": "modules/09b-variant-mechanism-and-isogenic-evidence.md",
+      "source_ids": [
+        "mit-7.01sc-genetics",
+        "ncbi-genetic-variance-phenotype",
+        "ncbi-human-genetic-variation"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-cell-data-and-link-only-curriculum-and-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
     }
   ]
 }

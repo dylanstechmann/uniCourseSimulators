@@ -2865,6 +2865,455 @@
         "kind": "original",
         "modifications": []
       }
+    },
+    {
+      "id": "cell-biology-19:transmission-vs-phenotype",
+      "type": "single_choice",
+      "prompt": "A parent is heterozygous A/a and the other parent is a/a. Under ordinary Mendelian segregation, what is the probability that a child inherits allele A?",
+      "options": [
+        "1/2",
+        "1/4",
+        "3/4",
+        "1"
+      ],
+      "points": 1,
+      "objective_ids": [
+        "cell-biology-19-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0
+      },
+      "feedback": {
+        "hint": "Calculate transmission from the heterozygous parent's two alleles; phenotype probability is a separate conditional step.",
+        "solution": "Each gamete from an A/a parent carries A with probability 1/2. This is the allele-transmission probability, not the probability of a phenotype.",
+        "lesson_ids": [
+          "cell-biology-19"
+        ],
+        "misconception_ids": [
+          "penetrance-means-transmission"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "cell-biology-19:affected-child-risk",
+      "type": "numeric",
+      "prompt": "One parent is A/a and the other is a/a. A defined phenotype has 80% penetrance among A/a carriers by age 40 and is absent among noncarriers under this simplified model. What is the predicted probability that one child meets the phenotype definition by age 40? Enter a percentage.",
+      "points": 1,
+      "objective_ids": [
+        "cell-biology-19-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 40.0,
+        "unit": "%",
+        "tolerance": 0.1,
+        "unit_required": true,
+        "significant_figures": 3,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Multiply the chance of inheriting A by the conditional phenotype probability among carriers.",
+        "solution": "P(A/a) = 0.5 and P(phenotype | A/a) = 0.8, so 0.5 x 0.8 = 0.40 or 40.0%. This depends on the stated simplified assumptions and age.",
+        "lesson_ids": [
+          "cell-biology-19"
+        ],
+        "misconception_ids": [
+          "penetrance-means-transmission"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "cell-biology-19:pedigree-penetrance",
+      "type": "structured",
+      "prompt": "In a synthetic family, a candidate allele is confirmed in five adult relatives; four meet a prespecified phenotype threshold, and the fifth is age 22 while the condition is usually assessed after age 40. Interpret the fraction, the younger carrier, and the limits of the pedigree.",
+      "response_fields": [
+        {
+          "id": "observed-fraction",
+          "type": "single_choice",
+          "prompt": "Descriptive fraction: among the five observed carriers, four meet the stated threshold. What fraction is observed?",
+          "options": [
+            "4/5, or 80% in this small observed group.",
+            "1/2, or 50% by Mendelian inheritance.",
+            "5/5, because all five carry the allele."
+          ],
+          "points": 1
+        },
+        {
+          "id": "age-interpretation",
+          "type": "single_choice",
+          "prompt": "Age: one unaffected carrier is 22, below the usual assessment age of 40. How should this observation be treated?",
+          "options": [
+            "The person is not yet fully observed for an age-dependent phenotype; record age and follow-up.",
+            "The person proves complete nonpenetrance at every age.",
+            "The person's genotype should be changed to noncarrier."
+          ],
+          "points": 1
+        },
+        {
+          "id": "claim-boundary",
+          "type": "single_choice",
+          "prompt": "Inference: what is the strongest bounded interpretation of 4/5 in a referred family?",
+          "options": [
+            "It is a descriptive fraction in this small, ascertained family, not a population or lifelong penetrance estimate.",
+            "It establishes exactly 80% penetrance for every ancestry and age.",
+            "It proves the allele alone caused all four phenotypes."
+          ],
+          "points": 1
+        }
+      ],
+      "points": 3,
+      "objective_ids": [
+        "cell-biology-19-objective-2"
+      ],
+      "solution_spec": {
+        "field_specs": [
+          {
+            "id": "observed-fraction",
+            "type": "single_choice",
+            "answer": 0
+          },
+          {
+            "id": "age-interpretation",
+            "type": "single_choice",
+            "answer": 0
+          },
+          {
+            "id": "claim-boundary",
+            "type": "single_choice",
+            "answer": 0
+          }
+        ],
+        "rubric": [
+          {
+            "id": "observed-fraction",
+            "criterion": "Calculate the observed carrier fraction",
+            "points": 1,
+            "evidence": [
+              "Reports four of five, or 80%, as a descriptive fraction in this sample."
+            ]
+          },
+          {
+            "id": "age-interpretation",
+            "criterion": "Account for age-dependent observation",
+            "points": 1,
+            "evidence": [
+              "Treats the younger carrier as not fully observed through the usual assessment age."
+            ]
+          },
+          {
+            "id": "claim-boundary",
+            "criterion": "Bound the family-level inference",
+            "points": 1,
+            "evidence": [
+              "Avoids generalizing a small ascertained family fraction to lifelong population penetrance."
+            ]
+          }
+        ]
+      },
+      "feedback": {
+        "hint": "Separate the observed sample fraction from the genotype-transmission model, and ask whether every carrier has passed the relevant assessment age.",
+        "solution": "Four of five observed carriers meet the threshold, but this is a descriptive 80% in a small referred family. The younger carrier is age-censored for a condition usually assessed after 40. Ascertainment, phenocopies, family environment, and other variants limit generalization.",
+        "lesson_ids": [
+          "cell-biology-19"
+        ],
+        "misconception_ids": [
+          "one-family-identifies-population-risk",
+          "penetrance-means-transmission"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "cell-biology-19:population-stratification",
+      "type": "single_choice",
+      "prompt": "A candidate allele is more common in cases than controls, but cases and controls were recruited from populations with different ancestry composition. Which concern most directly challenges a causal interpretation?",
+      "options": [
+        "Population stratification may confound the association even if the allele is not causal.",
+        "The result proves the allele directly changes protein function.",
+        "Different ancestry composition is irrelevant whenever the sample is large.",
+        "The allele must be a de novo mutation in every case."
+      ],
+      "points": 1,
+      "objective_ids": [
+        "cell-biology-19-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 0
+      },
+      "feedback": {
+        "hint": "Ask whether ancestry is associated with both allele frequency and the sampling or phenotype process.",
+        "solution": "Population structure can associate allele frequency with case status through ancestry or recruitment differences. An association is not proof that this base change causes the phenotype; family-based analysis, ancestry-aware design, replication, and functional tests address different alternatives.",
+        "lesson_ids": [
+          "cell-biology-19"
+        ],
+        "misconception_ids": [
+          "association-equals-causation-genetics"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "cell-biology-20:variant-evidence-level",
+      "type": "single_choice",
+      "prompt": "A missense annotation predicts a changed amino acid. What does the annotation establish by itself?",
+      "options": [
+        "The variant is predicted to change an amino acid; effect and phenotype remain to be measured.",
+        "The variant necessarily causes disease in every carrier.",
+        "The protein's catalytic activity is known to be zero.",
+        "The phenotype is proven to arise through altered splicing."
+      ],
+      "points": 1,
+      "objective_ids": [
+        "cell-biology-20-objective-1",
+        "cell-biology-20-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 0
+      },
+      "feedback": {
+        "hint": "Separate the sequence consequence from RNA, protein, cellular, and organism-level measurements.",
+        "solution": "The annotation describes a sequence-level consequence and suggests hypotheses. It does not establish a measured molecular effect, a cellular phenotype, or clinical causality.",
+        "lesson_ids": [
+          "cell-biology-20"
+        ],
+        "misconception_ids": [
+          "variant-prediction-equals-pathogenicity"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "cell-biology-20:isogenic-data",
+      "type": "structured",
+      "prompt": "Interpret the synthetic mock-edited, variant-knock-in, and variant-corrected data. Choose the directly measured protein-level result, what correction contributes, and a follow-up that distinguishes synthesis from turnover.",
+      "response_fields": [
+        {
+          "id": "measured-level",
+          "type": "single_choice",
+          "prompt": "Data interpretation: RNA and activity per measured protein are similar, protein amount per viable cell is lower, and the cell-response index is higher in the knock-in clones. Which molecular change is most directly observed?",
+          "options": [
+            "Lower measured Protein X amount per viable cell, with similar measured RNA and specific activity.",
+            "A proven decrease in catalytic activity per Protein X molecule.",
+            "A proven increase in transcript production."
+          ],
+          "points": 1
+        },
+        {
+          "id": "correction",
+          "type": "single_choice",
+          "prompt": "Reversibility: what does the variant-corrected group add?",
+          "options": [
+            "Evidence that measured protein amount and cell response move toward reference in the tested corrected clones.",
+            "Proof that no clone-specific or editing-related alternative exists.",
+            "Proof of a tissue-level phenotype in an organism."
+          ],
+          "points": 1
+        },
+        {
+          "id": "mechanism",
+          "type": "single_choice",
+          "prompt": "Next mechanism test: which paired measurements best separate lower synthesis from faster protein removal?",
+          "options": [
+            "A short-pulse nascent-protein assay and a multi-time-point protein pulse-chase, with matched controls.",
+            "One additional steady-state immunoblot from the same lysate.",
+            "A larger number of technical wells for the same endpoint."
+          ],
+          "points": 1
+        }
+      ],
+      "points": 3,
+      "objective_ids": [
+        "cell-biology-20-objective-1",
+        "cell-biology-20-objective-2"
+      ],
+      "solution_spec": {
+        "field_specs": [
+          {
+            "id": "measured-level",
+            "type": "single_choice",
+            "answer": 0
+          },
+          {
+            "id": "correction",
+            "type": "single_choice",
+            "answer": 0
+          },
+          {
+            "id": "mechanism",
+            "type": "single_choice",
+            "answer": 0
+          }
+        ],
+        "rubric": [
+          {
+            "id": "measured-level",
+            "criterion": "Name the measured molecular level",
+            "points": 1,
+            "evidence": [
+              "Identifies lower protein amount per viable cell while avoiding a claim of lower specific activity."
+            ]
+          },
+          {
+            "id": "correction",
+            "criterion": "Interpret correction evidence",
+            "points": 1,
+            "evidence": [
+              "States that correction moves tested measurements toward reference without excluding every clone/edit alternative."
+            ]
+          },
+          {
+            "id": "mechanism",
+            "criterion": "Discriminate synthesis and removal",
+            "points": 1,
+            "evidence": [
+              "Pairs a nascent-protein measurement with a multi-time-point turnover assay."
+            ]
+          }
+        ]
+      },
+      "feedback": {
+        "hint": "Compare RNA, protein amount per viable cell, activity per measured protein, and the cell response as separate columns.",
+        "solution": "The synthetic table shows lower Protein X amount per viable cell with similar measured RNA and specific activity, plus a cell-response shift. Correction moves the readouts toward reference, supporting a variant-associated effect in these clones. Pulse labeling and a controlled turnover time course can separate synthesis from removal, but do not by themselves prove organism-level causality.",
+        "lesson_ids": [
+          "cell-biology-20"
+        ],
+        "misconception_ids": [
+          "expression-confused-with-specific-activity",
+          "variant-prediction-equals-pathogenicity"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "cell-biology-20:follow-up-controls",
+      "type": "structured",
+      "prompt": "Select one control for clone/edit effects, one denominator for a specific-activity claim, and one appropriate limit on a rescued cell phenotype.",
+      "response_fields": [
+        {
+          "id": "independent-clones",
+          "type": "single_choice",
+          "prompt": "Editing control: which design addresses clone-specific effects?",
+          "options": [
+            "Compare multiple independently derived, sequence-checked clones with mock-edited controls.",
+            "Measure many wells from one selected clone only.",
+            "Assume the editing reagent changes no other sequence or cell property."
+          ],
+          "points": 1
+        },
+        {
+          "id": "specific-activity",
+          "type": "single_choice",
+          "prompt": "Enzyme claim: which denominator is needed to compare catalytic activity per Protein X molecule?",
+          "options": [
+            "Validated measured amount of Protein X under matched assay conditions.",
+            "Total culture volume without measuring protein.",
+            "The number of sequencing reads in the variant sample."
+          ],
+          "points": 1
+        },
+        {
+          "id": "organism-limit",
+          "type": "single_choice",
+          "prompt": "Claim boundary: what does a rescued cell-culture phenotype establish?",
+          "options": [
+            "A reversible effect in the tested cellular system that supports involvement, not an organism-level or clinical conclusion by itself.",
+            "Proof that the variant causes the same trait in every tissue and person.",
+            "A complete pathogenicity classification."
+          ],
+          "points": 1
+        }
+      ],
+      "points": 3,
+      "objective_ids": [
+        "cell-biology-20-objective-2",
+        "cell-biology-20-objective-3"
+      ],
+      "solution_spec": {
+        "field_specs": [
+          {
+            "id": "independent-clones",
+            "type": "single_choice",
+            "answer": 0
+          },
+          {
+            "id": "specific-activity",
+            "type": "single_choice",
+            "answer": 0
+          },
+          {
+            "id": "organism-limit",
+            "type": "single_choice",
+            "answer": 0
+          }
+        ],
+        "rubric": [
+          {
+            "id": "independent-clones",
+            "criterion": "Control editing and clone effects",
+            "points": 1,
+            "evidence": [
+              "Uses independent sequence-checked clones and mock-edited controls."
+            ]
+          },
+          {
+            "id": "specific-activity",
+            "criterion": "Normalize an activity claim",
+            "points": 1,
+            "evidence": [
+              "Uses measured Protein X amount as the activity denominator."
+            ]
+          },
+          {
+            "id": "organism-limit",
+            "criterion": "Bound cellular evidence",
+            "points": 1,
+            "evidence": [
+              "Does not generalize a cell-culture rescue to all tissues or a clinical classification."
+            ]
+          }
+        ]
+      },
+      "feedback": {
+        "hint": "Match each claim to the denominator or control that tests it, and keep cell culture separate from organism-level inference.",
+        "solution": "Independent clones and mock edits address different edit/clone alternatives. Protein amount is required for activity per Protein X. A rescue supports reversibility in the tested cells but does not establish a universal organismal or clinical effect.",
+        "lesson_ids": [
+          "cell-biology-20"
+        ],
+        "misconception_ids": [
+          "expression-confused-with-specific-activity",
+          "variant-prediction-equals-pathogenicity"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
     }
   ]
 }

@@ -1529,6 +1529,96 @@
       "checksum": null,
       "imported_assets": [],
       "rights_notes": "This record documents link-only use and does not clear textbook text or figures for copying."
+    },
+    {
+      "id": "mit-7.01sc-genetics",
+      "title": "Genetics - Fundamentals of Biology (7.01SC)",
+      "institution": "Massachusetts Institute of Technology / MIT OpenCourseWare",
+      "url": "https://ocw.mit.edu/courses/7-01sc-fundamentals-of-biology-fall-2011/pages/genetics/",
+      "accessed_at": "2026-10-06",
+      "license": "CC-BY-NC-SA-4.0",
+      "reuse_mode": "link-only-comparator",
+      "permissions": {
+        "linking": true,
+        "quotation": false,
+        "adaptation": false,
+        "redistribution": false
+      },
+      "attribution_requirements": [
+        "For a comparator link, display the unit title, course title, institution, and source URL without implying endorsement."
+      ],
+      "third_party_notes": "Asset-level rights are not cleared. No course prose, figure, problem, exam, or dataset is imported or adapted; this record is used only to compare topic scope.",
+      "mapped_courses": [
+        "cell-biology"
+      ],
+      "mapped_modules": [
+        "cell-biology-module-19",
+        "cell-biology-module-20"
+      ],
+      "version": "Fall 2011; Genetics unit; accessed 2026-10-06",
+      "checksum": null,
+      "imported_assets": [],
+      "rights_notes": "Only a link-only curriculum comparison is selected. Any future asset use needs a separate asset-level license and attribution review."
+    },
+    {
+      "id": "ncbi-genetic-variance-phenotype",
+      "title": "Understanding Genetic Variance and Phenotype Expression - An Evidence Framework for Genetic Testing",
+      "institution": "National Academies Press / NCBI Bookshelf",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK425811/",
+      "accessed_at": "2026-10-06",
+      "license": "Copyrighted report chapter; reuse rights not cleared here; link-only use selected",
+      "reuse_mode": "link-only-reference",
+      "permissions": {
+        "linking": true,
+        "quotation": false,
+        "adaptation": false,
+        "redistribution": false
+      },
+      "attribution_requirements": [
+        "Cite the chapter title and exact NCBI Bookshelf URL."
+      ],
+      "third_party_notes": "This report chapter is a link-only scientific and conceptual reference. No text, figure, table, or example is copied or adapted.",
+      "mapped_courses": [
+        "cell-biology"
+      ],
+      "mapped_modules": [
+        "cell-biology-module-19",
+        "cell-biology-module-20"
+      ],
+      "version": "2017; Bookshelf ID NBK425811",
+      "checksum": null,
+      "imported_assets": [],
+      "rights_notes": "This record documents link-only use and does not clear report text or figures for reuse."
+    },
+    {
+      "id": "ncbi-human-genetic-variation",
+      "title": "Understanding Human Genetic Variation - NIH Curriculum Supplement Series",
+      "institution": "National Institutes of Health / NCBI Bookshelf",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK20363/",
+      "accessed_at": "2026-10-06",
+      "license": "Copyrighted educational material; reuse rights not cleared here; link-only use selected",
+      "reuse_mode": "link-only-reference",
+      "permissions": {
+        "linking": true,
+        "quotation": false,
+        "adaptation": false,
+        "redistribution": false
+      },
+      "attribution_requirements": [
+        "Cite the title, NIH Curriculum Supplement Series, and exact NCBI Bookshelf URL."
+      ],
+      "third_party_notes": "This NIH educational reference is used only by link. No text, image, figure, question, or dataset is copied or adapted.",
+      "mapped_courses": [
+        "cell-biology"
+      ],
+      "mapped_modules": [
+        "cell-biology-module-19",
+        "cell-biology-module-20"
+      ],
+      "version": "NIH Curriculum Supplement Series; accessed 2026-10-06",
+      "checksum": null,
+      "imported_assets": [],
+      "rights_notes": "This record documents link-only use and does not clear educational text or figures for copying."
     }
   ]
 }
