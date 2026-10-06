@@ -1709,6 +1709,186 @@
       "checksum": null,
       "imported_assets": [],
       "rights_notes": "This record documents link-only use and does not clear book content for reuse."
+    },
+    {
+      "id": "mit-7.06x-cell-biology",
+      "title": "7.06x Cell Biology - MIT OpenCourseWare",
+      "institution": "Massachusetts Institute of Technology OpenCourseWare",
+      "url": "https://ocw.mit.edu/courses/res-7-007-7-06x-cell-biology/",
+      "accessed_at": "2026-10-06",
+      "license": "Third-party reuse rights not cleared for this package; link-only curriculum/scientific reference selected",
+      "reuse_mode": "link-only-reference",
+      "permissions": {
+        "linking": true,
+        "quotation": false,
+        "adaptation": false,
+        "redistribution": false
+      },
+      "attribution_requirements": [
+        "Identify 7.06x Cell Biology - MIT OpenCourseWare, Massachusetts Institute of Technology OpenCourseWare, and the exact URL."
+      ],
+      "third_party_notes": "Used only as a curriculum comparator or link-only scientific reference. No source lecture, prose, figure, table, problem, dataset, or video is copied or adapted; no MIT endorsement is implied.",
+      "mapped_courses": [
+        "cell-biology"
+      ],
+      "mapped_modules": [
+        "cell-biology-module-23",
+        "cell-biology-module-24"
+      ],
+      "version": "MITx cell-biology course scope; accessed 2026-10-06",
+      "checksum": null,
+      "imported_assets": [],
+      "rights_notes": "This record documents link-only use and does not clear linked course or book content for reuse."
+    },
+    {
+      "id": "mit-20.410j-cell-tissue-biomechanics",
+      "title": "Molecular, Cellular and Tissue Biomechanics (BE.410J) - Calendar",
+      "institution": "Massachusetts Institute of Technology OpenCourseWare",
+      "url": "https://ocw.mit.edu/courses/20-410j-molecular-cellular-and-tissue-biomechanics-be-410j-spring-2003/pages/calendar/",
+      "accessed_at": "2026-10-06",
+      "license": "Third-party reuse rights not cleared for this package; link-only curriculum/scientific reference selected",
+      "reuse_mode": "link-only-reference",
+      "permissions": {
+        "linking": true,
+        "quotation": false,
+        "adaptation": false,
+        "redistribution": false
+      },
+      "attribution_requirements": [
+        "Identify Molecular, Cellular and Tissue Biomechanics (BE.410J) - Calendar, Massachusetts Institute of Technology OpenCourseWare, and the exact URL."
+      ],
+      "third_party_notes": "Used only as a curriculum comparator or link-only scientific reference. No source lecture, prose, figure, table, problem, dataset, or video is copied or adapted; no MIT endorsement is implied.",
+      "mapped_courses": [
+        "cell-biology"
+      ],
+      "mapped_modules": [
+        "cell-biology-module-23",
+        "cell-biology-module-24"
+      ],
+      "version": "Spring 2003 course calendar; accessed 2026-10-06",
+      "checksum": null,
+      "imported_assets": [],
+      "rights_notes": "This record documents link-only use and does not clear linked course or book content for reuse."
+    },
+    {
+      "id": "ncbi-mboc-cytoskeleton-dynamics",
+      "title": "The Self-Assembly and Dynamic Structure of Cytoskeletal Filaments - Molecular Biology of the Cell",
+      "institution": "NIH / NCBI Bookshelf",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK26862/",
+      "accessed_at": "2026-10-06",
+      "license": "Third-party reuse rights not cleared for this package; link-only curriculum/scientific reference selected",
+      "reuse_mode": "link-only-reference",
+      "permissions": {
+        "linking": true,
+        "quotation": false,
+        "adaptation": false,
+        "redistribution": false
+      },
+      "attribution_requirements": [
+        "Identify The Self-Assembly and Dynamic Structure of Cytoskeletal Filaments - Molecular Biology of the Cell, NIH / NCBI Bookshelf, and the exact URL."
+      ],
+      "third_party_notes": "Used only as a curriculum comparator or link-only scientific reference. No source lecture, prose, figure, table, problem, dataset, or video is copied or adapted; no MIT endorsement is implied.",
+      "mapped_courses": [
+        "cell-biology"
+      ],
+      "mapped_modules": [
+        "cell-biology-module-23",
+        "cell-biology-module-24"
+      ],
+      "version": "Molecular Biology of the Cell, 4th edition chapter; accessed 2026-10-06",
+      "checksum": null,
+      "imported_assets": [],
+      "rights_notes": "This record documents link-only use and does not clear linked course or book content for reuse."
+    },
+    {
+      "id": "ncbi-mboc-integrins",
+      "title": "Integrins - Molecular Biology of the Cell",
+      "institution": "NIH / NCBI Bookshelf",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK26867/",
+      "accessed_at": "2026-10-06",
+      "license": "Third-party reuse rights not cleared for this package; link-only curriculum/scientific reference selected",
+      "reuse_mode": "link-only-reference",
+      "permissions": {
+        "linking": true,
+        "quotation": false,
+        "adaptation": false,
+        "redistribution": false
+      },
+      "attribution_requirements": [
+        "Identify Integrins - Molecular Biology of the Cell, NIH / NCBI Bookshelf, and the exact URL."
+      ],
+      "third_party_notes": "Used only as a curriculum comparator or link-only scientific reference. No source lecture, prose, figure, table, problem, dataset, or video is copied or adapted; no MIT endorsement is implied.",
+      "mapped_courses": [
+        "cell-biology"
+      ],
+      "mapped_modules": [
+        "cell-biology-module-23",
+        "cell-biology-module-24"
+      ],
+      "version": "Molecular Biology of the Cell, 4th edition chapter; accessed 2026-10-06",
+      "checksum": null,
+      "imported_assets": [],
+      "rights_notes": "This record documents link-only use and does not clear linked course or book content for reuse."
+    },
+    {
+      "id": "ncbi-cell-extracellular-matrix",
+      "title": "Cell Walls and the Extracellular Matrix - The Cell",
+      "institution": "NIH / NCBI Bookshelf",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK9874/",
+      "accessed_at": "2026-10-06",
+      "license": "Third-party reuse rights not cleared for this package; link-only curriculum/scientific reference selected",
+      "reuse_mode": "link-only-reference",
+      "permissions": {
+        "linking": true,
+        "quotation": false,
+        "adaptation": false,
+        "redistribution": false
+      },
+      "attribution_requirements": [
+        "Identify Cell Walls and the Extracellular Matrix - The Cell, NIH / NCBI Bookshelf, and the exact URL."
+      ],
+      "third_party_notes": "Used only as a curriculum comparator or link-only scientific reference. No source lecture, prose, figure, table, problem, dataset, or video is copied or adapted; no MIT endorsement is implied.",
+      "mapped_courses": [
+        "cell-biology"
+      ],
+      "mapped_modules": [
+        "cell-biology-module-23",
+        "cell-biology-module-24"
+      ],
+      "version": "The Cell: A Molecular Approach, 2nd edition chapter; accessed 2026-10-06",
+      "checksum": null,
+      "imported_assets": [],
+      "rights_notes": "This record documents link-only use and does not clear linked course or book content for reuse."
+    },
+    {
+      "id": "ncbi-mechanical-control-stem-cell-differentiation",
+      "title": "Mechanical Control of Stem Cell Differentiation - StemBook",
+      "institution": "NIH / NCBI Bookshelf",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK27063/",
+      "accessed_at": "2026-10-06",
+      "license": "Third-party reuse rights not cleared for this package; link-only curriculum/scientific reference selected",
+      "reuse_mode": "link-only-reference",
+      "permissions": {
+        "linking": true,
+        "quotation": false,
+        "adaptation": false,
+        "redistribution": false
+      },
+      "attribution_requirements": [
+        "Identify Mechanical Control of Stem Cell Differentiation - StemBook, NIH / NCBI Bookshelf, and the exact URL."
+      ],
+      "third_party_notes": "Used only as a curriculum comparator or link-only scientific reference. No source lecture, prose, figure, table, problem, dataset, or video is copied or adapted; no MIT endorsement is implied.",
+      "mapped_courses": [
+        "cell-biology"
+      ],
+      "mapped_modules": [
+        "cell-biology-module-23",
+        "cell-biology-module-24"
+      ],
+      "version": "StemBook chapter; accessed 2026-10-06",
+      "checksum": null,
+      "imported_assets": [],
+      "rights_notes": "This record documents link-only use and does not clear linked course or book content for reuse."
     }
   ]
 }

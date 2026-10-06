@@ -124,3 +124,11 @@ These templates guide feedback for the current public formative material. The so
 ### A transient signal or inhibitor treated as unique causal proof
 
 > The data show **[measured trajectory or target-engagement result]** under **[exposure, cell, and time conditions]**. The current comparison is also compatible with **[ligand availability / receptor state / cell-state / intervention-specific alternative]**. Test **[discriminating measurement or orthogonal perturbation]** with **[matched control/rescue]**; report only the level and scope directly supported.
+
+### Matrix stiffness treated as a universal cell-fate switch
+
+> The synthetic or measured table reports **[modulus/property]** and **[cellular readout]** in **[cell type, ligand, time, and assay]**. This supports **[bounded measured trend]**, not a universal fate rule. Match **[accessible ligand, matrix time-dependence, cell state]**, test **[force-pathway perturbation/rescue]**, and directly measure **[the named downstream outcome]**.
+
+### Cytoskeletal or adhesion image treated as a complete mechanism
+
+> The image measures **[structure/localization]** at **[time and condition]**. The proposed linkage from **[ECM/cell-cell ligand]** through **[integrin/cadherin and adaptor]** to **[filament or signal]** includes **[measured and inferred steps]**. Add **[target engagement, matched adhesion, force, or orthogonal control]** before extending the claim to **[unmeasured mechanism or tissue outcome]**.

@@ -448,6 +448,48 @@
         "cell-biology-22-objective-3"
       ],
       "license": "CC-BY-4.0"
+    },
+    {
+      "id": "cell-biology-23-0",
+      "lesson_id": "cell-biology-23",
+      "front": "Three cytoskeletal filament systems",
+      "back": "Actin, microtubules, and intermediate filaments differ in assembly, dynamics, mechanics, and common cellular roles. They are connected and remodelable rather than three fixed, independent cables.",
+      "objective_ids": [
+        "cell-biology-23-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "cell-biology-23-1",
+      "lesson_id": "cell-biology-23",
+      "front": "Integrins link matrix, cytoskeleton, and signaling",
+      "back": "Integrins bind many ECM ligands and connect through adaptor proteins to cytoskeletal structures. They participate in adhesion and signaling; an adhesion image alone does not identify a downstream mechanism.",
+      "objective_ids": [
+        "cell-biology-23-objective-2",
+        "cell-biology-23-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "cell-biology-24-0",
+      "lesson_id": "cell-biology-24",
+      "front": "Stress, strain, and Young modulus",
+      "back": "Stress is force/area; engineering strain is length change/original length; in a stated linear-elastic range, E = Δstress/Δstrain. Modulus does not capture relaxation, creep, anisotropy, or biological remodeling by itself.",
+      "objective_ids": [
+        "cell-biology-24-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "cell-biology-24-1",
+      "lesson_id": "cell-biology-24",
+      "front": "A stiffness-associated readout is not a fate claim",
+      "back": "Match ligand density and cell state, measure matrix mechanics in hydrated conditions, and separate a measured localization or force index from a causal mechanism or cell-fate outcome.",
+      "objective_ids": [
+        "cell-biology-24-objective-2",
+        "cell-biology-24-objective-3"
+      ],
+      "license": "CC-BY-4.0"
     }
   ]
 }

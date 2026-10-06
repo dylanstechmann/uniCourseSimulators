@@ -3759,6 +3759,451 @@
         "kind": "original",
         "modifications": []
       }
+    },
+    {
+      "id": "cell-biology-24:uniform-stress",
+      "type": "numeric",
+      "prompt": "A uniform force of 12 μN is applied across an original area of 3 × 10⁻⁹ m². Under the stated uniform-loading approximation, what is the engineering stress in Pa?",
+      "points": 1,
+      "objective_ids": [
+        "cell-biology-24-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 4000,
+        "unit": "Pa",
+        "tolerance": 40,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Convert microNewtons to Newtons, then divide force by area.",
+        "solution": "12 μN = 12 × 10⁻⁶ N; σ = F/A = (12 × 10⁻⁶)/(3 × 10⁻⁹) = 4.0 × 10³ Pa. This is stress under the stated geometry, not a modulus.",
+        "lesson_ids": [
+          "cell-biology-24"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "cell-biology-23:filament-roles",
+      "type": "single_choice",
+      "prompt": "Which statement best compares the common roles of the three major cytoskeletal filament systems?",
+      "options": [
+        "Intermediate filaments commonly provide tissue-dependent mechanical resilience; microtubules organize transport tracks and intracellular structure; actin contributes to cortex, protrusion, and contractile networks.",
+        "All three systems are static structural rods with identical molecular subunits and mechanical functions.",
+        "Actin uniquely transports every organelle, microtubules only reinforce epithelial sheets, and intermediate filaments polymerize into membrane channels.",
+        "Microtubules and actin are covalent polymers, while intermediate filaments never remodel after cell division."
+      ],
+      "points": 1,
+      "objective_ids": [
+        "cell-biology-23-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0
+      },
+      "feedback": {
+        "hint": "Match each filament to its common structure, dynamics, and cellular tasks; the systems also interact.",
+        "solution": "Actin, microtubules, and intermediate filaments have distinct common roles and mechanics. All are associated with accessory proteins and can reorganize in living cells.",
+        "lesson_ids": [
+          "cell-biology-23"
+        ],
+        "misconception_ids": [
+          "cytoskeleton-is-static"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "cell-biology-23:matrix-versus-cell-cell",
+      "type": "single_choice",
+      "prompt": "Which statement correctly contrasts one common cell–matrix linkage with a cell–cell linkage?",
+      "options": [
+        "Cadherins bind most collagen directly and connect only to microtubules.",
+        "Integrins bind many ECM ligands and connect through adaptors to cytoskeletal structures; cadherins can connect neighboring cells through their own associated proteins.",
+        "Integrins are extracellular matrix fibers that have no transmembrane or signaling role.",
+        "Focal adhesions and desmosomes are the same junction measured with different stains."
+      ],
+      "points": 1,
+      "objective_ids": [
+        "cell-biology-23-objective-2",
+        "cell-biology-23-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 1
+      },
+      "feedback": {
+        "hint": "Name the ligand location first: outside matrix versus a neighboring cell.",
+        "solution": "Integrins are transmembrane matrix receptors that can connect through adaptors to the cytoskeleton. Cadherins mediate selected cell–cell contacts and link to intracellular partners. The junctions are not interchangeable.",
+        "lesson_ids": [
+          "cell-biology-23"
+        ],
+        "misconception_ids": [
+          "integrins-only-anchors"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "cell-biology-24:synthetic-stiffness-data",
+      "type": "structured",
+      "prompt": "Interpret the explicitly synthetic hydrogel dataset in the lesson, in which ligand density and culture conditions were matched across measured substrate moduli.",
+      "response_fields": [
+        {
+          "id": "readout-trend",
+          "type": "single_choice",
+          "prompt": "Measured trend · What pattern is reported from 2 to 30 kPa?",
+          "options": [
+            "Both the nuclear YAP-positive fraction and traction-force index increase across the three synthetic conditions.",
+            "Only the soft condition has nonzero readouts.",
+            "Both readouts decrease as measured modulus increases."
+          ],
+          "points": 1
+        },
+        {
+          "id": "replicate-unit",
+          "type": "single_choice",
+          "prompt": "Replicate interpretation · What does n = 5 refer to in the table description?",
+          "options": [
+            "Five image pixels sampled from one cell.",
+            "Five technical wells from one preparation only.",
+            "Five independent culture preparations summarized as mean ± SD."
+          ],
+          "points": 1
+        },
+        {
+          "id": "mechanism-boundary",
+          "type": "single_choice",
+          "prompt": "Inference boundary · What does this table not establish by itself?",
+          "options": [
+            "That the measured conditions have different numerical moduli.",
+            "That stiffness alone caused a specific integrin pathway or stem-cell lineage change.",
+            "That the listed nuclear-localization fractions differ numerically."
+          ],
+          "points": 1
+        }
+      ],
+      "points": 3,
+      "objective_ids": [
+        "cell-biology-23-objective-3",
+        "cell-biology-24-objective-2"
+      ],
+      "solution_spec": {
+        "field_specs": [
+          {
+            "id": "readout-trend",
+            "type": "single_choice",
+            "answer": 0
+          },
+          {
+            "id": "replicate-unit",
+            "type": "single_choice",
+            "answer": 2
+          },
+          {
+            "id": "mechanism-boundary",
+            "type": "single_choice",
+            "answer": 1
+          }
+        ],
+        "rubric": [
+          {
+            "id": "readout-trend",
+            "criterion": "Describe both measured trends",
+            "points": 1,
+            "evidence": [
+              "Identifies the increasing reported YAP-localization fraction and traction index."
+            ]
+          },
+          {
+            "id": "replicate-unit",
+            "criterion": "Identify the stated replicate unit",
+            "points": 1,
+            "evidence": [
+              "Distinguishes independent culture preparations from technical wells or pixels."
+            ]
+          },
+          {
+            "id": "mechanism-boundary",
+            "criterion": "Separate association from mechanism and fate",
+            "points": 1,
+            "evidence": [
+              "Does not infer a unique signaling mechanism or lineage outcome from two readouts."
+            ]
+          }
+        ]
+      },
+      "feedback": {
+        "hint": "Separate the measured matrix property, the adhesion/filament link, and the cellular outcome.",
+        "solution": "The constructed means rise across the three moduli for both reported readouts. They are synthetic, grouped summaries with five independent culture preparations per condition. Even with matched ligand density and similar viability, this table does not demonstrate a unique force pathway or a cell-fate change.",
+        "lesson_ids": [
+          "cell-biology-24"
+        ],
+        "misconception_ids": [
+          "stiffness-alone-determines-fate",
+          "traction-correlates-proves-force-pathway"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "cell-biology-24:yap-relative-increase",
+      "type": "numeric",
+      "prompt": "Using the synthetic means in the lesson, nuclear YAP-positive fraction is 0.28 at 2 kPa and 0.76 at 30 kPa. What is the percentage increase relative to the 2-kPa mean? Report a percentage.",
+      "points": 1,
+      "objective_ids": [
+        "cell-biology-24-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 171.42857142857142,
+        "unit": "%",
+        "tolerance": 2,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Compute (new − starting)/starting × 100; the denominator is the soft-condition mean.",
+        "solution": "(0.76 − 0.28)/0.28 × 100 ≈ 171.4%. This is a relative difference between synthetic group means, not a probability or a causal estimate.",
+        "lesson_ids": [
+          "cell-biology-24"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "cell-biology-24:matrix-mechanics-controls",
+      "type": "structured",
+      "prompt": "Choose controls and measurements for an experiment testing whether a change in matrix mechanics contributes to a cell response.",
+      "response_fields": [
+        {
+          "id": "matrix-input",
+          "type": "single_choice",
+          "prompt": "Matrix control · Which design best reduces a ligand-presentation alternative?",
+          "options": [
+            "Change cross-linking chemistry and assume that accessible ligand density remains identical.",
+            "Measure or match accessible ligand density, surface chemistry, and hydrated modulus across conditions.",
+            "Compare a ligand-coated gel with an uncoated plastic dish."
+          ],
+          "points": 1
+        },
+        {
+          "id": "cell-state",
+          "type": "single_choice",
+          "prompt": "Cell-state control · Which matched measurements address a gross cell-state alternative?",
+          "options": [
+            "Measure viability, cell number or density, and spreading with a prespecified analysis rule.",
+            "Select only the largest cells after imaging.",
+            "Use one endpoint image and assume equal survival."
+          ],
+          "points": 1
+        },
+        {
+          "id": "force-route",
+          "type": "single_choice",
+          "prompt": "Force-route test · Which comparison addresses a proposed integrin/cytoskeletal contribution?",
+          "options": [
+            "Use a matched vehicle and controlled target perturbation, verify target engagement, and include an orthogonal intervention or specific rescue when feasible.",
+            "Treat one inhibitor response as proof of a unique pathway without measuring the target.",
+            "Add more technical wells without changing the intervention."
+          ],
+          "points": 1
+        },
+        {
+          "id": "outcome-scope",
+          "type": "single_choice",
+          "prompt": "Outcome boundary · What is required before claiming a lineage or tissue-repair effect?",
+          "options": [
+            "A single early nuclear-localization image.",
+            "A higher traction value in one condition.",
+            "A prespecified, validated downstream cell-state or functional outcome with appropriate controls and time points."
+          ],
+          "points": 1
+        }
+      ],
+      "points": 4,
+      "objective_ids": [
+        "cell-biology-23-objective-3",
+        "cell-biology-24-objective-3"
+      ],
+      "solution_spec": {
+        "field_specs": [
+          {
+            "id": "matrix-input",
+            "type": "single_choice",
+            "answer": 1
+          },
+          {
+            "id": "cell-state",
+            "type": "single_choice",
+            "answer": 0
+          },
+          {
+            "id": "force-route",
+            "type": "single_choice",
+            "answer": 0
+          },
+          {
+            "id": "outcome-scope",
+            "type": "single_choice",
+            "answer": 2
+          }
+        ],
+        "rubric": [
+          {
+            "id": "matrix-input",
+            "criterion": "Measure and match matrix input properties",
+            "points": 1,
+            "evidence": [
+              "Controls accessible ligand density and surface chemistry while verifying hydrated mechanics."
+            ]
+          },
+          {
+            "id": "cell-state",
+            "criterion": "Measure relevant cell-state covariates",
+            "points": 1,
+            "evidence": [
+              "Tracks viability, density or cell number, and a defined cell-area or shape measure."
+            ]
+          },
+          {
+            "id": "force-route",
+            "criterion": "Test the proposed force route with controlled interventions",
+            "points": 1,
+            "evidence": [
+              "Uses target engagement plus an orthogonal perturbation or specific rescue and matched control."
+            ]
+          },
+          {
+            "id": "outcome-scope",
+            "criterion": "Measure the outcome named in the claim",
+            "points": 1,
+            "evidence": [
+              "Requires a direct later cell-state or functional measurement rather than substituting a proximal readout."
+            ]
+          }
+        ]
+      },
+      "feedback": {
+        "hint": "Separate the measured matrix property, the adhesion/filament link, and the cellular outcome.",
+        "solution": "Matrix experiments should verify mechanics and accessible ligand, match cell state, measure target engagement in the force route, and assess the outcome named in the claim. A nuclear-localization or traction readout is not a substitute for a later lineage or tissue-function assay.",
+        "lesson_ids": [
+          "cell-biology-24"
+        ],
+        "misconception_ids": [
+          "stiffness-alone-determines-fate",
+          "elastic-modulus-equals-all-mechanics",
+          "integrins-only-anchors"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "cell-biology-24:stress-relaxation",
+      "type": "structured",
+      "prompt": "Two hydrated matrices have the same measured initial small-strain modulus. Under a maintained strain, Matrix A retains 40% of its initial stress at 60 seconds; Matrix B retains 85%.",
+      "response_fields": [
+        {
+          "id": "relaxation-read",
+          "type": "single_choice",
+          "prompt": "Stress relaxation · Which interpretation matches the stated data?",
+          "options": [
+            "Matrix B relaxes more rapidly because it retains a larger stress fraction.",
+            "Matrix A retains less stress and therefore shows more relaxation over this interval than Matrix B.",
+            "The two matrices have identical time-dependent behavior because their initial modulus matches."
+          ],
+          "points": 1
+        },
+        {
+          "id": "material-comparison",
+          "type": "single_choice",
+          "prompt": "Material comparison · What should a cell study report in addition to initial modulus?",
+          "options": [
+            "Only the polymer name, because that determines all mechanics.",
+            "No additional property if cells were seeded at the same number.",
+            "The relaxation protocol and time-dependent response, along with the measurement conditions."
+          ],
+          "points": 1
+        }
+      ],
+      "points": 2,
+      "objective_ids": [
+        "cell-biology-24-objective-1",
+        "cell-biology-24-objective-3"
+      ],
+      "solution_spec": {
+        "field_specs": [
+          {
+            "id": "relaxation-read",
+            "type": "single_choice",
+            "answer": 1
+          },
+          {
+            "id": "material-comparison",
+            "type": "single_choice",
+            "answer": 2
+          }
+        ],
+        "rubric": [
+          {
+            "id": "relaxation-read",
+            "criterion": "Interpret retained stress during the stated hold",
+            "points": 1,
+            "evidence": [
+              "Recognizes lower retained stress as greater relaxation over this measured interval."
+            ]
+          },
+          {
+            "id": "material-comparison",
+            "criterion": "Report relevant time-dependent mechanics",
+            "points": 1,
+            "evidence": [
+              "Reports the hold protocol, relaxation response, and measurement conditions in addition to modulus."
+            ]
+          }
+        ]
+      },
+      "feedback": {
+        "hint": "Separate the measured matrix property, the adhesion/filament link, and the cellular outcome.",
+        "solution": "Matrix A retains 40% and Matrix B retains 85% of initial stress, so A shows more stress relaxation over 60 seconds. A shared initial modulus does not establish that the matrices have the same viscoelastic behavior.",
+        "lesson_ids": [
+          "cell-biology-24"
+        ],
+        "misconception_ids": [
+          "elastic-modulus-equals-all-mechanics"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
     }
   ]
 }

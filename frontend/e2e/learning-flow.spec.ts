@@ -872,6 +872,69 @@ test("week 11 signaling practice separates occupancy, response dynamics, and fee
   ).toContainText("4 / 4 practice points");
 });
 
+test("week 12 mechanics practice separates modulus, matrix controls, and cell outcome", async ({
+  page,
+}) => {
+  await page.goto("/#/account");
+  await page.getByRole("button", { name: "Start guest session" }).click();
+  await page.getByRole("link", { name: "Course catalog", exact: true }).click();
+  await page.getByRole("link", { name: /Foundations of Cell/ }).click();
+  await page.getByRole("button", { name: "Enroll in partial course" }).click();
+  await page.getByRole("link", { name: "Practice gradebook" }).click();
+
+  const row = page.getByRole("row", {
+    name: /Week 12: cytoskeleton, matrix, and mechanobiology practice/,
+  });
+  await row.getByRole("button", { name: "Open practice set" }).click();
+  await expect(
+    page.getByRole("heading", {
+      name: "Week 12: cytoskeleton, matrix, and mechanobiology practice",
+    }),
+  ).toBeVisible();
+  await expect(
+    page.getByText(/7 questions · 13 practice points/),
+  ).toBeVisible();
+
+  const stress = page.locator(
+    '[data-question-id="cell-biology-24:uniform-stress"]',
+  );
+  await stress.getByLabel("Numerical value").fill("4000");
+  await stress.getByLabel("Unit").fill("Pa");
+  await stress
+    .getByRole("button", { name: "Submit practice response" })
+    .click();
+  await expect(
+    stress.getByRole("region", { name: "Submission feedback" }),
+  ).toContainText("1 / 1 practice points");
+
+  const stiffness = page.locator(
+    '[data-question-id="cell-biology-24:synthetic-stiffness-data"]',
+  );
+  await stiffness.getByLabel(/Measured trend/).selectOption("0");
+  await stiffness.getByLabel(/Replicate interpretation/).selectOption("2");
+  await stiffness.getByLabel(/Inference boundary/).selectOption("1");
+  await stiffness
+    .getByRole("button", { name: "Submit practice response" })
+    .click();
+  await expect(
+    stiffness.getByRole("region", { name: "Submission feedback" }),
+  ).toContainText("3 / 3 practice points");
+
+  const controls = page.locator(
+    '[data-question-id="cell-biology-24:matrix-mechanics-controls"]',
+  );
+  await controls.getByLabel(/Matrix control/).selectOption("1");
+  await controls.getByLabel(/Cell-state control/).selectOption("0");
+  await controls.getByLabel(/Force-route test/).selectOption("0");
+  await controls.getByLabel(/Outcome boundary/).selectOption("2");
+  await controls
+    .getByRole("button", { name: "Submit practice response" })
+    .click();
+  await expect(
+    controls.getByRole("region", { name: "Submission feedback" }),
+  ).toContainText("4 / 4 practice points");
+});
+
 test("structured experimental criteria receive deterministic partial credit and persist", async ({
   page,
 }) => {
