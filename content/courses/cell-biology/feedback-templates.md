@@ -144,3 +144,15 @@ These templates guide feedback for the current public formative material. The so
 ### Apoptosis-associated marker treated as a complete death diagnosis
 
 > **[Annexin-V, active caspase, or membrane-integrity]** reports **[measured event]** at **[collection time]**. It does not alone identify the initiating route or count all cells lost. Compare **[vehicle and validated positive control]**, retain detached cells, report **[explicit denominator and cell recovery]**, and use a time-resolved orthogonal readout.
+
+### Stem-cell marker treated as proof of potency or function
+
+> The panel reports **[marker-defined fraction]** in **[cell source and time]**. It does not by itself establish repeated self-renewal, developmental range, mature function, or safety. Separate those claims with **[clonal/renewal assay]**, **[context-appropriate lineage evidence]**, and **[prespecified functional test]**; state the population and denominator for each.
+
+### Descriptive factorial contrast treated as a proven interaction
+
+> The mean pattern gives a descriptive difference-in-differences of **[contrast and units]** across **[conditions]**. That calculation is not an uncertainty estimate or mechanistic test. Preserve **[independent batch values]**, account for **[blocked or repeated structure]** in the prespecified model, and limit the conclusion until that analysis and a discriminating perturbation are available.
+
+### In-vitro construct result treated as clinical efficacy
+
+> The assay supports **[measured construct outcome]** for **[cell model, conditions, and time]**. It does not establish patient benefit, long-term integration, or safety. Identify **[preclinical, manufacturing, functional, and oversight evidence]** still needed before any clinical claim; do not describe this practice case as a treatment recommendation.

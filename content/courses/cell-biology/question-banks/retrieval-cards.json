@@ -531,6 +531,48 @@
         "cell-biology-26-objective-2"
       ],
       "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "cell-biology-27-0",
+      "lesson_id": "cell-biology-27",
+      "front": "Self-renewal",
+      "back": "Repeated production of descendants that retain the relevant stem-cell properties under stated conditions; it is distinct from differentiation range or a current marker profile.",
+      "objective_ids": [
+        "cell-biology-27-objective-1"
+      ],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "cell-biology-27-1",
+      "lesson_id": "cell-biology-27",
+      "front": "Potency and function",
+      "back": "Potency describes a range of possible fates in context. A marker-defined lineage fraction is not by itself evidence of mature, functional tissue.",
+      "objective_ids": [
+        "cell-biology-27-objective-1",
+        "cell-biology-27-objective-2"
+      ],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "cell-biology-28-0",
+      "lesson_id": "cell-biology-28",
+      "front": "Difference-in-differences",
+      "back": "A contrast between condition means can describe an interaction pattern; it is not itself a significance test or mechanism. Use independent-batch values and a prespecified model to estimate uncertainty.",
+      "objective_ids": [
+        "cell-biology-28-objective-1"
+      ],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "cell-biology-28-1",
+      "lesson_id": "cell-biology-28",
+      "front": "Marker versus therapeutic evidence",
+      "back": "A marker and an in-vitro function assay address cell-model outcomes. Neither alone establishes safety, integration, or clinical efficacy.",
+      "objective_ids": [
+        "cell-biology-28-objective-2",
+        "cell-biology-28-objective-3"
+      ],
+      "license": "MIT OR CC-BY-4.0"
     }
   ]
 }

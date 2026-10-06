@@ -367,6 +367,36 @@
       "original_content": true,
       "license": "CC-BY-4.0",
       "modifications": []
+    },
+    {
+      "module_id": "cell-biology-module-27",
+      "lesson_id": "cell-biology-27",
+      "reading": "modules/13a-developmental-potency-and-lineage-evidence.md",
+      "source_ids": [
+        "mit-7.06x-cell-biology",
+        "mit-7.016-stem-cell-topics",
+        "nih-stem-cell-basics",
+        "ncbi-stem-cell-biology-basics"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-functional-assay-and-link-only-curriculum-and-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "cell-biology-module-28",
+      "lesson_id": "cell-biology-28",
+      "reading": "modules/13b-integrative-regenerative-study-design.md",
+      "source_ids": [
+        "mit-7.06x-cell-biology",
+        "mit-7.016-stem-cell-topics",
+        "nih-stem-cell-basics",
+        "isscr-stem-cell-guidelines"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-factorial-data-and-link-only-curriculum-scientific-and-ethics-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
     }
   ]
 }

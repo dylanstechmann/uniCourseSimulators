@@ -1735,7 +1735,9 @@
         "cell-biology-module-23",
         "cell-biology-module-24",
         "cell-biology-module-25",
-        "cell-biology-module-26"
+        "cell-biology-module-26",
+        "cell-biology-module-27",
+        "cell-biology-module-28"
       ],
       "version": "MITx cell-biology course scope; accessed 2026-10-06",
       "checksum": null,
@@ -2033,6 +2035,124 @@
         "cell-biology-module-26"
       ],
       "version": "Cell article record; PMID 31675495; DOI 10.1016/j.cell.2019.10.005; accessed 2026-10-06",
+      "checksum": null,
+      "imported_assets": [],
+      "rights_notes": "This record documents link-only use and does not clear linked content for reuse."
+    },
+    {
+      "id": "mit-7.016-stem-cell-topics",
+      "title": "7.016 Introductory Biology - Lecture Videos (cell cycle; stem cells, apoptosis, and tissue homeostasis)",
+      "institution": "MIT OpenCourseWare",
+      "url": "https://ocw.mit.edu/courses/7-016-introductory-biology-fall-2018/resources/lecture-videos/",
+      "accessed_at": "2026-10-06",
+      "license": "Third-party reuse rights not cleared for this package; link-only curriculum/scientific/ethics reference selected",
+      "reuse_mode": "link-only-reference",
+      "permissions": {
+        "linking": true,
+        "quotation": false,
+        "adaptation": false,
+        "redistribution": false
+      },
+      "attribution_requirements": [
+        "Identify 7.016 Introductory Biology - Lecture Videos (cell cycle; stem cells, apoptosis, and tissue homeostasis), MIT OpenCourseWare, and the exact URL."
+      ],
+      "third_party_notes": "Used only as a link-only curriculum, scientific, or ethics reference. No source text, figure, table, problem, dataset, or video is copied or adapted; no institutional endorsement is implied.",
+      "mapped_courses": [
+        "cell-biology"
+      ],
+      "mapped_modules": [
+        "cell-biology-module-27",
+        "cell-biology-module-28"
+      ],
+      "version": "Fall 2018; accessed 2026-10-06",
+      "checksum": null,
+      "imported_assets": [],
+      "rights_notes": "This record documents link-only use and does not clear linked content for reuse."
+    },
+    {
+      "id": "nih-stem-cell-basics",
+      "title": "Stem Cell Basics",
+      "institution": "NIH Stem Cell Information",
+      "url": "https://stemcells.nih.gov/info/basics/stc-basics",
+      "accessed_at": "2026-10-06",
+      "license": "Third-party reuse rights not cleared for this package; link-only curriculum/scientific/ethics reference selected",
+      "reuse_mode": "link-only-reference",
+      "permissions": {
+        "linking": true,
+        "quotation": false,
+        "adaptation": false,
+        "redistribution": false
+      },
+      "attribution_requirements": [
+        "Identify Stem Cell Basics, NIH Stem Cell Information, and the exact URL."
+      ],
+      "third_party_notes": "Used only as a link-only curriculum, scientific, or ethics reference. No source text, figure, table, problem, dataset, or video is copied or adapted; no institutional endorsement is implied.",
+      "mapped_courses": [
+        "cell-biology"
+      ],
+      "mapped_modules": [
+        "cell-biology-module-27",
+        "cell-biology-module-28"
+      ],
+      "version": "NIH Stem Cell Information page; accessed 2026-10-06",
+      "checksum": null,
+      "imported_assets": [],
+      "rights_notes": "This record documents link-only use and does not clear linked content for reuse."
+    },
+    {
+      "id": "ncbi-stem-cell-biology-basics",
+      "title": "Basics of Stem Cell Biology as Applied to the Brain",
+      "institution": "NIH / NCBI Bookshelf",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK435799/",
+      "accessed_at": "2026-10-06",
+      "license": "Third-party reuse rights not cleared for this package; link-only curriculum/scientific/ethics reference selected",
+      "reuse_mode": "link-only-reference",
+      "permissions": {
+        "linking": true,
+        "quotation": false,
+        "adaptation": false,
+        "redistribution": false
+      },
+      "attribution_requirements": [
+        "Identify Basics of Stem Cell Biology as Applied to the Brain, NIH / NCBI Bookshelf, and the exact URL."
+      ],
+      "third_party_notes": "Used only as a link-only curriculum, scientific, or ethics reference. No source text, figure, table, problem, dataset, or video is copied or adapted; no institutional endorsement is implied.",
+      "mapped_courses": [
+        "cell-biology"
+      ],
+      "mapped_modules": [
+        "cell-biology-module-27"
+      ],
+      "version": "Stem Cells in Neuroendocrinology chapter; accessed 2026-10-06",
+      "checksum": null,
+      "imported_assets": [],
+      "rights_notes": "This record documents link-only use and does not clear linked content for reuse."
+    },
+    {
+      "id": "isscr-stem-cell-guidelines",
+      "title": "Guidelines for Stem Cell Research and Clinical Translation",
+      "institution": "International Society for Stem Cell Research",
+      "url": "https://www.isscr.org/resources/guidelines-for-stem-cell-research",
+      "accessed_at": "2026-10-06",
+      "license": "Third-party reuse rights not cleared for this package; link-only curriculum/scientific/ethics reference selected",
+      "reuse_mode": "link-only-reference",
+      "permissions": {
+        "linking": true,
+        "quotation": false,
+        "adaptation": false,
+        "redistribution": false
+      },
+      "attribution_requirements": [
+        "Identify Guidelines for Stem Cell Research and Clinical Translation, International Society for Stem Cell Research, and the exact URL."
+      ],
+      "third_party_notes": "Used only as a link-only curriculum, scientific, or ethics reference. No source text, figure, table, problem, dataset, or video is copied or adapted; no institutional endorsement is implied.",
+      "mapped_courses": [
+        "cell-biology"
+      ],
+      "mapped_modules": [
+        "cell-biology-module-28"
+      ],
+      "version": "Online guidelines; version 1.2 includes the August 2025 targeted embryo-model update; accessed 2026-10-06",
       "checksum": null,
       "imported_assets": [],
       "rights_notes": "This record documents link-only use and does not clear linked content for reuse."

@@ -4655,6 +4655,453 @@
           }
         ]
       }
+    },
+    {
+      "id": "cell-biology-27:potency-logic",
+      "type": "single_choice",
+      "prompt": "Which statement correctly separates two common stem-cell properties?",
+      "points": 1,
+      "objective_ids": [
+        "cell-biology-27-objective-1"
+      ],
+      "feedback": {
+        "hint": "Ask whether the term describes continued propagation, specialized descendants, or the range of possible fates.",
+        "solution": "Self-renewal concerns retention of defined properties across propagation; potency concerns developmental range in a stated biological and assay context. Neither is proved by a single marker.",
+        "lesson_ids": [
+          "cell-biology-27"
+        ],
+        "misconception_ids": [
+          "stem-cell-marker-proves-potency"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      },
+      "options": [
+        "Self-renewal describes repeated production of cells retaining specified stem-cell properties; potency describes the range of fates the cells can generate in a stated context.",
+        "Self-renewal means a cell can form every tissue in any organism; potency is its current division rate.",
+        "A pluripotency-associated marker alone establishes both self-renewal and mature function.",
+        "Multipotent and pluripotent always name identical developmental ranges in every assay."
+      ],
+      "solution_spec": {
+        "answer": 0
+      }
+    },
+    {
+      "id": "cell-biology-27:lineage-evidence",
+      "type": "structured",
+      "prompt": "A candidate stem-cell-derived culture expresses a lineage-associated marker panel. Choose one response for each evidence criterion.",
+      "points": 3,
+      "objective_ids": [
+        "cell-biology-27-objective-2"
+      ],
+      "feedback": {
+        "hint": "Keep marker identity, function, and biological replication as separate criteria.",
+        "solution": "A marker panel supports the measured marker-defined fraction, not mature function for every cell. A prespecified function assay with controls adds a separate evidence layer. The stated four independent differentiations are the biological replicate unit.",
+        "lesson_ids": [
+          "cell-biology-27"
+        ],
+        "misconception_ids": [
+          "stem-cell-marker-proves-potency",
+          "technical-wells-as-biological-n"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      },
+      "response_fields": [
+        {
+          "id": "marker-claim",
+          "type": "single_choice",
+          "prompt": "Marker result · What does the measurement support?",
+          "options": [
+            "The measured marker-defined fraction under the stated culture and time conditions.",
+            "That every cell is a mature, functional tissue cell.",
+            "That no cells of another lineage are present."
+          ],
+          "points": 1
+        },
+        {
+          "id": "function-test",
+          "type": "single_choice",
+          "prompt": "Function · What strengthens a functional claim?",
+          "options": [
+            "Repeat the same marker stain in another image field only.",
+            "A prespecified tissue-relevant function assay with calibrated positive/negative controls, recovery, and an explicit denominator.",
+            "A higher transcript abundance without a functional assay."
+          ],
+          "points": 1
+        },
+        {
+          "id": "replicate-unit",
+          "type": "single_choice",
+          "prompt": "Replication · What is n = 4 independent differentiation batches?",
+          "options": [
+            "Four thousand cells measured within one batch.",
+            "Four image fields from one culture.",
+            "Four independent differentiation preparations, with cells nested within each preparation."
+          ],
+          "points": 1
+        }
+      ],
+      "solution_spec": {
+        "field_specs": [
+          {
+            "id": "marker-claim",
+            "type": "single_choice",
+            "answer": 0
+          },
+          {
+            "id": "function-test",
+            "type": "single_choice",
+            "answer": 1
+          },
+          {
+            "id": "replicate-unit",
+            "type": "single_choice",
+            "answer": 2
+          }
+        ],
+        "rubric": [
+          {
+            "id": "marker-claim",
+            "criterion": "Bound marker evidence",
+            "points": 1,
+            "evidence": [
+              "Reports the marker-defined fraction without inferring complete identity or function."
+            ]
+          },
+          {
+            "id": "function-test",
+            "criterion": "Select functional evidence",
+            "points": 1,
+            "evidence": [
+              "Chooses a defined function assay with assay controls and denominator."
+            ]
+          },
+          {
+            "id": "replicate-unit",
+            "criterion": "Identify the biological replicate",
+            "points": 1,
+            "evidence": [
+              "Distinguishes independent preparations from nested cells or fields."
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "cell-biology-27:functional-fraction",
+      "type": "numeric",
+      "prompt": "In the explicitly synthetic construct assay, 18 of 80 recovered viable constructs meet a predeclared force-generation threshold. What percentage of the recovered viable constructs meets that threshold? Report a percentage.",
+      "points": 1,
+      "objective_ids": [
+        "cell-biology-27-objective-2"
+      ],
+      "feedback": {
+        "hint": "Divide constructs meeting the stated threshold by the recovered viable-construct denominator, then multiply by 100.",
+        "solution": "18/80 × 100% = 22.5%. The result describes the measured recovered constructs and that assay threshold; it does not describe all starting cells or demonstrate clinical benefit.",
+        "lesson_ids": [
+          "cell-biology-27"
+        ],
+        "misconception_ids": [
+          "potency-equals-clinical-efficacy"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      },
+      "solution_spec": {
+        "answer": 22.5,
+        "unit": "%",
+        "tolerance": 0.225,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      }
+    },
+    {
+      "id": "cell-biology-28:factorial-pattern",
+      "type": "structured",
+      "prompt": "Interpret the explicitly synthetic matrix-by-cue dataset. Select a response for each criterion.",
+      "points": 3,
+      "objective_ids": [
+        "cell-biology-28-objective-1",
+        "cell-biology-28-objective-2"
+      ],
+      "feedback": {
+        "hint": "Separate the marker-defined outcome, batch structure, and inference boundary.",
+        "solution": "The synthetic means show higher marker-positive fractions under cue and higher-modulus conditions, with batch as the independent unit. A marker is not function, and four summary means do not identify a pathway or provide uncertainty for an interaction claim.",
+        "lesson_ids": [
+          "cell-biology-28"
+        ],
+        "misconception_ids": [
+          "marker-equals-function-stem-cell",
+          "technical-wells-as-biological-n"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      },
+      "response_fields": [
+        {
+          "id": "factor-trend",
+          "type": "single_choice",
+          "prompt": "Pattern · What do the means show?",
+          "options": [
+            "The marker-positive fraction is higher in the cue-present and higher-modulus conditions in this constructed comparison.",
+            "The table shows a validated mature tissue function in patients.",
+            "Viability is zero in the cue-present groups."
+          ],
+          "points": 1
+        },
+        {
+          "id": "batch-unit",
+          "type": "single_choice",
+          "prompt": "Replication · What is the stated independent unit?",
+          "options": [
+            "Every viable singlet is an independent differentiation batch.",
+            "Four independent differentiation batches each contributed randomized constructs to all four conditions.",
+            "The ± SD values are technical wells from one batch."
+          ],
+          "points": 1
+        },
+        {
+          "id": "claim-limit",
+          "type": "single_choice",
+          "prompt": "Boundary · What does the table not establish?",
+          "options": [
+            "That the four marker-fraction means differ numerically.",
+            "That viability is separately reported.",
+            "That the marker shift reflects stable lineage identity, functional potency, or a particular molecular mechanism."
+          ],
+          "points": 1
+        }
+      ],
+      "solution_spec": {
+        "field_specs": [
+          {
+            "id": "factor-trend",
+            "type": "single_choice",
+            "answer": 0
+          },
+          {
+            "id": "batch-unit",
+            "type": "single_choice",
+            "answer": 1
+          },
+          {
+            "id": "claim-limit",
+            "type": "single_choice",
+            "answer": 2
+          }
+        ],
+        "rubric": [
+          {
+            "id": "factor-trend",
+            "criterion": "Describe the measured trend",
+            "points": 1,
+            "evidence": [
+              "Names the marker-fraction trend without converting it to tissue function."
+            ]
+          },
+          {
+            "id": "batch-unit",
+            "criterion": "Use the correct replicate unit",
+            "points": 1,
+            "evidence": [
+              "Identifies four paired/blocked independent batches, not individual cells or wells."
+            ]
+          },
+          {
+            "id": "claim-limit",
+            "criterion": "Separate marker from function and mechanism",
+            "points": 1,
+            "evidence": [
+              "Does not infer function, durable state, or pathway from marker fractions alone."
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "cell-biology-28:interaction-contrast",
+      "type": "single_choice",
+      "prompt": "The cue-associated mean difference is 26 percentage points at 2 kPa and 39 points at 30 kPa. Which interpretation of the 13-point difference-in-differences is justified?",
+      "points": 1,
+      "objective_ids": [
+        "cell-biology-28-objective-1"
+      ],
+      "feedback": {
+        "hint": "A difference-in-differences summarizes the means; it is not itself an inferential test.",
+        "solution": "39−26 = 13 percentage points is a descriptive interaction contrast. Batch-level values and an appropriate prespecified model are needed to estimate uncertainty; the summary does not establish a mechanism.",
+        "lesson_ids": [
+          "cell-biology-28"
+        ],
+        "misconception_ids": [
+          "descriptive-contrast-proves-interaction"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      },
+      "options": [
+        "It proves a statistically significant mechanistic interaction between stiffness and the cue.",
+        "It is a descriptive contrast of four synthetic means; estimate its uncertainty from batch-level values with a prespecified factorial model.",
+        "It is a 13% relative increase from the 2-kPa baseline.",
+        "It shows that the cue has no association with the measured outcome."
+      ],
+      "solution_spec": {
+        "answer": 1
+      }
+    },
+    {
+      "id": "cell-biology-28:follow-up-design",
+      "type": "structured",
+      "prompt": "Choose a follow-up design that would make the matrix-by-cue comparison more interpretable.",
+      "points": 3,
+      "objective_ids": [
+        "cell-biology-28-objective-2"
+      ],
+      "feedback": {
+        "hint": "Match the design to the claimed cue, matrix, replicate unit, and distinct cell outcomes.",
+        "solution": "A controlled design measures matrix presentation and cell state, treats differentiation batch as the independent unit, retains raw batch values, and evaluates lineage markers separately from a defined function assay. No one control or marker resolves every alternative.",
+        "lesson_ids": [
+          "cell-biology-28"
+        ],
+        "misconception_ids": [
+          "marker-equals-function-stem-cell",
+          "technical-wells-as-biological-n"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      },
+      "response_fields": [
+        {
+          "id": "matrix-cell-controls",
+          "type": "single_choice",
+          "prompt": "Controls · Which condition measurements should be matched or checked?",
+          "options": [
+            "Accessible ligand, hydrated mechanics, cell source/state, seeding density, viability, and target engagement when a pathway is claimed.",
+            "Only the final marker value.",
+            "No matrix checks if the bulk modulus is printed on the container."
+          ],
+          "points": 1
+        },
+        {
+          "id": "analysis-unit",
+          "type": "single_choice",
+          "prompt": "Analysis · Which plan respects the stated batch structure?",
+          "options": [
+            "Treat every cell as an independent culture preparation.",
+            "Keep each differentiation batch as a block, randomize conditions within batch, and retain batch-level data for a planned factorial analysis.",
+            "Average all cells before splitting conditions by outcome."
+          ],
+          "points": 1
+        },
+        {
+          "id": "outcome-layers",
+          "type": "single_choice",
+          "prompt": "Outcome · What should be measured separately?",
+          "options": [
+            "A marker, relabeled as function.",
+            "Marker panel only, with no viability or recovery.",
+            "Orthogonal lineage evidence, a prespecified function assay, viable-cell recovery, and a time course."
+          ],
+          "points": 1
+        }
+      ],
+      "solution_spec": {
+        "field_specs": [
+          {
+            "id": "matrix-cell-controls",
+            "type": "single_choice",
+            "answer": 0
+          },
+          {
+            "id": "analysis-unit",
+            "type": "single_choice",
+            "answer": 1
+          },
+          {
+            "id": "outcome-layers",
+            "type": "single_choice",
+            "answer": 2
+          }
+        ],
+        "rubric": [
+          {
+            "id": "matrix-cell-controls",
+            "criterion": "Control matrix and cell context",
+            "points": 1,
+            "evidence": [
+              "Names matrix presentation and cell-state variables relevant to the claim."
+            ]
+          },
+          {
+            "id": "analysis-unit",
+            "criterion": "Preserve independent replication",
+            "points": 1,
+            "evidence": [
+              "Uses within-batch randomization and a model matched to the batch unit."
+            ]
+          },
+          {
+            "id": "outcome-layers",
+            "criterion": "Separate identity and function",
+            "points": 1,
+            "evidence": [
+              "Measures identity and functional outcomes as distinct layers with recovery and time."
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "cell-biology-28:translation-boundary",
+      "type": "single_choice",
+      "prompt": "What conclusion is warranted from a synthetic in-vitro marker and construct-function comparison?",
+      "points": 1,
+      "objective_ids": [
+        "cell-biology-28-objective-3"
+      ],
+      "feedback": {
+        "hint": "Keep an in-vitro outcome separate from clinical benefit and identify the oversight boundary.",
+        "solution": "In-vitro data can motivate additional research but do not establish safety or efficacy in people. Actual research needs the oversight appropriate to its cell source, procedure, jurisdiction, and study design.",
+        "lesson_ids": [
+          "cell-biology-28"
+        ],
+        "misconception_ids": [
+          "potency-equals-clinical-efficacy"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      },
+      "options": [
+        "The treatment is clinically effective because one in-vitro construct passed its assay.",
+        "The cultured cells will integrate safely into every recipient tissue.",
+        "The result motivates further controlled preclinical work; it does not establish clinical safety or efficacy, and real human-cell research requires applicable oversight.",
+        "An institutional review is unnecessary for any stem-cell study once cells are cultured."
+      ],
+      "solution_spec": {
+        "answer": 2
+      }
     }
   ]
 }

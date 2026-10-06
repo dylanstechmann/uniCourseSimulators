@@ -995,6 +995,68 @@ test("week 13 cell-cycle and cell-fate practice separates arrest, senescence, an
   ).toContainText("3 / 3 practice points");
 });
 
+test("week 14 stem-cell potency and study-design practice checks function and inference boundaries", async ({
+  page,
+}) => {
+  await page.goto("/#/account");
+  await page.getByRole("button", { name: "Start guest session" }).click();
+  await page.getByRole("link", { name: "Course catalog", exact: true }).click();
+  await page.getByRole("link", { name: /Foundations of Cell/ }).click();
+  await page.getByRole("button", { name: "Enroll in partial course" }).click();
+  await page.getByRole("link", { name: "Practice gradebook" }).click();
+
+  const row = page.getByRole("row", {
+    name: /Week 14: stem-cell potency and integrative study design practice/,
+  });
+  await row.getByRole("button", { name: "Open practice set" }).click();
+  await expect(
+    page.getByRole("heading", {
+      name: "Week 14: stem-cell potency and integrative study design practice",
+    }),
+  ).toBeVisible();
+  await expect(
+    page.getByText(/7 questions · 13 practice points/),
+  ).toBeVisible();
+
+  const fraction = page.locator(
+    '[data-question-id="cell-biology-27:functional-fraction"]',
+  );
+  await fraction.getByLabel("Numerical value").fill("22.5");
+  await fraction.getByLabel("Unit").fill("%");
+  await fraction
+    .getByRole("button", { name: "Submit practice response" })
+    .click();
+  await expect(
+    fraction.getByRole("region", { name: "Submission feedback" }),
+  ).toContainText("1 / 1 practice points");
+
+  const lineage = page.locator(
+    '[data-question-id="cell-biology-27:lineage-evidence"]',
+  );
+  await lineage.getByLabel(/Marker result/).selectOption("0");
+  await lineage.getByLabel(/Function/).selectOption("1");
+  await lineage.getByLabel(/Replication/).selectOption("2");
+  await lineage
+    .getByRole("button", { name: "Submit practice response" })
+    .click();
+  await expect(
+    lineage.getByRole("region", { name: "Submission feedback" }),
+  ).toContainText("3 / 3 practice points");
+
+  const design = page.locator(
+    '[data-question-id="cell-biology-28:follow-up-design"]',
+  );
+  await design.getByLabel(/Controls/).selectOption("0");
+  await design.getByLabel(/Analysis/).selectOption("1");
+  await design.getByLabel(/Outcome/).selectOption("2");
+  await design
+    .getByRole("button", { name: "Submit practice response" })
+    .click();
+  await expect(
+    design.getByRole("region", { name: "Submission feedback" }),
+  ).toContainText("3 / 3 practice points");
+});
+
 test("structured experimental criteria receive deterministic partial credit and persist", async ({
   page,
 }) => {
