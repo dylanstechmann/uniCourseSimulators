@@ -1460,14 +1460,14 @@ def validate_repository(
             source_document["sources"], "source", registry_path, report
         )
         for source in source_document["sources"]:
-            if source["reuse_mode"] == "link-only-comparator" and any(
+            if source["reuse_mode"] in {"link-only-comparator", "link-only-reference"} and any(
                 source["permissions"][key]
                 for key in ("quotation", "adaptation", "redistribution")
             ):
                 report.error(
                     "source-permissions",
                     registry_path,
-                    f"Comparator-only source {source['id']} must not claim content reuse permissions.",
+                    f"Link-only source {source['id']} must not claim content reuse permissions.",
                 )
     baseline_path = root / "content/courses/legacy-inventory.json"
     baseline = load_json(baseline_path, report) if baseline_path.exists() else {}

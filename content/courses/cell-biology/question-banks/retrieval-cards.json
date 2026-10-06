@@ -122,6 +122,46 @@
         "cell-biology-6-objective-2"
       ],
       "license": "CC-BY-4.0"
+    },
+    {
+      "id": "cell-biology-6-0",
+      "lesson_id": "cell-biology-7",
+      "front": "Protease protection",
+      "back": "If a protein resists protease in intact microsomes but becomes sensitive after detergent, it accessed a membrane-enclosed space under those assay conditions; compartment identity and the failed step still require separate evidence.",
+      "objective_ids": [
+        "cell-biology-7-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "cell-biology-6-1",
+      "lesson_id": "cell-biology-7",
+      "front": "Membrane topology in vesicle traffic",
+      "back": "During ordinary endomembrane budding and fusion, the cytosolic face remains cytosolic and the lumen-facing side remains lumen-facing; a secretory-vesicle lumen becomes extracellular after plasma-membrane fusion.",
+      "objective_ids": [
+        "cell-biology-7-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "cell-biology-7-0",
+      "lesson_id": "cell-biology-8",
+      "front": "Cargo recognition versus sorting",
+      "back": "A receptor can bind cargo normally yet fail to deliver it correctly if its cytosolic sorting or routing step is altered; matched receptor, cargo, and fraction controls are needed.",
+      "objective_ids": [
+        "cell-biology-8-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "cell-biology-7-1",
+      "lesson_id": "cell-biology-8",
+      "front": "KDEL retrieval signal",
+      "back": "KDEL helps retrieve many escaped ER-lumen proteins from post-ER compartments; it does not make each protein physically immobile in the ER.",
+      "objective_ids": [
+        "cell-biology-8-objective-1"
+      ],
+      "license": "CC-BY-4.0"
     }
   ]
 }

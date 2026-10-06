@@ -6,11 +6,12 @@ answer key, figure, video, dataset, or other asset**. Links and course titles
 are references, not evidence that a uniStemCourseSimulators course has equivalent depth.
 
 The machine-readable registry is [sources/registry.json](sources/registry.json).
-It preserves the prototype's 22 MIT reference IDs and adds three Johns
-Hopkins references plus three MIT reuse-policy references. The recorded access
-date is 2026-10-05. All 22 linked MIT course landing pages and the canonical JHU
-pages were opened on that date. An access date is not a claim that every asset
-or every outbound link on a source page has been checked.
+It preserves the prototype's 22 MIT reference IDs and the existing Johns
+Hopkins and MIT reuse-policy records. The week-3 biology package adds one
+link-only MIT course comparator and five link-only primary research references.
+Existing records were accessed on 2026-10-05; the new week-3 references were
+checked on 2026-10-06. An access date is not a claim that every asset or every
+outbound link on a source page has been checked.
 
 ## License boundaries
 
@@ -22,6 +23,7 @@ or every outbound link on a source page has been checked.
 | Future approved adaptations of applicable OCW material | CC BY-NC-SA 4.0 with source, faculty author, asset, license, and modification attribution |
 | All-rights-reserved or license-excluded source assets | No import, adaptation, or redistribution under this project's content policy |
 | JHU public catalogue and AAP descriptions | Link-only curriculum references; no open reuse license established |
+| Primary research citations | Bibliographic citation and link only unless a specific asset license is separately verified; no paper text, tables, or figures imported |
 | Other third-party assets | Explicit asset-specific license and attribution required before import |
 | Learner data and submitted work | Outside repository licensing; governed by the learner's rights and deployment policy |
 
@@ -32,11 +34,13 @@ as original merely because it has been edited or converted to Markdown.
 
 ## How to interpret the registry
 
-`reuse_mode: link-only-comparator` means the current repository only links to
-that source. `permissions` records the operations selected for this project:
-linking is enabled, while quotation, adaptation, and redistribution are not
-approved for these initial records. The flags do not exhaust the legal
-permissions of the underlying source. `rights_notes` explains this distinction.
+`reuse_mode: link-only-comparator` means the repository links to a curriculum
+source to compare public topic scope. `reuse_mode: link-only-reference` marks
+a primary research citation used to document scientific provenance. For both
+modes, `permissions` records linking only; quotation, adaptation, and
+redistribution are not approved for these records. The flags do not exhaust the
+legal permissions of the underlying source. `rights_notes` explains this
+distinction.
 
 An empty `imported_assets` array means no asset has been imported by that
 record. `checksum: null` means no reproducible source snapshot or checksum has

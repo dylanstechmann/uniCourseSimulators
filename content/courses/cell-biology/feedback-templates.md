@@ -45,6 +45,14 @@ These templates guide feedback for the current public formative material. The so
 
 > The readout is interpretable only if **[assay property or background]** is checked. Add **[specific positive, negative, vehicle, loading, or delivery control]** and state which failure it would reveal.
 
+### Membrane-enclosure result mistaken for a complete localization mechanism
+
+> Your protease-protection pattern supports **[membrane-enclosed access under the tested conditions]** because **[marker and detergent controls]**. It does not yet identify **[the exact targeting/import step or compartment]**. Next, add **[an orthogonal marker, matched synthesis measurement, or time-course]** and limit the claim to what that test resolves.
+
+### Cargo binding mistaken for successful sorting
+
+> The binding measurement supports **[cargo recognition]**, while **[compartment distribution or secretion result]** shows that the later route may differ. Check **[receptor amount/localization and fraction recovery]**, then ask whether a rescue restores delivery. A binding result alone does not establish the final destination.
+
 ### Incomplete but promising approach
 
 > The first step is useful: **[specific valid part]**. The missing link is **[unanswered criterion]**. Complete that link with **[a calculation, measurement, or control]**, then write a conclusion limited to the evidence you have.

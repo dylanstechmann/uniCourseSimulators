@@ -13,7 +13,7 @@
       "properties": {
         "id": {"type": "string", "minLength": 1}, "title": {"type": "string", "minLength": 5}, "institution": {"type": "string", "minLength": 2},
         "url": {"type": "string", "format": "uri", "pattern": "^https://"}, "accessed_at": {"type": "string", "format": "date"},
-        "license": {"type": "string", "minLength": 2}, "reuse_mode": {"enum": ["link-only-comparator", "original", "adapted", "redistributed"]},
+        "license": {"type": "string", "minLength": 2}, "reuse_mode": {"enum": ["link-only-comparator", "link-only-reference", "original", "adapted", "redistributed"]},
         "permissions": {"type": "object", "additionalProperties": false, "required": ["linking", "quotation", "adaptation", "redistribution"], "properties": {"linking": {"type": "boolean"}, "quotation": {"type": "boolean"}, "adaptation": {"type": "boolean"}, "redistribution": {"type": "boolean"}}},
         "attribution_requirements": {"type": "array", "items": {"type": "string", "minLength": 5}}, "third_party_notes": {"type": "string", "minLength": 10}, "rights_notes": {"type": "string"},
         "mapped_courses": {"type": "array", "uniqueItems": true, "items": {"type": "string", "minLength": 1}}, "mapped_modules": {"type": "array", "uniqueItems": true, "items": {"type": "string", "minLength": 1}},

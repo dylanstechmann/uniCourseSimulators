@@ -80,6 +80,35 @@
       "original_content": true,
       "license": "MIT OR CC-BY-4.0",
       "modifications": []
+    },
+    {
+      "module_id": "cell-biology-module-7",
+      "lesson_id": "cell-biology-7",
+      "reading": "modules/03a-organelle-compartments-and-protein-targeting.md",
+      "source_ids": [
+        "mit-7.016-trafficking",
+        "blobel-dobberstein-1975"
+      ],
+      "relationship": "original-content-with-link-only-comparator-and-primary-reference",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "cell-biology-module-8",
+      "lesson_id": "cell-biology-8",
+      "reading": "modules/03b-protein-sorting-and-vesicle-traffic.md",
+      "source_ids": [
+        "mit-7.016-trafficking",
+        "johnson-kornfeld-1992",
+        "munro-pelham-1987",
+        "miesenbock-rothman-1995",
+        "geuze-et-al-1988"
+      ],
+      "relationship": "original-content-with-link-only-comparator-and-primary-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
     }
   ]
 }

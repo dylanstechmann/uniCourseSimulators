@@ -17,7 +17,7 @@ An independent open-source learning platform under development. It does **not co
 | complete | 0 | All full-course gates satisfied |
 | externally reviewed | 0 | Qualified named reviewer examined a specified version |
 
-**No current package meets the complete-course standard.** The 103 lesson files, 110 formative questions, 207 cards and 25 self-assessed cases are useful practice material; they are not semester courses. Foundations of Cell and Molecular Biology remains partial: a proposed 14-week scope is mapped, and only the first two weeks have two substantial lessons each. No instructor review is fabricated.
+**No current package meets the complete-course standard.** The 105 lesson files, 114 formative questions, 211 cards and 25 self-assessed cases are useful practice material; they are not semester courses. Foundations of Cell and Molecular Biology remains partial: a proposed 14-week scope is mapped, and only the first three weeks have two substantial lessons each. No instructor review is fabricated.
 
 The curriculum map adds **37 catalog-only subject nodes** and **8 pathway maps** beside the 25 partial course packages. Catalog-only entries describe planned study areas and dependencies; they contain no authored lessons and cannot be enrolled in. Mapped prerequisite order is planning guidance and does not establish university equivalency.
 

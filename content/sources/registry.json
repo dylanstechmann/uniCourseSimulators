@@ -816,6 +816,181 @@
       "checksum": null,
       "imported_assets": [],
       "rights_notes": "The policy is linked, not republished. Its general OCW license statement does not clear rights for individual assets. Permission flags describe selected project use."
+    },
+    {
+      "id": "mit-7.016-trafficking",
+      "title": "Lecture 19: Cell Trafficking and Protein Localization",
+      "institution": "Massachusetts Institute of Technology / MIT OpenCourseWare",
+      "url": "https://ocw.mit.edu/courses/7-016-introductory-biology-fall-2018/resources/lecture-19-cell-trafficking-and-protein-localization/",
+      "accessed_at": "2026-10-06",
+      "license": "CC-BY-NC-SA-4.0 for applicable, non-excluded OCW material; this project uses a link only",
+      "reuse_mode": "link-only-comparator",
+      "permissions": {
+        "linking": true,
+        "quotation": false,
+        "adaptation": false,
+        "redistribution": false
+      },
+      "attribution_requirements": [
+        "Identify MIT OpenCourseWare, course 7.016, Fall 2018, Lecture 19, and the exact URL; do not imply MIT endorsement."
+      ],
+      "third_party_notes": "The page embeds or links to video and may include third-party material. No transcript, video, figure, problem, or other asset is copied or redistributed. Asset-specific restrictions remain in force.",
+      "mapped_courses": [
+        "cell-biology"
+      ],
+      "mapped_modules": [
+        "cell-biology-module-7",
+        "cell-biology-module-8"
+      ],
+      "version": "Fall 2018; course page accessed 2026-10-06",
+      "checksum": null,
+      "imported_assets": [],
+      "rights_notes": "Topic-level curriculum comparator only. MIT's general OCW license does not clear individual assets; this repository links only and does not imply affiliation or equivalence."
+    },
+    {
+      "id": "blobel-dobberstein-1975",
+      "title": "Transfer of proteins across membranes. I. Presence of proteolytically processed and unprocessed nascent immunoglobulin light chains on membrane-bound ribosomes of murine myeloma",
+      "institution": "Günter Blobel and Bernhard Dobberstein, Journal of Cell Biology",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/811671/",
+      "accessed_at": "2026-10-06",
+      "license": "No reuse license asserted; bibliographic citation and link only",
+      "reuse_mode": "link-only-reference",
+      "permissions": {
+        "linking": true,
+        "quotation": false,
+        "adaptation": false,
+        "redistribution": false
+      },
+      "attribution_requirements": [
+        "Credit Blobel and Dobberstein (1975), Journal of Cell Biology, and link to PMID 811671; do not reproduce the abstract, article text, tables, or figures."
+      ],
+      "third_party_notes": "PubMed record links to an archived research article. Publication and figure rights are not asserted by this project; no article assets are imported.",
+      "mapped_courses": [
+        "cell-biology"
+      ],
+      "mapped_modules": [
+        "cell-biology-module-7"
+      ],
+      "version": "1975; PMID 811671; DOI 10.1083/jcb.67.3.835",
+      "checksum": null,
+      "imported_assets": [],
+      "rights_notes": "Used only as a linked primary-research citation for historical experimental evidence about secretory-protein processing."
+    },
+    {
+      "id": "johnson-kornfeld-1992",
+      "title": "A His-Leu-Leu sequence near the carboxyl terminus of the cytoplasmic domain of the cation-dependent mannose 6-phosphate receptor is necessary for the lysosomal enzyme sorting function",
+      "institution": "Karl F. Johnson and Stuart Kornfeld, Journal of Biological Chemistry",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/1324923/",
+      "accessed_at": "2026-10-06",
+      "license": "No reuse license asserted; bibliographic citation and link only",
+      "reuse_mode": "link-only-reference",
+      "permissions": {
+        "linking": true,
+        "quotation": false,
+        "adaptation": false,
+        "redistribution": false
+      },
+      "attribution_requirements": [
+        "Credit Johnson and Kornfeld (1992), Journal of Biological Chemistry, and link to PMID 1324923; no article text, table, or figure is reproduced."
+      ],
+      "third_party_notes": "PubMed indexes the primary study. Publisher terms govern publication assets; none are imported here.",
+      "mapped_courses": [
+        "cell-biology"
+      ],
+      "mapped_modules": [
+        "cell-biology-module-8"
+      ],
+      "version": "1992; PMID 1324923; DOI 10.1016/S0021-9258(18)41900-X",
+      "checksum": null,
+      "imported_assets": [],
+      "rights_notes": "Used only as a linked primary-research citation. The lesson's example dataset is independently authored and synthetic."
+    },
+    {
+      "id": "munro-pelham-1987",
+      "title": "A C-terminal signal prevents secretion of luminal ER proteins",
+      "institution": "Sean Munro and Hugh R. B. Pelham, Cell",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/3545499/",
+      "accessed_at": "2026-10-06",
+      "license": "No reuse license asserted; bibliographic citation and link only",
+      "reuse_mode": "link-only-reference",
+      "permissions": {
+        "linking": true,
+        "quotation": false,
+        "adaptation": false,
+        "redistribution": false
+      },
+      "attribution_requirements": [
+        "Credit Munro and Pelham (1987), Cell, and link to PMID 3545499; do not reproduce article text or figures."
+      ],
+      "third_party_notes": "PubMed indexes the research article. This record does not assert reuse rights in the publication or its assets.",
+      "mapped_courses": [
+        "cell-biology"
+      ],
+      "mapped_modules": [
+        "cell-biology-module-8"
+      ],
+      "version": "1987; PMID 3545499; DOI 10.1016/0092-8674(87)90086-9",
+      "checksum": null,
+      "imported_assets": [],
+      "rights_notes": "Used only as a linked primary-research citation. The lesson paraphrases the experimental conclusion and states its contextual limitation."
+    },
+    {
+      "id": "miesenbock-rothman-1995",
+      "title": "The capacity to retrieve escaped ER proteins extends to the trans-most cisterna of the Golgi stack",
+      "institution": "G. M. Miesenböck and James E. Rothman, Journal of Cell Biology",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/7721936/",
+      "accessed_at": "2026-10-06",
+      "license": "No reuse license asserted; bibliographic citation and link only",
+      "reuse_mode": "link-only-reference",
+      "permissions": {
+        "linking": true,
+        "quotation": false,
+        "adaptation": false,
+        "redistribution": false
+      },
+      "attribution_requirements": [
+        "Credit Miesenböck and Rothman (1995), Journal of Cell Biology, and link to PMID 7721936; no text, figure, or table is reproduced."
+      ],
+      "third_party_notes": "PubMed indexes the primary study. Publication assets are not imported.",
+      "mapped_courses": [
+        "cell-biology"
+      ],
+      "mapped_modules": [
+        "cell-biology-module-8"
+      ],
+      "version": "1995; PMID 7721936; DOI 10.1083/jcb.129.2.309",
+      "checksum": null,
+      "imported_assets": [],
+      "rights_notes": "Used only as a linked primary-research citation."
+    },
+    {
+      "id": "geuze-et-al-1988",
+      "title": "Sorting of mannose 6-phosphate receptors and lysosomal membrane proteins in endocytic vesicles",
+      "institution": "H. J. Geuze, W. Stoorvogel, G. J. Strous, J. W. Slot, J. E. Bleekemolen, and I. Mellman, Journal of Cell Biology",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/2849607/",
+      "accessed_at": "2026-10-06",
+      "license": "No reuse license asserted; bibliographic citation and link only",
+      "reuse_mode": "link-only-reference",
+      "permissions": {
+        "linking": true,
+        "quotation": false,
+        "adaptation": false,
+        "redistribution": false
+      },
+      "attribution_requirements": [
+        "Credit Geuze et al. (1988), Journal of Cell Biology, and link to PMID 2849607; no article text, image, or table is reproduced."
+      ],
+      "third_party_notes": "PubMed links to a free archived article, but no publication assets are imported and this record does not assert a reuse license.",
+      "mapped_courses": [
+        "cell-biology"
+      ],
+      "mapped_modules": [
+        "cell-biology-module-8"
+      ],
+      "version": "1988; PMID 2849607; DOI 10.1083/jcb.107.6.2491",
+      "checksum": null,
+      "imported_assets": [],
+      "rights_notes": "Used only as a linked primary-research citation."
     }
   ]
 }

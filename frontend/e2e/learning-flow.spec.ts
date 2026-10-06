@@ -303,6 +303,68 @@ test("the developed cell-biology weeks expose original lessons and deterministic
   await expect(
     transport.getByRole("region", { name: "Submission feedback" }),
   ).toContainText("1 / 1 practice points");
+
+  await lessons
+    .getByRole("link", {
+      name: /Organelle compartments, membrane topology, and protein targeting/,
+    })
+    .click();
+  await expect(
+    page.getByRole("heading", {
+      name: "Organelle compartments, membrane topology, and protein targeting",
+      level: 1,
+    }),
+  ).toBeVisible();
+  const route = page.locator(
+    '[data-question-id="cell-biology-7:secretory-route"]',
+  );
+  await route.getByRole("radio").first().check();
+  await route.getByRole("button", { name: "Submit practice response" }).click();
+  await expect(
+    route.getByRole("region", { name: "Submission feedback" }),
+  ).toContainText("1 / 1 practice points");
+
+  const protection = page.locator(
+    '[data-question-id="cell-biology-7:protease-protection"]',
+  );
+  await protection.getByLabel(/Membrane-enclosure inference/).selectOption("0");
+  await protection.getByLabel(/Membrane-integrity control/).selectOption("0");
+  await protection.getByLabel(/Inference boundary/).selectOption("0");
+  await protection
+    .getByRole("button", { name: "Submit practice response" })
+    .click();
+  await expect(
+    protection.getByRole("region", { name: "Submission feedback" }),
+  ).toContainText("3 / 3 practice points");
+
+  await lessons
+    .getByRole("link", { name: /Protein sorting, vesicle traffic/ })
+    .click();
+  await expect(
+    page.getByRole("heading", {
+      name: "Protein sorting, vesicle traffic, and experimental inference",
+      level: 1,
+    }),
+  ).toBeVisible();
+  const lysosome = page.locator(
+    '[data-question-id="cell-biology-8:m6p-sorting"]',
+  );
+  await lysosome.getByRole("radio").first().check();
+  await lysosome
+    .getByRole("button", { name: "Submit practice response" })
+    .click();
+  await expect(
+    lysosome.getByRole("region", { name: "Submission feedback" }),
+  ).toContainText("1 / 1 practice points");
+
+  const kdel = page.locator(
+    '[data-question-id="cell-biology-8:kdel-retrieval"]',
+  );
+  await kdel.getByRole("radio").first().check();
+  await kdel.getByRole("button", { name: "Submit practice response" }).click();
+  await expect(
+    kdel.getByRole("region", { name: "Submission feedback" }),
+  ).toContainText("1 / 1 practice points");
 });
 
 test("structured experimental criteria receive deterministic partial credit and persist", async ({

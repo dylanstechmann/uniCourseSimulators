@@ -621,6 +621,183 @@
         "kind": "original",
         "modifications": []
       }
+    },
+    {
+      "id": "cell-biology-7:secretory-route",
+      "type": "single_choice",
+      "prompt": "A soluble protein has a cleavable N-terminal ER signal sequence. Which route best describes its common path to secretion?",
+      "options": [
+        "SRP recognizes the emerging signal, the ribosome is targeted to an ER translocon, the protein enters the ER lumen, then cargo passes through Golgi and a secretory vesicle before release.",
+        "The completed protein enters the nucleus, exits through a nuclear pore, and crosses directly through the plasma-membrane lipid bilayer.",
+        "The protein is imported into the mitochondrial matrix and then carried by COPII vesicles to the Golgi.",
+        "The protein remains in the cytosol until a clathrin coat pulls it through the ER membrane."
+      ],
+      "points": 1,
+      "objective_ids": [
+        "cell-biology-7-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0
+      },
+      "feedback": {
+        "hint": "Separate translocation into the ER from later vesicle transport between lumenal compartments.",
+        "solution": "An ER signal sequence is commonly recognized during translation and directs the ribosome–nascent-chain complex to an ER translocon. The soluble cargo enters the ER lumen and then moves through the Golgi and secretory vesicles. Vesicles carry cargo between compartments; they do not pull a soluble protein through a lipid bilayer.",
+        "lesson_ids": [
+          "cell-biology-7"
+        ],
+        "misconception_ids": [
+          "vesicle-traffic-crosses-bilayer"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "cell-biology-7:protease-protection",
+      "type": "structured",
+      "prompt": "Interpret the synthetic protease-protection experiment and state what the controls allow you to conclude.",
+      "response_fields": [
+        {
+          "id": "protection-inference",
+          "type": "single_choice",
+          "prompt": "Membrane-enclosure inference: wild-type signal is protected by protease in intact microsomes, while the signal-deletion construct is not. The ER-lumen marker is protected and the cytosolic marker is digested. Which inference is best supported?",
+          "options": [
+            "The wild-type test protein entered a membrane-enclosed lumen; the deleted region is needed for entry under these conditions.",
+            "The signal-deletion construct is never translated in any cell.",
+            "The wild-type protein is proven to bind directly to a specific ER receptor.",
+            "The wild-type protein is localized specifically to the Golgi rather than the ER."
+          ],
+          "points": 1
+        },
+        {
+          "id": "integrity-control",
+          "type": "single_choice",
+          "prompt": "Membrane-integrity control: what does adding detergent before protease contribute?",
+          "options": [
+            "It opens the microsome membrane; loss of protection supports a membrane-dependent barrier to protease.",
+            "It proves that the protein binds SRP with a particular affinity.",
+            "It establishes that the tagged protein is enzymatically active.",
+            "It shows that all microsomes came from a single organelle."
+          ],
+          "points": 1
+        },
+        {
+          "id": "inference-boundary",
+          "type": "single_choice",
+          "prompt": "Inference boundary: which conclusion still requires additional measurements?",
+          "options": [
+            "Which precise step—signal recognition, ribosome targeting, translocon engagement, or translocation—fails in the mutant.",
+            "Whether detergent changed access of protease to a lumenal marker.",
+            "Whether the wild-type signal is more protected than the signal-deletion construct in the stated assay.",
+            "Whether the cytosolic marker was exposed to protease in intact microsomes."
+          ],
+          "points": 1
+        }
+      ],
+      "points": 3,
+      "objective_ids": [
+        "cell-biology-7-objective-1",
+        "cell-biology-7-objective-2"
+      ],
+      "solution_spec": {
+        "field_specs": [
+          { "id": "protection-inference", "type": "single_choice", "answer": 0 },
+          { "id": "integrity-control", "type": "single_choice", "answer": 0 },
+          { "id": "inference-boundary", "type": "single_choice", "answer": 0 }
+        ],
+        "rubric": [
+          { "id": "protection-inference", "criterion": "Localization evidence", "points": 1, "evidence": ["Infers membrane-enclosed lumenal access from protection and matched marker behavior."] },
+          { "id": "integrity-control", "criterion": "Membrane-integrity control", "points": 1, "evidence": ["Uses detergent to test whether membrane disruption removes protection."] },
+          { "id": "inference-boundary", "criterion": "Bounded mechanistic inference", "points": 1, "evidence": ["Does not identify an unmeasured molecular import step."] }
+        ]
+      },
+      "feedback": {
+        "hint": "Use the ER-lumen and cytosolic markers to check assay behavior, then distinguish a localization inference from a molecular mechanism.",
+        "solution": "Wild-type protection in intact microsomes, sensitivity after detergent, a protected lumenal marker, and a digested cytosolic marker support entry into a membrane-enclosed lumen. The signal-deletion result is consistent with impaired entry in this assay. It does not distinguish signal recognition from targeting, translocon engagement, or translocation; matched synthesis, time-course, and orthogonal localization evidence would narrow those possibilities.",
+        "lesson_ids": [
+          "cell-biology-7"
+        ],
+        "misconception_ids": [
+          "signal-deletion-proves-specific-import-step",
+          "localization-assay-proves-function"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "cell-biology-8:m6p-sorting",
+      "type": "single_choice",
+      "prompt": "A cytosolic-tail mutant of the mannose-6-phosphate receptor binds cargo normally, but less newly synthesized cathepsin D reaches the lysosome fraction. Which explanation best fits this pattern?",
+      "options": [
+        "A post-binding sorting or routing step is impaired; receptor abundance, compartment access, and fraction recovery still need checking.",
+        "The receptor cannot recognize mannose-6-phosphate because cargo binding is unchanged.",
+        "All lysosomal hydrolases are made directly inside the lysosome and bypass the Golgi.",
+        "The result proves that the tail binds one specific coat protein in every cell type."
+      ],
+      "points": 1,
+      "objective_ids": [
+        "cell-biology-8-objective-1",
+        "cell-biology-8-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0
+      },
+      "feedback": {
+        "hint": "Separate cargo recognition from the later step that packages or routes the receptor–cargo complex.",
+        "solution": "Preserved ligand binding with reduced lysosomal delivery is consistent with a defect after cargo recognition, such as sorting or routing. Receptor abundance, compartment localization, cargo synthesis, degradation, and fraction recovery are alternative explanations that need controls; the pattern does not identify a unique adaptor or establish a universal mechanism.",
+        "lesson_ids": [
+          "cell-biology-8"
+        ],
+        "misconception_ids": [
+          "binding-equals-correct-destination",
+          "single-cell-system-generalized-universally"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "cell-biology-8:kdel-retrieval",
+      "type": "single_choice",
+      "prompt": "A lumenal ER protein with a terminal KDEL sequence is detected transiently in an early Golgi compartment and later returns to the ER. What model best explains this observation?",
+      "options": [
+        "A cycling receptor can retrieve escaped cargo from post-ER compartments; KDEL does not mean the protein is physically trapped in the ER at all times.",
+        "KDEL is an irreversible covalent anchor that prevents the protein from leaving the ER.",
+        "The protein must cross the Golgi membrane into the cytosol and then re-enter the ER.",
+        "The KDEL sequence converts the protein into a COPII coat subunit."
+      ],
+      "points": 1,
+      "objective_ids": [
+        "cell-biology-8-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0
+      },
+      "feedback": {
+        "hint": "Interpret the transient Golgi signal as evidence about movement, not permanent immobilization.",
+        "solution": "KDEL is a retrieval signal for many soluble ER-resident proteins. Cargo can escape to post-ER compartments and be returned through receptor-mediated traffic. The magnitude and kinetics depend on the cargo and cellular context, so the tag is not an absolute, irreversible tether.",
+        "lesson_ids": [
+          "cell-biology-8"
+        ],
+        "misconception_ids": [
+          "kdel-means-physical-immobility"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
     }
   ]
 }

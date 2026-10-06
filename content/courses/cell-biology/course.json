@@ -7,7 +7,7 @@
   "domain": "Life sciences",
   "level": "Year 1",
   "maturity": "partial",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "license": "MIT OR CC-BY-4.0",
   "content_origin": {
     "kind": "legacy-prototype",
@@ -154,11 +154,45 @@
       "course_outcome_ids": [
         "cell-biology-outcome-4"
       ]
+    },
+    {
+      "id": "cell-biology-7-objective-1",
+      "description": "Use targeting information and membrane-crossing route to predict a protein's likely destination and topology.",
+      "bloom": "analyze",
+      "course_outcome_ids": [
+        "cell-biology-outcome-1",
+        "cell-biology-outcome-3"
+      ]
+    },
+    {
+      "id": "cell-biology-7-objective-2",
+      "description": "Interpret protease-protection and compartment-marker results with the controls needed to bound localization claims.",
+      "bloom": "analyze",
+      "course_outcome_ids": [
+        "cell-biology-outcome-4"
+      ]
+    },
+    {
+      "id": "cell-biology-8-objective-1",
+      "description": "Trace secretory and endocytic cargo while distinguishing receptor recycling from cargo destination and membrane topology.",
+      "bloom": "analyze",
+      "course_outcome_ids": [
+        "cell-biology-outcome-1",
+        "cell-biology-outcome-3"
+      ]
+    },
+    {
+      "id": "cell-biology-8-objective-2",
+      "description": "Use matched binding, localization, and cargo-distribution measurements to distinguish a sorting defect from altered synthesis or degradation.",
+      "bloom": "evaluate",
+      "course_outcome_ids": [
+        "cell-biology-outcome-4"
+      ]
     }
   ],
   "duration": {
     "instructional_weeks": 14,
-    "equivalent_structure": "Proposed undergraduate 14-week scope only. Weeks 1 and 2 have four developed lessons. Compact legacy readings remain in weeks 4 and 7; weeks 3, 5 through 6, and 8 through 14 are outlines without authored lesson sequences or summative assessments. Workload is not measured, so this plan is not evidence of semester equivalence.",
+    "equivalent_structure": "Proposed undergraduate 14-week scope only. Weeks 1 through 3 have six developed lessons. Compact legacy readings remain in weeks 4 and 7; weeks 5 through 6 and 8 through 14 have no authored lesson sequences or summative assessments. Workload is not measured, so this plan is not evidence of semester equivalence.",
     "weeks": [
       {
         "week": 1,
@@ -185,8 +219,14 @@
       {
         "week": 3,
         "title": "Organelles, compartmentalization, and protein trafficking",
-        "lesson_ids": [],
-        "assessment_ids": []
+        "lesson_ids": [
+          "cell-biology-7",
+          "cell-biology-8"
+        ],
+        "assessment_ids": [
+          "cell-biology-7-practice",
+          "cell-biology-8-practice"
+        ]
       },
       {
         "week": 4,
@@ -438,6 +478,65 @@
           ]
         }
       ]
+    },
+    {
+      "id": "cell-biology-module-7",
+      "title": "Organelle compartments and protein targeting",
+      "source_ids": [
+        "mit-7.016-trafficking",
+        "blobel-dobberstein-1975"
+      ],
+      "lessons": [
+        {
+          "id": "cell-biology-7",
+          "title": "Organelle compartments, membrane topology, and protein targeting",
+          "reading": "modules/03a-organelle-compartments-and-protein-targeting.md",
+          "objectives": [
+            "cell-biology-7-objective-1",
+            "cell-biology-7-objective-2"
+          ],
+          "worked_example": "In synthetic protease-protection data, wild-type cargo remains protected in intact ER-derived microsomes and becomes sensitive after detergent, while a signal-deletion construct is already sensitive. Lumenal and cytosolic marker controls support the interpretation that the wild-type protein entered a membrane-enclosed compartment, without identifying which import step failed in the mutant.",
+          "question_ids": [
+            "cell-biology-7:secretory-route",
+            "cell-biology-7:protease-protection"
+          ],
+          "card_ids": [
+            "cell-biology-6-0",
+            "cell-biology-6-1"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cell-biology-module-8",
+      "title": "Protein sorting and vesicle traffic",
+      "source_ids": [
+        "mit-7.016-trafficking",
+        "johnson-kornfeld-1992",
+        "munro-pelham-1987",
+        "miesenbock-rothman-1995",
+        "geuze-et-al-1988"
+      ],
+      "lessons": [
+        {
+          "id": "cell-biology-8",
+          "title": "Protein sorting, vesicle traffic, and experimental inference",
+          "reading": "modules/03b-protein-sorting-and-vesicle-traffic.md",
+          "objectives": [
+            "cell-biology-8-objective-1",
+            "cell-biology-8-objective-2"
+          ],
+          "worked_example": "A synthetic comparison shows similar M6P-receptor ligand binding but less lysosomal delivery and more secretion for a cytosolic-tail mutant. This favors a post-binding sorting explanation but requires matched receptor abundance, fraction-recovery controls, and a rescue before stronger causal claims.",
+          "question_ids": [
+            "cell-biology-8:m6p-sorting",
+            "cell-biology-8:kdel-retrieval"
+          ],
+          "card_ids": [
+            "cell-biology-7-0",
+            "cell-biology-7-1"
+          ]
+        }
+      ]
     }
   ],
   "assessments": [
@@ -516,6 +615,36 @@
       "objective_ids": [],
       "question_ids": [],
       "points": 0
+    },
+    {
+      "id": "cell-biology-7-practice",
+      "type": "practice",
+      "mode": "practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "cell-biology-7-objective-1",
+        "cell-biology-7-objective-2"
+      ],
+      "question_ids": [
+        "cell-biology-7:secretory-route",
+        "cell-biology-7:protease-protection"
+      ],
+      "points": 4
+    },
+    {
+      "id": "cell-biology-8-practice",
+      "type": "practice",
+      "mode": "practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "cell-biology-8-objective-1",
+        "cell-biology-8-objective-2"
+      ],
+      "question_ids": [
+        "cell-biology-8:m6p-sorting",
+        "cell-biology-8:kdel-retrieval"
+      ],
+      "points": 2
     }
   ],
   "grading_policy": {
@@ -539,13 +668,18 @@
     "language": "en",
     "reading_format": "markdown",
     "math_format": "unicode-text",
-    "diagram_policy": "The seed package contains no imported diagrams; newly authored diagrams require descriptions and individual license tracking.",
+    "diagram_policy": "The package uses text-described route sequences and tables; no source figures are imported. Future original diagrams require concise descriptions and individual license tracking.",
     "known_issues": [
       "Unicode equations require structured mathematical alternatives and assistive-technology review."
     ],
     "review_status": "unreviewed"
   },
   "history": [
+    {
+      "version": "0.5.0",
+      "date": "2026-10-06",
+      "summary": "Developed two week-3 lessons on organelle targeting and vesicle sorting, added source-registry records, synthetic experimental practice, and retrieval cards; the course remains partial."
+    },
     {
       "version": "0.4.0",
       "date": "2026-10-06",
@@ -583,9 +717,9 @@
     }
   ],
   "limitations": [
-    "The proposed 14-week scope is not 14 weeks of instruction: only weeks 1 and 2 have two substantial lessons, while compact enzyme and gene-expression prototypes remain in weeks 4 and 7.",
+    "The proposed 14-week scope is not 14 weeks of instruction: weeks 1 through 3 have two original lessons each, while compact enzyme and gene-expression prototypes remain in weeks 4 and 7.",
     "There is no authored substantive homework sequence, three-activity laboratory sequence, midterm, cumulative final, or integrative project.",
-    "Current formative checks across six lessons do not demonstrate comprehensive outcome coverage or mastery; some lesson objectives remain unassessed.",
+    "Current formative checks across eight lessons do not demonstrate comprehensive outcome coverage or mastery; some lesson objectives remain unassessed.",
     "Bloom labels and structured prerequisite edges are initial authoring classifications awaiting subject-matter review.",
     "Question answers and solution feedback are intentionally public practice authoring specifications, not restricted exam keys.",
     "Numerical specifications preserve the prototype's tolerance and optional unit entry; significant-figure and dimensional checks have not been authored.",

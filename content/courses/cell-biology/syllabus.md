@@ -1,8 +1,8 @@
 # Foundations of Cell and Molecular Biology
 
-**Maturity: partial. Version: 0.4.0.**
+**Maturity: partial. Version: 0.5.0.**
 
-This original course package is intended to develop mechanistic reasoning from molecular structure to cell behavior. It is a work in progress, not a 14-week course yet: weeks 1–2 now have four developed lessons; compact prototype capsules remain for enzymes in week 4 and gene expression in week 7; other proposed weeks lack an authored lesson sequence or summative assessment. No semester equivalency, university credit, or prerequisite equivalency is claimed.
+This original course package is intended to develop mechanistic reasoning from molecular structure to cell behavior. It is a work in progress, not a 14-week course yet: weeks 1–3 now have six developed lessons; compact prototype capsules remain for enzymes in week 4 and gene expression in week 7; weeks 5–6 and 8–14 lack authored lesson sequences or summative assessments. No semester equivalency, university credit, or prerequisite equivalency is claimed.
 
 ## Prerequisites
 
@@ -21,13 +21,13 @@ These are intended outcomes. Current assessment coverage is incomplete and does 
 
 ## Proposed 14-week scope
 
-The full proposal and its objective-to-assessment crosswalk are in [assessment-crosswalk.md](assessment-crosswalk.md). Only weeks 1–2 currently have two substantial lessons each. Weeks 4 and 7 have one compact legacy lesson apiece; weeks 3, 5–6, and 8–14 remain outlines. The manifest's 14-week value records the proposed scope, not completed instructional time. The current [misconception catalog](misconceptions.md) and [instructor-style feedback templates](feedback-templates.md) cover selected formative topics; they do not diagnose free-form reasoning.
+The full proposal and its objective-to-assessment crosswalk are in [assessment-crosswalk.md](assessment-crosswalk.md). Weeks 1–3 currently have two original lessons each. Weeks 4 and 7 have one compact legacy lesson apiece; weeks 5–6 and 8–14 remain outlines. The manifest's 14-week value records the proposed scope, not completed instructional time. The current [misconception catalog](misconceptions.md) and [instructor-style feedback templates](feedback-templates.md) cover selected formative topics; they do not diagnose free-form reasoning.
 
 | Week | Proposed focus | Current content state |
 | --- | --- | --- |
 | 1 | Covalent architecture, functional groups, water, pH, and noncovalent interactions | Two original lessons and formative checks |
 | 2 | Protein sequence and structure; membrane structure and transport | Two original lessons and formative checks |
-| 3 | Organelles, compartmentalization, protein sorting, and trafficking | Outline only |
+| 3 | Organelles, compartmentalization, protein sorting, and trafficking | Two original lessons with formative practice; no full homework or lab |
 | 4 | Enzyme kinetics, free energy, coupling, and metabolic control | One compact prototype lesson; not a full week |
 | 5 | Cell imaging, fractionation, and measurement limits | Outline only |
 | 6 | DNA structure, replication, repair, and genome organization | Outline only |
@@ -52,8 +52,8 @@ New instructional explanations and examples are original and released under CC B
 
 ## Known limitations
 
-- The first two proposed weeks now have developed two-lesson sequences; the enzyme and gene-expression capsules remain too short to count as developed instructional weeks.
-- Weeks 3, 5–6, and 8–14 are planning scope, not lessons. The prototype enzyme and gene-expression capsules do not constitute complete weeks.
+- The first three proposed weeks now have developed two-lesson sequences; the enzyme and gene-expression capsules remain too short to count as developed instructional weeks.
+- Weeks 5–6 and 8–14 are planning scope, not lessons. The prototype enzyme and gene-expression capsules do not constitute complete weeks.
 - No authored 12–15 week homework/lab/exam sequence or cumulative project exists.
 - The course is unreviewed. Workload, objective coverage, scientific accuracy, accessibility, and assessments require independent review.
 - Public practice answers are not protected exam keys. Practice scores and the progress indicator do not certify mastery.
