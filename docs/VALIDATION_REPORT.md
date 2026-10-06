@@ -4,7 +4,28 @@
 
 2026-10-06; synthetic local learner data only. Milestones 1 and 2 are implemented. Milestone 3 remains partial; deterministic graders and prototype graded-assignment and review workflows are described below. A Milestone 4 curriculum-map increment is implemented and tested, while subject-matter review and map refinement remain. All 25 course packages are **partial**; zero are beta, complete or externally reviewed. Human score review is limited to saved attempts and does not constitute course-content review. No semester equivalence, university credit, security certification or public production deployment is asserted.
 
-## Current increment: week-4 enzyme mechanisms and kinetic inference
+## Current increment: week-5 cell measurement and fractionation
+
+Foundations of Cell and Molecular Biology advanced from version 0.6.0 to **0.7.0** while remaining `partial`. Week 5 adds two original lessons: conventional-light microscopy resolution, sampling, contrast, labeling controls, and colocalization limits; then differential fractionation, marker recovery, contamination, and bounded localization claims. Six deterministic practice items cover a resolution estimate, confocal contrast, colocalization inference, marker recovery, structured fraction analysis, and multi-marker design. Four spaced-retrieval cards, five misconception entries, two feedback templates, objective mappings, and source/license records were added. The bead-pair and marker-panel data are explicitly synthetic teaching data.
+
+MIT OCW 7.016 Lecture 29 is linked as a curriculum comparator. Waters (2009), Claude (1946), and the NCBI Bookshelf methods chapter are link-only scientific or methods references. No lecture, article, chapter, figure, or data was copied or adapted. The course has no external reviewer and its review status remains unreviewed.
+
+Weeks 1–5 now each have two developed lessons; week 4 retains its compact prototype capsule. Week 7 remains one compact gene-expression reading, and weeks 6 and 8–14 remain outlines without authored instructional sequences. The eight proposed homework sets, three full data/lab assignments, midterm, cumulative final, and integrative project are not present. All 126 practice questions are formative; the package has no course grade, semester-equivalence, credit, or prerequisite-equivalency claim. All 25 course packages remain partial; none meets the complete-course standard.
+
+Validation on 2026-10-06: **325 tests passed and 1 skipped** across root (57 passed, 1 skipped), backend (221), frontend unit tests (30), Playwright (10), and legacy storage (7). Frontend lint/format and TypeScript/Vite build passed (205 modules). Content validation reports 25 packages, 109 lessons, 126 questions, 219 cards, and 25 cases: 0 errors and 123 disclosed depth/objective warnings (98 legacy-depth, 25 objective-coverage). The API/content check passes for 25 packages and 128 supported practice specifications. Ruff and `git diff --check` pass. The source/bundle security-boundary scan reports 0 findings across 393 files. Rebuilt development Compose services are healthy, Alembic is `0007 (head)`, and `/api/v1/health` is `ok`; programming and LLM providers remain disabled. Existing database volumes were preserved.
+
+| Current command/check | Result |
+| --- | --- |
+| `uv run --with jsonschema --with pytest python tools/validate_content.py` | PASS: 25 packages, 109 lessons, 126 questions, 219 cards, 25 cases; 0 errors; 123 disclosed warnings |
+| `uv run --with jsonschema --with pytest python -m pytest tests -q` | 57 passed, 1 skipped |
+| Backend pytest suite | 221 passed; one upstream Starlette/httpx deprecation warning |
+| Frontend lint/format, Vitest, and Vite build | PASS: 30 unit tests; 205 production modules |
+| Playwright against the rebuilt Compose stack | 10 passed, including week-5 numeric units, fraction rubric, saved progress, and answer-key DTO boundary |
+| `docker compose exec -T api python -m courselab.check_content /content` | PASS: 25 packages / 128 supported practice specifications |
+| Compose health and migration | PASS: database, API, and web healthy; Alembic `0007 (head)`; API health `ok` |
+| Ruff, `git diff --check`, and `python tools/check_security.py --bundle frontend/dist` | PASS; 0 security-boundary findings across 393 files |
+
+## Previous increment: week-4 enzyme mechanisms and kinetic inference
 
 Foundations of Cell and Molecular Biology advanced from version 0.5.0 to **0.6.0** while remaining `partial`. Week 4 now has two substantial original lessons alongside the retained short prototype capsule: catalytic mechanisms/free-energy coupling, then initial-rate fitting and reversible-inhibitor patterns. Six new deterministic formative items cover equilibrium, coupled ΔG, Vmax at Km, model-based rate prediction, inhibitor-pattern/assay controls, and Km versus binding affinity. Four retrieval cards, misconception entries, layered-feedback templates, source records and independent numerical recalculation tests were added. The inhibitor table is explicitly synthetic and is not presented as published data.
 

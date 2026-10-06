@@ -136,6 +136,32 @@
       "original_content": true,
       "license": "CC-BY-4.0",
       "modifications": []
+    },
+    {
+      "module_id": "cell-biology-module-11",
+      "lesson_id": "cell-biology-11",
+      "reading": "modules/05a-cell-imaging-resolution-and-quantification.md",
+      "source_ids": [
+        "mit-7.016-cell-imaging",
+        "waters-2009-microscopy"
+      ],
+      "relationship": "original-content-with-link-only-curriculum-comparator-and-method-reference",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "cell-biology-module-12",
+      "lesson_id": "cell-biology-12",
+      "reading": "modules/05b-cell-fractionation-enrichment-and-recovery.md",
+      "source_ids": [
+        "claude-1946-fractionation",
+        "ncbi-cell-fractionation"
+      ],
+      "relationship": "original-content-with-synthetic-data-and-link-only-method-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
     }
   ]
 }

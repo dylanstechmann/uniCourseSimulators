@@ -433,6 +433,94 @@ test("the developed cell-biology weeks expose original lessons and deterministic
   await expect(
     inference.getByRole("region", { name: "Submission feedback" }),
   ).toContainText("3 / 3 practice points");
+
+  await lessons
+    .getByRole("link", { name: /Cell imaging: resolution, contrast/ })
+    .click();
+  await expect(
+    page.getByRole("heading", {
+      name: "Cell imaging: resolution, contrast, and quantitative limits",
+      level: 1,
+    }),
+  ).toBeVisible();
+  const resolution = page.locator(
+    '[data-question-id="cell-biology-11:resolution-estimate"]',
+  );
+  await resolution.getByLabel("Numerical value").fill("244");
+  await resolution.getByLabel("Unit").fill("nm");
+  await resolution
+    .getByRole("button", { name: "Submit practice response" })
+    .click();
+  await expect(
+    resolution.getByRole("region", { name: "Submission feedback" }),
+  ).toContainText("1 / 1 practice points");
+
+  const confocal = page.locator(
+    '[data-question-id="cell-biology-11:confocal-contrast"]',
+  );
+  await confocal.getByRole("radio").first().check();
+  await confocal
+    .getByRole("button", { name: "Submit practice response" })
+    .click();
+  await expect(
+    confocal.getByRole("region", { name: "Submission feedback" }),
+  ).toContainText("1 / 1 practice points");
+
+  const colocalization = page.locator(
+    '[data-question-id="cell-biology-11:colocalization-limit"]',
+  );
+  await colocalization.getByRole("radio").first().check();
+  await colocalization
+    .getByRole("button", { name: "Submit practice response" })
+    .click();
+  await expect(
+    colocalization.getByRole("region", { name: "Submission feedback" }),
+  ).toContainText("1 / 1 practice points");
+
+  await lessons
+    .getByRole("link", { name: /Cell fractionation: enrichment/ })
+    .click();
+  await expect(
+    page.getByRole("heading", {
+      name: "Cell fractionation: enrichment, contamination, and recovery",
+      level: 1,
+    }),
+  ).toBeVisible();
+  const recovery = page.locator(
+    '[data-question-id="cell-biology-12:er-marker-recovery"]',
+  );
+  await recovery.getByLabel("Numerical value").fill("95");
+  await recovery.getByLabel("Unit").fill("%");
+  await recovery
+    .getByRole("button", { name: "Submit practice response" })
+    .click();
+  await expect(
+    recovery.getByRole("region", { name: "Submission feedback" }),
+  ).toContainText("1 / 1 practice points");
+
+  const fractions = page.locator(
+    '[data-question-id="cell-biology-12:fraction-analysis"]',
+  );
+  await fractions.getByLabel(/Fraction interpretation/).selectOption("0");
+  await fractions.getByLabel(/Recovery accounting/).selectOption("0");
+  await fractions.getByLabel(/Inference boundary/).selectOption("0");
+  await fractions
+    .getByRole("button", { name: "Submit practice response" })
+    .click();
+  await expect(
+    fractions.getByRole("region", { name: "Submission feedback" }),
+  ).toContainText("3 / 3 practice points");
+
+  const markerPanel = page.locator(
+    '[data-question-id="cell-biology-12:marker-panel"]',
+  );
+  await markerPanel.getByRole("radio").first().check();
+  await markerPanel
+    .getByRole("button", { name: "Submit practice response" })
+    .click();
+  await expect(
+    markerPanel.getByRole("region", { name: "Submission feedback" }),
+  ).toContainText("1 / 1 practice points");
 });
 
 test("structured experimental criteria receive deterministic partial credit and persist", async ({

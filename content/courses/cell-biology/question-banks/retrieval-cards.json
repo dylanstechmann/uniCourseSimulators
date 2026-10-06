@@ -203,6 +203,47 @@
         "cell-biology-10-objective-2"
       ],
       "license": "CC-BY-4.0"
+    },
+    {
+      "id": "cell-biology-10-0",
+      "lesson_id": "cell-biology-11",
+      "front": "Lateral resolution estimate",
+      "back": "For an ideal circular aperture, d ≈ 0.61 λ/NA. This estimate depends on the optical setup; it is not restored by display zoom and is not a universal cutoff for biological images.",
+      "objective_ids": [
+        "cell-biology-11-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "cell-biology-10-1",
+      "lesson_id": "cell-biology-11",
+      "front": "Colocalization inference",
+      "back": "Fluorescence overlap supports signal proximity at the measured optical scale under the labeling and analysis conditions. It does not establish direct binding or causal function.",
+      "objective_ids": [
+        "cell-biology-11-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "cell-biology-11-0",
+      "lesson_id": "cell-biology-12",
+      "front": "Fraction recovery",
+      "back": "Recovery = amount across all collected fractions divided by amount in the starting input. It is an accounting measure, distinct from enrichment and purity.",
+      "objective_ids": [
+        "cell-biology-12-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "cell-biology-11-1",
+      "lesson_id": "cell-biology-12",
+      "front": "Enriched does not mean pure",
+      "back": "The largest recovered share of a marker indicates where that marker accumulated, but a concentration-based enrichment factor needs a protein, volume, or input denominator. Neither distribution nor enrichment establishes purity.",
+      "objective_ids": [
+        "cell-biology-12-objective-1",
+        "cell-biology-12-objective-2"
+      ],
+      "license": "CC-BY-4.0"
     }
   ]
 }

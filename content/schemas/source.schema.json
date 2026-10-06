@@ -2,7 +2,7 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "urn:uni-stem-course-simulators:schema:source-registry:1.0",
   "title": "uniStemCourseSimulators source registry",
-  "description": "Permission booleans describe the project's affirmed use, not every possible permission in a source license. Comparator-only records grant only linking here.",
+  "description": "Permission booleans describe the project's affirmed use, not every possible permission in a source license. Comparator and reference records grant only linking here; the underlying source license may grant other rights, which this record does not select.",
   "type": "object", "additionalProperties": false,
   "required": ["schema_version", "sources"],
   "properties": {

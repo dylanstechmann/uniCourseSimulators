@@ -1,11 +1,11 @@
 # Cell and Molecular Biology: proposed scope and assessment crosswalk
 
-**Crosswalk status:** planning document, version 0.6.0. It is not a set of authored assignments. **The course remains partial.** Weeks 1–4 have two developed lessons each and public formative items; week 4 also retains a compact prototype capsule and week 7 a compact gene-expression capsule; weeks 5–6 and 8–14 have no instructional sequences or assessment specifications.
+**Crosswalk status:** planning document, version 0.7.0. It is not a set of authored assignments. **The course remains partial.** Weeks 1–5 have two developed lessons each and public formative items; week 4 also retains a compact prototype capsule and week 7 a compact gene-expression capsule; weeks 6 and 8–14 have no instructional sequences or assessment specifications.
 
 ## Intended course outcomes
 
 - **O1 — Structure and function:** Relate molecular structure and chemical environment to plausible biological function, and state what those observations do not establish.
-- **O2 — Quantitative models:** Apply membrane, enzyme, and free-energy models while checking assumptions, units, and limits.
+- **O2 — Quantitative models:** Apply quantitative physical and biochemical models while checking assumptions, units, and limits.
 - **O3 — Information flow:** Trace genetic information through DNA replication, RNA processing, regulation, translation, and phenotype.
 - **O4 — Experimental reasoning:** Evaluate perturbations, measurements, controls, uncertainty, alternatives, and the scope of causal claims.
 
@@ -19,7 +19,7 @@ The IDs below refer to the course outcomes in `course.json`. New lesson-objectiv
 | 2 | Use residue environment to make a bounded protein-variant prediction; calculate a monovalent ion's equilibrium potential and distinguish channels from pumps. | O1, O2, O4 | Practice set on protein-variant evidence and electrochemical equilibrium; later add a short data worksheet. | Two original lessons; public formative items only. |
 | 3 | Predict targeting and membrane topology; trace cargo through secretory and endocytic routes; distinguish cargo binding from sorting using matched localization and distribution evidence. | O1, O3, O4 | **Homework 1:** interpret microscopy, fractionation, and localization controls. | Two original lessons, four public formative questions, and four retrieval cards; no full homework or lab. |
 | 4 | Distinguish catalysis from reaction thermodynamics; use steady-state Michaelis–Menten assumptions; compare inhibition patterns and evaluate assay controls and inference limits. | O2, O4 | **Homework 2:** fit initial-rate data, propagate uncertainty, and justify model limits with controls. | Two original lessons, a retained short prototype reading, six formative questions, four retrieval cards, and synthetic initial-rate data; H2 and a full lab remain unauthored. |
-| 5 | Select a measurement for a cell-biological claim and explain resolution, specificity, dynamic range, and calibration limits. | O1, O4 | **Lab 1:** compare synthetic microscopy and fractionation measurements with controls; state what each readout cannot show. | Scope only; no activity or data file. |
+| 5 | Estimate ideal optical resolution and sample-plane sampling; distinguish contrast from resolution; analyze synthetic fractionation recovery and contamination data; limit spatial and biochemical claims to their measurements. | O2, O4 | **Lab 1 (planned):** compare imaging and fractionation data with controls; state what each readout cannot show. | Two original lessons, six public formative questions, a synthetic bead-pair table and a synthetic marker-recovery panel; no full lab or homework. |
 | 6 | Trace replication and repair from strand polarity and template rules; distinguish a sequence observation from a repair-mechanism claim. | O3, O4 | **Homework 3:** analyze replication/repair perturbation results and positive, negative, and loading controls. | Scope only; no lesson or assignment file. |
 | 7 | Integrate weeks 1–6 by explaining a molecular mechanism, solving a bounded quantitative problem, and evaluating experimental evidence. | O1, O2, O3, O4 | **Midterm:** mixed mechanism, data, and short structured-control items; answer specifications and rubric required before use. | Planned only; no exam or protected answer key. |
 | 8 | Distinguish transcriptional association, direct occupancy, cis-element dependence, and a causal effect in the tested system. | O3, O4 | **Homework 4:** analyze a reporter and ChIP-qPCR design with matched controls, replicates, and inference boundaries. | One compact legacy gene-expression reading and formative experimental-logic item; not a developed week. |
@@ -34,7 +34,7 @@ The IDs below refer to the course outcomes in `course.json`. New lesson-objectiv
 
 | Component | Planned distribution | Current state |
 | --- | --- | --- |
-| Weekly formative practice | Every developed week; explicit scoring and feedback | Public formative questions now cover selected claims in weeks 1–4. They do not replace homework or demonstrate mastery. |
+| Weekly formative practice | Every developed week; explicit scoring and feedback | Public formative questions now cover selected claims in weeks 1–5. They do not replace homework or demonstrate mastery. |
 | Homework | Eight sets, H1–H8, mapped above | None of the eight full homework packages is authored. No homework contributes to a course grade. |
 | Data or virtual lab | Three activities, L1–L3, mapped above | The existing cell-biology CSV item summarizes a small supplied table; it is not a lab sequence or simulation. No new lab is enabled by this outline. |
 | Midterm | Week 7 | Not authored. |

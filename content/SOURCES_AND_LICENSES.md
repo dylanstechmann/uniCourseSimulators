@@ -7,10 +7,11 @@ are references, not evidence that a uniStemCourseSimulators course has equivalen
 
 The machine-readable registry is [sources/registry.json](sources/registry.json).
 It preserves the prototype's 22 MIT reference IDs and the existing Johns
-Hopkins and MIT reuse-policy records. The biology package adds two link-only
-MIT course comparators and seven link-only research references for weeks 3–4.
-Existing records were accessed on 2026-10-05; the new week-3 and week-4 references were
-checked on 2026-10-06. An access date is not a claim that every asset or every
+Hopkins and MIT reuse-policy records. The Foundations course has five MIT
+curriculum-comparator records overall, with module-specific comparisons for
+weeks 3–5, plus ten link-only scientific or methods references across those
+weeks. Existing records were accessed on 2026-10-05; the new week-3 through
+week-5 records were checked on 2026-10-06. An access date is not a claim that every asset or every
 outbound link on a source page has been checked.
 
 ## License boundaries
@@ -36,7 +37,7 @@ as original merely because it has been edited or converted to Markdown.
 
 `reuse_mode: link-only-comparator` means the repository links to a curriculum
 source to compare public topic scope. `reuse_mode: link-only-reference` marks
-a primary research citation used to document scientific provenance. For both
+a bibliographic, scientific, or methods reference used to document provenance. For both
 modes, `permissions` records linking only; quotation, adaptation, and
 redistribution are not approved for these records. The flags do not exhaust the
 legal permissions of the underlying source. `rights_notes` explains this

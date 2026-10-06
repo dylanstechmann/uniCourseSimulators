@@ -69,6 +69,14 @@ These templates guide feedback for the current public formative material. The so
 
 > The first step is useful: **[specific valid part]**. The missing link is **[unanswered criterion]**. Complete that link with **[a calculation, measurement, or control]**, then write a conclusion limited to the evidence you have.
 
+### Image overlap treated as molecular interaction
+
+> The images support **[measured signal proximity]** at approximately **[stated optical scale]** under these labeling conditions. They do not establish direct binding or causal recruitment. Check **[single-label/specificity controls]**, then choose an interaction assay or perturbation that tests the stronger claim.
+
+### Fraction enrichment treated as purity or intact-cell localization
+
+> The data support **[measured marker distribution or normalized enrichment]** with **[stated denominator, recovery, and contaminant markers]**. A pellet is a mixture after homogenization; it does not alone establish purity, intact-cell localization, or function. Add **[input/recovery/integrity control]** and an orthogonal intact-cell measurement.
+
 ## Delivery and uncertainty rules
 
 - Quote or point to the learner's own words, numbers, or selected fields; do not invent evidence about their reasoning.

@@ -7,7 +7,7 @@
   "domain": "Life sciences",
   "level": "Year 1",
   "maturity": "partial",
-  "version": "0.6.0",
+  "version": "0.7.0",
   "license": "MIT OR CC-BY-4.0",
   "content_origin": {
     "kind": "legacy-prototype",
@@ -35,7 +35,7 @@
     },
     {
       "id": "cell-biology-outcome-2",
-      "description": "Use free-energy and enzyme models to reason about cellular reactions.",
+      "description": "Use quantitative physical and biochemical models, including enzyme and free-energy relations, while checking assumptions, units, and limits.",
       "bloom": "apply"
     },
     {
@@ -220,11 +220,45 @@
       "course_outcome_ids": [
         "cell-biology-outcome-4"
       ]
+    },
+    {
+      "id": "cell-biology-11-objective-1",
+      "description": "Estimate conventional lateral resolution and sample-plane pixel size from wavelength and numerical aperture, distinguishing resolution, magnification, and contrast.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "cell-biology-outcome-2",
+        "cell-biology-outcome-4"
+      ]
+    },
+    {
+      "id": "cell-biology-11-objective-2",
+      "description": "Select image controls and bound a colocalization conclusion to the spatial scale and labeling evidence measured.",
+      "bloom": "evaluate",
+      "course_outcome_ids": [
+        "cell-biology-outcome-4"
+      ]
+    },
+    {
+      "id": "cell-biology-12-objective-1",
+      "description": "Calculate marker recovery across collected fractions and distinguish enrichment from purity using a multi-marker panel.",
+      "bloom": "analyze",
+      "course_outcome_ids": [
+        "cell-biology-outcome-2",
+        "cell-biology-outcome-4"
+      ]
+    },
+    {
+      "id": "cell-biology-12-objective-2",
+      "description": "Design fractionation controls for input, mass balance, contamination, integrity, and bounded in-cell inference.",
+      "bloom": "evaluate",
+      "course_outcome_ids": [
+        "cell-biology-outcome-4"
+      ]
     }
   ],
   "duration": {
     "instructional_weeks": 14,
-    "equivalent_structure": "Proposed undergraduate 14-week scope only. Weeks 1 through 4 now contain eight developed lessons, with the original short enzyme capsule retained as a separate introduction within week 4. Week 7 has a compact legacy capsule; weeks 5 through 6 and 8 through 14 have no authored lesson sequences or summative assessments. Workload is not measured, so this plan is not evidence of semester equivalence.",
+    "equivalent_structure": "Proposed undergraduate 14-week scope only. Weeks 1 through 5 now contain ten developed lessons; week 4 also retains the original short enzyme capsule. Week 7 has a compact legacy capsule; weeks 6 and 8 through 14 have no authored lesson sequences or summative assessments. Workload is not measured, so this plan is not evidence of semester equivalence.",
     "weeks": [
       {
         "week": 1,
@@ -275,8 +309,13 @@
       {
         "week": 5,
         "title": "Cell imaging, fractionation, and measurement limits",
-        "lesson_ids": [],
-        "assessment_ids": []
+        "lesson_ids": [
+          "cell-biology-11",
+          "cell-biology-12"
+        ],
+        "assessment_ids": [
+          "cell-biology-week5-practice"
+        ]
       },
       {
         "week": 6,
@@ -630,6 +669,64 @@
           ]
         }
       ]
+    },
+    {
+      "id": "cell-biology-module-11",
+      "title": "Cell imaging and spatial measurement",
+      "source_ids": [
+        "mit-7.016-cell-imaging",
+        "waters-2009-microscopy"
+      ],
+      "lessons": [
+        {
+          "id": "cell-biology-11",
+          "title": "Cell imaging: resolution, contrast, and quantitative limits",
+          "reading": "modules/05a-cell-imaging-resolution-and-quantification.md",
+          "objectives": [
+            "cell-biology-11-objective-1",
+            "cell-biology-11-objective-2"
+          ],
+          "worked_example": "For 520 nm emission and NA 1.30, the ideal Rayleigh estimate is 0.61 × 520/1.30 ≈ 244 nm; a Nyquist starting point samples at about 122 nm per pixel or finer. This ideal estimate is not a guarantee for a labeled biological specimen.",
+          "question_ids": [
+            "cell-biology-11:resolution-estimate",
+            "cell-biology-11:confocal-contrast",
+            "cell-biology-11:colocalization-limit"
+          ],
+          "card_ids": [
+            "cell-biology-10-0",
+            "cell-biology-10-1"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cell-biology-module-12",
+      "title": "Cell fractionation and recovery accounting",
+      "source_ids": [
+        "claude-1946-fractionation",
+        "ncbi-cell-fractionation"
+      ],
+      "lessons": [
+        {
+          "id": "cell-biology-12",
+          "title": "Cell fractionation: enrichment, contamination, and recovery",
+          "reading": "modules/05b-cell-fractionation-enrichment-and-recovery.md",
+          "objectives": [
+            "cell-biology-12-objective-1",
+            "cell-biology-12-objective-2"
+          ],
+          "worked_example": "In the explicitly synthetic marker panel, 4% + 18% + 68% + 5% gives 95% ER-marker recovery. P2 contains the largest measured share of the mitochondrial marker but also substantial ER and nuclear markers; the table lacks protein and volume denominators needed for a concentration-based enrichment factor or purity claim.",
+          "question_ids": [
+            "cell-biology-12:er-marker-recovery",
+            "cell-biology-12:fraction-analysis",
+            "cell-biology-12:marker-panel"
+          ],
+          "card_ids": [
+            "cell-biology-11-0",
+            "cell-biology-11-1"
+          ]
+        }
+      ]
     }
   ],
   "assessments": [
@@ -748,6 +845,29 @@
         "cell-biology-8:kdel-retrieval"
       ],
       "points": 2
+    },
+    {
+      "id": "cell-biology-week5-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Week 5: measurement and fractionation practice",
+      "path": "question-banks/practice.json",
+      "week": 5,
+      "objective_ids": [
+        "cell-biology-11-objective-1",
+        "cell-biology-11-objective-2",
+        "cell-biology-12-objective-1",
+        "cell-biology-12-objective-2"
+      ],
+      "question_ids": [
+        "cell-biology-11:resolution-estimate",
+        "cell-biology-11:confocal-contrast",
+        "cell-biology-11:colocalization-limit",
+        "cell-biology-12:er-marker-recovery",
+        "cell-biology-12:fraction-analysis",
+        "cell-biology-12:marker-panel"
+      ],
+      "points": 8
     }
   ],
   "grading_policy": {
@@ -778,6 +898,11 @@
     "review_status": "unreviewed"
   },
   "history": [
+    {
+      "version": "0.7.0",
+      "date": "2026-10-06",
+      "summary": "Developed two original week-5 measurement lessons on microscopy and fractionation with synthetic bead-pair and marker-panel data, six formative items, four retrieval cards, bounded inference practice, and link-only provenance; the course remains partial."
+    },
     {
       "version": "0.6.0",
       "date": "2026-10-06",
@@ -825,8 +950,8 @@
     }
   ],
   "limitations": [
-    "The proposed 14-week scope is not 14 weeks of instruction: weeks 1 through 4 have two original lessons each, and week 4 also retains a short prototype capsule; week 7 retains a compact gene-expression prototype.",
-    "There is no authored substantive homework sequence, three-activity laboratory sequence, midterm, cumulative final, or integrative project.",
+    "The first five proposed weeks now have developed two-lesson sequences, but this does not provide the planned homework, laboratory/data assignments, summative exams, workload evidence, or instructor review; week 4 retains one compact prototype capsule and week 7 remains a compact prototype reading.",
+    "Weeks 6 and 8–14 are planning scope, not lessons. The gene-expression prototype capsule does not constitute a complete week.",
     "Current formative checks across the developed lessons do not demonstrate comprehensive outcome coverage or mastery; some lesson objectives remain unassessed.",
     "Bloom labels and structured prerequisite edges are initial authoring classifications awaiting subject-matter review.",
     "Question answers and solution feedback are intentionally public practice authoring specifications, not restricted exam keys.",

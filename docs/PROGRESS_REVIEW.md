@@ -2,6 +2,12 @@
 
 Reviewed 2026-10-06 against the requested six milestones. The content and breadth measurements below use commit `68defd74b8c98d8cac0556de3de72b8219bf987f`; the current increment changes only instructor authorization, appeal context, documentation and tests, so those content measurements are unchanged. Its review fixes passed the validation recorded in [VALIDATION_REPORT.md](VALIDATION_REPORT.md). This review inspects application code, manifests, readings, assessments, schemas, validator, tests and deployment configuration. Automated passing tests demonstrate covered behavior; they do not establish academic adequacy or production security.
 
+## Update after week 5 course authoring (2026-10-06)
+
+The detailed inventory and findings below describe the exact review snapshot named above. Since that snapshot, the cell-biology package has advanced to version 0.7.0 and remains `partial`: weeks 1–5 now each have two substantial lessons, with week 4 retaining its short capsule and week 7 retaining its compact gene-expression prototype. Current repository inventory is 25 partial packages, 109 lessons, 126 formative questions, 219 retrieval cards, and 25 self-assessed cases. No course meets the complete standard; workload, full homework/lab/exam/project sequences, and independent academic review are still outstanding.
+
+The week-5 increment passed content validation, 57 root tests (1 skipped), 221 backend tests, 30 frontend tests, 10 Playwright tests, 7 legacy tests, and local Compose health checks. See the current week-5 entry in [VALIDATION_REPORT.md](VALIDATION_REPORT.md) for the recorded commands and limits. The highest-priority next content step is to author week 6 on DNA replication, repair, and genome organization with matched perturbation/control data, then continue the planned homework and laboratory sequence alongside instruction.
+
 ## Overall assessment
 
 The repository is a working local formative learning and practice platform. Infrastructure has progressed substantially: React/TypeScript, FastAPI, PostgreSQL, migrations, durable learner records, bounded deterministic graders and a curriculum graph exist. The central educational deliverable—a substantive university course—remains unfinished. **Zero courses are complete, beta or externally reviewed.** No credit, university equivalency, affiliation or admission eligibility is implied.

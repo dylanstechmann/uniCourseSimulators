@@ -1084,6 +1084,122 @@
       "checksum": null,
       "imported_assets": [],
       "rights_notes": "Bibliographic link only; no reuse permission is asserted."
+    },
+    {
+      "id": "mit-7.016-cell-imaging",
+      "title": "MIT OCW 7.016 — Lecture 29: Cell Imaging Techniques",
+      "institution": "Massachusetts Institute of Technology / MIT OpenCourseWare",
+      "url": "https://ocw.mit.edu/courses/7-016-introductory-biology-fall-2018/resources/lecture-29-cell-imaging-techniques/",
+      "license": "CC BY-NC-SA 4.0 may apply to eligible OCW materials; asset exclusions may apply",
+      "reuse_mode": "link-only-comparator",
+      "attribution_requirements": [
+        "For comparator links, identify the course, institution, and source page without implying MIT endorsement."
+      ],
+      "third_party_notes": "No lecture text, figures, images, questions, or data were copied. Verify each asset-specific credit and rights before any future reuse.",
+      "mapped_modules": [
+        "cell-biology-module-11"
+      ],
+      "version": null,
+      "accessed_at": "2026-10-06",
+      "permissions": {
+        "linking": true,
+        "quotation": false,
+        "adaptation": false,
+        "redistribution": false
+      },
+      "mapped_courses": [
+        "cell-biology"
+      ],
+      "checksum": null,
+      "imported_assets": [],
+      "rights_notes": "This record authorizes link-only use selected by this project; it does not clear third-party text, figures, or data for copying or adaptation."
+    },
+    {
+      "id": "waters-2009-microscopy",
+      "title": "Accuracy and precision in quantitative fluorescence microscopy",
+      "institution": "Jennifer C. Waters; Journal of Cell Biology",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/19564400/",
+      "license": "Article page notes CC BY-NC-SA 3.0 Unported terms after six months and a no-mirror-sites restriction; link-only use selected",
+      "reuse_mode": "link-only-reference",
+      "attribution_requirements": [
+        "Cite Jennifer C. Waters, article title, Journal of Cell Biology (2009), and DOI 10.1083/jcb.200903097."
+      ],
+      "third_party_notes": "No article text, figures, or data were copied; publisher-hosted rights language was not treated as permission to mirror.",
+      "mapped_modules": [
+        "cell-biology-module-11"
+      ],
+      "version": null,
+      "accessed_at": "2026-10-06",
+      "permissions": {
+        "linking": true,
+        "quotation": false,
+        "adaptation": false,
+        "redistribution": false
+      },
+      "mapped_courses": [
+        "cell-biology"
+      ],
+      "checksum": null,
+      "imported_assets": [],
+      "rights_notes": "This record authorizes link-only use selected by this project; it does not clear third-party text, figures, or data for copying or adaptation."
+    },
+    {
+      "id": "claude-1946-fractionation",
+      "title": "Fractionation of mammalian liver cells by differential centrifugation: II. Experimental procedures and results",
+      "institution": "Albert Claude; Journal of Experimental Medicine / PubMed Central archive",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2135635/",
+      "license": "Historical journal article; copyright/reuse status not cleared here; link-only use selected",
+      "reuse_mode": "link-only-reference",
+      "attribution_requirements": [
+        "Cite Albert Claude, 1946, Journal of Experimental Medicine 84(1):61–89, PMID 19871554, and the archive URL."
+      ],
+      "third_party_notes": "No article text, figure, or measured data were copied; source is a bibliographic reference only.",
+      "mapped_modules": [
+        "cell-biology-module-12"
+      ],
+      "version": null,
+      "accessed_at": "2026-10-06",
+      "permissions": {
+        "linking": true,
+        "quotation": false,
+        "adaptation": false,
+        "redistribution": false
+      },
+      "mapped_courses": [
+        "cell-biology"
+      ],
+      "checksum": null,
+      "imported_assets": [],
+      "rights_notes": "This record authorizes link-only use selected by this project; it does not clear third-party text, figures, or data for copying or adaptation."
+    },
+    {
+      "id": "ncbi-cell-fractionation",
+      "title": "Tools of Cell Biology — The Cell",
+      "institution": "NCBI Bookshelf",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK9941/",
+      "license": "Textbook chapter; reuse rights not cleared here; link-only use selected",
+      "reuse_mode": "link-only-reference",
+      "attribution_requirements": [
+        "Attribute the NCBI Bookshelf chapter by title and provide the exact URL; verify chapter authorship on the linked page when assigning it."
+      ],
+      "third_party_notes": "No chapter prose, figure, or data were copied; link-only reference.",
+      "mapped_modules": [
+        "cell-biology-module-12"
+      ],
+      "version": null,
+      "accessed_at": "2026-10-06",
+      "permissions": {
+        "linking": true,
+        "quotation": false,
+        "adaptation": false,
+        "redistribution": false
+      },
+      "mapped_courses": [
+        "cell-biology"
+      ],
+      "checksum": null,
+      "imported_assets": [],
+      "rights_notes": "This record authorizes link-only use selected by this project; it does not clear third-party text, figures, or data for copying or adaptation."
     }
   ]
 }

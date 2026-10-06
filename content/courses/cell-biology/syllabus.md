@@ -1,8 +1,8 @@
 # Foundations of Cell and Molecular Biology
 
-**Maturity: partial. Version: 0.6.0.**
+**Maturity: partial. Version: 0.7.0.**
 
-This original course package is intended to develop mechanistic reasoning from molecular structure to cell behavior. It is a work in progress, not a 14-week course yet: weeks 1–4 now have eight developed lessons, with the brief enzyme prototype retained as an additional introduction; week 7 still has a compact gene-expression capsule; weeks 5–6 and 8–14 lack authored lesson sequences or summative assessments. No semester equivalency, university credit, or prerequisite equivalency is claimed.
+This original course package is intended to develop mechanistic reasoning from molecular structure to cell behavior. It is a work in progress, not a 14-week course yet: weeks 1–5 now have ten developed lessons, with the brief enzyme prototype retained as an additional introduction; week 7 still has a compact gene-expression capsule; weeks 6 and 8–14 lack authored lesson sequences or summative assessments. No semester equivalency, university credit, or prerequisite equivalency is claimed.
 
 ## Prerequisites
 
@@ -13,7 +13,7 @@ Required background is high-school biology and chemistry, including atoms, simpl
 By the end of a fully developed version, a learner should be able to:
 
 1. Relate molecular structure, chemical environment, and interactions to plausible biological function while stating what a structure alone cannot establish.
-2. Use quantitative models of membranes, transport, enzyme kinetics, and free-energy change while checking assumptions and units.
+2. Use quantitative models of spatial measurement, membranes, transport, enzyme kinetics, and free-energy change while checking assumptions, units, and limits.
 3. Trace genetic information through replication, RNA processing, gene regulation, translation, and phenotype, including context-dependent exceptions.
 4. Interpret cell and molecular experiments by identifying the perturbation, measurement, controls, uncertainty, alternative explanations, and scope of a causal claim.
 
@@ -21,7 +21,7 @@ These are intended outcomes. Current assessment coverage is incomplete and does 
 
 ## Proposed 14-week scope
 
-The full proposal and its objective-to-assessment crosswalk are in [assessment-crosswalk.md](assessment-crosswalk.md). Weeks 1–4 currently have two original lessons each; week 4 also retains its original compact reading. Week 7 has one compact gene-expression reading; weeks 5–6 and 8–14 remain outlines. The manifest's 14-week value records the proposed scope, not completed instructional time. The current [misconception catalog](misconceptions.md) and [instructor-style feedback templates](feedback-templates.md) cover selected formative topics; they do not diagnose free-form reasoning.
+The full proposal and its objective-to-assessment crosswalk are in [assessment-crosswalk.md](assessment-crosswalk.md). Weeks 1–5 currently have two original lessons each; week 4 also retains its original compact reading. Week 7 has one compact gene-expression reading; weeks 6 and 8–14 remain outlines. The manifest's 14-week value records the proposed scope, not completed instructional time. The current [misconception catalog](misconceptions.md) and [instructor-style feedback templates](feedback-templates.md) cover selected formative topics; they do not diagnose free-form reasoning.
 
 | Week | Proposed focus | Current content state |
 | --- | --- | --- |
@@ -29,7 +29,7 @@ The full proposal and its objective-to-assessment crosswalk are in [assessment-c
 | 2 | Protein sequence and structure; membrane structure and transport | Two original lessons and formative checks |
 | 3 | Organelles, compartmentalization, protein sorting, and trafficking | Two original lessons with formative practice; no full homework or lab |
 | 4 | Enzyme catalysis, initial-rate kinetics, reversible inhibition, free energy, and coupling | Two developed lessons, one retained compact prototype reading, and six formative questions; no full homework or lab |
-| 5 | Cell imaging, fractionation, and measurement limits | Outline only |
+| 5 | Cell imaging, fractionation, and measurement limits | Two original lessons, synthetic measurement tables, and six public formative questions; no full lab or homework |
 | 6 | DNA structure, replication, repair, and genome organization | Outline only |
 | 7 | Chromatin, transcription, and gene regulation | One compact gene-expression prototype; not a full week |
 | 8 | RNA processing, translation, and protein turnover | Outline only |
@@ -48,12 +48,12 @@ Workload and weekly study hours have not been measured. No calendar dates or gra
 
 ## Sources and licensing
 
-New instructional explanations and examples are original and released under CC BY 4.0 as specified by the repository's content policy. MIT OpenCourseWare 7.01SC Fundamentals of Biology, 7.28x Molecular Biology, 7.016 Cell Trafficking, and 5.07SC Biological Chemistry I are link-only curriculum comparators. Briggs and Haldane, and Johnson and Goody, are link-only research references. No source text, image, question, or assessment is reproduced or adapted, and MIT does not endorse or sponsor this course. See [source-map.json](source-map.json), the shared [source registry](../../sources/registry.json), and [content/SOURCES_AND_LICENSES.md](../../SOURCES_AND_LICENSES.md) for provenance and asset boundaries.
+New instructional explanations and examples are original and released under CC BY 4.0 as specified by the repository's content policy. MIT OpenCourseWare 7.01SC Fundamentals of Biology, 7.28x Molecular Biology, 7.016 Cell Trafficking and Cell Imaging, and 5.07SC Biological Chemistry I are link-only curriculum comparators. Briggs and Haldane, Johnson and Goody, Waters, Claude, and the NCBI Bookshelf chapter are link-only scientific or methods references. No source text, image, question, or assessment is reproduced or adapted, and MIT does not endorse or sponsor this course. See [source-map.json](source-map.json), the shared [source registry](../../sources/registry.json), and [content/SOURCES_AND_LICENSES.md](../../SOURCES_AND_LICENSES.md) for provenance and asset boundaries.
 
 ## Known limitations
 
-- The first four proposed weeks now have developed two-lesson sequences, but this does not provide the planned homework, laboratory/data work, summative exams, workload evidence, or instructor review; week 7 remains a compact prototype reading.
-- Weeks 5–6 and 8–14 are planning scope, not lessons. The gene-expression prototype capsule does not constitute a complete week.
+- The first five proposed weeks now have developed two-lesson sequences, but this does not provide the planned homework, laboratory/data work, summative exams, workload evidence, or instructor review; week 4 retains one compact capsule and week 7 remains a compact prototype reading.
+- Weeks 6 and 8–14 are planning scope, not lessons. The gene-expression prototype capsule does not constitute a complete week.
 - No authored 12–15 week homework/lab/exam sequence or cumulative project exists.
 - The course is unreviewed. Workload, objective coverage, scientific accuracy, accessibility, and assessments require independent review.
 - Public practice answers are not protected exam keys. Practice scores and the progress indicator do not certify mastery.

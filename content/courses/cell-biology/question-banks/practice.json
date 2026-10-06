@@ -1207,6 +1207,286 @@
         "kind": "original",
         "modifications": []
       }
+    },
+    {
+      "id": "cell-biology-11:resolution-estimate",
+      "type": "numeric",
+      "prompt": "For 520 nm emission and a 1.30 numerical-aperture objective, estimate ideal lateral resolution using d ≈ 0.61 λ/NA. Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "cell-biology-11-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 244.0,
+        "unit": "nm",
+        "tolerance": 1,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": {
+          "length": 1
+        }
+      },
+      "feedback": {
+        "hint": "Substitute the wavelength in nanometres and keep NA dimensionless.",
+        "solution": "d ≈ 0.61 × 520/1.30 ≈ 244 nm. This is an ideal estimate; sampling, specimen optics, signal, and labeling can make practical performance worse.",
+        "lesson_ids": [
+          "cell-biology-11"
+        ],
+        "misconception_ids": [
+          "resolution-equals-magnification"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "cell-biology-11:confocal-contrast",
+      "type": "single_choice",
+      "prompt": "Why can a confocal pinhole improve optical sectioning in a thick specimen without guaranteeing better lateral resolution in every image?",
+      "options": [
+        "It rejects much out-of-focus emission, often improving section contrast; lateral resolution still depends on wavelength, numerical aperture, sampling, and the specimen.",
+        "It doubles objective numerical aperture regardless of the lens.",
+        "It proves that overlapping labels bind directly.",
+        "It eliminates photobleaching, background, and specimen movement."
+      ],
+      "points": 1,
+      "objective_ids": [
+        "cell-biology-11-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0
+      },
+      "feedback": {
+        "hint": "Separate rejection of out-of-focus signal from the optical factors that set lateral resolution.",
+        "solution": "The pinhole rejects much out-of-focus emission and can improve sectioning and contrast, while lateral resolution remains limited by the optical system and measurement conditions.",
+        "lesson_ids": [
+          "cell-biology-11"
+        ],
+        "misconception_ids": [
+          "contrast-equals-resolution"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "cell-biology-11:colocalization-limit",
+      "type": "single_choice",
+      "prompt": "Two fluorescence channels overlap within the measured optical resolution. Which conclusion is supported by that observation alone?",
+      "options": [
+        "The detected signals are spatially close at the measured scale under the labeling and analysis conditions; direct binding or causal function requires additional evidence.",
+        "The labeled molecules bind directly to each other.",
+        "The first protein causes the second protein to enter the compartment.",
+        "The overlap proves identical abundance and function in every cell."
+      ],
+      "points": 1,
+      "objective_ids": [
+        "cell-biology-11-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0
+      },
+      "feedback": {
+        "hint": "Name the measured spatial relationship, then distinguish it from physical interaction or causal function.",
+        "solution": "Optical overlap supports proximity at the assay resolution under those conditions. It does not establish molecular binding, causation, or universal behavior.",
+        "lesson_ids": [
+          "cell-biology-11"
+        ],
+        "misconception_ids": [
+          "colocalization-proves-binding",
+          "localization-assay-proves-function"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "cell-biology-12:er-marker-recovery",
+      "type": "numeric",
+      "prompt": "In the synthetic fractionation table, the ER marker recovery is 4% + 18% + 68% + 5%. Enter the recovered percentage with unit.",
+      "points": 1,
+      "objective_ids": [
+        "cell-biology-12-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 95,
+        "unit": "%",
+        "tolerance": 0.5,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": {
+          "length": 0,
+          "mass": 0,
+          "time": 0,
+          "amount": 0
+        }
+      },
+      "feedback": {
+        "hint": "Sum the measured marker percentages across every collected fraction.",
+        "solution": "4% + 18% + 68% + 5% = 95% recovery. The remaining 5% is unaccounted for in this assay; it is not proof of biological destruction.",
+        "lesson_ids": [
+          "cell-biology-12"
+        ],
+        "misconception_ids": [
+          "fraction-enrichment-equals-purity"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "cell-biology-12:fraction-analysis",
+      "type": "structured",
+      "prompt": "Interpret the explicitly synthetic fractionation marker panel. Select one response for each analytic criterion.",
+      "response_fields": [
+        {
+          "id": "fraction-interpretation",
+          "type": "single_choice",
+          "prompt": "Fraction interpretation · What does the marker panel support about P2?",
+          "options": [
+            "P2 contains the largest measured share of starting mitochondrial marker, with substantial ER and nuclear marker also present; the table does not establish purity or a concentration-based enrichment factor.",
+            "P2 is a pure mitochondrial fraction because it has the largest mitochondrial-marker share.",
+            "P2 proves the candidate protein functions inside mitochondria in intact cells.",
+            "The panel cannot identify any enrichment."
+          ],
+          "points": 1
+        },
+        {
+          "id": "recovery-accounting",
+          "type": "single_choice",
+          "prompt": "Recovery accounting · Which calculation gives the ER-marker recovery across collected fractions?",
+          "options": [
+            "Add the ER-marker percentages for P1, P2, P3, and S1 to obtain 95%.",
+            "Use only the largest ER-marker value, 68%, as recovery.",
+            "Divide ER-marker P2 by mitochondrial-marker P2.",
+            "Assume every marker must total exactly 100% even when recovery is incomplete."
+          ],
+          "points": 1
+        },
+        {
+          "id": "inference-boundary",
+          "type": "single_choice",
+          "prompt": "Inference boundary · What additional evidence best addresses whether a fractionation pattern reflects in-cell localization?",
+          "options": [
+            "Pair the marker panel and input/recovery checks with an orthogonal intact-cell localization measurement and a claim-matched perturbation control.",
+            "Rename P2 after the target organelle.",
+            "Load equal total protein without tracking input or fraction volumes.",
+            "Treat the pellet label as proof of biological function."
+          ],
+          "points": 1
+        }
+      ],
+      "points": 3,
+      "objective_ids": [
+        "cell-biology-12-objective-1",
+        "cell-biology-12-objective-2"
+      ],
+      "solution_spec": {
+        "field_specs": [
+          {
+            "id": "fraction-interpretation",
+            "type": "single_choice",
+            "answer": 0
+          },
+          {
+            "id": "recovery-accounting",
+            "type": "single_choice",
+            "answer": 0
+          },
+          {
+            "id": "inference-boundary",
+            "type": "single_choice",
+            "answer": 0
+          }
+        ],
+        "rubric": [
+          {
+            "id": "fraction-interpretation",
+            "criterion": "Enrichment and contamination",
+            "points": 1,
+            "evidence": [
+              "Identifies P2 as containing the largest measured share of starting mitochondrial marker while acknowledging ER and nuclear marker contamination and the missing concentration denominator."
+            ]
+          },
+          {
+            "id": "recovery-accounting",
+            "criterion": "Marker recovery calculation",
+            "points": 1,
+            "evidence": [
+              "Sums the ER marker across all collected fractions and reports 95% recovery."
+            ]
+          },
+          {
+            "id": "inference-boundary",
+            "criterion": "Bounded localization inference",
+            "points": 1,
+            "evidence": [
+              "Requests orthogonal intact-cell evidence and controls rather than treating a fraction label as in-cell function."
+            ]
+          }
+        ]
+      },
+      "feedback": {
+        "hint": "Keep enrichment, recovery, purity, and intact-cell localization as separate claims.",
+        "solution": "P2 contains the largest measured share of the starting mitochondrial marker but also ER and nuclear markers, so it is not pure. Because protein and volume denominators are absent, the table does not calculate a concentration-based enrichment factor. ER recovery is 95% across all collected fractions. Fractionation alone does not establish intact-cell location or function; combine recovery-aware marker analysis with an orthogonal spatial assay and suitable perturbation controls.",
+        "lesson_ids": [
+          "cell-biology-12"
+        ],
+        "misconception_ids": [
+          "fraction-enrichment-equals-purity",
+          "fraction-localization-proves-in-vivo"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "cell-biology-12:marker-panel",
+      "type": "single_choice",
+      "prompt": "Which design best tests organelle enrichment while checking contamination and losses during fractionation?",
+      "options": [
+        "Measure the starting input and every collected fraction for several compartment markers, quantify total protein or fraction volume, record recovery, and validate marker specificity in the tested cell system.",
+        "Measure one target marker in the intended pellet and infer purity from its intensity.",
+        "Compare equal-volume lanes without the starting homogenate.",
+        "Use a single organelle marker from a different cell type and assume its localization is unchanged."
+      ],
+      "points": 1,
+      "objective_ids": [
+        "cell-biology-12-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0
+      },
+      "feedback": {
+        "hint": "Choose a design that accounts for the input, all outputs, likely contaminants, and recovery.",
+        "solution": "A multi-marker panel across the input and all fractions with volume and recovery accounting can support a bounded enrichment claim and expose contamination or losses.",
+        "lesson_ids": [
+          "cell-biology-12"
+        ],
+        "misconception_ids": [
+          "fraction-enrichment-equals-purity"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
     }
   ]
 }
