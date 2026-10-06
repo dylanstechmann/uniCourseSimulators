@@ -276,6 +276,34 @@
       "original_content": true,
       "license": "CC-BY-4.0",
       "modifications": []
+    },
+    {
+      "module_id": "cell-biology-module-21",
+      "lesson_id": "cell-biology-21",
+      "reading": "modules/10a-receptor-signaling-and-network-logic.md",
+      "source_ids": [
+        "mit-7.016-cell-signaling",
+        "ncbi-mboc-rtk-signaling",
+        "ncbi-mboc-gpcr-signaling"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-signaling-data-and-link-only-curriculum-and-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "cell-biology-module-22",
+      "lesson_id": "cell-biology-22",
+      "reading": "modules/10b-signaling-dynamics-feedback-and-perturbations.md",
+      "source_ids": [
+        "mit-7.016-cell-signaling",
+        "ncbi-mboc-rtk-signaling",
+        "ncbi-mboc-gpcr-signaling"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-signaling-data-and-link-only-curriculum-and-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
     }
   ]
 }

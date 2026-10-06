@@ -116,3 +116,11 @@ These templates guide feedback for the current public formative material. The so
 - State when a response is ambiguous or the rubric does not cover it; route it for human review when a graded workflow exists.
 - Use the exact lesson ID and relevant source-map link. Do not cite a comparator as proof that the learner's conclusion is correct.
 - Keep full solutions hidden until the item's configured release point. The current course contains public practice solutions only; it contains no secure exam material.
+
+### Receptor occupancy confused with response or fate
+
+> The calculation estimates **[modeled receptor occupancy]** given **[free ligand, Kd, and assumptions]**. The experiment measured **[biochemical response and time]**. Occupancy does not alone predict **[functional response or cell fate]**; compare a separate response curve and **[prespecified downstream outcome]** with appropriate controls.
+
+### A transient signal or inhibitor treated as unique causal proof
+
+> The data show **[measured trajectory or target-engagement result]** under **[exposure, cell, and time conditions]**. The current comparison is also compatible with **[ligand availability / receptor state / cell-state / intervention-specific alternative]**. Test **[discriminating measurement or orthogonal perturbation]** with **[matched control/rescue]**; report only the level and scope directly supported.

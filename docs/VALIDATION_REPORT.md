@@ -4,7 +4,30 @@
 
 2026-10-06; synthetic local learner data only. Milestones 1 and 2 are implemented. Milestone 3 remains partial; deterministic graders and prototype graded-assignment and review workflows are described below. A Milestone 4 curriculum-map increment is implemented and tested, while subject-matter review and map refinement remain. All 25 course packages are **partial**; zero are beta, complete or externally reviewed. Human score review is limited to saved attempts and does not constitute course-content review. No semester equivalence, university credit, security certification or public production deployment is asserted.
 
-## Current increment: week-10 inheritance and variant evidence (2026-10-06)
+## Current increment: week-11 receptor signaling and perturbation (2026-10-06)
+
+Foundations of Cell and Molecular Biology advanced from 0.11.0 to **0.12.0** and remains `partial`. Week 11 adds two original lessons on receptor/network logic and signaling dynamics/feedback/perturbation; six mapped learning objectives; seven deterministic public formative questions worth 13 practice points; four retrieval cards; five misconception entries; layered feedback for occupancy, dynamics, and causal boundaries; and three link-only MIT OCW/NCBI Bookshelf source records. The pulse-versus-maintained-ligand phospho-ERK table is explicitly synthetic. Questions distinguish idealized receptor occupancy from cellular response, and biochemical pathway position from cell-fate evidence. The practice set is not graded coursework. No homework set, virtual lab, midterm, final, or project is claimed complete.
+
+Content validation passes for 25 packages, 119 lessons, 162 questions, 239 cards, and 25 cases, with 0 errors and 123 disclosed depth/objective warnings. The focused content regression set passed 8 tests; the complete root suite passed **63 tests with 1 skipped**, backend passed **223**, frontend unit tests passed **31**, Playwright passed **14**, and legacy-state tests passed **7**. Docker Compose rebuilt successfully; the API, database, and web services are healthy; existing database data was preserved; Alembic remains at `0007 (head)`; and `/api/v1/health` reports `ok`. The learner integration validator supports 166 practice specifications. The week-11 browser journey enrolled a guest, opened the version-pinned practice set, submitted the occupancy calculation, interpreted the time course, selected feedback-discriminating experiments, and received deterministic feedback. Frontend lint/format and production build pass (206 modules), Ruff passes, and the security-boundary scan reports 0 findings across 405 source files. All authored answers remain explicitly public practice specifications; no exam key was added.
+
+| Current command/check | Result |
+| --- | --- |
+| `python tools/validate_content.py` | PASS: 25 packages, 119 lessons, 162 questions, 239 cards, 25 cases; 0 errors; 123 disclosed warnings |
+| `backend/.venv/Scripts/python.exe -m pytest tests -q` | 63 passed, 1 skipped |
+| `cd backend; .venv/Scripts/python.exe -m pytest tests -q` | 223 passed; one upstream Starlette/httpx deprecation warning |
+| `cd backend; .venv/Scripts/ruff.exe check .` | PASS |
+| `cd frontend; npm test -- --run` | 31 passed |
+| `cd frontend; npm run lint; npm run build` | PASS: formatting/lint and TypeScript/Vite production build (206 modules) |
+| `cd frontend; npm run test:e2e` | 14 passed, including week-11 numeric and structured practice submissions |
+| `npm run test:legacy` | 7 passed |
+| `docker compose up --build -d --wait --wait-timeout 180` | PASS: API, database, and web healthy; existing data volume preserved |
+| `docker compose exec -T api python -m courselab.check_content /content` | PASS: 25 packages / 166 supported practice specifications |
+| `docker compose exec -T api alembic current` and `/api/v1/health` | PASS: `0007 (head)`; health `ok` |
+| `python tools/check_security.py --bundle frontend/dist` | PASS; 0 findings across 405 source files |
+
+Weeks 12–14 remain outlines. The eight homework packages, three full data/virtual-lab activities, summative midterm/final, integrative project, measured workload, comprehensive objective coverage, and independent scientific/accessibility reviews remain incomplete; the course stays partial.
+
+## Previous increment: week-10 inheritance and variant evidence (2026-10-06)
 
 Foundations of Cell and Molecular Biology advanced from 0.10.0 to **0.11.0** and remains `partial`. Week 10 adds two original lessons on inheritance/penetrance and variant-to-phenotype evidence; six mapped learning objectives; seven deterministic public formative questions worth 13 practice points; four retrieval cards; four misconception entries; layered feedback for pedigree and variant interpretation; and link-only source records for MIT OCW and NCBI Bookshelf references. Synthetic isogenic-edit data are labeled as teaching data. The new numerical answer distinguishes transmission probability from phenotype probability (50% × 80% penetrance = 40%); the evidence lesson distinguishes a predicted molecular effect from demonstrated pathogenicity. The practice set is not graded coursework. No homework set, virtual lab, midterm, final, or project is claimed complete.
 

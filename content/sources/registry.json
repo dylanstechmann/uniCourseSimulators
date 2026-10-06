@@ -1619,6 +1619,96 @@
       "checksum": null,
       "imported_assets": [],
       "rights_notes": "This record documents link-only use and does not clear educational text or figures for copying."
+    },
+    {
+      "id": "mit-7.016-cell-signaling",
+      "title": "Introductory Biology (7.016), Cell Signaling lectures 20–21",
+      "institution": "Massachusetts Institute of Technology OpenCourseWare",
+      "url": "https://ocw.mit.edu/courses/7-016-introductory-biology-fall-2018/pages/calendar/",
+      "accessed_at": "2026-10-06",
+      "license": "Third-party rights not cleared for this course package; link-only curriculum comparator selected",
+      "reuse_mode": "link-only-reference",
+      "permissions": {
+        "linking": true,
+        "quotation": false,
+        "adaptation": false,
+        "redistribution": false
+      },
+      "attribution_requirements": [
+        "Identify MIT OpenCourseWare, course 7.016, and the exact calendar URL."
+      ],
+      "third_party_notes": "Used only to compare topic scope. No lecture, transcript, slide, figure, problem, or video is copied or adapted; no MIT endorsement is implied.",
+      "mapped_courses": [
+        "cell-biology"
+      ],
+      "mapped_modules": [
+        "cell-biology-module-21",
+        "cell-biology-module-22"
+      ],
+      "version": "Fall 2018 calendar; accessed 2026-10-06",
+      "checksum": null,
+      "imported_assets": [],
+      "rights_notes": "The course links to the public calendar; it does not presume a license for the linked lecture materials."
+    },
+    {
+      "id": "ncbi-mboc-rtk-signaling",
+      "title": "Signaling through Enzyme-Linked Cell-Surface Receptors - Molecular Biology of the Cell",
+      "institution": "NIH / NCBI Bookshelf",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK26822/",
+      "accessed_at": "2026-10-06",
+      "license": "Copyrighted educational material; reuse rights not cleared here; link-only use selected",
+      "reuse_mode": "link-only-reference",
+      "permissions": {
+        "linking": true,
+        "quotation": false,
+        "adaptation": false,
+        "redistribution": false
+      },
+      "attribution_requirements": [
+        "Cite the chapter title, NIH / NCBI Bookshelf, and exact URL."
+      ],
+      "third_party_notes": "Link-only scientific reference. No text, figure, question, or dataset is copied or adapted.",
+      "mapped_courses": [
+        "cell-biology"
+      ],
+      "mapped_modules": [
+        "cell-biology-module-21",
+        "cell-biology-module-22"
+      ],
+      "version": "Molecular Biology of the Cell chapter; accessed 2026-10-06",
+      "checksum": null,
+      "imported_assets": [],
+      "rights_notes": "This record documents link-only use and does not clear book content for reuse."
+    },
+    {
+      "id": "ncbi-mboc-gpcr-signaling",
+      "title": "Signaling through G-Protein-Linked Cell-Surface Receptors - Molecular Biology of the Cell",
+      "institution": "NIH / NCBI Bookshelf",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK26912/",
+      "accessed_at": "2026-10-06",
+      "license": "Copyrighted educational material; reuse rights not cleared here; link-only use selected",
+      "reuse_mode": "link-only-reference",
+      "permissions": {
+        "linking": true,
+        "quotation": false,
+        "adaptation": false,
+        "redistribution": false
+      },
+      "attribution_requirements": [
+        "Cite the chapter title, NIH / NCBI Bookshelf, and exact URL."
+      ],
+      "third_party_notes": "Link-only scientific reference. No text, figure, question, or dataset is copied or adapted.",
+      "mapped_courses": [
+        "cell-biology"
+      ],
+      "mapped_modules": [
+        "cell-biology-module-21",
+        "cell-biology-module-22"
+      ],
+      "version": "Molecular Biology of the Cell chapter; accessed 2026-10-06",
+      "checksum": null,
+      "imported_assets": [],
+      "rights_notes": "This record documents link-only use and does not clear book content for reuse."
     }
   ]
 }

@@ -3314,6 +3314,451 @@
         "kind": "original",
         "modifications": []
       }
+    },
+    {
+      "id": "cell-biology-21:occupancy-model",
+      "type": "numeric",
+      "prompt": "Under the idealized single-site equilibrium model, free ligand is 1 nM and Kd is 4 nM. What fraction of receptors is predicted to be occupied? Enter a fraction from 0 to 1, not a percentage.",
+      "points": 1,
+      "objective_ids": [
+        "cell-biology-21-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0.2,
+        "unit": "",
+        "tolerance": 0.005,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use θ = [L]free / (Kd + [L]free) and keep the output as a fraction.",
+        "solution": "θ = 1/(4 + 1) = 0.20. This idealized binding estimate is not a prediction that the cell response is 20% of maximum.",
+        "lesson_ids": [
+          "cell-biology-21"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "cell-biology-21:rtk-relay",
+      "type": "single_choice",
+      "prompt": "Which sequence is one common route from an activated receptor tyrosine kinase toward ERK?",
+      "options": [
+        "Gαs activates adenylyl cyclase, cyclic AMP activates PKA, then PKA becomes Ras.",
+        "Receptor phosphotyrosines recruit adaptors that can activate Ras-GTP, followed by a RAF–MEK–ERK kinase relay.",
+        "A receptor directly converts extracellular ligand into ERK RNA without intracellular intermediates.",
+        "Ligand binding necessarily causes every receptor class to activate the same kinase sequence."
+      ],
+      "points": 1,
+      "objective_ids": [
+        "cell-biology-21-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 1
+      },
+      "feedback": {
+        "hint": "Follow the adaptor and small-GTPase connection in a common RTK example.",
+        "solution": "One common RTK route uses phosphotyrosine docking proteins to connect receptor activation to Ras and the RAF–MEK–ERK cascade. Other receptors and cell contexts can use different branches.",
+        "lesson_ids": [
+          "cell-biology-21"
+        ],
+        "misconception_ids": [
+          "map-is-the-pathway"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "cell-biology-21:relative-response",
+      "type": "numeric",
+      "prompt": "In a synthetic assay, pERK signal is 36 relative units in ligand-stimulated cells and 4 relative units in matched vehicle controls at the same collection time. What is the stimulated-to-vehicle fold change?",
+      "points": 1,
+      "objective_ids": [
+        "cell-biology-21-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 9,
+        "unit": "",
+        "tolerance": 0.05,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Divide the stimulated index by the specified comparison index.",
+        "solution": "36/4 = 9. This assay ratio describes the measured pERK index; it does not state receptor occupancy or a cell-fate change.",
+        "lesson_ids": [
+          "cell-biology-21"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "cell-biology-22:dynamic-trajectory",
+      "type": "structured",
+      "prompt": "Interpret the synthetic week-11 phospho-ERK time course after a two-minute ligand pulse or continued exposure.",
+      "response_fields": [
+        {
+          "id": "time-course-shape",
+          "type": "single_choice",
+          "prompt": "Time-course shape · Which description best matches the table?",
+          "options": [
+            "Both conditions return to vehicle by 10 minutes.",
+            "The pulse signal declines toward baseline, while continued-exposure signal remains elevated at 60 minutes.",
+            "The pulse condition has no early signal, while continued exposure first activates at 60 minutes."
+          ],
+          "points": 1
+        },
+        {
+          "id": "early-peak",
+          "type": "single_choice",
+          "prompt": "Early peak · What is the bounded comparison at 2 minutes?",
+          "options": [
+            "The two reported means are similar at 2 minutes; the table does not establish identical receptor occupancy.",
+            "The receptors must have equal affinity and abundance in both conditions.",
+            "The table proves the later cell fates are equal."
+          ],
+          "points": 1
+        },
+        {
+          "id": "response-boundary",
+          "type": "single_choice",
+          "prompt": "Claim boundary · Which conclusion follows directly from this readout?",
+          "options": [
+            "The conditions differ in the measured phospho-ERK trajectory; later fate requires a separate outcome assay.",
+            "The continued condition causes differentiation in every cell type.",
+            "The pulse condition triggers apoptosis because its signal declines."
+          ],
+          "points": 1
+        }
+      ],
+      "points": 3,
+      "objective_ids": [
+        "cell-biology-21-objective-3",
+        "cell-biology-22-objective-1"
+      ],
+      "solution_spec": {
+        "field_specs": [
+          {
+            "id": "time-course-shape",
+            "type": "single_choice",
+            "answer": 1
+          },
+          {
+            "id": "early-peak",
+            "type": "single_choice",
+            "answer": 0
+          },
+          {
+            "id": "response-boundary",
+            "type": "single_choice",
+            "answer": 0
+          }
+        ],
+        "rubric": [
+          {
+            "id": "time-course-shape",
+            "criterion": "Compare response duration under the stated exposure schedules",
+            "points": 1,
+            "evidence": [
+              "Identifies a decline after the pulse and a sustained elevated signal during continued exposure."
+            ]
+          },
+          {
+            "id": "early-peak",
+            "criterion": "Use the measured early values without inferring unmeasured binding",
+            "points": 1,
+            "evidence": [
+              "Notes similar 2-minute phospho-ERK values and does not claim equal affinity or occupancy."
+            ]
+          },
+          {
+            "id": "response-boundary",
+            "criterion": "Keep biochemical and cell-fate outcomes separate",
+            "points": 1,
+            "evidence": [
+              "Limits the conclusion to the measured phospho-ERK trajectory and calls for a separate fate assay."
+            ]
+          }
+        ]
+      },
+      "feedback": {
+        "hint": "Separate the measured signaling variable, the exposure schedule, the intervention target, and the scope of the claim.",
+        "solution": "The synthetic means show similar early pERK values and a longer elevated trajectory under continued exposure. A phosphorylation trace does not establish a later transcriptional or cell-fate outcome.",
+        "lesson_ids": [
+          "cell-biology-22"
+        ],
+        "misconception_ids": [
+          "phosphorylation-proves-fate",
+          "map-is-the-pathway"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "cell-biology-22:pathway-bypass",
+      "type": "structured",
+      "prompt": "Receptor inhibition lowers pERK. Constitutively active MEK restores pERK in the tested cells. Interpret the bypass evidence.",
+      "response_fields": [
+        {
+          "id": "bypass-position",
+          "type": "single_choice",
+          "prompt": "Pathway position · What does the rescue most directly support?",
+          "options": [
+            "The receptor is the only upstream influence on every cellular pathway.",
+            "The intervention restored every receptor function to its natural state.",
+            "Active MEK can bypass the receptor block to restore the measured pERK state in these cells."
+          ],
+          "points": 1
+        },
+        {
+          "id": "bypass-limit",
+          "type": "single_choice",
+          "prompt": "Inference limit · Which additional statement is justified?",
+          "options": [
+            "An artificial bypass does not by itself establish normal physiological sufficiency or restored cell fate.",
+            "Restored pERK proves the cells differentiated normally.",
+            "Overexpression eliminates all off-target and expression-level concerns."
+          ],
+          "points": 1
+        }
+      ],
+      "points": 2,
+      "objective_ids": [
+        "cell-biology-22-objective-2",
+        "cell-biology-22-objective-3"
+      ],
+      "solution_spec": {
+        "field_specs": [
+          {
+            "id": "bypass-position",
+            "type": "single_choice",
+            "answer": 2
+          },
+          {
+            "id": "bypass-limit",
+            "type": "single_choice",
+            "answer": 0
+          }
+        ],
+        "rubric": [
+          {
+            "id": "bypass-position",
+            "criterion": "Interpret the bypass at the measured downstream node",
+            "points": 1,
+            "evidence": [
+              "Describes restoration of measured pERK by the MEK bypass in the tested cells."
+            ]
+          },
+          {
+            "id": "bypass-limit",
+            "criterion": "Bound causal and physiological claims",
+            "points": 1,
+            "evidence": [
+              "Separates biochemical bypass from normal physiology and cell-fate outcomes."
+            ]
+          }
+        ]
+      },
+      "feedback": {
+        "hint": "Separate the measured signaling variable, the exposure schedule, the intervention target, and the scope of the claim.",
+        "solution": "The bypass supports that active MEK can restore the specified pERK measurement under these conditions. It does not show normal physiological sufficiency, restoration of every receptor branch, or cell-fate rescue.",
+        "lesson_ids": [
+          "cell-biology-22"
+        ],
+        "misconception_ids": [
+          "inhibitor-response-proves-target",
+          "phosphorylation-proves-fate"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "cell-biology-22:feedback-alternatives",
+      "type": "structured",
+      "prompt": "A ligand-induced pERK signal declines. Select follow-ups that distinguish ligand availability, receptor adaptation, induced feedback, and alternative explanations.",
+      "response_fields": [
+        {
+          "id": "hold-input",
+          "type": "single_choice",
+          "prompt": "Ligand-depletion test · Which comparison addresses whether ligand availability explains the decline?",
+          "options": [
+            "Use a matched medium exchange without measuring or replacing ligand.",
+            "Maintain or replenish ligand at a controlled concentration with matched medium-change and vehicle controls.",
+            "Increase the number of technical wells only in the declining condition."
+          ],
+          "points": 1
+        },
+        {
+          "id": "receptor-state",
+          "type": "single_choice",
+          "prompt": "Receptor-adaptation test · Which paired measurement is informative?",
+          "options": [
+            "Measure matched surface and total receptor abundance across the signaling time course.",
+            "Measure only the final pERK value in one dish.",
+            "Replace receptor measurements with a later morphology photograph."
+          ],
+          "points": 1
+        },
+        {
+          "id": "feedback-candidate",
+          "type": "single_choice",
+          "prompt": "Induced-feedback test · Which sequence supports a candidate feedback contribution?",
+          "options": [
+            "Assume any delayed response is feedback without measuring an intermediate.",
+            "Measure candidate expression only once after the signal has ended.",
+            "Measure candidate abundance or activity over time, perturb it with a matched control, and test a specific rescue."
+          ],
+          "points": 1
+        },
+        {
+          "id": "alternative-boundary",
+          "type": "single_choice",
+          "prompt": "Alternative explanation · Which control helps detect a cell-state alternative?",
+          "options": [
+            "Use technical replicate count as a substitute for cell health.",
+            "Measure viability and cell number at matched times alongside signaling.",
+            "Assume equal starting density guarantees equal viability throughout."
+          ],
+          "points": 1
+        }
+      ],
+      "points": 4,
+      "objective_ids": [
+        "cell-biology-22-objective-1",
+        "cell-biology-22-objective-3"
+      ],
+      "solution_spec": {
+        "field_specs": [
+          {
+            "id": "hold-input",
+            "type": "single_choice",
+            "answer": 1
+          },
+          {
+            "id": "receptor-state",
+            "type": "single_choice",
+            "answer": 0
+          },
+          {
+            "id": "feedback-candidate",
+            "type": "single_choice",
+            "answer": 2
+          },
+          {
+            "id": "alternative-boundary",
+            "type": "single_choice",
+            "answer": 1
+          }
+        ],
+        "rubric": [
+          {
+            "id": "hold-input",
+            "criterion": "Control the ligand input while testing depletion",
+            "points": 1,
+            "evidence": [
+              "Uses controlled ligand maintenance or replenishment and matched medium-change controls."
+            ]
+          },
+          {
+            "id": "receptor-state",
+            "criterion": "Measure receptor availability over time",
+            "points": 1,
+            "evidence": [
+              "Compares surface and total receptor at matched time points."
+            ]
+          },
+          {
+            "id": "feedback-candidate",
+            "criterion": "Test the feedback candidate with a temporal and causal chain",
+            "points": 1,
+            "evidence": [
+              "Combines time-resolved candidate measurement, controlled perturbation, and a specific rescue."
+            ]
+          },
+          {
+            "id": "alternative-boundary",
+            "criterion": "Check cell-state alternatives at the measured times",
+            "points": 1,
+            "evidence": [
+              "Measures viability and cell number alongside the signaling readout."
+            ]
+          }
+        ]
+      },
+      "feedback": {
+        "hint": "Separate the measured signaling variable, the exposure schedule, the intervention target, and the scope of the claim.",
+        "solution": "Different hypotheses need different measurements: controlled ligand input addresses depletion, time-matched surface and total receptor address receptor availability, and a temporally measured candidate perturbation with rescue tests feedback contribution. Viability and cell count help identify state changes. No single item alone proves a unique mechanism.",
+        "lesson_ids": [
+          "cell-biology-22"
+        ],
+        "misconception_ids": [
+          "declining-signal-proves-feedback",
+          "inhibitor-response-proves-target"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "cell-biology-22:orthogonal-specificity",
+      "type": "single_choice",
+      "prompt": "A small-molecule inhibitor reduces pERK. Which next result most strengthens the claim that the targeted pathway component contributes, while addressing a different intervention-specific alternative?",
+      "options": [
+        "More technical wells with the same inhibitor and no target-engagement measurement.",
+        "A second endpoint at the same time using the same compound concentration.",
+        "An orthogonal controlled genetic perturbation with target-engagement evidence and a specific rescue of a prespecified readout.",
+        "A later cell image chosen after inspecting which field looks most different."
+      ],
+      "points": 1,
+      "objective_ids": [
+        "cell-biology-22-objective-2",
+        "cell-biology-22-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 2
+      },
+      "feedback": {
+        "hint": "Ask whether a different intervention changes the predicted node, and whether restoring that component rescues the prespecified readout.",
+        "solution": "An orthogonal perturbation with target engagement and specific rescue can address different off-target or attribution alternatives. The conclusion must still be limited to the tested readout, cells, and conditions.",
+        "lesson_ids": [
+          "cell-biology-22"
+        ],
+        "misconception_ids": [
+          "inhibitor-response-proves-target"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
     }
   ]
 }

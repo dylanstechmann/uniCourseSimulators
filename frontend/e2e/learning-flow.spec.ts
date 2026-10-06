@@ -810,6 +810,68 @@ test("week 10 inheritance and variant practice separates transmission and phenot
   ).toContainText("3 / 3 practice points");
 });
 
+test("week 11 signaling practice separates occupancy, response dynamics, and feedback evidence", async ({
+  page,
+}) => {
+  await page.goto("/#/account");
+  await page.getByRole("button", { name: "Start guest session" }).click();
+  await page.getByRole("link", { name: "Course catalog", exact: true }).click();
+  await page.getByRole("link", { name: /Foundations of Cell/ }).click();
+  await page.getByRole("button", { name: "Enroll in partial course" }).click();
+  await page.getByRole("link", { name: "Practice gradebook" }).click();
+
+  const row = page.getByRole("row", {
+    name: /Week 11: receptor signaling and perturbation practice/,
+  });
+  await row.getByRole("button", { name: "Open practice set" }).click();
+  await expect(
+    page.getByRole("heading", {
+      name: "Week 11: receptor signaling and perturbation practice",
+    }),
+  ).toBeVisible();
+  await expect(
+    page.getByText(/7 questions · 13 practice points/),
+  ).toBeVisible();
+
+  const occupancy = page.locator(
+    '[data-question-id="cell-biology-21:occupancy-model"]',
+  );
+  await occupancy.getByLabel("Numerical value").fill("0.20");
+  await occupancy
+    .getByRole("button", { name: "Submit practice response" })
+    .click();
+  await expect(
+    occupancy.getByRole("region", { name: "Submission feedback" }),
+  ).toContainText("1 / 1 practice points");
+
+  const trajectory = page.locator(
+    '[data-question-id="cell-biology-22:dynamic-trajectory"]',
+  );
+  await trajectory.getByLabel(/Time-course shape/).selectOption("1");
+  await trajectory.getByLabel(/Early peak/).selectOption("0");
+  await trajectory.getByLabel(/Claim boundary/).selectOption("0");
+  await trajectory
+    .getByRole("button", { name: "Submit practice response" })
+    .click();
+  await expect(
+    trajectory.getByRole("region", { name: "Submission feedback" }),
+  ).toContainText("3 / 3 practice points");
+
+  const feedback = page.locator(
+    '[data-question-id="cell-biology-22:feedback-alternatives"]',
+  );
+  await feedback.getByLabel(/Ligand-depletion test/).selectOption("1");
+  await feedback.getByLabel(/Receptor-adaptation test/).selectOption("0");
+  await feedback.getByLabel(/Induced-feedback test/).selectOption("2");
+  await feedback.getByLabel(/Alternative explanation/).selectOption("1");
+  await feedback
+    .getByRole("button", { name: "Submit practice response" })
+    .click();
+  await expect(
+    feedback.getByRole("region", { name: "Submission feedback" }),
+  ).toContainText("4 / 4 practice points");
+});
+
 test("structured experimental criteria receive deterministic partial credit and persist", async ({
   page,
 }) => {

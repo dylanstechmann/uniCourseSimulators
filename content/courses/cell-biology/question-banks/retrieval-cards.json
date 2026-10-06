@@ -404,6 +404,50 @@
         "cell-biology-20-objective-2"
       ],
       "license": "CC-BY-4.0"
+    },
+    {
+      "id": "cell-biology-21-0",
+      "lesson_id": "cell-biology-21",
+      "front": "Receptor occupancy versus response",
+      "back": "The single-site occupancy estimate θ = [L]free/(Kd + [L]free) is not a prediction of response amplitude. Amplification, receptor reserve, feedback, localization, and assay range can separate occupancy from an operational EC50 or cell outcome.",
+      "objective_ids": [
+        "cell-biology-21-objective-1",
+        "cell-biology-21-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "cell-biology-21-1",
+      "lesson_id": "cell-biology-21",
+      "front": "A pathway diagram is a testable model",
+      "back": "Name the input, directly measured node, time, control, and inferred arrows. RTKs and GPCRs can amplify and converge on shared pathways, but the drawn route is not universal across cells.",
+      "objective_ids": [
+        "cell-biology-21-objective-2",
+        "cell-biology-21-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "cell-biology-22-0",
+      "lesson_id": "cell-biology-22",
+      "front": "A declining signal has competing explanations",
+      "back": "A falling phosphorylation trace alone does not distinguish induced feedback, receptor adaptation/internalization, ligand depletion, or cell-state change. Make each explanation predict a measurement or intervention.",
+      "objective_ids": [
+        "cell-biology-22-objective-1",
+        "cell-biology-22-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "cell-biology-22-1",
+      "lesson_id": "cell-biology-22",
+      "front": "A rescue supports a bounded causal link",
+      "back": "A specific rescue can strengthen attribution in the tested system. A bypassed biochemical signal does not prove normal physiological sufficiency, all pathway branches, or a cell-fate outcome.",
+      "objective_ids": [
+        "cell-biology-22-objective-2",
+        "cell-biology-22-objective-3"
+      ],
+      "license": "CC-BY-4.0"
     }
   ]
 }

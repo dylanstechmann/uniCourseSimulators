@@ -1,6 +1,6 @@
 # Cell and Molecular Biology: proposed scope and assessment crosswalk
 
-**Crosswalk status:** planning document, course version 0.11.0. It is not a set of completed assignments. **The course remains partial.** Weeks 1–7 have two original lessons each and public formative items; weeks 4 and 7 also retain compact prototype readings. Week 8 has an ungraded cumulative practice set, not a midterm. Weeks 9 and 10 have original lesson pairs and formative practice sets; weeks 11–14 remain outlines.
+**Crosswalk status:** planning document, course version 0.12.0. It is not a set of completed assignments. **The course remains partial.** Weeks 1–7 have two original lessons each and public formative items; weeks 4 and 7 also retain compact prototype readings. Week 8 has an ungraded cumulative practice set, not a midterm. Weeks 9–11 have original lesson pairs and formative practice sets; weeks 12–14 remain outlines.
 
 ## Intended course outcomes
 
@@ -36,7 +36,7 @@ The IDs below refer to the course outcomes in `course.json`. New lesson-objectiv
 
 | Component | Planned distribution | Current state |
 | --- | --- | --- |
-| Weekly formative practice | Every developed week; explicit scoring and feedback | Public formative questions cover selected claims in weeks 1–7, 9, and 10. Week 9 has eight items / 14 points; week 10 has seven / 13. They do not replace homework or demonstrate mastery. |
+| Weekly formative practice | Every developed week; explicit scoring and feedback | Public formative questions cover selected claims in weeks 1–7 and 9–11. Week 9 has eight items / 14 points; weeks 10 and 11 have seven / 13 each. They do not replace homework or demonstrate mastery. |
 | Homework | Eight sets, H1–H8, mapped above | None of the eight full homework packages is authored. No homework contributes to a course grade. |
 | Data or virtual lab | Three activities, L1–L3, mapped above | The existing cell-biology CSV item summarizes a small supplied table; it is not a lab sequence or simulation. No new lab is enabled by this outline. |
 | Cumulative week-8 practice | Selected public items across weeks 1–7 | Enabled as ungraded practice with answer-free API delivery; the underlying practice keys remain openly visible in the repository. |
@@ -53,4 +53,4 @@ The sequence is an original planning proposal informed at the topic level by pub
 
 ## Completion work still required
 
-The week-8 activity is a cumulative, ungraded review of weeks 1–7 using existing public practice items; it is not a midterm. Weeks 9 and 10 provide public formative practice and do not establish summative readiness, exam performance, or course mastery. Author and review weeks 11–14, the eight substantive homework sets, three data/lab activities, an actual midterm, cumulative final, and integrative project. Weeks 4, 7, 9, and 10 still need full homework/data-analysis assignments; uncertainty treatment and laboratory design remain incomplete. Map every actual learning objective to valid assessments; add answer specifications, independent numerical checks, unit/tolerance and grader mutation tests, accessibility alternatives, misconception-specific feedback, workload evidence, and qualified scientific and accessibility reviews. Preserve `partial` status until the entire course package passes the documented gates.
+The week-8 activity is a cumulative, ungraded review of weeks 1–7 using existing public practice items; it is not a midterm. Weeks 9–11 provide public formative practice and do not establish summative readiness, exam performance, or course mastery. Author and review weeks 12–14, the eight substantive homework sets, three data/lab activities, an actual midterm, cumulative final, and integrative project. Weeks 4, 7, and 9–11 still need full homework/data-analysis assignments; uncertainty treatment and laboratory design remain incomplete. Map every actual learning objective to valid assessments; add answer specifications, independent numerical checks, unit/tolerance and grader mutation tests, accessibility alternatives, misconception-specific feedback, workload evidence, and qualified scientific and accessibility reviews. Preserve `partial` status until the entire course package passes the documented gates.
