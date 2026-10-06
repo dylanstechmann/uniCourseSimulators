@@ -7,7 +7,7 @@
   "domain": "Quantitative methods",
   "level": "Year 2",
   "maturity": "partial",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "license": "MIT OR CC-BY-4.0",
   "content_origin": {
     "kind": "legacy-prototype",
@@ -46,6 +46,11 @@
     {
       "id": "statistics-outcome-4",
       "description": "Design controls, replication, randomization, and blinding.",
+      "bloom": "create"
+    },
+    {
+      "id": "statistics-outcome-5",
+      "description": "Create a labeled quantitative graph using an explicit scale and the units of the measured variables.",
       "bloom": "create"
     }
   ],
@@ -104,6 +109,14 @@
       "bloom": "analyze",
       "course_outcome_ids": [
         "statistics-outcome-3"
+      ]
+    },
+    {
+      "id": "statistics-5-objective-2",
+      "description": "Calculate group sample means from replicate values and place their coordinates on a labeled linear graph.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "statistics-outcome-5"
       ]
     }
   ],
@@ -238,15 +251,18 @@
           "title": "Descriptive differences and inferential limits",
           "reading": "modules/05-descriptive-evidence-and-causal-limits.md",
           "objectives": [
-            "statistics-5-objective-1"
+            "statistics-5-objective-1",
+            "statistics-5-objective-2"
           ],
-          "worked_example": "For means of 14.0 μM and 10.0 μM, calculate compound minus vehicle to obtain +4.0 μM. This describes the observed samples only; assignment and replicate-level variation are needed before making causal or uncertainty claims.",
+          "worked_example": "At 0, 2, and 4 μM, replicate signal means of 5, 10, and 15 form the plotted sample coordinates. Plotting the means preserves the dose order but hides within-group spread; it does not establish uncertainty or causation.",
           "question_ids": [
-            "statistics-5:group-summary"
+            "statistics-5:group-summary",
+            "statistics-5:concentration-graph"
           ],
           "card_ids": [
             "statistics-4-0",
-            "statistics-4-1"
+            "statistics-4-1",
+            "statistics-4-2"
           ]
         }
       ]
@@ -311,12 +327,14 @@
       "mode": "practice",
       "path": "question-banks/practice.json",
       "objective_ids": [
-        "statistics-5-objective-1"
+        "statistics-5-objective-1",
+        "statistics-5-objective-2"
       ],
       "question_ids": [
-        "statistics-5:group-summary"
+        "statistics-5:group-summary",
+        "statistics-5:concentration-graph"
       ],
-      "points": 2
+      "points": 5
     },
     {
       "id": "statistics-case",
@@ -365,6 +383,11 @@
       "version": "0.1.1",
       "date": "2026-10-05",
       "summary": "Added an original descriptive-data lesson and a deterministic two-field calculation-and-interpretation practice item. The package remains partial."
+    },
+    {
+      "version": "0.1.2",
+      "date": "2026-10-05",
+      "summary": "Added an original interactive coordinate-plot practice activity with separate pointwise partial credit. The package remains partial."
     }
   ],
   "limitations": [
@@ -374,7 +397,8 @@
     "Bloom labels and structured prerequisite edges are initial authoring classifications awaiting subject-matter review.",
     "Question answers and solution feedback are intentionally public practice authoring specifications, not restricted exam keys.",
     "Legacy numerical specifications preserve the prototype's tolerance and optional unit entry; they do not all enforce significant-figure or dimensional checks.",
-    "Total workload and weekly duration are unknown; former nominal credit values and hardcoded reading times do not establish workload."
+    "Total workload and weekly duration are unknown; former nominal credit values and hardcoded reading times do not establish workload.",
+    "The graph exercise checks coordinate placement on author-specified axes; it does not assess axis selection, uncertainty bars, model fitting, or interpretation."
   ],
   "intentionally_omitted": [
     "Full instructional sequence and summative assessments are not authored yet; this is a preserved seed inventory."

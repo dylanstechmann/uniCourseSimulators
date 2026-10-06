@@ -190,6 +190,33 @@ class ContentRepository:
                 }
                 for field in question.get("response_fields", [])
             ],
+            graph_spec=(
+                {
+                    "x_axis": {
+                        "label": question["graph_spec"]["x_axis"]["label"],
+                        "minimum": question["graph_spec"]["x_axis"]["minimum"],
+                        "maximum": question["graph_spec"]["x_axis"]["maximum"],
+                    },
+                    "y_axis": {
+                        "label": question["graph_spec"]["y_axis"]["label"],
+                        "minimum": question["graph_spec"]["y_axis"]["minimum"],
+                        "maximum": question["graph_spec"]["y_axis"]["maximum"],
+                    },
+                    "points": [
+                        {"id": point["id"], "label": point["label"]}
+                        for point in question["graph_spec"]["points"]
+                    ],
+                    "observations": [
+                        {
+                            "id": observation["id"],
+                            "x": observation["x"],
+                            "values": observation["values"],
+                        }
+                        for observation in question["graph_spec"]["observations"]
+                    ],
+                }
+                if question["type"] == "graph" else None
+            ),
             accepted_media_types=(
                 question.get("solution_spec", {}).get("accepted_media_types", [])
                 if question["type"] == "file_upload" else []

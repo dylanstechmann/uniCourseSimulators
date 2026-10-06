@@ -25,7 +25,7 @@ NUMBER = re.compile(
     r"^([+-]?(?:\d+\.?\d*|\.\d+)(?:[eE][+-]?\d+)?)\s*"
     r"((?:(?:[A-Za-zμµΩω°%]|1/[A-Za-z])[A-Za-z0-9μµΩω°%·/⁻¹²³^*(). _-]*)?)$"
 )
-GRADING_POLICY_VERSION = "practice-v9"
+GRADING_POLICY_VERSION = "practice-v10"
 MAX_CSV_UPLOAD_COLUMNS = 20
 MAX_CSV_UPLOAD_ROWS = 50
 
@@ -423,6 +423,212 @@ def _csv_upload_result(
     )
 
 
+def _grade_graph_response(question: dict, request: AttemptRequest, points: float) -> GradeResult:
+    """Grade learner-entered coordinates against a bounded, authored scatter plot."""
+    graph = question.get("graph_spec")
+    answer_spec = question.get("solution_spec", {})
+    authored_points = graph.get("points") if isinstance(graph, dict) else None
+    observations = graph.get("observations") if isinstance(graph, dict) else None
+    expected_points = answer_spec.get("points")
+    rubric = answer_spec.get("rubric")
+    if (
+        not isinstance(graph, dict)
+        or not isinstance(authored_points, list)
+        or not 2 <= len(authored_points) <= 20
+        or not isinstance(observations, list)
+        or len(observations) != len(authored_points)
+        or not isinstance(expected_points, list)
+        or not isinstance(rubric, list)
+        or len(rubric) != 2 * len(authored_points)
+    ):
+        raise GradingUnavailable("Graph response specification is invalid")
+
+    axes = {}
+    for axis_id in ("x_axis", "y_axis"):
+        axis = graph.get(axis_id)
+        if not isinstance(axis, dict):
+            raise GradingUnavailable("Graph axes are invalid")
+        label, minimum, maximum = axis.get("label"), axis.get("minimum"), axis.get("maximum")
+        if (
+            not isinstance(label, str) or len(label.strip()) < 3
+            or isinstance(minimum, bool) or not isinstance(minimum, (int, float))
+            or not math.isfinite(minimum) or abs(minimum) > 1e12
+            or isinstance(maximum, bool) or not isinstance(maximum, (int, float))
+            or not math.isfinite(maximum) or abs(maximum) > 1e12
+            or minimum >= maximum
+        ):
+            raise GradingUnavailable("Graph axis labels and bounds are invalid")
+        axes[axis_id] = (float(minimum), float(maximum))
+
+    points_by_id = {}
+    for item in authored_points:
+        if (
+            not isinstance(item, dict)
+            or not isinstance(item.get("id"), str)
+            or not re.fullmatch(r"[a-z][a-z0-9_-]{0,47}", item["id"])
+            or not isinstance(item.get("label"), str)
+            or len(item["label"].strip()) < 2
+            or item["id"] in points_by_id
+        ):
+            raise GradingUnavailable("Graph point labels and IDs must be valid and unique")
+        points_by_id[item["id"]] = item
+
+    answers_by_id = {}
+    for item in expected_points:
+        if (
+            not isinstance(item, dict)
+            or not isinstance(item.get("id"), str)
+            or item["id"] not in points_by_id
+            or item["id"] in answers_by_id
+        ):
+            raise GradingUnavailable("Graph points and answer coordinates must have matching unique IDs")
+        for coordinate, axis_id in (("x", "x_axis"), ("y", "y_axis")):
+            value = item.get(coordinate)
+            tolerance = item.get(f"{coordinate}_tolerance")
+            minimum, maximum = axes[axis_id]
+            if (
+                isinstance(value, bool) or not isinstance(value, (int, float))
+                or not math.isfinite(value) or not minimum <= value <= maximum
+                or isinstance(tolerance, bool) or not isinstance(tolerance, (int, float))
+                or not math.isfinite(tolerance) or not 0 <= tolerance <= maximum - minimum
+            ):
+                raise GradingUnavailable("Graph answer coordinates or tolerances are invalid")
+        answers_by_id[item["id"]] = item
+    if set(points_by_id) != set(answers_by_id):
+        raise GradingUnavailable("Every public graph point requires one answer coordinate pair")
+
+    observations_by_id = {}
+    for observation in observations:
+        if (
+            not isinstance(observation, dict)
+            or not isinstance(observation.get("id"), str)
+            or observation["id"] not in points_by_id
+            or observation["id"] in observations_by_id
+            or isinstance(observation.get("x"), bool)
+            or not isinstance(observation.get("x"), (int, float))
+            or not math.isfinite(observation["x"])
+            or not axes["x_axis"][0] <= observation["x"] <= axes["x_axis"][1]
+            or not isinstance(observation.get("values"), list)
+            or not 1 <= len(observation["values"]) <= 100
+            or any(
+                isinstance(value, bool)
+                or not isinstance(value, (int, float))
+                or not math.isfinite(value)
+                or not axes["y_axis"][0] <= value <= axes["y_axis"][1]
+                for value in observation["values"]
+            )
+        ):
+            raise GradingUnavailable("Graph observations must be finite, bounded, and map to public points")
+        observations_by_id[observation["id"]] = observation
+    if set(observations_by_id) != set(points_by_id):
+        raise GradingUnavailable("Every graph point must have one public observation row")
+
+    criteria_by_id = {}
+    for criterion in rubric:
+        if (
+            not isinstance(criterion, dict)
+            or not isinstance(criterion.get("id"), str)
+            or not isinstance(criterion.get("criterion"), str)
+            or len(criterion["criterion"].strip()) < 10
+            or not isinstance(criterion.get("evidence"), list)
+            or not criterion["evidence"]
+            or any(not isinstance(evidence, str) or len(evidence.strip()) < 3 for evidence in criterion["evidence"])
+            or isinstance(criterion.get("points"), bool)
+            or not isinstance(criterion.get("points"), (int, float))
+            or not math.isfinite(criterion["points"])
+            or criterion["points"] <= 0
+        ):
+            raise GradingUnavailable("Graph analytic rubric criteria are invalid")
+        criterion_id = criterion["id"]
+        if criterion_id in criteria_by_id:
+            raise GradingUnavailable("Graph rubric criterion IDs must be unique")
+        criteria_by_id[criterion_id] = criterion
+
+    expected_criteria = {
+        f"{point_id}_{coordinate}"
+        for point_id in points_by_id
+        for coordinate in ("x", "y")
+    }
+    if set(criteria_by_id) != expected_criteria:
+        raise GradingUnavailable("Each graph coordinate must map to one analytic rubric criterion")
+    if not math.isclose(
+        sum(float(item["points"]) for item in rubric), points, rel_tol=0, abs_tol=1e-8
+    ):
+        raise GradingUnavailable("Graph rubric points must sum to the question total")
+
+    response = request.response
+    if not isinstance(response, dict) or set(response) - expected_criteria:
+        return _graph_result(question, points, 0, "malformed_response", [])
+
+    components = []
+    score = 0.0
+    feedback = question.get("feedback", {})
+    lesson_ids = feedback.get("lesson_ids", [])
+    for point_id, expected in answers_by_id.items():
+        for coordinate in ("x", "y"):
+            component_id = f"{point_id}_{coordinate}"
+            criterion = criteria_by_id[component_id]
+            value = response.get(component_id)
+            if value is None:
+                components.append(FeedbackComponent(
+                    field_id=component_id, label=criterion["criterion"], score=0,
+                    max_score=float(criterion["points"]), diagnosis="missing_response",
+                ))
+                continue
+            child_question = {
+                "type": "numeric",
+                "points": criterion["points"],
+                "solution_spec": {
+                    "answer": expected[coordinate],
+                    "unit": "",
+                    "tolerance": expected[f"{coordinate}_tolerance"],
+                    "unit_required": False,
+                },
+                "feedback": {"hint": feedback.get("hint"), "lesson_ids": lesson_ids},
+            }
+            result = grade(child_question, AttemptRequest(response=value))
+            score += result.score
+            components.append(FeedbackComponent(
+                field_id=component_id, label=criterion["criterion"],
+                score=result.score, max_score=float(criterion["points"]),
+                diagnosis=result.feedback.diagnosis,
+            ))
+
+    complete = math.isclose(score, points, rel_tol=0, abs_tol=1e-8)
+    diagnosis = "graph_coordinates_complete" if complete else "graph_coordinates_partial" if score else "graph_coordinates_incorrect"
+    return _graph_result(question, points, score, diagnosis, components)
+
+
+def _graph_result(
+    question: dict,
+    points: float,
+    score: float,
+    diagnosis: str,
+    components: list[FeedbackComponent],
+) -> GradeResult:
+    authored = question.get("feedback", {})
+    lesson_ids = authored.get("lesson_ids", [])
+    correct = math.isclose(score, points, rel_tol=0, abs_tol=1e-8)
+    return GradeResult(
+        score=score,
+        max_score=points,
+        correct=correct,
+        feedback=Feedback(
+            diagnosis=diagnosis,
+            hint=None if correct else authored.get("hint"),
+            misconception=None if correct else authored.get("misconception"),
+            lesson_id=lesson_ids[0] if lesson_ids else None,
+            next_step=(
+                "Every plotted coordinate matched within its authored tolerance. Axis selection and scientific interpretation were not assessed."
+                if correct else
+                "Each x and y coordinate is scored separately. Check the source pairs, the point labels, and the units printed on both axes."
+            ),
+            components=components,
+        ),
+        grading_policy_version=GRADING_POLICY_VERSION,
+    )
+
+
 def count_significant_figures(number: str) -> int:
     """Count precision encoded lexically in a decimal/scientific-notation answer."""
     mantissa = re.split(r"[eE]", number, maxsplit=1)[0].lstrip("+-")
@@ -462,6 +668,8 @@ def grade(question: dict, request: AttemptRequest) -> GradeResult:
         raise ValueError("Question points must be positive and finite")
     if question["type"] in {"data_interpretation", "structured"}:
         return _grade_fielded_response(question, request, points)
+    if question["type"] == "graph":
+        return _grade_graph_response(question, request, points)
     if question["type"] == "file_upload":
         return _grade_csv_upload(question, request, points)
     if question["type"] == "multiple_select":

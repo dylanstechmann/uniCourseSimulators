@@ -23,6 +23,12 @@ const diagnoses: Record<string, string> = {
     "The CSV table is valid, but one or more required result cells are missing.",
   csv_results_incorrect:
     "The uploaded table is valid, but its numeric results do not meet the rubric checks.",
+  graph_coordinates_complete:
+    "Every plotted coordinate matched within its authored tolerance. Axis selection and scientific interpretation were not assessed.",
+  graph_coordinates_partial:
+    "Some plotted coordinates met their deterministic checks. Each x and y coordinate receives separate credit.",
+  graph_coordinates_incorrect:
+    "The plotted coordinates did not meet the analytic checks.",
   malformed_upload:
     "The file could not be scored. Check the required UTF-8 CSV format, header, and unique row labels.",
   missing_response: "No response was submitted for this field.",

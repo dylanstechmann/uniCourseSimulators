@@ -85,6 +85,16 @@
         "statistics-5-objective-1"
       ],
       "license": "CC-BY-4.0"
+    },
+    {
+      "id": "statistics-4-2",
+      "lesson_id": "statistics-5",
+      "front": "What information is lost when a graph shows group means without replicate values or uncertainty intervals?",
+      "back": "The mean-only plot hides within-group spread and the precision of each estimate; it cannot by itself show sampling uncertainty or establish a causal effect.",
+      "objective_ids": [
+        "statistics-5-objective-2"
+      ],
+      "license": "CC-BY-4.0"
     }
   ]
 }

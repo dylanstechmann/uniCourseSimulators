@@ -501,6 +501,37 @@ test("data interpretation awards transparent field credit and reloads saved feed
     "0 / 1 point",
   );
   await expect(practice.getByText(/Some fields are correct/)).toBeVisible();
+
+  const graph = page.locator(
+    '[data-question-id="statistics-5:concentration-graph"]',
+  );
+  await expect(graph.getByRole("table")).toContainText("4.8, 5, 5.2");
+  await expect(graph.getByRole("img", { name: /Graph preview/ })).toBeVisible();
+  const vehicle = graph.getByRole("group", { name: "Vehicle" });
+  await vehicle.getByLabel("Concentration (μM) coordinate").fill("0");
+  await vehicle
+    .getByLabel("Mean signal (arbitrary fluorescence units) coordinate")
+    .fill("4.7");
+  const lowDose = graph.getByRole("group", { name: "2 μM" });
+  await lowDose.getByLabel("Concentration (μM) coordinate").fill("2");
+  await lowDose
+    .getByLabel("Mean signal (arbitrary fluorescence units) coordinate")
+    .fill("10");
+  const highDose = graph.getByRole("group", { name: "4 μM" });
+  await highDose.getByLabel("Concentration (μM) coordinate").fill("4");
+  await highDose
+    .getByLabel("Mean signal (arbitrary fluorescence units) coordinate")
+    .fill("15");
+  await graph.getByRole("button", { name: "Submit practice response" }).click();
+  await expect(
+    graph.getByRole("region", { name: "Submission feedback" }),
+  ).toContainText("2.5 / 3 practice points");
+  await expect(graph.getByLabel("Field-level scoring")).toContainText(
+    "Vehicle sample mean coordinate",
+  );
+  await expect(graph.getByLabel("Field-level scoring")).toContainText(
+    "0 / 0.5 point",
+  );
   const accessibility = await new AxeBuilder({ page })
     .withTags(["wcag2a", "wcag2aa", "wcag21a", "wcag21aa"])
     .analyze();
@@ -512,6 +543,11 @@ test("data interpretation awards transparent field credit and reloads saved feed
       .locator('[data-question-id="statistics-5:group-summary"]')
       .getByRole("region", { name: "Submission feedback" }),
   ).toContainText("1 / 2 practice points");
+  await expect(
+    page
+      .locator('[data-question-id="statistics-5:concentration-graph"]')
+      .getByRole("region", { name: "Submission feedback" }),
+  ).toContainText("2.5 / 3 practice points");
 });
 
 test("CSV analysis upload receives cell-level partial credit and persists safely", async ({

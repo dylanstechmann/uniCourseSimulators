@@ -106,6 +106,7 @@ export interface Question {
     | "symbolic"
     | "structured"
     | "data_interpretation"
+    | "graph"
     | "file_upload";
   prompt: string;
   options: string[];
@@ -122,6 +123,12 @@ export interface Question {
     unit?: string | null;
     points: number;
   }[];
+  graph_spec?: {
+    x_axis: { label: string; minimum: number; maximum: number };
+    y_axis: { label: string; minimum: number; maximum: number };
+    points: { id: string; label: string }[];
+    observations: { id: string; x: number; values: number[] }[];
+  } | null;
   accepted_media_types?: string[];
   max_upload_bytes?: number | null;
   variant_id?: string | null;

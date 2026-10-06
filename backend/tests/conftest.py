@@ -32,7 +32,7 @@ def content_root(tmp_path):
         ],
         "modules": [{"id": "module", "title": "Controls", "source_ids": ["fixture"], "lessons": [{
             "id": "lesson-one", "title": "Experiment", "reading": "modules/one.md", "objectives": ["objective", "structured-objective"],
-            "question_ids": ["choice", "numeric", "multi", "symbolic", "data", "structured"],
+            "question_ids": ["choice", "numeric", "multi", "symbolic", "data", "structured", "graph"],
             "card_ids": ["control-card"], "worked_example": "Match the delivery procedure between groups."
         }]}], "syllabus": "syllabus.md", "license": "CC-BY-4.0", "review": {"status": "unreviewed"},
         "retrieval_cards": "question-banks/retrieval-cards.json",
@@ -118,6 +118,25 @@ def content_root(tmp_path):
                  {"id": "binding", "criterion": "Direct promoter occupancy", "points": 1, "evidence": ["Target-locus enrichment is compared with the assay control."]},
                  {"id": "claim", "criterion": "Evidence-bounded causal claim", "points": 1, "evidence": ["The conclusion is limited to the tested system and conditions."]}]},
          "feedback": {"hint": "Separate reagent controls, promoter occupancy, and the scope of an inference.", "solution": "A matched non-targeting control addresses delivery effects; controlled locus enrichment tests occupancy; the causal claim must stay within the tested system.", "lesson_ids": ["lesson-one"]}},
+        {"id": "graph", "type": "graph", "prompt": "Calculate group means and plot their coordinates on the supplied axes.",
+         "visibility": "public-practice-authoring", "points": 2, "objective_ids": ["data-objective"],
+         "graph_spec": {
+             "x_axis": {"label": "Dose (μM)", "minimum": 0, "maximum": 1},
+             "y_axis": {"label": "Mean response (units)", "minimum": 0, "maximum": 10},
+             "points": [{"id": "vehicle", "label": "Vehicle"}, {"id": "treatment", "label": "Treatment"}],
+             "observations": [
+                 {"id": "vehicle", "x": 0, "values": [4, 5, 6]},
+                 {"id": "treatment", "x": 1, "values": [8, 9, 10]}]},
+         "solution_spec": {
+             "points": [
+                 {"id": "vehicle", "x": 0, "y": 5, "x_tolerance": 0, "y_tolerance": 0.01},
+                 {"id": "treatment", "x": 1, "y": 9, "x_tolerance": 0, "y_tolerance": 0.01}],
+             "rubric": [
+                 {"id": "vehicle_x", "criterion": "Vehicle dose coordinate", "points": 0.5, "evidence": ["The vehicle point lies at zero dose."]},
+                 {"id": "vehicle_y", "criterion": "Vehicle mean coordinate", "points": 0.5, "evidence": ["The vehicle replicate mean is five response units."]},
+                 {"id": "treatment_x", "criterion": "Treatment dose coordinate", "points": 0.5, "evidence": ["The treatment point lies at one micromolar."]},
+                 {"id": "treatment_y", "criterion": "Treatment mean coordinate", "points": 0.5, "evidence": ["The treatment replicate mean is nine response units."]}]},
+         "feedback": {"hint": "Average replicates within a group before plotting the mean.", "solution": "The vehicle mean is 5 at 0 μM; the treatment mean is 9 at 1 μM.", "lesson_ids": ["lesson-one"]}},
     ]}
     (directory / "question-banks" / "practice.json").write_text(json.dumps(questions))
     return root

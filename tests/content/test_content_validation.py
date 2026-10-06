@@ -95,8 +95,8 @@ def test_preserved_inventory_is_honest_partial(repository):
     assert result.inventory == {
         "courses": 25,
         "lessons": 101,
-        "questions": 105,
-        "cards": 202,
+        "questions": 106,
+        "cards": 203,
         "cases": 25,
     }
     assert sum(warning["code"] == "legacy-depth" for warning in result.warnings) == 100
@@ -300,7 +300,7 @@ def test_structured_rubric_item_is_counted_while_course_remains_partial(reposito
     manifest = read(course[0])
     assert manifest["version"] == "0.3.2"
     assert manifest["maturity"] == "partial"
-    assert result.inventory["questions"] == 105
+    assert result.inventory["questions"] == 106
     question = next(
         item
         for item in read(course[0].parent / "question-banks/practice.json")["questions"]
@@ -308,6 +308,56 @@ def test_structured_rubric_item_is_counted_while_course_remains_partial(reposito
     )
     assert len(question["solution_spec"]["rubric"]) == 4
     assert all(field["points"] == 1 for field in question["response_fields"])
+
+
+def test_graph_plot_item_is_counted_while_statistics_course_remains_partial(repository):
+    result = validate_repository(repository)
+    assert result.ok, result.errors
+    course_path = repository / "content/courses/statistics/course.json"
+    manifest = read(course_path)
+    bank = read(course_path.parent / "question-banks/practice.json")
+    graph = next(item for item in bank["questions"] if item["type"] == "graph")
+    assert manifest["version"] == "0.1.2"
+    assert manifest["maturity"] == "partial"
+    assert graph["id"] == "statistics-5:concentration-graph"
+    assert len(graph["graph_spec"]["points"]) == 3
+    assert result.inventory["questions"] == 106
+
+
+def test_graph_expected_mean_is_recalculated_from_source_replicates(repository):
+    bank_path = repository / "content/courses/statistics/question-banks/practice.json"
+    bank = read(bank_path)
+    graph = next(item for item in bank["questions"] if item["type"] == "graph")
+    graph["solution_spec"]["points"][0]["y"] = 5.1
+    write(bank_path, bank)
+    assert "numerical-recalculation" in codes(validate_repository(repository))
+
+
+def test_graph_coordinate_criteria_must_map_one_to_one(repository):
+    bank_path = repository / "content/courses/statistics/question-banks/practice.json"
+    bank = read(bank_path)
+    graph = next(item for item in bank["questions"] if item["type"] == "graph")
+    graph["solution_spec"]["rubric"][0]["id"] = "unknown-coordinate"
+    write(bank_path, bank)
+    assert "answer-spec" in codes(validate_repository(repository))
+
+
+def test_graph_coordinate_criteria_cannot_be_whitespace(repository):
+    bank_path = repository / "content/courses/statistics/question-banks/practice.json"
+    bank = read(bank_path)
+    graph = next(item for item in bank["questions"] if item["type"] == "graph")
+    graph["solution_spec"]["rubric"][0]["criterion"] = "          "
+    write(bank_path, bank)
+    assert "answer-spec" in codes(validate_repository(repository))
+
+
+def test_graph_source_coordinates_must_fit_authored_axes(repository):
+    bank_path = repository / "content/courses/statistics/question-banks/practice.json"
+    bank = read(bank_path)
+    graph = next(item for item in bank["questions"] if item["type"] == "graph")
+    graph["graph_spec"]["observations"][0]["x"] = 9
+    write(bank_path, bank)
+    assert "numerical-recalculation" in codes(validate_repository(repository))
 
 
 def test_structured_rubric_ids_must_map_one_to_one_to_response_fields(repository, course):

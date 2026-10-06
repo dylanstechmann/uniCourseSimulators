@@ -139,11 +139,35 @@ class PublicResponseField(BaseModel):
     points: float = Field(gt=0)
 
 
+class PublicGraphAxis(BaseModel):
+    label: str
+    minimum: float
+    maximum: float
+
+
+class PublicGraphPoint(BaseModel):
+    id: str
+    label: str
+
+
+class PublicGraphObservation(BaseModel):
+    id: str
+    x: float
+    values: list[float] = Field(min_length=1, max_length=100)
+
+
+class PublicGraphSpec(BaseModel):
+    x_axis: PublicGraphAxis
+    y_axis: PublicGraphAxis
+    points: list[PublicGraphPoint] = Field(min_length=2, max_length=20)
+    observations: list[PublicGraphObservation] = Field(min_length=2, max_length=20)
+
+
 class PublicQuestion(BaseModel):
     id: str
     type: Literal[
         "single_choice", "multiple_select", "numeric", "symbolic", "structured",
-        "data_interpretation", "file_upload",
+        "data_interpretation", "graph", "file_upload",
     ]
     prompt: str
     options: list[str] = Field(default_factory=list)
@@ -153,6 +177,7 @@ class PublicQuestion(BaseModel):
     selection: Literal["single", "multiple"] = "single"
     partial_credit_policy: str | None = None
     response_fields: list[PublicResponseField] = Field(default_factory=list)
+    graph_spec: PublicGraphSpec | None = None
     accepted_media_types: list[str] = Field(default_factory=list)
     max_upload_bytes: int | None = Field(default=None, ge=1, le=MAX_CSV_UPLOAD_BYTES)
     variant_id: str | None = None

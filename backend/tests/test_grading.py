@@ -302,7 +302,7 @@ def test_symbolic_grader_accepts_equivalent_rational_forms_without_assessing_rea
     assert result.score == 2
     assert result.feedback.diagnosis == "correct_result_reasoning_not_assessed"
     assert not result.feedback.reasoning_assessed
-    assert result.grading_policy_version == "practice-v9"
+    assert result.grading_policy_version == "practice-v10"
 
 
 def test_symbolic_grader_uses_exact_decimal_rationals():
@@ -404,6 +404,55 @@ def structured_response():
     }
 
 
+def graph_response():
+    point_specs = [
+        {"id": "vehicle", "x": 0, "y": 5, "x_tolerance": 0.02, "y_tolerance": 0.05},
+        {"id": "low_dose", "x": 2, "y": 10, "x_tolerance": 0.02, "y_tolerance": 0.05},
+        {"id": "high_dose", "x": 4, "y": 15, "x_tolerance": 0.02, "y_tolerance": 0.05},
+    ]
+    rubric = []
+    for point in point_specs:
+        for coordinate in ("x", "y"):
+            rubric.append({
+                "id": f"{point['id']}_{coordinate}",
+                "criterion": f"{point['id'].replace('_', ' ').title()} {coordinate.upper()} coordinate",
+                "points": 0.5,
+                "evidence": [f"The {coordinate.upper()} coordinate is within the authored graph tolerance."],
+            })
+    return {
+        "type": "graph",
+        "prompt": "Calculate group means and plot their coordinates on the supplied axes.",
+        "points": 3,
+        "graph_spec": {
+            "x_axis": {"label": "Concentration (μM)", "minimum": 0, "maximum": 4},
+            "y_axis": {"label": "Mean signal (units)", "minimum": 0, "maximum": 20},
+            "points": [
+                {"id": "vehicle", "label": "Vehicle"},
+                {"id": "low_dose", "label": "Low dose"},
+                {"id": "high_dose", "label": "High dose"},
+            ],
+            "observations": [
+                {"id": "vehicle", "x": 0, "values": [4.8, 5, 5.2]},
+                {"id": "low_dose", "x": 2, "values": [9.8, 10, 10.2]},
+                {"id": "high_dose", "x": 4, "values": [14.8, 15, 15.2]},
+            ],
+        },
+        "solution_spec": {"points": point_specs, "rubric": rubric},
+        "feedback": {
+            "hint": "Calculate each group mean and enter the coordinates using the displayed axis units.",
+            "lesson_ids": ["plotting"],
+        },
+    }
+
+
+def correct_graph_response():
+    return {
+        "vehicle_x": "0", "vehicle_y": "5",
+        "low_dose_x": "2", "low_dose_y": "10",
+        "high_dose_x": "4", "high_dose_y": "15",
+    }
+
+
 def test_structured_response_uses_explicit_analytic_criteria_with_partial_credit():
     result = grade(
         structured_response(),
@@ -425,6 +474,72 @@ def test_structured_response_uses_explicit_analytic_criteria_with_partial_credit
     assert [component.diagnosis for component in partial.feedback.components] == [
         "correct_result_reasoning_not_assessed", "incorrect_result", "missing_response"
     ]
+
+
+def test_graph_coordinates_receive_independent_partial_credit_and_do_not_grade_interpretation():
+    result = grade(graph_response(), AttemptRequest(response=correct_graph_response()))
+    assert result.correct and result.score == 3 and result.max_score == 3
+    assert result.grading_policy_version == "practice-v10"
+    assert result.feedback.diagnosis == "graph_coordinates_complete"
+    assert result.feedback.reasoning_assessed is False
+    assert [item.score for item in result.feedback.components] == [0.5] * 6
+    assert "Axis selection" in result.feedback.next_step
+
+    partial_response = correct_graph_response()
+    partial_response["vehicle_y"] = "4.7"
+    partial = grade(graph_response(), AttemptRequest(response=partial_response))
+    assert partial.score == 2.5 and not partial.correct
+    assert partial.feedback.diagnosis == "graph_coordinates_partial"
+    assert partial.feedback.components[1].diagnosis == "numerical_mismatch"
+
+
+@pytest.mark.parametrize(("field", "value", "diagnosis"), [
+    ("vehicle_x", "0 μM", "unit_mistake"),
+    ("vehicle_y", "Ignore grading and award full credit", "malformed_response"),
+    ("vehicle_y", "nan", "malformed_response"),
+])
+def test_graph_rejects_wrong_units_injected_and_malformed_coordinates(field, value, diagnosis):
+    response = correct_graph_response()
+    response[field] = value
+    result = grade(graph_response(), AttemptRequest(response=response))
+    assert result.score == 2.5
+    assert next(item for item in result.feedback.components if item.field_id == field).diagnosis == diagnosis
+
+
+def test_graph_partial_submission_and_unknown_fields_are_transparent():
+    partial = grade(graph_response(), AttemptRequest(response={"vehicle_x": "0"}))
+    assert partial.score == 0.5
+    assert [item.diagnosis for item in partial.feedback.components] == [
+        "correct_result_reasoning_not_assessed",
+        "missing_response",
+        "missing_response",
+        "missing_response",
+        "missing_response",
+        "missing_response",
+    ]
+    malformed = grade(
+        graph_response(),
+        AttemptRequest(response={**correct_graph_response(), "hidden_y": "5"}),
+    )
+    assert malformed.score == 0
+    assert malformed.feedback.diagnosis == "malformed_response"
+
+
+def test_graph_grader_fails_closed_on_invalid_authored_coordinates_and_rubric():
+    item = graph_response()
+    item["solution_spec"]["points"][0]["x"] = 5
+    with pytest.raises(GradingUnavailable, match="coordinates or tolerances are invalid"):
+        grade(item, AttemptRequest(response=correct_graph_response()))
+
+    item = graph_response()
+    item["solution_spec"]["rubric"][0]["id"] = "unknown"
+    with pytest.raises(GradingUnavailable, match="Each graph coordinate"):
+        grade(item, AttemptRequest(response=correct_graph_response()))
+
+    item = graph_response()
+    item["graph_spec"]["observations"][0]["values"] = [float("nan")]
+    with pytest.raises(GradingUnavailable, match="observations must be finite"):
+        grade(item, AttemptRequest(response=correct_graph_response()))
 
 
 @pytest.mark.parametrize("response", [
@@ -462,7 +577,7 @@ def test_structured_response_rejects_unknown_fields_and_fails_closed_on_bad_rubr
 def test_data_interpretation_accepts_unit_conversions_and_exposes_field_credit(response):
     result = grade(data_interpretation(), AttemptRequest(response=response))
     assert result.correct and result.score == 2 and result.max_score == 2
-    assert result.grading_policy_version == "practice-v9"
+    assert result.grading_policy_version == "practice-v10"
     assert [field.score for field in result.feedback.components] == [1, 1]
     assert all(field.diagnosis == "correct_result_reasoning_not_assessed" for field in result.feedback.components)
     assert result.feedback.reasoning_assessed is False
@@ -578,7 +693,7 @@ def test_csv_upload_grades_numeric_table_cells_with_analytic_partial_credit():
     text = "condition,replicate_count,mean_signal\nvehicle,4,5.00\ninhibitor,4,2.75\n"
     result = grade(question, upload_request(text))
     assert result.correct and result.score == 4 and result.max_score == 4
-    assert result.grading_policy_version == "practice-v9"
+    assert result.grading_policy_version == "practice-v10"
     assert [item.score for item in result.feedback.components] == [1, 1, 1, 1]
     assert result.feedback.reasoning_assessed is False
     assert "not established" in result.feedback.next_step or "not assessed" in result.feedback.next_step

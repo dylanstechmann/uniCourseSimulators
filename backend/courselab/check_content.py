@@ -63,6 +63,12 @@ def check(root: Path) -> tuple[int, int]:
                         field_spec["id"]: str(field_spec["answer"])
                         for field_spec in spec["field_specs"]
                     }
+                elif resolved["type"] == "graph":
+                    expected = {
+                        f"{point['id']}_{coordinate}": str(point[coordinate])
+                        for point in spec["points"]
+                        for coordinate in ("x", "y")
+                    }
                 elif resolved["type"] == "file_upload":
                     validation = spec["validation_spec"]
                     key_column = validation["key_column"]

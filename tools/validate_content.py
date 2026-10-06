@@ -824,6 +824,179 @@ def validate_course(
                                 question["id"],
                                 "Structured rubric criterion points must match response-field points.",
                             )
+        if question["type"] == "graph":
+            graph = question.get("graph_spec", {})
+            axes = {}
+            valid_axes = isinstance(graph, dict)
+            if valid_axes:
+                for axis_id in ("x_axis", "y_axis"):
+                    axis = graph.get(axis_id)
+                    if (
+                        not isinstance(axis, dict)
+                        or not isinstance(axis.get("label"), str)
+                        or len(axis["label"].strip()) < 3
+                        or isinstance(axis.get("minimum"), bool)
+                        or not isinstance(axis.get("minimum"), (int, float))
+                        or not math.isfinite(axis["minimum"])
+                        or abs(axis["minimum"]) > 1e12
+                        or isinstance(axis.get("maximum"), bool)
+                        or not isinstance(axis.get("maximum"), (int, float))
+                        or not math.isfinite(axis["maximum"])
+                        or abs(axis["maximum"]) > 1e12
+                        or axis["minimum"] >= axis["maximum"]
+                    ):
+                        valid_axes = False
+                        break
+                    axes[axis_id] = (axis["minimum"], axis["maximum"])
+            public_points = graph.get("points", []) if isinstance(graph, dict) else []
+            if not isinstance(public_points, list):
+                public_points = []
+            observations = graph.get("observations", []) if isinstance(graph, dict) else []
+            if not isinstance(observations, list):
+                observations = []
+            expected_points = solution.get("points", [])
+            if not isinstance(expected_points, list):
+                expected_points = []
+            rubric = solution.get("rubric", [])
+            if not isinstance(rubric, list):
+                rubric = []
+            point_ids = [
+                item.get("id") for item in public_points
+                if isinstance(item, dict) and isinstance(item.get("id"), str)
+            ]
+            answer_ids = [
+                item.get("id") for item in expected_points
+                if isinstance(item, dict) and isinstance(item.get("id"), str)
+            ]
+            criterion_ids = [
+                item.get("id") for item in rubric
+                if isinstance(item, dict) and isinstance(item.get("id"), str)
+            ] if isinstance(rubric, list) else []
+            expected_criteria = {
+                f"{point_id}_{coordinate}"
+                for point_id in point_ids
+                for coordinate in ("x", "y")
+            }
+            if (
+                not valid_axes
+                or not 2 <= len(public_points) <= 20
+                or len(point_ids) != len(public_points)
+                or len(point_ids) != len(set(point_ids))
+                or len(observations) != len(public_points)
+                or len(answer_ids) != len(expected_points)
+                or len(answer_ids) != len(set(answer_ids))
+                or set(point_ids) != set(answer_ids)
+                or len(criterion_ids) != len(rubric)
+                or len(criterion_ids) != len(set(criterion_ids))
+                or set(criterion_ids) != expected_criteria
+            ):
+                report.error(
+                    "answer-spec",
+                    question["id"],
+                    "Graph points, axis bounds, answer coordinates, and rubric criteria must map uniquely.",
+                )
+            else:
+                answers = {item["id"]: item for item in expected_points}
+                criteria = {item["id"]: item for item in rubric}
+                graph_points_valid = True
+                observation_ids = [
+                    item.get("id") for item in observations
+                    if isinstance(item, dict) and isinstance(item.get("id"), str)
+                ]
+                if (
+                    len(observation_ids) != len(observations)
+                    or len(observation_ids) != len(set(observation_ids))
+                    or set(observation_ids) != set(point_ids)
+                ):
+                    graph_points_valid = False
+                observation_by_id = {
+                    item["id"]: item for item in observations
+                    if isinstance(item, dict) and isinstance(item.get("id"), str)
+                }
+                for point_id, answer in answers.items():
+                    for coordinate, axis_id in (("x", "x_axis"), ("y", "y_axis")):
+                        criterion = criteria[f"{point_id}_{coordinate}"]
+                        if (
+                            not isinstance(criterion.get("criterion"), str)
+                            or len(criterion["criterion"].strip()) < 10
+                            or not isinstance(criterion.get("evidence"), list)
+                            or not criterion["evidence"]
+                            or any(
+                                not isinstance(item, str) or len(item.strip()) < 3
+                                for item in criterion["evidence"]
+                            )
+                        ):
+                            graph_points_valid = False
+                        value = answer.get(coordinate)
+                        tolerance = answer.get(f"{coordinate}_tolerance")
+                        minimum, maximum = axes[axis_id]
+                        if (
+                            isinstance(value, bool)
+                            or not isinstance(value, (int, float))
+                            or not math.isfinite(value)
+                            or not minimum <= value <= maximum
+                            or isinstance(tolerance, bool)
+                            or not isinstance(tolerance, (int, float))
+                            or not math.isfinite(tolerance)
+                            or not 0 <= tolerance <= maximum - minimum
+                        ):
+                            graph_points_valid = False
+                    if any(
+                        isinstance(answer.get(key), bool)
+                        or not isinstance(answer.get(key), (int, float))
+                        or not math.isfinite(answer[key])
+                        for key in ("x", "y", "x_tolerance", "y_tolerance")
+                    ) or answer.get("x_tolerance", -1) < 0 or answer.get("y_tolerance", -1) < 0:
+                        graph_points_valid = False
+                        continue
+                    observation = observation_by_id.get(point_id)
+                    if (
+                        not isinstance(observation, dict)
+                        or isinstance(observation.get("x"), bool)
+                        or not isinstance(observation.get("x"), (int, float))
+                        or not math.isfinite(observation["x"])
+                        or not isinstance(observation.get("values"), list)
+                        or not 1 <= len(observation["values"]) <= 100
+                        or any(
+                            isinstance(value, bool)
+                            or not isinstance(value, (int, float))
+                            or not math.isfinite(value)
+                            for value in observation["values"]
+                        )
+                    ):
+                        graph_points_valid = False
+                        continue
+                    x_tolerance = answer.get("x_tolerance", -1)
+                    y_tolerance = answer.get("y_tolerance", -1)
+                    recalculated_y = math.fsum(observation["values"]) / len(observation["values"])
+                    if (
+                        not axes["x_axis"][0] <= observation["x"] <= axes["x_axis"][1]
+                        or any(
+                            not axes["y_axis"][0] <= value <= axes["y_axis"][1]
+                            for value in observation["values"]
+                        )
+                        or abs(answer.get("x", math.inf) - observation["x"]) > x_tolerance
+                        or abs(answer.get("y", math.inf) - recalculated_y) > y_tolerance
+                    ):
+                        report.error(
+                            "numerical-recalculation",
+                            f"{question['id']}/{point_id}",
+                            "Graph answer coordinates do not match the supplied x value and independently recalculated sample mean within their tolerances.",
+                        )
+                rubric_points = sum(
+                    item.get("points", 0)
+                    for item in rubric
+                    if isinstance(item.get("points"), (int, float))
+                    and not isinstance(item.get("points"), bool)
+                )
+                if not graph_points_valid or not math.isclose(
+                    rubric_points, question.get("points", 0), rel_tol=0, abs_tol=1e-8
+                ):
+                    report.error(
+                        "answer-spec",
+                        question["id"],
+                        "Graph coordinates must fit the public axes, use bounded tolerances, and map to a complete point-sum rubric.",
+                    )
         if question["type"] == "file_upload":
             validation = solution.get("validation_spec", {})
             checks = (

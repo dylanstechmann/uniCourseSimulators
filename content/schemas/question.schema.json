@@ -11,6 +11,41 @@
     "prompt": {"type": "string", "minLength": 15},
     "options": {"type": "array", "minItems": 2, "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
     "response_fields": {"type": "array", "minItems": 2, "maxItems": 20, "items": {"type": "object", "additionalProperties": false, "required": ["id", "type", "prompt", "points"], "properties": {"id": {"type": "string", "pattern": "^[a-z][a-z0-9_-]{0,63}$"}, "type": {"enum": ["numeric", "single_choice"]}, "prompt": {"type": "string", "minLength": 10}, "options": {"type": "array", "minItems": 2, "uniqueItems": true, "items": {"type": "string", "minLength": 1}}, "unit": {"type": "string"}, "points": {"type": "number", "exclusiveMinimum": 0}}}},
+    "graph_spec": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["x_axis", "y_axis", "points", "observations"],
+      "properties": {
+        "x_axis": {"$ref": "#/$defs/graphAxis"},
+        "y_axis": {"$ref": "#/$defs/graphAxis"},
+        "points": {
+          "type": "array", "minItems": 2, "maxItems": 20,
+          "items": {
+            "type": "object", "additionalProperties": false,
+            "required": ["id", "label"],
+            "properties": {
+              "id": {"type": "string", "pattern": "^[a-z][a-z0-9_-]{0,47}$"},
+              "label": {"type": "string", "minLength": 2}
+            }
+          }
+        },
+        "observations": {
+          "type": "array", "minItems": 2, "maxItems": 20,
+          "items": {
+            "type": "object", "additionalProperties": false,
+            "required": ["id", "x", "values"],
+            "properties": {
+              "id": {"type": "string", "pattern": "^[a-z][a-z0-9_-]{0,47}$"},
+              "x": {"type": "number"},
+              "values": {
+                "type": "array", "minItems": 1, "maxItems": 100,
+                "items": {"type": "number"}
+              }
+            }
+          }
+        }
+      }
+    },
     "points": {"type": "number", "exclusiveMinimum": 0},
     "objective_ids": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
     "solution_spec": {"type": "object", "minProperties": 1},
@@ -43,6 +78,9 @@
     },
     "provenance": {"type": "object", "properties": {"kind": {"enum": ["legacy-prototype", "original", "licensed-adaptation"]}, "legacy_id": {"type": "string"}, "modifications": {"type": "array", "items": {"type": "string"}}}}
   },
+  "$defs": {
+    "graphAxis": {"type": "object", "additionalProperties": false, "required": ["label", "minimum", "maximum"], "properties": {"label": {"type": "string", "minLength": 3}, "minimum": {"type": "number"}, "maximum": {"type": "number"}}}
+  },
   "allOf": [
     {"if": {"properties": {"type": {"const": "single_choice"}}}, "then": {"required": ["options"], "properties": {"solution_spec": {"required": ["answer"], "properties": {"answer": {"type": "integer", "minimum": 0}}}}}},
     {"if": {"properties": {"type": {"const": "multiple_select"}}}, "then": {"required": ["options"], "properties": {"solution_spec": {"required": ["answer", "partial_credit"], "properties": {"answer": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "integer", "minimum": 0}}, "partial_credit": {"enum": ["all-or-nothing", "correct-minus-incorrect-clamped-v1"]}}}}}},
@@ -51,6 +89,7 @@
     {"if": {"properties": {"type": {"const": "data_interpretation"}}}, "then": {"required": ["response_fields"], "properties": {"solution_spec": {"required": ["field_specs"], "properties": {"field_specs": {"type": "array", "minItems": 2, "maxItems": 20, "items": {"oneOf": [{"type": "object", "additionalProperties": false, "required": ["id", "type", "answer", "unit", "tolerance", "unit_required", "significant_figures", "dimensions"], "properties": {"id": {"type": "string", "pattern": "^[a-z][a-z0-9_-]{0,63}$"}, "type": {"const": "numeric"}, "answer": {"type": "number"}, "unit": {"type": "string"}, "tolerance": {"type": "number", "minimum": 0}, "relative_tolerance": {"type": "number", "minimum": 0, "maximum": 1}, "unit_required": {"type": "boolean"}, "significant_figures": {"type": "integer", "minimum": 1, "maximum": 12}, "dimensions": {"oneOf": [{"type": "null"}, {"type": "object", "minProperties": 1, "additionalProperties": false, "properties": {"length": {"type": "integer", "minimum": -12, "maximum": 12}, "mass": {"type": "integer", "minimum": -12, "maximum": 12}, "time": {"type": "integer", "minimum": -12, "maximum": 12}, "current": {"type": "integer", "minimum": -12, "maximum": 12}, "temperature": {"type": "integer", "minimum": -12, "maximum": 12}, "amount": {"type": "integer", "minimum": -12, "maximum": 12}, "luminous_intensity": {"type": "integer", "minimum": -12, "maximum": 12}}}]}}}, {"type": "object", "additionalProperties": false, "required": ["id", "type", "answer"], "properties": {"id": {"type": "string", "pattern": "^[a-z][a-z0-9_-]{0,63}$"}, "type": {"const": "single_choice"}, "answer": {"type": "integer", "minimum": 0}}}]}}}}}}},
     {"if": {"properties": {"type": {"const": "structured"}}}, "then": {"required": ["response_fields"], "properties": {"response_fields": {"type": "array", "minItems": 2, "maxItems": 20, "items": {"type": "object", "additionalProperties": false, "required": ["id", "type", "prompt", "options", "points"], "properties": {"id": {"type": "string", "pattern": "^[a-z][a-z0-9_-]{0,63}$"}, "type": {"const": "single_choice"}, "prompt": {"type": "string", "minLength": 10}, "options": {"type": "array", "minItems": 2, "uniqueItems": true, "items": {"type": "string", "minLength": 1}}, "points": {"type": "number", "exclusiveMinimum": 0}}}}, "solution_spec": {"required": ["field_specs", "rubric"], "properties": {"field_specs": {"type": "array", "minItems": 2, "maxItems": 20, "items": {"type": "object", "additionalProperties": false, "required": ["id", "type", "answer"], "properties": {"id": {"type": "string", "pattern": "^[a-z][a-z0-9_-]{0,63}$"}, "type": {"const": "single_choice"}, "answer": {"type": "integer", "minimum": 0}}}}, "rubric": {"type": "array", "minItems": 2, "maxItems": 20, "items": {"type": "object", "additionalProperties": false, "required": ["id", "criterion", "points", "evidence"], "properties": {"id": {"type": "string", "pattern": "^[a-z][a-z0-9_-]{0,63}$"}, "criterion": {"type": "string", "minLength": 10}, "points": {"type": "number", "exclusiveMinimum": 0}, "evidence": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 3}}}}}}}}}},
     {"if": {"properties": {"type": {"enum": ["graph", "table", "design"]}}}, "then": {"properties": {"solution_spec": {"required": ["rubric"], "properties": {"rubric": {"type": "array", "minItems": 1, "items": {"type": "object", "required": ["id", "criterion", "points", "evidence"], "properties": {"id": {"type": "string"}, "criterion": {"type": "string", "minLength": 10}, "points": {"type": "number", "exclusiveMinimum": 0}, "evidence": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 3}}}}}, "provisional": {"type": "boolean"}}}}}},
+    {"if": {"properties": {"type": {"const": "graph"}}}, "then": {"required": ["graph_spec"], "properties": {"solution_spec": {"required": ["points", "rubric"], "properties": {"points": {"type": "array", "minItems": 2, "maxItems": 20, "items": {"type": "object", "additionalProperties": false, "required": ["id", "x", "y", "x_tolerance", "y_tolerance"], "properties": {"id": {"type": "string", "pattern": "^[a-z][a-z0-9_-]{0,47}$"}, "x": {"type": "number"}, "y": {"type": "number"}, "x_tolerance": {"type": "number", "minimum": 0}, "y_tolerance": {"type": "number", "minimum": 0}}}}, "rubric": {"type": "array", "minItems": 4, "maxItems": 40, "items": {"type": "object", "additionalProperties": false, "required": ["id", "criterion", "points", "evidence"], "properties": {"id": {"type": "string", "pattern": "^[a-z][a-z0-9_-]{0,63}$"}, "criterion": {"type": "string", "minLength": 10}, "points": {"type": "number", "exclusiveMinimum": 0}, "evidence": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 3}}}}}}}}}},
     {"if": {"properties": {"type": {"const": "python"}}}, "then": {"properties": {"solution_spec": {"required": ["runner_profile", "test_suite_ref", "timeout_seconds", "memory_mb", "cpu_limit", "allowed_dependencies"], "properties": {"runner_profile": {"type": "string", "minLength": 3}, "test_suite_ref": {"type": "string", "minLength": 3}, "timeout_seconds": {"type": "integer", "minimum": 1, "maximum": 60}, "memory_mb": {"type": "integer", "minimum": 16, "maximum": 1024}, "cpu_limit": {"type": "number", "exclusiveMinimum": 0, "maximum": 2}, "allowed_dependencies": {"type": "array", "uniqueItems": true, "items": {"type": "string"}}}}}}},
     {"if":{"properties":{"type":{"const":"file_upload"}}},"then":{"properties":{"solution_spec":{"required":["accepted_media_types","max_bytes","validation_spec","rubric"],"properties":{"accepted_media_types":{"type":"array","minItems":1,"maxItems":1,"items":{"const":"text/csv"}},"max_bytes":{"type":"integer","minimum":1,"maximum":32768},"validation_spec":{"type":"object","additionalProperties":false,"required":["format","delimiter","key_column","columns","checks"],"properties":{"format":{"const":"csv-numeric-table-v1"},"delimiter":{"const":","},"key_column":{"type":"string","pattern":"^[a-z][a-z0-9_]{0,63}$"},"columns":{"type":"array","minItems":2,"maxItems":20,"uniqueItems":true,"items":{"type":"string","pattern":"^[a-z][a-z0-9_]{0,63}$"}},"checks":{"type":"array","minItems":1,"maxItems":50,"items":{"type":"object","additionalProperties":false,"required":["id","row_id","column","type","answer","unit","tolerance","calculation"],"properties":{"id":{"type":"string","pattern":"^[a-z][a-z0-9_-]{0,63}$"},"row_id":{"type":"string","pattern":"^[a-z][a-z0-9_-]{0,63}$"},"column":{"type":"string","pattern":"^[a-z][a-z0-9_]{0,63}$"},"type":{"const":"numeric"},"answer":{"type":"number"},"unit":{"type":"string"},"tolerance":{"type":"number","minimum":0},"relative_tolerance":{"type":"number","minimum":0,"maximum":1},"unit_required":{"type":"boolean"},"calculation":{"type":"object","additionalProperties":false,"required":["operation","values"],"properties":{"operation":{"enum":["count","mean"]},"values":{"type":"array","minItems":1,"maxItems":100,"items":{"type":"number"}}}}}}}}},"rubric":{"type":"array","minItems":1,"maxItems":50,"items":{"type":"object","additionalProperties":false,"required":["id","criterion","points","evidence"],"properties":{"id":{"type":"string","pattern":"^[a-z][a-z0-9_-]{0,63}$"},"criterion":{"type":"string","minLength":10},"points":{"type":"number","exclusiveMinimum":0},"evidence":{"type":"array","minItems":1,"items":{"type":"string","minLength":3}}}}}}}}}}
   ]

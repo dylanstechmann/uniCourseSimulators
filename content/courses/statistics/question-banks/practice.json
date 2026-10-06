@@ -195,6 +195,61 @@
           "Original composite item authored for the data-interpretation grader; no source question or answer was adapted."
         ]
       }
+    },
+    {
+      "id": "statistics-5:concentration-graph",
+      "type": "graph",
+      "prompt": "Calculate each group's sample mean signal, then plot the dose–response coordinates on the supplied axes.",
+      "graph_spec": {
+        "x_axis": {
+          "label": "Concentration (μM)",
+          "minimum": 0,
+          "maximum": 4
+        },
+        "y_axis": {
+          "label": "Mean signal (arbitrary fluorescence units)",
+          "minimum": 0,
+          "maximum": 20
+        },
+        "points": [
+          { "id": "vehicle", "label": "Vehicle" },
+          { "id": "low_dose", "label": "2 μM" },
+          { "id": "high_dose", "label": "4 μM" }
+        ],
+        "observations": [
+          { "id": "vehicle", "x": 0, "values": [4.8, 5.0, 5.2] },
+          { "id": "low_dose", "x": 2, "values": [9.8, 10.0, 10.2] },
+          { "id": "high_dose", "x": 4, "values": [14.8, 15.0, 15.2] }
+        ]
+      },
+      "points": 3,
+      "objective_ids": ["statistics-5-objective-2"],
+      "solution_spec": {
+        "points": [
+          { "id": "vehicle", "x": 0, "y": 5, "x_tolerance": 0, "y_tolerance": 0.01 },
+          { "id": "low_dose", "x": 2, "y": 10, "x_tolerance": 0, "y_tolerance": 0.01 },
+          { "id": "high_dose", "x": 4, "y": 15, "x_tolerance": 0, "y_tolerance": 0.01 }
+        ],
+        "rubric": [
+          { "id": "vehicle_x", "criterion": "Vehicle concentration coordinate", "points": 0.5, "evidence": ["The vehicle observation is placed at zero concentration."] },
+          { "id": "vehicle_y", "criterion": "Vehicle sample mean coordinate", "points": 0.5, "evidence": ["The three vehicle readings average to a mean signal of five units."] },
+          { "id": "low_dose_x", "criterion": "Low-dose concentration coordinate", "points": 0.5, "evidence": ["The low-dose observation is placed at two micromolar."] },
+          { "id": "low_dose_y", "criterion": "Low-dose sample mean coordinate", "points": 0.5, "evidence": ["The three low-dose readings average to a mean signal of ten units."] },
+          { "id": "high_dose_x", "criterion": "High-dose concentration coordinate", "points": 0.5, "evidence": ["The high-dose observation is placed at four micromolar."] },
+          { "id": "high_dose_y", "criterion": "High-dose sample mean coordinate", "points": 0.5, "evidence": ["The three high-dose readings average to a mean signal of fifteen units."] }
+        ]
+      },
+      "feedback": {
+        "hint": "Average the replicates within each group before assigning the y coordinate; use the displayed axis units.",
+        "solution": "The means are 5, 10, and 15 signal units at concentrations 0, 2, and 4 μM, respectively. These coordinates describe this small sample; they do not quantify uncertainty or establish a causal effect.",
+        "lesson_ids": ["statistics-5"],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": ["Original coordinate-plot assessment built from an authored replicate dataset; no source question or answer was adapted."]
+      }
     }
   ]
 }

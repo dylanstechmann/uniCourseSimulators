@@ -24,6 +24,248 @@ function fileAsBase64(file: File): Promise<string> {
   });
 }
 
+function GraphResponse({
+  question,
+  values,
+  onChange,
+}: {
+  question: Question;
+  values: Record<string, { x: string; y: string }>;
+  onChange: (pointId: string, coordinate: "x" | "y", value: string) => void;
+}) {
+  const graph = question.graph_spec;
+  if (!graph) return null;
+  const width = 640;
+  const height = 360;
+  const left = 76;
+  const right = 22;
+  const top = 22;
+  const bottom = 58;
+  const plotWidth = width - left - right;
+  const plotHeight = height - top - bottom;
+  const { x_axis: xAxis, y_axis: yAxis } = graph;
+  const xPosition = (value: number) =>
+    left +
+    ((value - xAxis.minimum) / (xAxis.maximum - xAxis.minimum)) * plotWidth;
+  const yPosition = (value: number) =>
+    top +
+    ((yAxis.maximum - value) / (yAxis.maximum - yAxis.minimum)) * plotHeight;
+  const xTicks = Array.from(
+    { length: 5 },
+    (_, index) => xAxis.minimum + ((xAxis.maximum - xAxis.minimum) * index) / 4,
+  );
+  const yTicks = Array.from(
+    { length: 5 },
+    (_, index) => yAxis.minimum + ((yAxis.maximum - yAxis.minimum) * index) / 4,
+  );
+  const formatted = (value: number) => Number(value.toPrecision(4)).toString();
+  const plotted = graph.points.flatMap((point) => {
+    const pair = values[point.id];
+    if (!pair?.x.trim() || !pair.y.trim()) return [];
+    const x = Number(pair.x);
+    const y = Number(pair.y);
+    if (
+      !Number.isFinite(x) ||
+      !Number.isFinite(y) ||
+      x < xAxis.minimum ||
+      x > xAxis.maximum ||
+      y < yAxis.minimum ||
+      y > yAxis.maximum
+    ) {
+      return [];
+    }
+    return [{ id: point.id, label: point.label, x, y }];
+  });
+  const plotDescription = graph.points
+    .map((point) => {
+      const pair = values[point.id];
+      if (!pair?.x.trim() || !pair.y.trim())
+        return `${point.label}: not plotted`;
+      const x = Number(pair.x);
+      const y = Number(pair.y);
+      if (!Number.isFinite(x) || !Number.isFinite(y)) {
+        return `${point.label}: enter finite coordinates`;
+      }
+      if (
+        x < xAxis.minimum ||
+        x > xAxis.maximum ||
+        y < yAxis.minimum ||
+        y > yAxis.maximum
+      ) {
+        return `${point.label}: coordinate is outside the displayed axes`;
+      }
+      return `${point.label}: x ${formatted(x)}, y ${formatted(y)}`;
+    })
+    .join("; ");
+
+  return (
+    <div className="graph-activity stack">
+      <p className="muted">
+        Calculate the mean for each row, then enter its x and mean-y coordinates
+        using the units shown on the axes. The plot updates as you type; each
+        coordinate receives separate credit.
+      </p>
+      <table className="graph-data-table">
+        <caption>Replicate measurements supplied for this graph</caption>
+        <thead>
+          <tr>
+            <th scope="col">Group</th>
+            <th scope="col">{xAxis.label}</th>
+            <th scope="col">Replicate values · {yAxis.label}</th>
+          </tr>
+        </thead>
+        <tbody>
+          {graph.observations.map((observation) => (
+            <tr key={observation.id}>
+              <th scope="row">
+                {graph.points.find((point) => point.id === observation.id)
+                  ?.label ?? observation.id}
+              </th>
+              <td>{formatted(observation.x)}</td>
+              <td>{observation.values.map(formatted).join(", ")}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+      <figure className="graph-figure">
+        <svg
+          viewBox={`0 0 ${width} ${height}`}
+          role="img"
+          aria-label={`Graph preview. Horizontal axis: ${xAxis.label}, from ${formatted(xAxis.minimum)} to ${formatted(xAxis.maximum)}. Vertical axis: ${yAxis.label}, from ${formatted(yAxis.minimum)} to ${formatted(yAxis.maximum)}. ${plotDescription}.`}
+        >
+          <rect
+            x={left}
+            y={top}
+            width={plotWidth}
+            height={plotHeight}
+            className="graph-plot-background"
+          />
+          {xTicks.map((tick) => (
+            <g key={`x-${tick}`}>
+              <line
+                x1={xPosition(tick)}
+                y1={top}
+                x2={xPosition(tick)}
+                y2={top + plotHeight}
+                className="graph-grid-line"
+              />
+              <text
+                x={xPosition(tick)}
+                y={top + plotHeight + 20}
+                className="graph-tick-label"
+                textAnchor="middle"
+              >
+                {formatted(tick)}
+              </text>
+            </g>
+          ))}
+          {yTicks.map((tick) => (
+            <g key={`y-${tick}`}>
+              <line
+                x1={left}
+                y1={yPosition(tick)}
+                x2={left + plotWidth}
+                y2={yPosition(tick)}
+                className="graph-grid-line"
+              />
+              <text
+                x={left - 10}
+                y={yPosition(tick) + 4}
+                className="graph-tick-label"
+                textAnchor="end"
+              >
+                {formatted(tick)}
+              </text>
+            </g>
+          ))}
+          <line
+            x1={left}
+            y1={top + plotHeight}
+            x2={left + plotWidth}
+            y2={top + plotHeight}
+            className="graph-axis-line"
+          />
+          <line
+            x1={left}
+            y1={top}
+            x2={left}
+            y2={top + plotHeight}
+            className="graph-axis-line"
+          />
+          <text
+            x={left + plotWidth / 2}
+            y={height - 9}
+            className="graph-axis-label"
+            textAnchor="middle"
+          >
+            {xAxis.label}
+          </text>
+          <text
+            x={16}
+            y={top + plotHeight / 2}
+            className="graph-axis-label"
+            textAnchor="middle"
+            transform={`rotate(-90 16 ${top + plotHeight / 2})`}
+          >
+            {yAxis.label}
+          </text>
+          {plotted.map((point) => (
+            <g key={point.id}>
+              <circle
+                cx={xPosition(point.x)}
+                cy={yPosition(point.y)}
+                r={7}
+                className="graph-point-marker"
+              />
+              <text
+                x={xPosition(point.x) + 9}
+                y={yPosition(point.y) - 8}
+                className="graph-point-label"
+              >
+                {point.label}
+              </text>
+            </g>
+          ))}
+        </svg>
+        <figcaption>
+          Point preview. Axis limits are supplied by the exercise; this check
+          does not assess axis selection or scientific interpretation.
+        </figcaption>
+      </figure>
+      <div className="graph-point-entries">
+        {graph.points.map((point) => (
+          <fieldset className="graph-point-entry" key={point.id}>
+            <legend>{point.label}</legend>
+            <div className="input-grid">
+              {(["x", "y"] as const).map((coordinate) => {
+                const axis = coordinate === "x" ? xAxis : yAxis;
+                const inputId = `${question.id}-${point.id}-${coordinate}`;
+                return (
+                  <div key={coordinate}>
+                    <label htmlFor={inputId}>{axis.label} coordinate</label>
+                    <input
+                      id={inputId}
+                      name={`${point.id}_${coordinate}`}
+                      type="number"
+                      inputMode="decimal"
+                      step="any"
+                      value={values[point.id]?.[coordinate] ?? ""}
+                      onChange={(event) =>
+                        onChange(point.id, coordinate, event.target.value)
+                      }
+                      autoComplete="off"
+                    />
+                  </div>
+                );
+              })}
+            </div>
+          </fieldset>
+        ))}
+      </div>
+    </div>
+  );
+}
+
 export function Assessment({
   question,
   enabled,
@@ -50,6 +292,9 @@ export function Assessment({
   const [fieldResponses, setFieldResponses] = useState<Record<string, string>>(
     {},
   );
+  const [graphResponses, setGraphResponses] = useState<
+    Record<string, { x: string; y: string }>
+  >({});
   const [uploadFile, setUploadFile] = useState<File | null>(null);
   const [attempt, setAttempt] = useState<Attempt | undefined>();
   const [busy, setBusy] = useState(false);
@@ -57,6 +302,14 @@ export function Assessment({
   const [appealBusy, setAppealBusy] = useState(false);
   const [appealError, setAppealError] = useState("");
   const [error, setError] = useState("");
+  const graphResponse = Object.fromEntries(
+    Object.entries(graphResponses)
+      .flatMap(([pointId, point]) => [
+        [`${pointId}_x`, point.x.trim()],
+        [`${pointId}_y`, point.y.trim()],
+      ])
+      .filter(([, coordinate]) => coordinate !== ""),
+  );
   async function submit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     setError("");
@@ -110,6 +363,10 @@ export function Assessment({
       setError("Enter or select at least one field before submitting.");
       return;
     }
+    if (question.type === "graph" && Object.keys(graphResponse).length === 0) {
+      setError("Enter at least one graph coordinate before submitting.");
+      return;
+    }
     setBusy(true);
     try {
       let response: string | number | number[] | Record<string, string>;
@@ -118,6 +375,8 @@ export function Assessment({
         question.type === "structured"
       ) {
         response = structuredResponse;
+      } else if (question.type === "graph") {
+        response = graphResponse;
       } else if (question.type === "single_choice") {
         response = choice!;
       } else if (question.type === "multiple_select") {
@@ -288,6 +547,21 @@ export function Assessment({
                 </div>
               ))}
             </div>
+          ) : question.type === "graph" ? (
+            <GraphResponse
+              question={question}
+              values={graphResponses}
+              onChange={(pointId, coordinate, coordinateValue) =>
+                setGraphResponses((previous) => ({
+                  ...previous,
+                  [pointId]: {
+                    x: previous[pointId]?.x ?? "",
+                    y: previous[pointId]?.y ?? "",
+                    [coordinate]: coordinateValue,
+                  },
+                }))
+              }
+            />
           ) : question.type === "numeric" ? (
             <div className="input-grid">
               <div>

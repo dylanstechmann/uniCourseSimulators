@@ -1,4 +1,4 @@
-import { render, screen, fireEvent } from "@testing-library/react";
+import { render, screen, fireEvent, within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { describe, expect, it, vi } from "vitest";
 import { Assessment } from "./Assessment";
@@ -88,6 +88,27 @@ const fileUploadQuestion: Question = {
   max_upload_bytes: 32768,
   learning_objective_ids: ["summarize-data"],
   assessment_role: "formative",
+};
+const graphQuestion: Question = {
+  id: "concentration-graph",
+  type: "graph",
+  prompt: "Calculate sample means and plot each group on the supplied axes.",
+  options: [],
+  points: 2,
+  learning_objective_ids: ["summarize-data"],
+  assessment_role: "formative",
+  graph_spec: {
+    x_axis: { label: "Dose (μM)", minimum: 0, maximum: 1 },
+    y_axis: { label: "Mean response (units)", minimum: 0, maximum: 10 },
+    points: [
+      { id: "vehicle", label: "Vehicle" },
+      { id: "treatment", label: "Treatment" },
+    ],
+    observations: [
+      { id: "vehicle", x: 0, values: [4, 5, 6] },
+      { id: "treatment", x: 1, values: [8, 9, 10] },
+    ],
+  },
 };
 const multipleQuestion: Question = {
   id: "membrane-assembly",
@@ -364,6 +385,91 @@ describe("formative assessment submission", () => {
     expect(
       screen.getByText(/parsed as data; uploaded content is never executed/),
     ).toBeInTheDocument();
+  });
+  it("plots learner coordinates accessibly and submits coordinate-level responses", async () => {
+    const submit = vi.fn().mockResolvedValue({
+      ...attempt,
+      question_id: graphQuestion.id,
+      score: 1.5,
+      effective_score: 1.5,
+      max_score: 2,
+      result: {
+        ...attempt.result,
+        correct: false,
+        score: 1.5,
+        max_score: 2,
+        feedback: {
+          ...attempt.result.feedback,
+          diagnosis: "graph_coordinates_partial",
+          next_step:
+            "Each x and y coordinate is scored separately. Check the source pairs, point labels, and axis units.",
+          components: [
+            {
+              field_id: "vehicle_x",
+              label: "Vehicle dose coordinate",
+              score: 0.5,
+              max_score: 0.5,
+              diagnosis: "correct_result_reasoning_not_assessed",
+            },
+            {
+              field_id: "vehicle_y",
+              label: "Vehicle mean coordinate",
+              score: 0,
+              max_score: 0.5,
+              diagnosis: "numerical_mismatch",
+            },
+          ],
+        },
+      },
+    });
+    render(<Assessment question={graphQuestion} enabled onSubmit={submit} />);
+    expect(
+      screen.getByRole("table", {
+        name: "Replicate measurements supplied for this graph",
+      }),
+    ).toHaveTextContent("4, 5, 6");
+    const preview = screen.getByRole("img", { name: /Graph preview/ });
+    expect(preview).toHaveAttribute(
+      "aria-label",
+      expect.stringContaining("not plotted"),
+    );
+
+    const vehicle = within(screen.getByRole("group", { name: "Vehicle" }));
+    await userEvent.type(vehicle.getByLabelText("Dose (μM) coordinate"), "0");
+    await userEvent.type(
+      vehicle.getByLabelText("Mean response (units) coordinate"),
+      "4.5",
+    );
+    const treatment = within(screen.getByRole("group", { name: "Treatment" }));
+    await userEvent.type(treatment.getByLabelText("Dose (μM) coordinate"), "1");
+    await userEvent.type(
+      treatment.getByLabelText("Mean response (units) coordinate"),
+      "9",
+    );
+    expect(preview).toHaveAttribute(
+      "aria-label",
+      expect.stringContaining("Vehicle: x 0, y 4.5"),
+    );
+    await userEvent.click(
+      screen.getByRole("button", { name: "Submit practice response" }),
+    );
+    expect(submit).toHaveBeenCalledWith(
+      {
+        vehicle_x: "0",
+        vehicle_y: "4.5",
+        treatment_x: "1",
+        treatment_y: "9",
+      },
+      undefined,
+    );
+    expect(
+      await screen.findByText(
+        "Some plotted coordinates met their deterministic checks. Each x and y coordinate receives separate credit.",
+      ),
+    ).toBeInTheDocument();
+    expect(screen.getByLabelText("Field-level scoring")).toHaveTextContent(
+      "Vehicle mean coordinate",
+    );
   });
   it("rejects an over-size CSV before sending it", async () => {
     const submit = vi.fn();
