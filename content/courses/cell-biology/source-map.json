@@ -13,7 +13,33 @@
       ],
       "relationship": "curriculum-comparator",
       "original_content": true,
-      "license": "MIT OR CC-BY-4.0",
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "cell-biology-module-5",
+      "lesson_id": "cell-biology-5",
+      "reading": "modules/01b-water-ph-and-interactions.md",
+      "source_ids": [
+        "biology",
+        "molecular"
+      ],
+      "relationship": "curriculum-comparator",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "cell-biology-module-6",
+      "lesson_id": "cell-biology-6",
+      "reading": "modules/02a-protein-sequence-and-structure.md",
+      "source_ids": [
+        "biology",
+        "molecular"
+      ],
+      "relationship": "curriculum-comparator",
+      "original_content": true,
+      "license": "CC-BY-4.0",
       "modifications": []
     },
     {
@@ -26,7 +52,7 @@
       ],
       "relationship": "curriculum-comparator",
       "original_content": true,
-      "license": "MIT OR CC-BY-4.0",
+      "license": "CC-BY-4.0",
       "modifications": []
     },
     {

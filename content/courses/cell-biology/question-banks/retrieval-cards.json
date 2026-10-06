@@ -5,17 +5,22 @@
     {
       "id": "cell-biology-0-0",
       "lesson_id": "cell-biology-1",
-      "front": "Hydrophobic effect",
-      "back": "The tendency of nonpolar surfaces to minimize contact with water; an emergent solvent effect, not a covalent attraction.",
-      "objective_ids": [],
+      "front": "Covalent linkage",
+      "back": "A bond that defines atom-to-atom connectivity in a molecule; it is chemically distinct from a noncovalent interaction between molecular surfaces.",
+      "objective_ids": [
+        "cell-biology-1-objective-1",
+        "cell-biology-1-objective-3"
+      ],
       "license": "MIT OR CC-BY-4.0"
     },
     {
       "id": "cell-biology-0-1",
       "lesson_id": "cell-biology-1",
-      "front": "Ionic strength",
-      "back": "A measure of dissolved ion concentration that affects electrostatic screening in solution.",
-      "objective_ids": [],
+      "front": "Functional group",
+      "back": "A recurring atom arrangement that gives a molecule characteristic chemical properties, with behavior that still depends on protonation, geometry, and surrounding solvent.",
+      "objective_ids": [
+        "cell-biology-1-objective-3"
+      ],
       "license": "MIT OR CC-BY-4.0"
     },
     {
@@ -23,7 +28,9 @@
       "lesson_id": "cell-biology-2",
       "front": "Electrochemical gradient",
       "back": "The combined chemical-potential and electrical-potential difference that drives ion movement.",
-      "objective_ids": [],
+      "objective_ids": [
+        "cell-biology-2-objective-1"
+      ],
       "license": "MIT OR CC-BY-4.0"
     },
     {
@@ -31,7 +38,9 @@
       "lesson_id": "cell-biology-2",
       "front": "Primary active transport",
       "back": "Transport directly coupled to an energy source such as ATP hydrolysis.",
-      "objective_ids": [],
+      "objective_ids": [
+        "cell-biology-2-objective-2"
+      ],
       "license": "MIT OR CC-BY-4.0"
     },
     {
@@ -39,7 +48,9 @@
       "lesson_id": "cell-biology-3",
       "front": "Vmax",
       "back": "The limiting rate in the Michaelis-Menten model at saturating substrate.",
-      "objective_ids": [],
+      "objective_ids": [
+        "cell-biology-3-objective-1"
+      ],
       "license": "MIT OR CC-BY-4.0"
     },
     {
@@ -47,7 +58,9 @@
       "lesson_id": "cell-biology-3",
       "front": "Catalyst",
       "back": "A substance that changes reaction rate by lowering activation barriers without changing the reaction's equilibrium.",
-      "objective_ids": [],
+      "objective_ids": [
+        "cell-biology-3-objective-2"
+      ],
       "license": "MIT OR CC-BY-4.0"
     },
     {
@@ -55,7 +68,9 @@
       "lesson_id": "cell-biology-4",
       "front": "Rescue experiment",
       "back": "Reintroduction of a functional perturbation-resistant gene or product to test whether a phenotype is caused by a specific loss.",
-      "objective_ids": [],
+      "objective_ids": [
+        "cell-biology-4-objective-2"
+      ],
       "license": "MIT OR CC-BY-4.0"
     },
     {
@@ -63,8 +78,50 @@
       "lesson_id": "cell-biology-4",
       "front": "Negative control",
       "back": "A comparison condition lacking the active perturbation, used to estimate background or nonspecific effects.",
-      "objective_ids": [],
+      "objective_ids": [
+        "cell-biology-4-objective-2"
+      ],
       "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "cell-biology-4-0",
+      "lesson_id": "cell-biology-5",
+      "front": "Henderson-Hasselbalch ratio",
+      "back": "For HA ⇌ H+ + A-, pH - pKa is log10([A-]/[HA]); one pH unit above pKa gives a tenfold excess of A- under the two-state model.",
+      "objective_ids": [
+        "cell-biology-5-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "cell-biology-4-1",
+      "lesson_id": "cell-biology-5",
+      "front": "Electrostatic screening",
+      "back": "Ions in solution screen charges. Increasing ionic strength can weaken a charge-mediated interaction without proving that interaction was the only cause of a measured change.",
+      "objective_ids": [
+        "cell-biology-1-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "cell-biology-5-0",
+      "lesson_id": "cell-biology-6",
+      "front": "Protein structural levels",
+      "back": "Primary sequence, local secondary structure, a chain's tertiary fold, and the quaternary association of multiple chains describe different structural organizations.",
+      "objective_ids": [
+        "cell-biology-6-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "cell-biology-5-1",
+      "lesson_id": "cell-biology-6",
+      "front": "Specific activity",
+      "back": "Activity per measured amount of protein; comparing it at matched protein concentration helps separate catalytic changes from differences in abundance.",
+      "objective_ids": [
+        "cell-biology-6-objective-2"
+      ],
+      "license": "CC-BY-4.0"
     }
   ]
 }

@@ -4,7 +4,32 @@
 
 2026-10-06; synthetic local learner data only. Milestones 1 and 2 are implemented. Milestone 3 remains partial; deterministic graders and prototype graded-assignment and review workflows are described below. A Milestone 4 curriculum-map increment is implemented and tested, while subject-matter review and map refinement remain. All 25 course packages are **partial**; zero are beta, complete or externally reviewed. Human score review is limited to saved attempts and does not constitute course-content review. No semester equivalence, university credit, security certification or public production deployment is asserted.
 
-## Current increment: graded-assignment appeals and manual review
+## Current increment: cell-biology scope and the first two developed weeks
+
+Foundations of Cell and Molecular Biology advanced from version 0.3.2 to **0.4.0** without changing its `partial` maturity. The manifest and syllabus now record a proposed 14-week undergraduate scope and an outcome-to-assessment crosswalk. Weeks 1 and 2 contain four original, substantial readings (about 700–790 words each), with worked biochemical and membrane-transport examples. Weeks 4 and 7 retain brief enzyme and gene-expression capsules; weeks 3, 5–6, and 8–14 have no authored lessons. The 14-week plan is not 14 weeks of instruction and does not establish semester equivalence.
+
+The initial weeks add explicit lesson objectives linked to the four intended course outcomes, four original deterministic practice items, four retrieval cards, a focused misconception catalog, and instructor-style feedback templates. A new Playwright flow opens the pH, protein-variant, and membrane-transport lessons, submits the associated practice responses, and checks the returned scores. All questions remain formative; solution specifications are public practice material and no live package awards a course grade. The content remains unreviewed. The proposed eight homework sets, three lab/data activities, midterm, cumulative final, and integrative project are not authored or enabled. Workload has not been measured.
+
+New teaching text is original and under the repository's CC BY 4.0 content license. MIT OCW 7.01SC Fundamentals of Biology and 7.28x Molecular Biology are linked as curriculum comparators only; no text, figure, problem, or exam was copied or adapted. The sources are the [MIT 7.01SC syllabus](https://ocw.mit.edu/courses/7-01sc-fundamentals-of-biology-fall-2011/pages/syllabus/) and [MIT OCW terms](https://ocw.mit.edu/pages/privacy-and-terms-of-use/); the terms' license does not clear third-party assets or imply MIT endorsement.
+
+Validation on 2026-10-06: root **54 passed, 1 skipped**; backend **221 passed** (one upstream Starlette/httpx deprecation warning); frontend **30 unit tests passed**, lint/format and TypeScript/Vite build passed (205 modules); Playwright **10 passed**; legacy storage tests **7 passed**. Content validation reports 25 packages, 103 lessons, 110 questions, 207 cards, and 25 cases: 0 errors and 123 explicit depth/objective warnings (98 legacy-depth, 25 objective-coverage). The API/content check passes for 25 packages and 112 supported practice specifications. Ruff passes. Source and bundle security-boundary scans found 0 issues across 387 files. Rebuilt Compose services are healthy, Alembic is `0007 (head)`, and `/api/v1/health` is `ok`; programming and LLM providers remain disabled. Existing database volumes were preserved.
+
+| Command/check | Result |
+| --- | --- |
+| `python tools/validate_content.py` | PASS: 25 packages, 103 lessons, 110 questions, 207 cards, 25 cases; 0 errors; 123 disclosed depth/objective warnings |
+| `python -m pytest tests -q` | 54 passed, 1 skipped |
+| `cd backend; python -m pytest tests -q` | 221 passed; 1 upstream deprecation warning |
+| `ruff check backend tools tests` | PASS |
+| Frontend `npm run lint`, `npm test -- --run`, `npm run build` | PASS; 30 unit tests; 205 modules built |
+| `npm run test:e2e` against `http://localhost:8080` | 10 passed, including new week 1–2 instruction and autograding flow |
+| `node tests/legacy/state.test.mjs` | 7 passed |
+| `python -m courselab.check_content ../content` | PASS: 25 packages / 112 practice specifications |
+| `python tools/check_security.py` and `python tools/check_security.py --bundle frontend/dist` | PASS: 387 files, 0 findings |
+| `docker compose up --build -d --wait --wait-timeout 180`; Alembic and health queries | PASS: database, API, and web healthy; `0007 (head)`; health `ok` |
+
+These checks confirm the current software paths and authored package structure. They do not establish full-course quality, a security audit, course-level human grading, workload, mastery, or institutional equivalency.
+
+## Previous increment: graded-assignment appeals and manual review
 
 Alembic revision 0007 adds a one-appeal-per-submission learner workflow and a separate append-only instructor decision record. Learners can request a review of a graded result; authorized reviewers can uphold, decline, or adjust within the assignment's score bounds. The original deterministic score and feedback remain immutable. Adjusted results are surfaced as effective scores and feed the weighted gradebook. Instructor review reconstructs only answer-free question views and verifies the pinned course source and question digest; stale or unavailable specifications can only be declined. Self-review is blocked. Learner export, account deletion, reviewer anonymization, and gradebook override counts include these records.
 

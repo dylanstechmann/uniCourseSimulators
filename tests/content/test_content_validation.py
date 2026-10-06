@@ -94,12 +94,12 @@ def test_preserved_inventory_is_honest_partial(repository):
     assert result.ok, result.errors
     assert result.inventory == {
         "courses": 25,
-        "lessons": 101,
-        "questions": 106,
-        "cards": 203,
+        "lessons": 103,
+        "questions": 110,
+        "cards": 207,
         "cases": 25,
     }
-    assert sum(warning["code"] == "legacy-depth" for warning in result.warnings) == 100
+    assert sum(warning["code"] == "legacy-depth" for warning in result.warnings) == 98
     assert (
         sum(warning["code"] == "objective-coverage" for warning in result.warnings)
         == 25
@@ -298,9 +298,9 @@ def test_structured_rubric_item_is_counted_while_course_remains_partial(reposito
     result = validate_repository(repository)
     assert result.ok, result.errors
     manifest = read(course[0])
-    assert manifest["version"] == "0.3.2"
+    assert manifest["version"] == "0.4.0"
     assert manifest["maturity"] == "partial"
-    assert result.inventory["questions"] == 106
+    assert result.inventory["questions"] == 110
     question = next(
         item
         for item in read(course[0].parent / "question-banks/practice.json")["questions"]
@@ -321,7 +321,41 @@ def test_graph_plot_item_is_counted_while_statistics_course_remains_partial(repo
     assert manifest["maturity"] == "partial"
     assert graph["id"] == "statistics-5:concentration-graph"
     assert len(graph["graph_spec"]["points"]) == 3
-    assert result.inventory["questions"] == 106
+    assert result.inventory["questions"] == 110
+
+
+def test_cell_biology_scope_does_not_claim_unwritten_weeks(repository):
+    result = validate_repository(repository)
+    assert result.ok, result.errors
+    course_root = repository / "content/courses/cell-biology"
+    manifest = read(course_root / "course.json")
+    weeks = manifest["duration"]["weeks"]
+    assert manifest["version"] == "0.4.0"
+    assert manifest["maturity"] == "partial"
+    assert len(weeks) == 14
+    assert [week["week"] for week in weeks if week["lesson_ids"]] == [1, 2, 4, 7]
+    assert len(weeks[0]["lesson_ids"]) == len(weeks[1]["lesson_ids"]) == 2
+    assert len(weeks[3]["lesson_ids"]) == len(weeks[6]["lesson_ids"]) == 1
+    assert all(not week["lesson_ids"] for week in weeks[2:3] + weeks[4:6] + weeks[7:])
+    assert manifest["grading_policy"]["mode"] == "formative-only"
+
+    source_map = read(course_root / "source-map.json")
+    mapped_ids = [item["module_id"] for item in source_map["modules"]]
+    assert len(mapped_ids) == len(set(mapped_ids)) == len(manifest["modules"])
+    assert "weeks 1–2" in (course_root / "syllabus.md").read_text(encoding="utf-8")
+    assert "no instructional packages or assessment specifications" in (
+        course_root / "assessment-crosswalk.md"
+    ).read_text(encoding="utf-8")
+
+    for lesson_id in ("cell-biology-1", "cell-biology-2", "cell-biology-5", "cell-biology-6"):
+        lesson = next(
+            lesson
+            for module in manifest["modules"]
+            for lesson in module["lessons"]
+            if lesson["id"] == lesson_id
+        )
+        reading = (course_root / lesson["reading"]).read_text(encoding="utf-8")
+        assert len(reading.split()) >= 450
 
 
 def test_graph_expected_mean_is_recalculated_from_source_replicates(repository):

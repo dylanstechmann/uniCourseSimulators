@@ -240,6 +240,70 @@ test("guest enrollment, feedback, notes, progress, account upgrade and deletion 
   ).toBeVisible();
 });
 
+test("the developed cell-biology weeks expose original lessons and deterministic practice", async ({
+  page,
+}) => {
+  await page.goto("/#/account");
+  await page.getByRole("button", { name: "Start guest session" }).click();
+  await page.getByRole("link", { name: "Course catalog", exact: true }).click();
+  await page.getByRole("link", { name: /Foundations of Cell/ }).click();
+  await page.getByRole("button", { name: "Enroll in partial course" }).click();
+
+  const lessons = page.getByRole("navigation", { name: "Lessons" });
+  await lessons
+    .getByRole("link", { name: /Water, pH, and noncovalent interactions/ })
+    .click();
+  await expect(
+    page.getByRole("heading", {
+      name: "Water, pH, and noncovalent interactions",
+    }),
+  ).toBeVisible();
+  const protonation = page.locator(
+    '[data-question-id="cell-biology-5:protonation-state"]',
+  );
+  await protonation.getByRole("radio").first().check();
+  await protonation
+    .getByRole("button", { name: "Submit practice response" })
+    .click();
+  await expect(
+    protonation.getByRole("region", { name: "Submission feedback" }),
+  ).toContainText("1 / 1 practice points");
+
+  await lessons
+    .getByRole("link", {
+      name: /Protein sequence, structure, and variant evidence/,
+    })
+    .click();
+  const variant = page.locator(
+    '[data-question-id="cell-biology-6:variant-inference"]',
+  );
+  await variant.getByLabel(/Mechanistic prediction/).selectOption("0");
+  await variant.getByLabel(/Discriminating evidence/).selectOption("0");
+  await variant.getByLabel(/Inference scope/).selectOption("0");
+  await variant
+    .getByRole("button", { name: "Submit practice response" })
+    .click();
+  await expect(
+    variant.getByRole("region", { name: "Submission feedback" }),
+  ).toContainText("3 / 3 practice points");
+
+  await lessons
+    .getByRole("link", {
+      name: /Membranes, transport, and electrochemical gradients/,
+    })
+    .click();
+  const transport = page.locator(
+    '[data-question-id="cell-biology-2:transport-classification"]',
+  );
+  await transport.getByRole("radio").first().check();
+  await transport
+    .getByRole("button", { name: "Submit practice response" })
+    .click();
+  await expect(
+    transport.getByRole("region", { name: "Submission feedback" }),
+  ).toContainText("1 / 1 practice points");
+});
+
 test("structured experimental criteria receive deterministic partial credit and persist", async ({
   page,
 }) => {

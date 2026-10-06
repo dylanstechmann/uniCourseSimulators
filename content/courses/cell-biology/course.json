@@ -7,7 +7,7 @@
   "domain": "Life sciences",
   "level": "Year 1",
   "maturity": "partial",
-  "version": "0.3.2",
+  "version": "0.4.0",
   "license": "MIT OR CC-BY-4.0",
   "content_origin": {
     "kind": "legacy-prototype",
@@ -54,49 +54,98 @@
       "id": "cell-biology-1-objective-1",
       "description": "Distinguish covalent structure from molecular interactions.",
       "bloom": "analyze",
-      "course_outcome_ids": []
+      "course_outcome_ids": [
+        "cell-biology-outcome-1"
+      ]
     },
     {
       "id": "cell-biology-1-objective-2",
       "description": "Predict how charge, polarity, and hydrophobicity shape biomolecular assembly.",
       "bloom": "apply",
-      "course_outcome_ids": []
+      "course_outcome_ids": [
+        "cell-biology-outcome-1"
+      ]
+    },
+    {
+      "id": "cell-biology-1-objective-3",
+      "description": "Use covalent structure and functional groups to identify chemical features that may change under a specified mutation.",
+      "bloom": "analyze",
+      "course_outcome_ids": [
+        "cell-biology-outcome-1"
+      ]
+    },
+    {
+      "id": "cell-biology-5-objective-1",
+      "description": "Use pH relative to pKa to predict the dominant protonation state of a simple ionizable group.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "cell-biology-outcome-1"
+      ]
+    },
+    {
+      "id": "cell-biology-6-objective-1",
+      "description": "Use residue environment and measurement context to make a bounded prediction about a protein substitution.",
+      "bloom": "evaluate",
+      "course_outcome_ids": [
+        "cell-biology-outcome-1",
+        "cell-biology-outcome-4"
+      ]
+    },
+    {
+      "id": "cell-biology-6-objective-2",
+      "description": "Use matched abundance, folding, and activity measurements to separate candidate mechanisms of a protein variant.",
+      "bloom": "analyze",
+      "course_outcome_ids": [
+        "cell-biology-outcome-4"
+      ]
     },
     {
       "id": "cell-biology-2-objective-1",
       "description": "Use electrochemical gradients to determine passive ion movement.",
       "bloom": "apply",
-      "course_outcome_ids": []
+      "course_outcome_ids": [
+        "cell-biology-outcome-2"
+      ]
     },
     {
       "id": "cell-biology-2-objective-2",
       "description": "Separate simple diffusion, facilitated diffusion, and active transport.",
       "bloom": "analyze",
-      "course_outcome_ids": []
+      "course_outcome_ids": [
+        "cell-biology-outcome-2"
+      ]
     },
     {
       "id": "cell-biology-3-objective-1",
       "description": "Interpret Michaelis-Menten parameters without confusing affinity and rate.",
       "bloom": "analyze",
-      "course_outcome_ids": []
+      "course_outcome_ids": [
+        "cell-biology-outcome-2"
+      ]
     },
     {
       "id": "cell-biology-3-objective-2",
       "description": "Relate ΔG to equilibrium and coupling.",
       "bloom": "analyze",
-      "course_outcome_ids": []
+      "course_outcome_ids": [
+        "cell-biology-outcome-2"
+      ]
     },
     {
       "id": "cell-biology-4-objective-1",
       "description": "Trace DNA information through transcription and translation.",
       "bloom": "analyze",
-      "course_outcome_ids": []
+      "course_outcome_ids": [
+        "cell-biology-outcome-3"
+      ]
     },
     {
       "id": "cell-biology-4-objective-2",
       "description": "Identify the purpose of positive, negative, and loading controls.",
       "bloom": "understand",
-      "course_outcome_ids": []
+      "course_outcome_ids": [
+        "cell-biology-outcome-4"
+      ]
     },
     {
       "id": "cell-biology-4-objective-3",
@@ -108,9 +157,112 @@
     }
   ],
   "duration": {
-    "instructional_weeks": null,
-    "equivalent_structure": null,
-    "weeks": []
+    "instructional_weeks": 14,
+    "equivalent_structure": "Proposed undergraduate 14-week scope only. Weeks 1 and 2 have four developed lessons. Compact legacy readings remain in weeks 4 and 7; weeks 3, 5 through 6, and 8 through 14 are outlines without authored lesson sequences or summative assessments. Workload is not measured, so this plan is not evidence of semester equivalence.",
+    "weeks": [
+      {
+        "week": 1,
+        "title": "Covalent architecture, functional groups, water, and molecular interactions",
+        "lesson_ids": [
+          "cell-biology-1",
+          "cell-biology-5"
+        ],
+        "assessment_ids": [
+          "cell-biology-1-practice"
+        ]
+      },
+      {
+        "week": 2,
+        "title": "Protein sequence and structure; membranes and transport",
+        "lesson_ids": [
+          "cell-biology-6",
+          "cell-biology-2"
+        ],
+        "assessment_ids": [
+          "cell-biology-2-practice"
+        ]
+      },
+      {
+        "week": 3,
+        "title": "Organelles, compartmentalization, and protein trafficking",
+        "lesson_ids": [],
+        "assessment_ids": []
+      },
+      {
+        "week": 4,
+        "title": "Enzyme kinetics, free energy, and cellular energetics",
+        "lesson_ids": [
+          "cell-biology-3"
+        ],
+        "assessment_ids": [
+          "cell-biology-3-practice"
+        ]
+      },
+      {
+        "week": 5,
+        "title": "Cell imaging, fractionation, and measurement limits",
+        "lesson_ids": [],
+        "assessment_ids": []
+      },
+      {
+        "week": 6,
+        "title": "DNA structure, replication, repair, and genome organization",
+        "lesson_ids": [],
+        "assessment_ids": []
+      },
+      {
+        "week": 7,
+        "title": "Chromatin, transcription, and gene regulation",
+        "lesson_ids": [
+          "cell-biology-4"
+        ],
+        "assessment_ids": [
+          "cell-biology-4-practice"
+        ]
+      },
+      {
+        "week": 8,
+        "title": "RNA processing, translation, and protein turnover",
+        "lesson_ids": [],
+        "assessment_ids": []
+      },
+      {
+        "week": 9,
+        "title": "Variation, inheritance, and genotype-to-phenotype reasoning",
+        "lesson_ids": [],
+        "assessment_ids": []
+      },
+      {
+        "week": 10,
+        "title": "Receptors, signaling networks, and feedback",
+        "lesson_ids": [],
+        "assessment_ids": []
+      },
+      {
+        "week": 11,
+        "title": "Cytoskeleton, adhesion, matrix, and mechanobiology",
+        "lesson_ids": [],
+        "assessment_ids": []
+      },
+      {
+        "week": 12,
+        "title": "Cell-cycle control, senescence, and cell death",
+        "lesson_ids": [],
+        "assessment_ids": []
+      },
+      {
+        "week": 13,
+        "title": "Development, cell fate, and stem-cell concepts",
+        "lesson_ids": [],
+        "assessment_ids": []
+      },
+      {
+        "week": 14,
+        "title": "Integrated experimental design and evidence synthesis",
+        "lesson_ids": [],
+        "assessment_ids": []
+      }
+    ]
   },
   "workload": {
     "estimated_total_hours": null,
@@ -120,7 +272,7 @@
   "modules": [
     {
       "id": "cell-biology-module-1",
-      "title": "Molecular structure and noncovalent forces",
+      "title": "Covalent architecture and functional groups",
       "source_ids": [
         "biology",
         "molecular"
@@ -128,20 +280,76 @@
       "lessons": [
         {
           "id": "cell-biology-1",
-          "title": "Molecular structure and noncovalent forces",
+          "title": "Covalent architecture, functional groups, and biological molecules",
           "reading": "modules/01-molecular-structure-and-noncovalent-forces.md",
           "objectives": [
             "cell-biology-1-objective-1",
-            "cell-biology-1-objective-2"
+            "cell-biology-1-objective-2",
+            "cell-biology-1-objective-3"
           ],
-          "worked_example": "A phospholipid has a charged or polar headgroup and nonpolar acyl chains. In water, the hydrophobic effect favors bilayers with the tails shielded; it does not require a special covalent bond between lipids.",
+          "worked_example": "For a cysteine-to-serine substitution, compare thiol and hydroxyl chemistry and ask whether a disulfide is plausible in the relevant compartment. If activity falls, compare soluble and insoluble fractions and include a matched wild-type control before attributing the effect to loss of disulfide formation.",
           "question_ids": [
             "cell-biology-1:check",
-            "cell-biology-1:check-all"
+            "cell-biology-1:check-all",
+            "cell-biology-1:functional-group"
           ],
           "card_ids": [
             "cell-biology-0-0",
             "cell-biology-0-1"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cell-biology-module-5",
+      "title": "Water, pH, and noncovalent interactions",
+      "source_ids": [
+        "biology",
+        "molecular"
+      ],
+      "lessons": [
+        {
+          "id": "cell-biology-5",
+          "title": "Water, pH, and noncovalent interactions",
+          "reading": "modules/01b-water-ph-and-interactions.md",
+          "objectives": [
+            "cell-biology-1-objective-2",
+            "cell-biology-5-objective-1"
+          ],
+          "worked_example": "At pH 7.4 with pKa 6.0, the two-state acid model gives [A-]/[HA] about 25 and a protonated fraction about 0.038. Calculate the population from the ratio, then state why this solution estimate may not transfer unchanged to a folded protein whose local environment shifts pKa.",
+          "question_ids": [
+            "cell-biology-5:protonation-state"
+          ],
+          "card_ids": [
+            "cell-biology-4-0",
+            "cell-biology-4-1"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cell-biology-module-6",
+      "title": "Protein sequence, structure, and variant evidence",
+      "source_ids": [
+        "biology",
+        "molecular"
+      ],
+      "lessons": [
+        {
+          "id": "cell-biology-6",
+          "title": "Protein sequence, structure, and variant evidence",
+          "reading": "modules/02a-protein-sequence-and-structure.md",
+          "objectives": [
+            "cell-biology-6-objective-1",
+            "cell-biology-6-objective-2"
+          ],
+          "worked_example": "With a buried leucine-to-aspartate variant, destabilization is plausible, not inevitable. Compare soluble abundance, folding, and specific activity at matched protein concentration to distinguish altered stability from catalytic effects and avoid inferring a phenotype from sequence alone.",
+          "question_ids": [
+            "cell-biology-6:variant-inference"
+          ],
+          "card_ids": [
+            "cell-biology-5-0",
+            "cell-biology-5-1"
           ]
         }
       ]
@@ -156,15 +364,16 @@
       "lessons": [
         {
           "id": "cell-biology-2",
-          "title": "Membranes, transport, and compartmentalization",
+          "title": "Membranes, transport, and electrochemical gradients",
           "reading": "modules/02-membranes-transport-and-compartmentalization.md",
           "objectives": [
             "cell-biology-2-objective-1",
             "cell-biology-2-objective-2"
           ],
-          "worked_example": "For a neutral solute with equal concentrations on both sides, net diffusive flux is zero even if molecules continue crossing in both directions.",
+          "worked_example": "For 5 mM K+ outside and 140 mM inside at 25 C, the ideal monovalent-ion Nernst potential is about -89 mV. At that voltage, the single-ion electrochemical terms balance even though concentrations differ; this value does not predict the whole-cell voltage or flux rate.",
           "question_ids": [
-            "cell-biology-2:check"
+            "cell-biology-2:check",
+            "cell-biology-2:transport-classification"
           ],
           "card_ids": [
             "cell-biology-1-0",
@@ -237,27 +446,37 @@
       "type": "practice",
       "mode": "practice",
       "path": "question-banks/practice.json",
-      "objective_ids": [
-        "cell-biology-1-objective-1"
-      ],
       "question_ids": [
         "cell-biology-1:check",
-        "cell-biology-1:check-all"
+        "cell-biology-1:check-all",
+        "cell-biology-1:functional-group",
+        "cell-biology-5:protonation-state"
       ],
-      "points": 4
+      "objective_ids": [
+        "cell-biology-1-objective-1",
+        "cell-biology-1-objective-2",
+        "cell-biology-1-objective-3",
+        "cell-biology-5-objective-1"
+      ],
+      "points": 6
     },
     {
       "id": "cell-biology-2-practice",
       "type": "practice",
       "mode": "practice",
       "path": "question-banks/practice.json",
-      "objective_ids": [
-        "cell-biology-2-objective-1"
-      ],
       "question_ids": [
-        "cell-biology-2:check"
+        "cell-biology-2:check",
+        "cell-biology-2:transport-classification",
+        "cell-biology-6:variant-inference"
       ],
-      "points": 1
+      "objective_ids": [
+        "cell-biology-2-objective-1",
+        "cell-biology-2-objective-2",
+        "cell-biology-6-objective-1",
+        "cell-biology-6-objective-2"
+      ],
+      "points": 5
     },
     {
       "id": "cell-biology-3-practice",
@@ -279,6 +498,7 @@
       "path": "question-banks/practice.json",
       "objective_ids": [
         "cell-biology-4-objective-1",
+        "cell-biology-4-objective-2",
         "cell-biology-4-objective-3"
       ],
       "question_ids": [
@@ -327,6 +547,11 @@
   },
   "history": [
     {
+      "version": "0.4.0",
+      "date": "2026-10-06",
+      "summary": "Drafted a 14-week scope and outcome-to-assessment crosswalk, developed two substantial lessons in each of weeks 1 and 2, and added original formative questions and retrieval cards; the course remains partial."
+    },
+    {
       "version": "0.3.2",
       "date": "2026-10-05",
       "summary": "Added an original, size-limited CSV summary-table exercise with deterministic numeric-cell checks; the package remains partial."
@@ -358,16 +583,16 @@
     }
   ],
   "limitations": [
-    "Four compact legacy units are preserved; this package is not equivalent to a full university semester.",
-    "There is no authored 12–15 week schedule, substantive homework sequence, laboratory sequence, midterm, cumulative final, or graded integrative project.",
-    "Seven formative checks across four short lessons do not demonstrate comprehensive outcome coverage or mastery; objective associations are provisional.",
+    "The proposed 14-week scope is not 14 weeks of instruction: only weeks 1 and 2 have two substantial lessons, while compact enzyme and gene-expression prototypes remain in weeks 4 and 7.",
+    "There is no authored substantive homework sequence, three-activity laboratory sequence, midterm, cumulative final, or integrative project.",
+    "Current formative checks across six lessons do not demonstrate comprehensive outcome coverage or mastery; some lesson objectives remain unassessed.",
     "Bloom labels and structured prerequisite edges are initial authoring classifications awaiting subject-matter review.",
     "Question answers and solution feedback are intentionally public practice authoring specifications, not restricted exam keys.",
     "Numerical specifications preserve the prototype's tolerance and optional unit entry; significant-figure and dimensional checks have not been authored.",
-    "Total workload and weekly duration are unknown; former nominal credit values and hardcoded reading times do not establish workload.",
+    "Total workload and weekly study hours are unknown; former nominal credit values and hardcoded reading times do not establish workload.",
     "The CSV practice item checks four numeric summary cells only; it does not grade scripts, arbitrary data analysis, uncertainty analysis, or causal reasoning."
   ],
   "intentionally_omitted": [
-    "Full instructional sequence and summative assessments are not authored yet; this is a preserved seed inventory."
+    "Lessons and assessments for most proposed weeks, summative course assessments, and the complete semester workflow are intentionally not represented as finished content."
   ]
 }

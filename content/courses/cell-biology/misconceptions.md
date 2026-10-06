@@ -1,0 +1,19 @@
+# Misconception catalog: current molecular foundations
+
+This catalog supports the current partial package. Codes are attached to selected practice feedback; the catalog does not claim that every misconception is assessed or that a score diagnoses a learner's reasoning with certainty.
+
+| ID | Likely evidence in a response | Diagnostic prompt | Next learning step |
+| --- | --- | --- | --- |
+| `hydrophobic-effect-is-a-covalent-bond` | Describes nonpolar groups as forming a new bond to water or to one another. | Ask which water interactions are available at the exposed surface and how burial changes solvent organization. | Re-read the solvent/interactions section, then compare a nonpolar surface with a polar surface. |
+| `pH-pka-direction-reversed` | Claims that a group is more protonated when pH is above pKa, or swaps the acid and conjugate-base ratio. | Ask the learner to write `[A-]/[HA] = 10^(pH-pKa)` before choosing a state. | Work one example at pH = pKa and one pH unit on either side; check that the fractions sum to one. |
+| `chemical-change-directly-proves-phenotype` | Jumps from one substitution to a claim of total protein loss, disease, or universal function. | Ask which intermediate property was measured and which alternative explanation remains. | Separate chemical prediction, molecular measurement, cell phenotype, and organism-level claim. |
+| `sequence-variant-determines-phenotype-without-evidence` | Treats a sequence or structure prediction as a direct assay of cellular or clinical outcome. | Ask what abundance, folding, localization, and functional data would be needed. | Build an evidence chain and identify the missing control for each link. |
+| `expression-confused-with-specific-activity` | Interprets less total cell activity as catalytic impairment without accounting for protein amount. | Ask whether activity was compared at matched protein concentration. | Contrast total cellular activity with activity per measured amount of purified protein. |
+| `single-cell-system-generalized-universally` | Extends one assay result to all cell types, tissues, or organisms. | Ask which populations and conditions were tested and what replication supports generalization. | Rewrite the conclusion to name the measured property, system, and conditions. |
+| `protein-mediated-means-primary-active` | Calls any transporter-mediated movement ATP-driven primary active transport. | Ask whether the transporter directly hydrolyzes ATP or couples a second gradient. | Draw the energy source and direction for each coupled substrate. |
+| `concentration-equal-at-electrochemical-equilibrium` | Says an ion must have equal concentrations on both sides at equilibrium. | Ask how membrane voltage contributes to the ion's electrochemical potential. | Recalculate one Nernst example and distinguish equilibrium condition from concentration equality. |
+| `transport-kinetics-confused-with-equilibrium` | Says a channel changes an ion's equilibrium potential or consumes ATP per ion. | Ask what changes when a pathway opens: the equilibrium condition or the rate of approach? | Compare a passive channel with a directly ATP-coupled pump. |
+
+## Limits of this catalog
+
+A selected option can be guessed. Treat these labels as prompts for further practice, not as psychological diagnoses or durable learner traits. Do not infer intent, intelligence, or mastery from a single error. The current deterministic grader awards points for explicit structured choices; it does not read free-form reasoning.

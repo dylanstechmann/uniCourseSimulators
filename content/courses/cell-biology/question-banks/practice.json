@@ -445,6 +445,182 @@
         "kind": "original",
         "modifications": []
       }
+    },
+    {
+      "id": "cell-biology-1:functional-group",
+      "type": "single_choice",
+      "prompt": "A solvent-exposed glutamate is replaced by glutamine at pH 7.4. Which prediction best follows from the chemical change without overclaiming a phenotype?",
+      "options": [
+        "A usually negative carboxylate is replaced by a polar amide, so a local electrostatic interaction may change and should be measured.",
+        "The mutation removes the peptide backbone and guarantees that no protein is made.",
+        "The mutation creates a disulfide bond with any nearby cysteine.",
+        "The mutation makes the side chain nonpolar and unable to contact water."
+      ],
+      "points": 1,
+      "objective_ids": [
+        "cell-biology-1-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 0
+      },
+      "feedback": {
+        "hint": "Compare the side-chain charge near neutral pH while remembering that both groups can interact with water.",
+        "solution": "Glutamate is usually negatively charged near pH 7.4, whereas glutamine is a polar, uncharged amide. A local electrostatic effect is plausible, but the sequence change alone does not prove loss of expression or function.",
+        "lesson_ids": [
+          "cell-biology-1"
+        ],
+        "misconception_ids": [
+          "chemical-change-directly-proves-phenotype"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "cell-biology-5:protonation-state",
+      "type": "single_choice",
+      "prompt": "For a simple carboxyl group with pKa 5.0, approximately what fraction is deprotonated at pH 6.0 under the Henderson-Hasselbalch model?",
+      "options": [
+        "About 91 percent",
+        "About 50 percent",
+        "About 9 percent",
+        "About 1 percent"
+      ],
+      "points": 1,
+      "objective_ids": [
+        "cell-biology-5-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0
+      },
+      "feedback": {
+        "hint": "One pH unit above pKa gives a tenfold excess of deprotonated over protonated form.",
+        "solution": "The ratio [A-]/[HA] is 10, so the deprotonated fraction is 10/(10+1), about 0.91. This is a simple two-state model; local protein environments can shift pKa.",
+        "lesson_ids": [
+          "cell-biology-5"
+        ],
+        "misconception_ids": [
+          "pH-pka-direction-reversed"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "cell-biology-2:transport-classification",
+      "type": "single_choice",
+      "prompt": "A membrane protein couples sodium moving down its electrochemical gradient to glucose moving uphill. How should the glucose movement be classified?",
+      "options": [
+        "Secondary active cotransport",
+        "Simple diffusion through the lipid bilayer",
+        "Passive facilitated diffusion down the glucose gradient",
+        "Primary active transport directly coupled to ATP hydrolysis by this protein"
+      ],
+      "points": 1,
+      "objective_ids": [
+        "cell-biology-2-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0
+      },
+      "feedback": {
+        "hint": "Identify which solute moves downhill and whether the transporter directly uses ATP.",
+        "solution": "The downhill sodium gradient supplies energy for uphill glucose transport, which is secondary active cotransport. The protein is energy-coupled but does not directly hydrolyze ATP in the stated mechanism.",
+        "lesson_ids": [
+          "cell-biology-2"
+        ],
+        "misconception_ids": [
+          "protein-mediated-means-primary-active"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "cell-biology-6:variant-inference",
+      "type": "structured",
+      "prompt": "Analyze a buried leucine-to-aspartate protein substitution. Make a bounded prediction, select measurements that distinguish its mechanism, and limit the scope of the inference.",
+      "response_fields": [
+        {
+          "id": "prediction",
+          "type": "single_choice",
+          "prompt": "Mechanistic prediction: which statement is justified from the sequence change alone?",
+          "options": [
+            "Reduced stability is plausible, but complete loss of expression or activity is not established.",
+            "The protein must be absent from every cell because a buried charge cannot be tolerated.",
+            "The substitution proves that the protein binds a new substrate.",
+            "No effect is possible because both residues occur in proteins."
+          ],
+          "points": 1
+        },
+        {
+          "id": "measurement",
+          "type": "single_choice",
+          "prompt": "Discriminating evidence: which measurement set best separates abundance, folding, and catalytic explanations?",
+          "options": [
+            "Compare abundance and soluble fraction, test folding, and measure specific activity at matched protein concentration.",
+            "Measure only the variant transcript once and infer its enzyme activity.",
+            "Repeat the DNA sequence and assume that it predicts cellular function.",
+            "Compare cell growth without measuring protein or activity."
+          ],
+          "points": 1
+        },
+        {
+          "id": "scope",
+          "type": "single_choice",
+          "prompt": "Inference scope: what conclusion is appropriate after a reproducible effect in one cell assay?",
+          "options": [
+            "The variant affects the measured property in the tested system; broader phenotypes need additional evidence.",
+            "The variant has the same effect in every tissue and organism.",
+            "The assay proves the exact atomic structure of the protein.",
+            "The effect establishes clinical causation without genetic or clinical evidence."
+          ],
+          "points": 1
+        }
+      ],
+      "points": 3,
+      "objective_ids": [
+        "cell-biology-6-objective-1",
+        "cell-biology-6-objective-2"
+      ],
+      "solution_spec": {
+        "field_specs": [
+          { "id": "prediction", "type": "single_choice", "answer": 0 },
+          { "id": "measurement", "type": "single_choice", "answer": 0 },
+          { "id": "scope", "type": "single_choice", "answer": 0 }
+        ],
+        "rubric": [
+          { "id": "prediction", "criterion": "Bounded mechanistic prediction", "points": 1, "evidence": ["Destabilization is presented as plausible rather than inevitable."] },
+          { "id": "measurement", "criterion": "Mechanism-discriminating measurements", "points": 1, "evidence": ["Abundance, folding or solubility, and activity at matched protein amount are distinguished."] },
+          { "id": "scope", "criterion": "Evidence-bounded inference", "points": 1, "evidence": ["The claim is limited to the tested measurement and system."] }
+        ]
+      },
+      "feedback": {
+        "hint": "Separate what the substitution makes plausible from what requires measurement; compare abundance, folding, and activity.",
+        "solution": "A buried charge can destabilize a soluble-protein core, but it does not prove the protein is absent. Matched abundance and solubility measurements, folding-sensitive evidence, and specific activity at equal protein concentration distinguish candidate mechanisms. Any causal claim remains limited to the assay and cell context.",
+        "lesson_ids": [
+          "cell-biology-6"
+        ],
+        "misconception_ids": [
+          "sequence-variant-determines-phenotype-without-evidence",
+          "expression-confused-with-specific-activity",
+          "single-cell-system-generalized-universally"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
     }
   ]
 }
