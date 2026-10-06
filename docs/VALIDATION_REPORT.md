@@ -4,7 +4,30 @@
 
 2026-10-06; synthetic local learner data only. Milestones 1 and 2 are implemented. Milestone 3 remains partial; the deterministic grading increments and the latest reviewer-role controls are described below. A Milestone 4 curriculum-map increment is implemented and tested, while subject-matter review and map refinement remain. All 25 course packages are **partial**; zero are beta, complete or externally reviewed. The appeal workflow provides limited formative-score review, but no qualified course-content review, semester equivalence, university credit, security certification or public production deployment is asserted.
 
-## Current increment: operator-provisioned review and variant-pinned restoration
+## Current increment: enrollment-versioned assessment plans
+
+The course schema now supports grade categories and weights, points or equal-assignment aggregation, assignment titles/weeks, release and deadline timestamps, attempt limits, and highest/latest attempt selection. The validator rejects weight/category mismatches, duplicate IDs, graded work in formative-only packages, invalid date order, and invalid attempt rules. Alembic revision 0005 adds enrollment/version-scoped `assessment_plans` and `assessment_instances`; enrollment captures policy and assignment metadata plus a source-file SHA-256, and an explicit content-version update appends a new snapshot while preserving the old metadata. The authenticated learner plan endpoint omits internal paths, question IDs, digests, and answer keys. The course workspace displays the plan alongside the existing practice gradebook.
+
+The weighted-grade core uses `Decimal`, is separately unit-tested for category aggregation, attempt selection/limits, missing and unreleased work, exact-deadline boundaries, late/unknown attempts, invalid scores, and repeatability. This is a calculation core only: there is not yet a graded-assignment submission/result store or a route connecting saved scores to the calculator. The visible practice gradebook remains formative. Current content stays at 25 partial courses, with no course grade configured.
+
+Validation on 2026-10-06: **308 tests passed** across the root content/security suite (54), backend suite (213), frontend unit suite (25), Playwright (9), and legacy storage tests (7). Ruff, frontend lint/Prettier, TypeScript/Vite build (204 modules), the API/content integration checker (25 packages and 108 supported practice specifications), and source/bundle security scan (378 source files, zero findings) passed. Content validation reported 25 packages, 101 lessons, 106 questions, 203 cards and 25 cases; zero errors and 125 explicit depth/objective warnings. The rebuilt Compose stack is healthy, PostgreSQL reports Alembic `0005`, and Playwright against the real stack verifies enrollment, lesson reading, practice submission and feedback, progress/gradebook persistence, and the new no-course-grade statement. Existing persistent volumes were preserved.
+
+| Command/check | Result |
+| --- | --- |
+| `python tools/validate_content.py` | PASS: 25 packages; 0 errors; 125 disclosed depth/objective warnings |
+| `python -m pytest tests -q` | 54 passed |
+| `cd backend; python -m pytest -q` | 213 passed |
+| `ruff check backend tools tests` | PASS |
+| Frontend `npm run lint`, `npm test`, `npm run build` | PASS; 25 unit tests; 204 modules built |
+| `npm run test:e2e` against `http://localhost:8080` | 9 passed, including assessment-plan display and formative-only status |
+| `node tests/legacy/state.test.mjs` | 7 passed |
+| `python tools/check_security.py --bundle frontend/dist` | PASS: 378 source files, zero findings |
+| `python -m courselab.check_content ../content` | PASS: 25 course packages and 108 supported practice specifications |
+| `docker compose up --build -d`; PostgreSQL migration query and `/api/v1/health` | PASS: stack healthy; Alembic `0005`; assessment snapshot tables exist |
+
+The test output includes existing Starlette/httpx and `datetime.utcnow()` deprecation warnings. The course-grade calculation is not active for any live package; assignment submission enforcement, result persistence, protected graded question delivery, and gradebook integration remain roadmap work. The hashed snapshots are metadata/version evidence, not full immutable content archives and do not support historical regrading.
+
+## Previous increment: operator-provisioned review and variant-pinned restoration
 
 Self-declared registration emails no longer grant reviewer access. Alembic revision 0004 adds an `is_instructor` role that defaults to false for all existing users. Only the operator CLI can grant or revoke it; operators must verify identity and authority out of band. Instructor decisions now reconstruct the saved variant and compare the question digest. The authorized API returns only the safe public question DTO, including actual options and structured-response fields; it never returns the grader key. Adjusting/upholding fails closed if the version is stale, the attempt was unpinned, or the installed specification changed. Without immutable package archives, older attempts can only be declined.
 

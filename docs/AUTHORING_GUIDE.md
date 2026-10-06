@@ -4,6 +4,12 @@ Use `content/courses/<id>/course.json`, `syllabus.md`, `modules/`, `question-ban
 
 Lesson `card_ids` connect retrieval cards in the course's `retrieval_cards` bank to the learner lesson response. The reader shows each front and keeps its back behind a native reveal control. Cards are self-assessment, not scored attempts; include objective IDs and the applicable content license on each card.
 
+## Assessment schedules and grade policies
+
+Assessment records may optionally include `title`, `week`, `category_id`, `release_at`, `due_at`, `attempt_limit`, and `attempt_scoring`. Use full ISO 8601 timestamps with a timezone (UTC `Z` is preferred). A due time equal to the server's current time is still open; a missing submission becomes a zero only after that time. `attempt_limit` is a positive integer or `null`; `attempt_scoring` is `highest` or `latest` (default `highest`).
+
+Use `mode: formative-only`, an empty category list, and only `practice` or `self-assessment` assessment modes until scored assignment delivery exists for the course. Do not describe practice points as course grades. A future `graded-course` policy requires nonempty unique categories whose decimal weights sum exactly to `1`, plus at least one graded assessment per category. Each graded assessment must name one category and award positive points; practice and self-assessment records must not carry a category. `category_aggregation` may be `points` or `assessment-average`. A partial course can define a test-only graded policy while the submission system is under development, but do not mark it complete or imply that a grade is currently earned. The API snapshots the policy and source-file checksums at enrollment; an enrollment version update appends a new snapshot.
+
 Use stable IDs and acyclic dependencies. Separate assumed knowledge from required uniStemCourseSimulators packages. Objectives describe observable performance with Bloom levels: interpret perturbations, compare controls, calculate transport or justify a mechanism with uncertainty.
 
 Manifest fields support workload/duration, prerequisites, outcomes, lessons, assignments/labs/exams/projects, grading, accessibility, sources, history, review and omissions. Map each assessed objective to questions/rubrics. Specifications are authoring data and must not be imported by frontend code.

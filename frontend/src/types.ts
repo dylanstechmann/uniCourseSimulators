@@ -156,6 +156,34 @@ export interface Enrollment {
   content_version: string;
   created_at: string;
 }
+export interface AssessmentPlan {
+  course_id: string;
+  content_version: string;
+  grading_mode: "formative-only" | "graded-course";
+  course_grade_status: "not_configured" | "configured_no_submissions";
+  categories: { id: string; title: string | null; weight: number }[];
+  category_aggregation: "points" | "assessment-average";
+  attempt_policy: string;
+  solution_release: string;
+  late_policy: string;
+  appeals: string;
+  assessments: {
+    id: string;
+    title: string;
+    type: string;
+    mode: "practice" | "graded" | "self-assessment";
+    category_id: string | null;
+    week: number | null;
+    points: number;
+    item_count: number;
+    objective_count: number;
+    release_at: string | null;
+    due_at: string | null;
+    attempt_limit: number | null;
+    attempt_scoring: "highest" | "latest";
+    schedule_status: "practice" | "upcoming" | "open" | "closed";
+  }[];
+}
 export interface Progress {
   lesson_id: string;
   completed: boolean;

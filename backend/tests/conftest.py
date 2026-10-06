@@ -36,6 +36,18 @@ def content_root(tmp_path):
             "card_ids": ["control-card"], "worked_example": "Match the delivery procedure between groups."
         }]}], "syllabus": "syllabus.md", "license": "CC-BY-4.0", "review": {"status": "unreviewed"},
         "retrieval_cards": "question-banks/retrieval-cards.json",
+        "assessments": [{
+            "id": "practice-controls", "type": "practice", "mode": "practice",
+            "title": "Control-selection practice", "path": "question-banks/practice.json",
+            "objective_ids": ["objective"], "question_ids": ["choice"], "points": 2,
+        }],
+        "grading_policy": {
+            "mode": "formative-only", "categories": [], "category_aggregation": "points",
+            "attempt_policy": "Unlimited practice retries; no graded assignments.",
+            "solution_release": "Practice solutions may be shown after submission.",
+            "late_policy": "No deadline or late penalty is configured.",
+            "appeals": "Request human review of a saved practice attempt.",
+        },
     }
     (directory / "course.json").write_text(json.dumps(manifest))
     (root / "curriculum-map.json").write_text(json.dumps({

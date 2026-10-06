@@ -5,6 +5,7 @@ import type {
   CourseSummary,
   Enrollment,
   Appeal,
+  AssessmentPlan,
   InstructorAppeal,
   Gradebook,
   Lesson,
@@ -89,6 +90,8 @@ export const api = {
     request<Enrollment>("/enrollments", "POST", { course_id }),
   upgradeEnrollment: (id: string) =>
     request<Enrollment>(`/enrollments/${encode(id)}/version`, "PUT", {}),
+  assessmentPlan: (id: string) =>
+    request<AssessmentPlan>(`/assessments/${encode(id)}`),
   progress: (id: string) => request<Progress[]>(`/progress/${encode(id)}`),
   setProgress: (id: string, lesson: string, completed: boolean) =>
     request<Progress>(`/progress/${encode(id)}/${encode(lesson)}`, "PATCH", {

@@ -1,6 +1,9 @@
 FROM python:3.12-slim AS content-validation
 COPY content/ /content/
 COPY tools/validate_content.py /validation/validate_content.py
+RUN mkdir -p /validation/courselab
+COPY backend/courselab/__init__.py /validation/courselab/__init__.py
+COPY backend/courselab/assessment.py /validation/courselab/assessment.py
 RUN pip install --no-cache-dir 'jsonschema>=4.23,<5' && python /validation/validate_content.py --root /
 
 FROM python:3.12-slim AS runtime

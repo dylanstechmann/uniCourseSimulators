@@ -16,11 +16,14 @@ from sqlalchemy import delete, select, update
 from sqlalchemy.exc import IntegrityError
 from sqlalchemy.orm import Session
 
+from .assessment import canonical_digest, utc_datetime, validate_assessment_configuration
 from .config import Settings
 from .content import ContentInvalid, ContentMissing, ContentRepository
 from .db import (
     Appeal,
     AppealReview,
+    AssessmentInstance,
+    AssessmentPlan,
     Attempt,
     Bookmark,
     Enrollment,
@@ -42,6 +45,7 @@ from .grading import GradingUnavailable, grade, question_spec_digest
 from .schemas import (
     AppealRequest,
     AppealReviewRequest,
+    AssessmentPlanResponse,
     AttemptRequest,
     BookmarkRequest,
     CourseSummary,
@@ -213,6 +217,86 @@ def create_app(settings: Settings | None = None) -> FastAPI:
             raise HTTPException(409, "The course version changed; a reviewed enrollment migration is required")
         return enrollment
 
+    def assessment_policy(manifest: dict) -> dict:
+        policy = dict(manifest.get("grading_policy") or {})
+        policy.setdefault("mode", "formative-only")
+        policy.setdefault("categories", [])
+        policy.setdefault("category_aggregation", "points")
+        policy.setdefault("attempt_policy", "No course grade is configured.")
+        policy.setdefault("solution_release", "Not specified.")
+        policy.setdefault("late_policy", "No course grade is configured.")
+        policy.setdefault("appeals", "Use the supported formative attempt review workflow.")
+        return policy
+
+    def ensure_assessment_plan(db: Session, enrollment: Enrollment, manifest: dict) -> AssessmentPlan:
+        existing = db.scalar(select(AssessmentPlan).where(
+            AssessmentPlan.enrollment_id == enrollment.id,
+            AssessmentPlan.content_version == enrollment.content_version,
+        ))
+        if existing:
+            return existing
+        if enrollment.content_version != manifest["version"]:
+            raise HTTPException(409, "This historical enrollment has no assessment snapshot; review the current version first")
+
+        source_assessments = manifest.get("assessments", [])
+        policy = assessment_policy(manifest)
+        normalized_assessments = []
+        for source in source_assessments:
+            item = dict(source)
+            item["attempt_scoring"] = item.get("attempt_scoring", "highest")
+            item["attempt_limit"] = item.get("attempt_limit")
+            item["release_at"] = item.get("release_at")
+            item["due_at"] = item.get("due_at")
+            normalized_assessments.append(item)
+        try:
+            validate_assessment_configuration(normalized_assessments, policy)
+        except (AttributeError, KeyError, TypeError, ValueError) as exc:
+            raise HTTPException(409, "The course assessment configuration is invalid") from exc
+
+        for item in normalized_assessments:
+            try:
+                source_file = content.assessment_source_file(enrollment.course_id, item["path"])
+                item["_source_sha256"] = hashlib.sha256(source_file.read_bytes()).hexdigest()
+            except (ContentInvalid, ContentMissing, KeyError, OSError) as exc:
+                raise HTTPException(409, "An assessment source is missing or invalid") from exc
+
+        snapshot = {
+            "course_id": enrollment.course_id,
+            "content_version": enrollment.content_version,
+            "grading_policy": policy,
+            "assessments": normalized_assessments,
+        }
+        plan = AssessmentPlan(
+            enrollment_id=enrollment.id,
+            content_version=enrollment.content_version,
+            grading_mode=policy["mode"],
+            policy_json=policy,
+            snapshot_sha256=canonical_digest(snapshot),
+        )
+        db.add(plan)
+        db.flush()
+        for item in normalized_assessments:
+            db.add(AssessmentInstance(
+                plan_id=plan.id,
+                assessment_id=item["id"],
+                assessment_type=item["type"],
+                mode=item["mode"],
+                title=item.get("title"),
+                category_id=item.get("category_id"),
+                week=item.get("week"),
+                points=float(item["points"]),
+                source_path=item["path"],
+                source_sha256=item["_source_sha256"],
+                objective_ids=item.get("objective_ids", []),
+                question_ids=item.get("question_ids", []),
+                release_at=utc_datetime(item.get("release_at")),
+                due_at=utc_datetime(item.get("due_at")),
+                attempt_limit=item.get("attempt_limit"),
+                attempt_scoring=item["attempt_scoring"],
+            ))
+        db.flush()
+        return plan
+
     def start_session(db: Session, user: User, response: Response, request: Request) -> dict:
         # Revoke the calling session when logging in or converting a guest.
         old = optional_identity(request, db)
@@ -378,7 +462,10 @@ def create_app(settings: Settings | None = None) -> FastAPI:
             existing = Enrollment(user_id=identity[0].id, course_id=body.course_id,
                                   content_version=manifest["version"])
             db.add(existing)
-            db.commit()
+            db.flush()
+        if existing.content_version == manifest["version"]:
+            ensure_assessment_plan(db, existing, manifest)
+        db.commit()
         return {"course_id": existing.course_id, "content_version": existing.content_version,
                 "created_at": timestamp(existing.created_at)}
 
@@ -394,6 +481,7 @@ def create_app(settings: Settings | None = None) -> FastAPI:
             raise HTTPException(403, "Enroll in this course before updating its version")
         # This explicit operation preserves every prior attempt and its original version.
         enrollment.content_version = manifest["version"]
+        ensure_assessment_plan(db, enrollment, manifest)
         db.commit()
         return {"course_id": enrollment.course_id, "content_version": enrollment.content_version,
                 "created_at": timestamp(enrollment.created_at)}
@@ -404,6 +492,61 @@ def create_app(settings: Settings | None = None) -> FastAPI:
         return [{"course_id": item.course_id, "content_version": item.content_version,
                  "created_at": timestamp(item.created_at)}
                 for item in db.scalars(select(Enrollment).where(Enrollment.user_id == user.id))]
+
+    @app.get("/api/v1/assessments/{course_id}", response_model=AssessmentPlanResponse)
+    def assessment_plan(course_id: str, request: Request, db: DB):
+        user, _ = require_identity(request, db)
+        enrollment = enrolled(db, user, course_id)
+        manifest = content.manifest(course_id)
+        plan = ensure_assessment_plan(db, enrollment, manifest)
+        db.commit()
+        policy = plan.policy_json
+        instances = list(db.scalars(
+            select(AssessmentInstance).where(AssessmentInstance.plan_id == plan.id)
+            .order_by(AssessmentInstance.week, AssessmentInstance.assessment_id)
+        ))
+        current = now()
+        visible_assessments = []
+        for item in instances:
+            if item.mode != "graded":
+                schedule_status = "practice"
+            elif item.release_at and current < item.release_at:
+                schedule_status = "upcoming"
+            elif item.due_at and current > item.due_at:
+                schedule_status = "closed"
+            else:
+                schedule_status = "open"
+            visible_assessments.append({
+                "id": item.assessment_id,
+                "title": item.title or item.assessment_id.replace("-", " ").title(),
+                "type": item.assessment_type,
+                "mode": item.mode,
+                "category_id": item.category_id,
+                "week": item.week,
+                "points": item.points,
+                "item_count": len(item.question_ids),
+                "objective_count": len(item.objective_ids),
+                "release_at": timestamp(item.release_at) if item.release_at else None,
+                "due_at": timestamp(item.due_at) if item.due_at else None,
+                "attempt_limit": item.attempt_limit,
+                "attempt_scoring": item.attempt_scoring,
+                "schedule_status": schedule_status,
+            })
+        return {
+            "course_id": course_id,
+            "content_version": plan.content_version,
+            "grading_mode": plan.grading_mode,
+            "course_grade_status": (
+                "configured_no_submissions" if plan.grading_mode == "graded-course" else "not_configured"
+            ),
+            "categories": policy["categories"],
+            "category_aggregation": policy.get("category_aggregation", "points"),
+            "attempt_policy": policy["attempt_policy"],
+            "solution_release": policy["solution_release"],
+            "late_policy": policy["late_policy"],
+            "appeals": policy["appeals"],
+            "assessments": visible_assessments,
+        }
 
     @app.patch("/api/v1/progress/{course_id}/{lesson_id}")
     def save_progress(course_id: str, lesson_id: str, body: ProgressRequest, request: Request, db: DB):

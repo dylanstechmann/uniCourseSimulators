@@ -169,10 +169,18 @@ test("guest enrollment, feedback, notes, progress, account upgrade and deletion 
     .getByRole("link", { name: "Practice gradebook", exact: true })
     .click();
   await expect(
+    page.getByRole("region", { name: "Course assessment plan" }),
+  ).toContainText("No course grade is configured");
+  await expect(
     page.getByRole("heading", { name: "Attempt and feedback history" }),
   ).toBeVisible();
   await expect(
-    page.getByRole("table").first().getByText("insufficient evidence").first(),
+    page
+      .getByRole("region", { name: "Practice gradebook" })
+      .getByRole("table")
+      .first()
+      .getByText("insufficient evidence")
+      .first(),
   ).toBeVisible();
   const gradebookAccessibility = await new AxeBuilder({ page })
     .withTags(["wcag2a", "wcag2aa", "wcag21a", "wcag21aa"])

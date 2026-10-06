@@ -59,6 +59,10 @@ class ContentRepository:
     def _read(self, course_id: str, relative: str) -> str:
         return self._file(course_id, relative).read_text(encoding="utf-8")
 
+    def assessment_source_file(self, course_id: str, relative: str) -> Path:
+        """Resolve a manifest assessment source under its course package."""
+        return self._file(course_id, relative)
+
     def _summary(self, manifest: dict) -> CourseSummary:
         return CourseSummary(
             **{name: manifest[name] for name in (

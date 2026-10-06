@@ -293,6 +293,43 @@ class PublicCourse(CourseSummary):
     assessment_policy: str = "Formative practice only; no credit or university prerequisite equivalency."
 
 
+class AssessmentCategoryView(BaseModel):
+    id: str
+    title: str | None = None
+    weight: float = Field(ge=0, le=1)
+
+
+class AssessmentInstanceView(BaseModel):
+    id: str
+    title: str
+    type: str
+    mode: Literal["practice", "graded", "self-assessment"]
+    category_id: str | None = None
+    week: int | None = Field(default=None, ge=1, le=52)
+    points: float = Field(ge=0)
+    item_count: int = Field(ge=0)
+    objective_count: int = Field(ge=0)
+    release_at: str | None = None
+    due_at: str | None = None
+    attempt_limit: int | None = Field(default=None, ge=1)
+    attempt_scoring: Literal["highest", "latest"]
+    schedule_status: Literal["practice", "upcoming", "open", "closed"]
+
+
+class AssessmentPlanResponse(BaseModel):
+    course_id: str
+    content_version: str
+    grading_mode: Literal["formative-only", "graded-course"]
+    course_grade_status: Literal["not_configured", "configured_no_submissions"]
+    categories: list[AssessmentCategoryView]
+    category_aggregation: Literal["points", "assessment-average"]
+    attempt_policy: str
+    solution_release: str
+    late_policy: str
+    appeals: str
+    assessments: list[AssessmentInstanceView]
+
+
 class FeedbackComponent(BaseModel):
     field_id: str
     label: str

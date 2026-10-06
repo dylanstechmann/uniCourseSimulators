@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { api, errorMessage } from "../api";
 import type {
   Attempt,
+  AssessmentPlan,
   Course,
   CourseSummary,
   Gradebook,
@@ -11,6 +12,7 @@ import type {
   Source,
 } from "../types";
 import { GradebookView } from "./GradebookView";
+import { AssessmentPlanView } from "./AssessmentPlanView";
 import { LessonStudy } from "./LessonStudy";
 import { MarkdownReader } from "./MarkdownReader";
 import { MaturityBadge } from "./MaturityBadge";
@@ -48,6 +50,9 @@ export function CourseWorkspace({
   const [notes, setNotes] = useState<Note[]>([]);
   const [attempts, setAttempts] = useState<Attempt[]>([]);
   const [gradebook, setGradebook] = useState<Gradebook | null>(null);
+  const [assessmentPlan, setAssessmentPlan] = useState<AssessmentPlan | null>(
+    null,
+  );
   const [error, setError] = useState("");
   const [busy, setBusy] = useState(false);
   useEffect(() => {
@@ -93,6 +98,7 @@ export function CourseWorkspace({
       setNotes([]);
       setAttempts([]);
       setGradebook(null);
+      setAssessmentPlan(null);
       return;
     }
     Promise.all([
@@ -100,13 +106,15 @@ export function CourseWorkspace({
       api.notes(id),
       api.attempts(id),
       api.gradebook(id),
+      api.assessmentPlan(id),
     ])
-      .then(([progress, notes, attempts, gradebook]) => {
+      .then(([progress, notes, attempts, gradebook, assessmentPlan]) => {
         if (active) {
           setProgress(progress);
           setNotes(notes);
           setAttempts(attempts);
           setGradebook(gradebook);
+          setAssessmentPlan(assessmentPlan);
         }
       })
       .catch((error) => {
@@ -345,11 +353,14 @@ export function CourseWorkspace({
         <div className="workspace-main">
           {showGradebook ? (
             enrolled && !needsVersionReview && gradebook ? (
-              <GradebookView
-                gradebook={gradebook}
-                attempts={attempts}
-                course={course}
-              />
+              <>
+                {assessmentPlan && <AssessmentPlanView plan={assessmentPlan} />}
+                <GradebookView
+                  gradebook={gradebook}
+                  attempts={attempts}
+                  course={course}
+                />
+              </>
             ) : (
               <section className="card">
                 <h2>Practice gradebook</h2>

@@ -72,7 +72,8 @@
       "type": "object", "additionalProperties": false, "required": ["mode", "categories", "attempt_policy", "solution_release", "late_policy", "appeals"],
       "properties": {
         "mode": {"enum": ["formative-only", "graded-course"]},
-        "categories": {"type": "array", "items": {"type": "object", "additionalProperties": false, "required": ["id", "weight"], "properties": {"id": {"$ref": "#/$defs/id"}, "weight": {"type": "number", "minimum": 0, "maximum": 1}}}},
+        "categories": {"type": "array", "items": {"type": "object", "additionalProperties": false, "required": ["id", "weight"], "properties": {"id": {"$ref": "#/$defs/id"}, "title": {"type": "string", "minLength": 3}, "weight": {"type": "number", "minimum": 0, "maximum": 1}}}},
+        "category_aggregation": {"enum": ["points", "assessment-average"], "default": "points"},
         "attempt_policy": {"type": "string", "minLength": 5},
         "solution_release": {"type": "string", "minLength": 5},
         "late_policy": {"type": "string", "minLength": 5},
@@ -116,7 +117,17 @@
     },
     "assessment": {
       "type": "object", "additionalProperties": false, "required": ["id", "type", "mode", "path", "objective_ids", "question_ids", "points"],
-      "properties": {"id": {"$ref": "#/$defs/id"}, "type": {"enum": ["practice", "homework", "lab", "simulation", "data-analysis", "design", "midterm", "final", "project", "case"]}, "mode": {"enum": ["practice", "graded", "self-assessment"]}, "path": {"$ref": "#/$defs/path"}, "objective_ids": {"type": "array", "uniqueItems": true, "items": {"$ref": "#/$defs/id"}}, "question_ids": {"type": "array", "uniqueItems": true, "items": {"$ref": "#/$defs/id"}}, "points": {"type": "number", "minimum": 0}}
+      "properties": {
+        "id": {"$ref": "#/$defs/id"}, "type": {"enum": ["practice", "homework", "lab", "simulation", "data-analysis", "design", "midterm", "final", "project", "case"]},
+        "mode": {"enum": ["practice", "graded", "self-assessment"]}, "title": {"type": "string", "minLength": 3},
+        "path": {"$ref": "#/$defs/path"}, "week": {"type": "integer", "minimum": 1, "maximum": 52},
+        "category_id": {"$ref": "#/$defs/id"}, "release_at": {"type": ["string", "null"], "format": "date-time"},
+        "due_at": {"type": ["string", "null"], "format": "date-time"},
+        "attempt_limit": {"type": ["integer", "null"], "minimum": 1},
+        "attempt_scoring": {"enum": ["highest", "latest"], "default": "highest"},
+        "objective_ids": {"type": "array", "uniqueItems": true, "items": {"$ref": "#/$defs/id"}},
+        "question_ids": {"type": "array", "uniqueItems": true, "items": {"$ref": "#/$defs/id"}}, "points": {"type": "number", "minimum": 0}
+      }
     }
   }
 }

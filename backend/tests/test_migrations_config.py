@@ -20,7 +20,7 @@ def test_alembic_upgrade_matches_metadata(tmp_path, monkeypatch):
     engine, _ = database(url)
     assert set(inspect(engine).get_table_names()) == {
         "alembic_version", "users", "sessions", "enrollments", "progress", "notes", "bookmarks",
-        "attempts", "appeals", "appeal_reviews"
+        "attempts", "appeals", "appeal_reviews", "assessment_plans", "assessment_instances"
     }
     command.check(config)
     command.downgrade(config, "base")

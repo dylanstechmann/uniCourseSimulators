@@ -58,6 +58,48 @@ class Enrollment(Base):
     created_at: Mapped[datetime] = mapped_column(DateTime, default=now)
 
 
+class AssessmentPlan(Base):
+    """Immutable policy snapshot attached to an enrollment and content version."""
+    __tablename__ = "assessment_plans"
+    __table_args__ = (UniqueConstraint("enrollment_id", "content_version", name="uq_assessment_plan_version"),)
+    id: Mapped[str] = mapped_column(String(36), primary_key=True, default=identifier)
+    enrollment_id: Mapped[str] = mapped_column(ForeignKey("enrollments.id", ondelete="CASCADE"), index=True)
+    content_version: Mapped[str] = mapped_column(String(100))
+    grading_mode: Mapped[str] = mapped_column(String(32))
+    policy_json: Mapped[dict] = mapped_column(JSON)
+    snapshot_sha256: Mapped[str] = mapped_column(String(64))
+    created_at: Mapped[datetime] = mapped_column(DateTime, default=now)
+
+
+class AssessmentInstance(Base):
+    """Safe manifest reference snapshot; question keys are never stored here."""
+    __tablename__ = "assessment_instances"
+    __table_args__ = (
+        UniqueConstraint("plan_id", "assessment_id", name="uq_assessment_instance_id"),
+        CheckConstraint("mode IN ('practice', 'graded', 'self-assessment')", name="ck_assessment_instance_mode"),
+        CheckConstraint("points >= 0", name="ck_assessment_instance_points_nonnegative"),
+        CheckConstraint("attempt_limit IS NULL OR attempt_limit >= 1", name="ck_assessment_instance_attempt_limit"),
+    )
+    id: Mapped[str] = mapped_column(String(36), primary_key=True, default=identifier)
+    plan_id: Mapped[str] = mapped_column(ForeignKey("assessment_plans.id", ondelete="CASCADE"), index=True)
+    assessment_id: Mapped[str] = mapped_column(String(120))
+    assessment_type: Mapped[str] = mapped_column(String(32))
+    mode: Mapped[str] = mapped_column(String(24))
+    title: Mapped[str | None] = mapped_column(String(240), nullable=True)
+    category_id: Mapped[str | None] = mapped_column(String(100), nullable=True)
+    week: Mapped[int | None] = mapped_column(nullable=True)
+    points: Mapped[float] = mapped_column(Float)
+    source_path: Mapped[str] = mapped_column(Text)
+    source_sha256: Mapped[str] = mapped_column(String(64))
+    objective_ids: Mapped[list] = mapped_column(JSON, default=list)
+    question_ids: Mapped[list] = mapped_column(JSON, default=list)
+    release_at: Mapped[datetime | None] = mapped_column(DateTime, nullable=True)
+    due_at: Mapped[datetime | None] = mapped_column(DateTime, nullable=True)
+    attempt_limit: Mapped[int | None] = mapped_column(nullable=True)
+    attempt_scoring: Mapped[str] = mapped_column(String(16), default="highest")
+    created_at: Mapped[datetime] = mapped_column(DateTime, default=now)
+
+
 class Progress(Base):
     __tablename__ = "progress"
     __table_args__ = (UniqueConstraint("user_id", "course_id", "lesson_id", name="uq_progress_lesson"),)

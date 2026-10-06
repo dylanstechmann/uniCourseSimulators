@@ -477,6 +477,21 @@ def test_week_schedule_references_existing_content(repository, course):
     assert "reference" in codes(validate_repository(repository))
 
 
+def test_formative_manifest_cannot_silently_include_a_graded_assignment(repository, course):
+    path, manifest = course
+    manifest["assessments"][0]["mode"] = "graded"
+    write(path, manifest)
+    assert "assessment-policy" in codes(validate_repository(repository))
+
+
+def test_assessment_due_time_cannot_precede_release(repository, course):
+    path, manifest = course
+    manifest["assessments"][0]["release_at"] = "2026-10-08T00:00:00Z"
+    manifest["assessments"][0]["due_at"] = "2026-10-07T00:00:00Z"
+    write(path, manifest)
+    assert "assessment-policy" in codes(validate_repository(repository))
+
+
 def test_source_license_is_required(repository):
     registry_path = repository / "content/sources/registry.json"
     registry = read(registry_path)

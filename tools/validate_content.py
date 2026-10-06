@@ -7,6 +7,7 @@ import argparse
 import json
 import math
 import re
+import sys
 from collections import Counter
 from dataclasses import dataclass, field
 from hashlib import sha256
@@ -18,6 +19,14 @@ from urllib.request import Request, urlopen
 from jsonschema import Draft202012Validator, FormatChecker
 from jsonschema.exceptions import SchemaError
 from referencing import Registry, Resource
+
+for import_path in (
+    Path(__file__).resolve().parent,
+    Path(__file__).resolve().parents[1] / "backend",
+):
+    if import_path.is_dir():
+        sys.path.insert(0, str(import_path))
+from courselab.assessment import validate_assessment_configuration  # noqa: E402
 
 MATURE = {"complete", "externally reviewed"}
 GATE_CHECKS = {
@@ -679,6 +688,12 @@ def validate_course(
     assessment_ids = unique_ids(
         manifest["assessments"], "assessment", course_path, report
     )
+    try:
+        validate_assessment_configuration(
+            manifest.get("assessments", []), manifest.get("grading_policy", {})
+        )
+    except (AttributeError, TypeError, ValueError) as exc:
+        report.error("assessment-policy", course_path, str(exc))
     report.inventory["lessons"] += len(lessons)
     questions = []
     # Repeated references to a bank share one authoring source, not duplicate items.
