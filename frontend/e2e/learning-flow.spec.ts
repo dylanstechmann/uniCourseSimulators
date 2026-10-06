@@ -256,6 +256,7 @@ test("the developed cell-biology weeks expose original lessons and deterministic
   await expect(
     page.getByRole("heading", {
       name: "Water, pH, and noncovalent interactions",
+      level: 1,
     }),
   ).toBeVisible();
   const protonation = page.locator(
