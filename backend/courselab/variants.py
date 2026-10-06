@@ -89,13 +89,35 @@ def issue_variant_token(
     content_version: str,
     secret: bytes,
     *,
+    preferred_variant_id: str | None = None,
     now: int | None = None,
 ) -> tuple[str | None, str | None, dict]:
     """Issue a bounded bearer token and return its reproducible selected spec."""
-    if not variant_ids(question):
+    identifiers = variant_ids(question)
+    if not identifiers:
+        if preferred_variant_id is not None:
+            raise VariantTokenError("This question has no variants")
         return None, None, resolve_variant(question, None)
     if len(secret) < 32:
         raise VariantTokenError("Variant signing key must be at least 32 bytes")
+    if preferred_variant_id is not None:
+        if preferred_variant_id not in identifiers:
+            raise VariantTokenError("Variant identifier is not in this question bank")
+        seed = secrets.token_urlsafe(24)
+        expires = (int(time.time()) if now is None else now) + TOKEN_TTL_SECONDS
+        payload = {
+            "v": 2,
+            "course": course_id,
+            "version": content_version,
+            "question": question["id"],
+            "seed": seed,
+            "exp": expires,
+            "variant_id": preferred_variant_id,
+        }
+        encoded = _b64encode(json.dumps(payload, sort_keys=True, separators=(",", ":")).encode("utf-8"))
+        signature = _b64encode(hmac.new(secret, encoded.encode("ascii"), hashlib.sha256).digest())
+        token = f"{encoded}.{signature}"
+        return token, preferred_variant_id, resolve_variant(question, preferred_variant_id)
     seed = secrets.token_urlsafe(24)
     expires = (int(time.time()) if now is None else now) + TOKEN_TTL_SECONDS
     payload = {
@@ -136,10 +158,13 @@ def verify_variant_token(
         if not hmac.compare_digest(signature, expected_signature):
             raise ValueError("Invalid signature")
         payload = json.loads(_b64decode(encoded))
+        if not isinstance(payload, dict):
+            raise ValueError("Token context or expiry is invalid")
+        common = {"course", "version", "question", "seed", "exp"}
+        legacy = set(payload) == common | {"v"} and payload.get("v") == 1
+        pinned = set(payload) == common | {"v", "variant_id"} and payload.get("v") == 2
         if (
-            not isinstance(payload, dict)
-            or set(payload) != {"v", "course", "version", "question", "seed", "exp"}
-            or payload["v"] != 1
+            not (legacy or pinned)
             or payload["course"] != course_id
             or payload["version"] != content_version
             or payload["question"] != question["id"]
@@ -149,7 +174,12 @@ def verify_variant_token(
             or payload["exp"] <= (int(time.time()) if now is None else now)
         ):
             raise ValueError("Token context or expiry is invalid")
-        variant_id = _seeded_variant_id(question, course_id, content_version, payload["seed"], secret)
+        if pinned:
+            variant_id = payload["variant_id"]
+            if not isinstance(variant_id, str) or variant_id not in variant_ids(question):
+                raise ValueError("Token variant is invalid")
+        else:
+            variant_id = _seeded_variant_id(question, course_id, content_version, payload["seed"], secret)
         return resolve_variant(question, variant_id), variant_id
     except (UnicodeError, ValueError, TypeError, KeyError, json.JSONDecodeError) as exc:
         raise VariantTokenError("Question variant token is invalid or expired") from exc

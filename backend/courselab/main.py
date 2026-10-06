@@ -331,12 +331,34 @@ def create_app(settings: Settings | None = None) -> FastAPI:
         return content.course(course_id)
 
     @app.get("/api/v1/courses/{course_id}/lessons/{lesson_id}", response_model=PublicLesson)
-    def lesson(course_id: str, lesson_id: str):
+    def lesson(course_id: str, lesson_id: str, request: Request, db: DB):
         version = content.manifest(course_id)["version"]
+        identity = optional_identity(request, db)
 
         def public_question(question: dict):
+            preferred_variant_id = None
+            if identity:
+                previous = db.scalar(
+                    select(Attempt)
+                    .where(
+                        Attempt.user_id == identity[0].id,
+                        Attempt.course_id == course_id,
+                        Attempt.content_version == version,
+                        Attempt.question_id == question["id"],
+                    )
+                    .order_by(Attempt.created_at.desc(), Attempt.id.desc())
+                    .limit(1)
+                )
+                if previous and isinstance(previous.response, dict):
+                    saved_variant_id = previous.response.get("variant_id")
+                    if isinstance(saved_variant_id, str):
+                        preferred_variant_id = saved_variant_id
             token, variant_id, resolved = issue_variant_token(
-                question, course_id, version, settings.variant_token_secret
+                question,
+                course_id,
+                version,
+                settings.variant_token_secret,
+                preferred_variant_id=preferred_variant_id,
             )
             return content.public_question(resolved, variant_id, token)
 

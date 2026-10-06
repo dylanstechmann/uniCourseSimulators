@@ -162,6 +162,18 @@ def test_seeded_variant_round_trip_and_attempt_pinning(enrolled, app):
         saved = db.get(Attempt, attempt["id"])
         assert saved.question_spec_sha256 == question_spec_digest(resolved, variant_id)
 
+    restored_question = next(
+        item for item in enrolled.get("/api/v1/courses/test-course/lessons/lesson-one").json()["questions"]
+        if item["id"] == "variant-choice"
+    )
+    assert restored_question["variant_id"] == variant_id
+    restored_spec, restored_variant_id = verify_variant_token(
+        authored, "test-course", "0.1.0", restored_question["variant_token"],
+        app.state.settings.variant_token_secret,
+    )
+    assert restored_variant_id == variant_id
+    assert restored_spec == resolved
+
     token_payload, token_signature = public_question["variant_token"].split(".")
     replacement = "A" if token_signature[0] != "A" else "B"
     tampered = f"{token_payload}.{replacement}{token_signature[1:]}"
