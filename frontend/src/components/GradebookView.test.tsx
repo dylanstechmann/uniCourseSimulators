@@ -10,6 +10,7 @@ describe("practice gradebook API contract", () => {
       assessment_role: "formative",
       aggregation: "best practice result per question",
       score: 1,
+      manual_override_count: 0,
       max_score: 4,
       attempt_count: 1,
       objective_evidence_policy: {
@@ -71,7 +72,9 @@ describe("practice gradebook API contract", () => {
       content_version: "0.1",
       response: { response: 0, variant_id: "surface-residue-substitution" },
       score: 1,
+      effective_score: 1,
       max_score: 1,
+      appeal: null,
       result: {
         score: 1,
         max_score: 1,

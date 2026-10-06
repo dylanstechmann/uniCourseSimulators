@@ -21,9 +21,9 @@ Layer feedback as diagnosis, targeted hint, misconception, next step, policy-con
 | Data interpretation | One composite numeric-plus-choice item with transparent per-field partial credit; general graph/table response tools and interpretation grading remain planned |
 | CSV upload | Size/column/type checks, safe parsing, no executable files |
 | Code | Separate isolated worker using pytest; never API execution |
-| Design | Transparent provisional rubric, manual review/appeal |
+| Design | Transparent provisional rubric, manual review/appeal (basic audited appeal workflow implemented; design-response rubric remains future work) |
 
-Future generated parameter variants must recompute reproducible specifications and pass independent recalculation tests. Current authored alternatives must have unique IDs, validate as complete standalone questions after overrides, and have distinct non-placeholder prompts. Overrides append actor/reason/time audit events and retain original attempts. Weights and release policies are explicit. Legacy packages offer practice evidence only, not semester grades.
+Future generated parameter variants must recompute reproducible specifications and pass independent recalculation tests. Current authored alternatives must have unique IDs, validate as complete standalone questions after overrides, and have distinct non-placeholder prompts. Human appeal decisions append actor/reason/time records and retain original attempts. Weights and release policies are explicit. Legacy packages offer practice evidence only, not semester grades.
 
 ## Feedback providers: planned
 
@@ -32,6 +32,8 @@ Deterministic no-LLM mode is default. Optional OpenAI-compatible, Anthropic, Ope
 Adversarial tests cover alternate forms, wrong units, near misses, invalid concepts, malformed inputs, injection/solution requests, keyword repetition and malicious/infinite code. Mutation tests must fail broken rules. Code safety checks require the actual runner, not a mock claiming isolation.
 
 ## Enabled implementation
+
+Learners may request one human review per immutable attempt. Registered instructor accounts explicitly allowlisted through `INSTRUCTOR_EMAILS` can uphold, decline or adjust a score within the original maximum. Alembic revision 0003 stores the appeal and the single decision separately; the automatic score/result is never overwritten. A score adjustment is labeled in attempt history and reflected in the formative gradebook. The instructor view shows only the prompt when the attempt's exact course version is still current; for a stale attempt, adjusting or upholding is blocked because old content packages are not archived. A reviewer can decline with an explanation. This is an audited practice-score exception path, not full rubric-based instructor grading, protected exams or a staff role-management system.
 
 The global grader policy identifier is `practice-v7`, which adds the bounded data-interpretation composite grader; historical attempts keep their recorded versions.
 

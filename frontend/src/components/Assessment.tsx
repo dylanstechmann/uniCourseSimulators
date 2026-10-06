@@ -1,6 +1,6 @@
 import { useState, type FormEvent } from "react";
 import { errorMessage } from "../api";
-import type { Attempt, Question } from "../types";
+import type { Appeal, Attempt, Question } from "../types";
 import { FeedbackView } from "./FeedbackView";
 
 export function Assessment({
@@ -9,11 +9,13 @@ export function Assessment({
   disabledMessage,
   previousAttempt,
   onSubmit,
+  onAppeal,
 }: {
   question: Question;
   enabled: boolean;
   disabledMessage?: string;
   previousAttempt?: Attempt;
+  onAppeal?: (attemptId: string, reason: string) => Promise<Appeal>;
   onSubmit: (
     response: string | number | number[] | Record<string, string>,
     unit?: string,
@@ -29,6 +31,9 @@ export function Assessment({
   );
   const [attempt, setAttempt] = useState<Attempt | undefined>();
   const [busy, setBusy] = useState(false);
+  const [appealReason, setAppealReason] = useState("");
+  const [appealBusy, setAppealBusy] = useState(false);
+  const [appealError, setAppealError] = useState("");
   const [error, setError] = useState("");
   async function submit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -89,6 +94,34 @@ export function Assessment({
       setBusy(false);
     }
   }
+  async function requestReview(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    const submitted = attempt || previousAttempt;
+    if (!submitted || !onAppeal) return;
+    setAppealError("");
+    if (appealReason.trim().length < 20) {
+      setAppealError(
+        "Please explain what may have been missed in at least 20 characters.",
+      );
+      return;
+    }
+    setAppealBusy(true);
+    try {
+      const appeal = await onAppeal(submitted.id, appealReason.trim());
+      setAttempt({
+        ...submitted,
+        appeal,
+        effective_score: appeal.effective_score,
+      });
+      setAppealReason("");
+    } catch (error) {
+      setAppealError(errorMessage(error));
+    } finally {
+      setAppealBusy(false);
+    }
+  }
+  const submittedAttempt = attempt || previousAttempt;
+  const appeal = submittedAttempt?.appeal;
   return (
     <section
       className="assessment card"
@@ -297,8 +330,60 @@ export function Assessment({
           </p>
         )}
       </form>
-      {(attempt || previousAttempt) && (
-        <FeedbackView attempt={(attempt || previousAttempt)!} />
+      {submittedAttempt && (
+        <>
+          <FeedbackView attempt={submittedAttempt} />
+          {appeal ? (
+            <section className="appeal-status" aria-label="Human review status">
+              <h4>Human review · {appeal.status}</h4>
+              {appeal.status === "open" ? (
+                <p>
+                  Your request is saved for an authorized instructor to review.
+                </p>
+              ) : (
+                <>
+                  <p>{appeal.review_note}</p>
+                  {appeal.status === "adjusted" ? (
+                    <p>
+                      Practice score after review: {appeal.effective_score} /{" "}
+                      {appeal.max_score}. The automatic score remains recorded
+                      separately.
+                    </p>
+                  ) : null}
+                </>
+              )}
+            </section>
+          ) : onAppeal ? (
+            <form className="appeal-form" onSubmit={requestReview}>
+              <h4>Request human review</h4>
+              <p className="muted">
+                Explain the evidence or rubric issue. An instructor may adjust
+                the practice score; the automatic result will remain in the
+                audit history.
+              </p>
+              <label htmlFor={`${question.id}-appeal-reason`}>
+                Reason for review
+              </label>
+              <textarea
+                id={`${question.id}-appeal-reason`}
+                value={appealReason}
+                onChange={(event) => setAppealReason(event.target.value)}
+                minLength={20}
+                maxLength={4000}
+                rows={4}
+                required
+              />
+              <button type="submit" disabled={!enabled || appealBusy}>
+                {appealBusy ? "Saving request…" : "Send for human review"}
+              </button>
+              {appealError ? (
+                <p role="alert" className="error">
+                  {appealError}
+                </p>
+              ) : null}
+            </form>
+          ) : null}
+        </>
       )}
     </section>
   );

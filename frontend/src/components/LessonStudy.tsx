@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { errorMessage } from "../api";
-import type { Attempt, Lesson, Note, Source } from "../types";
+import type { Appeal, Attempt, Lesson, Note, Source } from "../types";
 import { Assessment } from "./Assessment";
 import { MarkdownReader } from "./MarkdownReader";
 
@@ -13,6 +13,7 @@ export function LessonStudy({
   attempts,
   sources,
   onAttempt,
+  onAppeal,
   onSaveNote,
   onProgress,
 }: {
@@ -29,6 +30,7 @@ export function LessonStudy({
     unit?: string,
     variantToken?: string | null,
   ) => Promise<Attempt>;
+  onAppeal: (attemptId: string, reason: string) => Promise<Appeal>;
   onSaveNote: (body: string) => Promise<void>;
   onProgress: (completed: boolean) => Promise<void>;
 }) {
@@ -154,6 +156,7 @@ export function LessonStudy({
           onSubmit={(response, unit, variantToken) =>
             onAttempt(question.id, response, unit, variantToken)
           }
+          onAppeal={onAppeal}
         />
       ))}
       <section className="card">

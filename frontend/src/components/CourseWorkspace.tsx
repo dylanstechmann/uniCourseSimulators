@@ -166,6 +166,18 @@ export function CourseWorkspace({
     setGradebook(await api.gradebook(id));
     return attempt;
   }
+  async function requestAppeal(attemptId: string, reason: string) {
+    const appeal = await api.requestAppeal(attemptId, reason);
+    setAttempts((previous) =>
+      previous.map((attempt) =>
+        attempt.id === attemptId
+          ? { ...attempt, appeal, effective_score: appeal.effective_score }
+          : attempt,
+      ),
+    );
+    setGradebook(await api.gradebook(id));
+    return appeal;
+  }
   async function saveNote(body: string) {
     const note = await api.saveNote(id, lessonId!, body);
     setNotes((previous) => [
@@ -368,6 +380,7 @@ export function CourseWorkspace({
                 attempts={attempts}
                 sources={sources}
                 onAttempt={submit}
+                onAppeal={requestAppeal}
                 onSaveNote={saveNote}
                 onProgress={markProgress}
               />

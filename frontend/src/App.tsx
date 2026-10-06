@@ -10,6 +10,7 @@ import type {
 import { AccountPanel } from "./components/AccountPanel";
 import { CourseCatalog } from "./components/CourseCatalog";
 import { CourseWorkspace } from "./components/CourseWorkspace";
+import { InstructorReview } from "./components/InstructorReview";
 
 function currentRoute() {
   return window.location.hash.slice(1) || "/courses";
@@ -119,9 +120,11 @@ export default function App() {
     ? "course"
     : segments[0] === "account"
       ? "account"
-      : segments[0] === "learning"
-        ? "learning"
-        : "courses";
+      : segments[0] === "instructor"
+        ? "instructor"
+        : segments[0] === "learning"
+          ? "learning"
+          : "courses";
   return (
     <div
       className={`app-shell${largeText ? " large-text" : ""}${highContrast ? " high-contrast" : ""}`}
@@ -160,6 +163,14 @@ export default function App() {
           >
             My learning <span className="nav-count">{enrollments.length}</span>
           </a>
+          {session.can_review ? (
+            <a
+              href="#/instructor"
+              aria-current={page === "instructor" ? "page" : undefined}
+            >
+              Instructor review
+            </a>
+          ) : null}
           <a
             href="#/account"
             aria-current={page === "account" ? "page" : undefined}
@@ -232,6 +243,8 @@ export default function App() {
             </>
           ) : page === "account" ? (
             <AccountPanel session={session} onSession={setSession} />
+          ) : page === "instructor" ? (
+            <InstructorReview />
           ) : courseId ? (
             <CourseWorkspace
               key={courseId}

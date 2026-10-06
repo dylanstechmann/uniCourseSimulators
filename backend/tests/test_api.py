@@ -6,7 +6,7 @@ from fastapi.testclient import TestClient
 from sqlalchemy import func, select
 from sqlalchemy.orm import Session
 
-from courselab.db import Attempt, Enrollment, Note, SessionToken, User, now
+from courselab.db import Appeal, AppealReview, Attempt, Enrollment, Note, SessionToken, User, now
 from courselab.grading import question_spec_digest
 from courselab.main import COOKIE, token_hash
 from courselab.variants import verify_variant_token
@@ -479,6 +479,132 @@ def test_no_attempt_edit_endpoint(enrolled):
     attempt = submit(enrolled).json()
     assert enrolled.patch(f"/api/v1/attempts/{attempt['id']}", json={"score": 100}).status_code == 404
     assert enrolled.get("/api/v1/attempts").json()[0]["score"] == 2
+
+
+def test_learner_appeal_and_audited_instructor_score_adjustment(enrolled, app):
+    attempt = submit(enrolled, response=1).json()
+    original_score = attempt["score"]
+    assert original_score == 0 and attempt["appeal"] is None
+    reason = "My response matches the stated control condition; please check the keyed option."
+    appeal_response = enrolled.post(
+        f"/api/v1/attempts/{attempt['id']}/appeals", json={"reason": reason}
+    )
+    assert appeal_response.status_code == 201
+    appeal = appeal_response.json()
+    assert appeal["status"] == "open" and appeal["effective_score"] == original_score
+    assert enrolled.post(
+        f"/api/v1/attempts/{attempt['id']}/appeals", json={"reason": reason}
+    ).status_code == 409
+    assert enrolled.get("/api/v1/appeals").json()[0]["reason"] == reason
+
+    stranger = TestClient(app, headers={"Origin": "http://localhost:8080"})
+    stranger_session = stranger.post("/api/v1/auth/guest", json={}).json()
+    stranger.headers["X-CSRF-Token"] = stranger_session["csrf_token"]
+    assert stranger.post(
+        f"/api/v1/attempts/{attempt['id']}/appeals", json={"reason": reason}
+    ).status_code == 404
+    assert stranger.get("/api/v1/instructor/appeals").status_code == 403
+
+    with TestClient(app, headers={"Origin": "http://localhost:8080"}) as reviewer:
+        registration = reviewer.post("/api/v1/auth/register", json={
+            "email": "reviewer@example.org", "password": "a-reviewer-test-password"
+        })
+        assert registration.status_code == 201
+        assert reviewer.get("/api/v1/auth/session").json()["can_review"] is True
+        reviewer.headers["X-CSRF-Token"] = registration.json()["csrf_token"]
+        queue = reviewer.get("/api/v1/instructor/appeals")
+        assert queue.status_code == 200
+        item = queue.json()[0]
+        assert item["id"] == appeal["id"]
+        assert item["question_prompt"] == "Select a negative control."
+        assert item["content_is_current"] is True
+        assert "solution_spec" not in queue.text and "PRIVATE_TEST_SENTINEL" not in queue.text
+        decision = reviewer.post(
+            f"/api/v1/instructor/appeals/{appeal['id']}/review",
+            json={"decision": "adjusted", "override_score": 2,
+                  "review_note": "The alternate answer is supported by the authored rubric."},
+        )
+        assert decision.status_code == 200
+        assert decision.json()["status"] == "adjusted"
+        assert decision.json()["effective_score"] == 2
+        assert reviewer.get("/api/v1/instructor/appeals").json() == []
+        assert reviewer.post(
+            f"/api/v1/instructor/appeals/{appeal['id']}/review",
+            json={"decision": "adjusted", "override_score": 1,
+                  "review_note": "A second review cannot overwrite the first."},
+        ).status_code == 409
+        reviewer_user_id = reviewer.get("/api/v1/auth/session").json()["user"]["id"]
+        assert reviewer.delete("/api/v1/learner").status_code == 204
+
+    saved_attempt = enrolled.get("/api/v1/attempts").json()[0]
+    assert saved_attempt["score"] == 0
+    assert saved_attempt["effective_score"] == 2
+    assert saved_attempt["appeal"]["status"] == "adjusted"
+    gradebook = enrolled.get("/api/v1/gradebook/test-course").json()
+    assert gradebook["score"] == 2
+    assert gradebook["manual_override_count"] == 1
+    with app.state.sessions() as db:
+        saved = db.get(Attempt, attempt["id"])
+        reviews = list(db.query(AppealReview).all())
+        appeals = list(db.query(Appeal).all())
+        assert saved.score == 0 and saved.result["correct"] is False
+        assert len(appeals) == len(reviews) == 1
+        assert reviews[0].reviewer_user_id is None
+        assert reviews[0].reviewer_email == "deleted instructor account"
+        assert db.get(User, reviewer_user_id) is None
+
+
+def test_instructor_cannot_review_own_attempt(enrolled, app):
+    with TestClient(app, headers={"Origin": "http://localhost:8080"}) as reviewer:
+        registration = reviewer.post("/api/v1/auth/register", json={
+            "email": "reviewer@example.org", "password": "a-reviewer-test-password"
+        })
+        reviewer.headers["X-CSRF-Token"] = registration.json()["csrf_token"]
+        assert reviewer.post("/api/v1/enrollments", json={"course_id": "test-course"}).status_code == 201
+        attempt = submit(reviewer, response=1).json()
+        appeal = reviewer.post(
+            f"/api/v1/attempts/{attempt['id']}/appeals",
+            json={"reason": "This reviewer is also the learner on the attempt."},
+        ).json()
+        assert all(item["id"] != appeal["id"] for item in reviewer.get("/api/v1/instructor/appeals").json())
+        denied = reviewer.post(
+            f"/api/v1/instructor/appeals/{appeal['id']}/review",
+            json={"decision": "adjusted", "override_score": 1,
+                  "review_note": "This self-review must be rejected."},
+        )
+        assert denied.status_code == 403
+
+
+def test_stale_appeal_content_can_only_be_declined(enrolled, app, content_root):
+    attempt = submit(enrolled, response=1).json()
+    appeal = enrolled.post(
+        f"/api/v1/attempts/{attempt['id']}/appeals",
+        json={"reason": "The original answer rubric needs a second look."},
+    ).json()
+    manifest_path = content_root / "courses" / "test-course" / "course.json"
+    manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+    manifest["version"] = "0.2.0"
+    manifest_path.write_text(json.dumps(manifest), encoding="utf-8")
+    with TestClient(app, headers={"Origin": "http://localhost:8080"}) as reviewer:
+        registration = reviewer.post("/api/v1/auth/register", json={
+            "email": "reviewer@example.org", "password": "a-reviewer-test-password"
+        })
+        reviewer.headers["X-CSRF-Token"] = registration.json()["csrf_token"]
+        item = reviewer.get("/api/v1/instructor/appeals").json()[0]
+        assert item["content_is_current"] is False and item["question_prompt"] is None
+        adjusted = reviewer.post(
+            f"/api/v1/instructor/appeals/{appeal['id']}/review",
+            json={"decision": "adjusted", "override_score": 1,
+                  "review_note": "The score should be changed."},
+        )
+        assert adjusted.status_code == 409
+        declined = reviewer.post(
+            f"/api/v1/instructor/appeals/{appeal['id']}/review",
+            json={"decision": "declined",
+                  "review_note": "The exact course version is no longer available."},
+        )
+        assert declined.status_code == 200
+        assert declined.json()["status"] == "declined"
 
 
 @pytest.mark.parametrize("visibility", ["restricted-server-assessment", None])

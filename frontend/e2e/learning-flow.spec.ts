@@ -270,6 +270,131 @@ test("symbolic calculus practice accepts an equivalent expression and saves feed
   ).toBeVisible();
 });
 
+test("learner appeal receives an audited manual adjustment", async ({
+  page,
+  browser,
+}) => {
+  const reason = `Please reconsider the control comparison in my response. ${crypto.randomUUID()}`;
+  await page.goto("/#/account");
+  await page.getByRole("button", { name: "Start guest session" }).click();
+  await page.getByRole("link", { name: "Course catalog", exact: true }).click();
+  await page.getByRole("link", { name: /Foundations of Cell/ }).click();
+  await page.getByRole("button", { name: "Enroll in partial course" }).click();
+  await page
+    .getByRole("navigation", { name: "Lessons" })
+    .getByRole("link")
+    .first()
+    .click();
+
+  const practice = page.locator('[data-question-id="cell-biology-1:check"]');
+  await practice.getByRole("radio").last().check();
+  await practice
+    .getByRole("button", { name: "Submit practice response" })
+    .click();
+  await practice.getByLabel("Reason for review").fill(reason);
+  await practice.getByRole("button", { name: "Send for human review" }).click();
+  await expect(
+    practice.getByRole("heading", { name: "Human review · open" }),
+  ).toBeVisible();
+
+  const reviewerContext = await browser.newContext();
+  const reviewerPage = await reviewerContext.newPage();
+  try {
+    await reviewerPage.goto("/#/account");
+    await reviewerPage
+      .getByLabel("Email address")
+      .fill("courselab-reviewer@example.invalid");
+    await reviewerPage
+      .getByLabel("Password", { exact: true })
+      .fill("courselab-reviewer-password");
+    const registration = reviewerPage.waitForResponse((response) =>
+      response.url().endsWith("/api/v1/auth/register"),
+    );
+    await reviewerPage.getByRole("button", { name: "Create account" }).click();
+    if ((await registration).status() === 409) {
+      await reviewerPage
+        .getByRole("button", { name: "Use an existing account" })
+        .click();
+      await reviewerPage
+        .getByRole("button", { name: "Sign in", exact: true })
+        .click();
+    }
+    await expect(
+      reviewerPage.getByRole("heading", { name: "Signed in", exact: true }),
+    ).toBeVisible();
+    await reviewerPage
+      .getByRole("link", { name: "Instructor review", exact: true })
+      .click();
+    await expect(
+      reviewerPage.getByRole("heading", { name: "Human review requests" }),
+    ).toBeVisible();
+    const reviewCard = reviewerPage
+      .locator(".instructor-appeal")
+      .filter({ hasText: reason });
+    await expect(reviewCard).toBeVisible();
+    const accessibility = await new AxeBuilder({ page: reviewerPage })
+      .withTags(["wcag2a", "wcag2aa", "wcag21a", "wcag21aa"])
+      .analyze();
+    expect(accessibility.violations).toEqual([]);
+    await reviewCard
+      .getByRole("radio", { name: "Adjust practice score" })
+      .check();
+    await reviewCard.getByLabel(/Reviewed practice score/).fill("1");
+    await reviewCard
+      .getByLabel("Review note (visible to the learner)")
+      .fill(
+        "The alternate control is supported by the written practice rubric.",
+      );
+    await reviewCard
+      .getByRole("button", { name: "Record review decision" })
+      .click();
+    await expect(reviewCard).toHaveCount(0);
+
+    const attemptsResponse = page.waitForResponse((response) =>
+      response.url().includes("/api/v1/attempts?course_id=cell-biology"),
+    );
+    await page.reload();
+    const refreshedAttempts = await (await attemptsResponse).json();
+    expect(
+      refreshedAttempts.some(
+        (attempt: { appeal?: { status?: string; reason?: string } | null }) =>
+          attempt.appeal?.reason === reason &&
+          attempt.appeal.status === "adjusted",
+      ),
+    ).toBeTruthy();
+    const updatedPractice = page.locator(
+      '[data-question-id="cell-biology-1:check"]',
+    );
+    await expect(
+      updatedPractice.getByRole("heading", { name: "Human review · adjusted" }),
+    ).toBeVisible();
+    await expect(
+      updatedPractice.getByLabel("Submission feedback"),
+    ).toContainText("1 / 1 practice points after human review");
+    await page
+      .getByRole("link", { name: "Practice gradebook", exact: true })
+      .click();
+    await expect(
+      page.getByText("1 / 1 (manual review; automatic 0)"),
+    ).toBeVisible();
+
+    await reviewerPage
+      .getByRole("link", { name: "Account and data", exact: true })
+      .click();
+    await reviewerPage.getByLabel("Type DELETE to confirm").fill("DELETE");
+    await reviewerPage
+      .getByRole("button", { name: "Delete account and saved data" })
+      .click();
+    await expect(
+      reviewerPage.getByText("Account and saved learner data deleted.", {
+        exact: true,
+      }),
+    ).toBeVisible();
+  } finally {
+    await reviewerContext.close();
+  }
+});
+
 test("data interpretation awards transparent field credit and reloads saved feedback", async ({
   page,
 }) => {

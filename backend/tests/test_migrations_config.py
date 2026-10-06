@@ -19,7 +19,8 @@ def test_alembic_upgrade_matches_metadata(tmp_path, monkeypatch):
     command.upgrade(config, "head")
     engine, _ = database(url)
     assert set(inspect(engine).get_table_names()) == {
-        "alembic_version", "users", "sessions", "enrollments", "progress", "notes", "bookmarks", "attempts"
+        "alembic_version", "users", "sessions", "enrollments", "progress", "notes", "bookmarks",
+        "attempts", "appeals", "appeal_reviews"
     }
     command.check(config)
     command.downgrade(config, "base")
@@ -91,3 +92,9 @@ def test_variant_token_secret_is_private_and_has_a_minimum_length(monkeypatch):
     monkeypatch.setenv("VARIANT_TOKEN_SECRET", "too-short")
     with pytest.raises(ValueError, match="at least 32 bytes"):
         Settings.from_environment()
+
+
+def test_instructor_email_allowlist_is_normalized_and_contains_no_credentials(monkeypatch):
+    monkeypatch.setenv("INSTRUCTOR_EMAILS", " Reviewer@Example.org, second@example.org ")
+    settings = Settings.from_environment()
+    assert settings.instructor_emails == ("reviewer@example.org", "second@example.org")

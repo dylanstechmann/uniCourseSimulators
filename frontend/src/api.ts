@@ -4,6 +4,8 @@ import type {
   CurriculumMap,
   CourseSummary,
   Enrollment,
+  Appeal,
+  InstructorAppeal,
   Gradebook,
   Lesson,
   Note,
@@ -116,6 +118,27 @@ export const api = {
     ),
   attempts: (id: string) =>
     request<Attempt[]>(`/attempts?course_id=${encode(id)}`),
+  requestAppeal: (attemptId: string, reason: string) =>
+    request<Appeal>(`/attempts/${encode(attemptId)}/appeals`, "POST", {
+      reason,
+    }),
+  instructorAppeals: (status = "open") =>
+    request<InstructorAppeal[]>(`/instructor/appeals?status=${encode(status)}`),
+  reviewAppeal: (
+    appealId: string,
+    decision: "adjusted" | "upheld" | "declined",
+    review_note: string,
+    override_score?: number,
+  ) =>
+    request<InstructorAppeal>(
+      `/instructor/appeals/${encode(appealId)}/review`,
+      "POST",
+      {
+        decision,
+        review_note,
+        ...(override_score !== undefined ? { override_score } : {}),
+      },
+    ),
   gradebook: (id: string) => request<Gradebook>(`/gradebook/${encode(id)}`),
   exportData: () => request<unknown>("/learner/export"),
   async deleteLearner() {

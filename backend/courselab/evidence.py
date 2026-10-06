@@ -8,8 +8,11 @@ MIN_ITEM_COVERAGE = 0.8
 MIN_PERFORMANCE = 0.8
 
 
-def objective_evidence(questions: list[dict], attempts: list) -> dict[str, dict]:
+def objective_evidence(
+    questions: list[dict], attempts: list, score_overrides: dict[str, float] | None = None
+) -> dict[str, dict]:
     """Aggregate best points per distinct item without counting retries as breadth."""
+    score_overrides = score_overrides or {}
     items_by_objective: dict[str, dict[str, float]] = defaultdict(dict)
     for question in questions:
         question_id = question["id"]
@@ -32,8 +35,9 @@ def objective_evidence(questions: list[dict], attempts: list) -> dict[str, dict]
             correct_results += int(bool(attempt.result.get("correct")))
             question_id = attempt.question_id
             current = best_by_question.get(question_id)
-            if current is None or attempt.score > current[0]:
-                best_by_question[question_id] = (float(attempt.score), float(attempt.max_score))
+            effective_score = score_overrides.get(attempt.id, float(attempt.score))
+            if current is None or effective_score > current[0]:
+                best_by_question[question_id] = (effective_score, float(attempt.max_score))
 
         attempted_items = len(best_by_question)
         best_score = sum(score for score, _ in best_by_question.values())

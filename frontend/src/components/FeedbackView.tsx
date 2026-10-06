@@ -24,6 +24,7 @@ const diagnoses: Record<string, string> = {
 
 export function FeedbackView({ attempt }: { attempt: Attempt }) {
   const feedback = attempt.result.feedback;
+  const effectiveScore = attempt.effective_score ?? attempt.score;
   return (
     <section
       className={`feedback ${attempt.result.correct ? "feedback-correct" : ""}`}
@@ -31,8 +32,15 @@ export function FeedbackView({ attempt }: { attempt: Attempt }) {
       aria-live="polite"
     >
       <h3>
-        {attempt.score} / {attempt.max_score} practice points
+        {effectiveScore} / {attempt.max_score} practice points
+        {attempt.appeal?.status === "adjusted" ? " after human review" : ""}
       </h3>
+      {effectiveScore !== attempt.score ? (
+        <p>
+          <strong>Automatic score:</strong> {attempt.score} /{" "}
+          {attempt.max_score}. The instructor adjustment is recorded separately.
+        </p>
+      ) : null}
       <p>
         {diagnoses[feedback.diagnosis] ||
           feedback.diagnosis.replaceAll("_", " ")}

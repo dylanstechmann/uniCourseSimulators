@@ -14,7 +14,9 @@ Open `http://localhost:8080`. No `.env` file, manually chosen database password 
 
 The database and credentials volumes persist across container recreation. Stop the foreground run with Ctrl+C, or use `docker compose down` after a detached run. Keep the volumes when learner records are needed. Removing a volume destroys its stored data; deleting only the credentials volume leaves the existing PostgreSQL password inconsistent with a newly generated secret. PostgreSQL initialization variables do not rotate an existing cluster's password.
 
-Optional local configuration comes from `.env.example`; copy it to an untracked `.env` and edit only what is needed. If `COURSELAB_PORT` changes, update `ALLOWED_ORIGINS` to the exact matching localhost/127.0.0.1 origins. Development uses `COOKIE_SECURE=false` for local HTTP. The `.env` files, secrets, database files, backups and learner exports are excluded from Git, but an ignore rule is not a substitute for inspecting staged changes.
+Optional local configuration comes from `.env.example`; copy it to an untracked `.env` and edit only what is needed. If `COURSELAB_PORT` changes, update `ALLOWED_ORIGINS` to the exact matching localhost/127.0.0.1 origins. Development uses `COOKIE_SECURE=false` for local HTTP. Set `INSTRUCTOR_EMAILS` to a comma-separated list of registered reviewer accounts to enable the appeal queue; leave it empty to disable instructor review. The `.env` files, secrets, database files, backups and learner exports are excluded from Git, but an ignore rule is not a substitute for inspecting staged changes.
+
+Set `INSTRUCTOR_EMAILS` to an explicit comma-separated allowlist of registered account emails to enable instructor review. An empty value keeps the review queue disabled. Protect account recovery and avoid exposing the instructor allowlist in frontend configuration.
 
 Useful diagnostics:
 
@@ -35,7 +37,7 @@ docker compose exec -T api alembic current
 docker compose run --rm migrate
 ```
 
-The second command runs `alembic upgrade head` using the same image, database and secret as the API. Revision 0002 adds an optional question-specification digest to attempts; old rows are preserved and marked unpinned. For an application update, take and verify a backup, stop API/web writes, build the reviewed version, apply its migrations, and restart the application. Read each migration before applying it to valuable data. A downgrade is not a general data-recovery mechanism; some future changes may be irreversible. The initial and digest revisions' upgrade/downgrade/schema comparison is covered by backend tests.
+The second command runs `alembic upgrade head` using the same image, database and secret as the API. Revision 0002 adds an optional question-specification digest to attempts; revision 0003 adds learner appeals and append-only instructor review decisions. Old attempts are preserved and marked unpinned. For an application update, take and verify a backup, stop API/web writes, build the reviewed version, apply its migrations, and restart the application. Read each migration before applying it to valuable data. A downgrade is not a general data-recovery mechanism; some future changes may be irreversible. The initial, digest, and appeal revisions' upgrade/downgrade/schema comparison is covered by backend tests.
 
 Content is copied into the API image at `/content`. Rebuild when course packages change. Enrollments record their course version; a changed version blocks version-dependent operations until the learner uses the explicit `PUT /api/v1/enrollments/{course_id}/version` action. This updates the enrollment pointer and preserves earlier attempts with their original course version. Do not rewrite published content under an unchanged version to bypass that boundary.
 
@@ -117,4 +119,4 @@ Before public use, address the following concrete limitations of the example:
 - Email verification, password recovery, shared session administration, guest-data retention/cleanup, privacy procedures, monitoring and incident response require implementation or operator policy. Expired guest sessions do not currently clean up their learner records automatically.
 - Concurrent unique-key writes return a safe 409 and need retry; atomic upserts and robust client retry policy remain to be implemented.
 - The production Compose example lacks a full deployment health/readiness and rollback strategy, automated backup scheduling and demonstrated recovery objectives. The root validation report records development checks; it does not certify the public example.
-- Restricted exams, manual grade overrides/appeals, advanced graders, a validated code runner, full-course content gates and human course review remain roadmap work. Public seed practice specifications cannot protect a high-stakes exam.
+- Restricted exams, protected exams, advanced graders, a validated code runner, full-course content gates and human course review remain roadmap work. Public seed practice specifications cannot protect a high-stakes exam.

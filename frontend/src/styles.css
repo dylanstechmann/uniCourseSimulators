@@ -769,6 +769,52 @@ footer {
   --muted: #263c30;
   --line: #819584;
 }
+.appeal-form,
+.review-form {
+  display: grid;
+  gap: 12px;
+  margin-top: 18px;
+}
+.appeal-form textarea,
+.review-form textarea,
+.review-form input[type="number"] {
+  width: 100%;
+}
+.appeal-status {
+  margin-top: 16px;
+  padding: 14px 16px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--wash);
+}
+.instructor-review {
+  display: grid;
+  gap: 18px;
+}
+.instructor-appeal blockquote,
+.submitted-response {
+  margin: 10px 0;
+  padding: 12px 16px;
+  border-left: 3px solid var(--accent);
+  background: var(--wash);
+}
+.review-form fieldset {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding: 14px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+}
+.review-form legend {
+  padding: 0 6px;
+  font-weight: 650;
+}
+.review-form fieldset label {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+}
 @media (max-width: 1260px) {
   .course-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));

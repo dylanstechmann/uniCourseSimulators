@@ -40,6 +40,39 @@ class BookmarkRequest(StrictModel):
     saved: bool
 
 
+class AppealRequest(StrictModel):
+    reason: str = Field(min_length=20, max_length=4000)
+
+    @field_validator("reason")
+    @classmethod
+    def meaningful_reason(cls, value):
+        value = value.strip()
+        if len(value) < 20:
+            raise ValueError("Explain what the grader or rubric may have missed (at least 20 characters)")
+        return value
+
+
+class AppealReviewRequest(StrictModel):
+    decision: Literal["adjusted", "upheld", "declined"]
+    review_note: str = Field(min_length=10, max_length=4000)
+    override_score: float | None = Field(default=None, ge=0)
+
+    @field_validator("review_note")
+    @classmethod
+    def meaningful_review_note(cls, value):
+        value = value.strip()
+        if len(value) < 10:
+            raise ValueError("A review note must explain the decision (at least 10 characters)")
+        return value
+
+    @field_validator("override_score")
+    @classmethod
+    def finite_override_score(cls, value):
+        if value is not None and not math.isfinite(value):
+            raise ValueError("The override score must be finite")
+        return value
+
+
 class AttemptRequest(StrictModel):
     response: str | float | list[int] | dict[str, str] = Field(union_mode="left_to_right")
     unit: str | None = Field(default=None, max_length=100)
@@ -274,6 +307,7 @@ class GradebookResponse(BaseModel):
     score: float = Field(ge=0)
     max_score: float = Field(ge=0)
     attempt_count: int = Field(ge=0)
+    manual_override_count: int = Field(ge=0)
     objective_evidence_policy: ObjectiveEvidencePolicy
     objective_evidence: dict[str, ObjectiveEvidence]
     limitations: str

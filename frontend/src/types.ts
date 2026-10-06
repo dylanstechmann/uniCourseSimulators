@@ -13,6 +13,7 @@ export interface User {
 export interface Session {
   user: User | null;
   csrf_token: string | null;
+  can_review?: boolean;
 }
 export interface CourseSummary {
   id: string;
@@ -182,7 +183,9 @@ export interface Attempt {
     variant_id?: string;
   };
   score: number;
+  effective_score: number;
   max_score: number;
+  appeal: Appeal | null;
   result: {
     score: number;
     max_score: number;
@@ -194,6 +197,29 @@ export interface Attempt {
   objective_ids: string[];
   created_at: string;
 }
+export interface Appeal {
+  id: string;
+  attempt_id: string;
+  course_id: string;
+  question_id: string;
+  reason: string;
+  status: "open" | "adjusted" | "upheld" | "declined";
+  decision: "adjusted" | "upheld" | "declined" | null;
+  review_note: string | null;
+  original_score: number;
+  effective_score: number;
+  max_score: number;
+  created_at: string;
+  reviewed_at: string | null;
+}
+export interface InstructorAppeal extends Appeal {
+  learner: string;
+  content_is_current: boolean;
+  question_prompt: string | null;
+  response: Attempt["response"];
+  automatic_feedback: Attempt["result"];
+  specification_pinned: boolean;
+}
 export interface Gradebook {
   course_id: string;
   assessment_role: "formative";
@@ -201,6 +227,7 @@ export interface Gradebook {
   score: number;
   max_score: number;
   attempt_count: number;
+  manual_override_count: number;
   objective_evidence_policy: {
     version: "practice-evidence-v1";
     minimum_distinct_items: number;

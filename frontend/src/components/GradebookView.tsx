@@ -43,8 +43,8 @@ export function GradebookView({
       <div className="table-scroll">
         <table>
           <caption>
-            Best result per distinct formative question; retries do not count as
-            new items.
+            Best reviewed result per distinct formative question; retries do not
+            count as new items. Automatic scores remain in attempt history.
           </caption>
           <thead>
             <tr>
@@ -131,7 +131,15 @@ export function GradebookView({
                     {attempt.response.unit || ""}
                   </td>
                   <td>
-                    {attempt.score} / {attempt.max_score}
+                    {attempt.effective_score ?? attempt.score} /{" "}
+                    {attempt.max_score}
+                    {attempt.effective_score !== undefined &&
+                    attempt.effective_score !== attempt.score ? (
+                      <small> (manual review; automatic {attempt.score})</small>
+                    ) : null}
+                    {attempt.appeal ? (
+                      <small> Review: {attempt.appeal.status}</small>
+                    ) : null}
                   </td>
                   <td>
                     {attempt.result.feedback.diagnosis.replaceAll("_", " ")}

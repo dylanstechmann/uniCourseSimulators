@@ -9,16 +9,28 @@ from typing import Annotated
 
 from argon2 import PasswordHasher
 from argon2.exceptions import InvalidHashError, VerificationError, VerifyMismatchError
-from fastapi import Depends, FastAPI, HTTPException, Request, Response
+from fastapi import Depends, FastAPI, HTTPException, Query, Request, Response
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
-from sqlalchemy import delete, select
+from sqlalchemy import delete, select, update
 from sqlalchemy.exc import IntegrityError
 from sqlalchemy.orm import Session
 
 from .config import Settings
 from .content import ContentInvalid, ContentMissing, ContentRepository
-from .db import Attempt, Bookmark, Enrollment, Note, Progress, SessionToken, User, database, now
+from .db import (
+    Appeal,
+    AppealReview,
+    Attempt,
+    Bookmark,
+    Enrollment,
+    Note,
+    Progress,
+    SessionToken,
+    User,
+    database,
+    now,
+)
 from .evidence import (
     MIN_DISTINCT_ITEMS,
     MIN_ITEM_COVERAGE,
@@ -28,6 +40,8 @@ from .evidence import (
 )
 from .grading import GradingUnavailable, grade, question_spec_digest
 from .schemas import (
+    AppealRequest,
+    AppealReviewRequest,
     AttemptRequest,
     BookmarkRequest,
     CourseSummary,
@@ -52,6 +66,30 @@ def token_hash(token: str) -> str:
 
 def user_view(user: User) -> dict:
     return {"id": user.id, "email": user.email, "is_guest": user.is_guest}
+
+
+def appeal_view(appeal: Appeal, attempt: Attempt, review: AppealReview | None = None) -> dict:
+    status = review.decision if review else "open"
+    effective_score = (
+        float(review.override_score)
+        if review and review.decision == "adjusted"
+        else float(attempt.score)
+    )
+    return {
+        "id": appeal.id,
+        "attempt_id": attempt.id,
+        "course_id": attempt.course_id,
+        "question_id": attempt.question_id,
+        "reason": appeal.reason,
+        "status": status,
+        "decision": review.decision if review else None,
+        "review_note": review.review_note if review else None,
+        "original_score": float(attempt.score),
+        "effective_score": effective_score,
+        "max_score": float(attempt.max_score),
+        "created_at": timestamp(appeal.created_at),
+        "reviewed_at": timestamp(review.created_at) if review else None,
+    }
 
 
 def timestamp(value) -> str:
@@ -182,7 +220,24 @@ def create_app(settings: Settings | None = None) -> FastAPI:
         db.commit()
         response.set_cookie(COOKIE, raw, httponly=True, secure=settings.cookie_secure,
                             samesite="lax", max_age=hours * 3600, path="/api")
-        return {"user": user_view(user), "csrf_token": csrf}
+        return {
+            "user": user_view(user), "csrf_token": csrf,
+            "can_review": bool(
+                not user.is_guest and user.email and user.email.lower() in settings.instructor_emails
+            ),
+        }
+
+    def require_reviewer(request: Request, db: Session, mutation: bool = False) -> User:
+        identity = require_identity(request, db)
+        user = identity[0]
+        if (
+            user.is_guest or not user.email
+            or user.email.lower() not in settings.instructor_emails
+        ):
+            raise HTTPException(403, "Instructor review access is not enabled for this account")
+        if mutation:
+            require_csrf(request, identity)
+        return user
 
     @app.get("/api/v1/health")
     def health(db: DB):
@@ -194,15 +249,27 @@ def create_app(settings: Settings | None = None) -> FastAPI:
         identity = optional_identity(request, db)
         if not identity:
             response.delete_cookie(COOKIE, path="/api")
-            return {"user": None, "csrf_token": None}
-        return {"user": user_view(identity[0]), "csrf_token": identity[1].csrf_token}
+            return {"user": None, "csrf_token": None, "can_review": False}
+        user = identity[0]
+        return {
+            "user": user_view(user), "csrf_token": identity[1].csrf_token,
+            "can_review": bool(
+                not user.is_guest and user.email and user.email.lower() in settings.instructor_emails
+            ),
+        }
 
     @app.post("/api/v1/auth/guest")
     def guest(request: Request, response: Response, db: DB):
         identity = optional_identity(request, db)
         if identity:
             require_csrf(request, identity)
-            return {"user": user_view(identity[0]), "csrf_token": identity[1].csrf_token}
+            user = identity[0]
+            return {
+                "user": user_view(user), "csrf_token": identity[1].csrf_token,
+                "can_review": bool(
+                    not user.is_guest and user.email and user.email.lower() in settings.instructor_emails
+                ),
+            }
         user = User(is_guest=True)
         db.add(user)
         db.flush()
@@ -386,11 +453,25 @@ def create_app(settings: Settings | None = None) -> FastAPI:
         user, _ = require_identity(request, db)
         return [item.course_id for item in db.scalars(select(Bookmark).where(Bookmark.user_id == user.id))]
 
-    def attempt_view(item: Attempt) -> dict:
-        return {"id": item.id, "course_id": item.course_id, "question_id": item.question_id,
-                "content_version": item.content_version, "response": item.response,
-                "score": item.score, "max_score": item.max_score, "result": item.result,
-                "objective_ids": item.objective_ids, "created_at": timestamp(item.created_at)}
+    def attempt_view(item: Attempt, db: Session) -> dict:
+        appeal = db.scalar(select(Appeal).where(Appeal.attempt_id == item.id))
+        review = (
+            db.scalar(select(AppealReview).where(AppealReview.appeal_id == appeal.id))
+            if appeal else None
+        )
+        effective_score = (
+            float(review.override_score)
+            if review and review.decision == "adjusted"
+            else float(item.score)
+        )
+        return {
+            "id": item.id, "course_id": item.course_id, "question_id": item.question_id,
+            "content_version": item.content_version, "response": item.response,
+            "score": float(item.score), "effective_score": effective_score,
+            "max_score": float(item.max_score), "result": item.result,
+            "objective_ids": item.objective_ids, "created_at": timestamp(item.created_at),
+            "appeal": appeal_view(appeal, item, review) if appeal else None,
+        }
 
     @app.post("/api/v1/courses/{course_id}/questions/{question_id}/attempts", status_code=201)
     def submit(course_id: str, question_id: str, body: AttemptRequest, request: Request, db: DB):
@@ -419,7 +500,123 @@ def create_app(settings: Settings | None = None) -> FastAPI:
                        objective_ids=resolved_question.get("objective_ids", []))
         db.add(item)
         db.commit()
-        return attempt_view(item)
+        return attempt_view(item, db)
+
+    @app.post("/api/v1/attempts/{attempt_id}/appeals", status_code=201)
+    def create_appeal(attempt_id: str, body: AppealRequest, request: Request, db: DB):
+        identity = require_identity(request, db)
+        require_csrf(request, identity)
+        attempt = db.scalar(select(Attempt).where(
+            Attempt.id == attempt_id, Attempt.user_id == identity[0].id
+        ))
+        if not attempt:
+            raise HTTPException(404, "Attempt not found")
+        if db.scalar(select(Appeal).where(Appeal.attempt_id == attempt.id)):
+            raise HTTPException(409, "This attempt already has a human-review request")
+        appeal = Appeal(attempt_id=attempt.id, user_id=identity[0].id, reason=body.reason)
+        db.add(appeal)
+        db.commit()
+        return appeal_view(appeal, attempt)
+
+    @app.get("/api/v1/appeals")
+    def learner_appeals(request: Request, db: DB):
+        user, _ = require_identity(request, db)
+        appeals = db.scalars(
+            select(Appeal).where(Appeal.user_id == user.id).order_by(Appeal.created_at, Appeal.id)
+        )
+        result = []
+        for appeal in appeals:
+            attempt = db.get(Attempt, appeal.attempt_id)
+            review = db.scalar(select(AppealReview).where(AppealReview.appeal_id == appeal.id))
+            if attempt:
+                result.append(appeal_view(appeal, attempt, review))
+        return result
+
+    def instructor_appeal_record(appeal: Appeal, attempt: Attempt, db: Session) -> dict:
+        learner = db.get(User, appeal.user_id)
+        review = db.scalar(select(AppealReview).where(AppealReview.appeal_id == appeal.id))
+        try:
+            manifest = content.manifest(attempt.course_id)
+            content_is_current = manifest["version"] == attempt.content_version
+            question = content.question(attempt.course_id, attempt.question_id) if content_is_current else None
+        except (ContentMissing, ContentInvalid):
+            content_is_current, question = False, None
+        return {
+            **appeal_view(appeal, attempt, review),
+            "learner": learner.email if learner and learner.email else "Guest account",
+            "content_is_current": content_is_current,
+            "question_prompt": question.get("prompt") if question else None,
+            "response": attempt.response,
+            "automatic_feedback": attempt.result,
+            "specification_pinned": bool(attempt.question_spec_sha256),
+        }
+
+    @app.get("/api/v1/instructor/appeals")
+    def instructor_appeals(
+        request: Request, db: DB,
+        status: str = "open",
+        limit: int = Query(default=50, ge=1, le=100),
+    ):
+        reviewer = require_reviewer(request, db)
+        if status not in {"open", "reviewed", "all"}:
+            raise HTTPException(422, "Status must be open, reviewed, or all")
+        statement = select(Appeal).where(Appeal.user_id != reviewer.id).order_by(Appeal.created_at, Appeal.id)
+        if status == "open":
+            statement = statement.where(~select(AppealReview.id).where(
+                AppealReview.appeal_id == Appeal.id
+            ).exists())
+        elif status == "reviewed":
+            statement = statement.where(select(AppealReview.id).where(
+                AppealReview.appeal_id == Appeal.id
+            ).exists())
+        appeals = db.scalars(statement.limit(limit))
+        result = []
+        for appeal in appeals:
+            attempt = db.get(Attempt, appeal.attempt_id)
+            if attempt:
+                result.append(instructor_appeal_record(appeal, attempt, db))
+        return result
+
+    @app.post("/api/v1/instructor/appeals/{appeal_id}/review")
+    def review_appeal(
+        appeal_id: str, body: AppealReviewRequest, request: Request, db: DB
+    ):
+        reviewer = require_reviewer(request, db, mutation=True)
+        appeal = db.get(Appeal, appeal_id)
+        if not appeal:
+            raise HTTPException(404, "Appeal not found")
+        if appeal.user_id == reviewer.id:
+            raise HTTPException(403, "An instructor cannot review their own attempt")
+        if db.scalar(select(AppealReview).where(AppealReview.appeal_id == appeal.id)):
+            raise HTTPException(409, "This appeal already has a recorded review")
+        attempt = db.get(Attempt, appeal.attempt_id)
+        if not attempt:
+            raise HTTPException(404, "Attempt not found")
+        if body.decision == "adjusted":
+            if body.override_score is None or body.override_score > attempt.max_score:
+                raise HTTPException(422, "An adjusted decision needs a score from zero through the attempt maximum")
+        elif body.override_score is not None:
+            raise HTTPException(422, "Only an adjusted decision can change the score")
+        try:
+            current_version = content.manifest(attempt.course_id)["version"]
+        except (ContentMissing, ContentInvalid) as exc:
+            raise HTTPException(409, "The attempt's course package is unavailable for review") from exc
+        if current_version != attempt.content_version and body.decision != "declined":
+            raise HTTPException(
+                409,
+                "The original content version is unavailable; only a decline explaining this limitation can be recorded",
+            )
+        review = AppealReview(
+            appeal_id=appeal.id,
+            reviewer_user_id=reviewer.id,
+            reviewer_email=reviewer.email,
+            decision=body.decision,
+            review_note=body.review_note,
+            override_score=body.override_score,
+        )
+        db.add(review)
+        db.commit()
+        return instructor_appeal_record(appeal, attempt, db)
 
     @app.get("/api/v1/attempts")
     def attempts(request: Request, db: DB, course_id: str | None = None):
@@ -427,7 +624,7 @@ def create_app(settings: Settings | None = None) -> FastAPI:
         query = select(Attempt).where(Attempt.user_id == user.id).order_by(Attempt.created_at, Attempt.id)
         if course_id:
             query = query.where(Attempt.course_id == course_id)
-        return [attempt_view(item) for item in db.scalars(query)]
+        return [attempt_view(item, db) for item in db.scalars(query)]
 
     @app.get("/api/v1/gradebook/{course_id}", response_model=GradebookResponse)
     def gradebook(course_id: str, request: Request, db: DB):
@@ -446,17 +643,32 @@ def create_app(settings: Settings | None = None) -> FastAPI:
             )
         )
         best = {}
+        score_overrides = {}
+        reviewed = db.execute(
+            select(Appeal.attempt_id, AppealReview.override_score)
+            .join(AppealReview, AppealReview.appeal_id == Appeal.id)
+            .join(Attempt, Attempt.id == Appeal.attempt_id)
+            .where(
+                Attempt.user_id == user.id,
+                Attempt.course_id == course_id,
+                Attempt.content_version == enrollment.content_version,
+                AppealReview.decision == "adjusted",
+            )
+        )
+        score_overrides = {attempt_id: float(score) for attempt_id, score in reviewed}
         for item in rows:
-            best[item.question_id] = max(best.get(item.question_id, 0), item.score)
-        return {"course_id": course_id, "assessment_role": "formative", "aggregation": "best practice result per question",
+            effective_score = score_overrides.get(item.id, float(item.score))
+            best[item.question_id] = max(best.get(item.question_id, 0), effective_score)
+        return {"course_id": course_id, "assessment_role": "formative", "aggregation": "best reviewed practice result per question",
                 "score": sum(best.values()), "max_score": sum(float(item.get("points", 1)) for item in questions),
                 "attempt_count": len(rows),
+                "manual_override_count": len(score_overrides),
                 "objective_evidence_policy": {"version": POLICY_VERSION,
                     "minimum_distinct_items": MIN_DISTINCT_ITEMS,
                     "minimum_item_coverage": MIN_ITEM_COVERAGE,
                     "minimum_performance": MIN_PERFORMANCE},
-                "objective_evidence": objective_evidence(questions, rows),
-                "limitations": "The provisional practice indicator requires at least 3 distinct tagged items, 80% of available tagged-item coverage, and 80% best points on attempted items. It is a study signal from short formative checks; it does not establish reasoning, transfer, course mastery, credit, or course completion."}
+                "objective_evidence": objective_evidence(questions, rows, score_overrides),
+                "limitations": "The provisional practice indicator requires at least 3 distinct tagged items, 80% of available tagged-item coverage, and 80% best points on attempted items. Instructor adjustments are audited separately from automatic scores. This remains a study signal from short formative checks; it does not establish reasoning, transfer, course mastery, credit, or course completion."}
 
     @app.get("/api/v1/learner/export")
     def export(request: Request, db: DB):
@@ -464,7 +676,12 @@ def create_app(settings: Settings | None = None) -> FastAPI:
         return {"schema_version": "1.0", "exported_at": timestamp(now()), "user": user_view(user),
                 "enrollments": [{"course_id": item.course_id, "content_version": item.content_version}
                                 for item in db.scalars(select(Enrollment).where(Enrollment.user_id == user.id))],
-                "attempts": [attempt_view(item) for item in db.scalars(select(Attempt).where(Attempt.user_id == user.id))],
+                "attempts": [attempt_view(item, db) for item in db.scalars(select(Attempt).where(Attempt.user_id == user.id))],
+                "appeals": [appeal_view(
+                    appeal, db.get(Attempt, appeal.attempt_id),
+                    db.scalar(select(AppealReview).where(AppealReview.appeal_id == appeal.id)),
+                ) for appeal in db.scalars(select(Appeal).where(Appeal.user_id == user.id))
+                    if db.get(Attempt, appeal.attempt_id)],
                 "progress": [{"course_id": item.course_id, "lesson_id": item.lesson_id, "completed": item.completed}
                              for item in db.scalars(select(Progress).where(Progress.user_id == user.id))],
                 "notes": [{"course_id": item.course_id, "lesson_id": item.lesson_id, "body": item.body}
@@ -476,6 +693,12 @@ def create_app(settings: Settings | None = None) -> FastAPI:
         identity = require_identity(request, db)
         require_csrf(request, identity)
         # Explicit child deletion also protects SQLite test deployments.
+        appeal_ids = select(Appeal.id).where(Appeal.user_id == identity[0].id)
+        db.execute(delete(AppealReview).where(AppealReview.appeal_id.in_(appeal_ids)))
+        db.execute(delete(Appeal).where(Appeal.user_id == identity[0].id))
+        db.execute(update(AppealReview).where(
+            AppealReview.reviewer_user_id == identity[0].id
+        ).values(reviewer_user_id=None, reviewer_email="deleted instructor account"))
         for model in (SessionToken, Attempt, Bookmark, Note, Progress, Enrollment):
             db.execute(delete(model).where(model.user_id == identity[0].id))
         db.delete(identity[0])

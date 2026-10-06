@@ -87,6 +87,8 @@ const attempt: Attempt = {
   content_version: "0.1",
   response: { response: "80", unit: "µmol/min" },
   score: 1,
+  effective_score: 1,
+  appeal: null,
   max_score: 1,
   result: {
     score: 1,
@@ -296,6 +298,7 @@ describe("formative assessment submission", () => {
       question_id: multipleQuestion.id,
       response: { response: [0, 1] },
       score: 2,
+      effective_score: 2,
       max_score: 3,
       result: {
         ...attempt.result,
@@ -339,5 +342,66 @@ describe("formative assessment submission", () => {
       screen.getByRole("button", { name: "Submit practice response" }),
     );
     expect(submit).toHaveBeenCalledWith(0, undefined, "signed-variant-token");
+  });
+
+  it("sends a reasoned human-review request without changing the automatic attempt", async () => {
+    const failedAttempt: Attempt = {
+      ...attempt,
+      score: 0,
+      effective_score: 0,
+      result: {
+        ...attempt.result,
+        score: 0,
+        correct: false,
+        feedback: {
+          ...attempt.result.feedback,
+          diagnosis: "numerical_mismatch",
+        },
+      },
+    };
+    const appeal = {
+      id: "appeal-1",
+      attempt_id: failedAttempt.id,
+      course_id: failedAttempt.course_id,
+      question_id: failedAttempt.question_id,
+      reason: "The alternate value is supported by the stated model.",
+      status: "open" as const,
+      decision: null,
+      review_note: null,
+      original_score: 0,
+      effective_score: 0,
+      max_score: 1,
+      created_at: "2026-10-05T12:05:00Z",
+      reviewed_at: null,
+    };
+    const submit = vi.fn().mockResolvedValue(failedAttempt);
+    const requestReview = vi.fn().mockResolvedValue(appeal);
+    render(
+      <Assessment
+        question={numericQuestion}
+        enabled
+        onSubmit={submit}
+        onAppeal={requestReview}
+      />,
+    );
+    await userEvent.type(screen.getByLabelText("Numerical value"), "79");
+    await userEvent.type(screen.getByLabelText("Unit"), "µmol/min");
+    await userEvent.click(
+      screen.getByRole("button", { name: "Submit practice response" }),
+    );
+    await userEvent.type(
+      screen.getByLabelText("Reason for review"),
+      appeal.reason,
+    );
+    await userEvent.click(
+      screen.getByRole("button", { name: "Send for human review" }),
+    );
+    expect(requestReview).toHaveBeenCalledWith(failedAttempt.id, appeal.reason);
+    expect(
+      await screen.findByRole("heading", { name: "Human review · open" }),
+    ).toBeInTheDocument();
+    expect(
+      screen.getByRole("heading", { name: "0 / 1 practice points" }),
+    ).toBeInTheDocument();
   });
 });
