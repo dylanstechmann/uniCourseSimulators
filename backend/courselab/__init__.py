@@ -1,1 +1,1 @@
-"""Lattice CourseLab server. Content and learners remain separate boundaries."""
+"""uniStemCourseSimulators server. Content and learners remain separate boundaries."""

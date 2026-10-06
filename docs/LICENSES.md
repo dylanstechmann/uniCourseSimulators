@@ -1,7 +1,6 @@
 # Licensing decisions
 
-The existing software [MIT License](../LICENSE) remains unchanged. Lattice
-CourseLab separates educational content from software so source obligations
+The existing software [MIT License](../LICENSE) remains unchanged. uniStemCourseSimulators separates educational content from software so source obligations
 are visible when course packages grow.
 
 ## Original content
@@ -31,7 +30,7 @@ equivalency claim.
 Applicable OCW material may permit adaptation under its current CC BY-NC-SA
 4.0 terms. Any future approved adaptation stays under that license and includes
 complete attribution, a license link, and an account of modifications. It
-cannot be relabeled as CourseLab CC BY 4.0 content. All-rights-reserved or
+cannot be relabeled as uniStemCourseSimulators CC BY 4.0 content. All-rights-reserved or
 excluded assets are not imported. Asset-level review also identifies special
 third-party notices that must be preserved.
 

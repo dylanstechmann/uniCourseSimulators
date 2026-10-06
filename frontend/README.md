@@ -1,4 +1,4 @@
-# Lattice CourseLab frontend
+# uniStemCourseSimulators frontend
 
 React and TypeScript render public course metadata and Markdown returned by
 the FastAPI API. Course packages and private answer specifications are never

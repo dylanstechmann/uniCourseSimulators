@@ -71,7 +71,7 @@ export function AccountPanel({
       );
       const link = document.createElement("a");
       link.href = url;
-      link.download = "lattice-courselab-learner-data.json";
+      link.download = "uni-stem-course-simulators-learner-data.json";
       link.click();
       URL.revokeObjectURL(url);
       setMessage("Learner data exported. Keep the downloaded file private.");

@@ -1,4 +1,4 @@
-name: lattice-courselab
+name: uni-stem-course-simulators
 
 x-api: &api
   build:

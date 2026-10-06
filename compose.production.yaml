@@ -1,5 +1,5 @@
 # Example; complete an operator security/deployment review before public use.
-name: lattice-courselab-production
+name: uni-stem-course-simulators-production
 x-api: &api
   build:
     context: .

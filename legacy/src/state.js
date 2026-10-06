@@ -1,6 +1,7 @@
-export const STORAGE_KEY = "lattice-courselab:guest:v2";
-const PREVIOUS_KEY = "lattice-academy:v1"; // Read-only compatibility for existing learner data.
-export const BACKUP_KEY = "lattice-courselab:guest:pre-migration-backup";
+export const STORAGE_KEY = "uni-stem-course-simulators:guest:v3";
+// Read-only compatibility identifiers for both previous product names.
+const PREVIOUS_KEYS = ["lattice-courselab:guest:v2", "lattice-academy:v1"];
+export const BACKUP_KEY = "uni-stem-course-simulators:guest:pre-migration-backup";
 
 export const freshState = () => ({ completed: {}, visited: {}, answers: {}, notes: {}, capstoneDrafts: {}, rubricChecks: {}, cardSchedule: {}, bookmarks: [], lastCourseId: "cell-biology" });
 const record = (value) => value && typeof value === "object" && !Array.isArray(value);
@@ -25,12 +26,21 @@ export function loadGuestState(storage) {
   try {
     const current = storage.getItem(STORAGE_KEY);
     if (current !== null) return sanitizeState(JSON.parse(current));
-    const previous = storage.getItem(PREVIOUS_KEY);
-    if (previous === null) return freshState();
-    const migrated = sanitizeState(JSON.parse(previous));
-    storage.setItem(BACKUP_KEY, previous);
-    storage.setItem(STORAGE_KEY, JSON.stringify(migrated));
-    storage.setItem(`${STORAGE_KEY}:migration`, JSON.stringify({ version: 2, importedAt: new Date().toISOString(), trust: "unverified browser practice" }));
-    return migrated;
+    for (const sourceKey of PREVIOUS_KEYS) {
+      const previous = storage.getItem(sourceKey);
+      if (previous === null) continue;
+      let parsed;
+      try { parsed = JSON.parse(previous); } catch { continue; }
+      if (!record(parsed)) continue;
+      const migrated = sanitizeState(parsed);
+      // Do not overwrite retained backups or delete previous notebooks.
+      try {
+        if (storage.getItem(BACKUP_KEY) === null) storage.setItem(BACKUP_KEY, previous);
+        storage.setItem(STORAGE_KEY, JSON.stringify(migrated));
+        storage.setItem(`${STORAGE_KEY}:migration`, JSON.stringify({ version: 3, sourceKey, importedAt: new Date().toISOString(), trust: "unverified browser practice" }));
+      } catch { /* A full/read-only store must not hide a readable previous notebook. */ }
+      return migrated;
+    }
+    return freshState();
   } catch { return freshState(); }
 }

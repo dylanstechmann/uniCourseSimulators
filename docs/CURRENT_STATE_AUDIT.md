@@ -7,7 +7,8 @@ Audit date: 2026-10-05. Baseline: local commit `2669929`; remote previously popu
 The unchanged site was started using the shared workspace development container:
 
 ```sh
-docker compose run --rm -d -p 127.0.0.1:4173:4173 --name courselab-baseline dev python3 -m http.server 4173 --bind 0.0.0.0 --directory /workspace/lattice-biomed-academy
+# Historical command; replace <checkout> with the actual folder name.
+docker compose run --rm -d -p 127.0.0.1:4173:4173 --name courselab-baseline dev python3 -m http.server 4173 --bind 0.0.0.0 --directory /workspace/<checkout>
 ```
 
 Browser review showed 25 catalog entries, 100 short lessons, four suggested paths, 200 cards, and six equation calculators. Opening the first cell-biology lesson and selecting its correct option immediately changed progress to 1/4 and displayed the solution. A validation-only note and result persisted after reload on the separate `localhost:4173` test origin. No console warnings or errors appeared in that flow. There is no enrollment, login, server, gradebook, attempt timeline, or formal exam mode. The “Case studio” is saved prose with a learner checklist, not an autograded exam.
@@ -43,7 +44,7 @@ The 100 notes total about 6,565 words (median 66 words per lesson); cell-biology
 
 ## Migration risks and decisions
 
-Retain course/module identifiers and preserve source teaching text. Introduce validated manifests and Markdown packages before replacing the reader. Label all migrated material partial and keep an explicit limitations list. Copy valid old guest state to a versioned CourseLab key with a retained local backup; imported client scores remain formative. Keep legacy assets outside the production frontend root after React migration. Validate source registry entries and separate software/content licenses before adapting third-party assets. Keep guest/auth data and answer specifications server-side, apply ownership checks, and use migrations for durable records. A code-runner interface may be disabled until a separately isolated worker meets the requested resource and network constraints.
+Retain course/module identifiers and preserve source teaching text. Introduce validated manifests and Markdown packages before replacing the reader. Label all migrated material partial and keep an explicit limitations list. Copy valid old guest state to a versioned uniStemCourseSimulators key with a retained local backup; imported client scores remain formative. Keep legacy assets outside the production frontend root after React migration. Validate source registry entries and separate software/content licenses before adapting third-party assets. Keep guest/auth data and answer specifications server-side, apply ownership checks, and use migrations for durable records. A code-runner interface may be disabled until a separately isolated worker meets the requested resource and network constraints.
 
 ## Validation boundary
 

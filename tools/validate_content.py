@@ -1508,7 +1508,7 @@ def validate_repository(
             try:
                 request = Request(
                     source["url"],
-                    headers={"User-Agent": "Lattice-CourseLab-content-validation/1.0"},
+                    headers={"User-Agent": "uniStemCourseSimulators-content-validation/1.0"},
                 )
                 with urlopen(request, timeout=12) as response:
                     if response.status >= 400:

@@ -1,4 +1,4 @@
-# Contributing to Lattice CourseLab
+# Contributing to uniStemCourseSimulators
 
 Start with the audit and roadmap. Keep commits focused on one milestone. Preserve identifiers and working content during migration. Every package must state its maturity and limitations honestly; lesson counts alone cannot substantiate completeness.
 

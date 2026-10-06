@@ -4,7 +4,7 @@
 
 # Curriculum alignment and quality guide
 
-**Review basis:** official MIT OpenCourseWare syllabi and course-resource pages accessed October 5, 2026. Links point to source course pages; Lattice does not reproduce their lecture text, problem statements, or solution keys.
+**Review basis:** official MIT OpenCourseWare syllabi and course-resource pages accessed October 5, 2026. Links point to source course pages; uniStemCourseSimulators does not reproduce their lecture text, problem statements, or solution keys.
 
 ## Design standard
 
@@ -21,7 +21,7 @@ Quality checks used when authoring the release:
 
 ## Course-to-source map
 
-| Lattice course | OCW comparator | Coverage relationship |
+| uniStemCourseSimulators course | OCW comparator | Coverage relationship |
 | --- | --- | --- |
 | Foundations of Cell & Molecular Biology | [7.01SC Fundamentals of Biology](https://ocw.mit.edu/courses/7-01sc-fundamentals-of-biology-fall-2011/); [7.28x Molecular Biology](https://ocw.mit.edu/courses/res-7-008-7-28x-molecular-biology/) | Macromolecules, energetics, information flow, genetics, molecular methods, and experimental reasoning. |
 | Genetics & Genomics | [7.28x Molecular Biology](https://ocw.mit.edu/courses/res-7-008-7-28x-molecular-biology/) | Replication, regulation, experimental design, genomic association, and limits of causal variant inference. |
@@ -51,4 +51,4 @@ Quality checks used when authoring the release:
 
 The catalog intentionally spans all requested prerequisite areas, but its four units per course are a compact launch core. Before calling any course a full semester replacement, expand it with a week-by-week syllabus, multiple problem-set items per objective, lab/data exercises, cumulative exams, and feedback from subject-matter instructors. The advanced geroscience, physiology, and tissue-culture sequences need especially careful specialist review because direct OCW comparators are broader or adjacent rather than one-to-one matches.
 
-The MIT OCW courses above commonly include multiple lectures, problem sets, exams, and/or projects. Lattice provides immediate feedback for its own practice items and points learners to the source courses for further depth; its local score is formative and is not an MIT score, institutional grade, or credit award.
+The MIT OCW courses above commonly include multiple lectures, problem sets, exams, and/or projects. uniStemCourseSimulators provides immediate feedback for its own practice items and points learners to the source courses for further depth; its local score is formative and is not an MIT score, institutional grade, or credit award.

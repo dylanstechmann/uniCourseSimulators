@@ -84,7 +84,7 @@ function render() {
       ${renderSidebar()}
       <div class="main-shell">
         <header class="topbar">
-          <div class="crumbs">LATTICE <span aria-hidden="true">/</span> <strong>${esc(activePageName())}</strong></div>
+          <div class="crumbs">uniStemCourseSimulators <span aria-hidden="true">/</span> <strong>${esc(activePageName())}</strong></div>
           <div class="topbar-actions">
             <label class="search-shell"><input class="search-input" id="global-search" value="${esc(query)}" aria-label="Search courses" placeholder="Search courses · press Enter" /></label>
             <div class="topbar-meta"><span class="online-dot" aria-hidden="true"></span> LOCAL WORKSPACE</div>
@@ -105,9 +105,9 @@ function renderSidebar() {
     ["study", "✳", "Study room"], ["tools", "⌘", "Lab tools"],
   ];
   return `<aside class="sidebar" aria-label="Main navigation">
-    <a class="brand" href="#home" aria-label="Lattice CourseLab home">
+    <a class="brand" href="#home" aria-label="uniStemCourseSimulators home">
       <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none"><path d="M5 7h4v14h7v4H5zm13 0h4v6h6v4h-6v8h-4z" fill="currentColor"/><circle cx="27" cy="7" r="2.5" fill="#b6d978"/></svg></span>
-      <span class="brand-wordmark"><span class="brand-name">Lattice CourseLab</span><span class="brand-sub">Interactive course studio</span></span>
+      <span class="brand-wordmark"><span class="brand-name">uniStemCourseSimulators</span><span class="brand-sub">Interactive course studio</span></span>
     </a>
     <div class="nav-label">Workspace</div>
     <nav class="primary-nav">
@@ -156,7 +156,7 @@ function renderHome() {
   const started = courses.filter((item) => item.modules.some((unit) => state.visited[unit.id] || state.completed[unit.id]));
   const suggestions = (started.length ? started : courses.filter((item) => ["cell-biology", "general-chemistry-1", "calculus-1"].includes(item.id))).slice(0, 3);
   const cards = dueCards().length;
-  return `<section class="welcome-line"><div class="welcome-copy"><div class="eyebrow">A connected course studio</div><h1>Lattice CourseLab</h1><p>Interactive, source-grounded courses across science, mathematics, engineering, computing, and biomedicine.</p></div><div class="date-chip"><span aria-hidden="true">◷</span> SELF-PACED · PARTIAL CONTENT</div></section>
+  return `<section class="welcome-line"><div class="welcome-copy"><div class="eyebrow">A connected course studio</div><h1>uniStemCourseSimulators</h1><p>Interactive, source-grounded courses across science, mathematics, engineering, computing, and biomedicine.</p></div><div class="date-chip"><span aria-hidden="true">◷</span> SELF-PACED · PARTIAL CONTENT</div></section>
     <section class="hero-card"><div class="hero-copy"><div class="hero-kicker">A better way to connect the disciplines</div><h2>Start with the fundamentals.<br/>Follow the question further.</h2><p>Preserved lesson seeds, worked examples, practice checks, and study tools. Every current package is partial; none meets the full-course standard yet.</p><div class="hero-actions"><button class="button button-primary" data-page="catalog">Explore all ${courses.length} courses <span aria-hidden="true">→</span></button><button class="hero-link" data-page="pathways">View learning paths</button></div></div><div class="hero-art">${renderHeroArt()}</div></section>
     <section class="metric-row" aria-label="Learning progress">
       <div class="metric-card"><div class="metric-label">Practice checks passed</div><div class="metric-number">${Object.keys(state.completed).length}<span>/ ${totalUnits}</span></div></div>

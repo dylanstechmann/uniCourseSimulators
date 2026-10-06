@@ -4,7 +4,33 @@
 
 2026-10-05; synthetic local learner data only. Milestones 1 and 2 are implemented. Milestone 3 remains in progress; the deterministic grading increments are described below. A Milestone 4 curriculum-map increment is implemented and tested, while subject-matter review and map refinement remain. All 25 course packages are **partial**; zero are beta, complete or externally reviewed. The appeal workflow provides individual formative-score review, but no qualified course-content review, semester equivalence, university credit, security certification or public production deployment is asserted.
 
-## Current increment: practice-v10 fixed-axis graph-coordinate practice
+## Current increment: product rename and progress review
+
+The product and public GitHub repository are now **uniStemCourseSimulators**. UI, metadata, API title, normalized package names, schema namespaces, exported filename and documentation use the new identity. Existing browser notebooks are sanitized into a v3 key with retained old keys/backups; migration write failures keep readable prior data available in memory. The existing local Compose project identity is pinned in an untracked `.env` to preserve both database and credential volumes. Technical Python/database/session/configuration identifiers remain stable. No course maturity changed.
+
+[PROGRESS_REVIEW.md](PROGRESS_REVIEW.md) assesses the six milestones against actual code/content. [ROADMAP.md](ROADMAP.md) now prioritizes reviewer identity, saved-variant/digest reconstruction, semester assessment workflows and substantive biology instruction. The review found unresolved instructor impersonation and appeal fidelity defects; passing existing tests does not resolve them. Public instructor access must remain disabled. The biology syllabus was corrected to its actual version 0.3.2 and seven-question inventory.
+
+Local checks ran through the workspace `dev` container (Python 3.11 and Node 24); Compose uses Python 3.12. Commands inside the development container used `/tmp/uni-review/bin/python` and `/tmp/uni-review/bin/ruff` from a temporary environment installed from both requirement files. All current tests passed: **285 total**—195 backend, 52 root content/security checks, 22 Vitest, 9 Playwright and 7 legacy migration tests. The root suite had no skipped tests because SymPy was present. Its warnings include the upstream Starlette/httpx test-client deprecation. A final targeted catalog check verifies the renamed title and accessible brand.
+
+| Command/check | Result |
+| --- | --- |
+| `python tools/validate_content.py` | PASS: 25 packages, 101 lessons, 106 questions, 203 cards, 25 cases; zero errors, 125 disclosed depth/objective warnings |
+| `python -m pytest tests -q` | 52 passed |
+| `cd backend; python -m pytest -q` | 195 passed |
+| `python -m courselab.check_content ../content` | PASS: 25 packages / 108 supported specifications |
+| `npm run test:legacy` | 7 passed, including both previous keys, precedence, retained backups, malformed prior values and denied writes |
+| `ruff check backend tools tests` | PASS |
+| Frontend `npm run lint`, `npm test`, `npm run build` | PASS; 22 unit tests, TypeScript/Vite build of 203 modules |
+| `python tools/check_security.py --bundle frontend/dist` | PASS: source/bundle scan, zero findings; public DTO exclusions also exercised by E2E |
+| `docker compose up --build -d --wait --wait-timeout 180` | PASS: PostgreSQL/API/web healthy; credential/migration services exit 0; Alembic `0003 (head)` |
+| `E2E_BASE_URL=http://host.docker.internal:8080 npm run test:e2e` | 9 passed against the complete Compose application; enrollment, reading, submissions, partial credit, feedback, notes/progress, upgrade/export/delete, appeal and reload persistence |
+| Development and production Compose configuration | PASS; fresh development default resolves to `uni-stem-course-simulators`; production checked with validation-only domain/secret placeholders |
+
+The initial container frontend test launch encountered a Windows-installed Rollup optional dependency. `npm ci` inside the Linux development container repaired the environment without changing dependency versions; tests/build then passed. Playwright Chromium and its Linux dependencies were installed inside that development container. Its bridge URL was temporarily allowed as a mutation origin and the existing synthetic reviewer was temporarily allowlisted for the local appeal test. After testing, the API was restored to its default localhost origins and empty instructor allowlist. Only loopback web access is published.
+
+Data continuity was checked immediately before and after container recreation, before E2E added synthetic records: 77 users, 77 enrollments, 84 attempts and 6 progress records were unchanged. No volume was removed or copied, no live database password rotated, and no learner record was rewritten for branding. The untracked environment pin contains only the existing project identity. Source scanning is a bounded automated check, not a penetration test or proof against every possible secret. Live-source probes and dependency audits were not repeated for this identity-only increment; the previously recorded JHU HTTP 403 probe limitations remain unresolved. No public HTTPS deployment or external academic review is asserted.
+
+## Previous increment: practice-v10 fixed-axis graph-coordinate practice
 
 The deterministic graph grader awards separate partial credit for learner-entered x and y coordinates. The statistics practice lesson supplies bounded axes, labeled points, and replicate data; learners calculate group means, enter each coordinate, and receive a live SVG preview plus a screen-reader-readable source table. Expected coordinates, tolerances and criterion evidence remain server-side. The authoring validator independently recalculates each plotted mean and checks source-coordinate mapping. This narrow profile does not grade graph choice, axis selection, uncertainty bars, interpolation, model fit, or interpretation.
 
@@ -108,7 +134,7 @@ docker compose exec -T api python -c "import urllib.request; print(urllib.reques
 | Source/bundle boundary scan | 362 files; 0 findings, including the production JavaScript bundle |
 | Docker Compose/PostgreSQL | Services healthy; migration `0002 (head)`; health status `ok`; local origins only |
 | Production Compose configuration | Valid with synthetic hostname, non-secret path, and validation-only token key |
-| GitHub Actions | PASS for objective-evidence commit `b699162`; [workflow run](https://github.com/dylanstechmann/uniCourseSimulators/actions/runs/37376974796). |
+| GitHub Actions | PASS for objective-evidence commit `b699162`; [workflow run](https://github.com/dylanstechmann/uniStemCourseSimulators/actions/runs/37376974796). |
 
 The migration test confirms preexisting attempts survive with no invented specification digest. Numeric grader tests recalculate conversion and absolute/relative-tolerance boundaries for rates, compound concentration/time units, lengths, acceleration, percentages and derived units; they also check significant-figure counts across decimal/exponent notation and integer trailing zeros, a 12-figure upper bound, invalid policies, negative/zero answers, dimensions, exact-label contextual units, unknown/affine units, malformed/incompatible units, alternate micro symbols, exponent bounds, and SI case distinctions. The deployed-content integration check grades all 101 published practice specifications and verifies learner DTOs omit solution data. An API test confirms precision metadata is public while answer specifications remain private, and that an in-tolerance answer with excess precision receives a specific diagnostic. A version-upgrade API test verifies old attempts remain in history, are excluded from the new-version aggregate, and only current-version work contributes to that gradebook. For browser tests, the workspace container joined the app network and temporarily added `http://web` to its allowed-origin list; the application was then recreated with only documented localhost origins. The end-to-end flow persisted guest enrollment, lesson practice, feedback, notes and progress and verified that public lesson DTOs omit answer specifications. These checks do not amount to a penetration test or prove code-execution isolation; the arbitrary-code runner and LLM feedback providers remain disabled.
 
@@ -192,7 +218,7 @@ docker compose restart db api
 docker compose up --build -d --wait --wait-timeout 180
 ```
 
-Default Compose started with newly initialized CourseLab volumes and no manually supplied password. Credential initialization and Alembic exited 0; migration is `0001 (head)`. PostgreSQL/API/web became healthy. Build-time content validation passed. HTTP health reported `status: ok` and disabled programming/LLM capabilities. Only nginx localhost:8080 is published; database/API ports remain internal.
+Default Compose started with newly initialized named volumes under the then-current project identity and no manually supplied password. Credential initialization and Alembic exited 0; migration is `0001 (head)`. PostgreSQL/API/web became healthy. Build-time content validation passed. HTTP health reported `status: ok` and disabled programming/LLM capabilities. Only nginx localhost:8080 is published; database/API ports remain internal.
 
 A separate browser check enrolled a guest in biology, submitted the correct first choice and received 1/1 practice points with reasoning explicitly unassessed. Saved a synthetic note and marked a lesson read. After PostgreSQL/API restart and API recreation, reload retained note, read mark, enrollment and feedback. The gradebook retained 1/4 available practice points and the saved attempt/version/time. No browser console errors appeared. This checks database persistence beyond browser storage.
 

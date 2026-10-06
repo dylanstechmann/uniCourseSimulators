@@ -99,7 +99,7 @@ def timestamp(value) -> str:
 
 def create_app(settings: Settings | None = None) -> FastAPI:
     settings = settings or Settings.from_environment()
-    app = FastAPI(title="Lattice CourseLab API", version="0.2.0", docs_url=None, redoc_url=None)
+    app = FastAPI(title="uniStemCourseSimulators API", version="0.2.0", docs_url=None, redoc_url=None)
     engine, session_factory = database(settings.database_url)
     content = ContentRepository(settings.content_root)
     app.state.engine = engine

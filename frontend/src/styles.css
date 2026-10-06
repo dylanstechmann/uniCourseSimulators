@@ -202,6 +202,10 @@ ol {
   border-radius: 10px;
   font-size: 26px;
 }
+.brand > span:last-child {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
 .brand-sub {
   display: block;
   color: var(--muted);

@@ -27,7 +27,7 @@ Catalog-only science topics add physical and analytical chemistry; molecular and
 
 ## Johns Hopkins topic alignment
 
-The JHU regenerative/stem-cell map includes organic chemistry, biochemistry, molecular biology, and cell biology as foundational topics. Its advanced topic list includes developmental biology, gene therapy, regenerative medicine, bioethics, stem-cell biology, tissue-engineered systems for drug discovery, biotherapeutic manufacturing, and cell-culture/stem-cell laboratory concepts. The map cites public catalog pages in `content/sources/registry.json` and documents link-only use there. No Johns Hopkins instructional text or assessment has been copied; CourseLab makes no affiliation, admission, equivalency, or credit claim. See [curriculum reference notes](CURRICULUM_REFERENCE_NOTES.md).
+The JHU regenerative/stem-cell map includes organic chemistry, biochemistry, molecular biology, and cell biology as foundational topics. Its advanced topic list includes developmental biology, gene therapy, regenerative medicine, bioethics, stem-cell biology, tissue-engineered systems for drug discovery, biotherapeutic manufacturing, and cell-culture/stem-cell laboratory concepts. The map cites public catalog pages in `content/sources/registry.json` and documents link-only use there. No Johns Hopkins instructional text or assessment has been copied; uniStemCourseSimulators makes no affiliation, admission, equivalency, or credit claim. See [curriculum reference notes](CURRICULUM_REFERENCE_NOTES.md).
 
 ## Validation
 

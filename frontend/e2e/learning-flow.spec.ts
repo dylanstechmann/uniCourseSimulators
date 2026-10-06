@@ -5,6 +5,13 @@ test("catalog communicates maturity and has no automated accessibility violation
   page,
 }) => {
   await page.goto("/");
+  await expect(page).toHaveTitle("uniStemCourseSimulators");
+  await expect(
+    page.getByRole("link", {
+      name: "uniStemCourseSimulators Think · Model · Practice",
+      exact: true,
+    }),
+  ).toBeVisible();
   await expect(
     page.getByRole("heading", { name: "Course catalog", exact: true }),
   ).toBeVisible();
@@ -191,7 +198,7 @@ test("guest enrollment, feedback, notes, progress, account upgrade and deletion 
   const downloadPromise = page.waitForEvent("download");
   await page.getByRole("button", { name: "Export learner data" }).click();
   expect((await downloadPromise).suggestedFilename()).toBe(
-    "lattice-courselab-learner-data.json",
+    "uni-stem-course-simulators-learner-data.json",
   );
   await expect(
     page.getByRole("button", { name: "Delete account and saved data" }),

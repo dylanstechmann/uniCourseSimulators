@@ -1,9 +1,9 @@
 # Sources and licensing boundaries
 
-Lattice CourseLab uses public university materials as curriculum comparators.
+uniStemCourseSimulators uses public university materials as curriculum comparators.
 The initial registry imports **no external instructional text, question,
 answer key, figure, video, dataset, or other asset**. Links and course titles
-are references, not evidence that a CourseLab course has equivalent depth.
+are references, not evidence that a uniStemCourseSimulators course has equivalent depth.
 
 The machine-readable registry is [sources/registry.json](sources/registry.json).
 It preserves the prototype's 22 MIT reference IDs and adds three Johns
@@ -17,7 +17,7 @@ or every outbound link on a source page has been checked.
 | Material | License or project handling |
 | --- | --- |
 | Original software and implementation documentation | Existing [MIT License](../LICENSE); unchanged |
-| New original CourseLab educational content | [CC BY 4.0](../LICENSE-CONTENT), unless specifically marked otherwise |
+| New original uniStemCourseSimulators educational content | [CC BY 4.0](../LICENSE-CONTENT), unless specifically marked otherwise |
 | Preserved prototype educational content previously distributed under MIT | Historical MIT permissions retained; additionally offered under CC BY 4.0 |
 | Future approved adaptations of applicable OCW material | CC BY-NC-SA 4.0 with source, faculty author, asset, license, and modification attribution |
 | All-rights-reserved or license-excluded source assets | No import, adaptation, or redistribution under this project's content policy |
@@ -50,7 +50,7 @@ The current [MIT OCW terms](https://ocw.mit.edu/pages/privacy-and-terms-of-use/)
 identify CC BY-NC-SA 4.0 for applicable material, with attribution, license
 links, modification identification, noncommercial use, and ShareAlike
 requirements. Their displayed revision date is 08/11/2026. No use of MIT names
-or marks may imply endorsement; product branding is Lattice CourseLab.
+or marks may imply endorsement; product branding is uniStemCourseSimulators.
 
 Before any future adaptation, inspect the exact asset and its credit lines.
 The [OCW attribution guidance](https://mitocw.zendesk.com/hc/en-us/articles/4414774195355-How-do-I-properly-cite-my-reuse-of-OCW-content)

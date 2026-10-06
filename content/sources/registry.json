@@ -730,7 +730,7 @@
         "Identify Johns Hopkins University, the source page title, URL, and access date when documenting the curriculum comparator.",
         "Write original explanations and assessments. Do not imply affiliation, endorsement, admission eligibility, transferable credit, or prerequisite equivalency."
       ],
-      "third_party_notes": "The four public prerequisite subject areas are recorded as knowledge-map references. CourseLab completion is not evidence of admissions eligibility or institutional prerequisite equivalency.",
+      "third_party_notes": "The four public prerequisite subject areas are recorded as knowledge-map references. uniStemCourseSimulators completion is not evidence of admissions eligibility or institutional prerequisite equivalency.",
       "mapped_courses": [
         "organic-chemistry",
         "biochemistry",

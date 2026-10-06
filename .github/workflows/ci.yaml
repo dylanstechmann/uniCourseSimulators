@@ -1,4 +1,4 @@
-name: CourseLab validation
+name: uniStemCourseSimulators validation
 on: [push, pull_request, workflow_dispatch]
 permissions:
   contents: read

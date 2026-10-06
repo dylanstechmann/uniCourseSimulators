@@ -48,7 +48,9 @@ a { color: var(--pine); text-underline-offset: 3px; }
 .brand { align-items: center; display: flex; gap: 11px; margin: 0 0 33px 4px; text-decoration: none; }
 .brand-mark { align-items: center; background: var(--pine); border-radius: 12px; color: var(--lime); display: inline-flex; height: 38px; justify-content: center; width: 38px; }
 .brand-mark svg { height: 23px; width: 23px; }
-.brand-name { color: var(--ink); font-family: Manrope, sans-serif; font-size: 15px; font-weight: 800; letter-spacing: -.035em; line-height: 1.05; }
+.brand-name { color: var(--ink); font-family: Manrope, sans-serif; font-size: 15px; font-weight: 800; letter-spacing: -.035em; line-height: 1.05; overflow-wrap: anywhere; }
+.brand-wordmark { min-width: 0; }
+.welcome-copy h1 { overflow-wrap: anywhere; }
 .brand-sub { color: var(--muted); display: block; font-family: "DM Mono", monospace; font-size: 8px; font-weight: 500; letter-spacing: .115em; margin-top: 5px; text-transform: uppercase; }
 .nav-label { color: #9aa39c; font-family: "DM Mono", monospace; font-size: 9px; letter-spacing: .12em; margin: 0 0 9px 12px; text-transform: uppercase; }
 .primary-nav { display: grid; gap: 4px; }

@@ -146,7 +146,7 @@ export default function App() {
             ✣
           </span>
           <span>
-            Lattice CourseLab
+            uniStemCourseSimulators
             <span className="brand-sub">Think · Model · Practice</span>
           </span>
         </a>
@@ -181,8 +181,8 @@ export default function App() {
         <div className="sidebar-note">
           <strong>Explicit maturity</strong>
           <p>
-            Partial content is labeled. CourseLab does not confer credit or
-            establish university prerequisite equivalency.
+            Partial content is labeled. uniStemCourseSimulators does not confer
+            credit or establish university prerequisite equivalency.
           </p>
         </div>
         <div className="legacy">
@@ -238,7 +238,7 @@ export default function App() {
           )}
           {loading ? (
             <>
-              <h1>Lattice CourseLab</h1>
+              <h1>uniStemCourseSimulators</h1>
               <p role="status">Loading the learning platform…</p>
             </>
           ) : page === "account" ? (

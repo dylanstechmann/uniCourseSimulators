@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "urn:lattice-courselab:schema:question:1.0",
-  "title": "Lattice CourseLab assessment item",
+  "$id": "urn:uni-stem-course-simulators:schema:question:1.0",
+  "title": "uniStemCourseSimulators assessment item",
   "description": "Deterministic grading specification. Public practice authoring keys are explicitly public; restricted assessments must be provisioned server-side separately.",
   "type": "object", "additionalProperties": false,
   "required": ["id", "type", "prompt", "points", "objective_ids", "solution_spec", "feedback", "visibility"],

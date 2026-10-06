@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "urn:lattice-courselab:schema:curriculum-map:1.0",
-  "title": "Lattice CourseLab curriculum map",
+  "$id": "urn:uni-stem-course-simulators:schema:curriculum-map:1.0",
+  "title": "uniStemCourseSimulators curriculum map",
   "description": "Course packages and catalog-only nodes connected in project-authored pathways; the map makes no university equivalency or credit claim.",
   "type": "object",
   "additionalProperties": false,

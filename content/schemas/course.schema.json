@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "urn:lattice-courselab:schema:course:1.0",
-  "title": "Lattice CourseLab course manifest",
+  "$id": "urn:uni-stem-course-simulators:schema:course:1.0",
+  "title": "uniStemCourseSimulators course manifest",
   "description": "Authored course inventory. Maturity is validated independently; this schema alone does not establish semester equivalence.",
   "type": "object",
   "additionalProperties": false,

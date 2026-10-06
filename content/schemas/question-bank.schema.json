@@ -1,11 +1,11 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "urn:lattice-courselab:schema:question-bank:1.0",
-  "title": "Lattice CourseLab public practice question bank",
+  "$id": "urn:uni-stem-course-simulators:schema:question-bank:1.0",
+  "title": "uniStemCourseSimulators public practice question bank",
   "type": "object", "additionalProperties": false,
   "required": ["schema_version", "course_id", "license", "questions"],
   "properties": {
     "schema_version": {"const": "1.0"}, "course_id": {"type": "string", "minLength": 1}, "license": {"type": "string", "minLength": 1},
-    "questions": {"type": "array", "items": {"$ref": "urn:lattice-courselab:schema:question:1.0"}}
+    "questions": {"type": "array", "items": {"$ref": "urn:uni-stem-course-simulators:schema:question:1.0"}}
   }
 }

@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "urn:lattice-courselab:schema:source-registry:1.0",
-  "title": "Lattice CourseLab source registry",
+  "$id": "urn:uni-stem-course-simulators:schema:source-registry:1.0",
+  "title": "uniStemCourseSimulators source registry",
   "description": "Permission booleans describe the project's affirmed use, not every possible permission in a source license. Comparator-only records grant only linking here.",
   "type": "object", "additionalProperties": false,
   "required": ["schema_version", "sources"],

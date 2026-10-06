@@ -17,14 +17,14 @@ Primary advisory evidence:
 - [Starlette urlencoded parser limits, CVE-2026-54283](https://github.com/Kludex/starlette/security/advisories/GHSA-82w8-qh3p-5jfq): corrected in 1.3.1.
 - [pytest temporary-directory handling, CVE-2025-71176](https://github.com/advisories/GHSA-6w46-j5rx-g56g): corrected in 9.0.3.
 
-The CourseLab API uses JSON requests and responses; it does not parse form uploads, register `HTTPEndpoint` subclasses, serve `StaticFiles` or emit `FileResponse`. Docker runs Linux, so the Windows UNC issue was not applicable to that runtime. The underlying packages were upgraded without excluding or suppressing these findings. Pytest is used for validation, and upgrading it protects the test environment as well.
+The uniStemCourseSimulators API uses JSON requests and responses; it does not parse form uploads, register `HTTPEndpoint` subclasses, serve `StaticFiles` or emit `FileResponse`. Docker runs Linux, so the Windows UNC issue was not applicable to that runtime. The underlying packages were upgraded without excluding or suppressing these findings. Pytest is used for validation, and upgrading it protects the test environment as well.
 
 Reproduce with a transient environment inside the workspace `dev` service:
 
 ```sh
 python3 -m venv /tmp/courselab-backend-check
-/tmp/courselab-backend-check/bin/pip install -r /workspace/lattice-courselab-backend-wt/backend/requirements.txt pip-audit
-cd /workspace/lattice-courselab-backend-wt/backend
+/tmp/courselab-backend-check/bin/pip install -r /workspace/uniStemCourseSimulators/backend/requirements.txt pip-audit
+cd /workspace/uniStemCourseSimulators/backend
 /tmp/courselab-backend-check/bin/ruff check .
 /tmp/courselab-backend-check/bin/pytest
 /tmp/courselab-backend-check/bin/pip-audit -r requirements.txt

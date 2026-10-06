@@ -406,8 +406,8 @@ export function CourseWorkspace({
                 <h3>Concurrent course dependencies</h3>
                 {prerequisites(course.prerequisites.concurrent_course_ids)}
                 <p className="muted">
-                  These are CourseLab learning dependencies. They do not
-                  establish university prerequisite equivalency.
+                  These are uniStemCourseSimulators learning dependencies. They
+                  do not establish university prerequisite equivalency.
                 </p>
               </section>
               <section className="card">

@@ -1,9 +1,9 @@
 # Curriculum reference notes
 
-These public sources inform the topics and dependencies of original CourseLab
+These public sources inform the topics and dependencies of original uniStemCourseSimulators
 content. They do not establish prerequisite equivalency, admission eligibility,
 transferable credit, affiliation, endorsement, or a university's review of a
-CourseLab course. All pages below were accessed on 2026-10-05.
+uniStemCourseSimulators course. All pages below were accessed on 2026-10-05.
 
 ## Johns Hopkins regenerative/stem-cell knowledge map
 
@@ -12,13 +12,13 @@ The supplied catalogue URL ending in
 verified [canonical JHU Academic Catalogue page](https://e-catalogue.jhu.edu/arts-sciences/advanced-academic-programs/programs/center-biotechnology-education/regenerative-stem-cell-technologies/)
 is the 2026–27 edition. Together with the [AAP admissions page](https://advanced.jhu.edu/academics/graduate/ms-regenerative-stem-cell-technologies/admission-application-requirements/),
 it identifies one semester each of organic chemistry, biochemistry, molecular
-biology, and cell biology as prior coursework. CourseLab's map uses those
+biology, and cell biology as prior coursework. uniStemCourseSimulators's map uses those
 four subject areas as knowledge targets. Its combined cell/molecular prototype
 is partial and is not evidence of completing either semester requirement.
 
 The [AAP degree and courses page](https://advanced.jhu.edu/academics/graduate/ms-regenerative-stem-cell-technologies/degree-details-and-courses/)
 supports the following original map. Course names are source identifiers;
-the relationships below are topic-planning references, not CourseLab claims
+the relationships below are topic-planning references, not uniStemCourseSimulators claims
 of meeting institutional requirements.
 
 | Advanced subject area | Knowledge to build toward it |
@@ -32,7 +32,7 @@ of meeting institutional requirements.
 | Biotherapeutic manufacturing | Advanced cell biology, regenerative medicine, and process reasoning |
 | Cell-culture and stem-cell laboratory concepts | Cell culture, signal transduction, differentiation, scale-up, and quality concepts |
 
-CourseLab's sequencing and explanations will be authored independently. Source
+uniStemCourseSimulators's sequencing and explanations will be authored independently. Source
 catalogues reserve copyright; no descriptions, laboratory protocols, figures,
 or paid university course materials are reproduced. The curriculum map now
 lists these advanced areas as catalog-only nodes with explicit planning
@@ -55,7 +55,7 @@ noncommercial use, and ShareAlike. Excluded third-party assets must be reviewed
 individually and are not imported by project policy. See [licensing decisions](LICENSES.md)
 and [the source/asset ledger](../content/SOURCES_AND_LICENSES.md).
 
-Original CourseLab lessons, examples, and assessments should reason from
+Original uniStemCourseSimulators lessons, examples, and assessments should reason from
 scientific principles and independently authored data or explicitly licensed
 sources. They should not reproduce institutional prose merely to reach lesson
 or word counts. Human review and the project's full-course quality gates are

@@ -1,4 +1,4 @@
-# Lattice CourseLab learner API
+# uniStemCourseSimulators learner API
 
 This milestone provides server-owned guest/account state, enrollment, course and lesson reading, notes, bookmarks, learner-marked progress, immutable attempts, deterministic formative checks, practice gradebook evidence, export and account deletion. PostgreSQL is the Docker deployment database; SQLite is used only by portable pytest fixtures and explicit local development fallback.
 
@@ -26,7 +26,7 @@ The single-worker development rate limiter is in memory. A production deployment
 Backend checks run through the workspace `dev` service:
 
 ```sh
-cd /workspace/lattice-courselab-backend-wt/backend
+cd /workspace/uniStemCourseSimulators/backend
 python3 -m venv .venv
 .venv/bin/pip install -r requirements.txt
 .venv/bin/pytest

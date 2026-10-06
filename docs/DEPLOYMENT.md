@@ -1,4 +1,4 @@
-# Running and deploying Lattice CourseLab
+# Running and deploying uniStemCourseSimulators
 
 The default configuration runs a local learning system. `compose.production.yaml` is an operator example with Caddy HTTPS; it is not evidence of a public deployment or production security review. [VALIDATION_REPORT.md](VALIDATION_REPORT.md) records the checks actually performed. Courses remain partial, and the current server gradebook contains formative practice results only.
 
@@ -14,9 +14,9 @@ Open `http://localhost:8080`. No `.env` file, manually chosen database password 
 
 The database and credentials volumes persist across container recreation. Stop the foreground run with Ctrl+C, or use `docker compose down` after a detached run. Keep the volumes when learner records are needed. Removing a volume destroys its stored data; deleting only the credentials volume leaves the existing PostgreSQL password inconsistent with a newly generated secret. PostgreSQL initialization variables do not rotate an existing cluster's password.
 
-Optional local configuration comes from `.env.example`; copy it to an untracked `.env` and edit only what is needed. If `COURSELAB_PORT` changes, update `ALLOWED_ORIGINS` to the exact matching localhost/127.0.0.1 origins. Development uses `COOKIE_SECURE=false` for local HTTP. Set `INSTRUCTOR_EMAILS` to a comma-separated list of registered reviewer accounts to enable the appeal queue; leave it empty to disable instructor review. The `.env` files, secrets, database files, backups and learner exports are excluded from Git, but an ignore rule is not a substitute for inspecting staged changes.
+Optional local configuration comes from `.env.example`; copy it to an untracked `.env` and edit only what is needed. If `COURSELAB_PORT` changes, update `ALLOWED_ORIGINS` to the exact matching localhost/127.0.0.1 origins. Development uses `COOKIE_SECURE=false` for local HTTP. Leave `INSTRUCTOR_EMAILS` empty for public use; self-declared registration emails are not verified reviewer identities. The `.env` files, secrets, database files, backups and learner exports are excluded from Git, but an ignore rule is not a substitute for inspecting staged changes.
 
-Set `INSTRUCTOR_EMAILS` to an explicit comma-separated allowlist of registered account emails to enable instructor review. An empty value keeps the review queue disabled. Protect account recovery and avoid exposing the instructor allowlist in frontend configuration.
+The appeal allowlist is suitable only for synthetic local testing until reviewer identity and exact saved-question reconstruction are fixed. See [PROGRESS_REVIEW.md](PROGRESS_REVIEW.md) and [SECURITY.md](../SECURITY.md).
 
 Useful diagnostics:
 
@@ -28,7 +28,25 @@ docker compose exec -T api python -c "import urllib.request; print(urllib.reques
 
 The health endpoint checks database connectivity; it is not an assessment-quality, security or full learner-workflow certification. Do not enable SQL parameter logging or log request bodies containing passwords, notes or learner responses.
 
-## Database migrations and updates
+## Product rename and existing data
+
+Fresh checkouts use the Compose project name `uni-stem-course-simulators` (production: `uni-stem-course-simulators-production`). Compose normally prefixes volumes with that identity. A new name would select new empty volumes and make existing records appear missing.
+
+Before upgrading an existing installation, record its project identity from `docker compose ls` and volume attachments from `docker inspect`. Back up and verify the database using the procedure below. Set `COMPOSE_PROJECT_NAME` to that **existing identity** in the deployment's untracked environment file; it overrides the new default `name`. For the previous development default, the compatibility setting is:
+
+```dotenv
+COMPOSE_PROJECT_NAME=lattice-courselab
+```
+
+Preserve both the database and credentials volumes. Do not remove volumes, regenerate an existing database password or start a second writer against the same PostgreSQL volume. The current local installation retains its identity through this untracked setting. Renaming the underlying volumes is unnecessary for the product rename; a later volume migration requires a verified database backup and controlled restore/cutover.
+
+The legacy reader writes to `uni-stem-course-simulators:guest:v3`. On the same browser origin it reads the most recent valid previous notebook, sanitizes/copies it, records its source key, and retains all old keys/backups. These old strings remain only as compatibility identifiers. Browser data remains unverified and is never imported as server grades. The database name, Python module, session cookie and `COURSELAB_*` environment variables stay stable technical identifiers to avoid unrelated session/database/configuration changes. New UI, exports, package names and metadata use the new identity. Existing Git checkouts can update their remote with:
+
+```sh
+git remote set-url origin https://github.com/dylanstechmann/uniStemCourseSimulators.git
+```
+
+## Database migration procedure
 
 The API does not automatically create tables through ORM metadata. Alembic's versioned revisions are the deployment boundary. From a running local setup:
 

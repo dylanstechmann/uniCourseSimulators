@@ -1013,7 +1013,7 @@
     {
       "id": "jhu-regenerative-stem-cell-prerequisites",
       "title": "Johns Hopkins regenerative/stem-cell prerequisite knowledge map",
-      "description": "Map foundational and advanced subject areas named in public Johns Hopkins program materials to independently authored CourseLab catalog topics. This is a curriculum-alignment aid only.",
+      "description": "Map foundational and advanced subject areas named in public Johns Hopkins program materials to independently authored uniStemCourseSimulators catalog topics. This is a curriculum-alignment aid only.",
       "course_ids": [
         "organic-chemistry",
         "biochemistry",
@@ -1059,7 +1059,7 @@
         "biotherapeutic-manufacturing",
         "cell-culture-stem-cell-lab"
       ],
-      "disclaimer": "References public Johns Hopkins catalog descriptions for topic alignment only. CourseLab is not affiliated with Johns Hopkins University; this map does not establish equivalency, admission eligibility, transfer credit, or reuse permission. Instructional content is original and independently authored."
+      "disclaimer": "References public Johns Hopkins catalog descriptions for topic alignment only. uniStemCourseSimulators is not affiliated with Johns Hopkins University; this map does not establish equivalency, admission eligibility, transfer credit, or reuse permission. Instructional content is original and independently authored."
     }
   ]
 }

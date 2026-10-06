@@ -4,7 +4,7 @@ Use `content/courses/<id>/course.json`, `syllabus.md`, `modules/`, `question-ban
 
 Lesson `card_ids` connect retrieval cards in the course's `retrieval_cards` bank to the learner lesson response. The reader shows each front and keeps its back behind a native reveal control. Cards are self-assessment, not scored attempts; include objective IDs and the applicable content license on each card.
 
-Use stable IDs and acyclic dependencies. Separate assumed knowledge from required CourseLab packages. Objectives describe observable performance with Bloom levels: interpret perturbations, compare controls, calculate transport or justify a mechanism with uncertainty.
+Use stable IDs and acyclic dependencies. Separate assumed knowledge from required uniStemCourseSimulators packages. Objectives describe observable performance with Bloom levels: interpret perturbations, compare controls, calculate transport or justify a mechanism with uncertainty.
 
 Manifest fields support workload/duration, prerequisites, outcomes, lessons, assignments/labs/exams/projects, grading, accessibility, sources, history, review and omissions. Map each assessed objective to questions/rubrics. Specifications are authoring data and must not be imported by frontend code.
 
