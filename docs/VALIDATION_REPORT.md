@@ -27,9 +27,11 @@ Validation reports 25 packages, 128 lessons, 196 questions, 259 cards, and 25 ca
 | `docker compose exec -T api alembic current` and `/api/v1/health` | PASS: `0007 (head)`; health `ok` |
 | `python tools/check_security.py --bundle frontend/dist` | PASS; 0 findings across 417 source files |
 | `git diff --check` | PASS |
-| Hosted GitHub Actions | Pending publication of this increment |
+| Hosted GitHub Actions run `37555835879` | PASS: content/backend and frontend/E2E jobs |
 
 The existing grader interface limited attempts to 20 fields, below the maximum 40 coordinates from a 20-point plot. It now accepts up to 40 fields, with regression coverage for the boundary; graph component totals use stable summation so full credit returns exactly the configured point value. The new Playwright journey validates the data-analysis flow against the live local Compose app. No arbitrary learner code is executed by this lab.
+
+Published at commit `93f97ea1a4b9cfb973df34aa78831e39bfb0551a`; [hosted GitHub Actions run `37555835879`](https://github.com/dylanstechmann/uniStemCourseSimulators/actions/runs/37555835879) completed successfully, with both content/backend and frontend/E2E jobs passing.
 
 ## Previous increment: Week 3 open formative homework companion (2026-10-06)
 
