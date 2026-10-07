@@ -1,5 +1,7 @@
 import type {
   Attempt,
+  CardRating,
+  CardReviewResult,
   Course,
   CurriculumMap,
   CourseSummary,
@@ -17,6 +19,7 @@ import type {
   Note,
   Progress,
   PracticeAssessment,
+  ReviewQueue,
   Session,
   Source,
 } from "./types";
@@ -195,6 +198,13 @@ export const api = {
       },
     ),
   gradebook: (id: string) => request<Gradebook>(`/gradebook/${encode(id)}`),
+  reviewQueue: (id: string) => request<ReviewQueue>(`/reviews/${encode(id)}`),
+  reviewCard: (id: string, cardId: string, rating: CardRating) =>
+    request<CardReviewResult>(
+      `/courses/${encode(id)}/cards/${encode(cardId)}/reviews`,
+      "POST",
+      { rating },
+    ),
   exportData: () => request<unknown>("/learner/export"),
   async deleteLearner() {
     await request("/learner", "DELETE");

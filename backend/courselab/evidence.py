@@ -9,9 +9,16 @@ MIN_PERFORMANCE = 0.8
 
 
 def objective_evidence(
-    questions: list[dict], attempts: list, score_overrides: dict[str, float] | None = None
+    questions: list[dict],
+    attempts: list,
+    score_overrides: dict[str, float] | None = None,
+    authored_objective_ids: list[str] | None = None,
 ) -> dict[str, dict]:
-    """Aggregate best points per distinct item without counting retries as breadth."""
+    """Aggregate best points per distinct item without counting retries as breadth.
+
+    Authored objectives that no question is tagged to are reported as ``no_items`` so
+    uncovered objectives stay visible instead of silently disappearing.
+    """
     score_overrides = score_overrides or {}
     items_by_objective: dict[str, dict[str, float]] = defaultdict(dict)
     for question in questions:
@@ -64,4 +71,15 @@ def objective_evidence(
             "performance": round(performance, 4) if performance is not None else None,
             "status": status,
         }
+    for objective_id in authored_objective_ids or []:
+        result.setdefault(objective_id, {
+            "attempts": 0,
+            "correct_results": 0,
+            "attempted_items": 0,
+            "item_count": 0,
+            "best_score": 0.0,
+            "best_possible_score": 0.0,
+            "performance": None,
+            "status": "no_items",
+        })
     return result

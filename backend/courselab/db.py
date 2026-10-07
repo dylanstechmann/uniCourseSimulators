@@ -8,6 +8,7 @@ from sqlalchemy import (
     DateTime,
     Float,
     ForeignKey,
+    Index,
     String,
     Text,
     UniqueConstraint,
@@ -204,6 +205,32 @@ class Bookmark(Base):
     id: Mapped[str] = mapped_column(String(36), primary_key=True, default=identifier)
     user_id: Mapped[str] = mapped_column(ForeignKey("users.id", ondelete="CASCADE"), index=True)
     course_id: Mapped[str] = mapped_column(String(100))
+
+
+class CardReview(Base):
+    """Append-only learner self-rating of a retrieval card and the schedule it produced."""
+    __tablename__ = "card_reviews"
+    __table_args__ = (
+        CheckConstraint("rating IN ('again', 'hard', 'good', 'easy')", name="ck_card_review_rating"),
+        CheckConstraint("repetitions >= 0", name="ck_card_review_repetitions_nonnegative"),
+        CheckConstraint("ease > 0", name="ck_card_review_ease_positive"),
+        CheckConstraint("interval_days >= 0", name="ck_card_review_interval_nonnegative"),
+        Index("ix_card_reviews_user_course_card", "user_id", "course_id", "card_id"),
+    )
+    id: Mapped[str] = mapped_column(String(36), primary_key=True, default=identifier)
+    user_id: Mapped[str] = mapped_column(ForeignKey("users.id", ondelete="CASCADE"), index=True)
+    course_id: Mapped[str] = mapped_column(String(100))
+    lesson_id: Mapped[str] = mapped_column(String(100))
+    card_id: Mapped[str] = mapped_column(String(120))
+    content_version: Mapped[str] = mapped_column(String(100))
+    card_sha256: Mapped[str] = mapped_column(String(64))
+    policy_version: Mapped[str] = mapped_column(String(40))
+    rating: Mapped[str] = mapped_column(String(8))
+    repetitions: Mapped[int] = mapped_column()
+    ease: Mapped[float] = mapped_column(Float)
+    interval_days: Mapped[float] = mapped_column(Float)
+    due_at: Mapped[datetime] = mapped_column(DateTime)
+    reviewed_at: Mapped[datetime] = mapped_column(DateTime, default=now)
 
 
 class Attempt(Base):

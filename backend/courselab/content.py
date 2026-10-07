@@ -193,28 +193,62 @@ class ContentRepository:
                 return item
         raise ContentMissing("Question not found")
 
-    def retrieval_cards(self, course_id: str, lesson_id: str) -> list[PublicRetrievalCard]:
-        """Publish only the learner-facing fields for cards assigned to this lesson."""
-        manifest = self.manifest(course_id)
+    def _cards_by_id(self, course_id: str, manifest: dict) -> dict[str, dict]:
+        if not manifest.get("retrieval_cards"):
+            return {}
         package = json.loads(self._read(course_id, manifest["retrieval_cards"]))
         if package.get("course_id") != course_id:
             raise ContentInvalid("Retrieval-card course mismatch")
-        _, lesson = self.lesson_record(course_id, lesson_id)
         cards_by_id = {}
         for card in package["cards"]:
             if card["id"] in cards_by_id:
                 raise ContentInvalid("Retrieval-card IDs must be unique")
             cards_by_id[card["id"]] = card
+        return cards_by_id
+
+    @staticmethod
+    def _assigned_card(cards_by_id: dict[str, dict], card_id: str, lesson_id: str) -> dict:
+        card = cards_by_id.get(card_id)
+        if card is None or card.get("lesson_id") != lesson_id:
+            raise ContentInvalid("Lesson retrieval-card reference is invalid")
+        return card
+
+    def retrieval_cards(self, course_id: str, lesson_id: str) -> list[PublicRetrievalCard]:
+        """Publish only the learner-facing fields for cards assigned to this lesson."""
+        manifest = self.manifest(course_id)
+        _, lesson = self.lesson_record(course_id, lesson_id)
+        cards_by_id = self._cards_by_id(course_id, manifest)
         selected = []
         for card_id in lesson.get("card_ids", []):
-            card = cards_by_id.get(card_id)
-            if card is None or card.get("lesson_id") != lesson_id:
-                raise ContentInvalid("Lesson retrieval-card reference is invalid")
+            card = self._assigned_card(cards_by_id, card_id, lesson_id)
             selected.append(PublicRetrievalCard(
                 id=card["id"], front=card["front"], back=card["back"],
                 learning_objective_ids=card.get("objective_ids", []),
             ))
         return selected
+
+    def course_retrieval_cards(self, course_id: str) -> list[dict]:
+        """Every lesson-assigned card in syllabus order, with learner-visible fields only.
+
+        Cards that no lesson assigns are not published, matching the lesson DTO boundary.
+        """
+        manifest = self.manifest(course_id)
+        cards_by_id = self._cards_by_id(course_id, manifest)
+        published = []
+        seen = set()
+        for module in manifest["modules"]:
+            for lesson in module["lessons"]:
+                for card_id in lesson.get("card_ids", []):
+                    card = self._assigned_card(cards_by_id, card_id, lesson["id"])
+                    if card_id in seen:
+                        raise ContentInvalid("A retrieval card is assigned to more than one lesson")
+                    seen.add(card_id)
+                    published.append({
+                        "id": card["id"], "lesson_id": lesson["id"], "lesson_title": lesson["title"],
+                        "front": card["front"], "back": card["back"],
+                        "learning_objective_ids": card.get("objective_ids", []),
+                    })
+        return published
 
     def public_question(
         self, question: dict, variant_id: str | None = None, variant_token: str | None = None

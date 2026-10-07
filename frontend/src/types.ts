@@ -297,6 +297,7 @@ export interface Gradebook {
       best_possible_score: number;
       performance: number | null;
       status:
+        | "no_items"
         | "no_evidence"
         | "insufficient_evidence"
         | "needs_practice"
@@ -381,4 +382,44 @@ export interface Source {
   url: string;
   institution: string;
   license?: string;
+}
+export type CardRating = "again" | "hard" | "good" | "easy";
+export interface CardSchedule {
+  policy_version: string;
+  last_rating: CardRating;
+  review_count: number;
+  repetitions: number;
+  ease: number;
+  interval_days: number;
+  due_at: string;
+  reviewed_at: string;
+  due: boolean;
+}
+export interface ReviewQueueCard {
+  card_id: string;
+  lesson_id: string;
+  lesson_title: string;
+  front: string;
+  back: string;
+  learning_objective_ids: string[];
+  schedule: CardSchedule | null;
+  content_changed_since_last_review: boolean;
+}
+export interface ReviewQueue {
+  course_id: string;
+  content_version: string;
+  policy_version: string;
+  policy: string;
+  generated_at: string;
+  counts: { due: number; new: number; upcoming: number };
+  due: ReviewQueueCard[];
+  new: ReviewQueueCard[];
+  upcoming: ReviewQueueCard[];
+  limitations: string;
+}
+export interface CardReviewResult {
+  card_id: string;
+  lesson_id: string;
+  rating: CardRating;
+  schedule: CardSchedule;
 }

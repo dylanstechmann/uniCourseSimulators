@@ -30,6 +30,16 @@ describe("practice gradebook API contract", () => {
           performance: 1,
           status: "insufficient_evidence",
         },
+        "cell-biology-lo-2": {
+          attempts: 0,
+          correct_results: 0,
+          attempted_items: 0,
+          item_count: 0,
+          best_score: 0,
+          best_possible_score: 0,
+          performance: null,
+          status: "no_items",
+        },
       },
       limitations:
         "Practice results do not establish reasoning, mastery, or course completion.",
@@ -129,6 +139,12 @@ describe("practice gradebook API contract", () => {
     expect(
       within(evidenceTable).getByText("insufficient evidence"),
     ).toBeInTheDocument();
+    expect(
+      within(evidenceTable).getByRole("rowheader", {
+        name: "cell-biology-lo-2",
+      }),
+    ).toBeInTheDocument();
+    expect(within(evidenceTable).getByText("no items")).toBeInTheDocument();
     expect(screen.getByText(/at least 3 distinct items/)).toBeInTheDocument();
     const attemptsTable = screen.getAllByRole("table")[1];
     expect(within(attemptsTable).getAllByRole("row")).toHaveLength(2);

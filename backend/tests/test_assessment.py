@@ -147,3 +147,23 @@ def test_unsupported_late_work_policies_are_rejected():
     policy["late_submission_policy"] = "accept-with-penalty"
     with pytest.raises(ValueError, match="strict-deadline"):
         validate_assessment_configuration(assessments, policy)
+
+
+def test_objective_evidence_reports_authored_objectives_without_items():
+    from courselab.evidence import objective_evidence
+
+    questions = [{"id": "q1", "points": 2, "objective_ids": ["tagged"]}]
+    result = objective_evidence(questions, [], authored_objective_ids=["tagged", "untagged"])
+
+    assert result["tagged"]["status"] == "no_evidence"
+    assert result["untagged"] == {
+        "attempts": 0,
+        "correct_results": 0,
+        "attempted_items": 0,
+        "item_count": 0,
+        "best_score": 0.0,
+        "best_possible_score": 0.0,
+        "performance": None,
+        "status": "no_items",
+    }
+    assert "untagged" not in objective_evidence(questions, [])

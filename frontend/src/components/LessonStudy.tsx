@@ -1,7 +1,17 @@
 import { useEffect, useState } from "react";
 import { errorMessage } from "../api";
-import type { Appeal, Attempt, Lesson, Note, Source } from "../types";
+import type {
+  Appeal,
+  Attempt,
+  CardRating,
+  CardReviewResult,
+  CardSchedule,
+  Lesson,
+  Note,
+  Source,
+} from "../types";
 import { Assessment } from "./Assessment";
+import { CardRatingControls } from "./CardRatingControls";
 import { MarkdownReader } from "./MarkdownReader";
 
 export function LessonStudy({
@@ -16,6 +26,8 @@ export function LessonStudy({
   onAppeal,
   onSaveNote,
   onProgress,
+  cardSchedules = {},
+  onRateCard,
 }: {
   lesson: Lesson;
   enabled: boolean;
@@ -33,6 +45,11 @@ export function LessonStudy({
   onAppeal: (attemptId: string, reason: string) => Promise<Appeal>;
   onSaveNote: (body: string) => Promise<void>;
   onProgress: (completed: boolean) => Promise<void>;
+  cardSchedules?: Record<string, CardSchedule | null>;
+  onRateCard?: (
+    cardId: string,
+    rating: CardRating,
+  ) => Promise<CardReviewResult>;
 }) {
   const [body, setBody] = useState(note?.body || "");
   const [status, setStatus] = useState("");
@@ -90,6 +107,8 @@ export function LessonStudy({
             <p className="muted">
               Try to recall the answer before revealing it. These cards are
               practice and do not affect your grade.
+              {onRateCard &&
+                " Your self-ratings schedule each card in the course review queue."}
             </p>
             <ol>
               {lesson.retrieval_cards.map((card) => (
@@ -98,6 +117,14 @@ export function LessonStudy({
                   <details aria-label={`Answer for card ${card.id}`}>
                     <summary>Reveal answer</summary>
                     <MarkdownReader>{card.back}</MarkdownReader>
+                    {onRateCard && (
+                      <CardRatingControls
+                        cardId={card.id}
+                        schedule={cardSchedules[card.id]}
+                        enabled={enabled}
+                        onRate={(rating) => onRateCard(card.id, rating)}
+                      />
+                    )}
                   </details>
                 </li>
               ))}

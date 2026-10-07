@@ -14,7 +14,7 @@ The course case studio remains a self-assessed design task rather than an automa
 
 ## Study support
 
-- **Retrieval cards:** cards appear with developed lessons; learners can use them for self-assessment. The current reader does not yet persist a spaced-review queue.
+- **Retrieval cards:** cards appear with developed lessons; learners can use them for self-assessment. After revealing an answer, an enrolled learner can self-rate recall (again/hard/good/easy). The server stores each rating append-only with the card's text digest and schedules the next review with the documented `retrieval-schedule-v1` SM-2-style rule (10-minute relearn, then 1 day, 6 days, and interval × ease, capped at 365 days). A course **Review queue** lists due, not-yet-reviewed and later cards. Editing a card's text restarts its schedule. Ratings never change practice scores, objective evidence or grades; they are a study aid, not mastery evidence.
 - **Notes and bookmarks:** server-backed learner notes and course bookmarks can be exported or deleted with account data.
 - **Progress:** marked reading state is stored separately from quiz scores and does not certify mastery.
 - **Legacy calculators:** dilution, buffer, enzyme-kinetics, RC, diffusion-timescale, and Ohm's-law tools remain under `legacy/` and are not yet integrated into the React course reader.

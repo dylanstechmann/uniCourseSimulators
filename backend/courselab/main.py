@@ -35,6 +35,7 @@ from .db import (
     AssessmentPlan,
     Attempt,
     Bookmark,
+    CardReview,
     Enrollment,
     GradedSubmission,
     GradedSubmissionAppeal,
@@ -54,6 +55,9 @@ from .evidence import (
     objective_evidence,
 )
 from .grading import GradingUnavailable, grade, question_spec_digest
+from .retrieval import POLICY_SUMMARY as RETRIEVAL_POLICY_SUMMARY
+from .retrieval import POLICY_VERSION as RETRIEVAL_POLICY_VERSION
+from .retrieval import ScheduleState, card_digest, next_state
 from .schemas import (
     AppealRequest,
     AppealReviewRequest,
@@ -63,6 +67,8 @@ from .schemas import (
     AssessmentSubmissionResponse,
     AttemptRequest,
     BookmarkRequest,
+    CardReviewRequest,
+    CardReviewResponse,
     CourseSummary,
     Credentials,
     EnrollmentRequest,
@@ -75,6 +81,7 @@ from .schemas import (
     PublicCourse,
     PublicCurriculum,
     PublicLesson,
+    ReviewQueueResponse,
 )
 from .variants import VariantTokenError, issue_variant_token, resolve_variant, verify_variant_token
 
@@ -1271,6 +1278,108 @@ def create_app(settings: Settings | None = None) -> FastAPI:
         user, _ = require_identity(request, db)
         return [item.course_id for item in db.scalars(select(Bookmark).where(Bookmark.user_id == user.id))]
 
+    def card_review_history(db: Session, user: User, course_id: str) -> dict[str, list[CardReview]]:
+        history: dict[str, list[CardReview]] = defaultdict(list)
+        for item in db.scalars(
+            select(CardReview)
+            .where(CardReview.user_id == user.id, CardReview.course_id == course_id)
+            .order_by(CardReview.reviewed_at, CardReview.id)
+        ):
+            history[item.card_id].append(item)
+        return history
+
+    def current_card_reviews(reviews: list[CardReview], digest: str) -> list[CardReview]:
+        """Only reviews of the exact card text carry a schedule forward."""
+        return [item for item in reviews if item.card_sha256 == digest]
+
+    def card_schedule_view(reviews: list[CardReview], reference_time) -> dict:
+        latest = reviews[-1]
+        return {
+            "policy_version": latest.policy_version, "last_rating": latest.rating,
+            "review_count": len(reviews), "repetitions": latest.repetitions,
+            "ease": float(latest.ease), "interval_days": float(latest.interval_days),
+            "due_at": timestamp(latest.due_at), "reviewed_at": timestamp(latest.reviewed_at),
+            "due": latest.due_at <= reference_time,
+        }
+
+    def published_card(course_id: str, card_id: str) -> dict:
+        for card in content.course_retrieval_cards(course_id):
+            if card["id"] == card_id:
+                return card
+        raise ContentMissing("Retrieval card not found")
+
+    @app.get("/api/v1/reviews/{course_id}", response_model=ReviewQueueResponse)
+    def review_queue(course_id: str, request: Request, db: DB):
+        user, _ = require_identity(request, db)
+        enrollment = enrolled(db, user, course_id)
+        reference_time = now()
+        history = card_review_history(db, user, course_id)
+        due, new, upcoming = [], [], []
+        for card in content.course_retrieval_cards(course_id):
+            reviews = history.get(card["id"], [])
+            current = current_card_reviews(reviews, card_digest(course_id, card))
+            item = {
+                "card_id": card["id"], "lesson_id": card["lesson_id"], "lesson_title": card["lesson_title"],
+                "front": card["front"], "back": card["back"],
+                "learning_objective_ids": card["learning_objective_ids"],
+                "schedule": card_schedule_view(current, reference_time) if current else None,
+                "content_changed_since_last_review": bool(reviews) and not current,
+            }
+            if not current:
+                new.append(item)
+            elif current[-1].due_at <= reference_time:
+                due.append(item)
+            else:
+                upcoming.append(item)
+        due.sort(key=lambda item: item["schedule"]["due_at"])
+        upcoming.sort(key=lambda item: item["schedule"]["due_at"])
+        return {
+            "course_id": course_id, "content_version": enrollment.content_version,
+            "policy_version": RETRIEVAL_POLICY_VERSION, "policy": RETRIEVAL_POLICY_SUMMARY,
+            "generated_at": timestamp(reference_time),
+            "counts": {"due": len(due), "new": len(new), "upcoming": len(upcoming)},
+            "due": due, "new": new, "upcoming": upcoming,
+            "limitations": (
+                "Ratings are your own self-assessment after revealing an answer. The schedule only decides "
+                "when to show a card again; it is not a practice score, objective evidence, or mastery."
+            ),
+        }
+
+    @app.post(
+        "/api/v1/courses/{course_id}/cards/{card_id}/reviews",
+        status_code=201,
+        response_model=CardReviewResponse,
+    )
+    def review_card(course_id: str, card_id: str, body: CardReviewRequest, request: Request, db: DB):
+        identity = require_identity(request, db)
+        require_csrf(request, identity)
+        enrollment = enrolled(db, identity[0], course_id)
+        card = published_card(course_id, card_id)
+        digest = card_digest(course_id, card)
+        reviewed_at = now()
+        current = current_card_reviews(
+            card_review_history(db, identity[0], course_id).get(card_id, []), digest
+        )
+        previous = (
+            ScheduleState(current[-1].repetitions, float(current[-1].ease),
+                          float(current[-1].interval_days), current[-1].due_at)
+            if current else None
+        )
+        state = next_state(previous, body.rating, reviewed_at)
+        item = CardReview(
+            user_id=identity[0].id, course_id=course_id, lesson_id=card["lesson_id"], card_id=card_id,
+            content_version=enrollment.content_version, card_sha256=digest,
+            policy_version=RETRIEVAL_POLICY_VERSION, rating=body.rating,
+            repetitions=state.repetitions, ease=state.ease, interval_days=state.interval_days,
+            due_at=state.due_at, reviewed_at=reviewed_at,
+        )
+        db.add(item)
+        db.commit()
+        return {
+            "card_id": card_id, "lesson_id": card["lesson_id"], "rating": body.rating,
+            "schedule": card_schedule_view([*current, item], reviewed_at),
+        }
+
     def attempt_view(item: Attempt, db: Session) -> dict:
         appeal = db.scalar(select(Appeal).where(Appeal.attempt_id == item.id))
         review = (
@@ -1575,7 +1684,9 @@ def create_app(settings: Settings | None = None) -> FastAPI:
                     "minimum_distinct_items": MIN_DISTINCT_ITEMS,
                     "minimum_item_coverage": MIN_ITEM_COVERAGE,
                     "minimum_performance": MIN_PERFORMANCE},
-                "objective_evidence": objective_evidence(questions, rows, score_overrides),
+                "objective_evidence": objective_evidence(
+                    questions, rows, score_overrides,
+                    [item["id"] for item in content.manifest(course_id).get("lesson_objectives", [])]),
                 "limitations": "The provisional practice indicator requires at least 3 distinct tagged items, 80% of available tagged-item coverage, and 80% best points on attempted items. Instructor adjustments are audited separately from automatic scores. This remains a study signal from short formative checks; it does not establish reasoning, transfer, course mastery, credit, or course completion."}
 
     @app.get("/api/v1/learner/export")
@@ -1624,6 +1735,17 @@ def create_app(settings: Settings | None = None) -> FastAPI:
                              for item in db.scalars(select(Progress).where(Progress.user_id == user.id))],
                 "notes": [{"course_id": item.course_id, "lesson_id": item.lesson_id, "body": item.body}
                           for item in db.scalars(select(Note).where(Note.user_id == user.id))],
+                "card_reviews": [{
+                    "course_id": item.course_id, "lesson_id": item.lesson_id, "card_id": item.card_id,
+                    "content_version": item.content_version, "card_sha256": item.card_sha256,
+                    "policy_version": item.policy_version, "rating": item.rating,
+                    "repetitions": item.repetitions, "ease": float(item.ease),
+                    "interval_days": float(item.interval_days), "due_at": timestamp(item.due_at),
+                    "reviewed_at": timestamp(item.reviewed_at),
+                } for item in db.scalars(
+                    select(CardReview).where(CardReview.user_id == user.id)
+                    .order_by(CardReview.reviewed_at, CardReview.id)
+                )],
                 "bookmarks": [item.course_id for item in db.scalars(select(Bookmark).where(Bookmark.user_id == user.id))]}
 
     @app.delete("/api/v1/learner", status_code=204)
@@ -1651,7 +1773,7 @@ def create_app(settings: Settings | None = None) -> FastAPI:
         db.execute(update(GradedSubmissionAppealReview).where(
             GradedSubmissionAppealReview.reviewer_user_id == identity[0].id
         ).values(reviewer_user_id=None, reviewer_email="deleted instructor account"))
-        for model in (SessionToken, Attempt, Bookmark, Note, Progress, Enrollment):
+        for model in (SessionToken, Attempt, CardReview, Bookmark, Note, Progress, Enrollment):
             db.execute(delete(model).where(model.user_id == identity[0].id))
         db.delete(identity[0])
         db.commit()

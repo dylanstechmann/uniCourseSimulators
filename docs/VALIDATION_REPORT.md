@@ -4,7 +4,24 @@
 
 2026-10-06; synthetic local learner data only. Milestones 1 and 2 are implemented. Milestone 3 remains partial; deterministic graders and prototype graded-assignment and review workflows are described below. A Milestone 4 curriculum-map increment is implemented and tested, while subject-matter review and map refinement remain. All 25 course packages are **partial**; zero are beta, complete or externally reviewed. Human score review is limited to saved attempts and does not constitute course-content review. No semester equivalence, university credit, security certification or public production deployment is asserted.
 
-## Current increment: protected assessment-source boundary (2026-10-06)
+## Current increment: spaced retrieval queue and unassessed objectives (2026-10-07)
+
+Adds Alembic revision `0008` (`card_reviews`), an append-only record of each learner self-rating with the card-text SHA-256, policy version and resulting schedule. `retrieval-schedule-v1` is deterministic and unit-tested: 10-minute relearn after `again`, then 1 day, 6 days and interval × ease for `good`; `hard`/`easy` adjust interval and ease; ease stays within 1.3–3.0 and intervals are capped at 365 days. `GET /api/v1/reviews/{course}` returns due, not-yet-reviewed and later cards for lesson-published cards only; `POST /api/v1/courses/{course}/cards/{card}/reviews` requires session, CSRF and a current enrollment. Edited card text starts a new schedule. Learner export and deletion include the new rows. The gradebook now lists authored objectives with no tagged item as `no items`; the response schema accepts that status, which the uncommitted draft omitted. Ratings do not change scores, objective evidence or grades, and no retention benefit is claimed.
+
+| Current command/check | Result |
+| --- | --- |
+| `python tools/validate_content.py` | PASS: 25 packages, 128 lessons, 196 questions, 259 cards, 25 cases; 0 errors; 123 disclosed warnings |
+| `python -m pytest tests -q` (Linux dev container, Python 3.12) | 74 passed |
+| `cd backend; python -m pytest -q` | 248 passed (17 new retrieval/gradebook tests, including Alembic `check` against the new metadata) |
+| `ruff check backend tools tests` | PASS |
+| `cd frontend; npm run lint` | PASS |
+| `cd frontend; npx vitest run` | 35 passed (4 new review-queue tests) |
+| `cd frontend; npm run build` | PASS |
+| `python tools/check_security.py --bundle frontend/dist` | PASS; 0 findings across 424 source files |
+| `npm run test:legacy` | PASS |
+| Compose/Playwright E2E | Not run locally: this Linux container has no Docker engine. Hosted CI runs the Compose E2E job. |
+
+## Previous increment: protected assessment-source boundary (2026-10-06)
 
 Added an optional protected assessment root distinct from public course content. Graded manifests can refer to `private://` sources resolved only below the configured per-course directory; Docker Compose mounts that directory read-only for server-side use. Public/private root overlap, path traversal, file or course-directory symlink escape, absent configuration and missing files fail closed. Existing enrollment snapshots pin the source SHA-256; learner APIs omit both answer specifications and private source paths. No real answer key was added, no current course uses the private source, and all 25 packages remain formative-only. This is infrastructure for future assessed coursework, not a new graded assignment or course maturity change.
 

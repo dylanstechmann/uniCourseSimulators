@@ -3,6 +3,7 @@ import { api, errorMessage } from "../api";
 import type {
   Attempt,
   AssessmentPlan,
+  CardRating,
   Course,
   CourseSummary,
   Gradebook,
@@ -10,6 +11,7 @@ import type {
   Lesson,
   Note,
   Progress,
+  ReviewQueue,
   Source,
 } from "../types";
 import { GradebookView } from "./GradebookView";
@@ -19,11 +21,13 @@ import { MarkdownReader } from "./MarkdownReader";
 import { MaturityBadge } from "./MaturityBadge";
 import { GradedAssessment } from "./GradedAssessment";
 import { PracticeAssessmentView } from "./PracticeAssessmentView";
+import { ReviewQueueView } from "./ReviewQueueView";
 
 export function CourseWorkspace({
   id,
   lessonId,
   showGradebook,
+  showReview = false,
   enrollmentVersion,
   catalog,
   enrolled,
@@ -37,6 +41,7 @@ export function CourseWorkspace({
   id: string;
   lessonId?: string;
   showGradebook: boolean;
+  showReview?: boolean;
   enrollmentVersion?: string;
   catalog: CourseSummary[];
   enrolled: boolean;
@@ -65,6 +70,8 @@ export function CourseWorkspace({
   const [activePracticeAssessmentId, setActivePracticeAssessmentId] = useState<
     string | null
   >(null);
+  const [reviewQueue, setReviewQueue] = useState<ReviewQueue | null>(null);
+  const [reviewError, setReviewError] = useState("");
   const [error, setError] = useState("");
   const [busy, setBusy] = useState(false);
   useEffect(() => {
@@ -114,8 +121,18 @@ export function CourseWorkspace({
       setGradebook(null);
       setAssessmentPlan(null);
       setGradedSubmissions([]);
+      setReviewQueue(null);
       return;
     }
+    setReviewError("");
+    api
+      .reviewQueue(id)
+      .then((queue) => {
+        if (active) setReviewQueue(queue);
+      })
+      .catch((error) => {
+        if (active) setReviewError(errorMessage(error));
+      });
     Promise.all([
       api.progress(id),
       api.notes(id),
@@ -242,6 +259,23 @@ export function CourseWorkspace({
     );
     return appeal;
   }
+  async function rateCard(cardId: string, rating: CardRating) {
+    const result = await api.reviewCard(id, cardId, rating);
+    try {
+      setReviewQueue(await api.reviewQueue(id));
+      setReviewError("");
+    } catch (error) {
+      setReviewError(errorMessage(error));
+    }
+    return result;
+  }
+  const cardSchedules = Object.fromEntries(
+    reviewQueue
+      ? [...reviewQueue.due, ...reviewQueue.new, ...reviewQueue.upcoming].map(
+          (card) => [card.card_id, card.schedule],
+        )
+      : [],
+  );
   async function saveNote(body: string) {
     const note = await api.saveNote(id, lessonId!, body);
     setNotes((previous) => [
@@ -365,7 +399,9 @@ export function CourseWorkspace({
       <nav className="tabs" aria-label="Course views">
         <a
           href={courseLink}
-          aria-current={!lessonId && !showGradebook ? "page" : undefined}
+          aria-current={
+            !lessonId && !showGradebook && !showReview ? "page" : undefined
+          }
         >
           Syllabus and lessons
         </a>
@@ -374,6 +410,15 @@ export function CourseWorkspace({
           aria-current={showGradebook ? "page" : undefined}
         >
           Practice gradebook
+        </a>
+        <a
+          href={`${courseLink}/review`}
+          aria-current={showReview ? "page" : undefined}
+        >
+          Review queue
+          {reviewQueue && reviewQueue.counts.due > 0
+            ? ` (${reviewQueue.counts.due} due)`
+            : ""}
         </a>
       </nav>
       <div className="workspace-grid">
@@ -464,6 +509,32 @@ export function CourseWorkspace({
                 </p>
               </section>
             )
+          ) : showReview ? (
+            enrolled && !needsVersionReview && reviewQueue ? (
+              <ReviewQueueView
+                courseId={id}
+                queue={reviewQueue}
+                enabled={enrolled && !needsVersionReview}
+                onRate={rateCard}
+              />
+            ) : (
+              <section className="card">
+                <h2>Spaced retrieval review</h2>
+                {reviewError ? (
+                  <p role="alert" className="error">
+                    {reviewError}
+                  </p>
+                ) : (
+                  <p>
+                    {needsVersionReview
+                      ? "Update your enrollment to review this package's current retrieval cards."
+                      : enrolled
+                        ? "Loading your review schedule…"
+                        : "Enroll to schedule retrieval-card reviews. Card text remains readable in each lesson."}
+                  </p>
+                )}
+              </section>
+            )
           ) : lessonId ? (
             lesson ? (
               <LessonStudy
@@ -485,6 +556,10 @@ export function CourseWorkspace({
                 onAppeal={requestAppeal}
                 onSaveNote={saveNote}
                 onProgress={markProgress}
+                cardSchedules={cardSchedules}
+                onRateCard={
+                  enrolled && !needsVersionReview ? rateCard : undefined
+                }
               />
             ) : (
               <p role="status">Loading lesson…</p>

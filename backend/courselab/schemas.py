@@ -43,6 +43,10 @@ class BookmarkRequest(StrictModel):
     saved: bool
 
 
+class CardReviewRequest(StrictModel):
+    rating: Literal["again", "hard", "good", "easy"]
+
+
 class AppealRequest(StrictModel):
     reason: str = Field(min_length=20, max_length=4000)
 
@@ -468,7 +472,8 @@ class ObjectiveEvidence(BaseModel):
     best_possible_score: float = Field(ge=0)
     performance: float | None = Field(default=None, ge=0, le=1)
     status: Literal[
-        "no_evidence", "insufficient_evidence", "needs_practice", "provisional_practice_mastery"
+        "no_items", "no_evidence", "insufficient_evidence", "needs_practice",
+        "provisional_practice_mastery",
     ]
 
 
@@ -491,3 +496,46 @@ class GradebookResponse(BaseModel):
     objective_evidence: dict[str, ObjectiveEvidence]
     limitations: str
     course_grade: CourseGradeView | None = None
+
+
+class CardScheduleState(BaseModel):
+    policy_version: str
+    last_rating: Literal["again", "hard", "good", "easy"]
+    review_count: int = Field(ge=1)
+    repetitions: int = Field(ge=0)
+    ease: float = Field(gt=0)
+    interval_days: float = Field(ge=0)
+    due_at: str
+    reviewed_at: str
+    due: bool
+
+
+class ReviewQueueCard(BaseModel):
+    card_id: str
+    lesson_id: str
+    lesson_title: str
+    front: str
+    back: str
+    learning_objective_ids: list[str] = Field(default_factory=list)
+    schedule: CardScheduleState | None = None
+    content_changed_since_last_review: bool = False
+
+
+class ReviewQueueResponse(BaseModel):
+    course_id: str
+    content_version: str
+    policy_version: str
+    policy: str
+    generated_at: str
+    counts: dict[str, int]
+    due: list[ReviewQueueCard]
+    new: list[ReviewQueueCard]
+    upcoming: list[ReviewQueueCard]
+    limitations: str
+
+
+class CardReviewResponse(BaseModel):
+    card_id: str
+    lesson_id: str
+    rating: Literal["again", "hard", "good", "easy"]
+    schedule: CardScheduleState

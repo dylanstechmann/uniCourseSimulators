@@ -251,6 +251,7 @@ export default function App() {
               id={courseId}
               lessonId={lessonId}
               showGradebook={segments[2] === "gradebook"}
+              showReview={segments[2] === "review"}
               catalog={courses}
               enrollmentVersion={
                 enrollments.find((item) => item.course_id === courseId)
