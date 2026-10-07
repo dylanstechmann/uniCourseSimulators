@@ -10,6 +10,8 @@ Foundations of Cell and Molecular Biology advanced from 0.16.0 to **0.17.0** and
 
 Validation reports 25 packages, 127 lessons, 192 questions, 255 cards and 25 cases, with zero errors and 123 disclosed limitation/depth warnings. The focused content tests passed **66 tests with 1 skipped**; the full root suite passed **68 with 1 skipped**; backend passed **224** with the upstream Starlette/httpx deprecation warning; frontend unit tests passed **31**; Playwright passed **19**; and legacy migration tests passed **7**. The new browser flow exercised all five Week 3 items and confirmed practice-only gradebook status. Docker Compose rebuilt successfully while preserving the database volume; API, database and web are healthy; Alembic is `0007 (head)`; the integration validator supports 196 practice specifications. Ruff and frontend lint/format/build pass; the security-boundary scan found 0 issues across 415 source files.
 
+The published increment at commit `708dd2ca88f7e187afa333a4758f56e4d449fc44` passed [hosted GitHub Actions run `37551413785`](https://github.com/dylanstechmann/uniStemCourseSimulators/actions/runs/37551413785): both the content/backend and frontend/E2E jobs completed successfully.
+
 | Current command/check | Result |
 | --- | --- |
 | `python tools/validate_content.py` | PASS: 25 packages, 127 lessons, 192 questions, 255 cards, 25 cases; 0 errors; 123 disclosed warnings |
@@ -27,6 +29,7 @@ Validation reports 25 packages, 127 lessons, 192 questions, 255 cards and 25 cas
 | `docker compose exec -T api alembic current` and `/api/v1/health` | PASS: `0007 (head)`; health `ok` |
 | `python tools/check_security.py --bundle frontend/dist` | PASS; 0 findings across 415 source files |
 | `git diff --check` | PASS |
+| Hosted GitHub Actions run `37551413785` | PASS: content/backend and frontend/E2E jobs |
 
 The course still has no weighted grade or grade-bearing homework. All eight full graded homework sets, two remaining labs, summative midterm/final, cumulative project, workload evidence, comprehensive objective coverage, and independent scientific/accessibility review remain incomplete. The practice set’s public answer specs must never be presented as protected exam keys. No course is complete or externally reviewed.
 
