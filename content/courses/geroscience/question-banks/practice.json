@@ -15,7 +15,7 @@
       ],
       "points": 1,
       "objective_ids": [
-        "geroscience-1-objective-1"
+        "geroscience-1-objective-2"
       ],
       "solution_spec": {
         "answer": 1
@@ -32,7 +32,9 @@
       "provenance": {
         "kind": "legacy-prototype",
         "legacy_id": "geroscience-1:check",
-        "modifications": []
+        "modifications": [
+          "2026-10-07: objective tag changed from geroscience-1-objective-1 to geroscience-1-objective-2, the lesson objective this prompt assesses; prompt, options, and answer unchanged."
+        ]
       }
     },
     {
@@ -47,7 +49,7 @@
       ],
       "points": 1,
       "objective_ids": [
-        "geroscience-2-objective-1"
+        "geroscience-2-objective-2"
       ],
       "solution_spec": {
         "answer": 0
@@ -64,7 +66,9 @@
       "provenance": {
         "kind": "legacy-prototype",
         "legacy_id": "geroscience-2:check",
-        "modifications": []
+        "modifications": [
+          "2026-10-07: objective tag changed from geroscience-2-objective-1 to geroscience-2-objective-2, the lesson objective this prompt assesses; prompt, options, and answer unchanged."
+        ]
       }
     },
     {
@@ -79,7 +83,7 @@
       ],
       "points": 1,
       "objective_ids": [
-        "geroscience-3-objective-1"
+        "geroscience-3-objective-2"
       ],
       "solution_spec": {
         "answer": 1
@@ -96,7 +100,9 @@
       "provenance": {
         "kind": "legacy-prototype",
         "legacy_id": "geroscience-3:check",
-        "modifications": []
+        "modifications": [
+          "2026-10-07: objective tag changed from geroscience-3-objective-1 to geroscience-3-objective-2, the lesson objective this prompt assesses; prompt, options, and answer unchanged."
+        ]
       }
     },
     {
@@ -111,7 +117,7 @@
       ],
       "points": 1,
       "objective_ids": [
-        "geroscience-4-objective-1"
+        "geroscience-4-objective-2"
       ],
       "solution_spec": {
         "answer": 0
@@ -128,6 +134,647 @@
       "provenance": {
         "kind": "legacy-prototype",
         "legacy_id": "geroscience-4:check",
+        "modifications": [
+          "2026-10-07: objective tag changed from geroscience-4-objective-1 to geroscience-4-objective-2, the lesson objective this prompt assesses; prompt, options, and answer unchanged."
+        ]
+      }
+    },
+    {
+      "id": "geroscience-5:interval-death-probability",
+      "type": "numeric",
+      "prompt": "In the lesson's synthetic life table, 38 control mice are alive at 27 months and 24 are alive at 30 months, with no censoring. What is the probability that a control mouse alive at 27 months dies before 30 months? Enter a proportion between 0 and 1.",
+      "points": 1,
+      "objective_ids": [
+        "geroscience-5-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0.368,
+        "unit": "",
+        "tolerance": 0.005,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Divide the deaths during the interval by the number alive at its start.",
+        "solution": "Fourteen mice died (38 − 24), so the interval death probability is 14/38 ≈ 0.368. It describes one age band without uncertainty and is not the same as an instantaneous hazard.",
+        "lesson_ids": [
+          "geroscience-5"
+        ],
+        "misconception_ids": [
+          "interval-probability-uses-starting-cohort"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "geroscience-5:doubling-time",
+      "type": "numeric",
+      "prompt": "A cohort's monthly mortality hazard is 0.015 at 24 months and 0.12 at 39 months. Assuming a Gompertz hazard μ(t) = A·e^(G·t) across this range, what is the mortality-rate doubling time in months?",
+      "points": 1,
+      "objective_ids": [
+        "geroscience-5-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 5.0,
+        "unit": "",
+        "tolerance": 0.05,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Find G as the natural log of the hazard ratio divided by the age difference, then use ln 2 / G.",
+        "solution": "G = ln(0.12/0.015)/(39 − 24) = ln 8/15 ≈ 0.139 per month, so MRDT = ln 2 / G = 5.0 months: hazard doubles three times in 15 months. The value summarizes the fitted model over this age range, not a direct measurement of an aging rate.",
+        "lesson_ids": [
+          "geroscience-5"
+        ],
+        "misconception_ids": [
+          "doubling-time-equals-lifespan-gain"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "geroscience-5:survivor-function",
+      "type": "data_interpretation",
+      "prompt": "Synthetic follow-up to the lesson's life table: at 30 months, grip strength normalized to each group's 18-month mean was measured in every survivor. Control survivors (n = 24) averaged 1.00 and treated survivors (n = 35) averaged 0.92. The treatment also raised survival to 30 months. Calculate the difference and choose the best-supported interpretation.",
+      "response_fields": [
+        {
+          "id": "difference",
+          "type": "numeric",
+          "prompt": "Calculate treated minus control mean normalized grip strength. Report one significant figure, such as -0.5.",
+          "unit": "",
+          "points": 1
+        },
+        {
+          "id": "interpretation",
+          "type": "single_choice",
+          "prompt": "Which interpretation is best supported?",
+          "points": 1,
+          "options": [
+            "The treatment weakened muscle in the animals that received it.",
+            "The survivor groups differ in composition because the treatment kept more animals alive, so the lower mean may reflect retained frailer animals; within-animal change or a joint analysis of function and death is needed.",
+            "Healthspan is proven to be longer because more treated animals survived to 30 months.",
+            "Grip strength cannot inform healthspan in any study."
+          ]
+        }
+      ],
+      "points": 2,
+      "objective_ids": [
+        "geroscience-5-objective-2"
+      ],
+      "solution_spec": {
+        "field_specs": [
+          {
+            "id": "difference",
+            "type": "numeric",
+            "answer": -0.08,
+            "unit": "",
+            "tolerance": 0.005,
+            "relative_tolerance": 0,
+            "unit_required": false,
+            "significant_figures": 1,
+            "dimensions": null
+          },
+          {
+            "id": "interpretation",
+            "type": "single_choice",
+            "answer": 1
+          }
+        ]
+      },
+      "feedback": {
+        "hint": "Subtract the control mean from the treated mean, then ask whether the two survivor groups contain comparable animals.",
+        "solution": "Treated minus control is 0.92 − 1.00 = −0.08. Because the treatment kept 11 more animals alive, the treated survivors include animals that would have died under control conditions. A lower survivor mean can reflect that composition rather than harm; within-animal change from baseline, or analyses that model function and death together, are needed.",
+        "lesson_ids": [
+          "geroscience-5"
+        ],
+        "misconception_ids": [
+          "survivors-are-comparable-groups"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "geroscience-5:generality",
+      "type": "single_choice",
+      "prompt": "A compound extended median lifespan in male mice of one inbred strain at one laboratory when started at 4 months of age. Which follow-up most directly tests whether the result generalizes?",
+      "options": [
+        "Repeat the same study at the same laboratory with more male mice of the same strain.",
+        "Test both sexes of a genetically heterogeneous stock at several independent sites with harmonized protocols, prespecified endpoints, measured drug exposure, and a later start-age cohort.",
+        "Measure an epigenetic clock in the original treated mice.",
+        "Report the single longest-lived treated mouse as evidence of extended maximum lifespan."
+      ],
+      "points": 1,
+      "objective_ids": [
+        "geroscience-5-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 1
+      },
+      "feedback": {
+        "hint": "Ask which design varies sex, genetic background, site, and start age while keeping endpoints fixed in advance.",
+        "solution": "Testing both sexes of a genetically heterogeneous stock at several independent sites, with harmonized protocols, prespecified endpoints, measured exposure, and a later-start cohort, tests generality directly. More animals of the same strain at the same site tests reproducibility of one setting, and a clock or the single oldest animal is not a substitute for survival analysis.",
+        "lesson_ids": [
+          "geroscience-5"
+        ],
+        "misconception_ids": [
+          "one-strain-result-generalizes"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "geroscience-6:itt-versus-survivors",
+      "type": "data_interpretation",
+      "prompt": "Synthetic trial: 50 aged mice per arm were randomized. Vehicle: 3 died before assessment and 20 of 47 survivors improved. Senolytic: 10 died before assessment and 24 of 40 survivors improved. In the prespecified intention-to-treat analysis, death counts as not improved. Report the intention-to-treat difference and choose the best interpretation.",
+      "response_fields": [
+        {
+          "id": "itt_difference",
+          "type": "numeric",
+          "prompt": "Calculate the intention-to-treat improvement rate, senolytic minus vehicle, in percentage points. Report two significant figures, such as 1.5.",
+          "unit": "",
+          "points": 1
+        },
+        {
+          "id": "interpretation",
+          "type": "single_choice",
+          "prompt": "Which interpretation is best supported?",
+          "points": 1,
+          "options": [
+            "The senolytic improved endurance by about 17 points, and the deaths are unrelated to efficacy.",
+            "The survivor-only comparison overstates benefit because more treated animals died before assessment; the intention-to-treat difference is smaller, and deaths must be reported and analyzed as an outcome.",
+            "Intention-to-treat analysis is invalid whenever animals die.",
+            "The vehicle arm should be excluded because few of its animals died."
+          ]
+        }
+      ],
+      "points": 2,
+      "objective_ids": [
+        "geroscience-6-objective-2"
+      ],
+      "solution_spec": {
+        "field_specs": [
+          {
+            "id": "itt_difference",
+            "type": "numeric",
+            "answer": 8.0,
+            "unit": "",
+            "tolerance": 0.05,
+            "relative_tolerance": 0,
+            "unit_required": false,
+            "significant_figures": 2,
+            "dimensions": null
+          },
+          {
+            "id": "interpretation",
+            "type": "single_choice",
+            "answer": 1
+          }
+        ]
+      },
+      "feedback": {
+        "hint": "Divide the number improved by the number randomized in each arm, then compare with the survivor-only rates.",
+        "solution": "Intention-to-treat rates are 24/50 = 48% and 20/50 = 40%, an 8.0-point difference. Survivor-only rates are 60.0% and about 42.6%, a difference near 17.4 points. More treated animals died before assessment, so the survivor comparison overstates benefit; deaths must be reported and analyzed as an outcome.",
+        "lesson_ids": [
+          "geroscience-6"
+        ],
+        "misconception_ids": [
+          "survivor-analysis-is-unbiased"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "geroscience-6:bcl-xl-safety",
+      "type": "multiple_select",
+      "prompt": "A candidate senolytic inhibits BCL-xL. Which measurements belong in its first controlled animal study? Select all that apply.",
+      "options": [
+        "Platelet counts at expected peak exposure",
+        "Deaths and dropouts reported by randomized arm",
+        "Wound closure in an injury cohort when dosing overlaps tissue repair",
+        "Only senescence-associated β-galactosidase staining in the target tissue",
+        "Function measured only in animals that complete the study, with no record of losses"
+      ],
+      "points": 3,
+      "objective_ids": [
+        "geroscience-6-objective-3"
+      ],
+      "solution_spec": {
+        "answer": [
+          0,
+          1,
+          2
+        ],
+        "partial_credit": "correct-minus-incorrect-clamped-v1"
+      },
+      "feedback": {
+        "hint": "Consider harms that follow from the mechanism itself, losses that could bias efficacy, and beneficial roles of senescent cells.",
+        "solution": "Platelets need BCL-xL, so platelet counts at expected peak exposure detect an on-target toxicity. Deaths and dropouts by randomized arm expose selection bias. Senescent cells aid wound repair in mouse models, so an injury cohort tests harm when dosing overlaps repair. A single senescence stain or survivor-only function cannot detect these harms. The score uses max(0, correct selections minus incorrect selections) divided by three, multiplied by three points.",
+        "lesson_ids": [
+          "geroscience-6"
+        ],
+        "misconception_ids": [
+          "off-target-is-the-only-toxicity",
+          "senescent-cells-are-only-harmful"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "geroscience-6:genetic-clearance-meaning",
+      "type": "single_choice",
+      "prompt": "In a transgenic mouse, a p16Ink4a-promoter-driven suicide gene is activated by a drug, and kidney function improves. What does this result most directly establish?",
+      "options": [
+        "Every senescent cell in the body was removed, and only senescent cells were removed.",
+        "Eliminating cells with activity of that promoter, in this model and schedule, changed kidney function; promoter specificity and clearance efficiency still need tissue-level verification.",
+        "Any senolytic drug will improve kidney function in people.",
+        "p16 expression itself is the cause of kidney aging."
+      ],
+      "points": 1,
+      "objective_ids": [
+        "geroscience-6-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 1
+      },
+      "feedback": {
+        "hint": "Separate what the promoter labels from what senescence means, and the model from people.",
+        "solution": "The experiment shows that eliminating cells with activity of that promoter, in this model and schedule, changed kidney function. Promoter activity is not exclusive to senescent cells and clearance is incomplete, so tissue-level verification of what was removed is still needed. It says nothing directly about drugs or people.",
+        "lesson_ids": [
+          "geroscience-6"
+        ],
+        "misconception_ids": [
+          "promoter-equals-cell-state"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "geroscience-7:vaf-clone-size",
+      "type": "numeric",
+      "prompt": "Targeted sequencing of whole-blood DNA covers a TET2 position with 1,000 reads, of which 120 carry a variant. Assuming a heterozygous autosomal mutation without copy-number change, what fraction of sampled nucleated cells carries it? Enter a proportion between 0 and 1.",
+      "points": 1,
+      "objective_ids": [
+        "geroscience-7-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0.24,
+        "unit": "",
+        "tolerance": 0.005,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Compute the variant allele fraction, then account for one mutant allele in each diploid mutant cell.",
+        "solution": "VAF = 120/1000 = 0.12. Each heterozygous mutant cell contributes one mutant allele of two, so about 2 × 0.12 = 0.24 of sampled cells carry the variant. Loss of heterozygosity, an X-linked locus in a male, or a mixed compartment would change this conversion.",
+        "lesson_ids": [
+          "geroscience-7"
+        ],
+        "misconception_ids": [
+          "vaf-equals-cell-fraction"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "geroscience-7:parabiosis-controls",
+      "type": "multiple_select",
+      "prompt": "An old mouse joined to a young partner shows better muscle repair than before joining. Which comparisons are needed to attribute the change to partner age rather than to the procedure? Select all that apply.",
+      "options": [
+        "Old–old isochronic pairs that undergo the same surgery",
+        "Young–young isochronic pairs that undergo the same surgery",
+        "Age-matched animals given a sham procedure without shared circulation",
+        "Only the heterochronic pair measured before and after joining",
+        "An unoperated young mouse compared with the joined old partner"
+      ],
+      "points": 3,
+      "objective_ids": [
+        "geroscience-7-objective-2"
+      ],
+      "solution_spec": {
+        "answer": [
+          0,
+          1,
+          2
+        ],
+        "partial_credit": "correct-minus-incorrect-clamped-v1"
+      },
+      "feedback": {
+        "hint": "The procedure, shared organs, and time all change along with partner age.",
+        "solution": "Old–old and young–young isochronic pairs receive the same surgery and joining, and sham-operated age-matched animals control for surgical stress without shared circulation. A before-and-after measurement of the heterochronic pair alone, or a comparison with an unoperated young mouse, confounds partner age with the procedure. The score uses max(0, correct selections minus incorrect selections) divided by three, multiplied by three points.",
+        "lesson_ids": [
+          "geroscience-7"
+        ],
+        "misconception_ids": [
+          "parabiosis-isolates-blood-factors"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "geroscience-7:assay-specificity",
+      "type": "data_interpretation",
+      "prompt": "Use the lesson's synthetic assay table for plasma protein X and related protein Y. Calculate the old-minus-young difference for the X-unique mass-spectrometry peptide in ng/mL, then choose the best-supported conclusion.",
+      "response_fields": [
+        {
+          "id": "ms_difference",
+          "type": "numeric",
+          "prompt": "Calculate old minus young for the X-unique peptide in ng/mL. Report one significant figure, such as 0.5.",
+          "unit": "",
+          "points": 1
+        },
+        {
+          "id": "conclusion",
+          "type": "single_choice",
+          "prompt": "Which conclusion is best supported?",
+          "points": 1,
+          "options": [
+            "Protein X declines with age, so supplementing X should rejuvenate old tissue.",
+            "A specific measurement shows no decline in X, and the affinity signal persists in knockout plasma, so the affinity assay likely cross-reacts with Y; the age-decline claim for X is not supported.",
+            "Mass spectrometry is less reliable than any affinity assay, so the original decline stands.",
+            "Both X and Y must be rejuvenating factors because both were measured."
+          ]
+        }
+      ],
+      "points": 2,
+      "objective_ids": [
+        "geroscience-7-objective-3"
+      ],
+      "solution_spec": {
+        "field_specs": [
+          {
+            "id": "ms_difference",
+            "type": "numeric",
+            "answer": 0.2,
+            "unit": "",
+            "tolerance": 0.005,
+            "relative_tolerance": 0,
+            "unit_required": false,
+            "significant_figures": 1,
+            "dimensions": null
+          },
+          {
+            "id": "conclusion",
+            "type": "single_choice",
+            "answer": 1
+          }
+        ]
+      },
+      "feedback": {
+        "hint": "Compare the assay that is specific to X with the one that is not, and use the knockout result.",
+        "solution": "The X-unique peptide changes by 4.3 − 4.1 = +0.2 ng/mL, essentially no decline, while the Y-unique peptide falls and the affinity signal persists in X-knockout plasma. The affinity assay most likely reports Y, so the claimed age decline in X is not supported by a specific measurement.",
+        "lesson_ids": [
+          "geroscience-7"
+        ],
+        "misconception_ids": [
+          "any-assay-signal-is-the-named-protein"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "geroscience-7:dilution-design",
+      "type": "single_choice",
+      "prompt": "Replacing half of an old mouse's plasma with saline plus albumin improves several tissue measures. Which interpretation fits this design best?",
+      "options": [
+        "It proves that a specific young-blood protein is the rejuvenating factor.",
+        "It supports a role for diluting or removing old-plasma factors, because no young blood was added; it does not identify which factors matter or show durable or human benefit.",
+        "It shows that albumin deficiency causes aging.",
+        "It shows that all parabiosis results were caused by shared organs."
+      ],
+      "points": 1,
+      "objective_ids": [
+        "geroscience-7-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 1
+      },
+      "feedback": {
+        "hint": "Ask what was added and what was removed in this experiment.",
+        "solution": "No young blood was added, so the result supports a role for diluting or removing old-plasma factors. It does not identify which factors matter, rule out contributions from young-blood factors in other designs, or show durable or human benefit.",
+        "lesson_ids": [
+          "geroscience-7"
+        ],
+        "misconception_ids": [
+          "young-blood-required-for-benefit"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "geroscience-8:age-acceleration",
+      "type": "numeric",
+      "prompt": "A reference calibration gives clock age = 6 + 0.88 × chronological age. A 70-year-old's sample reads a clock age of 64. What is this person's age acceleration in years? Use a negative sign if the clock is younger than predicted.",
+      "points": 1,
+      "objective_ids": [
+        "geroscience-8-objective-1"
+      ],
+      "solution_spec": {
+        "answer": -3.6,
+        "unit": "",
+        "tolerance": 0.05,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Compute the calibrated prediction for this chronological age, then subtract it from the measured clock age.",
+        "solution": "The predicted clock age is 6 + 0.88 × 70 = 67.6, so age acceleration is 64 − 67.6 = −3.6 years. The raw difference (64 − 70 = −6) would overstate how young the sample appears because the calibration slope is below 1.",
+        "lesson_ids": [
+          "geroscience-8"
+        ],
+        "misconception_ids": [
+          "raw-difference-is-acceleration"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "geroscience-8:reprogramming-window",
+      "type": "data_interpretation",
+      "prompt": "Use the lesson's synthetic partial-reprogramming time course. Calculate the change in clock estimate from day 0 to day 12 (day 12 minus day 0, in years), then choose the best-supported conclusion.",
+      "response_fields": [
+        {
+          "id": "clock_change",
+          "type": "numeric",
+          "prompt": "Calculate day-12 minus day-0 clock estimate in years. Report two significant figures, such as -15.",
+          "unit": "",
+          "points": 1
+        },
+        {
+          "id": "conclusion",
+          "type": "single_choice",
+          "prompt": "Which conclusion is best supported?",
+          "points": 1,
+          "options": [
+            "Day 12 is the best rejuvenation condition because it has the largest clock decrease.",
+            "The largest clock decrease coincides with lost fibroblast markers, reduced collagen secretion, and more pluripotency-marker-positive cells; only the day-4 condition kept identity and function, and it still needs durability and tumorigenicity tests.",
+            "None of the conditions changed the clock, so reprogramming had no effect.",
+            "Pluripotency-marker-positive cells at day 12 show that the cells became younger fibroblasts."
+          ]
+        }
+      ],
+      "points": 2,
+      "objective_ids": [
+        "geroscience-8-objective-2"
+      ],
+      "solution_spec": {
+        "field_specs": [
+          {
+            "id": "clock_change",
+            "type": "numeric",
+            "answer": -22,
+            "unit": "",
+            "tolerance": 0.05,
+            "relative_tolerance": 0,
+            "unit_required": false,
+            "significant_figures": 2,
+            "dimensions": null
+          },
+          {
+            "id": "conclusion",
+            "type": "single_choice",
+            "answer": 1
+          }
+        ]
+      },
+      "feedback": {
+        "hint": "Read the identity, pluripotency, and function columns alongside the clock column.",
+        "solution": "The clock estimate changes by 30 − 52 = −22 years. That largest decrease coincides with loss of fibroblast markers, lower collagen secretion, and more pluripotency-marker-positive cells. Only day 4 kept identity and function, and even that condition needs durability, genome-integrity, and tumorigenicity testing.",
+        "lesson_ids": [
+          "geroscience-8"
+        ],
+        "misconception_ids": [
+          "larger-clock-change-is-better"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "geroscience-8:design-measures",
+      "type": "multiple_select",
+      "prompt": "You plan an in vivo partial-reprogramming study in aged mice. Which measurements are needed before claiming rejuvenation without loss of cell identity? Select all that apply.",
+      "options": [
+        "Lineage-identity markers in the target tissue",
+        "A prespecified functional measure of the target tissue",
+        "Histology and tumor surveillance across organs during and after induction",
+        "Follow-up after induction stops to test durability",
+        "A clock estimate alone, reporting the condition with the largest decrease"
+      ],
+      "points": 4,
+      "objective_ids": [
+        "geroscience-8-objective-3"
+      ],
+      "solution_spec": {
+        "answer": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "partial_credit": "correct-minus-incorrect-clamped-v1"
+      },
+      "feedback": {
+        "hint": "A rejuvenation claim needs identity, function, safety, and durability evidence, not only a younger-looking molecular profile.",
+        "solution": "Lineage-identity markers, a prespecified functional measure, histology with tumor surveillance during and after induction, and follow-up after induction stops are all needed. A clock estimate alone cannot distinguish rejuvenation from dedifferentiation, and choosing the largest decrease rewards the riskiest condition. The score uses max(0, correct selections minus incorrect selections) divided by four, multiplied by four points.",
+        "lesson_ids": [
+          "geroscience-8"
+        ],
+        "misconception_ids": [
+          "clock-alone-proves-rejuvenation"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "geroscience-8:regression-to-mean",
+      "type": "single_choice",
+      "prompt": "A study enrolls only people whose age acceleration exceeds +5 years. After six months of an intervention, their average acceleration falls to +2 years, and there is no comparison group. What is the main problem with calling this rejuvenation?",
+      "options": [
+        "Values selected for being extreme tend to move toward the mean on retest, so a randomized control is needed to separate an effect from regression to the mean and measurement noise.",
+        "Epigenetic clocks can never change within six months.",
+        "A fall in acceleration proves that the participants' cells were reprogrammed.",
+        "Computing acceleration as clock age minus chronological age would remove the problem."
+      ],
+      "points": 1,
+      "objective_ids": [
+        "geroscience-8-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0
+      },
+      "feedback": {
+        "hint": "Think about what happens on retest to values that were selected for being extreme.",
+        "solution": "Participants selected for extreme values tend to measure closer to the mean on retest, and clocks also have measurement noise. Without a randomized comparison group, the decline cannot be attributed to the intervention.",
+        "lesson_ids": [
+          "geroscience-8"
+        ],
+        "misconception_ids": [
+          "selected-extremes-stay-extreme"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
         "modifications": []
       }
     }

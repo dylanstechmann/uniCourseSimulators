@@ -4,7 +4,18 @@
 
 2026-10-06; synthetic local learner data only. Milestones 1 and 2 are implemented. Milestone 3 remains partial; deterministic graders and prototype graded-assignment and review workflows are described below. A Milestone 4 curriculum-map increment is implemented and tested, while subject-matter review and map refinement remain. All 25 course packages are **partial**; zero are beta, complete or externally reviewed. Human score review is limited to saved attempts and does not constitute course-content review. No semester equivalence, university credit, security certification or public production deployment is asserted.
 
-## Current increment: spaced retrieval queue and unassessed objectives (2026-10-07)
+## Current increment: Geroscience & Regenerative Biology original lessons (2026-10-07)
+
+Geroscience & Regenerative Biology advances to **0.2.0** and remains `partial`. Four original lessons with explicitly synthetic data follow the four preserved compact units. The package adds 15 formative items, 16 cards and 21 link-only scientific references, each checked against its PubMed title and DOI on 2026-10-07; findings are summarized qualitatively without reproducing source data. Every lesson objective now links to a course outcome. The four legacy checks are retagged to the objectives their prompts assess, and the change is recorded in each item's provenance. Every keyed answer was graded by the production grader (full credit for the key, zero for representative wrong answers, partial credit for split data-interpretation responses), and a new content test independently recalculates each numerical key from the lesson tables.
+
+| Current command/check | Result |
+| --- | --- |
+| `python tools/validate_content.py` | PASS: 25 packages, 132 lessons, 211 questions, 275 cards, 25 cases; 0 errors; 123 disclosed warnings |
+| `python -m courselab.check_content ../content` | PASS: 25 packages / 215 supported practice specifications |
+| `python -m pytest tests -q` | 75 passed (inventory pins updated; new geroscience recalculation test) |
+| `cd backend; python -m pytest -q` | 248 passed |
+
+## Previous increment: spaced retrieval queue and unassessed objectives (2026-10-07)
 
 Adds Alembic revision `0008` (`card_reviews`), an append-only record of each learner self-rating with the card-text SHA-256, policy version and resulting schedule. `retrieval-schedule-v1` is deterministic and unit-tested: 10-minute relearn after `again`, then 1 day, 6 days and interval × ease for `good`; `hard`/`easy` adjust interval and ease; ease stays within 1.3–3.0 and intervals are capped at 365 days. `GET /api/v1/reviews/{course}` returns due, not-yet-reviewed and later cards for lesson-published cards only; `POST /api/v1/courses/{course}/cards/{card}/reviews` requires session, CSRF and a current enrollment. Edited card text starts a new schedule. Learner export and deletion include the new rows. The gradebook now lists authored objectives with no tagged item as `no items`; the response schema accepts that status, which the uncommitted draft omitted. Ratings do not change scores, objective evidence or grades, and no retention benefit is claimed.
 

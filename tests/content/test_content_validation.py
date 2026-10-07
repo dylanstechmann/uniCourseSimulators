@@ -147,9 +147,9 @@ def test_preserved_inventory_is_honest_partial(repository):
     assert result.ok, result.errors
     assert result.inventory == {
         "courses": 25,
-        "lessons": 128,
-        "questions": 196,
-        "cards": 259,
+        "lessons": 132,
+        "questions": 211,
+        "cards": 275,
         "cases": 25,
     }
     assert sum(warning["code"] == "legacy-depth" for warning in result.warnings) == 98
@@ -353,7 +353,7 @@ def test_structured_rubric_item_is_counted_while_course_remains_partial(reposito
     manifest = read(course[0])
     assert manifest["version"] == "0.18.0"
     assert manifest["maturity"] == "partial"
-    assert result.inventory["questions"] == 196
+    assert result.inventory["questions"] == 211
     question = next(
         item
         for item in read(course[0].parent / "question-banks/practice.json")["questions"]
@@ -374,7 +374,7 @@ def test_graph_plot_item_is_counted_while_statistics_course_remains_partial(repo
     assert manifest["maturity"] == "partial"
     assert graph["id"] == "statistics-5:concentration-graph"
     assert len(graph["graph_spec"]["points"]) == 3
-    assert result.inventory["questions"] == 196
+    assert result.inventory["questions"] == 211
 
 
 def test_cell_biology_scope_does_not_claim_unwritten_weeks(repository):
@@ -698,7 +698,7 @@ def test_public_validation_discloses_unmounted_private_assessment_without_faking
     result = validate_repository(repository)
 
     assert result.ok, result.errors
-    assert result.inventory["questions"] == 196
+    assert result.inventory["questions"] == 211
     assert any(item["code"] == "private-assessment-unchecked" for item in result.warnings)
 
 
@@ -710,7 +710,7 @@ def test_private_assessment_validator_loads_and_validates_key_only_from_separate
     result = validate_repository(repository, private_assessments_root=private_root)
 
     assert result.ok, result.errors
-    assert result.inventory["questions"] == 197
+    assert result.inventory["questions"] == 212
     assert "restricted-key" not in codes(result)
     assert "private-assessment-unchecked" not in {item["code"] for item in result.warnings}
 
@@ -1175,3 +1175,53 @@ def test_virtual_imaging_lab_summary_plot_and_contrast_match_synthetic_csv(repos
         == means["cue"] - means["vehicle"]
         == 9
     )
+
+
+def test_geroscience_original_lessons_are_mapped_synthetic_and_recalculated():
+    course_root = ROOT / "content/courses/geroscience"
+    manifest = read(course_root / "course.json")
+    bank = {item["id"]: item for item in read(course_root / "question-banks/practice.json")["questions"]}
+    assert manifest["version"] == "0.2.0"
+    assert manifest["maturity"] == "partial"
+    assert manifest["review"]["status"] == "unreviewed"
+    outcomes = {item["id"] for item in manifest["outcomes"]}
+    for objective in manifest["lesson_objectives"]:
+        assert objective["course_outcome_ids"], objective["id"]
+        assert set(objective["course_outcome_ids"]) <= outcomes
+    new_lessons = [
+        lesson
+        for module in manifest["modules"]
+        for lesson in module["lessons"]
+        if lesson["id"] in {"geroscience-5", "geroscience-6", "geroscience-7", "geroscience-8"}
+    ]
+    assert len(new_lessons) == 4
+    for lesson in new_lessons:
+        reading = (course_root / lesson["reading"]).read_text(encoding="utf-8")
+        assert "synthetic teaching data" in reading
+        assert "## Limits of this lesson" in reading
+        for question_id in lesson["question_ids"]:
+            assert set(bank[question_id]["objective_ids"]) <= set(lesson["objectives"])
+            assert bank[question_id]["provenance"]["kind"] == "original"
+
+    # Independent recalculation of every new numerical key from the values stated in the
+    # lesson tables and prompts.
+    def key(question_id, field_id=None):
+        spec = bank[question_id]["solution_spec"]
+        if field_id is None:
+            return spec["answer"], spec["tolerance"]
+        field = next(item for item in spec["field_specs"] if item["id"] == field_id)
+        return field["answer"], field["tolerance"]
+
+    expected = {
+        ("geroscience-5:interval-death-probability", None): (38 - 24) / 38,
+        ("geroscience-5:doubling-time", None): math.log(2) / (math.log(0.12 / 0.015) / (39 - 24)),
+        ("geroscience-5:survivor-function", "difference"): 0.92 - 1.00,
+        ("geroscience-6:itt-versus-survivors", "itt_difference"): 100 * (24 / 50 - 20 / 50),
+        ("geroscience-7:vaf-clone-size", None): 2 * 120 / 1000,
+        ("geroscience-7:assay-specificity", "ms_difference"): 4.3 - 4.1,
+        ("geroscience-8:age-acceleration", None): 64 - (6 + 0.88 * 70),
+        ("geroscience-8:reprogramming-window", "clock_change"): 30 - 52,
+    }
+    for (question_id, field_id), value in expected.items():
+        answer, tolerance = key(question_id, field_id)
+        assert abs(answer - value) <= tolerance, (question_id, answer, value)

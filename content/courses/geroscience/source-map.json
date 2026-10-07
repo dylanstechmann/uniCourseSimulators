@@ -58,6 +58,73 @@
       "original_content": true,
       "license": "MIT OR CC-BY-4.0",
       "modifications": []
+    },
+    {
+      "module_id": "geroscience-module-5",
+      "lesson_id": "geroscience-5",
+      "reading": "modules/01b-survival-mortality-and-healthspan-endpoints.md",
+      "source_ids": [
+        "harrison-2009-rapamycin-itp",
+        "statistics"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-survival-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "geroscience-module-6",
+      "lesson_id": "geroscience-6",
+      "reading": "modules/02b-testing-senescent-cell-causality.md",
+      "source_ids": [
+        "xu-2018-senolytics-physical-function",
+        "baker-2011-ink-attac-clearance",
+        "baker-2016-p16-cells-healthy-lifespan",
+        "chang-2016-abt263-senolytic",
+        "mason-2007-platelet-bcl-xl",
+        "zhu-2015-senolytic-discovery",
+        "demaria-2014-senescence-wound-healing",
+        "pubmed-cell-senescence-consensus"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-trial-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "geroscience-module-7",
+      "lesson_id": "geroscience-7",
+      "reading": "modules/03b-clonal-hematopoiesis-and-circulating-factors.md",
+      "source_ids": [
+        "jaiswal-2014-clonal-hematopoiesis",
+        "steensma-2015-chip-definition",
+        "fuster-2017-tet2-atherosclerosis",
+        "conboy-2005-heterochronic-parabiosis",
+        "rebo-2016-heterochronic-blood-exchange",
+        "mehdipour-2020-neutral-blood-exchange",
+        "egerman-2015-gdf11-specificity"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-assay-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "geroscience-module-8",
+      "lesson_id": "geroscience-8",
+      "reading": "modules/04b-aging-clocks-and-partial-reprogramming.md",
+      "source_ids": [
+        "horvath-2013-methylation-age",
+        "higgins-chen-2022-clock-reliability",
+        "takahashi-yamanaka-2006-ips",
+        "abad-2013-in-vivo-reprogramming-teratomas",
+        "ocampo-2016-partial-reprogramming",
+        "lu-2020-osk-vision"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-reprogramming-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
     }
   ]
 }

@@ -7,14 +7,16 @@
   "domain": "Life sciences",
   "level": "Year 3",
   "maturity": "partial",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "license": "MIT OR CC-BY-4.0",
   "content_origin": {
     "kind": "legacy-prototype",
     "source_path": "src/data/courses.js",
     "source_sha256": "a77a7cb7f5be2ffa12068877042ac775c6d9b79b83ac2f316fe4f26a0d3d783b",
     "migration_version": "1.0",
-    "modifications": []
+    "modifications": [
+      "2026-10-07: added four original lessons (survival and healthspan endpoints; senescent-cell causality; clonal hematopoiesis and circulating factors; aging clocks and partial reprogramming) beside the preserved legacy units; retagged the four legacy checks to the objectives they assess."
+    ]
   },
   "prerequisites": {
     "course_ids": [
@@ -56,49 +58,164 @@
       "id": "geroscience-1-objective-1",
       "description": "Compare damage, maintenance, and adaptation models.",
       "bloom": "analyze",
-      "course_outcome_ids": []
+      "course_outcome_ids": [
+        "geroscience-outcome-1"
+      ]
     },
     {
       "id": "geroscience-1-objective-2",
       "description": "Distinguish biomarker change from improved function.",
       "bloom": "analyze",
-      "course_outcome_ids": []
+      "course_outcome_ids": [
+        "geroscience-outcome-4"
+      ]
     },
     {
       "id": "geroscience-2-objective-1",
       "description": "Define senescence operationally using multiple features.",
       "bloom": "understand",
-      "course_outcome_ids": []
+      "course_outcome_ids": [
+        "geroscience-outcome-2"
+      ]
     },
     {
       "id": "geroscience-2-objective-2",
       "description": "Distinguish cell-state evidence from a single marker.",
       "bloom": "analyze",
-      "course_outcome_ids": []
+      "course_outcome_ids": [
+        "geroscience-outcome-2"
+      ]
     },
     {
       "id": "geroscience-3-objective-1",
       "description": "Relate stem-cell function to niche signals and tissue demand.",
       "bloom": "analyze",
-      "course_outcome_ids": []
+      "course_outcome_ids": [
+        "geroscience-outcome-2"
+      ]
     },
     {
       "id": "geroscience-3-objective-2",
       "description": "Distinguish cell number from self-renewal and differentiation capacity.",
       "bloom": "analyze",
-      "course_outcome_ids": []
+      "course_outcome_ids": [
+        "geroscience-outcome-2"
+      ]
     },
     {
       "id": "geroscience-4-objective-1",
       "description": "Evaluate whether an intervention's mechanism is supported by its endpoints.",
       "bloom": "evaluate",
-      "course_outcome_ids": []
+      "course_outcome_ids": [
+        "geroscience-outcome-3"
+      ]
     },
     {
       "id": "geroscience-4-objective-2",
       "description": "Design a study that separates efficacy from toxicity or selection effects.",
       "bloom": "create",
-      "course_outcome_ids": []
+      "course_outcome_ids": [
+        "geroscience-outcome-3"
+      ]
+    },
+    {
+      "id": "geroscience-5-objective-1",
+      "description": "Calculate an interval death probability and a Gompertz mortality-rate doubling time from cohort data.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "geroscience-outcome-4"
+      ]
+    },
+    {
+      "id": "geroscience-5-objective-2",
+      "description": "Distinguish lifespan, healthspan, and tissue-function endpoints, including the effects of censoring and survivor selection.",
+      "bloom": "analyze",
+      "course_outcome_ids": [
+        "geroscience-outcome-4"
+      ]
+    },
+    {
+      "id": "geroscience-5-objective-3",
+      "description": "Evaluate whether a lifespan study's design supports the generality of its claim.",
+      "bloom": "evaluate",
+      "course_outcome_ids": [
+        "geroscience-outcome-3"
+      ]
+    },
+    {
+      "id": "geroscience-6-objective-1",
+      "description": "Compare genetic and pharmacologic senescent-cell clearance designs and state what each can establish.",
+      "bloom": "analyze",
+      "course_outcome_ids": [
+        "geroscience-outcome-2",
+        "geroscience-outcome-3"
+      ]
+    },
+    {
+      "id": "geroscience-6-objective-2",
+      "description": "Calculate intention-to-treat and survivor-only response estimates and explain how treatment-related dropout biases efficacy.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "geroscience-outcome-3"
+      ]
+    },
+    {
+      "id": "geroscience-6-objective-3",
+      "description": "Identify mechanism-linked senolytic toxicities and select measurements that would detect them.",
+      "bloom": "evaluate",
+      "course_outcome_ids": [
+        "geroscience-outcome-3"
+      ]
+    },
+    {
+      "id": "geroscience-7-objective-1",
+      "description": "Explain clonal expansion in an aging stem-cell pool and convert a variant allele fraction into an estimated clone size.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "geroscience-outcome-2"
+      ]
+    },
+    {
+      "id": "geroscience-7-objective-2",
+      "description": "Evaluate heterochronic parabiosis and blood-exchange designs, separating dilution of old-blood factors from supply of young-blood factors.",
+      "bloom": "evaluate",
+      "course_outcome_ids": [
+        "geroscience-outcome-1",
+        "geroscience-outcome-3"
+      ]
+    },
+    {
+      "id": "geroscience-7-objective-3",
+      "description": "Identify assay-specificity and replication problems in claims about single circulating factors.",
+      "bloom": "analyze",
+      "course_outcome_ids": [
+        "geroscience-outcome-1"
+      ]
+    },
+    {
+      "id": "geroscience-8-objective-1",
+      "description": "Explain how epigenetic clocks are trained and calculate age acceleration as a residual from a reference calibration.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "geroscience-outcome-1"
+      ]
+    },
+    {
+      "id": "geroscience-8-objective-2",
+      "description": "Evaluate whether a clock change supports rejuvenation, considering noise, cell composition, regression to the mean, and identity loss.",
+      "bloom": "evaluate",
+      "course_outcome_ids": [
+        "geroscience-outcome-1",
+        "geroscience-outcome-4"
+      ]
+    },
+    {
+      "id": "geroscience-8-objective-3",
+      "description": "Design measurements for a partial-reprogramming experiment that separate youthful features from dedifferentiation and tumor risk.",
+      "bloom": "create",
+      "course_outcome_ids": [
+        "geroscience-outcome-3"
+      ]
     }
   ],
   "duration": {
@@ -141,6 +258,39 @@
       ]
     },
     {
+      "id": "geroscience-module-5",
+      "title": "Measuring aging outcomes",
+      "source_ids": [
+        "harrison-2009-rapamycin-itp",
+        "statistics"
+      ],
+      "lessons": [
+        {
+          "id": "geroscience-5",
+          "title": "Survival curves, mortality hazards, and healthspan endpoints",
+          "reading": "modules/01b-survival-mortality-and-healthspan-endpoints.md",
+          "objectives": [
+            "geroscience-5-objective-1",
+            "geroscience-5-objective-2",
+            "geroscience-5-objective-3"
+          ],
+          "worked_example": "If monthly hazard rises from 0.010 at 18 months to 0.040 at 30 months, G = ln 4/12 ≈ 0.116 per month and the mortality-rate doubling time is about 6.0 months. A group with half the hazard at every age keeps the same doubling time yet lives longer, so doubling time and median lifespan answer different questions.",
+          "question_ids": [
+            "geroscience-5:interval-death-probability",
+            "geroscience-5:doubling-time",
+            "geroscience-5:survivor-function",
+            "geroscience-5:generality"
+          ],
+          "card_ids": [
+            "geroscience-5-card-1",
+            "geroscience-5-card-2",
+            "geroscience-5-card-3",
+            "geroscience-5-card-4"
+          ]
+        }
+      ]
+    },
+    {
       "id": "geroscience-module-2",
       "title": "Senescence, inflammation, and tissue context",
       "source_ids": [
@@ -164,6 +314,44 @@
           "card_ids": [
             "geroscience-1-0",
             "geroscience-1-1"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "geroscience-module-6",
+      "title": "Testing senescent-cell causality",
+      "source_ids": [
+        "xu-2018-senolytics-physical-function",
+        "baker-2011-ink-attac-clearance",
+        "baker-2016-p16-cells-healthy-lifespan",
+        "chang-2016-abt263-senolytic",
+        "mason-2007-platelet-bcl-xl",
+        "zhu-2015-senolytic-discovery",
+        "demaria-2014-senescence-wound-healing",
+        "pubmed-cell-senescence-consensus"
+      ],
+      "lessons": [
+        {
+          "id": "geroscience-6",
+          "title": "Clearance models, senolytics, and dropout-aware efficacy",
+          "reading": "modules/02b-testing-senescent-cell-causality.md",
+          "objectives": [
+            "geroscience-6-objective-1",
+            "geroscience-6-objective-2",
+            "geroscience-6-objective-3"
+          ],
+          "worked_example": "With 40 animals per arm, 19 of 38 vehicle survivors and 20 of 32 senolytic survivors improved, an apparent 12.5-point benefit. Counting the deaths as not improved gives 47.5% versus 50.0%, a 2.5-point difference: treatment-related deaths removed animals unlikely to improve, so survivors alone overstate benefit.",
+          "question_ids": [
+            "geroscience-6:itt-versus-survivors",
+            "geroscience-6:bcl-xl-safety",
+            "geroscience-6:genetic-clearance-meaning"
+          ],
+          "card_ids": [
+            "geroscience-6-card-1",
+            "geroscience-6-card-2",
+            "geroscience-6-card-3",
+            "geroscience-6-card-4"
           ]
         }
       ]
@@ -197,6 +385,44 @@
       ]
     },
     {
+      "id": "geroscience-module-7",
+      "title": "Aging stem-cell pools and circulating factors",
+      "source_ids": [
+        "jaiswal-2014-clonal-hematopoiesis",
+        "steensma-2015-chip-definition",
+        "fuster-2017-tet2-atherosclerosis",
+        "conboy-2005-heterochronic-parabiosis",
+        "rebo-2016-heterochronic-blood-exchange",
+        "mehdipour-2020-neutral-blood-exchange",
+        "egerman-2015-gdf11-specificity"
+      ],
+      "lessons": [
+        {
+          "id": "geroscience-7",
+          "title": "Clonal hematopoiesis and circulating-factor claims",
+          "reading": "modules/03b-clonal-hematopoiesis-and-circulating-factors.md",
+          "objectives": [
+            "geroscience-7-objective-1",
+            "geroscience-7-objective-2",
+            "geroscience-7-objective-3"
+          ],
+          "worked_example": "If 72 of 800 reads carry a DNMT3A variant, the variant allele fraction is 0.09. For a heterozygous autosomal mutation without copy-number change, about 2 × 0.09 = 18% of sampled nucleated cells carry it; a binomial standard error near 0.010 already makes 0.07–0.11 plausible.",
+          "question_ids": [
+            "geroscience-7:vaf-clone-size",
+            "geroscience-7:parabiosis-controls",
+            "geroscience-7:assay-specificity",
+            "geroscience-7:dilution-design"
+          ],
+          "card_ids": [
+            "geroscience-7-card-1",
+            "geroscience-7-card-2",
+            "geroscience-7-card-3",
+            "geroscience-7-card-4"
+          ]
+        }
+      ]
+    },
+    {
       "id": "geroscience-module-4",
       "title": "Intervention evidence and translational design",
       "source_ids": [
@@ -223,6 +449,43 @@
           ]
         }
       ]
+    },
+    {
+      "id": "geroscience-module-8",
+      "title": "Aging clocks and partial reprogramming",
+      "source_ids": [
+        "horvath-2013-methylation-age",
+        "higgins-chen-2022-clock-reliability",
+        "takahashi-yamanaka-2006-ips",
+        "abad-2013-in-vivo-reprogramming-teratomas",
+        "ocampo-2016-partial-reprogramming",
+        "lu-2020-osk-vision"
+      ],
+      "lessons": [
+        {
+          "id": "geroscience-8",
+          "title": "Aging clocks and partial-reprogramming rejuvenation claims",
+          "reading": "modules/04b-aging-clocks-and-partial-reprogramming.md",
+          "objectives": [
+            "geroscience-8-objective-1",
+            "geroscience-8-objective-2",
+            "geroscience-8-objective-3"
+          ],
+          "worked_example": "With a calibration clock age = 4 + 0.92 × chronological age, a 50-year-old reading 55 has age acceleration 55 − 50 = +5 years, while an 80-year-old reading 80 has +2.4 years despite a raw difference of zero. Selecting people for high acceleration guarantees some decline on retest, so a randomized control is required.",
+          "question_ids": [
+            "geroscience-8:age-acceleration",
+            "geroscience-8:reprogramming-window",
+            "geroscience-8:design-measures",
+            "geroscience-8:regression-to-mean"
+          ],
+          "card_ids": [
+            "geroscience-8-card-1",
+            "geroscience-8-card-2",
+            "geroscience-8-card-3",
+            "geroscience-8-card-4"
+          ]
+        }
+      ]
     }
   ],
   "assessments": [
@@ -232,7 +495,7 @@
       "mode": "practice",
       "path": "question-banks/practice.json",
       "objective_ids": [
-        "geroscience-1-objective-1"
+        "geroscience-1-objective-2"
       ],
       "question_ids": [
         "geroscience-1:check"
@@ -245,7 +508,7 @@
       "mode": "practice",
       "path": "question-banks/practice.json",
       "objective_ids": [
-        "geroscience-2-objective-1"
+        "geroscience-2-objective-2"
       ],
       "question_ids": [
         "geroscience-2:check"
@@ -258,7 +521,7 @@
       "mode": "practice",
       "path": "question-banks/practice.json",
       "objective_ids": [
-        "geroscience-3-objective-1"
+        "geroscience-3-objective-2"
       ],
       "question_ids": [
         "geroscience-3:check"
@@ -271,12 +534,87 @@
       "mode": "practice",
       "path": "question-banks/practice.json",
       "objective_ids": [
-        "geroscience-4-objective-1"
+        "geroscience-4-objective-2"
       ],
       "question_ids": [
         "geroscience-4:check"
       ],
       "points": 1
+    },
+    {
+      "id": "geroscience-5-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Survival and healthspan endpoint practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "geroscience-5-objective-1",
+        "geroscience-5-objective-2",
+        "geroscience-5-objective-3"
+      ],
+      "question_ids": [
+        "geroscience-5:interval-death-probability",
+        "geroscience-5:doubling-time",
+        "geroscience-5:survivor-function",
+        "geroscience-5:generality"
+      ],
+      "points": 5
+    },
+    {
+      "id": "geroscience-6-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Senescent-cell causality and safety practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "geroscience-6-objective-1",
+        "geroscience-6-objective-2",
+        "geroscience-6-objective-3"
+      ],
+      "question_ids": [
+        "geroscience-6:itt-versus-survivors",
+        "geroscience-6:bcl-xl-safety",
+        "geroscience-6:genetic-clearance-meaning"
+      ],
+      "points": 6
+    },
+    {
+      "id": "geroscience-7-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Clonal hematopoiesis and circulating-factor practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "geroscience-7-objective-1",
+        "geroscience-7-objective-2",
+        "geroscience-7-objective-3"
+      ],
+      "question_ids": [
+        "geroscience-7:vaf-clone-size",
+        "geroscience-7:parabiosis-controls",
+        "geroscience-7:assay-specificity",
+        "geroscience-7:dilution-design"
+      ],
+      "points": 7
+    },
+    {
+      "id": "geroscience-8-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Aging clock and partial-reprogramming practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "geroscience-8-objective-1",
+        "geroscience-8-objective-2",
+        "geroscience-8-objective-3"
+      ],
+      "question_ids": [
+        "geroscience-8:age-acceleration",
+        "geroscience-8:reprogramming-window",
+        "geroscience-8:design-measures",
+        "geroscience-8:regression-to-mean"
+      ],
+      "points": 8
     },
     {
       "id": "geroscience-case",
@@ -320,18 +658,25 @@
       "version": "0.1.0",
       "date": "2026-10-05",
       "summary": "Preserved original compact prototype content in separate manifests and readings; labeled partial without semester or credit equivalency."
+    },
+    {
+      "version": "0.2.0",
+      "date": "2026-10-07",
+      "summary": "Added four original lessons with explicitly synthetic data tables, worked examples, 15 formative items, 16 retrieval cards, and 21 link-only scientific references: survival curves, Gompertz hazards and healthspan endpoints; genetic and pharmacologic senescent-cell clearance with dropout-aware efficacy; clonal hematopoiesis and circulating-factor claims; and epigenetic clocks with partial reprogramming. Mapped every lesson objective to a course outcome and retagged the four legacy checks to the objectives they assess. The package remains partial and unreviewed."
     }
   ],
   "limitations": [
-    "Four compact legacy units are preserved; this package is not equivalent to a full university semester.",
+    "Four compact legacy units are preserved beside four original substantial lessons; this package is not equivalent to a full university semester.",
     "There is no authored 12–15 week schedule, substantive homework sequence, laboratory sequence, midterm, cumulative final, or graded integrative project.",
-    "The single formative check per lesson does not demonstrate comprehensive outcome coverage or mastery; association with the first lesson objective is provisional.",
-    "Bloom labels and structured prerequisite edges are initial authoring classifications awaiting subject-matter review.",
+    "Formative checks cover each new lesson's objectives, but the first objective of each legacy unit still has no tagged practice item; this is not demonstrated comprehensive outcome coverage or mastery.",
+    "Bloom labels, objective-to-outcome links, and structured prerequisite edges are authoring classifications awaiting subject-matter review.",
+    "All data tables in the new lessons are synthetic teaching data; cited studies are summarized qualitatively from link-only references and are not reproduced.",
     "Question answers and solution feedback are intentionally public practice authoring specifications, not restricted exam keys.",
-    "Numerical specifications preserve the prototype's tolerance and optional unit entry; significant-figure and dimensional checks have not been authored.",
+    "Numerical items use unitless answers with stated tolerances; significant-figure and dimensional checks have not been authored for this package.",
     "Total workload and weekly duration are unknown; former nominal credit values and hardcoded reading times do not establish workload."
   ],
   "intentionally_omitted": [
-    "Full instructional sequence and summative assessments are not authored yet; this is a preserved seed inventory."
+    "A full instructional sequence, graded assessments, and laboratory activities are not authored yet; the new lessons extend a partial package.",
+    "No dosing, treatment, supplement, or clinical-test recommendations are given; intervention content is limited to evidence appraisal."
   ]
 }

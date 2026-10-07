@@ -65,6 +65,166 @@
       "back": "Analysis that retains participants or experimental units in their assigned groups regardless of adherence, under a prespecified strategy.",
       "objective_ids": [],
       "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "geroscience-5-card-1",
+      "lesson_id": "geroscience-5",
+      "front": "Censoring in a survival study",
+      "back": "An animal leaves observation for a reason other than the event; it counts as at risk until removal and is neither a death nor deleted.",
+      "objective_ids": [
+        "geroscience-5-objective-2"
+      ],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "geroscience-5-card-2",
+      "lesson_id": "geroscience-5",
+      "front": "Mortality-rate doubling time",
+      "back": "ln 2 / G for a Gompertz hazard μ(t) = A·e^(G·t): the age interval over which the fitted hazard doubles.",
+      "objective_ids": [
+        "geroscience-5-objective-1"
+      ],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "geroscience-5-card-3",
+      "lesson_id": "geroscience-5",
+      "front": "Why can survivor-only function comparisons mislead?",
+      "back": "If treatment changes who survives, survivor groups differ in composition, so differences mix treatment effects with selection by death.",
+      "objective_ids": [
+        "geroscience-5-objective-2"
+      ],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "geroscience-5-card-4",
+      "lesson_id": "geroscience-5",
+      "front": "Compression of morbidity",
+      "back": "A shorter late-life period of disability relative to lifespan; longer life does not guarantee it.",
+      "objective_ids": [
+        "geroscience-5-objective-2"
+      ],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "geroscience-6-card-1",
+      "lesson_id": "geroscience-6",
+      "front": "On-target toxicity of BCL-xL inhibition",
+      "back": "Platelets depend on BCL-xL to survive, so inhibiting it shortens platelet life span and lowers platelet counts.",
+      "objective_ids": [
+        "geroscience-6-objective-3"
+      ],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "geroscience-6-card-2",
+      "lesson_id": "geroscience-6",
+      "front": "Intention-to-treat analysis",
+      "back": "Every randomized subject is analyzed in its assigned arm, with a prespecified rule for deaths and missing outcomes.",
+      "objective_ids": [
+        "geroscience-6-objective-2"
+      ],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "geroscience-6-card-3",
+      "lesson_id": "geroscience-6",
+      "front": "Limit of p16-promoter clearance models",
+      "back": "p16 promoter activity is not exclusive to senescent cells, and clearance is incomplete and differs by tissue.",
+      "objective_ids": [
+        "geroscience-6-objective-1"
+      ],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "geroscience-6-card-4",
+      "lesson_id": "geroscience-6",
+      "front": "A useful role of senescent cells that clearance can remove",
+      "back": "In mouse wounds, senescent cells speed closure by secreting PDGF-AA; removing them delayed healing.",
+      "objective_ids": [
+        "geroscience-6-objective-3"
+      ],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "geroscience-7-card-1",
+      "lesson_id": "geroscience-7",
+      "front": "Clonal hematopoiesis of indeterminate potential (CHIP)",
+      "back": "A blood-cancer-associated somatic mutation detected in blood, commonly at VAF of at least 2%, without a diagnosed hematologic cancer.",
+      "objective_ids": [
+        "geroscience-7-objective-1"
+      ],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "geroscience-7-card-2",
+      "lesson_id": "geroscience-7",
+      "front": "Variant allele fraction to clone size",
+      "back": "For a heterozygous autosomal mutation without copy-number change, the fraction of mutant cells is about 2 × VAF.",
+      "objective_ids": [
+        "geroscience-7-objective-1"
+      ],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "geroscience-7-card-3",
+      "lesson_id": "geroscience-7",
+      "front": "Isochronic parabiosis control",
+      "back": "Same-age pairs that receive the same joining surgery, separating partner-age effects from the procedure itself.",
+      "objective_ids": [
+        "geroscience-7-objective-2"
+      ],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "geroscience-7-card-4",
+      "lesson_id": "geroscience-7",
+      "front": "What did the GDF11 debate teach?",
+      "back": "Reagents that also detected myostatin undermined the reported age decline; factor claims need specific assays and independent replication.",
+      "objective_ids": [
+        "geroscience-7-objective-3"
+      ],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "geroscience-8-card-1",
+      "lesson_id": "geroscience-8",
+      "front": "Epigenetic age acceleration",
+      "back": "The residual of clock age after regressing it on chronological age in a reference population.",
+      "objective_ids": [
+        "geroscience-8-objective-1"
+      ],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "geroscience-8-card-2",
+      "lesson_id": "geroscience-8",
+      "front": "How can a blood clock change without any cell changing?",
+      "back": "Clock estimates partly reflect cell-type proportions, so shifting composition moves the estimate.",
+      "objective_ids": [
+        "geroscience-8-objective-2"
+      ],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "geroscience-8-card-3",
+      "lesson_id": "geroscience-8",
+      "front": "OSKM",
+      "back": "OCT4, SOX2, KLF4 and c-MYC: factors that can reprogram somatic cells to pluripotency and erase their identity.",
+      "objective_ids": [
+        "geroscience-8-objective-3"
+      ],
+      "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "geroscience-8-card-4",
+      "lesson_id": "geroscience-8",
+      "front": "Why is a larger clock decrease not always better?",
+      "back": "Past a threshold, reprogramming causes dedifferentiation and tumor risk, and pluripotent cells read as epigenetically young.",
+      "objective_ids": [
+        "geroscience-8-objective-2"
+      ],
+      "license": "MIT OR CC-BY-4.0"
     }
   ]
 }

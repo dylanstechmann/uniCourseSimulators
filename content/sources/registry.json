@@ -471,7 +471,8 @@
       ],
       "third_party_notes": "Asset-level rights have not been cleared. Some OCW assets are excluded from the Creative Commons license or carry additional credits; inspect each proposed asset before reuse. External MITx-linked resources have their own terms. No source asset, assessment, figure, or instructional prose is imported by this record.",
       "mapped_courses": [
-        "statistics"
+        "statistics",
+        "geroscience"
       ],
       "mapped_modules": [],
       "version": "spring 2022; landing page accessed 2026-10-05",
@@ -2153,6 +2154,615 @@
         "cell-biology-module-28"
       ],
       "version": "Online guidelines; version 1.2 includes the August 2025 targeted embryo-model update; accessed 2026-10-06",
+      "checksum": null,
+      "imported_assets": [],
+      "rights_notes": "This record documents link-only use and does not clear linked content for reuse."
+    },
+    {
+      "id": "harrison-2009-rapamycin-itp",
+      "title": "Rapamycin fed late in life extends lifespan in genetically heterogeneous mice",
+      "institution": "NIH / National Library of Medicine PubMed",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/19587680/",
+      "accessed_at": "2026-10-07",
+      "license": "Third-party reuse rights not cleared for this package; link-only scientific reference selected",
+      "reuse_mode": "link-only-reference",
+      "permissions": {
+        "linking": true,
+        "quotation": false,
+        "adaptation": false,
+        "redistribution": false
+      },
+      "attribution_requirements": [
+        "Identify Rapamycin fed late in life extends lifespan in genetically heterogeneous mice, NIH / National Library of Medicine PubMed, and the exact URL."
+      ],
+      "third_party_notes": "Used only as a link-only scientific reference. No source text, figure, table, problem, or dataset is copied or adapted; findings are summarized qualitatively in original wording.",
+      "mapped_courses": [
+        "geroscience"
+      ],
+      "mapped_modules": [
+        "geroscience-module-5"
+      ],
+      "version": "Nature article record; PMID 19587680; DOI 10.1038/nature08221; accessed 2026-10-07",
+      "checksum": null,
+      "imported_assets": [],
+      "rights_notes": "This record documents link-only use and does not clear linked content for reuse."
+    },
+    {
+      "id": "xu-2018-senolytics-physical-function",
+      "title": "Senolytics improve physical function and increase lifespan in old age",
+      "institution": "NIH / National Library of Medicine PubMed",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/29988130/",
+      "accessed_at": "2026-10-07",
+      "license": "Third-party reuse rights not cleared for this package; link-only scientific reference selected",
+      "reuse_mode": "link-only-reference",
+      "permissions": {
+        "linking": true,
+        "quotation": false,
+        "adaptation": false,
+        "redistribution": false
+      },
+      "attribution_requirements": [
+        "Identify Senolytics improve physical function and increase lifespan in old age, NIH / National Library of Medicine PubMed, and the exact URL."
+      ],
+      "third_party_notes": "Used only as a link-only scientific reference. No source text, figure, table, problem, or dataset is copied or adapted; findings are summarized qualitatively in original wording.",
+      "mapped_courses": [
+        "geroscience"
+      ],
+      "mapped_modules": [
+        "geroscience-module-6"
+      ],
+      "version": "Nature Medicine article record; PMID 29988130; DOI 10.1038/s41591-018-0092-9; accessed 2026-10-07",
+      "checksum": null,
+      "imported_assets": [],
+      "rights_notes": "This record documents link-only use and does not clear linked content for reuse."
+    },
+    {
+      "id": "baker-2011-ink-attac-clearance",
+      "title": "Clearance of p16Ink4a-positive senescent cells delays ageing-associated disorders",
+      "institution": "NIH / National Library of Medicine PubMed",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/22048312/",
+      "accessed_at": "2026-10-07",
+      "license": "Third-party reuse rights not cleared for this package; link-only scientific reference selected",
+      "reuse_mode": "link-only-reference",
+      "permissions": {
+        "linking": true,
+        "quotation": false,
+        "adaptation": false,
+        "redistribution": false
+      },
+      "attribution_requirements": [
+        "Identify Clearance of p16Ink4a-positive senescent cells delays ageing-associated disorders, NIH / National Library of Medicine PubMed, and the exact URL."
+      ],
+      "third_party_notes": "Used only as a link-only scientific reference. No source text, figure, table, problem, or dataset is copied or adapted; findings are summarized qualitatively in original wording.",
+      "mapped_courses": [
+        "geroscience"
+      ],
+      "mapped_modules": [
+        "geroscience-module-6"
+      ],
+      "version": "Nature article record; PMID 22048312; DOI 10.1038/nature10600; accessed 2026-10-07",
+      "checksum": null,
+      "imported_assets": [],
+      "rights_notes": "This record documents link-only use and does not clear linked content for reuse."
+    },
+    {
+      "id": "baker-2016-p16-cells-healthy-lifespan",
+      "title": "Naturally occurring p16(Ink4a)-positive cells shorten healthy lifespan",
+      "institution": "NIH / National Library of Medicine PubMed",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/26840489/",
+      "accessed_at": "2026-10-07",
+      "license": "Third-party reuse rights not cleared for this package; link-only scientific reference selected",
+      "reuse_mode": "link-only-reference",
+      "permissions": {
+        "linking": true,
+        "quotation": false,
+        "adaptation": false,
+        "redistribution": false
+      },
+      "attribution_requirements": [
+        "Identify Naturally occurring p16(Ink4a)-positive cells shorten healthy lifespan, NIH / National Library of Medicine PubMed, and the exact URL."
+      ],
+      "third_party_notes": "Used only as a link-only scientific reference. No source text, figure, table, problem, or dataset is copied or adapted; findings are summarized qualitatively in original wording.",
+      "mapped_courses": [
+        "geroscience"
+      ],
+      "mapped_modules": [
+        "geroscience-module-6"
+      ],
+      "version": "Nature article record; PMID 26840489; DOI 10.1038/nature16932; accessed 2026-10-07",
+      "checksum": null,
+      "imported_assets": [],
+      "rights_notes": "This record documents link-only use and does not clear linked content for reuse."
+    },
+    {
+      "id": "chang-2016-abt263-senolytic",
+      "title": "Clearance of senescent cells by ABT263 rejuvenates aged hematopoietic stem cells in mice",
+      "institution": "NIH / National Library of Medicine PubMed",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/26657143/",
+      "accessed_at": "2026-10-07",
+      "license": "Third-party reuse rights not cleared for this package; link-only scientific reference selected",
+      "reuse_mode": "link-only-reference",
+      "permissions": {
+        "linking": true,
+        "quotation": false,
+        "adaptation": false,
+        "redistribution": false
+      },
+      "attribution_requirements": [
+        "Identify Clearance of senescent cells by ABT263 rejuvenates aged hematopoietic stem cells in mice, NIH / National Library of Medicine PubMed, and the exact URL."
+      ],
+      "third_party_notes": "Used only as a link-only scientific reference. No source text, figure, table, problem, or dataset is copied or adapted; findings are summarized qualitatively in original wording.",
+      "mapped_courses": [
+        "geroscience"
+      ],
+      "mapped_modules": [
+        "geroscience-module-6"
+      ],
+      "version": "Nature Medicine article record; PMID 26657143; DOI 10.1038/nm.4010; accessed 2026-10-07",
+      "checksum": null,
+      "imported_assets": [],
+      "rights_notes": "This record documents link-only use and does not clear linked content for reuse."
+    },
+    {
+      "id": "mason-2007-platelet-bcl-xl",
+      "title": "Programmed anuclear cell death delimits platelet life span",
+      "institution": "NIH / National Library of Medicine PubMed",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/17382885/",
+      "accessed_at": "2026-10-07",
+      "license": "Third-party reuse rights not cleared for this package; link-only scientific reference selected",
+      "reuse_mode": "link-only-reference",
+      "permissions": {
+        "linking": true,
+        "quotation": false,
+        "adaptation": false,
+        "redistribution": false
+      },
+      "attribution_requirements": [
+        "Identify Programmed anuclear cell death delimits platelet life span, NIH / National Library of Medicine PubMed, and the exact URL."
+      ],
+      "third_party_notes": "Used only as a link-only scientific reference. No source text, figure, table, problem, or dataset is copied or adapted; findings are summarized qualitatively in original wording.",
+      "mapped_courses": [
+        "geroscience"
+      ],
+      "mapped_modules": [
+        "geroscience-module-6"
+      ],
+      "version": "Cell article record; PMID 17382885; DOI 10.1016/j.cell.2007.01.037; accessed 2026-10-07",
+      "checksum": null,
+      "imported_assets": [],
+      "rights_notes": "This record documents link-only use and does not clear linked content for reuse."
+    },
+    {
+      "id": "zhu-2015-senolytic-discovery",
+      "title": "The Achilles' heel of senescent cells: from transcriptome to senolytic drugs",
+      "institution": "NIH / National Library of Medicine PubMed",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/25754370/",
+      "accessed_at": "2026-10-07",
+      "license": "Third-party reuse rights not cleared for this package; link-only scientific reference selected",
+      "reuse_mode": "link-only-reference",
+      "permissions": {
+        "linking": true,
+        "quotation": false,
+        "adaptation": false,
+        "redistribution": false
+      },
+      "attribution_requirements": [
+        "Identify The Achilles' heel of senescent cells: from transcriptome to senolytic drugs, NIH / National Library of Medicine PubMed, and the exact URL."
+      ],
+      "third_party_notes": "Used only as a link-only scientific reference. No source text, figure, table, problem, or dataset is copied or adapted; findings are summarized qualitatively in original wording.",
+      "mapped_courses": [
+        "geroscience"
+      ],
+      "mapped_modules": [
+        "geroscience-module-6"
+      ],
+      "version": "Aging Cell article record; PMID 25754370; DOI 10.1111/acel.12344; accessed 2026-10-07",
+      "checksum": null,
+      "imported_assets": [],
+      "rights_notes": "This record documents link-only use and does not clear linked content for reuse."
+    },
+    {
+      "id": "demaria-2014-senescence-wound-healing",
+      "title": "An essential role for senescent cells in optimal wound healing through secretion of PDGF-AA",
+      "institution": "NIH / National Library of Medicine PubMed",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/25499914/",
+      "accessed_at": "2026-10-07",
+      "license": "Third-party reuse rights not cleared for this package; link-only scientific reference selected",
+      "reuse_mode": "link-only-reference",
+      "permissions": {
+        "linking": true,
+        "quotation": false,
+        "adaptation": false,
+        "redistribution": false
+      },
+      "attribution_requirements": [
+        "Identify An essential role for senescent cells in optimal wound healing through secretion of PDGF-AA, NIH / National Library of Medicine PubMed, and the exact URL."
+      ],
+      "third_party_notes": "Used only as a link-only scientific reference. No source text, figure, table, problem, or dataset is copied or adapted; findings are summarized qualitatively in original wording.",
+      "mapped_courses": [
+        "geroscience"
+      ],
+      "mapped_modules": [
+        "geroscience-module-6"
+      ],
+      "version": "Developmental Cell article record; PMID 25499914; DOI 10.1016/j.devcel.2014.11.012; accessed 2026-10-07",
+      "checksum": null,
+      "imported_assets": [],
+      "rights_notes": "This record documents link-only use and does not clear linked content for reuse."
+    },
+    {
+      "id": "jaiswal-2014-clonal-hematopoiesis",
+      "title": "Age-related clonal hematopoiesis associated with adverse outcomes",
+      "institution": "NIH / National Library of Medicine PubMed",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/25426837/",
+      "accessed_at": "2026-10-07",
+      "license": "Third-party reuse rights not cleared for this package; link-only scientific reference selected",
+      "reuse_mode": "link-only-reference",
+      "permissions": {
+        "linking": true,
+        "quotation": false,
+        "adaptation": false,
+        "redistribution": false
+      },
+      "attribution_requirements": [
+        "Identify Age-related clonal hematopoiesis associated with adverse outcomes, NIH / National Library of Medicine PubMed, and the exact URL."
+      ],
+      "third_party_notes": "Used only as a link-only scientific reference. No source text, figure, table, problem, or dataset is copied or adapted; findings are summarized qualitatively in original wording.",
+      "mapped_courses": [
+        "geroscience"
+      ],
+      "mapped_modules": [
+        "geroscience-module-7"
+      ],
+      "version": "New England Journal of Medicine article record; PMID 25426837; DOI 10.1056/NEJMoa1408617; accessed 2026-10-07",
+      "checksum": null,
+      "imported_assets": [],
+      "rights_notes": "This record documents link-only use and does not clear linked content for reuse."
+    },
+    {
+      "id": "steensma-2015-chip-definition",
+      "title": "Clonal hematopoiesis of indeterminate potential and its distinction from myelodysplastic syndromes",
+      "institution": "NIH / National Library of Medicine PubMed",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/25931582/",
+      "accessed_at": "2026-10-07",
+      "license": "Third-party reuse rights not cleared for this package; link-only scientific reference selected",
+      "reuse_mode": "link-only-reference",
+      "permissions": {
+        "linking": true,
+        "quotation": false,
+        "adaptation": false,
+        "redistribution": false
+      },
+      "attribution_requirements": [
+        "Identify Clonal hematopoiesis of indeterminate potential and its distinction from myelodysplastic syndromes, NIH / National Library of Medicine PubMed, and the exact URL."
+      ],
+      "third_party_notes": "Used only as a link-only scientific reference. No source text, figure, table, problem, or dataset is copied or adapted; findings are summarized qualitatively in original wording.",
+      "mapped_courses": [
+        "geroscience"
+      ],
+      "mapped_modules": [
+        "geroscience-module-7"
+      ],
+      "version": "Blood article record; PMID 25931582; DOI 10.1182/blood-2015-03-631747; accessed 2026-10-07",
+      "checksum": null,
+      "imported_assets": [],
+      "rights_notes": "This record documents link-only use and does not clear linked content for reuse."
+    },
+    {
+      "id": "fuster-2017-tet2-atherosclerosis",
+      "title": "Clonal hematopoiesis associated with TET2 deficiency accelerates atherosclerosis development in mice",
+      "institution": "NIH / National Library of Medicine PubMed",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28104796/",
+      "accessed_at": "2026-10-07",
+      "license": "Third-party reuse rights not cleared for this package; link-only scientific reference selected",
+      "reuse_mode": "link-only-reference",
+      "permissions": {
+        "linking": true,
+        "quotation": false,
+        "adaptation": false,
+        "redistribution": false
+      },
+      "attribution_requirements": [
+        "Identify Clonal hematopoiesis associated with TET2 deficiency accelerates atherosclerosis development in mice, NIH / National Library of Medicine PubMed, and the exact URL."
+      ],
+      "third_party_notes": "Used only as a link-only scientific reference. No source text, figure, table, problem, or dataset is copied or adapted; findings are summarized qualitatively in original wording.",
+      "mapped_courses": [
+        "geroscience"
+      ],
+      "mapped_modules": [
+        "geroscience-module-7"
+      ],
+      "version": "Science article record; PMID 28104796; DOI 10.1126/science.aag1381; accessed 2026-10-07",
+      "checksum": null,
+      "imported_assets": [],
+      "rights_notes": "This record documents link-only use and does not clear linked content for reuse."
+    },
+    {
+      "id": "conboy-2005-heterochronic-parabiosis",
+      "title": "Rejuvenation of aged progenitor cells by exposure to a young systemic environment",
+      "institution": "NIH / National Library of Medicine PubMed",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/15716955/",
+      "accessed_at": "2026-10-07",
+      "license": "Third-party reuse rights not cleared for this package; link-only scientific reference selected",
+      "reuse_mode": "link-only-reference",
+      "permissions": {
+        "linking": true,
+        "quotation": false,
+        "adaptation": false,
+        "redistribution": false
+      },
+      "attribution_requirements": [
+        "Identify Rejuvenation of aged progenitor cells by exposure to a young systemic environment, NIH / National Library of Medicine PubMed, and the exact URL."
+      ],
+      "third_party_notes": "Used only as a link-only scientific reference. No source text, figure, table, problem, or dataset is copied or adapted; findings are summarized qualitatively in original wording.",
+      "mapped_courses": [
+        "geroscience"
+      ],
+      "mapped_modules": [
+        "geroscience-module-7"
+      ],
+      "version": "Nature article record; PMID 15716955; DOI 10.1038/nature03260; accessed 2026-10-07",
+      "checksum": null,
+      "imported_assets": [],
+      "rights_notes": "This record documents link-only use and does not clear linked content for reuse."
+    },
+    {
+      "id": "rebo-2016-heterochronic-blood-exchange",
+      "title": "A single heterochronic blood exchange reveals rapid inhibition of multiple tissues by old blood",
+      "institution": "NIH / National Library of Medicine PubMed",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/27874859/",
+      "accessed_at": "2026-10-07",
+      "license": "Third-party reuse rights not cleared for this package; link-only scientific reference selected",
+      "reuse_mode": "link-only-reference",
+      "permissions": {
+        "linking": true,
+        "quotation": false,
+        "adaptation": false,
+        "redistribution": false
+      },
+      "attribution_requirements": [
+        "Identify A single heterochronic blood exchange reveals rapid inhibition of multiple tissues by old blood, NIH / National Library of Medicine PubMed, and the exact URL."
+      ],
+      "third_party_notes": "Used only as a link-only scientific reference. No source text, figure, table, problem, or dataset is copied or adapted; findings are summarized qualitatively in original wording.",
+      "mapped_courses": [
+        "geroscience"
+      ],
+      "mapped_modules": [
+        "geroscience-module-7"
+      ],
+      "version": "Nature Communications article record; PMID 27874859; DOI 10.1038/ncomms13363; accessed 2026-10-07",
+      "checksum": null,
+      "imported_assets": [],
+      "rights_notes": "This record documents link-only use and does not clear linked content for reuse."
+    },
+    {
+      "id": "mehdipour-2020-neutral-blood-exchange",
+      "title": "Rejuvenation of three germ layers tissues by exchanging old blood plasma with saline-albumin",
+      "institution": "NIH / National Library of Medicine PubMed",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/32474458/",
+      "accessed_at": "2026-10-07",
+      "license": "Third-party reuse rights not cleared for this package; link-only scientific reference selected",
+      "reuse_mode": "link-only-reference",
+      "permissions": {
+        "linking": true,
+        "quotation": false,
+        "adaptation": false,
+        "redistribution": false
+      },
+      "attribution_requirements": [
+        "Identify Rejuvenation of three germ layers tissues by exchanging old blood plasma with saline-albumin, NIH / National Library of Medicine PubMed, and the exact URL."
+      ],
+      "third_party_notes": "Used only as a link-only scientific reference. No source text, figure, table, problem, or dataset is copied or adapted; findings are summarized qualitatively in original wording.",
+      "mapped_courses": [
+        "geroscience"
+      ],
+      "mapped_modules": [
+        "geroscience-module-7"
+      ],
+      "version": "Aging (Albany NY) article record; PMID 32474458; accessed 2026-10-07",
+      "checksum": null,
+      "imported_assets": [],
+      "rights_notes": "This record documents link-only use and does not clear linked content for reuse."
+    },
+    {
+      "id": "egerman-2015-gdf11-specificity",
+      "title": "GDF11 Increases with Age and Inhibits Skeletal Muscle Regeneration",
+      "institution": "NIH / National Library of Medicine PubMed",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/26001423/",
+      "accessed_at": "2026-10-07",
+      "license": "Third-party reuse rights not cleared for this package; link-only scientific reference selected",
+      "reuse_mode": "link-only-reference",
+      "permissions": {
+        "linking": true,
+        "quotation": false,
+        "adaptation": false,
+        "redistribution": false
+      },
+      "attribution_requirements": [
+        "Identify GDF11 Increases with Age and Inhibits Skeletal Muscle Regeneration, NIH / National Library of Medicine PubMed, and the exact URL."
+      ],
+      "third_party_notes": "Used only as a link-only scientific reference. No source text, figure, table, problem, or dataset is copied or adapted; findings are summarized qualitatively in original wording.",
+      "mapped_courses": [
+        "geroscience"
+      ],
+      "mapped_modules": [
+        "geroscience-module-7"
+      ],
+      "version": "Cell Metabolism article record; PMID 26001423; DOI 10.1016/j.cmet.2015.05.010; accessed 2026-10-07",
+      "checksum": null,
+      "imported_assets": [],
+      "rights_notes": "This record documents link-only use and does not clear linked content for reuse."
+    },
+    {
+      "id": "horvath-2013-methylation-age",
+      "title": "DNA methylation age of human tissues and cell types",
+      "institution": "NIH / National Library of Medicine PubMed",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/24138928/",
+      "accessed_at": "2026-10-07",
+      "license": "Third-party reuse rights not cleared for this package; link-only scientific reference selected",
+      "reuse_mode": "link-only-reference",
+      "permissions": {
+        "linking": true,
+        "quotation": false,
+        "adaptation": false,
+        "redistribution": false
+      },
+      "attribution_requirements": [
+        "Identify DNA methylation age of human tissues and cell types, NIH / National Library of Medicine PubMed, and the exact URL."
+      ],
+      "third_party_notes": "Used only as a link-only scientific reference. No source text, figure, table, problem, or dataset is copied or adapted; findings are summarized qualitatively in original wording.",
+      "mapped_courses": [
+        "geroscience"
+      ],
+      "mapped_modules": [
+        "geroscience-module-8"
+      ],
+      "version": "Genome Biology article record; PMID 24138928; DOI 10.1186/gb-2013-14-10-r115; accessed 2026-10-07",
+      "checksum": null,
+      "imported_assets": [],
+      "rights_notes": "This record documents link-only use and does not clear linked content for reuse."
+    },
+    {
+      "id": "higgins-chen-2022-clock-reliability",
+      "title": "A computational solution for bolstering reliability of epigenetic clocks: Implications for clinical trials and longitudinal tracking",
+      "institution": "NIH / National Library of Medicine PubMed",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/36277076/",
+      "accessed_at": "2026-10-07",
+      "license": "Third-party reuse rights not cleared for this package; link-only scientific reference selected",
+      "reuse_mode": "link-only-reference",
+      "permissions": {
+        "linking": true,
+        "quotation": false,
+        "adaptation": false,
+        "redistribution": false
+      },
+      "attribution_requirements": [
+        "Identify A computational solution for bolstering reliability of epigenetic clocks: Implications for clinical trials and longitudinal tracking, NIH / National Library of Medicine PubMed, and the exact URL."
+      ],
+      "third_party_notes": "Used only as a link-only scientific reference. No source text, figure, table, problem, or dataset is copied or adapted; findings are summarized qualitatively in original wording.",
+      "mapped_courses": [
+        "geroscience"
+      ],
+      "mapped_modules": [
+        "geroscience-module-8"
+      ],
+      "version": "Nature Aging article record; PMID 36277076; DOI 10.1038/s43587-022-00248-2; accessed 2026-10-07",
+      "checksum": null,
+      "imported_assets": [],
+      "rights_notes": "This record documents link-only use and does not clear linked content for reuse."
+    },
+    {
+      "id": "takahashi-yamanaka-2006-ips",
+      "title": "Induction of pluripotent stem cells from mouse embryonic and adult fibroblast cultures by defined factors",
+      "institution": "NIH / National Library of Medicine PubMed",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/16904174/",
+      "accessed_at": "2026-10-07",
+      "license": "Third-party reuse rights not cleared for this package; link-only scientific reference selected",
+      "reuse_mode": "link-only-reference",
+      "permissions": {
+        "linking": true,
+        "quotation": false,
+        "adaptation": false,
+        "redistribution": false
+      },
+      "attribution_requirements": [
+        "Identify Induction of pluripotent stem cells from mouse embryonic and adult fibroblast cultures by defined factors, NIH / National Library of Medicine PubMed, and the exact URL."
+      ],
+      "third_party_notes": "Used only as a link-only scientific reference. No source text, figure, table, problem, or dataset is copied or adapted; findings are summarized qualitatively in original wording.",
+      "mapped_courses": [
+        "geroscience"
+      ],
+      "mapped_modules": [
+        "geroscience-module-8"
+      ],
+      "version": "Cell article record; PMID 16904174; DOI 10.1016/j.cell.2006.07.024; accessed 2026-10-07",
+      "checksum": null,
+      "imported_assets": [],
+      "rights_notes": "This record documents link-only use and does not clear linked content for reuse."
+    },
+    {
+      "id": "abad-2013-in-vivo-reprogramming-teratomas",
+      "title": "Reprogramming in vivo produces teratomas and iPS cells with totipotency features",
+      "institution": "NIH / National Library of Medicine PubMed",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/24025773/",
+      "accessed_at": "2026-10-07",
+      "license": "Third-party reuse rights not cleared for this package; link-only scientific reference selected",
+      "reuse_mode": "link-only-reference",
+      "permissions": {
+        "linking": true,
+        "quotation": false,
+        "adaptation": false,
+        "redistribution": false
+      },
+      "attribution_requirements": [
+        "Identify Reprogramming in vivo produces teratomas and iPS cells with totipotency features, NIH / National Library of Medicine PubMed, and the exact URL."
+      ],
+      "third_party_notes": "Used only as a link-only scientific reference. No source text, figure, table, problem, or dataset is copied or adapted; findings are summarized qualitatively in original wording.",
+      "mapped_courses": [
+        "geroscience"
+      ],
+      "mapped_modules": [
+        "geroscience-module-8"
+      ],
+      "version": "Nature article record; PMID 24025773; DOI 10.1038/nature12586; accessed 2026-10-07",
+      "checksum": null,
+      "imported_assets": [],
+      "rights_notes": "This record documents link-only use and does not clear linked content for reuse."
+    },
+    {
+      "id": "ocampo-2016-partial-reprogramming",
+      "title": "In Vivo Amelioration of Age-Associated Hallmarks by Partial Reprogramming",
+      "institution": "NIH / National Library of Medicine PubMed",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/27984723/",
+      "accessed_at": "2026-10-07",
+      "license": "Third-party reuse rights not cleared for this package; link-only scientific reference selected",
+      "reuse_mode": "link-only-reference",
+      "permissions": {
+        "linking": true,
+        "quotation": false,
+        "adaptation": false,
+        "redistribution": false
+      },
+      "attribution_requirements": [
+        "Identify In Vivo Amelioration of Age-Associated Hallmarks by Partial Reprogramming, NIH / National Library of Medicine PubMed, and the exact URL."
+      ],
+      "third_party_notes": "Used only as a link-only scientific reference. No source text, figure, table, problem, or dataset is copied or adapted; findings are summarized qualitatively in original wording.",
+      "mapped_courses": [
+        "geroscience"
+      ],
+      "mapped_modules": [
+        "geroscience-module-8"
+      ],
+      "version": "Cell article record; PMID 27984723; DOI 10.1016/j.cell.2016.11.052; accessed 2026-10-07",
+      "checksum": null,
+      "imported_assets": [],
+      "rights_notes": "This record documents link-only use and does not clear linked content for reuse."
+    },
+    {
+      "id": "lu-2020-osk-vision",
+      "title": "Reprogramming to recover youthful epigenetic information and restore vision",
+      "institution": "NIH / National Library of Medicine PubMed",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/33268865/",
+      "accessed_at": "2026-10-07",
+      "license": "Third-party reuse rights not cleared for this package; link-only scientific reference selected",
+      "reuse_mode": "link-only-reference",
+      "permissions": {
+        "linking": true,
+        "quotation": false,
+        "adaptation": false,
+        "redistribution": false
+      },
+      "attribution_requirements": [
+        "Identify Reprogramming to recover youthful epigenetic information and restore vision, NIH / National Library of Medicine PubMed, and the exact URL."
+      ],
+      "third_party_notes": "Used only as a link-only scientific reference. No source text, figure, table, problem, or dataset is copied or adapted; findings are summarized qualitatively in original wording.",
+      "mapped_courses": [
+        "geroscience"
+      ],
+      "mapped_modules": [
+        "geroscience-module-8"
+      ],
+      "version": "Nature article record; PMID 33268865; DOI 10.1038/s41586-020-2975-4; accessed 2026-10-07",
       "checksum": null,
       "imported_assets": [],
       "rights_notes": "This record documents link-only use and does not clear linked content for reuse."
