@@ -878,6 +878,130 @@ test("week 3 open homework companion grades data summaries and bounded reasoning
   await expect(row).toContainText("ungraded");
 });
 
+test("week 11 signaling lab grades replicate summaries, time-course points, and bounded rescue reasoning", async ({
+  page,
+}) => {
+  await page.goto("/#/account");
+  await page.getByRole("button", { name: "Start guest session" }).click();
+  await page.getByRole("link", { name: "Course catalog", exact: true }).click();
+  await page.getByRole("link", { name: /Foundations of Cell/ }).click();
+  await page.getByRole("button", { name: "Enroll in partial course" }).click();
+  await page.getByRole("link", { name: "Practice gradebook" }).click();
+
+  const row = page.getByRole("row", {
+    name: /Virtual lab 2: signaling dynamics, inhibition, and rescue \(ungraded practice\)/,
+  });
+  await row.getByRole("button", { name: "Open practice set" }).click();
+  await expect(
+    page.getByRole("heading", {
+      name: "Virtual lab 2: signaling dynamics, inhibition, and rescue (ungraded practice)",
+    }),
+  ).toBeVisible();
+  await expect(
+    page.getByText(/4 questions · 20 practice points/),
+  ).toBeVisible();
+
+  const upload = page.locator(
+    '[data-question-id="cell-biology-lab2:summary-table"]',
+  );
+  const summary = [
+    "condition_time,biological_preparation_count,mean_perk_relative",
+    "vehicle_2,4,1.0",
+    "ligand_pulse_2,4,4.8",
+    "ligand_continuous_2,4,4.9",
+    "continuous_meki_2,4,1.15",
+    "ligand_egfri_2,4,1.2",
+    "egfri_active_mek_2,4,4.2",
+    "vehicle_60,4,1.0",
+    "ligand_pulse_60,4,1.1",
+    "ligand_continuous_60,4,3.2",
+    "continuous_meki_60,4,1.0",
+    "ligand_egfri_60,4,1.0",
+    "egfri_active_mek_60,4,2.6",
+  ].join("\n");
+  await upload.getByLabel("CSV file upload").setInputFiles({
+    name: "signaling-summary.csv",
+    mimeType: "text/csv",
+    buffer: Buffer.from(summary),
+  });
+  await upload
+    .getByRole("button", { name: "Submit practice response" })
+    .click();
+  await expect(
+    upload.getByRole("region", { name: "Submission feedback" }),
+  ).toContainText("6 / 6 practice points");
+
+  const plot = page.locator(
+    '[data-question-id="cell-biology-lab2:trajectory-plot"]',
+  );
+  const trajectories = [
+    { condition: "Vehicle", means: [1, 1, 1, 1, 1] },
+    { condition: "Ligand pulse", means: [1, 4.8, 2.7, 1.5, 1.1] },
+    { condition: "Continuous ligand", means: [1, 4.9, 4.3, 3.8, 3.2] },
+  ];
+  const times = [0, 2, 10, 30, 60];
+  for (const trajectory of trajectories) {
+    for (const [index, time] of times.entries()) {
+      const group = plot.getByRole("group", {
+        name: `${trajectory.condition}, ${time} min`,
+        exact: true,
+      });
+      await group
+        .getByLabel(/Collection time after exposure begins .* coordinate/)
+        .fill(String(time));
+      await group
+        .getByLabel(
+          /pERK relative to total ERK and vehicle baseline .* coordinate/,
+        )
+        .fill(String(trajectory.means[index]));
+    }
+  }
+  await plot.getByRole("button", { name: "Submit practice response" }).click();
+  await expect(
+    plot.getByRole("region", { name: "Submission feedback" }),
+  ).toContainText("6 / 6 practice points");
+
+  const contrast = page.locator(
+    '[data-question-id="cell-biology-lab2:inhibitor-contrast"]',
+  );
+  await contrast
+    .getByLabel(/Calculate the vehicle-adjusted signal suppression/)
+    .fill("96.2 %");
+  await contrast
+    .getByLabel(/What does the reduction directly measure/)
+    .selectOption("0");
+  await contrast.getByLabel(/Which inference is justified/).selectOption("0");
+  await contrast
+    .getByRole("button", { name: "Submit practice response" })
+    .click();
+  await expect(
+    contrast.getByRole("region", { name: "Submission feedback" }),
+  ).toContainText("3 / 3 practice points");
+
+  const rescue = page.locator(
+    '[data-question-id="cell-biology-lab2:rescue-interpretation"]',
+  );
+  for (const criterion of [
+    "Rescue readout",
+    "Construct control",
+    "Specificity",
+    "Outcome",
+    "Replication",
+  ]) {
+    await rescue.getByLabel(new RegExp(criterion)).selectOption("0");
+  }
+  await rescue
+    .getByRole("button", { name: "Submit practice response" })
+    .click();
+  await expect(
+    rescue.getByRole("region", { name: "Submission feedback" }),
+  ).toContainText("5 / 5 practice points");
+
+  await page.getByRole("link", { name: "Practice gradebook" }).click();
+  await expect(row).toContainText("practice");
+  await expect(row).toContainText("ungraded");
+});
+
 test("week 10 inheritance and variant practice separates transmission and phenotype", async ({
   page,
 }) => {

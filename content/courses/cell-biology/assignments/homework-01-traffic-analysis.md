@@ -1,7 +1,7 @@
 # Homework 1 practice: trafficking, localization, and fractionation evidence
 
 **Status:** open formative practice; this packet and its answer specifications are public and are not suitable for a protected or summative exam. It does not contribute to a course grade.  
-**Course package:** Foundations of Cell and Molecular Biology, version 0.17.0  
+**Course package:** Foundations of Cell and Molecular Biology, version 0.18.0
 **Suggested time:** 2–3 hours  
 **Prerequisite lessons:** [Organelle compartments and protein targeting](../modules/03a-organelle-compartments-and-protein-targeting.md) and [Protein sorting and vesicle traffic](../modules/03b-protein-sorting-and-vesicle-traffic.md).  
 **Dataset:** [synthetic M6P-receptor sorting results](https://raw.githubusercontent.com/dylanstechmann/uniStemCourseSimulators/main/content/courses/cell-biology/assignments/homework-01-m6p-sorting.csv).

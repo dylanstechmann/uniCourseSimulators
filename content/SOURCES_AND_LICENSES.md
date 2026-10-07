@@ -10,7 +10,9 @@ It preserves the prototype's 22 MIT reference IDs and the existing Johns
 Hopkins and MIT reuse-policy records. The Foundations course has five MIT
 curriculum-comparator records overall, with module-specific comparisons for
 weeks 3–7, plus eighteen link-only scientific, methods, or standards
-references mapped across those weeks. Existing records were accessed on
+references mapped across those weeks and week 11. The week-11 signaling lab
+uses an original synthetic dataset and links existing MIT/NCBI registry records;
+it imports no third-party text, figures, or data. Existing records were accessed on
 2026-10-05; newly added records through week 7 were checked on 2026-10-06.
 The Haring et al. ChIP-qPCR article is published under CC BY 2.0; this project
 uses a bibliographic citation and link only and does not redistribute its

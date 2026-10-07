@@ -79,4 +79,4 @@ These safeguards do not turn one experiment into universal proof. They make the 
 
 ## Limits of this lesson
 
-This lesson uses one synthetic ERK time course to teach experimental reasoning. It does not supply a virtual laboratory, raw imaging files, a fitted dynamical model, a complete survey of GPCR or kinase signaling, or evidence for a therapeutic response. Pathway behavior varies with cell type and conditions, and external academic review is still required.
+This lesson uses one synthetic ERK time course to teach experimental reasoning. The separate virtual-lab activity provides an interactive analysis of a larger constructed dataset; neither resource provides raw imaging files, a fitted dynamical model, a complete survey of GPCR or kinase signaling, or evidence for a therapeutic response. Pathway behavior varies with cell type and conditions, and external academic review is still required.

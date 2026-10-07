@@ -1,5 +1,9 @@
 # Progress review: uniStemCourseSimulators
 
+## Update after week 11 signaling lab (2026-10-06)
+
+The cell-biology package advanced to 0.18.0 and remains partial. Week 11 now has an original 2–3 hour virtual data-analysis lab built around 120 openly documented synthetic pERK/total-ERK observations across six conditions, five times, and four independent preparation blocks. It adds a 24-cell CSV summary check, 15 time-course plot points, a baseline-adjusted inhibitor calculation, five explicit rescue/control choices, and four retrieval cards. The answer specifications are public; the lab is ungraded and does not count as a grade-bearing lab. The course still lacks all eight graded homework packages, one additional lab, summative exams, a cumulative project, measured workload, and independent course review. The course remains partial and no university equivalency is claimed.
+
 Reviewed 2026-10-06 against the requested six milestones. The content and breadth measurements below use commit `68defd74b8c98d8cac0556de3de72b8219bf987f`; the current increment changes only instructor authorization, appeal context, documentation and tests, so those content measurements are unchanged. Its review fixes passed the validation recorded in [VALIDATION_REPORT.md](VALIDATION_REPORT.md). This review inspects application code, manifests, readings, assessments, schemas, validator, tests and deployment configuration. Automated passing tests demonstrate covered behavior; they do not establish academic adequacy or production security.
 
 ## Update after week 5 course authoring (2026-10-06)

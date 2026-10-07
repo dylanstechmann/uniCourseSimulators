@@ -97,9 +97,9 @@ def test_preserved_inventory_is_honest_partial(repository):
     assert result.ok, result.errors
     assert result.inventory == {
         "courses": 25,
-        "lessons": 127,
-        "questions": 192,
-        "cards": 255,
+        "lessons": 128,
+        "questions": 196,
+        "cards": 259,
         "cases": 25,
     }
     assert sum(warning["code"] == "legacy-depth" for warning in result.warnings) == 98
@@ -301,9 +301,9 @@ def test_structured_rubric_item_is_counted_while_course_remains_partial(reposito
     result = validate_repository(repository)
     assert result.ok, result.errors
     manifest = read(course[0])
-    assert manifest["version"] == "0.17.0"
+    assert manifest["version"] == "0.18.0"
     assert manifest["maturity"] == "partial"
-    assert result.inventory["questions"] == 192
+    assert result.inventory["questions"] == 196
     question = next(
         item
         for item in read(course[0].parent / "question-banks/practice.json")["questions"]
@@ -324,7 +324,7 @@ def test_graph_plot_item_is_counted_while_statistics_course_remains_partial(repo
     assert manifest["maturity"] == "partial"
     assert graph["id"] == "statistics-5:concentration-graph"
     assert len(graph["graph_spec"]["points"]) == 3
-    assert result.inventory["questions"] == 192
+    assert result.inventory["questions"] == 196
 
 
 def test_cell_biology_scope_does_not_claim_unwritten_weeks(repository):
@@ -333,7 +333,7 @@ def test_cell_biology_scope_does_not_claim_unwritten_weeks(repository):
     course_root = repository / "content/courses/cell-biology"
     manifest = read(course_root / "course.json")
     weeks = manifest["duration"]["weeks"]
-    assert manifest["version"] == "0.17.0"
+    assert manifest["version"] == "0.18.0"
     assert manifest["maturity"] == "partial"
     assert len(weeks) == 14
     assert [week["week"] for week in weeks if week["lesson_ids"]] == [1, 2, 3, 4, 5, 6, 7, 9, 10, 11, 12, 13, 14]
@@ -376,8 +376,8 @@ def test_cell_biology_scope_does_not_claim_unwritten_weeks(repository):
     assert week10_practice["mode"] == "practice"
     assert len(week10_practice["question_ids"]) == 7
     assert week10_practice["points"] == 13
-    assert weeks[10]["lesson_ids"] == ["cell-biology-21", "cell-biology-22"]
-    assert weeks[10]["assessment_ids"] == ["cell-biology-week11-practice"]
+    assert weeks[10]["lesson_ids"] == ["cell-biology-21", "cell-biology-22", "cell-biology-lab-02"]
+    assert weeks[10]["assessment_ids"] == ["cell-biology-week11-practice", "cell-biology-week11-signaling-lab"]
     week11_practice = next(item for item in manifest["assessments"] if item["id"] == weeks[10]["assessment_ids"][0])
     assert week11_practice["mode"] == "practice"
     assert len(week11_practice["question_ids"]) == 7
@@ -782,6 +782,47 @@ def test_week3_open_homework_answers_match_the_synthetic_dataset(repository):
     assert manifest["grading_policy"]["mode"] == "formative-only"
 
 
+
+def test_week11_signaling_lab_matches_synthetic_dataset_and_remains_formative(repository):
+    course_root = repository / "content/courses/cell-biology"
+    manifest = read(course_root / "course.json")
+    assessment = next(item for item in manifest["assessments"] if item["id"] == "cell-biology-week11-signaling-lab")
+    bank = read(course_root / assessment["path"])
+    questions = {item["id"]: item for item in bank["questions"]}
+    lab_ids = ["cell-biology-lab2:summary-table", "cell-biology-lab2:trajectory-plot", "cell-biology-lab2:inhibitor-contrast", "cell-biology-lab2:rescue-interpretation"]
+    with (course_root / "labs/signaling-timecourse.csv").open(newline="", encoding="utf-8") as source:
+        rows = list(csv.DictReader(source))
+    assert len(rows) == 120
+    assert {row["condition"] for row in rows} == {"vehicle", "ligand_pulse", "ligand_continuous", "continuous_meki", "ligand_egfri", "egfri_active_mek"}
+    assert {int(row["time_min"]) for row in rows} == {0, 2, 10, 30, 60}
+    means = {}
+    for condition in {row["condition"] for row in rows}:
+        for time_min in (0, 2, 10, 30, 60):
+            group = [float(row["perk_totalerk_relative"]) for row in rows if row["condition"] == condition and int(row["time_min"]) == time_min]
+            assert len(group) == 4
+            means[(condition, time_min)] = math.fsum(group) / len(group)
+    assert means[("ligand_pulse", 2)] == 4.8
+    assert means[("ligand_continuous", 2)] == 4.9
+    assert means[("continuous_meki", 2)] == 1.15
+    assert means[("ligand_pulse", 60)] == 1.1
+    assert means[("ligand_continuous", 60)] == 3.2
+    assert assessment["type"] == "lab" and assessment["mode"] == "practice"
+    assert assessment["points"] == 20 and sum(questions[qid]["points"] for qid in lab_ids) == 20
+    assert all(questions[qid]["visibility"] == "public-practice-authoring" for qid in lab_ids)
+    upload = questions[lab_ids[0]]
+    assert len(upload["solution_spec"]["validation_spec"]["checks"]) == 24
+    for check in upload["solution_spec"]["validation_spec"]["checks"]:
+        condition, time_text = check["row_id"].rsplit("_", 1)
+        values = [float(row["perk_totalerk_relative"]) for row in rows if row["condition"] == condition and int(row["time_min"]) == int(time_text)]
+        expected = len(values) if check["calculation"]["operation"] == "count" else math.fsum(values) / len(values)
+        assert check["calculation"]["values"] == values
+        assert math.isclose(check["answer"], expected, rel_tol=0, abs_tol=1e-12)
+    contrast = questions[lab_ids[2]]["solution_spec"]["field_specs"][0]
+    recalculated = 100 * (1 - (means[("continuous_meki", 2)] - means[("vehicle", 2)]) / (means[("ligand_continuous", 2)] - means[("vehicle", 2)]))
+    assert math.isclose(contrast["answer"], recalculated, rel_tol=0, abs_tol=contrast["tolerance"])
+    assert manifest["maturity"] == "partial" and manifest["grading_policy"]["mode"] == "formative-only"
+
+
 def test_malformed_retrieval_records_return_errors(repository, course):
     path, _ = course
     cards_path = path.parent / "question-banks/retrieval-cards.json"
@@ -865,7 +906,7 @@ def test_week9_schedule_objectives_and_practice_are_mapped(repository):
     questions = {item["id"]: item for item in bank["questions"]}
 
     assert manifest["maturity"] == "partial"
-    assert manifest["version"] == "0.17.0"
+    assert manifest["version"] == "0.18.0"
     assert week9["lesson_ids"] == ["cell-biology-17", "cell-biology-18"]
     assert week9["assessment_ids"] == [assessment["id"]]
     assert sum(questions[item]["points"] for item in assessment["question_ids"]) == assessment["points"] == 14

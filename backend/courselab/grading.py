@@ -594,6 +594,10 @@ def _grade_graph_response(question: dict, request: AttemptRequest, points: float
                 diagnosis=result.feedback.diagnosis,
             ))
 
+    # Many fractional coordinate criteria can accumulate binary floating-point
+    # noise (for example, thirty 0.2-point entries). Re-sum the components
+    # accurately before persisting and displaying the learner's total.
+    score = math.fsum(component.score for component in components)
     complete = math.isclose(score, points, rel_tol=0, abs_tol=1e-8)
     diagnosis = "graph_coordinates_complete" if complete else "graph_coordinates_partial" if score else "graph_coordinates_incorrect"
     return _graph_result(question, points, score, diagnosis, components)

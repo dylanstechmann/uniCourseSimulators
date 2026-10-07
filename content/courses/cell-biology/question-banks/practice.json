@@ -5850,6 +5850,1585 @@
       },
       "visibility": "public-practice-authoring",
       "provenance": {"kind": "original", "modifications": []}
+    },
+  {
+    "id": "cell-biology-lab2:summary-table",
+    "type": "file_upload",
+    "prompt": "Virtual lab 2 · From the linked synthetic replicate-level CSV, report the independent-preparation count and mean relative pERK signal for every condition at 2 and 60 minutes. Upload exactly these ordered columns: condition_time,biological_preparation_count,mean_perk_relative. Use keys such as vehicle_2 and e.gfri_active_mek_60. Keep preparation-level records as the replicate unit; the checker scores only the numeric table, not a prose interpretation.",
+    "points": 6,
+    "objective_ids": [
+      "cell-biology-22-objective-1"
+    ],
+    "solution_spec": {
+      "accepted_media_types": [
+        "text/csv"
+      ],
+      "max_bytes": 32768,
+      "validation_spec": {
+        "format": "csv-numeric-table-v1",
+        "delimiter": ",",
+        "key_column": "condition_time",
+        "columns": [
+          "condition_time",
+          "biological_preparation_count",
+          "mean_perk_relative"
+        ],
+        "checks": [
+          {
+            "id": "vehicle_2_n",
+            "row_id": "vehicle_2",
+            "column": "biological_preparation_count",
+            "type": "numeric",
+            "answer": 4,
+            "unit": "",
+            "tolerance": 0,
+            "relative_tolerance": 0,
+            "unit_required": false,
+            "calculation": {
+              "operation": "count",
+              "values": [
+                0.9,
+                1.0,
+                1.0,
+                1.1
+              ]
+            }
+          },
+          {
+            "id": "vehicle_2_mean",
+            "row_id": "vehicle_2",
+            "column": "mean_perk_relative",
+            "type": "numeric",
+            "answer": 1.0,
+            "unit": "",
+            "tolerance": 0.005,
+            "relative_tolerance": 0,
+            "unit_required": false,
+            "calculation": {
+              "operation": "mean",
+              "values": [
+                0.9,
+                1.0,
+                1.0,
+                1.1
+              ]
+            }
+          },
+          {
+            "id": "ligand_pulse_2_n",
+            "row_id": "ligand_pulse_2",
+            "column": "biological_preparation_count",
+            "type": "numeric",
+            "answer": 4,
+            "unit": "",
+            "tolerance": 0,
+            "relative_tolerance": 0,
+            "unit_required": false,
+            "calculation": {
+              "operation": "count",
+              "values": [
+                4.5,
+                4.7,
+                5.0,
+                5.0
+              ]
+            }
+          },
+          {
+            "id": "ligand_pulse_2_mean",
+            "row_id": "ligand_pulse_2",
+            "column": "mean_perk_relative",
+            "type": "numeric",
+            "answer": 4.8,
+            "unit": "",
+            "tolerance": 0.005,
+            "relative_tolerance": 0,
+            "unit_required": false,
+            "calculation": {
+              "operation": "mean",
+              "values": [
+                4.5,
+                4.7,
+                5.0,
+                5.0
+              ]
+            }
+          },
+          {
+            "id": "ligand_continuous_2_n",
+            "row_id": "ligand_continuous_2",
+            "column": "biological_preparation_count",
+            "type": "numeric",
+            "answer": 4,
+            "unit": "",
+            "tolerance": 0,
+            "relative_tolerance": 0,
+            "unit_required": false,
+            "calculation": {
+              "operation": "count",
+              "values": [
+                4.6,
+                4.9,
+                5.1,
+                5.0
+              ]
+            }
+          },
+          {
+            "id": "ligand_continuous_2_mean",
+            "row_id": "ligand_continuous_2",
+            "column": "mean_perk_relative",
+            "type": "numeric",
+            "answer": 4.9,
+            "unit": "",
+            "tolerance": 0.005,
+            "relative_tolerance": 0,
+            "unit_required": false,
+            "calculation": {
+              "operation": "mean",
+              "values": [
+                4.6,
+                4.9,
+                5.1,
+                5.0
+              ]
+            }
+          },
+          {
+            "id": "continuous_meki_2_n",
+            "row_id": "continuous_meki_2",
+            "column": "biological_preparation_count",
+            "type": "numeric",
+            "answer": 4,
+            "unit": "",
+            "tolerance": 0,
+            "relative_tolerance": 0,
+            "unit_required": false,
+            "calculation": {
+              "operation": "count",
+              "values": [
+                1.0,
+                1.1,
+                1.2,
+                1.3
+              ]
+            }
+          },
+          {
+            "id": "continuous_meki_2_mean",
+            "row_id": "continuous_meki_2",
+            "column": "mean_perk_relative",
+            "type": "numeric",
+            "answer": 1.15,
+            "unit": "",
+            "tolerance": 0.005,
+            "relative_tolerance": 0,
+            "unit_required": false,
+            "calculation": {
+              "operation": "mean",
+              "values": [
+                1.0,
+                1.1,
+                1.2,
+                1.3
+              ]
+            }
+          },
+          {
+            "id": "ligand_egfri_2_n",
+            "row_id": "ligand_egfri_2",
+            "column": "biological_preparation_count",
+            "type": "numeric",
+            "answer": 4,
+            "unit": "",
+            "tolerance": 0,
+            "relative_tolerance": 0,
+            "unit_required": false,
+            "calculation": {
+              "operation": "count",
+              "values": [
+                1.1,
+                1.2,
+                1.3,
+                1.2
+              ]
+            }
+          },
+          {
+            "id": "ligand_egfri_2_mean",
+            "row_id": "ligand_egfri_2",
+            "column": "mean_perk_relative",
+            "type": "numeric",
+            "answer": 1.2,
+            "unit": "",
+            "tolerance": 0.005,
+            "relative_tolerance": 0,
+            "unit_required": false,
+            "calculation": {
+              "operation": "mean",
+              "values": [
+                1.1,
+                1.2,
+                1.3,
+                1.2
+              ]
+            }
+          },
+          {
+            "id": "egfri_active_mek_2_n",
+            "row_id": "egfri_active_mek_2",
+            "column": "biological_preparation_count",
+            "type": "numeric",
+            "answer": 4,
+            "unit": "",
+            "tolerance": 0,
+            "relative_tolerance": 0,
+            "unit_required": false,
+            "calculation": {
+              "operation": "count",
+              "values": [
+                4.0,
+                4.2,
+                4.3,
+                4.3
+              ]
+            }
+          },
+          {
+            "id": "egfri_active_mek_2_mean",
+            "row_id": "egfri_active_mek_2",
+            "column": "mean_perk_relative",
+            "type": "numeric",
+            "answer": 4.2,
+            "unit": "",
+            "tolerance": 0.005,
+            "relative_tolerance": 0,
+            "unit_required": false,
+            "calculation": {
+              "operation": "mean",
+              "values": [
+                4.0,
+                4.2,
+                4.3,
+                4.3
+              ]
+            }
+          },
+          {
+            "id": "vehicle_60_n",
+            "row_id": "vehicle_60",
+            "column": "biological_preparation_count",
+            "type": "numeric",
+            "answer": 4,
+            "unit": "",
+            "tolerance": 0,
+            "relative_tolerance": 0,
+            "unit_required": false,
+            "calculation": {
+              "operation": "count",
+              "values": [
+                0.9,
+                1.0,
+                1.0,
+                1.1
+              ]
+            }
+          },
+          {
+            "id": "vehicle_60_mean",
+            "row_id": "vehicle_60",
+            "column": "mean_perk_relative",
+            "type": "numeric",
+            "answer": 1.0,
+            "unit": "",
+            "tolerance": 0.005,
+            "relative_tolerance": 0,
+            "unit_required": false,
+            "calculation": {
+              "operation": "mean",
+              "values": [
+                0.9,
+                1.0,
+                1.0,
+                1.1
+              ]
+            }
+          },
+          {
+            "id": "ligand_pulse_60_n",
+            "row_id": "ligand_pulse_60",
+            "column": "biological_preparation_count",
+            "type": "numeric",
+            "answer": 4,
+            "unit": "",
+            "tolerance": 0,
+            "relative_tolerance": 0,
+            "unit_required": false,
+            "calculation": {
+              "operation": "count",
+              "values": [
+                1.0,
+                1.1,
+                1.2,
+                1.1
+              ]
+            }
+          },
+          {
+            "id": "ligand_pulse_60_mean",
+            "row_id": "ligand_pulse_60",
+            "column": "mean_perk_relative",
+            "type": "numeric",
+            "answer": 1.1,
+            "unit": "",
+            "tolerance": 0.005,
+            "relative_tolerance": 0,
+            "unit_required": false,
+            "calculation": {
+              "operation": "mean",
+              "values": [
+                1.0,
+                1.1,
+                1.2,
+                1.1
+              ]
+            }
+          },
+          {
+            "id": "ligand_continuous_60_n",
+            "row_id": "ligand_continuous_60",
+            "column": "biological_preparation_count",
+            "type": "numeric",
+            "answer": 4,
+            "unit": "",
+            "tolerance": 0,
+            "relative_tolerance": 0,
+            "unit_required": false,
+            "calculation": {
+              "operation": "count",
+              "values": [
+                3.0,
+                3.1,
+                3.3,
+                3.4
+              ]
+            }
+          },
+          {
+            "id": "ligand_continuous_60_mean",
+            "row_id": "ligand_continuous_60",
+            "column": "mean_perk_relative",
+            "type": "numeric",
+            "answer": 3.1999999999999997,
+            "unit": "",
+            "tolerance": 0.005,
+            "relative_tolerance": 0,
+            "unit_required": false,
+            "calculation": {
+              "operation": "mean",
+              "values": [
+                3.0,
+                3.1,
+                3.3,
+                3.4
+              ]
+            }
+          },
+          {
+            "id": "continuous_meki_60_n",
+            "row_id": "continuous_meki_60",
+            "column": "biological_preparation_count",
+            "type": "numeric",
+            "answer": 4,
+            "unit": "",
+            "tolerance": 0,
+            "relative_tolerance": 0,
+            "unit_required": false,
+            "calculation": {
+              "operation": "count",
+              "values": [
+                0.9,
+                1.0,
+                1.1,
+                1.0
+              ]
+            }
+          },
+          {
+            "id": "continuous_meki_60_mean",
+            "row_id": "continuous_meki_60",
+            "column": "mean_perk_relative",
+            "type": "numeric",
+            "answer": 1.0,
+            "unit": "",
+            "tolerance": 0.005,
+            "relative_tolerance": 0,
+            "unit_required": false,
+            "calculation": {
+              "operation": "mean",
+              "values": [
+                0.9,
+                1.0,
+                1.1,
+                1.0
+              ]
+            }
+          },
+          {
+            "id": "ligand_egfri_60_n",
+            "row_id": "ligand_egfri_60",
+            "column": "biological_preparation_count",
+            "type": "numeric",
+            "answer": 4,
+            "unit": "",
+            "tolerance": 0,
+            "relative_tolerance": 0,
+            "unit_required": false,
+            "calculation": {
+              "operation": "count",
+              "values": [
+                0.9,
+                1.0,
+                1.1,
+                1.0
+              ]
+            }
+          },
+          {
+            "id": "ligand_egfri_60_mean",
+            "row_id": "ligand_egfri_60",
+            "column": "mean_perk_relative",
+            "type": "numeric",
+            "answer": 1.0,
+            "unit": "",
+            "tolerance": 0.005,
+            "relative_tolerance": 0,
+            "unit_required": false,
+            "calculation": {
+              "operation": "mean",
+              "values": [
+                0.9,
+                1.0,
+                1.1,
+                1.0
+              ]
+            }
+          },
+          {
+            "id": "egfri_active_mek_60_n",
+            "row_id": "egfri_active_mek_60",
+            "column": "biological_preparation_count",
+            "type": "numeric",
+            "answer": 4,
+            "unit": "",
+            "tolerance": 0,
+            "relative_tolerance": 0,
+            "unit_required": false,
+            "calculation": {
+              "operation": "count",
+              "values": [
+                2.4,
+                2.5,
+                2.7,
+                2.8
+              ]
+            }
+          },
+          {
+            "id": "egfri_active_mek_60_mean",
+            "row_id": "egfri_active_mek_60",
+            "column": "mean_perk_relative",
+            "type": "numeric",
+            "answer": 2.6,
+            "unit": "",
+            "tolerance": 0.005,
+            "relative_tolerance": 0,
+            "unit_required": false,
+            "calculation": {
+              "operation": "mean",
+              "values": [
+                2.4,
+                2.5,
+                2.7,
+                2.8
+              ]
+            }
+          }
+        ]
+      },
+      "rubric": [
+        {
+          "id": "vehicle_2_n",
+          "criterion": "Independent preparation count for Vehicle at 2 min",
+          "points": 0.25,
+          "evidence": [
+            "Reports 4 using four independent preparation-level observations."
+          ]
+        },
+        {
+          "id": "vehicle_2_mean",
+          "criterion": "Mean relative pERK signal for Vehicle at 2 min",
+          "points": 0.25,
+          "evidence": [
+            "Reports 1 using four independent preparation-level observations."
+          ]
+        },
+        {
+          "id": "ligand_pulse_2_n",
+          "criterion": "Independent preparation count for Ligand pulse at 2 min",
+          "points": 0.25,
+          "evidence": [
+            "Reports 4 using four independent preparation-level observations."
+          ]
+        },
+        {
+          "id": "ligand_pulse_2_mean",
+          "criterion": "Mean relative pERK signal for Ligand pulse at 2 min",
+          "points": 0.25,
+          "evidence": [
+            "Reports 4.8 using four independent preparation-level observations."
+          ]
+        },
+        {
+          "id": "ligand_continuous_2_n",
+          "criterion": "Independent preparation count for Continuous ligand at 2 min",
+          "points": 0.25,
+          "evidence": [
+            "Reports 4 using four independent preparation-level observations."
+          ]
+        },
+        {
+          "id": "ligand_continuous_2_mean",
+          "criterion": "Mean relative pERK signal for Continuous ligand at 2 min",
+          "points": 0.25,
+          "evidence": [
+            "Reports 4.9 using four independent preparation-level observations."
+          ]
+        },
+        {
+          "id": "continuous_meki_2_n",
+          "criterion": "Independent preparation count for Ligand + MEK inhibitor at 2 min",
+          "points": 0.25,
+          "evidence": [
+            "Reports 4 using four independent preparation-level observations."
+          ]
+        },
+        {
+          "id": "continuous_meki_2_mean",
+          "criterion": "Mean relative pERK signal for Ligand + MEK inhibitor at 2 min",
+          "points": 0.25,
+          "evidence": [
+            "Reports 1.15 using four independent preparation-level observations."
+          ]
+        },
+        {
+          "id": "ligand_egfri_2_n",
+          "criterion": "Independent preparation count for Ligand + receptor inhibitor at 2 min",
+          "points": 0.25,
+          "evidence": [
+            "Reports 4 using four independent preparation-level observations."
+          ]
+        },
+        {
+          "id": "ligand_egfri_2_mean",
+          "criterion": "Mean relative pERK signal for Ligand + receptor inhibitor at 2 min",
+          "points": 0.25,
+          "evidence": [
+            "Reports 1.2 using four independent preparation-level observations."
+          ]
+        },
+        {
+          "id": "egfri_active_mek_2_n",
+          "criterion": "Independent preparation count for Receptor inhibitor + active MEK at 2 min",
+          "points": 0.25,
+          "evidence": [
+            "Reports 4 using four independent preparation-level observations."
+          ]
+        },
+        {
+          "id": "egfri_active_mek_2_mean",
+          "criterion": "Mean relative pERK signal for Receptor inhibitor + active MEK at 2 min",
+          "points": 0.25,
+          "evidence": [
+            "Reports 4.2 using four independent preparation-level observations."
+          ]
+        },
+        {
+          "id": "vehicle_60_n",
+          "criterion": "Independent preparation count for Vehicle at 60 min",
+          "points": 0.25,
+          "evidence": [
+            "Reports 4 using four independent preparation-level observations."
+          ]
+        },
+        {
+          "id": "vehicle_60_mean",
+          "criterion": "Mean relative pERK signal for Vehicle at 60 min",
+          "points": 0.25,
+          "evidence": [
+            "Reports 1 using four independent preparation-level observations."
+          ]
+        },
+        {
+          "id": "ligand_pulse_60_n",
+          "criterion": "Independent preparation count for Ligand pulse at 60 min",
+          "points": 0.25,
+          "evidence": [
+            "Reports 4 using four independent preparation-level observations."
+          ]
+        },
+        {
+          "id": "ligand_pulse_60_mean",
+          "criterion": "Mean relative pERK signal for Ligand pulse at 60 min",
+          "points": 0.25,
+          "evidence": [
+            "Reports 1.1 using four independent preparation-level observations."
+          ]
+        },
+        {
+          "id": "ligand_continuous_60_n",
+          "criterion": "Independent preparation count for Continuous ligand at 60 min",
+          "points": 0.25,
+          "evidence": [
+            "Reports 4 using four independent preparation-level observations."
+          ]
+        },
+        {
+          "id": "ligand_continuous_60_mean",
+          "criterion": "Mean relative pERK signal for Continuous ligand at 60 min",
+          "points": 0.25,
+          "evidence": [
+            "Reports 3.2 using four independent preparation-level observations."
+          ]
+        },
+        {
+          "id": "continuous_meki_60_n",
+          "criterion": "Independent preparation count for Ligand + MEK inhibitor at 60 min",
+          "points": 0.25,
+          "evidence": [
+            "Reports 4 using four independent preparation-level observations."
+          ]
+        },
+        {
+          "id": "continuous_meki_60_mean",
+          "criterion": "Mean relative pERK signal for Ligand + MEK inhibitor at 60 min",
+          "points": 0.25,
+          "evidence": [
+            "Reports 1 using four independent preparation-level observations."
+          ]
+        },
+        {
+          "id": "ligand_egfri_60_n",
+          "criterion": "Independent preparation count for Ligand + receptor inhibitor at 60 min",
+          "points": 0.25,
+          "evidence": [
+            "Reports 4 using four independent preparation-level observations."
+          ]
+        },
+        {
+          "id": "ligand_egfri_60_mean",
+          "criterion": "Mean relative pERK signal for Ligand + receptor inhibitor at 60 min",
+          "points": 0.25,
+          "evidence": [
+            "Reports 1 using four independent preparation-level observations."
+          ]
+        },
+        {
+          "id": "egfri_active_mek_60_n",
+          "criterion": "Independent preparation count for Receptor inhibitor + active MEK at 60 min",
+          "points": 0.25,
+          "evidence": [
+            "Reports 4 using four independent preparation-level observations."
+          ]
+        },
+        {
+          "id": "egfri_active_mek_60_mean",
+          "criterion": "Mean relative pERK signal for Receptor inhibitor + active MEK at 60 min",
+          "points": 0.25,
+          "evidence": [
+            "Reports 2.6 using four independent preparation-level observations."
+          ]
+        }
+      ]
+    },
+    "feedback": {
+      "hint": "Filter by the specified time and condition, retain all four independently prepared culture batches, then calculate their arithmetic mean.",
+      "solution": "Each condition-time group has four independently prepared observations. At 2 minutes, mean relative pERK is 4.90 for continuous ligand and 1.15 for ligand plus MEK inhibitor; at 60 minutes, means are 3.20 for continuous ligand and 1.10 for the pulse. These constructed summaries are descriptive and do not establish inferential uncertainty.",
+      "lesson_ids": [
+        "cell-biology-lab-02"
+      ],
+      "misconception_ids": [
+        "technical-wells-as-biological-n"
+      ]
+    },
+    "visibility": "public-practice-authoring",
+    "provenance": {
+      "kind": "original",
+      "modifications": []
     }
+  },
+  {
+    "id": "cell-biology-lab2:trajectory-plot",
+    "type": "graph",
+    "prompt": "Virtual lab 2 · Plot the mean relative pERK signal over time for vehicle, a two-minute ligand pulse, and continuous ligand. Use the displayed fixed axes. Each dot is one condition-time mean; the widget does not join points with lines, so compare the ordered times and state the trajectory pattern in the next item.",
+    "graph_spec": {
+      "x_axis": {
+        "label": "Collection time after exposure begins (min)",
+        "minimum": 0,
+        "maximum": 60
+      },
+      "y_axis": {
+        "label": "pERK relative to total ERK and vehicle baseline (relative units)",
+        "minimum": 0,
+        "maximum": 6
+      },
+      "points": [
+        {
+          "id": "vehicle_0",
+          "label": "Vehicle, 0 min"
+        },
+        {
+          "id": "vehicle_2",
+          "label": "Vehicle, 2 min"
+        },
+        {
+          "id": "vehicle_10",
+          "label": "Vehicle, 10 min"
+        },
+        {
+          "id": "vehicle_30",
+          "label": "Vehicle, 30 min"
+        },
+        {
+          "id": "vehicle_60",
+          "label": "Vehicle, 60 min"
+        },
+        {
+          "id": "ligand_pulse_0",
+          "label": "Ligand pulse, 0 min"
+        },
+        {
+          "id": "ligand_pulse_2",
+          "label": "Ligand pulse, 2 min"
+        },
+        {
+          "id": "ligand_pulse_10",
+          "label": "Ligand pulse, 10 min"
+        },
+        {
+          "id": "ligand_pulse_30",
+          "label": "Ligand pulse, 30 min"
+        },
+        {
+          "id": "ligand_pulse_60",
+          "label": "Ligand pulse, 60 min"
+        },
+        {
+          "id": "ligand_continuous_0",
+          "label": "Continuous ligand, 0 min"
+        },
+        {
+          "id": "ligand_continuous_2",
+          "label": "Continuous ligand, 2 min"
+        },
+        {
+          "id": "ligand_continuous_10",
+          "label": "Continuous ligand, 10 min"
+        },
+        {
+          "id": "ligand_continuous_30",
+          "label": "Continuous ligand, 30 min"
+        },
+        {
+          "id": "ligand_continuous_60",
+          "label": "Continuous ligand, 60 min"
+        }
+      ],
+      "observations": [
+        {
+          "id": "vehicle_0",
+          "x": 0,
+          "values": [
+            0.9,
+            1.0,
+            1.0,
+            1.1
+          ]
+        },
+        {
+          "id": "vehicle_2",
+          "x": 2,
+          "values": [
+            0.9,
+            1.0,
+            1.0,
+            1.1
+          ]
+        },
+        {
+          "id": "vehicle_10",
+          "x": 10,
+          "values": [
+            0.9,
+            1.0,
+            1.0,
+            1.1
+          ]
+        },
+        {
+          "id": "vehicle_30",
+          "x": 30,
+          "values": [
+            0.9,
+            1.0,
+            1.0,
+            1.1
+          ]
+        },
+        {
+          "id": "vehicle_60",
+          "x": 60,
+          "values": [
+            0.9,
+            1.0,
+            1.0,
+            1.1
+          ]
+        },
+        {
+          "id": "ligand_pulse_0",
+          "x": 0,
+          "values": [
+            0.9,
+            1.0,
+            1.1,
+            1.0
+          ]
+        },
+        {
+          "id": "ligand_pulse_2",
+          "x": 2,
+          "values": [
+            4.5,
+            4.7,
+            5.0,
+            5.0
+          ]
+        },
+        {
+          "id": "ligand_pulse_10",
+          "x": 10,
+          "values": [
+            2.5,
+            2.6,
+            2.8,
+            2.9
+          ]
+        },
+        {
+          "id": "ligand_pulse_30",
+          "x": 30,
+          "values": [
+            1.3,
+            1.4,
+            1.6,
+            1.7
+          ]
+        },
+        {
+          "id": "ligand_pulse_60",
+          "x": 60,
+          "values": [
+            1.0,
+            1.1,
+            1.2,
+            1.1
+          ]
+        },
+        {
+          "id": "ligand_continuous_0",
+          "x": 0,
+          "values": [
+            0.9,
+            1.0,
+            1.1,
+            1.0
+          ]
+        },
+        {
+          "id": "ligand_continuous_2",
+          "x": 2,
+          "values": [
+            4.6,
+            4.9,
+            5.1,
+            5.0
+          ]
+        },
+        {
+          "id": "ligand_continuous_10",
+          "x": 10,
+          "values": [
+            4.0,
+            4.2,
+            4.5,
+            4.5
+          ]
+        },
+        {
+          "id": "ligand_continuous_30",
+          "x": 30,
+          "values": [
+            3.6,
+            3.7,
+            3.9,
+            4.0
+          ]
+        },
+        {
+          "id": "ligand_continuous_60",
+          "x": 60,
+          "values": [
+            3.0,
+            3.1,
+            3.3,
+            3.4
+          ]
+        }
+      ]
+    },
+    "points": 6,
+    "objective_ids": [
+      "cell-biology-22-objective-1"
+    ],
+    "solution_spec": {
+      "points": [
+        {
+          "id": "vehicle_0",
+          "x": 0,
+          "y": 1.0,
+          "x_tolerance": 0,
+          "y_tolerance": 0.01
+        },
+        {
+          "id": "vehicle_2",
+          "x": 2,
+          "y": 1.0,
+          "x_tolerance": 0,
+          "y_tolerance": 0.01
+        },
+        {
+          "id": "vehicle_10",
+          "x": 10,
+          "y": 1.0,
+          "x_tolerance": 0,
+          "y_tolerance": 0.01
+        },
+        {
+          "id": "vehicle_30",
+          "x": 30,
+          "y": 1.0,
+          "x_tolerance": 0,
+          "y_tolerance": 0.01
+        },
+        {
+          "id": "vehicle_60",
+          "x": 60,
+          "y": 1.0,
+          "x_tolerance": 0,
+          "y_tolerance": 0.01
+        },
+        {
+          "id": "ligand_pulse_0",
+          "x": 0,
+          "y": 1.0,
+          "x_tolerance": 0,
+          "y_tolerance": 0.01
+        },
+        {
+          "id": "ligand_pulse_2",
+          "x": 2,
+          "y": 4.8,
+          "x_tolerance": 0,
+          "y_tolerance": 0.01
+        },
+        {
+          "id": "ligand_pulse_10",
+          "x": 10,
+          "y": 2.6999999999999997,
+          "x_tolerance": 0,
+          "y_tolerance": 0.01
+        },
+        {
+          "id": "ligand_pulse_30",
+          "x": 30,
+          "y": 1.5000000000000002,
+          "x_tolerance": 0,
+          "y_tolerance": 0.01
+        },
+        {
+          "id": "ligand_pulse_60",
+          "x": 60,
+          "y": 1.1,
+          "x_tolerance": 0,
+          "y_tolerance": 0.01
+        },
+        {
+          "id": "ligand_continuous_0",
+          "x": 0,
+          "y": 1.0,
+          "x_tolerance": 0,
+          "y_tolerance": 0.01
+        },
+        {
+          "id": "ligand_continuous_2",
+          "x": 2,
+          "y": 4.9,
+          "x_tolerance": 0,
+          "y_tolerance": 0.01
+        },
+        {
+          "id": "ligand_continuous_10",
+          "x": 10,
+          "y": 4.3,
+          "x_tolerance": 0,
+          "y_tolerance": 0.01
+        },
+        {
+          "id": "ligand_continuous_30",
+          "x": 30,
+          "y": 3.8000000000000003,
+          "x_tolerance": 0,
+          "y_tolerance": 0.01
+        },
+        {
+          "id": "ligand_continuous_60",
+          "x": 60,
+          "y": 3.1999999999999997,
+          "x_tolerance": 0,
+          "y_tolerance": 0.01
+        }
+      ],
+      "rubric": [
+        {
+          "id": "vehicle_0_x",
+          "criterion": "Vehicle time coordinate at 0 minutes",
+          "points": 0.2,
+          "evidence": [
+            "Maps the measurement to the collection time listed in the dataset."
+          ]
+        },
+        {
+          "id": "vehicle_0_y",
+          "criterion": "Vehicle mean signal at 0 minutes",
+          "points": 0.2,
+          "evidence": [
+            "Averages the four independent preparation-level pERK measurements."
+          ]
+        },
+        {
+          "id": "vehicle_2_x",
+          "criterion": "Vehicle time coordinate at 2 minutes",
+          "points": 0.2,
+          "evidence": [
+            "Maps the measurement to the collection time listed in the dataset."
+          ]
+        },
+        {
+          "id": "vehicle_2_y",
+          "criterion": "Vehicle mean signal at 2 minutes",
+          "points": 0.2,
+          "evidence": [
+            "Averages the four independent preparation-level pERK measurements."
+          ]
+        },
+        {
+          "id": "vehicle_10_x",
+          "criterion": "Vehicle time coordinate at 10 minutes",
+          "points": 0.2,
+          "evidence": [
+            "Maps the measurement to the collection time listed in the dataset."
+          ]
+        },
+        {
+          "id": "vehicle_10_y",
+          "criterion": "Vehicle mean signal at 10 minutes",
+          "points": 0.2,
+          "evidence": [
+            "Averages the four independent preparation-level pERK measurements."
+          ]
+        },
+        {
+          "id": "vehicle_30_x",
+          "criterion": "Vehicle time coordinate at 30 minutes",
+          "points": 0.2,
+          "evidence": [
+            "Maps the measurement to the collection time listed in the dataset."
+          ]
+        },
+        {
+          "id": "vehicle_30_y",
+          "criterion": "Vehicle mean signal at 30 minutes",
+          "points": 0.2,
+          "evidence": [
+            "Averages the four independent preparation-level pERK measurements."
+          ]
+        },
+        {
+          "id": "vehicle_60_x",
+          "criterion": "Vehicle time coordinate at 60 minutes",
+          "points": 0.2,
+          "evidence": [
+            "Maps the measurement to the collection time listed in the dataset."
+          ]
+        },
+        {
+          "id": "vehicle_60_y",
+          "criterion": "Vehicle mean signal at 60 minutes",
+          "points": 0.2,
+          "evidence": [
+            "Averages the four independent preparation-level pERK measurements."
+          ]
+        },
+        {
+          "id": "ligand_pulse_0_x",
+          "criterion": "Ligand pulse time coordinate at 0 minutes",
+          "points": 0.2,
+          "evidence": [
+            "Maps the measurement to the collection time listed in the dataset."
+          ]
+        },
+        {
+          "id": "ligand_pulse_0_y",
+          "criterion": "Ligand pulse mean signal at 0 minutes",
+          "points": 0.2,
+          "evidence": [
+            "Averages the four independent preparation-level pERK measurements."
+          ]
+        },
+        {
+          "id": "ligand_pulse_2_x",
+          "criterion": "Ligand pulse time coordinate at 2 minutes",
+          "points": 0.2,
+          "evidence": [
+            "Maps the measurement to the collection time listed in the dataset."
+          ]
+        },
+        {
+          "id": "ligand_pulse_2_y",
+          "criterion": "Ligand pulse mean signal at 2 minutes",
+          "points": 0.2,
+          "evidence": [
+            "Averages the four independent preparation-level pERK measurements."
+          ]
+        },
+        {
+          "id": "ligand_pulse_10_x",
+          "criterion": "Ligand pulse time coordinate at 10 minutes",
+          "points": 0.2,
+          "evidence": [
+            "Maps the measurement to the collection time listed in the dataset."
+          ]
+        },
+        {
+          "id": "ligand_pulse_10_y",
+          "criterion": "Ligand pulse mean signal at 10 minutes",
+          "points": 0.2,
+          "evidence": [
+            "Averages the four independent preparation-level pERK measurements."
+          ]
+        },
+        {
+          "id": "ligand_pulse_30_x",
+          "criterion": "Ligand pulse time coordinate at 30 minutes",
+          "points": 0.2,
+          "evidence": [
+            "Maps the measurement to the collection time listed in the dataset."
+          ]
+        },
+        {
+          "id": "ligand_pulse_30_y",
+          "criterion": "Ligand pulse mean signal at 30 minutes",
+          "points": 0.2,
+          "evidence": [
+            "Averages the four independent preparation-level pERK measurements."
+          ]
+        },
+        {
+          "id": "ligand_pulse_60_x",
+          "criterion": "Ligand pulse time coordinate at 60 minutes",
+          "points": 0.2,
+          "evidence": [
+            "Maps the measurement to the collection time listed in the dataset."
+          ]
+        },
+        {
+          "id": "ligand_pulse_60_y",
+          "criterion": "Ligand pulse mean signal at 60 minutes",
+          "points": 0.2,
+          "evidence": [
+            "Averages the four independent preparation-level pERK measurements."
+          ]
+        },
+        {
+          "id": "ligand_continuous_0_x",
+          "criterion": "Continuous ligand time coordinate at 0 minutes",
+          "points": 0.2,
+          "evidence": [
+            "Maps the measurement to the collection time listed in the dataset."
+          ]
+        },
+        {
+          "id": "ligand_continuous_0_y",
+          "criterion": "Continuous ligand mean signal at 0 minutes",
+          "points": 0.2,
+          "evidence": [
+            "Averages the four independent preparation-level pERK measurements."
+          ]
+        },
+        {
+          "id": "ligand_continuous_2_x",
+          "criterion": "Continuous ligand time coordinate at 2 minutes",
+          "points": 0.2,
+          "evidence": [
+            "Maps the measurement to the collection time listed in the dataset."
+          ]
+        },
+        {
+          "id": "ligand_continuous_2_y",
+          "criterion": "Continuous ligand mean signal at 2 minutes",
+          "points": 0.2,
+          "evidence": [
+            "Averages the four independent preparation-level pERK measurements."
+          ]
+        },
+        {
+          "id": "ligand_continuous_10_x",
+          "criterion": "Continuous ligand time coordinate at 10 minutes",
+          "points": 0.2,
+          "evidence": [
+            "Maps the measurement to the collection time listed in the dataset."
+          ]
+        },
+        {
+          "id": "ligand_continuous_10_y",
+          "criterion": "Continuous ligand mean signal at 10 minutes",
+          "points": 0.2,
+          "evidence": [
+            "Averages the four independent preparation-level pERK measurements."
+          ]
+        },
+        {
+          "id": "ligand_continuous_30_x",
+          "criterion": "Continuous ligand time coordinate at 30 minutes",
+          "points": 0.2,
+          "evidence": [
+            "Maps the measurement to the collection time listed in the dataset."
+          ]
+        },
+        {
+          "id": "ligand_continuous_30_y",
+          "criterion": "Continuous ligand mean signal at 30 minutes",
+          "points": 0.2,
+          "evidence": [
+            "Averages the four independent preparation-level pERK measurements."
+          ]
+        },
+        {
+          "id": "ligand_continuous_60_x",
+          "criterion": "Continuous ligand time coordinate at 60 minutes",
+          "points": 0.2,
+          "evidence": [
+            "Maps the measurement to the collection time listed in the dataset."
+          ]
+        },
+        {
+          "id": "ligand_continuous_60_y",
+          "criterion": "Continuous ligand mean signal at 60 minutes",
+          "points": 0.2,
+          "evidence": [
+            "Averages the four independent preparation-level pERK measurements."
+          ]
+        }
+      ]
+    },
+    "feedback": {
+      "hint": "Compute one mean from the four preparation-level values for each time-condition row; do not pool the 20 timepoint wells as independent conditions.",
+      "solution": "The time-ordered points show a similar early response for pulse and continuous ligand, followed by a decline toward vehicle after the pulse while continuous exposure remains elevated at 60 minutes. The fixed-axis coordinate exercise does not assess uncertainty or explain why a signal declines.",
+      "lesson_ids": [
+        "cell-biology-lab-02"
+      ],
+      "misconception_ids": [
+        "declining-signal-proves-feedback",
+        "technical-wells-as-biological-n"
+      ]
+    },
+    "visibility": "public-practice-authoring",
+    "provenance": {
+      "kind": "original",
+      "modifications": []
+    }
+  },
+  {
+    "id": "cell-biology-lab2:inhibitor-contrast",
+    "type": "data_interpretation",
+    "prompt": "Virtual lab 2 · At 2 minutes, compare continuous ligand plus vehicle with continuous ligand plus MEK inhibitor. Calculate the percent suppression of the vehicle-adjusted ligand-associated signal: 100 × [1 − (inhibitor mean − vehicle mean)/(continuous-ligand mean − vehicle mean)]. Use means 4.90, 1.15, and 1.00 relative units, respectively. This is a descriptive calculation on constructed data.",
+    "points": 3,
+    "objective_ids": [
+      "cell-biology-22-objective-2"
+    ],
+    "response_fields": [
+      {
+        "id": "percent-suppression",
+        "type": "numeric",
+        "prompt": "Calculate the vehicle-adjusted signal suppression (%)",
+        "unit": "%",
+        "points": 1
+      },
+      {
+        "id": "measured-node",
+        "type": "single_choice",
+        "prompt": "What does the reduction directly measure?",
+        "options": [
+          "A lower pERK-to-total-ERK signal under the stated synthetic inhibitor condition, relative to the ligand condition.",
+          "Proof that the inhibitor bound only MEK and changed no other cell process.",
+          "A complete downstream differentiation response."
+        ],
+        "points": 1
+      },
+      {
+        "id": "uncertainty-boundary",
+        "type": "single_choice",
+        "prompt": "Which inference is justified by four constructed replicate values without a prespecified statistical model?",
+        "options": [
+          "The constructed means differ descriptively; uncertainty and a general effect are not established.",
+          "The inhibitor has a statistically significant universal effect.",
+          "The experiment proves MEK is the only route to ERK phosphorylation."
+        ],
+        "points": 1
+      }
+    ],
+    "solution_spec": {
+      "field_specs": [
+        {
+          "id": "percent-suppression",
+          "type": "numeric",
+          "answer": 96.2,
+          "unit": "%",
+          "tolerance": 0.1,
+          "relative_tolerance": 0,
+          "unit_required": true,
+          "significant_figures": 3,
+          "dimensions": null
+        },
+        {
+          "id": "measured-node",
+          "type": "single_choice",
+          "answer": 0
+        },
+        {
+          "id": "uncertainty-boundary",
+          "type": "single_choice",
+          "answer": 0
+        }
+      ],
+      "rubric": [
+        {
+          "id": "percent-suppression",
+          "criterion": "Calculate the baseline-adjusted signal contrast",
+          "points": 1,
+          "evidence": [
+            "Uses the vehicle-adjusted ligand and inhibitor means in the stated formula."
+          ]
+        },
+        {
+          "id": "measured-node",
+          "criterion": "Name the directly measured biochemical node",
+          "points": 1,
+          "evidence": [
+            "Limits the result to the measured pERK-to-total-ERK signal under the stated condition."
+          ]
+        },
+        {
+          "id": "uncertainty-boundary",
+          "criterion": "Bound a descriptive constructed comparison",
+          "points": 1,
+          "evidence": [
+            "Does not infer significance, generality, or a unique pathway mechanism."
+          ]
+        }
+      ]
+    },
+    "feedback": {
+      "hint": "First subtract the vehicle signal from both ligand and inhibitor means. Then divide the residual inhibitor-associated signal by the baseline-adjusted ligand signal.",
+      "solution": "The ligand-associated signal is 4.90 − 1.00 = 3.90 units; the inhibitor-associated signal is 1.15 − 1.00 = 0.15. Suppression is 100 × (1 − 0.15/3.90) = 96.2%. This is a descriptive calculation; target engagement, orthogonal perturbation, and matched alternatives are needed for a stronger specificity claim.",
+      "lesson_ids": [
+        "cell-biology-lab-02"
+      ],
+      "misconception_ids": [
+        "inhibitor-response-proves-target"
+      ]
+    },
+    "visibility": "public-practice-authoring",
+    "provenance": {
+      "kind": "original",
+      "modifications": []
+    }
+  },
+  {
+    "id": "cell-biology-lab2:rescue-interpretation",
+    "type": "structured",
+    "prompt": "Virtual lab 2 · Interpret the receptor-inhibitor/active-MEK bypass without converting a biochemical readout into a cell-fate claim. Select one response for each evidence criterion. These explicit choices do not grade a free-written explanation.",
+    "points": 5,
+    "objective_ids": [
+      "cell-biology-22-objective-2",
+      "cell-biology-22-objective-3"
+    ],
+    "response_fields": [
+      {
+        "id": "rescue-readout",
+        "type": "single_choice",
+        "prompt": "Rescue readout · What does the active-MEK bypass support?",
+        "options": [
+          "In these synthetic cells, active MEK can bypass the receptor-inhibitor condition and restore part of the measured pERK trajectory; this does not show restoration of every receptor branch.",
+          "The receptor inhibitor failed because pERK is above baseline in every condition.",
+          "The rescue proves normal physiology and complete differentiation."
+        ],
+        "points": 1
+      },
+      {
+        "id": "construct-control",
+        "type": "single_choice",
+        "prompt": "Construct control · Which comparison best tests whether the induced active-MEK construct itself explains the effect?",
+        "options": [
+          "Compare matched inducer and empty-vector controls, verify expression/target engagement, and measure total ERK and viability at the same times.",
+          "Add more technical wells only to the rescue group.",
+          "Assume expression is identical because each well received the same DNA mass."
+        ],
+        "points": 1
+      },
+      {
+        "id": "orthogonal-specificity",
+        "type": "single_choice",
+        "prompt": "Specificity · Which follow-up most directly addresses inhibitor-specific off-target alternatives?",
+        "options": [
+          "Use an orthogonal controlled genetic perturbation with target-engagement evidence and a prespecified, specific rescue.",
+          "Repeat the same compound at the same dose and endpoint without a target-engagement measurement.",
+          "Select the most different image after viewing the group labels."
+        ],
+        "points": 1
+      },
+      {
+        "id": "outcome-separation",
+        "type": "single_choice",
+        "prompt": "Outcome · What additional evidence is needed before claiming that the signaling rescue restores cell fate?",
+        "options": [
+          "A later, prespecified cell-state or functional outcome assay with matched controls and viable-cell denominators.",
+          "A higher pERK value at one early time point alone.",
+          "No additional evidence; ERK phosphorylation is the cell-fate outcome."
+        ],
+        "points": 1
+      },
+      {
+        "id": "replicate-unit",
+        "type": "single_choice",
+        "prompt": "Replication · What is the independent unit represented by P01–P04?",
+        "options": [
+          "Four independently prepared culture batches, each split across matched conditions; collection wells and repeated time points are not extra independent preparations.",
+          "Every cell represented in the assay is an independent biological preparation.",
+          "The five time points from one preparation are five independent culture batches."
+        ],
+        "points": 1
+      }
+    ],
+    "solution_spec": {
+      "field_specs": [
+        {
+          "id": "rescue-readout",
+          "type": "single_choice",
+          "answer": 0
+        },
+        {
+          "id": "construct-control",
+          "type": "single_choice",
+          "answer": 0
+        },
+        {
+          "id": "orthogonal-specificity",
+          "type": "single_choice",
+          "answer": 0
+        },
+        {
+          "id": "outcome-separation",
+          "type": "single_choice",
+          "answer": 0
+        },
+        {
+          "id": "replicate-unit",
+          "type": "single_choice",
+          "answer": 0
+        }
+      ],
+      "rubric": [
+        {
+          "id": "rescue-readout",
+          "criterion": "What does the active-MEK bypass support?",
+          "points": 1,
+          "evidence": [
+            "In these synthetic cells, active MEK can bypass the receptor-inhibitor condition and restore part of the measured pERK trajectory; this does not show restoration of every receptor branch."
+          ]
+        },
+        {
+          "id": "construct-control",
+          "criterion": "Which comparison best tests whether the induced active-MEK construct itself explains the effect?",
+          "points": 1,
+          "evidence": [
+            "Compare matched inducer and empty-vector controls, verify expression/target engagement, and measure total ERK and viability at the same times."
+          ]
+        },
+        {
+          "id": "orthogonal-specificity",
+          "criterion": "Which follow-up most directly addresses inhibitor-specific off-target alternatives?",
+          "points": 1,
+          "evidence": [
+            "Use an orthogonal controlled genetic perturbation with target-engagement evidence and a prespecified, specific rescue."
+          ]
+        },
+        {
+          "id": "outcome-separation",
+          "criterion": "What additional evidence is needed before claiming that the signaling rescue restores cell fate?",
+          "points": 1,
+          "evidence": [
+            "A later, prespecified cell-state or functional outcome assay with matched controls and viable-cell denominators."
+          ]
+        },
+        {
+          "id": "replicate-unit",
+          "criterion": "What is the independent unit represented by P01–P04?",
+          "points": 1,
+          "evidence": [
+            "Four independently prepared culture batches, each split across matched conditions; collection wells and repeated time points are not extra independent preparations."
+          ]
+        }
+      ]
+    },
+    "feedback": {
+      "hint": "Separate the measured kinase node from pathway position, intervention specificity, cell state, and biological replication.",
+      "solution": "The bypass is consistent with active MEK restoring part of the measured pERK signal despite receptor inhibition in this constructed system. Expression-matched construct controls, target engagement, an orthogonal perturbation, total-ERK/viability checks, and a later prespecified outcome address different alternatives. Four independently prepared cultures are the replicates; wells and time points are nested measurements.",
+      "lesson_ids": [
+        "cell-biology-lab-02"
+      ],
+      "misconception_ids": [
+        "phosphorylation-proves-fate",
+        "inhibitor-response-proves-target",
+        "technical-wells-as-biological-n"
+      ]
+    },
+    "visibility": "public-practice-authoring",
+    "provenance": {
+      "kind": "original",
+      "modifications": []
+    }
+  }
   ]
 }

@@ -410,6 +410,20 @@
       "original_content": true,
       "license": "CC-BY-4.0",
       "modifications": []
+    },
+    {
+      "module_id": "cell-biology-module-lab-02",
+      "lesson_id": "cell-biology-lab-02",
+      "reading": "labs/02-signaling-dynamics-inhibitor-rescue.md",
+      "source_ids": [
+        "mit-7.016-cell-signaling",
+        "ncbi-mboc-rtk-signaling",
+        "ncbi-mboc-gpcr-signaling"
+      ],
+      "relationship": "original-instruction-and-synthetic-signaling-data-with-link-only-curriculum-and-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
     }
   ]
 }

@@ -93,8 +93,8 @@ class AttemptRequest(StrictModel):
                 ):
                     raise ValueError("CSV upload encoding must contain at most 32 KiB of data")
                 return value
-            if not 1 <= len(value) <= 20:
-                raise ValueError("Structured responses must contain 1–20 fields")
+            if not 1 <= len(value) <= 40:
+                raise ValueError("Structured and graph responses must contain 1–40 fields")
             if any(
                 not isinstance(key, str)
                 or not re.fullmatch(r"[a-z][a-z0-9_-]{0,63}", key)

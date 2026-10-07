@@ -7,7 +7,7 @@
   "domain": "Life sciences",
   "level": "Year 1",
   "maturity": "partial",
-  "version": "0.17.0",
+  "version": "0.18.0",
   "license": "MIT OR CC-BY-4.0",
   "content_origin": {
     "kind": "legacy-prototype",
@@ -765,10 +765,12 @@
         "title": "Receptors, signaling networks, feedback, and perturbation",
         "lesson_ids": [
           "cell-biology-21",
-          "cell-biology-22"
+          "cell-biology-22",
+          "cell-biology-lab-02"
         ],
         "assessment_ids": [
-          "cell-biology-week11-practice"
+          "cell-biology-week11-practice",
+          "cell-biology-week11-signaling-lab"
         ]
       },
       {
@@ -1042,12 +1044,12 @@
           "id": "cell-biology-hw1",
           "title": "Homework 1 practice: trafficking, localization, and fractionation evidence (open, ungraded)",
           "reading": "assignments/homework-01-traffic-analysis.md",
-    "objectives": [
-      "cell-biology-8-objective-1",
-      "cell-biology-8-objective-2"
-    ],
-    "question_ids": [],
-    "worked_example": "The lysosome-enriched cargo means are 67.75% for wild type, 42.25% for the tail mutant, and 62.50% for the motif-repaired clone. The mutant-minus-wild-type descriptive contrast is -25.50 percentage points; four independent culture preparations per group do not by themselves establish uncertainty or a molecular mechanism.",
+          "objectives": [
+            "cell-biology-8-objective-1",
+            "cell-biology-8-objective-2"
+          ],
+          "question_ids": [],
+          "worked_example": "The lysosome-enriched cargo means are 67.75% for wild type, 42.25% for the tail mutant, and 62.50% for the motif-repaired clone. The mutant-minus-wild-type descriptive contrast is -25.50 percentage points; four independent culture preparations per group do not by themselves establish uncertainty or a molecular mechanism.",
           "card_ids": [
             "cell-biology-hw1-0",
             "cell-biology-hw1-1",
@@ -1713,6 +1715,40 @@
           "card_ids": []
         }
       ]
+    },
+    {
+      "id": "cell-biology-module-lab-02",
+      "title": "Virtual laboratory: signaling dynamics, inhibition, and rescue",
+      "source_ids": [
+        "mit-7.016-cell-signaling",
+        "ncbi-mboc-rtk-signaling",
+        "ncbi-mboc-gpcr-signaling"
+      ],
+      "lessons": [
+        {
+          "id": "cell-biology-lab-02",
+          "title": "Virtual lab 2: signaling time course, controls, and rescue",
+          "reading": "labs/02-signaling-dynamics-inhibitor-rescue.md",
+          "objectives": [
+            "cell-biology-22-objective-1",
+            "cell-biology-22-objective-2",
+            "cell-biology-22-objective-3"
+          ],
+          "worked_example": "At 2 minutes, mean relative pERK is 4.90 under continuous ligand and 1.15 with MEK inhibitor. Subtracting vehicle (1.00) gives 3.90 and 0.15 above baseline; the observed residual fraction is 0.15/3.90 = 3.85%. This synthetic comparison measures one downstream phosphorylation readout and does not establish inhibitor specificity or a later cell outcome.",
+          "question_ids": [
+            "cell-biology-lab2:summary-table",
+            "cell-biology-lab2:trajectory-plot",
+            "cell-biology-lab2:inhibitor-contrast",
+            "cell-biology-lab2:rescue-interpretation"
+          ],
+          "card_ids": [
+            "cell-biology-lab2-0",
+            "cell-biology-lab2-1",
+            "cell-biology-lab2-2",
+            "cell-biology-lab2-3"
+          ]
+        }
+      ]
     }
   ],
   "assessments": [
@@ -2140,6 +2176,26 @@
         "cell-biology-hw1:m6p-route-topology"
       ],
       "points": 24
+    },
+    {
+      "id": "cell-biology-week11-signaling-lab",
+      "type": "lab",
+      "mode": "practice",
+      "title": "Virtual lab 2: signaling dynamics, inhibition, and rescue (ungraded practice)",
+      "path": "question-banks/practice.json",
+      "week": 11,
+      "objective_ids": [
+        "cell-biology-22-objective-1",
+        "cell-biology-22-objective-2",
+        "cell-biology-22-objective-3"
+      ],
+      "question_ids": [
+        "cell-biology-lab2:summary-table",
+        "cell-biology-lab2:trajectory-plot",
+        "cell-biology-lab2:inhibitor-contrast",
+        "cell-biology-lab2:rescue-interpretation"
+      ],
+      "points": 20
     }
   ],
   "grading_policy": {
@@ -2274,18 +2330,24 @@
       "version": "0.17.0",
       "date": "2026-10-06",
       "summary": "Added an original Week 3 open formative homework companion with a synthetic trafficking dataset, CSV summary, fixed-axis plot, signed contrast, structured control/rescue reasoning, and route/topology check. All answers remain public practice authoring specifications; this is not a graded homework set and the course remains partial."
+    },
+    {
+      "version": "0.18.0",
+      "date": "2026-10-06",
+      "summary": "Added a second original virtual data-analysis lab for Week 11, with 120 explicitly synthetic replicate-level signaling observations, summary-table and graph-coordinate practice, bounded inhibitor/rescue reasoning, four retrieval cards, and link-only provenance. The lab is public and ungraded; the course remains partial and still lacks a full graded lab sequence, eight graded homework sets, summative exams, and capstone."
     }
   ],
   "limitations": [
-    "Weeks 1-7 each have two original topic lessons; weeks 4 and 7 retain compact prototype readings. Week 3 also has an open formative homework companion with a synthetic M6P-sorting dataset; it does not count as a graded homework set. Weeks 9-14 add twelve original lessons. Week 5 includes one synthetic fluorescence image-quantification data lab with a deterministic formative component; the complete planned lab sequence, eight graded homework sets, summative exams, workload evidence, and instructor review remain unfinished.",
-    "Week 8 is an ungraded cumulative practice set, not an exam or midterm. Weeks 9-14 have original lesson pairs and formative practice sets; week 8 remains practice-only with no lesson pair. One lab activity does not meet the planned three-lab scope; the other data/virtual-lab activities, exams, cumulative project, workload evidence, and independent review are still missing.",
+    "Weeks 1-7 each have two original topic lessons; weeks 4 and 7 retain compact prototype readings. Week 3 also has an open formative homework companion with a synthetic M6P-sorting dataset; it does not count as a graded homework set. Weeks 9-14 add twelve original lessons. Weeks 5 and 11 each include one synthetic data-analysis lab with deterministic formative components; the complete planned lab sequence, eight graded homework sets, summative exams, workload evidence, and instructor review remain unfinished.",
+    "Week 8 is an ungraded cumulative practice set, not an exam or midterm. Weeks 9-14 have original lesson pairs and formative practice sets; week 8 remains practice-only with no lesson pair. Two formative lab activities do not meet the planned three-lab scope; one additional data/virtual-lab activity, exams, cumulative project, workload evidence, and independent review are still missing.",
     "Current formative checks across the developed lessons do not demonstrate comprehensive outcome coverage or mastery; some lesson objectives remain unassessed.",
     "Bloom labels and structured prerequisite edges are initial authoring classifications awaiting subject-matter review.",
     "Question answers and solution feedback are intentionally public practice authoring specifications, not restricted exam keys.",
     "Week-4 numeric examples require units and include dimensional checks, but legacy numerical specifications elsewhere still need unit, tolerance, and significant-figure review.",
     "Total workload and weekly study hours are unknown; former nominal credit values and hardcoded reading times do not establish workload.",
     "CSV upload checks fixed numeric summary cells only; the virtual lab does not grade arbitrary data analysis, uncertainty estimation, free-response reasoning, or causal inference.",
-    "Homework 1 is openly licensed formative practice with publicly inspectable solution specifications; it is not suitable as a protected exam, does not contribute to a course grade, and does not count as one of the eight required graded homework sets."
+    "Homework 1 is openly licensed formative practice with publicly inspectable solution specifications; it is not suitable as a protected exam, does not contribute to a course grade, and does not count as one of the eight required graded homework sets.",
+    "Virtual lab 2 uses synthetic phospho-ERK-to-total-ERK relative values and constrained deterministic checks. Its graph task scores points on fixed axes and does not assess axis selection, statistical uncertainty, or biological interpretation; neither the inhibitor nor bypass result alone establishes pathway specificity, normal physiology, or cell fate."
   ],
   "intentionally_omitted": [
     "Lessons and assessments for most proposed weeks, summative course assessments, and the complete semester workflow are intentionally not represented as finished content."

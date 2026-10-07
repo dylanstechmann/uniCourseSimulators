@@ -615,6 +615,48 @@
         "cell-biology-8-objective-2"
       ],
       "license": "CC-BY-4.0"
+    },
+    {
+      "id": "cell-biology-lab2-0",
+      "lesson_id": "cell-biology-lab-02",
+      "front": "Signal amplitude versus duration",
+      "back": "An early peak and a late endpoint describe different features of a trajectory. Compare matched time points and exposure schedules; neither a sustained phosphorylation trace nor a declining trace identifies a unique mechanism or later cell fate.",
+      "objective_ids": [
+        "cell-biology-22-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "cell-biology-lab2-1",
+      "lesson_id": "cell-biology-lab-02",
+      "front": "What does a pathway bypass rescue show?",
+      "back": "If an activated downstream component restores a measured node under an upstream block, the result supports a possible ordering for that node in the tested system. It does not restore all receptor branches or establish normal physiology.",
+      "objective_ids": [
+        "cell-biology-22-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "cell-biology-lab2-2",
+      "lesson_id": "cell-biology-lab-02",
+      "front": "What does an inhibitor response establish?",
+      "back": "A lower downstream signal under an inhibitor is compatible with target contribution, but can also reflect off-target action, altered cell state, delivery, or assay effects. Verify target engagement and use a distinct controlled perturbation and specific rescue.",
+      "objective_ids": [
+        "cell-biology-22-objective-2",
+        "cell-biology-22-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "cell-biology-lab2-3",
+      "lesson_id": "cell-biology-lab-02",
+      "front": "Count biological replicates correctly in a time course",
+      "back": "Independent culture preparations define biological replication here. Sister wells, assay repeats, cells, and time points from the same preparation do not create additional independent preparations.",
+      "objective_ids": [
+        "cell-biology-22-objective-1",
+        "cell-biology-22-objective-3"
+      ],
+      "license": "CC-BY-4.0"
     }
   ]
 }
