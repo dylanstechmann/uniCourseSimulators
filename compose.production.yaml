@@ -10,10 +10,18 @@ x-api: &api
     DB_NAME: courselab
     DB_USER: courselab
     CONTENT_ROOT: /content
+    PRIVATE_ASSESSMENTS_ROOT: /run/private-assessments
     COOKIE_SECURE: "true"
     ALLOWED_ORIGINS: https://${COURSELAB_DOMAIN:?Set COURSELAB_DOMAIN}
     VARIANT_TOKEN_SECRET: ${VARIANT_TOKEN_SECRET:?Set a stable random VARIANT_TOKEN_SECRET}
   secrets: [db-password]
+  volumes:
+    - type: bind
+      source: ${COURSELAB_PRIVATE_ASSESSMENTS_PATH:-/srv/courselab-private-assessments}
+      target: /run/private-assessments
+      read_only: true
+      bind:
+        create_host_path: true
   networks: [database, application]
   read_only: true
   tmpfs: [/tmp:size=64m,noexec,nosuid]

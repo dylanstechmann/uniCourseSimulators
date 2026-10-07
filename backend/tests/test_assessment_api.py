@@ -182,14 +182,21 @@ def test_assessment_plan_pins_categories_and_keeps_prior_version_snapshot(guest,
 
 
 def _configure_graded_homework(
-    content_root, *, release_at="2020-01-01T00:00:00Z", due_at=None,
+    content_root, *, release_at="2020-01-01T00:00:00Z", due_at=None, private_root=None,
 ):
     directory = content_root / "courses" / "test-course"
     manifest_path = directory / "course.json"
     manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
     practice = json.loads((directory / "question-banks" / "practice.json").read_text(encoding="utf-8"))
     question = next(item for item in practice["questions"] if item["id"] == "choice")
-    (directory / "question-banks" / "private-homework.json").write_text(
+    if private_root is None:
+        source_path = "question-banks/private-homework.json"
+        source_file = directory / source_path
+    else:
+        source_path = "private://assignments/homework-1.json"
+        source_file = private_root / "courses" / "test-course" / "assignments" / "homework-1.json"
+    source_file.parent.mkdir(parents=True, exist_ok=True)
+    source_file.write_text(
         json.dumps({"course_id": "test-course", "questions": [question]}), encoding="utf-8",
     )
     manifest["grading_policy"] = {
@@ -203,12 +210,48 @@ def _configure_graded_homework(
     }
     manifest["assessments"] = [{
         "id": "homework-1", "type": "homework", "mode": "graded", "title": "Control analysis",
-        "path": "question-banks/private-homework.json", "objective_ids": ["objective"],
+        "path": source_path, "objective_ids": ["objective"],
         "question_ids": ["choice"], "points": 2, "category_id": "homework", "week": 1,
         "release_at": release_at, "due_at": due_at,
         "attempt_limit": 2, "attempt_scoring": "highest",
     }]
     manifest_path.write_text(json.dumps(manifest), encoding="utf-8")
+
+
+def test_private_assessment_keys_are_read_from_mount_and_never_returned(guest, app, content_root):
+    private_root = app.state.settings.private_assessments_root
+    _configure_graded_homework(content_root, private_root=private_root)
+    key_file = private_root / "courses" / "test-course" / "assignments" / "homework-1.json"
+    assert key_file.is_file()
+    assert not key_file.is_relative_to(content_root)
+
+    # Without the mounted key, enrollment plan creation fails closed.
+    app.state.content.private_assessments_root = None
+    unavailable = guest.post("/api/v1/enrollments", json={"course_id": "test-course"})
+    assert unavailable.status_code == 409
+
+    app.state.content.private_assessments_root = private_root
+    assert guest.post("/api/v1/enrollments", json={"course_id": "test-course"}).status_code == 201
+    plan = guest.get("/api/v1/assessments/test-course")
+    assert plan.status_code == 200
+    assert "private://" not in plan.text and "PRIVATE_TEST_SENTINEL" not in plan.text
+    questions = guest.get("/api/v1/assessments/test-course/homework-1/questions")
+    assert questions.status_code == 200
+    assert questions.json()["questions"][0]["prompt"] == "Select a negative control."
+    for response in (
+        questions,
+        guest.get("/api/v1/courses/test-course"),
+        guest.get("/api/v1/lessons/test-course/lesson-one"),
+    ):
+        assert "solution_spec" not in response.text
+        assert "PRIVATE_TEST_SENTINEL" not in response.text
+        assert "private://" not in response.text
+
+    submitted = guest.post(
+        "/api/v1/assessments/test-course/homework-1/submissions",
+        json={"responses": {"choice": {"response": 0}}},
+    )
+    assert submitted.status_code == 201 and submitted.json()["score"] == 2
 
 
 def _provision_reviewer(app, client, email="reviewer@example.org"):

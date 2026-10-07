@@ -43,6 +43,7 @@ PLACEHOLDER = re.compile(
     r"insert (?:lesson|content|text) here",
     re.IGNORECASE,
 )
+PRIVATE_ASSESSMENT_PREFIX = "private://"
 
 
 @dataclass
@@ -126,6 +127,81 @@ def safe_file(course_root: Path, reference: str, report: Report) -> Path | None:
         report.error(
             "missing-file", resolved, "Referenced content file does not exist."
         )
+        return None
+    return resolved
+
+
+def assessment_source_file(
+    course_root: Path,
+    course_id: str,
+    reference: str,
+    private_root: Path | None,
+    maturity: str,
+    report: Report,
+) -> Path | None:
+    """Resolve public sources or optional private answer packages without fallback."""
+    if not isinstance(reference, str) or not reference.startswith(PRIVATE_ASSESSMENT_PREFIX):
+        return safe_file(course_root, reference, report)
+
+    relative = reference.removeprefix(PRIVATE_ASSESSMENT_PREFIX)
+    parts = relative.split("/")
+    if (
+        not relative
+        or relative.startswith("/")
+        or "\\" in relative
+        or ":" in relative
+        or any(part in {"", ".", ".."} for part in parts)
+    ):
+        report.error("path", reference, "Unsafe private assessment source reference.")
+        return None
+    if private_root is None:
+        if maturity in MATURE:
+            report.error(
+                "private-assessment-unavailable",
+                reference,
+                "Mature courses must be validated with the private assessment root mounted.",
+            )
+        else:
+            report.warn(
+                "private-assessment-unchecked",
+                reference,
+                "Private assessment package is intentionally absent from public validation; supply its root to validate the answer key.",
+            )
+        return None
+
+    private_root = private_root.resolve()
+    public_root = course_root.resolve().parents[1]
+    if (
+        private_root == public_root
+        or private_root.is_relative_to(public_root)
+        or public_root.is_relative_to(private_root)
+    ):
+        report.error(
+            "private-assessment-root",
+            reference,
+            "Private assessment and public content roots must not overlap.",
+        )
+        return None
+    courses_root = (private_root / "courses").resolve()
+    try:
+        courses_root.relative_to(private_root)
+    except ValueError:
+        report.error("path", reference, "Private assessment courses directory escapes its root.")
+        return None
+    directory = (courses_root / course_id).resolve()
+    try:
+        directory.relative_to(courses_root)
+    except ValueError:
+        report.error("path", reference, "Private assessment course directory escapes its root.")
+        return None
+    resolved = (directory / Path(*parts)).resolve()
+    try:
+        resolved.relative_to(directory)
+    except ValueError:
+        report.error("path", reference, "Private assessment source escapes its course root.")
+        return None
+    if not resolved.is_file():
+        report.error("missing-private-assessment", reference, "Private assessment package does not exist.")
         return None
     return resolved
 
@@ -665,6 +741,7 @@ def validate_course(
     seen_readings: dict[str, str],
     seen_questions: dict[str, str],
     report: Report,
+    private_assessments_root: Path | None = None,
 ) -> None:
     report.inventory["courses"] += 1
     course_path = course_root / "course.json"
@@ -694,8 +771,27 @@ def validate_course(
         )
     except (AttributeError, TypeError, ValueError) as exc:
         report.error("assessment-policy", course_path, str(exc))
+    assessment_paths = {}
+    for assessment in manifest["assessments"]:
+        reference = assessment["path"]
+        is_private = isinstance(reference, str) and reference.startswith(PRIVATE_ASSESSMENT_PREFIX)
+        if is_private and assessment["mode"] != "graded":
+            report.error(
+                "private-assessment-mode",
+                course_path,
+                "Private assessment sources are reserved for graded assessments.",
+            )
+        assessment_paths[reference] = assessment_source_file(
+            course_root,
+            manifest["id"],
+            reference,
+            private_assessments_root,
+            manifest["maturity"],
+            report,
+        )
     report.inventory["lessons"] += len(lessons)
     questions = []
+    private_question_ids = set()
     # Repeated references to a bank share one authoring source, not duplicate items.
     bank_paths = {
         assessment["path"]
@@ -703,7 +799,7 @@ def validate_course(
         if assessment["question_ids"]
     }
     for reference in sorted(bank_paths):
-        bank_path = safe_file(course_root, reference, report)
+        bank_path = assessment_paths.get(reference)
         if not bank_path:
             continue
         bank = load_json(bank_path, report)
@@ -718,6 +814,8 @@ def validate_course(
                 "Question bank course_id does not match its manifest.",
             )
         questions.extend(bank["questions"])
+        if reference.startswith(PRIVATE_ASSESSMENT_PREFIX):
+            private_question_ids.update(question["id"] for question in bank["questions"])
     question_ids = unique_ids(questions, "question", course_path, report)
     report.inventory["questions"] += len(questions)
     covered = set()
@@ -1188,7 +1286,10 @@ def validate_course(
                             "answer-spec", question["id"],
                             f"Variant {variant_id} has a choice answer outside its option array.",
                         )
-        if question["visibility"] == "restricted-server-assessment":
+        if (
+            question["visibility"] == "restricted-server-assessment"
+            and question["id"] not in private_question_ids
+        ):
             report.error(
                 "restricted-key",
                 question["id"],
@@ -1198,11 +1299,16 @@ def validate_course(
         check_refs(
             assessment["objective_ids"], objective_ids, "objective", course_path, report
         )
-        check_refs(
-            assessment["question_ids"], question_ids, "question", course_path, report
+        source_unavailable = (
+            assessment["path"] in assessment_paths
+            and assessment_paths[assessment["path"]] is None
+            and assessment["path"].startswith(PRIVATE_ASSESSMENT_PREFIX)
         )
+        if not source_unavailable:
+            check_refs(
+                assessment["question_ids"], question_ids, "question", course_path, report
+            )
         covered.update(assessment["objective_ids"])
-        safe_file(course_root, assessment["path"], report)
     uncovered = sorted(objective_ids - covered)
     if uncovered and manifest["maturity"] not in MATURE:
         report.warn(
@@ -1445,7 +1551,11 @@ def validate_course(
 
 
 def validate_repository(
-    root: Path, *, check_links: bool = False, source_registry: Path | None = None
+    root: Path,
+    *,
+    check_links: bool = False,
+    source_registry: Path | None = None,
+    private_assessments_root: Path | None = None,
 ) -> Report:
     root = root.resolve()
     report = Report()
@@ -1499,6 +1609,7 @@ def validate_repository(
             seen_readings,
             seen_questions,
             report,
+            private_assessments_root,
         )
     if not courses:
         report.error(
@@ -1545,11 +1656,19 @@ def main() -> int:
         type=Path,
         help="Read-only source registry override for isolated worktree validation.",
     )
+    parser.add_argument(
+        "--private-assessments-root",
+        type=Path,
+        help="Optional private answer-package root; never copy it into the repository or frontend.",
+    )
     parser.add_argument("--check-links", action="store_true")
     parser.add_argument("--json", action="store_true", dest="json_output")
     args = parser.parse_args()
     report = validate_repository(
-        args.root, check_links=args.check_links, source_registry=args.source_registry
+        args.root,
+        check_links=args.check_links,
+        source_registry=args.source_registry,
+        private_assessments_root=args.private_assessments_root,
     )
     if args.json_output:
         print(json.dumps(report.as_dict(), indent=2))

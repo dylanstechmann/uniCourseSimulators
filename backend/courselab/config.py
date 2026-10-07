@@ -12,6 +12,7 @@ from sqlalchemy import URL
 class Settings:
     database_url: str = field(repr=False)
     content_root: Path
+    private_assessments_root: Path | None = None
     allowed_origins: tuple[str, ...] = ("http://localhost:8080", "http://127.0.0.1:8080")
     cookie_secure: bool = True
     session_hours: int = 168
@@ -39,9 +40,13 @@ class Settings:
         variant_secret = os.getenv("VARIANT_TOKEN_SECRET") or None
         if variant_secret is not None and len(variant_secret.encode("utf-8")) < 32:
             raise ValueError("VARIANT_TOKEN_SECRET must contain at least 32 bytes")
+        private_assessments_root = os.getenv("PRIVATE_ASSESSMENTS_ROOT") or None
         return cls(
             database_url=database_url or "sqlite:///./courselab-development.db",
             content_root=Path(os.getenv("CONTENT_ROOT", "../content")).resolve(),
+            private_assessments_root=(
+                Path(private_assessments_root).resolve() if private_assessments_root else None
+            ),
             allowed_origins=tuple(
                 origin.strip() for origin in os.getenv(
                     "ALLOWED_ORIGINS", "http://localhost:8080,http://127.0.0.1:8080"

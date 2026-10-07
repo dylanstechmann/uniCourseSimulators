@@ -99,6 +99,14 @@ def test_variant_token_secret_is_private_and_has_a_minimum_length(monkeypatch):
         Settings.from_environment()
 
 
+def test_private_assessment_root_is_optional_and_resolved(tmp_path, monkeypatch):
+    private_root = tmp_path / "protected" / "keys"
+    monkeypatch.setenv("PRIVATE_ASSESSMENTS_ROOT", str(private_root))
+    assert Settings.from_environment().private_assessments_root == private_root.resolve()
+    monkeypatch.delenv("PRIVATE_ASSESSMENTS_ROOT")
+    assert Settings.from_environment().private_assessments_root is None
+
+
 def test_self_declared_email_environment_is_not_authorization(monkeypatch):
     monkeypatch.setenv("INSTRUCTOR_EMAILS", "reviewer@example.org")
     settings = Settings.from_environment()

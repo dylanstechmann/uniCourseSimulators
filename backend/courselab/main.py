@@ -1,4 +1,4 @@
-"""FastAPI learner service with server ownership and formative-only assessment."""
+"""FastAPI learner service with server-owned records and versioned assessment."""
 
 import base64
 import binascii
@@ -128,7 +128,7 @@ def create_app(settings: Settings | None = None) -> FastAPI:
     settings = settings or Settings.from_environment()
     app = FastAPI(title="uniStemCourseSimulators API", version="0.2.0", docs_url=None, redoc_url=None)
     engine, session_factory = database(settings.database_url)
-    content = ContentRepository(settings.content_root)
+    content = ContentRepository(settings.content_root, settings.private_assessments_root)
     app.state.engine = engine
     app.state.sessions = session_factory
     app.state.content = content

@@ -92,6 +92,56 @@ def codes(report):
     return {error["code"] for error in report.errors}
 
 
+def install_private_homework(repository: Path, manifest_path: Path, private_root: Path) -> None:
+    manifest = read(manifest_path)
+    objective_id = manifest["lesson_objectives"][0]["id"]
+    lesson_id = manifest["modules"][0]["lessons"][0]["id"]
+    question = {
+        "id": "cell-biology-private-hw2-q1",
+        "type": "single_choice",
+        "prompt": "Which concentration series best supports initial-rate estimation before substantial substrate depletion?",
+        "options": [
+            "A single endpoint after most substrate is consumed.",
+            "Several early time points across multiple substrate concentrations.",
+        ],
+        "points": 2,
+        "objective_ids": [objective_id],
+        "solution_spec": {"answer": 1},
+        "feedback": {
+            "hint": "Compare how both time and initial substrate concentration are sampled.",
+            "solution": "Multiple early time points support initial-rate estimates before depletion dominates.",
+            "lesson_ids": [lesson_id],
+        },
+        "visibility": "restricted-server-assessment",
+    }
+    key_path = private_root / "courses/cell-biology/assignments/homework-02.json"
+    key_path.parent.mkdir(parents=True)
+    write(key_path, {
+        "schema_version": "1.0",
+        "course_id": "cell-biology",
+        "license": "Private test fixture only",
+        "questions": [question],
+    })
+    manifest["grading_policy"]["mode"] = "graded-course"
+    manifest["grading_policy"]["categories"] = [
+        {"id": "homework", "title": "Homework", "weight": 1.0}
+    ]
+    manifest["assessments"].append({
+        "id": "homework-2-private-fixture",
+        "type": "homework",
+        "mode": "graded",
+        "title": "Private test homework",
+        "path": "private://assignments/homework-02.json",
+        "objective_ids": [objective_id],
+        "question_ids": [question["id"]],
+        "points": 2,
+        "category_id": "homework",
+        "week": 4,
+        "attempt_scoring": "highest",
+    })
+    write(manifest_path, manifest)
+
+
 def test_preserved_inventory_is_honest_partial(repository):
     result = validate_repository(repository)
     assert result.ok, result.errors
@@ -638,6 +688,74 @@ def test_formative_manifest_cannot_silently_include_a_graded_assignment(reposito
     manifest["assessments"][0]["mode"] = "graded"
     write(path, manifest)
     assert "assessment-policy" in codes(validate_repository(repository))
+
+
+def test_public_validation_discloses_unmounted_private_assessment_without_faking_keys(repository, course, tmp_path):
+    manifest_path, _ = course
+    private_root = tmp_path / "operator-private-assessments"
+    install_private_homework(repository, manifest_path, private_root)
+
+    result = validate_repository(repository)
+
+    assert result.ok, result.errors
+    assert result.inventory["questions"] == 196
+    assert any(item["code"] == "private-assessment-unchecked" for item in result.warnings)
+
+
+def test_private_assessment_validator_loads_and_validates_key_only_from_separate_root(repository, course, tmp_path):
+    manifest_path, _ = course
+    private_root = tmp_path / "operator-private-assessments"
+    install_private_homework(repository, manifest_path, private_root)
+
+    result = validate_repository(repository, private_assessments_root=private_root)
+
+    assert result.ok, result.errors
+    assert result.inventory["questions"] == 197
+    assert "restricted-key" not in codes(result)
+    assert "private-assessment-unchecked" not in {item["code"] for item in result.warnings}
+
+
+def test_private_assessment_validator_rejects_public_root_overlap(repository, course, tmp_path):
+    manifest_path, manifest = course
+    manifest["grading_policy"]["mode"] = "graded-course"
+    manifest["grading_policy"]["categories"] = [
+        {"id": "homework", "title": "Homework", "weight": 1.0}
+    ]
+    manifest["assessments"].append({
+        "id": "private-homework-overlap-test",
+        "type": "homework",
+        "mode": "graded",
+        "title": "Invalid private source",
+        "path": "private://assignments/overlap.json",
+        "objective_ids": [manifest["lesson_objectives"][0]["id"]],
+        "question_ids": ["unknown-private-question"],
+        "points": 1,
+        "category_id": "homework",
+        "week": 4,
+    })
+    write(manifest_path, manifest)
+
+    result = validate_repository(repository, private_assessments_root=repository / "content")
+
+    assert "private-assessment-root" in codes(result)
+
+
+def test_private_assessment_validator_rejects_course_directory_symlink_escape(repository, course, tmp_path):
+    manifest_path, _ = course
+    private_root = tmp_path / "operator-private-assessments"
+    install_private_homework(repository, manifest_path, private_root)
+    private_course = private_root / "courses/cell-biology"
+    outside_course = tmp_path / "outside-course"
+    private_course.rename(outside_course)
+    try:
+        private_course.symlink_to(outside_course, target_is_directory=True)
+    except (OSError, NotImplementedError):
+        pytest.skip("Directory symlink creation is unavailable on this Windows host")
+
+    result = validate_repository(repository, private_assessments_root=private_root)
+
+    assert "path" in codes(result)
+    assert "missing-private-assessment" not in codes(result)
 
 
 def test_assessment_due_time_cannot_precede_release(repository, course):

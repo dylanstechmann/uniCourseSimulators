@@ -4,7 +4,34 @@
 
 2026-10-06; synthetic local learner data only. Milestones 1 and 2 are implemented. Milestone 3 remains partial; deterministic graders and prototype graded-assignment and review workflows are described below. A Milestone 4 curriculum-map increment is implemented and tested, while subject-matter review and map refinement remain. All 25 course packages are **partial**; zero are beta, complete or externally reviewed. Human score review is limited to saved attempts and does not constitute course-content review. No semester equivalence, university credit, security certification or public production deployment is asserted.
 
-## Current increment: Week 11 signaling-dynamics virtual lab (2026-10-06)
+## Current increment: protected assessment-source boundary (2026-10-06)
+
+Added an optional protected assessment root distinct from public course content. Graded manifests can refer to `private://` sources resolved only below the configured per-course directory; Docker Compose mounts that directory read-only for server-side use. Public/private root overlap, path traversal, file or course-directory symlink escape, absent configuration and missing files fail closed. Existing enrollment snapshots pin the source SHA-256; learner APIs omit both answer specifications and private source paths. No real answer key was added, no current course uses the private source, and all 25 packages remain formative-only. This is infrastructure for future assessed coursework, not a new graded assignment or course maturity change.
+
+| Current command/check | Result |
+| --- | --- |
+| `python tools/validate_content.py` | PASS: 25 packages, 128 lessons, 196 questions, 259 cards, 25 cases; 0 errors; 123 disclosed warnings |
+| `backend/.venv/Scripts/python.exe -m pytest tests -q` | 72 passed, 2 skipped |
+| `backend/.venv/Scripts/python.exe -m pytest backend/tests -q` | 229 passed, 1 skipped; one upstream Starlette/httpx deprecation warning |
+| `backend/.venv/Scripts/ruff.exe check backend tools tests` | PASS |
+| `cd frontend; npm run lint` | PASS |
+| `cd frontend; npm test -- --run` | 31 passed |
+| `cd frontend; npm run build` | PASS: TypeScript and Vite production build (206 modules) |
+| `cd frontend; $env:E2E_BASE_URL='http://localhost:8080'; npm run test:e2e` | 20 passed against the final rebuilt Compose app |
+| `npm run test:legacy` | 7 passed |
+| `docker compose config --quiet` | PASS |
+| `docker compose -f compose.production.yaml config --quiet` | PASS with documented sample environment values |
+| `docker compose up --build -d --wait --wait-timeout 180` | PASS: API, database, and web healthy; existing database volume preserved |
+| `docker compose exec -T api python -m courselab.check_content /content` | PASS: 25 packages / 200 supported practice specifications |
+| `docker compose exec -T api alembic current` and `/api/v1/health` | PASS: `0007 (head)`; health `ok`; programming runner and LLM feedback disabled |
+| Protected mount write probe in API container | PASS: mount is read-only |
+| `python tools/check_security.py --bundle frontend/dist` | PASS; 0 findings across 418 source files |
+| `git diff --check` | PASS |
+| Hosted GitHub Actions | Pending publication of this increment |
+
+The source resolver and API tests confirm the key is read only from the private mount, is not returned in course/lesson/assessment DTOs, and is not substituted from similarly named public files. A missing key blocks graded enrollment-plan creation. Symlink-escape tests are skipped because this Windows host does not permit creating test symlinks; lexical traversal and root-overlap rejection passed. No current catalog course is affected because none references a private source.
+
+## Previous increment: Week 11 signaling-dynamics virtual lab (2026-10-06)
 
 Foundations of Cell and Molecular Biology advances from 0.17.0 to **0.18.0** and remains `partial`. The new original 2–3 hour lab uses 120 explicitly synthetic pERK/total-ERK observations across six treatment conditions, five times, and four preparation blocks. Learners summarize 24 condition/time cells, plot 15 selected time points, calculate a vehicle-adjusted inhibitor effect, and distinguish rescue, vehicle, and pathway-control evidence. Four retrieval cards support spaced review. It is interactive formative practice; answer specifications are public, scores are ungraded, and the activity is not one of the course's three grade-bearing labs.
 

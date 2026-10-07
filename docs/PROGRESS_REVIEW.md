@@ -1,5 +1,9 @@
 # Progress review: uniStemCourseSimulators
 
+## Update after private assessment-source boundary (2026-10-06)
+
+Graded assessment sources can now load from a separate operator-mounted, read-only directory using confined `private://` references. Public and private roots must be disjoint; traversal and symlink escapes are rejected. Missing keys fail closed, and the existing enrollment snapshot continues to pin the source SHA-256. Compose mounts the private root only into API/migration containers; `.local/private-assessments/` is Git-ignored. Tests confirm answer specs and paths do not appear in learner APIs. This is source-handling infrastructure only: no private key or graded course package has been added, all 25 packages remain formative-only, and no course grade is enabled. The next content task is a complete Week 4 enzyme-kinetics homework package mapped to its authored instruction; it must remain inactive until its protected answer package and all reviews are provisioned.
+
 ## Update after week 11 signaling lab (2026-10-06)
 
 The cell-biology package advanced to 0.18.0 and remains partial. Week 11 now has an original 2–3 hour virtual data-analysis lab built around 120 openly documented synthetic pERK/total-ERK observations across six conditions, five times, and four independent preparation blocks. It adds a 24-cell CSV summary check, 15 time-course plot points, a baseline-adjusted inhibitor calculation, five explicit rescue/control choices, and four retrieval cards. The answer specifications are public; the lab is ungraded and does not count as a grade-bearing lab. The course still lacks all eight graded homework packages, one additional lab, summative exams, a cumulative project, measured workload, and independent course review. The course remains partial and no university equivalency is claimed.

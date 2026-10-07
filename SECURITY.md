@@ -2,7 +2,7 @@
 
 This is development software. The preserved browser reader contains public practice answers and editable scores. It is unsuitable for secure examinations or confidential student records.
 
-Use synthetic data. Server account records, session secrets, provider credentials and production assessment specifications must be excluded from Git/frontend assets. Public repository authoring solutions are intentionally discoverable; production exam secrecy requires a separate private content store and release policy.
+Use synthetic data. Server account records, session secrets, provider credentials and production assessment specifications must be excluded from Git/frontend assets. Public repository authoring solutions are intentionally discoverable. Production deployments may mount protected assessment packages from a separate read-only server directory using `COURSELAB_PRIVATE_ASSESSMENTS_PATH`; `private://` sources are confined below that root and never fall back to public course content. Missing or changed files fail closed, and enrollment pins their checksum. No shipped course currently references a protected assessment or claims to provide graded coursework.
 
 Never execute submitted code in the API. The future runner requires ephemeral containers with no network, Docker socket, host mounts or writable base filesystem; bounded CPU, memory, processes and runtime; temporary submission storage; and an explicit dependency allowlist. Code assignments stay disabled until isolation is implemented and adversarially tested.
 

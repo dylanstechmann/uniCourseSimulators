@@ -23,6 +23,14 @@ docker compose exec -T api python -m courselab.manage_instructor USER_ID revoke
 
 The `.env` files, secrets, database files, backups and learner exports are excluded from Git, but an ignore rule is not a substitute for inspecting staged changes.
 
+## Protected assessment content
+
+Production answer specifications belong in a separate private directory, never in the public `content/` tree, a frontend bundle, or a Git commit. Compose mounts `COURSELAB_PRIVATE_ASSESSMENTS_PATH` read-only at `/run/private-assessments`; the API resolves `private://` assessment sources below `courses/<course-id>/` in that mount. For example, a manifest source `private://assignments/homework-02.json` maps to `courses/cell-biology/assignments/homework-02.json` under the configured host directory. The public lesson and assessment APIs omit source paths and grader specifications. Enrollment pins the source-file checksum; a missing or changed key fails closed instead of silently grading with different content.
+
+Development Compose defaults to the ignored `.local/private-assessments/` directory and creates it if needed. Production Compose defaults to `/srv/courselab-private-assessments`; set `COURSELAB_PRIVATE_ASSESSMENTS_PATH` in the untracked production environment file to an operator-controlled directory outside the checkout. The directory and JSON packages must be readable by the API container's uid 10001 and must not be writable by the service. Back up private assessment packages with restricted, encrypted backups. Do not put real answer files in the public repository, even temporarily or on a branch.
+
+No current catalog course references a private graded package; all course packages remain formative-only. A course manifest must not switch to a graded policy until its assignment instructions, private question package, rubric, schedule, release policy, tests, and review are ready. When a manifest does reference a private source, the assessment-plan endpoint returns a conflict while that source is unavailable.
+
 Appeal adjustments/upheld decisions are permitted only while the exact installed question version, resolved variant and saved digest match. Changed or missing content can only be declined; immutable historical content archives remain future work. See [PROGRESS_REVIEW.md](PROGRESS_REVIEW.md) and [SECURITY.md](../SECURITY.md).
 
 Useful diagnostics:
@@ -60,23 +68,24 @@ docker compose run --rm migrate
 
 The second command runs `alembic upgrade head` using the same image, database and secret as the API. Revision 0002 adds an optional question-specification digest to attempts; revision 0003 adds learner appeals and append-only instructor review decisions; revision 0004 adds an instructor role defaulting to false for all existing accounts. Old attempts are preserved and marked unpinned. For an application update, take and verify a backup, stop API/web writes, build the reviewed version, apply its migrations, and restart the application. Read each migration before applying it to valuable data. A downgrade is not a general data-recovery mechanism; some future changes may be irreversible. Upgrade/downgrade and migrated-schema comparisons are covered by backend tests.
 
-Content is copied into the API image at `/content`. Rebuild when course packages change. Enrollments record their course version; a changed version blocks version-dependent operations until the learner uses the explicit `PUT /api/v1/enrollments/{course_id}/version` action. This updates the enrollment pointer and preserves earlier attempts with their original course version. Do not rewrite published content under an unchanged version to bypass that boundary.
+Public content is copied into the API image at `/content`; protected assessment packages are mounted separately at `/run/private-assessments`. Rebuild when public course packages change. Enrollments record their course version; a changed version blocks version-dependent operations until the learner uses the explicit `PUT /api/v1/enrollments/{course_id}/version` action. This updates the enrollment pointer and preserves earlier attempts with their original course version. Do not rewrite published content under an unchanged version to bypass that boundary.
 
 ## Production example, domain and HTTPS
 
 Use a host with Docker/Compose, a DNS hostname controlled by the operator, and network access suitable for certificate issuance. Set the hostname's A/AAAA records to that host, permit inbound TCP 80/443, and keep PostgreSQL/API ports unpublished. `COURSELAB_DOMAIN` must be the hostname alone, with no scheme, path or GitHub URL. The example does not depend on a particular cloud provider.
 
-Create an untracked `.env.production` containing the intended `COURSELAB_DOMAIN`, an absolute `DB_PASSWORD_FILE` outside the checkout, and a stable random `VARIANT_TOKEN_SECRET` of at least 32 bytes. Generate a fresh secret only when initializing a new deployment and keep it stable across API restarts so unexpired practice variant tokens remain usable. A Linux host example below creates an operator-private directory and permits the API's uid 10001 to read the database secret without printing it:
+Create an untracked `.env.production` containing the intended `COURSELAB_DOMAIN`, an absolute `DB_PASSWORD_FILE` outside the checkout, a stable random `VARIANT_TOKEN_SECRET` of at least 32 bytes, and `COURSELAB_PRIVATE_ASSESSMENTS_PATH` pointing to a directory outside the checkout. Generate a fresh secret only when initializing a new deployment and keep it stable across API restarts so unexpired practice variant tokens remain usable. A Linux host example below creates operator-private directories and permits the API's uid 10001 to read the database secret and private assessment packages:
 
 ```sh
 sudo install -d -m 0700 /srv/courselab-secrets
 sudo sh -c 'umask 077; test ! -e /srv/courselab-secrets/db-password && openssl rand -base64 32 > /srv/courselab-secrets/db-password'
 sudo chown 10001:10001 /srv/courselab-secrets/db-password
 sudo chmod 0440 /srv/courselab-secrets/db-password
+sudo install -d -o 10001 -g 10001 -m 0750 /srv/courselab-private-assessments
 openssl rand -hex 32
 ```
 
-Store the generated `openssl` output as `VARIANT_TOKEN_SECRET` in `.env.production`; never commit it.
+Store the generated `openssl` output as `VARIANT_TOKEN_SECRET` in `.env.production`; set `COURSELAB_PRIVATE_ASSESSMENTS_PATH=/srv/courselab-private-assessments`; never commit either private assessment files or credentials.
 
 Set `DB_PASSWORD_FILE` to that file. Run subsequent production Docker commands as the host administrator (using `sudo` where needed), because the example secret directory is accessible only to that administrator. File-backed Compose secrets use host file permissions; uid/gid/mode remapping is not supported for that form. [Docker Compose secrets](https://docs.docker.com/reference/compose-file/services/#secrets). Check readability as the API's container user before starting; the following command reads without displaying the value:
 

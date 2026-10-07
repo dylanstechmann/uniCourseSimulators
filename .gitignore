@@ -15,4 +15,5 @@ test-results/
 learner-exports/
 secrets/
 backups/
+.local/private-assessments/
 .ruff_cache/

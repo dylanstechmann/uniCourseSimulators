@@ -33,8 +33,17 @@ class ContentInvalid(ValueError):
 
 
 class ContentRepository:
-    def __init__(self, root: Path):
+    def __init__(self, root: Path, private_assessments_root: Path | None = None):
         self.root = root.resolve()
+        self.private_assessments_root = (
+            private_assessments_root.resolve() if private_assessments_root else None
+        )
+        if self.private_assessments_root and (
+            self.private_assessments_root == self.root
+            or self.private_assessments_root.is_relative_to(self.root)
+            or self.root.is_relative_to(self.private_assessments_root)
+        ):
+            raise ValueError("Private assessments and public course content must use separate roots")
 
     def _file(self, course_id: str, relative: str) -> Path:
         if not re.fullmatch(r"[a-z0-9]+(?:-[a-z0-9]+)*", course_id):
@@ -60,7 +69,40 @@ class ContentRepository:
         return self._file(course_id, relative).read_text(encoding="utf-8")
 
     def assessment_source_file(self, course_id: str, relative: str) -> Path:
-        """Resolve a manifest assessment source under its course package."""
+        """Resolve public package sources or keys from a separate private mount.
+
+        A `private://` source maps below
+        `<private-root>/courses/<course-id>/...`; it can never fall back to the
+        public content directory. Missing private configuration or files fail
+        closed when the assessment plan is created or checked.
+        """
+        if relative.startswith("private://"):
+            if self.private_assessments_root is None:
+                raise ContentMissing("Private assessment content is unavailable")
+            if not re.fullmatch(r"[a-z0-9]+(?:-[a-z0-9]+)*", course_id):
+                raise ContentMissing("Course not found")
+            private_relative = relative.removeprefix("private://")
+            parts = private_relative.split("/")
+            if (
+                not private_relative
+                or private_relative.startswith("/")
+                or "\\" in private_relative
+                or ":" in private_relative
+                or any(part in {"", ".", ".."} for part in parts)
+            ):
+                raise ContentInvalid("Unsafe private assessment reference")
+            courses_root = (self.private_assessments_root / "courses").resolve()
+            if not courses_root.is_relative_to(self.private_assessments_root):
+                raise ContentInvalid("Unsafe private assessment reference")
+            directory = (courses_root / course_id).resolve()
+            if not directory.is_relative_to(courses_root):
+                raise ContentInvalid("Unsafe private assessment reference")
+            candidate = (directory / Path(*parts)).resolve()
+            if not candidate.is_relative_to(directory):
+                raise ContentInvalid("Unsafe private assessment reference")
+            if not candidate.is_file():
+                raise ContentMissing("Private assessment content not found")
+            return candidate
         return self._file(course_id, relative)
 
     def _summary(self, manifest: dict) -> CourseSummary:
