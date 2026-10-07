@@ -4,7 +4,33 @@
 
 2026-10-06; synthetic local learner data only. Milestones 1 and 2 are implemented. Milestone 3 remains partial; deterministic graders and prototype graded-assignment and review workflows are described below. A Milestone 4 curriculum-map increment is implemented and tested, while subject-matter review and map refinement remain. All 25 course packages are **partial**; zero are beta, complete or externally reviewed. Human score review is limited to saved attempts and does not constitute course-content review. No semester equivalence, university credit, security certification or public production deployment is asserted.
 
-## Current increment: first interactive data-analysis lab (2026-10-06)
+## Current increment: Week 3 open formative homework companion (2026-10-06)
+
+Foundations of Cell and Molecular Biology advanced from 0.16.0 to **0.17.0** and remains `partial`. Week 3 now includes an original 2–3 hour homework companion on protein trafficking, localization and fractionation evidence. It pairs a 12-preparation synthetic M6P-receptor dataset with five deterministic public practice items: a CSV summary, fixed-axis plot, signed contrast with a bounded inference, structured control/rescue reasoning, and route/topology multiple select. Four CC BY 4.0 retrieval cards reinforce assay limits. The autograder checks summary cells and selected structured responses; it does not grade prose, test uncertainty inference, or establish mechanism. All answer specifications are visible in this public repository, the activity is explicitly ungraded, and it does not count as one of eight required graded homework sets.
+
+Validation reports 25 packages, 127 lessons, 192 questions, 255 cards and 25 cases, with zero errors and 123 disclosed limitation/depth warnings. The focused content tests passed **66 tests with 1 skipped**; the full root suite passed **68 with 1 skipped**; backend passed **224** with the upstream Starlette/httpx deprecation warning; frontend unit tests passed **31**; Playwright passed **19**; and legacy migration tests passed **7**. The new browser flow exercised all five Week 3 items and confirmed practice-only gradebook status. Docker Compose rebuilt successfully while preserving the database volume; API, database and web are healthy; Alembic is `0007 (head)`; the integration validator supports 196 practice specifications. Ruff and frontend lint/format/build pass; the security-boundary scan found 0 issues across 415 source files.
+
+| Current command/check | Result |
+| --- | --- |
+| `python tools/validate_content.py` | PASS: 25 packages, 127 lessons, 192 questions, 255 cards, 25 cases; 0 errors; 123 disclosed warnings |
+| `backend/.venv/Scripts/python.exe -m pytest tests/content/test_content_validation.py -q` | 66 passed, 1 skipped |
+| `backend/.venv/Scripts/python.exe -m pytest tests -q` | 68 passed, 1 skipped |
+| `cd backend; .venv/Scripts/python.exe -m pytest tests -q` | 224 passed; one upstream Starlette/httpx deprecation warning |
+| `cd backend; .venv/Scripts/ruff.exe check .` | PASS |
+| `cd frontend; npm run lint` | PASS |
+| `cd frontend; npm test -- --run` | 31 passed |
+| `cd frontend; npm run build` | PASS: TypeScript and Vite production build (206 modules) |
+| `cd frontend; $env:E2E_BASE_URL='http://localhost:8080'; npm run test:e2e` | 19 passed, including CSV, graph, contrast, structured, and multiple-select Week 3 practice |
+| `npm run test:legacy` | 7 passed |
+| `docker compose up --build -d --wait --wait-timeout 180` | PASS: API, database, and web healthy; existing data volume preserved |
+| `docker compose exec -T api python -m courselab.check_content /content` | PASS: 25 packages / 196 supported practice specifications |
+| `docker compose exec -T api alembic current` and `/api/v1/health` | PASS: `0007 (head)`; health `ok` |
+| `python tools/check_security.py --bundle frontend/dist` | PASS; 0 findings across 415 source files |
+| `git diff --check` | PASS |
+
+The course still has no weighted grade or grade-bearing homework. All eight full graded homework sets, two remaining labs, summative midterm/final, cumulative project, workload evidence, comprehensive objective coverage, and independent scientific/accessibility review remain incomplete. The practice set’s public answer specs must never be presented as protected exam keys. No course is complete or externally reviewed.
+
+## Previous increment: first interactive data-analysis lab (2026-10-06)
 
 Foundations of Cell and Molecular Biology advanced from 0.15.0 to **0.16.0** and remains `partial`. Week 5 now includes the first authored lab in the proposed three-activity sequence: an original 2–3 hour virtual fluorescence-data-analysis lesson, eight-row synthetic CSV, instructor rubric, and four-question formative assessment worth 13 ungraded practice points. The learner uploads per-condition counts/means, plots batch-level percentages on fixed axes, interprets imaging controls, and reports a descriptive 9-percentage-point contrast. An API change allows `lab`-typed practice assessments to use the existing answer-free, enrollment-version-pinned endpoint, still restricted to explicitly public formative items. This package does not supply microscope images, simulate equipment, execute wet-lab procedures, grade prose, or count toward a course grade.
 

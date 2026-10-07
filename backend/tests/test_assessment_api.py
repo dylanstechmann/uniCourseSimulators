@@ -71,11 +71,11 @@ def test_public_practice_set_is_enrollment_scoped_answer_free_and_version_pinned
     assert guest.get(route).status_code == 409
 
 
-def test_practice_mode_lab_assessment_can_serve_only_public_formative_items(guest, content_root):
+def test_practice_mode_homework_assessment_can_serve_only_public_formative_items(guest, content_root):
     manifest_path = content_root / "courses" / "test-course" / "course.json"
     manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
-    manifest["assessments"][0]["type"] = "lab"
-    manifest["assessments"][0]["title"] = "Virtual lab practice"
+    manifest["assessments"][0]["type"] = "homework"
+    manifest["assessments"][0]["title"] = "Homework practice"
     manifest_path.write_text(json.dumps(manifest), encoding="utf-8")
 
     assert guest.post("/api/v1/enrollments", json={"course_id": "test-course"}).status_code == 201

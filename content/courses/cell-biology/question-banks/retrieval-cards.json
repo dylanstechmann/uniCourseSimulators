@@ -573,6 +573,48 @@
         "cell-biology-28-objective-3"
       ],
       "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "cell-biology-hw1-0",
+      "lesson_id": "cell-biology-hw1",
+      "front": "Cargo recognition versus destination",
+      "back": "M6P binding supports cargo recognition by a receptor; it does not establish the cargo’s later intracellular destination or lysosomal function.",
+      "objective_ids": [
+        "cell-biology-8-objective-1",
+        "cell-biology-8-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "cell-biology-hw1-1",
+      "lesson_id": "cell-biology-hw1",
+      "front": "What does a fraction-recovery marker establish?",
+      "back": "It checks recovery of the reference marker through fractionation. Similar recovery does not prove fraction purity or equal recovery of every cargo.",
+      "objective_ids": [
+        "cell-biology-8-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "cell-biology-hw1-2",
+      "lesson_id": "cell-biology-hw1",
+      "front": "Biological replicate unit in the M6P dataset",
+      "back": "Each independent culture preparation is one biological replicate. Multiple measured columns or fractions from that preparation do not create additional independent replicates.",
+      "objective_ids": [
+        "cell-biology-8-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "cell-biology-hw1-3",
+      "lesson_id": "cell-biology-hw1",
+      "front": "What does movement toward wild type after motif repair support?",
+      "back": "It supports a contribution of the tested motif in these constructed cell lines; it does not by itself prove direct adaptor binding or generality across cargoes and cell types.",
+      "objective_ids": [
+        "cell-biology-8-objective-1",
+        "cell-biology-8-objective-2"
+      ],
+      "license": "CC-BY-4.0"
     }
   ]
 }

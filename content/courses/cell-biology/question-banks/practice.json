@@ -5535,6 +5535,321 @@
         "kind": "original",
         "modifications": []
       }
+    },
+    {
+      "id": "cell-biology-hw1:sorting-summary",
+      "type": "file_upload",
+      "prompt": "Homework 1 open formative practice · Use the original synthetic M6P-sorting CSV linked in the homework reading. For each of the wild-type, tail-mutant, and motif-repaired isogenic cell conditions, report the number of independent culture preparations, mean lysosomal-delivery percentage, and mean conditioned-medium percentage. Upload exactly these ordered columns with one row per condition: condition,batch_count,mean_lysosomal_delivery_pct,mean_conditioned_medium_pct. Average the four preparation-level percentages within each condition and retain the shown condition keys. This deterministic public check scores the summary cells only; it does not test a significance claim or grade prose.",
+      "points": 9,
+      "objective_ids": [
+        "cell-biology-8-objective-2"
+      ],
+      "solution_spec": {
+        "accepted_media_types": [
+          "text/csv"
+        ],
+        "max_bytes": 32768,
+        "validation_spec": {
+          "format": "csv-numeric-table-v1",
+          "delimiter": ",",
+          "key_column": "condition",
+          "columns": [
+            "condition",
+            "batch_count",
+            "mean_lysosomal_delivery_pct",
+            "mean_conditioned_medium_pct"
+          ],
+          "checks": [
+            {
+              "id": "wt-count",
+              "row_id": "wt",
+              "column": "batch_count",
+              "type": "numeric",
+              "answer": 4,
+              "unit": "",
+              "tolerance": 0,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {"operation": "count", "values": [66, 70, 68, 67]}
+            },
+            {
+              "id": "wt-lysosome-mean",
+              "row_id": "wt",
+              "column": "mean_lysosomal_delivery_pct",
+              "type": "numeric",
+              "answer": 67.75,
+              "unit": "%",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {"operation": "mean", "values": [66, 70, 68, 67]}
+            },
+            {
+              "id": "wt-medium-mean",
+              "row_id": "wt",
+              "column": "mean_conditioned_medium_pct",
+              "type": "numeric",
+              "answer": 20.75,
+              "unit": "%",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {"operation": "mean", "values": [20, 22, 21, 20]}
+            },
+            {
+              "id": "mutant-count",
+              "row_id": "tail_mutant",
+              "column": "batch_count",
+              "type": "numeric",
+              "answer": 4,
+              "unit": "",
+              "tolerance": 0,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {"operation": "count", "values": [40, 44, 42, 43]}
+            },
+            {
+              "id": "mutant-lysosome-mean",
+              "row_id": "tail_mutant",
+              "column": "mean_lysosomal_delivery_pct",
+              "type": "numeric",
+              "answer": 42.25,
+              "unit": "%",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {"operation": "mean", "values": [40, 44, 42, 43]}
+            },
+            {
+              "id": "mutant-medium-mean",
+              "row_id": "tail_mutant",
+              "column": "mean_conditioned_medium_pct",
+              "type": "numeric",
+              "answer": 45.75,
+              "unit": "%",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {"operation": "mean", "values": [45, 48, 46, 44]}
+            },
+            {
+              "id": "repaired-count",
+              "row_id": "motif_repaired",
+              "column": "batch_count",
+              "type": "numeric",
+              "answer": 4,
+              "unit": "",
+              "tolerance": 0,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {"operation": "count", "values": [60, 64, 63, 63]}
+            },
+            {
+              "id": "repaired-lysosome-mean",
+              "row_id": "motif_repaired",
+              "column": "mean_lysosomal_delivery_pct",
+              "type": "numeric",
+              "answer": 62.5,
+              "unit": "%",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {"operation": "mean", "values": [60, 64, 63, 63]}
+            },
+            {
+              "id": "repaired-medium-mean",
+              "row_id": "motif_repaired",
+              "column": "mean_conditioned_medium_pct",
+              "type": "numeric",
+              "answer": 26.25,
+              "unit": "%",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {"operation": "mean", "values": [27, 25, 26, 27]}
+            }
+          ]
+        },
+        "rubric": [
+          {"id": "wt-count", "criterion": "Wild-type preparation count", "points": 1, "evidence": ["Retains four independent wild-type culture preparations."]},
+          {"id": "wt-lysosome-mean", "criterion": "Wild-type lysosomal-delivery mean", "points": 1, "evidence": ["Averages the four wild-type lysosomal-delivery percentages."]},
+          {"id": "wt-medium-mean", "criterion": "Wild-type medium mean", "points": 1, "evidence": ["Averages the four wild-type conditioned-medium percentages."]},
+          {"id": "mutant-count", "criterion": "Tail-mutant preparation count", "points": 1, "evidence": ["Retains four independent tail-mutant culture preparations."]},
+          {"id": "mutant-lysosome-mean", "criterion": "Tail-mutant lysosomal-delivery mean", "points": 1, "evidence": ["Averages the four tail-mutant lysosomal-delivery percentages."]},
+          {"id": "mutant-medium-mean", "criterion": "Tail-mutant medium mean", "points": 1, "evidence": ["Averages the four tail-mutant conditioned-medium percentages."]},
+          {"id": "repaired-count", "criterion": "Repaired-clone preparation count", "points": 1, "evidence": ["Retains four independent motif-repaired culture preparations."]},
+          {"id": "repaired-lysosome-mean", "criterion": "Repaired-clone lysosomal-delivery mean", "points": 1, "evidence": ["Averages the four motif-repaired lysosomal-delivery percentages."]},
+          {"id": "repaired-medium-mean", "criterion": "Repaired-clone medium mean", "points": 1, "evidence": ["Averages the four motif-repaired conditioned-medium percentages."]}
+        ]
+      },
+      "feedback": {
+        "hint": "Group the culture-level values by condition. Compute each condition's mean from four preparations and keep lysosomal delivery separate from conditioned-medium recovery.",
+        "solution": "The mean lysosomal-delivery values are 67.75% for wild type, 42.25% for the tail mutant, and 62.50% for the motif-repaired clone. The mean conditioned-medium values are 20.75%, 45.75%, and 26.25%, respectively. Each condition has four independent preparations. The endpoints are not complementary totals and should not be forced to sum to 100%.",
+        "lesson_ids": ["cell-biology-hw1", "cell-biology-8"],
+        "misconception_ids": ["binding-equals-correct-destination", "fraction-enrichment-equals-purity", "technical-wells-as-biological-n"]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {"kind": "original", "modifications": []}
+    },
+    {
+      "id": "cell-biology-hw1:lysosomal-delivery-plot",
+      "type": "graph",
+      "prompt": "Homework 1 open formative practice · Plot the mean lysosomal-delivery percentage for the three cell lines on the supplied axes. Use the fixed category codes in the x-axis label, the four independent-preparation values shown in the observations, and the mean for each group. The plotted points are descriptive summaries and do not display uncertainty.",
+      "graph_spec": {
+        "x_axis": {"label": "Receptor condition code (0 = WT, 1 = tail mutant, 2 = motif repaired)", "minimum": 0, "maximum": 2},
+        "y_axis": {"label": "Labeled cargo recovered in lysosome-enriched fraction (% of initial pulse)", "minimum": 0, "maximum": 75},
+        "points": [
+          {"id": "wt", "label": "Wild type"},
+          {"id": "tail_mutant", "label": "Tail mutant"},
+          {"id": "motif_repaired", "label": "Motif repaired"}
+        ],
+        "observations": [
+          {"id": "wt", "x": 0, "values": [66, 70, 68, 67]},
+          {"id": "tail_mutant", "x": 1, "values": [40, 44, 42, 43]},
+          {"id": "motif_repaired", "x": 2, "values": [60, 64, 63, 63]}
+        ]
+      },
+      "points": 6,
+      "objective_ids": ["cell-biology-8-objective-2"],
+      "solution_spec": {
+        "points": [
+          {"id": "wt", "x": 0, "y": 67.75, "x_tolerance": 0, "y_tolerance": 0.01},
+          {"id": "tail_mutant", "x": 1, "y": 42.25, "x_tolerance": 0, "y_tolerance": 0.01},
+          {"id": "motif_repaired", "x": 2, "y": 62.5, "x_tolerance": 0, "y_tolerance": 0.01}
+        ],
+        "rubric": [
+          {"id": "wt_x", "criterion": "Wild-type condition coordinate", "points": 1, "evidence": ["Wild type maps to condition code zero."]},
+          {"id": "wt_y", "criterion": "Wild-type mean coordinate", "points": 1, "evidence": ["The four wild-type values average to 67.75 percent."]},
+          {"id": "tail_mutant_x", "criterion": "Tail-mutant condition coordinate", "points": 1, "evidence": ["The tail mutant maps to condition code one."]},
+          {"id": "tail_mutant_y", "criterion": "Tail-mutant mean coordinate", "points": 1, "evidence": ["The four tail-mutant values average to 42.25 percent."]},
+          {"id": "motif_repaired_x", "criterion": "Motif-repaired condition coordinate", "points": 1, "evidence": ["The repaired clone maps to condition code two."]},
+          {"id": "motif_repaired_y", "criterion": "Motif-repaired mean coordinate", "points": 1, "evidence": ["The four repaired-clone values average to 62.50 percent."]}
+        ]
+      },
+      "feedback": {
+        "hint": "First average each set of four independent culture-level values. Keep the three fixed x codes in the order supplied.",
+        "solution": "The points are (0, 67.75), (1, 42.25), and (2, 62.50). These means show a descriptive pattern; the plot does not show replicate spread, inferential uncertainty, or a molecular mechanism.",
+        "lesson_ids": ["cell-biology-hw1", "cell-biology-8"],
+        "misconception_ids": ["technical-wells-as-biological-n", "binding-equals-correct-destination"]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {"kind": "original", "modifications": []}
+    },
+    {
+      "id": "cell-biology-hw1:contrast-and-inference",
+      "type": "data_interpretation",
+      "prompt": "Homework 1 open formative practice · Compare the tail-mutant mean with the wild-type mean for labeled cargo in the lysosome-enriched fraction. Report a signed difference as tail mutant minus wild type, then choose the strongest conclusion that fits this synthetic summary. Four independent culture preparations were used per condition; no uncertainty model or inferential test is supplied.",
+      "points": 2,
+      "objective_ids": ["cell-biology-8-objective-2"],
+      "response_fields": [
+        {"id": "lysosome_difference", "type": "numeric", "prompt": "Calculate tail mutant minus wild type in percentage points.", "unit": "%", "points": 1},
+        {"id": "inference", "type": "single_choice", "prompt": "Which interpretation is best supported?", "options": [
+          "The synthetic pattern is consistent with a tail-motif contribution to post-binding cargo sorting: ligand binding is similar, the mutant has less lysosome-fraction cargo and more medium cargo, and the repaired clone shifts toward wild type. It does not prove a direct adaptor interaction or generality.",
+          "Similar ligand binding proves that the hydrolase was delivered normally to lysosomes.",
+          "The means establish a statistically significant universal effect and identify the exact coat-adaptor mechanism.",
+          "More cargo in the medium proves the receptor binds M6P less strongly, regardless of the binding measurement."
+        ], "points": 1}
+      ],
+      "solution_spec": {
+        "field_specs": [
+          {"id": "lysosome_difference", "type": "numeric", "answer": -25.5, "unit": "%", "tolerance": 0.005, "relative_tolerance": 0, "unit_required": true, "significant_figures": 3, "dimensions": null},
+          {"id": "inference", "type": "single_choice", "answer": 0}
+        ]
+      },
+      "feedback": {
+        "hint": "Subtract the wild-type mean from the tail-mutant mean. Then distinguish ligand recognition, cargo distribution, rescue, and claims that require additional measurements.",
+        "solution": "The difference is 42.25% − 67.75% = −25.50 percentage points. Similar binding and receptor-abundance indices, similar lysosome-marker recovery, and a shift toward the wild-type pattern in the repaired clone make a large binding loss or broad recovery failure less consistent with the pattern. The constructed means do not establish statistical significance, direct adaptor binding, or a universal mechanism.",
+        "lesson_ids": ["cell-biology-hw1", "cell-biology-8"],
+        "misconception_ids": ["percentage-points-confused-with-percent-change", "binding-equals-correct-destination", "rescue-proves-direct-catalysis"]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {"kind": "original", "modifications": []}
+    },
+    {
+      "id": "cell-biology-hw1:control-and-rescue-logic",
+      "type": "structured",
+      "prompt": "Homework 1 open formative practice · Select one response for each evidence criterion in the synthetic isogenic-cell comparison. The structured choices provide deterministic partial credit; they do not grade a written argument.",
+      "points": 5,
+      "objective_ids": ["cell-biology-8-objective-1", "cell-biology-8-objective-2"],
+      "response_fields": [
+        {"id": "ligand-binding", "type": "single_choice", "prompt": "Recognition · What does similar M6P ligand-binding index across the three lines support?", "options": [
+          "There is no large measured binding-index loss in this assay; downstream cargo distribution still requires separate evidence.",
+          "The hydrolase must reach the lysosome because receptor binding is unchanged.",
+          "The receptor tail has no role in any trafficking step.",
+          "The binding assay proves exact equality in every cell and every batch."
+        ], "points": 1},
+        {"id": "receptor-abundance", "type": "single_choice", "prompt": "Input control · How should the similar whole-cell receptor-abundance indices be used?", "options": [
+          "They make a large difference in receptor abundance a less likely explanation of the group pattern, but do not replace localization or functional measurements.",
+          "They prove identical receptor surface localization and activity.",
+          "They show that cargo synthesis and degradation are identical.",
+          "They allow all fraction-recovery controls to be omitted."
+        ], "points": 1},
+        {"id": "fraction-recovery", "type": "single_choice", "prompt": "Fractionation control · What does the similar lysosome-marker recovery allow you to say?", "options": [
+          "It argues against a large group-wide loss of the reference marker during fractionation, but does not prove fraction purity or equal recovery of every cargo.",
+          "It proves that every recovered protein is lysosomal.",
+          "It proves the tail mutant has normal intracellular trafficking.",
+          "It means the delivery percentage and medium percentage must sum to 100."
+        ], "points": 1},
+        {"id": "rescue", "type": "single_choice", "prompt": "Repair · What does movement of the repaired-clone values toward wild type add?", "options": [
+          "It supports a contribution of the tested motif in these constructed cell lines, while indirect effects remain possible.",
+          "It proves that the motif directly binds one specific adaptor protein.",
+          "It demonstrates that all lysosomal cargo uses the same motif.",
+          "It eliminates the need to measure receptor abundance or fraction recovery."
+        ], "points": 1},
+        {"id": "next-measurement", "type": "single_choice", "prompt": "Next step · Which follow-up most directly separates cargo delivery from secretion, degradation, and fraction recovery?", "options": [
+          "A time course of total pulse-labeled cargo across cell-associated, lysosome-enriched, and medium fractions, with input and multiple fraction-marker recovery checks.",
+          "One endpoint image of a single marker with no matched cell or fraction control.",
+          "Measure receptor abundance once more and infer cargo turnover from it.",
+          "Repeat the same group means without retaining culture-level values."
+        ], "points": 1}
+      ],
+      "solution_spec": {
+        "field_specs": [
+          {"id": "ligand-binding", "type": "single_choice", "answer": 0},
+          {"id": "receptor-abundance", "type": "single_choice", "answer": 0},
+          {"id": "fraction-recovery", "type": "single_choice", "answer": 0},
+          {"id": "rescue", "type": "single_choice", "answer": 0},
+          {"id": "next-measurement", "type": "single_choice", "answer": 0}
+        ],
+        "rubric": [
+          {"id": "ligand-binding", "criterion": "Separate binding from destination", "points": 1, "evidence": ["Similar binding does not establish downstream delivery."]},
+          {"id": "receptor-abundance", "criterion": "Use matched whole-cell input", "points": 1, "evidence": ["Similar abundance reduces one gross alternative without proving identical surface localization or function."]},
+          {"id": "fraction-recovery", "criterion": "Interpret fraction recovery narrowly", "points": 1, "evidence": ["A reference recovery marker checks process recovery, not purity or cargo-specific recovery."]},
+          {"id": "rescue", "criterion": "Bound the rescue inference", "points": 1, "evidence": ["A repaired clone supports motif involvement in this system, not a direct physical interaction."]},
+          {"id": "next-measurement", "criterion": "Select a discriminating follow-up", "points": 1, "evidence": ["Time-resolved total cargo accounting with matched input and fraction controls separates candidate alternatives."]}
+        ]
+      },
+      "feedback": {
+        "hint": "For each criterion, name what that particular assay measured before stating what it rules out. Rescue strengthens one inference but does not identify every molecular interaction.",
+        "solution": "Similar ligand binding and receptor abundance argue against large differences in those measured quantities. Similar lysosome-marker recovery reduces a gross fraction-recovery explanation but does not establish purity. A repaired clone moving toward wild type supports motif involvement in this cell system, not direct adaptor binding. A pulse-chase with total cargo accounting, multiple markers, and independent preparations better separates delivery, secretion, degradation, and recovery.",
+        "lesson_ids": ["cell-biology-hw1", "cell-biology-8"],
+        "misconception_ids": ["binding-equals-correct-destination", "fraction-enrichment-equals-purity", "rescue-proves-direct-catalysis"]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {"kind": "original", "modifications": []}
+    },
+    {
+      "id": "cell-biology-hw1:m6p-route-topology",
+      "type": "multiple_select",
+      "prompt": "Homework 1 open formative practice · Select the two statements that best describe the common M6P route and the role of receptor topology. The score uses the displayed correct-minus-incorrect partial-credit rule.",
+      "options": [
+        "M6P-modified soluble hydrolase can bind its receptor in the trans-Golgi network, while cytosolic receptor motifs help recruit sorting machinery.",
+        "After release in an acidic endosomal compartment, many receptors recycle while hydrolase cargo proceeds toward lysosomes.",
+        "A soluble hydrolase crosses the vesicle bilayer because its M6P group faces the cytosol.",
+        "Binding to M6P receptor alone proves that active hydrolase reached a lysosome.",
+        "The receptor and hydrolase must remain bound and travel together to the lysosome."
+      ],
+      "points": 2,
+      "objective_ids": ["cell-biology-8-objective-1", "cell-biology-8-objective-2"],
+      "solution_spec": {"answer": [0, 1], "partial_credit": "correct-minus-incorrect-clamped-v1"},
+      "feedback": {
+        "hint": "Separate lumenal cargo recognition and release from the cytosolic sorting face of the transmembrane receptor.",
+        "solution": "M6P recognition helps load many soluble hydrolases, while cytosolic receptor motifs interact with sorting machinery. In an acidic endosomal environment, cargo and receptor can separate and follow different later routes. The hydrolase remains in the lumen of transport compartments; binding alone is not proof of final destination or function.",
+        "lesson_ids": ["cell-biology-hw1", "cell-biology-8"],
+        "misconception_ids": ["vesicle-traffic-crosses-bilayer", "binding-equals-correct-destination"]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {"kind": "original", "modifications": []}
     }
   ]
 }

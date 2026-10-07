@@ -1,0 +1,13 @@
+condition,batch,ligand_binding_index,receptor_abundance_index,lysosomal_delivery_pct,conditioned_medium_pct,lysosome_marker_recovery_pct,viability_pct
+wt,W1,100,98,66,20,90,95
+wt,W2,98,102,70,22,92,95
+wt,W3,102,100,68,21,89,94
+wt,W4,101,101,67,20,91,96
+tail_mutant,M1,98,100,40,45,89,94
+tail_mutant,M2,101,97,44,48,91,93
+tail_mutant,M3,99,101,42,46,90,95
+tail_mutant,M4,100,100,43,44,88,94
+motif_repaired,R1,100,101,60,27,91,94
+motif_repaired,R2,99,102,64,25,92,95
+motif_repaired,R3,103,99,63,26,90,96
+motif_repaired,R4,101,100,63,27,91,94

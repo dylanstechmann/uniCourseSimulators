@@ -1,6 +1,6 @@
 # Foundations of Cell and Molecular Biology
 
-**Maturity: partial. Version: 0.16.0.**
+**Maturity: partial. Version: 0.17.0.**
 
 This original course package develops mechanistic reasoning from molecular structure to cell behavior. It is still not a completed 14-week university course: weeks 1–7 have two original topic lessons each, while weeks 4 and 7 retain short prototype readings in addition; week 5 adds one original virtual fluorescence data-analysis lab; week 8 has an ungraded cumulative practice set; weeks 9–14 have original lesson pairs and formative practice. No semester equivalency, university credit, or prerequisite equivalency is claimed.
 
@@ -27,7 +27,7 @@ The full proposal and objective-to-assessment crosswalk are in [assessment-cross
 | --- | --- | --- |
 | 1 | Covalent architecture, functional groups, water, pH, and noncovalent interactions | Two original lessons and formative checks |
 | 2 | Protein sequence and structure; membrane structure and transport | Two original lessons and formative checks |
-| 3 | Organelles, compartmentalization, protein sorting, and trafficking | Two original lessons with formative practice; no full homework or lab |
+| 3 | Organelles, compartmentalization, protein sorting, and trafficking | Two original topic lessons plus an open, ungraded homework companion with a synthetic dataset and five interactive practice items; no grade-bearing homework or lab |
 | 4 | Enzyme catalysis, initial-rate kinetics, reversible inhibition, free energy, and coupling | Two developed lessons, one retained compact prototype reading, and formative questions; no full homework or lab |
 | 5 | Cell imaging, fractionation, and measurement limits | Two topic lessons plus one virtual fluorescence data-analysis lab with synthetic CSV data and formative autograding; no homework |
 | 6 | DNA structure, replication, repair, and genome organization | Two original lessons, qualitative density-model predictions, a synthetic lesion-assay time course, and public formative questions; no full homework or lab |
@@ -42,7 +42,7 @@ The full proposal and objective-to-assessment crosswalk are in [assessment-cross
 
 ## Assessment and study policy
 
-All currently delivered items are public formative practice. Learners may retry them, inspect feedback, and use retrieval cards; this package has no weighted course grade, deadlines, midterm, cumulative final, or graded project. Week 5 contains one virtual fluorescence data-analysis lab with an eight-row synthetic CSV, numeric summary, fixed-axis plot, and explicit structured checks. Its 13 points are ungraded practice feedback. Week 8 contains a 12-question cumulative formative review of weeks 1–7. Week 9 provides eight questions on RNA processing, translation, and protein turnover; weeks 10–14 each provide seven questions on their selected topics. These are self-paced practice, not exams, and give immediate per-question feedback. The proposal includes eight homework sets, three data or virtual-lab activities, a midterm, a cumulative final, and an integrative experimental-design project. The two remaining labs and all substantive homework and summative packages remain unwritten. See the crosswalk for the complete planned assessment sequence and current evidence gaps.
+All currently delivered items are public formative practice. Learners may retry them, inspect feedback, and use retrieval cards; this package has no weighted course grade, deadlines, midterm, cumulative final, or graded project. Week 3 includes an open formative homework companion with a synthetic trafficking dataset, five interactive practice items, and answer specifications that are public in this repository; it is not grade-bearing coursework or a protected exam. Week 5 contains one virtual fluorescence data-analysis lab with an eight-row synthetic CSV, numeric summary, fixed-axis plot, and explicit structured checks. Its 13 points are ungraded practice feedback. Week 8 contains a 12-question cumulative formative review of weeks 1–7. Week 9 provides eight questions on RNA processing, translation, and protein turnover; weeks 10–14 each provide seven questions on their selected topics. These are self-paced practice, not exams, and give immediate per-question feedback. The proposal includes eight full graded homework sets, three data or virtual-lab activities, a midterm, a cumulative final, and an integrative experimental-design project. All eight graded homework packages, the two remaining labs, and all summative packages remain unwritten. See the crosswalk for the complete planned assessment sequence and current evidence gaps.
 
 Workload and weekly study hours have not been measured. No calendar dates or grading weights are configured. Human review of an individual saved practice or graded attempt is a narrow platform feature and does not provide course-level instructor grading or academic review.
 
@@ -55,6 +55,6 @@ New instructional explanations and examples are original and released under CC B
 - Weeks 1–7 and 9–14 have developed two-lesson sequences, but this does not provide the planned homework, full laboratory/data work, summative exams, workload evidence, or instructor review; weeks 4 and 7 retain additional compact prototype readings.
 - Week 8 contains formative review only; it is not a midterm or exam. Weeks 9–14 lessons use original synthetic examples and formative checks. The week-6 density-model illustration, UV lesion time course, week-7 chromatin/ChIP-qPCR/reporter tables, week-9 RNA/protein tables, week-10 pedigree/isogenic-cell tables, week-11 phospho-ERK time course, week-12 hydrogel stiffness table, week-13 cell-cycle/cell-state comparisons, and week-14 construct/factorial comparisons are explicitly synthetic teaching examples, not measurements copied from the cited sources.
 - The week-7 evidence exercises introduce accessibility, occupancy, and reporter inference; they do not constitute a full genomics, chromatin, or gene-regulation course.
-- No authored 12–15 week homework/lab/exam sequence or cumulative project exists.
+- No authored eight-set graded homework sequence, complete three-activity lab sequence, summative exams, or cumulative project exists.
 - The course is unreviewed. Workload, objective coverage, scientific accuracy, accessibility, and assessments require independent review.
 - Public practice answers are not protected exam keys. Practice scores and the progress indicator do not certify mastery.

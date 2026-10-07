@@ -763,6 +763,121 @@ test("week 9 RNA and protein practice loads and grades version-pinned content", 
   ).toContainText("3 / 3 practice points");
 });
 
+test("week 3 open homework companion grades data summaries and bounded reasoning as practice", async ({
+  page,
+}) => {
+  await page.goto("/#/account");
+  await page.getByRole("button", { name: "Start guest session" }).click();
+  await page.getByRole("link", { name: "Course catalog", exact: true }).click();
+  await page.getByRole("link", { name: /Foundations of Cell/ }).click();
+  await page.getByRole("button", { name: "Enroll in partial course" }).click();
+  await page.getByRole("link", { name: "Practice gradebook" }).click();
+
+  const row = page.getByRole("row", {
+    name: /Homework 1: trafficking and localization evidence \(open, ungraded practice\)/,
+  });
+  await row.getByRole("button", { name: "Open practice set" }).click();
+  await expect(
+    page.getByRole("heading", {
+      name: "Homework 1: trafficking and localization evidence (open, ungraded practice)",
+    }),
+  ).toBeVisible();
+  await expect(
+    page.getByText(/5 questions · 24 practice points/),
+  ).toBeVisible();
+
+  const upload = page.locator(
+    '[data-question-id="cell-biology-hw1:sorting-summary"]',
+  );
+  await upload.getByLabel("CSV file upload").setInputFiles({
+    name: "m6p-sorting-summary.csv",
+    mimeType: "text/csv",
+    buffer: Buffer.from(
+      "condition,batch_count,mean_lysosomal_delivery_pct,mean_conditioned_medium_pct\nwt,4,67.75,20.75\ntail_mutant,4,42.25,45.75\nmotif_repaired,4,62.5,26.25\n",
+    ),
+  });
+  await upload
+    .getByRole("button", { name: "Submit practice response" })
+    .click();
+  await expect(
+    upload.getByRole("region", { name: "Submission feedback" }),
+  ).toContainText("9 / 9 practice points");
+
+  const plot = page.locator(
+    '[data-question-id="cell-biology-hw1:lysosomal-delivery-plot"]',
+  );
+  for (const point of [
+    { label: "Wild type", x: "0", y: "67.75" },
+    { label: "Tail mutant", x: "1", y: "42.25" },
+    { label: "Motif repaired", x: "2", y: "62.5" },
+  ]) {
+    const group = plot.getByRole("group", { name: point.label, exact: true });
+    await group
+      .getByLabel(/Receptor condition code .* coordinate/)
+      .fill(point.x);
+    await group
+      .getByLabel(
+        /Labeled cargo recovered in lysosome-enriched fraction .* coordinate/,
+      )
+      .fill(point.y);
+  }
+  await plot.getByRole("button", { name: "Submit practice response" }).click();
+  await expect(
+    plot.getByRole("region", { name: "Submission feedback" }),
+  ).toContainText("6 / 6 practice points");
+
+  const contrast = page.locator(
+    '[data-question-id="cell-biology-hw1:contrast-and-inference"]',
+  );
+  await contrast
+    .getByLabel(/Calculate tail mutant minus wild type/)
+    .fill("-25.5 %");
+  await contrast
+    .getByLabel(/Which interpretation is best supported/)
+    .selectOption("0");
+  await contrast
+    .getByRole("button", { name: "Submit practice response" })
+    .click();
+  await expect(
+    contrast.getByRole("region", { name: "Submission feedback" }),
+  ).toContainText("2 / 2 practice points");
+
+  const reasoning = page.locator(
+    '[data-question-id="cell-biology-hw1:control-and-rescue-logic"]',
+  );
+  for (const criterion of [
+    "Recognition",
+    "Input control",
+    "Fractionation control",
+    "Repair",
+    "Next step",
+  ]) {
+    await reasoning.getByLabel(new RegExp(criterion)).selectOption("0");
+  }
+  await reasoning
+    .getByRole("button", { name: "Submit practice response" })
+    .click();
+  await expect(
+    reasoning.getByRole("region", { name: "Submission feedback" }),
+  ).toContainText("5 / 5 practice points");
+
+  const topology = page.locator(
+    '[data-question-id="cell-biology-hw1:m6p-route-topology"]',
+  );
+  await topology.getByRole("checkbox").nth(0).check();
+  await topology.getByRole("checkbox").nth(1).check();
+  await topology
+    .getByRole("button", { name: "Submit practice response" })
+    .click();
+  await expect(
+    topology.getByRole("region", { name: "Submission feedback" }),
+  ).toContainText("2 / 2 practice points");
+
+  await page.getByRole("link", { name: "Practice gradebook" }).click();
+  await expect(row).toContainText("practice");
+  await expect(row).toContainText("ungraded");
+});
+
 test("week 10 inheritance and variant practice separates transmission and phenotype", async ({
   page,
 }) => {
