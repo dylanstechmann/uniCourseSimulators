@@ -27,9 +27,11 @@ Added an optional protected assessment root distinct from public course content.
 | Protected mount write probe in API container | PASS: mount is read-only |
 | `python tools/check_security.py --bundle frontend/dist` | PASS; 0 findings across 418 source files |
 | `git diff --check` | PASS |
-| Hosted GitHub Actions | Pending publication of this increment |
+| Hosted GitHub Actions run [37560199350](https://github.com/dylanstechmann/uniStemCourseSimulators/actions/runs/37560199350) | PASS: content/backend and frontend/E2E jobs |
 
 The source resolver and API tests confirm the key is read only from the private mount, is not returned in course/lesson/assessment DTOs, and is not substituted from similarly named public files. A missing key blocks graded enrollment-plan creation. Symlink-escape tests are skipped because this Windows host does not permit creating test symlinks; lexical traversal and root-overlap rejection passed. No current catalog course is affected because none references a private source.
+
+Published in commit `86188bbcba2828ae00fbade1a86cfa737e4b309c`; the hosted content/backend and frontend/E2E jobs completed successfully.
 
 ## Previous increment: Week 11 signaling-dynamics virtual lab (2026-10-06)
 
