@@ -1,5 +1,7 @@
 # uniStemCourseSimulators
 
+This is a personal hobby and learning project. Code and educational drafts were developed with substantial assistance from AI coding tools.
+
 Repository: [dylanstechmann/uniStemCourseSimulators](https://github.com/dylanstechmann/uniStemCourseSimulators). See the [progress review](docs/PROGRESS_REVIEW.md) for delivered features, material findings and prioritized remaining work. The software includes local study tools and a graded-assignment prototype; the requested semester-depth courses are still unfinished. Instructor access is granted to registered accounts by an operator after out-of-band identity verification. Practice score changes are blocked unless the saved question and variant digest still match.
 
 Interactive, source-grounded courses across science, mathematics, engineering, computing, and biomedicine.
