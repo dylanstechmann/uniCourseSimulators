@@ -145,6 +145,326 @@
         "statics-materials-6-objective-3"
       ],
       "license": "CC-BY-4.0"
+    },
+    {
+      "id": "statics-materials-7-card-1",
+      "lesson_id": "statics-materials-7",
+      "front": "Stress concentration factor",
+      "back": "K_t = σ_max/σ_nom depends only on geometry and loading; a small circular hole in a wide plate under tension has K_t = 3.",
+      "objective_ids": [
+        "statics-materials-7-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "statics-materials-7-card-2",
+      "lesson_id": "statics-materials-7",
+      "front": "Elliptical hole and notch",
+      "back": "K_t = 1 + 2a/b = 1 + 2√(a/ρ), with a perpendicular to the load; a smaller root radius ρ raises K_t.",
+      "objective_ids": [
+        "statics-materials-7-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "statics-materials-7-card-3",
+      "lesson_id": "statics-materials-7",
+      "front": "Static and fatigue",
+      "back": "Ductile parts redistribute stress by yielding, so the net-section stress governs static strength; brittle parts fracture at the peak; for fatigue use K_f = 1 + q(K_t − 1).",
+      "objective_ids": [
+        "statics-materials-7-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "statics-materials-7-card-4",
+      "lesson_id": "statics-materials-7",
+      "front": "Net section",
+      "back": "Use the area left after the hole: σ_net = F/((w − d)t); the gross area underestimates the stress.",
+      "objective_ids": [
+        "statics-materials-7-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "statics-materials-8-card-1",
+      "lesson_id": "statics-materials-8",
+      "front": "The cycle",
+      "back": "σ_a = (σ_max − σ_min)/2, σ_m = (σ_max + σ_min)/2, R = σ_min/σ_max; fatigue lives are reported against the amplitude with the mean and R stated.",
+      "objective_ids": [
+        "statics-materials-8-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "statics-materials-8-card-2",
+      "lesson_id": "statics-materials-8",
+      "front": "Basquin's law",
+      "back": "σ_a = σ_f′ (2N_f)^b, so N_f = ½(σ_a/σ_f′)^(1/b); with b = −0.10 a 10% lower amplitude gives 2.87 times the life.",
+      "objective_ids": [
+        "statics-materials-8-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "statics-materials-8-card-3",
+      "lesson_id": "statics-materials-8",
+      "front": "Mean stress and damage",
+      "back": "Goodman: σ_a/σ_e + σ_m/σ_u = 1/n. Miner: D = Σ n_i/N_i, failure near D = 1 but with wide scatter.",
+      "objective_ids": [
+        "statics-materials-8-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "statics-materials-8-card-4",
+      "lesson_id": "statics-materials-8",
+      "front": "Scatter and censoring",
+      "back": "Lives scatter log-normally; test several specimens per level, report mean log N and spread, and treat run-outs as censored; many materials have no endurance limit.",
+      "objective_ids": [
+        "statics-materials-8-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "statics-materials-9-card-1",
+      "lesson_id": "statics-materials-9",
+      "front": "Euler's critical load",
+      "back": "P_cr = π²EI/(KL)²: an instability limit set by stiffness (E, I) and length, not by yield strength.",
+      "objective_ids": [
+        "statics-materials-9-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "statics-materials-9-card-2",
+      "lesson_id": "statics-materials-9",
+      "front": "Effective length",
+      "back": "K = 1 pinned–pinned, 0.5 fixed–fixed, about 0.7 fixed–pinned, 2 fixed–free; the load scales as 1/(KL)².",
+      "objective_ids": [
+        "statics-materials-9-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "statics-materials-9-card-3",
+      "lesson_id": "statics-materials-9",
+      "front": "Slenderness",
+      "back": "λ = KL/r with r = √(I/A) (d/4 for a solid circle); σ_cr = π²E/λ²; Euler applies when λ is above π√(E/σ_y), otherwise yielding governs.",
+      "objective_ids": [
+        "statics-materials-9-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "statics-materials-9-card-4",
+      "lesson_id": "statics-materials-9",
+      "front": "Scaling and design",
+      "back": "For a solid circle P_cr scales with d⁴/L²: doubling d gives 16 times, doubling L gives one quarter. Real maxima fall below the Euler value because of imperfections.",
+      "objective_ids": [
+        "statics-materials-9-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "statics-materials-10-card-1",
+      "lesson_id": "statics-materials-10",
+      "front": "Transformation",
+      "back": "σθ = (σx+σy)/2 + (σx−σy)/2 cos2θ + τxy sin2θ; σx+σy is invariant under rotation.",
+      "objective_ids": [
+        "statics-materials-10-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "statics-materials-10-card-2",
+      "lesson_id": "statics-materials-10",
+      "front": "Principal stresses",
+      "back": "σ1,2 = centre ± R with centre (σx+σy)/2 and R = √[((σx−σy)/2)² + τxy²]; tan 2θp = 2τxy/(σx−σy); the maximum in-plane shear is R.",
+      "objective_ids": [
+        "statics-materials-10-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "statics-materials-10-card-3",
+      "lesson_id": "statics-materials-10",
+      "front": "Mohr's circle",
+      "back": "A physical rotation θ is a rotation 2θ on the circle; principal planes are the ends of the horizontal diameter.",
+      "objective_ids": [
+        "statics-materials-10-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "statics-materials-10-card-4",
+      "lesson_id": "statics-materials-10",
+      "front": "Yield criteria",
+      "back": "Tresca: max(|σ1|, |σ2|, |σ1−σ2|) = σ_y. von Mises: √(σ1² − σ1σ2 + σ2²) = σ_y. Both are for ductile, isotropic materials; shear yield is σ_y/2 or σ_y/√3.",
+      "objective_ids": [
+        "statics-materials-10-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "statics-materials-11-card-1",
+      "lesson_id": "statics-materials-11",
+      "front": "Standard deflections",
+      "back": "Cantilever tip load PL³/(3EI); cantilever uniform load wL⁴/(8EI); simply supported centre load PL³/(48EI); simply supported uniform load 5wL⁴/(384EI).",
+      "objective_ids": [
+        "statics-materials-11-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "statics-materials-11-card-2",
+      "lesson_id": "statics-materials-11",
+      "front": "Rectangular section",
+      "back": "I = bh³/12 with h in the direction of the load; the stiffness of a three-point bend is k = 48EI/L³ = 4Ebh³/L³ and the maximum stress is 3PL/(2bh²).",
+      "objective_ids": [
+        "statics-materials-11-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "statics-materials-11-card-3",
+      "lesson_id": "statics-materials-11",
+      "front": "Flexural modulus",
+      "back": "E = L³m/(4bh³) from the slope m = P/δ; thickness enters as a cube, so a 5% thickness error is about a 15% modulus error.",
+      "objective_ids": [
+        "statics-materials-11-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "statics-materials-11-card-4",
+      "lesson_id": "statics-materials-11",
+      "front": "Limits",
+      "back": "Superposition needs linear material and small deflection; short, thick beams need a shear correction; check span-to-thickness (about 16 or more) and that the supports do not indent.",
+      "objective_ids": [
+        "statics-materials-11-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "statics-materials-12-card-1",
+      "lesson_id": "statics-materials-12",
+      "front": "Weibull failure probability",
+      "back": "P_f = 1 − exp[−(V/V₀)(σ/σ₀)^m]; at σ = σ₀ and V = V₀ the failure probability is 63.2%.",
+      "objective_ids": [
+        "statics-materials-12-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "statics-materials-12-card-2",
+      "lesson_id": "statics-materials-12",
+      "front": "Weibull modulus",
+      "back": "m measures scatter, not strength: larger m means a narrower distribution; many ceramics have m of about 5 to 20, and an estimate from a handful of specimens is very uncertain.",
+      "objective_ids": [
+        "statics-materials-12-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "statics-materials-12-card-3",
+      "lesson_id": "statics-materials-12",
+      "front": "Design stress",
+      "back": "σ = σ₀[−ln(1 − P_f)]^(1/m) for the reference volume; a 1% failure probability at m = 10 is about 63% of σ₀.",
+      "objective_ids": [
+        "statics-materials-12-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "statics-materials-12-card-4",
+      "lesson_id": "statics-materials-12",
+      "front": "Size effect",
+      "back": "For the same P_f, σ₂/σ₁ = (V₁/V₂)^(1/m); a lower m means a larger penalty for volume; the model does not apply to ductile yielding.",
+      "objective_ids": [
+        "statics-materials-12-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "statics-materials-lab1-0",
+      "lesson_id": "statics-materials-lab-01",
+      "front": "Summarizing fatigue lives",
+      "back": "Count specimens and failures per level, average the logarithm of the life, and keep run-outs visible as censored.",
+      "objective_ids": [
+        "statics-materials-lab-01-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "statics-materials-lab1-1",
+      "lesson_id": "statics-materials-lab-01",
+      "front": "Fitting the S–N line",
+      "back": "Regress mean log life on log stress amplitude; the slope is 1/b for Basquin's law, so b = 1/slope.",
+      "objective_ids": [
+        "statics-materials-lab-01-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "statics-materials-lab1-2",
+      "lesson_id": "statics-materials-lab-01",
+      "front": "Run-outs",
+      "back": "A run-out lasted at least to the cutoff; dropping it or counting it as a failure at the cutoff both bias the life low.",
+      "objective_ids": [
+        "statics-materials-lab-01-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "statics-materials-lab1-3",
+      "lesson_id": "statics-materials-lab-01",
+      "front": "Extrapolation",
+      "back": "A line through a few tested levels does not support a predicted life well below the lowest tested stress, and the median is not a design life because of scatter.",
+      "objective_ids": [
+        "statics-materials-lab-01-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "statics-materials-13-card-1",
+      "lesson_id": "statics-materials-13",
+      "front": "Why the static test misleads",
+      "back": "It applies one load once to a new, dry specimen; service applies millions of cycles to a wet, warm, degrading and creeping one, through struts that carry many times the nominal stress.",
+      "objective_ids": [
+        "statics-materials-13-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "statics-materials-13-card-2",
+      "lesson_id": "statics-materials-13",
+      "front": "Steep S–N curves",
+      "back": "With b about −0.08, a 15% loss of strength divides the fatigue life by about 7.6; a thin life margin cannot absorb degradation or scatter.",
+      "objective_ids": [
+        "statics-materials-13-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "statics-materials-13-card-3",
+      "lesson_id": "statics-materials-13",
+      "front": "Acceleration and heating",
+      "back": "W = π σ_a ε_a sin δ per cycle; power = W × frequency; adiabatic rate = power/(ρc). Accelerate by frequency only with temperature measured and a 1 Hz check.",
+      "objective_ids": [
+        "statics-materials-13-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "statics-materials-13-card-4",
+      "lesson_id": "statics-materials-13",
+      "front": "Test plan elements",
+      "back": "Wet 37 °C environment, several amplitude levels, unloaded and static-load controls, stiffness, porosity and flow measured, stopping criteria and run-outs fixed in advance.",
+      "objective_ids": [
+        "statics-materials-13-objective-3"
+      ],
+      "license": "CC-BY-4.0"
     }
   ]
 }

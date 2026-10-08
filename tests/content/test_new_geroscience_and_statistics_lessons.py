@@ -33,7 +33,8 @@ LESSONS = [("geroscience", f"geroscience-{n}") for n in range(9, 15)] + [
 ] + [("genetics", f"genetics-{n}") for n in range(10, 16)] + [("physiology", f"physiology-{n}") for n in range(8, 15)] + [("biochemistry", f"biochemistry-{n}") for n in range(8, 14)] + [
     ("statistics", f"statistics-{n}") for n in range(9, 16)] + [("biomaterials", f"biomaterials-{n}") for n in range(7, 14)] + [
     ("bioreactors", f"bioreactors-{n}") for n in range(7, 14)] + [("transport", f"transport-{n}") for n in range(7, 14)] + [
-    ("cellular-biomechanics", f"cellular-biomechanics-{n}") for n in range(7, 14)]
+    ("cellular-biomechanics", f"cellular-biomechanics-{n}") for n in range(7, 14)] + [
+    ("statics-materials", f"statics-materials-{n}") for n in range(7, 14)]
 
 
 def load(course):
@@ -574,4 +575,57 @@ def test_cellular_biomechanics_lab_keys_match_the_dataset_and_the_lab_is_labelle
     assert len(rows) == 180 and {int(r["gel"]) for r in rows} == {1, 2, 3}
     text = (COURSES / "cellular-biomechanics/labs/01-stiffness-ligand-density-and-the-unit-of-analysis.md").read_text(encoding="utf-8")
     assert "nothing here is evidence about any cell type or material" in text
+
+
+def test_statics_materials_schedule_places_every_lesson_once_and_stays_partial():
+    manifest = load("statics-materials")
+    weeks = manifest["duration"]["weeks"]
+    assert [w["week"] for w in weeks] == list(range(1, 15))
+    scheduled = [lesson for w in weeks for lesson in w["lesson_ids"]]
+    all_lessons = [lesson["id"] for m in manifest["modules"] for lesson in m["lessons"]]
+    assert len(all_lessons) == 14
+    assert sorted(scheduled) == sorted(all_lessons) and len(scheduled) == len(set(scheduled))
+    assessments = {a["id"]: a for a in manifest["assessments"]}
+    assert all(a in assessments for w in weeks for a in w["assessment_ids"])
+    assert all(a["mode"] != "graded" for a in manifest["assessments"])
+    assert manifest["maturity"] == "partial" and manifest["review"]["status"] == "unreviewed"
+    assert manifest["grading_policy"]["mode"] == "formative-only"
+    assert "not evidence of semester equivalence" in manifest["duration"]["equivalent_structure"]
+    prototype_weeks = {lesson: w["week"] for w in weeks for lesson in w["lesson_ids"] if lesson in {f"statics-materials-{n}" for n in range(1, 5)}}
+    assert prototype_weeks == {"statics-materials-1": 1, "statics-materials-2": 3, "statics-materials-3": 4, "statics-materials-4": 8}
+    lab_week = next(w for w in weeks if "statics-materials-lab-01" in w["lesson_ids"])
+    assert lab_week["week"] == 12 and "statics-materials-week12-fatigue-lab" in lab_week["assessment_ids"]
+    assert "statics-materials-case" in weeks[-1]["assessment_ids"] and "statics-materials-13" in weeks[-1]["lesson_ids"]
+    # the fatigue lesson comes before the lab that uses it, and the capstone comes after the lessons it draws on
+    order = {lesson: w["week"] for w in weeks for lesson in w["lesson_ids"]}
+    assert order["statics-materials-8"] < order["statics-materials-lab-01"] < order["statics-materials-13"]
+
+
+def test_statics_materials_package_gives_no_design_basis_or_test_protocol():
+    manifest = load("statics-materials")
+    assert any("gives no design basis, test protocol or safety advice" in item for item in manifest["limitations"])
+    limits = {
+        "07-stress-concentrations-holes-and-notches.md": "Nothing here is a design check for any part",
+        "08-fatigue-sn-curves-and-cumulative-damage.md": "Nothing here is a design check for any part",
+        "09-buckling-of-slender-struts.md": "Nothing in this lesson is a design check for any device or structure",
+        "10-principal-stresses-mohrs-circle-and-yield.md": "is not a statement about the safety of any device or person",
+        "11-beam-deflection-and-flexural-modulus.md": "is not a test method for any real material",
+        "12-weibull-strength-and-the-size-effect.md": "Nothing here is a design basis for any device",
+        "13-cyclic-perfusion-failure-analysis-and-test-plan.md": "not a laboratory protocol or a design basis for any device",
+    }
+    for name, phrase in limits.items():
+        text = (COURSES / "statics-materials/modules" / name).read_text(encoding="utf-8")
+        assert phrase in text, name
+    syllabus = (COURSES / "statics-materials/syllabus.md").read_text(encoding="utf-8")
+    assert "Version: 0.4.0." in syllabus and "Proposed 14-week schedule" in syllabus
+    assert all(f"- {outcome['description']}" in syllabus for outcome in manifest["outcomes"])
+
+
+def test_statics_materials_lab_keys_match_the_dataset_and_the_lab_is_labelled_synthetic():
+    import csv
+    rows = list(csv.DictReader((COURSES / "statics-materials/labs/fatigue-lives-by-stress-amplitude.csv").open(encoding="utf-8")))
+    assert len(rows) == 20 and {int(r["specimen"]) for r in rows} == {1, 2, 3, 4, 5}
+    assert {r["status"] for r in rows} == {"failed", "runout"}
+    text = (COURSES / "statics-materials/labs/01-fatigue-lives-scatter-and-run-outs.md").read_text(encoding="utf-8")
+    assert "nothing here is evidence about any device" in text
 

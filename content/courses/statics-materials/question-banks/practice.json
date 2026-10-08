@@ -619,6 +619,2656 @@
         "kind": "original",
         "modifications": []
       }
+    },
+    {
+      "id": "statics-materials-7:hole-local-stress",
+      "type": "numeric",
+      "prompt": "A wide plate under a far-field tension of 50 MPa has a small circular hole (K_t = 3). What is the peak stress at the hole edge? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "statics-materials-7-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 150.0,
+        "unit": "MPa",
+        "tolerance": 0.5,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Multiply the nominal stress by K_t.",
+        "solution": "3 × 50 = 150 MPa.",
+        "lesson_ids": [
+          "statics-materials-7"
+        ],
+        "misconception_ids": [
+          "gross-for-net"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "statics-materials-7:first-yield-stress",
+      "type": "numeric",
+      "prompt": "The yield strength is 120 MPa. At what far-field stress does the edge of the hole (K_t = 3) first yield? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "statics-materials-7-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 40.0,
+        "unit": "MPa",
+        "tolerance": 0.2,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Divide the yield strength by K_t.",
+        "solution": "120/3 = 40 MPa.",
+        "lesson_ids": [
+          "statics-materials-7"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "statics-materials-7:ellipse-kt",
+      "type": "numeric",
+      "prompt": "An elliptical hole has semi-axis a = 2 mm perpendicular to the load and b = 0.5 mm parallel to it. What is K_t = 1 + 2a/b? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "statics-materials-7-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 9.0,
+        "unit": "",
+        "tolerance": 0.05,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Divide a by b before doubling.",
+        "solution": "1 + 2 × 2/0.5 = 9.",
+        "lesson_ids": [
+          "statics-materials-7"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "statics-materials-7:ellipse-local-stress",
+      "type": "numeric",
+      "prompt": "With K_t = 9 and a far-field stress of 50 MPa, what is the peak stress at the end of the ellipse? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "statics-materials-7-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 450.0,
+        "unit": "MPa",
+        "tolerance": 0.5,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Multiply the far-field stress by K_t.",
+        "solution": "9 × 50 = 450 MPa, nearly four times the yield strength.",
+        "lesson_ids": [
+          "statics-materials-7"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "statics-materials-7:notch-kt",
+      "type": "numeric",
+      "prompt": "A notch has depth 1 mm and root radius 0.1 mm. Using K_t ≈ 1 + 2√(a/ρ), what is K_t? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "statics-materials-7-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 7.3246,
+        "unit": "",
+        "tolerance": 0.02,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Divide the depth by the root radius, take the square root and double it.",
+        "solution": "1 + 2√(1/0.1) = 7.32.",
+        "lesson_ids": [
+          "statics-materials-7"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "statics-materials-7:smaller-root-radius",
+      "type": "numeric",
+      "prompt": "The root radius is halved to 0.05 mm (same depth 1 mm). What is the new K_t? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "statics-materials-7-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 9.9443,
+        "unit": "",
+        "tolerance": 0.02,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Halving ρ multiplies the square-root term by √2.",
+        "solution": "1 + 2√(1/0.05) = 9.94, against 7.32.",
+        "lesson_ids": [
+          "statics-materials-7"
+        ],
+        "misconception_ids": [
+          "root-radius-ignored"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "statics-materials-7:fatigue-notch-factor",
+      "type": "numeric",
+      "prompt": "A hole has K_t = 3 and the material has notch sensitivity q = 0.8. What is K_f = 1 + q(K_t − 1)? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "statics-materials-7-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 2.6,
+        "unit": "",
+        "tolerance": 0.02,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Subtract 1 from K_t before multiplying by q.",
+        "solution": "1 + 0.8 × 2 = 2.6.",
+        "lesson_ids": [
+          "statics-materials-7"
+        ],
+        "misconception_ids": [
+          "kt-for-fatigue"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "statics-materials-7:concentration-statements",
+      "type": "multiple_select",
+      "prompt": "Which statements about stress concentrations are appropriate? Select all that apply.",
+      "points": 2,
+      "objective_ids": [
+        "statics-materials-7-objective-3"
+      ],
+      "options": [
+        "The stress concentration factor of a hole depends on the strength of the material.",
+        "A brittle material cannot redistribute stress by yielding, so the peak stress controls fracture.",
+        "A smaller root radius at a notch raises the concentration.",
+        "The stress at a hole is higher than the nominal stress, by a factor that depends on the geometry.",
+        "For fatigue, the fatigue notch factor K_f is usually lower than K_t."
+      ],
+      "solution_spec": {
+        "answer": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "partial_credit": "correct-minus-incorrect-clamped-v1"
+      },
+      "feedback": {
+        "hint": "Think about what K_t depends on and how materials respond to the peak stress.",
+        "solution": "K_t depends on geometry, a sharper root raises it, brittle materials fracture at the peak, and K_f lies between 1 and K_t. K_t does not depend on the material's strength.",
+        "lesson_ids": [
+          "statics-materials-7"
+        ],
+        "misconception_ids": [
+          "root-radius-ignored",
+          "kt-for-fatigue"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "statics-materials-8:stress-amplitude",
+      "type": "numeric",
+      "prompt": "A cycle swings between σ_max = 200 MPa and σ_min = 20 MPa. What is the stress amplitude? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "statics-materials-8-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 90.0,
+        "unit": "MPa",
+        "tolerance": 0.2,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "The amplitude is half of the range.",
+        "solution": "(200 − 20)/2 = 90 MPa.",
+        "lesson_ids": [
+          "statics-materials-8"
+        ],
+        "misconception_ids": [
+          "range-for-amplitude"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "statics-materials-8:mean-stress",
+      "type": "numeric",
+      "prompt": "A cycle swings between σ_max = 200 MPa and σ_min = 20 MPa. What is the mean stress? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "statics-materials-8-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 110.0,
+        "unit": "MPa",
+        "tolerance": 0.2,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Average the maximum and the minimum.",
+        "solution": "(200 + 20)/2 = 110 MPa.",
+        "lesson_ids": [
+          "statics-materials-8"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "statics-materials-8:stress-ratio",
+      "type": "numeric",
+      "prompt": "A cycle swings between σ_max = 200 MPa and σ_min = 20 MPa. What is the stress ratio R = σ_min/σ_max? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "statics-materials-8-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0.1,
+        "unit": "",
+        "tolerance": 0.005,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Divide the minimum by the maximum.",
+        "solution": "20/200 = 0.1.",
+        "lesson_ids": [
+          "statics-materials-8"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "statics-materials-8:life-at-300",
+      "type": "numeric",
+      "prompt": "With σ_f′ = 900 MPa and b = −0.1, what is the life at σ_a = 300 MPa, N_f = ½(σ_a/σ_f′)^(1/b), in thousands of cycles? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "statics-materials-8-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 29.5245,
+        "unit": "",
+        "tolerance": 0.1,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Compute 300/900 first, raise it to the power −10 and halve it.",
+        "solution": "½ × (1/3)^(−10) = 29,525 cycles = 29.5 thousand cycles.",
+        "lesson_ids": [
+          "statics-materials-8"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "statics-materials-8:life-ratio",
+      "type": "numeric",
+      "prompt": "By what factor does the life change when the stress amplitude is reduced by 10% (b = −0.10)? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "statics-materials-8-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 2.868,
+        "unit": "",
+        "tolerance": 0.02,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "The life scales as σ_a to the power 1/b.",
+        "solution": "0.9^(−10) = 2.87.",
+        "lesson_ids": [
+          "statics-materials-8"
+        ],
+        "misconception_ids": [
+          "linear-life-with-stress"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "statics-materials-8:miner-sum",
+      "type": "numeric",
+      "prompt": "A part sees 10,000 cycles at 300 MPa (life 29,525) and 500,000 cycles at 200 MPa (life 1,702,531). What is Miner's sum? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "statics-materials-8-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 0.6324,
+        "unit": "",
+        "tolerance": 0.005,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Add the two fractions n/N.",
+        "solution": "0.339 + 0.294 = 0.632.",
+        "lesson_ids": [
+          "statics-materials-8"
+        ],
+        "misconception_ids": [
+          "miner-exact"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "statics-materials-8:goodman-amplitude",
+      "type": "numeric",
+      "prompt": "With σ_e = 150 MPa, σ_u = 600 MPa and a mean stress of 200 MPa, what is the allowable amplitude for n = 1 from σ_a/σ_e + σ_m/σ_u = 1? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "statics-materials-8-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 100.0,
+        "unit": "MPa",
+        "tolerance": 0.5,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Solve for σ_a.",
+        "solution": "150 × (1 − 200/600) = 100 MPa.",
+        "lesson_ids": [
+          "statics-materials-8"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "statics-materials-8:fatigue-statements",
+      "type": "multiple_select",
+      "prompt": "Which statements about fatigue are appropriate? Select all that apply.",
+      "points": 2,
+      "objective_ids": [
+        "statics-materials-8-objective-3"
+      ],
+      "options": [
+        "Run-outs in a fatigue test are censored observations, not failures.",
+        "A tensile mean stress shortens fatigue life at a given amplitude.",
+        "Miner's rule predicts failure exactly when the damage sum reaches 1.",
+        "Every material has an endurance limit below which it never fails.",
+        "A small reduction in stress amplitude can multiply the fatigue life several times."
+      ],
+      "solution_spec": {
+        "answer": [
+          0,
+          1,
+          4
+        ],
+        "partial_credit": "correct-minus-incorrect-clamped-v1"
+      },
+      "feedback": {
+        "hint": "Think about the exponent of the S–N curve and about what the rules assume.",
+        "solution": "Life is very sensitive to stress, tensile mean stress is harmful and run-outs are censored. Miner's sum at failure varies widely around 1, and many materials have no endurance limit.",
+        "lesson_ids": [
+          "statics-materials-8"
+        ],
+        "misconception_ids": [
+          "miner-exact",
+          "linear-life-with-stress"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "statics-materials-9:radius-of-gyration",
+      "type": "numeric",
+      "prompt": "A solid circular strut has diameter d = 0.5 mm. What is its radius of gyration r = √(I/A)? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "statics-materials-9-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0.125,
+        "unit": "mm",
+        "tolerance": 0.002,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "For a solid circle, I = πd⁴/64 and A = πd²/4.",
+        "solution": "r = d/4 = 0.125 mm.",
+        "lesson_ids": [
+          "statics-materials-9"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "statics-materials-9:slenderness",
+      "type": "numeric",
+      "prompt": "A solid circular strut has diameter d = 0.5 mm, length L = 5 mm and pinned ends (K = 1). What is its slenderness ratio λ = KL/r? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "statics-materials-9-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 40.0,
+        "unit": "",
+        "tolerance": 0.2,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Divide the effective length by the radius of gyration.",
+        "solution": "5/0.125 = 40.",
+        "lesson_ids": [
+          "statics-materials-9"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "statics-materials-9:critical-load",
+      "type": "numeric",
+      "prompt": "A solid circular strut has diameter d = 0.5 mm, length L = 5 mm, pinned ends (K = 1) and E = 2000 MPa. What is its Euler critical load P_cr = π²EI/(KL)²? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "statics-materials-9-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 2.4224,
+        "unit": "N",
+        "tolerance": 0.02,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use I = πd⁴/64 in mm⁴, with E in MPa and lengths in mm, to get newtons.",
+        "solution": "I = 0.003068 mm⁴, so P_cr = π² × 2000 × 0.003068/5² = 2.422 N.",
+        "lesson_ids": [
+          "statics-materials-9"
+        ],
+        "misconception_ids": [
+          "strength-instead-of-stiffness"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "statics-materials-9:critical-stress",
+      "type": "numeric",
+      "prompt": "For a pinned solid circular strut with d = 0.5 mm, L = 5 mm and E = 2000 MPa, what is the Euler critical stress, the critical load divided by the cross-section area? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "statics-materials-9-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 12.337,
+        "unit": "MPa",
+        "tolerance": 0.1,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Divide the critical load by A = πd²/4.",
+        "solution": "2.422 N/0.19635 mm² = 12.34 MPa.",
+        "lesson_ids": [
+          "statics-materials-9"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "statics-materials-9:length-doubled",
+      "type": "numeric",
+      "prompt": "A pinned solid circular strut has d = 0.5 mm, L = 10 mm and E = 2000 MPa. What is its Euler critical load? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "statics-materials-9-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0.60559,
+        "unit": "N",
+        "tolerance": 0.01,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "The load scales with 1/L².",
+        "solution": "2.422/4 = 0.6056 N.",
+        "lesson_ids": [
+          "statics-materials-9"
+        ],
+        "misconception_ids": [
+          "linear-length-scaling"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "statics-materials-9:fixed-fixed",
+      "type": "numeric",
+      "prompt": "A solid circular strut with d = 0.5 mm, L = 5 mm and E = 2000 MPa is held with both ends fixed (K = 0.5). What is its Euler critical load? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "statics-materials-9-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 9.6895,
+        "unit": "N",
+        "tolerance": 0.05,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "The effective length is half the real length.",
+        "solution": "2.422/0.5² = 9.689 N.",
+        "lesson_ids": [
+          "statics-materials-9"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "statics-materials-9:transition-slenderness",
+      "type": "numeric",
+      "prompt": "What is the transition slenderness λ* = π√(E/σ_y) for E = 2000 MPa and σ_y = 40 MPa? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "statics-materials-9-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 22.2144,
+        "unit": "",
+        "tolerance": 0.05,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Compute the ratio E/σ_y, take the square root and multiply by π.",
+        "solution": "π × √(2000/40) = 22.21.",
+        "lesson_ids": [
+          "statics-materials-9"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "statics-materials-9:design-diameter",
+      "type": "numeric",
+      "prompt": "What is the smallest diameter of a pinned strut of length 5 mm with E = 2000 MPa that has an Euler critical load of 5 N? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "statics-materials-9-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 0.5993,
+        "unit": "mm",
+        "tolerance": 0.005,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Solve P_cr = π²E(πd⁴/64)/L² for d.",
+        "solution": "d = (64 × 5 × 5²/(π³ × 2000))^(1/4) = 0.599 mm.",
+        "lesson_ids": [
+          "statics-materials-9"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "statics-materials-9:buckling-statements",
+      "type": "multiple_select",
+      "prompt": "Which statements about buckling of slender struts are appropriate? Select all that apply.",
+      "points": 2,
+      "objective_ids": [
+        "statics-materials-9-objective-3"
+      ],
+      "options": [
+        "An initial bow or an off-axis load makes the real maximum load lower than the ideal Euler value.",
+        "Euler's formula applies to any strut however short it is.",
+        "Doubling the length of a pinned strut halves its critical load.",
+        "The elastic critical load depends on the stiffness (E and I), not on the yield strength.",
+        "Doubling the diameter of a solid circular strut multiplies its critical load by 16."
+      ],
+      "solution_spec": {
+        "answer": [
+          0,
+          3,
+          4
+        ],
+        "partial_credit": "correct-minus-incorrect-clamped-v1"
+      },
+      "feedback": {
+        "hint": "Think about what each symbol in the formula represents and what an ideal strut leaves out.",
+        "solution": "The load depends on E I and on 1/L² (doubling the length divides it by 4). The d⁴ dependence gives a factor of 16, and imperfections reduce the real maximum. Euler's formula fails for short struts, which yield first.",
+        "lesson_ids": [
+          "statics-materials-9"
+        ],
+        "misconception_ids": [
+          "linear-length-scaling",
+          "strength-instead-of-stiffness"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "statics-materials-10:mohr-radius",
+      "type": "numeric",
+      "prompt": "A plane stress state has σx = 80 MPa, σy = 20 MPa and τxy = 30 MPa. What is the radius of Mohr's circle? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "statics-materials-10-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 42.4264,
+        "unit": "MPa",
+        "tolerance": 0.05,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "R is the square root of the squared half-difference plus the squared shear.",
+        "solution": "R = √(30² + 30²) = 42.43 MPa.",
+        "lesson_ids": [
+          "statics-materials-10"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "statics-materials-10:principal-max",
+      "type": "numeric",
+      "prompt": "A plane stress state has σx = 80 MPa, σy = 20 MPa and τxy = 30 MPa. What is the larger principal stress σ1? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "statics-materials-10-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 92.4264,
+        "unit": "MPa",
+        "tolerance": 0.1,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Add the radius to the centre of the circle.",
+        "solution": "50 + 42.43 = 92.43 MPa.",
+        "lesson_ids": [
+          "statics-materials-10"
+        ],
+        "misconception_ids": [
+          "largest-normal-is-sigma-x"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "statics-materials-10:principal-min",
+      "type": "numeric",
+      "prompt": "A plane stress state has σx = 80 MPa, σy = 20 MPa and τxy = 30 MPa. What is the smaller principal stress σ2? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "statics-materials-10-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 7.5736,
+        "unit": "MPa",
+        "tolerance": 0.1,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Subtract the radius from the centre of the circle.",
+        "solution": "50 − 42.43 = 7.57 MPa.",
+        "lesson_ids": [
+          "statics-materials-10"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "statics-materials-10:principal-angle",
+      "type": "numeric",
+      "prompt": "A plane stress state has σx = 80 MPa, σy = 20 MPa and τxy = 30 MPa. At what angle θp, in degrees counter-clockwise from the x axis, is the plane carrying σ1? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "statics-materials-10-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 22.5,
+        "unit": "",
+        "tolerance": 0.1,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "tan 2θp = 2τxy/(σx − σy); halve the angle.",
+        "solution": "θp = ½ atan(2 × 30/60) = 22.5°.",
+        "lesson_ids": [
+          "statics-materials-10"
+        ],
+        "misconception_ids": [
+          "angle-not-doubled"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "statics-materials-10:inclined-plane",
+      "type": "numeric",
+      "prompt": "A plane stress state has σx = 80 MPa, σy = 20 MPa and τxy = 30 MPa. What is the normal stress σθ on the plane whose normal is 30° counter-clockwise from the x axis? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "statics-materials-10-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 90.9808,
+        "unit": "MPa",
+        "tolerance": 0.1,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the transformation equation with 2θ = 60°.",
+        "solution": "50 + 30 cos 60° + 30 sin 60° = 90.98 MPa.",
+        "lesson_ids": [
+          "statics-materials-10"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "statics-materials-10:von-mises",
+      "type": "numeric",
+      "prompt": "A plane stress state has σx = 80 MPa, σy = 20 MPa and τxy = 30 MPa. What is its von Mises stress? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "statics-materials-10-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 88.8819,
+        "unit": "MPa",
+        "tolerance": 0.1,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use σ1 and σ2, or the expression in σx, σy and τxy.",
+        "solution": "√(92.43² − 92.43 × 7.57 + 7.57²) = 88.88 MPa.",
+        "lesson_ids": [
+          "statics-materials-10"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "statics-materials-10:safety-factor",
+      "type": "numeric",
+      "prompt": "A plane stress state has σx = 80 MPa, σy = 20 MPa and τxy = 30 MPa in a ductile material with σ_y = 120 MPa. What is the factor of safety against first yield by the von Mises criterion? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "statics-materials-10-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 1.3501,
+        "unit": "",
+        "tolerance": 0.01,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Divide the yield stress by the von Mises stress.",
+        "solution": "120/88.88 = 1.350.",
+        "lesson_ids": [
+          "statics-materials-10"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "statics-materials-10:shear-yield",
+      "type": "numeric",
+      "prompt": "What shear yield stress does the von Mises criterion predict for σ_y = 120 MPa in pure shear? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "statics-materials-10-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 69.282,
+        "unit": "MPa",
+        "tolerance": 0.1,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "In pure shear σ1 = τ and σ2 = −τ, so σ_vm = √3 τ.",
+        "solution": "120/√3 = 69.28 MPa.",
+        "lesson_ids": [
+          "statics-materials-10"
+        ],
+        "misconception_ids": [
+          "tresca-shear-yield"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "statics-materials-10:mohr-statements",
+      "type": "multiple_select",
+      "prompt": "Which statements about plane stress and Mohr's circle are appropriate? Select all that apply.",
+      "points": 2,
+      "objective_ids": [
+        "statics-materials-10-objective-3"
+      ],
+      "options": [
+        "A rotation of the physical plane by θ moves the point around Mohr's circle by 2θ.",
+        "The sum σx + σy changes when the axes are rotated.",
+        "The maximum in-plane shear stress equals the radius of the circle.",
+        "The shear stress is zero on the principal planes.",
+        "The von Mises criterion is a reliable failure criterion for brittle materials."
+      ],
+      "solution_spec": {
+        "answer": [
+          0,
+          2,
+          3
+        ],
+        "partial_credit": "correct-minus-incorrect-clamped-v1"
+      },
+      "feedback": {
+        "hint": "Recall what is invariant, and what the criteria were calibrated on.",
+        "solution": "Angles double on the circle, the principal planes are free of shear, and the radius is the largest in-plane shear. The sum of the normal stresses is invariant, and the criteria describe yielding of ductile materials.",
+        "lesson_ids": [
+          "statics-materials-10"
+        ],
+        "misconception_ids": [
+          "angle-not-doubled"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "statics-materials-11:second-moment",
+      "type": "numeric",
+      "prompt": "A rectangular beam section is 5 mm wide and 1 mm deep (the load acts across the 1 mm dimension). What is I = bh³/12 in mm⁴? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "statics-materials-11-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0.41667,
+        "unit": "",
+        "tolerance": 0.001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the dimension in the direction of the load as h.",
+        "solution": "5 × 1³/12 = 0.4167 mm⁴.",
+        "lesson_ids": [
+          "statics-materials-11"
+        ],
+        "misconception_ids": [
+          "swapped-b-and-h"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "statics-materials-11:central-deflection",
+      "type": "numeric",
+      "prompt": "A strip with span 20 mm, width 5 mm, thickness 1 mm and E = 3000 MPa is simply supported and loaded at its centre by 2 N. What is the central deflection? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "statics-materials-11-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0.26667,
+        "unit": "mm",
+        "tolerance": 0.003,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use δ = PL³/(48EI) with E in MPa and lengths in mm.",
+        "solution": "2 × 20³/(48 × 1250) = 0.2667 mm.",
+        "lesson_ids": [
+          "statics-materials-11"
+        ],
+        "misconception_ids": [
+          "cantilever-formula-for-supported-beam"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "statics-materials-11:bending-stiffness",
+      "type": "numeric",
+      "prompt": "A strip with span 20 mm, width 5 mm, thickness 1 mm and E = 3000 MPa is simply supported and loaded at its centre. What is its stiffness P/δ in N/mm? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "statics-materials-11-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 7.5,
+        "unit": "",
+        "tolerance": 0.05,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Divide the load by the deflection, or use 48EI/L³.",
+        "solution": "2/0.2667 = 7.5 N/mm.",
+        "lesson_ids": [
+          "statics-materials-11"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "statics-materials-11:centre-stress",
+      "type": "numeric",
+      "prompt": "A strip with span 20 mm, width 5 mm, thickness 1 mm and E = 3000 MPa is simply supported and loaded at its centre by 2 N. What is the maximum bending stress? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "statics-materials-11-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 12.0,
+        "unit": "MPa",
+        "tolerance": 0.1,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use M = PL/4 and c = h/2, or σ = 3PL/(2bh²).",
+        "solution": "3 × 2 × 20/(2 × 5 × 1²) = 12.0 MPa.",
+        "lesson_ids": [
+          "statics-materials-11"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "statics-materials-11:thickness-halved",
+      "type": "numeric",
+      "prompt": "A simply supported rectangular strip is loaded at its centre. By what factor does its stiffness change if its thickness is halved (same width, span and material)? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "statics-materials-11-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0.125,
+        "unit": "",
+        "tolerance": 0.005,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "The stiffness is proportional to h³.",
+        "solution": "(1/2)³ = 0.125.",
+        "lesson_ids": [
+          "statics-materials-11"
+        ],
+        "misconception_ids": [
+          "linear-thickness-scaling"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "statics-materials-11:cantilever-tip",
+      "type": "numeric",
+      "prompt": "A strip with width 5 mm, thickness 1 mm and E = 3000 MPa is clamped at one end as a 20 mm cantilever and loaded at its tip with 0.05 N. What is the tip deflection? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "statics-materials-11-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0.10667,
+        "unit": "mm",
+        "tolerance": 0.002,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use δ = PL³/(3EI).",
+        "solution": "0.05 × 20³/(3 × 1250) = 0.10667 mm.",
+        "lesson_ids": [
+          "statics-materials-11"
+        ],
+        "misconception_ids": [
+          "cantilever-formula-for-supported-beam"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "statics-materials-11:uniform-load",
+      "type": "numeric",
+      "prompt": "A strip with width 5 mm, thickness 1 mm and E = 3000 MPa is simply supported over a 20 mm span and carries a uniform load of 0.02 N/mm. What is the central deflection? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "statics-materials-11-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 0.03333,
+        "unit": "mm",
+        "tolerance": 0.001,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use δ = 5wL⁴/(384EI).",
+        "solution": "5 × 0.02 × 20⁴/(384 × 1250) = 0.03333 mm.",
+        "lesson_ids": [
+          "statics-materials-11"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "statics-materials-11:flexural-modulus",
+      "type": "numeric",
+      "prompt": "A three-point bend test on a strip with b = 6 mm, h = 1.2 mm and span 24 mm gives a slope P/δ = 11.2 N/mm. What is the flexural modulus E = L³m/(4bh³)? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "statics-materials-11-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 3733.333,
+        "unit": "MPa",
+        "tolerance": 5.0,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Take the thickness to the third power.",
+        "solution": "24³ × 11.2/(4 × 6 × 1.2³) = 3733 MPa.",
+        "lesson_ids": [
+          "statics-materials-11"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "statics-materials-11:beam-statements",
+      "type": "multiple_select",
+      "prompt": "Which statements about beam deflection are appropriate? Select all that apply.",
+      "points": 2,
+      "objective_ids": [
+        "statics-materials-11-objective-3"
+      ],
+      "options": [
+        "The stiffness of a rectangular beam in bending is proportional to the cube of its thickness.",
+        "For linear elastic material and small deflections, deflections from separate loads can be added.",
+        "Halving the span of a beam doubles its stiffness.",
+        "A beam made of a material with a higher yield strength is necessarily stiffer.",
+        "For short, thick beams, shear deformation adds to the deflection predicted by the bending formula."
+      ],
+      "solution_spec": {
+        "answer": [
+          0,
+          1,
+          4
+        ],
+        "partial_credit": "correct-minus-incorrect-clamped-v1"
+      },
+      "feedback": {
+        "hint": "Think about which quantities appear in EI and how the span enters.",
+        "solution": "The stiffness scales with h³ and 1/L³ (halving the span multiplies it by 8). Yield strength does not appear in the deflection. Superposition holds for linear, small-deflection problems, and short, thick beams have a shear contribution.",
+        "lesson_ids": [
+          "statics-materials-11"
+        ],
+        "misconception_ids": [
+          "linear-thickness-scaling"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "statics-materials-12:failure-probability",
+      "type": "numeric",
+      "prompt": "A synthetic brittle material has Weibull scale σ₀ = 100 MPa and modulus m = 10 for the reference volume. What is the probability of failure under a uniform stress of 80 MPa? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "statics-materials-12-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0.10181,
+        "unit": "",
+        "tolerance": 0.002,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "P_f = 1 − exp[−(σ/σ₀)^m] with σ/σ₀ = 0.8.",
+        "solution": "1 − exp(−0.8^10) = 0.1018.",
+        "lesson_ids": [
+          "statics-materials-12"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "statics-materials-12:characteristic-fraction",
+      "type": "numeric",
+      "prompt": "What fraction of specimens of the reference volume fail at a stress equal to σ₀? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "statics-materials-12-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0.63212,
+        "unit": "",
+        "tolerance": 0.002,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Put σ = σ₀ in the formula; the result does not depend on m.",
+        "solution": "1 − exp(−1) = 0.632.",
+        "lesson_ids": [
+          "statics-materials-12"
+        ],
+        "misconception_ids": [
+          "mean-strength-is-design-strength"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "statics-materials-12:stress-for-one-percent",
+      "type": "numeric",
+      "prompt": "A synthetic brittle material has Weibull scale σ₀ = 100 MPa and modulus m = 10 for the reference volume. What stress gives a failure probability of 1% at the reference volume? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "statics-materials-12-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 63.1274,
+        "unit": "MPa",
+        "tolerance": 0.2,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Solve σ = σ₀ [−ln(1 − P_f)]^(1/m).",
+        "solution": "100 × [−ln 0.99]^(1/10) = 63.13 MPa.",
+        "lesson_ids": [
+          "statics-materials-12"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "statics-materials-12:size-factor",
+      "type": "numeric",
+      "prompt": "By what factor does the stress for a given failure probability change when the stressed volume is 8 times larger (m = 10)? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "statics-materials-12-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0.81225,
+        "unit": "",
+        "tolerance": 0.002,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "The factor is the volume ratio to the power −1/m.",
+        "solution": "8^(−1/10) = 0.8123.",
+        "lesson_ids": [
+          "statics-materials-12"
+        ],
+        "misconception_ids": [
+          "size-effect-exponent-m"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "statics-materials-12:large-part-stress",
+      "type": "numeric",
+      "prompt": "A synthetic brittle material has Weibull scale σ₀ = 100 MPa and modulus m = 10 for the reference volume. What stress gives a failure probability of 1% for a part with 8 times the reference volume? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "statics-materials-12-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 51.2754,
+        "unit": "MPa",
+        "tolerance": 0.2,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the 1% stress for the reference volume and the size factor.",
+        "solution": "63.13 × 0.8123 = 51.28 MPa.",
+        "lesson_ids": [
+          "statics-materials-12"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "statics-materials-12:lower-modulus",
+      "type": "numeric",
+      "prompt": "Keep σ₀ = 100 MPa but let m = 5. What is the probability of failure at 80 MPa at the reference volume? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "statics-materials-12-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 0.27941,
+        "unit": "",
+        "tolerance": 0.003,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Compute 0.8 to the power 5.",
+        "solution": "1 − exp(−0.8^5) = 0.2794.",
+        "lesson_ids": [
+          "statics-materials-12"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "statics-materials-12:modulus-two-points",
+      "type": "numeric",
+      "prompt": "Two points on a Weibull plot are (70 MPa, P_f = 0.1) and (90 MPa, P_f = 0.6). What is the Weibull modulus estimated from the slope of ln[−ln(1 − P_f)] against ln σ? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "statics-materials-12-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 8.6065,
+        "unit": "",
+        "tolerance": 0.05,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Divide the difference of the two y values by the difference of ln σ.",
+        "solution": "(−0.0874 − (−2.2504))/(4.4998 − 4.2485) = 8.61.",
+        "lesson_ids": [
+          "statics-materials-12"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "statics-materials-12:weibull-statements",
+      "type": "multiple_select",
+      "prompt": "Which statements about brittle strength and the Weibull model are appropriate? Select all that apply.",
+      "points": 2,
+      "objective_ids": [
+        "statics-materials-12-objective-3"
+      ],
+      "options": [
+        "The Weibull model applies unchanged to ductile yielding.",
+        "A ceramic's strength is a single material constant, so one test is enough.",
+        "In the weakest-link model, a larger stressed volume has a lower strength for the same failure probability.",
+        "The scale parameter σ₀ is the stress at which 63.2% of specimens of the reference volume fail.",
+        "A higher Weibull modulus means less scatter in strength."
+      ],
+      "solution_spec": {
+        "answer": [
+          2,
+          3,
+          4
+        ],
+        "partial_credit": "correct-minus-incorrect-clamped-v1"
+      },
+      "feedback": {
+        "hint": "Think about where failure starts and what each parameter measures.",
+        "solution": "Higher m means a narrower distribution, a larger volume holds more flaws, and σ₀ is the 63.2% stress. Strength of a brittle material is a distribution and the model describes flaw-controlled fracture, not yielding.",
+        "lesson_ids": [
+          "statics-materials-12"
+        ],
+        "misconception_ids": [
+          "mean-strength-is-design-strength"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "statics-materials-lab1:level-summary",
+      "type": "file_upload",
+      "prompt": "Using the synthetic fatigue CSV, summarize each stress level. Upload a table with one row per level (key column `level`: s300, s260, s230 and s200) and columns `specimens` (the number of specimens), `failures` (the number that failed before the cutoff) and `mean_log10_failed` (the mean of the base-10 logarithm of the cycles to failure of the specimens that failed).",
+      "points": 12,
+      "objective_ids": [
+        "statics-materials-lab-01-objective-1"
+      ],
+      "solution_spec": {
+        "accepted_media_types": [
+          "text/csv"
+        ],
+        "max_bytes": 32768,
+        "validation_spec": {
+          "format": "csv-numeric-table-v1",
+          "delimiter": ",",
+          "key_column": "level",
+          "columns": [
+            "level",
+            "specimens",
+            "failures",
+            "mean_log10_failed"
+          ],
+          "checks": [
+            {
+              "id": "s300-specimens",
+              "row_id": "s300",
+              "column": "specimens",
+              "type": "numeric",
+              "answer": 5.0,
+              "unit": "",
+              "tolerance": 0,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "count",
+                "values": [
+                  18200,
+                  24600,
+                  30900,
+                  38000,
+                  51300
+                ]
+              }
+            },
+            {
+              "id": "s300-failures",
+              "row_id": "s300",
+              "column": "failures",
+              "type": "numeric",
+              "answer": 5.0,
+              "unit": "",
+              "tolerance": 0,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "count",
+                "values": [
+                  18200,
+                  24600,
+                  30900,
+                  38000,
+                  51300
+                ]
+              }
+            },
+            {
+              "id": "s300-mean_log10_failed",
+              "row_id": "s300",
+              "column": "mean_log10_failed",
+              "type": "numeric",
+              "answer": 4.4862,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  4.260071,
+                  4.390935,
+                  4.489958,
+                  4.579784,
+                  4.710117
+                ]
+              }
+            },
+            {
+              "id": "s260-specimens",
+              "row_id": "s260",
+              "column": "specimens",
+              "type": "numeric",
+              "answer": 5.0,
+              "unit": "",
+              "tolerance": 0,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "count",
+                "values": [
+                  155000,
+                  205000,
+                  66300,
+                  110000,
+                  132000
+                ]
+              }
+            },
+            {
+              "id": "s260-failures",
+              "row_id": "s260",
+              "column": "failures",
+              "type": "numeric",
+              "answer": 5.0,
+              "unit": "",
+              "tolerance": 0,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "count",
+                "values": [
+                  155000,
+                  205000,
+                  66300,
+                  110000,
+                  132000
+                ]
+              }
+            },
+            {
+              "id": "s260-mean_log10_failed",
+              "row_id": "s260",
+              "column": "mean_log10_failed",
+              "type": "numeric",
+              "answer": 5.0971,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  5.190332,
+                  5.311754,
+                  4.821514,
+                  5.041393,
+                  5.120574
+                ]
+              }
+            },
+            {
+              "id": "s230-specimens",
+              "row_id": "s230",
+              "column": "specimens",
+              "type": "numeric",
+              "answer": 5.0,
+              "unit": "",
+              "tolerance": 0,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "count",
+                "values": [
+                  461000,
+                  568000,
+                  821000,
+                  272000,
+                  334000
+                ]
+              }
+            },
+            {
+              "id": "s230-failures",
+              "row_id": "s230",
+              "column": "failures",
+              "type": "numeric",
+              "answer": 5.0,
+              "unit": "",
+              "tolerance": 0,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "count",
+                "values": [
+                  461000,
+                  568000,
+                  821000,
+                  272000,
+                  334000
+                ]
+              }
+            },
+            {
+              "id": "s230-mean_log10_failed",
+              "row_id": "s230",
+              "column": "mean_log10_failed",
+              "type": "numeric",
+              "answer": 5.6581,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  5.663701,
+                  5.754348,
+                  5.914343,
+                  5.434569,
+                  5.523746
+                ]
+              }
+            },
+            {
+              "id": "s200-specimens",
+              "row_id": "s200",
+              "column": "specimens",
+              "type": "numeric",
+              "answer": 5.0,
+              "unit": "",
+              "tolerance": 0,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "count",
+                "values": [
+                  853000,
+                  1290000,
+                  1910000,
+                  2000000,
+                  2000000
+                ]
+              }
+            },
+            {
+              "id": "s200-failures",
+              "row_id": "s200",
+              "column": "failures",
+              "type": "numeric",
+              "answer": 3.0,
+              "unit": "",
+              "tolerance": 0,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "count",
+                "values": [
+                  853000,
+                  1290000,
+                  1910000
+                ]
+              }
+            },
+            {
+              "id": "s200-mean_log10_failed",
+              "row_id": "s200",
+              "column": "mean_log10_failed",
+              "type": "numeric",
+              "answer": 6.1075,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  5.930949,
+                  6.11059,
+                  6.281033
+                ]
+              }
+            }
+          ]
+        },
+        "rubric": [
+          {
+            "id": "s300-specimens",
+            "criterion": "s300: specimens",
+            "points": 1,
+            "evidence": [
+              "Recomputes specimens for s300 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "s300-failures",
+            "criterion": "s300: failures",
+            "points": 1,
+            "evidence": [
+              "Recomputes failures for s300 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "s300-mean_log10_failed",
+            "criterion": "s300: mean_log10_failed",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_log10_failed for s300 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "s260-specimens",
+            "criterion": "s260: specimens",
+            "points": 1,
+            "evidence": [
+              "Recomputes specimens for s260 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "s260-failures",
+            "criterion": "s260: failures",
+            "points": 1,
+            "evidence": [
+              "Recomputes failures for s260 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "s260-mean_log10_failed",
+            "criterion": "s260: mean_log10_failed",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_log10_failed for s260 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "s230-specimens",
+            "criterion": "s230: specimens",
+            "points": 1,
+            "evidence": [
+              "Recomputes specimens for s230 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "s230-failures",
+            "criterion": "s230: failures",
+            "points": 1,
+            "evidence": [
+              "Recomputes failures for s230 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "s230-mean_log10_failed",
+            "criterion": "s230: mean_log10_failed",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_log10_failed for s230 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "s200-specimens",
+            "criterion": "s200: specimens",
+            "points": 1,
+            "evidence": [
+              "Recomputes specimens for s200 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "s200-failures",
+            "criterion": "s200: failures",
+            "points": 1,
+            "evidence": [
+              "Recomputes failures for s200 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "s200-mean_log10_failed",
+            "criterion": "s200: mean_log10_failed",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_log10_failed for s200 from the preparation-level values."
+            ]
+          }
+        ]
+      },
+      "feedback": {
+        "hint": "Count all specimens and the failed ones separately; take log10 of each failure life before averaging, and leave out the run-outs.",
+        "solution": "Each level has 5 specimens; the failures are 5, 5, 5, 3. The mean log10 lives of the failures are 300 MPa 4.486, 260 MPa 5.097, 230 MPa 5.658, 200 MPa 6.108.",
+        "lesson_ids": [
+          "statics-materials-lab-01",
+          "statics-materials-8",
+          "statics-materials-12"
+        ],
+        "misconception_ids": [
+          "runouts-as-failures"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "statics-materials-lab1:scatter-260",
+      "type": "numeric",
+      "prompt": "What is the sample standard deviation of log10(cycles) of the five specimens at 260 MPa? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "statics-materials-lab-01-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0.1833,
+        "unit": "",
+        "tolerance": 0.005,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use n − 1 in the denominator and take logarithms of the lives before computing the spread.",
+        "solution": "SD = 0.183; the longest life is 3.1 times the shortest at this level.",
+        "lesson_ids": [
+          "statics-materials-lab-01",
+          "statics-materials-8",
+          "statics-materials-12"
+        ],
+        "misconception_ids": [
+          "life-scatter-ignored"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "statics-materials-lab1:fitted-slope",
+      "type": "numeric",
+      "prompt": "Fit a straight line to the mean log10 life of the failures against log10 of the stress amplitude, using the three levels in which no specimen was a run-out (300, 260 and 230 MPa). What is the slope? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "statics-materials-lab-01-objective-2"
+      ],
+      "solution_spec": {
+        "answer": -10.1473,
+        "unit": "",
+        "tolerance": 0.15,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the three level means from your table and log10 of 300, 260 and 230.",
+        "solution": "The least-squares slope is −10.15; Basquin's law predicts a slope of 1/b.",
+        "lesson_ids": [
+          "statics-materials-lab-01",
+          "statics-materials-8",
+          "statics-materials-12"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "statics-materials-lab1:basquin-exponent",
+      "type": "numeric",
+      "prompt": "What Basquin exponent b = 1/slope does the fitted line give? Enter the number only (it is negative).",
+      "points": 1,
+      "objective_ids": [
+        "statics-materials-lab-01-objective-2"
+      ],
+      "solution_spec": {
+        "answer": -0.09855,
+        "unit": "",
+        "tolerance": 0.002,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Invert the slope.",
+        "solution": "b = 1/(−10.15) = −0.099.",
+        "lesson_ids": [
+          "statics-materials-lab-01",
+          "statics-materials-8",
+          "statics-materials-12"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "statics-materials-lab1:runout-bias",
+      "type": "data_interpretation",
+      "prompt": "At 200 MPa, 2 of the 5 specimens reached the 2,000,000-cycle cutoff without failing (run-outs). The mean log10 life of the 3 that failed is 6.108. If the run-outs are instead counted as failures at the cutoff, what is the mean log10 life of all five?",
+      "points": 2,
+      "objective_ids": [
+        "statics-materials-lab-01-objective-3"
+      ],
+      "response_fields": [
+        {
+          "id": "value",
+          "type": "numeric",
+          "prompt": "What is the mean? Report exactly 3 significant figures.",
+          "unit": "",
+          "points": 1
+        },
+        {
+          "id": "inference",
+          "type": "single_choice",
+          "prompt": "Which statement about the two averages is correct?",
+          "options": [
+            "Both are biased low, because the run-outs lasted at least as long as the cutoff and the failure-only mean leaves out the longest-lived specimens.",
+            "The failure-only mean is unbiased because it uses only measured lives.",
+            "Counting run-outs at the cutoff biases the mean high.",
+            "Run-outs carry no information about the life."
+          ],
+          "points": 1
+        }
+      ],
+      "solution_spec": {
+        "field_specs": [
+          {
+            "id": "value",
+            "type": "numeric",
+            "answer": 6.18,
+            "unit": "",
+            "tolerance": 0.01,
+            "relative_tolerance": 0,
+            "unit_required": false,
+            "significant_figures": 3,
+            "dimensions": null
+          },
+          {
+            "id": "inference",
+            "type": "single_choice",
+            "answer": 0
+          }
+        ]
+      },
+      "feedback": {
+        "hint": "Count all five lives, using the cutoff for the run-outs.",
+        "solution": "The mean of all five lives is 6.185, higher than the failures-only mean of 6.108. Both are still below the value that uncensored data would give.",
+        "lesson_ids": [
+          "statics-materials-lab-01",
+          "statics-materials-8",
+          "statics-materials-12"
+        ],
+        "misconception_ids": [
+          "runouts-as-failures"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "statics-materials-lab1:extrapolated-life",
+      "type": "numeric",
+      "prompt": "Use the fitted line from the three complete levels to predict the median log10 life at 160 MPa. Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "statics-materials-lab-01-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 7.2502,
+        "unit": "",
+        "tolerance": 0.05,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Evaluate the line at log10(160), using the mean of the x values and the mean of the y values.",
+        "solution": "log10 N = 5.080 + (−10.15) × (2.204 − 2.418) = 7.25, about 18 million cycles, an extrapolation below the lowest tested level of 200 MPa.",
+        "lesson_ids": [
+          "statics-materials-lab-01",
+          "statics-materials-8",
+          "statics-materials-12"
+        ],
+        "misconception_ids": [
+          "extrapolation-trusted"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "statics-materials-lab1:design-reasoning",
+      "type": "structured",
+      "prompt": "Answer each part about the fatigue data.",
+      "points": 3,
+      "objective_ids": [
+        "statics-materials-lab-01-objective-3"
+      ],
+      "response_fields": [
+        {
+          "id": "scatter",
+          "type": "single_choice",
+          "prompt": "What does the spread of lives at one stress level show?",
+          "options": [
+            "Nominally identical specimens at one stress differ in life by a factor of several, so a single specimen per level would say little.",
+            "The spread is measurement error that disappears with a better machine.",
+            "The material has no fatigue limit.",
+            "The stress was not controlled."
+          ],
+          "points": 1
+        },
+        {
+          "id": "censoring",
+          "type": "single_choice",
+          "prompt": "How should the two run-outs at 200 MPa be treated?",
+          "options": [
+            "As specimens that survived at least to the cutoff (censored), kept in the analysis and reported.",
+            "As failures at the cutoff.",
+            "As errors to be removed.",
+            "As evidence of an endurance limit."
+          ],
+          "points": 1
+        },
+        {
+          "id": "limits",
+          "type": "single_choice",
+          "prompt": "What do these data not support?",
+          "options": [
+            "A predicted life at 160 MPa, which lies below the tested range and rests on a line fitted to three levels.",
+            "That life falls as the stress amplitude rises.",
+            "That lives scatter.",
+            "That some specimens survived the cutoff."
+          ],
+          "points": 1
+        }
+      ],
+      "solution_spec": {
+        "field_specs": [
+          {
+            "id": "scatter",
+            "type": "single_choice",
+            "answer": 0
+          },
+          {
+            "id": "censoring",
+            "type": "single_choice",
+            "answer": 0
+          },
+          {
+            "id": "limits",
+            "type": "single_choice",
+            "answer": 0
+          }
+        ],
+        "rubric": [
+          {
+            "id": "scatter",
+            "criterion": "What the scatter shows",
+            "points": 1,
+            "evidence": [
+              "Reads the scatter as intrinsic variability."
+            ]
+          },
+          {
+            "id": "censoring",
+            "criterion": "Treating run-outs",
+            "points": 1,
+            "evidence": [
+              "Treats run-outs as censored observations."
+            ]
+          },
+          {
+            "id": "limits",
+            "criterion": "What the data do not support",
+            "points": 1,
+            "evidence": [
+              "Names the extrapolation as unsupported."
+            ]
+          }
+        ]
+      },
+      "feedback": {
+        "hint": "For each part, ask what the variability means, what a run-out tells you and where the data stop.",
+        "solution": "The lives scatter by a factor of several, run-outs are censored, and the extrapolated life at 160 MPa lies beyond the data.",
+        "lesson_ids": [
+          "statics-materials-lab-01",
+          "statics-materials-8",
+          "statics-materials-12"
+        ],
+        "misconception_ids": [
+          "life-scatter-ignored",
+          "runouts-as-failures",
+          "extrapolation-trusted"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "statics-materials-lab1:supported-statements",
+      "type": "multiple_select",
+      "prompt": "Which statements about these synthetic fatigue data are supported? Select all that apply.",
+      "points": 2,
+      "objective_ids": [
+        "statics-materials-lab-01-objective-3"
+      ],
+      "options": [
+        "Lives fall steeply as the stress amplitude rises, with a fitted exponent near −0.1.",
+        "At a given stress level, the lives of identical specimens differ by a factor of about three or more.",
+        "The two specimens that reached 2,000,000 cycles at 200 MPa should be recorded as censored, not as failures.",
+        "The data show that the material has an endurance limit near 200 MPa.",
+        "A single specimen at each of the four levels would have been enough."
+      ],
+      "solution_spec": {
+        "answer": [
+          0,
+          1,
+          2
+        ],
+        "partial_credit": "correct-minus-incorrect-clamped-v1"
+      },
+      "feedback": {
+        "hint": "Keep each statement inside what 20 specimens at four levels can show.",
+        "solution": "The first three follow from the table and the fit. Two run-outs at the lowest level do not show an endurance limit, and one specimen per level would hide the scatter.",
+        "lesson_ids": [
+          "statics-materials-lab-01",
+          "statics-materials-8",
+          "statics-materials-12"
+        ],
+        "misconception_ids": [
+          "life-scatter-ignored",
+          "runouts-as-failures"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "statics-materials-13:static-factor",
+      "type": "numeric",
+      "prompt": "A synthetic porous scaffold has a one-time compression yield strength of 1.9 MPa and is loaded in service from 0 to 0.4 MPa at 1 Hz for 30 days. What is the static factor of safety on the peak nominal stress? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "statics-materials-13-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 4.75,
+        "unit": "",
+        "tolerance": 0.02,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Divide the yield strength by the peak service stress.",
+        "solution": "1.9/0.4 = 4.75.",
+        "lesson_ids": [
+          "statics-materials-13"
+        ],
+        "misconception_ids": [
+          "static-test-is-service-test"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "statics-materials-13:service-cycles",
+      "type": "numeric",
+      "prompt": "How many cycles occur in 30 days at 1 Hz? Enter the answer in millions of cycles (number only).",
+      "points": 1,
+      "objective_ids": [
+        "statics-materials-13-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 2.592,
+        "unit": "",
+        "tolerance": 0.005,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Multiply the number of seconds by the frequency.",
+        "solution": "30 × 86,400 × 1 = 2,592,000 cycles = 2.592 million.",
+        "lesson_ids": [
+          "statics-materials-13"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "statics-materials-13:strut-amplitude",
+      "type": "numeric",
+      "prompt": "A lattice model gives a strut stress 40 times the nominal stress. What is the strut stress amplitude for a nominal amplitude of 0.2 MPa? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "statics-materials-13-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 8.0,
+        "unit": "MPa",
+        "tolerance": 0.05,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Multiply the nominal amplitude by the amplification factor.",
+        "solution": "40 × 0.2 = 8.0 MPa.",
+        "lesson_ids": [
+          "statics-materials-13"
+        ],
+        "misconception_ids": [
+          "nominal-as-strut-stress"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "statics-materials-13:strut-life",
+      "type": "numeric",
+      "prompt": "The strut material follows σ_a = σ_f′(2N_f)^b with σ_f′ = 30 MPa and b = −0.08. What is the strut life at 8.0 MPa, in millions of cycles? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "statics-materials-13-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 7.4879,
+        "unit": "",
+        "tolerance": 0.1,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "N_f = ½(σ_a/σ_f′)^(1/b).",
+        "solution": "½ × (8.0/30)^(1/−0.08) = 7.49 million cycles.",
+        "lesson_ids": [
+          "statics-materials-13"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "statics-materials-13:life-after-degradation",
+      "type": "numeric",
+      "prompt": "A strut material follows σ_a = σ_f′(2N_f)^b with b = −0.08. If hydrolysis lowers σ_f′ by 15% with b unchanged, by what factor does the fatigue life at a fixed stress amplitude fall? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "statics-materials-13-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 7.6254,
+        "unit": "",
+        "tolerance": 0.05,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "The life scales with σ_f′ to the power 1/b.",
+        "solution": "0.85^(−12.5) = 7.63.",
+        "lesson_ids": [
+          "statics-materials-13"
+        ],
+        "misconception_ids": [
+          "linear-life-with-strength"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "statics-materials-13:buckling-modulus",
+      "type": "numeric",
+      "prompt": "A strut has an Euler load of 2.0 N when new and carries 0.86 N at peak load. At what fraction of its initial modulus does it reach the Euler load, if its dimensions do not change? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "statics-materials-13-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 0.43,
+        "unit": "",
+        "tolerance": 0.01,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "The Euler load is proportional to E.",
+        "solution": "0.86/2.0 = 0.43.",
+        "lesson_ids": [
+          "statics-materials-13"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "statics-materials-13:heating-rate",
+      "type": "numeric",
+      "prompt": "At 10 Hz the dissipated power is 25,133 W/m³ and the volumetric heat capacity is 4.0 MJ/(m³·K). What is the adiabatic heating rate in mK/s? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "statics-materials-13-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 6.2832,
+        "unit": "",
+        "tolerance": 0.02,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Divide the power by the volumetric heat capacity and convert K to mK.",
+        "solution": "25,133/4,000,000 = 0.00628 K/s = 6.28 mK/s.",
+        "lesson_ids": [
+          "statics-materials-13"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "statics-materials-13:time-to-2k",
+      "type": "numeric",
+      "prompt": "At an adiabatic heating rate of 6.283 mK/s, what is the shortest time for a 2 K rise if no heat escapes? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "statics-materials-13-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 318.31,
+        "unit": "s",
+        "tolerance": 1.0,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Divide 2 K by the rate in K/s.",
+        "solution": "2/0.00628 = 318 s.",
+        "lesson_ids": [
+          "statics-materials-13"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "statics-materials-13:plan-statements",
+      "type": "multiple_select",
+      "prompt": "Which elements make an accelerated fatigue test of the scaffold interpretable? Select all that apply.",
+      "points": 2,
+      "objective_ids": [
+        "statics-materials-13-objective-3"
+      ],
+      "options": [
+        "Raise the stress amplitude far above service levels without checking the failure mode.",
+        "Keep the specimens in fluid at 37 °C and measure the specimen temperature.",
+        "Treat specimens that survive to the cutoff as failures.",
+        "Fix the stopping criteria (stiffness, height or flow resistance) before the test.",
+        "Run a subset at the reference frequency to check that acceleration does not change the result."
+      ],
+      "solution_spec": {
+        "answer": [
+          1,
+          3,
+          4
+        ],
+        "partial_credit": "correct-minus-incorrect-clamped-v1"
+      },
+      "feedback": {
+        "hint": "Ask what could change the mechanism, and what has to be decided in advance.",
+        "solution": "The wet, warm environment, a frequency check with a temperature measurement and pre-set stopping criteria keep the test interpretable. An unchecked high amplitude can change the failure mode, and run-outs are censored, not failures.",
+        "lesson_ids": [
+          "statics-materials-13"
+        ],
+        "misconception_ids": [
+          "static-test-is-service-test"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
     }
   ]
 }

@@ -4,7 +4,24 @@
 
 2026-10-06; synthetic local learner data only. Milestones 1 and 2 are implemented. Milestone 3 remains partial; deterministic graders and prototype graded-assignment and review workflows are described below. A Milestone 4 curriculum-map increment is implemented and tested, while subject-matter review and map refinement remain. All 25 course packages are **partial**; zero are beta, complete or externally reviewed. Human score review is limited to saved attempts and does not constitute course-content review. No semester equivalence, university credit, security certification or public production deployment is asserted.
 
-## Current increment: cellular biomechanics gets a proposed 14-week schedule, seven lessons and a stiffness and ligand-density lab (2026-10-08, twenty-second pass)
+## Current increment: statics and materials gets a proposed 14-week schedule, seven lessons and a fatigue-lives lab (2026-10-08, twenty-third pass)
+
+Written by an AI coding assistant. Statics & Mechanics of Materials moves from 0.3.2 to 0.4.0 and stays `partial`, unreviewed and formative-only.
+
+- **Proposed 14-week schedule** (`duration.weeks`) and a regenerated syllabus: the four short prototype units sit in weeks 1, 3, 4 and 8 beside the original lessons; week 12 is a lab and week 14 a lesson that prepares the existing course case. The manifest says the schedule is not evidence of semester equivalence.
+- **Seven lessons (7 to 13)**, each about 1,050 to 1,520 words with a worked example, common mistakes, eight or nine items and four cards: stress concentrations (holes, notches, the fatigue notch factor); fatigue (Basquin, Goodman, Miner); buckling of slender struts (Euler load, slenderness); principal stresses, Mohr's circle and the Tresca and von Mises criteria; beam deflection and the flexural modulus; brittle strength and the Weibull distribution; and a failure analysis and accelerated test plan for a scaffold that meets a static strength target and collapses under cyclic perfusion.
+- **Virtual lab 1**: synthetic fatigue lives of 20 specimens at four stress amplitudes, with two run-outs at the cutoff (20 rows). Eight items (a 12-cell summary upload by level, the scatter at one level, a fitted slope and Basquin exponent, a data-interpretation item on the bias of two treatments of the run-outs, an extrapolated life, a structured item and a multiple-select item).
+- **Review record:** [statics-materials-0.4.0.md](reviews/ai-assisted/statics-materials-0.4.0.md). All 74 numeric keys in the package, including the 17 that predate this pass, agree with independent recalculation, as do the lab keys against its CSV and the numbers the lessons quote without asking for them. All 68 new items earn full credit under the real grader on the first run. Eleven drafting problems, including a reversed statement, a worked example with an impossible result and a sentence on run-outs with the wrong direction of bias, were fixed before the commit.
+- Tests: 78 recalculation and statement checks for statics and materials; the schedule, the no-design-basis statements, the syllabus outcomes and the lab keys against its CSV have tests; the inventory pins moved to 273 lessons, 1,248 questions and 832 cards.
+
+| Command/check (this container, Python 3.12.3, 2026-10-08) | Result |
+| --- | --- |
+| `python tools/validate_content.py` | PASS: 25 packages, 273 lessons, 1248 questions, 832 cards, 25 cases; 0 errors; 98 disclosed legacy-depth warnings |
+| `verify.sh` | see the PROGRESS.md entry for this pass |
+
+Not run: frontend checks, Docker Compose, Playwright for this pass. Not reviewed by a person.
+
+## Previous increment: cellular biomechanics gets a proposed 14-week schedule, seven lessons and a stiffness and ligand-density lab (2026-10-08, twenty-second pass)
 
 Written by an AI coding assistant. Cellular Biomechanics & Mechanobiology moves from 0.2.1 to 0.3.0 and stays `partial`, unreviewed and formative-only.
 

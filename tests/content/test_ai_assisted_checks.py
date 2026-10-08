@@ -1733,3 +1733,286 @@ def test_cellular_biomechanics_lab_text_and_keys_agree_with_the_dataset():
     # the gel means were built from the stated condition means with a between-gel spread of -6, 0 and +6
     assert [round(_CB_COND[c]) for c in _CB_CONDITIONS] == [22, 28, 36, 50, 42, 68]
     assert all(sorted(round(v - _CB_COND[c]) for v in _cb_gel_means(c)) == [-6, 0, 6] for c in _CB_CONDITIONS)
+
+
+# ---- statics and mechanics of materials 0.4.0 ---------------------------------------------------------------
+def _basquin_life(sa: float, sf: float, b: float) -> float:
+    return 0.5 * (sa / sf) ** (1 / b)
+
+
+def _euler_load(e: float, d: float, length: float, k: float = 1.0) -> float:
+    return math.pi ** 2 * e * (math.pi * d ** 4 / 64) / (k * length) ** 2
+
+
+def _weibull_pf(s: float, s0: float, m: float, v: float = 1.0) -> float:
+    return 1 - math.exp(-v * (s / s0) ** m)
+
+
+def _sm_lab_rows() -> list[dict[str, str]]:
+    import csv
+    return list(csv.DictReader((COURSES / "statics-materials/labs/fatigue-lives-by-stress-amplitude.csv").open(encoding="utf-8")))
+
+
+_SM_ROWS = _sm_lab_rows()
+_SM_LEVELS = [("s300", 300), ("s260", 260), ("s230", 230), ("s200", 200)]
+
+
+def _sm_logs(level: str, failed_only: bool = True) -> list[float]:
+    return [math.log10(float(r["cycles"])) for r in _SM_ROWS if r["level"] == level and (r["status"] == "failed" or not failed_only)]
+
+
+def _sm_fit() -> tuple[float, float, float]:
+    xs = [math.log10(s) for lv, s in _SM_LEVELS[:3]]
+    ys = [sum(_sm_logs(lv)) / len(_sm_logs(lv)) for lv, _ in _SM_LEVELS[:3]]
+    mx, my = sum(xs) / 3, sum(ys) / 3
+    slope = sum((x - mx) * (y - my) for x, y in zip(xs, ys)) / sum((x - mx) ** 2 for x in xs)
+    return slope, mx, my
+
+
+_SM_SLOPE, _SM_MX, _SM_MY = _sm_fit()
+_SM_I_STRUT = math.pi * 0.5 ** 4 / 64
+_SM_A_STRUT = math.pi * 0.5 ** 2 / 4
+_SM_D_DESIGN = _bisect(lambda d: _euler_load(2000.0, d, 5.0) - 5.0, 0.1, 2.0)
+_SM_VM = math.sqrt(80 ** 2 - 80 * 20 + 20 ** 2 + 3 * 30 ** 2)
+_SM_I_STRIP = 5 * 1 ** 3 / 12
+_SM_ENERGY = math.pi * 0.2e6 * (0.2 / 5.0) * 0.1                      # J/m^3 per cycle: pi sigma_a eps_a sin(delta)
+_SM_RATE_10 = _SM_ENERGY * 10 / 4.0e6                                  # K/s
+_SM_BOLD_MOHR = (math.hypot((80 - 20) / 2, 30), 50 + math.hypot(30, 30), 50 - math.hypot(30, 30))
+_SM_WEIBULL_M = (math.log(-math.log(1 - 0.60)) - math.log(-math.log(1 - 0.10))) / (math.log(90) - math.log(70))
+
+STATICS_MATERIALS_NUMERIC = {
+    # items written before 2026-10-08, recomputed from the numbers in their prompts
+    "statics-materials-1:check": 600 / 2,
+    "statics-materials-2:check": 500 / 50,
+    "statics-materials-4:check": 120 / 40,
+    "statics-materials-1:reaction-force": 200 * 1.0 / 4.0,
+    "statics-materials-2:stress-units": 1200 / 30,
+    "statics-materials-3:bending-stress": 500 * 0.05 / (0.05 * 0.1 ** 3 / 12) / 1e6,
+    "statics-materials-4:factor-of-safety": 250 / 100,
+    "statics-materials-5:second-moment": math.pi / 4 * (13 ** 4 - 7 ** 4),
+    "statics-materials-5:bending-stress": 100e3 * 13 / 20546,
+    "statics-materials-5:combined-stress": 100e3 * 13 / (math.pi / 4 * (13 ** 4 - 7 ** 4)) + 2000 / (math.pi * (13 ** 2 - 7 ** 2)),
+    "statics-materials-5:safety-factor": 150 / (100e3 * 13 / (math.pi / 4 * (13 ** 4 - 7 ** 4)) + 2000 / (math.pi * (13 ** 2 - 7 ** 2))),
+    "statics-materials-5:solid-equivalent": 100e3 * math.sqrt(120.0) / (math.pi * math.sqrt(120.0) ** 4 / 4),
+    "statics-materials-6:muscle-force": (15 * 15 + 50 * 35) / 4,
+    "statics-materials-6:joint-reaction": (15 * 15 + 50 * 35) / 4 - 15 - 50,
+    "statics-materials-6:angled-muscle": 493.75 / math.sin(math.radians(80)),
+    "statics-materials-6:compression": 501.4 * math.cos(math.radians(80)),
+    "statics-materials-6:mechanical-advantage": 4 / 35,
+    # statics-materials-7: stress concentrations
+    "statics-materials-7:hole-local-stress": 3 * 50,
+    "statics-materials-7:first-yield-stress": 120 / 3,
+    "statics-materials-7:ellipse-kt": 1 + 2 * 2 / 0.5,
+    "statics-materials-7:ellipse-local-stress": 9 * 50,
+    "statics-materials-7:notch-kt": 1 + 2 * math.sqrt(1 / 0.1),
+    "statics-materials-7:smaller-root-radius": 1 + 2 * math.sqrt(1 / 0.05),
+    "statics-materials-7:fatigue-notch-factor": 1 + 0.8 * (3 - 1),
+    # statics-materials-8: fatigue
+    "statics-materials-8:stress-amplitude": (200 - 20) / 2,
+    "statics-materials-8:mean-stress": (200 + 20) / 2,
+    "statics-materials-8:stress-ratio": 20 / 200,
+    "statics-materials-8:life-at-300": _basquin_life(300, 900, -0.1) / 1000,
+    "statics-materials-8:life-ratio": _basquin_life(0.9 * 300, 900, -0.1) / _basquin_life(300, 900, -0.1),
+    "statics-materials-8:miner-sum": 10_000 / 29_525 + 500_000 / 1_702_531,
+    "statics-materials-8:goodman-amplitude": 150 * (1 - 200 / 600),
+    # statics-materials-9: buckling
+    "statics-materials-9:radius-of-gyration": math.sqrt(_SM_I_STRUT / _SM_A_STRUT),
+    "statics-materials-9:slenderness": 5.0 / math.sqrt(_SM_I_STRUT / _SM_A_STRUT),
+    "statics-materials-9:critical-load": _euler_load(2000.0, 0.5, 5.0),
+    "statics-materials-9:critical-stress": _euler_load(2000.0, 0.5, 5.0) / _SM_A_STRUT,
+    "statics-materials-9:length-doubled": _euler_load(2000.0, 0.5, 10.0),
+    "statics-materials-9:fixed-fixed": _euler_load(2000.0, 0.5, 5.0, k=0.5),
+    "statics-materials-9:transition-slenderness": math.pi * math.sqrt(2000 / 40),
+    "statics-materials-9:design-diameter": _SM_D_DESIGN,
+    # statics-materials-10: combined stress
+    "statics-materials-10:mohr-radius": _SM_BOLD_MOHR[0],
+    "statics-materials-10:principal-max": _SM_BOLD_MOHR[1],
+    "statics-materials-10:principal-min": _SM_BOLD_MOHR[2],
+    "statics-materials-10:principal-angle": math.degrees(math.atan2(2 * 30, 80 - 20) / 2),
+    "statics-materials-10:inclined-plane": 50 + 30 * math.cos(math.radians(60)) + 30 * math.sin(math.radians(60)),
+    "statics-materials-10:von-mises": _SM_VM,
+    "statics-materials-10:safety-factor": 120 / _SM_VM,
+    "statics-materials-10:shear-yield": 120 / math.sqrt(3),
+    # statics-materials-11: beam deflection
+    "statics-materials-11:second-moment": _SM_I_STRIP,
+    "statics-materials-11:central-deflection": 2 * 20 ** 3 / (48 * 3000 * _SM_I_STRIP),
+    "statics-materials-11:bending-stiffness": 48 * 3000 * _SM_I_STRIP / 20 ** 3,
+    "statics-materials-11:centre-stress": (2 * 20 / 4) * 0.5 / _SM_I_STRIP,
+    "statics-materials-11:thickness-halved": (5 * 0.5 ** 3 / 12) / (5 * 1.0 ** 3 / 12),
+    "statics-materials-11:cantilever-tip": 0.05 * 20 ** 3 / (3 * 3000 * _SM_I_STRIP),
+    "statics-materials-11:uniform-load": 5 * 0.02 * 20 ** 4 / (384 * 3000 * _SM_I_STRIP),
+    "statics-materials-11:flexural-modulus": 11.2 * 24 ** 3 / (48 * (6 * 1.2 ** 3 / 12)),
+    # statics-materials-12: Weibull strength
+    "statics-materials-12:failure-probability": _weibull_pf(80, 100, 10),
+    "statics-materials-12:characteristic-fraction": 1 - math.exp(-1),
+    "statics-materials-12:stress-for-one-percent": _bisect(lambda s: _weibull_pf(s, 100, 10) - 0.01, 1.0, 100.0),
+    "statics-materials-12:size-factor": 8 ** (-1 / 10),
+    "statics-materials-12:large-part-stress": _bisect(lambda s: _weibull_pf(s, 100, 10, v=8) - 0.01, 1.0, 100.0),
+    "statics-materials-12:lower-modulus": _weibull_pf(80, 100, 5),
+    "statics-materials-12:modulus-two-points": _SM_WEIBULL_M,
+    # statics-materials-13: cyclic perfusion failure analysis
+    "statics-materials-13:static-factor": 1.9 / 0.4,
+    "statics-materials-13:service-cycles": 30 * 24 * 3600 * 1.0 / 1e6,
+    "statics-materials-13:strut-amplitude": 40 * 0.2,
+    "statics-materials-13:strut-life": _basquin_life(8.0, 30.0, -0.08) / 1e6,
+    "statics-materials-13:life-after-degradation": _basquin_life(8.0, 30.0, -0.08) / _basquin_life(8.0, 30.0 * 0.85, -0.08),
+    "statics-materials-13:buckling-modulus": 0.86 / 2.0,
+    "statics-materials-13:heating-rate": _SM_RATE_10 * 1000,
+    "statics-materials-13:time-to-2k": 2.0 / _SM_RATE_10,
+    # virtual lab 1, recomputed from the CSV
+    "statics-materials-lab1:scatter-260": _sd(_sm_logs("s260")),
+    "statics-materials-lab1:fitted-slope": _SM_SLOPE,
+    "statics-materials-lab1:basquin-exponent": 1 / _SM_SLOPE,
+    "statics-materials-lab1:extrapolated-life": _SM_MY + _SM_SLOPE * (math.log10(160) - _SM_MX),
+}
+
+
+@pytest.mark.parametrize("question_id,expected", sorted(STATICS_MATERIALS_NUMERIC.items()))
+def test_statics_materials_numeric_key_matches_independent_recalculation(question_id, expected):
+    spec = bank("statics-materials")[question_id]["solution_spec"]
+    allowed = spec["tolerance"] + (spec.get("relative_tolerance") or 0) * abs(spec["answer"])
+    assert abs(spec["answer"] - expected) <= allowed, (question_id, spec["answer"], expected)
+
+
+def test_every_statics_materials_numeric_item_is_recalculated():
+    numeric = {qid for qid, item in bank("statics-materials").items() if item["type"] == "numeric"}
+    assert numeric == set(STATICS_MATERIALS_NUMERIC)
+
+
+def test_statics_materials_concentration_fatigue_and_buckling_lessons_state_the_computed_numbers():
+    text = reading("statics-materials", "statics-materials-7")
+    kt_notch = 1 + 2 * math.sqrt(1 / 0.1)
+    kt_2 = 1 + 2 * math.sqrt(0.8 / 0.2)
+    _fragments_in(text, [
+        f"3 × 50 = **{3 * 50:.0f} MPa**", f"120/3 = **{120 / 3:.0f} MPa**", f"K_t = 1 + 2 × 2/0.5 = **{1 + 2 * 2 / 0.5:.0f}**", f"local stress of **{9 * 50:.0f} MPa**",
+        f"= **{kt_notch:.2f}**", f"raises it to {1 + 2 * math.sqrt(1 / 0.05):.2f}", f"K_f = 1 + 0.8 × 2 = **{1 + 0.8 * 2:.1f}**",
+        f"12000/(30 × 2) = {12000 / (30 * 2):.0f} MPa", f"12000/(24 × 2) = **{12000 / (24 * 2):.0f} MPa**",
+        f"σ_max = 2.5 × 90 = {2.5 * 90:.0f} MPa; first yield at 200/2.5 = {200 / 2.5:.0f} MPa", f"K_t = 1 + 2 × 1.5/0.75 = {1 + 2 * 1.5 / 0.75:.0f}",
+        f"K_t = 1 + 2√(0.8/0.2) = {kt_2:.2f}; K_f = 1 + 0.6 × ({kt_2:.2f} − 1) = {1 + 0.6 * (kt_2 - 1):.2f}",
+    ])
+    miner = 10_000 / _basquin_life(300, 900, -0.1) + 500_000 / _basquin_life(200, 900, -0.1)
+    text = reading("statics-materials", "statics-materials-8")
+    _fragments_in(text, [
+        "σ_a = **90 MPa**, σ_m = **110 MPa** and R = **0.1**", f"= **{_basquin_life(300, 900, -0.1):,.0f} cycles**", f"N_f = **{_basquin_life(200, 900, -0.1):,.0f} cycles**",
+        f"0.9^(−10) = **{0.9 ** -10:.2f}**", f"150 × (1 − 200/600) = **{150 * (1 - 200 / 600):.0f} MPa**",
+        f"= {10_000 / _basquin_life(300, 900, -0.1):.3f} + {500_000 / _basquin_life(200, 900, -0.1):.3f} = **{miner:.3f}**", f"About {1 - miner:.0%} of the life remains",
+    ])
+    n_250, n_200 = _basquin_life(250, 800, -0.12), _basquin_life(200, 800, -0.12)
+    d2 = 2_000 / n_250 + 15_000 / n_200
+    _fragments_in(text, [
+        f"= {n_250:,.0f}; N_f(200) = {n_200:,.0f} cycles", f"D = 2,000/{n_250:,.0f} + 15,000/{n_200:,.0f} = {2_000 / n_250:.3f} + {15_000 / n_200:.3f} = {d2:.3f}",
+        f"R = {30 / 150:.2f}", f"use {d2:.0%} of the life, so the remaining life is {1 - d2:.0%}",
+    ])
+    text = reading("statics-materials", "statics-materials-9")
+    d_design = _SM_D_DESIGN
+    i_2 = math.pi * 0.8 ** 4 / 64
+    a_2 = math.pi * 0.8 ** 2 / 4
+    p_2 = _euler_load(1500.0, 0.8, 6.0, k=0.7)
+    _fragments_in(text, [
+        f"**{_SM_I_STRUT * 1e-12 / 1e-15:.3f} × 10⁻¹⁵ m⁴** ({_SM_I_STRUT:.6f} mm⁴)", f"A = {_SM_A_STRUT:.5f} mm²", "r = 0.125 mm", f"= **{_euler_load(2000.0, 0.5, 5.0):.3f} N**",
+        f"gives {_euler_load(2000.0, 0.5, 10.0):.4f} N, one quarter", f"gives {_euler_load(2000.0, 0.5, 5.0, k=0.5):.3f} N, four times", "by 16.", "λ = 5/0.125 = **40**",
+        f"= **{_euler_load(2000.0, 0.5, 5.0) / _SM_A_STRUT:.2f} MPa**", f"λ* = **{math.pi * math.sqrt(2000 / 40):.2f}**", f"**d = {d_design:.3f} mm**", f"slenderness of {5 / (d_design / 4):.1f}",
+        f"I = π × 0.8⁴/64 = {i_2:.5f} mm⁴, A = {a_2:.4f} mm² and r = d/4 = 0.20 mm", f"/(0.7 × 6)² = {p_2:.2f} N, which corresponds to σ_cr = {p_2 / a_2:.2f} MPa",
+        f"λ = 0.7 × 6/0.20 = {0.7 * 6 / 0.2:.0f}", f"λ* = π √(1500/30) = {math.pi * math.sqrt(1500 / 30):.2f}", f"σ_y A = 30 × {a_2:.4f} = {30 * a_2:.2f} N, below the Euler value of {p_2:.2f} N",
+        f"overestimated the capacity by {p_2 / (30 * a_2) - 1:.0%}",
+    ])
+
+
+def test_statics_materials_stress_beam_brittle_and_capstone_lessons_state_the_computed_numbers():
+    s1, s2 = _SM_BOLD_MOHR[1], _SM_BOLD_MOHR[2]
+    text = reading("statics-materials", "statics-materials-10")
+    sig_30 = 50 + 30 * math.cos(math.radians(60)) + 30 * math.sin(math.radians(60))
+    tau_30 = -30 * math.sin(math.radians(60)) + 30 * math.cos(math.radians(60))
+    _fragments_in(text, [
+        f"= **{sig_30:.2f} MPa** and τθ = −{abs(tau_30):.2f} MPa", f"R = √(30² + 30²) = **{_SM_BOLD_MOHR[0]:.2f} MPa**", f"σ1 = **{s1:.2f} MPa** and σ2 = **{s2:.2f} MPa**",
+        f"θp = ½ atan(2 × 30/60) = **{math.degrees(math.atan2(60, 60)) / 2:.1f}°**", f"σ1/2 = {s1 / 2:.2f} MPa", f"σ_vm = **{_SM_VM:.2f} MPa**", f"the Tresca value is {s1:.2f} MPa",
+        f"**{120 / _SM_VM:.3f}** by von Mises and {120 / s1:.3f} by Tresca", f"σ_y/√3 = **{120 / math.sqrt(3):.2f} MPa**",
+    ])
+    r_2 = math.hypot(40, 35)
+    p1, p2 = 20 + r_2, 20 - r_2
+    vm_2 = math.sqrt(60 ** 2 - 60 * (-20) + (-20) ** 2 + 3 * 35 ** 2)
+    _fragments_in(text, [
+        f"R = √(40² + 35²) = {r_2:.2f} MPa", f"σ1 = 20 + {r_2:.2f} = {p1:.2f} MPa and σ2 = 20 − {r_2:.2f} = −{abs(p2):.2f} MPa", f"at θp = ½ atan(2 × 35/80) = {math.degrees(math.atan2(70, 80)) / 2:.2f}°",
+        f"= {vm_2:.2f} MPa, so n = 150/{vm_2:.2f} = {150 / vm_2:.3f}", f"σ1 − σ2 = {p1 - p2:.2f} MPa", f"n = 150/{p1 - p2:.2f} = {150 / (p1 - p2):.3f}",
+    ])
+    text = reading("statics-materials", "statics-materials-11")
+    ei = 3000 * _SM_I_STRIP
+    k_2 = 48 * 2400 * (4 * 0.8 ** 3 / 12) / 16 ** 3
+    h_req = (10 * 16 ** 3 / (4 * 2400 * 4)) ** (1 / 3)
+    _fragments_in(text, [
+        f"I = 5 × 1³/12 = **{_SM_I_STRIP:.4f} mm⁴**, EI = {ei:.0f} N·mm²", f"= 2 × 20³/(48 × {ei:.0f}) = **{2 * 20 ** 3 / (48 * ei):.4f} mm**", f"= **{48 * ei / 20 ** 3:.1f} N/mm**",
+        f"σ = 3PL/(2bh²) = **{3 * 2 * 20 / (2 * 5 * 1 ** 2):.1f} MPa**", f"{2 * 20 ** 3 / (48 * ei) / 20:.1%} of the span", "multiplies the stiffness by 0.125, one eighth",
+        f"= 0.05 × 20³/(3 × {ei:.0f}) = **{0.05 * 20 ** 3 / (3 * ei):.5f} mm**", f"δ = 5wL⁴/(384EI) = **{5 * 0.02 * 20 ** 4 / (384 * ei):.5f} mm**", f"= **{11.2 * 24 ** 3 / (4 * 6 * 1.2 ** 3):.0f} MPa**",
+        f"I = 4 × 0.8³/12 = {4 * 0.8 ** 3 / 12:.5f} mm⁴", f"= {1.3 * 16 ** 3 / (48 * 2400 * 4 * 0.8 ** 3 / 12):.4f} mm", f"k = 48EI/L³ = {k_2:.2f} N/mm and σ = 3PL/(2bh²) = {3 * 1.3 * 16 / (2 * 4 * 0.8 ** 2):.2f} MPa",
+        f"= {h_req ** 3:.4f} mm³, so h = {h_req:.3f} mm", f"factor of {10 / k_2:.2f}", f"ratio of {16 / h_req:.1f}",
+    ])
+    text = reading("statics-materials", "statics-materials-12")
+    strengths = [62.0, 71.0, 77.0, 83.0, 88.0, 96.0]
+    xs = [math.log(s) for s in strengths]
+    ys = [math.log(-math.log(1 - (i + 0.5) / 6)) for i in range(6)]
+    mx, my = sum(xs) / 6, sum(ys) / 6
+    m_fit = sum((x - mx) * (y - my) for x, y in zip(xs, ys)) / sum((x - mx) ** 2 for x in xs)
+    s0_fit = math.exp(mx - my / m_fit)
+    s_1pct = _bisect(lambda s: _weibull_pf(s, 100, 10) - 0.01, 1.0, 100.0)
+    s_1pct_big = _bisect(lambda s: _weibull_pf(s, 100, 10, v=8) - 0.01, 1.0, 100.0)
+    k_ic_stress = lambda a: 1.0 / (1.12 * math.sqrt(math.pi * a))             # noqa: E731
+    _fragments_in(text, [
+        f"σ_f = **{k_ic_stress(50e-6):.1f} MPa** for a 50 μm flaw and **{k_ic_stress(20e-6):.1f} MPa** for a 20 μm flaw", f"1 − 1/e = **{1 - math.exp(-1):.3f}**",
+        f"P_f(80 MPa) = 1 − exp(−0.8^10) = **{_weibull_pf(80, 100, 10):.4f}** and P_f(60 MPa) = {_weibull_pf(60, 100, 10):.4f}", f"factor of about {_weibull_pf(80, 100, 10) / _weibull_pf(60, 100, 10):.0f}",
+        f"σ = **{s_1pct:.2f} MPa**, about {s_1pct / 100:.0%} of σ₀", f"m = **{_SM_WEIBULL_M:.2f}**", f"m = {m_fit:.1f} and σ₀ = {s0_fit:.1f} MPa",
+        f"8^(−1/10) = **{8 ** (-1 / 10):.4f}**", f"from {s_1pct:.2f} MPa to **{s_1pct_big:.2f} MPa**", f"factor of {8 ** (-1 / 5):.3f}", f"rises from {_weibull_pf(80, 100, 10):.3f} to **{_weibull_pf(80, 100, 5):.4f}**",
+        f"1 − exp(−(0.75)^8) = 1 − exp(−{0.75 ** 8:.4f}) = {_weibull_pf(90, 120, 8):.4f}",
+        f"σ = 120 × [−ln(0.995)]^(1/8) = 120 × {(-math.log(0.995)) ** (1 / 8):.4f} = {120 * (-math.log(0.995)) ** (1 / 8):.1f} MPa", f"27^(−1/8) = {27 ** (-1 / 8):.4f}",
+        f"{120 * (-math.log(0.995)) ** (1 / 8):.1f} × {27 ** (-1 / 8):.4f} = {120 * (-math.log(0.995)) ** (1 / 8) * 27 ** (-1 / 8):.1f} MPa", f"about {27 ** (-1 / 8):.0%} of the stress",
+    ])
+    text = reading("statics-materials", "statics-materials-13")
+    n_strut = _basquin_life(8.0, 30.0, -0.08)
+    n_deg = _basquin_life(8.0, 25.5, -0.08)
+    w_cycle = _SM_ENERGY
+    _fragments_in(text, [
+        f"1.9/0.4 = **{1.9 / 0.4:.2f}**", "40 × 0.2 = **8.0 MPa**", f"30 × 86,400 = **{30 * 86400:,.0f} cycles**", f"= **{n_strut / 1e6:.2f} million cycles**, about {n_strut / (30 * 86400):.1f} times",
+        "to 25.5 MPa", f"The life becomes {n_deg / 1e6:.2f} million cycles, shorter by the factor 0.85^(−12.5) = **{n_strut / n_deg:.2f}**, which is {n_deg / 86400:.1f} days",
+        f"0.86/2.0 = **{0.86 / 2.0:.2f}**", f"take {30 * 86400 / 10 / 86400:.1f} days at 10 Hz", "the strain amplitude is 0.040", f"**{w_cycle / 1000:.3f} kJ/m³**", f"At 10 Hz this is {w_cycle * 10:,.0f} W/m³",
+        f"**{_SM_RATE_10 * 1000:.2f} mK/s**", f"at least **{2 / _SM_RATE_10:.0f} s**", f"At 1 Hz the rate is {_SM_RATE_10 * 100:.3f} mK/s and the same rise takes {2 / (_SM_RATE_10 / 10):,.0f} s",
+        f"divides the life by {1.25 ** 12.5:.1f}", "This plan uses 50 specimens (20 + 5 + 15 + 5 + 5)",
+    ])
+    ss_2 = 35 * 0.15
+    n_2, n_2d = _basquin_life(ss_2, 28.0, -0.09), _basquin_life(ss_2, 28.0 * 0.85, -0.09)
+    w_2 = math.pi * 0.15e6 * (0.15 / 4.0) * 0.08
+    _fragments_in(text, [
+        f"35 × 0.15 = {ss_2:.2f} MPa", f"= {n_2 / 1e6:.1f} million cycles, a margin of {n_2 / (30 * 86400):.1f} over 2,592,000", f"σ_f′ = {28 * 0.85:.1f} MPa, N_f = {n_2d / 1e6:.2f} million cycles, a margin of {n_2d / (30 * 86400):.1f}",
+        f"{w_2:,.0f} J/m³ per cycle", f"{w_2 * 10:,.0f}/4,000,000 = {w_2 * 10 / 4e6 * 1000:.2f} mK/s", f"takes at least {2 / (w_2 * 10 / 4e6):.0f} s",
+    ])
+
+
+def test_statics_materials_lab_text_and_keys_agree_with_the_dataset():
+    assert len(_SM_ROWS) == 20 and {r["level"] for r in _SM_ROWS} == {lv for lv, _ in _SM_LEVELS}
+    runouts = [r for r in _SM_ROWS if r["status"] == "runout"]
+    assert [r["level"] for r in runouts] == ["s200", "s200"] and all(int(r["cycles"]) == 2_000_000 for r in runouts)
+    assert all(int(r["cycles"]) < 2_000_000 for r in _SM_ROWS if r["status"] == "failed")
+    assert all(int(r["amplitude_mpa"]) == dict(_SM_LEVELS)[r["level"]] for r in _SM_ROWS)
+    # the lives were built from Basquin's law (sigma_f' = 900 MPa, b = -0.10) with spread in log10 life
+    for level, amplitude in _SM_LEVELS[:3]:
+        line = math.log10(0.5) - 10 * math.log10(amplitude / 900)
+        logs = _sm_logs(level)
+        assert abs(sum(logs) / len(logs) - line) < 0.05, level
+        assert 0.1 < _sd(logs) < 0.25, level
+    text = (COURSES / "statics-materials/labs/01-fatigue-lives-scatter-and-run-outs.md").read_text(encoding="utf-8")
+    means = [sum(_sm_logs(lv)) / len(_sm_logs(lv)) for lv, _ in _SM_LEVELS]
+    mean_all_200 = sum(_sm_logs("s200", failed_only=False)) / 5
+    sd_260 = _sd(_sm_logs("s260"))
+    ratio_260 = max(float(r["cycles"]) for r in _SM_ROWS if r["level"] == "s260") / min(float(r["cycles"]) for r in _SM_ROWS if r["level"] == "s260")
+    log_160 = _SM_MY + _SM_SLOPE * (math.log10(160) - _SM_MX)
+    _fragments_in(text, [
+        "are " + ", ".join(f"{m:.3f}" for m in means) + ", in the order of the table", f"at 260 MPa is {sd_260:.3f}, a factor of {10 ** sd_260:.2f} in cycles", f"the longest life is {ratio_260:.1f} times the shortest",
+        f"slope −{abs(_SM_SLOPE):.2f}, so b = 1/−{abs(_SM_SLOPE):.2f} = −{abs(1 / _SM_SLOPE):.3f}", f"the three failures is {means[3]:.3f}", f"counted at the cutoff is {mean_all_200:.3f}",
+        f"median log10 life of {log_160:.2f}, about {10 ** log_160 / 1e6:.0f} million cycles", "nothing here is evidence about any device",
+    ])
+    field = bank("statics-materials")["statics-materials-lab1:runout-bias"]["solution_spec"]["field_specs"][0]
+    assert abs(field["answer"] - mean_all_200) <= field["tolerance"] and field["significant_figures"] == 3
+    checks = {(c["row_id"], c["column"]): c["answer"] for c in bank("statics-materials")["statics-materials-lab1:level-summary"]["solution_spec"]["validation_spec"]["checks"]}
+    assert len(checks) == 12
+    for level, _ in _SM_LEVELS:
+        failed = len(_sm_logs(level))
+        assert checks[(level, "specimens")] == 5 and checks[(level, "failures")] == failed
+        assert abs(checks[(level, "mean_log10_failed")] - sum(_sm_logs(level)) / failed) < 1e-3

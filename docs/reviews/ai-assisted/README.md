@@ -17,3 +17,4 @@ review that do.
 | Bioreactors & Tissue Culture Engineering 0.4.0 (new lessons, lab and schedule) | 2026-10-08 | [bioreactors-0.4.0.md](bioreactors-0.4.0.md) |
 | Thermodynamics & Transport in Bioengineering 0.4.0 (new lessons, lab and schedule) | 2026-10-08 | [transport-0.4.0.md](transport-0.4.0.md) |
 | Cellular Biomechanics & Mechanobiology 0.3.0 (new lessons, lab and schedule) | 2026-10-08 | [cellular-biomechanics-0.3.0.md](cellular-biomechanics-0.3.0.md) |
+| Statics & Mechanics of Materials 0.4.0 (new lessons, lab and schedule) | 2026-10-08 | [statics-materials-0.4.0.md](statics-materials-0.4.0.md) |

@@ -80,6 +80,110 @@
       "original_content": true,
       "license": "CC-BY-4.0",
       "modifications": []
+    },
+    {
+      "module_id": "statics-materials-module-7",
+      "lesson_id": "statics-materials-7",
+      "reading": "modules/07-stress-concentrations-holes-and-notches.md",
+      "source_ids": [
+        "solidMechanics",
+        "mechanics"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "statics-materials-module-8",
+      "lesson_id": "statics-materials-8",
+      "reading": "modules/08-fatigue-sn-curves-and-cumulative-damage.md",
+      "source_ids": [
+        "solidMechanics",
+        "mechanics"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "statics-materials-module-9",
+      "lesson_id": "statics-materials-9",
+      "reading": "modules/09-buckling-of-slender-struts.md",
+      "source_ids": [
+        "solidMechanics",
+        "mechanics"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "statics-materials-module-10",
+      "lesson_id": "statics-materials-10",
+      "reading": "modules/10-principal-stresses-mohrs-circle-and-yield.md",
+      "source_ids": [
+        "solidMechanics",
+        "mechanics"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "statics-materials-module-11",
+      "lesson_id": "statics-materials-11",
+      "reading": "modules/11-beam-deflection-and-flexural-modulus.md",
+      "source_ids": [
+        "solidMechanics",
+        "mechanics"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "statics-materials-module-12",
+      "lesson_id": "statics-materials-12",
+      "reading": "modules/12-weibull-strength-and-the-size-effect.md",
+      "source_ids": [
+        "solidMechanics",
+        "mechanics"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "statics-materials-module-lab-01",
+      "lesson_id": "statics-materials-lab-01",
+      "reading": "labs/01-fatigue-lives-scatter-and-run-outs.md",
+      "source_ids": [
+        "solidMechanics",
+        "mechanics"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "statics-materials-module-13",
+      "lesson_id": "statics-materials-13",
+      "reading": "modules/13-cyclic-perfusion-failure-analysis-and-test-plan.md",
+      "source_ids": [
+        "solidMechanics",
+        "mechanics"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
     }
   ]
 }

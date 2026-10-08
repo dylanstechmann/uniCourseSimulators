@@ -7,7 +7,7 @@
   "domain": "Mechanical engineering",
   "level": "Year 2",
   "maturity": "partial",
-  "version": "0.3.2",
+  "version": "0.4.0",
   "license": "MIT OR CC-BY-4.0",
   "content_origin": {
     "kind": "legacy-prototype",
@@ -147,12 +147,365 @@
         "statics-materials-outcome-1",
         "statics-materials-outcome-3"
       ]
+    },
+    {
+      "id": "statics-materials-7-objective-1",
+      "description": "Compute the local stress at a hole or notch from a stress concentration factor and the nominal stress.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "statics-materials-outcome-2",
+        "statics-materials-outcome-4"
+      ]
+    },
+    {
+      "id": "statics-materials-7-objective-2",
+      "description": "Use the elliptical-hole and notch relations to see how the geometry of the root controls the concentration.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "statics-materials-outcome-2",
+        "statics-materials-outcome-3"
+      ]
+    },
+    {
+      "id": "statics-materials-7-objective-3",
+      "description": "Evaluate when a stress concentration matters for static and for fatigue loading, and how to reduce it.",
+      "bloom": "evaluate",
+      "course_outcome_ids": [
+        "statics-materials-outcome-3",
+        "statics-materials-outcome-4"
+      ]
+    },
+    {
+      "id": "statics-materials-8-objective-1",
+      "description": "Compute the stress amplitude, mean stress and stress ratio of a cycle.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "statics-materials-outcome-2"
+      ]
+    },
+    {
+      "id": "statics-materials-8-objective-2",
+      "description": "Use Basquin's law to estimate life at a stress amplitude and how it responds to small changes in stress.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "statics-materials-outcome-3",
+        "statics-materials-outcome-4"
+      ]
+    },
+    {
+      "id": "statics-materials-8-objective-3",
+      "description": "Apply a mean-stress correction and Miner's rule, and evaluate their limits and the scatter of fatigue data.",
+      "bloom": "evaluate",
+      "course_outcome_ids": [
+        "statics-materials-outcome-3",
+        "statics-materials-outcome-4"
+      ]
+    },
+    {
+      "id": "statics-materials-9-objective-1",
+      "description": "Compute the second moment of area, radius of gyration and slenderness ratio of a solid circular strut.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "statics-materials-outcome-2"
+      ]
+    },
+    {
+      "id": "statics-materials-9-objective-2",
+      "description": "Use Euler's formula with an effective-length factor to find the critical load and critical stress, and see how they scale with length and diameter.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "statics-materials-outcome-3",
+        "statics-materials-outcome-4"
+      ]
+    },
+    {
+      "id": "statics-materials-9-objective-3",
+      "description": "Decide whether elastic buckling or yielding governs a given strut, and size a strut for a design load.",
+      "bloom": "evaluate",
+      "course_outcome_ids": [
+        "statics-materials-outcome-3",
+        "statics-materials-outcome-4"
+      ]
+    },
+    {
+      "id": "statics-materials-10-objective-1",
+      "description": "Compute the principal stresses, their orientation and the maximum in-plane shear stress for a plane stress state.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "statics-materials-outcome-2",
+        "statics-materials-outcome-3"
+      ]
+    },
+    {
+      "id": "statics-materials-10-objective-2",
+      "description": "Use the stress-transformation equations to find the stress on an inclined plane.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "statics-materials-outcome-2"
+      ]
+    },
+    {
+      "id": "statics-materials-10-objective-3",
+      "description": "Compare the von Mises and Tresca criteria for a ductile material and state what they do not cover.",
+      "bloom": "evaluate",
+      "course_outcome_ids": [
+        "statics-materials-outcome-3",
+        "statics-materials-outcome-4"
+      ]
+    },
+    {
+      "id": "statics-materials-11-objective-1",
+      "description": "Compute the second moment of area of a rectangular section and use the standard formulas to find the deflection and stiffness of cantilever and simply supported beams.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "statics-materials-outcome-2",
+        "statics-materials-outcome-3"
+      ]
+    },
+    {
+      "id": "statics-materials-11-objective-2",
+      "description": "Obtain a flexural modulus and the maximum stress from three-point bending data.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "statics-materials-outcome-2",
+        "statics-materials-outcome-3"
+      ]
+    },
+    {
+      "id": "statics-materials-11-objective-3",
+      "description": "Evaluate how thickness and span control stiffness, and when the simple beam formulas are not valid.",
+      "bloom": "evaluate",
+      "course_outcome_ids": [
+        "statics-materials-outcome-3",
+        "statics-materials-outcome-4"
+      ]
+    },
+    {
+      "id": "statics-materials-12-objective-1",
+      "description": "Compute the probability of failure of a brittle part under uniform stress from the Weibull distribution and invert it to find a design stress.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "statics-materials-outcome-3",
+        "statics-materials-outcome-4"
+      ]
+    },
+    {
+      "id": "statics-materials-12-objective-2",
+      "description": "Estimate the Weibull modulus from ranked strength data and interpret it as a measure of scatter.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "statics-materials-outcome-4"
+      ]
+    },
+    {
+      "id": "statics-materials-12-objective-3",
+      "description": "Evaluate how the stressed volume changes the strength (the weakest-link size effect) and when the model does not apply.",
+      "bloom": "evaluate",
+      "course_outcome_ids": [
+        "statics-materials-outcome-3",
+        "statics-materials-outcome-4"
+      ]
+    },
+    {
+      "id": "statics-materials-lab-01-objective-1",
+      "description": "Summarize fatigue lives by stress amplitude, counting failures and run-outs and averaging the logarithm of the life.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "statics-materials-outcome-4"
+      ]
+    },
+    {
+      "id": "statics-materials-lab-01-objective-2",
+      "description": "Fit a Basquin line to the level means and read the exponent and a predicted life from it.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "statics-materials-outcome-4",
+        "statics-materials-outcome-2"
+      ]
+    },
+    {
+      "id": "statics-materials-lab-01-objective-3",
+      "description": "Evaluate how scatter, censoring and extrapolation limit what fatigue data support.",
+      "bloom": "evaluate",
+      "course_outcome_ids": [
+        "statics-materials-outcome-4",
+        "statics-materials-outcome-3"
+      ]
+    },
+    {
+      "id": "statics-materials-13-objective-1",
+      "description": "Explain why a scaffold that meets a static strength target can fail under cyclic perfusion, using stress amplification, fatigue life and stiffness loss.",
+      "bloom": "analyze",
+      "course_outcome_ids": [
+        "statics-materials-outcome-3",
+        "statics-materials-outcome-4"
+      ]
+    },
+    {
+      "id": "statics-materials-13-objective-2",
+      "description": "Estimate the number of cycles in a service period, the strut stress amplitude, the fatigue life and the effect of a loss of strength.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "statics-materials-outcome-2",
+        "statics-materials-outcome-4"
+      ]
+    },
+    {
+      "id": "statics-materials-13-objective-3",
+      "description": "Design an accelerated test with controls and stopping criteria, and bound the heating that acceleration introduces.",
+      "bloom": "create",
+      "course_outcome_ids": [
+        "statics-materials-outcome-3",
+        "statics-materials-outcome-4"
+      ]
     }
   ],
   "duration": {
-    "instructional_weeks": null,
-    "equivalent_structure": null,
-    "weeks": []
+    "instructional_weeks": 14,
+    "equivalent_structure": "Proposed 14-week undergraduate scope only. The four compact prototype units sit in weeks 1, 3, 4 and 8 beside original lessons on equilibrium in the body, a long bone in bending, beam deflection, combined stress, stress concentrations, buckling, fatigue and brittle strength; week 12 is a synthetic-data lab on fatigue lives and week 14 pairs a failure-analysis lesson with the course case. All activities are open, ungraded practice. There are no graded homework sets, exams or project, and workload has not been measured, so this schedule is not evidence of semester equivalence.",
+    "weeks": [
+      {
+        "week": 1,
+        "title": "Free-body diagrams and equilibrium",
+        "lesson_ids": [
+          "statics-materials-1"
+        ],
+        "assessment_ids": [
+          "statics-materials-1-practice"
+        ]
+      },
+      {
+        "week": 2,
+        "title": "Force and moment equilibrium in the body",
+        "lesson_ids": [
+          "statics-materials-6"
+        ],
+        "assessment_ids": [
+          "statics-materials-6-practice"
+        ]
+      },
+      {
+        "week": 3,
+        "title": "Axial load, stress and strain",
+        "lesson_ids": [
+          "statics-materials-2"
+        ],
+        "assessment_ids": [
+          "statics-materials-2-practice"
+        ]
+      },
+      {
+        "week": 4,
+        "title": "Torsion and bending",
+        "lesson_ids": [
+          "statics-materials-3"
+        ],
+        "assessment_ids": [
+          "statics-materials-3-practice"
+        ]
+      },
+      {
+        "week": 5,
+        "title": "Bending of a long bone: second moment of area and combined stresses",
+        "lesson_ids": [
+          "statics-materials-5"
+        ],
+        "assessment_ids": [
+          "statics-materials-5-practice"
+        ]
+      },
+      {
+        "week": 6,
+        "title": "Beam deflection and stiffness: three-point bending and the flexural modulus",
+        "lesson_ids": [
+          "statics-materials-11"
+        ],
+        "assessment_ids": [
+          "statics-materials-11-practice"
+        ]
+      },
+      {
+        "week": 7,
+        "title": "Combined stress: principal stresses, Mohr's circle and yield criteria",
+        "lesson_ids": [
+          "statics-materials-10"
+        ],
+        "assessment_ids": [
+          "statics-materials-10-practice"
+        ]
+      },
+      {
+        "week": 8,
+        "title": "Failure criteria and design margins",
+        "lesson_ids": [
+          "statics-materials-4"
+        ],
+        "assessment_ids": [
+          "statics-materials-4-practice"
+        ]
+      },
+      {
+        "week": 9,
+        "title": "Stress concentrations: holes, notches and local stress",
+        "lesson_ids": [
+          "statics-materials-7"
+        ],
+        "assessment_ids": [
+          "statics-materials-7-practice"
+        ]
+      },
+      {
+        "week": 10,
+        "title": "Buckling of slender struts: Euler load, effective length and slenderness",
+        "lesson_ids": [
+          "statics-materials-9"
+        ],
+        "assessment_ids": [
+          "statics-materials-9-practice"
+        ]
+      },
+      {
+        "week": 11,
+        "title": "Fatigue under cyclic loading: S–N curves, mean stress and cumulative damage",
+        "lesson_ids": [
+          "statics-materials-8"
+        ],
+        "assessment_ids": [
+          "statics-materials-8-practice"
+        ]
+      },
+      {
+        "week": 12,
+        "title": "Virtual lab: fatigue lives, scatter and run-outs",
+        "lesson_ids": [
+          "statics-materials-lab-01"
+        ],
+        "assessment_ids": [
+          "statics-materials-week12-fatigue-lab"
+        ]
+      },
+      {
+        "week": 13,
+        "title": "Strength of brittle materials: flaws, scatter and the Weibull distribution",
+        "lesson_ids": [
+          "statics-materials-12"
+        ],
+        "assessment_ids": [
+          "statics-materials-12-practice"
+        ]
+      },
+      {
+        "week": 14,
+        "title": "Why a scaffold that meets its strength target can still collapse: failure analysis and an accelerated test plan",
+        "lesson_ids": [
+          "statics-materials-13"
+        ],
+        "assessment_ids": [
+          "statics-materials-13-practice",
+          "statics-materials-case"
+        ]
+      }
+    ]
   },
   "workload": {
     "estimated_total_hours": null,
@@ -341,6 +694,306 @@
           ]
         }
       ]
+    },
+    {
+      "id": "statics-materials-module-7",
+      "title": "Stress concentrations",
+      "source_ids": [
+        "solidMechanics",
+        "mechanics"
+      ],
+      "lessons": [
+        {
+          "id": "statics-materials-7",
+          "title": "Stress concentrations: holes, notches and why the nominal stress is not the stress that fails a part",
+          "reading": "modules/07-stress-concentrations-holes-and-notches.md",
+          "objectives": [
+            "statics-materials-7-objective-1",
+            "statics-materials-7-objective-2",
+            "statics-materials-7-objective-3"
+          ],
+          "worked_example": "A synthetic plate with a far-field stress of 90 MPa and a hole with K_t 2.5 has a peak stress of 225 MPa (first yield at 80 MPa far-field), an elliptical slot with semi-axes 1.5 mm and 0.75 mm has K_t 5, and a 0.8 mm notch with a 0.2 mm root has K_t 5.00 and K_f 3.40; in the lesson a 3-fold concentration puts a 50 MPa far-field stress at 150 MPa, above a 120 MPa yield strength.",
+          "question_ids": [
+            "statics-materials-7:hole-local-stress",
+            "statics-materials-7:first-yield-stress",
+            "statics-materials-7:ellipse-kt",
+            "statics-materials-7:ellipse-local-stress",
+            "statics-materials-7:notch-kt",
+            "statics-materials-7:smaller-root-radius",
+            "statics-materials-7:fatigue-notch-factor",
+            "statics-materials-7:concentration-statements"
+          ],
+          "card_ids": [
+            "statics-materials-7-card-1",
+            "statics-materials-7-card-2",
+            "statics-materials-7-card-3",
+            "statics-materials-7-card-4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "statics-materials-module-8",
+      "title": "Fatigue",
+      "source_ids": [
+        "solidMechanics",
+        "mechanics"
+      ],
+      "lessons": [
+        {
+          "id": "statics-materials-8",
+          "title": "Fatigue under cyclic loading: S–N curves, Basquin's law, mean stress and cumulative damage",
+          "reading": "modules/08-fatigue-sn-curves-and-cumulative-damage.md",
+          "objectives": [
+            "statics-materials-8-objective-1",
+            "statics-materials-8-objective-2",
+            "statics-materials-8-objective-3"
+          ],
+          "worked_example": "A synthetic material with σ_f′ 800 MPa and b −0.12 lasts 8,101 cycles at 250 MPa and 52,016 at 200 MPa, so 2,000 cycles at the first and 15,000 at the second use 54% of its life (Miner's sum 0.535); in the lesson, a cycle between 200 and 20 MPa has amplitude 90 MPa, mean 110 MPa and R = 0.1, and a 10% lower amplitude multiplies the life by 2.87.",
+          "question_ids": [
+            "statics-materials-8:stress-amplitude",
+            "statics-materials-8:mean-stress",
+            "statics-materials-8:stress-ratio",
+            "statics-materials-8:life-at-300",
+            "statics-materials-8:life-ratio",
+            "statics-materials-8:miner-sum",
+            "statics-materials-8:goodman-amplitude",
+            "statics-materials-8:fatigue-statements"
+          ],
+          "card_ids": [
+            "statics-materials-8-card-1",
+            "statics-materials-8-card-2",
+            "statics-materials-8-card-3",
+            "statics-materials-8-card-4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "statics-materials-module-9",
+      "title": "Buckling",
+      "source_ids": [
+        "solidMechanics",
+        "mechanics"
+      ],
+      "lessons": [
+        {
+          "id": "statics-materials-9",
+          "title": "Buckling of slender struts: Euler's critical load, effective length and slenderness",
+          "reading": "modules/09-buckling-of-slender-struts.md",
+          "objectives": [
+            "statics-materials-9-objective-1",
+            "statics-materials-9-objective-2",
+            "statics-materials-9-objective-3"
+          ],
+          "worked_example": "A synthetic strut with d 0.8 mm, L 6 mm, E 1500 MPa and one end fixed, one pinned has slenderness 21, below the transition value 22.21 for a yield stress of 30 MPa, so it yields at 15.08 N before the Euler value of 16.87 N; in the lesson a pinned strut of d 0.5 mm and L 5 mm has an Euler load of 2.422 N and slenderness 40.",
+          "question_ids": [
+            "statics-materials-9:radius-of-gyration",
+            "statics-materials-9:slenderness",
+            "statics-materials-9:critical-load",
+            "statics-materials-9:critical-stress",
+            "statics-materials-9:length-doubled",
+            "statics-materials-9:fixed-fixed",
+            "statics-materials-9:transition-slenderness",
+            "statics-materials-9:design-diameter",
+            "statics-materials-9:buckling-statements"
+          ],
+          "card_ids": [
+            "statics-materials-9-card-1",
+            "statics-materials-9-card-2",
+            "statics-materials-9-card-3",
+            "statics-materials-9-card-4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "statics-materials-module-10",
+      "title": "Combined stress and yield",
+      "source_ids": [
+        "solidMechanics",
+        "mechanics"
+      ],
+      "lessons": [
+        {
+          "id": "statics-materials-10",
+          "title": "Combined stress: principal stresses, Mohr's circle and yield criteria",
+          "reading": "modules/10-principal-stresses-mohrs-circle-and-yield.md",
+          "objectives": [
+            "statics-materials-10-objective-1",
+            "statics-materials-10-objective-2",
+            "statics-materials-10-objective-3"
+          ],
+          "worked_example": "A synthetic state of 60, −20 and 35 MPa has principal stresses 73.15 and −33.15 MPa at 20.6°, a von Mises stress of 94.21 MPa and factors of safety 1.592 (von Mises) and 1.411 (Tresca) for a yield stress of 150 MPa; in the lesson the state 80, 20, 30 MPa has R = 42.43 MPa and a von Mises stress of 88.88 MPa.",
+          "question_ids": [
+            "statics-materials-10:mohr-radius",
+            "statics-materials-10:principal-max",
+            "statics-materials-10:principal-min",
+            "statics-materials-10:principal-angle",
+            "statics-materials-10:inclined-plane",
+            "statics-materials-10:von-mises",
+            "statics-materials-10:safety-factor",
+            "statics-materials-10:shear-yield",
+            "statics-materials-10:mohr-statements"
+          ],
+          "card_ids": [
+            "statics-materials-10-card-1",
+            "statics-materials-10-card-2",
+            "statics-materials-10-card-3",
+            "statics-materials-10-card-4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "statics-materials-module-11",
+      "title": "Beam deflection",
+      "source_ids": [
+        "solidMechanics",
+        "mechanics"
+      ],
+      "lessons": [
+        {
+          "id": "statics-materials-11",
+          "title": "Beam deflection and stiffness: three-point bending, superposition and what the span and thickness control",
+          "reading": "modules/11-beam-deflection-and-flexural-modulus.md",
+          "objectives": [
+            "statics-materials-11-objective-1",
+            "statics-materials-11-objective-2",
+            "statics-materials-11-objective-3"
+          ],
+          "worked_example": "A synthetic strip with b 4 mm, h 0.8 mm, span 16 mm and E 2400 MPa deflects 0.2708 mm under a central load of 1.3 N (stiffness 4.80 N/mm, stress 12.19 MPa) and would need a thickness of 1.022 mm for 10 N/mm; in the lesson, a strip with span 20 mm, b 5 mm, h 1 mm and E 3000 MPa deflects 0.2667 mm under 2 N.",
+          "question_ids": [
+            "statics-materials-11:second-moment",
+            "statics-materials-11:central-deflection",
+            "statics-materials-11:bending-stiffness",
+            "statics-materials-11:centre-stress",
+            "statics-materials-11:thickness-halved",
+            "statics-materials-11:cantilever-tip",
+            "statics-materials-11:uniform-load",
+            "statics-materials-11:flexural-modulus",
+            "statics-materials-11:beam-statements"
+          ],
+          "card_ids": [
+            "statics-materials-11-card-1",
+            "statics-materials-11-card-2",
+            "statics-materials-11-card-3",
+            "statics-materials-11-card-4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "statics-materials-module-12",
+      "title": "Brittle strength",
+      "source_ids": [
+        "solidMechanics",
+        "mechanics"
+      ],
+      "lessons": [
+        {
+          "id": "statics-materials-12",
+          "title": "Strength of brittle materials: flaws, scatter and the Weibull distribution",
+          "reading": "modules/12-weibull-strength-and-the-size-effect.md",
+          "objectives": [
+            "statics-materials-12-objective-1",
+            "statics-materials-12-objective-2",
+            "statics-materials-12-objective-3"
+          ],
+          "worked_example": "A synthetic ceramic with σ₀ 120 MPa and m 8 has a failure probability of 0.0953 at 90 MPa, needs 61.9 MPa for a 0.5% probability and only 41.0 MPa when the volume is 27 times larger; in the lesson, σ₀ 100 MPa and m 10 give a failure probability of 0.1018 at 80 MPa and 63.13 MPa for 1%.",
+          "question_ids": [
+            "statics-materials-12:failure-probability",
+            "statics-materials-12:characteristic-fraction",
+            "statics-materials-12:stress-for-one-percent",
+            "statics-materials-12:size-factor",
+            "statics-materials-12:large-part-stress",
+            "statics-materials-12:lower-modulus",
+            "statics-materials-12:modulus-two-points",
+            "statics-materials-12:weibull-statements"
+          ],
+          "card_ids": [
+            "statics-materials-12-card-1",
+            "statics-materials-12-card-2",
+            "statics-materials-12-card-3",
+            "statics-materials-12-card-4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "statics-materials-module-lab-01",
+      "title": "Virtual laboratory: fatigue lives",
+      "source_ids": [
+        "solidMechanics",
+        "mechanics"
+      ],
+      "lessons": [
+        {
+          "id": "statics-materials-lab-01",
+          "title": "Virtual lab 1: fatigue lives, scatter and run-outs",
+          "reading": "labs/01-fatigue-lives-scatter-and-run-outs.md",
+          "objectives": [
+            "statics-materials-lab-01-objective-1",
+            "statics-materials-lab-01-objective-2",
+            "statics-materials-lab-01-objective-3"
+          ],
+          "worked_example": "In the synthetic fatigue data the standard deviation of log10 life at 260 MPa is 0.183, the fitted slope of mean log10 life on log10 stress is −10.15 (b = −0.099), counting the two run-outs at 200 MPa as failures at the cutoff raises the mean log10 life from 6.108 to 6.185, and the median life predicted at 160 MPa is an extrapolation.",
+          "question_ids": [
+            "statics-materials-lab1:level-summary",
+            "statics-materials-lab1:scatter-260",
+            "statics-materials-lab1:fitted-slope",
+            "statics-materials-lab1:basquin-exponent",
+            "statics-materials-lab1:runout-bias",
+            "statics-materials-lab1:extrapolated-life",
+            "statics-materials-lab1:design-reasoning",
+            "statics-materials-lab1:supported-statements"
+          ],
+          "card_ids": [
+            "statics-materials-lab1-0",
+            "statics-materials-lab1-1",
+            "statics-materials-lab1-2",
+            "statics-materials-lab1-3"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "statics-materials-module-13",
+      "title": "Case: cyclic perfusion failure",
+      "source_ids": [
+        "solidMechanics",
+        "mechanics"
+      ],
+      "lessons": [
+        {
+          "id": "statics-materials-13",
+          "title": "Why a scaffold that meets its strength target can still collapse: a failure analysis and an accelerated test plan",
+          "reading": "modules/13-cyclic-perfusion-failure-analysis-and-test-plan.md",
+          "objectives": [
+            "statics-materials-13-objective-1",
+            "statics-materials-13-objective-2",
+            "statics-materials-13-objective-3"
+          ],
+          "worked_example": "A synthetic scaffold with a strut stress amplitude of 5.25 MPa and σ_f′ 28 MPa has a fatigue life of 59.8 million cycles, a margin of 23.1 over the 2,592,000 cycles required, falling to 3.8 after a 15% loss of strength, and an adiabatic heating bound of 3.53 mK/s at 10 Hz; in the lesson, the scaffold with a 1.9 MPa yield strength has a strut life of 7.49 million cycles against 2,592,000 required.",
+          "question_ids": [
+            "statics-materials-13:static-factor",
+            "statics-materials-13:service-cycles",
+            "statics-materials-13:strut-amplitude",
+            "statics-materials-13:strut-life",
+            "statics-materials-13:life-after-degradation",
+            "statics-materials-13:buckling-modulus",
+            "statics-materials-13:heating-rate",
+            "statics-materials-13:time-to-2k",
+            "statics-materials-13:plan-statements"
+          ],
+          "card_ids": [
+            "statics-materials-13-card-1",
+            "statics-materials-13-card-2",
+            "statics-materials-13-card-3",
+            "statics-materials-13-card-4"
+          ]
+        }
+      ]
     }
   ],
   "assessments": [
@@ -453,6 +1106,218 @@
       "points": 6
     },
     {
+      "id": "statics-materials-7-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Stress concentrations practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "statics-materials-7-objective-1",
+        "statics-materials-7-objective-2",
+        "statics-materials-7-objective-3",
+        "statics-materials-outcome-2",
+        "statics-materials-outcome-3",
+        "statics-materials-outcome-4"
+      ],
+      "question_ids": [
+        "statics-materials-7:hole-local-stress",
+        "statics-materials-7:first-yield-stress",
+        "statics-materials-7:ellipse-kt",
+        "statics-materials-7:ellipse-local-stress",
+        "statics-materials-7:notch-kt",
+        "statics-materials-7:smaller-root-radius",
+        "statics-materials-7:fatigue-notch-factor",
+        "statics-materials-7:concentration-statements"
+      ],
+      "points": 9
+    },
+    {
+      "id": "statics-materials-8-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Fatigue practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "statics-materials-8-objective-1",
+        "statics-materials-8-objective-2",
+        "statics-materials-8-objective-3",
+        "statics-materials-outcome-2",
+        "statics-materials-outcome-3",
+        "statics-materials-outcome-4"
+      ],
+      "question_ids": [
+        "statics-materials-8:stress-amplitude",
+        "statics-materials-8:mean-stress",
+        "statics-materials-8:stress-ratio",
+        "statics-materials-8:life-at-300",
+        "statics-materials-8:life-ratio",
+        "statics-materials-8:miner-sum",
+        "statics-materials-8:goodman-amplitude",
+        "statics-materials-8:fatigue-statements"
+      ],
+      "points": 9
+    },
+    {
+      "id": "statics-materials-9-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Buckling practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "statics-materials-9-objective-1",
+        "statics-materials-9-objective-2",
+        "statics-materials-9-objective-3",
+        "statics-materials-outcome-2",
+        "statics-materials-outcome-3",
+        "statics-materials-outcome-4"
+      ],
+      "question_ids": [
+        "statics-materials-9:radius-of-gyration",
+        "statics-materials-9:slenderness",
+        "statics-materials-9:critical-load",
+        "statics-materials-9:critical-stress",
+        "statics-materials-9:length-doubled",
+        "statics-materials-9:fixed-fixed",
+        "statics-materials-9:transition-slenderness",
+        "statics-materials-9:design-diameter",
+        "statics-materials-9:buckling-statements"
+      ],
+      "points": 10
+    },
+    {
+      "id": "statics-materials-10-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Combined stress and yield practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "statics-materials-10-objective-1",
+        "statics-materials-10-objective-2",
+        "statics-materials-10-objective-3",
+        "statics-materials-outcome-2",
+        "statics-materials-outcome-3",
+        "statics-materials-outcome-4"
+      ],
+      "question_ids": [
+        "statics-materials-10:mohr-radius",
+        "statics-materials-10:principal-max",
+        "statics-materials-10:principal-min",
+        "statics-materials-10:principal-angle",
+        "statics-materials-10:inclined-plane",
+        "statics-materials-10:von-mises",
+        "statics-materials-10:safety-factor",
+        "statics-materials-10:shear-yield",
+        "statics-materials-10:mohr-statements"
+      ],
+      "points": 10
+    },
+    {
+      "id": "statics-materials-11-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Beam deflection practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "statics-materials-11-objective-1",
+        "statics-materials-11-objective-2",
+        "statics-materials-11-objective-3",
+        "statics-materials-outcome-2",
+        "statics-materials-outcome-3",
+        "statics-materials-outcome-4"
+      ],
+      "question_ids": [
+        "statics-materials-11:second-moment",
+        "statics-materials-11:central-deflection",
+        "statics-materials-11:bending-stiffness",
+        "statics-materials-11:centre-stress",
+        "statics-materials-11:thickness-halved",
+        "statics-materials-11:cantilever-tip",
+        "statics-materials-11:uniform-load",
+        "statics-materials-11:flexural-modulus",
+        "statics-materials-11:beam-statements"
+      ],
+      "points": 10
+    },
+    {
+      "id": "statics-materials-12-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Brittle strength practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "statics-materials-12-objective-1",
+        "statics-materials-12-objective-2",
+        "statics-materials-12-objective-3",
+        "statics-materials-outcome-3",
+        "statics-materials-outcome-4"
+      ],
+      "question_ids": [
+        "statics-materials-12:failure-probability",
+        "statics-materials-12:characteristic-fraction",
+        "statics-materials-12:stress-for-one-percent",
+        "statics-materials-12:size-factor",
+        "statics-materials-12:large-part-stress",
+        "statics-materials-12:lower-modulus",
+        "statics-materials-12:modulus-two-points",
+        "statics-materials-12:weibull-statements"
+      ],
+      "points": 9
+    },
+    {
+      "id": "statics-materials-13-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Case: cyclic perfusion failure practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "statics-materials-13-objective-1",
+        "statics-materials-13-objective-2",
+        "statics-materials-13-objective-3",
+        "statics-materials-outcome-2",
+        "statics-materials-outcome-3",
+        "statics-materials-outcome-4"
+      ],
+      "question_ids": [
+        "statics-materials-13:static-factor",
+        "statics-materials-13:service-cycles",
+        "statics-materials-13:strut-amplitude",
+        "statics-materials-13:strut-life",
+        "statics-materials-13:life-after-degradation",
+        "statics-materials-13:buckling-modulus",
+        "statics-materials-13:heating-rate",
+        "statics-materials-13:time-to-2k",
+        "statics-materials-13:plan-statements"
+      ],
+      "points": 10
+    },
+    {
+      "id": "statics-materials-week12-fatigue-lab",
+      "type": "lab",
+      "mode": "practice",
+      "title": "Virtual lab 1: fatigue lives, scatter and run-outs (ungraded practice)",
+      "path": "question-banks/practice.json",
+      "week": 12,
+      "objective_ids": [
+        "statics-materials-lab-01-objective-1",
+        "statics-materials-lab-01-objective-2",
+        "statics-materials-lab-01-objective-3",
+        "statics-materials-outcome-2",
+        "statics-materials-outcome-3",
+        "statics-materials-outcome-4"
+      ],
+      "question_ids": [
+        "statics-materials-lab1:level-summary",
+        "statics-materials-lab1:scatter-260",
+        "statics-materials-lab1:fitted-slope",
+        "statics-materials-lab1:basquin-exponent",
+        "statics-materials-lab1:runout-bias",
+        "statics-materials-lab1:extrapolated-life",
+        "statics-materials-lab1:design-reasoning",
+        "statics-materials-lab1:supported-statements"
+      ],
+      "points": 23
+    },
+    {
       "id": "statics-materials-case",
       "type": "case",
       "mode": "self-assessment",
@@ -514,18 +1379,24 @@
       "version": "0.3.2",
       "date": "2026-10-08",
       "summary": "Fixed number formatting that an earlier authoring step left in learner-visible text: raw exponent notation (a number written with the letter e and a power of ten) and floating-point artifacts (a decimal with a long run of trailing digits) in item statics-materials-3:bending-stress. No answer key, tolerance or objective changed. The package remains partial, unreviewed and formative-only."
+    },
+    {
+      "version": "0.4.0",
+      "date": "2026-10-08",
+      "summary": "Added a proposed 14-week schedule; seven original lessons (stress concentrations; fatigue, S-N curves and cumulative damage; buckling of slender struts; principal stresses, Mohr's circle and yield criteria; beam deflection and the flexural modulus; brittle strength and the Weibull distribution; and a failure analysis and accelerated test plan, which prepares the course case on a scaffold that collapses under cyclic perfusion); and a synthetic-data lab on fatigue lives, scatter and run-outs. No new references were added. All activities remain ungraded practice; the package remains partial and unreviewed, gives no design basis, test protocol or safety advice, and makes no claim about any device, material or person."
     }
   ],
   "limitations": [
-    "Four compact legacy units are preserved; this package is not equivalent to a full university semester.",
-    "There is no authored 12–15 week schedule, substantive homework sequence, laboratory sequence, midterm, cumulative final, or graded integrative project.",
-    "Practice items are short formative checks (two per prototype unit and six per original lesson); they do not demonstrate comprehensive outcome coverage or mastery, and objective associations remain provisional.",
+    "Four compact legacy units are preserved beside ten original readings, including one synthetic-data virtual lab; this package is not equivalent to a full university semester.",
+    "A proposed 14-week schedule exists but is unmeasured and unreviewed. There is one synthetic-data virtual lab and no substantive homework sequence, laboratory sequence, midterm, cumulative final, or graded integrative project.",
+    "Practice items are short formative checks (two per prototype unit and six to nine per original lesson); they do not demonstrate comprehensive outcome coverage or mastery, and objective associations remain provisional.",
     "Bloom labels and structured prerequisite edges are initial authoring classifications awaiting subject-matter review.",
     "Question answers and solution feedback are intentionally public practice authoring specifications, not restricted exam keys.",
-    "Of the 17 numerical answers in this package, ten require a unit, none checks significant figures and none checks dimensions; the others accept a number within a stated tolerance, with the unit optional.",
-    "Total workload and weekly duration are unknown; former nominal credit values and hardcoded reading times do not establish workload."
+    "Of the 75 numerical answers in this package, 37 require a unit, one checks significant figures and none checks dimensions; the others accept a number within a stated tolerance, with the unit optional.",
+    "Total workload and weekly duration are unknown; former nominal credit values and hardcoded reading times do not establish workload.",
+    "All loads, materials, specimens and numbers are synthetic teaching examples; this package gives no design basis, test protocol or safety advice and says nothing about any real device, implant or person. The models are simplified textbook descriptions, not analysis methods for real components."
   ],
   "intentionally_omitted": [
-    "Full instructional sequence and summative assessments are not authored yet; the original lessons extend a partial package."
+    "Graded assessments and a laboratory sequence are not authored yet (one synthetic-data virtual lab exists); the original lessons extend a partial package."
   ]
 }
