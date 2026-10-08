@@ -80,6 +80,32 @@
       "original_content": true,
       "license": "CC-BY-4.0",
       "modifications": []
+    },
+    {
+      "module_id": "genetics-module-7",
+      "lesson_id": "genetics-7",
+      "reading": "modules/07-three-point-mapping-and-interference.md",
+      "source_ids": [
+        "biology",
+        "molecular"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "genetics-module-8",
+      "lesson_id": "genetics-8",
+      "reading": "modules/08-designing-a-controlled-perturbation-experiment.md",
+      "source_ids": [
+        "biology",
+        "molecular"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
     }
   ]
 }

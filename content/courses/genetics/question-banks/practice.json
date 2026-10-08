@@ -662,6 +662,389 @@
         "kind": "original",
         "modifications": []
       }
+    },
+    {
+      "id": "genetics-7:middle-gene",
+      "type": "single_choice",
+      "prompt": "A three-point testcross of a heterozygote carrying + + + on one chromosome and a b c on the other gives these synthetic progeny: + + + = 395; a b c = 387; a + + = 52; + b c = 54; + + c = 50; a b + = 54; + b + = 4; a + c = 4. Which locus is in the middle?",
+      "points": 1,
+      "objective_ids": [
+        "genetics-7-objective-1"
+      ],
+      "options": [
+        "The order cannot be determined from a testcross.",
+        "b, because the rarest classes (+ b + and a + c) differ from the parental classes only at b.",
+        "a, because it is listed first.",
+        "c, because it has the most recombinants."
+      ],
+      "solution_spec": {
+        "answer": 1
+      },
+      "feedback": {
+        "hint": "Find the two rarest classes and compare each with the parental class it most resembles.",
+        "solution": "Double crossovers swap only the middle locus relative to the parental combination. + b + and a + c differ from + + + and a b c only at b, so b is in the middle.",
+        "lesson_ids": [
+          "genetics-7"
+        ],
+        "misconception_ids": [
+          "listed-order-is-map-order"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "genetics-7:rf-ab",
+      "type": "numeric",
+      "prompt": "In 1000 testcross progeny, 106 are single crossovers between a and b and 8 are double crossovers (one exchange in each interval). Calculate the recombination fraction between a and b. Enter a decimal fraction, number only.",
+      "points": 1,
+      "objective_ids": [
+        "genetics-7-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0.114,
+        "unit": "",
+        "tolerance": 0.002,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Include double crossovers: each has an exchange in the a–b interval.",
+        "solution": "r(a–b) = (106 + 8) / 1000 = 0.114 (11.4 cM).",
+        "lesson_ids": [
+          "genetics-7"
+        ],
+        "misconception_ids": [
+          "omit-double-crossovers"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "genetics-7:expected-dco",
+      "type": "numeric",
+      "prompt": "With r(a–b) = 0.114 and r(b–c) = 0.112 in 1000 progeny, how many double crossovers are expected if crossovers in the two intervals are independent? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "genetics-7-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 12.768,
+        "unit": "",
+        "tolerance": 0.2,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Multiply the two interval fractions and the number of progeny.",
+        "solution": "0.114 × 0.112 × 1000 = 12.8.",
+        "lesson_ids": [
+          "genetics-7"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "genetics-7:interference",
+      "type": "numeric",
+      "prompt": "8 double crossovers were observed where 12.77 were expected. Calculate interference, I = 1 − observed/expected. Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "genetics-7-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0.3734,
+        "unit": "",
+        "tolerance": 0.01,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "The coefficient of coincidence is observed/expected; interference is one minus it.",
+        "solution": "CoC = 8/12.77 = 0.63; I = 0.37.",
+        "lesson_ids": [
+          "genetics-7"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "genetics-7:haldane",
+      "type": "numeric",
+      "prompt": "Two loci show an observed recombination fraction of 0.21. Using Haldane's map function d = −½ ln(1 − 2r) in Morgans, calculate the map distance in centimorgans. Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "genetics-7-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 27.236,
+        "unit": "",
+        "tolerance": 0.2,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Compute 1 − 2r, take its natural log, multiply by −0.5 and convert Morgans to centimorgans.",
+        "solution": "d = −0.5 × ln(1 − 0.42) = −0.5 × ln(0.58) = 0.272 M = 27.2 cM.",
+        "lesson_ids": [
+          "genetics-7"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "genetics-7:outer-underestimate",
+      "type": "single_choice",
+      "prompt": "Why is the directly observed a–c recombination fraction (0.21) smaller than r(a–b) + r(b–c) (0.23)?",
+      "points": 1,
+      "objective_ids": [
+        "genetics-7-objective-3"
+      ],
+      "options": [
+        "Recombination fractions always overestimate distance.",
+        "Because of a counting error in the testcross.",
+        "The b locus suppresses crossing over.",
+        "Double crossovers restore the parental combination of the outer loci, so they are invisible when only a and c are scored."
+      ],
+      "solution_spec": {
+        "answer": 3
+      },
+      "feedback": {
+        "hint": "Look at the a and c alleles in the double-crossover classes.",
+        "solution": "In + b + and a + c, the outer alleles are in their parental arrangement. Two-locus scoring misses these exchanges; summing intervals recovers them. Over larger distances more multiple exchanges are hidden.",
+        "lesson_ids": [
+          "genetics-7"
+        ],
+        "misconception_ids": [
+          "rf-is-additive"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "genetics-8:ddct-expression",
+      "type": "numeric",
+      "prompt": "Synthetic qPCR: in control cells the target Ct is 24.0 and the reference Ct is 18.0; after knockdown the target Ct is 26.5 and the reference Ct is 18.2. Assuming 100% efficiency, calculate relative target expression 2^(−ΔΔCt). Enter a decimal fraction, number only.",
+      "points": 1,
+      "objective_ids": [
+        "genetics-8-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0.2031,
+        "unit": "",
+        "tolerance": 0.005,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Compute ΔCt in each condition (target − reference), then subtract control from knockdown.",
+        "solution": "ΔCt control = 6.0, knockdown = 8.3, ΔΔCt = 2.3; 2^(−2.3) = 0.203.",
+        "lesson_ids": [
+          "genetics-8"
+        ],
+        "misconception_ids": [
+          "skip-reference-normalization"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "genetics-8:percent-knockdown",
+      "type": "numeric",
+      "prompt": "Relative expression after knockdown is 0.203 of control. What percentage knockdown is that? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "genetics-8-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 79.694,
+        "unit": "%",
+        "tolerance": 0.5,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Knockdown is one minus relative expression.",
+        "solution": "(1 − 0.203) × 100 = 79.7%.",
+        "lesson_ids": [
+          "genetics-8"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "genetics-8:sample-size",
+      "type": "numeric",
+      "prompt": "For a two-sided test at α = 0.05 with 80% power (z values 1.96 and 0.8416), the between-replicate standard deviation is 0.5 and the smallest important difference is 1.0 on a log₂ scale. Using n ≈ 2(z₁ + z₂)² σ²/δ², calculate the unrounded number per group. Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "genetics-8-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 3.9245,
+        "unit": "",
+        "tolerance": 0.05,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Square the sum of z values, multiply by 2σ², divide by δ².",
+        "solution": "2 × (1.96 + 0.8416)² × 0.5² / 1.0² = 3.92, rounded up to 4 independent biological replicates per group.",
+        "lesson_ids": [
+          "genetics-8"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "genetics-8:best-specificity-control",
+      "type": "single_choice",
+      "prompt": "A single siRNA against gene G reduces cell migration. Which addition most directly tests whether the effect is caused by loss of G rather than an off-target effect?",
+      "points": 1,
+      "objective_ids": [
+        "genetics-8-objective-1"
+      ],
+      "options": [
+        "Increase the siRNA concentration to get stronger knockdown.",
+        "Add more wells from the same transfection.",
+        "Restore G with a construct the siRNA cannot target and check that migration recovers, and repeat with a second siRNA of different sequence.",
+        "Measure G mRNA once more by qPCR."
+      ],
+      "solution_spec": {
+        "answer": 2
+      },
+      "feedback": {
+        "hint": "Which control changes G specifically without changing the reagent's other targets?",
+        "solution": "Rescue and independent reagents address specificity. Higher dose raises off-target risk, more wells are technical replicates, and remeasuring knockdown confirms the perturbation but not the cause of the phenotype.",
+        "lesson_ids": [
+          "genetics-8"
+        ],
+        "misconception_ids": [
+          "knockdown-confirmed-equals-specific"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "genetics-8:pseudoreplication",
+      "type": "single_choice",
+      "prompt": "An experiment uses one transfection per condition, split into six wells each, and runs a t-test with n = 6 per group. What is the main problem?",
+      "points": 1,
+      "objective_ids": [
+        "genetics-8-objective-3"
+      ],
+      "options": [
+        "A t-test cannot compare two groups.",
+        "Six wells are too many for a t-test.",
+        "The wells are technical replicates of one biological replicate, so n is effectively 1 per group and the test overstates confidence.",
+        "There is no problem if the wells are pipetted carefully."
+      ],
+      "solution_spec": {
+        "answer": 2
+      },
+      "feedback": {
+        "hint": "What could vary independently between the six wells?",
+        "solution": "Wells from one transfection share the transfection, passage and day. Independent replicates come from separate transfections; well-level values should be averaged within each.",
+        "lesson_ids": [
+          "genetics-8"
+        ],
+        "misconception_ids": [
+          "wells-are-biological-replicates"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "genetics-8:design-elements",
+      "type": "multiple_select",
+      "prompt": "Which elements belong in the design of a perturbation experiment meant to support a claim about a gene? Select all that apply.",
+      "points": 2,
+      "objective_ids": [
+        "genetics-8-objective-1"
+      ],
+      "options": [
+        "Reporting only the guide that produced a phenotype.",
+        "Random assignment of conditions to plate positions and processing order.",
+        "A primary readout named before the data are seen.",
+        "A non-targeting control delivered the same way.",
+        "Choosing the reference gene after seeing which one gives the largest effect."
+      ],
+      "solution_spec": {
+        "answer": [
+          1,
+          2,
+          3
+        ],
+        "partial_credit": "correct-minus-incorrect-clamped-v1"
+      },
+      "feedback": {
+        "hint": "Separate safeguards from choices that bias the result toward an effect.",
+        "solution": "Matched controls, pre-specified readouts and randomization protect against artifacts and selective analysis. Picking the reference gene or reagent after seeing results is selective analysis.",
+        "lesson_ids": [
+          "genetics-8"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
     }
   ]
 }

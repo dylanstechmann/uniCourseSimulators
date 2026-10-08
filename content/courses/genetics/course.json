@@ -7,7 +7,7 @@
   "domain": "Life sciences",
   "level": "Year 2",
   "maturity": "partial",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "license": "MIT OR CC-BY-4.0",
   "content_origin": {
     "kind": "legacy-prototype",
@@ -144,6 +144,56 @@
       "bloom": "evaluate",
       "course_outcome_ids": [
         "genetics-outcome-3"
+      ]
+    },
+    {
+      "id": "genetics-7-objective-1",
+      "description": "Determine gene order and interval recombination fractions from three-point testcross progeny counts.",
+      "bloom": "analyze",
+      "course_outcome_ids": [
+        "genetics-outcome-2"
+      ]
+    },
+    {
+      "id": "genetics-7-objective-2",
+      "description": "Calculate expected double crossovers, the coefficient of coincidence and interference.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "genetics-outcome-2"
+      ]
+    },
+    {
+      "id": "genetics-7-objective-3",
+      "description": "Evaluate why observed recombination underestimates map distance for distant loci and apply a map function to correct it.",
+      "bloom": "evaluate",
+      "course_outcome_ids": [
+        "genetics-outcome-2",
+        "genetics-outcome-1"
+      ]
+    },
+    {
+      "id": "genetics-8-objective-1",
+      "description": "Choose a perturbation tool and the controls needed to attribute an effect to the targeted gene.",
+      "bloom": "evaluate",
+      "course_outcome_ids": [
+        "genetics-outcome-4",
+        "genetics-outcome-3"
+      ]
+    },
+    {
+      "id": "genetics-8-objective-2",
+      "description": "Quantify knockdown by the ΔΔCt method and state its assumptions.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "genetics-outcome-4"
+      ]
+    },
+    {
+      "id": "genetics-8-objective-3",
+      "description": "Plan biological replication and sample size, and distinguish independent replicates from repeated measurements.",
+      "bloom": "create",
+      "course_outcome_ids": [
+        "genetics-outcome-4"
       ]
     }
   ],
@@ -340,6 +390,76 @@
           ]
         }
       ]
+    },
+    {
+      "id": "genetics-module-7",
+      "title": "Three-point mapping and interference",
+      "source_ids": [
+        "biology",
+        "molecular"
+      ],
+      "lessons": [
+        {
+          "id": "genetics-7",
+          "title": "Three-point mapping: gene order, map distance, interference and why distances do not simply add",
+          "reading": "modules/07-three-point-mapping-and-interference.md",
+          "objectives": [
+            "genetics-7-objective-1",
+            "genetics-7-objective-2",
+            "genetics-7-objective-3"
+          ],
+          "worked_example": "In the synthetic cross the rarest classes identify b as the middle gene; r(a–b) = 0.114, r(b–c) = 0.112; expected double crossovers 12.8, observed 8, so interference is 0.37; the observed a–c fraction 0.21 undercounts the summed 0.23.",
+          "question_ids": [
+            "genetics-7:middle-gene",
+            "genetics-7:rf-ab",
+            "genetics-7:expected-dco",
+            "genetics-7:interference",
+            "genetics-7:haldane",
+            "genetics-7:outer-underestimate"
+          ],
+          "card_ids": [
+            "genetics-7-card-1",
+            "genetics-7-card-2",
+            "genetics-7-card-3",
+            "genetics-7-card-4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "genetics-module-8",
+      "title": "Designing a controlled perturbation experiment",
+      "source_ids": [
+        "biology",
+        "molecular"
+      ],
+      "lessons": [
+        {
+          "id": "genetics-8",
+          "title": "Designing a controlled gene-perturbation experiment: tools, controls, quantification and replication",
+          "reading": "modules/08-designing-a-controlled-perturbation-experiment.md",
+          "objectives": [
+            "genetics-8-objective-1",
+            "genetics-8-objective-2",
+            "genetics-8-objective-3"
+          ],
+          "worked_example": "Synthetic qPCR gives ΔCt 6.0 (control) and 8.3 (knockdown), ΔΔCt = 2.3 and relative expression 0.203 (80% knockdown); with σ = 0.5 and δ = 1.0, about 4 independent biological replicates per group are needed.",
+          "question_ids": [
+            "genetics-8:ddct-expression",
+            "genetics-8:percent-knockdown",
+            "genetics-8:sample-size",
+            "genetics-8:best-specificity-control",
+            "genetics-8:pseudoreplication",
+            "genetics-8:design-elements"
+          ],
+          "card_ids": [
+            "genetics-8-card-1",
+            "genetics-8-card-2",
+            "genetics-8-card-3",
+            "genetics-8-card-4"
+          ]
+        }
+      ]
     }
   ],
   "assessments": [
@@ -447,6 +567,48 @@
       "points": 7
     },
     {
+      "id": "genetics-7-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Three-point mapping and interference practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "genetics-7-objective-1",
+        "genetics-7-objective-2",
+        "genetics-7-objective-3"
+      ],
+      "question_ids": [
+        "genetics-7:middle-gene",
+        "genetics-7:rf-ab",
+        "genetics-7:expected-dco",
+        "genetics-7:interference",
+        "genetics-7:haldane",
+        "genetics-7:outer-underestimate"
+      ],
+      "points": 6
+    },
+    {
+      "id": "genetics-8-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Designing a controlled perturbation experiment practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "genetics-8-objective-1",
+        "genetics-8-objective-2",
+        "genetics-8-objective-3"
+      ],
+      "question_ids": [
+        "genetics-8:ddct-expression",
+        "genetics-8:percent-knockdown",
+        "genetics-8:sample-size",
+        "genetics-8:best-specificity-control",
+        "genetics-8:pseudoreplication",
+        "genetics-8:design-elements"
+      ],
+      "points": 7
+    },
+    {
       "id": "genetics-case",
       "type": "case",
       "mode": "self-assessment",
@@ -493,6 +655,11 @@
       "version": "0.2.0",
       "date": "2026-10-08",
       "summary": "Added two original lessons (Hardy–Weinberg proportions and departures, carrier frequency, twin-based heritability and polygenic scores) with synthetic data, formative items with computed keys and retrieval cards. The package remains partial and unreviewed."
+    },
+    {
+      "version": "0.3.0",
+      "date": "2026-10-08",
+      "summary": "Added two original lessons (three-point mapping with interference and map functions, and designing a controlled gene-perturbation experiment with ΔΔCt quantification and sample size) with synthetic data, formative items with computed keys and retrieval cards. The package remains partial and unreviewed."
     }
   ],
   "limitations": [

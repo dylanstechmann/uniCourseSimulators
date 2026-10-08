@@ -4,7 +4,18 @@
 
 2026-10-06; synthetic local learner data only. Milestones 1 and 2 are implemented. Milestone 3 remains partial; deterministic graders and prototype graded-assignment and review workflows are described below. A Milestone 4 curriculum-map increment is implemented and tested, while subject-matter review and map refinement remain. All 25 course packages are **partial**; zero are beta, complete or externally reviewed. Human score review is limited to saved attempts and does not constitute course-content review. No semester equivalence, university credit, security certification or public production deployment is asserted.
 
-## Current increment: two lessons each in genetics, biochemistry, physiology and biomaterials (2026-10-08, third pass)
+## Current increment: genetics lessons 7 and 8 (2026-10-08, fourth pass)
+
+Written by an AI coding assistant. Genetics moves to 0.3.0 (still `partial`) with two more original lessons: three-point mapping (gene order from double-crossover classes, interval distances, coefficient of coincidence and interference, Haldane's map function) and designing a controlled gene-perturbation experiment (tool choice, specificity controls including rescue, ΔΔCt quantification and its assumptions, biological versus technical replication, a normal-approximation sample size). Synthetic counts and Ct values; 12 items whose keys were graded to full credit by the real grader; 8 cards. Every genetics course outcome is now linked from a lesson objective; package-wide, 63 of 101 outcomes remain unlinked.
+
+| Command/check (this container, Python 3.12.3, 2026-10-08) | Result |
+| --- | --- |
+| `python tools/validate_content.py` | PASS: 25 packages, 160 lessons, 461 questions, 380 cards, 25 cases; 0 errors; 123 disclosed warnings |
+| `verify.sh` (root and backend pytest, security, ruff, legacy) | all steps PASS: root 128 passed; backend 1171 passed, 2 skipped; security 474 files, 0 findings; ruff clean; legacy 7/7 |
+
+Docker Compose, Playwright and the frontend checks were not run (no frontend change). Not reviewed by a subject-matter expert.
+
+## Previous increment: two lessons each in genetics, biochemistry, physiology and biomaterials (2026-10-08, third pass)
 
 Written by an AI coding assistant.
 

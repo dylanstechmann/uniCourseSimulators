@@ -145,6 +145,86 @@
         "genetics-6-objective-3"
       ],
       "license": "CC-BY-4.0"
+    },
+    {
+      "id": "genetics-7-card-1",
+      "lesson_id": "genetics-7",
+      "front": "Testcross logic",
+      "back": "Crossing to a recessive tester makes each progeny phenotype reveal the gamete from the heterozygous parent.",
+      "objective_ids": [
+        "genetics-7-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "genetics-7-card-2",
+      "lesson_id": "genetics-7",
+      "front": "Finding gene order",
+      "back": "The rarest classes are double crossovers; the locus that differs from parental in them is the middle one.",
+      "objective_ids": [
+        "genetics-7-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "genetics-7-card-3",
+      "lesson_id": "genetics-7",
+      "front": "Interference",
+      "back": "Expected DCO = r₁ × r₂ × N; coefficient of coincidence = observed/expected; I = 1 − CoC.",
+      "objective_ids": [
+        "genetics-7-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "genetics-7-card-4",
+      "lesson_id": "genetics-7",
+      "front": "Map functions",
+      "back": "Observed r undercounts multiple exchanges and cannot exceed 0.5; Haldane d = −½ ln(1 − 2r) assumes no interference.",
+      "objective_ids": [
+        "genetics-7-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "genetics-8-card-1",
+      "lesson_id": "genetics-8",
+      "front": "Perturbation tools",
+      "back": "Knockout cuts DNA; CRISPRi blocks transcription without cutting; RNAi degrades transcripts; each can hit off-targets.",
+      "objective_ids": [
+        "genetics-8-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "genetics-8-card-2",
+      "lesson_id": "genetics-8",
+      "front": "Specificity controls",
+      "back": "Non-targeting control, two independent reagents and rescue with a resistant construct.",
+      "objective_ids": [
+        "genetics-8-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "genetics-8-card-3",
+      "lesson_id": "genetics-8",
+      "front": "ΔΔCt",
+      "back": "ΔCt = target − reference; ΔΔCt = perturbed − control; relative expression = 2^(−ΔΔCt) if efficiency ≈ 100% and the reference is stable.",
+      "objective_ids": [
+        "genetics-8-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "genetics-8-card-4",
+      "lesson_id": "genetics-8",
+      "front": "Replication",
+      "back": "Independent biological replicates are the unit; n ≈ 2(z₁ + z₂)²σ²/δ² per group; wells from one transfection are technical replicates.",
+      "objective_ids": [
+        "genetics-8-objective-3"
+      ],
+      "license": "CC-BY-4.0"
     }
   ]
 }
