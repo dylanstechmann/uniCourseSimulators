@@ -442,6 +442,191 @@
         "kind": "original",
         "modifications": []
       }
+    },
+    {
+      "id": "signals-control-6:conv-sample",
+      "type": "numeric",
+      "prompt": "A discrete system has impulse response h = [0.5, 0.3, 0.2]. The input is x = [0, 0, 1, 1, 1, 0, 0]. What is the output sample y[4] (counting from 0), y[4] = h[0]x[4] + h[1]x[3] + h[2]x[2]? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "signals-control-6-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 1.0,
+        "unit": "",
+        "tolerance": 0.005,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Multiply aligned values and add.",
+        "solution": "0.5×1 + 0.3×1 + 0.2×1 = 1.0.",
+        "lesson_ids": [
+          "signals-control-6"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "signals-control-6:conv-length",
+      "type": "numeric",
+      "prompt": "Convolving an input of 7 samples with an impulse response of 3 samples gives an output of how many samples? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "signals-control-6-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 9.0,
+        "unit": "",
+        "tolerance": 0,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Length = len(x) + len(h) − 1.",
+        "solution": "7 + 3 − 1 = 9.",
+        "lesson_ids": [
+          "signals-control-6"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "signals-control-6:step-2tau",
+      "type": "numeric",
+      "prompt": "A first-order sensor (τ = 2 s) sees a unit step at t = 0. What percentage of the step does it show at t = 4 s? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "signals-control-6-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 86.466,
+        "unit": "%",
+        "tolerance": 0.2,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Step response 1 − e^(−t/τ).",
+        "solution": "1 − e^(−2) = 0.8647 = 86.5%.",
+        "lesson_ids": [
+          "signals-control-6"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "signals-control-6:impulse-value",
+      "type": "numeric",
+      "prompt": "What is the impulse response h(t) = (1/τ)e^(−t/τ) of a first-order sensor with τ = 2 s at t = 2 s? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "signals-control-6-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0.18394,
+        "unit": "1/s",
+        "tolerance": 0.002,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Evaluate (1/τ)e^(−t/τ).",
+        "solution": "(1/2) × e^(−1) = 0.1839 s⁻¹.",
+        "lesson_ids": [
+          "signals-control-6"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "signals-control-6:ramp-error",
+      "type": "numeric",
+      "prompt": "A signal rises at 0.5 units/s and is measured by a first-order sensor with τ = 2 s. After the initial transient, by how much does the reading lag the true value? Enter the number only (units).",
+      "points": 1,
+      "objective_ids": [
+        "signals-control-6-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 1.0,
+        "unit": "",
+        "tolerance": 0.02,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "On a ramp, a first-order sensor lags by τ seconds.",
+        "solution": "0.5 × 2 = 1.0 units.",
+        "lesson_ids": [
+          "signals-control-6"
+        ],
+        "misconception_ids": [
+          "sensor-reads-true-value"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "signals-control-6:deconvolution",
+      "type": "single_choice",
+      "prompt": "A team estimates the true input from a first-order sensor's output using x ≈ y + τ dy/dt on raw, noisy data. What problem should they expect?",
+      "points": 1,
+      "objective_ids": [
+        "signals-control-6-objective-3"
+      ],
+      "options": [
+        "It makes the output longer than the input.",
+        "The correction is exact and noise-free.",
+        "Differentiating noisy data amplifies the noise, so the corrected signal needs smoothing and an accurate τ.",
+        "The correction removes the need to know τ."
+      ],
+      "solution_spec": {
+        "answer": 2
+      },
+      "feedback": {
+        "hint": "What does differentiation do to rapid fluctuations?",
+        "solution": "Derivative operations amplify high-frequency content, which is mostly noise. Deconvolution is useful but must be regularized or filtered.",
+        "lesson_ids": [
+          "signals-control-6"
+        ],
+        "misconception_ids": [
+          "deconvolution-free-lunch"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
     }
   ]
 }

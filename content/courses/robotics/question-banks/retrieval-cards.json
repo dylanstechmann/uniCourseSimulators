@@ -105,6 +105,46 @@
         "robotics-5-objective-3"
       ],
       "license": "CC-BY-4.0"
+    },
+    {
+      "id": "robotics-6-card-1",
+      "lesson_id": "robotics-6",
+      "front": "Gearbox",
+      "back": "τ_out = ηNτ_motor, ω_out = ω_motor/N; power cannot increase.",
+      "objective_ids": [
+        "robotics-6-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "robotics-6-card-2",
+      "lesson_id": "robotics-6",
+      "front": "Torque budget",
+      "back": "Static gravity torque mgr; margin = available/required, plus acceleration and friction.",
+      "objective_ids": [
+        "robotics-6-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "robotics-6-card-3",
+      "lesson_id": "robotics-6",
+      "front": "Encoder resolution",
+      "back": "Counts per output rev = CPR × N; tool resolution = r × Δθ.",
+      "objective_ids": [
+        "robotics-6-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "robotics-6-card-4",
+      "lesson_id": "robotics-6",
+      "front": "Failure limits",
+      "back": "Current limit, following-error limit, soft position limits, plausibility checks and safe stop.",
+      "objective_ids": [
+        "robotics-6-objective-3"
+      ],
+      "license": "CC-BY-4.0"
     }
   ]
 }

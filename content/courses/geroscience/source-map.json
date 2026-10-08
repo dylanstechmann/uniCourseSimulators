@@ -211,6 +211,19 @@
       "original_content": true,
       "license": "CC-BY-4.0",
       "modifications": []
+    },
+    {
+      "module_id": "geroscience-module-15",
+      "lesson_id": "geroscience-15",
+      "reading": "modules/11-biomarker-reliability-and-surrogate-endpoints.md",
+      "source_ids": [
+        "biology",
+        "molecular"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
     }
   ]
 }

@@ -7,7 +7,7 @@
   "domain": "Life sciences",
   "level": "Year 3",
   "maturity": "partial",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "license": "MIT OR CC-BY-4.0",
   "content_origin": {
     "kind": "legacy-prototype",
@@ -359,6 +359,32 @@
       "bloom": "evaluate",
       "course_outcome_ids": [
         "geroscience-outcome-3"
+      ]
+    },
+    {
+      "id": "geroscience-15-objective-1",
+      "description": "Calculate the intraclass correlation coefficient from between-person and within-person variance and interpret it as test–retest reliability.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "geroscience-outcome-1",
+        "geroscience-outcome-4"
+      ]
+    },
+    {
+      "id": "geroscience-15-objective-2",
+      "description": "Compute the smallest detectable change for an individual and show how averaging repeated measurements improves it.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "geroscience-outcome-4"
+      ]
+    },
+    {
+      "id": "geroscience-15-objective-3",
+      "description": "Evaluate whether a biomarker can serve as a surrogate endpoint for an intervention, distinguishing prediction from causal mediation.",
+      "bloom": "evaluate",
+      "course_outcome_ids": [
+        "geroscience-outcome-3",
+        "geroscience-outcome-1"
       ]
     }
   ],
@@ -847,6 +873,41 @@
           ]
         }
       ]
+    },
+    {
+      "id": "geroscience-module-15",
+      "title": "Biomarker reliability and surrogates",
+      "source_ids": [
+        "biology",
+        "molecular"
+      ],
+      "lessons": [
+        {
+          "id": "geroscience-15",
+          "title": "Biomarkers of aging under scrutiny: reliability, the smallest detectable change and surrogate endpoints",
+          "reading": "modules/11-biomarker-reliability-and-surrogate-endpoints.md",
+          "objectives": [
+            "geroscience-15-objective-1",
+            "geroscience-15-objective-2",
+            "geroscience-15-objective-3"
+          ],
+          "worked_example": "With between-person SD 5 and within-person SD 3 years, ICC = 0.735 and the smallest detectable individual change is 8.3 years, falling to 4.8 years when 3 measurements are averaged; a 4-year drop from two single readings is within noise.",
+          "question_ids": [
+            "geroscience-15:icc",
+            "geroscience-15:sdc",
+            "geroscience-15:averaged-sdc",
+            "geroscience-15:individual-change",
+            "geroscience-15:surrogate",
+            "geroscience-15:cell-composition"
+          ],
+          "card_ids": [
+            "geroscience-15-card-1",
+            "geroscience-15-card-2",
+            "geroscience-15-card-3",
+            "geroscience-15-card-4"
+          ]
+        }
+      ]
     }
   ],
   "assessments": [
@@ -1107,6 +1168,27 @@
       "points": 6
     },
     {
+      "id": "geroscience-15-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Biomarker reliability and surrogates practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "geroscience-15-objective-1",
+        "geroscience-15-objective-2",
+        "geroscience-15-objective-3"
+      ],
+      "question_ids": [
+        "geroscience-15:icc",
+        "geroscience-15:sdc",
+        "geroscience-15:averaged-sdc",
+        "geroscience-15:individual-change",
+        "geroscience-15:surrogate",
+        "geroscience-15:cell-composition"
+      ],
+      "points": 6
+    },
+    {
       "id": "geroscience-case",
       "type": "case",
       "mode": "self-assessment",
@@ -1158,6 +1240,11 @@
       "version": "0.3.0",
       "date": "2026-10-08",
       "summary": "Added six original lessons with explicitly synthetic data tables, worked examples, 30 formative items with computed keys, 24 retrieval cards and link-only references verified on 2026-10-08: genome instability and repair capacity; proteostasis, autophagy and mitochondria (flux versus level); nutrient sensing and lifespan interventions (including conflicting primate studies); regeneration across species and what counts as evidence; reading an aging-intervention paper (sample size, multiplicity); and evidence tiers from model to human (absolute and relative effects, surrogates). The lessons make no claim that any intervention slows or reverses human aging. The package remains partial and unreviewed."
+    },
+    {
+      "version": "0.4.0",
+      "date": "2026-10-08",
+      "summary": "Added an original lesson on biomarker reliability (ICC, smallest detectable change) and surrogate endpoints, with no claim that any intervention changes human aging with synthetic data, formative items with computed keys and retrieval cards. The package remains partial and unreviewed."
     }
   ],
   "limitations": [

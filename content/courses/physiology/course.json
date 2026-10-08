@@ -7,7 +7,7 @@
   "domain": "Life sciences",
   "level": "Year 2",
   "maturity": "partial",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "license": "MIT OR CC-BY-4.0",
   "content_origin": {
     "kind": "legacy-prototype",
@@ -149,6 +149,32 @@
       "bloom": "evaluate",
       "course_outcome_ids": [
         "physiology-outcome-3"
+      ]
+    },
+    {
+      "id": "physiology-7-objective-1",
+      "description": "Calculate net filtration pressure from hydrostatic and oncotic pressures with a reflection coefficient using the Starling equation.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "physiology-outcome-2",
+        "physiology-outcome-3"
+      ]
+    },
+    {
+      "id": "physiology-7-objective-2",
+      "description": "Compute a filtration rate from the filtration coefficient and net pressure, and predict where along a capillary fluid leaves or returns.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "physiology-outcome-3"
+      ]
+    },
+    {
+      "id": "physiology-7-objective-3",
+      "description": "Predict how changes in capillary pressure, plasma protein or wall permeability shift fluid balance, and explain the role of lymph.",
+      "bloom": "analyze",
+      "course_outcome_ids": [
+        "physiology-outcome-4",
+        "physiology-outcome-1"
       ]
     }
   ],
@@ -344,6 +370,41 @@
           ]
         }
       ]
+    },
+    {
+      "id": "physiology-module-7",
+      "title": "Starling forces and edema",
+      "source_ids": [
+        "biology",
+        "transport"
+      ],
+      "lessons": [
+        {
+          "id": "physiology-7",
+          "title": "Fluid exchange across capillaries: Starling forces, filtration, absorption and why edema forms",
+          "reading": "modules/07-capillary-starling-forces-and-edema.md",
+          "objectives": [
+            "physiology-7-objective-1",
+            "physiology-7-objective-2",
+            "physiology-7-objective-3"
+          ],
+          "worked_example": "With P_i = 0 mmHg, π_c = 25 mmHg, π_i = 5 mmHg and σ = 0.9, the net filtration pressure is 17 mmHg at P_c = 35 and -3 mmHg at P_c = 15; at a mean 25 mmHg and K_f = 0.5, filtration is 3.5 mL/min; lowering π_c to 15 raises the arterial-end net pressure to 26 mmHg.",
+          "question_ids": [
+            "physiology-7:arterial-net",
+            "physiology-7:venous-net",
+            "physiology-7:filtration-rate",
+            "physiology-7:low-albumin",
+            "physiology-7:inflammation",
+            "physiology-7:lymph"
+          ],
+          "card_ids": [
+            "physiology-7-card-1",
+            "physiology-7-card-2",
+            "physiology-7-card-3",
+            "physiology-7-card-4"
+          ]
+        }
+      ]
     }
   ],
   "assessments": [
@@ -450,6 +511,27 @@
       "points": 6
     },
     {
+      "id": "physiology-7-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Starling forces and edema practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "physiology-7-objective-1",
+        "physiology-7-objective-2",
+        "physiology-7-objective-3"
+      ],
+      "question_ids": [
+        "physiology-7:arterial-net",
+        "physiology-7:venous-net",
+        "physiology-7:filtration-rate",
+        "physiology-7:low-albumin",
+        "physiology-7:inflammation",
+        "physiology-7:lymph"
+      ],
+      "points": 6
+    },
+    {
       "id": "physiology-case",
       "type": "case",
       "mode": "self-assessment",
@@ -496,6 +578,11 @@
       "version": "0.2.0",
       "date": "2026-10-08",
       "summary": "Added two original lessons (oxygen content, the Fick principle, delivery and extraction, and renal clearance, filtration and tubular handling) with synthetic data, formative items with computed keys and retrieval cards. The package remains partial and unreviewed."
+    },
+    {
+      "version": "0.3.0",
+      "date": "2026-10-08",
+      "summary": "Added an original lesson on capillary Starling forces, filtration and edema with synthetic data, formative items with computed keys and retrieval cards. The package remains partial and unreviewed."
     }
   ],
   "limitations": [

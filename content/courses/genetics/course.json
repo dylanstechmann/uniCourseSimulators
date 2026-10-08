@@ -7,7 +7,7 @@
   "domain": "Life sciences",
   "level": "Year 2",
   "maturity": "partial",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "license": "MIT OR CC-BY-4.0",
   "content_origin": {
     "kind": "legacy-prototype",
@@ -194,6 +194,30 @@
       "bloom": "create",
       "course_outcome_ids": [
         "genetics-outcome-4"
+      ]
+    },
+    {
+      "id": "genetics-9-objective-1",
+      "description": "State the three core instrumental-variable assumptions and explain why genetic variants can satisfy them.",
+      "bloom": "understand",
+      "course_outcome_ids": [
+        "genetics-outcome-3"
+      ]
+    },
+    {
+      "id": "genetics-9-objective-2",
+      "description": "Compute a Wald-ratio causal estimate with its approximate standard error and convert a log-odds estimate to an odds ratio.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "genetics-outcome-3"
+      ]
+    },
+    {
+      "id": "genetics-9-objective-3",
+      "description": "Evaluate an MR result for weak instruments and pleiotropy, and distinguish it from an observational association.",
+      "bloom": "evaluate",
+      "course_outcome_ids": [
+        "genetics-outcome-3"
       ]
     }
   ],
@@ -460,6 +484,41 @@
           ]
         }
       ]
+    },
+    {
+      "id": "genetics-module-9",
+      "title": "Mendelian randomization",
+      "source_ids": [
+        "biology",
+        "molecular"
+      ],
+      "lessons": [
+        {
+          "id": "genetics-9",
+          "title": "Mendelian randomization: using genetic variants to test whether an exposure causes an outcome",
+          "reading": "modules/09-mendelian-randomization.md",
+          "objectives": [
+            "genetics-9-objective-1",
+            "genetics-9-objective-2",
+            "genetics-9-objective-3"
+          ],
+          "worked_example": "A variant raising the exposure by 0.1 and the outcome log-odds by 0.05 per allele gives a Wald ratio of 0.50 (odds ratio 1.65 per unit, SE about 0.10); its F-statistic is 100, while a variant with effect 0.02 and SE 0.01 has F = 4, a weak instrument.",
+          "question_ids": [
+            "genetics-9:assumptions",
+            "genetics-9:wald-ratio",
+            "genetics-9:odds-ratio",
+            "genetics-9:wald-se",
+            "genetics-9:f-statistic",
+            "genetics-9:pleiotropy"
+          ],
+          "card_ids": [
+            "genetics-9-card-1",
+            "genetics-9-card-2",
+            "genetics-9-card-3",
+            "genetics-9-card-4"
+          ]
+        }
+      ]
     }
   ],
   "assessments": [
@@ -609,6 +668,27 @@
       "points": 7
     },
     {
+      "id": "genetics-9-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Mendelian randomization practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "genetics-9-objective-1",
+        "genetics-9-objective-2",
+        "genetics-9-objective-3"
+      ],
+      "question_ids": [
+        "genetics-9:assumptions",
+        "genetics-9:wald-ratio",
+        "genetics-9:odds-ratio",
+        "genetics-9:wald-se",
+        "genetics-9:f-statistic",
+        "genetics-9:pleiotropy"
+      ],
+      "points": 7
+    },
+    {
       "id": "genetics-case",
       "type": "case",
       "mode": "self-assessment",
@@ -660,6 +740,11 @@
       "version": "0.3.0",
       "date": "2026-10-08",
       "summary": "Added two original lessons (three-point mapping with interference and map functions, and designing a controlled gene-perturbation experiment with ΔΔCt quantification and sample size) with synthetic data, formative items with computed keys and retrieval cards. The package remains partial and unreviewed."
+    },
+    {
+      "version": "0.4.0",
+      "date": "2026-10-08",
+      "summary": "Added an original lesson on Mendelian randomization (instrument assumptions, Wald ratio, instrument strength and pleiotropy) with synthetic data, formative items with computed keys and retrieval cards. The package remains partial and unreviewed."
     }
   ],
   "limitations": [

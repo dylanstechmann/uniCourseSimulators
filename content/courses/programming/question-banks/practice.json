@@ -435,6 +435,380 @@
         "kind": "original",
         "modifications": []
       }
+    },
+    {
+      "id": "programming-6:pair-count",
+      "type": "numeric",
+      "prompt": "A nested loop compares every pair of 10,000 items once (i < j). How many comparisons is that? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "programming-6-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 49995000.0,
+        "unit": "",
+        "tolerance": 0,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "n(n − 1)/2.",
+        "solution": "10,000 × 9,999/2 = 49,995,000.",
+        "lesson_ids": [
+          "programming-6"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "programming-6:pair-time",
+      "type": "numeric",
+      "prompt": "At a synthetic rate of 10⁷ loop iterations per second, how long do 49,995,000 iterations take? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "programming-6-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 4.9995,
+        "unit": "s",
+        "tolerance": 0.05,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Time = operations / rate.",
+        "solution": "49,995,000/10⁷ = 5.0 s.",
+        "lesson_ids": [
+          "programming-6"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "programming-6:scaling-factor",
+      "type": "numeric",
+      "prompt": "An O(n²) algorithm takes 3 s on 20,000 items. Roughly how long on 60,000 items? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "programming-6-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 27.0,
+        "unit": "s",
+        "tolerance": 0.5,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Tripling n multiplies O(n²) work by 3².",
+        "solution": "3 s × 3² = 27 s.",
+        "lesson_ids": [
+          "programming-6"
+        ],
+        "misconception_ids": [
+          "linear-scaling-assumed"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "programming-6:binary-steps",
+      "type": "numeric",
+      "prompt": "What is the maximum number of comparisons a binary search needs in a sorted list of 1,000,000 items (⌈log₂ n⌉)? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "programming-6-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 20.0,
+        "unit": "",
+        "tolerance": 0,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Each step halves the remaining range.",
+        "solution": "log₂(1,000,000) ≈ 19.93, so 20 steps.",
+        "lesson_ids": [
+          "programming-6"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "programming-6:membership",
+      "type": "single_choice",
+      "prompt": "A script checks 10,000 IDs, one at a time, against a Python list of 1,000,000 reference IDs and is very slow. What change most improves the scaling?",
+      "points": 1,
+      "objective_ids": [
+        "programming-6-objective-3"
+      ],
+      "options": [
+        "Run the same loop on a faster computer.",
+        "Convert the reference list to a set once, making each membership test O(1) on average.",
+        "Print progress more often.",
+        "Sort the query IDs but keep the list lookup."
+      ],
+      "solution_spec": {
+        "answer": 1
+      },
+      "feedback": {
+        "hint": "What is the cost of `in` for a list versus a set?",
+        "solution": "List membership is O(n) per query; set membership uses hashing and is O(1) on average. A faster computer changes only the constant.",
+        "lesson_ids": [
+          "programming-6"
+        ],
+        "misconception_ids": [
+          "hardware-fixes-scaling"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "programming-6:vectorize",
+      "type": "single_choice",
+      "prompt": "Rewriting an O(n²) pairwise-distance loop with a vectorized library builds an n × n distance array. What does this change?",
+      "points": 1,
+      "objective_ids": [
+        "programming-6-objective-3"
+      ],
+      "options": [
+        "It makes the algorithm O(n).",
+        "It has no effect on run time.",
+        "It reduces the time per operation substantially, but the work and memory still grow as n², so very large n can exhaust memory.",
+        "It removes the need to check results."
+      ],
+      "solution_spec": {
+        "answer": 2
+      },
+      "feedback": {
+        "hint": "Distinguish the constant factor from the growth rate.",
+        "solution": "Vectorization moves the loop into compiled code, a large constant-factor gain. The n × n array still needs n² memory; for big n, a spatial index or chunking is needed.",
+        "lesson_ids": [
+          "programming-6"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "programming-7:spacing",
+      "type": "numeric",
+      "prompt": "Machine epsilon for doubles is about 2.220×10⁻¹⁶. Approximately what is the spacing between adjacent representable numbers near 10⁸? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "programming-7-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 2.220446049250313e-08,
+        "unit": "",
+        "tolerance": 0,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null,
+        "relative_tolerance": 0.02
+      },
+      "feedback": {
+        "hint": "Spacing ≈ |x| × ε.",
+        "solution": "10⁸ × 2.220×10⁻¹⁶ ≈ 2.22×10⁻⁸.",
+        "lesson_ids": [
+          "programming-7"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "programming-7:true-variance",
+      "type": "numeric",
+      "prompt": "What is the population variance of the values 100000001, 100000002, 100000003? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "programming-7-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0.666667,
+        "unit": "",
+        "tolerance": 0.001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Subtract the mean first, then average the squared deviations.",
+        "solution": "Deviations −1, 0, 1; variance = 2/3 = 0.6667. The shortcut formula returns 0.0 in double precision.",
+        "lesson_ids": [
+          "programming-7"
+        ],
+        "misconception_ids": [
+          "shortcut-variance"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "programming-7:digits-lost",
+      "type": "numeric",
+      "prompt": "For data with mean 100000002 and variance 0.6667, estimate the decimal digits lost by mean(x²) − mean(x)², log₁₀(x̄²/s²). Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "programming-7-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 16.1761,
+        "unit": "",
+        "tolerance": 0.05,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Compute x̄²/s² and take log base 10.",
+        "solution": "log₁₀(100000002²/0.6667) = 16.2: more than the ~16 digits available.",
+        "lesson_ids": [
+          "programming-7"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "programming-7:cancellation-error",
+      "type": "numeric",
+      "prompt": "Two numbers a = 1.0000001 and b = 1.0 each carry relative error 10⁻¹². Estimate the relative error of a − b using δ|a|/|a − b|. Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "programming-7-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 1.0000000994161328e-05,
+        "unit": "",
+        "tolerance": 0,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null,
+        "relative_tolerance": 0.02
+      },
+      "feedback": {
+        "hint": "Divide the absolute error (δ|a|) by the size of the difference.",
+        "solution": "10⁻¹² × 1.0000001/1.0×10⁻⁷ ≈ 10⁻⁵.",
+        "lesson_ids": [
+          "programming-7"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "programming-7:float-test",
+      "type": "single_choice",
+      "prompt": "A unit test asserts `compute_ratio() == 0.3`, where the function returns 0.1 + 0.2 computed in floating point. The test fails. What is the right fix?",
+      "points": 1,
+      "objective_ids": [
+        "programming-7-objective-3"
+      ],
+      "options": [
+        "Compare with a tolerance, for example `math.isclose(result, 0.3, rel_tol=1e-12)`.",
+        "Round the result to one decimal place everywhere in the program.",
+        "Change the expected value to 0.30000000000000004.",
+        "Use integers for all calculations."
+      ],
+      "solution_spec": {
+        "answer": 0
+      },
+      "feedback": {
+        "hint": "Floating-point results should be compared within a tolerance that reflects the computation's accuracy.",
+        "solution": "Exact equality fails because 0.1 and 0.2 are not exactly representable. A tolerance test passes for correct code and still catches real errors; hard-coding the rounded artifact makes the test brittle.",
+        "lesson_ids": [
+          "programming-7"
+        ],
+        "misconception_ids": [
+          "float-equality"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "programming-7:near-zero",
+      "type": "single_choice",
+      "prompt": "A test uses only a relative tolerance to check that a computed residual equals 0.0. Why does it fail even when the residual is 10⁻¹⁷?",
+      "points": 1,
+      "objective_ids": [
+        "programming-7-objective-3"
+      ],
+      "options": [
+        "A relative tolerance scales with the expected value, which is zero, so it allows no difference; near zero an absolute tolerance is needed.",
+        "Because 10⁻¹⁷ is larger than machine epsilon.",
+        "Because floating point cannot represent 0.0.",
+        "Relative tolerances cannot be used in tests."
+      ],
+      "solution_spec": {
+        "answer": 0
+      },
+      "feedback": {
+        "hint": "What is rtol × max(|a|, |b|) when the expected value is 0?",
+        "solution": "rtol × max(|0|, |10⁻¹⁷|) is about 10⁻²⁶, so 10⁻¹⁷ fails. Combine relative and absolute tolerances, as math.isclose with abs_tol does.",
+        "lesson_ids": [
+          "programming-7"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
     }
   ]
 }

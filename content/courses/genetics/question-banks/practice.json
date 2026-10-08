@@ -1045,6 +1045,198 @@
         "kind": "original",
         "modifications": []
       }
+    },
+    {
+      "id": "genetics-9:assumptions",
+      "type": "multiple_select",
+      "prompt": "Which are core assumptions of a Mendelian randomization analysis? Select all that apply.",
+      "points": 2,
+      "objective_ids": [
+        "genetics-9-objective-1"
+      ],
+      "options": [
+        "The variant is not associated with confounders of the exposure–outcome relationship.",
+        "The variant affects the outcome only through the exposure.",
+        "The variant is associated with the exposure.",
+        "The exposure is normally distributed.",
+        "The outcome is measured in the same people as the exposure."
+      ],
+      "solution_spec": {
+        "answer": [
+          0,
+          1,
+          2
+        ],
+        "partial_credit": "correct-minus-incorrect-clamped-v1"
+      },
+      "feedback": {
+        "hint": "Relevance, independence and exclusion restriction.",
+        "solution": "The three instrumental-variable assumptions are relevance, independence and exclusion restriction. Normality is not required, and two-sample designs use exposure and outcome from different people.",
+        "lesson_ids": [
+          "genetics-9"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "genetics-9:wald-ratio",
+      "type": "numeric",
+      "prompt": "A variant raises an exposure by 0.1 units per allele and the log-odds of disease by 0.05 per allele. What is the Wald-ratio estimate of the exposure's effect (log-odds per unit)? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "genetics-9-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0.5,
+        "unit": "",
+        "tolerance": 0.01,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Divide the outcome effect by the exposure effect.",
+        "solution": "0.05/0.1 = 0.50.",
+        "lesson_ids": [
+          "genetics-9"
+        ],
+        "misconception_ids": [
+          "ratio-inverted"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "genetics-9:odds-ratio",
+      "type": "numeric",
+      "prompt": "A causal estimate is 0.50 log-odds per unit of exposure. What odds ratio per unit is that? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "genetics-9-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 1.6487,
+        "unit": "",
+        "tolerance": 0.01,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Exponentiate the log-odds.",
+        "solution": "e^0.50 = 1.65.",
+        "lesson_ids": [
+          "genetics-9"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "genetics-9:wald-se",
+      "type": "numeric",
+      "prompt": "Using SE(β_XY) ≈ SE(β_ZY)/|β_ZX| with SE(β_ZY) = 0.01 and β_ZX = 0.1, what is the approximate standard error of the Wald ratio? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "genetics-9-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0.1,
+        "unit": "",
+        "tolerance": 0.005,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Divide the outcome SE by the exposure effect.",
+        "solution": "0.01/0.1 = 0.10; 95% interval (0.30, 0.70).",
+        "lesson_ids": [
+          "genetics-9"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "genetics-9:f-statistic",
+      "type": "numeric",
+      "prompt": "A variant's effect on the exposure is 0.02 with standard error 0.01. What is its approximate F-statistic, (β/SE)²? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "genetics-9-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 4.0,
+        "unit": "",
+        "tolerance": 0.1,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Square the ratio of effect to standard error.",
+        "solution": "(0.02/0.01)² = 4: below the common threshold of 10, so a weak instrument.",
+        "lesson_ids": [
+          "genetics-9"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "genetics-9:pleiotropy",
+      "type": "single_choice",
+      "prompt": "Two variants used as instruments give Wald ratios of 0.5 and 1.5 log-odds per unit, both with small standard errors. What is the most likely explanation?",
+      "points": 1,
+      "objective_ids": [
+        "genetics-9-objective-3"
+      ],
+      "options": [
+        "Both estimates are correct and should be averaged without further checks.",
+        "At least one variant affects the outcome through a pathway other than the exposure (pleiotropy), violating the exclusion restriction.",
+        "The exposure has two different causal effects.",
+        "Mendelian randomization cannot use more than one variant."
+      ],
+      "solution_spec": {
+        "answer": 1
+      },
+      "feedback": {
+        "hint": "If both act only through the exposure, what should their ratios do?",
+        "solution": "Valid instruments estimate the same causal effect, so their ratios should agree within sampling error. Heterogeneity signals invalid instruments; robust methods and pleiotropy checks are needed.",
+        "lesson_ids": [
+          "genetics-9"
+        ],
+        "misconception_ids": [
+          "heterogeneity-ignored"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
     }
   ]
 }

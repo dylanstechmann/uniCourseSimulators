@@ -465,6 +465,46 @@
         "geroscience-14-objective-3"
       ],
       "license": "CC-BY-4.0"
+    },
+    {
+      "id": "geroscience-15-card-1",
+      "lesson_id": "geroscience-15",
+      "front": "Intraclass correlation",
+      "back": "ICC = σ²_between/(σ²_between + σ²_within): share of variance that is real between-person difference.",
+      "objective_ids": [
+        "geroscience-15-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "geroscience-15-card-2",
+      "lesson_id": "geroscience-15",
+      "front": "Smallest detectable change",
+      "back": "SDC = 1.96√2 σ_within; individual changes below it are noise.",
+      "objective_ids": [
+        "geroscience-15-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "geroscience-15-card-3",
+      "lesson_id": "geroscience-15",
+      "front": "Averaging",
+      "back": "Mean of k readings: σ_within/√k; technical replicates remove only technical noise.",
+      "objective_ids": [
+        "geroscience-15-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "geroscience-15-card-4",
+      "lesson_id": "geroscience-15",
+      "front": "Surrogate endpoints",
+      "back": "Prediction across people is not mediation; validate with trials measuring marker and outcome.",
+      "objective_ids": [
+        "geroscience-15-objective-3"
+      ],
+      "license": "CC-BY-4.0"
     }
   ]
 }

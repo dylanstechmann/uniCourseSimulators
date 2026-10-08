@@ -73,6 +73,19 @@
       "original_content": true,
       "license": "CC-BY-4.0",
       "modifications": []
+    },
+    {
+      "module_id": "robotics-module-6",
+      "lesson_id": "robotics-6",
+      "reading": "modules/06-joint-torque-budget-and-sensing.md",
+      "source_ids": [
+        "robotics",
+        "signals"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
     }
   ]
 }

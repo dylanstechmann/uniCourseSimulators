@@ -1,5 +1,9 @@
 # Progress review: uniStemCourseSimulators
 
+## Update after the research-skill lessons (2026-10-08, ninth pass)
+
+Written by an AI coding assistant. Ten lessons aimed at research practice: multiple testing, effect sizes and regression to the mean, algorithmic cost, floating-point pitfalls, biomarker reliability and surrogate endpoints, Mendelian randomization, binding equilibria, Starling forces, sensor lag and robot-joint budgets. The package count with only one new lesson is now small; the remaining distance to a semester course is week-by-week sequencing, graded work and human review.
+
 ## Update after the outcome-linking lessons (2026-10-08, eighth pass)
 
 Written by an AI coding assistant. Twelve lessons were written specifically for the 19 course outcomes that no lesson objective addressed, so every outcome in every package now has at least one lesson objective and practice items behind it. Twelve packages are at 0.3.0. This closes a measured mapping gap; it does not make any package a semester course, and the validator's outcome-to-assessment warning remains because assessments do not list outcome ids directly. Nothing is reviewed or graded.

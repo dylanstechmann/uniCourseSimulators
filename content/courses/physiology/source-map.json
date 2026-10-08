@@ -80,6 +80,19 @@
       "original_content": true,
       "license": "CC-BY-4.0",
       "modifications": []
+    },
+    {
+      "module_id": "physiology-module-7",
+      "lesson_id": "physiology-7",
+      "reading": "modules/07-capillary-starling-forces-and-edema.md",
+      "source_ids": [
+        "biology",
+        "transport"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
     }
   ]
 }

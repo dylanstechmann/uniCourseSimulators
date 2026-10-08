@@ -80,6 +80,32 @@
       "original_content": true,
       "license": "CC-BY-4.0",
       "modifications": []
+    },
+    {
+      "module_id": "statistics-module-7",
+      "lesson_id": "statistics-7",
+      "reading": "modules/07-multiple-testing-and-false-discovery-rate.md",
+      "source_ids": [
+        "statistics",
+        "biology"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "statistics-module-8",
+      "lesson_id": "statistics-8",
+      "reading": "modules/08-effect-sizes-intervals-and-regression-to-the-mean.md",
+      "source_ids": [
+        "statistics",
+        "biology"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
     }
   ]
 }

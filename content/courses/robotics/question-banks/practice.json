@@ -435,6 +435,191 @@
         "kind": "original",
         "modifications": []
       }
+    },
+    {
+      "id": "robotics-6:output-torque",
+      "type": "numeric",
+      "prompt": "A motor provides 0.05 N·m through a 50:1 gearbox with efficiency 0.8. What output torque is available? Enter the number only (N·m).",
+      "points": 1,
+      "objective_ids": [
+        "robotics-6-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 2.0,
+        "unit": "",
+        "tolerance": 0.02,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "τ_out = η N τ_motor.",
+        "solution": "0.8 × 50 × 0.05 = 2.0 N·m.",
+        "lesson_ids": [
+          "robotics-6"
+        ],
+        "misconception_ids": [
+          "efficiency-omitted"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "robotics-6:output-speed",
+      "type": "numeric",
+      "prompt": "The motor runs at 3000 rpm through the 50:1 reduction. What is the output speed in rpm? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "robotics-6-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 60.0,
+        "unit": "",
+        "tolerance": 0.1,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Speed divides by the ratio.",
+        "solution": "3000/50 = 60 rpm.",
+        "lesson_ids": [
+          "robotics-6"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "robotics-6:gravity-torque",
+      "type": "numeric",
+      "prompt": "A horizontal arm holds a 0.2 kg tool at 30 cm from the joint (g = 9.81 m/s²). What holding torque is needed? Enter the number only (N·m).",
+      "points": 1,
+      "objective_ids": [
+        "robotics-6-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0.5886,
+        "unit": "",
+        "tolerance": 0.005,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "τ = m g r.",
+        "solution": "0.2 × 9.81 × 0.3 = 0.589 N·m.",
+        "lesson_ids": [
+          "robotics-6"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "robotics-6:margin",
+      "type": "numeric",
+      "prompt": "Available torque is 2.0 N·m and the static load needs 0.589 N·m. What is the torque margin? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "robotics-6-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 3.3979,
+        "unit": "",
+        "tolerance": 0.02,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Margin = available/required.",
+        "solution": "2.0/0.589 = 3.40.",
+        "lesson_ids": [
+          "robotics-6"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "robotics-6:tool-resolution",
+      "type": "numeric",
+      "prompt": "A 1024-count encoder on the motor shaft sits behind a 50:1 reduction. What is the position resolution at a tool 30 cm from the joint? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "robotics-6-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 0.036816,
+        "unit": "mm",
+        "tolerance": 0.0005,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Counts per output revolution = CPR × N; arc = r × Δθ in radians.",
+        "solution": "51,200 counts/rev → 0.00703° → 0.3 m × 1.227×10⁻⁴ rad = 0.0368 mm.",
+        "lesson_ids": [
+          "robotics-6"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "robotics-6:backlash",
+      "type": "single_choice",
+      "prompt": "The motor-side encoder resolves 0.037 mm at the tool, but the gearbox has 0.1° of backlash at the output (0.52 mm at the tool). Which statement is correct?",
+      "points": 1,
+      "objective_ids": [
+        "robotics-6-objective-3"
+      ],
+      "options": [
+        "Backlash improves accuracy by adding compliance.",
+        "Positioning accuracy is limited by backlash, which the motor-side encoder cannot see; an output-side encoder or consistent approach direction is needed.",
+        "Backlash only matters when the motor is off.",
+        "Accuracy equals the encoder resolution."
+      ],
+      "solution_spec": {
+        "answer": 1
+      },
+      "feedback": {
+        "hint": "What does the encoder measure, and where does the play occur?",
+        "solution": "Play between gear teeth lets the output move without the motor shaft turning. Measuring after the gears, preloading, or approaching from one direction addresses it.",
+        "lesson_ids": [
+          "robotics-6"
+        ],
+        "misconception_ids": [
+          "resolution-is-accuracy"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
     }
   ]
 }

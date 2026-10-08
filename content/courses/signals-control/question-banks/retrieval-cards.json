@@ -105,6 +105,46 @@
         "signals-control-5-objective-3"
       ],
       "license": "CC-BY-4.0"
+    },
+    {
+      "id": "signals-control-6-card-1",
+      "lesson_id": "signals-control-6",
+      "front": "Convolution",
+      "back": "y[n] = Σ h[k]x[n − k]; output length len(x) + len(h) − 1.",
+      "objective_ids": [
+        "signals-control-6-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "signals-control-6-card-2",
+      "lesson_id": "signals-control-6",
+      "front": "First-order impulse response",
+      "back": "h(t) = (1/τ)e^(−t/τ); H(s) = 1/(τs + 1); step response 1 − e^(−t/τ).",
+      "objective_ids": [
+        "signals-control-6-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "signals-control-6-card-3",
+      "lesson_id": "signals-control-6",
+      "front": "Ramp lag",
+      "back": "A first-order sensor follows a ramp with a constant τ-second lag, error a × τ.",
+      "objective_ids": [
+        "signals-control-6-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "signals-control-6-card-4",
+      "lesson_id": "signals-control-6",
+      "front": "Correcting lag",
+      "back": "x ≈ y + τ dy/dt amplifies noise; report sensor response time with data.",
+      "objective_ids": [
+        "signals-control-6-objective-3"
+      ],
+      "license": "CC-BY-4.0"
     }
   ]
 }

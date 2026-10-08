@@ -7,7 +7,7 @@
   "domain": "Mechanical engineering",
   "level": "Year 3",
   "maturity": "partial",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "license": "MIT OR CC-BY-4.0",
   "content_origin": {
     "kind": "legacy-prototype",
@@ -125,6 +125,31 @@
       "course_outcome_ids": [
         "robotics-outcome-4",
         "robotics-outcome-3"
+      ]
+    },
+    {
+      "id": "robotics-6-objective-1",
+      "description": "Compute output torque and speed through a gearbox with a stated efficiency, and the gravity torque a load imposes.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "robotics-outcome-3"
+      ]
+    },
+    {
+      "id": "robotics-6-objective-2",
+      "description": "Calculate a torque margin and evaluate whether a joint can hold and move its load.",
+      "bloom": "evaluate",
+      "course_outcome_ids": [
+        "robotics-outcome-3"
+      ]
+    },
+    {
+      "id": "robotics-6-objective-3",
+      "description": "Calculate encoder resolution at the joint and at the tool, compare it with mechanical backlash, and design failure limits for the control loop.",
+      "bloom": "create",
+      "course_outcome_ids": [
+        "robotics-outcome-4",
+        "robotics-outcome-1"
       ]
     }
   ],
@@ -289,6 +314,41 @@
           ]
         }
       ]
+    },
+    {
+      "id": "robotics-module-6",
+      "title": "Joint torque budget and sensing",
+      "source_ids": [
+        "robotics",
+        "signals"
+      ],
+      "lessons": [
+        {
+          "id": "robotics-6",
+          "title": "Actuators, gearing and sensing for a lab robot joint: torque budgets, resolution and failure limits",
+          "reading": "modules/06-joint-torque-budget-and-sensing.md",
+          "objectives": [
+            "robotics-6-objective-1",
+            "robotics-6-objective-2",
+            "robotics-6-objective-3"
+          ],
+          "worked_example": "A 0.05 N·m motor through 50:1 at η = 0.8 gives 2.0 N·m at 60 rpm; a 0.2 kg tool at 30 cm needs 0.589 N·m, a margin of 3.4; a 1024-count motor encoder resolves 0.0368 mm at the tool, but 0.1° backlash means 0.52 mm.",
+          "question_ids": [
+            "robotics-6:output-torque",
+            "robotics-6:output-speed",
+            "robotics-6:gravity-torque",
+            "robotics-6:margin",
+            "robotics-6:tool-resolution",
+            "robotics-6:backlash"
+          ],
+          "card_ids": [
+            "robotics-6-card-1",
+            "robotics-6-card-2",
+            "robotics-6-card-3",
+            "robotics-6-card-4"
+          ]
+        }
+      ]
     }
   ],
   "assessments": [
@@ -374,6 +434,27 @@
       "points": 6
     },
     {
+      "id": "robotics-6-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Joint torque budget and sensing practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "robotics-6-objective-1",
+        "robotics-6-objective-2",
+        "robotics-6-objective-3"
+      ],
+      "question_ids": [
+        "robotics-6:output-torque",
+        "robotics-6:output-speed",
+        "robotics-6:gravity-torque",
+        "robotics-6:margin",
+        "robotics-6:tool-resolution",
+        "robotics-6:backlash"
+      ],
+      "points": 6
+    },
+    {
       "id": "robotics-case",
       "type": "case",
       "mode": "self-assessment",
@@ -425,6 +506,11 @@
       "version": "0.2.0",
       "date": "2026-10-08",
       "summary": "Added an original lesson on planar two-link arm kinematics for lab positioning (forward and inverse kinematics, reachability, singularity and joint-error propagation) with synthetic data, formative items with computed keys and retrieval cards. The package remains partial and unreviewed."
+    },
+    {
+      "version": "0.3.0",
+      "date": "2026-10-08",
+      "summary": "Added an original lesson on joint torque budgets, gearing, encoder resolution, backlash and failure limits with synthetic data, formative items with computed keys and retrieval cards. The package remains partial and unreviewed."
     }
   ],
   "limitations": [

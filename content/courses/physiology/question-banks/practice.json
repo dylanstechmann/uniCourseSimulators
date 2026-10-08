@@ -622,6 +622,192 @@
         "kind": "original",
         "modifications": []
       }
+    },
+    {
+      "id": "physiology-7:arterial-net",
+      "type": "numeric",
+      "prompt": "At the arterial end of a capillary, P_c = 35 mmHg, with P_i = 0 mmHg, π_c = 25 mmHg, π_i = 5 mmHg and σ = 0.9. What is the net filtration pressure? Enter the number only (mmHg).",
+      "points": 1,
+      "objective_ids": [
+        "physiology-7-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 17.0,
+        "unit": "",
+        "tolerance": 0.1,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Net = (P_c − P_i) − σ(π_c − π_i).",
+        "solution": "(35 − 0) − 0.9 × (25 − 5) = 17 mmHg, outward.",
+        "lesson_ids": [
+          "physiology-7"
+        ],
+        "misconception_ids": [
+          "sigma-omitted"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physiology-7:venous-net",
+      "type": "numeric",
+      "prompt": "At the venous end, P_c = 15 mmHg, with P_i = 0 mmHg, π_c = 25 mmHg, π_i = 5 mmHg and σ = 0.9. What is the net filtration pressure? Enter the number only (mmHg).",
+      "points": 1,
+      "objective_ids": [
+        "physiology-7-objective-1"
+      ],
+      "solution_spec": {
+        "answer": -3.0,
+        "unit": "",
+        "tolerance": 0.1,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Same equation with the lower capillary pressure.",
+        "solution": "15 − 18 = -3 mmHg: negative, so reabsorption.",
+        "lesson_ids": [
+          "physiology-7"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physiology-7:filtration-rate",
+      "type": "numeric",
+      "prompt": "With mean net filtration pressure 7 mmHg and K_f = 0.5 mL/min per mmHg, what is the filtration rate? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "physiology-7-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 3.5,
+        "unit": "mL/min",
+        "tolerance": 0.05,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "J_v = K_f × net pressure.",
+        "solution": "0.5 × 7 = 3.5 mL/min, returned by lymph at steady state.",
+        "lesson_ids": [
+          "physiology-7"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physiology-7:low-albumin",
+      "type": "numeric",
+      "prompt": "Plasma oncotic pressure falls to 15 mmHg with P_c = 35 mmHg, P_i = 0, π_i = 5 and σ = 0.9. What is the new arterial-end net filtration pressure? Enter the number only (mmHg).",
+      "points": 1,
+      "objective_ids": [
+        "physiology-7-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 26.0,
+        "unit": "",
+        "tolerance": 0.1,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Recompute the oncotic term with the lower π_c.",
+        "solution": "35 − 0.9 × (15 − 5) = 26 mmHg, up from 17.",
+        "lesson_ids": [
+          "physiology-7"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physiology-7:inflammation",
+      "type": "single_choice",
+      "prompt": "Inflammation makes capillary walls leaky to protein. How does this promote edema in Starling terms?",
+      "points": 1,
+      "objective_ids": [
+        "physiology-7-objective-3"
+      ],
+      "options": [
+        "It lowers capillary hydrostatic pressure.",
+        "It affects only lymph flow.",
+        "σ falls and protein leaks into the interstitium, raising π_i, so the oncotic force opposing filtration shrinks while K_f rises.",
+        "It raises plasma oncotic pressure."
+      ],
+      "solution_spec": {
+        "answer": 2
+      },
+      "feedback": {
+        "hint": "Which terms depend on the wall's permeability to protein?",
+        "solution": "A leakier wall lowers σ and lets protein out, reducing σ(π_c − π_i); a higher K_f also raises water flux for the same net pressure.",
+        "lesson_ids": [
+          "physiology-7"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physiology-7:lymph",
+      "type": "single_choice",
+      "prompt": "Filtration in a tissue is normal, but its lymphatic drainage is blocked. What happens?",
+      "points": 1,
+      "objective_ids": [
+        "physiology-7-objective-3"
+      ],
+      "options": [
+        "Plasma oncotic pressure rises to compensate fully.",
+        "Interstitial fluid accumulates (edema), because filtered fluid is not returned even though the Starling forces are unchanged.",
+        "Nothing, because capillaries reabsorb all filtered fluid.",
+        "Filtration stops immediately."
+      ],
+      "solution_spec": {
+        "answer": 1
+      },
+      "feedback": {
+        "hint": "Where does most filtered fluid return to the circulation?",
+        "solution": "Lymph removes the net filtrate. Without it, fluid and protein accumulate; rising P_i slows filtration but cannot fully prevent edema.",
+        "lesson_ids": [
+          "physiology-7"
+        ],
+        "misconception_ids": [
+          "capillaries-reabsorb-all"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
     }
   ]
 }

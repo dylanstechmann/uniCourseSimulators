@@ -225,6 +225,46 @@
         "genetics-8-objective-3"
       ],
       "license": "CC-BY-4.0"
+    },
+    {
+      "id": "genetics-9-card-1",
+      "lesson_id": "genetics-9",
+      "front": "MR assumptions",
+      "back": "Relevance, independence from confounders, exclusion restriction (no horizontal pleiotropy).",
+      "objective_ids": [
+        "genetics-9-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "genetics-9-card-2",
+      "lesson_id": "genetics-9",
+      "front": "Wald ratio",
+      "back": "β_XY = β_ZY/β_ZX; SE ≈ SE(β_ZY)/|β_ZX| for strong instruments.",
+      "objective_ids": [
+        "genetics-9-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "genetics-9-card-3",
+      "lesson_id": "genetics-9",
+      "front": "Instrument strength",
+      "back": "F ≈ (β_ZX/SE)²; below about 10 is weak and biases estimates.",
+      "objective_ids": [
+        "genetics-9-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "genetics-9-card-4",
+      "lesson_id": "genetics-9",
+      "front": "Interpretation",
+      "back": "MR estimates a lifelong genetic shift; check heterogeneity and robust estimators.",
+      "objective_ids": [
+        "genetics-9-objective-3"
+      ],
+      "license": "CC-BY-4.0"
     }
   ]
 }

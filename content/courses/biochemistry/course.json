@@ -7,7 +7,7 @@
   "domain": "Biochemistry",
   "level": "Year 2",
   "maturity": "partial",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "license": "MIT OR CC-BY-4.0",
   "content_origin": {
     "kind": "legacy-prototype",
@@ -146,6 +146,31 @@
       "bloom": "analyze",
       "course_outcome_ids": [
         "biochemistry-outcome-3"
+      ]
+    },
+    {
+      "id": "biochemistry-7-objective-1",
+      "description": "Use the dissociation constant to compute fractional occupancy at a given free ligand concentration and interpret K_d.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "biochemistry-outcome-1"
+      ]
+    },
+    {
+      "id": "biochemistry-7-objective-2",
+      "description": "Account for ligand depletion with the exact quadratic solution and judge when the simple hyperbolic equation is adequate.",
+      "bloom": "analyze",
+      "course_outcome_ids": [
+        "biochemistry-outcome-1"
+      ]
+    },
+    {
+      "id": "biochemistry-7-objective-3",
+      "description": "Use the Hill equation to describe cooperative binding and compare oxygen unloading by cooperative and non-cooperative carriers.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "biochemistry-outcome-1",
+        "biochemistry-outcome-4"
       ]
     }
   ],
@@ -341,6 +366,41 @@
           ]
         }
       ]
+    },
+    {
+      "id": "biochemistry-module-7",
+      "title": "Binding equilibria and cooperativity",
+      "source_ids": [
+        "biochemistry",
+        "biology"
+      ],
+      "lessons": [
+        {
+          "id": "biochemistry-7",
+          "title": "Binding equilibria: dissociation constants, ligand depletion and cooperative binding",
+          "reading": "modules/07-binding-equilibria-and-cooperativity.md",
+          "objectives": [
+            "biochemistry-7-objective-1",
+            "biochemistry-7-objective-2",
+            "biochemistry-7-objective-3"
+          ],
+          "worked_example": "At K_d = 10 nM and 30 nM free ligand, θ = 0.75; with 50 nM receptor and ligand, the quadratic gives 32.1 nM complex rather than 41.7; a Hill carrier (n = 2.8, P₅₀ = 26) unloads 20.8% between 100 and 40 mmHg versus 3.8% for a hyperbolic one.",
+          "question_ids": [
+            "biochemistry-7:occupancy",
+            "biochemistry-7:depletion",
+            "biochemistry-7:hill-40",
+            "biochemistry-7:unloading",
+            "biochemistry-7:hill-meaning",
+            "biochemistry-7:kd-assay"
+          ],
+          "card_ids": [
+            "biochemistry-7-card-1",
+            "biochemistry-7-card-2",
+            "biochemistry-7-card-3",
+            "biochemistry-7-card-4"
+          ]
+        }
+      ]
     }
   ],
   "assessments": [
@@ -447,6 +507,27 @@
       "points": 6
     },
     {
+      "id": "biochemistry-7-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Binding equilibria and cooperativity practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "biochemistry-7-objective-1",
+        "biochemistry-7-objective-2",
+        "biochemistry-7-objective-3"
+      ],
+      "question_ids": [
+        "biochemistry-7:occupancy",
+        "biochemistry-7:depletion",
+        "biochemistry-7:hill-40",
+        "biochemistry-7:unloading",
+        "biochemistry-7:hill-meaning",
+        "biochemistry-7:kd-assay"
+      ],
+      "points": 6
+    },
+    {
       "id": "biochemistry-case",
       "type": "case",
       "mode": "self-assessment",
@@ -493,6 +574,11 @@
       "version": "0.2.0",
       "date": "2026-10-08",
       "summary": "Added two original lessons (enzyme kinetics from data with inhibition fingerprints, and actual versus standard free energy, coupling and redox) with synthetic data, formative items with computed keys and retrieval cards. The package remains partial and unreviewed."
+    },
+    {
+      "version": "0.3.0",
+      "date": "2026-10-08",
+      "summary": "Added an original lesson on binding equilibria (K_d, ligand depletion and cooperative Hill binding) with synthetic data, formative items with computed keys and retrieval cards. The package remains partial and unreviewed."
     }
   ],
   "limitations": [

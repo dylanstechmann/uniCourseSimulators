@@ -67,6 +67,32 @@
       "original_content": true,
       "license": "CC-BY-4.0",
       "modifications": []
+    },
+    {
+      "module_id": "programming-module-6",
+      "lesson_id": "programming-6",
+      "reading": "modules/06-algorithmic-cost-and-scaling.md",
+      "source_ids": [
+        "numerical",
+        "engineeringMath"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "programming-module-7",
+      "lesson_id": "programming-7",
+      "reading": "modules/07-floating-point-rounding-and-cancellation.md",
+      "source_ids": [
+        "numerical",
+        "engineeringMath"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
     }
   ]
 }

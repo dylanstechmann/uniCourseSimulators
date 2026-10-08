@@ -145,6 +145,46 @@
         "biochemistry-6-objective-3"
       ],
       "license": "CC-BY-4.0"
+    },
+    {
+      "id": "biochemistry-7-card-1",
+      "lesson_id": "biochemistry-7",
+      "front": "Dissociation constant",
+      "back": "K_d = [R][L]/[RL]; θ = L_free/(K_d + L_free); half occupied at L_free = K_d.",
+      "objective_ids": [
+        "biochemistry-7-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "biochemistry-7-card-2",
+      "lesson_id": "biochemistry-7",
+      "front": "Ligand depletion",
+      "back": "Use the quadratic when receptor is not ≪ K_d; otherwise binding is overestimated.",
+      "objective_ids": [
+        "biochemistry-7-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "biochemistry-7-card-3",
+      "lesson_id": "biochemistry-7",
+      "front": "Hill equation",
+      "back": "Y = Pⁿ/(P₅₀ⁿ + Pⁿ); n > 1 positive cooperativity; n ≤ number of sites.",
+      "objective_ids": [
+        "biochemistry-7-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "biochemistry-7-card-4",
+      "lesson_id": "biochemistry-7",
+      "front": "Cooperative delivery",
+      "back": "A sigmoidal curve unloads far more between lung and tissue pressures than a hyperbola.",
+      "objective_ids": [
+        "biochemistry-7-objective-3"
+      ],
+      "license": "CC-BY-4.0"
     }
   ]
 }

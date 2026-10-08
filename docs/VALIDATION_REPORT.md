@@ -4,7 +4,19 @@
 
 2026-10-06; synthetic local learner data only. Milestones 1 and 2 are implemented. Milestone 3 remains partial; deterministic graders and prototype graded-assignment and review workflows are described below. A Milestone 4 curriculum-map increment is implemented and tested, while subject-matter review and map refinement remain. All 25 course packages are **partial**; zero are beta, complete or externally reviewed. Human score review is limited to saved attempts and does not constitute course-content review. No semester equivalence, university credit, security certification or public production deployment is asserted.
 
-## Current increment: twelve lessons that link every course outcome (2026-10-08, eighth pass)
+## Current increment: ten research-skill lessons (2026-10-08, ninth pass)
+
+Written by an AI coding assistant. Ten original lessons of about 820 to 900 words, each with common mistakes, a worked problem, six items and four cards: statistics (multiple testing with Bonferroni and Benjamini–Hochberg; effect sizes, confidence intervals and regression to the mean), programming (algorithmic cost and data structures; floating-point rounding and cancellation, with runnable Python snippets), geroscience (biomarker reliability, smallest detectable change and surrogate endpoints, stating no claim that any intervention changes human aging), genetics (Mendelian randomization), biochemistry (binding equilibria, ligand depletion, Hill cooperativity), physiology (Starling forces and edema), signals and control (convolution and sensor lag) and robotics (joint torque budget, encoder resolution, backlash and failure limits). Statistics, programming, biochemistry, physiology, signals and control, and robotics move to 0.3.0; geroscience and genetics to 0.4.0; all stay `partial`. 60 keys were graded to full credit. The authoring pipeline's notation converter was changed to leave fenced and inline code untouched, and a test checks that the Python snippet keeps its `1e8` literals. Two existing tests pinned the statistics and geroscience versions and were updated; their maturity and review assertions are unchanged.
+
+| Command/check (this container, Python 3.12.3, 2026-10-08) | Result |
+| --- | --- |
+| `python tools/validate_content.py` | PASS: 25 packages, 201 lessons, 708 questions, 544 cards, 25 cases; 0 errors; 123 disclosed warnings |
+| `verify.sh` (first run) | content, legacy, security (505+ files, 0 findings), ruff, backend (1665 passed, 2 skipped) PASS; root pytest 2 failed on version pins |
+| `python -m pytest tests -q` after the pin update | 212 passed |
+
+Not run: frontend checks, Docker Compose, Playwright. Not reviewed by a subject-matter expert.
+
+## Previous increment: twelve lessons that link every course outcome (2026-10-08, eighth pass)
 
 Written by an AI coding assistant. Twelve original lessons of about 810 to 910 words, each with common mistakes, a worked problem, six items and four cards, written for the 19 course outcomes that no lesson objective linked to: bioreactors (cell-culture mass balance), transport (perfusion tubing: balances, Reynolds number, pressure drop), calculus 1 (limits, continuity and net change), calculus 2 (Taylor error bounds), calculus 3 (constrained optimization and polar integrals), circuits (RC frequency response and aliasing), general chemistry 1 (polarity, partitioning and calorimetry), general chemistry 2 (Nernst equation and metal centers), organic chemistry (SN1/SN2 and stereochemistry), physics EM (induction, flow meters and current limits, with a synthetic limit that is explicitly not safety guidance), physics mechanics (centrifuge rotation) and statics (forearm equilibrium). The twelve packages move to 0.3.0 and stay `partial`. 72 keys were graded to full credit. Pre-commit checks caught three short feedback strings, three readings under 800 words, a source id not used by the package and a muscle-stress example whose synthetic area gave an implausible stress; all were fixed.
 

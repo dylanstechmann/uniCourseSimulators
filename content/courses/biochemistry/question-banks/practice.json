@@ -627,6 +627,192 @@
         "kind": "original",
         "modifications": []
       }
+    },
+    {
+      "id": "biochemistry-7:occupancy",
+      "type": "numeric",
+      "prompt": "A receptor binds its ligand with K_d = 10 nM. What fraction of receptors is occupied at 30 nM free ligand? Enter a decimal fraction, number only.",
+      "points": 1,
+      "objective_ids": [
+        "biochemistry-7-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0.75,
+        "unit": "",
+        "tolerance": 0.005,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "θ = L/(K_d + L).",
+        "solution": "30/(10 + 30) = 0.75.",
+        "lesson_ids": [
+          "biochemistry-7"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "biochemistry-7:depletion",
+      "type": "numeric",
+      "prompt": "Receptor and ligand are each present at 50 nM total, with K_d = 10 nM. Using the quadratic solution, how much complex forms? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "biochemistry-7-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 32.087,
+        "unit": "nM",
+        "tolerance": 0.2,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "[RL] = {(R_T + L_T + K_d) − √[(R_T + L_T + K_d)² − 4R_T L_T]}/2.",
+        "solution": "(110 − √2100)/2 = 32.1 nM; assuming free = total would give 41.7 nM.",
+        "lesson_ids": [
+          "biochemistry-7"
+        ],
+        "misconception_ids": [
+          "total-as-free-ligand"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "biochemistry-7:hill-40",
+      "type": "numeric",
+      "prompt": "A carrier follows the Hill equation with n = 2.8 and P₅₀ = 26 mmHg. What percentage is saturated at 40 mmHg? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "biochemistry-7-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 76.962,
+        "unit": "%",
+        "tolerance": 0.2,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Y = Pⁿ/(P₅₀ⁿ + Pⁿ).",
+        "solution": "40^2.8/(26^2.8 + 40^2.8) = 0.7696 = 77.0%.",
+        "lesson_ids": [
+          "biochemistry-7"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "biochemistry-7:unloading",
+      "type": "numeric",
+      "prompt": "The same carrier is 97.8% saturated at 100 mmHg and 77.0% at 40 mmHg. A non-cooperative carrier with P₅₀ = 2.8 mmHg unloads 3.8% over the same range. How many percentage points more does the cooperative carrier unload? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "biochemistry-7-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 16.97,
+        "unit": "%",
+        "tolerance": 0.3,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Compute the cooperative carrier's unloading, then subtract.",
+        "solution": "20.8 − 3.8 = 17.0 percentage points.",
+        "lesson_ids": [
+          "biochemistry-7"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "biochemistry-7:hill-meaning",
+      "type": "single_choice",
+      "prompt": "A binding curve fits a Hill coefficient of 2.8. What does that indicate?",
+      "points": 1,
+      "objective_ids": [
+        "biochemistry-7-objective-3"
+      ],
+      "options": [
+        "Exactly 2.8 binding sites.",
+        "Positive cooperativity among at least three interacting sites; n is a steepness measure, not an exact site count.",
+        "Independent, non-interacting sites.",
+        "Negative cooperativity."
+      ],
+      "solution_spec": {
+        "answer": 1
+      },
+      "feedback": {
+        "hint": "n > 1 means the curve is steeper than a hyperbola.",
+        "solution": "n > 1 signals positive cooperativity, and n cannot exceed the number of interacting sites. Hemoglobin has four sites and n near 3.",
+        "lesson_ids": [
+          "biochemistry-7"
+        ],
+        "misconception_ids": [
+          "hill-equals-sites"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "biochemistry-7:kd-assay",
+      "type": "single_choice",
+      "prompt": "A titration uses 100 nM receptor to measure a ligand whose true K_d is about 1 nM, fitting θ = L_total/(K_d + L_total). What goes wrong?",
+      "points": 1,
+      "objective_ids": [
+        "biochemistry-7-objective-2"
+      ],
+      "options": [
+        "Ligand depletion: at this receptor concentration most added ligand is bound, so the fitted K_d reflects receptor concentration more than affinity.",
+        "Binding cannot be measured above 10 nM receptor.",
+        "The fitted K_d will be too small.",
+        "Nothing; the simple equation is exact."
+      ],
+      "solution_spec": {
+        "answer": 0
+      },
+      "feedback": {
+        "hint": "Compare the receptor concentration with K_d.",
+        "solution": "When R_T ≫ K_d the titration is stoichiometric: binding tracks added ligand until the receptor saturates, and the apparent K_d approaches about R_T/2. Lower receptor or the quadratic model is needed.",
+        "lesson_ids": [
+          "biochemistry-7"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
     }
   ]
 }

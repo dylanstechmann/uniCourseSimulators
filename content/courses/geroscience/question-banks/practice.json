@@ -1896,6 +1896,195 @@
         "kind": "original",
         "modifications": []
       }
+    },
+    {
+      "id": "geroscience-15:icc",
+      "type": "numeric",
+      "prompt": "A synthetic aging score has between-person SD 5 years and within-person (repeat-measurement) SD 3 years. What is the ICC? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "geroscience-15-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0.73529,
+        "unit": "",
+        "tolerance": 0.005,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "ICC = between variance / total variance; square the SDs.",
+        "solution": "25/(25 + 9) = 0.735.",
+        "lesson_ids": [
+          "geroscience-15"
+        ],
+        "misconception_ids": [
+          "sd-instead-of-variance"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "geroscience-15:sdc",
+      "type": "numeric",
+      "prompt": "With within-person SD 3 years, what is the smallest detectable change 1.96 × √2 × σ_within? Enter a value in years (number only).",
+      "points": 1,
+      "objective_ids": [
+        "geroscience-15-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 8.3156,
+        "unit": "",
+        "tolerance": 0.05,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Multiply the within-person SD by 1.96 and √2.",
+        "solution": "1.96 × 1.414 × 3 = 8.32 years.",
+        "lesson_ids": [
+          "geroscience-15"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "geroscience-15:averaged-sdc",
+      "type": "numeric",
+      "prompt": "If each time point averages 3 independent measurements (within-person SD 3 years each), what is the new smallest detectable change? Enter the number only (years).",
+      "points": 1,
+      "objective_ids": [
+        "geroscience-15-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 4.801,
+        "unit": "",
+        "tolerance": 0.05,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "The within-person SD of a mean of k readings is σ/√k.",
+        "solution": "σ = 3/√3 = 1.732; SDC = 1.96 × 1.414 × 1.732 = 4.80 years.",
+        "lesson_ids": [
+          "geroscience-15"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "geroscience-15:individual-change",
+      "type": "single_choice",
+      "prompt": "A person's score falls by 4 years between two single measurements, and the marker's SDC is 8.3 years. What can be concluded?",
+      "points": 1,
+      "objective_ids": [
+        "geroscience-15-objective-2"
+      ],
+      "options": [
+        "The intervention they took worked.",
+        "The change is within measurement noise for one person; it does not show a real change in that individual.",
+        "The marker must be broken.",
+        "Their biological age fell by four years."
+      ],
+      "solution_spec": {
+        "answer": 1
+      },
+      "feedback": {
+        "hint": "Compare the observed change with the SDC.",
+        "solution": "Changes smaller than the SDC (8.3 years) are compatible with measurement noise alone. Repeated measurements and a control comparison are needed.",
+        "lesson_ids": [
+          "geroscience-15"
+        ],
+        "misconception_ids": [
+          "single-change-is-signal"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "geroscience-15:surrogate",
+      "type": "single_choice",
+      "prompt": "A blood-based aging score strongly predicts mortality across people. A drug lowers the score. What is still needed before treating the score change as evidence of reduced mortality risk?",
+      "points": 1,
+      "objective_ids": [
+        "geroscience-15-objective-3"
+      ],
+      "options": [
+        "Only a larger correlation coefficient in the original cohort.",
+        "Nothing; a strong predictor is automatically a valid surrogate.",
+        "Showing that the score correlates with chronological age.",
+        "Evidence that changing the score through this kind of intervention changes the outcome, ideally trials measuring both marker and outcome."
+      ],
+      "solution_spec": {
+        "answer": 3
+      },
+      "feedback": {
+        "hint": "Distinguish prediction across people from mediation of an intervention's effect.",
+        "solution": "Surrogacy requires that the intervention's effect on the outcome passes through the marker. Confounding, off-pathway effects and changes in sampled cell composition can all break the link.",
+        "lesson_ids": [
+          "geroscience-15"
+        ],
+        "misconception_ids": [
+          "predictor-equals-surrogate"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "geroscience-15:cell-composition",
+      "type": "single_choice",
+      "prompt": "An intervention shifts the proportions of white-blood-cell types, and a DNA-methylation score measured in blood falls. Which explanation must be ruled out before interpreting the fall as slower aging?",
+      "points": 1,
+      "objective_ids": [
+        "geroscience-15-objective-3"
+      ],
+      "options": [
+        "Methylation cannot be measured in blood.",
+        "The score changed because the mix of sampled cells changed, not because aging processes in cells or other tissues changed.",
+        "The score always falls after any intervention.",
+        "Cell-type shifts raise every score."
+      ],
+      "solution_spec": {
+        "answer": 1
+      },
+      "feedback": {
+        "hint": "What does a blood sample measure if its cell composition changes?",
+        "solution": "Bulk blood measurements reflect a mixture. Changing the mixture changes the average signal even if no cell changes, so analyses must adjust for or measure composition.",
+        "lesson_ids": [
+          "geroscience-15"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
     }
   ]
 }

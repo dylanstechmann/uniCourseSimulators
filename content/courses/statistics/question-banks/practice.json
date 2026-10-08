@@ -525,6 +525,379 @@
         "kind": "original",
         "modifications": []
       }
+    },
+    {
+      "id": "statistics-7:fwer",
+      "type": "numeric",
+      "prompt": "Twenty independent tests are each run at α = 0.05 and every null hypothesis is true. What is the probability of at least one false positive? Enter a decimal fraction, number only.",
+      "points": 1,
+      "objective_ids": [
+        "statistics-7-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0.64151,
+        "unit": "",
+        "tolerance": 0.002,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "FWER = 1 − (1 − α)ᵐ.",
+        "solution": "1 − 0.95²⁰ = 0.642.",
+        "lesson_ids": [
+          "statistics-7"
+        ],
+        "misconception_ids": [
+          "fwer-equals-alpha"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "statistics-7:expected-fp",
+      "type": "numeric",
+      "prompt": "A screen tests 1,000 genes, none truly different, at p < 0.05 each. How many false positives are expected? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "statistics-7-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 50.0,
+        "unit": "",
+        "tolerance": 0.5,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Expected false positives = α × number of true nulls.",
+        "solution": "0.05 × 1,000 = 50.",
+        "lesson_ids": [
+          "statistics-7"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "statistics-7:bonferroni-count",
+      "type": "numeric",
+      "prompt": "Ten p-values are 0.001, 0.004, 0.012, 0.02, 0.031, 0.04, 0.18, 0.33, 0.52, 0.81. How many are significant after Bonferroni correction at α = 0.05? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "statistics-7-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 2.0,
+        "unit": "",
+        "tolerance": 0,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Compare each p with α/m.",
+        "solution": "α/m = 0.005; 2 p-values are at or below it.",
+        "lesson_ids": [
+          "statistics-7"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "statistics-7:bh-count",
+      "type": "numeric",
+      "prompt": "For the same p-values (0.001, 0.004, 0.012, 0.02, 0.031, 0.04, 0.18, 0.33, 0.52, 0.81), how many hypotheses does the Benjamini–Hochberg procedure reject at q = 0.05? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "statistics-7-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 4.0,
+        "unit": "",
+        "tolerance": 0,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Find the largest rank i with p₍ᵢ₎ ≤ (i/m)q.",
+        "solution": "Ranks 1–4 meet thresholds 0.005, 0.010, 0.015, 0.020; ranks 5 onward fail; BH rejects 4.",
+        "lesson_ids": [
+          "statistics-7"
+        ],
+        "misconception_ids": [
+          "bh-stop-at-first-fail"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "statistics-7:fdr-meaning",
+      "type": "single_choice",
+      "prompt": "A screen reports 40 hits at a false discovery rate of 5%. Which statement is correct?",
+      "points": 1,
+      "objective_ids": [
+        "statistics-7-objective-3"
+      ],
+      "options": [
+        "On average about 2 of the 40 hits are expected to be false positives, but the procedure does not say which ones.",
+        "Each hit has exactly a 5% chance of being false.",
+        "At most 2 hits can be false.",
+        "There is a 5% chance that any hit is false."
+      ],
+      "solution_spec": {
+        "answer": 0
+      },
+      "feedback": {
+        "hint": "FDR is an expectation over the set of discoveries.",
+        "solution": "FDR controls the expected proportion of false discoveries among rejections. It is not a per-hit probability and not a hard maximum.",
+        "lesson_ids": [
+          "statistics-7"
+        ],
+        "misconception_ids": [
+          "fdr-per-hit-probability"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "statistics-7:which-control",
+      "type": "single_choice",
+      "prompt": "A team will advance one compound to an expensive animal study based on a confirmatory test of three pre-specified endpoints. Which error control fits best?",
+      "points": 1,
+      "objective_ids": [
+        "statistics-7-objective-3"
+      ],
+      "options": [
+        "Family-wise control, such as Bonferroni or Holm across the three endpoints, because a single false positive drives a costly decision.",
+        "FDR control at 20%.",
+        "No correction, because only three tests were run.",
+        "Correct only the endpoint with the smallest p-value."
+      ],
+      "solution_spec": {
+        "answer": 0
+      },
+      "feedback": {
+        "hint": "Match the error criterion to the cost of a false positive.",
+        "solution": "Confirmatory decisions warrant FWER control. FDR suits exploratory screens whose hits are followed up.",
+        "lesson_ids": [
+          "statistics-7"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "statistics-8:standard-error",
+      "type": "numeric",
+      "prompt": "Two groups of 20 have equal standard deviation 3.0. What is the standard error of the difference in means, s√(2/n)? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "statistics-8-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0.94868,
+        "unit": "",
+        "tolerance": 0.002,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Substitute s and n.",
+        "solution": "3.0 × √(2/20) = 0.949.",
+        "lesson_ids": [
+          "statistics-8"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "statistics-8:ci-upper",
+      "type": "numeric",
+      "prompt": "The difference in means is 1.5 with standard error 0.949 and t critical value 2.024. What is the upper limit of the 95% confidence interval? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "statistics-8-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 3.4201,
+        "unit": "",
+        "tolerance": 0.01,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Difference + t × SE.",
+        "solution": "1.5 + 2.024 × 0.949 = 3.42; the interval is (-0.42, 3.42).",
+        "lesson_ids": [
+          "statistics-8"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "statistics-8:interpret-ci",
+      "type": "single_choice",
+      "prompt": "The 95% interval for a treatment effect is (-0.42, 3.42). Which conclusion is best supported?",
+      "points": 1,
+      "objective_ids": [
+        "statistics-8-objective-1"
+      ],
+      "options": [
+        "The treatment has no effect.",
+        "The treatment has an effect of 1.5 with 95% probability.",
+        "The study proves the treatment works.",
+        "The estimate is imprecise: the data are compatible with no effect and with an effect of over 3 units."
+      ],
+      "solution_spec": {
+        "answer": 3
+      },
+      "feedback": {
+        "hint": "Look at both ends of the interval.",
+        "solution": "An interval spanning zero and large values reflects imprecision. Absence of significance is not evidence of absence when the interval is wide.",
+        "lesson_ids": [
+          "statistics-8"
+        ],
+        "misconception_ids": [
+          "nonsignificant-means-no-effect"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "statistics-8:cohens-d",
+      "type": "numeric",
+      "prompt": "The difference in means is 1.5 and the common standard deviation is 3.0. What is Cohen's d? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "statistics-8-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0.5,
+        "unit": "",
+        "tolerance": 0.005,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "d = difference / SD.",
+        "solution": "1.5/3.0 = 0.50.",
+        "lesson_ids": [
+          "statistics-8"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "statistics-8:larger-n-se",
+      "type": "numeric",
+      "prompt": "If each group had 80 participants instead of 20 (same SD 3.0), what would the standard error be? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "statistics-8-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0.47434,
+        "unit": "",
+        "tolerance": 0.002,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "SE falls with √n.",
+        "solution": "3.0 × √(2/80) = 0.474, half the earlier value.",
+        "lesson_ids": [
+          "statistics-8"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "statistics-8:regression-to-mean",
+      "type": "numeric",
+      "prompt": "A marker has population mean 100 and test–retest correlation 0.7. Someone is enrolled because their first reading was 130. With no intervention, what second reading is expected? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "statistics-8-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 121.0,
+        "unit": "",
+        "tolerance": 0.5,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "E[x₂] = μ + r(x₁ − μ).",
+        "solution": "100 + 0.7 × 30 = 121: an apparent improvement of 9 from selection alone.",
+        "lesson_ids": [
+          "statistics-8"
+        ],
+        "misconception_ids": [
+          "change-after-selection-is-effect"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
     }
   ]
 }

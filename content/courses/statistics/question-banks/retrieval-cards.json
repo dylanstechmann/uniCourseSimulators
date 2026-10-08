@@ -135,6 +135,86 @@
         "statistics-6-objective-3"
       ],
       "license": "CC-BY-4.0"
+    },
+    {
+      "id": "statistics-7-card-1",
+      "lesson_id": "statistics-7",
+      "front": "Family-wise error",
+      "back": "FWER = 1 − (1 − α)ᵐ for independent tests; 20 tests at 0.05 give about 0.64.",
+      "objective_ids": [
+        "statistics-7-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "statistics-7-card-2",
+      "lesson_id": "statistics-7",
+      "front": "Bonferroni",
+      "back": "Test each at α/m; controls FWER under any dependence; conservative for large m.",
+      "objective_ids": [
+        "statistics-7-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "statistics-7-card-3",
+      "lesson_id": "statistics-7",
+      "front": "Benjamini–Hochberg",
+      "back": "Largest i with p₍ᵢ₎ ≤ (i/m)q; reject ranks 1..i; controls FDR.",
+      "objective_ids": [
+        "statistics-7-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "statistics-7-card-4",
+      "lesson_id": "statistics-7",
+      "front": "Interpreting FDR",
+      "back": "Expected fraction of false discoveries, not a per-hit probability; correct for every test run.",
+      "objective_ids": [
+        "statistics-7-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "statistics-8-card-1",
+      "lesson_id": "statistics-8",
+      "front": "Confidence interval",
+      "back": "Difference ± t × SE; SE = s√(2/n) for equal groups; wide intervals mean imprecision, not absence.",
+      "objective_ids": [
+        "statistics-8-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "statistics-8-card-2",
+      "lesson_id": "statistics-8",
+      "front": "Effect size",
+      "back": "Cohen's d = difference/SD; report raw units too.",
+      "objective_ids": [
+        "statistics-8-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "statistics-8-card-3",
+      "lesson_id": "statistics-8",
+      "front": "Precision and n",
+      "back": "SE ∝ 1/√n: quadrupling n halves SE; large n can make trivial effects significant.",
+      "objective_ids": [
+        "statistics-8-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "statistics-8-card-4",
+      "lesson_id": "statistics-8",
+      "front": "Regression to the mean",
+      "back": "E[x₂|x₁] = μ + r(x₁ − μ); use randomized controls selected the same way.",
+      "objective_ids": [
+        "statistics-8-objective-3"
+      ],
+      "license": "CC-BY-4.0"
     }
   ]
 }

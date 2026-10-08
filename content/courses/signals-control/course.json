@@ -7,7 +7,7 @@
   "domain": "Electrical engineering",
   "level": "Year 3",
   "maturity": "partial",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "license": "MIT OR CC-BY-4.0",
   "content_origin": {
     "kind": "legacy-prototype",
@@ -122,6 +122,32 @@
       "bloom": "evaluate",
       "course_outcome_ids": [
         "signals-control-outcome-4"
+      ]
+    },
+    {
+      "id": "signals-control-6-objective-1",
+      "description": "Compute the output of a discrete linear time-invariant system by convolving an input sequence with an impulse response.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "signals-control-outcome-1"
+      ]
+    },
+    {
+      "id": "signals-control-6-objective-2",
+      "description": "Relate a first-order sensor's impulse response to its step response and time constant, and to its transfer function.",
+      "bloom": "analyze",
+      "course_outcome_ids": [
+        "signals-control-outcome-1",
+        "signals-control-outcome-2"
+      ]
+    },
+    {
+      "id": "signals-control-6-objective-3",
+      "description": "Quantify the lag and error a first-order sensor introduces for step and ramp inputs, and evaluate strategies to correct them.",
+      "bloom": "evaluate",
+      "course_outcome_ids": [
+        "signals-control-outcome-4",
+        "signals-control-outcome-2"
       ]
     }
   ],
@@ -282,6 +308,41 @@
           ]
         }
       ]
+    },
+    {
+      "id": "signals-control-module-6",
+      "title": "Convolution and sensor response",
+      "source_ids": [
+        "signals",
+        "control"
+      ],
+      "lessons": [
+        {
+          "id": "signals-control-6",
+          "title": "Convolution and impulse response: why a sensor blurs and delays what it measures",
+          "reading": "modules/06-convolution-and-sensor-impulse-response.md",
+          "objectives": [
+            "signals-control-6-objective-1",
+            "signals-control-6-objective-2",
+            "signals-control-6-objective-3"
+          ],
+          "worked_example": "Convolving the pulse [0, 0, 1, 1, 1, 0, 0] with h = [0.5, 0.3, 0.2] gives [0.0, 0.0, 0.5, 0.8, 1.0, 0.5, 0.2, 0.0, 0.0]; a first-order sensor with τ = 2 s shows 86.5% of a step after 4 s and lags a 0.5 units/s ramp by 1.0 units.",
+          "question_ids": [
+            "signals-control-6:conv-sample",
+            "signals-control-6:conv-length",
+            "signals-control-6:step-2tau",
+            "signals-control-6:impulse-value",
+            "signals-control-6:ramp-error",
+            "signals-control-6:deconvolution"
+          ],
+          "card_ids": [
+            "signals-control-6-card-1",
+            "signals-control-6-card-2",
+            "signals-control-6-card-3",
+            "signals-control-6-card-4"
+          ]
+        }
+      ]
     }
   ],
   "assessments": [
@@ -367,6 +428,27 @@
       "points": 7
     },
     {
+      "id": "signals-control-6-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Convolution and sensor response practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "signals-control-6-objective-1",
+        "signals-control-6-objective-2",
+        "signals-control-6-objective-3"
+      ],
+      "question_ids": [
+        "signals-control-6:conv-sample",
+        "signals-control-6:conv-length",
+        "signals-control-6:step-2tau",
+        "signals-control-6:impulse-value",
+        "signals-control-6:ramp-error",
+        "signals-control-6:deconvolution"
+      ],
+      "points": 6
+    },
+    {
       "id": "signals-control-case",
       "type": "case",
       "mode": "self-assessment",
@@ -413,6 +495,11 @@
       "version": "0.2.0",
       "date": "2026-10-08",
       "summary": "Added an original lesson on proportional control of an incubator (first-order plant, steady-state error, closed-loop speed, saturation and integral windup) with synthetic data, formative items with computed keys and retrieval cards. The package remains partial and unreviewed."
+    },
+    {
+      "version": "0.3.0",
+      "date": "2026-10-08",
+      "summary": "Added an original lesson on convolution, impulse response and first-order sensor lag with synthetic data, formative items with computed keys and retrieval cards. The package remains partial and unreviewed."
     }
   ],
   "limitations": [

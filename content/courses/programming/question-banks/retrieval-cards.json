@@ -105,6 +105,86 @@
         "programming-5-objective-3"
       ],
       "license": "CC-BY-4.0"
+    },
+    {
+      "id": "programming-6-card-1",
+      "lesson_id": "programming-6",
+      "front": "Big-O",
+      "back": "Describes growth with n: O(n) pass, O(n log n) sort, O(log n) binary search, O(n²) all pairs.",
+      "objective_ids": [
+        "programming-6-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "programming-6-card-2",
+      "lesson_id": "programming-6",
+      "front": "Time estimate",
+      "back": "Time ≈ operation count / rate; O(n²) work grows 100× for 10× data.",
+      "objective_ids": [
+        "programming-6-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "programming-6-card-3",
+      "lesson_id": "programming-6",
+      "front": "Data structures",
+      "back": "Set/dict lookup O(1) average versus list O(n); sort once then binary search.",
+      "objective_ids": [
+        "programming-6-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "programming-6-card-4",
+      "lesson_id": "programming-6",
+      "front": "Optimize wisely",
+      "back": "Profile first, keep a slow reference implementation and compare outputs.",
+      "objective_ids": [
+        "programming-6-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "programming-7-card-1",
+      "lesson_id": "programming-7",
+      "front": "Machine epsilon",
+      "back": "≈ 2.2×10⁻¹⁶ for doubles; spacing near x is about |x|ε.",
+      "objective_ids": [
+        "programming-7-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "programming-7-card-2",
+      "lesson_id": "programming-7",
+      "front": "Catastrophic cancellation",
+      "back": "a − b for nearly equal a, b loses about log₁₀(|a|/|a − b|) digits.",
+      "objective_ids": [
+        "programming-7-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "programming-7-card-3",
+      "lesson_id": "programming-7",
+      "front": "Stable variance",
+      "back": "Use two-pass or Welford, not mean(x²) − mean(x)².",
+      "objective_ids": [
+        "programming-7-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "programming-7-card-4",
+      "lesson_id": "programming-7",
+      "front": "Comparing floats",
+      "back": "Use relative and absolute tolerances (math.isclose); sum logs instead of multiplying probabilities.",
+      "objective_ids": [
+        "programming-7-objective-3"
+      ],
+      "license": "CC-BY-4.0"
     }
   ]
 }

@@ -7,7 +7,7 @@
   "domain": "Quantitative methods",
   "level": "Year 2",
   "maturity": "partial",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "license": "MIT OR CC-BY-4.0",
   "content_origin": {
     "kind": "legacy-prototype",
@@ -142,6 +142,58 @@
       "bloom": "analyze",
       "course_outcome_ids": [
         "statistics-outcome-3"
+      ]
+    },
+    {
+      "id": "statistics-7-objective-1",
+      "description": "Calculate the family-wise error rate and the expected number of false positives across many independent tests.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "statistics-outcome-3"
+      ]
+    },
+    {
+      "id": "statistics-7-objective-2",
+      "description": "Apply the Bonferroni correction and the Benjamini–Hochberg procedure to a list of p-values and count the rejections each allows.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "statistics-outcome-3",
+        "statistics-outcome-2"
+      ]
+    },
+    {
+      "id": "statistics-7-objective-3",
+      "description": "Choose between family-wise and false-discovery control for a study goal, and interpret an adjusted result correctly.",
+      "bloom": "evaluate",
+      "course_outcome_ids": [
+        "statistics-outcome-2",
+        "statistics-outcome-3"
+      ]
+    },
+    {
+      "id": "statistics-8-objective-1",
+      "description": "Compute a difference in means, its standard error and a 95% confidence interval, and interpret the interval.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "statistics-outcome-3"
+      ]
+    },
+    {
+      "id": "statistics-8-objective-2",
+      "description": "Calculate a standardized effect size and explain how sample size changes precision but not the effect.",
+      "bloom": "analyze",
+      "course_outcome_ids": [
+        "statistics-outcome-3",
+        "statistics-outcome-1"
+      ]
+    },
+    {
+      "id": "statistics-8-objective-3",
+      "description": "Predict the expected remeasurement of an extreme value under regression to the mean and evaluate study designs that guard against it.",
+      "bloom": "evaluate",
+      "course_outcome_ids": [
+        "statistics-outcome-4",
+        "statistics-outcome-1"
       ]
     }
   ],
@@ -328,6 +380,76 @@
           ]
         }
       ]
+    },
+    {
+      "id": "statistics-module-7",
+      "title": "Multiple testing and FDR",
+      "source_ids": [
+        "statistics",
+        "biology"
+      ],
+      "lessons": [
+        {
+          "id": "statistics-7",
+          "title": "Many tests at once: family-wise error, Bonferroni and the false discovery rate",
+          "reading": "modules/07-multiple-testing-and-false-discovery-rate.md",
+          "objectives": [
+            "statistics-7-objective-1",
+            "statistics-7-objective-2",
+            "statistics-7-objective-3"
+          ],
+          "worked_example": "Twenty null tests at 0.05 give FWER 0.642; for ten synthetic p-values, Bonferroni at 0.005 rejects 2 while Benjamini–Hochberg at q = 0.05 rejects 4, because the fourth-smallest p (0.020) meets its threshold (4/10 × 0.05).",
+          "question_ids": [
+            "statistics-7:fwer",
+            "statistics-7:expected-fp",
+            "statistics-7:bonferroni-count",
+            "statistics-7:bh-count",
+            "statistics-7:fdr-meaning",
+            "statistics-7:which-control"
+          ],
+          "card_ids": [
+            "statistics-7-card-1",
+            "statistics-7-card-2",
+            "statistics-7-card-3",
+            "statistics-7-card-4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "statistics-module-8",
+      "title": "Effect sizes, intervals and regression to the mean",
+      "source_ids": [
+        "statistics",
+        "biology"
+      ],
+      "lessons": [
+        {
+          "id": "statistics-8",
+          "title": "Effect sizes, confidence intervals and regression to the mean: reading a result for what it can support",
+          "reading": "modules/08-effect-sizes-intervals-and-regression-to-the-mean.md",
+          "objectives": [
+            "statistics-8-objective-1",
+            "statistics-8-objective-2",
+            "statistics-8-objective-3"
+          ],
+          "worked_example": "A 1.5-unit difference with SE 0.949 gives a 95% interval (-0.42, 3.42) and d = 0.50; quadrupling n halves SE to 0.474; a first reading of 130 with r = 0.7 is expected to retest at 121 with no intervention.",
+          "question_ids": [
+            "statistics-8:standard-error",
+            "statistics-8:ci-upper",
+            "statistics-8:interpret-ci",
+            "statistics-8:cohens-d",
+            "statistics-8:larger-n-se",
+            "statistics-8:regression-to-mean"
+          ],
+          "card_ids": [
+            "statistics-8-card-1",
+            "statistics-8-card-2",
+            "statistics-8-card-3",
+            "statistics-8-card-4"
+          ]
+        }
+      ]
     }
   ],
   "assessments": [
@@ -427,6 +549,48 @@
       "points": 5
     },
     {
+      "id": "statistics-7-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Multiple testing and FDR practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "statistics-7-objective-1",
+        "statistics-7-objective-2",
+        "statistics-7-objective-3"
+      ],
+      "question_ids": [
+        "statistics-7:fwer",
+        "statistics-7:expected-fp",
+        "statistics-7:bonferroni-count",
+        "statistics-7:bh-count",
+        "statistics-7:fdr-meaning",
+        "statistics-7:which-control"
+      ],
+      "points": 6
+    },
+    {
+      "id": "statistics-8-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Effect sizes, intervals and regression to the mean practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "statistics-8-objective-1",
+        "statistics-8-objective-2",
+        "statistics-8-objective-3"
+      ],
+      "question_ids": [
+        "statistics-8:standard-error",
+        "statistics-8:ci-upper",
+        "statistics-8:interpret-ci",
+        "statistics-8:cohens-d",
+        "statistics-8:larger-n-se",
+        "statistics-8:regression-to-mean"
+      ],
+      "points": 6
+    },
+    {
       "id": "statistics-case",
       "type": "case",
       "mode": "self-assessment",
@@ -483,6 +647,11 @@
       "version": "0.2.0",
       "date": "2026-10-08",
       "summary": "Added an original lesson on time-to-event data (censoring, a hand-checkable Kaplan-Meier table, median survival, rate and hazard ratios) with five formative items with computed keys and four retrieval cards. The package remains partial and unreviewed."
+    },
+    {
+      "version": "0.3.0",
+      "date": "2026-10-08",
+      "summary": "Added two original lessons (multiple testing with Bonferroni and Benjamini–Hochberg; effect sizes, confidence intervals and regression to the mean) with synthetic data, formative items with computed keys and retrieval cards. The package remains partial and unreviewed."
     }
   ],
   "limitations": [

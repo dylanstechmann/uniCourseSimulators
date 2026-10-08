@@ -27,6 +27,9 @@ LESSONS = [("geroscience", f"geroscience-{n}") for n in range(9, 15)] + [
     ("bioreactors", "bioreactors-6"), ("transport", "transport-6"), ("calculus-1", "calculus-1-6"), ("calculus-2", "calculus-2-6"),
     ("calculus-3", "calculus-3-6"), ("circuits", "circuits-6"), ("general-chemistry-1", "general-chemistry-1-6"), ("general-chemistry-2", "general-chemistry-2-7"),
     ("organic-chemistry", "organic-chemistry-6"), ("physics-em", "physics-em-6"), ("physics-mechanics", "physics-mechanics-6"), ("statics-materials", "statics-materials-6"),
+    ("statistics", "statistics-7"), ("statistics", "statistics-8"), ("programming", "programming-6"), ("programming", "programming-7"),
+    ("geroscience", "geroscience-15"), ("genetics", "genetics-9"), ("biochemistry", "biochemistry-7"), ("physiology", "physiology-7"),
+    ("signals-control", "signals-control-6"), ("robotics", "robotics-6"),
 ]
 
 
@@ -103,3 +106,14 @@ def test_package_labels_are_unchanged():
         assert manifest["maturity"] == "partial"
         assert manifest["review"]["status"] == "unreviewed"
         assert manifest["grading_policy"]["mode"] == "formative-only"
+
+
+def test_programming_code_blocks_keep_python_number_literals():
+    text = (COURSES / "programming/modules/07-floating-point-rounding-and-cancellation.md").read_text(encoding="utf-8")
+    block = text.split("```python", 1)[1].split("```", 1)[0]
+    assert "1e8 + 1" in block and "10⁸" not in block
+
+
+def test_biomarker_lesson_makes_no_human_anti_aging_claim():
+    text = (COURSES / "geroscience/modules/11-biomarker-reliability-and-surrogate-endpoints.md").read_text(encoding="utf-8")
+    assert "makes no claim that any intervention changes human aging" in text

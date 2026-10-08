@@ -7,7 +7,7 @@
   "domain": "Computing",
   "level": "Year 2",
   "maturity": "partial",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "license": "MIT OR CC-BY-4.0",
   "content_origin": {
     "kind": "legacy-prototype",
@@ -119,6 +119,58 @@
       "bloom": "apply",
       "course_outcome_ids": [
         "programming-outcome-3",
+        "programming-outcome-4"
+      ]
+    },
+    {
+      "id": "programming-6-objective-1",
+      "description": "Count the operations of simple loops and express their growth with big-O notation.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "programming-outcome-2",
+        "programming-outcome-1"
+      ]
+    },
+    {
+      "id": "programming-6-objective-2",
+      "description": "Estimate run time from an operation count and a stated rate, and predict how it scales when the input grows.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "programming-outcome-2"
+      ]
+    },
+    {
+      "id": "programming-6-objective-3",
+      "description": "Choose data structures and algorithms (hash-based lookup, sorting with binary search, vectorized operations) that change the scaling, and decide when optimization is worth it.",
+      "bloom": "evaluate",
+      "course_outcome_ids": [
+        "programming-outcome-1",
+        "programming-outcome-2"
+      ]
+    },
+    {
+      "id": "programming-7-objective-1",
+      "description": "Explain machine epsilon and compute the spacing between representable floating-point numbers near a given value.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "programming-outcome-2"
+      ]
+    },
+    {
+      "id": "programming-7-objective-2",
+      "description": "Diagnose catastrophic cancellation, estimate the digits lost, and choose a numerically stable formula.",
+      "bloom": "analyze",
+      "course_outcome_ids": [
+        "programming-outcome-2",
+        "programming-outcome-1"
+      ]
+    },
+    {
+      "id": "programming-7-objective-3",
+      "description": "Write comparisons and tests with appropriate absolute and relative tolerances.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "programming-outcome-1",
         "programming-outcome-4"
       ]
     }
@@ -280,6 +332,76 @@
           ]
         }
       ]
+    },
+    {
+      "id": "programming-module-6",
+      "title": "Algorithmic cost and scaling",
+      "source_ids": [
+        "numerical",
+        "engineeringMath"
+      ],
+      "lessons": [
+        {
+          "id": "programming-6",
+          "title": "How long will it take? Algorithmic cost, scaling and choosing data structures for research code",
+          "reading": "modules/06-algorithmic-cost-and-scaling.md",
+          "objectives": [
+            "programming-6-objective-1",
+            "programming-6-objective-2",
+            "programming-6-objective-3"
+          ],
+          "worked_example": "All pairs of 10,000 items is 49,995,000 comparisons, about 5.0 s at a synthetic 10⁷ per second and 100 times longer for 10 times the data; 10,000 list lookups in 1,000,000 items cost about 5.0×10⁹ comparisons, while a set makes each lookup constant time.",
+          "question_ids": [
+            "programming-6:pair-count",
+            "programming-6:pair-time",
+            "programming-6:scaling-factor",
+            "programming-6:binary-steps",
+            "programming-6:membership",
+            "programming-6:vectorize"
+          ],
+          "card_ids": [
+            "programming-6-card-1",
+            "programming-6-card-2",
+            "programming-6-card-3",
+            "programming-6-card-4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "programming-module-7",
+      "title": "Floating-point rounding and cancellation",
+      "source_ids": [
+        "numerical",
+        "engineeringMath"
+      ],
+      "lessons": [
+        {
+          "id": "programming-7",
+          "title": "Floating-point arithmetic in scientific code: rounding, cancellation and comparing numbers safely",
+          "reading": "modules/07-floating-point-rounding-and-cancellation.md",
+          "objectives": [
+            "programming-7-objective-1",
+            "programming-7-objective-2",
+            "programming-7-objective-3"
+          ],
+          "worked_example": "Near 10⁸ doubles are spaced about 2.2×10⁻⁸ apart; the shortcut variance of three values near 10⁸ returns 0.0 although the true value is 0.6667, a loss of about 16 digits; the two-pass formula gives the right answer.",
+          "question_ids": [
+            "programming-7:spacing",
+            "programming-7:true-variance",
+            "programming-7:digits-lost",
+            "programming-7:cancellation-error",
+            "programming-7:float-test",
+            "programming-7:near-zero"
+          ],
+          "card_ids": [
+            "programming-7-card-1",
+            "programming-7-card-2",
+            "programming-7-card-3",
+            "programming-7-card-4"
+          ]
+        }
+      ]
     }
   ],
   "assessments": [
@@ -365,6 +487,48 @@
       "points": 6
     },
     {
+      "id": "programming-6-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Algorithmic cost and scaling practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "programming-6-objective-1",
+        "programming-6-objective-2",
+        "programming-6-objective-3"
+      ],
+      "question_ids": [
+        "programming-6:pair-count",
+        "programming-6:pair-time",
+        "programming-6:scaling-factor",
+        "programming-6:binary-steps",
+        "programming-6:membership",
+        "programming-6:vectorize"
+      ],
+      "points": 6
+    },
+    {
+      "id": "programming-7-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Floating-point rounding and cancellation practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "programming-7-objective-1",
+        "programming-7-objective-2",
+        "programming-7-objective-3"
+      ],
+      "question_ids": [
+        "programming-7:spacing",
+        "programming-7:true-variance",
+        "programming-7:digits-lost",
+        "programming-7:cancellation-error",
+        "programming-7:float-test",
+        "programming-7:near-zero"
+      ],
+      "points": 6
+    },
+    {
       "id": "programming-case",
       "type": "case",
       "mode": "self-assessment",
@@ -411,6 +575,11 @@
       "version": "0.2.0",
       "date": "2026-10-08",
       "summary": "Added an original lesson on testing a scientific function (known-answer tests, floating-point tolerances, seeded randomness and provenance records) with six formative items with computed keys and four retrieval cards. The package remains partial and unreviewed."
+    },
+    {
+      "version": "0.3.0",
+      "date": "2026-10-08",
+      "summary": "Added two original lessons (algorithmic cost, scaling and data structures; floating-point rounding, cancellation and safe comparison) with synthetic data, formative items with computed keys and retrieval cards. The package remains partial and unreviewed."
     }
   ],
   "limitations": [

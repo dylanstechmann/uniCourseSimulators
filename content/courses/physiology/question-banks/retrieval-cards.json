@@ -145,6 +145,46 @@
         "physiology-6-objective-3"
       ],
       "license": "CC-BY-4.0"
+    },
+    {
+      "id": "physiology-7-card-1",
+      "lesson_id": "physiology-7",
+      "front": "Starling equation",
+      "back": "J_v = K_f[(P_c − P_i) − σ(π_c − π_i)]; positive means filtration out.",
+      "objective_ids": [
+        "physiology-7-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "physiology-7-card-2",
+      "lesson_id": "physiology-7",
+      "front": "Along a capillary",
+      "back": "Net pressure falls with P_c; many tissues filter along most of the length, with lymph returning fluid.",
+      "objective_ids": [
+        "physiology-7-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "physiology-7-card-3",
+      "lesson_id": "physiology-7",
+      "front": "Edema routes",
+      "back": "Higher P_c, lower π_c, leaky walls (lower σ, higher K_f) or blocked lymph.",
+      "objective_ids": [
+        "physiology-7-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "physiology-7-card-4",
+      "lesson_id": "physiology-7",
+      "front": "Safety factors",
+      "back": "Rising P_i and falling π_i oppose further filtration until exhausted.",
+      "objective_ids": [
+        "physiology-7-objective-3"
+      ],
+      "license": "CC-BY-4.0"
     }
   ]
 }
