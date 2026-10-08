@@ -248,6 +248,193 @@
         "kind": "original",
         "modifications": []
       }
+    },
+    {
+      "id": "calculus-3-5:partial-x",
+      "type": "numeric",
+      "prompt": "For C(x, y) = 100 exp(−(x² + y²)/5000) μM with x, y in μm, calculate ∂C/∂x at (30, 40). Enter the number only (μM/μm).",
+      "points": 1,
+      "objective_ids": [
+        "calculus-3-5-objective-1"
+      ],
+      "solution_spec": {
+        "answer": -0.72784,
+        "unit": "",
+        "tolerance": 0.005,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Differentiate the exponent with the chain rule: ∂C/∂x = −(2x/5000) C.",
+        "solution": "C = 60.65; ∂C/∂x = −(60/5000) × 60.65 = -0.7278 μM/μm.",
+        "lesson_ids": [
+          "calculus-3-5"
+        ],
+        "misconception_ids": [
+          "chain-rule-omitted"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-3-5:gradient-magnitude",
+      "type": "numeric",
+      "prompt": "For the same field at (30, 40), ∂C/∂x = -0.7278 and ∂C/∂y = -0.9704 μM/μm. What is |∇C|? Enter the number only (μM/μm).",
+      "points": 1,
+      "objective_ids": [
+        "calculus-3-5-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 1.21306,
+        "unit": "",
+        "tolerance": 0.005,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "The magnitude is the square root of the sum of squared components.",
+        "solution": "√(-0.7278² + -0.9704²) = 1.213 μM/μm.",
+        "lesson_ids": [
+          "calculus-3-5"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-3-5:directional",
+      "type": "numeric",
+      "prompt": "With ∇C = (-0.7278, -0.9704) μM/μm, what is the directional derivative along the unit vector (1/√2, 1/√2)? Enter the number only (μM/μm).",
+      "points": 1,
+      "objective_ids": [
+        "calculus-3-5-objective-2"
+      ],
+      "solution_spec": {
+        "answer": -1.20087,
+        "unit": "",
+        "tolerance": 0.005,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Dot the gradient with the unit vector.",
+        "solution": "(-0.7278 + -0.9704)/√2 = -1.2009 μM/μm.",
+        "lesson_ids": [
+          "calculus-3-5"
+        ],
+        "misconception_ids": [
+          "non-unit-direction"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-3-5:steepest",
+      "type": "single_choice",
+      "prompt": "At (30, 40) in this field, in which direction does concentration increase fastest?",
+      "points": 1,
+      "objective_ids": [
+        "calculus-3-5-objective-2"
+      ],
+      "options": [
+        "Along (−0.6, −0.8), the direction of ∇C, which points back toward the source.",
+        "Along (0.8, −0.6), perpendicular to the gradient.",
+        "Every direction gives the same rate.",
+        "Along (0.6, 0.8), away from the source."
+      ],
+      "solution_spec": {
+        "answer": 0
+      },
+      "feedback": {
+        "hint": "D_u C = |∇C| cos θ is largest when u is parallel to ∇C.",
+        "solution": "The gradient points toward steepest increase. Perpendicular directions follow contours where the directional derivative is zero.",
+        "lesson_ids": [
+          "calculus-3-5"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-3-5:fick-flux",
+      "type": "numeric",
+      "prompt": "With |∇C| = 1.213 μM/μm and D = 10 μm²/s, what is the magnitude of the diffusive flux J = −D∇C? Enter the number only (μM·μm/s).",
+      "points": 1,
+      "objective_ids": [
+        "calculus-3-5-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 12.1306,
+        "unit": "",
+        "tolerance": 0.05,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Multiply D by the gradient magnitude; the sign gives direction only.",
+        "solution": "10 × 1.213 = 12.13 μM·μm/s, pointing away from the source.",
+        "lesson_ids": [
+          "calculus-3-5"
+        ],
+        "misconception_ids": [
+          "flux-up-gradient"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-3-5:fractional-difference",
+      "type": "numeric",
+      "prompt": "A 10 μm cell aligned with a gradient of 1.213 μM/μm sits where C = 60.65 μM. What is the fractional concentration difference across it? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "calculus-3-5-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 20.0,
+        "unit": "%",
+        "tolerance": 0.3,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Fraction = |∇C| L / C.",
+        "solution": "1.213 × 10 / 60.65 = 0.200 = 20%.",
+        "lesson_ids": [
+          "calculus-3-5"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
     }
   ]
 }

@@ -2,7 +2,7 @@
 
 ## Update after the biomechanics, physics and engineering lessons (2026-10-08, sixth pass)
 
-Written by an AI coding assistant. Nine more lessons connect the engineering and physics packages to the biology track: cell indentation and viscoelasticity, stiffness versus ligand density, least-squares calibration, Markov chains for cell states, long-bone bending, impact forces, the membrane as a capacitor, sensor loading and ADC resolution, and incubator temperature control. Only calculus 3 and robotics remain at legacy depth. Unlinked course outcomes: 25 of 101. Nothing is reviewed or graded; a lesson-length reading per package is still far from a semester course.
+Written by an AI coding assistant. Nine more lessons connect the engineering and physics packages to the biology track: cell indentation and viscoelasticity, stiffness versus ligand density, least-squares calibration, Markov chains for cell states, long-bone bending, impact forces, the membrane as a capacitor, sensor loading and ADC resolution, and incubator temperature control. Calculus 3 and robotics followed in a seventh pass, so every package now has at least one lesson-length original reading (19 of 101 outcomes still unlinked). Unlinked course outcomes: 25 of 101. Nothing is reviewed or graded; a lesson-length reading per package is still far from a semester course.
 
 ## Update after the chemistry and mathematics lessons (2026-10-08, fifth pass)
 

@@ -60,6 +60,19 @@
       "original_content": true,
       "license": "MIT OR CC-BY-4.0",
       "modifications": []
+    },
+    {
+      "module_id": "robotics-module-5",
+      "lesson_id": "robotics-5",
+      "reading": "modules/05-planar-arm-kinematics-and-joint-error.md",
+      "source_ids": [
+        "robotics",
+        "numerical"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
     }
   ]
 }

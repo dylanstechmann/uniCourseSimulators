@@ -65,6 +65,46 @@
       "back": "A surface integral of the field component normal to an oriented boundary.",
       "objective_ids": [],
       "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "calculus-3-5-card-1",
+      "lesson_id": "calculus-3-5",
+      "front": "Gradient",
+      "back": "∇C = (∂C/∂x, ∂C/∂y) points toward steepest increase; |∇C| is that rate.",
+      "objective_ids": [
+        "calculus-3-5-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "calculus-3-5-card-2",
+      "lesson_id": "calculus-3-5",
+      "front": "Directional derivative",
+      "back": "D_uC = ∇C · u for a unit vector u; zero along contour lines.",
+      "objective_ids": [
+        "calculus-3-5-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "calculus-3-5-card-3",
+      "lesson_id": "calculus-3-5",
+      "front": "Fick's law in 2D/3D",
+      "back": "J = −D∇C: flux points down the gradient.",
+      "objective_ids": [
+        "calculus-3-5-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "calculus-3-5-card-4",
+      "lesson_id": "calculus-3-5",
+      "front": "Detectability",
+      "back": "Fractional difference across a cell ≈ |∇C|L/C; absolute concentration also matters.",
+      "objective_ids": [
+        "calculus-3-5-objective-3"
+      ],
+      "license": "CC-BY-4.0"
     }
   ]
 }

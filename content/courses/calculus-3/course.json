@@ -7,7 +7,7 @@
   "domain": "Mathematics",
   "level": "Year 2",
   "maturity": "partial",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "license": "MIT OR CC-BY-4.0",
   "content_origin": {
     "kind": "legacy-prototype",
@@ -97,6 +97,31 @@
       "description": "Choose Green's, Stokes', or divergence theorem from the geometry.",
       "bloom": "evaluate",
       "course_outcome_ids": []
+    },
+    {
+      "id": "calculus-3-5-objective-1",
+      "description": "Compute partial derivatives and the gradient vector of a two-variable concentration field at a point.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "calculus-3-outcome-1"
+      ]
+    },
+    {
+      "id": "calculus-3-5-objective-2",
+      "description": "Calculate a directional derivative, identify the direction of steepest ascent and interpret the gradient's magnitude.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "calculus-3-outcome-1"
+      ]
+    },
+    {
+      "id": "calculus-3-5-objective-3",
+      "description": "Apply Fick's law J = −D∇C and estimate the fractional concentration difference across a cell to judge whether a gradient is detectable.",
+      "bloom": "evaluate",
+      "course_outcome_ids": [
+        "calculus-3-outcome-1",
+        "calculus-3-outcome-4"
+      ]
     }
   ],
   "duration": {
@@ -221,6 +246,41 @@
           ]
         }
       ]
+    },
+    {
+      "id": "calculus-3-module-5",
+      "title": "Gradients in a concentration field",
+      "source_ids": [
+        "multivariable",
+        "transport"
+      ],
+      "lessons": [
+        {
+          "id": "calculus-3-5",
+          "title": "Gradients in a concentration field: partial derivatives, directional derivatives and what a cell can sense",
+          "reading": "modules/05-gradients-in-a-concentration-field.md",
+          "objectives": [
+            "calculus-3-5-objective-1",
+            "calculus-3-5-objective-2",
+            "calculus-3-5-objective-3"
+          ],
+          "worked_example": "At (30, 40) μm the synthetic field is 60.65 μM with ∇C = (-0.7278, -0.9704) μM/μm and |∇C| = 1.213; the diagonal directional derivative is -1.2009; with D = 10 μm²/s the flux is 12.13, and a 10 μm cell sees a 20% difference.",
+          "question_ids": [
+            "calculus-3-5:partial-x",
+            "calculus-3-5:gradient-magnitude",
+            "calculus-3-5:directional",
+            "calculus-3-5:steepest",
+            "calculus-3-5:fick-flux",
+            "calculus-3-5:fractional-difference"
+          ],
+          "card_ids": [
+            "calculus-3-5-card-1",
+            "calculus-3-5-card-2",
+            "calculus-3-5-card-3",
+            "calculus-3-5-card-4"
+          ]
+        }
+      ]
     }
   ],
   "assessments": [
@@ -285,6 +345,27 @@
       "points": 2
     },
     {
+      "id": "calculus-3-5-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Gradients in a concentration field practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "calculus-3-5-objective-1",
+        "calculus-3-5-objective-2",
+        "calculus-3-5-objective-3"
+      ],
+      "question_ids": [
+        "calculus-3-5:partial-x",
+        "calculus-3-5:gradient-magnitude",
+        "calculus-3-5:directional",
+        "calculus-3-5:steepest",
+        "calculus-3-5:fick-flux",
+        "calculus-3-5:fractional-difference"
+      ],
+      "points": 6
+    },
+    {
       "id": "calculus-3-case",
       "type": "case",
       "mode": "self-assessment",
@@ -326,6 +407,11 @@
       "version": "0.1.0",
       "date": "2026-10-05",
       "summary": "Preserved original compact prototype content in separate manifests and readings; labeled partial without semester or credit equivalency."
+    },
+    {
+      "version": "0.2.0",
+      "date": "2026-10-08",
+      "summary": "Added an original lesson on gradients in a concentration field (partial and directional derivatives, steepest ascent, Fick's law and gradient detectability across a cell) with synthetic data, formative items with computed keys and retrieval cards. The package remains partial and unreviewed."
     }
   ],
   "limitations": [

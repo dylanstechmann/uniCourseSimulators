@@ -250,6 +250,191 @@
         "kind": "original",
         "modifications": []
       }
+    },
+    {
+      "id": "robotics-5:forward-x",
+      "type": "numeric",
+      "prompt": "A planar arm has L₁ = 0.3 m and L₂ = 0.2 m. With θ₁ = 30° and θ₂ = 45° (relative to link 1), what is the tool's x coordinate? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "robotics-5-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0.31157,
+        "unit": "m",
+        "tolerance": 0.001,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "x = L₁ cos θ₁ + L₂ cos(θ₁ + θ₂).",
+        "solution": "0.3 cos 30° + 0.2 cos 75° = 0.3116 m.",
+        "lesson_ids": [
+          "robotics-5"
+        ],
+        "misconception_ids": [
+          "absolute-vs-relative-angle"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "robotics-5:forward-y",
+      "type": "numeric",
+      "prompt": "For the same arm and angles, what is the tool's y coordinate? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "robotics-5-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0.34319,
+        "unit": "m",
+        "tolerance": 0.001,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "y = L₁ sin θ₁ + L₂ sin(θ₁ + θ₂).",
+        "solution": "0.3 sin 30° + 0.2 sin 75° = 0.3432 m.",
+        "lesson_ids": [
+          "robotics-5"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "robotics-5:elbow-angle",
+      "type": "numeric",
+      "prompt": "Find the elbow angle magnitude |θ₂| that places the tool of this arm (L₁ = 0.3, L₂ = 0.2 m) at (0.35, 0.15) m. Enter the number only, in degrees.",
+      "points": 1,
+      "objective_ids": [
+        "robotics-5-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 82.819,
+        "unit": "",
+        "tolerance": 0.1,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "cos θ₂ = (x² + y² − L₁² − L₂²)/(2L₁L₂).",
+        "solution": "cos θ₂ = 0.1250, so |θ₂| = 82.82°.",
+        "lesson_ids": [
+          "robotics-5"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "robotics-5:shoulder-angle",
+      "type": "numeric",
+      "prompt": "With θ₂ = +82.82°, find θ₁ for the target (0.35, 0.15) m. Enter the number only, in degrees.",
+      "points": 1,
+      "objective_ids": [
+        "robotics-5-objective-2"
+      ],
+      "solution_spec": {
+        "answer": -8.208,
+        "unit": "",
+        "tolerance": 0.1,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "θ₁ = atan2(y, x) − atan2(L₂ sin θ₂, L₁ + L₂ cos θ₂).",
+        "solution": "23.20° − 31.41° = -8.21°; the other solution is θ₂ = −82.82°, θ₁ = 54.61°.",
+        "lesson_ids": [
+          "robotics-5"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "robotics-5:tool-error",
+      "type": "numeric",
+      "prompt": "The tool is 0.4635 m from the base. Estimate the tool displacement caused by a 1° error at the base joint. Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "robotics-5-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 8.09,
+        "unit": "mm",
+        "tolerance": 0.1,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Arc length = radius × angle in radians.",
+        "solution": "0.4635 m × 0.01745 rad = 0.0081 m = 8.1 mm.",
+        "lesson_ids": [
+          "robotics-5"
+        ],
+        "misconception_ids": [
+          "degrees-in-arc-length"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "robotics-5:reachability",
+      "type": "single_choice",
+      "prompt": "Which target can the arm (L₁ = 0.3 m, L₂ = 0.2 m) reach?",
+      "points": 1,
+      "objective_ids": [
+        "robotics-5-objective-2"
+      ],
+      "options": [
+        "(0.30, 0.20) m, because its distance from the base (0.361 m) lies between 0.10 and 0.50 m.",
+        "(0.00, 0.55) m.",
+        "(0.06, 0.05) m.",
+        "(0.45, 0.30) m."
+      ],
+      "solution_spec": {
+        "answer": 0
+      },
+      "feedback": {
+        "hint": "Reachable targets satisfy |L₁ − L₂| ≤ r ≤ L₁ + L₂.",
+        "solution": "Distances: 0.361 m (reachable), 0.541 m (too far), 0.078 m (too close), 0.55 m (too far). Equivalently, cos θ₂ must lie in [−1, 1].",
+        "lesson_ids": [
+          "robotics-5"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
     }
   ]
 }

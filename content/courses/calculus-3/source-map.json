@@ -54,6 +54,19 @@
       "original_content": true,
       "license": "MIT OR CC-BY-4.0",
       "modifications": []
+    },
+    {
+      "module_id": "calculus-3-module-5",
+      "lesson_id": "calculus-3-5",
+      "reading": "modules/05-gradients-in-a-concentration-field.md",
+      "source_ids": [
+        "multivariable",
+        "transport"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
     }
   ]
 }

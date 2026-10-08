@@ -11,7 +11,7 @@ comprehensive coverage. Every package is still `partial` and unreviewed.
 | bioreactors | partial | 5 | 11 | 14 | 12 | 0 | 0 | 4 | 1 |
 | calculus-1 | partial | 5 | 11 | 15 | 12 | 0 | 0 | 4 | 2 |
 | calculus-2 | partial | 5 | 11 | 14 | 12 | 0 | 0 | 4 | 1 |
-| calculus-3 | partial | 4 | 8 | 8 | 8 | 0 | 0 | 4 | 4 |
+| calculus-3 | partial | 5 | 11 | 14 | 12 | 0 | 0 | 4 | 2 |
 | cell-biology | partial | 39 | 69 | 137 | 89 | 0 | 0 | 4 | 0 |
 | cellular-biomechanics | partial | 6 | 14 | 20 | 16 | 0 | 0 | 4 | 0 |
 | circuits | partial | 5 | 11 | 14 | 12 | 0 | 0 | 4 | 1 |
@@ -26,13 +26,13 @@ comprehensive coverage. Every package is still `partial` and unreviewed.
 | physics-mechanics | partial | 5 | 11 | 14 | 12 | 0 | 0 | 4 | 1 |
 | physiology | partial | 6 | 14 | 20 | 16 | 0 | 0 | 4 | 0 |
 | programming | partial | 5 | 11 | 14 | 12 | 0 | 0 | 4 | 0 |
-| robotics | partial | 4 | 8 | 8 | 8 | 0 | 0 | 4 | 4 |
+| robotics | partial | 5 | 11 | 14 | 12 | 0 | 0 | 4 | 0 |
 | signals-control | partial | 5 | 11 | 14 | 12 | 0 | 0 | 4 | 0 |
 | statics-materials | partial | 5 | 11 | 14 | 12 | 0 | 0 | 4 | 1 |
 | statistics | partial | 6 | 13 | 15 | 15 | 0 | 0 | 5 | 0 |
 | transport | partial | 5 | 11 | 13 | 12 | 0 | 0 | 4 | 2 |
 
-Totals: 25 packages, 177 lessons, 386 objectives, 564 practice items, 0 lesson objectives with no assessment mapping, 0 with no practice item, 25 of 101 course outcomes that no lesson objective links to.
+Totals: 25 packages, 179 lessons, 392 objectives, 576 practice items, 0 lesson objectives with no assessment mapping, 0 with no practice item, 19 of 101 course outcomes that no lesson objective links to.
 
 `tools/validate_content.py` counts course outcomes and lesson objectives together, so its `objective-coverage` warning
 persists for packages whose outcomes are not linked from any lesson objective. Linking them is a judgement for a
@@ -52,7 +52,7 @@ Outcomes with no linking lesson objective: `calculus-2-outcome-4`
 
 ## calculus-3
 
-Outcomes with no linking lesson objective: `calculus-3-outcome-1`, `calculus-3-outcome-2`, `calculus-3-outcome-3`, `calculus-3-outcome-4`
+Outcomes with no linking lesson objective: `calculus-3-outcome-2`, `calculus-3-outcome-3`
 
 ## circuits
 
@@ -77,10 +77,6 @@ Outcomes with no linking lesson objective: `physics-em-outcome-3`, `physics-em-o
 ## physics-mechanics
 
 Outcomes with no linking lesson objective: `physics-mechanics-outcome-3`
-
-## robotics
-
-Outcomes with no linking lesson objective: `robotics-outcome-1`, `robotics-outcome-2`, `robotics-outcome-3`, `robotics-outcome-4`
 
 ## statics-materials
 

@@ -7,7 +7,7 @@
   "domain": "Mechanical engineering",
   "level": "Year 3",
   "maturity": "partial",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "license": "MIT OR CC-BY-4.0",
   "content_origin": {
     "kind": "legacy-prototype",
@@ -100,6 +100,32 @@
       "description": "Identify sensing uncertainty and safety constraints.",
       "bloom": "understand",
       "course_outcome_ids": []
+    },
+    {
+      "id": "robotics-5-objective-1",
+      "description": "Compute the tool position of a planar two-link arm from its joint angles (forward kinematics).",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "robotics-outcome-2",
+        "robotics-outcome-1"
+      ]
+    },
+    {
+      "id": "robotics-5-objective-2",
+      "description": "Solve the inverse kinematics for a reachable target, identify the two solutions and test reachability.",
+      "bloom": "analyze",
+      "course_outcome_ids": [
+        "robotics-outcome-2"
+      ]
+    },
+    {
+      "id": "robotics-5-objective-3",
+      "description": "Estimate tool position error from joint angle error and evaluate what limits positioning accuracy.",
+      "bloom": "evaluate",
+      "course_outcome_ids": [
+        "robotics-outcome-4",
+        "robotics-outcome-3"
+      ]
     }
   ],
   "duration": {
@@ -228,6 +254,41 @@
           ]
         }
       ]
+    },
+    {
+      "id": "robotics-module-5",
+      "title": "Planar arm kinematics",
+      "source_ids": [
+        "robotics",
+        "numerical"
+      ],
+      "lessons": [
+        {
+          "id": "robotics-5",
+          "title": "Positioning a lab robot arm: forward and inverse kinematics of a planar two-link arm and the cost of joint error",
+          "reading": "modules/05-planar-arm-kinematics-and-joint-error.md",
+          "objectives": [
+            "robotics-5-objective-1",
+            "robotics-5-objective-2",
+            "robotics-5-objective-3"
+          ],
+          "worked_example": "At θ₁ = 30° and θ₂ = 45° the tool is at (0.3116, 0.3432) m; the target (0.35, 0.15) m needs |θ₂| = 82.82° with θ₁ = -8.21° or 54.61°; a 1° base error at 0.464 m reach moves the tool 8.1 mm.",
+          "question_ids": [
+            "robotics-5:forward-x",
+            "robotics-5:forward-y",
+            "robotics-5:elbow-angle",
+            "robotics-5:shoulder-angle",
+            "robotics-5:tool-error",
+            "robotics-5:reachability"
+          ],
+          "card_ids": [
+            "robotics-5-card-1",
+            "robotics-5-card-2",
+            "robotics-5-card-3",
+            "robotics-5-card-4"
+          ]
+        }
+      ]
     }
   ],
   "assessments": [
@@ -292,6 +353,27 @@
       "points": 2
     },
     {
+      "id": "robotics-5-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Planar arm kinematics practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "robotics-5-objective-1",
+        "robotics-5-objective-2",
+        "robotics-5-objective-3"
+      ],
+      "question_ids": [
+        "robotics-5:forward-x",
+        "robotics-5:forward-y",
+        "robotics-5:elbow-angle",
+        "robotics-5:shoulder-angle",
+        "robotics-5:tool-error",
+        "robotics-5:reachability"
+      ],
+      "points": 6
+    },
+    {
       "id": "robotics-case",
       "type": "case",
       "mode": "self-assessment",
@@ -338,6 +420,11 @@
       "version": "0.1.0",
       "date": "2026-10-05",
       "summary": "Expanded the power hint to state the calculation method and units without changing the question or answer."
+    },
+    {
+      "version": "0.2.0",
+      "date": "2026-10-08",
+      "summary": "Added an original lesson on planar two-link arm kinematics for lab positioning (forward and inverse kinematics, reachability, singularity and joint-error propagation) with synthetic data, formative items with computed keys and retrieval cards. The package remains partial and unreviewed."
     }
   ],
   "limitations": [

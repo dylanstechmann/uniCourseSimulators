@@ -65,6 +65,46 @@
       "back": "A defined system condition that minimizes risk after a fault or uncertainty threshold is reached.",
       "objective_ids": [],
       "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "robotics-5-card-1",
+      "lesson_id": "robotics-5",
+      "front": "Forward kinematics (2-link)",
+      "back": "x = L₁cos θ₁ + L₂cos(θ₁ + θ₂), y = L₁sin θ₁ + L₂sin(θ₁ + θ₂).",
+      "objective_ids": [
+        "robotics-5-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "robotics-5-card-2",
+      "lesson_id": "robotics-5",
+      "front": "Inverse kinematics",
+      "back": "cos θ₂ = (r² − L₁² − L₂²)/(2L₁L₂); two solutions ±θ₂ (elbow up/down).",
+      "objective_ids": [
+        "robotics-5-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "robotics-5-card-3",
+      "lesson_id": "robotics-5",
+      "front": "Reachability and singularity",
+      "back": "|L₁ − L₂| ≤ r ≤ L₁ + L₂; a fully stretched arm is singular.",
+      "objective_ids": [
+        "robotics-5-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "robotics-5-card-4",
+      "lesson_id": "robotics-5",
+      "front": "Joint error",
+      "back": "Tool error ≈ r δθ (radians); calibrate against physical references.",
+      "objective_ids": [
+        "robotics-5-objective-3"
+      ],
+      "license": "CC-BY-4.0"
     }
   ]
 }
