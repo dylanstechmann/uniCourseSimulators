@@ -1,5 +1,9 @@
 # Progress review: uniStemCourseSimulators
 
+## Update after the geroscience schedule (2026-10-08, tenth pass)
+
+Written by an AI coding assistant. Geroscience is the second package with a proposed week-by-week structure (14 weeks, 18 readings including a synthetic lifespan lab and a study-design lesson). Like cell biology, it has no graded homework, exams or project, no measured workload and no human review, so it remains `partial`. The remaining distance to a complete course is the same list: graded work with protected keys, workload evidence and named review.
+
 ## Update after the research-skill lessons (2026-10-08, ninth pass)
 
 Written by an AI coding assistant. Ten lessons aimed at research practice: multiple testing, effect sizes and regression to the mean, algorithmic cost, floating-point pitfalls, biomarker reliability and surrogate endpoints, Mendelian randomization, binding equilibria, Starling forces, sensor lag and robot-joint budgets. The package count with only one new lesson is now small; the remaining distance to a semester course is week-by-week sequencing, graded work and human review.

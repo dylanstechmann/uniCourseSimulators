@@ -7,7 +7,7 @@
   "domain": "Life sciences",
   "level": "Year 3",
   "maturity": "partial",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "license": "MIT OR CC-BY-4.0",
   "content_origin": {
     "kind": "legacy-prototype",
@@ -386,12 +386,212 @@
         "geroscience-outcome-3",
         "geroscience-outcome-1"
       ]
+    },
+    {
+      "id": "geroscience-16-objective-1",
+      "description": "Specify a primary endpoint, comparison and analysis for an aging-intervention study in advance, and justify the choice between lifespan and healthspan endpoints.",
+      "bloom": "create",
+      "course_outcome_ids": [
+        "geroscience-outcome-4",
+        "geroscience-outcome-3"
+      ]
+    },
+    {
+      "id": "geroscience-16-objective-2",
+      "description": "Estimate the number of deaths and animals needed to detect a stated hazard ratio with a survival comparison.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "geroscience-outcome-3"
+      ]
+    },
+    {
+      "id": "geroscience-16-objective-3",
+      "description": "Evaluate a study design for the safeguards that prevent false positives: randomization, blinding, both sexes, multiple sites, pre-registration and handling of censoring and survivor bias.",
+      "bloom": "evaluate",
+      "course_outcome_ids": [
+        "geroscience-outcome-3",
+        "geroscience-outcome-2"
+      ]
+    },
+    {
+      "id": "geroscience-lab-01-objective-1",
+      "description": "Summarize a lifespan cohort correctly when some animals are still alive at the end of the study, using counts and Kaplan–Meier medians rather than naive means.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "geroscience-outcome-4"
+      ]
+    },
+    {
+      "id": "geroscience-lab-01-objective-2",
+      "description": "Identify survivorship bias in a healthspan measure taken only in animals alive at a late time point.",
+      "bloom": "analyze",
+      "course_outcome_ids": [
+        "geroscience-outcome-4",
+        "geroscience-outcome-1"
+      ]
+    },
+    {
+      "id": "geroscience-lab-01-objective-3",
+      "description": "Evaluate which conclusions a single synthetic cohort supports about an intervention's effect on lifespan and healthspan.",
+      "bloom": "evaluate",
+      "course_outcome_ids": [
+        "geroscience-outcome-3",
+        "geroscience-outcome-4"
+      ]
     }
   ],
   "duration": {
-    "instructional_weeks": null,
-    "equivalent_structure": null,
-    "weeks": []
+    "instructional_weeks": 14,
+    "equivalent_structure": "Proposed 14-week undergraduate scope only. Weeks 1 to 12 pair the compact prototype units with original lessons on mechanisms, measurement, regeneration and evidence appraisal; week 13 is a synthetic-data lifespan lab and week 14 a study-design lesson with the course case. All activities are open, ungraded practice. There are no graded homework sets, exams or project, and workload has not been measured, so this schedule is not evidence of semester equivalence.",
+    "weeks": [
+      {
+        "week": 1,
+        "title": "Aging as a systems process",
+        "lesson_ids": [
+          "geroscience-1"
+        ],
+        "assessment_ids": [
+          "geroscience-1-practice"
+        ]
+      },
+      {
+        "week": 2,
+        "title": "Measuring aging: survival curves, mortality hazards and healthspan endpoints",
+        "lesson_ids": [
+          "geroscience-5"
+        ],
+        "assessment_ids": [
+          "geroscience-5-practice"
+        ]
+      },
+      {
+        "week": 3,
+        "title": "Genome instability and repair capacity",
+        "lesson_ids": [
+          "geroscience-9"
+        ],
+        "assessment_ids": [
+          "geroscience-9-practice"
+        ]
+      },
+      {
+        "week": 4,
+        "title": "Proteostasis, autophagy and mitochondria",
+        "lesson_ids": [
+          "geroscience-10"
+        ],
+        "assessment_ids": [
+          "geroscience-10-practice"
+        ]
+      },
+      {
+        "week": 5,
+        "title": "Senescence, inflammation and tissue context",
+        "lesson_ids": [
+          "geroscience-2"
+        ],
+        "assessment_ids": [
+          "geroscience-2-practice"
+        ]
+      },
+      {
+        "week": 6,
+        "title": "Testing senescent-cell causality: clearance models and senolytic claims",
+        "lesson_ids": [
+          "geroscience-6"
+        ],
+        "assessment_ids": [
+          "geroscience-6-practice"
+        ]
+      },
+      {
+        "week": 7,
+        "title": "Nutrient sensing and lifespan interventions in model organisms",
+        "lesson_ids": [
+          "geroscience-11"
+        ],
+        "assessment_ids": [
+          "geroscience-11-practice"
+        ]
+      },
+      {
+        "week": 8,
+        "title": "Stem cells, niches, clonal hematopoiesis and circulating factors",
+        "lesson_ids": [
+          "geroscience-3",
+          "geroscience-7"
+        ],
+        "assessment_ids": [
+          "geroscience-3-practice",
+          "geroscience-7-practice"
+        ]
+      },
+      {
+        "week": 9,
+        "title": "Regeneration across species",
+        "lesson_ids": [
+          "geroscience-12"
+        ],
+        "assessment_ids": [
+          "geroscience-12-practice"
+        ]
+      },
+      {
+        "week": 10,
+        "title": "Biomarkers: aging clocks, reliability and surrogate endpoints",
+        "lesson_ids": [
+          "geroscience-8",
+          "geroscience-15"
+        ],
+        "assessment_ids": [
+          "geroscience-8-practice",
+          "geroscience-15-practice"
+        ]
+      },
+      {
+        "week": 11,
+        "title": "Intervention evidence and reading an aging-intervention paper",
+        "lesson_ids": [
+          "geroscience-4",
+          "geroscience-13"
+        ],
+        "assessment_ids": [
+          "geroscience-4-practice",
+          "geroscience-13-practice"
+        ]
+      },
+      {
+        "week": 12,
+        "title": "From model to human: evidence tiers and honest limits",
+        "lesson_ids": [
+          "geroscience-14"
+        ],
+        "assessment_ids": [
+          "geroscience-14-practice"
+        ]
+      },
+      {
+        "week": 13,
+        "title": "Virtual lab: lifespan cohort with censoring and survivor bias",
+        "lesson_ids": [
+          "geroscience-lab-01"
+        ],
+        "assessment_ids": [
+          "geroscience-week13-lifespan-lab"
+        ]
+      },
+      {
+        "week": 14,
+        "title": "Designing a credible aging-intervention study and integrative case",
+        "lesson_ids": [
+          "geroscience-16"
+        ],
+        "assessment_ids": [
+          "geroscience-16-practice",
+          "geroscience-case"
+        ]
+      }
+    ]
   },
   "workload": {
     "estimated_total_hours": null,
@@ -908,6 +1108,75 @@
           ]
         }
       ]
+    },
+    {
+      "id": "geroscience-module-16",
+      "title": "Designing an aging-intervention study",
+      "source_ids": [
+        "biology",
+        "molecular"
+      ],
+      "lessons": [
+        {
+          "id": "geroscience-16",
+          "title": "Designing a credible aging-intervention study: endpoints, power for survival, and safeguards against fooling ourselves",
+          "reading": "modules/12-designing-a-credible-aging-intervention-study.md",
+          "objectives": [
+            "geroscience-16-objective-1",
+            "geroscience-16-objective-2",
+            "geroscience-16-objective-3"
+          ],
+          "worked_example": "Detecting a hazard ratio of 0.8 with 80% power at α = 0.05 needs about 631 deaths, roughly 788 animals if 80% die; HR 0.7 needs 247; 400 animals with 320 deaths can detect only about a 27% reduction in death rate.",
+          "question_ids": [
+            "geroscience-16:events-hr08",
+            "geroscience-16:events-hr07",
+            "geroscience-16:animals",
+            "geroscience-16:primary-endpoint",
+            "geroscience-16:safeguards",
+            "geroscience-16:detectable-effect"
+          ],
+          "card_ids": [
+            "geroscience-16-card-1",
+            "geroscience-16-card-2",
+            "geroscience-16-card-3",
+            "geroscience-16-card-4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "geroscience-module-lab-01",
+      "title": "Virtual laboratory: lifespan cohort with censoring and survivor bias",
+      "source_ids": [
+        "biology",
+        "molecular"
+      ],
+      "lessons": [
+        {
+          "id": "geroscience-lab-01",
+          "title": "Virtual lab 1: a lifespan cohort with censoring and a survivor-only healthspan test",
+          "reading": "labs/01-lifespan-cohort-censoring-and-survivor-bias.md",
+          "objectives": [
+            "geroscience-lab-01-objective-1",
+            "geroscience-lab-01-objective-2",
+            "geroscience-lab-01-objective-3"
+          ],
+          "worked_example": "The Kaplan–Meier median is day 760 in the control group and day 821 in the intervention group, where two animals are censored at day 1000; treating them as deaths gives a biased mean of 836.5 days. Grip strength at day 730 exists for 8 control and 10 intervention survivors, so the means of 90.5 and 92.5 g compare different survivor subsets.",
+          "question_ids": [
+            "geroscience-lab1:summary-table",
+            "geroscience-lab1:km-median",
+            "geroscience-lab1:naive-mean",
+            "geroscience-lab1:bias-reasoning",
+            "geroscience-lab1:supported-conclusions"
+          ],
+          "card_ids": [
+            "geroscience-lab1-0",
+            "geroscience-lab1-1",
+            "geroscience-lab1-2",
+            "geroscience-lab1-3"
+          ]
+        }
+      ]
     }
   ],
   "assessments": [
@@ -1189,6 +1458,48 @@
       "points": 6
     },
     {
+      "id": "geroscience-16-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Designing an aging-intervention study practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "geroscience-16-objective-1",
+        "geroscience-16-objective-2",
+        "geroscience-16-objective-3"
+      ],
+      "question_ids": [
+        "geroscience-16:events-hr08",
+        "geroscience-16:events-hr07",
+        "geroscience-16:animals",
+        "geroscience-16:primary-endpoint",
+        "geroscience-16:safeguards",
+        "geroscience-16:detectable-effect"
+      ],
+      "points": 7
+    },
+    {
+      "id": "geroscience-week13-lifespan-lab",
+      "type": "lab",
+      "mode": "practice",
+      "title": "Virtual lab 1: lifespan cohort (ungraded practice)",
+      "path": "question-banks/practice.json",
+      "week": 13,
+      "objective_ids": [
+        "geroscience-lab-01-objective-1",
+        "geroscience-lab-01-objective-2",
+        "geroscience-lab-01-objective-3"
+      ],
+      "question_ids": [
+        "geroscience-lab1:summary-table",
+        "geroscience-lab1:km-median",
+        "geroscience-lab1:naive-mean",
+        "geroscience-lab1:bias-reasoning",
+        "geroscience-lab1:supported-conclusions"
+      ],
+      "points": 14
+    },
+    {
       "id": "geroscience-case",
       "type": "case",
       "mode": "self-assessment",
@@ -1245,6 +1556,11 @@
       "version": "0.4.0",
       "date": "2026-10-08",
       "summary": "Added an original lesson on biomarker reliability (ICC, smallest detectable change) and surrogate endpoints, with no claim that any intervention changes human aging with synthetic data, formative items with computed keys and retrieval cards. The package remains partial and unreviewed."
+    },
+    {
+      "version": "0.5.0",
+      "date": "2026-10-08",
+      "summary": "Added a proposed 14-week schedule, a synthetic lifespan-cohort virtual lab (censoring, Kaplan–Meier medians and survivor bias in a late healthspan measure) and an original study-design lesson (endpoints, deaths needed for a survival comparison, safeguards against false positives). All activities remain ungraded practice; the package remains partial and unreviewed and makes no claim about human aging."
     }
   ],
   "limitations": [

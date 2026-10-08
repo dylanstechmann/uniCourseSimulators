@@ -505,6 +505,86 @@
         "geroscience-15-objective-3"
       ],
       "license": "CC-BY-4.0"
+    },
+    {
+      "id": "geroscience-16-card-1",
+      "lesson_id": "geroscience-16",
+      "front": "Primary endpoint",
+      "back": "Fix one primary endpoint, comparison and analysis in advance; pre-specify a small set of secondary endpoints.",
+      "objective_ids": [
+        "geroscience-16-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "geroscience-16-card-2",
+      "lesson_id": "geroscience-16",
+      "front": "Events for survival power",
+      "back": "d = 4(z₁ + z₂)²/(ln HR)²; about 630 deaths for HR 0.8 at 80% power, α = 0.05.",
+      "objective_ids": [
+        "geroscience-16-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "geroscience-16-card-3",
+      "lesson_id": "geroscience-16",
+      "front": "Animals needed",
+      "back": "Animals ≈ deaths needed / expected fraction dying, before losses and sex-specific analysis.",
+      "objective_ids": [
+        "geroscience-16-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "geroscience-16-card-4",
+      "lesson_id": "geroscience-16",
+      "front": "Credibility safeguards",
+      "back": "Randomization, blinding, both sexes, multiple sites, pre-registration and full reporting.",
+      "objective_ids": [
+        "geroscience-16-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "geroscience-lab1-0",
+      "lesson_id": "geroscience-lab-01",
+      "front": "Censoring",
+      "back": "An animal alive at study end is censored: at risk until its last observation, not a death.",
+      "objective_ids": [
+        "geroscience-lab-01-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "geroscience-lab1-1",
+      "lesson_id": "geroscience-lab-01",
+      "front": "Kaplan–Meier median",
+      "back": "The first time the KM estimate falls to 0.5 or below; with censoring, a mean of recorded times is biased low.",
+      "objective_ids": [
+        "geroscience-lab-01-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "geroscience-lab1-2",
+      "lesson_id": "geroscience-lab-01",
+      "front": "Survivor-only measures",
+      "back": "Healthspan tests done only in survivors compare selected subsets; report how many were measured and analyze with that in mind.",
+      "objective_ids": [
+        "geroscience-lab-01-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "geroscience-lab1-3",
+      "lesson_id": "geroscience-lab-01",
+      "front": "Scope of one cohort",
+      "back": "One cohort, sex, strain and site support a result to replicate, not a general claim about aging or people.",
+      "objective_ids": [
+        "geroscience-lab-01-objective-3"
+      ],
+      "license": "CC-BY-4.0"
     }
   ]
 }

@@ -10,6 +10,7 @@ from __future__ import annotations
 
 import base64
 import json
+import math
 from pathlib import Path
 
 import pytest
@@ -30,6 +31,17 @@ def load_items():
     return items
 
 
+def as_written(field):
+    """Write a numeric key the way a learner would: to the required significant figures when one is set."""
+    figures, answer = field.get("significant_figures"), field["answer"]
+    if not figures or answer == 0:
+        value = f"{answer}"
+    else:
+        decimals = figures - 1 - math.floor(math.log10(abs(answer)))
+        value = f"{answer:.{decimals}f}" if decimals >= 0 else f"{answer:.{figures - 1}e}"
+    return f"{value} {field.get('unit', '')}".strip()
+
+
 def correct_response(question):
     kind, spec = question["type"], question["solution_spec"]
     if kind == "multiple_select":
@@ -37,9 +49,9 @@ def correct_response(question):
     if kind == "single_choice":
         return spec["answer"]
     if kind == "numeric":
-        return f"{spec['answer']} {spec.get('unit', '')}".strip()
+        return as_written(spec)
     if kind in ("data_interpretation", "structured"):
-        return {f["id"]: str(f["answer"]) if f["type"] == "single_choice" else f"{f['answer']} {f['unit']}".strip()
+        return {f["id"]: str(f["answer"]) if f["type"] == "single_choice" else as_written(f)
                 for f in spec["field_specs"]}
     if kind == "graph":
         return {**{f"{p['id']}_x": str(p["x"]) for p in spec["points"]},

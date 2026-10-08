@@ -4,7 +4,24 @@
 
 2026-10-06; synthetic local learner data only. Milestones 1 and 2 are implemented. Milestone 3 remains partial; deterministic graders and prototype graded-assignment and review workflows are described below. A Milestone 4 curriculum-map increment is implemented and tested, while subject-matter review and map refinement remain. All 25 course packages are **partial**; zero are beta, complete or externally reviewed. Human score review is limited to saved attempts and does not constitute course-content review. No semester equivalence, university credit, security certification or public production deployment is asserted.
 
-## Current increment: ten research-skill lessons (2026-10-08, ninth pass)
+## Current increment: a proposed 14-week geroscience schedule, a lifespan lab and a design lesson (2026-10-08, tenth pass)
+
+Written by an AI coding assistant. Geroscience & Regenerative Biology moves to 0.5.0 and stays `partial`, unreviewed and formative-only.
+
+- **Proposed 14-week schedule** in `course.json` (`duration.weeks`) and the syllabus: weeks 1 to 12 pair the compact prototype units with the original lessons; week 13 is a lab and week 14 a design lesson with the course case. The manifest says the schedule is not evidence of semester equivalence. The syllabus sections on structure, assessment and limitations were regenerated from the manifest (the previous text still described version 0.2.0 and eight units).
+- **Virtual lab 1** (`labs/01-lifespan-cohort-censoring-and-survivor-bias.md`, `labs/lifespan-cohort.csv`): 24 synthetic animals, two censored at study end, and a grip-strength measure taken only in survivors. Five items (CSV summary with recalculated keys, Kaplan–Meier median, a naive-mean lower bound, structured bias reasoning, supported conclusions), four cards, one week-13 practice assessment.
+- **Lesson 16, designing a credible aging-intervention study**: endpoints, Schoenfeld's event count for a survival comparison, animals needed, and safeguards (randomization, blinding, both sexes, several sites, pre-registration).
+- **Test harness fix:** `backend/tests/test_authored_items.py` wrote numeric keys as raw floats, so an integer key with a three-significant-figure requirement (821) was submitted as "821.0" and failed. It now writes keys to the required significant figures, keeping trailing zeros, as a learner would. All 1,432 authored-item checks pass.
+- New tests check that every geroscience lesson is scheduled exactly once, that no assessment is graded, that the package stays partial and unreviewed, and that the lab's keys match its CSV (including a recomputed Kaplan–Meier median).
+
+| Command/check (this container, Python 3.12.3, 2026-10-08) | Result |
+| --- | --- |
+| `python tools/validate_content.py` | PASS: 25 packages, 203 lessons, 719 questions, 552 cards, 25 cases; 0 errors; 123 disclosed warnings |
+| `verify.sh` | all steps PASS: root 216 passed; backend 1687 passed, 2 skipped; security 518 files, 0 findings; ruff clean; legacy 7/7 |
+
+Not run: frontend checks, Docker Compose, Playwright. Not reviewed by a subject-matter expert.
+
+## Previous increment: ten research-skill lessons (2026-10-08, ninth pass)
 
 Written by an AI coding assistant. Ten original lessons of about 820 to 900 words, each with common mistakes, a worked problem, six items and four cards: statistics (multiple testing with Bonferroni and Benjamini–Hochberg; effect sizes, confidence intervals and regression to the mean), programming (algorithmic cost and data structures; floating-point rounding and cancellation, with runnable Python snippets), geroscience (biomarker reliability, smallest detectable change and surrogate endpoints, stating no claim that any intervention changes human aging), genetics (Mendelian randomization), biochemistry (binding equilibria, ligand depletion, Hill cooperativity), physiology (Starling forces and edema), signals and control (convolution and sensor lag) and robotics (joint torque budget, encoder resolution, backlash and failure limits). Statistics, programming, biochemistry, physiology, signals and control, and robotics move to 0.3.0; geroscience and genetics to 0.4.0; all stay `partial`. 60 keys were graded to full credit. The authoring pipeline's notation converter was changed to leave fenced and inline code untouched, and a test checks that the Python snippet keeps its `1e8` literals. Two existing tests pinned the statistics and geroscience versions and were updated; their maturity and review assertions are unchanged.
 

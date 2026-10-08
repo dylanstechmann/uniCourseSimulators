@@ -2085,6 +2085,707 @@
         "kind": "original",
         "modifications": []
       }
+    },
+    {
+      "id": "geroscience-16:events-hr08",
+      "type": "numeric",
+      "prompt": "Using d = 4(z₁ + z₂)²/(ln HR)² with z₁ = 1.96 and z₂ = 0.8416, how many deaths are needed to detect a hazard ratio of 0.8? Enter the number only (unrounded).",
+      "points": 1,
+      "objective_ids": [
+        "geroscience-16-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 630.53,
+        "unit": "",
+        "tolerance": 2,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Square the sum of z values, multiply by 4 and divide by the squared log hazard ratio.",
+        "solution": "4 × 7.849 / (-0.2231)² = 631 deaths.",
+        "lesson_ids": [
+          "geroscience-16"
+        ],
+        "misconception_ids": [
+          "animals-not-events"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "geroscience-16:events-hr07",
+      "type": "numeric",
+      "prompt": "With the same formula, how many deaths are needed to detect a hazard ratio of 0.7? Enter the number only (unrounded).",
+      "points": 1,
+      "objective_ids": [
+        "geroscience-16-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 246.79,
+        "unit": "",
+        "tolerance": 2,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Only the log hazard ratio changes.",
+        "solution": "4 × 7.849 / (-0.3567)² = 247 deaths: larger effects need fewer events.",
+        "lesson_ids": [
+          "geroscience-16"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "geroscience-16:animals",
+      "type": "numeric",
+      "prompt": "A study needs 631 deaths and expects 80% of animals to die before it ends. Roughly how many animals in total are needed? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "geroscience-16-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 788.16,
+        "unit": "",
+        "tolerance": 3,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Divide required deaths by the expected fraction that die.",
+        "solution": "631/0.8 = 788 animals, before losses or analysis by sex.",
+        "lesson_ids": [
+          "geroscience-16"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "geroscience-16:primary-endpoint",
+      "type": "single_choice",
+      "prompt": "A team plans to measure lifespan plus 25 healthspan tests and will 'report whichever improve'. What is the main design flaw?",
+      "points": 1,
+      "objective_ids": [
+        "geroscience-16-objective-1"
+      ],
+      "options": [
+        "Lifespan should never be measured.",
+        "There is no flaw if the sample is large.",
+        "No primary endpoint is fixed in advance, so testing many outcomes and reporting the favorable ones produces false positives.",
+        "Healthspan tests are always more reliable than lifespan."
+      ],
+      "solution_spec": {
+        "answer": 2
+      },
+      "feedback": {
+        "hint": "Recall the multiple-testing lesson.",
+        "solution": "Pre-specifying one primary endpoint (and a small, corrected set of secondary ones) is what makes a positive result believable.",
+        "lesson_ids": [
+          "geroscience-16"
+        ],
+        "misconception_ids": [
+          "outcome-switching"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "geroscience-16:safeguards",
+      "type": "multiple_select",
+      "prompt": "Which features make a positive lifespan result more credible? Select all that apply.",
+      "points": 2,
+      "objective_ids": [
+        "geroscience-16-objective-3"
+      ],
+      "options": [
+        "Both sexes, analyzed separately and together.",
+        "Randomized assignment and blinded health scoring and euthanasia decisions.",
+        "Reporting only animals that lived past the median.",
+        "Several sites running the same pre-registered protocol.",
+        "A single small cohort at one site with the analysis chosen after unblinding."
+      ],
+      "solution_spec": {
+        "answer": [
+          0,
+          1,
+          3
+        ],
+        "partial_credit": "correct-minus-incorrect-clamped-v1"
+      },
+      "feedback": {
+        "hint": "Which features prevent bias and chance findings, and which introduce them?",
+        "solution": "Randomization, blinding, both sexes and multi-site pre-registered replication guard against bias and site effects. Post hoc analysis and selective reporting create false positives.",
+        "lesson_ids": [
+          "geroscience-16"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "geroscience-16:detectable-effect",
+      "type": "single_choice",
+      "prompt": "A study of 400 animals with about 320 deaths can detect, with 80% power, a hazard ratio of about 0.73. The true effect of the intervention is HR = 0.9. What is the most likely outcome?",
+      "points": 1,
+      "objective_ids": [
+        "geroscience-16-objective-3"
+      ],
+      "options": [
+        "The study will usually miss the effect, and if it does find one, the estimate is likely to be exaggerated.",
+        "The study will reliably detect the effect.",
+        "The study will show HR = 0.73.",
+        "Power does not affect what is found."
+      ],
+      "solution_spec": {
+        "answer": 0
+      },
+      "feedback": {
+        "hint": "Compare the true effect with the detectable effect.",
+        "solution": "An underpowered study rarely detects a small true effect, and significant results from such studies tend to overestimate it (winner's curse).",
+        "lesson_ids": [
+          "geroscience-16"
+        ],
+        "misconception_ids": [
+          "underpowered-significant-is-reliable"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "geroscience-lab1:summary-table",
+      "type": "file_upload",
+      "prompt": "Using the synthetic lifespan-cohort CSV, upload a summary table with one row per group (key column `group`) and columns `animals` (number of animals), `grip_measured` (number with a grip value at day 730) and `mean_grip_g` (mean grip strength of measured animals, grams).",
+      "points": 6,
+      "objective_ids": [
+        "geroscience-lab-01-objective-1",
+        "geroscience-lab-01-objective-2"
+      ],
+      "solution_spec": {
+        "accepted_media_types": [
+          "text/csv"
+        ],
+        "max_bytes": 32768,
+        "validation_spec": {
+          "format": "csv-numeric-table-v1",
+          "delimiter": ",",
+          "key_column": "group",
+          "columns": [
+            "group",
+            "animals",
+            "grip_measured",
+            "mean_grip_g"
+          ],
+          "checks": [
+            {
+              "id": "control-animals",
+              "row_id": "control",
+              "column": "animals",
+              "type": "numeric",
+              "answer": 12.0,
+              "unit": "",
+              "tolerance": 0,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "count",
+                "values": [
+                  612,
+                  655,
+                  690,
+                  718,
+                  742,
+                  760,
+                  781,
+                  803,
+                  826,
+                  850,
+                  879,
+                  915
+                ]
+              }
+            },
+            {
+              "id": "control-grip_measured",
+              "row_id": "control",
+              "column": "grip_measured",
+              "type": "numeric",
+              "answer": 8.0,
+              "unit": "",
+              "tolerance": 0,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "count",
+                "values": [
+                  92,
+                  88,
+                  95,
+                  90,
+                  86,
+                  93,
+                  89,
+                  91
+                ]
+              }
+            },
+            {
+              "id": "control-mean_grip_g",
+              "row_id": "control",
+              "column": "mean_grip_g",
+              "type": "numeric",
+              "answer": 90.5,
+              "unit": "g",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  92,
+                  88,
+                  95,
+                  90,
+                  86,
+                  93,
+                  89,
+                  91
+                ]
+              }
+            },
+            {
+              "id": "intervention-animals",
+              "row_id": "intervention",
+              "column": "animals",
+              "type": "numeric",
+              "answer": 12.0,
+              "unit": "",
+              "tolerance": 0,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "count",
+                "values": [
+                  640,
+                  701,
+                  745,
+                  772,
+                  798,
+                  821,
+                  846,
+                  870,
+                  905,
+                  940,
+                  1000,
+                  1000
+                ]
+              }
+            },
+            {
+              "id": "intervention-grip_measured",
+              "row_id": "intervention",
+              "column": "grip_measured",
+              "type": "numeric",
+              "answer": 10.0,
+              "unit": "",
+              "tolerance": 0,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "count",
+                "values": [
+                  94,
+                  90,
+                  97,
+                  92,
+                  88,
+                  95,
+                  91,
+                  93,
+                  89,
+                  96
+                ]
+              }
+            },
+            {
+              "id": "intervention-mean_grip_g",
+              "row_id": "intervention",
+              "column": "mean_grip_g",
+              "type": "numeric",
+              "answer": 92.5,
+              "unit": "g",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  94,
+                  90,
+                  97,
+                  92,
+                  88,
+                  95,
+                  91,
+                  93,
+                  89,
+                  96
+                ]
+              }
+            }
+          ]
+        },
+        "rubric": [
+          {
+            "id": "control-animals",
+            "criterion": "control: animals",
+            "points": 1,
+            "evidence": [
+              "Recomputes animals for control from the preparation-level values."
+            ]
+          },
+          {
+            "id": "control-grip_measured",
+            "criterion": "control: grip_measured",
+            "points": 1,
+            "evidence": [
+              "Recomputes grip_measured for control from the preparation-level values."
+            ]
+          },
+          {
+            "id": "control-mean_grip_g",
+            "criterion": "control: mean_grip_g",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_grip_g for control from the preparation-level values."
+            ]
+          },
+          {
+            "id": "intervention-animals",
+            "criterion": "intervention: animals",
+            "points": 1,
+            "evidence": [
+              "Recomputes animals for intervention from the preparation-level values."
+            ]
+          },
+          {
+            "id": "intervention-grip_measured",
+            "criterion": "intervention: grip_measured",
+            "points": 1,
+            "evidence": [
+              "Recomputes grip_measured for intervention from the preparation-level values."
+            ]
+          },
+          {
+            "id": "intervention-mean_grip_g",
+            "criterion": "intervention: mean_grip_g",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_grip_g for intervention from the preparation-level values."
+            ]
+          }
+        ]
+      },
+      "feedback": {
+        "hint": "Count every animal, then count only those with a grip value, then average the grip values that exist.",
+        "solution": "Each group has 12 animals; 8 control and 10 intervention animals were alive for the day-730 grip test, with means 90.5 g and 92.5 g.",
+        "lesson_ids": [
+          "geroscience-lab-01",
+          "geroscience-5",
+          "geroscience-13"
+        ],
+        "misconception_ids": [
+          "blank-as-zero"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "geroscience-lab1:km-median",
+      "type": "data_interpretation",
+      "prompt": "The intervention group has deaths at 640, 701, 745, 772, 798, 821, 846, 870, 905, 940 days and two animals alive when the study ended at day 1000.",
+      "points": 2,
+      "objective_ids": [
+        "geroscience-lab-01-objective-1",
+        "geroscience-lab-01-objective-3"
+      ],
+      "response_fields": [
+        {
+          "id": "value",
+          "type": "numeric",
+          "prompt": "At what day does the Kaplan–Meier survival estimate for the intervention group first fall to 0.5 or below? Report exactly 3 significant figures.",
+          "unit": "",
+          "points": 1
+        },
+        {
+          "id": "inference",
+          "type": "single_choice",
+          "prompt": "The control group's Kaplan–Meier median is day 760. Which statement about the difference is best supported?",
+          "options": [
+            "Median survival is about 61 days longer with the intervention in this cohort; with 12 animals per group and one cohort, the estimate is uncertain and needs replication.",
+            "The intervention extends lifespan by exactly that amount in every animal.",
+            "The difference proves the intervention slows aging.",
+            "No comparison is possible because two animals were censored."
+          ],
+          "points": 1
+        }
+      ],
+      "solution_spec": {
+        "field_specs": [
+          {
+            "id": "value",
+            "type": "numeric",
+            "answer": 821.0,
+            "unit": "",
+            "tolerance": 0.5,
+            "relative_tolerance": 0,
+            "unit_required": false,
+            "significant_figures": 3,
+            "dimensions": null
+          },
+          {
+            "id": "inference",
+            "type": "single_choice",
+            "answer": 0
+          }
+        ]
+      },
+      "feedback": {
+        "hint": "With censoring only at the end, each death multiplies survival by (1 − 1/number at risk).",
+        "solution": "After six deaths S = 6/12 = 0.5, at day 821. The control median is day 760. A difference in one small cohort is a result to replicate, not a general claim.",
+        "lesson_ids": [
+          "geroscience-lab-01",
+          "geroscience-5",
+          "geroscience-13"
+        ],
+        "misconception_ids": [
+          "censored-as-death",
+          "single-cohort-generalization"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "geroscience-lab1:naive-mean",
+      "type": "numeric",
+      "prompt": "A student averages the last-observed days of all 12 intervention animals, treating the two still alive at day 1000 as if they died then. What value do they get, in days? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "geroscience-lab-01-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 836.5,
+        "unit": "",
+        "tolerance": 0.5,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Average all twelve recorded days.",
+        "solution": "The mean is 836.5 days. It is a lower bound on true mean lifespan because the two censored animals would have lived longer than day 1000; methods that handle censoring are needed.",
+        "lesson_ids": [
+          "geroscience-lab-01",
+          "geroscience-5",
+          "geroscience-13"
+        ],
+        "misconception_ids": [
+          "censored-as-death"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "geroscience-lab1:bias-reasoning",
+      "type": "structured",
+      "prompt": "Answer each part about the day-730 grip-strength comparison and the cohort design.",
+      "points": 3,
+      "objective_ids": [
+        "geroscience-lab-01-objective-2",
+        "geroscience-lab-01-objective-3"
+      ],
+      "response_fields": [
+        {
+          "id": "survivor-bias",
+          "type": "single_choice",
+          "prompt": "Grip strength was measured only in animals alive at day 730 (8 control, 10 intervention). What does this imply for comparing the group means?",
+          "options": [
+            "The groups compare different survivor subsets, so a difference can reflect who survived rather than an effect on strength.",
+            "The comparison is unbiased because the same test was used.",
+            "Animals that died should be entered as zero grip strength.",
+            "Survival has no relation to strength, so the subset does not matter."
+          ],
+          "points": 1
+        },
+        {
+          "id": "censoring",
+          "type": "single_choice",
+          "prompt": "How should the two intervention animals alive at day 1000 be treated in the survival analysis?",
+          "options": [
+            "As censored observations that contribute to the at-risk count until day 1000.",
+            "As deaths at day 1000.",
+            "They should be removed from the analysis.",
+            "Their lifespan should be set to the group mean."
+          ],
+          "points": 1
+        },
+        {
+          "id": "replication",
+          "type": "single_choice",
+          "prompt": "The study used one cohort of one sex and strain, housed in one facility. Which next step most strengthens any lifespan claim?",
+          "options": [
+            "Replicate in independent cohorts, both sexes and more than one site, with the analysis plan fixed in advance.",
+            "Report the result as general to mammals.",
+            "Increase the precision of the grip-strength scale.",
+            "Repeat the statistical test until it is significant."
+          ],
+          "points": 1
+        }
+      ],
+      "solution_spec": {
+        "field_specs": [
+          {
+            "id": "survivor-bias",
+            "type": "single_choice",
+            "answer": 0
+          },
+          {
+            "id": "censoring",
+            "type": "single_choice",
+            "answer": 0
+          },
+          {
+            "id": "replication",
+            "type": "single_choice",
+            "answer": 0
+          }
+        ],
+        "rubric": [
+          {
+            "id": "survivor-bias",
+            "criterion": "Survivor-only measurement bias",
+            "points": 1,
+            "evidence": [
+              "Recognizes that conditioning on survival changes the populations being compared."
+            ]
+          },
+          {
+            "id": "censoring",
+            "criterion": "Handling censored animals",
+            "points": 1,
+            "evidence": [
+              "Treats censored animals as at risk until their last observation."
+            ]
+          },
+          {
+            "id": "replication",
+            "criterion": "Single-cohort limitation",
+            "points": 1,
+            "evidence": [
+              "Identifies replication across sex, strain and site with a fixed analysis plan."
+            ]
+          }
+        ]
+      },
+      "feedback": {
+        "hint": "For each part, ask what population is being compared and what was actually observed.",
+        "solution": "Survivor-only measurements compare selected subsets; censored animals are at risk until last seen; one cohort is a starting point that needs replication.",
+        "lesson_ids": [
+          "geroscience-lab-01",
+          "geroscience-5",
+          "geroscience-13"
+        ],
+        "misconception_ids": [
+          "survivor-bias-ignored"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "geroscience-lab1:supported-conclusions",
+      "type": "multiple_select",
+      "prompt": "Which conclusions does this synthetic cohort support? Select all that apply.",
+      "points": 2,
+      "objective_ids": [
+        "geroscience-lab-01-objective-3"
+      ],
+      "options": [
+        "In this cohort, the Kaplan–Meier median survival was later in the intervention group (day 821 versus 760).",
+        "Two intervention animals were censored, so the intervention group's mean of recorded days understates its true mean lifespan.",
+        "The higher mean grip strength in surviving intervention animals may partly reflect which animals survived.",
+        "The intervention would extend human lifespan by a similar proportion.",
+        "The intervention slowed biological aging in every tissue."
+      ],
+      "solution_spec": {
+        "answer": [
+          0,
+          1,
+          2
+        ],
+        "partial_credit": "correct-minus-incorrect-clamped-v1"
+      },
+      "feedback": {
+        "hint": "Keep conclusions inside what this synthetic cohort measured.",
+        "solution": "The first three follow from the data and design. Claims about humans or about aging in every tissue go far beyond one small synthetic mouse-like cohort.",
+        "lesson_ids": [
+          "geroscience-lab-01",
+          "geroscience-5",
+          "geroscience-13"
+        ],
+        "misconception_ids": [
+          "model-to-human-leap"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
     }
   ]
 }

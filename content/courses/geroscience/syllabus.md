@@ -1,6 +1,6 @@
 # Geroscience & Regenerative Biology
 
-**Maturity: partial. Version: 0.2.0.**
+**Maturity: partial. Version: 0.5.0.**
 
 Mechanisms linking aging biology to tissue resilience, damage response, senescence, stem-cell function, and regeneration—taught with evidence appraisal and translational caution.
 
@@ -15,30 +15,38 @@ Cell biology; Genetics; Biochemistry; Biostatistics recommended. Structured requ
 - Evaluate causal evidence for an intervention.
 - Separate lifespan, healthspan, and tissue-function endpoints.
 
-## Units
+## Proposed 14-week schedule
 
-Each preserved compact unit is followed by an original, substantial lesson on the same theme.
+This is a proposed scope, not a measured or reviewed semester. Each week lists its readings; every lesson has public formative items and retrieval cards.
 
-1. Aging as a systems process (compact legacy unit)
-2. Measuring aging outcomes: survival curves, mortality hazards, and healthspan endpoints
-3. Senescence, inflammation, and tissue context (compact legacy unit)
-4. Testing senescent-cell causality: clearance models, senolytics, and dropout-aware efficacy
-5. Stem cells, niches, and regenerative capacity (compact legacy unit)
-6. Aging stem-cell pools: clonal hematopoiesis and circulating-factor claims
-7. Intervention evidence and translational design (compact legacy unit)
-8. Aging clocks and partial-reprogramming rejuvenation claims
+| Week | Theme | Readings |
+|---|---|---|
+| 1 | Aging as a systems process | Aging as a systems process |
+| 2 | Measuring aging: survival curves, mortality hazards and healthspan endpoints | Survival curves, mortality hazards, and healthspan endpoints |
+| 3 | Genome instability and repair capacity | Genome instability and repair capacity: damage, maintenance and what accumulates |
+| 4 | Proteostasis, autophagy and mitochondria | Proteostasis, autophagy and mitochondria: quality control and what changes with age |
+| 5 | Senescence, inflammation and tissue context | Senescence, inflammation, and tissue context |
+| 6 | Testing senescent-cell causality: clearance models and senolytic claims | Clearance models, senolytics, and dropout-aware efficacy |
+| 7 | Nutrient sensing and lifespan interventions in model organisms | Nutrient sensing and lifespan interventions: what the model organisms show |
+| 8 | Stem cells, niches, clonal hematopoiesis and circulating factors | Stem cells, niches, and regenerative capacity; Clonal hematopoiesis and circulating-factor claims |
+| 9 | Regeneration across species | Regeneration across species: what regrows, what scars, and what counts as evidence |
+| 10 | Biomarkers: aging clocks, reliability and surrogate endpoints | Aging clocks and partial-reprogramming rejuvenation claims; Biomarkers of aging under scrutiny: reliability, the smallest detectable change and surrogate endpoints |
+| 11 | Intervention evidence and reading an aging-intervention paper | Intervention evidence and translational design; Reading an aging-intervention paper: design, power and what a result is worth |
+| 12 | From model to human: evidence tiers and honest limits | From model to human: evidence tiers, surrogate markers and honest limits |
+| 13 | Virtual lab: lifespan cohort with censoring and survivor bias | Virtual lab 1: a lifespan cohort with censoring and a survivor-only healthspan test |
+| 14 | Designing a credible aging-intervention study and integrative case | Designing a credible aging-intervention study: endpoints, power for survival, and safeguards against fooling ourselves |
 
 ## Assessment and study policy
 
-Each compact unit has one public formative check; each original lesson has three or four formative items (numeric, single-choice, multiple-select, and data-interpretation) mapped to its objectives. Every lesson has retrieval cards that can be scheduled in the course review queue, and a course case includes a self-assessment checklist. These are practice activities, with unlimited retries and no institutional grade, university credit, or transferable credit. Workload has not been measured.
+Every lesson has formative items (numeric, single-choice, multiple-select, data-interpretation and, in the lab, CSV-upload and structured items) mapped to its objectives, plus retrieval cards for the review queue. Week 13 is a synthetic-data virtual lab and week 14 pairs a study-design lesson with the course case and its self-assessment checklist. These are practice activities with unlimited retries and no institutional grade, university credit or transferable credit. Workload has not been measured.
 
 ## Data and source policy
 
 Every table in the original lessons is explicitly synthetic teaching data. Published studies are cited as link-only references and summarized qualitatively in original wording; no source text, figure, or dataset is reproduced. The lessons give no dosing, treatment, supplement, or clinical-test recommendations.
 
-## Schedule and current limitations
+## Current limitations
 
-No full-semester calendar or 14-week structure has been authored. No substantive homework sets, laboratories, midterm, final, or graded cumulative project are included. The four compact legacy readings remain short, and the first objective of each legacy unit still has no tagged practice item. Qualified human review is required before this course can meet the complete-course quality standard.
+The schedule above is proposed, not measured, and has not been reviewed by a qualified instructor. There are no graded homework sets, midterm, final or graded project. The four compact prototype readings remain short. References are link-only and were checked for existence, not for support of each sentence. No lesson recommends any intervention, and nothing here is evidence that any intervention slows or reverses human aging. Qualified human review is required before this course could meet the complete-course standard.
 
 ## Sources and licensing
 

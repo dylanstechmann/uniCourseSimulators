@@ -224,6 +224,32 @@
       "original_content": true,
       "license": "CC-BY-4.0",
       "modifications": []
+    },
+    {
+      "module_id": "geroscience-module-16",
+      "lesson_id": "geroscience-16",
+      "reading": "modules/12-designing-a-credible-aging-intervention-study.md",
+      "source_ids": [
+        "biology",
+        "molecular"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "geroscience-module-lab-01",
+      "lesson_id": "geroscience-lab-01",
+      "reading": "labs/01-lifespan-cohort-censoring-and-survivor-bias.md",
+      "source_ids": [
+        "biology",
+        "molecular"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
     }
   ]
 }

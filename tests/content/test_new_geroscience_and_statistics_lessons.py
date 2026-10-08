@@ -29,7 +29,7 @@ LESSONS = [("geroscience", f"geroscience-{n}") for n in range(9, 15)] + [
     ("organic-chemistry", "organic-chemistry-6"), ("physics-em", "physics-em-6"), ("physics-mechanics", "physics-mechanics-6"), ("statics-materials", "statics-materials-6"),
     ("statistics", "statistics-7"), ("statistics", "statistics-8"), ("programming", "programming-6"), ("programming", "programming-7"),
     ("geroscience", "geroscience-15"), ("genetics", "genetics-9"), ("biochemistry", "biochemistry-7"), ("physiology", "physiology-7"),
-    ("signals-control", "signals-control-6"), ("robotics", "robotics-6"),
+    ("signals-control", "signals-control-6"), ("robotics", "robotics-6"), ("geroscience", "geroscience-16"),
 ]
 
 
@@ -117,3 +117,40 @@ def test_programming_code_blocks_keep_python_number_literals():
 def test_biomarker_lesson_makes_no_human_anti_aging_claim():
     text = (COURSES / "geroscience/modules/11-biomarker-reliability-and-surrogate-endpoints.md").read_text(encoding="utf-8")
     assert "makes no claim that any intervention changes human aging" in text
+
+
+def test_geroscience_schedule_places_every_lesson_once_and_stays_partial():
+    manifest = load("geroscience")
+    weeks = manifest["duration"]["weeks"]
+    assert [w["week"] for w in weeks] == list(range(1, 15))
+    scheduled = [lesson for w in weeks for lesson in w["lesson_ids"]]
+    all_lessons = [lesson["id"] for m in manifest["modules"] for lesson in m["lessons"]]
+    assert sorted(scheduled) == sorted(all_lessons) and len(scheduled) == len(set(scheduled))
+    assessments = {a["id"]: a for a in manifest["assessments"]}
+    assert all(a in assessments for w in weeks for a in w["assessment_ids"])
+    assert all(a["mode"] != "graded" for a in manifest["assessments"])
+    assert manifest["maturity"] == "partial" and manifest["review"]["status"] == "unreviewed"
+    assert "not evidence of semester equivalence" in manifest["duration"]["equivalent_structure"]
+
+
+def test_geroscience_lab_key_matches_its_dataset():
+    import csv
+    rows = list(csv.DictReader((COURSES / "geroscience/labs/lifespan-cohort.csv").open(encoding="utf-8")))
+    bank = {q["id"]: q for q in json.loads((COURSES / "geroscience/question-banks/practice.json").read_text(encoding="utf-8"))["questions"]}
+    checks = {(c["row_id"], c["column"]): c["answer"] for c in bank["geroscience-lab1:summary-table"]["solution_spec"]["validation_spec"]["checks"]}
+    for group in ("control", "intervention"):
+        grips = [float(r["grip_strength_g_day730"]) for r in rows if r["group"] == group and r["grip_strength_g_day730"]]
+        assert checks[(group, "animals")] == sum(r["group"] == group for r in rows)
+        assert checks[(group, "grip_measured")] == len(grips)
+        assert abs(checks[(group, "mean_grip_g")] - sum(grips) / len(grips)) < 1e-9
+    treated = sorted((int(r["last_day_observed"]), int(r["died"])) for r in rows if r["group"] == "intervention")
+    at_risk, survival, median = len(treated), 1.0, None
+    for day, died in treated:
+        if died:
+            survival *= 1 - 1 / at_risk
+            if survival <= 0.5 and median is None:
+                median = day
+        at_risk -= 1
+    assert bank["geroscience-lab1:km-median"]["solution_spec"]["field_specs"][0]["answer"] == median
+    text = (COURSES / "geroscience/labs/01-lifespan-cohort-censoring-and-survivor-bias.md").read_text(encoding="utf-8")
+    assert "nothing here is evidence about any compound or about human aging" in text
