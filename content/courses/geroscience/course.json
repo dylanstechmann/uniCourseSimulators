@@ -1602,21 +1602,21 @@
     {
       "version": "0.5.1",
       "date": "2026-10-08",
-      "summary": "Assessments with items now also list the course outcomes those items assess, derived from each item's lesson objective and that objective's outcome links. The rubric-only case lists none. No readings, items or keys changed. The syllabus version line was updated. The package remains partial, unreviewed and formative-only."
+      "summary": "Assessments with items now also list the course outcomes those items assess, derived from each item's lesson objective and that objective's outcome links. The rubric-only case lists none. No readings, items or keys changed. The syllabus version line was updated. The course limitations shown to learners were also updated: they still described the package before its 14-week schedule, lab and new lessons, and said some objectives had no practice item. The package remains partial, unreviewed and formative-only."
     }
   ],
   "limitations": [
-    "Four compact legacy units are preserved beside four original substantial lessons; this package is not equivalent to a full university semester.",
-    "There is no authored 12–15 week schedule, substantive homework sequence, laboratory sequence, midterm, cumulative final, or graded integrative project.",
-    "Formative checks cover each new lesson's objectives, but the first objective of each legacy unit still has no tagged practice item; this is not demonstrated comprehensive outcome coverage or mastery.",
+    "Four compact legacy units are preserved beside 13 original readings, including one synthetic-data virtual lab; this package is not equivalent to a full university semester.",
+    "A proposed 14-week schedule exists but is unmeasured and unreviewed. There is one synthetic-data virtual lab and no substantive homework sequence, laboratory sequence, midterm, cumulative final, or graded integrative project.",
+    "Practice items are short formative checks (two per prototype unit and three to six per original lesson); they do not demonstrate comprehensive outcome coverage or mastery, and objective associations remain provisional.",
     "Bloom labels, objective-to-outcome links, and structured prerequisite edges are authoring classifications awaiting subject-matter review.",
     "All data tables in the new lessons are synthetic teaching data; cited studies are summarized qualitatively from link-only references and are not reproduced.",
     "Question answers and solution feedback are intentionally public practice authoring specifications, not restricted exam keys.",
-    "Numerical items use unitless answers with stated tolerances; significant-figure and dimensional checks have not been authored for this package.",
+    "Of the 31 numerical answers in this package, one requires a unit, five check significant figures and none checks dimensions; the others accept a number within a stated tolerance, with the unit optional.",
     "Total workload and weekly duration are unknown; former nominal credit values and hardcoded reading times do not establish workload."
   ],
   "intentionally_omitted": [
-    "A full instructional sequence, graded assessments, and laboratory activities are not authored yet; the new lessons extend a partial package.",
+    "Graded assessments and a laboratory sequence are not authored yet (one synthetic-data virtual lab exists); the original lessons extend a partial package.",
     "No dosing, treatment, supplement, or clinical-test recommendations are given; intervention content is limited to evidence appraisal."
   ]
 }

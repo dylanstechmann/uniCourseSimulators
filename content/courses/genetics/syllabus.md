@@ -1,6 +1,6 @@
 # Genetics & Genomics
 
-**Maturity: partial. Version: 0.4.1.**
+**Maturity: partial. Version: 0.4.2.**
 
 Move from Mendelian segregation to modern genome-scale inference, keeping recombination, gene regulation, and experimental design in view.
 

@@ -52,7 +52,7 @@ If crossovers in the two intervals were independent, double crossovers would occ
 
 Looking only at the outer loci, a and c appear recombinant in the single-crossover classes but not in the double-crossover classes, where they kept their parental combination. The observed a–c recombination fraction is (106 + 104) / 1000 = 0.210, smaller than the 0.226 obtained by summing intervals. Over long distances this undercount grows, and the observed fraction can never exceed 0.5, however far apart two loci are.
 
-**Map functions** convert an observed fraction into an additive distance under a model of crossover distribution. Haldane's function assumes no interference: d = −½ ln(1 − 2r) Morgans. For r = 0.210, d = 27.2 cM. It overcorrects here, because Haldane assumes no interference while this cross shows substantial interference; Kosambi's function allows for some interference and gives intermediate values. The choice of function is a modeling assumption that should be stated with the map.
+**Map functions** convert an observed fraction into an additive distance under a model of crossover distribution. Haldane's function assumes no interference: d = −½ ln(1 − 2r) Morgans. For r = 0.210, d = 27.2 cM. It overcorrects here, because Haldane assumes no interference while this cross shows substantial interference; Kosambi's function, d = ¼ ln[(1 + 2r)/(1 − 2r)], allows for interference and gives 22.4 cM, close to the 22.6 cM sum of the two intervals. The choice of function is a modeling assumption that should be stated with the map.
 
 ## Worked example
 

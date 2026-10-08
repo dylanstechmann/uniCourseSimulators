@@ -1,0 +1,52 @@
+name: Course feedback
+description: Report something confusing, wrong or broken in a lesson or practice item.
+title: "[Course feedback] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for reading. This is a personal hobby and learning project, written with substantial AI
+        assistance; every package is partial and unreviewed. Please do not paste passwords, personal data or
+        private assessment keys. See docs/REVIEWER_GUIDE.md for what a subject-matter review involves.
+  - type: input
+    id: location
+    attributes:
+      label: Course, version and lesson
+      description: For example "Genetics & Genomics 0.4.1, lesson 8" or an item id such as genetics-8:sample-size.
+    validations:
+      required: true
+  - type: dropdown
+    id: severity
+    attributes:
+      label: What kind of problem is it?
+      options:
+        - "error: a wrong fact, number, key or conclusion"
+        - "misleading: true but likely to give a wrong impression"
+        - "unclear: hard to follow or missing a step"
+        - "bug: a page, button or grade behaves wrongly"
+        - "suggestion"
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: What did you notice?
+      description: Quote the sentence or describe what happened, and what you expected instead.
+    validations:
+      required: true
+  - type: dropdown
+    id: background
+    attributes:
+      label: Your background in this subject (optional)
+      options:
+        - "Prefer not to say"
+        - "General reader or student"
+        - "Studied the subject at university"
+        - "Teach or research in this subject"
+  - type: checkboxes
+    id: consent
+    attributes:
+      label: Public issue
+      options:
+        - label: I understand this issue is public and contains no personal or private data.
+          required: true

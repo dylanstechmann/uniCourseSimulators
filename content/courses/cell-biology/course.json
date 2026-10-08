@@ -2745,13 +2745,13 @@
     {
       "version": "0.19.1",
       "date": "2026-10-08",
-      "summary": "Assessments with items now also list the course outcomes those items assess, derived from each item's lesson objective and that objective's outcome links. The rubric-only case lists none. No readings, items or keys changed. The syllabus version line was updated. The package remains partial, unreviewed and formative-only."
+      "summary": "Assessments with items now also list the course outcomes those items assess, derived from each item's lesson objective and that objective's outcome links. The rubric-only case lists none. No readings, items or keys changed. The syllabus version line was updated. One course limitation shown to learners was also updated: it said some lesson objectives were unassessed, which is no longer true. The package remains partial, unreviewed and formative-only."
     }
   ],
   "limitations": [
     "Weeks 1-7 each have two original topic lessons; weeks 4 and 7 retain compact prototype readings. Weeks 3, 4, 6, 7, 9, 10, 12 and 13 each have an open formative homework companion (Homework 1 to 8) with a synthetic dataset; none is a graded homework set. Weeks 9-14 add twelve original lessons. Weeks 5, 11 and 14 each include one synthetic data-analysis lab with deterministic formative components; workload evidence, summative exams, a protected assessment store with real keys, and instructor review remain unfinished.",
     "Week 8 is an ungraded cumulative practice set, not an exam or midterm. The midterm, cumulative final and integrative project exist only as specifications under assessment-specs; they contain no items, keys or scoring and have not been reviewed. Week 8 remains practice-only with no lesson pair. Workload evidence and independent review are still missing.",
-    "Current formative checks across the developed lessons do not demonstrate comprehensive outcome coverage or mastery; some lesson objectives remain unassessed.",
+    "Current formative checks across the developed lessons do not demonstrate comprehensive outcome coverage or mastery; every lesson objective now has at least one practice item, but one item is not depth.",
     "Bloom labels and structured prerequisite edges are initial authoring classifications awaiting subject-matter review.",
     "Question answers and solution feedback are intentionally public practice authoring specifications, not restricted exam keys.",
     "Week-4 numeric examples require units and include dimensional checks, but legacy numerical specifications elsewhere still need unit, tolerance, and significant-figure review.",

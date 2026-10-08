@@ -4,7 +4,22 @@
 
 2026-10-06; synthetic local learner data only. Milestones 1 and 2 are implemented. Milestone 3 remains partial; deterministic graders and prototype graded-assignment and review workflows are described below. A Milestone 4 curriculum-map increment is implemented and tested, while subject-matter review and map refinement remain. All 25 course packages are **partial**; zero are beta, complete or externally reviewed. Human score review is limited to saved attempts and does not constitute course-content review. No semester equivalence, university credit, security certification or public production deployment is asserted.
 
-## Current increment: browser QA of protected graded assignments, and three fixes it found (2026-10-08, twelfth pass)
+## Current increment: reviewer guide, an AI-assisted check of genetics, and stale limitation text (2026-10-08, thirteenth pass)
+
+Written by an AI coding assistant. The owner said friends, relatives, university contacts, freelancers, and the owner with AI could all review, and that AI with data processing would do best. The repository's standard still requires actual human review for `complete` and named, qualified, independent review for `externally reviewed`. So AI checks are recorded as a separate, labelled layer that changes no label.
+
+- **[Reviewer guide](REVIEWER_GUIDE.md)**, a [lesson review form](review-templates/lesson-review.md) and a GitHub "Course feedback" issue form. They describe three kinds of review (reader feedback, AI-assisted check, subject-matter review), what each can change, and how a named review is recorded.
+- **[AI-assisted check of genetics 0.4.1](reviews/ai-assisted/genetics-0.4.1.md).** All 23 numerical keys agree with an independent recalculation, kept as tests in `tests/content/test_ai_assisted_checks.py` together with an exact noncentral-t power calculation. No key was wrong. Six text findings were fixed in genetics 0.4.2. The most important: the perturbation lesson advised 4 replicates per group, which gives about 66% power; the exact t-test needs 6 for 80%.
+- **Stale learner-facing limitations** in all 25 packages were replaced with text computed from each package: items per unit and lesson, and how many numerical answers require a unit or check significant figures or dimensions. Geroscience no longer says it lacks a 14-week schedule, statistics no longer describes "one supplemental original unit", and cell biology no longer says some objectives are unassessed. These changes are folded into the unpublished x.y.1 versions, and their history entries say so.
+
+| Command/check (this container, Python 3.12.3, 2026-10-08) | Result |
+| --- | --- |
+| `python tools/validate_content.py` | PASS: 25 packages, 203 lessons, 719 questions, 552 cards, 25 cases; 0 errors; 98 disclosed legacy-depth warnings |
+| `verify.sh` | all steps PASS: root 247 passed (26 new recalculation tests); backend 1689 passed, 2 skipped; security scan 0 findings; ruff clean; legacy 7/7 |
+
+Not run: Docker Compose, Playwright for this pass. Not reviewed by a person.
+
+## Previous increment: browser QA of protected graded assignments, and three fixes it found (2026-10-08, twelfth pass)
 
 Written by an AI coding assistant, after the owner asked for the protected, graded mode to be tested automatically rather than by hand. Details, commands and limits are in [QA_PROTECTED_GRADED.md](QA_PROTECTED_GRADED.md).
 

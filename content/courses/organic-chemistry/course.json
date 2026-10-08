@@ -513,19 +513,19 @@
     {
       "version": "0.3.1",
       "date": "2026-10-08",
-      "summary": "Assessments with items now also list the course outcomes those items assess, derived from each item's lesson objective and that objective's outcome links. The rubric-only case lists none, and neither do the 4 prototype-unit assessments, whose objectives are not yet linked to an outcome. No readings, items or keys changed. The syllabus was regenerated from the manifest: it states the current version, lists every lesson with its item and card counts, and describes the current practice and limitations (it still described only the four original units). The package remains partial, unreviewed and formative-only."
+      "summary": "Assessments with items now also list the course outcomes those items assess, derived from each item's lesson objective and that objective's outcome links. The rubric-only case lists none, and neither do the 4 prototype-unit assessments, whose objectives are not yet linked to an outcome. No readings, items or keys changed. The syllabus was regenerated from the manifest: it states the current version, lists every lesson with its item and card counts, and describes the current practice and limitations (it still described only the four original units). The course limitations shown to learners were also updated: they still described one formative check per lesson and the original numerical rules. The package remains partial, unreviewed and formative-only."
     }
   ],
   "limitations": [
     "Four compact legacy units are preserved; this package is not equivalent to a full university semester.",
     "There is no authored 12–15 week schedule, substantive homework sequence, laboratory sequence, midterm, cumulative final, or graded integrative project.",
-    "The single formative check per lesson does not demonstrate comprehensive outcome coverage or mastery; association with the first lesson objective is provisional.",
+    "Practice items are short formative checks (two per prototype unit and six per original lesson); they do not demonstrate comprehensive outcome coverage or mastery, and objective associations remain provisional.",
     "Bloom labels and structured prerequisite edges are initial authoring classifications awaiting subject-matter review.",
     "Question answers and solution feedback are intentionally public practice authoring specifications, not restricted exam keys.",
-    "Numerical specifications preserve the prototype's tolerance and optional unit entry; significant-figure and dimensional checks have not been authored.",
+    "Of the 8 numerical answers in this package, four require a unit, none checks significant figures and none checks dimensions; the others accept a number within a stated tolerance, with the unit optional.",
     "Total workload and weekly duration are unknown; former nominal credit values and hardcoded reading times do not establish workload."
   ],
   "intentionally_omitted": [
-    "Full instructional sequence and summative assessments are not authored yet; this is a preserved seed inventory."
+    "Full instructional sequence and summative assessments are not authored yet; the original lessons extend a partial package."
   ]
 }

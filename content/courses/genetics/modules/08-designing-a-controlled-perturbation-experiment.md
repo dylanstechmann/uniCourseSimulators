@@ -35,7 +35,7 @@ Quantitative PCR reports a cycle threshold (Ct): the cycle at which product cros
 - ΔΔCt = ΔCt(perturbed) − ΔCt(control)
 - relative expression = 2^(−ΔΔCt)
 
-**Synthetic Ct values:** control target 24.0, reference 18.0; knockdown target 26.5, reference 18.2. Then ΔCt(control) = 6.0, ΔCt(knockdown) = 8.3, ΔΔCt = 2.3, and relative expression = 2^(−2.3) = 0.203, a 80% knockdown.
+**Synthetic Ct values:** control target 24.0, reference 18.0; knockdown target 26.5, reference 18.2. Then ΔCt(control) = 6.0, ΔCt(knockdown) = 8.3, ΔΔCt = 2.3, and relative expression = 2^(−2.3) = 0.203, an 80% knockdown.
 
 The method assumes both amplicons double each cycle (efficiency near 100%) and that the reference gene is unaffected by the perturbation. If efficiency is lower, 2 should be replaced by the measured amplification factor; if the reference changes, the normalization is biased. Validating these assumptions is part of the experiment, not an extra.
 
@@ -47,7 +47,7 @@ For comparing two group means with a normal approximation, the number per group 
 
 **n ≈ 2 (z₁₋α/₂ + z₁₋β)² σ² / δ²,**
 
-where σ is the standard deviation between biological replicates and δ the smallest difference worth detecting. For a log₂ expression readout with σ = 0.5 and δ = 1.0, n ≈ 2 × (1.96 + 0.8416)² × 0.5² / 1.0² = 3.92, so 4 per group. Because this approximation is slightly optimistic at small n, a t-based calculation would ask for one or two more. If replicate variability were σ = 0.8, the same formula gives 10.0, so 11 per group. The variance estimate usually comes from pilot data or prior experiments in the same system and should be stated.
+where σ is the standard deviation between biological replicates and δ the smallest difference worth detecting. For a log₂ expression readout with σ = 0.5 and δ = 1.0, n ≈ 2 × (1.96 + 0.8416)² × 0.5² / 1.0² = 3.92, so 4 per group. This normal approximation is optimistic at small n: an exact t-test calculation shows that 4 per group gives only about 66% power, and 6 per group are needed for 80%. If replicate variability were σ = 0.8, the same formula gives 10.05, so 11 per group (12 by the exact t-test calculation). The variance estimate usually comes from pilot data or prior experiments in the same system and should be stated.
 
 ## Randomization and blinding
 
@@ -59,7 +59,7 @@ Plate position, passage number and processing order can all create effects. Assi
 
 **Step 1: specificity.** Add a second siRNA with a different sequence and a rescue construct resistant to the siRNA. Agreement across reagents and reversal by rescue address off-target effects.
 
-**Step 2: replication.** Repeat the transfection independently at least 4 times (from the calculation above, if variability is similar), treating each transfection as one replicate and averaging its wells.
+**Step 2: replication.** Repeat the transfection independently at least 6 times per condition (the exact t-test figure above, if variability is similar), treating each transfection as one replicate and averaging its wells.
 
 **Step 3: measurement.** Confirm knockdown by ΔΔCt (and ideally protein) in each replicate at the time proliferation is measured, with a validated reference gene.
 

@@ -7,7 +7,7 @@
   "domain": "Life sciences",
   "level": "Year 2",
   "maturity": "partial",
-  "version": "0.4.1",
+  "version": "0.4.2",
   "license": "MIT OR CC-BY-4.0",
   "content_origin": {
     "kind": "legacy-prototype",
@@ -432,7 +432,7 @@
             "genetics-7-objective-2",
             "genetics-7-objective-3"
           ],
-          "worked_example": "In the synthetic cross the rarest classes identify b as the middle gene; r(a–b) = 0.114, r(b–c) = 0.112; expected double crossovers 12.8, observed 8, so interference is 0.37; the observed a–c fraction 0.21 undercounts the summed 0.23.",
+          "worked_example": "In the synthetic cross the rarest classes identify b as the middle gene; r(a–b) = 0.114, r(b–c) = 0.112; expected double crossovers 12.8, observed 8, so interference is 0.37; the observed a–c fraction 0.21 undercounts the summed 0.226.",
           "question_ids": [
             "genetics-7:middle-gene",
             "genetics-7:rf-ab",
@@ -467,7 +467,7 @@
             "genetics-8-objective-2",
             "genetics-8-objective-3"
           ],
-          "worked_example": "Synthetic qPCR gives ΔCt 6.0 (control) and 8.3 (knockdown), ΔΔCt = 2.3 and relative expression 0.203 (80% knockdown); with σ = 0.5 and δ = 1.0, about 4 independent biological replicates per group are needed.",
+          "worked_example": "Synthetic qPCR gives ΔCt 6.0 (control) and 8.3 (knockdown), ΔΔCt = 2.3 and relative expression 0.203 (80% knockdown); with σ = 0.5 and δ = 1.0, the normal approximation gives about 4 independent biological replicates per group, and an exact t-test calculation 6.",
           "question_ids": [
             "genetics-8:ddct-expression",
             "genetics-8:percent-knockdown",
@@ -758,19 +758,24 @@
     {
       "version": "0.4.1",
       "date": "2026-10-08",
-      "summary": "Assessments with items now also list the course outcomes those items assess, derived from each item's lesson objective and that objective's outcome links. The rubric-only case lists none, and neither do the 4 prototype-unit assessments, whose objectives are not yet linked to an outcome. No readings, items or keys changed. The syllabus was regenerated from the manifest: it states the current version, lists every lesson with its item and card counts, and describes the current practice and limitations (it still described only the four original units). The package remains partial, unreviewed and formative-only."
+      "summary": "Assessments with items now also list the course outcomes those items assess, derived from each item's lesson objective and that objective's outcome links. The rubric-only case lists none, and neither do the 4 prototype-unit assessments, whose objectives are not yet linked to an outcome. No readings, items or keys changed. The syllabus was regenerated from the manifest: it states the current version, lists every lesson with its item and card counts, and describes the current practice and limitations (it still described only the four original units). The course limitations shown to learners were also updated: they still described one formative check per lesson and the original numerical rules. The package remains partial, unreviewed and formative-only."
+    },
+    {
+      "version": "0.4.2",
+      "date": "2026-10-08",
+      "summary": "Fixes from an AI-assisted check of 0.4.1 (docs/reviews/ai-assisted/genetics-0.4.1.md), which recomputed every practice answer from its stated data and read each lesson: the perturbation lesson recommended 4 replicates per group right after noting that the normal approximation runs low (an exact t-test calculation gives about 66% power at 4 and needs 6), and its worked example, item solution and card now say so; the mapping lesson now gives Kosambi's 22.4 cM instead of 'intermediate values'; one item and one worked example use the unrounded 0.226; one heritability sentence was reworded. This was not a human review; the package remains partial, unreviewed and formative-only."
     }
   ],
   "limitations": [
     "Four compact legacy units are preserved; this package is not equivalent to a full university semester.",
     "There is no authored 12–15 week schedule, substantive homework sequence, laboratory sequence, midterm, cumulative final, or graded integrative project.",
-    "The single formative check per lesson does not demonstrate comprehensive outcome coverage or mastery; association with the first lesson objective is provisional.",
+    "Practice items are short formative checks (two per prototype unit and six to seven per original lesson); they do not demonstrate comprehensive outcome coverage or mastery, and objective associations remain provisional.",
     "Bloom labels and structured prerequisite edges are initial authoring classifications awaiting subject-matter review.",
     "Question answers and solution feedback are intentionally public practice authoring specifications, not restricted exam keys.",
-    "Numerical specifications preserve the prototype's tolerance and optional unit entry; significant-figure and dimensional checks have not been authored.",
+    "Of the 23 numerical answers in this package, one requires a unit, none checks significant figures and none checks dimensions; the others accept a number within a stated tolerance, with the unit optional.",
     "Total workload and weekly duration are unknown; former nominal credit values and hardcoded reading times do not establish workload."
   ],
   "intentionally_omitted": [
-    "Full instructional sequence and summative assessments are not authored yet; this is a preserved seed inventory."
+    "Full instructional sequence and summative assessments are not authored yet; the original lessons extend a partial package."
   ]
 }

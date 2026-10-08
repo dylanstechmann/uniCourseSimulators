@@ -821,7 +821,7 @@
     {
       "id": "genetics-7:outer-underestimate",
       "type": "single_choice",
-      "prompt": "Why is the directly observed a–c recombination fraction (0.21) smaller than r(a–b) + r(b–c) (0.23)?",
+      "prompt": "Why is the directly observed a–c recombination fraction (0.21) smaller than r(a–b) + r(b–c) (0.226)?",
       "points": 1,
       "objective_ids": [
         "genetics-7-objective-3"
@@ -931,7 +931,7 @@
       },
       "feedback": {
         "hint": "Square the sum of z values, multiply by 2σ², divide by δ².",
-        "solution": "2 × (1.96 + 0.8416)² × 0.5² / 1.0² = 3.92, rounded up to 4 independent biological replicates per group.",
+        "solution": "2 × (1.96 + 0.8416)² × 0.5² / 1.0² = 3.92, so at least 4 per group by this approximation; an exact t-test calculation asks for 6 independent biological replicates per group.",
         "lesson_ids": [
           "genetics-8"
         ],

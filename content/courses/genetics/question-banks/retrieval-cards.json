@@ -220,7 +220,7 @@
       "id": "genetics-8-card-4",
       "lesson_id": "genetics-8",
       "front": "Replication",
-      "back": "Independent biological replicates are the unit; n ≈ 2(z₁ + z₂)²σ²/δ² per group; wells from one transfection are technical replicates.",
+      "back": "Independent biological replicates are the unit; n ≈ 2(z₁ + z₂)²σ²/δ² per group is a normal approximation that runs low at small n; wells from one transfection are technical replicates.",
       "objective_ids": [
         "genetics-8-objective-3"
       ],

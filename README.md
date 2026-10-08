@@ -123,6 +123,6 @@ Start Compose before E2E. Run `python tools/check_security.py --bundle frontend/
 
 ## Contributing and licensing
 
-Read [CONTRIBUTING.md](CONTRIBUTING.md). Software retains MIT. Educational licensing is separate in [LICENSE-CONTENT](LICENSE-CONTENT) and [content/SOURCES_AND_LICENSES.md](content/SOURCES_AND_LICENSES.md). Historical MIT grants remain valid. Adapted OCW material requires applicable CC BY-NC-SA 4.0 attribution/ShareAlike conditions and asset-level checks; JHU catalogs are alignment references only.
+Read [CONTRIBUTING.md](CONTRIBUTING.md). To review a lesson, or to understand what reader feedback, AI-assisted checks and subject-matter review can each change, read the [reviewer guide](docs/REVIEWER_GUIDE.md); AI-assisted check records are in [docs/reviews/ai-assisted](docs/reviews/ai-assisted/README.md). Software retains MIT. Educational licensing is separate in [LICENSE-CONTENT](LICENSE-CONTENT) and [content/SOURCES_AND_LICENSES.md](content/SOURCES_AND_LICENSES.md). Historical MIT grants remain valid. Adapted OCW material requires applicable CC BY-NC-SA 4.0 attribution/ShareAlike conditions and asset-level checks; JHU catalogs are alignment references only.
 
 Security: [SECURITY.md](SECURITY.md). Test evidence: [docs/VALIDATION_REPORT.md](docs/VALIDATION_REPORT.md).

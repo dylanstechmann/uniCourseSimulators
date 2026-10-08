@@ -1,5 +1,9 @@
 # Progress review: uniStemCourseSimulators
 
+## Update after the reviewer guide and the first AI-assisted check (2026-10-08, thirteenth pass)
+
+Written by an AI coding assistant. Review now has a written path. Anyone can send reader feedback with a short form. AI-assisted checks recompute answers and look for stale or inconsistent text, and are recorded separately. A named, qualified subject-matter review is still what the standard requires before any package moves past `partial`. The first AI-assisted check, of genetics 0.4.1, found no wrong answer key. It did find that one lesson advised a replicate count with about 66% power, and that learner-facing limitation text was stale in all 25 packages. Both are fixed. The check is not independent of the content's author, and it is not a human review.
+
 ## Update after browser QA of protected graded assignments (2026-10-08, twelfth pass)
 
 Written by an AI coding assistant. The owner preferred automated testing over trying the protected, graded mode by hand. A throwaway graded copy of genetics with private keys was driven in a headless browser. The first run showed that the mode had never worked end to end. A protected course's gradebook failed, which hid its assignments. Assignments written with the usual question ids could not be submitted. The attempt counter did not update. All three are fixed with regression tests, and the browser run now passes, with no private key reaching the learner. This proves the mechanism on one synthetic setup; it does not create graded content, and every committed package is still formative-only.

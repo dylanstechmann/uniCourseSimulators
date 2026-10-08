@@ -26,7 +26,7 @@ where r is the within-pair correlation for the trait.
 
 **Synthetic teaching data:** r_MZ = 0.5, r_DZ = 0.3. Then h² = 2 × (0.5 − 0.3) = 0.40, c² = 2 × 0.3 − 0.5 = 0.10 and e² = 1 − 0.5 = 0.50.
 
-The equal-environments assumption is the weak point: if MZ pairs are treated more alike than DZ pairs, h² is overestimated. Non-additive genetic effects (dominance, interactions) and assortative mating also bias the simple formulas. Modern designs estimate heritability from measured genotypes in unrelated people as well, and these estimates are usually lower than twin estimates for the same trait, a gap often called "missing heritability".
+The equal-environments assumption is the weak point: if MZ pairs are treated more alike than DZ pairs, h² is overestimated. Non-additive genetic effects (dominance, interactions) and assortative mating also bias the simple formulas. Modern designs also estimate heritability from measured genotypes in unrelated people. These estimates are usually lower than twin estimates for the same trait, and the gap is part of what is called "missing heritability".
 
 ## Polygenic scores
 
