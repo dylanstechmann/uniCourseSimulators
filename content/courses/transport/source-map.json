@@ -80,6 +80,110 @@
       "original_content": true,
       "license": "CC-BY-4.0",
       "modifications": []
+    },
+    {
+      "module_id": "transport-module-7",
+      "lesson_id": "transport-7",
+      "reading": "modules/07-transient-diffusion-and-the-error-function.md",
+      "source_ids": [
+        "transport",
+        "tissueEngineering"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "transport-module-8",
+      "lesson_id": "transport-8",
+      "reading": "modules/08-advection-diffusion-and-the-peclet-number.md",
+      "source_ids": [
+        "transport",
+        "tissueEngineering"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "transport-module-9",
+      "lesson_id": "transport-9",
+      "reading": "modules/09-oxygen-in-a-spheroid-and-the-anoxic-core.md",
+      "source_ids": [
+        "transport",
+        "tissueEngineering"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "transport-module-10",
+      "lesson_id": "transport-10",
+      "reading": "modules/10-michaelis-menten-uptake-and-the-limits-of-zero-order.md",
+      "source_ids": [
+        "transport",
+        "tissueEngineering"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "transport-module-11",
+      "lesson_id": "transport-11",
+      "reading": "modules/11-heat-transfer-lumped-capacitance-and-the-biot-number.md",
+      "source_ids": [
+        "transport",
+        "tissueEngineering"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "transport-module-12",
+      "lesson_id": "transport-12",
+      "reading": "modules/12-residence-time-and-tanks-in-series.md",
+      "source_ids": [
+        "transport",
+        "tissueEngineering"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "transport-module-lab-01",
+      "lesson_id": "transport-lab-01",
+      "reading": "labs/01-oxygen-depth-profiles-in-cell-laden-slabs.md",
+      "source_ids": [
+        "transport",
+        "tissueEngineering"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "transport-module-13",
+      "lesson_id": "transport-13",
+      "reading": "modules/13-perfused-construct-with-a-hypoxic-center.md",
+      "source_ids": [
+        "transport",
+        "tissueEngineering"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
     }
   ]
 }

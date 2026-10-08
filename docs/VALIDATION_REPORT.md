@@ -4,7 +4,24 @@
 
 2026-10-06; synthetic local learner data only. Milestones 1 and 2 are implemented. Milestone 3 remains partial; deterministic graders and prototype graded-assignment and review workflows are described below. A Milestone 4 curriculum-map increment is implemented and tested, while subject-matter review and map refinement remain. All 25 course packages are **partial**; zero are beta, complete or externally reviewed. Human score review is limited to saved attempts and does not constitute course-content review. No semester equivalence, university credit, security certification or public production deployment is asserted.
 
-## Current increment: bioreactors gets a proposed 14-week schedule, seven lessons and a kLa lab (2026-10-08, twentieth pass)
+## Current increment: transport gets a proposed 14-week schedule, seven lessons and an oxygen depth-profile lab (2026-10-08, twenty-first pass)
+
+Written by an AI coding assistant. Thermodynamics & Transport in Bioengineering moves from 0.3.2 to 0.4.0 and stays `partial`, unreviewed and formative-only.
+
+- **Proposed 14-week schedule** (`duration.weeks`) and a regenerated syllabus: the four short prototype units sit in weeks 1, 3, 9 and 12 beside the original lessons; week 8 is a lab and week 14 a lesson that prepares the existing course case. The manifest says the schedule is not evidence of semester equivalence.
+- **Seven lessons (7 to 13)**, each about 900 to 1,250 words with a worked example, common mistakes, seven or eight items and four cards: transient diffusion and the error function; advection, diffusion and the Péclet number (with the mass-transfer coefficient); oxygen in a spheroid (critical radius, anoxic core and rim); Michaelis–Menten uptake and the limits of zero order; lumped heat transfer and the Biot number; residence time, wash-in and washout and tanks in series; and a perfused construct with a hypoxic center, which prepares the course case.
+- **Virtual lab 1**: synthetic oxygen depth profiles in cell-laden slabs of three thicknesses (three constructs each, 81 rows). Eight items (a 12-cell summary upload, a consumption rate, a critical thickness, the depth at which oxygen reaches zero, an anoxic thickness, a single-choice item, a structured item and a multiple-select item), four cards and a week-8 practice assessment.
+- **Review record:** [transport-0.4.0.md](reviews/ai-assisted/transport-0.4.0.md). All 67 numeric keys in the package, including the 17 that predate this pass, agree with independent recalculation, as do the lab keys against its CSV and the numbers the lessons quote without asking for them (including a numerical table checked by a separate solver). All 62 new items earn full credit under the real grader on the first run. Five drafting problems were found and fixed before the commit, including a worked example whose answer was negative.
+- Tests: 72 recalculation and statement checks for transport; the schedule, the no-protocol statements, the syllabus outcomes and the lab keys against its CSV have tests; the inventory pins moved to 257 lessons, 1,116 questions and 768 cards.
+
+| Command/check (this container, Python 3.12.3, 2026-10-08) | Result |
+| --- | --- |
+| `python tools/validate_content.py` | PASS: 25 packages, 257 lessons, 1116 questions, 768 cards, 25 cases; 0 errors; 98 disclosed legacy-depth warnings |
+| `verify.sh` | see the PROGRESS.md entry for this pass |
+
+Not run: frontend checks, Docker Compose, Playwright for this pass. Not reviewed by a person.
+
+## Previous increment: bioreactors gets a proposed 14-week schedule, seven lessons and a kLa lab (2026-10-08, twentieth pass)
 
 Written by an AI coding assistant. Bioreactors & Tissue Culture Engineering moves from 0.3.2 to 0.4.0 and stays `partial`, unreviewed and formative-only.
 

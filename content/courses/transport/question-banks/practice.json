@@ -585,6 +585,2503 @@
         "kind": "original",
         "modifications": []
       }
+    },
+    {
+      "id": "transport-7:diffusion-time-1mm",
+      "type": "numeric",
+      "prompt": "Estimate the diffusion time L²/D across L = 1 mm for D = 2.0 × 10⁻⁹ m²/s. Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "transport-7-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 500.0,
+        "unit": "s",
+        "tolerance": 1.0,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Convert 1 mm to metres before squaring.",
+        "solution": "(10⁻³)²/(2.0 × 10⁻⁹) = 500 s, or 8.3 min.",
+        "lesson_ids": [
+          "transport-7"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "transport-7:diffusion-time-5mm",
+      "type": "numeric",
+      "prompt": "For the same D, how many hours does diffusion take across 5 mm (L²/D)? Enter the number of hours.",
+      "points": 1,
+      "objective_ids": [
+        "transport-7-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 3.4722,
+        "unit": "",
+        "tolerance": 0.02,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "The time scales with the square of the distance.",
+        "solution": "(5 × 10⁻³)²/(2.0 × 10⁻⁹) = 12,500 s = 3.47 h, 25 times the 1 mm value.",
+        "lesson_ids": [
+          "transport-7"
+        ],
+        "misconception_ids": [
+          "linear-time-with-depth"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "transport-7:similarity-variable",
+      "type": "numeric",
+      "prompt": "A medium is exposed at x = 0 to a constant surface concentration. Compute η = x/(2√(Dt)) at x = 200 μm and t = 60 s for D = 2.0 × 10⁻⁹ m²/s. Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "transport-7-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0.2887,
+        "unit": "",
+        "tolerance": 0.002,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Take the square root of D times t in metres squared.",
+        "solution": "η = 2.0 × 10⁻⁴/(2√(2.0 × 10⁻⁹ × 60)) = 0.2887.",
+        "lesson_ids": [
+          "transport-7"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "transport-7:concentration-at-depth",
+      "type": "numeric",
+      "prompt": "With erfc(0.289) = 0.683 and a surface concentration of 0.2 mol/m³, what is the concentration at that depth and time, C = C₀ erfc(η)? Enter the number in mol/m³.",
+      "points": 1,
+      "objective_ids": [
+        "transport-7-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0.1366,
+        "unit": "",
+        "tolerance": 0.002,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Multiply the surface concentration by the erfc value.",
+        "solution": "0.2 × 0.683 = 0.137 mol/m³, about 68% of the surface value.",
+        "lesson_ids": [
+          "transport-7"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "transport-7:half-time",
+      "type": "numeric",
+      "prompt": "Using t₅₀ = 1.1 x²/D, how long does the concentration at x = 500 μm take to reach half of the surface value for D = 2.0 × 10⁻⁹ m²/s? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "transport-7-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 137.382,
+        "unit": "s",
+        "tolerance": 3.0,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Convert the depth to metres and square it.",
+        "solution": "1.1 × (500 × 10⁻⁶)²/(2.0 × 10⁻⁹) = 138 s (with the exact coefficient 1.099: 137 s).",
+        "lesson_ids": [
+          "transport-7"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "transport-7:time-scaling",
+      "type": "numeric",
+      "prompt": "A solute takes 137 s to reach half of the surface concentration at a depth of 500 μm. By what factor longer does it take at a depth of 1000 μm? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "transport-7-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 4,
+        "unit": "",
+        "tolerance": 0,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "The time scales with the square of the depth.",
+        "solution": "(1000/500)² = 4: about 549 s.",
+        "lesson_ids": [
+          "transport-7"
+        ],
+        "misconception_ids": [
+          "linear-time-with-depth"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "transport-7:valid-time",
+      "type": "numeric",
+      "prompt": "The semi-infinite solution holds for a sealed slab of thickness L until t ≈ L²/(16 D). What is this time for L = 1 mm and D = 2.0 × 10⁻⁹ m²/s? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "transport-7-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 31.25,
+        "unit": "s",
+        "tolerance": 0.5,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Divide L²/D by 16.",
+        "solution": "500/16 = 31.2 s.",
+        "lesson_ids": [
+          "transport-7"
+        ],
+        "misconception_ids": [
+          "semi-infinite-always"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "transport-7:transient-statements",
+      "type": "multiple_select",
+      "prompt": "Which statements about transient diffusion are appropriate? Select all that apply.",
+      "points": 2,
+      "objective_ids": [
+        "transport-7-objective-3"
+      ],
+      "options": [
+        "A surface concentration that falls as the bath is depleted leaves the erfc solution unchanged.",
+        "The semi-infinite solution fails for a thin sealed slab once the profile reaches the back face.",
+        "The time L²/D is the time to complete equilibration.",
+        "The diffusion time grows with the square of the distance.",
+        "For a semi-infinite medium, the depth at which the concentration reaches a given fraction of the surface value grows as √t."
+      ],
+      "solution_spec": {
+        "answer": [
+          1,
+          3,
+          4
+        ],
+        "partial_credit": "correct-minus-incorrect-clamped-v1"
+      },
+      "feedback": {
+        "hint": "Think about how time depends on distance and about what the solution assumes.",
+        "solution": "The time scales as the square of the distance and the front as √t, and the solution fails once the back face matters. L²/D is an order of magnitude, and a depleting bath changes the boundary condition.",
+        "lesson_ids": [
+          "transport-7"
+        ],
+        "misconception_ids": [
+          "linear-time-with-depth",
+          "semi-infinite-always"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "transport-8:advection-time",
+      "type": "numeric",
+      "prompt": "A flow with U = 0.2 mm/s carries a solute along L = 1 mm. What is the advection time L/U? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "transport-8-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 5.0,
+        "unit": "s",
+        "tolerance": 0.05,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Convert both quantities to metres.",
+        "solution": "1 × 10⁻³/(2.0 × 10⁻⁴) = 5 s.",
+        "lesson_ids": [
+          "transport-8"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "transport-8:peclet-number",
+      "type": "numeric",
+      "prompt": "With U = 0.2 mm/s, L = 1 mm and D = 2.0 × 10⁻⁹ m²/s, what is the Péclet number UL/D? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "transport-8-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 100.0,
+        "unit": "",
+        "tolerance": 0.5,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Pe is the ratio of the diffusion time to the advection time.",
+        "solution": "Pe = 500/5 = 100: advection dominates along this length.",
+        "lesson_ids": [
+          "transport-8"
+        ],
+        "misconception_ids": [
+          "peclet-without-length"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "transport-8:slow-flow-peclet",
+      "type": "numeric",
+      "prompt": "At a velocity of 2 μm/s over the same 1 mm and the same D, what is the Péclet number? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "transport-8-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 1.0,
+        "unit": "",
+        "tolerance": 0.02,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Convert 2 μm/s to m/s.",
+        "solution": "Pe = 2.0 × 10⁻⁶ × 10⁻³/(2.0 × 10⁻⁹) = 1: advection and diffusion are comparable.",
+        "lesson_ids": [
+          "transport-8"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "transport-8:mass-transfer-coefficient",
+      "type": "numeric",
+      "prompt": "For fully developed laminar tube flow, Sh = k_c d/D = 3.66. For d = 1 mm and D = 2.0 × 10⁻⁹ m²/s, what is k_c? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "transport-8-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 7.32,
+        "unit": "μm/s",
+        "tolerance": 0.05,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Solve for k_c and convert m/s to μm/s.",
+        "solution": "k_c = 3.66 × (2.0 × 10⁻⁹)/(10⁻³) = 7.32 μm/s.",
+        "lesson_ids": [
+          "transport-8"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "transport-8:concentration-difference",
+      "type": "numeric",
+      "prompt": "Cells on the wall take up oxygen at 1.11 × 10⁻⁷ mol/(m²·s) and k_c = 7.32 μm/s. What concentration difference N/k_c is needed, in mol/m³? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "transport-8-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0.01518,
+        "unit": "",
+        "tolerance": 0.0005,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Convert k_c to m/s before dividing.",
+        "solution": "1.11 × 10⁻⁷/(7.32 × 10⁻⁶) = 0.0152 mol/m³, 7.6% of 0.2.",
+        "lesson_ids": [
+          "transport-8"
+        ],
+        "misconception_ids": [
+          "flow-raises-kc"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "transport-8:schmidt-number",
+      "type": "numeric",
+      "prompt": "For a kinematic viscosity of 0.70 × 10⁻⁶ m²/s and D = 2.0 × 10⁻⁹ m²/s, what is the Schmidt number ν/D? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "transport-8-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 350.0,
+        "unit": "",
+        "tolerance": 1.0,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Divide the two diffusivities, both in m²/s.",
+        "solution": "Sc = 0.70 × 10⁻⁶/(2.0 × 10⁻⁹) = 350.",
+        "lesson_ids": [
+          "transport-8"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "transport-8:boundary-layer-ratio",
+      "type": "numeric",
+      "prompt": "The concentration boundary layer is thinner than the velocity boundary layer by about Sc^(−1/3). What is this ratio for Sc = 350? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "transport-8-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 0.1419,
+        "unit": "",
+        "tolerance": 0.005,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Take the cube root of the Schmidt number and invert.",
+        "solution": "350^(−1/3) = 0.142.",
+        "lesson_ids": [
+          "transport-8"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "transport-8:peclet-statements",
+      "type": "multiple_select",
+      "prompt": "Which statements about advection, diffusion and wall transfer are appropriate? Select all that apply.",
+      "points": 2,
+      "objective_ids": [
+        "transport-8-objective-3"
+      ],
+      "options": [
+        "A large Péclet number means that cells on the wall are always well supplied.",
+        "In fully developed laminar tube flow, the mass-transfer coefficient does not depend on the flow rate.",
+        "A flow can be advection dominated along a channel and diffusion dominated across a small gap.",
+        "The Péclet number is the ratio of the diffusion time to the advection time over the same length.",
+        "Doubling the flow rate doubles the mass-transfer coefficient at the wall in a fully developed laminar flow."
+      ],
+      "solution_spec": {
+        "answer": [
+          1,
+          2,
+          3
+        ],
+        "partial_credit": "correct-minus-incorrect-clamped-v1"
+      },
+      "feedback": {
+        "hint": "Check which length the Péclet number refers to and what the Sherwood number is constant for.",
+        "solution": "Pe compares two times over one length, the answer depends on the length chosen, and Sh is constant in fully developed laminar flow. Flow rate then does not change k_c, and a large Pe says nothing about the supply across the stream.",
+        "lesson_ids": [
+          "transport-8"
+        ],
+        "misconception_ids": [
+          "peclet-without-length",
+          "flow-raises-kc"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "transport-9:critical-radius",
+      "type": "numeric",
+      "prompt": "For D = 2.0 × 10⁻⁹ m²/s, C₀ = 0.2 mol/m³ and q = 0.02 mol/(m³·s), what is the critical radius R_c = √(6DC₀/q) of a sphere? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "transport-9-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 346.4102,
+        "unit": "μm",
+        "tolerance": 0.5,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Evaluate 6DC₀/q in m² and take the square root.",
+        "solution": "R_c = √(6 × 2.0 × 10⁻⁹ × 0.2/0.02) = √(1.2 × 10⁻⁷) m = 346.4 μm.",
+        "lesson_ids": [
+          "transport-9"
+        ],
+        "misconception_ids": [
+          "slab-for-sphere"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "transport-9:central-concentration",
+      "type": "numeric",
+      "prompt": "A sphere of radius 300 μm has the same parameters. What is its central concentration, C₀ − qR²/(6D)? Enter the number in mol/m³.",
+      "points": 1,
+      "objective_ids": [
+        "transport-9-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0.05,
+        "unit": "",
+        "tolerance": 0.002,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Convert the radius to metres before squaring.",
+        "solution": "0.2 − 0.02 × (300 × 10⁻⁶)²/(6 × 2.0 × 10⁻⁹) = 0.050 mol/m³.",
+        "lesson_ids": [
+          "transport-9"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "transport-9:radius-ratio",
+      "type": "numeric",
+      "prompt": "The surface concentration is doubled. By what factor does the critical radius change? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "transport-9-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 1.4142,
+        "unit": "",
+        "tolerance": 0.005,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "R_c grows as the square root of C₀.",
+        "solution": "√2 = 1.414, not 2.",
+        "lesson_ids": [
+          "transport-9"
+        ],
+        "misconception_ids": [
+          "linear-in-surface-oxygen"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "transport-9:core-volume-share",
+      "type": "numeric",
+      "prompt": "A sphere of radius 400 μm has an anoxic core of radius 130.5 μm. What fraction of its volume is the core? Enter a decimal fraction, number only.",
+      "points": 1,
+      "objective_ids": [
+        "transport-9-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0.03476,
+        "unit": "",
+        "tolerance": 0.002,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Volumes scale with the cube of the radius.",
+        "solution": "(130.5/400)³ = 0.0348, or 3.5%.",
+        "lesson_ids": [
+          "transport-9"
+        ],
+        "misconception_ids": [
+          "core-radius-as-fraction"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "transport-9:rim-thickness",
+      "type": "numeric",
+      "prompt": "A sphere of radius 500 μm has an anoxic core of radius 256.7 μm. How thick is the living rim? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "transport-9-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 243.3318,
+        "unit": "μm",
+        "tolerance": 0.5,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Subtract the core radius from the sphere radius.",
+        "solution": "500 − 256.7 = 243.3 μm, thicker than the slab's 200 μm.",
+        "lesson_ids": [
+          "transport-9"
+        ],
+        "misconception_ids": [
+          "constant-rim"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "transport-9:growth-time",
+      "type": "numeric",
+      "prompt": "A spheroid grows exponentially in volume with a doubling time of 24 h from a radius of 100 μm. Using R(t) = R₀ 2^(t/(3 t_d)), how many hours until it reaches R_c = 346.4 μm? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "transport-9-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 129.059,
+        "unit": "",
+        "tolerance": 1.0,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Solve for t: t = 3 t_d log₂(R_c/R₀).",
+        "solution": "3 × 24 × log₂(346.4/100) = 129 h, or 5.4 days.",
+        "lesson_ids": [
+          "transport-9"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "transport-9:spheroid-statements",
+      "type": "multiple_select",
+      "prompt": "Which statements about oxygen in a spheroid are appropriate? Select all that apply.",
+      "points": 2,
+      "objective_ids": [
+        "transport-9-objective-3"
+      ],
+      "options": [
+        "A bulk viability assay measures the viability of the rim alone.",
+        "A larger spheroid is always better supplied because its surface is larger.",
+        "A sphere's critical radius is larger than a slab's critical thickness for the same parameters.",
+        "Doubling the surface concentration raises the critical radius by a factor of √2.",
+        "Beyond the critical radius the model has an anoxic core, and the living rim is not a constant thickness."
+      ],
+      "solution_spec": {
+        "answer": [
+          2,
+          3,
+          4
+        ],
+        "partial_credit": "correct-minus-incorrect-clamped-v1"
+      },
+      "feedback": {
+        "hint": "Think about the geometry of the supply and the dependence on C₀.",
+        "solution": "The sphere has a larger critical size than the slab, the core and rim change with size, and R_c grows as √C₀. A bulk assay averages the core and the rim, and a larger spheroid has a smaller surface for its volume.",
+        "lesson_ids": [
+          "transport-9"
+        ],
+        "misconception_ids": [
+          "slab-for-sphere",
+          "constant-rim",
+          "linear-in-surface-oxygen"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "transport-10:fraction-at-km",
+      "type": "numeric",
+      "prompt": "For Michaelis–Menten uptake v = V_max C/(K_m + C), what fraction of V_max is reached at C = K_m? Enter a decimal fraction, number only.",
+      "points": 1,
+      "objective_ids": [
+        "transport-10-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0.5,
+        "unit": "",
+        "tolerance": 0.005,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Substitute C = K_m into the expression.",
+        "solution": "v = V_max K_m/(2 K_m) = 0.5 V_max.",
+        "lesson_ids": [
+          "transport-10"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "transport-10:concentration-for-90",
+      "type": "numeric",
+      "prompt": "With K_m = 0.005 mol/m³, what concentration gives 90% of V_max? Enter the number in mol/m³.",
+      "points": 1,
+      "objective_ids": [
+        "transport-10-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0.045,
+        "unit": "",
+        "tolerance": 0.002,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Solve 0.9 = C/(K_m + C).",
+        "solution": "C = 9 K_m = 0.045 mol/m³.",
+        "lesson_ids": [
+          "transport-10"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "transport-10:uptake-at-low-oxygen",
+      "type": "numeric",
+      "prompt": "With V_max = 0.02 mol/(m³·s) and K_m = 0.005 mol/m³, what is the uptake rate at C = 0.02 mol/m³? Enter the number in mol/(m³·s).",
+      "points": 1,
+      "objective_ids": [
+        "transport-10-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0.016,
+        "unit": "",
+        "tolerance": 0.0002,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Evaluate V_max C/(K_m + C).",
+        "solution": "0.02 × 0.02/(0.005 + 0.02) = 0.016 mol/(m³·s).",
+        "lesson_ids": [
+          "transport-10"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "transport-10:zero-order-overestimate",
+      "type": "numeric",
+      "prompt": "A zero-order model uses 0.02 mol/(m³·s) at every concentration. By what factor does it overestimate the uptake at C = 0.02 mol/m³, where the true rate is 0.016? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "transport-10-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 1.25,
+        "unit": "",
+        "tolerance": 0.005,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Divide the assumed rate by the true rate.",
+        "solution": "0.02/0.016 = 1.25, a 25% overestimate.",
+        "lesson_ids": [
+          "transport-10"
+        ],
+        "misconception_ids": [
+          "vmax-everywhere"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "transport-10:first-order-constant",
+      "type": "numeric",
+      "prompt": "At concentrations well below K_m the uptake is first order with rate constant V_max/K_m. What is it for V_max = 0.02 mol/(m³·s) and K_m = 0.005 mol/m³? Enter the value per second, number only.",
+      "points": 1,
+      "objective_ids": [
+        "transport-10-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 4.0,
+        "unit": "",
+        "tolerance": 0.05,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Divide V_max by K_m.",
+        "solution": "0.02/0.005 = 4.0 per second.",
+        "lesson_ids": [
+          "transport-10"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "transport-10:km-to-surface",
+      "type": "numeric",
+      "prompt": "What is the ratio of K_m = 0.005 mol/m³ to the surface concentration C₀ = 0.2 mol/m³? Enter a decimal fraction, number only.",
+      "points": 1,
+      "objective_ids": [
+        "transport-10-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 0.025,
+        "unit": "",
+        "tolerance": 0.001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Divide the two concentrations.",
+        "solution": "0.005/0.2 = 0.025: the zero-order regime covers nearly the whole range.",
+        "lesson_ids": [
+          "transport-10"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "transport-10:kinetics-statements",
+      "type": "multiple_select",
+      "prompt": "Which statements about saturable uptake are appropriate? Select all that apply.",
+      "points": 2,
+      "objective_ids": [
+        "transport-10-objective-3"
+      ],
+      "options": [
+        "A zero-order model with V_max measured in air-saturated medium understates the consumption in the deep region.",
+        "Cells keep their function until the oxygen concentration reaches exactly zero.",
+        "The zero-order critical thickness is a reasonable first estimate when K_m is small compared with the surface concentration.",
+        "With Michaelis–Menten uptake the oxygen in the core of a thick slab approaches zero without usually being exactly zero.",
+        "Uptake is nearly independent of oxygen when the concentration is well above K_m and falls as oxygen runs down."
+      ],
+      "solution_spec": {
+        "answer": [
+          2,
+          3,
+          4
+        ],
+        "partial_credit": "correct-minus-incorrect-clamped-v1"
+      },
+      "feedback": {
+        "hint": "Think about how uptake changes with concentration and what each model predicts for the minimum.",
+        "solution": "Uptake saturates, the minimum approaches zero gradually, and the zero-order estimate is reasonable when K_m ≪ C₀. The zero-order model overstates the deep uptake, and function is lost well above zero oxygen.",
+        "lesson_ids": [
+          "transport-10"
+        ],
+        "misconception_ids": [
+          "vmax-everywhere",
+          "function-until-zero"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "transport-11:volume-to-area",
+      "type": "numeric",
+      "prompt": "For a sphere, V/A = D/6. What is V/A for a sphere of diameter 10 mm? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "transport-11-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 1.6667,
+        "unit": "mm",
+        "tolerance": 0.005,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Divide the diameter by 6.",
+        "solution": "10/6 = 1.667 mm.",
+        "lesson_ids": [
+          "transport-11"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "transport-11:time-constant",
+      "type": "numeric",
+      "prompt": "A water-like sphere (ρ = 1000 kg/m³, c_p = 4180 J/(kg·K), V/A = 1.667 mm) cools in air with h = 10 W/(m²·K). What is τ = ρ c_p (V/A)/h? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "transport-11-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 696.667,
+        "unit": "s",
+        "tolerance": 1.0,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Convert V/A to metres before multiplying.",
+        "solution": "1000 × 4180 × 0.001667/10 = 697 s.",
+        "lesson_ids": [
+          "transport-11"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "transport-11:biot-number-air",
+      "type": "numeric",
+      "prompt": "For the same sphere in air, what is the Biot number h (V/A)/k with k = 0.6 W/(m·K)? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "transport-11-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0.02778,
+        "unit": "",
+        "tolerance": 0.001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use V/A in metres.",
+        "solution": "10 × 0.001667/0.6 = 0.028, below 0.1: the lumped model holds.",
+        "lesson_ids": [
+          "transport-11"
+        ],
+        "misconception_ids": [
+          "lumped-unchecked"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "transport-11:cooling-time",
+      "type": "numeric",
+      "prompt": "The sphere starts at 37 °C in surroundings at 4 °C with τ = 697 s. How many minutes until it reaches 10 °C? Enter the number of minutes.",
+      "points": 1,
+      "objective_ids": [
+        "transport-11-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 19.794,
+        "unit": "",
+        "tolerance": 0.2,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use t = τ ln((T₀ − T_∞)/(T − T_∞)).",
+        "solution": "697 × ln(33/6) = 1188 s = 19.8 min.",
+        "lesson_ids": [
+          "transport-11"
+        ],
+        "misconception_ids": [
+          "time-constant-as-total-time"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "transport-11:biot-number-bath",
+      "type": "numeric",
+      "prompt": "In a stirred bath h = 500 W/(m²·K). What is the Biot number for the same sphere? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "transport-11-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 1.3889,
+        "unit": "",
+        "tolerance": 0.02,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Scale the previous Biot number by the ratio of the heat-transfer coefficients.",
+        "solution": "500 × 0.001667/0.6 = 1.39, well above 0.1: the lumped model fails.",
+        "lesson_ids": [
+          "transport-11"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "transport-11:bath-time-constant",
+      "type": "numeric",
+      "prompt": "If the lumped model held in the bath, what would the time constant be for h = 500 W/(m²·K)? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "transport-11-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 13.933,
+        "unit": "s",
+        "tolerance": 0.2,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "The time constant is inversely proportional to h.",
+        "solution": "697/50 = 13.9 s, but the interior would limit the result.",
+        "lesson_ids": [
+          "transport-11"
+        ],
+        "misconception_ids": [
+          "fifty-fold-faster"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "transport-11:conduction-time",
+      "type": "numeric",
+      "prompt": "Estimate the conduction time R²/α inside the sphere (R = 5 mm, α = 1.4 × 10⁻⁷ m²/s). Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "transport-11-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 178.571,
+        "unit": "s",
+        "tolerance": 1.0,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Convert the radius to metres first.",
+        "solution": "(5 × 10⁻³)²/(1.4 × 10⁻⁷) = 179 s.",
+        "lesson_ids": [
+          "transport-11"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "transport-11:thermal-statements",
+      "type": "multiple_select",
+      "prompt": "Which statements about lumped capacitance are appropriate? Select all that apply.",
+      "points": 2,
+      "objective_ids": [
+        "transport-11-objective-3"
+      ],
+      "options": [
+        "A larger Biot number means the body is more uniform in temperature.",
+        "The time constant is proportional to V/A and inversely proportional to h.",
+        "The lumped model needs a Biot number well below about 0.1.",
+        "When the internal conduction time is longer than the external time constant, raising h does not shorten the time proportionally.",
+        "The body reaches the surrounding temperature after one time constant."
+      ],
+      "solution_spec": {
+        "answer": [
+          1,
+          2,
+          3
+        ],
+        "partial_credit": "correct-minus-incorrect-clamped-v1"
+      },
+      "feedback": {
+        "hint": "Think about which resistance is larger, the one inside the body or the one at its surface.",
+        "solution": "A small Biot number validates the model, the time constant scales with V/A over h, and internal conduction sets a floor on the time. One time constant covers only 63% of the change, and a larger Bi means a less uniform body.",
+        "lesson_ids": [
+          "transport-11"
+        ],
+        "misconception_ids": [
+          "lumped-unchecked",
+          "time-constant-as-total-time",
+          "fifty-fold-faster"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "transport-12:residence-time",
+      "type": "numeric",
+      "prompt": "A well-mixed chamber of 10 mL is fed at 0.5 mL/min. What is the mean residence time V/Q? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "transport-12-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 20.0,
+        "unit": "min",
+        "tolerance": 0.05,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Divide the volume by the flow.",
+        "solution": "10/0.5 = 20 min.",
+        "lesson_ids": [
+          "transport-12"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "transport-12:washin-two-tau",
+      "type": "numeric",
+      "prompt": "After the feed switches to a solute at concentration C_in, what fraction of C_in has the chamber reached after 40 min (two residence times of 20 min)? Enter a decimal fraction, number only.",
+      "points": 1,
+      "objective_ids": [
+        "transport-12-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0.86466,
+        "unit": "",
+        "tolerance": 0.005,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use C/C_in = 1 − e^(−t/τ).",
+        "solution": "1 − e^(−2) = 0.865.",
+        "lesson_ids": [
+          "transport-12"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "transport-12:time-to-95",
+      "type": "numeric",
+      "prompt": "How many minutes until the chamber reaches 95% of the feed concentration (τ = 20 min)? Enter the number of minutes.",
+      "points": 1,
+      "objective_ids": [
+        "transport-12-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 59.915,
+        "unit": "",
+        "tolerance": 0.3,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Solve 1 − e^(−t/τ) = 0.95 for t.",
+        "solution": "t = −20 ln 0.05 = 59.9 min, about 3 τ.",
+        "lesson_ids": [
+          "transport-12"
+        ],
+        "misconception_ids": [
+          "residence-time-as-complete"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "transport-12:washout-to-one-percent",
+      "type": "numeric",
+      "prompt": "When the feed switches back to zero, how many minutes until the concentration falls to 1% of its starting value (τ = 20 min)? Enter the number of minutes.",
+      "points": 1,
+      "objective_ids": [
+        "transport-12-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 92.103,
+        "unit": "",
+        "tolerance": 0.3,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Solve e^(−t/τ) = 0.01 for t.",
+        "solution": "t = −20 ln 0.01 = 92.1 min, about 4.6 τ.",
+        "lesson_ids": [
+          "transport-12"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "transport-12:steady-fraction-with-uptake",
+      "type": "numeric",
+      "prompt": "The cells consume the solute with a first-order constant k = 0.05 per minute. What fraction of the feed concentration does the chamber reach at steady state, 1/(1 + kτ) with τ = 20 min? Enter a decimal fraction, number only.",
+      "points": 1,
+      "objective_ids": [
+        "transport-12-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0.5,
+        "unit": "",
+        "tolerance": 0.005,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Compute kτ first.",
+        "solution": "1/(1 + 0.05 × 20) = 0.50.",
+        "lesson_ids": [
+          "transport-12"
+        ],
+        "misconception_ids": [
+          "consumption-ignored"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "transport-12:effective-time-constant",
+      "type": "numeric",
+      "prompt": "With the same consumption, what is the effective time constant τ/(1 + kτ), in minutes? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "transport-12-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 10.0,
+        "unit": "min",
+        "tolerance": 0.05,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Divide τ by 1 + kτ.",
+        "solution": "20/(1 + 1) = 10 min.",
+        "lesson_ids": [
+          "transport-12"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "transport-12:series-response",
+      "type": "numeric",
+      "prompt": "Three equal tanks in series have a total residence time of 20 min. What fraction of the feed concentration has the outlet reached at t = 20 min, 1 − e^(−3)(1 + 3 + 4.5)? Enter a decimal fraction, number only.",
+      "points": 1,
+      "objective_ids": [
+        "transport-12-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 0.57681,
+        "unit": "",
+        "tolerance": 0.005,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Evaluate e^(−3) and the sum in brackets.",
+        "solution": "1 − 0.0498 × 8.5 = 0.577, against 0.632 for one tank.",
+        "lesson_ids": [
+          "transport-12"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "transport-12:chamber-statements",
+      "type": "multiple_select",
+      "prompt": "Which statements about well-mixed chambers are appropriate? Select all that apply.",
+      "points": 2,
+      "objective_ids": [
+        "transport-12-objective-3"
+      ],
+      "options": [
+        "Consumption by the cells lowers the steady concentration to C_in/(1 + kτ).",
+        "A long thin channel is well described by a single perfectly mixed volume.",
+        "After three residence times a step change in the feed is about 95% complete in a single well-mixed volume.",
+        "Tanks in series with the same total residence time give a sharper response than one tank.",
+        "The residence time is the time for a change to be complete."
+      ],
+      "solution_spec": {
+        "answer": [
+          0,
+          2,
+          3
+        ],
+        "partial_credit": "correct-minus-incorrect-clamped-v1"
+      },
+      "feedback": {
+        "hint": "Think about what the exponential means and how the model changes with mixing.",
+        "solution": "Three residence times give 95%, consumption reduces the steady level, and more tanks sharpen the response. τ is a time constant, not the completion time, and a long thin channel is closer to plug flow.",
+        "lesson_ids": [
+          "transport-12"
+        ],
+        "misconception_ids": [
+          "residence-time-as-complete",
+          "consumption-ignored"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "transport-lab1:profile-summary",
+      "type": "file_upload",
+      "prompt": "Using the synthetic profile CSV, upload a summary table with one row per slab thickness (key column `thickness`: l100, l200 and l300) and columns `profiles` (the number of replicate profiles), `c_surface` (mean oxygen at depth 0 μm), `c_100` (mean at depth 100 μm) and `c_end` (mean at the sealed back face, whose depth equals the thickness), all concentrations in mol/m³.",
+      "points": 12,
+      "objective_ids": [
+        "transport-lab-01-objective-1"
+      ],
+      "solution_spec": {
+        "accepted_media_types": [
+          "text/csv"
+        ],
+        "max_bytes": 32768,
+        "validation_spec": {
+          "format": "csv-numeric-table-v1",
+          "delimiter": ",",
+          "key_column": "thickness",
+          "columns": [
+            "thickness",
+            "profiles",
+            "c_surface",
+            "c_100",
+            "c_end"
+          ],
+          "checks": [
+            {
+              "id": "l100-profiles",
+              "row_id": "l100",
+              "column": "profiles",
+              "type": "numeric",
+              "answer": 3.0,
+              "unit": "",
+              "tolerance": 0,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "count",
+                "values": [
+                  0.204,
+                  0.198,
+                  0.198
+                ]
+              }
+            },
+            {
+              "id": "l100-c_surface",
+              "row_id": "l100",
+              "column": "c_surface",
+              "type": "numeric",
+              "answer": 0.2,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  0.204,
+                  0.198,
+                  0.198
+                ]
+              }
+            },
+            {
+              "id": "l100-c_100",
+              "row_id": "l100",
+              "column": "c_100",
+              "type": "numeric",
+              "answer": 0.15,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  0.147,
+                  0.154,
+                  0.149
+                ]
+              }
+            },
+            {
+              "id": "l100-c_end",
+              "row_id": "l100",
+              "column": "c_end",
+              "type": "numeric",
+              "answer": 0.15,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  0.147,
+                  0.154,
+                  0.149
+                ]
+              }
+            },
+            {
+              "id": "l200-profiles",
+              "row_id": "l200",
+              "column": "profiles",
+              "type": "numeric",
+              "answer": 3.0,
+              "unit": "",
+              "tolerance": 0,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "count",
+                "values": [
+                  0.197,
+                  0.204,
+                  0.199
+                ]
+              }
+            },
+            {
+              "id": "l200-c_surface",
+              "row_id": "l200",
+              "column": "c_surface",
+              "type": "numeric",
+              "answer": 0.2,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  0.197,
+                  0.204,
+                  0.199
+                ]
+              }
+            },
+            {
+              "id": "l200-c_100",
+              "row_id": "l200",
+              "column": "c_100",
+              "type": "numeric",
+              "answer": 0.05,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  0.049,
+                  0.048,
+                  0.053
+                ]
+              }
+            },
+            {
+              "id": "l200-c_end",
+              "row_id": "l200",
+              "column": "c_end",
+              "type": "numeric",
+              "answer": 0.0,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  0.0,
+                  0.0,
+                  0.0
+                ]
+              }
+            },
+            {
+              "id": "l300-profiles",
+              "row_id": "l300",
+              "column": "profiles",
+              "type": "numeric",
+              "answer": 3.0,
+              "unit": "",
+              "tolerance": 0,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "count",
+                "values": [
+                  0.199,
+                  0.198,
+                  0.203
+                ]
+              }
+            },
+            {
+              "id": "l300-c_surface",
+              "row_id": "l300",
+              "column": "c_surface",
+              "type": "numeric",
+              "answer": 0.2,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  0.199,
+                  0.198,
+                  0.203
+                ]
+              }
+            },
+            {
+              "id": "l300-c_100",
+              "row_id": "l300",
+              "column": "c_100",
+              "type": "numeric",
+              "answer": 0.05,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  0.054,
+                  0.048,
+                  0.048
+                ]
+              }
+            },
+            {
+              "id": "l300-c_end",
+              "row_id": "l300",
+              "column": "c_end",
+              "type": "numeric",
+              "answer": 0.0,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  0.0,
+                  0.0,
+                  0.0
+                ]
+              }
+            }
+          ]
+        },
+        "rubric": [
+          {
+            "id": "l100-profiles",
+            "criterion": "l100: profiles",
+            "points": 1,
+            "evidence": [
+              "Recomputes profiles for l100 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "l100-c_surface",
+            "criterion": "l100: c_surface",
+            "points": 1,
+            "evidence": [
+              "Recomputes c_surface for l100 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "l100-c_100",
+            "criterion": "l100: c_100",
+            "points": 1,
+            "evidence": [
+              "Recomputes c_100 for l100 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "l100-c_end",
+            "criterion": "l100: c_end",
+            "points": 1,
+            "evidence": [
+              "Recomputes c_end for l100 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "l200-profiles",
+            "criterion": "l200: profiles",
+            "points": 1,
+            "evidence": [
+              "Recomputes profiles for l200 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "l200-c_surface",
+            "criterion": "l200: c_surface",
+            "points": 1,
+            "evidence": [
+              "Recomputes c_surface for l200 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "l200-c_100",
+            "criterion": "l200: c_100",
+            "points": 1,
+            "evidence": [
+              "Recomputes c_100 for l200 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "l200-c_end",
+            "criterion": "l200: c_end",
+            "points": 1,
+            "evidence": [
+              "Recomputes c_end for l200 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "l300-profiles",
+            "criterion": "l300: profiles",
+            "points": 1,
+            "evidence": [
+              "Recomputes profiles for l300 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "l300-c_surface",
+            "criterion": "l300: c_surface",
+            "points": 1,
+            "evidence": [
+              "Recomputes c_surface for l300 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "l300-c_100",
+            "criterion": "l300: c_100",
+            "points": 1,
+            "evidence": [
+              "Recomputes c_100 for l300 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "l300-c_end",
+            "criterion": "l300: c_end",
+            "points": 1,
+            "evidence": [
+              "Recomputes c_end for l300 from the preparation-level values."
+            ]
+          }
+        ]
+      },
+      "feedback": {
+        "hint": "Filter by thickness and depth, count the replicates and average their oxygen readings.",
+        "solution": "Each thickness has 3 profiles. The mean surface value is 0.200 mol/m³; at 100 μm the means are 0.150, 0.050 and 0.050; at the sealed face they are 0.150, 0.000 and 0.000.",
+        "lesson_ids": [
+          "transport-lab-01",
+          "transport-5",
+          "transport-10"
+        ],
+        "misconception_ids": [
+          "profiles-as-points"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "transport-lab1:consumption-rate",
+      "type": "numeric",
+      "prompt": "For the 100 μm slab the mean oxygen at the sealed face is 0.150 mol/m³ with C₀ = 0.2 mol/m³ and D = 2.0 × 10⁻⁹ m²/s. Using C_end = C₀ − qL²/(2D), what is the consumption rate q? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "transport-lab-01-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0.02,
+        "unit": "mol/(m³·s)",
+        "tolerance": 0.0005,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Solve C_end = C₀ − qL²/(2D) for q, with L in metres.",
+        "solution": "q = 2 × 2.0 × 10⁻⁹ × (0.2 − 0.150)/(100 × 10⁻⁶)² = 0.0200 mol/(m³·s).",
+        "lesson_ids": [
+          "transport-lab-01",
+          "transport-5",
+          "transport-10"
+        ],
+        "misconception_ids": [
+          "units-micrometres"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "transport-lab1:critical-thickness",
+      "type": "numeric",
+      "prompt": "With q = 0.02 mol/(m³·s), C₀ = 0.2 mol/m³ and D = 2.0 × 10⁻⁹ m²/s, what is the critical thickness √(2DC₀/q) of a slab supplied from one face? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "transport-lab-01-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 200.0,
+        "unit": "μm",
+        "tolerance": 1.0,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Evaluate 2DC₀/q in m² and take the square root.",
+        "solution": "√(2 × 2.0 × 10⁻⁹ × 0.2/0.02) = 200 μm.",
+        "lesson_ids": [
+          "transport-lab-01",
+          "transport-5",
+          "transport-10"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "transport-lab1:zero-depth",
+      "type": "numeric",
+      "prompt": "In the 300 μm slab, at what depth (in μm) does the mean oxygen first reach zero? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "transport-lab-01-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 200.0,
+        "unit": "",
+        "tolerance": 0,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Read the mean profile down the slab and find the first depth with a mean of zero.",
+        "solution": "The mean oxygen reaches 0 at 200 μm and stays at zero to the back face.",
+        "lesson_ids": [
+          "transport-lab-01",
+          "transport-5",
+          "transport-10"
+        ],
+        "misconception_ids": [
+          "profile-linear"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "transport-lab1:anoxic-thickness",
+      "type": "numeric",
+      "prompt": "With a critical thickness of 200 μm, how thick is the anoxic zone of the 300 μm slab? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "transport-lab-01-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 100.0,
+        "unit": "μm",
+        "tolerance": 1.0,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Subtract the critical thickness from the slab thickness.",
+        "solution": "300 − 200 = 100 μm, one third of the slab.",
+        "lesson_ids": [
+          "transport-lab-01",
+          "transport-5",
+          "transport-10"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "transport-lab1:profile-meaning",
+      "type": "single_choice",
+      "prompt": "The 200 μm and 300 μm slabs have the same oxygen profile down to a depth of 200 μm. What does this show?",
+      "points": 1,
+      "objective_ids": [
+        "transport-lab-01-objective-3"
+      ],
+      "options": [
+        "Oxygen penetrates only to the critical thickness, set by the supply and the consumption; below it the extra tissue is anoxic and does not change the profile above.",
+        "The measurement is wrong because the profiles should differ.",
+        "The 300 μm slab consumes less oxygen than the 200 μm slab.",
+        "Oxygen penetrates to the full thickness in every slab."
+      ],
+      "solution_spec": {
+        "answer": 0
+      },
+      "feedback": {
+        "hint": "Compare the depth at which each profile reaches zero with the critical thickness.",
+        "solution": "The profile depends on the supply and the consumption, not on the total thickness, as long as the slab is thicker than the critical thickness; the tissue beyond it is anoxic.",
+        "lesson_ids": [
+          "transport-lab-01",
+          "transport-5",
+          "transport-10"
+        ],
+        "misconception_ids": [
+          "thickness-sets-penetration"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "transport-lab1:profile-reasoning",
+      "type": "structured",
+      "prompt": "Answer each part about the depth profiles.",
+      "points": 3,
+      "objective_ids": [
+        "transport-lab-01-objective-3"
+      ],
+      "response_fields": [
+        {
+          "id": "curvature",
+          "type": "single_choice",
+          "prompt": "Which quantity does the curvature of the oxygen profile (the second derivative) give?",
+          "options": [
+            "The volumetric consumption rate divided by the diffusion coefficient, q/D.",
+            "The surface concentration.",
+            "The flow rate of the medium.",
+            "The thickness of the slab."
+          ],
+          "points": 1
+        },
+        {
+          "id": "replicates",
+          "type": "single_choice",
+          "prompt": "What is the replicate for the oxygen profile at a given thickness?",
+          "options": [
+            "An independent construct measured with its own profile.",
+            "Each depth reading within one profile.",
+            "Each thickness.",
+            "The same construct measured twice at one depth."
+          ],
+          "points": 1
+        },
+        {
+          "id": "limits",
+          "type": "single_choice",
+          "prompt": "Which limitation applies to the zero-order interpretation of these profiles?",
+          "options": [
+            "Real uptake saturates at low oxygen, so the edge of the anoxic zone is softer than the model's, and the consumption may differ between cell batches.",
+            "Oxygen does not diffuse in tissue.",
+            "The slab has no surface.",
+            "The profile cannot depend on depth."
+          ],
+          "points": 1
+        }
+      ],
+      "solution_spec": {
+        "field_specs": [
+          {
+            "id": "curvature",
+            "type": "single_choice",
+            "answer": 0
+          },
+          {
+            "id": "replicates",
+            "type": "single_choice",
+            "answer": 0
+          },
+          {
+            "id": "limits",
+            "type": "single_choice",
+            "answer": 0
+          }
+        ],
+        "rubric": [
+          {
+            "id": "curvature",
+            "criterion": "What the curvature gives",
+            "points": 1,
+            "evidence": [
+              "Links the curvature to q/D."
+            ]
+          },
+          {
+            "id": "replicates",
+            "criterion": "What the replicates are",
+            "points": 1,
+            "evidence": [
+              "Identifies the construct, not the reading, as the replicate."
+            ]
+          },
+          {
+            "id": "limits",
+            "criterion": "What the lab does not show",
+            "points": 1,
+            "evidence": [
+              "Names the softening of the edge by saturable uptake."
+            ]
+          }
+        ]
+      },
+      "feedback": {
+        "hint": "For each part, ask what the profile shape encodes and what the model assumes.",
+        "solution": "The curvature encodes q/D, the construct is the replicate, and zero-order uptake is an idealization whose edge is softer in reality.",
+        "lesson_ids": [
+          "transport-lab-01",
+          "transport-5",
+          "transport-10"
+        ],
+        "misconception_ids": [
+          "profiles-as-points",
+          "profile-linear"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "transport-lab1:supported-conclusions",
+      "type": "multiple_select",
+      "prompt": "Which conclusions follow from these synthetic depth profiles? Select all that apply.",
+      "points": 2,
+      "objective_ids": [
+        "transport-lab-01-objective-3"
+      ],
+      "options": [
+        "The consumption rate is about 0.02 mol/(m³·s) in these slabs.",
+        "A slab thicker than about 200 μm has an anoxic zone.",
+        "The oxygen profile is curved, steepest at the supplied face and flat at the sealed face.",
+        "The slabs would behave the same way in a perfused chamber with channels.",
+        "These profiles prove the cells are viable down to 200 μm."
+      ],
+      "solution_spec": {
+        "answer": [
+          0,
+          1,
+          2
+        ],
+        "partial_credit": "correct-minus-incorrect-clamped-v1"
+      },
+      "feedback": {
+        "hint": "Keep each conclusion inside what depth profiles of three slabs can show.",
+        "solution": "The first three follow from the table. Channels change the geometry, and oxygen above zero does not prove viability.",
+        "lesson_ids": [
+          "transport-lab-01",
+          "transport-5",
+          "transport-10"
+        ],
+        "misconception_ids": [
+          "thickness-sets-penetration",
+          "profile-linear"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "transport-13:radial-drop",
+      "type": "numeric",
+      "prompt": "A channel of radius 100 μm supplies a tissue cylinder of outer radius 200 μm with q = 0.02 mol/(m³·s) and D = 2.0 × 10⁻⁹ m²/s. Using ΔC = (q/(4D))[2R_t² ln(R_t/r_c) − (R_t² − r_c²)], what is the radial drop? Enter the number in mol/m³.",
+      "points": 1,
+      "objective_ids": [
+        "transport-13-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0.06363,
+        "unit": "",
+        "tolerance": 0.001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Evaluate the bracket in m² first, then multiply by q/(4D).",
+        "solution": "ΔC = 2.500 × 10⁶ × 2.545 × 10⁻⁸ = 0.0636 mol/m³.",
+        "lesson_ids": [
+          "transport-13"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "transport-13:axial-drop",
+      "type": "numeric",
+      "prompt": "The same tissue consumes 1.885 × 10⁻¹¹ mol/s per channel, and the flow is 10 μL/min = 1.667 × 10⁻¹⁰ m³/s. By how much does the channel concentration fall along its length, in mol/m³? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "transport-13-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0.1131,
+        "unit": "",
+        "tolerance": 0.002,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Divide the uptake by the flow.",
+        "solution": "1.885 × 10⁻¹¹/(1.667 × 10⁻¹⁰) = 0.1131 mol/m³.",
+        "lesson_ids": [
+          "transport-13"
+        ],
+        "misconception_ids": [
+          "inlet-adequate-means-supplied"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "transport-13:outlet-concentration",
+      "type": "numeric",
+      "prompt": "With an inlet concentration of 0.2 mol/m³ and an axial drop of 0.1131 mol/m³, what is the concentration in the channel at the outlet? Enter the number in mol/m³.",
+      "points": 1,
+      "objective_ids": [
+        "transport-13-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0.0869,
+        "unit": "",
+        "tolerance": 0.002,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Subtract the axial drop from the inlet value.",
+        "solution": "0.2 − 0.1131 = 0.0869 mol/m³.",
+        "lesson_ids": [
+          "transport-13"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "transport-13:lowest-concentration",
+      "type": "numeric",
+      "prompt": "At the outlet end the channel holds 0.0869 mol/m³ and the radial drop is 0.0636 mol/m³. What is the lowest concentration in the tissue there? Enter the number in mol/m³.",
+      "points": 1,
+      "objective_ids": [
+        "transport-13-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0.02327,
+        "unit": "",
+        "tolerance": 0.002,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "The two drops add.",
+        "solution": "0.0869 − 0.0636 = 0.0233 mol/m³, below the threshold of 0.03.",
+        "lesson_ids": [
+          "transport-13"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "transport-13:required-flow",
+      "type": "numeric",
+      "prompt": "To keep the lowest concentration at or above 0.05 mol/m³, the axial drop may not exceed 0.0864 mol/m³. With an uptake of 1.885 × 10⁻¹¹ mol/s per channel, what flow per channel is needed, in μL/min? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "transport-13-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 13.0944,
+        "unit": "μL/min",
+        "tolerance": 0.1,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Flow = uptake/allowed drop; convert m³/s to μL/min (1 m³/s = 6 × 10¹⁰ μL/min).",
+        "solution": "1.885 × 10⁻¹¹/0.0864 = 2.182 × 10⁻¹⁰ m³/s = 13.1 μL/min.",
+        "lesson_ids": [
+          "transport-13"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "transport-13:shear-at-required-flow",
+      "type": "numeric",
+      "prompt": "The channel radius is 100 μm, the viscosity 0.78 mPa·s and the flow 13.1 μL/min. Using τ = 4μQ/(πr³), what is the wall shear stress? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "transport-13-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 0.2167,
+        "unit": "Pa",
+        "tolerance": 0.005,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Convert the flow to m³/s and the radius to metres.",
+        "solution": "τ = 4 × 0.00078 × 2.182 × 10⁻¹⁰/(π × (100 × 10⁻⁶)³) = 0.217 Pa.",
+        "lesson_ids": [
+          "transport-13"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "transport-13:hypoxic-center",
+      "type": "structured",
+      "prompt": "A perfused construct has adequate inlet oxygen but a hypoxic center. Answer each part about the model.",
+      "points": 3,
+      "objective_ids": [
+        "transport-13-objective-2",
+        "transport-13-objective-3"
+      ],
+      "response_fields": [
+        {
+          "id": "limits",
+          "type": "single_choice",
+          "prompt": "Which statement about the two limits is correct for this channel?",
+          "options": [
+            "The flow limits how much oxygen remains in the channel along its length, and diffusion limits how far oxygen reaches from the channel into the tissue; the two drops add at the outlet end.",
+            "Only the inlet concentration matters.",
+            "Raising the flow reduces the radial drop.",
+            "The radial and axial drops are the same quantity."
+          ],
+          "points": 1
+        },
+        {
+          "id": "design",
+          "type": "single_choice",
+          "prompt": "Which change reduces both limits?",
+          "options": [
+            "Bringing the channels closer together, which shortens the diffusion distance and the tissue each channel feeds.",
+            "Raising the flow only.",
+            "Raising the viscosity of the medium.",
+            "Using a longer channel."
+          ],
+          "points": 1
+        },
+        {
+          "id": "measurement",
+          "type": "single_choice",
+          "prompt": "Which measurement could show the model to be wrong?",
+          "options": [
+            "Oxygen at the tissue edge at several positions along the channel, compared with the predicted fall from the inlet end to the outlet end.",
+            "The outlet concentration of the medium alone.",
+            "The number of channels.",
+            "The color of the medium."
+          ],
+          "points": 1
+        }
+      ],
+      "solution_spec": {
+        "field_specs": [
+          {
+            "id": "limits",
+            "type": "single_choice",
+            "answer": 0
+          },
+          {
+            "id": "design",
+            "type": "single_choice",
+            "answer": 0
+          },
+          {
+            "id": "measurement",
+            "type": "single_choice",
+            "answer": 0
+          }
+        ],
+        "rubric": [
+          {
+            "id": "limits",
+            "criterion": "Two steps of supply",
+            "points": 1,
+            "evidence": [
+              "Separates axial depletion from radial diffusion."
+            ]
+          },
+          {
+            "id": "design",
+            "criterion": "A design change",
+            "points": 1,
+            "evidence": [
+              "Identifies closer channel spacing as the change that helps both."
+            ]
+          },
+          {
+            "id": "measurement",
+            "criterion": "A falsifying measurement",
+            "points": 1,
+            "evidence": [
+              "Chooses a spatially resolved measurement that tests the prediction."
+            ]
+          }
+        ]
+      },
+      "feedback": {
+        "hint": "For each part, ask which limit a change affects and what the model predicts that a measurement could contradict.",
+        "solution": "Flow sets the axial drop and spacing sets the radial drop; closer channels help both; a spatially resolved oxygen measurement tests the predicted fall along the channel.",
+        "lesson_ids": [
+          "transport-13",
+          "transport-5",
+          "transport-8",
+          "transport-9"
+        ],
+        "misconception_ids": [
+          "inlet-adequate-means-supplied",
+          "outlet-only-measurement"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "transport-13:perfusion-statements",
+      "type": "multiple_select",
+      "prompt": "Which statements about the perfused construct are appropriate? Select all that apply.",
+      "points": 2,
+      "objective_ids": [
+        "transport-13-objective-3"
+      ],
+      "options": [
+        "An adequate inlet concentration does not guarantee that the tissue far from the channel is supplied.",
+        "Closer channels reduce the radial drop, and the tissue each channel feeds.",
+        "A measurement of the outlet medium alone separates the two limits.",
+        "The model predicts the same lowest concentration at every position along the channel.",
+        "Raising the flow reduces the axial drop but not the radial drop."
+      ],
+      "solution_spec": {
+        "answer": [
+          0,
+          1,
+          4
+        ],
+        "partial_credit": "correct-minus-incorrect-clamped-v1"
+      },
+      "feedback": {
+        "hint": "Think about which step each change acts on.",
+        "solution": "The inlet value does not guarantee tissue supply, flow acts on the axial drop only, and closer channels help both limits. The outlet medium cannot separate the limits, and the lowest concentration falls along the channel.",
+        "lesson_ids": [
+          "transport-13"
+        ],
+        "misconception_ids": [
+          "inlet-adequate-means-supplied",
+          "outlet-only-measurement"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
     }
   ]
 }

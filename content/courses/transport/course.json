@@ -7,7 +7,7 @@
   "domain": "Bioengineering",
   "level": "Year 3",
   "maturity": "partial",
-  "version": "0.3.2",
+  "version": "0.4.0",
   "license": "MIT OR CC-BY-4.0",
   "content_origin": {
     "kind": "legacy-prototype",
@@ -146,12 +146,367 @@
       "course_outcome_ids": [
         "transport-outcome-3"
       ]
+    },
+    {
+      "id": "transport-7-objective-1",
+      "description": "Estimate diffusion times with L²/D and compare them with consumption times and experiment durations.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "transport-outcome-2",
+        "transport-outcome-4"
+      ]
+    },
+    {
+      "id": "transport-7-objective-2",
+      "description": "Use the error-function solution to compute the concentration at a depth and time, and the time to reach a given fraction of the surface value.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "transport-outcome-2"
+      ]
+    },
+    {
+      "id": "transport-7-objective-3",
+      "description": "Evaluate when the semi-infinite and constant-surface-concentration assumptions hold.",
+      "bloom": "evaluate",
+      "course_outcome_ids": [
+        "transport-outcome-2",
+        "transport-outcome-4"
+      ]
+    },
+    {
+      "id": "transport-8-objective-1",
+      "description": "Compute the Péclet number from the advection and diffusion time scales and say which process controls transport.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "transport-outcome-2",
+        "transport-outcome-4"
+      ]
+    },
+    {
+      "id": "transport-8-objective-2",
+      "description": "Compute a mass-transfer coefficient for laminar tube flow and the concentration difference needed to supply a wall flux.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "transport-outcome-2",
+        "transport-outcome-3"
+      ]
+    },
+    {
+      "id": "transport-8-objective-3",
+      "description": "Evaluate what raising the flow rate does, and does not do, for delivery to a surface.",
+      "bloom": "evaluate",
+      "course_outcome_ids": [
+        "transport-outcome-2",
+        "transport-outcome-4"
+      ]
+    },
+    {
+      "id": "transport-9-objective-1",
+      "description": "Compute the central oxygen concentration and the critical radius of a sphere with zero-order consumption.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "transport-outcome-2",
+        "transport-outcome-4"
+      ]
+    },
+    {
+      "id": "transport-9-objective-2",
+      "description": "Describe the anoxic core of a larger sphere, its radius and its share of the volume, and the thickness of the living rim.",
+      "bloom": "analyze",
+      "course_outcome_ids": [
+        "transport-outcome-2"
+      ]
+    },
+    {
+      "id": "transport-9-objective-3",
+      "description": "Estimate the time a growing spheroid takes to reach its critical size and evaluate the limits of the model.",
+      "bloom": "evaluate",
+      "course_outcome_ids": [
+        "transport-outcome-2",
+        "transport-outcome-4"
+      ]
+    },
+    {
+      "id": "transport-10-objective-1",
+      "description": "Compute the uptake rate, and the fraction of the maximum rate, at a given oxygen concentration.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "transport-outcome-2"
+      ]
+    },
+    {
+      "id": "transport-10-objective-2",
+      "description": "Judge where the zero-order approximation is accurate and by how much it overestimates consumption elsewhere.",
+      "bloom": "analyze",
+      "course_outcome_ids": [
+        "transport-outcome-2",
+        "transport-outcome-4"
+      ]
+    },
+    {
+      "id": "transport-10-objective-3",
+      "description": "Evaluate how saturable uptake changes the interpretation of a critical thickness.",
+      "bloom": "evaluate",
+      "course_outcome_ids": [
+        "transport-outcome-2",
+        "transport-outcome-4"
+      ]
+    },
+    {
+      "id": "transport-11-objective-1",
+      "description": "Compute the time constant of a body cooling or warming by convection and the time to reach a target temperature.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "transport-outcome-1",
+        "transport-outcome-2"
+      ]
+    },
+    {
+      "id": "transport-11-objective-2",
+      "description": "Compute the Biot number and decide whether the lumped assumption holds.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "transport-outcome-2",
+        "transport-outcome-4"
+      ]
+    },
+    {
+      "id": "transport-11-objective-3",
+      "description": "Compare external and internal thermal time scales and evaluate when a gradient inside the body controls the time course.",
+      "bloom": "evaluate",
+      "course_outcome_ids": [
+        "transport-outcome-2",
+        "transport-outcome-4"
+      ]
+    },
+    {
+      "id": "transport-12-objective-1",
+      "description": "Compute the mean residence time and the wash-in and washout times of a well-mixed chamber.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "transport-outcome-1",
+        "transport-outcome-4"
+      ]
+    },
+    {
+      "id": "transport-12-objective-2",
+      "description": "Include first-order consumption and compute the steady concentration and the effective time constant.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "transport-outcome-1",
+        "transport-outcome-2"
+      ]
+    },
+    {
+      "id": "transport-12-objective-3",
+      "description": "Compare a single well-mixed volume with tanks in series and evaluate the assumption of perfect mixing.",
+      "bloom": "evaluate",
+      "course_outcome_ids": [
+        "transport-outcome-1",
+        "transport-outcome-4"
+      ]
+    },
+    {
+      "id": "transport-lab-01-objective-1",
+      "description": "Summarize replicate oxygen profiles by slab thickness at chosen depths.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "transport-outcome-2"
+      ]
+    },
+    {
+      "id": "transport-lab-01-objective-2",
+      "description": "Estimate the consumption rate from the curvature of a profile and the critical thickness from it.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "transport-outcome-2",
+        "transport-outcome-4"
+      ]
+    },
+    {
+      "id": "transport-lab-01-objective-3",
+      "description": "Interpret a profile that reaches zero oxygen, including the thickness of the anoxic zone, and state the limits of the model.",
+      "bloom": "evaluate",
+      "course_outcome_ids": [
+        "transport-outcome-2",
+        "transport-outcome-4"
+      ]
+    },
+    {
+      "id": "transport-13-objective-1",
+      "description": "Compute the radial oxygen drop from a channel to the edge of the tissue it supplies, and the axial drop along the channel.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "transport-outcome-1",
+        "transport-outcome-2"
+      ]
+    },
+    {
+      "id": "transport-13-objective-2",
+      "description": "Locate the lowest oxygen concentration and compare design changes (flow, channel spacing) by their effects on it.",
+      "bloom": "analyze",
+      "course_outcome_ids": [
+        "transport-outcome-2",
+        "transport-outcome-3",
+        "transport-outcome-4"
+      ]
+    },
+    {
+      "id": "transport-13-objective-3",
+      "description": "State what each step of the model assumes and design a measurement that could show it to be wrong.",
+      "bloom": "create",
+      "course_outcome_ids": [
+        "transport-outcome-2",
+        "transport-outcome-4"
+      ]
     }
   ],
   "duration": {
-    "instructional_weeks": null,
-    "equivalent_structure": null,
-    "weeks": []
+    "instructional_weeks": 14,
+    "equivalent_structure": "Proposed 14-week undergraduate scope only. The four compact prototype units sit in weeks 1, 3, 9 and 12 beside original lessons on residence time, transient diffusion, oxygen limits in slabs and spheroids, saturable uptake, tubing and pressure drop, advection and diffusion together, and lumped heat transfer; week 8 is a synthetic-data lab on oxygen depth profiles and week 14 a lesson on a perfused construct with a hypoxic center, which prepares the course case. All activities are open, ungraded practice. There are no graded homework sets, exams or project, and workload has not been measured, so this schedule is not evidence of semester equivalence.",
+    "weeks": [
+      {
+        "week": 1,
+        "title": "Control volumes and conservation",
+        "lesson_ids": [
+          "transport-1"
+        ],
+        "assessment_ids": [
+          "transport-1-practice"
+        ]
+      },
+      {
+        "week": 2,
+        "title": "Well-mixed chambers: residence time, wash-in and washout, and tanks in series",
+        "lesson_ids": [
+          "transport-12"
+        ],
+        "assessment_ids": [
+          "transport-12-practice"
+        ]
+      },
+      {
+        "week": 3,
+        "title": "Diffusion, reaction and characteristic length",
+        "lesson_ids": [
+          "transport-2"
+        ],
+        "assessment_ids": [
+          "transport-2-practice"
+        ]
+      },
+      {
+        "week": 4,
+        "title": "Transient diffusion: penetration depth, the error function and equilibration times",
+        "lesson_ids": [
+          "transport-7"
+        ],
+        "assessment_ids": [
+          "transport-7-practice"
+        ]
+      },
+      {
+        "week": 5,
+        "title": "Oxygen limits in thick constructs: zero-order uptake, critical thickness and time scales",
+        "lesson_ids": [
+          "transport-5"
+        ],
+        "assessment_ids": [
+          "transport-5-practice"
+        ]
+      },
+      {
+        "week": 6,
+        "title": "Oxygen in a spheroid: the critical radius, the anoxic core and the living rim",
+        "lesson_ids": [
+          "transport-9"
+        ],
+        "assessment_ids": [
+          "transport-9-practice"
+        ]
+      },
+      {
+        "week": 7,
+        "title": "When zero order fails: Michaelis–Menten uptake and a softer edge to the limit",
+        "lesson_ids": [
+          "transport-10"
+        ],
+        "assessment_ids": [
+          "transport-10-practice"
+        ]
+      },
+      {
+        "week": 8,
+        "title": "Virtual lab: oxygen depth profiles in cell-laden slabs",
+        "lesson_ids": [
+          "transport-lab-01"
+        ],
+        "assessment_ids": [
+          "transport-week8-oxygen-profile-lab"
+        ]
+      },
+      {
+        "week": 9,
+        "title": "Fluid mechanics and microvascular flow",
+        "lesson_ids": [
+          "transport-3"
+        ],
+        "assessment_ids": [
+          "transport-3-practice"
+        ]
+      },
+      {
+        "week": 10,
+        "title": "Perfusing a culture through tubing: control-volume balances, Reynolds number and pressure drop",
+        "lesson_ids": [
+          "transport-6"
+        ],
+        "assessment_ids": [
+          "transport-6-practice"
+        ]
+      },
+      {
+        "week": 11,
+        "title": "Advection and diffusion together: the Péclet number and mass-transfer coefficients",
+        "lesson_ids": [
+          "transport-8"
+        ],
+        "assessment_ids": [
+          "transport-8-practice"
+        ]
+      },
+      {
+        "week": 12,
+        "title": "Heat transfer and coupled transport",
+        "lesson_ids": [
+          "transport-4"
+        ],
+        "assessment_ids": [
+          "transport-4-practice"
+        ]
+      },
+      {
+        "week": 13,
+        "title": "Heat transfer: lumped capacitance, the Biot number and thermal time scales",
+        "lesson_ids": [
+          "transport-11"
+        ],
+        "assessment_ids": [
+          "transport-11-practice"
+        ]
+      },
+      {
+        "week": 14,
+        "title": "A perfused construct with a hypoxic center: advection supplies the channel, diffusion supplies the tissue",
+        "lesson_ids": [
+          "transport-13"
+        ],
+        "assessment_ids": [
+          "transport-13-practice",
+          "transport-case"
+        ]
+      }
+    ]
   },
   "workload": {
     "estimated_total_hours": null,
@@ -339,6 +694,300 @@
           ]
         }
       ]
+    },
+    {
+      "id": "transport-module-7",
+      "title": "Transient diffusion",
+      "source_ids": [
+        "transport",
+        "tissueEngineering"
+      ],
+      "lessons": [
+        {
+          "id": "transport-7",
+          "title": "Transient diffusion: penetration depth, the error function and equilibration times",
+          "reading": "modules/07-transient-diffusion-and-the-error-function.md",
+          "objectives": [
+            "transport-7-objective-1",
+            "transport-7-objective-2",
+            "transport-7-objective-3"
+          ],
+          "worked_example": "For a synthetic solute with D = 1.0 × 10⁻⁹ m²/s at a constant surface concentration of 1.0 mol/m³, the concentration at 300 μm after 120 s is 0.540 mol/m³ and the half-time at that depth is 99 s; with D = 2.0 × 10⁻⁹ m²/s, diffusion across 1 mm takes about 500 s and the half-time at 500 μm is 137 s.",
+          "question_ids": [
+            "transport-7:diffusion-time-1mm",
+            "transport-7:diffusion-time-5mm",
+            "transport-7:similarity-variable",
+            "transport-7:concentration-at-depth",
+            "transport-7:half-time",
+            "transport-7:time-scaling",
+            "transport-7:valid-time",
+            "transport-7:transient-statements"
+          ],
+          "card_ids": [
+            "transport-7-card-1",
+            "transport-7-card-2",
+            "transport-7-card-3",
+            "transport-7-card-4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "transport-module-8",
+      "title": "Advection, diffusion and wall transfer",
+      "source_ids": [
+        "transport",
+        "tissueEngineering"
+      ],
+      "lessons": [
+        {
+          "id": "transport-8",
+          "title": "Advection and diffusion together: the Péclet number and mass-transfer coefficients",
+          "reading": "modules/08-advection-diffusion-and-the-peclet-number.md",
+          "objectives": [
+            "transport-8-objective-1",
+            "transport-8-objective-2",
+            "transport-8-objective-3"
+          ],
+          "worked_example": "A synthetic tube of 0.5 mm diameter with U = 1.0 mm/s and D = 3.0 × 10⁻⁹ m²/s has a Péclet number of 167 over 0.5 mm, k_c = 21.96 μm/s and needs a concentration difference of 0.0091 mol/m³ to supply 2.0 × 10⁻⁷ mol/(m²·s); the lesson's 1 mm channel at 0.2 mm/s has Pe = 100, k_c = 7.32 μm/s and needs 0.0152 mol/m³ for a confluent monolayer.",
+          "question_ids": [
+            "transport-8:advection-time",
+            "transport-8:peclet-number",
+            "transport-8:slow-flow-peclet",
+            "transport-8:mass-transfer-coefficient",
+            "transport-8:concentration-difference",
+            "transport-8:schmidt-number",
+            "transport-8:boundary-layer-ratio",
+            "transport-8:peclet-statements"
+          ],
+          "card_ids": [
+            "transport-8-card-1",
+            "transport-8-card-2",
+            "transport-8-card-3",
+            "transport-8-card-4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "transport-module-9",
+      "title": "Oxygen in a spheroid",
+      "source_ids": [
+        "transport",
+        "tissueEngineering"
+      ],
+      "lessons": [
+        {
+          "id": "transport-9",
+          "title": "Oxygen in a spheroid: the critical radius, the anoxic core and why the rim is not a constant thickness",
+          "reading": "modules/09-oxygen-in-a-spheroid-and-the-anoxic-core.md",
+          "objectives": [
+            "transport-9-objective-1",
+            "transport-9-objective-2",
+            "transport-9-objective-3"
+          ],
+          "worked_example": "A synthetic spheroid with D = 1.5 × 10⁻⁹ m²/s, C₀ = 0.15 mol/m³ and q = 0.03 mol/(m³·s) has a critical radius of 212.1 μm and keeps 0.042 mol/m³ at its centre at 180 μm, reaching the critical size from 80 μm in 127 h at a 30 h doubling time; the lesson's sphere has R_c = 346.4 μm, a 130.5 μm core (3.5% of the volume) at 400 μm and a 243.3 μm rim at 500 μm.",
+          "question_ids": [
+            "transport-9:critical-radius",
+            "transport-9:central-concentration",
+            "transport-9:radius-ratio",
+            "transport-9:core-volume-share",
+            "transport-9:rim-thickness",
+            "transport-9:growth-time",
+            "transport-9:spheroid-statements"
+          ],
+          "card_ids": [
+            "transport-9-card-1",
+            "transport-9-card-2",
+            "transport-9-card-3",
+            "transport-9-card-4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "transport-module-10",
+      "title": "Saturable oxygen uptake",
+      "source_ids": [
+        "transport",
+        "tissueEngineering"
+      ],
+      "lessons": [
+        {
+          "id": "transport-10",
+          "title": "When zero order fails: Michaelis–Menten oxygen uptake and a softer edge to the limit",
+          "reading": "modules/10-michaelis-menten-uptake-and-the-limits-of-zero-order.md",
+          "objectives": [
+            "transport-10-objective-1",
+            "transport-10-objective-2",
+            "transport-10-objective-3"
+          ],
+          "worked_example": "A synthetic cell with V_max 0.03 mol/(m³·s) and K_m 0.01 mol/m³ takes up oxygen at 75% of V_max at 0.03 mol/m³ (a zero-order model overestimates it by 1.33), needs 0.19 mol/m³ for 95% of V_max and is first order with rate constant 3.0 per second at low oxygen; in the lesson's slab the Michaelis–Menten minimum at 200 μm is 0.0229 mol/m³ where the zero-order model gives zero.",
+          "question_ids": [
+            "transport-10:fraction-at-km",
+            "transport-10:concentration-for-90",
+            "transport-10:uptake-at-low-oxygen",
+            "transport-10:zero-order-overestimate",
+            "transport-10:first-order-constant",
+            "transport-10:km-to-surface",
+            "transport-10:kinetics-statements"
+          ],
+          "card_ids": [
+            "transport-10-card-1",
+            "transport-10-card-2",
+            "transport-10-card-3",
+            "transport-10-card-4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "transport-module-11",
+      "title": "Lumped heat transfer",
+      "source_ids": [
+        "transport",
+        "tissueEngineering"
+      ],
+      "lessons": [
+        {
+          "id": "transport-11",
+          "title": "Heat transfer: lumped capacitance, the Biot number and thermal time scales",
+          "reading": "modules/11-heat-transfer-lumped-capacitance-and-the-biot-number.md",
+          "objectives": [
+            "transport-11-objective-1",
+            "transport-11-objective-2",
+            "transport-11-objective-3"
+          ],
+          "worked_example": "A synthetic water-like sphere of 6 mm diameter with h = 25 W/(m²·K) has τ = 167 s and Bi = 0.042, and warms from 22 to 35 °C in 337 s toward 37 °C; the 10 mm sphere in the lesson has τ = 697 s in air and 19.8 min to cool from 37 to 10 °C, but Bi = 1.39 in a bath, where the lumped model fails.",
+          "question_ids": [
+            "transport-11:volume-to-area",
+            "transport-11:time-constant",
+            "transport-11:biot-number-air",
+            "transport-11:cooling-time",
+            "transport-11:biot-number-bath",
+            "transport-11:bath-time-constant",
+            "transport-11:conduction-time",
+            "transport-11:thermal-statements"
+          ],
+          "card_ids": [
+            "transport-11-card-1",
+            "transport-11-card-2",
+            "transport-11-card-3",
+            "transport-11-card-4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "transport-module-12",
+      "title": "Residence time and mixing",
+      "source_ids": [
+        "transport",
+        "tissueEngineering"
+      ],
+      "lessons": [
+        {
+          "id": "transport-12",
+          "title": "Well-mixed chambers: residence time, wash-in and washout, and tanks in series",
+          "reading": "modules/12-residence-time-and-tanks-in-series.md",
+          "objectives": [
+            "transport-12-objective-1",
+            "transport-12-objective-2",
+            "transport-12-objective-3"
+          ],
+          "worked_example": "A synthetic 5 mL chamber fed at 2 mL/min has a residence time of 2.5 min, washes out to 1% in 11.5 min, reaches 0.667 of the feed concentration with first-order uptake k = 0.2 per minute (effective time constant 1.67 min), and two equal tanks in series reach 0.594 at t = τ; the lesson's 10 mL chamber at 0.5 mL/min has τ = 20 min and reaches 95% after 59.9 min.",
+          "question_ids": [
+            "transport-12:residence-time",
+            "transport-12:washin-two-tau",
+            "transport-12:time-to-95",
+            "transport-12:washout-to-one-percent",
+            "transport-12:steady-fraction-with-uptake",
+            "transport-12:effective-time-constant",
+            "transport-12:series-response",
+            "transport-12:chamber-statements"
+          ],
+          "card_ids": [
+            "transport-12-card-1",
+            "transport-12-card-2",
+            "transport-12-card-3",
+            "transport-12-card-4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "transport-module-lab-01",
+      "title": "Virtual laboratory: oxygen depth profiles",
+      "source_ids": [
+        "transport",
+        "tissueEngineering"
+      ],
+      "lessons": [
+        {
+          "id": "transport-lab-01",
+          "title": "Virtual lab 1: oxygen depth profiles in cell-laden slabs",
+          "reading": "labs/01-oxygen-depth-profiles-in-cell-laden-slabs.md",
+          "objectives": [
+            "transport-lab-01-objective-1",
+            "transport-lab-01-objective-2",
+            "transport-lab-01-objective-3"
+          ],
+          "worked_example": "The synthetic slabs give a consumption rate of 0.02 mol/(m³·s) from the 100 μm profile and a critical thickness of 200 μm; the 300 μm slab reaches zero oxygen at 200 μm, leaving an anoxic zone of 100 μm, and the 200 μm and 300 μm profiles coincide down to the critical depth.",
+          "question_ids": [
+            "transport-lab1:profile-summary",
+            "transport-lab1:consumption-rate",
+            "transport-lab1:critical-thickness",
+            "transport-lab1:zero-depth",
+            "transport-lab1:anoxic-thickness",
+            "transport-lab1:profile-meaning",
+            "transport-lab1:profile-reasoning",
+            "transport-lab1:supported-conclusions"
+          ],
+          "card_ids": [
+            "transport-lab1-0",
+            "transport-lab1-1",
+            "transport-lab1-2",
+            "transport-lab1-3"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "transport-module-13",
+      "title": "A perfused construct with a hypoxic center",
+      "source_ids": [
+        "transport",
+        "tissueEngineering"
+      ],
+      "lessons": [
+        {
+          "id": "transport-13",
+          "title": "A perfused construct with a hypoxic center: advection supplies the channel, diffusion supplies the tissue",
+          "reading": "modules/13-perfused-construct-with-a-hypoxic-center.md",
+          "objectives": [
+            "transport-13-objective-1",
+            "transport-13-objective-2",
+            "transport-13-objective-3"
+          ],
+          "worked_example": "A synthetic channel of 75 μm radius feeding tissue to 150 μm at 4 μL/min has a radial drop of 0.0268 mol/m³ and an axial drop of 0.0954 mol/m³, so the lowest concentration at the outlet end is 0.0777 mol/m³; the lesson's channel loses 0.113 mol/m³ along its length and 0.064 mol/m³ radially, leaving 0.023 mol/m³ at the outlet end, and needs 13.1 μL/min or channels at 150 μm to stay above 0.05 mol/m³.",
+          "question_ids": [
+            "transport-13:radial-drop",
+            "transport-13:axial-drop",
+            "transport-13:outlet-concentration",
+            "transport-13:lowest-concentration",
+            "transport-13:required-flow",
+            "transport-13:shear-at-required-flow",
+            "transport-13:hypoxic-center",
+            "transport-13:perfusion-statements"
+          ],
+          "card_ids": [
+            "transport-13-card-1",
+            "transport-13-card-2",
+            "transport-13-card-3",
+            "transport-13-card-4"
+          ]
+        }
+      ]
     }
   ],
   "assessments": [
@@ -448,6 +1097,210 @@
       "points": 6
     },
     {
+      "id": "transport-7-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Transient diffusion practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "transport-7-objective-1",
+        "transport-7-objective-2",
+        "transport-7-objective-3",
+        "transport-outcome-2",
+        "transport-outcome-4"
+      ],
+      "question_ids": [
+        "transport-7:diffusion-time-1mm",
+        "transport-7:diffusion-time-5mm",
+        "transport-7:similarity-variable",
+        "transport-7:concentration-at-depth",
+        "transport-7:half-time",
+        "transport-7:time-scaling",
+        "transport-7:valid-time",
+        "transport-7:transient-statements"
+      ],
+      "points": 9
+    },
+    {
+      "id": "transport-8-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Advection, diffusion and wall transfer practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "transport-8-objective-1",
+        "transport-8-objective-2",
+        "transport-8-objective-3",
+        "transport-outcome-2",
+        "transport-outcome-3",
+        "transport-outcome-4"
+      ],
+      "question_ids": [
+        "transport-8:advection-time",
+        "transport-8:peclet-number",
+        "transport-8:slow-flow-peclet",
+        "transport-8:mass-transfer-coefficient",
+        "transport-8:concentration-difference",
+        "transport-8:schmidt-number",
+        "transport-8:boundary-layer-ratio",
+        "transport-8:peclet-statements"
+      ],
+      "points": 9
+    },
+    {
+      "id": "transport-9-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Oxygen in a spheroid practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "transport-9-objective-1",
+        "transport-9-objective-2",
+        "transport-9-objective-3",
+        "transport-outcome-2",
+        "transport-outcome-4"
+      ],
+      "question_ids": [
+        "transport-9:critical-radius",
+        "transport-9:central-concentration",
+        "transport-9:radius-ratio",
+        "transport-9:core-volume-share",
+        "transport-9:rim-thickness",
+        "transport-9:growth-time",
+        "transport-9:spheroid-statements"
+      ],
+      "points": 8
+    },
+    {
+      "id": "transport-10-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Saturable oxygen uptake practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "transport-10-objective-1",
+        "transport-10-objective-2",
+        "transport-10-objective-3",
+        "transport-outcome-2",
+        "transport-outcome-4"
+      ],
+      "question_ids": [
+        "transport-10:fraction-at-km",
+        "transport-10:concentration-for-90",
+        "transport-10:uptake-at-low-oxygen",
+        "transport-10:zero-order-overestimate",
+        "transport-10:first-order-constant",
+        "transport-10:km-to-surface",
+        "transport-10:kinetics-statements"
+      ],
+      "points": 8
+    },
+    {
+      "id": "transport-11-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Lumped heat transfer practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "transport-11-objective-1",
+        "transport-11-objective-2",
+        "transport-11-objective-3",
+        "transport-outcome-1",
+        "transport-outcome-2",
+        "transport-outcome-4"
+      ],
+      "question_ids": [
+        "transport-11:volume-to-area",
+        "transport-11:time-constant",
+        "transport-11:biot-number-air",
+        "transport-11:cooling-time",
+        "transport-11:biot-number-bath",
+        "transport-11:bath-time-constant",
+        "transport-11:conduction-time",
+        "transport-11:thermal-statements"
+      ],
+      "points": 9
+    },
+    {
+      "id": "transport-12-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Residence time and mixing practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "transport-12-objective-1",
+        "transport-12-objective-2",
+        "transport-12-objective-3",
+        "transport-outcome-1",
+        "transport-outcome-2",
+        "transport-outcome-4"
+      ],
+      "question_ids": [
+        "transport-12:residence-time",
+        "transport-12:washin-two-tau",
+        "transport-12:time-to-95",
+        "transport-12:washout-to-one-percent",
+        "transport-12:steady-fraction-with-uptake",
+        "transport-12:effective-time-constant",
+        "transport-12:series-response",
+        "transport-12:chamber-statements"
+      ],
+      "points": 9
+    },
+    {
+      "id": "transport-13-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "A perfused construct with a hypoxic center practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "transport-13-objective-1",
+        "transport-13-objective-2",
+        "transport-13-objective-3",
+        "transport-outcome-1",
+        "transport-outcome-2",
+        "transport-outcome-3",
+        "transport-outcome-4"
+      ],
+      "question_ids": [
+        "transport-13:radial-drop",
+        "transport-13:axial-drop",
+        "transport-13:outlet-concentration",
+        "transport-13:lowest-concentration",
+        "transport-13:required-flow",
+        "transport-13:shear-at-required-flow",
+        "transport-13:hypoxic-center",
+        "transport-13:perfusion-statements"
+      ],
+      "points": 11
+    },
+    {
+      "id": "transport-week8-oxygen-profile-lab",
+      "type": "lab",
+      "mode": "practice",
+      "title": "Virtual lab 1: oxygen depth profiles in cell-laden slabs (ungraded practice)",
+      "path": "question-banks/practice.json",
+      "week": 8,
+      "objective_ids": [
+        "transport-lab-01-objective-1",
+        "transport-lab-01-objective-2",
+        "transport-lab-01-objective-3",
+        "transport-outcome-2",
+        "transport-outcome-4"
+      ],
+      "question_ids": [
+        "transport-lab1:profile-summary",
+        "transport-lab1:consumption-rate",
+        "transport-lab1:critical-thickness",
+        "transport-lab1:zero-depth",
+        "transport-lab1:anoxic-thickness",
+        "transport-lab1:profile-meaning",
+        "transport-lab1:profile-reasoning",
+        "transport-lab1:supported-conclusions"
+      ],
+      "points": 22
+    },
+    {
       "id": "transport-case",
       "type": "case",
       "mode": "self-assessment",
@@ -509,18 +1362,24 @@
       "version": "0.3.2",
       "date": "2026-10-08",
       "summary": "Added a common-mistakes section to 1 original lesson that lacked one (transport-5); each bullet names a mistake that the lesson's own text addresses. Fixed number formatting that an earlier authoring step left in learner-visible text: raw exponent notation (a number written with the letter e and a power of ten) and floating-point artifacts (a decimal with a long run of trailing digits) in a worked-example summary, item transport-3:poiseuille-flow, item transport-5:critical-thickness, item transport-5:doubled-surface-oxygen, item transport-5:minimum-concentration, item transport-5:thiele-modulus, the oxygen-limits reading. No answer key, tolerance or objective changed. The package remains partial, unreviewed and formative-only."
+    },
+    {
+      "version": "0.4.0",
+      "date": "2026-10-08",
+      "summary": "Added a proposed 14-week schedule; seven original lessons (residence time, wash-in and washout; transient diffusion and the error function; advection, diffusion and the Péclet number; oxygen in a spheroid with an anoxic core; Michaelis–Menten uptake and the limits of zero order; lumped heat transfer and the Biot number; and a perfused construct with a hypoxic center, which prepares the course case); and a synthetic-data lab on oxygen depth profiles in slabs. No new references were added. All activities remain ungraded practice; the package remains partial and unreviewed, gives no laboratory protocol or handling procedure, and makes no claim about any tissue, device or process."
     }
   ],
   "limitations": [
-    "Four compact legacy units are preserved; this package is not equivalent to a full university semester.",
-    "There is no authored 12–15 week schedule, substantive homework sequence, laboratory sequence, midterm, cumulative final, or graded integrative project.",
-    "Practice items are short formative checks (two per prototype unit and five to six per original lesson); they do not demonstrate comprehensive outcome coverage or mastery, and objective associations remain provisional.",
+    "Four compact legacy units are preserved beside ten original readings, including one synthetic-data virtual lab; this package is not equivalent to a full university semester.",
+    "A proposed 14-week schedule exists but is unmeasured and unreviewed. There is one synthetic-data virtual lab and no substantive homework sequence, laboratory sequence, midterm, cumulative final, or graded integrative project.",
+    "Practice items are short formative checks (two per prototype unit and five to eight per original lesson); they do not demonstrate comprehensive outcome coverage or mastery, and objective associations remain provisional.",
     "Bloom labels and structured prerequisite edges are initial authoring classifications awaiting subject-matter review.",
     "Question answers and solution feedback are intentionally public practice authoring specifications, not restricted exam keys.",
-    "Of the 17 numerical answers in this package, nine require a unit, none checks significant figures and none checks dimensions; the others accept a number within a stated tolerance, with the unit optional.",
-    "Total workload and weekly duration are unknown; former nominal credit values and hardcoded reading times do not establish workload."
+    "Of the 67 numerical answers in this package, 27 require a unit, none checks significant figures and none checks dimensions; the others accept a number within a stated tolerance, with the unit optional.",
+    "Total workload and weekly duration are unknown; former nominal credit values and hardcoded reading times do not establish workload.",
+    "All constructs, solutes, cells and numbers are synthetic teaching examples; this package gives no laboratory protocols, handling procedures or medical advice and says nothing about any real tissue, device or process. The formulas are first-order textbook estimates, not design methods."
   ],
   "intentionally_omitted": [
-    "Full instructional sequence and summative assessments are not authored yet; the original lessons extend a partial package."
+    "Graded assessments and a laboratory sequence are not authored yet (one synthetic-data virtual lab exists); the original lessons extend a partial package."
   ]
 }

@@ -145,6 +145,326 @@
         "transport-6-objective-3"
       ],
       "license": "CC-BY-4.0"
+    },
+    {
+      "id": "transport-7-card-1",
+      "lesson_id": "transport-7",
+      "front": "Diffusion time",
+      "back": "τ ≈ L²/D: 5 s for 100 μm, 500 s for 1 mm and 3.5 h for 5 mm at D = 2 × 10⁻⁹ m²/s; ten times the distance takes a hundred times as long.",
+      "objective_ids": [
+        "transport-7-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "transport-7-card-2",
+      "lesson_id": "transport-7",
+      "front": "Error-function solution",
+      "back": "C(x, t) = C₀ erfc(x/(2√(Dt))) for a semi-infinite medium with constant surface concentration; the front moves as √t.",
+      "objective_ids": [
+        "transport-7-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "transport-7-card-3",
+      "lesson_id": "transport-7",
+      "front": "Time to half",
+      "back": "erfc(η) = 0.5 at η = 0.477, so t₅₀ ≈ 1.1 x²/D; the 1% front is at 3.64 √(Dt).",
+      "objective_ids": [
+        "transport-7-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "transport-7-card-4",
+      "lesson_id": "transport-7",
+      "front": "When it applies",
+      "back": "Valid until the profile reaches the far side (t ≲ L²/(16 D)); needs a constant surface concentration, constant D and no reaction.",
+      "objective_ids": [
+        "transport-7-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "transport-8-card-1",
+      "lesson_id": "transport-8",
+      "front": "Péclet number",
+      "back": "Pe = UL/D = t_diff/t_adv; much larger than 1 means advection controls along that length; it depends on the length chosen.",
+      "objective_ids": [
+        "transport-8-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "transport-8-card-2",
+      "lesson_id": "transport-8",
+      "front": "Mass-transfer coefficient",
+      "back": "N = k_c (C_bulk − C_wall); Sh = k_c d/D, which is 3.66 for fully developed laminar tube flow with a uniform wall concentration.",
+      "objective_ids": [
+        "transport-8-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "transport-8-card-3",
+      "lesson_id": "transport-8",
+      "front": "Flow rate and k_c",
+      "back": "In fully developed laminar flow, k_c does not depend on flow rate; faster flow helps by replenishing the bulk along the tube, not by changing the transfer across it.",
+      "objective_ids": [
+        "transport-8-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "transport-8-card-4",
+      "lesson_id": "transport-8",
+      "front": "Schmidt number",
+      "back": "Sc = ν/D is of order 10² to 10³ in liquids; the concentration boundary layer is thinner than the velocity one by about Sc^(−1/3).",
+      "objective_ids": [
+        "transport-8-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "transport-9-card-1",
+      "lesson_id": "transport-9",
+      "front": "Critical radius",
+      "back": "R_c = √(6DC₀/q) (centre just reaches zero): 346 μm for D = 2 × 10⁻⁹ m²/s, C₀ = 0.2 and q = 0.02, against 200 μm for the slab.",
+      "objective_ids": [
+        "transport-9-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "transport-9-card-2",
+      "lesson_id": "transport-9",
+      "front": "Anoxic core",
+      "back": "For R > R_c, C(r) = (q/6D)(r² − 3 r_n² + 2 r_n³/r) outside a core of radius r_n; r_n solves C₀ = (q/6D)(R² − 3 r_n² + 2 r_n³/R).",
+      "objective_ids": [
+        "transport-9-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "transport-9-card-3",
+      "lesson_id": "transport-9",
+      "front": "Core and rim",
+      "back": "A 400 μm sphere has a core of 130 μm (3.5% of the volume); at 500 μm the core is 257 μm (13.5%); the rim is not a constant thickness.",
+      "objective_ids": [
+        "transport-9-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "transport-9-card-4",
+      "lesson_id": "transport-9",
+      "front": "Growth to the limit",
+      "back": "t = 3 t_d log₂(R_c/R₀) for volume doubling every t_d; R_c grows as √C₀ and as 1/√q.",
+      "objective_ids": [
+        "transport-9-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "transport-10-card-1",
+      "lesson_id": "transport-10",
+      "front": "Michaelis–Menten uptake",
+      "back": "v = V_max C/(K_m + C): half of V_max at C = K_m, 90% at 9 K_m, first order with rate constant V_max/K_m at low C.",
+      "objective_ids": [
+        "transport-10-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "transport-10-card-2",
+      "lesson_id": "transport-10",
+      "front": "Zero order and its error",
+      "back": "Using V_max at every concentration overestimates the uptake where C is comparable with K_m (a factor of 1.25 at C = 0.02 for K_m = 0.005).",
+      "objective_ids": [
+        "transport-10-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "transport-10-card-3",
+      "lesson_id": "transport-10",
+      "front": "The softer edge",
+      "back": "With saturable uptake the minimum in a slab approaches zero gradually: 0.023 mol/m³ at the zero-order critical thickness of 200 μm and 0.002 at 250 μm in the synthetic example.",
+      "objective_ids": [
+        "transport-10-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "transport-10-card-4",
+      "lesson_id": "transport-10",
+      "front": "Defining the limit",
+      "back": "Define the limit by a functional threshold; function is lost at oxygen levels well above K_m, so the zero-order critical thickness is a first estimate, not the edge of function.",
+      "objective_ids": [
+        "transport-10-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "transport-11-card-1",
+      "lesson_id": "transport-11",
+      "front": "Lumped capacitance",
+      "back": "T(t) = T_∞ + (T₀ − T_∞) e^(−t/τ), τ = ρ c_p V/(h A); for a sphere V/A = D/6; time to a target = τ ln((T₀ − T_∞)/(T − T_∞)).",
+      "objective_ids": [
+        "transport-11-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "transport-11-card-2",
+      "lesson_id": "transport-11",
+      "front": "Biot number",
+      "back": "Bi = h (V/A)/k compares internal conduction with surface convection; the lumped model needs Bi well below about 0.1.",
+      "objective_ids": [
+        "transport-11-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "transport-11-card-3",
+      "lesson_id": "transport-11",
+      "front": "Internal time scale",
+      "back": "Conduction takes about R²/α (the slowest decay R²/(π² α) for a sphere); if it exceeds the external time constant, the interior controls and a higher h does not help proportionally.",
+      "objective_ids": [
+        "transport-11-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "transport-11-card-4",
+      "lesson_id": "transport-11",
+      "front": "Time constant",
+      "back": "After one time constant only 63% of the change has occurred; the exponential approach never completes in finite time.",
+      "objective_ids": [
+        "transport-11-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "transport-12-card-1",
+      "lesson_id": "transport-12",
+      "front": "Residence time and step response",
+      "back": "τ = V/Q; wash-in C/C_in = 1 − e^(−t/τ) (95% at 3 τ); washout C/C₀ = e^(−t/τ) (1% at 4.6 τ).",
+      "objective_ids": [
+        "transport-12-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "transport-12-card-2",
+      "lesson_id": "transport-12",
+      "front": "Consumption",
+      "back": "With first-order uptake k, C_ss/C_in = 1/(1 + kτ) and the effective time constant is τ/(1 + kτ); kτ compares residence and consumption times.",
+      "objective_ids": [
+        "transport-12-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "transport-12-card-3",
+      "lesson_id": "transport-12",
+      "front": "Tanks in series",
+      "back": "N equal tanks have the same mean residence time but a sharper response, 1 − e^(−Nx) Σ (Nx)^k/k!; the relative SD of the residence time is 1/√N, and large N approaches plug flow.",
+      "objective_ids": [
+        "transport-12-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "transport-12-card-4",
+      "lesson_id": "transport-12",
+      "front": "Limits of perfect mixing",
+      "back": "Dead volume, bypass and long thin channels make the real response differ from the perfect-mixing result; a tracer experiment measures it.",
+      "objective_ids": [
+        "transport-12-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "transport-lab1-0",
+      "lesson_id": "transport-lab-01",
+      "front": "Summarizing depth profiles",
+      "back": "Count the replicate profiles and average the oxygen readings at each depth; the construct is the replicate.",
+      "objective_ids": [
+        "transport-lab-01-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "transport-lab1-1",
+      "lesson_id": "transport-lab-01",
+      "front": "Consumption from curvature",
+      "back": "C_end = C₀ − qL²/(2D) at the sealed face of a one-sided slab; solve for q with L in metres.",
+      "objective_ids": [
+        "transport-lab-01-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "transport-lab1-2",
+      "lesson_id": "transport-lab-01",
+      "front": "Critical thickness",
+      "back": "L_c = √(2DC₀/q); a slab thicker than L_c has an anoxic zone of thickness L − L_c, and the profile above it does not depend on the thickness.",
+      "objective_ids": [
+        "transport-lab-01-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "transport-lab1-3",
+      "lesson_id": "transport-lab-01",
+      "front": "Limits of the model",
+      "back": "Zero-order uptake is an idealization: real uptake saturates, so the edge of the anoxic zone is softer, and oxygen above zero does not prove viability.",
+      "objective_ids": [
+        "transport-lab-01-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "transport-13-card-1",
+      "lesson_id": "transport-13",
+      "front": "Radial drop",
+      "back": "ΔC_r = (q/(4D))[2R_t² ln(R_t/r_c) − (R_t² − r_c²)] from the channel to the edge of the Krogh cylinder; it falls rapidly with the channel spacing.",
+      "objective_ids": [
+        "transport-13-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "transport-13-card-2",
+      "lesson_id": "transport-13",
+      "front": "Axial drop",
+      "back": "ΔC_ax = π(R_t² − r_c²) ℓ q / Q: the oxygen used along the channel divided by the flow; more flow reduces it but not the radial drop.",
+      "objective_ids": [
+        "transport-13-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "transport-13-card-3",
+      "lesson_id": "transport-13",
+      "front": "Where the oxygen is lowest",
+      "back": "At the outlet end at the tissue edge: C_in − ΔC_ax − ΔC_r; an adequate inlet value does not guarantee supply.",
+      "objective_ids": [
+        "transport-13-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "transport-13-card-4",
+      "lesson_id": "transport-13",
+      "front": "Design and test",
+      "back": "Closer channels reduce both drops; test the model with oxygen at the tissue edge at several axial positions on independent constructs.",
+      "objective_ids": [
+        "transport-13-objective-3"
+      ],
+      "license": "CC-BY-4.0"
     }
   ]
 }

@@ -1,6 +1,6 @@
 # Thermodynamics & Transport in Bioengineering
 
-**Maturity: partial. Version: 0.3.2.**
+**Maturity: partial. Version: 0.4.0.**
 
 Conservation laws, thermodynamic driving forces, fluid mechanics, heat and mass transfer, and scaling applied to cells, tissues, and bioprocess equipment.
 
@@ -15,26 +15,34 @@ Differential Equations; Physics: Mechanics; General Chemistry II. Structured req
 - Estimate flow regime and pressure drop.
 - Use dimensional analysis to select dominant mechanisms.
 
-## Units and lessons
+## Proposed 14-week schedule
 
-Units 1–4 keep the short prototype readings preserved from the original project; they need substantial expansion. Units 5 and 6 are original lesson-length readings (about 810 to 880 words) with learning objectives, a worked example, common mistakes, stated limits and explicitly synthetic data. No unit has been reviewed by a qualified instructor.
+This is a proposed scope, not a measured or reviewed semester. Each week lists its readings; the four short prototype readings (about 70 to 80 words each) sit in weeks 1, 3, 9 and 12 beside the original lessons, and every lesson has public formative items and retrieval cards.
 
-| Unit | Lesson | Reading | Practice items | Retrieval cards |
-|---:|---|---|---:|---:|
-| 1 | Control volumes and conservation | short prototype | 2 | 2 |
-| 2 | Diffusion, reaction, and characteristic length | short prototype | 2 | 2 |
-| 3 | Fluid mechanics and microvascular flow | short prototype | 2 | 2 |
-| 4 | Heat transfer and coupled transport | short prototype | 2 | 2 |
-| 5 | Oxygen limits in thick constructs: zero-order uptake, critical thickness and time scales | lesson-length original | 5 | 4 |
-| 6 | Perfusing a culture through tubing: control-volume balances, Reynolds number and pressure drop | lesson-length original | 6 | 4 |
+| Week | Theme | Readings |
+|---|---|---|
+| 1 | Control volumes and conservation | Control volumes and conservation |
+| 2 | Well-mixed chambers: residence time, wash-in and washout, and tanks in series | Well-mixed chambers: residence time, wash-in and washout, and tanks in series |
+| 3 | Diffusion, reaction and characteristic length | Diffusion, reaction, and characteristic length |
+| 4 | Transient diffusion: penetration depth, the error function and equilibration times | Transient diffusion: penetration depth, the error function and equilibration times |
+| 5 | Oxygen limits in thick constructs: zero-order uptake, critical thickness and time scales | Oxygen limits in thick constructs: zero-order uptake, critical thickness and time scales |
+| 6 | Oxygen in a spheroid: the critical radius, the anoxic core and the living rim | Oxygen in a spheroid: the critical radius, the anoxic core and why the rim is not a constant thickness |
+| 7 | When zero order fails: Michaelis–Menten uptake and a softer edge to the limit | When zero order fails: Michaelis–Menten oxygen uptake and a softer edge to the limit |
+| 8 | Virtual lab: oxygen depth profiles in cell-laden slabs | Virtual lab 1: oxygen depth profiles in cell-laden slabs |
+| 9 | Fluid mechanics and microvascular flow | Fluid mechanics and microvascular flow |
+| 10 | Perfusing a culture through tubing: control-volume balances, Reynolds number and pressure drop | Perfusing a culture through tubing: control-volume balances, Reynolds number and pressure drop |
+| 11 | Advection and diffusion together: the Péclet number and mass-transfer coefficients | Advection and diffusion together: the Péclet number and mass-transfer coefficients |
+| 12 | Heat transfer and coupled transport | Heat transfer and coupled transport |
+| 13 | Heat transfer: lumped capacitance, the Biot number and thermal time scales | Heat transfer: lumped capacitance, the Biot number and thermal time scales |
+| 14 | A perfused construct with a hypoxic center: advection supplies the channel, diffusion supplies the tissue | A perfused construct with a hypoxic center: advection supplies the channel, diffusion supplies the tissue |
 
 ## Assessment and study policy
 
-Every lesson has public formative practice items (numeric and single-choice) tagged to its learning objectives. The practice assessments for the original lessons also list the course outcomes those objectives link to; the objectives of the prototype units are not yet linked to course outcomes, so their assessments list none. In total the package has 19 practice items and 16 retrieval cards for the review queue. A course case includes a self-assessment checklist. These are practice activities, with unlimited retries and no institutional grade, university credit, or transferable credit. Workload has not been measured.
+Every lesson has public formative items (numeric, single-choice, multiple-select, structured-response and CSV-upload) mapped to its objectives, plus retrieval cards for the review queue; each practice assessment also lists the course outcomes its items assess. Week 8 is a synthetic-data virtual lab and week 14 pairs a lesson on a perfused construct with a hypoxic center with the course case and its self-assessment checklist. These are practice activities with unlimited retries and no institutional grade, university credit or transferable credit. Workload has not been measured.
 
-## Schedule and current limitations
+## Current limitations
 
-No full-semester calendar or 14-week structure has been authored. No substantive homework sets, laboratories, midterm, final, or graded cumulative project are included. The four short prototype readings require substantial expansion, and the newer lessons rely on explicitly synthetic data. Nothing in this package has been reviewed by a qualified instructor; qualified human review is required before this course can meet the complete-course quality standard.
+The schedule above is proposed, not measured, and has not been reviewed by a qualified instructor. There are no graded homework sets, midterm, final or graded project. The four prototype readings remain short. The package cites no new papers: the lessons teach standard first-order relations with synthetic data, and the typical values they quote (diffusion coefficients, uptake rates, Sherwood number, heat-transfer coefficients, water properties) are textbook-level and vary between sources. All constructs, solutes, cells and numbers are synthetic; no lesson gives a laboratory protocol, handling procedure or medical advice, and nothing here says anything about any real tissue, device or process. Qualified human review is required before this course could meet the complete-course standard.
 
 ## Sources and licensing
 

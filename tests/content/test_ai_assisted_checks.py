@@ -1213,3 +1213,297 @@ def test_bioreactors_lab_text_and_keys_agree_with_the_dataset():
     # the curves were built from kLa = 2.0 (N/200)^1.5 per hour; the fits recover it
     assert abs(_BR_K200 - 2.0) < 0.06 and abs(_BR_K400 - 2.0 * 2 ** 1.5) < 0.15 and abs(exponent - 1.5) < 0.06
     assert all(0 <= float(r["do_pct"]) <= 100 for r in _BR_ROWS)
+
+
+# ---- transport 0.4.0 ----------------------------------------------------------------------------------------
+_TD, _TC0, _TQ = 2.0e-9, 0.2, 0.02                            # the oxygen-limit lesson's diffusion coefficient, surface value and uptake
+_T_KB, _T_T = 1.381e-23, 310.0
+
+
+def _bisect(f, low: float, high: float, steps: int = 200) -> float:
+    for _ in range(steps):
+        mid = (low + high) / 2
+        low, high = (mid, high) if f(low) * f(mid) > 0 else (low, mid)
+    return (low + high) / 2
+
+
+def _erfc_inverse(p: float) -> float:
+    return _bisect(lambda x: math.erfc(x) - p, 0.0, 6.0)
+
+
+def _sphere_core_radius(radius: float) -> float:
+    if _TC0 - _TQ * radius ** 2 / (6 * _TD) >= 0:
+        return 0.0
+    return _bisect(lambda rn: _TQ / (6 * _TD) * (radius ** 2 - 3 * rn ** 2 + 2 * rn ** 3 / radius) - _TC0, 1e-9, radius * 0.999999)
+
+
+def _mm_slab_minimum(length: float, vmax: float = 0.02, km: float = 0.005, c0: float = 0.2, d: float = 2.0e-9, steps: int = 800) -> float:
+    """Lowest concentration (sealed face) of a one-sided slab with Michaelis-Menten uptake, by RK4 shooting and bisection."""
+    def rate(c: float) -> float:
+        c = max(c, 0.0)
+        return vmax * c / (km + c) / d
+
+    def end_state(slope: float) -> tuple[float, float]:
+        c, g, h = c0, slope, length / steps
+        for _ in range(steps):
+            k1c, k1g = g, rate(c)
+            k2c, k2g = g + h / 2 * k1g, rate(c + h / 2 * k1c)
+            k3c, k3g = g + h / 2 * k2g, rate(c + h / 2 * k2c)
+            k4c, k4g = g + h * k3g, rate(c + h * k3c)
+            c += h / 6 * (k1c + 2 * k2c + 2 * k3c + k4c)
+            g += h / 6 * (k1g + 2 * k2g + 2 * k3g + k4g)
+        return g, c
+
+    slope = _bisect(lambda s: end_state(s)[0], -5e3, 0.0, steps=70)
+    return end_state(slope)[1]
+
+
+def _krogh_radial_drop(rt: float, rc: float, q: float, d: float) -> float:
+    return q / (4 * d) * (2 * rt ** 2 * math.log(rt / rc) - (rt ** 2 - rc ** 2))
+
+
+def _tanks_in_series(x: float, n: int) -> float:
+    return 1 - math.exp(-n * x) * sum((n * x) ** k / math.factorial(k) for k in range(n))
+
+
+def _transport_lab_rows() -> list[dict[str, str]]:
+    import csv
+    return list(csv.DictReader((COURSES / "transport/labs/oxygen-depth-profiles.csv").open(encoding="utf-8")))
+
+
+def _profile_mean(rows: list[dict[str, str]], thickness: int, depth: int) -> float:
+    values = [float(r["o2_mol_m3"]) for r in rows if int(r["thickness_um"]) == thickness and int(r["depth_um"]) == depth]
+    return sum(values) / len(values)
+
+
+_TR_ROWS = _transport_lab_rows()
+_TR_Q = round(2 * _TD * (_TC0 - _profile_mean(_TR_ROWS, 100, 100)) / (100e-6) ** 2, 3)
+_TR_LC = math.sqrt(2 * _TD * _TC0 / _TR_Q) * 1e6
+_TR_ZERO = next(z for z in range(0, 301, 25) if _profile_mean(_TR_ROWS, 300, z) == 0)
+_TR_PIPE_Q = 2.0e-6 / 60
+_ETA_T = 200e-6 / (2 * math.sqrt(_TD * 60))
+_CH_RC, _CH_RT, _CH_L, _CH_Q = 100e-6, 200e-6, 10e-3, 10e-9 / 60
+_CH_UPTAKE = math.pi * (_CH_RT ** 2 - _CH_RC ** 2) * _CH_L * _TQ
+_CH_DR = _krogh_radial_drop(_CH_RT, _CH_RC, _TQ, _TD)
+_CH_DAX = _CH_UPTAKE / _CH_Q
+_CH_QREQ = _CH_UPTAKE / (_TC0 - _CH_DR - 0.05)
+_LC_SPHERE = math.sqrt(6 * _TD * _TC0 / _TQ)
+_LUMPED_TAU = 1000 * 4180 * (10e-3 / 6) / 10
+_SH_KC = 3.66 * _TD / 1e-3
+_AREAL_FLUX = 2.0e5 * 1e4 * 2.0e-10 * 1e-3 / 3600
+
+TRANSPORT_NUMERIC = {
+    # items written before 2026-10-08, recomputed from the numbers in their prompts
+    "transport-1:check": 5.0,
+    "transport-2:check": (100e-6) ** 2 / 1e-9,
+    "transport-3:check": 1000 * 0.02 * 0.5e-3 / 0.001,
+    "transport-4:check": 0.02 / (0.5 * 0.10),
+    "transport-1:accumulation-rate": 2.0 - 1.5,
+    "transport-2:diffusion-time": (100e-6) ** 2 / 1.0e-9,
+    "transport-3:poiseuille-flow": math.pi * (0.5e-3) ** 4 * 100 / (8 * 1.0e-3 * 0.10),
+    "transport-4:series-thermal-resistance": 50 / (0.20 + 0.30),
+    "transport-5:critical-thickness": math.sqrt(2 * _TD * _TC0 / _TQ) * 1e6,
+    "transport-5:minimum-concentration": _TC0 - _TQ * (150e-6) ** 2 / (2 * _TD),
+    "transport-5:doubled-surface-oxygen": math.sqrt(2 * _TD * 0.4 / _TQ) * 1e6,
+    "transport-5:thiele-modulus": _TQ * (100e-6) ** 2 / (_TD * _TC0),
+    "transport-6:heater-power": 1000 * _TR_PIPE_Q * 4180 * (37 - 22),
+    "transport-6:reynolds": 4 * 1000 * _TR_PIPE_Q / (math.pi * 7.80e-4 * 1.0e-3),
+    "transport-6:pressure-drop": 128 * 7.80e-4 * 0.5 * _TR_PIPE_Q / (math.pi * (1.0e-3) ** 4),
+    "transport-6:half-diameter": 2 ** 4,
+    "transport-6:wall-shear": 32 * 7.80e-4 * _TR_PIPE_Q / (math.pi * (1.0e-3) ** 3),
+    # transport-7: transient diffusion
+    "transport-7:diffusion-time-1mm": (1e-3) ** 2 / _TD,
+    "transport-7:diffusion-time-5mm": (5e-3) ** 2 / _TD / 3600,
+    "transport-7:similarity-variable": _ETA_T,
+    "transport-7:concentration-at-depth": _TC0 * 0.683,
+    "transport-7:half-time": (500e-6 / (2 * _erfc_inverse(0.5))) ** 2 / _TD,
+    "transport-7:time-scaling": (1000 / 500) ** 2,
+    "transport-7:valid-time": (1e-3) ** 2 / (16 * _TD),
+    # transport-8: advection and diffusion
+    "transport-8:advection-time": 1e-3 / 2.0e-4,
+    "transport-8:peclet-number": 2.0e-4 * 1e-3 / _TD,
+    "transport-8:slow-flow-peclet": 2.0e-6 * 1e-3 / _TD,
+    "transport-8:mass-transfer-coefficient": _SH_KC * 1e6,
+    "transport-8:concentration-difference": _AREAL_FLUX / _SH_KC,
+    "transport-8:schmidt-number": 0.70e-6 / _TD,
+    "transport-8:boundary-layer-ratio": (0.70e-6 / _TD) ** (-1 / 3),
+    # transport-9: spheroid
+    "transport-9:critical-radius": _LC_SPHERE * 1e6,
+    "transport-9:central-concentration": _TC0 - _TQ * (300e-6) ** 2 / (6 * _TD),
+    "transport-9:radius-ratio": math.sqrt(2),
+    "transport-9:core-volume-share": (_sphere_core_radius(400e-6) / 400e-6) ** 3,
+    "transport-9:rim-thickness": (500e-6 - _sphere_core_radius(500e-6)) * 1e6,
+    "transport-9:growth-time": 3 * 24 * math.log2(_LC_SPHERE / 100e-6),
+    # transport-10: Michaelis-Menten uptake
+    "transport-10:fraction-at-km": 0.005 / (0.005 + 0.005),
+    "transport-10:concentration-for-90": 0.9 * 0.005 / (1 - 0.9),
+    "transport-10:uptake-at-low-oxygen": 0.02 * 0.02 / (0.005 + 0.02),
+    "transport-10:zero-order-overestimate": 0.02 / (0.02 * 0.02 / (0.005 + 0.02)),
+    "transport-10:first-order-constant": 0.02 / 0.005,
+    "transport-10:km-to-surface": 0.005 / 0.2,
+    # transport-11: lumped heat transfer
+    "transport-11:volume-to-area": 10 / 6,
+    "transport-11:time-constant": _LUMPED_TAU,
+    "transport-11:biot-number-air": 10 * (10e-3 / 6) / 0.6,
+    "transport-11:cooling-time": _LUMPED_TAU * math.log((37 - 4) / (10 - 4)) / 60,
+    "transport-11:biot-number-bath": 500 * (10e-3 / 6) / 0.6,
+    "transport-11:bath-time-constant": 1000 * 4180 * (10e-3 / 6) / 500,
+    "transport-11:conduction-time": (5e-3) ** 2 / 1.4e-7,
+    # transport-12: residence time
+    "transport-12:residence-time": 10.0 / 0.5,
+    "transport-12:washin-two-tau": 1 - math.exp(-2),
+    "transport-12:time-to-95": -20 * math.log(0.05),
+    "transport-12:washout-to-one-percent": -20 * math.log(0.01),
+    "transport-12:steady-fraction-with-uptake": 1 / (1 + 0.05 * 20),
+    "transport-12:effective-time-constant": 20 / (1 + 0.05 * 20),
+    "transport-12:series-response": _tanks_in_series(1.0, 3),
+    # transport-13: perfused construct
+    "transport-13:radial-drop": _CH_DR,
+    "transport-13:axial-drop": _CH_DAX,
+    "transport-13:outlet-concentration": _TC0 - _CH_DAX,
+    "transport-13:lowest-concentration": _TC0 - _CH_DAX - _CH_DR,
+    "transport-13:required-flow": _CH_QREQ * 60 * 1e9,
+    "transport-13:shear-at-required-flow": 4 * 0.78e-3 * _CH_QREQ / (math.pi * (100e-6) ** 3),
+    # virtual lab 1, recomputed from the CSV
+    "transport-lab1:consumption-rate": _TR_Q,
+    "transport-lab1:critical-thickness": _TR_LC,
+    "transport-lab1:zero-depth": _TR_ZERO,
+    "transport-lab1:anoxic-thickness": 300 - round(_TR_LC),
+}
+
+
+@pytest.mark.parametrize("question_id,expected", sorted(TRANSPORT_NUMERIC.items()))
+def test_transport_numeric_key_matches_independent_recalculation(question_id, expected):
+    spec = bank("transport")[question_id]["solution_spec"]
+    allowed = spec["tolerance"] + (spec.get("relative_tolerance") or 0) * abs(spec["answer"])
+    assert abs(spec["answer"] - expected) <= allowed, (question_id, spec["answer"], expected)
+
+
+def test_every_transport_numeric_item_is_recalculated():
+    numeric = {qid for qid, item in bank("transport").items() if item["type"] == "numeric"}
+    assert numeric == set(TRANSPORT_NUMERIC)
+
+
+def test_transport_diffusion_and_advection_lessons_state_the_computed_numbers():
+    eta = _ETA_T
+    eta_half = _erfc_inverse(0.5)
+    eta_01 = _erfc_inverse(0.01)
+    coef = 1 / (4 * eta_half ** 2)
+    rows = ["| 0 | 1.0000 |"] + [f"| {e:g} | {math.erfc(e):.4f} |" for e in (0.25, 0.5, 1.0, 1.5, 2.0)]
+    _fragments_in(reading("transport", "transport-7"), rows + [
+        f"takes {(100e-6) ** 2 / _TD:.0f} s", f"**{(1e-3) ** 2 / _TD:.0f} s**", f"{(5e-3) ** 2 / _TD:,.0f} s, or **{(5e-3) ** 2 / _TD / 3600:.2f} h**", f"**{eta:.4f}**",
+        f"erfc({eta:.3f}) = {math.erfc(eta):.3f}", f"**{_TC0 * math.erfc(eta):.4f} mol/m³**", f"{math.erfc(eta):.0%} of the surface value", f"by only {math.sqrt(2) - 1:.0%}",
+        f"η = {eta_half:.4f}", f"{coef:.3f} x²/D", f"**{coef * (500e-6) ** 2 / _TD:.0f} s**", f"η = {eta_01:.3f}", f"{2 * eta_01 * math.sqrt(_TD * 600) * 1000:.1f} mm",
+        f"For L = 1 mm this is {(1e-3) ** 2 / (16 * _TD):.0f} s", f"{_TC0}/{_TQ} = {_TC0 / _TQ:.0f} s", f"is {(100e-6) ** 2 / _TD / (_TC0 / _TQ):.1f} times the consumption time",
+    ])
+    eta_w = 300e-6 / (2 * math.sqrt(1.0e-9 * 120))
+    _fragments_in(reading("transport", "transport-7"), [
+        f"= {eta_w:.4f}", f"erfc({eta_w:.3f}) = {math.erfc(eta_w):.3f}", f"= {math.erfc(eta_w):.3f} mol/m³", f"= {coef * (300e-6) ** 2 / 1.0e-9:.0f} s", f"x²/D = {(300e-6) ** 2 / 1.0e-9:.0f} s",
+    ])
+    kc = 3.66 * _TD / 1e-3
+    pe_w = 1.0e-3 * 0.5e-3 / 3.0e-9
+    kc_w = 3.66 * 3.0e-9 / 0.5e-3
+    _fragments_in(reading("transport", "transport-8"), [
+        f"t_adv = {1e-3 / 2.0e-4:.0f} s and t_diff = {(1e-3) ** 2 / _TD:.0f} s", f"**Pe = {2.0e-4 * 1e-3 / _TD:.0f}**", f"Pe = {2.0e-6 * 1e-3 / _TD:.0f}", f"**{kc * 1e6:.2f} μm/s**",
+        f"**{_AREAL_FLUX / 1e-7 :.2f} × 10⁻⁷ mol/(m²·s)**", f"**{_AREAL_FLUX / kc:.4f} mol/m³**", f"{_AREAL_FLUX / kc / _TC0:.1%}", f"Sc = **{0.70e-6 / _TD:.0f}**", f"{(0.70e-6 / _TD) ** (-1 / 3):.2f}",
+        f"Pe = {(0.5e-3) ** 2 / 3.0e-9:.0f}/{0.5e-3 / 1.0e-3:.1f} = {pe_w:.0f}", f"{kc_w * 1e6:.2f} μm/s", f"ΔC = 2.0 × 10⁻⁷/(2.20 × 10⁻⁵) = {2.0e-7 / kc_w:.4f} mol/m³",
+    ])
+
+
+def test_transport_oxygen_lessons_state_the_computed_numbers():
+    lc_sphere = math.sqrt(6 * _TD * _TC0 / _TQ)
+    rn_400, rn_500, rn_600 = (_sphere_core_radius(r * 1e-6) for r in (400, 500, 600))
+    _fragments_in(reading("transport", "transport-9"), [
+        f"**{lc_sphere * 1e6:.1f} μm**", f"**{_TC0 - _TQ * (300e-6) ** 2 / (6 * _TD):.3f} mol/m³**",
+        "| 200 | 0.133 | — | 0% |", "| 300 | 0.050 | — | 0% |", f"| 400 | 0 (anoxic core) | {rn_400 * 1e6:.1f} | {(rn_400 / 400e-6) ** 3:.1%} |",
+        f"| 500 | 0 (anoxic core) | {rn_500 * 1e6:.1f} | {(rn_500 / 500e-6) ** 3:.1%} |", f"| 600 | 0 (anoxic core) | {rn_600 * 1e6:.1f} | {(rn_600 / 600e-6) ** 3:.1%} |",
+        f"core of radius {rn_400 * 1e6:.1f} μm, only **{(rn_400 / 400e-6) ** 3:.1%}**", f"**{(rn_500 / 500e-6) ** 3:.1%}** of the volume", f"{(500e-6 - rn_500) * 1e6:.1f} μm thick",
+        f"({(600e-6 - rn_600) * 1e6:.1f} μm at a radius of 600 μm)", f"**{3 * 24 * math.log2(lc_sphere / 100e-6):.0f} h**", f"{3 * 24 * math.log2(lc_sphere / 100e-6) / 24:.1f} days", f"**{math.sqrt(2):.3f}**",
+    ])
+    # the cubic that fixes the core radius is satisfied at the stated values
+    for radius, rn in ((400e-6, rn_400), (500e-6, rn_500), (600e-6, rn_600)):
+        assert _TQ / (6 * _TD) * (radius ** 2 - 3 * rn ** 2 + 2 * rn ** 3 / radius) == pytest.approx(_TC0, abs=1e-9)
+    d2, c2, q2 = 1.5e-9, 0.15, 0.03
+    rc2 = math.sqrt(6 * d2 * c2 / q2)
+    _fragments_in(reading("transport", "transport-9"), [f"{rc2 * 1e6:.1f} μm", f"{c2 - q2 * (180e-6) ** 2 / (6 * d2):.3f} mol/m³", f"{3 * 30 * math.log2(rc2 / 80e-6):.0f} h", f"{180e-6 / rc2:.0%} of the critical radius"])
+    text = reading("transport", "transport-10")
+    zero = {um: _TC0 - _TQ * (um * 1e-6) ** 2 / (2 * _TD) for um in (150, 180, 200)}
+    mm = {um: _mm_slab_minimum(um * 1e-6) for um in (150, 180, 200, 220, 250)}
+    _fragments_in(text, [
+        "v(K_m) = **0.5 V_max**", "**0.045 mol/m³**", f"**{0.02 * 0.02 / 0.025:.3f} mol/(m³·s)**", f"**{0.02 / (0.02 * 0.02 / 0.025):.2f}**", f"**{0.02 / 0.005:.1f} per second**", f"{0.005 / 0.2:.3f}",
+        f"| 150 | {zero[150]:.3f} | {mm[150]:.4f} |", f"| 180 | {zero[180]:.3f} | {mm[180]:.4f} |", f"| 200 | 0.000 | {mm[200]:.4f} |", f"| 220 | no valid solution | {mm[220]:.4f} |",
+        f"| 250 | no valid solution | {mm[250]:.4f} |", f"**{mm[200]:.4f} mol/m³**", f"{mm[200] / _TC0:.0%} of the surface value", f"{mm[250]:.4f} mol/m³ at 250 μm",
+    ])
+    assert abs(zero[200]) < 1e-12 and 0.005 <= mm[150] - zero[150] <= 0.012 and 0.005 <= mm[180] - zero[180] <= 0.012
+    v2 = 0.03 * 0.03 / (0.01 + 0.03)
+    _fragments_in(text, [f"{v2:.4f} mol/(m³·s)", f"{v2 / 0.03:.0%}", f"{19 * 0.01:.2f} mol/m³", f"{0.03 / 0.01:.1f} per second", f"{0.03 / v2:.2f}"])
+
+
+def test_transport_heat_chamber_and_capstone_lessons_state_the_computed_numbers():
+    lc = 10e-3 / 6
+    tau = 1000 * 4180 * lc / 10
+    text = reading("transport", "transport-11")
+    _fragments_in(text, [
+        f"has V/A = {lc * 1000:.3f} mm", f"**τ = 1000 × 4180 × {lc:.6f}/10 = {tau:.0f} s**", f"**{tau * math.log(33 / 6):.0f} s**", f"{tau * math.log(33 / 6) / 60:.1f} min",
+        f"**{10 * lc / 0.6:.4f}**", f"τ = {1000 * 4180 * lc / 500:.1f} s", f"Bi = {500 * lc / 0.6:.2f}", f"**R²/α = {(5e-3) ** 2 / 1.4e-7:.0f} s**", f"{(5e-3) ** 2 / (math.pi ** 2 * 1.4e-7):.1f} s",
+        f"({tau:.0f} s) is much longer",
+    ])
+    lw = 6e-3 / 6
+    tau_w = 1000 * 4180 * lw / 25
+    _fragments_in(text, [f"τ = 1000 × 4180 × {lw:.4f}/25 = {tau_w:.0f} s", f"Bi = 25 × {lw:.4f}/0.6 = {25 * lw / 0.6:.3f}", f"= {tau_w * math.log((37 - 22) / (37 - 35)):.0f} s"])
+    f_2 = 1 - math.exp(-2)
+    t95 = -20 * math.log(0.05)
+    x95 = _bisect(lambda x: _tanks_in_series(x, 3) - 0.95, 0.1, 6.0)
+    _fragments_in(reading("transport", "transport-12"), [
+        f"τ = **{10.0 / 0.5:.0f} min**", f"{f_2:.1%} after two", f"**{t95:.1f} min**", f"**{-20 * math.log(0.01):.1f} min**", f"{1 / (1 + 0.05 * 20):.2f},", f"= {20 / (1 + 0.05 * 20):.0f} min**",
+        f"**{_tanks_in_series(1.0, 3):.3f}**", f"**{x95:.2f} τ = {x95 * 20:.1f} min**", f"1/√N = {1 / math.sqrt(3):.2f}",
+    ])
+    tau2 = 5.0 / 2.0
+    _fragments_in(reading("transport", "transport-12"), [f"{tau2:.1f} min", f"{-tau2 * math.log(0.01):.1f} min", f"{1 / (1 + 0.2 * tau2):.3f}", f"{tau2 / (1 + 0.2 * tau2):.2f} min", f"{_tanks_in_series(1.0, 2):.3f}"])
+    text = reading("transport", "transport-13")
+    dr, dax = _CH_DR, _CH_DAX
+    bracket = 2 * _CH_RT ** 2 * math.log(_CH_RT / _CH_RC) - (_CH_RT ** 2 - _CH_RC ** 2)
+    shear = 4 * 0.78e-3 * _CH_Q / (math.pi * _CH_RC ** 3)
+    dp = 8 * 0.78e-3 * _CH_Q * _CH_L / (math.pi * _CH_RC ** 4)
+    dr2 = _krogh_radial_drop(150e-6, _CH_RC, _TQ, _TD)
+    dax2 = math.pi * (150e-6 ** 2 - _CH_RC ** 2) * _CH_L * _TQ / _CH_Q
+    _fragments_in(text, [
+        f"bracket is {bracket * 1e8:.3f} × 10⁻⁸ m²", f"**{dr:.4f} mol/m³**", f"{dr / _TC0:.0%} of the inlet value", f"tissue minimum is {_TC0 - dr:.4f} mol/m³", f"= {dax:.4f} mol/m³**",
+        f"**{_TC0 - dax:.4f} mol/m³**", f"**{_TC0 - dax - dr:.4f} mol/m³**", f"**{shear:.3f} Pa**", f"{dp:.0f} Pa", f"**{_CH_QREQ * 60 * 1e9:.1f} μL/min**",
+        f"{_CH_UPTAKE * 1e11:.3f} × 10⁻¹¹ mol/s", f"{dr2:.4f} mol/m³ (a factor of {dr / dr2:.1f})", f"**{_TC0 - dax2 - dr2:.4f} mol/m³**",
+    ])
+    rc3, rt3, l3, q3 = 75e-6, 150e-6, 8e-3, 0.015
+    dr3 = _krogh_radial_drop(rt3, rc3, q3, _TD)
+    dax3 = math.pi * (rt3 ** 2 - rc3 ** 2) * l3 * q3 / (4.0e-9 / 60)
+    _fragments_in(text, [f"= {dr3:.4f} mol/m³", f"{dax3:.4f} mol/m³", f"{_TC0 - dax3:.4f} mol/m³", f"{_TC0 - dax3 - dr3:.4f} mol/m³"])
+    # the radial formula is the solution of the Krogh-cylinder equation: check it by direct integration of the profile
+    steps, r, c = 4000, _CH_RC, 0.0
+    h = (_CH_RT - _CH_RC) / steps
+    def gradient(radius: float) -> float:
+        return _TQ / (2 * _TD) * (radius - _CH_RT ** 2 / radius)
+
+    for _ in range(steps):
+        c += h * gradient(r + h / 2)
+        r += h
+    assert c == pytest.approx(-dr, rel=1e-4)
+
+
+def test_transport_lab_text_and_keys_agree_with_the_dataset():
+    assert len(_TR_ROWS) == 81 and sorted({int(r["thickness_um"]) for r in _TR_ROWS}) == [100, 200, 300]
+    text = (COURSES / "transport/labs/01-oxygen-depth-profiles-in-cell-laden-slabs.md").read_text(encoding="utf-8")
+    _fragments_in(text, [
+        f"is {_profile_mean(_TR_ROWS, 100, 100):.3f} mol/m³, so q", f"= {2 * _TD * (_TC0 - _profile_mean(_TR_ROWS, 100, 100)) / (100e-6) ** 2:.4f} mol/(m³·s)", f"is √(2 × 2.0 × 10⁻⁹ × {_TC0}/{_TR_Q}) = {_TR_LC:.0f} μm",
+        f"reaches zero at {_TR_ZERO} μm", f"anoxic over the remaining {300 - round(_TR_LC)} μm",
+    ])
+    checks = {(c["row_id"], c["column"]): c["answer"] for c in bank("transport")["transport-lab1:profile-summary"]["solution_spec"]["validation_spec"]["checks"]}
+    assert len(checks) == 12
+    for thickness in (100, 200, 300):
+        assert checks[(f"l{thickness}", "profiles")] == 3
+        for column, depth in (("c_surface", 0), ("c_100", 100), ("c_end", thickness)):
+            assert abs(checks[(f"l{thickness}", column)] - _profile_mean(_TR_ROWS, thickness, depth)) < 1e-3, (thickness, column)
+    # the profiles follow C = C0 - (q/2D) z (2 Lm - z) with Lm = min(L, critical thickness)
+    for r in _TR_ROWS:
+        lm = min(int(r["thickness_um"]) * 1e-6, math.sqrt(2 * _TD * _TC0 / _TQ))
+        z = int(r["depth_um"]) * 1e-6
+        model = 0.0 if (z >= lm - 1e-12 and int(r["thickness_um"]) * 1e-6 > lm) else _TC0 - _TQ / (2 * _TD) * z * (2 * lm - z)
+        assert abs(float(r["o2_mol_m3"]) - model) <= 0.0045, r
