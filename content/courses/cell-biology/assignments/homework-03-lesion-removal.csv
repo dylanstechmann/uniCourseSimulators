@@ -1,0 +1,13 @@
+condition,culture,lesion_remaining_pct_4h,s_phase_pct,viability_pct
+wt,W1,38,31,95
+wt,W2,42,29,94
+wt,W3,40,30,96
+wt,W4,40,30,95
+repair_deficient,R1,83,30,93
+repair_deficient,R2,86,32,94
+repair_deficient,R3,84,29,92
+repair_deficient,R4,87,31,94
+complemented,C1,45,30,95
+complemented,C2,48,31,96
+complemented,C3,46,29,94
+complemented,C4,47,30,95

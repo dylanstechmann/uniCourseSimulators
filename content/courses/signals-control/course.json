@@ -129,7 +129,8 @@
           ],
           "worked_example": "For τẏ+y=u, G(s)=1/(τs+1), a first-order low-pass with DC gain 1 and time constant τ.",
           "question_ids": [
-            "signals-control-1:check"
+            "signals-control-1:check",
+            "signals-control-1:dc-gain"
           ],
           "card_ids": [
             "signals-control-0-0",
@@ -156,7 +157,8 @@
           ],
           "worked_example": "A first-order low-pass with τ=0.1 s has cutoff fc=1/(2πτ)≈1.59 Hz; signals far above this are attenuated.",
           "question_ids": [
-            "signals-control-2:check"
+            "signals-control-2:check",
+            "signals-control-2:aliased-frequency"
           ],
           "card_ids": [
             "signals-control-1-0",
@@ -183,7 +185,8 @@
           ],
           "worked_example": "For proportional control of a unit-gain first-order plant, raising controller gain speeds tracking but also raises sensitivity to noise and unmodeled delay.",
           "question_ids": [
-            "signals-control-3:check"
+            "signals-control-3:check",
+            "signals-control-3:gain-margin"
           ],
           "card_ids": [
             "signals-control-2-0",
@@ -210,7 +213,8 @@
           ],
           "worked_example": "For a first-order thermal process, integral action can eliminate a persistent offset from heat loss, but too much integral gain can produce slow oscillation after saturation.",
           "question_ids": [
-            "signals-control-4:check"
+            "signals-control-4:check",
+            "signals-control-4:integrator-windup"
           ],
           "card_ids": [
             "signals-control-3-0",
@@ -227,12 +231,14 @@
       "mode": "practice",
       "path": "question-banks/practice.json",
       "objective_ids": [
-        "signals-control-1-objective-1"
+        "signals-control-1-objective-1",
+        "signals-control-1-objective-2"
       ],
       "question_ids": [
-        "signals-control-1:check"
+        "signals-control-1:check",
+        "signals-control-1:dc-gain"
       ],
-      "points": 1
+      "points": 2
     },
     {
       "id": "signals-control-2-practice",
@@ -240,12 +246,14 @@
       "mode": "practice",
       "path": "question-banks/practice.json",
       "objective_ids": [
-        "signals-control-2-objective-1"
+        "signals-control-2-objective-1",
+        "signals-control-2-objective-2"
       ],
       "question_ids": [
-        "signals-control-2:check"
+        "signals-control-2:check",
+        "signals-control-2:aliased-frequency"
       ],
-      "points": 1
+      "points": 2
     },
     {
       "id": "signals-control-3-practice",
@@ -253,12 +261,14 @@
       "mode": "practice",
       "path": "question-banks/practice.json",
       "objective_ids": [
-        "signals-control-3-objective-1"
+        "signals-control-3-objective-1",
+        "signals-control-3-objective-2"
       ],
       "question_ids": [
-        "signals-control-3:check"
+        "signals-control-3:check",
+        "signals-control-3:gain-margin"
       ],
-      "points": 1
+      "points": 2
     },
     {
       "id": "signals-control-4-practice",
@@ -266,12 +276,14 @@
       "mode": "practice",
       "path": "question-banks/practice.json",
       "objective_ids": [
-        "signals-control-4-objective-1"
+        "signals-control-4-objective-1",
+        "signals-control-4-objective-2"
       ],
       "question_ids": [
-        "signals-control-4:check"
+        "signals-control-4:check",
+        "signals-control-4:integrator-windup"
       ],
-      "points": 1
+      "points": 2
     },
     {
       "id": "signals-control-case",

@@ -128,7 +128,8 @@
           ],
           "worked_example": "A 0.20 kg instrument package accelerating upward at 2 m/s² has tension T−mg=ma, so T=0.20(9.81+2)=2.36 N.",
           "question_ids": [
-            "physics-mechanics-1:check"
+            "physics-mechanics-1:check",
+            "physics-mechanics-1:incline-acceleration"
           ],
           "card_ids": [
             "physics-mechanics-0-0",
@@ -155,7 +156,8 @@
           ],
           "worked_example": "Compressing a linear spring by x stores U=½kx². A spring with k=200 N/m compressed 0.05 m stores 0.25 J.",
           "question_ids": [
-            "physics-mechanics-2:check"
+            "physics-mechanics-2:check",
+            "physics-mechanics-2:dissipated-energy"
           ],
           "card_ids": [
             "physics-mechanics-1-0",
@@ -182,7 +184,8 @@
           ],
           "worked_example": "A 0.15 kg ball changes velocity from +8 to −4 m/s. Its impulse is 0.15(−12)=−1.8 N·s.",
           "question_ids": [
-            "physics-mechanics-3:check"
+            "physics-mechanics-3:check",
+            "physics-mechanics-3:impulse-area"
           ],
           "card_ids": [
             "physics-mechanics-2-0",
@@ -209,7 +212,8 @@
           ],
           "worked_example": "A 10 N force perpendicular to a 0.25 m lever arm produces 2.5 N·m torque.",
           "question_ids": [
-            "physics-mechanics-4:check"
+            "physics-mechanics-4:check",
+            "physics-mechanics-4:strain-from-stress"
           ],
           "card_ids": [
             "physics-mechanics-3-0",
@@ -226,12 +230,14 @@
       "mode": "practice",
       "path": "question-banks/practice.json",
       "objective_ids": [
-        "physics-mechanics-1-objective-1"
+        "physics-mechanics-1-objective-1",
+        "physics-mechanics-1-objective-2"
       ],
       "question_ids": [
-        "physics-mechanics-1:check"
+        "physics-mechanics-1:check",
+        "physics-mechanics-1:incline-acceleration"
       ],
-      "points": 1
+      "points": 2
     },
     {
       "id": "physics-mechanics-2-practice",
@@ -239,12 +245,14 @@
       "mode": "practice",
       "path": "question-banks/practice.json",
       "objective_ids": [
-        "physics-mechanics-2-objective-1"
+        "physics-mechanics-2-objective-1",
+        "physics-mechanics-2-objective-2"
       ],
       "question_ids": [
-        "physics-mechanics-2:check"
+        "physics-mechanics-2:check",
+        "physics-mechanics-2:dissipated-energy"
       ],
-      "points": 1
+      "points": 2
     },
     {
       "id": "physics-mechanics-3-practice",
@@ -252,12 +260,14 @@
       "mode": "practice",
       "path": "question-banks/practice.json",
       "objective_ids": [
-        "physics-mechanics-3-objective-1"
+        "physics-mechanics-3-objective-1",
+        "physics-mechanics-3-objective-2"
       ],
       "question_ids": [
-        "physics-mechanics-3:check"
+        "physics-mechanics-3:check",
+        "physics-mechanics-3:impulse-area"
       ],
-      "points": 1
+      "points": 2
     },
     {
       "id": "physics-mechanics-4-practice",
@@ -265,12 +275,14 @@
       "mode": "practice",
       "path": "question-banks/practice.json",
       "objective_ids": [
-        "physics-mechanics-4-objective-1"
+        "physics-mechanics-4-objective-1",
+        "physics-mechanics-4-objective-2"
       ],
       "question_ids": [
-        "physics-mechanics-4:check"
+        "physics-mechanics-4:check",
+        "physics-mechanics-4:strain-from-stress"
       ],
-      "points": 1
+      "points": 2
     },
     {
       "id": "physics-mechanics-case",

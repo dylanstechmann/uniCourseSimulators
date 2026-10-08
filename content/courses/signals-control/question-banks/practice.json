@@ -129,6 +129,127 @@
         "legacy_id": "signals-control-4:check",
         "modifications": []
       }
+    },
+    {
+      "id": "signals-control-1:dc-gain",
+      "type": "numeric",
+      "prompt": "A first-order system obeys dy/dt + 2y = 6u. What is its steady-state (DC) gain y/u? Enter a number.",
+      "points": 1,
+      "objective_ids": [
+        "signals-control-1-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 3.0,
+        "unit": "",
+        "tolerance": 0.01,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Set the derivative to zero, or evaluate G(s) at s = 0.",
+        "solution": "G(s) = 6/(s + 2); at s = 0 the gain is 6/2 = 3. The pole at −2 gives a time constant of 0.5 time units.",
+        "lesson_ids": [
+          "signals-control-1"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "signals-control-2:aliased-frequency",
+      "type": "numeric",
+      "prompt": "A 120 Hz interference tone is sampled at 200 Hz with no anti-alias filter. At what apparent frequency does it appear in the sampled data? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "signals-control-2-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 80,
+        "unit": "Hz",
+        "tolerance": 0.5,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "A tone folds about multiples of the sampling frequency.",
+        "solution": "120 Hz is above the 100 Hz Nyquist limit and appears at |120 − 200| = 80 Hz. Filtering after sampling cannot separate it from a real 80 Hz signal, so a low-pass filter must act before the sampler.",
+        "lesson_ids": [
+          "signals-control-2"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "signals-control-3:gain-margin",
+      "type": "numeric",
+      "prompt": "At the phase-crossover frequency, a loop's magnitude is |L| = 0.4. What is the gain margin as a linear factor? Enter a number.",
+      "points": 1,
+      "objective_ids": [
+        "signals-control-3-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 2.5,
+        "unit": "",
+        "tolerance": 0.01,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Gain margin is 1 divided by the magnitude at the phase crossover.",
+        "solution": "GM = 1/0.4 = 2.5, meaning the loop gain can rise by a factor of 2.5 before the closed loop reaches instability in the nominal model. Model uncertainty shrinks the usable margin.",
+        "lesson_ids": [
+          "signals-control-3"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "signals-control-4:integrator-windup",
+      "type": "single_choice",
+      "prompt": "A PI controller's actuator saturates for several seconds during a large setpoint step. After the step, the output overshoots badly. What is the most likely cause?",
+      "options": [
+        "Integrator windup: the integral term kept accumulating while the actuator could not respond.",
+        "The setpoint was too small.",
+        "The sampling rate was too high.",
+        "The sensor is perfectly accurate."
+      ],
+      "points": 1,
+      "objective_ids": [
+        "signals-control-4-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0
+      },
+      "feedback": {
+        "hint": "Ask what keeps changing inside the controller while the actuator is stuck.",
+        "solution": "During saturation the error stays large, so the integral term grows without changing the output. When the actuator comes out of saturation the stored integral drives a large overshoot. Anti-windup methods limit or back-calculate the integral.",
+        "lesson_ids": [
+          "signals-control-4"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
     }
   ]
 }

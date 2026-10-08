@@ -127,6 +127,128 @@
         "legacy_id": "differential-equations-4:check",
         "modifications": []
       }
+    },
+    {
+      "id": "differential-equations-1:characteristic-time",
+      "type": "numeric",
+      "prompt": "A quantity obeys dx/dt = −0.5 (x − 4) with t in seconds. What is the characteristic time of approach to equilibrium? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "differential-equations-1-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 2.0,
+        "unit": "s",
+        "tolerance": 0.01,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Write the equation as dx/dt = −(x − x*)/τ.",
+        "solution": "The equilibrium is x* = 4 and the rate constant is 0.5 s⁻¹, so τ = 1/0.5 = 2 s. After one τ the distance to equilibrium has fallen to about 37% of its starting value.",
+        "lesson_ids": [
+          "differential-equations-1"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "differential-equations-2:force-balance-model",
+      "type": "single_choice",
+      "prompt": "A 2 kg mass on a spring (k = 8 N/m) with a damper (c = 3 N·s/m) is driven by a force F(t). Which equation is the correct force balance for the displacement x?",
+      "options": [
+        "2 x″ + 3 x′ − 8 x = F(t)",
+        "2 x′ + 3 x″ + 8 x = F(t)",
+        "2 x″ − 3 x′ + 8 x = F(t)",
+        "2 x″ + 3 x′ + 8 x = F(t)"
+      ],
+      "points": 1,
+      "objective_ids": [
+        "differential-equations-2-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 3
+      },
+      "feedback": {
+        "hint": "Mass times acceleration equals the sum of forces: applied minus spring minus damper.",
+        "solution": "Newton's second law gives m x″ = F − c x′ − k x, which rearranges to m x″ + c x′ + k x = F(t). The spring and damper forces oppose motion, so their terms carry positive signs on the left.",
+        "lesson_ids": [
+          "differential-equations-2"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "differential-equations-3:eigenvalue-stability",
+      "type": "single_choice",
+      "prompt": "For a linear system x′ = A x, the matrix A has eigenvalues −1 ± 2i. How is the equilibrium at the origin classified?",
+      "options": [
+        "A stable spiral: solutions oscillate while decaying.",
+        "An unstable spiral.",
+        "A center with constant-amplitude oscillation.",
+        "A saddle."
+      ],
+      "points": 1,
+      "objective_ids": [
+        "differential-equations-3-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0
+      },
+      "feedback": {
+        "hint": "Look at the sign of the real part and the presence of an imaginary part.",
+        "solution": "Complex eigenvalues with negative real part give oscillation (imaginary part) with exponential decay (real part −1), a stable spiral. Nonlinear systems need the linearization argument to apply near the equilibrium.",
+        "lesson_ids": [
+          "differential-equations-3"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "differential-equations-4:euler-stability-limit",
+      "type": "numeric",
+      "prompt": "Explicit Euler is applied to y′ = −50 y. What is the largest time step h for which the numerical solution is stable (decays)? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "differential-equations-4-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0.04,
+        "unit": "s",
+        "tolerance": 0.0005,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Euler multiplies the solution by (1 − λh) each step; require its magnitude below 1.",
+        "solution": "For y′ = −λy the update factor is 1 − λh. Stability needs |1 − 50 h| < 1, so h < 2/50 = 0.04 s. A step below this limit is stable, but accuracy may still need a smaller step.",
+        "lesson_ids": [
+          "differential-equations-4"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
     }
   ]
 }

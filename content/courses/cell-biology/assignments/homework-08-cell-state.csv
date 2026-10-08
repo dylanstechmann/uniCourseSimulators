@@ -1,0 +1,13 @@
+condition,culture,edu_pct,sabgal_pct,reentry_edu_pct
+proliferating,P1,38,4,41
+proliferating,P2,40,5,39
+proliferating,P3,42,6,42
+proliferating,P4,40,5,40
+quiescent,Q1,4,8,33
+quiescent,Q2,5,9,35
+quiescent,Q3,6,10,34
+quiescent,Q4,5,9,34
+damage_induced,D1,3,62,6
+damage_induced,D2,4,65,7
+damage_induced,D3,5,68,5
+damage_induced,D4,4,65,6

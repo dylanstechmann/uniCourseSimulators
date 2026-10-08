@@ -129,6 +129,128 @@
         "legacy_id": "programming-4:check",
         "modifications": []
       }
+    },
+    {
+      "id": "programming-1:checkable-function",
+      "type": "single_choice",
+      "prompt": "Which design makes a small function easiest to check independently?",
+      "options": [
+        "A long function that does everything in one block.",
+        "A function that reads and modifies several global variables.",
+        "A function that prints results and returns nothing.",
+        "A pure function with explicit inputs and outputs and no hidden global state, tested against hand-computed cases."
+      ],
+      "points": 1,
+      "objective_ids": [
+        "programming-1-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 3
+      },
+      "feedback": {
+        "hint": "Choose the design that a test can call in isolation.",
+        "solution": "A pure function's output depends only on its arguments, so tests can supply inputs and compare outputs with independently computed values. Hidden state and side effects make behavior order-dependent and hard to check.",
+        "lesson_ids": [
+          "programming-1"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "programming-2:euler-amplification",
+      "type": "numeric",
+      "prompt": "Explicit Euler is applied to y′ = −4 y with step h = 0.6. What is the magnitude of the per-step amplification factor |1 − λh|? A value above 1 means the numerical solution grows. Enter a number.",
+      "points": 1,
+      "objective_ids": [
+        "programming-2-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 1.4,
+        "unit": "",
+        "tolerance": 0.005,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "The update is yₙ₊₁ = (1 − λh) yₙ.",
+        "solution": "|1 − 4 × 0.6| = |1 − 2.4| = 1.4 > 1, so the numerical solution grows although the true solution decays. The stable step here is h < 2/4 = 0.5.",
+        "lesson_ids": [
+          "programming-2"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "programming-3:residual-standard-error",
+      "type": "numeric",
+      "prompt": "A two-parameter model is fit to 5 points and the residuals are 0.1, −0.2, 0.1, 0.0 and 0.0. Calculate the residual standard error with n − p degrees of freedom. Enter a number.",
+      "points": 1,
+      "objective_ids": [
+        "programming-3-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0.1414,
+        "unit": "",
+        "tolerance": 0.002,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Sum the squared residuals and divide by the degrees of freedom before the square root.",
+        "solution": "Σr² = 0.06, degrees of freedom = 5 − 2 = 3, so s = √(0.06/3) = 0.1414. This estimates the scatter around the fitted model and feeds parameter uncertainty.",
+        "lesson_ids": [
+          "programming-3"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "programming-4:show-observations",
+      "type": "single_choice",
+      "prompt": "Which display best shows a small experiment's results without hiding the individual observations?",
+      "options": [
+        "Individual points for every observation overlaid with a summary and an uncertainty interval.",
+        "A bar of the mean with error bars only.",
+        "A smooth curve with no data points.",
+        "A bar of the mean alone."
+      ],
+      "points": 1,
+      "objective_ids": [
+        "programming-4-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0
+      },
+      "feedback": {
+        "hint": "Show the data and the summary together.",
+        "solution": "With few observations, plotting each point next to the summary lets readers see spread, outliers and sample size, which a bar of the mean hides.",
+        "lesson_ids": [
+          "programming-4"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
     }
   ]
 }

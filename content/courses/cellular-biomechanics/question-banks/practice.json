@@ -130,6 +130,130 @@
         "legacy_id": "cellular-biomechanics-4:check",
         "modifications": []
       }
+    },
+    {
+      "id": "cellular-biomechanics-1:constitutive-regime",
+      "type": "single_choice",
+      "prompt": "A cell is indented for 10 ms and then held for 100 s while the force relaxes by about half. Which model class is needed to describe the hold?",
+      "options": [
+        "No model, because the force is zero.",
+        "A viscoelastic model, because force relaxation at fixed indentation shows time dependence that a purely elastic model cannot produce.",
+        "A rigid-body model.",
+        "A purely elastic model, because every material relaxes the same way."
+      ],
+      "points": 1,
+      "objective_ids": [
+        "cellular-biomechanics-1-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 1
+      },
+      "feedback": {
+        "hint": "Look at what changes with time at fixed deformation.",
+        "solution": "At fixed deformation a purely elastic solid keeps constant force. Relaxation means time dependence, so a viscoelastic description (for example a standard linear solid or power-law rheology) is required over that time window; an elastic model may suffice if the loading is much faster or slower than the relaxation times.",
+        "lesson_ids": [
+          "cellular-biomechanics-1"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "cellular-biomechanics-2:adhesion-geometry",
+      "type": "single_choice",
+      "prompt": "The same total adhesive area is presented as one large patch or as many small spots spaced widely apart. Which prediction follows from the idea that adhesion geometry sets local force transmission?",
+      "options": [
+        "Local tension at each adhesion and the recruitment of mechanosensitive proteins can differ even though the total area is equal.",
+        "Signaling depends only on the soluble medium.",
+        "Nothing can differ because total area is the only variable.",
+        "Spreading is determined by the number of cells only."
+      ],
+      "points": 1,
+      "objective_ids": [
+        "cellular-biomechanics-2-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0
+      },
+      "feedback": {
+        "hint": "Separate total area from the size and spacing of adhesions.",
+        "solution": "Force is transmitted through individual adhesions, so their size, spacing and anchoring change local load and the proteins recruited there. Equal total area does not imply equal local signaling; this prediction needs a measurement, not an assumption.",
+        "lesson_ids": [
+          "cellular-biomechanics-2"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "cellular-biomechanics-3:perturbation-and-rescue",
+      "type": "single_choice",
+      "prompt": "Knockdown of a protein reduces a mechanical response. Re-expressing the wild-type protein restores it, while a version lacking one domain does not. What does this support?",
+      "options": [
+        "Proof that the domain binds a specific partner.",
+        "That the knockdown had no off-target effects.",
+        "Involvement of the protein and that domain in this response in this system, not proof of direct causation or of the full pathway.",
+        "That the protein is the only regulator of the response."
+      ],
+      "points": 1,
+      "objective_ids": [
+        "cellular-biomechanics-3-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 2
+      },
+      "feedback": {
+        "hint": "Say what the rescue pattern shows and what remains open.",
+        "solution": "Loss of response with knockdown and restoration by the wild-type but not the domain mutant supports a requirement for that domain in this system. Direct binding, other regulators and off-target effects need other evidence.",
+        "lesson_ids": [
+          "cellular-biomechanics-3"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "cellular-biomechanics-4:nested-replicates",
+      "type": "single_choice",
+      "prompt": "Each condition has 3 independent dishes with 20 cells measured per dish. Which analysis respects the structure?",
+      "options": [
+        "Pool all dishes and use the number of cells as n.",
+        "Average only one cell per dish and ignore the rest.",
+        "Treat all 60 cells per condition as independent.",
+        "Treat the dish as the independent unit or use a nested/mixed model with dish as a grouping factor."
+      ],
+      "points": 1,
+      "objective_ids": [
+        "cellular-biomechanics-4-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 3
+      },
+      "feedback": {
+        "hint": "Decide what is truly independent.",
+        "solution": "Cells within a dish share conditions and are correlated, so dishes (or experiments) are the independent units. A nested or mixed-effects analysis or averaging within dish respects this; counting cells as independent overstates precision.",
+        "lesson_ids": [
+          "cellular-biomechanics-4"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
     }
   ]
 }

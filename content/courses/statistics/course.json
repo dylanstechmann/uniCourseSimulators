@@ -149,7 +149,8 @@
           ],
           "worked_example": "If biological replicates have SD=12 units and n=9 independent samples, the standard error of the mean is 12/√9=4 units.",
           "question_ids": [
-            "statistics-1:check"
+            "statistics-1:check",
+            "statistics-1:standard-error"
           ],
           "card_ids": [
             "statistics-0-0",
@@ -176,7 +177,8 @@
           ],
           "worked_example": "If an estimated treatment effect is 4.0 units with 95% CI [1.0, 7.0], the interval excludes zero under that model, but the effect's biological importance still requires context.",
           "question_ids": [
-            "statistics-2:check"
+            "statistics-2:check",
+            "statistics-2:magnitude-vs-precision"
           ],
           "card_ids": [
             "statistics-1-0",
@@ -203,7 +205,8 @@
           ],
           "worked_example": "If 20 independent null tests each use α=0.05 without correction, the probability of at least one false positive is 1−0.95²⁰≈0.64.",
           "question_ids": [
-            "statistics-3:check"
+            "statistics-3:check",
+            "statistics-3:bonferroni"
           ],
           "card_ids": [
             "statistics-2-0",
@@ -230,7 +233,8 @@
           ],
           "worked_example": "In a 2-condition study across 6 independent donors, donor is a biological replication/blocking factor; measuring 100 cells per donor improves within-donor precision but does not create 600 independent donors.",
           "question_ids": [
-            "statistics-4:check"
+            "statistics-4:check",
+            "statistics-4:pseudoreplication"
           ],
           "card_ids": [
             "statistics-3-0",
@@ -275,12 +279,14 @@
       "mode": "practice",
       "path": "question-banks/practice.json",
       "objective_ids": [
-        "statistics-1-objective-1"
+        "statistics-1-objective-1",
+        "statistics-1-objective-2"
       ],
       "question_ids": [
-        "statistics-1:check"
+        "statistics-1:check",
+        "statistics-1:standard-error"
       ],
-      "points": 1
+      "points": 2
     },
     {
       "id": "statistics-2-practice",
@@ -288,12 +294,14 @@
       "mode": "practice",
       "path": "question-banks/practice.json",
       "objective_ids": [
-        "statistics-2-objective-1"
+        "statistics-2-objective-1",
+        "statistics-2-objective-2"
       ],
       "question_ids": [
-        "statistics-2:check"
+        "statistics-2:check",
+        "statistics-2:magnitude-vs-precision"
       ],
-      "points": 1
+      "points": 2
     },
     {
       "id": "statistics-3-practice",
@@ -301,12 +309,14 @@
       "mode": "practice",
       "path": "question-banks/practice.json",
       "objective_ids": [
-        "statistics-3-objective-1"
+        "statistics-3-objective-1",
+        "statistics-3-objective-2"
       ],
       "question_ids": [
-        "statistics-3:check"
+        "statistics-3:check",
+        "statistics-3:bonferroni"
       ],
-      "points": 1
+      "points": 2
     },
     {
       "id": "statistics-4-practice",
@@ -314,12 +324,14 @@
       "mode": "practice",
       "path": "question-banks/practice.json",
       "objective_ids": [
-        "statistics-4-objective-1"
+        "statistics-4-objective-1",
+        "statistics-4-objective-2"
       ],
       "question_ids": [
-        "statistics-4:check"
+        "statistics-4:check",
+        "statistics-4:pseudoreplication"
       ],
-      "points": 1
+      "points": 2
     },
     {
       "id": "statistics-5-practice",

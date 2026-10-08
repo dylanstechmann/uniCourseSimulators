@@ -127,7 +127,8 @@
           ],
           "worked_example": "Store each sample's treatment, donor, batch, and measurement unit together; keep the raw file unchanged and write cleaned outputs as a derived artifact.",
           "question_ids": [
-            "programming-1:check"
+            "programming-1:check",
+            "programming-1:checkable-function"
           ],
           "card_ids": [
             "programming-0-0",
@@ -154,7 +155,8 @@
           ],
           "worked_example": "Integrating ẋ=−x from 0 to 1 with Euler step h=0.1 gives a different result than h=0.01; convergence toward e⁻¹ is the check.",
           "question_ids": [
-            "programming-2:check"
+            "programming-2:check",
+            "programming-2:euler-amplification"
           ],
           "card_ids": [
             "programming-1-0",
@@ -181,7 +183,8 @@
           ],
           "worked_example": "A model with lower training error but higher held-out error may be overfit; simplify it, regularize it, or collect independent data.",
           "question_ids": [
-            "programming-3:check"
+            "programming-3:check",
+            "programming-3:residual-standard-error"
           ],
           "card_ids": [
             "programming-2-0",
@@ -208,7 +211,8 @@
           ],
           "worked_example": "Plotting donor-level points with a paired line can make within-donor treatment effects clearer than two unpaired bars when donors are the randomized blocks.",
           "question_ids": [
-            "programming-4:check"
+            "programming-4:check",
+            "programming-4:show-observations"
           ],
           "card_ids": [
             "programming-3-0",
@@ -225,12 +229,14 @@
       "mode": "practice",
       "path": "question-banks/practice.json",
       "objective_ids": [
-        "programming-1-objective-1"
+        "programming-1-objective-1",
+        "programming-1-objective-2"
       ],
       "question_ids": [
-        "programming-1:check"
+        "programming-1:check",
+        "programming-1:checkable-function"
       ],
-      "points": 1
+      "points": 2
     },
     {
       "id": "programming-2-practice",
@@ -238,12 +244,14 @@
       "mode": "practice",
       "path": "question-banks/practice.json",
       "objective_ids": [
-        "programming-2-objective-1"
+        "programming-2-objective-1",
+        "programming-2-objective-2"
       ],
       "question_ids": [
-        "programming-2:check"
+        "programming-2:check",
+        "programming-2:euler-amplification"
       ],
-      "points": 1
+      "points": 2
     },
     {
       "id": "programming-3-practice",
@@ -251,12 +259,14 @@
       "mode": "practice",
       "path": "question-banks/practice.json",
       "objective_ids": [
-        "programming-3-objective-1"
+        "programming-3-objective-1",
+        "programming-3-objective-2"
       ],
       "question_ids": [
-        "programming-3:check"
+        "programming-3:check",
+        "programming-3:residual-standard-error"
       ],
-      "points": 1
+      "points": 2
     },
     {
       "id": "programming-4-practice",
@@ -264,12 +274,14 @@
       "mode": "practice",
       "path": "question-banks/practice.json",
       "objective_ids": [
-        "programming-4-objective-1"
+        "programming-4-objective-1",
+        "programming-4-objective-2"
       ],
       "question_ids": [
-        "programming-4:check"
+        "programming-4:check",
+        "programming-4:show-observations"
       ],
-      "points": 1
+      "points": 2
     },
     {
       "id": "programming-case",

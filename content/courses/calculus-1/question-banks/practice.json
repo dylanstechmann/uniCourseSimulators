@@ -153,6 +153,126 @@
         "legacy_id": "calculus-1-4:check",
         "modifications": []
       }
+    },
+    {
+      "id": "calculus-1-1:linearization",
+      "type": "numeric",
+      "prompt": "Use the local linear approximation of f(x) = √x at x = 4 to estimate √4.2. Enter a number.",
+      "points": 1,
+      "objective_ids": [
+        "calculus-1-1-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 2.05,
+        "unit": "",
+        "tolerance": 0.001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "L(x) = f(4) + f′(4)(x − 4) with f′(x) = 1/(2√x).",
+        "solution": "f(4) = 2 and f′(4) = 1/4, so L(4.2) = 2 + 0.25 × 0.2 = 2.05. The exact value is 2.04939; the approximation is good while x stays near 4 and the curvature is small.",
+        "lesson_ids": [
+          "calculus-1-1"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-1-2:rate-with-units",
+      "type": "numeric",
+      "prompt": "A drug-free tracer concentration is C(t) = 5·exp(−0.2 t) mM with t in hours. Calculate dC/dt at t = 2 h. Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "calculus-1-2-objective-2"
+      ],
+      "solution_spec": {
+        "answer": -0.6703,
+        "unit": "mM/h",
+        "tolerance": 0.005,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Differentiate with respect to t and keep mM per hour.",
+        "solution": "dC/dt = −0.2 × 5·e^(−0.2 t) = −1.0·e^(−0.4) = -0.6703 mM/h. The negative sign means the concentration is falling; the unit is concentration per time.",
+        "lesson_ids": [
+          "calculus-1-2"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-1-3:constrained-optimization",
+      "type": "numeric",
+      "prompt": "A rectangular enclosure has a fixed perimeter of 40 m. What is the largest possible area? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "calculus-1-3-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 100.0,
+        "unit": "m^2",
+        "tolerance": 0.1,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the perimeter to write the width in terms of the length, then maximize.",
+        "solution": "The constraint 2(l + w) = 40 gives w = 20 − l, so A = l(20 − l). dA/dl = 20 − 2l = 0 at l = 10 m, w = 10 m, and A = 100 m². The endpoints give area 0, so the interior critical point is the maximum.",
+        "lesson_ids": [
+          "calculus-1-3"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-1-4:state-from-rate",
+      "type": "numeric",
+      "prompt": "A particle starts at x(0) = 2.0 m and moves with velocity v(t) = 3t m/s. Calculate its position at t = 4 s. Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "calculus-1-4-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 26.0,
+        "unit": "m",
+        "tolerance": 0.01,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Integrate the velocity and add the initial position.",
+        "solution": "x(t) = x(0) + ∫ 3t dt = 2.0 + 1.5 t². At t = 4 s, x = 2.0 + 1.5 × 16 = 26 m. The integral gives the displacement; the initial condition fixes the state.",
+        "lesson_ids": [
+          "calculus-1-4"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
     }
   ]
 }

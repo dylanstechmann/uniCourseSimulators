@@ -126,6 +126,127 @@
         "legacy_id": "circuits-4:check",
         "modifications": []
       }
+    },
+    {
+      "id": "circuits-1:thevenin-resistance",
+      "type": "numeric",
+      "prompt": "A 12 V source in series with 4 Ω feeds a 12 Ω resistor placed across the output terminals; the load will connect to the same terminals. Find the Thevenin resistance seen by the load, with the source replaced by a short. Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "circuits-1-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 3.0,
+        "unit": "Ω",
+        "tolerance": 0.01,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "With the source shorted, the 4 Ω and 12 Ω resistors are in parallel.",
+        "solution": "Rth = (4 × 12)/(4 + 12) = 3 Ω. The Thevenin voltage is 12 × 12/16 = 9 V, so the load sees a 9 V source in series with 3 Ω.",
+        "lesson_ids": [
+          "circuits-1"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "circuits-2:small-differential-signal",
+      "type": "single_choice",
+      "prompt": "A sensor produces a 2 mV differential signal on top of a 1 V common-mode level. Which front end is most appropriate?",
+      "options": [
+        "A passive attenuator.",
+        "A single inverting op-amp stage with unmatched resistors.",
+        "An instrumentation amplifier, which has high input impedance and a high common-mode rejection ratio.",
+        "A comparator."
+      ],
+      "points": 1,
+      "objective_ids": [
+        "circuits-2-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 2
+      },
+      "feedback": {
+        "hint": "Ask what must be rejected and what must be preserved.",
+        "solution": "The wanted signal is the small difference; the large common-mode level must be rejected. Instrumentation amplifiers combine high input impedance and high CMRR, and keep gain accurate for the difference.",
+        "lesson_ids": [
+          "circuits-2"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "circuits-3:nyquist-rate",
+      "type": "numeric",
+      "prompt": "A signal contains components up to 150 Hz. What is the minimum sampling rate required by the Nyquist condition to avoid aliasing of that band? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "circuits-3-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 300.0,
+        "unit": "Hz",
+        "tolerance": 0.5,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "The sampling rate must exceed twice the highest frequency.",
+        "solution": "The minimum is 2 × 150 = 300 Hz, strictly greater in practice. Nyquist is necessary but not sufficient for real signals: noise above the band folds into it unless an anti-alias filter is used, and a filter's roll-off, the converter and timing jitter also matter.",
+        "lesson_ids": [
+          "circuits-3"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "circuits-4:uncertainty-propagation",
+      "type": "numeric",
+      "prompt": "A voltage is calculated as V = I·R with I = 2.00 ± 0.02 A and R = 10.0 ± 0.1 Ω (independent standard uncertainties). Calculate the standard uncertainty of V. Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "circuits-4-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0.283,
+        "unit": "V",
+        "tolerance": 0.01,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "For a product, relative uncertainties add in quadrature.",
+        "solution": "V = 20.0 V. The relative uncertainties are 0.01 and 0.01, so the combined relative uncertainty is √(0.01² + 0.01²) = 0.0141 and the uncertainty is 20.0 × 0.0141 = 0.28 V.",
+        "lesson_ids": [
+          "circuits-4"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
     }
   ]
 }

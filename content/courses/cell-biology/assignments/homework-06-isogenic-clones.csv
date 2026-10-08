@@ -1,0 +1,13 @@
+condition,clone,assay_score
+parental_variant,P1,41
+parental_variant,P2,44
+parental_variant,P3,39
+parental_variant,P4,40
+corrected,C1,78
+corrected,C2,80
+corrected,C3,77
+corrected,C4,79
+reintroduced,R1,43
+reintroduced,R2,40
+reintroduced,R3,42
+reintroduced,R4,43

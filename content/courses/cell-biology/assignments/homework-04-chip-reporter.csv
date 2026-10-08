@@ -1,0 +1,9 @@
+condition,culture,chip_specific_pct_input,chip_igg_pct_input,reporter_wt_rel,reporter_mut_rel
+control,C1,6.0,0.4,3.1,1.2
+control,C2,6.4,0.5,3.3,1.1
+control,C3,5.8,0.4,2.9,1.3
+control,C4,6.2,0.5,3.1,1.2
+knockdown,K1,2.1,0.4,1.4,1.1
+knockdown,K2,2.4,0.5,1.6,1.2
+knockdown,K3,2.0,0.5,1.5,1.2
+knockdown,K4,2.3,0.4,1.5,1.1

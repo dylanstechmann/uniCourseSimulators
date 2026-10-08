@@ -132,7 +132,8 @@
           ],
           "worked_example": "A hydrophilic surface may resist some nonspecific adsorption, yet specific ligands can be introduced to promote controlled adhesion; protein amount alone does not report conformation or activity.",
           "question_ids": [
-            "biomaterials-1:check"
+            "biomaterials-1:check",
+            "biomaterials-1:bulk-vs-surface"
           ],
           "card_ids": [
             "biomaterials-0-0",
@@ -159,7 +160,8 @@
           ],
           "worked_example": "If scaffold stiffness falls faster than new matrix stiffness rises, total construct support can drop before regenerated tissue is load-bearing.",
           "question_ids": [
-            "biomaterials-2:check"
+            "biomaterials-2:check",
+            "biomaterials-2:degradation-modulus"
           ],
           "card_ids": [
             "biomaterials-1-0",
@@ -186,7 +188,8 @@
           ],
           "worked_example": "A cartilage construct should be evaluated for matrix composition, mechanical properties, integration, and load-bearing function, not only a single chondrogenic marker.",
           "question_ids": [
-            "biomaterials-3:check"
+            "biomaterials-3:check",
+            "biomaterials-3:design-mapping"
           ],
           "card_ids": [
             "biomaterials-2-0",
@@ -213,7 +216,8 @@
           ],
           "worked_example": "A degradable implant can be biocompatible only when degradation rate, products, local tissue response, and intended function are evaluated together.",
           "question_ids": [
-            "biomaterials-4:check"
+            "biomaterials-4:check",
+            "biomaterials-4:failure-mode"
           ],
           "card_ids": [
             "biomaterials-3-0",
@@ -230,12 +234,14 @@
       "mode": "practice",
       "path": "question-banks/practice.json",
       "objective_ids": [
-        "biomaterials-1-objective-1"
+        "biomaterials-1-objective-1",
+        "biomaterials-1-objective-2"
       ],
       "question_ids": [
-        "biomaterials-1:check"
+        "biomaterials-1:check",
+        "biomaterials-1:bulk-vs-surface"
       ],
-      "points": 1
+      "points": 2
     },
     {
       "id": "biomaterials-2-practice",
@@ -243,12 +249,14 @@
       "mode": "practice",
       "path": "question-banks/practice.json",
       "objective_ids": [
-        "biomaterials-2-objective-1"
+        "biomaterials-2-objective-1",
+        "biomaterials-2-objective-2"
       ],
       "question_ids": [
-        "biomaterials-2:check"
+        "biomaterials-2:check",
+        "biomaterials-2:degradation-modulus"
       ],
-      "points": 1
+      "points": 2
     },
     {
       "id": "biomaterials-3-practice",
@@ -256,12 +264,14 @@
       "mode": "practice",
       "path": "question-banks/practice.json",
       "objective_ids": [
-        "biomaterials-3-objective-1"
+        "biomaterials-3-objective-1",
+        "biomaterials-3-objective-2"
       ],
       "question_ids": [
-        "biomaterials-3:check"
+        "biomaterials-3:check",
+        "biomaterials-3:design-mapping"
       ],
-      "points": 1
+      "points": 2
     },
     {
       "id": "biomaterials-4-practice",
@@ -269,12 +279,14 @@
       "mode": "practice",
       "path": "question-banks/practice.json",
       "objective_ids": [
-        "biomaterials-4-objective-1"
+        "biomaterials-4-objective-1",
+        "biomaterials-4-objective-2"
       ],
       "question_ids": [
-        "biomaterials-4:check"
+        "biomaterials-4:check",
+        "biomaterials-4:failure-mode"
       ],
-      "points": 1
+      "points": 2
     },
     {
       "id": "biomaterials-case",

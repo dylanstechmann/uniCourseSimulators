@@ -132,7 +132,8 @@
           ],
           "worked_example": "Translate by (2,0) in world coordinates then rotate the frame by 90°; the outcome differs from rotating first then translating, unless the transform is expressed consistently.",
           "question_ids": [
-            "robotics-1:check"
+            "robotics-1:check",
+            "robotics-1:end-effector-position"
           ],
           "card_ids": [
             "robotics-0-0",
@@ -160,7 +161,8 @@
           ],
           "worked_example": "For equal links L and a straight arm, the reach is 2L; nearby desired points may correspond to elbow-up and elbow-down configurations.",
           "question_ids": [
-            "robotics-2:check"
+            "robotics-2:check",
+            "robotics-2:singularity"
           ],
           "card_ids": [
             "robotics-1-0",
@@ -188,7 +190,8 @@
           ],
           "worked_example": "A joint delivering 0.4 N·m at 5 rad/s outputs 2 W mechanical power before transmission losses.",
           "question_ids": [
-            "robotics-3:check"
+            "robotics-3:check",
+            "robotics-3:gear-ratio-torque"
           ],
           "card_ids": [
             "robotics-2-0",
@@ -216,7 +219,8 @@
           ],
           "worked_example": "A pipetting robot can have precise joint encoders but still miss a well if the plate frame is mislocalized; a fiducial or vision check closes that uncertainty.",
           "question_ids": [
-            "robotics-4:check"
+            "robotics-4:check",
+            "robotics-4:combined-sensor-uncertainty"
           ],
           "card_ids": [
             "robotics-3-0",
@@ -233,12 +237,14 @@
       "mode": "practice",
       "path": "question-banks/practice.json",
       "objective_ids": [
-        "robotics-1-objective-1"
+        "robotics-1-objective-1",
+        "robotics-1-objective-2"
       ],
       "question_ids": [
-        "robotics-1:check"
+        "robotics-1:check",
+        "robotics-1:end-effector-position"
       ],
-      "points": 1
+      "points": 2
     },
     {
       "id": "robotics-2-practice",
@@ -246,12 +252,14 @@
       "mode": "practice",
       "path": "question-banks/practice.json",
       "objective_ids": [
-        "robotics-2-objective-1"
+        "robotics-2-objective-1",
+        "robotics-2-objective-2"
       ],
       "question_ids": [
-        "robotics-2:check"
+        "robotics-2:check",
+        "robotics-2:singularity"
       ],
-      "points": 1
+      "points": 2
     },
     {
       "id": "robotics-3-practice",
@@ -259,12 +267,14 @@
       "mode": "practice",
       "path": "question-banks/practice.json",
       "objective_ids": [
-        "robotics-3-objective-1"
+        "robotics-3-objective-1",
+        "robotics-3-objective-2"
       ],
       "question_ids": [
-        "robotics-3:check"
+        "robotics-3:check",
+        "robotics-3:gear-ratio-torque"
       ],
-      "points": 1
+      "points": 2
     },
     {
       "id": "robotics-4-practice",
@@ -272,12 +282,14 @@
       "mode": "practice",
       "path": "question-banks/practice.json",
       "objective_ids": [
-        "robotics-4-objective-1"
+        "robotics-4-objective-1",
+        "robotics-4-objective-2"
       ],
       "question_ids": [
-        "robotics-4:check"
+        "robotics-4:check",
+        "robotics-4:combined-sensor-uncertainty"
       ],
-      "points": 1
+      "points": 2
     },
     {
       "id": "robotics-case",

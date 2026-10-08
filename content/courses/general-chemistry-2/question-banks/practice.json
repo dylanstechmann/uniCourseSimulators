@@ -127,6 +127,127 @@
         "legacy_id": "general-chemistry-2-4:check",
         "modifications": []
       }
+    },
+    {
+      "id": "general-chemistry-2-1:henderson-hasselbalch",
+      "type": "numeric",
+      "prompt": "An acetate buffer has pKa 4.76, [A⁻] = 0.20 M and [HA] = 0.10 M. Estimate the pH with the Henderson–Hasselbalch equation. Enter a number.",
+      "points": 1,
+      "objective_ids": [
+        "general-chemistry-2-1-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 5.06,
+        "unit": "",
+        "tolerance": 0.02,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "pH = pKa + log([A⁻]/[HA]).",
+        "solution": "pH = 4.76 + log(2.0) = 5.06. The equation assumes concentrations near their formal values, moderate ionic strength and a buffer ratio roughly between 0.1 and 10.",
+        "lesson_ids": [
+          "general-chemistry-2-1"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "general-chemistry-2-2:arrhenius-ratio",
+      "type": "numeric",
+      "prompt": "A reaction has Ea = 50 kJ/mol. By what factor does the rate constant increase from 298 K to 308 K? Use R = 8.314 J/(mol·K). Enter a number.",
+      "points": 1,
+      "objective_ids": [
+        "general-chemistry-2-2-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 1.93,
+        "unit": "",
+        "tolerance": 0.02,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "k₂/k₁ = exp[(Ea/R)(1/T₁ − 1/T₂)].",
+        "solution": "(Ea/R)(1/298 − 1/308) = 0.655, so the ratio is e^that = 1.93. Arrhenius behavior is an empirical model with a constant Ea over the temperature range.",
+        "lesson_ids": [
+          "general-chemistry-2-2"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "general-chemistry-2-3:cell-potential",
+      "type": "numeric",
+      "prompt": "A galvanic cell has a Cu²⁺/Cu cathode (E° = +0.34 V) and a Zn²⁺/Zn anode (E° = −0.76 V). Calculate E°cell. Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "general-chemistry-2-3-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 1.1,
+        "unit": "V",
+        "tolerance": 0.01,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "E°cell = E°cathode − E°anode.",
+        "solution": "E°cell = 0.34 − (−0.76) = +1.10 V. A positive E° corresponds to a negative ΔG° and spontaneity under standard conditions; other concentrations shift the potential by the Nernst equation.",
+        "lesson_ids": [
+          "general-chemistry-2-3"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "general-chemistry-2-4:ligand-field",
+      "type": "single_choice",
+      "prompt": "Replacing weak-field ligands on an octahedral metal ion with strong-field ligands generally does what?",
+      "options": [
+        "Increases the d-orbital splitting, which can favor a low-spin configuration and shifts color and redox potential.",
+        "Changes only the metal's atomic mass.",
+        "Decreases the splitting to zero.",
+        "Has no effect on geometry or redox behavior."
+      ],
+      "points": 1,
+      "objective_ids": [
+        "general-chemistry-2-4-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0
+      },
+      "feedback": {
+        "hint": "Think of ligand-field strength and its effect on orbital energies.",
+        "solution": "Strong-field ligands raise the d-orbital splitting Δo, which can pair electrons (low spin) for suitable electron counts and changes absorbed light and the ease of oxidation or reduction. Geometry and redox behavior are tuned by ligand identity.",
+        "lesson_ids": [
+          "general-chemistry-2-4"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
     }
   ]
 }

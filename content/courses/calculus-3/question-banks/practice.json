@@ -127,6 +127,127 @@
         "legacy_id": "calculus-3-4:check",
         "modifications": []
       }
+    },
+    {
+      "id": "calculus-3-1:directional-derivative",
+      "type": "numeric",
+      "prompt": "For f(x, y) = x²y at the point (1, 2), calculate the directional derivative in the direction of the vector (3, 4). Enter a number.",
+      "points": 1,
+      "objective_ids": [
+        "calculus-3-1-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 3.2,
+        "unit": "",
+        "tolerance": 0.01,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the gradient and a unit direction vector.",
+        "solution": "∇f = (2xy, x²) = (4, 1) at (1, 2). The unit vector is (3, 4)/5, so the directional derivative is (4·3 + 1·4)/5 = 3.2.",
+        "lesson_ids": [
+          "calculus-3-1"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-3-2:lagrange-multiplier",
+      "type": "numeric",
+      "prompt": "Maximize f(x, y) = xy subject to x + y = 10. Enter the maximum value.",
+      "points": 1,
+      "objective_ids": [
+        "calculus-3-2-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 25.0,
+        "unit": "",
+        "tolerance": 0.01,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Set ∇f = λ∇g with g = x + y.",
+        "solution": "∇f = (y, x) = λ(1, 1) gives x = y, and the constraint gives x = y = 5, so f = 25. The constraint is smooth and the critical point is a maximum along it.",
+        "lesson_ids": [
+          "calculus-3-2"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-3-3:jacobian-polar-area",
+      "type": "numeric",
+      "prompt": "Use polar coordinates to calculate the area of a disk of radius 3. Include the Jacobian. Enter a number.",
+      "points": 1,
+      "objective_ids": [
+        "calculus-3-3-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 28.274,
+        "unit": "",
+        "tolerance": 0.01,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "The area element in polar coordinates is r dr dθ.",
+        "solution": "Area = ∫₀^2π ∫₀³ r dr dθ = 2π × 9/2 = 9π = 28.274. Leaving out the Jacobian r would integrate dr dθ and give 6π = 18.85, which is not an area; the factor r is the local area scale factor.",
+        "lesson_ids": [
+          "calculus-3-3"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-3-4:choose-the-theorem",
+      "type": "single_choice",
+      "prompt": "You need the net outward flux of a smooth vector field through a closed surface that bounds a solid region. Which theorem is the natural choice?",
+      "options": [
+        "Green's theorem in the plane.",
+        "The divergence theorem, which converts the surface flux to a volume integral of the divergence.",
+        "The fundamental theorem of line integrals.",
+        "Stokes' theorem on the surface itself."
+      ],
+      "points": 1,
+      "objective_ids": [
+        "calculus-3-4-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 1
+      },
+      "feedback": {
+        "hint": "Match the theorem to the geometry: closed surface and enclosed volume.",
+        "solution": "Flux through a closed surface equals the volume integral of the divergence (divergence theorem). Green's theorem is for a planar region and its boundary curve, and Stokes' theorem relates circulation around a curve to flux of the curl through a surface bounded by it.",
+        "lesson_ids": [
+          "calculus-3-4"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
     }
   ]
 }

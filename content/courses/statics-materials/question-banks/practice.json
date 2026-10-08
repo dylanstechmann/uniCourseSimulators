@@ -127,6 +127,126 @@
         "legacy_id": "statics-materials-4:check",
         "modifications": []
       }
+    },
+    {
+      "id": "statics-materials-1:reaction-force",
+      "type": "numeric",
+      "prompt": "A simply supported beam 4.0 m long carries a single 200 N downward load 1.0 m from the left support. Calculate the reaction at the right support. Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "statics-materials-1-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 50.0,
+        "unit": "N",
+        "tolerance": 0.1,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Take moments about the left support.",
+        "solution": "Moments about the left support: R_right × 4.0 = 200 × 1.0, so R_right = 50 N and R_left = 150 N by force balance.",
+        "lesson_ids": [
+          "statics-materials-1"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "statics-materials-2:stress-units",
+      "type": "numeric",
+      "prompt": "A rod carries an axial force of 1200 N over a cross-section of 30 mm². Calculate the axial stress. Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "statics-materials-2-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 40.0,
+        "unit": "MPa",
+        "tolerance": 0.1,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Convert mm² to m² or use N/mm², which is MPa.",
+        "solution": "σ = 1200 N ÷ 30 mm² = 40 N/mm² = 40 MPa. Unit consistency matters: N/mm² and MPa are the same. A linear stress-strain model applies only below the elastic limit.",
+        "lesson_ids": [
+          "statics-materials-2"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "statics-materials-3:bending-stress",
+      "type": "numeric",
+      "prompt": "A rectangular beam section (width 0.050 m, depth 0.100 m) carries a bending moment of 500 N·m. Calculate the maximum bending stress σ = M c / I. Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "statics-materials-3-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 6.0,
+        "unit": "MPa",
+        "tolerance": 0.05,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "I = b h³/12 and c = h/2.",
+        "solution": "I = 0.050 × 0.100³ / 12 = 4.167e-06 m⁴, c = 0.050 m, so σ = 500 × 0.050 ÷ 4.167e-06 = 6.00 MPa at the extreme fibers.",
+        "lesson_ids": [
+          "statics-materials-3"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "statics-materials-4:factor-of-safety",
+      "type": "numeric",
+      "prompt": "A member has yield strength 250 MPa and a working stress of 100 MPa. Calculate the factor of safety against yield. Enter a number.",
+      "points": 1,
+      "objective_ids": [
+        "statics-materials-4-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 2.5,
+        "unit": "",
+        "tolerance": 0.01,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Divide the strength by the working stress.",
+        "solution": "FoS = 250/100 = 2.5. A factor of safety reflects uncertainty in loads and strength; it is not a probability of survival.",
+        "lesson_ids": [
+          "statics-materials-4"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
     }
   ]
 }

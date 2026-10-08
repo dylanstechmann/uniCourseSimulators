@@ -131,6 +131,129 @@
         "legacy_id": "biomaterials-4:check",
         "modifications": []
       }
+    },
+    {
+      "id": "biomaterials-1:bulk-vs-surface",
+      "type": "single_choice",
+      "prompt": "Two polymer films have the same bulk composition and modulus. One was plasma-treated to make its surface more hydrophilic. Protein adsorption and cell attachment differ between them. Which interpretation is best?",
+      "options": [
+        "Surface chemistry and energy can change the biological response without changing bulk properties, so both must be characterized.",
+        "The difference must come from a bulk stiffness change.",
+        "Identical bulk composition guarantees identical cell response.",
+        "Surface treatments cannot alter protein adsorption."
+      ],
+      "points": 1,
+      "objective_ids": [
+        "biomaterials-1-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0
+      },
+      "feedback": {
+        "hint": "Separate what the cell touches from what the sample is made of.",
+        "solution": "Cells and proteins contact the surface, so wettability, charge, chemistry and topography can change adsorption and attachment while bulk composition and modulus stay the same. A design brief therefore needs surface and bulk measurements.",
+        "lesson_ids": [
+          "biomaterials-1"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "biomaterials-2:degradation-modulus",
+      "type": "numeric",
+      "prompt": "A degradable scaffold's modulus is modeled as E(t) = E0·exp(−k t) with E0 = 2.0 MPa and k = 0.05 day⁻¹. Calculate E at t = 14 days. Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "biomaterials-2-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0.9932,
+        "unit": "MPa",
+        "tolerance": 0.01,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Compute k·t first.",
+        "solution": "k·t = 0.70 and E = 2.0 × e^−0.70 = 0.993 MPa. This is a first-order model of one property; real degradation changes mass, porosity and modulus at different rates.",
+        "lesson_ids": [
+          "biomaterials-2"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "biomaterials-3:design-mapping",
+      "type": "single_choice",
+      "prompt": "A design brief aims to form cartilage-like matrix in vitro. Which plan best maps components to the goal?",
+      "options": [
+        "A scaffold chosen only for how easily it is manufactured.",
+        "A chondrogenic cell source, a hydrated scaffold with stiffness in a relevant range, biochemical cues that support matrix production, and loading conditions chosen for the goal, each with a measurable readout.",
+        "Any scaffold, because cells determine the outcome regardless of mechanics.",
+        "A stiff mineralized scaffold with no biochemical cues."
+      ],
+      "points": 1,
+      "objective_ids": [
+        "biomaterials-3-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 1
+      },
+      "feedback": {
+        "hint": "Match cells, scaffold, cues and mechanics to one stated goal.",
+        "solution": "Tissue-engineering design links four elements to a stated goal: a suitable cell source, a scaffold with appropriate properties, biochemical cues and mechanical conditions, and each needs a readout. This is an in-vitro design exercise and says nothing about clinical performance.",
+        "lesson_ids": [
+          "biomaterials-3"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "biomaterials-4:failure-mode",
+      "type": "single_choice",
+      "prompt": "In a case study, a synthetic implant material attracts a thick fibrous capsule that isolates it from surrounding tissue and degrades its intended function. Which failure-mode category does this illustrate?",
+      "options": [
+        "A sterilization step that was skipped.",
+        "A manufacturing tolerance error only.",
+        "A host (foreign-body) response, which is different from mechanical fatigue or toxic degradation products.",
+        "Mechanical fatigue of the bulk material."
+      ],
+      "points": 1,
+      "objective_ids": [
+        "biomaterials-4-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 2
+      },
+      "feedback": {
+        "hint": "Classify by cause: host response, mechanics, chemistry or process.",
+        "solution": "Encapsulation is a host response to the material. Case studies separate failure modes by cause (host response, mechanical failure, degradation chemistry, process error), because each calls for a different investigation.",
+        "lesson_ids": [
+          "biomaterials-4"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
     }
   ]
 }

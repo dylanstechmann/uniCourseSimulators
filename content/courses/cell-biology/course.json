@@ -7,7 +7,7 @@
   "domain": "Life sciences",
   "level": "Year 1",
   "maturity": "partial",
-  "version": "0.18.0",
+  "version": "0.19.0",
   "license": "MIT OR CC-BY-4.0",
   "content_origin": {
     "kind": "legacy-prototype",
@@ -643,7 +643,7 @@
   ],
   "duration": {
     "instructional_weeks": 14,
-    "equivalent_structure": "Proposed 14-week undergraduate scope only. Weeks 1 through 7 contain original lessons; weeks 4 and 7 retain short prototype readings. Week 8 has an ungraded cumulative practice set, not a midterm. Weeks 9 and 10 each now contain two original lessons and a formative practice set; weeks 11 through 14 remain outlines. Planned workload is not measured, so this schedule is not evidence of semester equivalence.",
+    "equivalent_structure": "Proposed 14-week undergraduate scope only. Every week has original lessons except week 8, which has an ungraded cumulative practice set and is not a midterm. Weeks 3, 4, 6, 7, 9, 10, 12 and 13 carry an open formative homework companion, and weeks 5, 11 and 14 carry a synthetic data-analysis lab. Planned workload is not measured, so this schedule is not evidence of semester equivalence.",
     "weeks": [
       {
         "week": 1,
@@ -687,10 +687,12 @@
         "lesson_ids": [
           "cell-biology-3",
           "cell-biology-9",
-          "cell-biology-10"
+          "cell-biology-10",
+          "cell-biology-hw2"
         ],
         "assessment_ids": [
-          "cell-biology-3-practice"
+          "cell-biology-3-practice",
+          "cell-biology-hw2-practice"
         ]
       },
       {
@@ -711,10 +713,12 @@
         "title": "DNA structure, replication, repair, and genome organization",
         "lesson_ids": [
           "cell-biology-13",
-          "cell-biology-14"
+          "cell-biology-14",
+          "cell-biology-hw3"
         ],
         "assessment_ids": [
-          "cell-biology-week6-practice"
+          "cell-biology-week6-practice",
+          "cell-biology-hw3-practice"
         ]
       },
       {
@@ -723,11 +727,13 @@
         "lesson_ids": [
           "cell-biology-4",
           "cell-biology-15",
-          "cell-biology-16"
+          "cell-biology-16",
+          "cell-biology-hw4"
         ],
         "assessment_ids": [
           "cell-biology-4-practice",
-          "cell-biology-week7-practice"
+          "cell-biology-week7-practice",
+          "cell-biology-hw4-practice"
         ]
       },
       {
@@ -743,10 +749,12 @@
         "title": "RNA processing, translation, and protein turnover",
         "lesson_ids": [
           "cell-biology-17",
-          "cell-biology-18"
+          "cell-biology-18",
+          "cell-biology-hw5"
         ],
         "assessment_ids": [
-          "cell-biology-week9-practice"
+          "cell-biology-week9-practice",
+          "cell-biology-hw5-practice"
         ]
       },
       {
@@ -754,10 +762,12 @@
         "title": "Variation, inheritance, and genotype-to-phenotype reasoning",
         "lesson_ids": [
           "cell-biology-19",
-          "cell-biology-20"
+          "cell-biology-20",
+          "cell-biology-hw6"
         ],
         "assessment_ids": [
-          "cell-biology-week10-practice"
+          "cell-biology-week10-practice",
+          "cell-biology-hw6-practice"
         ]
       },
       {
@@ -778,10 +788,12 @@
         "title": "Cytoskeleton, adhesion, extracellular matrix, and mechanobiology",
         "lesson_ids": [
           "cell-biology-23",
-          "cell-biology-24"
+          "cell-biology-24",
+          "cell-biology-hw7"
         ],
         "assessment_ids": [
-          "cell-biology-week12-practice"
+          "cell-biology-week12-practice",
+          "cell-biology-hw7-practice"
         ]
       },
       {
@@ -789,10 +801,12 @@
         "title": "Cell-cycle control, mitosis, senescence, and cell death",
         "lesson_ids": [
           "cell-biology-25",
-          "cell-biology-26"
+          "cell-biology-26",
+          "cell-biology-hw8"
         ],
         "assessment_ids": [
-          "cell-biology-week13-practice"
+          "cell-biology-week13-practice",
+          "cell-biology-hw8-practice"
         ]
       },
       {
@@ -800,10 +814,12 @@
         "title": "Development, stem-cell potency, regenerative biology, and integration",
         "lesson_ids": [
           "cell-biology-27",
-          "cell-biology-28"
+          "cell-biology-28",
+          "cell-biology-lab-03"
         ],
         "assessment_ids": [
-          "cell-biology-week14-practice"
+          "cell-biology-week14-practice",
+          "cell-biology-week14-lineage-lab"
         ]
       }
     ]
@@ -944,7 +960,9 @@
           ],
           "worked_example": "If [S] = Km, the model predicts v = Vmax/2. Doubling enzyme concentration doubles Vmax but leaves Km unchanged in the simple model.",
           "question_ids": [
-            "cell-biology-3:check"
+            "cell-biology-3:check",
+            "cell-biology-3:delta-g-from-k",
+            "cell-biology-3:catalyst-and-equilibrium"
           ],
           "card_ids": [
             "cell-biology-2-0",
@@ -1115,6 +1133,22 @@
             "cell-biology-9-0",
             "cell-biology-9-1"
           ]
+        },
+        {
+          "id": "cell-biology-hw2",
+          "title": "Homework 2 practice: initial rates and reversible inhibition (open, ungraded)",
+          "reading": "assignments/homework-02-inhibition-analysis.md",
+          "objectives": [
+            "cell-biology-10-objective-1",
+            "cell-biology-10-objective-2"
+          ],
+          "question_ids": [],
+          "worked_example": "At 40 µM substrate the vehicle mean is 80 nM·s⁻¹ and both inhibitors average 48 nM·s⁻¹. With α = 1 + 40/20 = 3 the competitive apparent Km is 60 µM, but an uncompetitive pattern can give the same 48 nM·s⁻¹ at that one concentration, so a wide substrate series is needed.",
+          "card_ids": [
+            "cell-biology-hw2-0",
+            "cell-biology-hw2-1",
+            "cell-biology-hw2-2"
+          ]
         }
       ]
     },
@@ -1234,6 +1268,22 @@
             "cell-biology-13-0",
             "cell-biology-13-1"
           ]
+        },
+        {
+          "id": "cell-biology-hw3",
+          "title": "Homework 3 practice: replication, repair and lesion-removal evidence (open, ungraded)",
+          "reading": "assignments/homework-03-repair-and-replication.md",
+          "objectives": [
+            "cell-biology-14-objective-1",
+            "cell-biology-14-objective-2"
+          ],
+          "question_ids": [],
+          "worked_example": "The wild-type lesion signal remaining at 4 h averages (38 + 42 + 40 + 40) / 4 = 40%, and the repair-deficient line averages 85%. The difference is 45 percentage points. S-phase fractions are about 30% in all three lines, so unequal replication-dilution of the signal is a less likely explanation.",
+          "card_ids": [
+            "cell-biology-hw3-0",
+            "cell-biology-hw3-1",
+            "cell-biology-hw3-2"
+          ]
         }
       ]
     },
@@ -1296,6 +1346,22 @@
           "card_ids": [
             "cell-biology-15-0",
             "cell-biology-15-1"
+          ]
+        },
+        {
+          "id": "cell-biology-hw4",
+          "title": "Homework 4 practice: ChIP-qPCR percent input and matched reporters (open, ungraded)",
+          "reading": "assignments/homework-04-reporter-and-chip.md",
+          "objectives": [
+            "cell-biology-16-objective-1",
+            "cell-biology-16-objective-2"
+          ],
+          "question_ids": [],
+          "worked_example": "The control specific-antibody mean is (6.0 + 6.4 + 5.8 + 6.2) / 4 = 6.1% input and the matched IgG mean is 0.45% input, so enrichment over IgG is 6.1 / 0.45 = 13.56-fold. The knockdown mean falls to 2.2% input. The wild-type reporter falls from 3.1 to 1.5 after knockdown while the motif-mutant reporter stays near 1.2 and 1.15.",
+          "card_ids": [
+            "cell-biology-hw4-0",
+            "cell-biology-hw4-1",
+            "cell-biology-hw4-2"
           ]
         }
       ]
@@ -1361,6 +1427,22 @@
             "cell-biology-18-0",
             "cell-biology-18-1"
           ]
+        },
+        {
+          "id": "cell-biology-hw5",
+          "title": "Homework 5 practice: mRNA, protein synthesis and turnover (open, ungraded)",
+          "reading": "assignments/homework-05-rna-and-protein-layers.md",
+          "objectives": [
+            "cell-biology-18-objective-1",
+            "cell-biology-18-objective-2"
+          ],
+          "question_ids": [],
+          "worked_example": "Both lines have a mean mRNA level of 100. The variant protein level averages (52 + 48 + 50 + 50) / 4 = 50 against 100, and its nascent-protein labeling averages 50 against 100. The fraction remaining after a 4 h synthesis block is 50% in both lines, so with first-order decay the half-life is 4 h in both; the lower protein is more consistent with reduced synthesis than with faster turnover.",
+          "card_ids": [
+            "cell-biology-hw5-0",
+            "cell-biology-hw5-1",
+            "cell-biology-hw5-2"
+          ]
         }
       ]
     },
@@ -1423,6 +1505,22 @@
           "card_ids": [
             "cell-biology-20-0",
             "cell-biology-20-1"
+          ]
+        },
+        {
+          "id": "cell-biology-hw6",
+          "title": "Homework 6 practice: penetrance and isogenic evidence (open, ungraded)",
+          "reading": "assignments/homework-06-genotype-and-phenotype.md",
+          "objectives": [
+            "cell-biology-20-objective-1",
+            "cell-biology-20-objective-2"
+          ],
+          "question_ids": [],
+          "worked_example": "Penetrance among carriers is 18 / 30 = 60%, against 7 / 70 = 10% among non-carriers, so affected status is six times as frequent in carriers in this constructed table; it is an association in one dataset. In the isogenic comparison the variant line averages (41 + 44 + 39 + 40) / 4 = 41, the corrected clones 78.5 and the re-introduced variant 42.",
+          "card_ids": [
+            "cell-biology-hw6-0",
+            "cell-biology-hw6-1",
+            "cell-biology-hw6-2"
           ]
         }
       ]
@@ -1556,6 +1654,22 @@
             "cell-biology-24-0",
             "cell-biology-24-1"
           ]
+        },
+        {
+          "id": "cell-biology-hw7",
+          "title": "Homework 7 practice: matrix stiffness, controls and perturbation design (open, ungraded)",
+          "reading": "assignments/homework-07-matrix-perturbation-design.md",
+          "objectives": [
+            "cell-biology-24-objective-1",
+            "cell-biology-24-objective-2"
+          ],
+          "question_ids": [],
+          "worked_example": "Mean spread area is (420 + 450 + 400 + 430) / 4 = 425 µm² on soft, 890 µm² on medium and 1490 µm² on stiff gels. The stiff-to-soft ratio is 1490 / 425 = 3.51. Cell density (about 140 to 150 per mm²) and relative ligand density (about 100) are matched, so those two alternatives are reduced, but gel stiffness is a stand-in for several properties and the readout is one cell shape measure.",
+          "card_ids": [
+            "cell-biology-hw7-0",
+            "cell-biology-hw7-1",
+            "cell-biology-hw7-2"
+          ]
         }
       ]
     },
@@ -1619,6 +1733,22 @@
           "card_ids": [
             "cell-biology-26-0",
             "cell-biology-26-1"
+          ]
+        },
+        {
+          "id": "cell-biology-hw8",
+          "title": "Homework 8 practice: quiescence, senescence and cell-state markers (open, ungraded)",
+          "reading": "assignments/homework-08-cell-state-evidence.md",
+          "objectives": [
+            "cell-biology-26-objective-1",
+            "cell-biology-26-objective-2"
+          ],
+          "question_ids": [],
+          "worked_example": "Both arrested states have a low DNA-synthesis label (5% and 4% against 40% in proliferating cells), so that marker alone does not separate them. The stress-associated enzyme marker is 9% in the serum-withdrawn cultures and 65% in the damage-induced cultures. After stimulation, re-entry averages 34% for the quiescent cultures and 6% for the damage-induced cultures, a 28 percentage-point difference.",
+          "card_ids": [
+            "cell-biology-hw8-0",
+            "cell-biology-hw8-1",
+            "cell-biology-hw8-2"
           ]
         }
       ]
@@ -1749,6 +1879,40 @@
           ]
         }
       ]
+    },
+    {
+      "id": "cell-biology-module-lab-03",
+      "title": "Virtual laboratory: lineage-marker time course and state inference",
+      "source_ids": [
+        "mit-7.06x-cell-biology",
+        "nih-stem-cell-basics",
+        "ncbi-stem-cell-biology-basics"
+      ],
+      "lessons": [
+        {
+          "id": "cell-biology-lab-03",
+          "title": "Virtual lab 3: lineage-marker time course and state inference",
+          "reading": "labs/03-lineage-time-course-and-state-inference.md",
+          "objectives": [
+            "cell-biology-27-objective-1",
+            "cell-biology-27-objective-2",
+            "cell-biology-27-objective-3"
+          ],
+          "worked_example": "At day 8 the factor condition averages (58 + 60 + 57 + 59) / 4 = 58.5% lineage-marker-positive cells against 7.5% in control, a 51 percentage-point difference. Cells per well average 241 thousand with the factor and 451 thousand in control, so the factor condition has fewer cells: a rise in the marker fraction can reflect conversion of cells, selective loss or slower growth of marker-negative cells, or a mix. The marker-positive cells per well are about 141 thousand (0.585 × 241) with the factor against about 34 thousand (0.075 × 451) in control, so the marker-positive count also rises, which a fraction alone cannot show.",
+          "question_ids": [
+            "cell-biology-lab3:summary-table",
+            "cell-biology-lab3:trajectory-plot",
+            "cell-biology-lab3:fraction-contrast",
+            "cell-biology-lab3:state-inference"
+          ],
+          "card_ids": [
+            "cell-biology-lab3-0",
+            "cell-biology-lab3-1",
+            "cell-biology-lab3-2",
+            "cell-biology-lab3-3"
+          ]
+        }
+      ]
     }
   ],
   "assessments": [
@@ -1799,7 +1963,8 @@
         "cell-biology-9-objective-1",
         "cell-biology-9-objective-2",
         "cell-biology-10-objective-1",
-        "cell-biology-10-objective-2"
+        "cell-biology-10-objective-2",
+        "cell-biology-3-objective-2"
       ],
       "question_ids": [
         "cell-biology-3:check",
@@ -1808,9 +1973,11 @@
         "cell-biology-9:rate-at-km",
         "cell-biology-10:rate-prediction",
         "cell-biology-10:kinetic-inference",
-        "cell-biology-10:km-vs-binding"
+        "cell-biology-10:km-vs-binding",
+        "cell-biology-3:delta-g-from-k",
+        "cell-biology-3:catalyst-and-equilibrium"
       ],
-      "points": 9
+      "points": 11
     },
     {
       "id": "cell-biology-4-practice",
@@ -2196,6 +2363,165 @@
         "cell-biology-lab2:rescue-interpretation"
       ],
       "points": 20
+    },
+    {
+      "id": "cell-biology-hw2-practice",
+      "type": "homework",
+      "mode": "practice",
+      "title": "Homework 2: initial rates and reversible inhibition (open, ungraded practice)",
+      "path": "question-banks/practice.json",
+      "week": 4,
+      "objective_ids": [
+        "cell-biology-10-objective-1",
+        "cell-biology-10-objective-2"
+      ],
+      "question_ids": [
+        "cell-biology-hw2:rate-summary",
+        "cell-biology-hw2:vehicle-rate-plot",
+        "cell-biology-hw2:apparent-km-and-single-point",
+        "cell-biology-hw2:controls-for-inhibition",
+        "cell-biology-hw2:kinetic-interpretation"
+      ],
+      "points": 21
+    },
+    {
+      "id": "cell-biology-hw3-practice",
+      "type": "homework",
+      "mode": "practice",
+      "title": "Homework 3: replication, repair and lesion-removal evidence (open, ungraded practice)",
+      "path": "question-banks/practice.json",
+      "week": 6,
+      "objective_ids": [
+        "cell-biology-14-objective-1",
+        "cell-biology-14-objective-2"
+      ],
+      "question_ids": [
+        "cell-biology-hw3:lesion-summary",
+        "cell-biology-hw3:contrast-and-inference",
+        "cell-biology-hw3:controls-and-outcomes",
+        "cell-biology-hw3:replication-model"
+      ],
+      "points": 18
+    },
+    {
+      "id": "cell-biology-hw4-practice",
+      "type": "homework",
+      "mode": "practice",
+      "title": "Homework 4: ChIP-qPCR percent input and matched reporters (open, ungraded practice)",
+      "path": "question-banks/practice.json",
+      "week": 7,
+      "objective_ids": [
+        "cell-biology-16-objective-1",
+        "cell-biology-16-objective-2"
+      ],
+      "question_ids": [
+        "cell-biology-hw4:chip-reporter-summary",
+        "cell-biology-hw4:specific-input-plot",
+        "cell-biology-hw4:fold-over-igg",
+        "cell-biology-hw4:control-roles",
+        "cell-biology-hw4:occupancy-and-regulation"
+      ],
+      "points": 23
+    },
+    {
+      "id": "cell-biology-hw5-practice",
+      "type": "homework",
+      "mode": "practice",
+      "title": "Homework 5: mRNA, protein synthesis and turnover (open, ungraded practice)",
+      "path": "question-banks/practice.json",
+      "week": 9,
+      "objective_ids": [
+        "cell-biology-18-objective-1",
+        "cell-biology-18-objective-2"
+      ],
+      "question_ids": [
+        "cell-biology-hw5:layer-summary",
+        "cell-biology-hw5:protein-plot",
+        "cell-biology-hw5:half-life-and-layer",
+        "cell-biology-hw5:layer-logic",
+        "cell-biology-hw5:expression-layers"
+      ],
+      "points": 23
+    },
+    {
+      "id": "cell-biology-hw6-practice",
+      "type": "homework",
+      "mode": "practice",
+      "title": "Homework 6: penetrance and isogenic evidence (open, ungraded practice)",
+      "path": "question-banks/practice.json",
+      "week": 10,
+      "objective_ids": [
+        "cell-biology-20-objective-1",
+        "cell-biology-20-objective-2"
+      ],
+      "question_ids": [
+        "cell-biology-hw6:clone-summary",
+        "cell-biology-hw6:assay-plot",
+        "cell-biology-hw6:penetrance",
+        "cell-biology-hw6:evidence-roles",
+        "cell-biology-hw6:genotype-phenotype-errors"
+      ],
+      "points": 21
+    },
+    {
+      "id": "cell-biology-hw7-practice",
+      "type": "homework",
+      "mode": "practice",
+      "title": "Homework 7: matrix stiffness, controls and perturbation design (open, ungraded practice)",
+      "path": "question-banks/practice.json",
+      "week": 12,
+      "objective_ids": [
+        "cell-biology-24-objective-1",
+        "cell-biology-24-objective-2"
+      ],
+      "question_ids": [
+        "cell-biology-hw7:coverslip-summary",
+        "cell-biology-hw7:spreading-plot",
+        "cell-biology-hw7:fold-and-scope",
+        "cell-biology-hw7:design-controls",
+        "cell-biology-hw7:mechanotransduction-claims"
+      ],
+      "points": 27
+    },
+    {
+      "id": "cell-biology-hw8-practice",
+      "type": "homework",
+      "mode": "practice",
+      "title": "Homework 8: quiescence, senescence and cell-state markers (open, ungraded practice)",
+      "path": "question-banks/practice.json",
+      "week": 13,
+      "objective_ids": [
+        "cell-biology-26-objective-1",
+        "cell-biology-26-objective-2"
+      ],
+      "question_ids": [
+        "cell-biology-hw8:state-summary",
+        "cell-biology-hw8:reentry-plot",
+        "cell-biology-hw8:reentry-contrast",
+        "cell-biology-hw8:marker-roles",
+        "cell-biology-hw8:state-errors"
+      ],
+      "points": 27
+    },
+    {
+      "id": "cell-biology-week14-lineage-lab",
+      "type": "lab",
+      "mode": "practice",
+      "title": "Virtual lab 3: lineage-marker time course and state inference (ungraded practice)",
+      "path": "question-banks/practice.json",
+      "week": 14,
+      "objective_ids": [
+        "cell-biology-27-objective-1",
+        "cell-biology-27-objective-2",
+        "cell-biology-27-objective-3"
+      ],
+      "question_ids": [
+        "cell-biology-lab3:summary-table",
+        "cell-biology-lab3:trajectory-plot",
+        "cell-biology-lab3:fraction-contrast",
+        "cell-biology-lab3:state-inference"
+      ],
+      "points": 21
     }
   ],
   "grading_policy": {
@@ -2335,19 +2661,25 @@
       "version": "0.18.0",
       "date": "2026-10-06",
       "summary": "Added a second original virtual data-analysis lab for Week 11, with 120 explicitly synthetic replicate-level signaling observations, summary-table and graph-coordinate practice, bounded inhibitor/rescue reasoning, four retrieval cards, and link-only provenance. The lab is public and ungraded; the course remains partial and still lacks a full graded lab sequence, eight graded homework sets, summative exams, and capstone."
+    },
+    {
+      "version": "0.19.0",
+      "date": "2026-10-08",
+      "summary": "Added seven open formative homework companions (Homework 2 to 8, each with a packet, a synthetic dataset, a CSV summary check, a graph or interpretation check where it fits, structured control logic, a multiple-select item and retrieval cards), a third synthetic virtual data-analysis lab for week 14, two practice items for the lesson-3 free-energy objective, and specification-only documents for the midterm, cumulative final and integrative project (no items, keys or rubric scoring). All additions are public, ungraded practice; the course remains partial, unreviewed and formative-only, and none of the eight homework sets is a graded set."
     }
   ],
   "limitations": [
-    "Weeks 1-7 each have two original topic lessons; weeks 4 and 7 retain compact prototype readings. Week 3 also has an open formative homework companion with a synthetic M6P-sorting dataset; it does not count as a graded homework set. Weeks 9-14 add twelve original lessons. Weeks 5 and 11 each include one synthetic data-analysis lab with deterministic formative components; the complete planned lab sequence, eight graded homework sets, summative exams, workload evidence, and instructor review remain unfinished.",
-    "Week 8 is an ungraded cumulative practice set, not an exam or midterm. Weeks 9-14 have original lesson pairs and formative practice sets; week 8 remains practice-only with no lesson pair. Two formative lab activities do not meet the planned three-lab scope; one additional data/virtual-lab activity, exams, cumulative project, workload evidence, and independent review are still missing.",
+    "Weeks 1-7 each have two original topic lessons; weeks 4 and 7 retain compact prototype readings. Weeks 3, 4, 6, 7, 9, 10, 12 and 13 each have an open formative homework companion (Homework 1 to 8) with a synthetic dataset; none is a graded homework set. Weeks 9-14 add twelve original lessons. Weeks 5, 11 and 14 each include one synthetic data-analysis lab with deterministic formative components; workload evidence, summative exams, a protected assessment store with real keys, and instructor review remain unfinished.",
+    "Week 8 is an ungraded cumulative practice set, not an exam or midterm. The midterm, cumulative final and integrative project exist only as specifications under assessment-specs; they contain no items, keys or scoring and have not been reviewed. Week 8 remains practice-only with no lesson pair. Workload evidence and independent review are still missing.",
     "Current formative checks across the developed lessons do not demonstrate comprehensive outcome coverage or mastery; some lesson objectives remain unassessed.",
     "Bloom labels and structured prerequisite edges are initial authoring classifications awaiting subject-matter review.",
     "Question answers and solution feedback are intentionally public practice authoring specifications, not restricted exam keys.",
     "Week-4 numeric examples require units and include dimensional checks, but legacy numerical specifications elsewhere still need unit, tolerance, and significant-figure review.",
     "Total workload and weekly study hours are unknown; former nominal credit values and hardcoded reading times do not establish workload.",
     "CSV upload checks fixed numeric summary cells only; the virtual lab does not grade arbitrary data analysis, uncertainty estimation, free-response reasoning, or causal inference.",
-    "Homework 1 is openly licensed formative practice with publicly inspectable solution specifications; it is not suitable as a protected exam, does not contribute to a course grade, and does not count as one of the eight required graded homework sets.",
-    "Virtual lab 2 uses synthetic phospho-ERK-to-total-ERK relative values and constrained deterministic checks. Its graph task scores points on fixed axes and does not assess axis selection, statistical uncertainty, or biological interpretation; neither the inhibitor nor bypass result alone establishes pathway specificity, normal physiology, or cell fate."
+    "Homework 1 to 8 are openly licensed formative practice with publicly inspectable solution specifications; they are not suitable as protected exams, do not contribute to a course grade, and are not graded homework sets. The datasets are synthetic and every software check scores deterministic numeric, coordinate or choice cells only.",
+    "Virtual lab 2 uses synthetic phospho-ERK-to-total-ERK relative values and constrained deterministic checks. Its graph task scores points on fixed axes and does not assess axis selection, statistical uncertainty, or biological interpretation; neither the inhibitor nor bypass result alone establishes pathway specificity, normal physiology, or cell fate.",
+    "Virtual lab 3 uses synthetic marker percentages and cell numbers. Its checks score summary cells, graph coordinates and structured choices only; it does not assess lineage tracing, potency, function or any clinical claim, and marker patterns do not establish them."
   ],
   "intentionally_omitted": [
     "Lessons and assessments for most proposed weeks, summative course assessments, and the complete semester workflow are intentionally not represented as finished content."

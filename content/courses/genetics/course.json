@@ -126,7 +126,8 @@
           ],
           "worked_example": "For two heterozygous parents Aa × Aa, the child genotype probabilities are 1/4 AA, 1/2 Aa, and 1/4 aa. A recessive phenotype with full penetrance has probability 1/4 only if both parents are carriers.",
           "question_ids": [
-            "genetics-1:check"
+            "genetics-1:check",
+            "genetics-1:genotype-vs-phenotype-frequency"
           ],
           "card_ids": [
             "genetics-0-0",
@@ -153,7 +154,8 @@
           ],
           "worked_example": "If 180 of 1,000 offspring are recombinant in a testcross, r = 0.18 and the loci are approximately 18 cM apart for a short interval.",
           "question_ids": [
-            "genetics-2:check"
+            "genetics-2:check",
+            "genetics-2:map-distance"
           ],
           "card_ids": [
             "genetics-1-0",
@@ -180,7 +182,8 @@
           ],
           "worked_example": "If editing a promoter lowers RNA and protein, a promoter-independent cDNA rescue that restores phenotype supports a causal link between reduced gene product and phenotype, while not excluding every downstream effect.",
           "question_ids": [
-            "genetics-3:check"
+            "genetics-3:check",
+            "genetics-3:distinguish-correlation-from-mechanism"
           ],
           "card_ids": [
             "genetics-2-0",
@@ -207,7 +210,8 @@
           ],
           "worked_example": "A replicated association with a noncoding SNP narrows a region, not necessarily a gene. Fine-mapping and cell-type-specific perturbation can distinguish plausible regulatory mechanisms.",
           "question_ids": [
-            "genetics-4:check"
+            "genetics-4:check",
+            "genetics-4:association-vs-causation"
           ],
           "card_ids": [
             "genetics-3-0",
@@ -224,12 +228,14 @@
       "mode": "practice",
       "path": "question-banks/practice.json",
       "objective_ids": [
-        "genetics-1-objective-1"
+        "genetics-1-objective-1",
+        "genetics-1-objective-2"
       ],
       "question_ids": [
-        "genetics-1:check"
+        "genetics-1:check",
+        "genetics-1:genotype-vs-phenotype-frequency"
       ],
-      "points": 1
+      "points": 2
     },
     {
       "id": "genetics-2-practice",
@@ -237,12 +243,14 @@
       "mode": "practice",
       "path": "question-banks/practice.json",
       "objective_ids": [
-        "genetics-2-objective-1"
+        "genetics-2-objective-1",
+        "genetics-2-objective-2"
       ],
       "question_ids": [
-        "genetics-2:check"
+        "genetics-2:check",
+        "genetics-2:map-distance"
       ],
-      "points": 1
+      "points": 2
     },
     {
       "id": "genetics-3-practice",
@@ -250,12 +258,14 @@
       "mode": "practice",
       "path": "question-banks/practice.json",
       "objective_ids": [
-        "genetics-3-objective-1"
+        "genetics-3-objective-1",
+        "genetics-3-objective-2"
       ],
       "question_ids": [
-        "genetics-3:check"
+        "genetics-3:check",
+        "genetics-3:distinguish-correlation-from-mechanism"
       ],
-      "points": 1
+      "points": 2
     },
     {
       "id": "genetics-4-practice",
@@ -263,12 +273,14 @@
       "mode": "practice",
       "path": "question-banks/practice.json",
       "objective_ids": [
-        "genetics-4-objective-1"
+        "genetics-4-objective-1",
+        "genetics-4-objective-2"
       ],
       "question_ids": [
-        "genetics-4:check"
+        "genetics-4:check",
+        "genetics-4:association-vs-causation"
       ],
-      "points": 1
+      "points": 2
     },
     {
       "id": "genetics-case",

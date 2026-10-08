@@ -248,7 +248,8 @@
           ],
           "worked_example": "A change in an epigenetic clock after intervention does not by itself show that tissue function or healthspan improved; both should be measured independently.",
           "question_ids": [
-            "geroscience-1:check"
+            "geroscience-1:check",
+            "geroscience-1:damage-maintenance-adaptation"
           ],
           "card_ids": [
             "geroscience-0-0",
@@ -309,7 +310,8 @@
           ],
           "worked_example": "A senescence-associated β-galactosidase-positive cell is not conclusive alone; a panel plus evidence of persistent arrest and appropriate controls is stronger.",
           "question_ids": [
-            "geroscience-2:check"
+            "geroscience-2:check",
+            "geroscience-2:operational-senescence"
           ],
           "card_ids": [
             "geroscience-1-0",
@@ -375,7 +377,8 @@
           ],
           "worked_example": "An expanded progenitor population after injury may reflect compensatory proliferation; it does not establish durable self-renewal or restoration of organ function.",
           "question_ids": [
-            "geroscience-3:check"
+            "geroscience-3:check",
+            "geroscience-3:niche-and-stem-cell-function"
           ],
           "card_ids": [
             "geroscience-2-0",
@@ -441,7 +444,8 @@
           ],
           "worked_example": "If a senolytic improves function only in animals that tolerate a high dose, reporting survivors alone can exaggerate benefit; intent-to-treat and toxicity analyses are essential.",
           "question_ids": [
-            "geroscience-4:check"
+            "geroscience-4:check",
+            "geroscience-4:intervention-mechanism-vs-endpoints"
           ],
           "card_ids": [
             "geroscience-3-0",
@@ -495,12 +499,14 @@
       "mode": "practice",
       "path": "question-banks/practice.json",
       "objective_ids": [
-        "geroscience-1-objective-2"
+        "geroscience-1-objective-2",
+        "geroscience-1-objective-1"
       ],
       "question_ids": [
-        "geroscience-1:check"
+        "geroscience-1:check",
+        "geroscience-1:damage-maintenance-adaptation"
       ],
-      "points": 1
+      "points": 2
     },
     {
       "id": "geroscience-2-practice",
@@ -508,12 +514,14 @@
       "mode": "practice",
       "path": "question-banks/practice.json",
       "objective_ids": [
-        "geroscience-2-objective-2"
+        "geroscience-2-objective-2",
+        "geroscience-2-objective-1"
       ],
       "question_ids": [
-        "geroscience-2:check"
+        "geroscience-2:check",
+        "geroscience-2:operational-senescence"
       ],
-      "points": 1
+      "points": 2
     },
     {
       "id": "geroscience-3-practice",
@@ -521,12 +529,14 @@
       "mode": "practice",
       "path": "question-banks/practice.json",
       "objective_ids": [
-        "geroscience-3-objective-2"
+        "geroscience-3-objective-2",
+        "geroscience-3-objective-1"
       ],
       "question_ids": [
-        "geroscience-3:check"
+        "geroscience-3:check",
+        "geroscience-3:niche-and-stem-cell-function"
       ],
-      "points": 1
+      "points": 2
     },
     {
       "id": "geroscience-4-practice",
@@ -534,12 +544,14 @@
       "mode": "practice",
       "path": "question-banks/practice.json",
       "objective_ids": [
-        "geroscience-4-objective-2"
+        "geroscience-4-objective-2",
+        "geroscience-4-objective-1"
       ],
       "question_ids": [
-        "geroscience-4:check"
+        "geroscience-4:check",
+        "geroscience-4:intervention-mechanism-vs-endpoints"
       ],
-      "points": 1
+      "points": 2
     },
     {
       "id": "geroscience-5-practice",

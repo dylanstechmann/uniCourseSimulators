@@ -128,7 +128,8 @@
           ],
           "worked_example": "A 2 μF capacitor at 5 V stores U=½CV²=25 μJ.",
           "question_ids": [
-            "physics-em-1:check"
+            "physics-em-1:check",
+            "physics-em-1:capacitor-energy"
           ],
           "card_ids": [
             "physics-em-0-0",
@@ -155,7 +156,8 @@
           ],
           "worked_example": "For R=100 kΩ and C=10 μF, τ=RC=1 s; after one time constant a charging capacitor reaches about 63% of its final value.",
           "question_ids": [
-            "physics-em-2:check"
+            "physics-em-2:check",
+            "physics-em-2:rc-charging"
           ],
           "card_ids": [
             "physics-em-1-0",
@@ -182,7 +184,8 @@
           ],
           "worked_example": "A coil's flux changes from 0 to 0.02 Wb in 0.01 s. One turn has induced emf magnitude |ΔΦ/Δt|=2 V.",
           "question_ids": [
-            "physics-em-3:check"
+            "physics-em-3:check",
+            "physics-em-3:faraday-emf"
           ],
           "card_ids": [
             "physics-em-2-0",
@@ -209,7 +212,8 @@
           ],
           "worked_example": "A 1 MΩ sensor source connected to a 1 MΩ input forms a divider and loses half its voltage; a 100 MΩ input reduces this loading substantially.",
           "question_ids": [
-            "physics-em-4:check"
+            "physics-em-4:check",
+            "physics-em-4:electrode-polarization"
           ],
           "card_ids": [
             "physics-em-3-0",
@@ -226,12 +230,14 @@
       "mode": "practice",
       "path": "question-banks/practice.json",
       "objective_ids": [
-        "physics-em-1-objective-1"
+        "physics-em-1-objective-1",
+        "physics-em-1-objective-2"
       ],
       "question_ids": [
-        "physics-em-1:check"
+        "physics-em-1:check",
+        "physics-em-1:capacitor-energy"
       ],
-      "points": 1
+      "points": 2
     },
     {
       "id": "physics-em-2-practice",
@@ -239,12 +245,14 @@
       "mode": "practice",
       "path": "question-banks/practice.json",
       "objective_ids": [
-        "physics-em-2-objective-1"
+        "physics-em-2-objective-1",
+        "physics-em-2-objective-2"
       ],
       "question_ids": [
-        "physics-em-2:check"
+        "physics-em-2:check",
+        "physics-em-2:rc-charging"
       ],
-      "points": 1
+      "points": 2
     },
     {
       "id": "physics-em-3-practice",
@@ -252,12 +260,14 @@
       "mode": "practice",
       "path": "question-banks/practice.json",
       "objective_ids": [
-        "physics-em-3-objective-1"
+        "physics-em-3-objective-1",
+        "physics-em-3-objective-2"
       ],
       "question_ids": [
-        "physics-em-3:check"
+        "physics-em-3:check",
+        "physics-em-3:faraday-emf"
       ],
-      "points": 1
+      "points": 2
     },
     {
       "id": "physics-em-4-practice",
@@ -265,12 +275,14 @@
       "mode": "practice",
       "path": "question-banks/practice.json",
       "objective_ids": [
-        "physics-em-4-objective-1"
+        "physics-em-4-objective-1",
+        "physics-em-4-objective-2"
       ],
       "question_ids": [
-        "physics-em-4:check"
+        "physics-em-4:check",
+        "physics-em-4:electrode-polarization"
       ],
-      "points": 1
+      "points": 2
     },
     {
       "id": "physics-em-case",

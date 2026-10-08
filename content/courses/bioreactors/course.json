@@ -129,7 +129,8 @@
           ],
           "worked_example": "If viable cell count rises from 0.5 to 2 million cells/mL over 48 h in log phase, μ=ln(4)/48=0.0289 h⁻¹ and doubling time is 24 h.",
           "question_ids": [
-            "bioreactors-1:check"
+            "bioreactors-1:check",
+            "bioreactors-1:doubling-time"
           ],
           "card_ids": [
             "bioreactors-0-0",
@@ -156,7 +157,8 @@
           ],
           "worked_example": "If kLa=20 h⁻¹, C*=0.20 mM, and C=0.05 mM, OTR=3 mM/h in the simplified bulk model.",
           "question_ids": [
-            "bioreactors-2:check"
+            "bioreactors-2:check",
+            "bioreactors-2:oxygen-supply-vs-demand"
           ],
           "card_ids": [
             "bioreactors-1-0",
@@ -183,7 +185,8 @@
           ],
           "worked_example": "Maintaining constant tip speed while increasing impeller diameter changes rotational speed and may alter mixing and power density; the chosen criterion must match the process limitation.",
           "question_ids": [
-            "bioreactors-3:check"
+            "bioreactors-3:check",
+            "bioreactors-3:similarity-constraints"
           ],
           "card_ids": [
             "bioreactors-2-0",
@@ -210,7 +213,8 @@
           ],
           "worked_example": "A dissolved-oxygen probe that drifts low can trigger excessive agitation; a second calibrated measurement or reference check can distinguish sensor drift from true oxygen limitation.",
           "question_ids": [
-            "bioreactors-4:check"
+            "bioreactors-4:check",
+            "bioreactors-4:drift-vs-assay-variation"
           ],
           "card_ids": [
             "bioreactors-3-0",
@@ -227,12 +231,14 @@
       "mode": "practice",
       "path": "question-banks/practice.json",
       "objective_ids": [
-        "bioreactors-1-objective-1"
+        "bioreactors-1-objective-1",
+        "bioreactors-1-objective-2"
       ],
       "question_ids": [
-        "bioreactors-1:check"
+        "bioreactors-1:check",
+        "bioreactors-1:doubling-time"
       ],
-      "points": 1
+      "points": 2
     },
     {
       "id": "bioreactors-2-practice",
@@ -240,12 +246,14 @@
       "mode": "practice",
       "path": "question-banks/practice.json",
       "objective_ids": [
-        "bioreactors-2-objective-1"
+        "bioreactors-2-objective-1",
+        "bioreactors-2-objective-2"
       ],
       "question_ids": [
-        "bioreactors-2:check"
+        "bioreactors-2:check",
+        "bioreactors-2:oxygen-supply-vs-demand"
       ],
-      "points": 1
+      "points": 2
     },
     {
       "id": "bioreactors-3-practice",
@@ -253,12 +261,14 @@
       "mode": "practice",
       "path": "question-banks/practice.json",
       "objective_ids": [
-        "bioreactors-3-objective-1"
+        "bioreactors-3-objective-1",
+        "bioreactors-3-objective-2"
       ],
       "question_ids": [
-        "bioreactors-3:check"
+        "bioreactors-3:check",
+        "bioreactors-3:similarity-constraints"
       ],
-      "points": 1
+      "points": 2
     },
     {
       "id": "bioreactors-4-practice",
@@ -266,12 +276,14 @@
       "mode": "practice",
       "path": "question-banks/practice.json",
       "objective_ids": [
-        "bioreactors-4-objective-1"
+        "bioreactors-4-objective-1",
+        "bioreactors-4-objective-2"
       ],
       "question_ids": [
-        "bioreactors-4:check"
+        "bioreactors-4:check",
+        "bioreactors-4:drift-vs-assay-variation"
       ],
-      "points": 1
+      "points": 2
     },
     {
       "id": "bioreactors-case",

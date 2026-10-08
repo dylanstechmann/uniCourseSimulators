@@ -126,7 +126,8 @@
           ],
           "worked_example": "At pH = pKa, [A⁻]/[HA] = 1. Adding 1 mmol HCl to a buffer consumes approximately 1 mmol A⁻ and forms 1 mmol HA before recalculating pH.",
           "question_ids": [
-            "general-chemistry-2-1:check"
+            "general-chemistry-2-1:check",
+            "general-chemistry-2-1:henderson-hasselbalch"
           ],
           "card_ids": [
             "general-chemistry-2-0-0",
@@ -153,7 +154,8 @@
           ],
           "worked_example": "A first-order process with k = 0.20 min⁻¹ has half-life 0.693/0.20 = 3.47 min.",
           "question_ids": [
-            "general-chemistry-2-2:check"
+            "general-chemistry-2-2:check",
+            "general-chemistry-2-2:arrhenius-ratio"
           ],
           "card_ids": [
             "general-chemistry-2-1-0",
@@ -180,7 +182,8 @@
           ],
           "worked_example": "If E°cathode = +0.80 V and E°anode = −0.20 V, E°cell = +1.00 V; for n > 0, ΔG° is negative.",
           "question_ids": [
-            "general-chemistry-2-3:check"
+            "general-chemistry-2-3:check",
+            "general-chemistry-2-3:cell-potential"
           ],
           "card_ids": [
             "general-chemistry-2-2-0",
@@ -207,7 +210,8 @@
           ],
           "worked_example": "A heme iron can bind axial ligands and reversibly coordinate O₂; protein residues tune oxygen affinity and protect the metal center.",
           "question_ids": [
-            "general-chemistry-2-4:check"
+            "general-chemistry-2-4:check",
+            "general-chemistry-2-4:ligand-field"
           ],
           "card_ids": [
             "general-chemistry-2-3-0",
@@ -224,12 +228,14 @@
       "mode": "practice",
       "path": "question-banks/practice.json",
       "objective_ids": [
-        "general-chemistry-2-1-objective-1"
+        "general-chemistry-2-1-objective-1",
+        "general-chemistry-2-1-objective-2"
       ],
       "question_ids": [
-        "general-chemistry-2-1:check"
+        "general-chemistry-2-1:check",
+        "general-chemistry-2-1:henderson-hasselbalch"
       ],
-      "points": 1
+      "points": 2
     },
     {
       "id": "general-chemistry-2-2-practice",
@@ -237,12 +243,14 @@
       "mode": "practice",
       "path": "question-banks/practice.json",
       "objective_ids": [
-        "general-chemistry-2-2-objective-1"
+        "general-chemistry-2-2-objective-1",
+        "general-chemistry-2-2-objective-2"
       ],
       "question_ids": [
-        "general-chemistry-2-2:check"
+        "general-chemistry-2-2:check",
+        "general-chemistry-2-2:arrhenius-ratio"
       ],
-      "points": 1
+      "points": 2
     },
     {
       "id": "general-chemistry-2-3-practice",
@@ -250,12 +258,14 @@
       "mode": "practice",
       "path": "question-banks/practice.json",
       "objective_ids": [
-        "general-chemistry-2-3-objective-1"
+        "general-chemistry-2-3-objective-1",
+        "general-chemistry-2-3-objective-2"
       ],
       "question_ids": [
-        "general-chemistry-2-3:check"
+        "general-chemistry-2-3:check",
+        "general-chemistry-2-3:cell-potential"
       ],
-      "points": 1
+      "points": 2
     },
     {
       "id": "general-chemistry-2-4-practice",
@@ -263,12 +273,14 @@
       "mode": "practice",
       "path": "question-banks/practice.json",
       "objective_ids": [
-        "general-chemistry-2-4-objective-1"
+        "general-chemistry-2-4-objective-1",
+        "general-chemistry-2-4-objective-2"
       ],
       "question_ids": [
-        "general-chemistry-2-4:check"
+        "general-chemistry-2-4:check",
+        "general-chemistry-2-4:ligand-field"
       ],
-      "points": 1
+      "points": 2
     },
     {
       "id": "general-chemistry-2-case",

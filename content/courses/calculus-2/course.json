@@ -127,7 +127,8 @@
           ],
           "worked_example": "For C(t)=C₀e^(−kt), k>0, the total exposure is ∫₀∞C₀e^(−kt)dt = C₀/k.",
           "question_ids": [
-            "calculus-2-1:check"
+            "calculus-2-1:check",
+            "calculus-2-1:improper-integral"
           ],
           "card_ids": [
             "calculus-2-0-0",
@@ -153,7 +154,8 @@
           ],
           "worked_example": "For |x|<1, 1/(1−x)=Σxⁿ. At x=0.2, truncating after n=2 gives 1.24 versus 1.25; the tail is 0.2³/(1−0.2)=0.008/0.8=0.01.",
           "question_ids": [
-            "calculus-2-2:check"
+            "calculus-2-2:check",
+            "calculus-2-2:taylor-remainder"
           ],
           "card_ids": [
             "calculus-2-1-0",
@@ -179,7 +181,8 @@
           ],
           "worked_example": "If a spring-like actuator applies F(x)=4x N from x=0 to 3 m, W=∫₀³4x dx=18 J.",
           "question_ids": [
-            "calculus-2-3:check"
+            "calculus-2-3:check",
+            "calculus-2-3:variable-force-work"
           ],
           "card_ids": [
             "calculus-2-2-0",
@@ -205,7 +208,8 @@
           ],
           "worked_example": "For eˣ near x=0, the quadratic approximation at x=0.2 is 1+0.2+0.2²/2=1.22; the cubic remainder is under about 0.0017 on that interval.",
           "question_ids": [
-            "calculus-2-4:check"
+            "calculus-2-4:check",
+            "calculus-2-4:alternating-series-error"
           ],
           "card_ids": [
             "calculus-2-3-0",
@@ -222,12 +226,14 @@
       "mode": "practice",
       "path": "question-banks/practice.json",
       "objective_ids": [
-        "calculus-2-1-objective-1"
+        "calculus-2-1-objective-1",
+        "calculus-2-1-objective-2"
       ],
       "question_ids": [
-        "calculus-2-1:check"
+        "calculus-2-1:check",
+        "calculus-2-1:improper-integral"
       ],
-      "points": 1
+      "points": 2
     },
     {
       "id": "calculus-2-2-practice",
@@ -235,12 +241,14 @@
       "mode": "practice",
       "path": "question-banks/practice.json",
       "objective_ids": [
-        "calculus-2-2-objective-1"
+        "calculus-2-2-objective-1",
+        "calculus-2-2-objective-2"
       ],
       "question_ids": [
-        "calculus-2-2:check"
+        "calculus-2-2:check",
+        "calculus-2-2:taylor-remainder"
       ],
-      "points": 1
+      "points": 2
     },
     {
       "id": "calculus-2-3-practice",
@@ -248,12 +256,14 @@
       "mode": "practice",
       "path": "question-banks/practice.json",
       "objective_ids": [
-        "calculus-2-3-objective-1"
+        "calculus-2-3-objective-1",
+        "calculus-2-3-objective-2"
       ],
       "question_ids": [
-        "calculus-2-3:check"
+        "calculus-2-3:check",
+        "calculus-2-3:variable-force-work"
       ],
-      "points": 1
+      "points": 2
     },
     {
       "id": "calculus-2-4-practice",
@@ -261,12 +271,14 @@
       "mode": "practice",
       "path": "question-banks/practice.json",
       "objective_ids": [
-        "calculus-2-4-objective-1"
+        "calculus-2-4-objective-1",
+        "calculus-2-4-objective-2"
       ],
       "question_ids": [
-        "calculus-2-4:check"
+        "calculus-2-4:check",
+        "calculus-2-4:alternating-series-error"
       ],
-      "points": 1
+      "points": 2
     },
     {
       "id": "calculus-2-case",

@@ -777,6 +777,130 @@
         "kind": "original",
         "modifications": []
       }
+    },
+    {
+      "id": "geroscience-1:damage-maintenance-adaptation",
+      "type": "single_choice",
+      "prompt": "A tissue shows more of a damage marker with age. Which observation would most specifically support a decline-in-maintenance model rather than a simple rise in damage input?",
+      "options": [
+        "Directly measured repair or clearance capacity is lower in old tissue even when damage input is held constant.",
+        "Old animals live shorter lives.",
+        "The marker correlates with age across individuals.",
+        "The marker is higher in old tissue."
+      ],
+      "points": 1,
+      "objective_ids": [
+        "geroscience-1-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0
+      },
+      "feedback": {
+        "hint": "Find the measurement that separates input from removal.",
+        "solution": "Damage accumulates when input exceeds removal. A higher marker alone cannot tell which changed, so the discriminating evidence is a direct measure of repair or clearance capacity at fixed input. Adaptation models predict compensatory changes that also need direct tests.",
+        "lesson_ids": [
+          "geroscience-1"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "geroscience-2:operational-senescence",
+      "type": "single_choice",
+      "prompt": "Which operational definition of cellular senescence is best supported?",
+      "options": [
+        "Any cell positive for one marker.",
+        "Stable cell-cycle arrest plus several additional features such as damage signaling and a secretory phenotype, with a functional test of arrest, not a single marker.",
+        "Any cell that is not dividing.",
+        "Any cell from an old donor."
+      ],
+      "points": 1,
+      "objective_ids": [
+        "geroscience-2-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 1
+      },
+      "feedback": {
+        "hint": "Prefer several independent features and a functional test.",
+        "solution": "No single marker is specific. An operational definition combines stable arrest, supporting features and a test that arrest is persistent, and states how each was measured; quiescent and terminally differentiated cells can share single features.",
+        "lesson_ids": [
+          "geroscience-2"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "geroscience-3:niche-and-stem-cell-function",
+      "type": "single_choice",
+      "prompt": "Aged stem cells transplanted into a young niche show restored function in an assay. What is the best interpretation?",
+      "options": [
+        "The stem cells became permanently young.",
+        "The niche contributes to the functional decline in this assay; intrinsic changes are not ruled out and may also contribute.",
+        "Intrinsic cell changes play no role.",
+        "The result applies to every tissue."
+      ],
+      "points": 1,
+      "objective_ids": [
+        "geroscience-3-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 1
+      },
+      "feedback": {
+        "hint": "State what the transplant manipulates and what it leaves unchanged.",
+        "solution": "Changing only the niche and seeing restored function shows the niche influences the readout in that system. It does not show that the cells carry no intrinsic change, that the effect is permanent or that other tissues behave the same.",
+        "lesson_ids": [
+          "geroscience-3"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "geroscience-4:intervention-mechanism-vs-endpoints",
+      "type": "single_choice",
+      "prompt": "A compound extends lifespan in a mouse study and lowers a senescence marker. How well do these endpoints support the proposed mechanism?",
+      "options": [
+        "Lifespan extension shows the mechanism directly.",
+        "They show an outcome and an association with a marker; the mechanism needs a causal test, such as perturbing the proposed target or clearing marked cells and showing the lifespan effect depends on it.",
+        "A marker change establishes the target.",
+        "They prove the compound acts by clearing senescent cells."
+      ],
+      "points": 1,
+      "objective_ids": [
+        "geroscience-4-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 1
+      },
+      "feedback": {
+        "hint": "Distinguish outcome endpoints from mechanism tests.",
+        "solution": "Lifespan and a marker are endpoints; they are compatible with several mechanisms. A causal test of the proposed mechanism changes that mechanism and asks whether the outcome depends on it. Findings in one model organism are not direct evidence for people.",
+        "lesson_ids": [
+          "geroscience-4"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
     }
   ]
 }

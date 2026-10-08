@@ -129,7 +129,8 @@
           ],
           "worked_example": "A carboxylate conjugate base distributes negative charge over two oxygens, making a carboxylic acid more acidic than a typical alcohol whose alkoxide charge is localized.",
           "question_ids": [
-            "organic-chemistry-1:check"
+            "organic-chemistry-1:check",
+            "organic-chemistry-1:resonance-carboxylate"
           ],
           "card_ids": [
             "organic-chemistry-0-0",
@@ -156,7 +157,8 @@
           ],
           "worked_example": "A primary alkyl halide with a strong nucleophile in a polar aprotic solvent favors SN2; a tertiary substrate blocks backside attack and may favor ionization when a stable carbocation can form.",
           "question_ids": [
-            "organic-chemistry-2:check"
+            "organic-chemistry-2:check",
+            "organic-chemistry-2:sn2-stereochemistry-and-rate"
           ],
           "card_ids": [
             "organic-chemistry-1-0",
@@ -183,7 +185,8 @@
           ],
           "worked_example": "In a cyclohexane chair, E2 requires a trans-diaxial beta hydrogen and leaving group; ring flip can expose the reactive conformation.",
           "question_ids": [
-            "organic-chemistry-3:check"
+            "organic-chemistry-3:check",
+            "organic-chemistry-3:zaitsev-regioselectivity"
           ],
           "card_ids": [
             "organic-chemistry-2-0",
@@ -210,7 +213,8 @@
           ],
           "worked_example": "An ester plus hydroxide forms a tetrahedral intermediate; collapse expels an alkoxide, followed by proton transfer to give a carboxylate under basic conditions.",
           "question_ids": [
-            "organic-chemistry-4:check"
+            "organic-chemistry-4:check",
+            "organic-chemistry-4:addition-vs-substitution"
           ],
           "card_ids": [
             "organic-chemistry-3-0",
@@ -227,12 +231,14 @@
       "mode": "practice",
       "path": "question-banks/practice.json",
       "objective_ids": [
-        "organic-chemistry-1-objective-1"
+        "organic-chemistry-1-objective-1",
+        "organic-chemistry-1-objective-2"
       ],
       "question_ids": [
-        "organic-chemistry-1:check"
+        "organic-chemistry-1:check",
+        "organic-chemistry-1:resonance-carboxylate"
       ],
-      "points": 1
+      "points": 2
     },
     {
       "id": "organic-chemistry-2-practice",
@@ -240,12 +246,14 @@
       "mode": "practice",
       "path": "question-banks/practice.json",
       "objective_ids": [
-        "organic-chemistry-2-objective-1"
+        "organic-chemistry-2-objective-1",
+        "organic-chemistry-2-objective-2"
       ],
       "question_ids": [
-        "organic-chemistry-2:check"
+        "organic-chemistry-2:check",
+        "organic-chemistry-2:sn2-stereochemistry-and-rate"
       ],
-      "points": 1
+      "points": 2
     },
     {
       "id": "organic-chemistry-3-practice",
@@ -253,12 +261,14 @@
       "mode": "practice",
       "path": "question-banks/practice.json",
       "objective_ids": [
-        "organic-chemistry-3-objective-1"
+        "organic-chemistry-3-objective-1",
+        "organic-chemistry-3-objective-2"
       ],
       "question_ids": [
-        "organic-chemistry-3:check"
+        "organic-chemistry-3:check",
+        "organic-chemistry-3:zaitsev-regioselectivity"
       ],
-      "points": 1
+      "points": 2
     },
     {
       "id": "organic-chemistry-4-practice",
@@ -266,12 +276,14 @@
       "mode": "practice",
       "path": "question-banks/practice.json",
       "objective_ids": [
-        "organic-chemistry-4-objective-1"
+        "organic-chemistry-4-objective-1",
+        "organic-chemistry-4-objective-2"
       ],
       "question_ids": [
-        "organic-chemistry-4:check"
+        "organic-chemistry-4:check",
+        "organic-chemistry-4:addition-vs-substitution"
       ],
-      "points": 1
+      "points": 2
     },
     {
       "id": "organic-chemistry-case",

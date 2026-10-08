@@ -7429,6 +7429,5707 @@
       "kind": "original",
       "modifications": []
     }
-  }
+  },
+    {
+      "id": "cell-biology-hw2:rate-summary",
+      "type": "file_upload",
+      "prompt": "Homework 2 open formative practice · Use the synthetic initial-rate CSV linked in the homework reading. For each condition, using only the rows at 40 µM substrate, report the number of independent assay days and the mean initial rate in nM/s. Upload exactly these ordered columns with one row per condition: condition,batch_count,mean_rate_nm_per_s. This deterministic public check scores the summary cells only; it does not grade prose.",
+      "points": 6,
+      "objective_ids": [
+        "cell-biology-10-objective-1",
+        "cell-biology-10-objective-2"
+      ],
+      "solution_spec": {
+        "accepted_media_types": [
+          "text/csv"
+        ],
+        "max_bytes": 32768,
+        "validation_spec": {
+          "format": "csv-numeric-table-v1",
+          "delimiter": ",",
+          "key_column": "condition",
+          "columns": [
+            "condition",
+            "batch_count",
+            "mean_rate_nm_per_s"
+          ],
+          "checks": [
+            {
+              "id": "vehicle-batch_count",
+              "row_id": "vehicle",
+              "column": "batch_count",
+              "type": "numeric",
+              "answer": 4.0,
+              "unit": "",
+              "tolerance": 0,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "count",
+                "values": [
+                  79,
+                  81,
+                  80,
+                  80
+                ]
+              }
+            },
+            {
+              "id": "vehicle-mean_rate_nm_per_s",
+              "row_id": "vehicle",
+              "column": "mean_rate_nm_per_s",
+              "type": "numeric",
+              "answer": 80.0,
+              "unit": "nM/s",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  79,
+                  81,
+                  80,
+                  80
+                ]
+              }
+            },
+            {
+              "id": "inhibitor_a-batch_count",
+              "row_id": "inhibitor_a",
+              "column": "batch_count",
+              "type": "numeric",
+              "answer": 4.0,
+              "unit": "",
+              "tolerance": 0,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "count",
+                "values": [
+                  47,
+                  49,
+                  48,
+                  48
+                ]
+              }
+            },
+            {
+              "id": "inhibitor_a-mean_rate_nm_per_s",
+              "row_id": "inhibitor_a",
+              "column": "mean_rate_nm_per_s",
+              "type": "numeric",
+              "answer": 48.0,
+              "unit": "nM/s",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  47,
+                  49,
+                  48,
+                  48
+                ]
+              }
+            },
+            {
+              "id": "inhibitor_b-batch_count",
+              "row_id": "inhibitor_b",
+              "column": "batch_count",
+              "type": "numeric",
+              "answer": 4.0,
+              "unit": "",
+              "tolerance": 0,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "count",
+                "values": [
+                  47,
+                  48,
+                  49,
+                  48
+                ]
+              }
+            },
+            {
+              "id": "inhibitor_b-mean_rate_nm_per_s",
+              "row_id": "inhibitor_b",
+              "column": "mean_rate_nm_per_s",
+              "type": "numeric",
+              "answer": 48.0,
+              "unit": "nM/s",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  47,
+                  48,
+                  49,
+                  48
+                ]
+              }
+            }
+          ]
+        },
+        "rubric": [
+          {
+            "id": "vehicle-batch_count",
+            "criterion": "vehicle: batch_count",
+            "points": 1,
+            "evidence": [
+              "Recomputes batch_count for vehicle from the preparation-level values."
+            ]
+          },
+          {
+            "id": "vehicle-mean_rate_nm_per_s",
+            "criterion": "vehicle: mean_rate_nm_per_s",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_rate_nm_per_s for vehicle from the preparation-level values."
+            ]
+          },
+          {
+            "id": "inhibitor_a-batch_count",
+            "criterion": "inhibitor_a: batch_count",
+            "points": 1,
+            "evidence": [
+              "Recomputes batch_count for inhibitor_a from the preparation-level values."
+            ]
+          },
+          {
+            "id": "inhibitor_a-mean_rate_nm_per_s",
+            "criterion": "inhibitor_a: mean_rate_nm_per_s",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_rate_nm_per_s for inhibitor_a from the preparation-level values."
+            ]
+          },
+          {
+            "id": "inhibitor_b-batch_count",
+            "criterion": "inhibitor_b: batch_count",
+            "points": 1,
+            "evidence": [
+              "Recomputes batch_count for inhibitor_b from the preparation-level values."
+            ]
+          },
+          {
+            "id": "inhibitor_b-mean_rate_nm_per_s",
+            "criterion": "inhibitor_b: mean_rate_nm_per_s",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_rate_nm_per_s for inhibitor_b from the preparation-level values."
+            ]
+          }
+        ]
+      },
+      "feedback": {
+        "hint": "Group the four assay-day values by condition and average them; keep the day count at four.",
+        "solution": "The mean initial rates at 40 µM are 80 nM·s⁻¹ for the vehicle and 48 nM·s⁻¹ for each inhibitor. Each condition has four independent assay days; time points within a day are not extra replicates.",
+        "lesson_ids": [
+          "cell-biology-hw2",
+          "cell-biology-10"
+        ],
+        "misconception_ids": [
+          "replicates-confused-with-independent-experiments",
+          "technical-wells-as-biological-n"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "cell-biology-hw2:vehicle-rate-plot",
+      "type": "graph",
+      "prompt": "Homework 2 open formative practice · Plot the mean vehicle initial rate at the three substrate concentrations on the supplied axes, using the four assay-day values shown for each. The points are descriptive summaries and do not display uncertainty.",
+      "points": 6,
+      "objective_ids": [
+        "cell-biology-10-objective-1",
+        "cell-biology-10-objective-2"
+      ],
+      "graph_spec": {
+        "x_axis": {
+          "label": "Substrate concentration (µM)",
+          "minimum": 0,
+          "maximum": 160
+        },
+        "y_axis": {
+          "label": "Initial rate (nM/s)",
+          "minimum": 0,
+          "maximum": 120
+        },
+        "points": [
+          {
+            "id": "s10",
+            "label": "10 µM"
+          },
+          {
+            "id": "s40",
+            "label": "40 µM"
+          },
+          {
+            "id": "s160",
+            "label": "160 µM"
+          }
+        ],
+        "observations": [
+          {
+            "id": "s10",
+            "x": 10,
+            "values": [
+              39,
+              41,
+              40,
+              40
+            ]
+          },
+          {
+            "id": "s40",
+            "x": 40,
+            "values": [
+              79,
+              81,
+              80,
+              80
+            ]
+          },
+          {
+            "id": "s160",
+            "x": 160,
+            "values": [
+              107,
+              107,
+              106,
+              107
+            ]
+          }
+        ]
+      },
+      "solution_spec": {
+        "points": [
+          {
+            "id": "s10",
+            "x": 10,
+            "y": 40.0,
+            "x_tolerance": 0,
+            "y_tolerance": 0.01
+          },
+          {
+            "id": "s40",
+            "x": 40,
+            "y": 80.0,
+            "x_tolerance": 0,
+            "y_tolerance": 0.01
+          },
+          {
+            "id": "s160",
+            "x": 160,
+            "y": 106.75,
+            "x_tolerance": 0,
+            "y_tolerance": 0.01
+          }
+        ],
+        "rubric": [
+          {
+            "id": "s10_x",
+            "criterion": "10 µM coordinate",
+            "points": 1,
+            "evidence": [
+              "10 µM sits at the supplied x value."
+            ]
+          },
+          {
+            "id": "s10_y",
+            "criterion": "10 µM mean coordinate",
+            "points": 1,
+            "evidence": [
+              "The replicate values average to 40.0."
+            ]
+          },
+          {
+            "id": "s40_x",
+            "criterion": "40 µM coordinate",
+            "points": 1,
+            "evidence": [
+              "40 µM sits at the supplied x value."
+            ]
+          },
+          {
+            "id": "s40_y",
+            "criterion": "40 µM mean coordinate",
+            "points": 1,
+            "evidence": [
+              "The replicate values average to 80.0."
+            ]
+          },
+          {
+            "id": "s160_x",
+            "criterion": "160 µM coordinate",
+            "points": 1,
+            "evidence": [
+              "160 µM sits at the supplied x value."
+            ]
+          },
+          {
+            "id": "s160_y",
+            "criterion": "160 µM mean coordinate",
+            "points": 1,
+            "evidence": [
+              "The replicate values average to 106.75."
+            ]
+          }
+        ]
+      },
+      "feedback": {
+        "hint": "Average each set of four assay days, then place the mean at its substrate concentration.",
+        "solution": "The means are 40 nM/s at 10 µM, 80 nM/s at 40 µM and 106.75 nM/s at 160 µM. The rising, flattening trend is consistent with saturation, but three points do not establish a fitted Km or Vmax.",
+        "lesson_ids": [
+          "cell-biology-hw2",
+          "cell-biology-10"
+        ],
+        "misconception_ids": [
+          "mean-as-causal-proof"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "cell-biology-hw2:apparent-km-and-single-point",
+      "type": "data_interpretation",
+      "prompt": "Homework 2 open formative practice · Under the simple competitive model, the apparent Km equals alpha times Km with alpha = 1 + [I]/Ki. The vehicle Km is 20 µM. Then decide what the equal mean rates of inhibitors A and B at 40 µM imply.",
+      "points": 2,
+      "objective_ids": [
+        "cell-biology-10-objective-1",
+        "cell-biology-10-objective-2"
+      ],
+      "response_fields": [
+        {
+          "id": "value",
+          "type": "numeric",
+          "prompt": "Calculate the apparent Km (µM) for inhibitor A with [I] = 40 µM and Ki = 20 µM. Report exactly 3 significant figures.",
+          "unit": "µM",
+          "points": 1
+        },
+        {
+          "id": "inference",
+          "type": "single_choice",
+          "prompt": "What does equal mean rate at one substrate concentration (40 µM) for inhibitors A and B support?",
+          "options": [
+            "It does not distinguish the two inhibition patterns; rates over a wide substrate range are needed.",
+            "It shows both inhibitors act through the same mechanism.",
+            "It proves both inhibitors bind the same site on the enzyme.",
+            "It shows the inhibitors have identical Ki values."
+          ],
+          "points": 1
+        }
+      ],
+      "solution_spec": {
+        "field_specs": [
+          {
+            "id": "value",
+            "type": "numeric",
+            "answer": 60.0,
+            "unit": "µM",
+            "tolerance": 0.005,
+            "relative_tolerance": 0,
+            "unit_required": true,
+            "significant_figures": 3,
+            "dimensions": null
+          },
+          {
+            "id": "inference",
+            "type": "single_choice",
+            "answer": 0
+          }
+        ]
+      },
+      "feedback": {
+        "hint": "Compute alpha first, then multiply by the vehicle Km. Then compare the models at other substrate levels.",
+        "solution": "alpha = 1 + 40/20 = 3, so the apparent Km is 3 × 20 = 60 µM. A competitive change in Km and an uncompetitive change in Vmax and Km can give the same rate at one substrate concentration (48 nM/s here), so one point cannot classify the pattern.",
+        "lesson_ids": [
+          "cell-biology-hw2",
+          "cell-biology-10"
+        ],
+        "misconception_ids": [
+          "inhibitor-pattern-proves-binding-site",
+          "km-always-equals-binding-affinity"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "cell-biology-hw2:controls-for-inhibition",
+      "type": "structured",
+      "prompt": "Homework 2 open formative practice · Select one response for each alternative explanation of a lower measured rate. The structured choices provide deterministic partial credit; they do not grade a written argument.",
+      "points": 5,
+      "objective_ids": [
+        "cell-biology-10-objective-1",
+        "cell-biology-10-objective-2"
+      ],
+      "response_fields": [
+        {
+          "id": "detector",
+          "type": "single_choice",
+          "prompt": "Compound absorbs or quenches the product signal. Which control tests this?",
+          "options": [
+            "Inhibitor plus a product standard without enzyme, read on the same detector.",
+            "Repeat the enzyme reaction once more at the same single substrate level.",
+            "Increase the enzyme concentration and report the slower rate.",
+            "Omit the vehicle so solvent effects are not combined with the compound."
+          ],
+          "points": 1
+        },
+        {
+          "id": "depletion",
+          "type": "single_choice",
+          "prompt": "A late endpoint may reflect substrate depletion rather than initial rate. What addresses this?",
+          "options": [
+            "Estimate the slope in a prespecified early linear window and check linearity at more than one enzyme concentration.",
+            "Use only the last time point of each reaction.",
+            "Choose the first five minutes for every enzyme and substrate.",
+            "Average all time points regardless of curvature."
+          ],
+          "points": 1
+        },
+        {
+          "id": "solvent",
+          "type": "single_choice",
+          "prompt": "The inhibitor is delivered in a solvent. Which control addresses a solvent effect?",
+          "options": [
+            "A vehicle-matched control with the same solvent concentration and handling.",
+            "A no-substrate blank only.",
+            "A second inhibitor at a different concentration without a vehicle.",
+            "A heat-inactivated enzyme condition, which also reports specificity of catalysis."
+          ],
+          "points": 1
+        },
+        {
+          "id": "calibration",
+          "type": "single_choice",
+          "prompt": "Signal may saturate at high product. Which check addresses this?",
+          "options": [
+            "A product calibration series that shows the readout stays linear over the measured range.",
+            "A single product concentration near the highest signal.",
+            "A no-enzyme blank at one time point.",
+            "Reading all conditions at the highest detector gain."
+          ],
+          "points": 1
+        },
+        {
+          "id": "claim",
+          "type": "single_choice",
+          "prompt": "A competitive-looking curve is observed. What does it support?",
+          "options": [
+            "A simple-model pattern; where the inhibitor binds needs independent evidence such as binding or washout measurements.",
+            "Proof that the inhibitor occupies the substrate-binding pocket.",
+            "Proof that Km equals the binding affinity.",
+            "Proof that no other mechanism, including aggregation, is present."
+          ],
+          "points": 1
+        }
+      ],
+      "solution_spec": {
+        "field_specs": [
+          {
+            "id": "detector",
+            "type": "single_choice",
+            "answer": 0
+          },
+          {
+            "id": "depletion",
+            "type": "single_choice",
+            "answer": 0
+          },
+          {
+            "id": "solvent",
+            "type": "single_choice",
+            "answer": 0
+          },
+          {
+            "id": "calibration",
+            "type": "single_choice",
+            "answer": 0
+          },
+          {
+            "id": "claim",
+            "type": "single_choice",
+            "answer": 0
+          }
+        ],
+        "rubric": [
+          {
+            "id": "detector",
+            "criterion": "Detector interference",
+            "points": 1,
+            "evidence": [
+              "Interference is tested without the enzyme reaction."
+            ]
+          },
+          {
+            "id": "depletion",
+            "criterion": "Substrate depletion",
+            "points": 1,
+            "evidence": [
+              "The window must be set by reaction progress, not by a fixed rule."
+            ]
+          },
+          {
+            "id": "solvent",
+            "criterion": "Solvent effect",
+            "points": 1,
+            "evidence": [
+              "Vehicle matching keeps the solvent identical across conditions."
+            ]
+          },
+          {
+            "id": "calibration",
+            "criterion": "Detector range",
+            "points": 1,
+            "evidence": [
+              "Linearity of the readout is checked directly."
+            ]
+          },
+          {
+            "id": "claim",
+            "criterion": "Mechanism claim",
+            "points": 1,
+            "evidence": [
+              "A kinetic pattern is not a structural observation."
+            ]
+          }
+        ]
+      },
+      "feedback": {
+        "hint": "Name what each control measures before stating which alternative it rules out.",
+        "solution": "An enzyme-free product standard tests optical interference; an early linear window checked at more than one enzyme concentration addresses depletion; a vehicle-matched control addresses the solvent; a calibration series checks linearity; and a competitive-looking pattern supports a model, not a binding site.",
+        "lesson_ids": [
+          "cell-biology-hw2",
+          "cell-biology-10"
+        ],
+        "misconception_ids": [
+          "inhibitor-response-proves-target",
+          "inhibitor-pattern-proves-binding-site"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "cell-biology-hw2:kinetic-interpretation",
+      "type": "multiple_select",
+      "prompt": "Homework 2 open formative practice · Select the two statements about kinetic data that are best supported. The score uses the displayed correct-minus-incorrect partial-credit rule.",
+      "points": 2,
+      "objective_ids": [
+        "cell-biology-10-objective-1",
+        "cell-biology-10-objective-2"
+      ],
+      "options": [
+        "Reciprocal plots magnify error at low substrate, so parameters should be estimated by fitting the rate equation directly and examining residuals.",
+        "A competitive-looking pattern raises the apparent Km while the rates approach each other at high substrate in the simple model.",
+        "A straight reciprocal plot alone is enough to classify any inhibitor.",
+        "If the rate drops after inhibitor addition, the inhibitor must bind the active site.",
+        "Rates at one late time point are the best estimate of initial velocity."
+      ],
+      "solution_spec": {
+        "answer": [
+          0,
+          1
+        ],
+        "partial_credit": "correct-minus-incorrect-clamped-v1"
+      },
+      "feedback": {
+        "hint": "Recall which analysis choices keep the estimate honest and what the competitive pattern predicts.",
+        "solution": "Direct nonlinear fitting with residuals avoids the error magnification of reciprocals, and a competitive-looking pattern raises the apparent Km with converging rates at high substrate. Neither the pattern nor a drop in rate identifies a binding site, and an initial velocity needs the early linear window.",
+        "lesson_ids": [
+          "cell-biology-hw2",
+          "cell-biology-10"
+        ],
+        "misconception_ids": [
+          "inhibitor-pattern-proves-binding-site",
+          "rate-change-proves-catalytic-mechanism"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "cell-biology-hw3:lesion-summary",
+      "type": "file_upload",
+      "prompt": "Homework 3 open formative practice · Use the synthetic lesion-removal CSV linked in the homework reading. For each condition report the number of independent cultures, the mean percentage of lesion signal remaining at 4 h, and the mean S-phase percentage. Upload exactly these ordered columns with one row per condition: condition,batch_count,mean_lesion_remaining_pct,mean_s_phase_pct. This deterministic public check scores the summary cells only.",
+      "points": 9,
+      "objective_ids": [
+        "cell-biology-14-objective-1",
+        "cell-biology-14-objective-2"
+      ],
+      "solution_spec": {
+        "accepted_media_types": [
+          "text/csv"
+        ],
+        "max_bytes": 32768,
+        "validation_spec": {
+          "format": "csv-numeric-table-v1",
+          "delimiter": ",",
+          "key_column": "condition",
+          "columns": [
+            "condition",
+            "batch_count",
+            "mean_lesion_remaining_pct",
+            "mean_s_phase_pct"
+          ],
+          "checks": [
+            {
+              "id": "wt-batch_count",
+              "row_id": "wt",
+              "column": "batch_count",
+              "type": "numeric",
+              "answer": 4.0,
+              "unit": "",
+              "tolerance": 0,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "count",
+                "values": [
+                  38,
+                  42,
+                  40,
+                  40
+                ]
+              }
+            },
+            {
+              "id": "wt-mean_lesion_remaining_pct",
+              "row_id": "wt",
+              "column": "mean_lesion_remaining_pct",
+              "type": "numeric",
+              "answer": 40.0,
+              "unit": "%",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  38,
+                  42,
+                  40,
+                  40
+                ]
+              }
+            },
+            {
+              "id": "wt-mean_s_phase_pct",
+              "row_id": "wt",
+              "column": "mean_s_phase_pct",
+              "type": "numeric",
+              "answer": 30.0,
+              "unit": "%",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  31,
+                  29,
+                  30,
+                  30
+                ]
+              }
+            },
+            {
+              "id": "repair_deficient-batch_count",
+              "row_id": "repair_deficient",
+              "column": "batch_count",
+              "type": "numeric",
+              "answer": 4.0,
+              "unit": "",
+              "tolerance": 0,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "count",
+                "values": [
+                  83,
+                  86,
+                  84,
+                  87
+                ]
+              }
+            },
+            {
+              "id": "repair_deficient-mean_lesion_remaining_pct",
+              "row_id": "repair_deficient",
+              "column": "mean_lesion_remaining_pct",
+              "type": "numeric",
+              "answer": 85.0,
+              "unit": "%",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  83,
+                  86,
+                  84,
+                  87
+                ]
+              }
+            },
+            {
+              "id": "repair_deficient-mean_s_phase_pct",
+              "row_id": "repair_deficient",
+              "column": "mean_s_phase_pct",
+              "type": "numeric",
+              "answer": 30.5,
+              "unit": "%",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  30,
+                  32,
+                  29,
+                  31
+                ]
+              }
+            },
+            {
+              "id": "complemented-batch_count",
+              "row_id": "complemented",
+              "column": "batch_count",
+              "type": "numeric",
+              "answer": 4.0,
+              "unit": "",
+              "tolerance": 0,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "count",
+                "values": [
+                  45,
+                  48,
+                  46,
+                  47
+                ]
+              }
+            },
+            {
+              "id": "complemented-mean_lesion_remaining_pct",
+              "row_id": "complemented",
+              "column": "mean_lesion_remaining_pct",
+              "type": "numeric",
+              "answer": 46.5,
+              "unit": "%",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  45,
+                  48,
+                  46,
+                  47
+                ]
+              }
+            },
+            {
+              "id": "complemented-mean_s_phase_pct",
+              "row_id": "complemented",
+              "column": "mean_s_phase_pct",
+              "type": "numeric",
+              "answer": 30.0,
+              "unit": "%",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  30,
+                  31,
+                  29,
+                  30
+                ]
+              }
+            }
+          ]
+        },
+        "rubric": [
+          {
+            "id": "wt-batch_count",
+            "criterion": "wt: batch_count",
+            "points": 1,
+            "evidence": [
+              "Recomputes batch_count for wt from the preparation-level values."
+            ]
+          },
+          {
+            "id": "wt-mean_lesion_remaining_pct",
+            "criterion": "wt: mean_lesion_remaining_pct",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_lesion_remaining_pct for wt from the preparation-level values."
+            ]
+          },
+          {
+            "id": "wt-mean_s_phase_pct",
+            "criterion": "wt: mean_s_phase_pct",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_s_phase_pct for wt from the preparation-level values."
+            ]
+          },
+          {
+            "id": "repair_deficient-batch_count",
+            "criterion": "repair_deficient: batch_count",
+            "points": 1,
+            "evidence": [
+              "Recomputes batch_count for repair_deficient from the preparation-level values."
+            ]
+          },
+          {
+            "id": "repair_deficient-mean_lesion_remaining_pct",
+            "criterion": "repair_deficient: mean_lesion_remaining_pct",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_lesion_remaining_pct for repair_deficient from the preparation-level values."
+            ]
+          },
+          {
+            "id": "repair_deficient-mean_s_phase_pct",
+            "criterion": "repair_deficient: mean_s_phase_pct",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_s_phase_pct for repair_deficient from the preparation-level values."
+            ]
+          },
+          {
+            "id": "complemented-batch_count",
+            "criterion": "complemented: batch_count",
+            "points": 1,
+            "evidence": [
+              "Recomputes batch_count for complemented from the preparation-level values."
+            ]
+          },
+          {
+            "id": "complemented-mean_lesion_remaining_pct",
+            "criterion": "complemented: mean_lesion_remaining_pct",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_lesion_remaining_pct for complemented from the preparation-level values."
+            ]
+          },
+          {
+            "id": "complemented-mean_s_phase_pct",
+            "criterion": "complemented: mean_s_phase_pct",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_s_phase_pct for complemented from the preparation-level values."
+            ]
+          }
+        ]
+      },
+      "feedback": {
+        "hint": "Group the culture-level values by condition and average them; keep the culture count at four.",
+        "solution": "Mean lesion signal remaining is 40% (wild type), 85% (repair-deficient) and 46.5% (complemented); mean S-phase fractions are 30%, 30.5% and 30%. Each condition has four independent cultures.",
+        "lesson_ids": [
+          "cell-biology-hw3",
+          "cell-biology-14",
+          "cell-biology-13"
+        ],
+        "misconception_ids": [
+          "replicates-confused-with-independent-experiments",
+          "technical-wells-as-biological-n"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "cell-biology-hw3:contrast-and-inference",
+      "type": "data_interpretation",
+      "prompt": "Homework 3 open formative practice · Compare the repair-deficient mean with the wild-type mean for lesion signal remaining at 4 h. Report a signed difference as repair-deficient minus wild type, then choose the strongest conclusion that fits this synthetic summary. Four independent cultures were used per condition; no uncertainty model is supplied.",
+      "points": 2,
+      "objective_ids": [
+        "cell-biology-14-objective-1",
+        "cell-biology-14-objective-2"
+      ],
+      "response_fields": [
+        {
+          "id": "value",
+          "type": "numeric",
+          "prompt": "Calculate repair-deficient minus wild type in percentage points. Report exactly 3 significant figures.",
+          "unit": "%",
+          "points": 1
+        },
+        {
+          "id": "inference",
+          "type": "single_choice",
+          "prompt": "Which interpretation is best supported?",
+          "options": [
+            "The retained signal is consistent with slower lesion removal in the deficient line: S-phase fraction and viability are similar and the complemented line shifts toward wild type. It does not identify a pathway or a mutation rate.",
+            "Similar S-phase fractions prove the lesion was removed by a specific pathway.",
+            "The means establish a statistically significant effect and the exact repair step.",
+            "Retained lesion signal proves a higher mutation frequency in the deficient line."
+          ],
+          "points": 1
+        }
+      ],
+      "solution_spec": {
+        "field_specs": [
+          {
+            "id": "value",
+            "type": "numeric",
+            "answer": 45.0,
+            "unit": "%",
+            "tolerance": 0.005,
+            "relative_tolerance": 0,
+            "unit_required": true,
+            "significant_figures": 3,
+            "dimensions": null
+          },
+          {
+            "id": "inference",
+            "type": "single_choice",
+            "answer": 0
+          }
+        ]
+      },
+      "feedback": {
+        "hint": "Subtract the wild-type mean from the deficient mean, then ask which alternative explanations the matched measurements reduce.",
+        "solution": "The difference is 85 − 40 = 45 percentage points. Similar S-phase fractions and viability reduce replication-dilution and cell-death explanations, and the complemented line moving toward wild type supports factor involvement in this system. The constructed means do not establish significance, a specific pathway, or a mutation rate.",
+        "lesson_ids": [
+          "cell-biology-hw3",
+          "cell-biology-14",
+          "cell-biology-13"
+        ],
+        "misconception_ids": [
+          "percentage-points-confused-with-percent-change",
+          "lesion-signal-equals-mutation-rate",
+          "rescue-proves-direct-catalysis"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "cell-biology-hw3:controls-and-outcomes",
+      "type": "structured",
+      "prompt": "Homework 3 open formative practice · Select one response for each evidence criterion in the synthetic repair comparison. The structured choices provide deterministic partial credit; they do not grade a written argument.",
+      "points": 5,
+      "objective_ids": [
+        "cell-biology-14-objective-1",
+        "cell-biology-14-objective-2"
+      ],
+      "response_fields": [
+        {
+          "id": "replication",
+          "type": "single_choice",
+          "prompt": "Similar S-phase fractions across the lines are used for what?",
+          "options": [
+            "They make unequal replication-dilution of the lesion signal a less likely explanation, but do not prove the lesion was repaired.",
+            "They prove the repair factor acts in S phase.",
+            "They show cell survival is identical.",
+            "They replace the need for any lesion-specific measurement."
+          ],
+          "points": 1
+        },
+        {
+          "id": "viability",
+          "type": "single_choice",
+          "prompt": "Similar viability is used for what?",
+          "options": [
+            "It argues against a gross loss of damaged cells as the cause of different signal, without establishing equal long-term survival.",
+            "It proves no cell died during the assay.",
+            "It shows all cells repaired the lesion.",
+            "It shows the mutation frequency is equal."
+          ],
+          "points": 1
+        },
+        {
+          "id": "complementation",
+          "type": "single_choice",
+          "prompt": "What does the complemented line add?",
+          "options": [
+            "It supports involvement of the restored factor in this constructed cell system, while indirect effects remain possible.",
+            "It proves the factor binds the lesion directly.",
+            "It shows every lesion class uses this factor.",
+            "It makes a time course unnecessary."
+          ],
+          "points": 1
+        },
+        {
+          "id": "outcomes",
+          "type": "single_choice",
+          "prompt": "Which pair of outcomes should NOT be treated as interchangeable?",
+          "options": [
+            "Lesion removal and mutation frequency, because removal can be accurate or error-prone and mutations arise from other sources too.",
+            "Lesion signal at 0 h and the same signal at 0 h.",
+            "Culture count and replicate count when cultures are independent.",
+            "Viability and viability."
+          ],
+          "points": 1
+        },
+        {
+          "id": "next",
+          "type": "single_choice",
+          "prompt": "Which follow-up most directly measures lesion removal?",
+          "options": [
+            "A time course of lesion-specific signal in independent cultures with a loading control and an S-phase label at each time.",
+            "One more 4 h endpoint with no loading control.",
+            "Counting colonies after damage only.",
+            "Measuring receptor abundance."
+          ],
+          "points": 1
+        }
+      ],
+      "solution_spec": {
+        "field_specs": [
+          {
+            "id": "replication",
+            "type": "single_choice",
+            "answer": 0
+          },
+          {
+            "id": "viability",
+            "type": "single_choice",
+            "answer": 0
+          },
+          {
+            "id": "complementation",
+            "type": "single_choice",
+            "answer": 0
+          },
+          {
+            "id": "outcomes",
+            "type": "single_choice",
+            "answer": 0
+          },
+          {
+            "id": "next",
+            "type": "single_choice",
+            "answer": 0
+          }
+        ],
+        "rubric": [
+          {
+            "id": "replication",
+            "criterion": "Replication dilution",
+            "points": 1,
+            "evidence": [
+              "S-phase fraction addresses one alternative explanation."
+            ]
+          },
+          {
+            "id": "viability",
+            "criterion": "Cell death",
+            "points": 1,
+            "evidence": [
+              "Viability addresses cell loss."
+            ]
+          },
+          {
+            "id": "complementation",
+            "criterion": "Complemented line",
+            "points": 1,
+            "evidence": [
+              "Restoration moves the phenotype toward wild type."
+            ]
+          },
+          {
+            "id": "outcomes",
+            "criterion": "Different outcomes",
+            "points": 1,
+            "evidence": [
+              "Lesion removal, DNA synthesis, survival and mutation are separate outcomes."
+            ]
+          },
+          {
+            "id": "next",
+            "criterion": "Next measurement",
+            "points": 1,
+            "evidence": [
+              "A time-resolved, controlled measurement answers the removal question."
+            ]
+          }
+        ]
+      },
+      "feedback": {
+        "hint": "Name what each measurement reports before stating what it rules out.",
+        "solution": "S-phase fraction and viability each reduce a specific alternative, the complemented line supports factor involvement in this system, lesion removal and mutation frequency are different outcomes, and a controlled time course is the stronger next measurement.",
+        "lesson_ids": [
+          "cell-biology-hw3",
+          "cell-biology-14",
+          "cell-biology-13"
+        ],
+        "misconception_ids": [
+          "lesion-signal-equals-mutation-rate",
+          "proofreading-equals-mismatch-repair",
+          "all-damage-uses-one-repair-pathway"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "cell-biology-hw3:replication-model",
+      "type": "multiple_select",
+      "prompt": "Homework 3 open formative practice · Select the two statements that are correct about replication. The score uses the displayed correct-minus-incorrect partial-credit rule.",
+      "points": 2,
+      "objective_ids": [
+        "cell-biology-14-objective-1",
+        "cell-biology-14-objective-2"
+      ],
+      "options": [
+        "After one round of replication of heavy-isotope DNA in light medium, semiconservative replication predicts all duplexes are hybrid density.",
+        "The lagging strand is made in short fragments, each synthesized 5′ to 3′ in the direction away from the fork.",
+        "DNA polymerases synthesize new strands 3′ to 5′.",
+        "Semiconservative replication predicts one fully heavy and one fully light duplex after one round.",
+        "Lesion removal and DNA synthesis are the same measurement."
+      ],
+      "solution_spec": {
+        "answer": [
+          0,
+          1
+        ],
+        "partial_credit": "correct-minus-incorrect-clamped-v1"
+      },
+      "feedback": {
+        "hint": "Recall template pairing and the 5′ to 3′ direction of synthesis.",
+        "solution": "Each daughter duplex keeps one parental strand, so after one round in light medium every duplex is hybrid. New strands extend 5′ to 3′, so the lagging strand is made discontinuously away from the fork direction. Polymerases do not extend 3′ to 5′.",
+        "lesson_ids": [
+          "cell-biology-hw3",
+          "cell-biology-14",
+          "cell-biology-13"
+        ],
+        "misconception_ids": [
+          "strand-polarity-reversed",
+          "lagging-strand-made-3-to-5",
+          "semiconservative-fraction-calculated-from-strands"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "cell-biology-hw4:chip-reporter-summary",
+      "type": "file_upload",
+      "prompt": "Homework 4 open formative practice · Use the synthetic ChIP-qPCR and reporter CSV linked in the reading. For each condition report the number of independent cultures and the mean specific-antibody percent input, mean IgG percent input, mean wild-type reporter and mean motif-mutant reporter. Upload exactly these ordered columns with one row per condition: condition,batch_count,mean_specific_pct_input,mean_igg_pct_input,mean_reporter_wt,mean_reporter_mut. This deterministic public check scores the summary cells only.",
+      "points": 10,
+      "objective_ids": [
+        "cell-biology-16-objective-1",
+        "cell-biology-16-objective-2"
+      ],
+      "solution_spec": {
+        "accepted_media_types": [
+          "text/csv"
+        ],
+        "max_bytes": 32768,
+        "validation_spec": {
+          "format": "csv-numeric-table-v1",
+          "delimiter": ",",
+          "key_column": "condition",
+          "columns": [
+            "condition",
+            "batch_count",
+            "mean_specific_pct_input",
+            "mean_igg_pct_input",
+            "mean_reporter_wt",
+            "mean_reporter_mut"
+          ],
+          "checks": [
+            {
+              "id": "control-batch_count",
+              "row_id": "control",
+              "column": "batch_count",
+              "type": "numeric",
+              "answer": 4.0,
+              "unit": "",
+              "tolerance": 0,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "count",
+                "values": [
+                  6.0,
+                  6.4,
+                  5.8,
+                  6.2
+                ]
+              }
+            },
+            {
+              "id": "control-mean_specific_pct_input",
+              "row_id": "control",
+              "column": "mean_specific_pct_input",
+              "type": "numeric",
+              "answer": 6.1,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  6.0,
+                  6.4,
+                  5.8,
+                  6.2
+                ]
+              }
+            },
+            {
+              "id": "control-mean_igg_pct_input",
+              "row_id": "control",
+              "column": "mean_igg_pct_input",
+              "type": "numeric",
+              "answer": 0.45,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  0.4,
+                  0.5,
+                  0.4,
+                  0.5
+                ]
+              }
+            },
+            {
+              "id": "control-mean_reporter_wt",
+              "row_id": "control",
+              "column": "mean_reporter_wt",
+              "type": "numeric",
+              "answer": 3.1,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  3.1,
+                  3.3,
+                  2.9,
+                  3.1
+                ]
+              }
+            },
+            {
+              "id": "control-mean_reporter_mut",
+              "row_id": "control",
+              "column": "mean_reporter_mut",
+              "type": "numeric",
+              "answer": 1.2,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  1.2,
+                  1.1,
+                  1.3,
+                  1.2
+                ]
+              }
+            },
+            {
+              "id": "knockdown-batch_count",
+              "row_id": "knockdown",
+              "column": "batch_count",
+              "type": "numeric",
+              "answer": 4.0,
+              "unit": "",
+              "tolerance": 0,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "count",
+                "values": [
+                  2.1,
+                  2.4,
+                  2.0,
+                  2.3
+                ]
+              }
+            },
+            {
+              "id": "knockdown-mean_specific_pct_input",
+              "row_id": "knockdown",
+              "column": "mean_specific_pct_input",
+              "type": "numeric",
+              "answer": 2.2,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  2.1,
+                  2.4,
+                  2.0,
+                  2.3
+                ]
+              }
+            },
+            {
+              "id": "knockdown-mean_igg_pct_input",
+              "row_id": "knockdown",
+              "column": "mean_igg_pct_input",
+              "type": "numeric",
+              "answer": 0.45,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  0.4,
+                  0.5,
+                  0.5,
+                  0.4
+                ]
+              }
+            },
+            {
+              "id": "knockdown-mean_reporter_wt",
+              "row_id": "knockdown",
+              "column": "mean_reporter_wt",
+              "type": "numeric",
+              "answer": 1.5,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  1.4,
+                  1.6,
+                  1.5,
+                  1.5
+                ]
+              }
+            },
+            {
+              "id": "knockdown-mean_reporter_mut",
+              "row_id": "knockdown",
+              "column": "mean_reporter_mut",
+              "type": "numeric",
+              "answer": 1.15,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  1.1,
+                  1.2,
+                  1.2,
+                  1.1
+                ]
+              }
+            }
+          ]
+        },
+        "rubric": [
+          {
+            "id": "control-batch_count",
+            "criterion": "control: batch_count",
+            "points": 1,
+            "evidence": [
+              "Recomputes batch_count for control from the preparation-level values."
+            ]
+          },
+          {
+            "id": "control-mean_specific_pct_input",
+            "criterion": "control: mean_specific_pct_input",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_specific_pct_input for control from the preparation-level values."
+            ]
+          },
+          {
+            "id": "control-mean_igg_pct_input",
+            "criterion": "control: mean_igg_pct_input",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_igg_pct_input for control from the preparation-level values."
+            ]
+          },
+          {
+            "id": "control-mean_reporter_wt",
+            "criterion": "control: mean_reporter_wt",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_reporter_wt for control from the preparation-level values."
+            ]
+          },
+          {
+            "id": "control-mean_reporter_mut",
+            "criterion": "control: mean_reporter_mut",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_reporter_mut for control from the preparation-level values."
+            ]
+          },
+          {
+            "id": "knockdown-batch_count",
+            "criterion": "knockdown: batch_count",
+            "points": 1,
+            "evidence": [
+              "Recomputes batch_count for knockdown from the preparation-level values."
+            ]
+          },
+          {
+            "id": "knockdown-mean_specific_pct_input",
+            "criterion": "knockdown: mean_specific_pct_input",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_specific_pct_input for knockdown from the preparation-level values."
+            ]
+          },
+          {
+            "id": "knockdown-mean_igg_pct_input",
+            "criterion": "knockdown: mean_igg_pct_input",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_igg_pct_input for knockdown from the preparation-level values."
+            ]
+          },
+          {
+            "id": "knockdown-mean_reporter_wt",
+            "criterion": "knockdown: mean_reporter_wt",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_reporter_wt for knockdown from the preparation-level values."
+            ]
+          },
+          {
+            "id": "knockdown-mean_reporter_mut",
+            "criterion": "knockdown: mean_reporter_mut",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_reporter_mut for knockdown from the preparation-level values."
+            ]
+          }
+        ]
+      },
+      "feedback": {
+        "hint": "Average each column within a condition and keep the culture count at four.",
+        "solution": "Control: 6.1% input specific, 0.45% IgG, wild-type reporter 3.1, mutant reporter 1.2. Knockdown: 2.2%, 0.45%, 1.5, 1.15. Four independent cultures per condition.",
+        "lesson_ids": [
+          "cell-biology-hw4",
+          "cell-biology-16",
+          "cell-biology-15"
+        ],
+        "misconception_ids": [
+          "replicates-confused-with-independent-experiments",
+          "technical-wells-as-biological-n"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "cell-biology-hw4:specific-input-plot",
+      "type": "graph",
+      "prompt": "Homework 4 open formative practice · Plot the mean specific-antibody percent input for the control and knockdown cultures on the supplied axes using the four culture values for each. The points are descriptive summaries and show no uncertainty.",
+      "points": 4,
+      "objective_ids": [
+        "cell-biology-16-objective-1",
+        "cell-biology-16-objective-2"
+      ],
+      "graph_spec": {
+        "x_axis": {
+          "label": "Condition code (0 = control, 1 = knockdown)",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "y_axis": {
+          "label": "Specific antibody (% input)",
+          "minimum": 0,
+          "maximum": 8
+        },
+        "points": [
+          {
+            "id": "control",
+            "label": "Control"
+          },
+          {
+            "id": "knockdown",
+            "label": "Knockdown"
+          }
+        ],
+        "observations": [
+          {
+            "id": "control",
+            "x": 0,
+            "values": [
+              6.0,
+              6.4,
+              5.8,
+              6.2
+            ]
+          },
+          {
+            "id": "knockdown",
+            "x": 1,
+            "values": [
+              2.1,
+              2.4,
+              2.0,
+              2.3
+            ]
+          }
+        ]
+      },
+      "solution_spec": {
+        "points": [
+          {
+            "id": "control",
+            "x": 0,
+            "y": 6.1,
+            "x_tolerance": 0,
+            "y_tolerance": 0.01
+          },
+          {
+            "id": "knockdown",
+            "x": 1,
+            "y": 2.2,
+            "x_tolerance": 0,
+            "y_tolerance": 0.01
+          }
+        ],
+        "rubric": [
+          {
+            "id": "control_x",
+            "criterion": "Control coordinate",
+            "points": 1,
+            "evidence": [
+              "Control sits at the supplied x value."
+            ]
+          },
+          {
+            "id": "control_y",
+            "criterion": "Control mean coordinate",
+            "points": 1,
+            "evidence": [
+              "The replicate values average to 6.1."
+            ]
+          },
+          {
+            "id": "knockdown_x",
+            "criterion": "Knockdown coordinate",
+            "points": 1,
+            "evidence": [
+              "Knockdown sits at the supplied x value."
+            ]
+          },
+          {
+            "id": "knockdown_y",
+            "criterion": "Knockdown mean coordinate",
+            "points": 1,
+            "evidence": [
+              "The replicate values average to 2.2."
+            ]
+          }
+        ]
+      },
+      "feedback": {
+        "hint": "Average each set of four culture values and use the fixed x codes.",
+        "solution": "The means are 6.1% input (control) and 2.2% input (knockdown). The plot is descriptive and shows neither replicate spread nor a causal mechanism.",
+        "lesson_ids": [
+          "cell-biology-hw4",
+          "cell-biology-16",
+          "cell-biology-15"
+        ],
+        "misconception_ids": [
+          "mean-as-causal-proof"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "cell-biology-hw4:fold-over-igg",
+      "type": "data_interpretation",
+      "prompt": "Homework 4 open formative practice · Calculate fold enrichment over matched IgG in the control cultures (mean specific percent input divided by mean IgG percent input), then choose the best-supported conclusion.",
+      "points": 2,
+      "objective_ids": [
+        "cell-biology-16-objective-1",
+        "cell-biology-16-objective-2"
+      ],
+      "response_fields": [
+        {
+          "id": "value",
+          "type": "numeric",
+          "prompt": "Calculate the control fold enrichment over IgG (dimensionless). Report exactly 3 significant figures.",
+          "unit": "",
+          "points": 1
+        },
+        {
+          "id": "inference",
+          "type": "single_choice",
+          "prompt": "Which conclusion is best supported by the control enrichment, the lower knockdown signal and the reporters together?",
+          "options": [
+            "The region is enriched over IgG and the signal falls after knockdown; the wild-type reporter responds while the motif-mutant reporter does not. This is consistent with occupancy and a motif contribution in the reporter, not proof of direct control of the native gene.",
+            "ChIP enrichment proves the factor directly regulates transcription of the endogenous gene.",
+            "Percent input and fold over IgG are the same quantity.",
+            "A reporter response proves the factor binds the motif."
+          ],
+          "points": 1
+        }
+      ],
+      "solution_spec": {
+        "field_specs": [
+          {
+            "id": "value",
+            "type": "numeric",
+            "answer": 13.6,
+            "unit": "",
+            "tolerance": 0.06,
+            "relative_tolerance": 0,
+            "unit_required": false,
+            "significant_figures": 3,
+            "dimensions": null
+          },
+          {
+            "id": "inference",
+            "type": "single_choice",
+            "answer": 0
+          }
+        ]
+      },
+      "feedback": {
+        "hint": "Divide the control specific mean by the control IgG mean, then separate occupancy, reporter and endogenous-gene claims.",
+        "solution": "6.1 / 0.45 = 13.56-fold over IgG. Enrichment, a falling signal after knockdown and a motif-dependent reporter are consistent with occupancy and a motif contribution to the construct; none shows direct control of the endogenous gene.",
+        "lesson_ids": [
+          "cell-biology-hw4",
+          "cell-biology-16",
+          "cell-biology-15"
+        ],
+        "misconception_ids": [
+          "chip-occupancy-proves-direct-binding",
+          "reporter-proves-endogenous-regulation",
+          "chip-input-igg-controls-interchangeable"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "cell-biology-hw4:control-roles",
+      "type": "structured",
+      "prompt": "Homework 4 open formative practice · Select the role of each control. The structured choices provide deterministic partial credit; they do not grade a written argument.",
+      "points": 5,
+      "objective_ids": [
+        "cell-biology-16-objective-1",
+        "cell-biology-16-objective-2"
+      ],
+      "response_fields": [
+        {
+          "id": "input",
+          "type": "single_choice",
+          "prompt": "What does input chromatin provide?",
+          "options": [
+            "A pre-immunoprecipitation reference that normalizes starting material and representation.",
+            "An estimate of nonspecific antibody recovery.",
+            "Proof that the antibody is specific.",
+            "A test for primer-dimer contamination."
+          ],
+          "points": 1
+        },
+        {
+          "id": "igg",
+          "type": "single_choice",
+          "prompt": "What does the matched IgG pull-down estimate?",
+          "options": [
+            "Nonspecific recovery under the same immunoprecipitation procedure.",
+            "The amount of starting chromatin.",
+            "Primer efficiency.",
+            "Reporter transfection efficiency."
+          ],
+          "points": 1
+        },
+        {
+          "id": "loci",
+          "type": "single_choice",
+          "prompt": "What do a known positive locus and an unrelated negative locus add?",
+          "options": [
+            "The positive locus shows the assay can detect an expected target; the negative locus tests locus specificity.",
+            "They are interchangeable with IgG.",
+            "They replace biological replicates.",
+            "They prove direct regulation of the candidate gene."
+          ],
+          "points": 1
+        },
+        {
+          "id": "mutant",
+          "type": "single_choice",
+          "prompt": "What does a matched motif-mutant reporter test?",
+          "options": [
+            "Whether the reporter response depends on that sequence in the construct.",
+            "Whether the factor binds the native chromosome.",
+            "Whether the antibody is specific.",
+            "Whether input was equal across samples."
+          ],
+          "points": 1
+        },
+        {
+          "id": "template",
+          "type": "single_choice",
+          "prompt": "What does a no-template well detect?",
+          "options": [
+            "Reagent contamination or primer artifacts.",
+            "Nonspecific antibody recovery.",
+            "Biological variability.",
+            "Chromatin fragment size."
+          ],
+          "points": 1
+        }
+      ],
+      "solution_spec": {
+        "field_specs": [
+          {
+            "id": "input",
+            "type": "single_choice",
+            "answer": 0
+          },
+          {
+            "id": "igg",
+            "type": "single_choice",
+            "answer": 0
+          },
+          {
+            "id": "loci",
+            "type": "single_choice",
+            "answer": 0
+          },
+          {
+            "id": "mutant",
+            "type": "single_choice",
+            "answer": 0
+          },
+          {
+            "id": "template",
+            "type": "single_choice",
+            "answer": 0
+          }
+        ],
+        "rubric": [
+          {
+            "id": "input",
+            "criterion": "Input chromatin",
+            "points": 1,
+            "evidence": [
+              "Input normalizes the starting material."
+            ]
+          },
+          {
+            "id": "igg",
+            "criterion": "Matched IgG",
+            "points": 1,
+            "evidence": [
+              "IgG estimates background recovery."
+            ]
+          },
+          {
+            "id": "loci",
+            "criterion": "Positive and negative loci",
+            "points": 1,
+            "evidence": [
+              "Loci test assay performance and specificity."
+            ]
+          },
+          {
+            "id": "mutant",
+            "criterion": "Motif-mutant reporter",
+            "points": 1,
+            "evidence": [
+              "The mutant isolates a sequence contribution in the construct."
+            ]
+          },
+          {
+            "id": "template",
+            "criterion": "No-template qPCR well",
+            "points": 1,
+            "evidence": [
+              "No-template wells test reagents and primers."
+            ]
+          }
+        ]
+      },
+      "feedback": {
+        "hint": "Name what each control normalizes or tests before stating what it excludes.",
+        "solution": "Input, IgG, positive and negative loci, a motif-mutant reporter and a no-template well each answer a different question; none substitutes for the others.",
+        "lesson_ids": [
+          "cell-biology-hw4",
+          "cell-biology-16",
+          "cell-biology-15"
+        ],
+        "misconception_ids": [
+          "chip-input-igg-controls-interchangeable",
+          "colocalization-proves-binding"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "cell-biology-hw4:occupancy-and-regulation",
+      "type": "multiple_select",
+      "prompt": "Homework 4 open formative practice · Select the two statements that are best supported. The score uses the displayed correct-minus-incorrect partial-credit rule.",
+      "points": 2,
+      "objective_ids": [
+        "cell-biology-16-objective-1",
+        "cell-biology-16-objective-2"
+      ],
+      "options": [
+        "Multiple PCR wells from one culture are technical replicates, not independent biological samples.",
+        "A reporter result in a plasmid does not by itself show a change in native transcription.",
+        "Open chromatin means the gene is being transcribed.",
+        "A histone mark proves it causes the expression change.",
+        "Percent input is an absolute count of bound molecules."
+      ],
+      "solution_spec": {
+        "answer": [
+          0,
+          1
+        ],
+        "partial_credit": "correct-minus-incorrect-clamped-v1"
+      },
+      "feedback": {
+        "hint": "Separate technical wells from cultures and construct evidence from endogenous regulation.",
+        "solution": "PCR wells from one culture are technical replicates, and a plasmid reporter is not the endogenous locus. Accessibility, histone marks and percent input are associations or relative measures, not direct measures of transcription or absolute binding.",
+        "lesson_ids": [
+          "cell-biology-hw4",
+          "cell-biology-16",
+          "cell-biology-15"
+        ],
+        "misconception_ids": [
+          "open-chromatin-equals-transcribed",
+          "histone-mark-proves-cause",
+          "reporter-proves-endogenous-regulation"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "cell-biology-hw5:layer-summary",
+      "type": "file_upload",
+      "prompt": "Homework 5 open formative practice · Use the synthetic expression CSV linked in the reading. For each condition report the number of independent cultures and the mean mRNA, protein, nascent-protein labeling and percentage of protein remaining at 4 h. Upload exactly these ordered columns with one row per condition: condition,batch_count,mean_mrna,mean_protein,mean_labeling,mean_remaining_4h. This deterministic public check scores the summary cells only.",
+      "points": 10,
+      "objective_ids": [
+        "cell-biology-18-objective-1",
+        "cell-biology-18-objective-2"
+      ],
+      "solution_spec": {
+        "accepted_media_types": [
+          "text/csv"
+        ],
+        "max_bytes": 32768,
+        "validation_spec": {
+          "format": "csv-numeric-table-v1",
+          "delimiter": ",",
+          "key_column": "condition",
+          "columns": [
+            "condition",
+            "batch_count",
+            "mean_mrna",
+            "mean_protein",
+            "mean_labeling",
+            "mean_remaining_4h"
+          ],
+          "checks": [
+            {
+              "id": "wt-batch_count",
+              "row_id": "wt",
+              "column": "batch_count",
+              "type": "numeric",
+              "answer": 4.0,
+              "unit": "",
+              "tolerance": 0,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "count",
+                "values": [
+                  100,
+                  98,
+                  103,
+                  99
+                ]
+              }
+            },
+            {
+              "id": "wt-mean_mrna",
+              "row_id": "wt",
+              "column": "mean_mrna",
+              "type": "numeric",
+              "answer": 100.0,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  100,
+                  98,
+                  103,
+                  99
+                ]
+              }
+            },
+            {
+              "id": "wt-mean_protein",
+              "row_id": "wt",
+              "column": "mean_protein",
+              "type": "numeric",
+              "answer": 100.0,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  100,
+                  101,
+                  99,
+                  100
+                ]
+              }
+            },
+            {
+              "id": "wt-mean_labeling",
+              "row_id": "wt",
+              "column": "mean_labeling",
+              "type": "numeric",
+              "answer": 100.0,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  100,
+                  97,
+                  103,
+                  100
+                ]
+              }
+            },
+            {
+              "id": "wt-mean_remaining_4h",
+              "row_id": "wt",
+              "column": "mean_remaining_4h",
+              "type": "numeric",
+              "answer": 50.0,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  50,
+                  52,
+                  49,
+                  49
+                ]
+              }
+            },
+            {
+              "id": "variant-batch_count",
+              "row_id": "variant",
+              "column": "batch_count",
+              "type": "numeric",
+              "answer": 4.0,
+              "unit": "",
+              "tolerance": 0,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "count",
+                "values": [
+                  99,
+                  102,
+                  98,
+                  101
+                ]
+              }
+            },
+            {
+              "id": "variant-mean_mrna",
+              "row_id": "variant",
+              "column": "mean_mrna",
+              "type": "numeric",
+              "answer": 100.0,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  99,
+                  102,
+                  98,
+                  101
+                ]
+              }
+            },
+            {
+              "id": "variant-mean_protein",
+              "row_id": "variant",
+              "column": "mean_protein",
+              "type": "numeric",
+              "answer": 50.0,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  52,
+                  48,
+                  50,
+                  50
+                ]
+              }
+            },
+            {
+              "id": "variant-mean_labeling",
+              "row_id": "variant",
+              "column": "mean_labeling",
+              "type": "numeric",
+              "answer": 50.0,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  51,
+                  49,
+                  50,
+                  50
+                ]
+              }
+            },
+            {
+              "id": "variant-mean_remaining_4h",
+              "row_id": "variant",
+              "column": "mean_remaining_4h",
+              "type": "numeric",
+              "answer": 50.0,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  49,
+                  51,
+                  50,
+                  50
+                ]
+              }
+            }
+          ]
+        },
+        "rubric": [
+          {
+            "id": "wt-batch_count",
+            "criterion": "wt: batch_count",
+            "points": 1,
+            "evidence": [
+              "Recomputes batch_count for wt from the preparation-level values."
+            ]
+          },
+          {
+            "id": "wt-mean_mrna",
+            "criterion": "wt: mean_mrna",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_mrna for wt from the preparation-level values."
+            ]
+          },
+          {
+            "id": "wt-mean_protein",
+            "criterion": "wt: mean_protein",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_protein for wt from the preparation-level values."
+            ]
+          },
+          {
+            "id": "wt-mean_labeling",
+            "criterion": "wt: mean_labeling",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_labeling for wt from the preparation-level values."
+            ]
+          },
+          {
+            "id": "wt-mean_remaining_4h",
+            "criterion": "wt: mean_remaining_4h",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_remaining_4h for wt from the preparation-level values."
+            ]
+          },
+          {
+            "id": "variant-batch_count",
+            "criterion": "variant: batch_count",
+            "points": 1,
+            "evidence": [
+              "Recomputes batch_count for variant from the preparation-level values."
+            ]
+          },
+          {
+            "id": "variant-mean_mrna",
+            "criterion": "variant: mean_mrna",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_mrna for variant from the preparation-level values."
+            ]
+          },
+          {
+            "id": "variant-mean_protein",
+            "criterion": "variant: mean_protein",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_protein for variant from the preparation-level values."
+            ]
+          },
+          {
+            "id": "variant-mean_labeling",
+            "criterion": "variant: mean_labeling",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_labeling for variant from the preparation-level values."
+            ]
+          },
+          {
+            "id": "variant-mean_remaining_4h",
+            "criterion": "variant: mean_remaining_4h",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_remaining_4h for variant from the preparation-level values."
+            ]
+          }
+        ]
+      },
+      "feedback": {
+        "hint": "Average each measurement within a condition; keep the culture count at four.",
+        "solution": "Wild type: mRNA 100, protein 100, labeling 100, remaining 50. Variant: mRNA 100, protein 50, labeling 50, remaining 50. Four independent cultures per condition.",
+        "lesson_ids": [
+          "cell-biology-hw5",
+          "cell-biology-18",
+          "cell-biology-17"
+        ],
+        "misconception_ids": [
+          "replicates-confused-with-independent-experiments"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "cell-biology-hw5:protein-plot",
+      "type": "graph",
+      "prompt": "Homework 5 open formative practice · Plot the mean relative protein level for wild type and the variant on the supplied axes. The points are descriptive summaries and show no uncertainty.",
+      "points": 4,
+      "objective_ids": [
+        "cell-biology-18-objective-1",
+        "cell-biology-18-objective-2"
+      ],
+      "graph_spec": {
+        "x_axis": {
+          "label": "Condition code (0 = wild type, 1 = variant)",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "y_axis": {
+          "label": "Protein level (relative to wild type)",
+          "minimum": 0,
+          "maximum": 120
+        },
+        "points": [
+          {
+            "id": "wt",
+            "label": "Wild type"
+          },
+          {
+            "id": "variant",
+            "label": "Variant"
+          }
+        ],
+        "observations": [
+          {
+            "id": "wt",
+            "x": 0,
+            "values": [
+              100,
+              101,
+              99,
+              100
+            ]
+          },
+          {
+            "id": "variant",
+            "x": 1,
+            "values": [
+              52,
+              48,
+              50,
+              50
+            ]
+          }
+        ]
+      },
+      "solution_spec": {
+        "points": [
+          {
+            "id": "wt",
+            "x": 0,
+            "y": 100.0,
+            "x_tolerance": 0,
+            "y_tolerance": 0.01
+          },
+          {
+            "id": "variant",
+            "x": 1,
+            "y": 50.0,
+            "x_tolerance": 0,
+            "y_tolerance": 0.01
+          }
+        ],
+        "rubric": [
+          {
+            "id": "wt_x",
+            "criterion": "Wild type coordinate",
+            "points": 1,
+            "evidence": [
+              "Wild type sits at the supplied x value."
+            ]
+          },
+          {
+            "id": "wt_y",
+            "criterion": "Wild type mean coordinate",
+            "points": 1,
+            "evidence": [
+              "The replicate values average to 100.0."
+            ]
+          },
+          {
+            "id": "variant_x",
+            "criterion": "Variant coordinate",
+            "points": 1,
+            "evidence": [
+              "Variant sits at the supplied x value."
+            ]
+          },
+          {
+            "id": "variant_y",
+            "criterion": "Variant mean coordinate",
+            "points": 1,
+            "evidence": [
+              "The replicate values average to 50.0."
+            ]
+          }
+        ]
+      },
+      "feedback": {
+        "hint": "Average each set of four values and use the fixed x codes.",
+        "solution": "The means are 100 (wild type) and 50 (variant). The plot does not show which expression layer changed.",
+        "lesson_ids": [
+          "cell-biology-hw5",
+          "cell-biology-18",
+          "cell-biology-17"
+        ],
+        "misconception_ids": [
+          "protein-abundance-equals-synthesis"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "cell-biology-hw5:half-life-and-layer",
+      "type": "data_interpretation",
+      "prompt": "Homework 5 open formative practice · Assume first-order decay of the protein after the synthesis block. Use the wild-type mean fraction remaining at 4 h to calculate the half-life, then choose the best-supported interpretation of the variant.",
+      "points": 2,
+      "objective_ids": [
+        "cell-biology-18-objective-1",
+        "cell-biology-18-objective-2"
+      ],
+      "response_fields": [
+        {
+          "id": "value",
+          "type": "numeric",
+          "prompt": "Calculate the wild-type protein half-life in hours. Report exactly 2 significant figures.",
+          "unit": "h",
+          "points": 1
+        },
+        {
+          "id": "inference",
+          "type": "single_choice",
+          "prompt": "Which interpretation is best supported by the mRNA, labeling and decay data?",
+          "options": [
+            "Equal mRNA and equal decay with halved labeling and halved protein are more consistent with reduced synthesis (translation-level effect) than with faster degradation; the specific mechanism is not identified.",
+            "Equal mRNA proves equal protein synthesis.",
+            "Lower protein proves faster degradation.",
+            "The variant must reduce transcription."
+          ],
+          "points": 1
+        }
+      ],
+      "solution_spec": {
+        "field_specs": [
+          {
+            "id": "value",
+            "type": "numeric",
+            "answer": 4.0,
+            "unit": "h",
+            "tolerance": 0.05,
+            "relative_tolerance": 0,
+            "unit_required": true,
+            "significant_figures": 2,
+            "dimensions": null
+          },
+          {
+            "id": "inference",
+            "type": "single_choice",
+            "answer": 0
+          }
+        ]
+      },
+      "feedback": {
+        "hint": "For first-order decay, half-life = t × ln 2 / ln(initial / remaining).",
+        "solution": "With 50% remaining at 4 h the half-life is 4 × ln 2 / ln 2 = 4 h. The variant has the same remaining fraction, so turnover is similar, while labeling and protein are halved at equal mRNA; that favors reduced synthesis without identifying initiation, elongation or localization as the cause.",
+        "lesson_ids": [
+          "cell-biology-hw5",
+          "cell-biology-18",
+          "cell-biology-17"
+        ],
+        "misconception_ids": [
+          "translation-rate-equals-mrna-abundance",
+          "protein-abundance-equals-synthesis",
+          "mature-rna-abundance-equals-transcription"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "cell-biology-hw5:layer-logic",
+      "type": "structured",
+      "prompt": "Homework 5 open formative practice · Select the measurement that addresses each layer. The structured choices provide deterministic partial credit; they do not grade a written argument.",
+      "points": 5,
+      "objective_ids": [
+        "cell-biology-18-objective-1",
+        "cell-biology-18-objective-2"
+      ],
+      "response_fields": [
+        {
+          "id": "rna",
+          "type": "single_choice",
+          "prompt": "Which measurement addresses mRNA abundance?",
+          "options": [
+            "Quantitative RT-PCR of the transcript with a stable reference, from independent cultures.",
+            "A western blot of the protein.",
+            "A cycloheximide-chase decay curve.",
+            "A pulse-incorporation signal."
+          ],
+          "points": 1
+        },
+        {
+          "id": "synthesis",
+          "type": "single_choice",
+          "prompt": "Which measurement addresses synthesis rate?",
+          "options": [
+            "A short-pulse incorporation or ribosome-association measurement of the protein.",
+            "Steady-state protein alone.",
+            "mRNA abundance alone.",
+            "Cell viability."
+          ],
+          "points": 1
+        },
+        {
+          "id": "turnover",
+          "type": "single_choice",
+          "prompt": "Which measurement addresses turnover?",
+          "options": [
+            "Protein remaining over time after blocking synthesis, with a loading control.",
+            "Steady-state protein at one time.",
+            "mRNA abundance.",
+            "Pulse incorporation at one time."
+          ],
+          "points": 1
+        },
+        {
+          "id": "isoform",
+          "type": "single_choice",
+          "prompt": "Total RNA qPCR cannot resolve a change in isoform usage. Which measurement can?",
+          "options": [
+            "Isoform-specific primers or junction-spanning reads.",
+            "Total RNA qPCR with more replicates.",
+            "Protein half-life.",
+            "Viability."
+          ],
+          "points": 1
+        },
+        {
+          "id": "scope",
+          "type": "single_choice",
+          "prompt": "Equal mRNA, equal decay, halved labeling and halved protein support which scope?",
+          "options": [
+            "A translation-level difference in this constructed system, with the mechanism undetermined.",
+            "A proven initiation defect.",
+            "A proven transcription defect.",
+            "A proven degradation defect."
+          ],
+          "points": 1
+        }
+      ],
+      "solution_spec": {
+        "field_specs": [
+          {
+            "id": "rna",
+            "type": "single_choice",
+            "answer": 0
+          },
+          {
+            "id": "synthesis",
+            "type": "single_choice",
+            "answer": 0
+          },
+          {
+            "id": "turnover",
+            "type": "single_choice",
+            "answer": 0
+          },
+          {
+            "id": "isoform",
+            "type": "single_choice",
+            "answer": 0
+          },
+          {
+            "id": "scope",
+            "type": "single_choice",
+            "answer": 0
+          }
+        ],
+        "rubric": [
+          {
+            "id": "rna",
+            "criterion": "Transcript abundance",
+            "points": 1,
+            "evidence": [
+              "Transcript abundance is measured at the RNA level."
+            ]
+          },
+          {
+            "id": "synthesis",
+            "criterion": "Synthesis rate",
+            "points": 1,
+            "evidence": [
+              "Synthesis needs a nascent-protein measurement."
+            ]
+          },
+          {
+            "id": "turnover",
+            "criterion": "Turnover: evidence reasoning",
+            "points": 1,
+            "evidence": [
+              "Turnover needs a time-resolved decay measurement."
+            ]
+          },
+          {
+            "id": "isoform",
+            "criterion": "Isoform: evidence reasoning",
+            "points": 1,
+            "evidence": [
+              "Isoforms need isoform-resolving measurements."
+            ]
+          },
+          {
+            "id": "scope",
+            "criterion": "Scope: evidence reasoning",
+            "points": 1,
+            "evidence": [
+              "The layer is supported; the mechanism is not."
+            ]
+          }
+        ]
+      },
+      "feedback": {
+        "hint": "Match each layer to the measurement that reports it.",
+        "solution": "mRNA abundance, synthesis and turnover each need their own measurement; total-RNA qPCR cannot resolve isoforms; and matched data support a layer without identifying the molecular mechanism.",
+        "lesson_ids": [
+          "cell-biology-hw5",
+          "cell-biology-18",
+          "cell-biology-17"
+        ],
+        "misconception_ids": [
+          "rtqpcr-total-rna-resolves-isoforms",
+          "translation-rate-equals-mrna-abundance"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "cell-biology-hw5:expression-layers",
+      "type": "multiple_select",
+      "prompt": "Homework 5 open formative practice · Select the two statements that are best supported. The score uses the displayed correct-minus-incorrect partial-credit rule.",
+      "points": 2,
+      "objective_ids": [
+        "cell-biology-18-objective-1",
+        "cell-biology-18-objective-2"
+      ],
+      "options": [
+        "Steady-state protein level reflects both synthesis and degradation, so it cannot by itself say which changed.",
+        "mRNA abundance and protein synthesis rate can differ because translation efficiency varies.",
+        "Equal mRNA proves equal protein.",
+        "A lower protein level proves the gene is transcribed less.",
+        "Protein half-life is the same as mRNA half-life."
+      ],
+      "solution_spec": {
+        "answer": [
+          0,
+          1
+        ],
+        "partial_credit": "correct-minus-incorrect-clamped-v1"
+      },
+      "feedback": {
+        "hint": "Remember that protein level is a balance and that mRNA is not a direct readout of translation.",
+        "solution": "Steady-state protein depends on synthesis and degradation, and translation efficiency varies independently of mRNA abundance. Equal mRNA does not guarantee equal protein, and lower protein does not prove lower transcription.",
+        "lesson_ids": [
+          "cell-biology-hw5",
+          "cell-biology-18",
+          "cell-biology-17"
+        ],
+        "misconception_ids": [
+          "protein-abundance-equals-synthesis",
+          "translation-rate-equals-mrna-abundance"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "cell-biology-hw6:clone-summary",
+      "type": "file_upload",
+      "prompt": "Homework 6 open formative practice · Use the synthetic isogenic-clone CSV linked in the reading. For each condition report the number of independent clones and the mean assay score. Upload exactly these ordered columns with one row per condition: condition,batch_count,mean_assay_score. This deterministic public check scores the summary cells only.",
+      "points": 6,
+      "objective_ids": [
+        "cell-biology-20-objective-1",
+        "cell-biology-20-objective-2"
+      ],
+      "solution_spec": {
+        "accepted_media_types": [
+          "text/csv"
+        ],
+        "max_bytes": 32768,
+        "validation_spec": {
+          "format": "csv-numeric-table-v1",
+          "delimiter": ",",
+          "key_column": "condition",
+          "columns": [
+            "condition",
+            "batch_count",
+            "mean_assay_score"
+          ],
+          "checks": [
+            {
+              "id": "parental_variant-batch_count",
+              "row_id": "parental_variant",
+              "column": "batch_count",
+              "type": "numeric",
+              "answer": 4.0,
+              "unit": "",
+              "tolerance": 0,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "count",
+                "values": [
+                  41,
+                  44,
+                  39,
+                  40
+                ]
+              }
+            },
+            {
+              "id": "parental_variant-mean_assay_score",
+              "row_id": "parental_variant",
+              "column": "mean_assay_score",
+              "type": "numeric",
+              "answer": 41.0,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  41,
+                  44,
+                  39,
+                  40
+                ]
+              }
+            },
+            {
+              "id": "corrected-batch_count",
+              "row_id": "corrected",
+              "column": "batch_count",
+              "type": "numeric",
+              "answer": 4.0,
+              "unit": "",
+              "tolerance": 0,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "count",
+                "values": [
+                  78,
+                  80,
+                  77,
+                  79
+                ]
+              }
+            },
+            {
+              "id": "corrected-mean_assay_score",
+              "row_id": "corrected",
+              "column": "mean_assay_score",
+              "type": "numeric",
+              "answer": 78.5,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  78,
+                  80,
+                  77,
+                  79
+                ]
+              }
+            },
+            {
+              "id": "reintroduced-batch_count",
+              "row_id": "reintroduced",
+              "column": "batch_count",
+              "type": "numeric",
+              "answer": 4.0,
+              "unit": "",
+              "tolerance": 0,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "count",
+                "values": [
+                  43,
+                  40,
+                  42,
+                  43
+                ]
+              }
+            },
+            {
+              "id": "reintroduced-mean_assay_score",
+              "row_id": "reintroduced",
+              "column": "mean_assay_score",
+              "type": "numeric",
+              "answer": 42.0,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  43,
+                  40,
+                  42,
+                  43
+                ]
+              }
+            }
+          ]
+        },
+        "rubric": [
+          {
+            "id": "parental_variant-batch_count",
+            "criterion": "parental_variant: batch_count",
+            "points": 1,
+            "evidence": [
+              "Recomputes batch_count for parental_variant from the preparation-level values."
+            ]
+          },
+          {
+            "id": "parental_variant-mean_assay_score",
+            "criterion": "parental_variant: mean_assay_score",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_assay_score for parental_variant from the preparation-level values."
+            ]
+          },
+          {
+            "id": "corrected-batch_count",
+            "criterion": "corrected: batch_count",
+            "points": 1,
+            "evidence": [
+              "Recomputes batch_count for corrected from the preparation-level values."
+            ]
+          },
+          {
+            "id": "corrected-mean_assay_score",
+            "criterion": "corrected: mean_assay_score",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_assay_score for corrected from the preparation-level values."
+            ]
+          },
+          {
+            "id": "reintroduced-batch_count",
+            "criterion": "reintroduced: batch_count",
+            "points": 1,
+            "evidence": [
+              "Recomputes batch_count for reintroduced from the preparation-level values."
+            ]
+          },
+          {
+            "id": "reintroduced-mean_assay_score",
+            "criterion": "reintroduced: mean_assay_score",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_assay_score for reintroduced from the preparation-level values."
+            ]
+          }
+        ]
+      },
+      "feedback": {
+        "hint": "Group the clone-level values by condition and average them; keep the clone count at four.",
+        "solution": "Mean assay scores are 41 (parental variant), 78.5 (corrected) and 42 (re-introduced); four independent clones per condition.",
+        "lesson_ids": [
+          "cell-biology-hw6",
+          "cell-biology-20",
+          "cell-biology-19"
+        ],
+        "misconception_ids": [
+          "replicates-confused-with-independent-experiments"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "cell-biology-hw6:assay-plot",
+      "type": "graph",
+      "prompt": "Homework 6 open formative practice · Plot the mean assay score for the three conditions on the supplied axes using the four clone values for each. The points are descriptive summaries and show no uncertainty.",
+      "points": 6,
+      "objective_ids": [
+        "cell-biology-20-objective-1",
+        "cell-biology-20-objective-2"
+      ],
+      "graph_spec": {
+        "x_axis": {
+          "label": "Condition code (0 = parental variant, 1 = corrected, 2 = re-introduced)",
+          "minimum": 0,
+          "maximum": 2
+        },
+        "y_axis": {
+          "label": "Assay score (higher is closer to reference)",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "points": [
+          {
+            "id": "parental",
+            "label": "Parental variant"
+          },
+          {
+            "id": "corrected",
+            "label": "Corrected"
+          },
+          {
+            "id": "reintroduced",
+            "label": "Re-introduced"
+          }
+        ],
+        "observations": [
+          {
+            "id": "parental",
+            "x": 0,
+            "values": [
+              41,
+              44,
+              39,
+              40
+            ]
+          },
+          {
+            "id": "corrected",
+            "x": 1,
+            "values": [
+              78,
+              80,
+              77,
+              79
+            ]
+          },
+          {
+            "id": "reintroduced",
+            "x": 2,
+            "values": [
+              43,
+              40,
+              42,
+              43
+            ]
+          }
+        ]
+      },
+      "solution_spec": {
+        "points": [
+          {
+            "id": "parental",
+            "x": 0,
+            "y": 41.0,
+            "x_tolerance": 0,
+            "y_tolerance": 0.01
+          },
+          {
+            "id": "corrected",
+            "x": 1,
+            "y": 78.5,
+            "x_tolerance": 0,
+            "y_tolerance": 0.01
+          },
+          {
+            "id": "reintroduced",
+            "x": 2,
+            "y": 42.0,
+            "x_tolerance": 0,
+            "y_tolerance": 0.01
+          }
+        ],
+        "rubric": [
+          {
+            "id": "parental_x",
+            "criterion": "Parental variant coordinate",
+            "points": 1,
+            "evidence": [
+              "Parental variant sits at the supplied x value."
+            ]
+          },
+          {
+            "id": "parental_y",
+            "criterion": "Parental variant mean coordinate",
+            "points": 1,
+            "evidence": [
+              "The replicate values average to 41.0."
+            ]
+          },
+          {
+            "id": "corrected_x",
+            "criterion": "Corrected coordinate",
+            "points": 1,
+            "evidence": [
+              "Corrected sits at the supplied x value."
+            ]
+          },
+          {
+            "id": "corrected_y",
+            "criterion": "Corrected mean coordinate",
+            "points": 1,
+            "evidence": [
+              "The replicate values average to 78.5."
+            ]
+          },
+          {
+            "id": "reintroduced_x",
+            "criterion": "Re-introduced coordinate",
+            "points": 1,
+            "evidence": [
+              "Re-introduced sits at the supplied x value."
+            ]
+          },
+          {
+            "id": "reintroduced_y",
+            "criterion": "Re-introduced mean coordinate",
+            "points": 1,
+            "evidence": [
+              "The replicate values average to 42.0."
+            ]
+          }
+        ]
+      },
+      "feedback": {
+        "hint": "Average each set of four clone values and use the fixed x codes.",
+        "solution": "The means are 41, 78.5 and 42. The plot shows a descriptive pattern, not a mechanism.",
+        "lesson_ids": [
+          "cell-biology-hw6",
+          "cell-biology-20",
+          "cell-biology-19"
+        ],
+        "misconception_ids": [
+          "mean-as-causal-proof"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "cell-biology-hw6:penetrance",
+      "type": "data_interpretation",
+      "prompt": "Homework 6 open formative practice · In the constructed table, 18 of 30 variant carriers and 7 of 70 non-carriers have the trait. Calculate penetrance among carriers and choose the best-supported statement.",
+      "points": 2,
+      "objective_ids": [
+        "cell-biology-20-objective-1",
+        "cell-biology-20-objective-2"
+      ],
+      "response_fields": [
+        {
+          "id": "value",
+          "type": "numeric",
+          "prompt": "Calculate penetrance among carriers as a percentage. Report exactly 3 significant figures.",
+          "unit": "%",
+          "points": 1
+        },
+        {
+          "id": "inference",
+          "type": "single_choice",
+          "prompt": "Which statement is best supported by the table?",
+          "options": [
+            "Penetrance is the fraction of carriers with the trait (here 60%); it describes frequency in this dataset and does not show mechanism, transmission or what will happen to any one person.",
+            "A penetrance of 60% means the variant causes the trait in 60% of cells.",
+            "Penetrance is the probability a carrier's child inherits the variant.",
+            "The table proves the variant is the cause."
+          ],
+          "points": 1
+        }
+      ],
+      "solution_spec": {
+        "field_specs": [
+          {
+            "id": "value",
+            "type": "numeric",
+            "answer": 60.0,
+            "unit": "%",
+            "tolerance": 0.05,
+            "relative_tolerance": 0,
+            "unit_required": true,
+            "significant_figures": 3,
+            "dimensions": null
+          },
+          {
+            "id": "inference",
+            "type": "single_choice",
+            "answer": 0
+          }
+        ]
+      },
+      "feedback": {
+        "hint": "Divide affected carriers by all carriers and express the result as a percentage.",
+        "solution": "18 / 30 = 60%. Non-carriers have a 10% frequency (7 / 70), so the trait is more frequent in carriers in this constructed table. Penetrance is a population frequency among carriers; it is not transmission probability, a cell-level fraction or evidence of mechanism, and it does not predict an individual outcome.",
+        "lesson_ids": [
+          "cell-biology-hw6",
+          "cell-biology-20",
+          "cell-biology-19"
+        ],
+        "misconception_ids": [
+          "penetrance-means-transmission",
+          "association-equals-causation-genetics",
+          "one-family-identifies-population-risk"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "cell-biology-hw6:evidence-roles",
+      "type": "structured",
+      "prompt": "Homework 6 open formative practice · Select what each piece of evidence adds. The structured choices provide deterministic partial credit; they do not grade a written argument.",
+      "points": 5,
+      "objective_ids": [
+        "cell-biology-20-objective-1",
+        "cell-biology-20-objective-2"
+      ],
+      "response_fields": [
+        {
+          "id": "pedigree",
+          "type": "single_choice",
+          "prompt": "What does the family table add?",
+          "options": [
+            "An association between genotype and trait in these families, with penetrance as a frequency.",
+            "Proof of the molecular mechanism.",
+            "A prediction for any individual.",
+            "A guarantee of transmission."
+          ],
+          "points": 1
+        },
+        {
+          "id": "correction",
+          "type": "single_choice",
+          "prompt": "What does correcting the variant add when the readout moves toward reference?",
+          "options": [
+            "Support that the variant contributes to the readout in this cell system, with off-target and clonal effects still to exclude.",
+            "Proof of pathogenicity in people.",
+            "Proof the variant acts directly on one protein.",
+            "Proof the readout measures the whole trait."
+          ],
+          "points": 1
+        },
+        {
+          "id": "reintro",
+          "type": "single_choice",
+          "prompt": "What does re-introducing the variant add when the readout returns?",
+          "options": [
+            "It argues against a corrected-clone artifact and supports reversibility of the effect in this system.",
+            "It proves the effect is general to all cell types.",
+            "It identifies the binding partner.",
+            "It replaces the need for multiple clones."
+          ],
+          "points": 1
+        },
+        {
+          "id": "clones",
+          "type": "single_choice",
+          "prompt": "Why use several independent clones?",
+          "options": [
+            "Clones can differ for reasons unrelated to the variant, so independence guards against a single odd clone.",
+            "Clones increase the number of assay wells only.",
+            "They make off-target effects impossible.",
+            "They replace a control line."
+          ],
+          "points": 1
+        },
+        {
+          "id": "scope",
+          "type": "single_choice",
+          "prompt": "What is NOT shown by this isogenic result?",
+          "options": [
+            "That the variant causes the human trait or predicts an individual outcome.",
+            "That the assay score changed.",
+            "That four clones were used.",
+            "That the clones are isogenic."
+          ],
+          "points": 1
+        }
+      ],
+      "solution_spec": {
+        "field_specs": [
+          {
+            "id": "pedigree",
+            "type": "single_choice",
+            "answer": 0
+          },
+          {
+            "id": "correction",
+            "type": "single_choice",
+            "answer": 0
+          },
+          {
+            "id": "reintro",
+            "type": "single_choice",
+            "answer": 0
+          },
+          {
+            "id": "clones",
+            "type": "single_choice",
+            "answer": 0
+          },
+          {
+            "id": "scope",
+            "type": "single_choice",
+            "answer": 0
+          }
+        ],
+        "rubric": [
+          {
+            "id": "pedigree",
+            "criterion": "Pedigree table",
+            "points": 1,
+            "evidence": [
+              "Families show association and frequency."
+            ]
+          },
+          {
+            "id": "correction",
+            "criterion": "Correction",
+            "points": 1,
+            "evidence": [
+              "Correction tests dependence on the variant."
+            ]
+          },
+          {
+            "id": "reintro",
+            "criterion": "Re-introduction",
+            "points": 1,
+            "evidence": [
+              "Re-introduction tests the reverse direction."
+            ]
+          },
+          {
+            "id": "clones",
+            "criterion": "Independent clones",
+            "points": 1,
+            "evidence": [
+              "Clonal variation is a real alternative explanation."
+            ]
+          },
+          {
+            "id": "scope",
+            "criterion": "Scope: evidence reasoning",
+            "points": 1,
+            "evidence": [
+              "Cell-level evidence is not individual prediction."
+            ]
+          }
+        ]
+      },
+      "feedback": {
+        "hint": "State what each evidence type can and cannot show.",
+        "solution": "Families show association and frequency; correction and re-introduction in independent isogenic clones support a role for the variant in a readout in this system; none of them shows human causation or an individual's outcome.",
+        "lesson_ids": [
+          "cell-biology-hw6",
+          "cell-biology-20",
+          "cell-biology-19"
+        ],
+        "misconception_ids": [
+          "variant-prediction-equals-pathogenicity",
+          "sequence-variant-determines-phenotype-without-evidence",
+          "single-cell-system-generalized-universally"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "cell-biology-hw6:genotype-phenotype-errors",
+      "type": "multiple_select",
+      "prompt": "Homework 6 open formative practice · Select the two statements that are correct. The score uses the displayed correct-minus-incorrect partial-credit rule.",
+      "points": 2,
+      "objective_ids": [
+        "cell-biology-20-objective-1",
+        "cell-biology-20-objective-2"
+      ],
+      "options": [
+        "Reduced penetrance means some carriers do not show the trait, which does not imply the variant has no effect in others.",
+        "An association between a variant and a trait in families does not by itself establish mechanism.",
+        "Penetrance and transmission probability are the same quantity.",
+        "A predicted damaging effect is evidence of a disease outcome.",
+        "One family is enough to estimate population risk."
+      ],
+      "solution_spec": {
+        "answer": [
+          0,
+          1
+        ],
+        "partial_credit": "correct-minus-incorrect-clamped-v1"
+      },
+      "feedback": {
+        "hint": "Keep frequency, transmission and mechanism distinct.",
+        "solution": "Reduced penetrance and association are compatible with a real effect without establishing mechanism. Penetrance is not transmission, a prediction is not an outcome, and one family does not estimate population risk.",
+        "lesson_ids": [
+          "cell-biology-hw6",
+          "cell-biology-20",
+          "cell-biology-19"
+        ],
+        "misconception_ids": [
+          "penetrance-means-transmission",
+          "variant-prediction-equals-pathogenicity",
+          "one-family-identifies-population-risk"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "cell-biology-hw7:coverslip-summary",
+      "type": "file_upload",
+      "prompt": "Homework 7 open formative practice · Use the synthetic spreading CSV linked in the reading. For each condition report the number of independent coverslips and the mean spread area (µm²), mean cell density (per mm²) and mean relative ligand density. Upload exactly these ordered columns with one row per condition: condition,batch_count,mean_spread_area_um2,mean_cell_density,mean_ligand_density. This deterministic public check scores the summary cells only.",
+      "points": 12,
+      "objective_ids": [
+        "cell-biology-24-objective-1",
+        "cell-biology-24-objective-2"
+      ],
+      "solution_spec": {
+        "accepted_media_types": [
+          "text/csv"
+        ],
+        "max_bytes": 32768,
+        "validation_spec": {
+          "format": "csv-numeric-table-v1",
+          "delimiter": ",",
+          "key_column": "condition",
+          "columns": [
+            "condition",
+            "batch_count",
+            "mean_spread_area_um2",
+            "mean_cell_density",
+            "mean_ligand_density"
+          ],
+          "checks": [
+            {
+              "id": "soft-batch_count",
+              "row_id": "soft",
+              "column": "batch_count",
+              "type": "numeric",
+              "answer": 4.0,
+              "unit": "",
+              "tolerance": 0,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "count",
+                "values": [
+                  420,
+                  450,
+                  400,
+                  430
+                ]
+              }
+            },
+            {
+              "id": "soft-mean_spread_area_um2",
+              "row_id": "soft",
+              "column": "mean_spread_area_um2",
+              "type": "numeric",
+              "answer": 425.0,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  420,
+                  450,
+                  400,
+                  430
+                ]
+              }
+            },
+            {
+              "id": "soft-mean_cell_density",
+              "row_id": "soft",
+              "column": "mean_cell_density",
+              "type": "numeric",
+              "answer": 142.5,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  140,
+                  150,
+                  135,
+                  145
+                ]
+              }
+            },
+            {
+              "id": "soft-mean_ligand_density",
+              "row_id": "soft",
+              "column": "mean_ligand_density",
+              "type": "numeric",
+              "answer": 100.0,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  100,
+                  98,
+                  102,
+                  100
+                ]
+              }
+            },
+            {
+              "id": "medium-batch_count",
+              "row_id": "medium",
+              "column": "batch_count",
+              "type": "numeric",
+              "answer": 4.0,
+              "unit": "",
+              "tolerance": 0,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "count",
+                "values": [
+                  880,
+                  900,
+                  860,
+                  920
+                ]
+              }
+            },
+            {
+              "id": "medium-mean_spread_area_um2",
+              "row_id": "medium",
+              "column": "mean_spread_area_um2",
+              "type": "numeric",
+              "answer": 890.0,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  880,
+                  900,
+                  860,
+                  920
+                ]
+              }
+            },
+            {
+              "id": "medium-mean_cell_density",
+              "row_id": "medium",
+              "column": "mean_cell_density",
+              "type": "numeric",
+              "answer": 144.0,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  138,
+                  142,
+                  150,
+                  146
+                ]
+              }
+            },
+            {
+              "id": "medium-mean_ligand_density",
+              "row_id": "medium",
+              "column": "mean_ligand_density",
+              "type": "numeric",
+              "answer": 100.0,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  101,
+                  99,
+                  100,
+                  100
+                ]
+              }
+            },
+            {
+              "id": "stiff-batch_count",
+              "row_id": "stiff",
+              "column": "batch_count",
+              "type": "numeric",
+              "answer": 4.0,
+              "unit": "",
+              "tolerance": 0,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "count",
+                "values": [
+                  1480,
+                  1500,
+                  1450,
+                  1530
+                ]
+              }
+            },
+            {
+              "id": "stiff-mean_spread_area_um2",
+              "row_id": "stiff",
+              "column": "mean_spread_area_um2",
+              "type": "numeric",
+              "answer": 1490.0,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  1480,
+                  1500,
+                  1450,
+                  1530
+                ]
+              }
+            },
+            {
+              "id": "stiff-mean_cell_density",
+              "row_id": "stiff",
+              "column": "mean_cell_density",
+              "type": "numeric",
+              "answer": 145.0,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  143,
+                  139,
+                  148,
+                  150
+                ]
+              }
+            },
+            {
+              "id": "stiff-mean_ligand_density",
+              "row_id": "stiff",
+              "column": "mean_ligand_density",
+              "type": "numeric",
+              "answer": 100.0,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  99,
+                  101,
+                  100,
+                  100
+                ]
+              }
+            }
+          ]
+        },
+        "rubric": [
+          {
+            "id": "soft-batch_count",
+            "criterion": "soft: batch_count",
+            "points": 1,
+            "evidence": [
+              "Recomputes batch_count for soft from the preparation-level values."
+            ]
+          },
+          {
+            "id": "soft-mean_spread_area_um2",
+            "criterion": "soft: mean_spread_area_um2",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_spread_area_um2 for soft from the preparation-level values."
+            ]
+          },
+          {
+            "id": "soft-mean_cell_density",
+            "criterion": "soft: mean_cell_density",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_cell_density for soft from the preparation-level values."
+            ]
+          },
+          {
+            "id": "soft-mean_ligand_density",
+            "criterion": "soft: mean_ligand_density",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_ligand_density for soft from the preparation-level values."
+            ]
+          },
+          {
+            "id": "medium-batch_count",
+            "criterion": "medium: batch_count",
+            "points": 1,
+            "evidence": [
+              "Recomputes batch_count for medium from the preparation-level values."
+            ]
+          },
+          {
+            "id": "medium-mean_spread_area_um2",
+            "criterion": "medium: mean_spread_area_um2",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_spread_area_um2 for medium from the preparation-level values."
+            ]
+          },
+          {
+            "id": "medium-mean_cell_density",
+            "criterion": "medium: mean_cell_density",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_cell_density for medium from the preparation-level values."
+            ]
+          },
+          {
+            "id": "medium-mean_ligand_density",
+            "criterion": "medium: mean_ligand_density",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_ligand_density for medium from the preparation-level values."
+            ]
+          },
+          {
+            "id": "stiff-batch_count",
+            "criterion": "stiff: batch_count",
+            "points": 1,
+            "evidence": [
+              "Recomputes batch_count for stiff from the preparation-level values."
+            ]
+          },
+          {
+            "id": "stiff-mean_spread_area_um2",
+            "criterion": "stiff: mean_spread_area_um2",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_spread_area_um2 for stiff from the preparation-level values."
+            ]
+          },
+          {
+            "id": "stiff-mean_cell_density",
+            "criterion": "stiff: mean_cell_density",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_cell_density for stiff from the preparation-level values."
+            ]
+          },
+          {
+            "id": "stiff-mean_ligand_density",
+            "criterion": "stiff: mean_ligand_density",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_ligand_density for stiff from the preparation-level values."
+            ]
+          }
+        ]
+      },
+      "feedback": {
+        "hint": "Average each column within a condition; keep the coverslip count at four.",
+        "solution": "Mean spread area is 425, 890 and 1490 µm²; mean cell density 142.5, 144 and 145 per mm²; ligand density about 100. Four independent coverslips per condition.",
+        "lesson_ids": [
+          "cell-biology-hw7",
+          "cell-biology-24",
+          "cell-biology-23"
+        ],
+        "misconception_ids": [
+          "technical-wells-as-biological-n",
+          "replicates-confused-with-independent-experiments"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "cell-biology-hw7:spreading-plot",
+      "type": "graph",
+      "prompt": "Homework 7 open formative practice · Plot the mean spread area for the three stiffness conditions on the supplied axes using the four coverslip values for each. The points are descriptive summaries and show no uncertainty.",
+      "points": 6,
+      "objective_ids": [
+        "cell-biology-24-objective-1",
+        "cell-biology-24-objective-2"
+      ],
+      "graph_spec": {
+        "x_axis": {
+          "label": "Condition code (0 = soft, 1 = medium, 2 = stiff)",
+          "minimum": 0,
+          "maximum": 2
+        },
+        "y_axis": {
+          "label": "Spread area (µm²)",
+          "minimum": 0,
+          "maximum": 1800
+        },
+        "points": [
+          {
+            "id": "soft",
+            "label": "Soft"
+          },
+          {
+            "id": "medium",
+            "label": "Medium"
+          },
+          {
+            "id": "stiff",
+            "label": "Stiff"
+          }
+        ],
+        "observations": [
+          {
+            "id": "soft",
+            "x": 0,
+            "values": [
+              420,
+              450,
+              400,
+              430
+            ]
+          },
+          {
+            "id": "medium",
+            "x": 1,
+            "values": [
+              880,
+              900,
+              860,
+              920
+            ]
+          },
+          {
+            "id": "stiff",
+            "x": 2,
+            "values": [
+              1480,
+              1500,
+              1450,
+              1530
+            ]
+          }
+        ]
+      },
+      "solution_spec": {
+        "points": [
+          {
+            "id": "soft",
+            "x": 0,
+            "y": 425.0,
+            "x_tolerance": 0,
+            "y_tolerance": 0.5
+          },
+          {
+            "id": "medium",
+            "x": 1,
+            "y": 890.0,
+            "x_tolerance": 0,
+            "y_tolerance": 0.5
+          },
+          {
+            "id": "stiff",
+            "x": 2,
+            "y": 1490.0,
+            "x_tolerance": 0,
+            "y_tolerance": 0.5
+          }
+        ],
+        "rubric": [
+          {
+            "id": "soft_x",
+            "criterion": "Soft coordinate",
+            "points": 1,
+            "evidence": [
+              "Soft sits at the supplied x value."
+            ]
+          },
+          {
+            "id": "soft_y",
+            "criterion": "Soft mean coordinate",
+            "points": 1,
+            "evidence": [
+              "The replicate values average to 425.0."
+            ]
+          },
+          {
+            "id": "medium_x",
+            "criterion": "Medium coordinate",
+            "points": 1,
+            "evidence": [
+              "Medium sits at the supplied x value."
+            ]
+          },
+          {
+            "id": "medium_y",
+            "criterion": "Medium mean coordinate",
+            "points": 1,
+            "evidence": [
+              "The replicate values average to 890.0."
+            ]
+          },
+          {
+            "id": "stiff_x",
+            "criterion": "Stiff coordinate",
+            "points": 1,
+            "evidence": [
+              "Stiff sits at the supplied x value."
+            ]
+          },
+          {
+            "id": "stiff_y",
+            "criterion": "Stiff mean coordinate",
+            "points": 1,
+            "evidence": [
+              "The replicate values average to 1490.0."
+            ]
+          }
+        ]
+      },
+      "feedback": {
+        "hint": "Average each set of four coverslip values and use the fixed x codes.",
+        "solution": "The means are 425, 890 and 1490 µm². The plot is descriptive and does not establish that stiffness alone caused the change.",
+        "lesson_ids": [
+          "cell-biology-hw7",
+          "cell-biology-24",
+          "cell-biology-23"
+        ],
+        "misconception_ids": [
+          "stiffness-alone-determines-fate"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "cell-biology-hw7:fold-and-scope",
+      "type": "data_interpretation",
+      "prompt": "Homework 7 open formative practice · Calculate the stiff-to-soft ratio of mean spread area, then choose the best-supported conclusion.",
+      "points": 2,
+      "objective_ids": [
+        "cell-biology-24-objective-1",
+        "cell-biology-24-objective-2"
+      ],
+      "response_fields": [
+        {
+          "id": "value",
+          "type": "numeric",
+          "prompt": "Calculate the stiff-to-soft ratio of mean spread area (dimensionless). Report exactly 3 significant figures.",
+          "unit": "",
+          "points": 1
+        },
+        {
+          "id": "inference",
+          "type": "single_choice",
+          "prompt": "Which conclusion is best supported?",
+          "options": [
+            "Spread area is about 3.5-fold larger on the stiffest gels with matched ligand and cell density; this supports a stiffness-associated shape difference in this system, not that stiffness alone sets cell fate or force.",
+            "Stiffness alone determines cell fate.",
+            "Spreading area is a direct measure of traction force.",
+            "The ratio proves a specific mechanotransduction pathway."
+          ],
+          "points": 1
+        }
+      ],
+      "solution_spec": {
+        "field_specs": [
+          {
+            "id": "value",
+            "type": "numeric",
+            "answer": 3.51,
+            "unit": "",
+            "tolerance": 0.01,
+            "relative_tolerance": 0,
+            "unit_required": false,
+            "significant_figures": 3,
+            "dimensions": null
+          },
+          {
+            "id": "inference",
+            "type": "single_choice",
+            "answer": 0
+          }
+        ]
+      },
+      "feedback": {
+        "hint": "Divide the stiff mean by the soft mean and keep the units dimensionless.",
+        "solution": "1490 / 425 = 3.51. Matched ligand and cell density reduce two alternatives, but gel stiffness covaries with other gel properties, and spreading is a shape readout rather than force or fate.",
+        "lesson_ids": [
+          "cell-biology-hw7",
+          "cell-biology-24",
+          "cell-biology-23"
+        ],
+        "misconception_ids": [
+          "stiffness-alone-determines-fate",
+          "elastic-modulus-equals-all-mechanics",
+          "traction-correlates-proves-force-pathway"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "cell-biology-hw7:design-controls",
+      "type": "structured",
+      "prompt": "Homework 7 open formative practice · Select the control that best addresses each alternative explanation. The structured choices provide deterministic partial credit; they do not grade a written argument.",
+      "points": 5,
+      "objective_ids": [
+        "cell-biology-24-objective-1",
+        "cell-biology-24-objective-2"
+      ],
+      "response_fields": [
+        {
+          "id": "ligand",
+          "type": "single_choice",
+          "prompt": "How is ligand density addressed?",
+          "options": [
+            "Measure the coated ligand on each gel type and keep it matched, or vary it independently.",
+            "Assume equal coating because the same solution was used.",
+            "Count more cells per coverslip.",
+            "Report only the stiffest gels."
+          ],
+          "points": 1
+        },
+        {
+          "id": "number",
+          "type": "single_choice",
+          "prompt": "How is cell number addressed?",
+          "options": [
+            "Match plating density and report cell density per coverslip, analyzing density as a covariate.",
+            "Analyze only the best-spread cells.",
+            "Ignore density because it is similar.",
+            "Use a single large field."
+          ],
+          "points": 1
+        },
+        {
+          "id": "gel",
+          "type": "single_choice",
+          "prompt": "Stiffness covaries with porosity and thickness. What helps?",
+          "options": [
+            "Independently verify the modulus and vary stiffness and a second gel property separately where possible.",
+            "Assume stiffness is the only property that changed.",
+            "Use only one gel batch.",
+            "Skip thickness."
+          ],
+          "points": 1
+        },
+        {
+          "id": "unit",
+          "type": "single_choice",
+          "prompt": "What is the independent unit for the spreading comparison?",
+          "options": [
+            "The coverslip (separate gel preparation), not each cell.",
+            "Each cell.",
+            "Each pixel.",
+            "Each image field."
+          ],
+          "points": 1
+        },
+        {
+          "id": "scope",
+          "type": "single_choice",
+          "prompt": "What does spread area NOT show by itself?",
+          "options": [
+            "Traction force, pathway activity or cell fate.",
+            "That area was measured.",
+            "That gels differ in stiffness.",
+            "That the coverslips are separate."
+          ],
+          "points": 1
+        }
+      ],
+      "solution_spec": {
+        "field_specs": [
+          {
+            "id": "ligand",
+            "type": "single_choice",
+            "answer": 0
+          },
+          {
+            "id": "number",
+            "type": "single_choice",
+            "answer": 0
+          },
+          {
+            "id": "gel",
+            "type": "single_choice",
+            "answer": 0
+          },
+          {
+            "id": "unit",
+            "type": "single_choice",
+            "answer": 0
+          },
+          {
+            "id": "scope",
+            "type": "single_choice",
+            "answer": 0
+          }
+        ],
+        "rubric": [
+          {
+            "id": "ligand",
+            "criterion": "Ligand density",
+            "points": 1,
+            "evidence": [
+              "Coating density is measured, not assumed."
+            ]
+          },
+          {
+            "id": "number",
+            "criterion": "Cell number",
+            "points": 1,
+            "evidence": [
+              "Cell number can alter spreading and signaling."
+            ]
+          },
+          {
+            "id": "gel",
+            "criterion": "Gel properties",
+            "points": 1,
+            "evidence": [
+              "Confounding gel properties need separate variation."
+            ]
+          },
+          {
+            "id": "unit",
+            "criterion": "Independent unit",
+            "points": 1,
+            "evidence": [
+              "Cells within a coverslip are not independent."
+            ]
+          },
+          {
+            "id": "scope",
+            "criterion": "Readout scope",
+            "points": 1,
+            "evidence": [
+              "Shape is not force or fate."
+            ]
+          }
+        ]
+      },
+      "feedback": {
+        "hint": "Name the alternative explanation and the control that tests it.",
+        "solution": "Measure and match ligand density, match and report cell density, vary gel properties independently, treat coverslips as the unit, and keep a shape readout separate from force and fate claims.",
+        "lesson_ids": [
+          "cell-biology-hw7",
+          "cell-biology-24",
+          "cell-biology-23"
+        ],
+        "misconception_ids": [
+          "stiffness-alone-determines-fate",
+          "technical-wells-as-biological-n",
+          "traction-correlates-proves-force-pathway"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "cell-biology-hw7:mechanotransduction-claims",
+      "type": "multiple_select",
+      "prompt": "Homework 7 open formative practice · Select the two statements that are best supported. The score uses the displayed correct-minus-incorrect partial-credit rule.",
+      "points": 2,
+      "objective_ids": [
+        "cell-biology-24-objective-1",
+        "cell-biology-24-objective-2"
+      ],
+      "options": [
+        "Elastic modulus alone does not capture all mechanics; viscoelasticity, thickness and porosity can also matter.",
+        "Cytoskeletal organization, adhesion and matrix mechanics are separate candidate contributors to a measured response.",
+        "Integrins are only passive anchors.",
+        "A correlation between spreading and traction proves the force pathway.",
+        "The cytoskeleton is static."
+      ],
+      "solution_spec": {
+        "answer": [
+          0,
+          1
+        ],
+        "partial_credit": "correct-minus-incorrect-clamped-v1"
+      },
+      "feedback": {
+        "hint": "Recall that mechanics has several properties and that a correlation does not identify a pathway.",
+        "solution": "Elastic modulus does not capture viscoelastic, thickness or porosity effects, and adhesion, cytoskeleton and matrix mechanics are separate contributors. Integrins also signal, a correlation does not prove a pathway, and the cytoskeleton is dynamic.",
+        "lesson_ids": [
+          "cell-biology-hw7",
+          "cell-biology-24",
+          "cell-biology-23"
+        ],
+        "misconception_ids": [
+          "elastic-modulus-equals-all-mechanics",
+          "integrins-only-anchors",
+          "cytoskeleton-is-static"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "cell-biology-hw8:state-summary",
+      "type": "file_upload",
+      "prompt": "Homework 8 open formative practice · Use the synthetic cell-state CSV linked in the reading. For each condition report the number of independent cultures and the mean DNA-synthesis label, mean enzyme marker and mean after-stimulation DNA-synthesis label (all percentages). Upload exactly these ordered columns with one row per condition: condition,batch_count,mean_edu_pct,mean_sabgal_pct,mean_reentry_edu_pct. This deterministic public check scores the summary cells only.",
+      "points": 12,
+      "objective_ids": [
+        "cell-biology-26-objective-1",
+        "cell-biology-26-objective-2"
+      ],
+      "solution_spec": {
+        "accepted_media_types": [
+          "text/csv"
+        ],
+        "max_bytes": 32768,
+        "validation_spec": {
+          "format": "csv-numeric-table-v1",
+          "delimiter": ",",
+          "key_column": "condition",
+          "columns": [
+            "condition",
+            "batch_count",
+            "mean_edu_pct",
+            "mean_sabgal_pct",
+            "mean_reentry_edu_pct"
+          ],
+          "checks": [
+            {
+              "id": "proliferating-batch_count",
+              "row_id": "proliferating",
+              "column": "batch_count",
+              "type": "numeric",
+              "answer": 4.0,
+              "unit": "",
+              "tolerance": 0,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "count",
+                "values": [
+                  38,
+                  40,
+                  42,
+                  40
+                ]
+              }
+            },
+            {
+              "id": "proliferating-mean_edu_pct",
+              "row_id": "proliferating",
+              "column": "mean_edu_pct",
+              "type": "numeric",
+              "answer": 40.0,
+              "unit": "%",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  38,
+                  40,
+                  42,
+                  40
+                ]
+              }
+            },
+            {
+              "id": "proliferating-mean_sabgal_pct",
+              "row_id": "proliferating",
+              "column": "mean_sabgal_pct",
+              "type": "numeric",
+              "answer": 5.0,
+              "unit": "%",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  4,
+                  5,
+                  6,
+                  5
+                ]
+              }
+            },
+            {
+              "id": "proliferating-mean_reentry_edu_pct",
+              "row_id": "proliferating",
+              "column": "mean_reentry_edu_pct",
+              "type": "numeric",
+              "answer": 40.5,
+              "unit": "%",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  41,
+                  39,
+                  42,
+                  40
+                ]
+              }
+            },
+            {
+              "id": "quiescent-batch_count",
+              "row_id": "quiescent",
+              "column": "batch_count",
+              "type": "numeric",
+              "answer": 4.0,
+              "unit": "",
+              "tolerance": 0,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "count",
+                "values": [
+                  4,
+                  5,
+                  6,
+                  5
+                ]
+              }
+            },
+            {
+              "id": "quiescent-mean_edu_pct",
+              "row_id": "quiescent",
+              "column": "mean_edu_pct",
+              "type": "numeric",
+              "answer": 5.0,
+              "unit": "%",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  4,
+                  5,
+                  6,
+                  5
+                ]
+              }
+            },
+            {
+              "id": "quiescent-mean_sabgal_pct",
+              "row_id": "quiescent",
+              "column": "mean_sabgal_pct",
+              "type": "numeric",
+              "answer": 9.0,
+              "unit": "%",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  8,
+                  9,
+                  10,
+                  9
+                ]
+              }
+            },
+            {
+              "id": "quiescent-mean_reentry_edu_pct",
+              "row_id": "quiescent",
+              "column": "mean_reentry_edu_pct",
+              "type": "numeric",
+              "answer": 34.0,
+              "unit": "%",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  33,
+                  35,
+                  34,
+                  34
+                ]
+              }
+            },
+            {
+              "id": "damage_induced-batch_count",
+              "row_id": "damage_induced",
+              "column": "batch_count",
+              "type": "numeric",
+              "answer": 4.0,
+              "unit": "",
+              "tolerance": 0,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "count",
+                "values": [
+                  3,
+                  4,
+                  5,
+                  4
+                ]
+              }
+            },
+            {
+              "id": "damage_induced-mean_edu_pct",
+              "row_id": "damage_induced",
+              "column": "mean_edu_pct",
+              "type": "numeric",
+              "answer": 4.0,
+              "unit": "%",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  3,
+                  4,
+                  5,
+                  4
+                ]
+              }
+            },
+            {
+              "id": "damage_induced-mean_sabgal_pct",
+              "row_id": "damage_induced",
+              "column": "mean_sabgal_pct",
+              "type": "numeric",
+              "answer": 65.0,
+              "unit": "%",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  62,
+                  65,
+                  68,
+                  65
+                ]
+              }
+            },
+            {
+              "id": "damage_induced-mean_reentry_edu_pct",
+              "row_id": "damage_induced",
+              "column": "mean_reentry_edu_pct",
+              "type": "numeric",
+              "answer": 6.0,
+              "unit": "%",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  6,
+                  7,
+                  5,
+                  6
+                ]
+              }
+            }
+          ]
+        },
+        "rubric": [
+          {
+            "id": "proliferating-batch_count",
+            "criterion": "proliferating: batch_count",
+            "points": 1,
+            "evidence": [
+              "Recomputes batch_count for proliferating from the preparation-level values."
+            ]
+          },
+          {
+            "id": "proliferating-mean_edu_pct",
+            "criterion": "proliferating: mean_edu_pct",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_edu_pct for proliferating from the preparation-level values."
+            ]
+          },
+          {
+            "id": "proliferating-mean_sabgal_pct",
+            "criterion": "proliferating: mean_sabgal_pct",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_sabgal_pct for proliferating from the preparation-level values."
+            ]
+          },
+          {
+            "id": "proliferating-mean_reentry_edu_pct",
+            "criterion": "proliferating: mean_reentry_edu_pct",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_reentry_edu_pct for proliferating from the preparation-level values."
+            ]
+          },
+          {
+            "id": "quiescent-batch_count",
+            "criterion": "quiescent: batch_count",
+            "points": 1,
+            "evidence": [
+              "Recomputes batch_count for quiescent from the preparation-level values."
+            ]
+          },
+          {
+            "id": "quiescent-mean_edu_pct",
+            "criterion": "quiescent: mean_edu_pct",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_edu_pct for quiescent from the preparation-level values."
+            ]
+          },
+          {
+            "id": "quiescent-mean_sabgal_pct",
+            "criterion": "quiescent: mean_sabgal_pct",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_sabgal_pct for quiescent from the preparation-level values."
+            ]
+          },
+          {
+            "id": "quiescent-mean_reentry_edu_pct",
+            "criterion": "quiescent: mean_reentry_edu_pct",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_reentry_edu_pct for quiescent from the preparation-level values."
+            ]
+          },
+          {
+            "id": "damage_induced-batch_count",
+            "criterion": "damage_induced: batch_count",
+            "points": 1,
+            "evidence": [
+              "Recomputes batch_count for damage_induced from the preparation-level values."
+            ]
+          },
+          {
+            "id": "damage_induced-mean_edu_pct",
+            "criterion": "damage_induced: mean_edu_pct",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_edu_pct for damage_induced from the preparation-level values."
+            ]
+          },
+          {
+            "id": "damage_induced-mean_sabgal_pct",
+            "criterion": "damage_induced: mean_sabgal_pct",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_sabgal_pct for damage_induced from the preparation-level values."
+            ]
+          },
+          {
+            "id": "damage_induced-mean_reentry_edu_pct",
+            "criterion": "damage_induced: mean_reentry_edu_pct",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_reentry_edu_pct for damage_induced from the preparation-level values."
+            ]
+          }
+        ]
+      },
+      "feedback": {
+        "hint": "Average each column within a condition; keep the culture count at four.",
+        "solution": "Proliferating: 40, 5, 40.5. Quiescent: 5, 9, 34. Damage-induced: 4, 65, 6. Four independent cultures per condition.",
+        "lesson_ids": [
+          "cell-biology-hw8",
+          "cell-biology-26",
+          "cell-biology-25"
+        ],
+        "misconception_ids": [
+          "replicates-confused-with-independent-experiments"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "cell-biology-hw8:reentry-plot",
+      "type": "graph",
+      "prompt": "Homework 8 open formative practice · Plot the mean after-stimulation DNA-synthesis label for the three conditions on the supplied axes using the four culture values for each. The points are descriptive summaries and show no uncertainty.",
+      "points": 6,
+      "objective_ids": [
+        "cell-biology-26-objective-1",
+        "cell-biology-26-objective-2"
+      ],
+      "graph_spec": {
+        "x_axis": {
+          "label": "Condition code (0 = proliferating, 1 = quiescent, 2 = damage-induced)",
+          "minimum": 0,
+          "maximum": 2
+        },
+        "y_axis": {
+          "label": "DNA-synthesis label after stimulation (%)",
+          "minimum": 0,
+          "maximum": 60
+        },
+        "points": [
+          {
+            "id": "prolif",
+            "label": "Proliferating"
+          },
+          {
+            "id": "quiescent",
+            "label": "Quiescent"
+          },
+          {
+            "id": "damage",
+            "label": "Damage-induced"
+          }
+        ],
+        "observations": [
+          {
+            "id": "prolif",
+            "x": 0,
+            "values": [
+              41,
+              39,
+              42,
+              40
+            ]
+          },
+          {
+            "id": "quiescent",
+            "x": 1,
+            "values": [
+              33,
+              35,
+              34,
+              34
+            ]
+          },
+          {
+            "id": "damage",
+            "x": 2,
+            "values": [
+              6,
+              7,
+              5,
+              6
+            ]
+          }
+        ]
+      },
+      "solution_spec": {
+        "points": [
+          {
+            "id": "prolif",
+            "x": 0,
+            "y": 40.5,
+            "x_tolerance": 0,
+            "y_tolerance": 0.01
+          },
+          {
+            "id": "quiescent",
+            "x": 1,
+            "y": 34.0,
+            "x_tolerance": 0,
+            "y_tolerance": 0.01
+          },
+          {
+            "id": "damage",
+            "x": 2,
+            "y": 6.0,
+            "x_tolerance": 0,
+            "y_tolerance": 0.01
+          }
+        ],
+        "rubric": [
+          {
+            "id": "prolif_x",
+            "criterion": "Proliferating coordinate",
+            "points": 1,
+            "evidence": [
+              "Proliferating sits at the supplied x value."
+            ]
+          },
+          {
+            "id": "prolif_y",
+            "criterion": "Proliferating mean coordinate",
+            "points": 1,
+            "evidence": [
+              "The replicate values average to 40.5."
+            ]
+          },
+          {
+            "id": "quiescent_x",
+            "criterion": "Quiescent coordinate",
+            "points": 1,
+            "evidence": [
+              "Quiescent sits at the supplied x value."
+            ]
+          },
+          {
+            "id": "quiescent_y",
+            "criterion": "Quiescent mean coordinate",
+            "points": 1,
+            "evidence": [
+              "The replicate values average to 34.0."
+            ]
+          },
+          {
+            "id": "damage_x",
+            "criterion": "Damage-induced coordinate",
+            "points": 1,
+            "evidence": [
+              "Damage-induced sits at the supplied x value."
+            ]
+          },
+          {
+            "id": "damage_y",
+            "criterion": "Damage-induced mean coordinate",
+            "points": 1,
+            "evidence": [
+              "The replicate values average to 6.0."
+            ]
+          }
+        ]
+      },
+      "feedback": {
+        "hint": "Average each set of four culture values and use the fixed x codes.",
+        "solution": "The means are 40.5, 34 and 6. The plot shows re-entry; it does not by itself assign a state.",
+        "lesson_ids": [
+          "cell-biology-hw8",
+          "cell-biology-26",
+          "cell-biology-25"
+        ],
+        "misconception_ids": [
+          "senescence-single-marker"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "cell-biology-hw8:reentry-contrast",
+      "type": "data_interpretation",
+      "prompt": "Homework 8 open formative practice · Calculate the signed difference in after-stimulation DNA-synthesis label (quiescent minus damage-induced, in percentage points), then choose the best-supported conclusion.",
+      "points": 2,
+      "objective_ids": [
+        "cell-biology-26-objective-1",
+        "cell-biology-26-objective-2"
+      ],
+      "response_fields": [
+        {
+          "id": "value",
+          "type": "numeric",
+          "prompt": "Calculate quiescent minus damage-induced in percentage points. Report exactly 3 significant figures.",
+          "unit": "%",
+          "points": 1
+        },
+        {
+          "id": "inference",
+          "type": "single_choice",
+          "prompt": "Which conclusion is best supported by the three measurements together?",
+          "options": [
+            "Both arrested states have a low DNA-synthesis label, but the damage-induced cultures have a high enzyme marker and little re-entry while the serum-withdrawn cultures re-enter; together these are more consistent with a persistent arrest in the damage-induced cultures. No single marker or time point proves senescence.",
+            "A low DNA-synthesis label proves senescence.",
+            "A high enzyme marker alone proves senescence.",
+            "Re-entry proves the cells are stem cells."
+          ],
+          "points": 1
+        }
+      ],
+      "solution_spec": {
+        "field_specs": [
+          {
+            "id": "value",
+            "type": "numeric",
+            "answer": 28.0,
+            "unit": "%",
+            "tolerance": 0.05,
+            "relative_tolerance": 0,
+            "unit_required": true,
+            "significant_figures": 3,
+            "dimensions": null
+          },
+          {
+            "id": "inference",
+            "type": "single_choice",
+            "answer": 0
+          }
+        ]
+      },
+      "feedback": {
+        "hint": "Subtract the damage-induced mean from the quiescent mean.",
+        "solution": "34 − 6 = 28 percentage points. A low DNA-synthesis label does not separate quiescence from senescence; the enzyme marker and the reversibility test do, together, and even then the evidence supports a persistent-arrest pattern in this system rather than proving senescence.",
+        "lesson_ids": [
+          "cell-biology-hw8",
+          "cell-biology-26",
+          "cell-biology-25"
+        ],
+        "misconception_ids": [
+          "quiescence-equals-senescence",
+          "senescence-single-marker"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "cell-biology-hw8:marker-roles",
+      "type": "structured",
+      "prompt": "Homework 8 open formative practice · Select what each piece of evidence does and does not show. The structured choices provide deterministic partial credit; they do not grade a written argument.",
+      "points": 5,
+      "objective_ids": [
+        "cell-biology-26-objective-1",
+        "cell-biology-26-objective-2"
+      ],
+      "response_fields": [
+        {
+          "id": "edu",
+          "type": "single_choice",
+          "prompt": "What does a low DNA-synthesis label show?",
+          "options": [
+            "That few cells were synthesizing DNA during the labeling window; it does not distinguish quiescence from senescence.",
+            "That the cells are senescent.",
+            "That the cells are dead.",
+            "That the cells cannot re-enter the cycle."
+          ],
+          "points": 1
+        },
+        {
+          "id": "enzyme",
+          "type": "single_choice",
+          "prompt": "What does a high senescence-associated enzyme marker show alone?",
+          "options": [
+            "An associated change that is not specific by itself; it needs other markers and a functional test.",
+            "Proof of senescence.",
+            "Proof of apoptosis.",
+            "Proof of potency."
+          ],
+          "points": 1
+        },
+        {
+          "id": "reentry",
+          "type": "single_choice",
+          "prompt": "What does failure to re-enter after stimulation add?",
+          "options": [
+            "A functional argument for a persistent arrest, limited by the time and stimulus used.",
+            "Proof of senescence at any time point.",
+            "Proof of cell death.",
+            "Nothing about the cell state."
+          ],
+          "points": 1
+        },
+        {
+          "id": "death",
+          "type": "single_choice",
+          "prompt": "Why measure viability or apoptosis markers too?",
+          "options": [
+            "Arrested cultures can include dying cells, and cell death is a different outcome from arrest.",
+            "Viability replaces the other markers.",
+            "Apoptosis and senescence are the same.",
+            "It is only needed for proliferating cells."
+          ],
+          "points": 1
+        },
+        {
+          "id": "scope",
+          "type": "single_choice",
+          "prompt": "What is NOT shown by this marker pattern?",
+          "options": [
+            "Potency, regenerative function or any clinical effect.",
+            "That the cultures differ in markers.",
+            "That four cultures were used.",
+            "That serum was withdrawn."
+          ],
+          "points": 1
+        }
+      ],
+      "solution_spec": {
+        "field_specs": [
+          {
+            "id": "edu",
+            "type": "single_choice",
+            "answer": 0
+          },
+          {
+            "id": "enzyme",
+            "type": "single_choice",
+            "answer": 0
+          },
+          {
+            "id": "reentry",
+            "type": "single_choice",
+            "answer": 0
+          },
+          {
+            "id": "death",
+            "type": "single_choice",
+            "answer": 0
+          },
+          {
+            "id": "scope",
+            "type": "single_choice",
+            "answer": 0
+          }
+        ],
+        "rubric": [
+          {
+            "id": "edu",
+            "criterion": "DNA-synthesis label",
+            "points": 1,
+            "evidence": [
+              "A low label is shared by several states."
+            ]
+          },
+          {
+            "id": "enzyme",
+            "criterion": "Enzyme marker",
+            "points": 1,
+            "evidence": [
+              "The marker is not specific alone."
+            ]
+          },
+          {
+            "id": "reentry",
+            "criterion": "Re-entry: evidence reasoning",
+            "points": 1,
+            "evidence": [
+              "Reversibility is a functional distinction."
+            ]
+          },
+          {
+            "id": "death",
+            "criterion": "Cell death",
+            "points": 1,
+            "evidence": [
+              "Arrest, senescence and death are different outcomes."
+            ]
+          },
+          {
+            "id": "scope",
+            "criterion": "Scope: evidence reasoning",
+            "points": 1,
+            "evidence": [
+              "A marker pattern is not function or potency."
+            ]
+          }
+        ]
+      },
+      "feedback": {
+        "hint": "State what each marker measures and what it cannot separate.",
+        "solution": "A low DNA-synthesis label is shared by several states, a single enzyme marker is not specific, a reversibility test adds a functional distinction with limits, cell death is a separate outcome, and marker patterns are not potency or function.",
+        "lesson_ids": [
+          "cell-biology-hw8",
+          "cell-biology-26",
+          "cell-biology-25"
+        ],
+        "misconception_ids": [
+          "quiescence-equals-senescence",
+          "senescence-single-marker",
+          "apoptosis-equals-all-cell-death",
+          "marker-equals-function-stem-cell"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "cell-biology-hw8:state-errors",
+      "type": "multiple_select",
+      "prompt": "Homework 8 open formative practice · Select the two statements that are best supported. The score uses the displayed correct-minus-incorrect partial-credit rule.",
+      "points": 2,
+      "objective_ids": [
+        "cell-biology-26-objective-1",
+        "cell-biology-26-objective-2"
+      ],
+      "options": [
+        "A single marker is insufficient to assign senescence; several markers and a functional test are needed.",
+        "DNA content alone does not identify all cell-cycle phases or distinguish arrested states.",
+        "Quiescence and senescence are the same state.",
+        "A stem-cell marker proves potency.",
+        "Phosphorylation of a protein proves a fate decision."
+      ],
+      "solution_spec": {
+        "answer": [
+          0,
+          1
+        ],
+        "partial_credit": "correct-minus-incorrect-clamped-v1"
+      },
+      "feedback": {
+        "hint": "Recall that states are assigned from combinations of evidence.",
+        "solution": "Several markers and a functional test are needed for senescence, and DNA content alone does not resolve all phases or arrested states. Quiescence and senescence differ, and neither a stem-cell marker nor a phosphorylation event proves a fate.",
+        "lesson_ids": [
+          "cell-biology-hw8",
+          "cell-biology-26",
+          "cell-biology-25"
+        ],
+        "misconception_ids": [
+          "senescence-single-marker",
+          "dna-content-identifies-all-cell-cycle-phases",
+          "quiescence-equals-senescence",
+          "marker-equals-function-stem-cell",
+          "phosphorylation-proves-fate"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "cell-biology-lab3:summary-table",
+      "type": "file_upload",
+      "prompt": "Virtual lab 3 open formative practice · Use the day-8 rows of the synthetic lineage CSV linked in the lab reading. For each condition report the number of independent cultures and the mean lineage-marker percentage, mean pluripotency-associated marker percentage and mean cells per well in thousands. Upload exactly these ordered columns with one row per condition: condition,batch_count,mean_lineage_pct,mean_pluripotency_pct,mean_cells_thousands. This deterministic public check scores the summary cells only.",
+      "points": 8,
+      "objective_ids": [
+        "cell-biology-27-objective-1",
+        "cell-biology-27-objective-2",
+        "cell-biology-27-objective-3"
+      ],
+      "solution_spec": {
+        "accepted_media_types": [
+          "text/csv"
+        ],
+        "max_bytes": 32768,
+        "validation_spec": {
+          "format": "csv-numeric-table-v1",
+          "delimiter": ",",
+          "key_column": "condition",
+          "columns": [
+            "condition",
+            "batch_count",
+            "mean_lineage_pct",
+            "mean_pluripotency_pct",
+            "mean_cells_thousands"
+          ],
+          "checks": [
+            {
+              "id": "control-batch_count",
+              "row_id": "control",
+              "column": "batch_count",
+              "type": "numeric",
+              "answer": 4.0,
+              "unit": "",
+              "tolerance": 0,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "count",
+                "values": [
+                  7,
+                  8,
+                  7,
+                  8
+                ]
+              }
+            },
+            {
+              "id": "control-mean_lineage_pct",
+              "row_id": "control",
+              "column": "mean_lineage_pct",
+              "type": "numeric",
+              "answer": 7.5,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  7,
+                  8,
+                  7,
+                  8
+                ]
+              }
+            },
+            {
+              "id": "control-mean_pluripotency_pct",
+              "row_id": "control",
+              "column": "mean_pluripotency_pct",
+              "type": "numeric",
+              "answer": 64.5,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  64,
+                  66,
+                  63,
+                  65
+                ]
+              }
+            },
+            {
+              "id": "control-mean_cells_thousands",
+              "row_id": "control",
+              "column": "mean_cells_thousands",
+              "type": "numeric",
+              "answer": 451.0,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  450,
+                  458,
+                  444,
+                  452
+                ]
+              }
+            },
+            {
+              "id": "factor-batch_count",
+              "row_id": "factor",
+              "column": "batch_count",
+              "type": "numeric",
+              "answer": 4.0,
+              "unit": "",
+              "tolerance": 0,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "count",
+                "values": [
+                  58,
+                  60,
+                  57,
+                  59
+                ]
+              }
+            },
+            {
+              "id": "factor-mean_lineage_pct",
+              "row_id": "factor",
+              "column": "mean_lineage_pct",
+              "type": "numeric",
+              "answer": 58.5,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  58,
+                  60,
+                  57,
+                  59
+                ]
+              }
+            },
+            {
+              "id": "factor-mean_pluripotency_pct",
+              "row_id": "factor",
+              "column": "mean_pluripotency_pct",
+              "type": "numeric",
+              "answer": 18.5,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  18,
+                  20,
+                  17,
+                  19
+                ]
+              }
+            },
+            {
+              "id": "factor-mean_cells_thousands",
+              "row_id": "factor",
+              "column": "mean_cells_thousands",
+              "type": "numeric",
+              "answer": 241.0,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  240,
+                  246,
+                  236,
+                  242
+                ]
+              }
+            }
+          ]
+        },
+        "rubric": [
+          {
+            "id": "control-batch_count",
+            "criterion": "control: batch_count",
+            "points": 1,
+            "evidence": [
+              "Recomputes batch_count for control from the preparation-level values."
+            ]
+          },
+          {
+            "id": "control-mean_lineage_pct",
+            "criterion": "control: mean_lineage_pct",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_lineage_pct for control from the preparation-level values."
+            ]
+          },
+          {
+            "id": "control-mean_pluripotency_pct",
+            "criterion": "control: mean_pluripotency_pct",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_pluripotency_pct for control from the preparation-level values."
+            ]
+          },
+          {
+            "id": "control-mean_cells_thousands",
+            "criterion": "control: mean_cells_thousands",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_cells_thousands for control from the preparation-level values."
+            ]
+          },
+          {
+            "id": "factor-batch_count",
+            "criterion": "factor: batch_count",
+            "points": 1,
+            "evidence": [
+              "Recomputes batch_count for factor from the preparation-level values."
+            ]
+          },
+          {
+            "id": "factor-mean_lineage_pct",
+            "criterion": "factor: mean_lineage_pct",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_lineage_pct for factor from the preparation-level values."
+            ]
+          },
+          {
+            "id": "factor-mean_pluripotency_pct",
+            "criterion": "factor: mean_pluripotency_pct",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_pluripotency_pct for factor from the preparation-level values."
+            ]
+          },
+          {
+            "id": "factor-mean_cells_thousands",
+            "criterion": "factor: mean_cells_thousands",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_cells_thousands for factor from the preparation-level values."
+            ]
+          }
+        ]
+      },
+      "feedback": {
+        "hint": "Use only the day-8 rows, group by condition and average each column.",
+        "solution": "Control: 7.5% lineage, 64.5% pluripotency-associated, 451 thousand cells. Factor: 58.5%, 18.5%, 241 thousand. Four independent cultures per condition.",
+        "lesson_ids": [
+          "cell-biology-lab-03",
+          "cell-biology-27"
+        ],
+        "misconception_ids": [
+          "replicates-confused-with-independent-experiments"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "cell-biology-lab3:trajectory-plot",
+      "type": "graph",
+      "prompt": "Virtual lab 3 open formative practice · Plot the mean lineage-marker percentage for the factor condition at days 0, 4 and 8 on the supplied axes using the four culture values for each day. The points are descriptive summaries and show no uncertainty.",
+      "points": 6,
+      "objective_ids": [
+        "cell-biology-27-objective-1",
+        "cell-biology-27-objective-2",
+        "cell-biology-27-objective-3"
+      ],
+      "graph_spec": {
+        "x_axis": {
+          "label": "Day of culture",
+          "minimum": 0,
+          "maximum": 8
+        },
+        "y_axis": {
+          "label": "Lineage-marker-positive cells (%)",
+          "minimum": 0,
+          "maximum": 80
+        },
+        "points": [
+          {
+            "id": "day0",
+            "label": "Day 0"
+          },
+          {
+            "id": "day4",
+            "label": "Day 4"
+          },
+          {
+            "id": "day8",
+            "label": "Day 8"
+          }
+        ],
+        "observations": [
+          {
+            "id": "day0",
+            "x": 0,
+            "values": [
+              2,
+              3,
+              3,
+              2
+            ]
+          },
+          {
+            "id": "day4",
+            "x": 4,
+            "values": [
+              24,
+              26,
+              25,
+              25
+            ]
+          },
+          {
+            "id": "day8",
+            "x": 8,
+            "values": [
+              58,
+              60,
+              57,
+              59
+            ]
+          }
+        ]
+      },
+      "solution_spec": {
+        "points": [
+          {
+            "id": "day0",
+            "x": 0,
+            "y": 2.5,
+            "x_tolerance": 0,
+            "y_tolerance": 0.01
+          },
+          {
+            "id": "day4",
+            "x": 4,
+            "y": 25.0,
+            "x_tolerance": 0,
+            "y_tolerance": 0.01
+          },
+          {
+            "id": "day8",
+            "x": 8,
+            "y": 58.5,
+            "x_tolerance": 0,
+            "y_tolerance": 0.01
+          }
+        ],
+        "rubric": [
+          {
+            "id": "day0_x",
+            "criterion": "Day 0 coordinate",
+            "points": 1,
+            "evidence": [
+              "Day 0 sits at the supplied x value."
+            ]
+          },
+          {
+            "id": "day0_y",
+            "criterion": "Day 0 mean coordinate",
+            "points": 1,
+            "evidence": [
+              "The replicate values average to 2.5."
+            ]
+          },
+          {
+            "id": "day4_x",
+            "criterion": "Day 4 coordinate",
+            "points": 1,
+            "evidence": [
+              "Day 4 sits at the supplied x value."
+            ]
+          },
+          {
+            "id": "day4_y",
+            "criterion": "Day 4 mean coordinate",
+            "points": 1,
+            "evidence": [
+              "The replicate values average to 25.0."
+            ]
+          },
+          {
+            "id": "day8_x",
+            "criterion": "Day 8 coordinate",
+            "points": 1,
+            "evidence": [
+              "Day 8 sits at the supplied x value."
+            ]
+          },
+          {
+            "id": "day8_y",
+            "criterion": "Day 8 mean coordinate",
+            "points": 1,
+            "evidence": [
+              "The replicate values average to 58.5."
+            ]
+          }
+        ]
+      },
+      "feedback": {
+        "hint": "Average the four culture values at each day and place the mean at its day.",
+        "solution": "The means are 2.5% (day 0), 25% (day 4) and 58.5% (day 8). The trend is descriptive and does not distinguish conversion from selection.",
+        "lesson_ids": [
+          "cell-biology-lab-03",
+          "cell-biology-27"
+        ],
+        "misconception_ids": [
+          "marker-equals-function-stem-cell"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "cell-biology-lab3:fraction-contrast",
+      "type": "data_interpretation",
+      "prompt": "Virtual lab 3 open formative practice · Calculate factor minus control in lineage-marker percentage points at day 8, then choose the best-supported statement given that cells per well differ between the conditions.",
+      "points": 2,
+      "objective_ids": [
+        "cell-biology-27-objective-1",
+        "cell-biology-27-objective-2",
+        "cell-biology-27-objective-3"
+      ],
+      "response_fields": [
+        {
+          "id": "value",
+          "type": "numeric",
+          "prompt": "Calculate factor minus control in percentage points. Report exactly 3 significant figures.",
+          "unit": "%",
+          "points": 1
+        },
+        {
+          "id": "inference",
+          "type": "single_choice",
+          "prompt": "Which statement is best supported?",
+          "options": [
+            "The marker-positive fraction is higher with the factor and, because cells per well are lower, marker-positive cells per well also rise in this table; whether cells converted, marker-negative cells were lost or grew more slowly, or both, needs lineage tracing or per-cell tracking.",
+            "The higher fraction proves cells were converted to the lineage.",
+            "The higher fraction proves the factor is safe and effective.",
+            "Cell number is irrelevant to a fraction."
+          ],
+          "points": 1
+        }
+      ],
+      "solution_spec": {
+        "field_specs": [
+          {
+            "id": "value",
+            "type": "numeric",
+            "answer": 51.0,
+            "unit": "%",
+            "tolerance": 0.005,
+            "relative_tolerance": 0,
+            "unit_required": true,
+            "significant_figures": 3,
+            "dimensions": null
+          },
+          {
+            "id": "inference",
+            "type": "single_choice",
+            "answer": 0
+          }
+        ]
+      },
+      "feedback": {
+        "hint": "Subtract the control mean from the factor mean, then compare absolute marker-positive counts using cells per well.",
+        "solution": "58.5 − 7.5 = 51 percentage points. Marker-positive cells per well are about 0.585 × 241 = 141 thousand against 0.075 × 451 = 34 thousand, so the count also rises. A fraction alone cannot separate conversion from selective loss or growth; that needs tracing or per-cell data.",
+        "lesson_ids": [
+          "cell-biology-lab-03",
+          "cell-biology-27"
+        ],
+        "misconception_ids": [
+          "marker-equals-function-stem-cell",
+          "stem-cell-marker-proves-potency",
+          "mean-as-causal-proof"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "cell-biology-lab3:state-inference",
+      "type": "structured",
+      "prompt": "Virtual lab 3 open formative practice · Select what each piece of evidence does and does not show. The structured choices provide deterministic partial credit; they do not grade a written argument.",
+      "points": 5,
+      "objective_ids": [
+        "cell-biology-27-objective-1",
+        "cell-biology-27-objective-2",
+        "cell-biology-27-objective-3"
+      ],
+      "response_fields": [
+        {
+          "id": "fraction",
+          "type": "single_choice",
+          "prompt": "Why combine marker fraction with cells per well?",
+          "options": [
+            "To compute marker-positive cells per well, because a fraction can rise from loss of other cells without more marker-positive cells.",
+            "Cell number is not needed for fractions.",
+            "Because fractions cannot exceed 50%.",
+            "To remove biological replicates."
+          ],
+          "points": 1
+        },
+        {
+          "id": "tracing",
+          "type": "single_choice",
+          "prompt": "Which data best separate conversion from selective survival or growth?",
+          "options": [
+            "Lineage tracing or time-lapse tracking of individual cells, with matched death and proliferation measures.",
+            "A single endpoint marker fraction.",
+            "More wells at the same endpoint.",
+            "The pluripotency-associated marker alone."
+          ],
+          "points": 1
+        },
+        {
+          "id": "viability",
+          "type": "single_choice",
+          "prompt": "Viability falls slightly with the factor. What follows?",
+          "options": [
+            "Selective loss cannot be excluded and should be measured directly rather than assumed.",
+            "Viability proves conversion.",
+            "Viability is irrelevant.",
+            "Viability proves no cells died."
+          ],
+          "points": 1
+        },
+        {
+          "id": "markers",
+          "type": "single_choice",
+          "prompt": "What do the lineage marker rising and the pluripotency-associated marker falling together show?",
+          "options": [
+            "A concordant marker pattern, which is still not a demonstration of defined function or potency.",
+            "That the cells are functional lineage cells.",
+            "That the cells lost all potency.",
+            "That the process is safe."
+          ],
+          "points": 1
+        },
+        {
+          "id": "scope",
+          "type": "single_choice",
+          "prompt": "What is NOT established by this synthetic time course?",
+          "options": [
+            "Functional capacity, potency, safety or any therapeutic effect.",
+            "That marker fractions were measured.",
+            "That four cultures were used per day.",
+            "That days differ."
+          ],
+          "points": 1
+        }
+      ],
+      "solution_spec": {
+        "field_specs": [
+          {
+            "id": "fraction",
+            "type": "single_choice",
+            "answer": 0
+          },
+          {
+            "id": "tracing",
+            "type": "single_choice",
+            "answer": 0
+          },
+          {
+            "id": "viability",
+            "type": "single_choice",
+            "answer": 0
+          },
+          {
+            "id": "markers",
+            "type": "single_choice",
+            "answer": 0
+          },
+          {
+            "id": "scope",
+            "type": "single_choice",
+            "answer": 0
+          }
+        ],
+        "rubric": [
+          {
+            "id": "fraction",
+            "criterion": "Fraction versus count",
+            "points": 1,
+            "evidence": [
+              "A fraction is relative; a count is absolute."
+            ]
+          },
+          {
+            "id": "tracing",
+            "criterion": "Conversion versus selection",
+            "points": 1,
+            "evidence": [
+              "Per-cell history separates the explanations."
+            ]
+          },
+          {
+            "id": "viability",
+            "criterion": "Viability trend",
+            "points": 1,
+            "evidence": [
+              "A viability trend is a reason to test selection."
+            ]
+          },
+          {
+            "id": "markers",
+            "criterion": "Two markers",
+            "points": 1,
+            "evidence": [
+              "Marker pattern is not function."
+            ]
+          },
+          {
+            "id": "scope",
+            "criterion": "Scope: evidence reasoning",
+            "points": 1,
+            "evidence": [
+              "In-vitro marker data do not establish function or therapy."
+            ]
+          }
+        ]
+      },
+      "feedback": {
+        "hint": "Name what each measurement can and cannot separate.",
+        "solution": "A fraction is relative, so counts matter; conversion and selection need per-cell history; a viability trend is a reason to test selection; a concordant marker pattern is still not function or potency; and none of this is a therapeutic claim.",
+        "lesson_ids": [
+          "cell-biology-lab-03",
+          "cell-biology-27"
+        ],
+        "misconception_ids": [
+          "marker-equals-function-stem-cell",
+          "stem-cell-marker-proves-potency",
+          "potency-equals-clinical-efficacy"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "cell-biology-3:delta-g-from-k",
+      "type": "numeric",
+      "prompt": "For a reversible reaction at 298 K the equilibrium constant is K = 10. Using ΔG° = −RT ln K with R = 8.314 J/(mol·K), calculate the standard free-energy change. Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "cell-biology-3-objective-2"
+      ],
+      "solution_spec": {
+        "answer": -5.7,
+        "unit": "kJ/mol",
+        "tolerance": 0.05,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": {
+          "length": 2,
+          "mass": 1,
+          "time": -2,
+          "amount": -1
+        }
+      },
+      "feedback": {
+        "hint": "Compute RT in J/mol, multiply by ln 10, change the sign, and convert joules to kilojoules.",
+        "solution": "RT = 8.314 × 298 = 2477.6 J/mol and ln 10 = 2.3026, so ΔG° = −2477.6 × 2.3026 = −5705 J/mol = -5.7 kJ/mol. A K greater than 1 corresponds to a negative ΔG° for the stated standard state; the value describes the equilibrium position, not the rate.",
+        "lesson_ids": [
+          "cell-biology-3"
+        ],
+        "misconception_ids": [
+          "catalyst-changes-equilibrium"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "cell-biology-3:catalyst-and-equilibrium",
+      "type": "single_choice",
+      "prompt": "A catalyst is added to a reversible reaction at constant temperature. Which statement is correct for the model in the lesson?",
+      "options": [
+        "It lowers the activation barrier in both directions and leaves ΔG° and the equilibrium constant unchanged.",
+        "It makes ΔG° more negative and shifts the equilibrium toward products.",
+        "It lowers only the forward barrier, so the reverse reaction slows.",
+        "It couples the reaction to ATP hydrolysis, which changes ΔG° of the reaction itself."
+      ],
+      "points": 1,
+      "objective_ids": [
+        "cell-biology-3-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0
+      },
+      "feedback": {
+        "hint": "Separate how fast equilibrium is approached from where equilibrium lies.",
+        "solution": "A catalyst lowers the barrier for the forward and reverse reactions by the same route, so equilibrium is reached sooner but ΔG° and K are unchanged. Driving an unfavorable step needs coupling to a favorable one, which changes the net free energy of the coupled process, not the standard free-energy change of the original reaction.",
+        "lesson_ids": [
+          "cell-biology-3"
+        ],
+        "misconception_ids": [
+          "catalyst-changes-equilibrium"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    }
   ]
 }

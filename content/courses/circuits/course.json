@@ -128,7 +128,8 @@
           ],
           "worked_example": "A 5 V source with 1 kΩ series resistance driving a 9 kΩ load gives 4.5 V across the load by voltage division.",
           "question_ids": [
-            "circuits-1:check"
+            "circuits-1:check",
+            "circuits-1:thevenin-resistance"
           ],
           "card_ids": [
             "circuits-0-0",
@@ -155,7 +156,8 @@
           ],
           "worked_example": "A non-inverting stage with Rf=90 kΩ and Rg=10 kΩ has ideal gain 1+Rf/Rg=10, while actual bandwidth falls as closed-loop gain rises.",
           "question_ids": [
-            "circuits-2:check"
+            "circuits-2:check",
+            "circuits-2:small-differential-signal"
           ],
           "card_ids": [
             "circuits-1-0",
@@ -182,7 +184,8 @@
           ],
           "worked_example": "With R=10 kΩ and C=1 μF, fc≈15.9 Hz; a 100 Hz component is strongly attenuated by a single-pole low-pass stage.",
           "question_ids": [
-            "circuits-3:check"
+            "circuits-3:check",
+            "circuits-3:nyquist-rate"
           ],
           "card_ids": [
             "circuits-2-0",
@@ -209,7 +212,8 @@
           ],
           "worked_example": "If V=2x and voltage uncertainty is ±0.02 V, the corresponding first-order x uncertainty is ±0.01 units, assuming slope 2 V/unit and no other error sources.",
           "question_ids": [
-            "circuits-4:check"
+            "circuits-4:check",
+            "circuits-4:uncertainty-propagation"
           ],
           "card_ids": [
             "circuits-3-0",
@@ -226,12 +230,14 @@
       "mode": "practice",
       "path": "question-banks/practice.json",
       "objective_ids": [
-        "circuits-1-objective-1"
+        "circuits-1-objective-1",
+        "circuits-1-objective-2"
       ],
       "question_ids": [
-        "circuits-1:check"
+        "circuits-1:check",
+        "circuits-1:thevenin-resistance"
       ],
-      "points": 1
+      "points": 2
     },
     {
       "id": "circuits-2-practice",
@@ -239,12 +245,14 @@
       "mode": "practice",
       "path": "question-banks/practice.json",
       "objective_ids": [
-        "circuits-2-objective-1"
+        "circuits-2-objective-1",
+        "circuits-2-objective-2"
       ],
       "question_ids": [
-        "circuits-2:check"
+        "circuits-2:check",
+        "circuits-2:small-differential-signal"
       ],
-      "points": 1
+      "points": 2
     },
     {
       "id": "circuits-3-practice",
@@ -252,12 +260,14 @@
       "mode": "practice",
       "path": "question-banks/practice.json",
       "objective_ids": [
-        "circuits-3-objective-1"
+        "circuits-3-objective-1",
+        "circuits-3-objective-2"
       ],
       "question_ids": [
-        "circuits-3:check"
+        "circuits-3:check",
+        "circuits-3:nyquist-rate"
       ],
-      "points": 1
+      "points": 2
     },
     {
       "id": "circuits-4-practice",
@@ -265,12 +275,14 @@
       "mode": "practice",
       "path": "question-banks/practice.json",
       "objective_ids": [
-        "circuits-4-objective-1"
+        "circuits-4-objective-1",
+        "circuits-4-objective-2"
       ],
       "question_ids": [
-        "circuits-4:check"
+        "circuits-4:check",
+        "circuits-4:uncertainty-propagation"
       ],
-      "points": 1
+      "points": 2
     },
     {
       "id": "circuits-case",

@@ -126,6 +126,126 @@
         "legacy_id": "physics-mechanics-4:check",
         "modifications": []
       }
+    },
+    {
+      "id": "physics-mechanics-1:incline-acceleration",
+      "type": "numeric",
+      "prompt": "A 10 kg block slides without friction down a 30° incline. Calculate its acceleration along the incline using g = 9.81 m/s². Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "physics-mechanics-1-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 4.905,
+        "unit": "m/s^2",
+        "tolerance": 0.05,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Resolve gravity along the incline.",
+        "solution": "Along the incline m a = m g sin 30°, so a = 4.905 m/s². The mass cancels; the normal force balances the perpendicular component.",
+        "lesson_ids": [
+          "physics-mechanics-1"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physics-mechanics-2:dissipated-energy",
+      "type": "numeric",
+      "prompt": "A 2.0 kg object is dropped from 5.0 m and hits the floor at 8.0 m/s. Using g = 9.81 m/s², how much mechanical energy was dissipated? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "physics-mechanics-2-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 34.1,
+        "unit": "J",
+        "tolerance": 0.3,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Compare the initial potential energy with the final kinetic energy.",
+        "solution": "Initial potential energy = 2.0 × 9.81 × 5.0 = 98.1 J and final kinetic energy = ½ × 2.0 × 8.0² = 64.0 J, so 34.1 J was dissipated (drag, heat, sound). Gravity is conservative; air resistance is not.",
+        "lesson_ids": [
+          "physics-mechanics-2"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physics-mechanics-3:impulse-area",
+      "type": "numeric",
+      "prompt": "A triangular force pulse rises linearly from 0 to 200 N over 0.020 s and then stops. Calculate the impulse. Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "physics-mechanics-3-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 2.0,
+        "unit": "N*s",
+        "tolerance": 0.01,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Impulse is the area under the force-time curve.",
+        "solution": "Area = ½ × 200 N × 0.020 s = 2.0 N·s. By the impulse-momentum theorem this equals the change in momentum.",
+        "lesson_ids": [
+          "physics-mechanics-3"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physics-mechanics-4:strain-from-stress",
+      "type": "numeric",
+      "prompt": "A rod carries an axial stress of 5.0×10⁶ Pa in a linear elastic material with E = 2.0×10⁹ Pa. Calculate the strain. Enter a number.",
+      "points": 1,
+      "objective_ids": [
+        "physics-mechanics-4-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0.0025,
+        "unit": "",
+        "tolerance": 1e-05,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use σ = E ε.",
+        "solution": "ε = σ/E = 5.0×10⁶ ÷ 2.0×10⁹ = 0.0025, dimensionless. The linear model holds only below yield and for slow loading.",
+        "lesson_ids": [
+          "physics-mechanics-4"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
     }
   ]
 }

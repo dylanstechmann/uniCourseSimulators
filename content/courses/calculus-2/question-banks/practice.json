@@ -129,6 +129,127 @@
         "legacy_id": "calculus-2-4:check",
         "modifications": []
       }
+    },
+    {
+      "id": "calculus-2-1:improper-integral",
+      "type": "single_choice",
+      "prompt": "Which of the following improper integrals converges to a finite value?",
+      "options": [
+        "∫ from 1 to ∞ of 1 dx",
+        "∫ from 1 to ∞ of x⁻² dx",
+        "∫ from 1 to ∞ of x⁻¹ dx",
+        "∫ from 1 to ∞ of x⁻¹ᐟ² dx"
+      ],
+      "points": 1,
+      "objective_ids": [
+        "calculus-2-1-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 1
+      },
+      "feedback": {
+        "hint": "Use the p-test: ∫ from 1 to ∞ of x⁻ᵖ dx converges if and only if p > 1.",
+        "solution": "With p = 2 the antiderivative −1/x gives the value 1, so the integral converges. For p = 1 and p = 1/2 the antiderivative grows without bound, and a constant integrand grows linearly, so those diverge.",
+        "lesson_ids": [
+          "calculus-2-1"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-2-2:taylor-remainder",
+      "type": "numeric",
+      "prompt": "The degree-2 Taylor polynomial of eˣ at 0 is used to estimate e^0.5. Use the Lagrange remainder bound |R₂| ≤ M|x|³/3! with M = e^0.5 ≈ 1.6487 to bound the error. Enter a number.",
+      "points": 1,
+      "objective_ids": [
+        "calculus-2-2-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0.0343,
+        "unit": "",
+        "tolerance": 0.0005,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "On [0, 0.5] the third derivative of eˣ is at most e^0.5.",
+        "solution": "|R₂| ≤ 1.6487 × 0.5³ ÷ 6 = 0.0343. The polynomial gives 1.625, and the true value 1.6487 differs by 0.0237, which is inside the bound.",
+        "lesson_ids": [
+          "calculus-2-2"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-2-3:variable-force-work",
+      "type": "numeric",
+      "prompt": "A spring-like force F(x) = 4x newtons acts along a displacement from x = 0 to x = 3 m. Calculate the work done. Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "calculus-2-3-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 18.0,
+        "unit": "J",
+        "tolerance": 0.05,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Integrate the force over the displacement.",
+        "solution": "W = ∫₀³ 4x dx = 2x² evaluated from 0 to 3 = 18 N·m = 18 J. The units come from newtons times meters.",
+        "lesson_ids": [
+          "calculus-2-3"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-2-4:alternating-series-error",
+      "type": "numeric",
+      "prompt": "The alternating series Σ (−1)ⁿ⁺¹/n² is truncated after 4 terms. Use the alternating-series error bound to state the largest possible absolute error. Enter a number.",
+      "points": 1,
+      "objective_ids": [
+        "calculus-2-4-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0.04,
+        "unit": "",
+        "tolerance": 0.0005,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "The error is at most the first omitted term.",
+        "solution": "The first omitted term is 1/5² = 0.04. For an alternating series whose terms decrease to zero, the truncation error is no larger than the first omitted term in magnitude.",
+        "lesson_ids": [
+          "calculus-2-4"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
     }
   ]
 }

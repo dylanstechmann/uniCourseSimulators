@@ -127,6 +127,127 @@
         "legacy_id": "linear-algebra-4:check",
         "modifications": []
       }
+    },
+    {
+      "id": "linear-algebra-1:rank-from-pivots",
+      "type": "numeric",
+      "prompt": "Row-reduce the matrix with rows (1, 2, 3), (2, 4, 6) and (1, 0, 1). What is its rank? Enter a number.",
+      "points": 1,
+      "objective_ids": [
+        "linear-algebra-1-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 2,
+        "unit": "",
+        "tolerance": 0.01,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Count pivot columns after elimination.",
+        "solution": "Row 2 is twice row 1, so it eliminates to zero. Rows 1 and 3 are independent, giving 2 pivots, so the rank is 2. A rank below the number of unknowns means a system with this matrix has either no solution or infinitely many.",
+        "lesson_ids": [
+          "linear-algebra-1"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "linear-algebra-2:vector-vs-coordinates",
+      "type": "numeric",
+      "prompt": "In the basis b₁ = (1, 0), b₂ = (1, 1), a vector has coordinates (3, 1). What is its x-component in the standard basis? Enter a number.",
+      "points": 1,
+      "objective_ids": [
+        "linear-algebra-2-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 4,
+        "unit": "",
+        "tolerance": 0.01,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "The vector is 3·b₁ + 1·b₂.",
+        "solution": "v = 3(1, 0) + 1(1, 1) = (4, 1). The same geometric vector has different coordinates in different bases, so the numbers (3, 1) and (4, 1) describe one object.",
+        "lesson_ids": [
+          "linear-algebra-2"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "linear-algebra-3:mode-by-mode-decay",
+      "type": "numeric",
+      "prompt": "A system xₖ₊₁ = A xₖ has an eigenvector with eigenvalue 0.8. The component of x along that eigenvector starts at 1.0. What is its size after 3 steps? Enter a number.",
+      "points": 1,
+      "objective_ids": [
+        "linear-algebra-3-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0.512,
+        "unit": "",
+        "tolerance": 0.001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Each step multiplies the eigencomponent by its eigenvalue.",
+        "solution": "After 3 steps the component is 0.8³ = 0.512. Diagonalization separates the system into independent modes, each scaling by its own eigenvalue.",
+        "lesson_ids": [
+          "linear-algebra-3"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "linear-algebra-4:residual-pattern",
+      "type": "single_choice",
+      "prompt": "A straight-line fit has R² = 0.95, but the residuals are positive at both ends and negative in the middle. What is the best conclusion?",
+      "options": [
+        "The line is a poor model for the structure: the curved residual pattern shows systematic error that R² does not reveal.",
+        "The residuals are random.",
+        "The model is validated because R² is high.",
+        "More data of the same kind will remove the curvature."
+      ],
+      "points": 1,
+      "objective_ids": [
+        "linear-algebra-4-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0
+      },
+      "feedback": {
+        "hint": "Read the residual pattern, not only R².",
+        "solution": "A high R² can coexist with systematic misfit. Curved residuals suggest the functional form is wrong or a variable is missing; a good fit statistic is not evidence the model is adequate.",
+        "lesson_ids": [
+          "linear-algebra-4"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
     }
   ]
 }

@@ -129,7 +129,8 @@
           ],
           "worked_example": "If a circulating solute enters at 5 μmol/min and is cleared with first-order rate constant 0.1 min⁻¹, the steady concentration in a well-mixed 1 L compartment is 50 μmol/L.",
           "question_ids": [
-            "physiology-1:check"
+            "physiology-1:check",
+            "physiology-1:feedback-classification"
           ],
           "card_ids": [
             "physiology-0-0",
@@ -156,7 +157,8 @@
           ],
           "worked_example": "If Vm = −60 mV, EK = −90 mV, and gK = 2 nS, then outward-positive IK = 2 nS × 30 mV = 60 pA.",
           "question_ids": [
-            "physiology-2:check"
+            "physiology-2:check",
+            "physiology-2:ionic-current"
           ],
           "card_ids": [
             "physiology-1-0",
@@ -183,7 +185,8 @@
           ],
           "worked_example": "Doubling vessel radius at fixed length and viscosity lowers ideal Poiseuille resistance by a factor of 16; real vessels also change tone and geometry.",
           "question_ids": [
-            "physiology-3:check"
+            "physiology-3:check",
+            "physiology-3:perfusion-limited-gas"
           ],
           "card_ids": [
             "physiology-2-0",
@@ -210,7 +213,8 @@
           ],
           "worked_example": "If urinary concentration is 50 mg/L, urine flow is 1 mL/min, and plasma concentration is 2 mg/L, clearance is 25 mL/min.",
           "question_ids": [
-            "physiology-4:check"
+            "physiology-4:check",
+            "physiology-4:hormonal-set-point"
           ],
           "card_ids": [
             "physiology-3-0",
@@ -227,12 +231,14 @@
       "mode": "practice",
       "path": "question-banks/practice.json",
       "objective_ids": [
-        "physiology-1-objective-1"
+        "physiology-1-objective-1",
+        "physiology-1-objective-2"
       ],
       "question_ids": [
-        "physiology-1:check"
+        "physiology-1:check",
+        "physiology-1:feedback-classification"
       ],
-      "points": 1
+      "points": 2
     },
     {
       "id": "physiology-2-practice",
@@ -240,12 +246,14 @@
       "mode": "practice",
       "path": "question-banks/practice.json",
       "objective_ids": [
-        "physiology-2-objective-1"
+        "physiology-2-objective-1",
+        "physiology-2-objective-2"
       ],
       "question_ids": [
-        "physiology-2:check"
+        "physiology-2:check",
+        "physiology-2:ionic-current"
       ],
-      "points": 1
+      "points": 2
     },
     {
       "id": "physiology-3-practice",
@@ -253,12 +261,14 @@
       "mode": "practice",
       "path": "question-banks/practice.json",
       "objective_ids": [
-        "physiology-3-objective-1"
+        "physiology-3-objective-1",
+        "physiology-3-objective-2"
       ],
       "question_ids": [
-        "physiology-3:check"
+        "physiology-3:check",
+        "physiology-3:perfusion-limited-gas"
       ],
-      "points": 1
+      "points": 2
     },
     {
       "id": "physiology-4-practice",
@@ -266,12 +276,14 @@
       "mode": "practice",
       "path": "question-banks/practice.json",
       "objective_ids": [
-        "physiology-4-objective-1"
+        "physiology-4-objective-1",
+        "physiology-4-objective-2"
       ],
       "question_ids": [
-        "physiology-4:check"
+        "physiology-4:check",
+        "physiology-4:hormonal-set-point"
       ],
-      "points": 1
+      "points": 2
     },
     {
       "id": "physiology-case",

@@ -126,6 +126,128 @@
         "legacy_id": "physics-em-4:check",
         "modifications": []
       }
+    },
+    {
+      "id": "physics-em-1:capacitor-energy",
+      "type": "numeric",
+      "prompt": "A capacitor of 2.0×10⁻⁶ farad is charged to 10 V. Calculate the stored energy. Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "physics-em-1-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 9.999999999999999e-05,
+        "unit": "J",
+        "tolerance": 0,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null,
+        "relative_tolerance": 0.01
+      },
+      "feedback": {
+        "hint": "Use U = ½ C V².",
+        "solution": "U = ½ × 2.0×10⁻⁶ × 10² = 1.0e-04 J. The energy scales with the square of the voltage.",
+        "lesson_ids": [
+          "physics-em-1"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physics-em-2:rc-charging",
+      "type": "numeric",
+      "prompt": "A 5.0 V source charges a 1.0 kΩ and 1.0 µF series RC circuit from zero. Calculate the capacitor voltage at t = 2.0 ms. Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "physics-em-2-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 4.323,
+        "unit": "V",
+        "tolerance": 0.01,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "The time constant is RC.",
+        "solution": "RC = 10³ Ω × 10⁻⁶ F = 1.0 ms, so V(2 ms) = 5.0 (1 − e⁻²) = 4.32 V. After about five time constants the capacitor is within 1% of the source.",
+        "lesson_ids": [
+          "physics-em-2"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physics-em-3:faraday-emf",
+      "type": "numeric",
+      "prompt": "A coil of 50 turns experiences a flux change of 2.0×10⁻³ Wb in 0.10 s, uniformly. Calculate the magnitude of the induced emf. Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "physics-em-3-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 1.0,
+        "unit": "V",
+        "tolerance": 0.01,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "emf = N × (ΔΦ/Δt).",
+        "solution": "|emf| = 50 × 2.0×10⁻³ ÷ 0.10 = 1.0 V. Lenz's law gives the direction, opposing the flux change.",
+        "lesson_ids": [
+          "physics-em-3"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physics-em-4:electrode-polarization",
+      "type": "single_choice",
+      "prompt": "After attaching a skin electrode, a recorded trace shows a slow baseline shift that decays over minutes and does not follow the subject's activity. What is the most likely origin?",
+      "options": [
+        "A large tissue signal at very low frequency.",
+        "The amplifier's gain being too high only.",
+        "Electrode half-cell polarization and settling, not tissue signal.",
+        "The subject's heartbeat."
+      ],
+      "points": 1,
+      "objective_ids": [
+        "physics-em-4-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 2
+      },
+      "feedback": {
+        "hint": "Separate drifts that follow the preparation from signals that follow the physiology.",
+        "solution": "A slow drift after placement that decays and is unrelated to activity is typical of electrode polarization and skin-interface settling. Choosing stable electrode materials, allowing settling time and high-pass filtering carefully separate it from low-frequency tissue signal.",
+        "lesson_ids": [
+          "physics-em-4"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
     }
   ]
 }

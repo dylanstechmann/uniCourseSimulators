@@ -127,6 +127,129 @@
         "legacy_id": "physiology-4:check",
         "modifications": []
       }
+    },
+    {
+      "id": "physiology-1:feedback-classification",
+      "type": "single_choice",
+      "prompt": "Which example is positive feedback?",
+      "options": [
+        "A fall in blood pressure triggering a response that raises pressure.",
+        "A rise in body temperature triggering sweating that lowers temperature.",
+        "Rising blood glucose triggering insulin release that lowers glucose.",
+        "Stretch of the uterine wall increasing oxytocin release, which increases contraction and stretch during labor."
+      ],
+      "points": 1,
+      "objective_ids": [
+        "physiology-1-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 3
+      },
+      "feedback": {
+        "hint": "Positive feedback amplifies the change that triggered it.",
+        "solution": "Positive feedback drives the variable further in the direction of change until an external event ends it. The other examples reduce the deviation, which is negative feedback.",
+        "lesson_ids": [
+          "physiology-1"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physiology-2:ionic-current",
+      "type": "numeric",
+      "prompt": "A conductance g = 10 nS has reversal potential −90 mV. At a membrane potential of −40 mV, what is the current in nanoamperes (positive outward)? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "physiology-2-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0.5,
+        "unit": "",
+        "tolerance": 0.01,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "I = g (Vm − Erev).",
+        "solution": "I = 10 nS × (−40 mV − (−90 mV)) = 10 nS × 50 mV = 0.5 nA, outward because Vm is above the reversal potential. Current flows toward the reversal potential.",
+        "lesson_ids": [
+          "physiology-2"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physiology-3:perfusion-limited-gas",
+      "type": "single_choice",
+      "prompt": "A gas reaches equilibrium between alveolar gas and capillary blood within the first third of the capillary transit time. Its uptake is limited by what?",
+      "options": [
+        "Diffusion across the membrane.",
+        "Ventilation of the dead space only.",
+        "The molecular mass of the gas only.",
+        "Perfusion (blood flow), because equilibrium is reached early and more blood is needed to carry more gas."
+      ],
+      "points": 1,
+      "objective_ids": [
+        "physiology-3-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 3
+      },
+      "feedback": {
+        "hint": "Ask what limits uptake once equilibrium is reached early.",
+        "solution": "If partial pressures equilibrate early, diffusion is not limiting; uptake rises only with more flow, so it is perfusion-limited. Diffusion-limited gases do not equilibrate during the transit time.",
+        "lesson_ids": [
+          "physiology-3"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physiology-4:hormonal-set-point",
+      "type": "single_choice",
+      "prompt": "In a negative-feedback hormone loop, the receptors that sense the hormone in the control center become less sensitive. What is the expected effect on the steady-state hormone level?",
+      "options": [
+        "The level falls.",
+        "The loop becomes positive feedback.",
+        "The level is unchanged.",
+        "The set point shifts to a higher circulating hormone level before feedback suppresses secretion."
+      ],
+      "points": 1,
+      "objective_ids": [
+        "physiology-4-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 3
+      },
+      "feedback": {
+        "hint": "A less sensitive sensor needs a larger signal to respond.",
+        "solution": "Reduced sensitivity raises the concentration needed to suppress secretion, which moves the effective set point upward. Real endocrine loops involve several levels and time courses.",
+        "lesson_ids": [
+          "physiology-4"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
     }
   ]
 }

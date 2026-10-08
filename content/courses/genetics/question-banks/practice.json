@@ -129,6 +129,128 @@
         "legacy_id": "genetics-4:check",
         "modifications": []
       }
+    },
+    {
+      "id": "genetics-1:genotype-vs-phenotype-frequency",
+      "type": "numeric",
+      "prompt": "In a population at Hardy–Weinberg proportions, 4% show a recessive phenotype (genotype aa). What fraction of the population are heterozygous (Aa)? Enter a number.",
+      "points": 1,
+      "objective_ids": [
+        "genetics-1-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0.32,
+        "unit": "",
+        "tolerance": 0.005,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "The recessive phenotype frequency is q².",
+        "solution": "q² = 0.04, so q = 0.2 and p = 0.8; heterozygotes are 2pq = 0.32. Phenotype frequency (0.04) is not the same as genotype frequency of carriers (0.32).",
+        "lesson_ids": [
+          "genetics-1"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "genetics-2:map-distance",
+      "type": "numeric",
+      "prompt": "In a testcross of 200 offspring, 12 are recombinant for two linked genes. Estimate the map distance in centimorgans. Enter a number.",
+      "points": 1,
+      "objective_ids": [
+        "genetics-2-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 6.0,
+        "unit": "",
+        "tolerance": 0.05,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Recombination fraction × 100 gives map units for short distances.",
+        "solution": "RF = 12/200 = 0.06, so about 6 cM. Recombination fraction is a distance proxy that saturates near 0.5 and underestimates distance for large separations because of multiple crossovers.",
+        "lesson_ids": [
+          "genetics-2"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "genetics-3:distinguish-correlation-from-mechanism",
+      "type": "single_choice",
+      "prompt": "A genome-wide association study links a noncoding variant to a trait. Which next step best distinguishes correlation from mechanism?",
+      "options": [
+        "Repeat the same association in the same population.",
+        "Collect a larger association sample and report a smaller p-value.",
+        "Assume the nearest gene is causal.",
+        "Change the variant in isogenic cells or an animal model and test the readout, with a rescue or independent edit."
+      ],
+      "points": 1,
+      "objective_ids": [
+        "genetics-3-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 3
+      },
+      "feedback": {
+        "hint": "Choose a perturbation of the variant, not another correlation.",
+        "solution": "More correlations cannot separate a causal variant from linked ones. Editing the variant (or its regulatory element) and measuring a pre-specified readout, with an independent edit or rescue, tests mechanism in that system.",
+        "lesson_ids": [
+          "genetics-3"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "genetics-4:association-vs-causation",
+      "type": "single_choice",
+      "prompt": "A variant is strongly associated with a trait, but it sits in a block of variants inherited together. What is the best statement?",
+      "options": [
+        "The association does not show this variant is causal, because linked variants can carry the signal; fine mapping and a functional test are needed.",
+        "The association proves the variant causes the trait.",
+        "A strong p-value establishes mechanism.",
+        "Linkage between variants is irrelevant."
+      ],
+      "points": 1,
+      "objective_ids": [
+        "genetics-4-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0
+      },
+      "feedback": {
+        "hint": "Ask what else travels with the variant.",
+        "solution": "Linkage disequilibrium means nearby variants are correlated, so statistical association points to a region. Fine-mapping narrows candidates and functional experiments test whether the variant changes the molecular and cellular readout.",
+        "lesson_ids": [
+          "genetics-4"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
     }
   ]
 }

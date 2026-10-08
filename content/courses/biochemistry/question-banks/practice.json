@@ -128,6 +128,130 @@
         "legacy_id": "biochemistry-4:check",
         "modifications": []
       }
+    },
+    {
+      "id": "biochemistry-1:affinity-specificity-cooperativity",
+      "type": "single_choice",
+      "prompt": "Protein X binds a ligand with Kd = 1 µM and a Hill coefficient of 1.0. Protein Y binds the same ligand with an apparent K0.5 of 10 µM and a Hill coefficient of 3. Which statement is correct?",
+      "options": [
+        "X has the higher affinity at low ligand; Y has lower apparent affinity but is positively cooperative, giving a steeper response over a narrow concentration range. Affinity, specificity and cooperativity are separate properties.",
+        "Y has the higher affinity because its Hill coefficient is larger.",
+        "Cooperativity and affinity are the same quantity measured two ways.",
+        "A Hill coefficient of 3 means the protein binds exactly three ligands with equal affinity."
+      ],
+      "points": 1,
+      "objective_ids": [
+        "biochemistry-1-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0
+      },
+      "feedback": {
+        "hint": "Compare the Kd or K0.5 values first, then separate steepness of the response.",
+        "solution": "Affinity is how tightly a ligand binds (smaller Kd means tighter). Specificity compares binding of different ligands. Cooperativity describes how binding at one site changes binding at another and shows as a steep, sigmoidal response. A Hill coefficient above 1 indicates positive cooperativity but not higher affinity, and it is an empirical steepness index, not a count of sites.",
+        "lesson_ids": [
+          "biochemistry-1"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "biochemistry-2:catalytic-efficiency",
+      "type": "numeric",
+      "prompt": "An enzyme has kcat = 500 s⁻¹ and Km = 25 µM for a substrate. Calculate the catalytic efficiency kcat/Km in L/(mol·s). Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "biochemistry-2-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 20000000.0,
+        "unit": "L/(mol*s)",
+        "tolerance": 0,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null,
+        "relative_tolerance": 0.01
+      },
+      "feedback": {
+        "hint": "Convert Km to mol/L before dividing.",
+        "solution": "kcat/Km = 500 s⁻¹ ÷ 25×10⁻⁶ mol/L = 2.0e+07 L mol⁻¹ s⁻¹. It is an apparent second-order rate constant for the free enzyme and substrate at low substrate; it assumes the simple Michaelis–Menten model.",
+        "lesson_ids": [
+          "biochemistry-2"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "biochemistry-3:uncoupler-and-pmf",
+      "type": "single_choice",
+      "prompt": "An uncoupler makes the inner mitochondrial membrane permeable to protons in an isolated preparation that is oxidizing NADH. What is the expected effect?",
+      "options": [
+        "Electron transport stops immediately and ATP synthesis increases.",
+        "Electron transport can continue (often faster) but the proton motive force collapses, so ATP synthase makes much less ATP.",
+        "ATP synthesis is unchanged because it depends only on NADH supply.",
+        "The proton motive force increases because protons leak outward."
+      ],
+      "points": 1,
+      "objective_ids": [
+        "biochemistry-3-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 1
+      },
+      "feedback": {
+        "hint": "Ask what the proton motive force is made of and what drives ATP synthase.",
+        "solution": "Electron transport pumps protons and builds a gradient plus a membrane potential (the proton motive force). ATP synthase uses the energy of protons flowing back. A proton leak dissipates the gradient, so electron flow and oxygen use continue or rise while ATP production falls.",
+        "lesson_ids": [
+          "biochemistry-3"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "biochemistry-4:pathway-block-and-fluxes",
+      "type": "single_choice",
+      "prompt": "In a linear pathway A → B → C → D at steady state, the enzyme converting B to C is partly inhibited. Which change is expected?",
+      "options": [
+        "Flux is unchanged because other enzymes compensate immediately.",
+        "B falls and C rises because the product is no longer inhibited.",
+        "Only the first reaction is affected.",
+        "Flux through the pathway falls, B rises and C falls relative to before."
+      ],
+      "points": 1,
+      "objective_ids": [
+        "biochemistry-4-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 3
+      },
+      "feedback": {
+        "hint": "Follow the steady-state fluxes through the block.",
+        "solution": "A partial block lowers the rate of the shared step, so the substrate upstream of it accumulates, the downstream pool drops and the steady-state flux through the whole linear pathway is reduced. Real cells may adjust regulation over time, so the immediate prediction is the stated direction.",
+        "lesson_ids": [
+          "biochemistry-4"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
     }
   ]
 }

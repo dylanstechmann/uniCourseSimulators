@@ -1,0 +1,13 @@
+condition,coverslip,spread_area_um2,cell_density_per_mm2,ligand_density_rel
+soft,S1,420,140,100
+soft,S2,450,150,98
+soft,S3,400,135,102
+soft,S4,430,145,100
+medium,M1,880,138,101
+medium,M2,900,142,99
+medium,M3,860,150,100
+medium,M4,920,146,100
+stiff,S1,1480,143,99
+stiff,S2,1500,139,101
+stiff,S3,1450,148,100
+stiff,S4,1530,150,100

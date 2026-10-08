@@ -424,6 +424,20 @@
       "original_content": true,
       "license": "CC-BY-4.0",
       "modifications": []
+    },
+    {
+      "module_id": "cell-biology-module-lab-03",
+      "lesson_id": "cell-biology-lab-03",
+      "reading": "labs/03-lineage-time-course-and-state-inference.md",
+      "source_ids": [
+        "mit-7.06x-cell-biology",
+        "nih-stem-cell-basics",
+        "ncbi-stem-cell-biology-basics"
+      ],
+      "relationship": "original-instruction-and-synthetic-lineage-data-with-link-only-curriculum-and-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
     }
   ]
 }

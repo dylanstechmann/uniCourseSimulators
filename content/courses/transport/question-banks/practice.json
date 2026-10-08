@@ -126,6 +126,127 @@
         "legacy_id": "transport-4:check",
         "modifications": []
       }
+    },
+    {
+      "id": "transport-1:accumulation-rate",
+      "type": "numeric",
+      "prompt": "A tank receives 2.0 kg/s of liquid and discharges 1.5 kg/s. What is the rate of mass accumulation in the control volume? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "transport-1-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0.5,
+        "unit": "kg/s",
+        "tolerance": 0.01,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Accumulation = in − out (no generation).",
+        "solution": "Accumulation = 2.0 − 1.5 = 0.5 kg/s, so the tank mass is rising and the situation is transient. Steady state would need inflow equal to outflow.",
+        "lesson_ids": [
+          "transport-1"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "transport-2:diffusion-time",
+      "type": "numeric",
+      "prompt": "Estimate the diffusion time across L = 100 µm for a solute with D = 1.0×10⁻⁹ m²/s using t ≈ L²/D. Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "transport-2-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 10.0,
+        "unit": "s",
+        "tolerance": 0.1,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Convert L to meters first.",
+        "solution": "L = 1.0×10⁻⁴ m, so t ≈ (1.0×10⁻⁴)² ÷ 1.0×10⁻⁹ = 10 s. If reaction is much faster than this, the concentration gradient is steep; if much slower, the profile is nearly uniform.",
+        "lesson_ids": [
+          "transport-2"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "transport-3:poiseuille-flow",
+      "type": "numeric",
+      "prompt": "Laminar flow of a Newtonian liquid (μ = 1.0×10⁻³ Pa·s) occurs in a tube of radius 0.50 mm and length 0.10 m under a pressure drop of 100 Pa. Using Q = π r⁴ ΔP/(8 μ L), calculate the volumetric flow rate. Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "transport-3-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 2.4543692606170264e-08,
+        "unit": "m^3/s",
+        "tolerance": 0,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null,
+        "relative_tolerance": 0.01
+      },
+      "feedback": {
+        "hint": "Convert the radius to meters.",
+        "solution": "Q = π (5.0×10⁻⁴)⁴ × 100 ÷ (8 × 1.0×10⁻³ × 0.10) = 2.45e-08 m³/s. The result applies to fully developed laminar flow in a rigid straight tube; flow scales with the fourth power of radius.",
+        "lesson_ids": [
+          "transport-3"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "transport-4:series-thermal-resistance",
+      "type": "numeric",
+      "prompt": "Heat flows through two thermal resistances in series, 0.20 K/W and 0.30 K/W, under a total temperature difference of 50 K. Calculate the heat flow. Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "transport-4-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 100.0,
+        "unit": "W",
+        "tolerance": 0.5,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Series resistances add; q = ΔT/R_total.",
+        "solution": "R_total = 0.20 + 0.30 = 0.50 K/W, so q = 50/0.50 = 100 W. The resistance-network analogy to electrical circuits holds for steady one-dimensional conduction.",
+        "lesson_ids": [
+          "transport-4"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
     }
   ]
 }

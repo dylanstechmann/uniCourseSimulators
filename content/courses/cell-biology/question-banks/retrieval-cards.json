@@ -657,6 +657,285 @@
         "cell-biology-22-objective-3"
       ],
       "license": "CC-BY-4.0"
+    },
+    {
+      "id": "cell-biology-hw2-0",
+      "lesson_id": "cell-biology-hw2",
+      "front": "Equal rate at one substrate level",
+      "back": "Two inhibitors can give the same rate at one substrate concentration while differing in apparent Km and Vmax; a wide substrate series separates the patterns.",
+      "objective_ids": [
+        "cell-biology-10-objective-1",
+        "cell-biology-10-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "cell-biology-hw2-1",
+      "lesson_id": "cell-biology-hw2",
+      "front": "Independent unit in an assay series",
+      "back": "Assay days with separate enzyme dilutions are the independent units; time points within a day estimate one slope and are not extra replicates.",
+      "objective_ids": [
+        "cell-biology-10-objective-1",
+        "cell-biology-10-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "cell-biology-hw2-2",
+      "lesson_id": "cell-biology-hw2",
+      "front": "Kinetic pattern versus binding site",
+      "back": "A competitive-looking pattern is a model description of rates. It does not locate the inhibitor; binding, washout or structural evidence answers that.",
+      "objective_ids": [
+        "cell-biology-10-objective-1",
+        "cell-biology-10-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "cell-biology-hw3-0",
+      "lesson_id": "cell-biology-hw3",
+      "front": "Retained lesion signal",
+      "back": "More lesion signal remaining can reflect slower removal, replication dilution, cell loss or unequal recovery; matched S-phase, viability and complementation controls address these separately.",
+      "objective_ids": [
+        "cell-biology-14-objective-1",
+        "cell-biology-14-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "cell-biology-hw3-1",
+      "lesson_id": "cell-biology-hw3",
+      "front": "Removal versus mutation",
+      "back": "Lesion removal, DNA synthesis, survival and mutation frequency are different outcomes and need different measurements.",
+      "objective_ids": [
+        "cell-biology-14-objective-1",
+        "cell-biology-14-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "cell-biology-hw3-2",
+      "lesson_id": "cell-biology-hw3",
+      "front": "Semiconservative prediction",
+      "back": "After one round of replication in light medium, heavy parental DNA gives hybrid-density duplexes; each daughter duplex keeps one parental strand.",
+      "objective_ids": [
+        "cell-biology-14-objective-1",
+        "cell-biology-14-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "cell-biology-hw4-0",
+      "lesson_id": "cell-biology-hw4",
+      "front": "Percent input versus fold over IgG",
+      "back": "Percent input normalizes to starting chromatin; fold over IgG compares to nonspecific recovery. Name the denominator whenever either is reported.",
+      "objective_ids": [
+        "cell-biology-16-objective-1",
+        "cell-biology-16-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "cell-biology-hw4-1",
+      "lesson_id": "cell-biology-hw4",
+      "front": "Reporter limits",
+      "back": "A motif-dependent reporter response supports a sequence contribution in the construct; it does not show a change in native transcription.",
+      "objective_ids": [
+        "cell-biology-16-objective-1",
+        "cell-biology-16-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "cell-biology-hw4-2",
+      "lesson_id": "cell-biology-hw4",
+      "front": "Technical versus independent",
+      "back": "Several qPCR wells from one culture are technical replicates and do not increase the number of independent cultures.",
+      "objective_ids": [
+        "cell-biology-16-objective-1",
+        "cell-biology-16-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "cell-biology-hw5-0",
+      "lesson_id": "cell-biology-hw5",
+      "front": "Protein level is a balance",
+      "back": "Steady-state protein reflects synthesis and degradation; a level alone cannot say which changed.",
+      "objective_ids": [
+        "cell-biology-18-objective-1",
+        "cell-biology-18-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "cell-biology-hw5-1",
+      "lesson_id": "cell-biology-hw5",
+      "front": "First-order half-life",
+      "back": "With first-order decay, half-life = t × ln 2 / ln(initial / remaining); state the assumption and the units.",
+      "objective_ids": [
+        "cell-biology-18-objective-1",
+        "cell-biology-18-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "cell-biology-hw5-2",
+      "lesson_id": "cell-biology-hw5",
+      "front": "Layers need their own measurements",
+      "back": "mRNA abundance, synthesis rate, turnover and isoform usage each need a measurement at that layer.",
+      "objective_ids": [
+        "cell-biology-18-objective-1",
+        "cell-biology-18-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "cell-biology-hw6-0",
+      "lesson_id": "cell-biology-hw6",
+      "front": "Penetrance",
+      "back": "Penetrance is the fraction of carriers who show a defined trait; it is a frequency, not a transmission probability or a mechanism.",
+      "objective_ids": [
+        "cell-biology-20-objective-1",
+        "cell-biology-20-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "cell-biology-hw6-1",
+      "lesson_id": "cell-biology-hw6",
+      "front": "Correction and re-introduction",
+      "back": "A correction that moves a readout toward reference and a re-introduction that moves it back support a role for the variant in that system; independent clones guard against clonal artifacts.",
+      "objective_ids": [
+        "cell-biology-20-objective-1",
+        "cell-biology-20-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "cell-biology-hw6-2",
+      "lesson_id": "cell-biology-hw6",
+      "front": "Cell evidence is not individual prediction",
+      "back": "An isogenic cellular readout does not show that a variant causes a human trait or predicts any person's outcome.",
+      "objective_ids": [
+        "cell-biology-20-objective-1",
+        "cell-biology-20-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "cell-biology-hw7-0",
+      "lesson_id": "cell-biology-hw7",
+      "front": "Stiffness is a stand-in",
+      "back": "Gel stiffness covaries with porosity, thickness and ligand presentation; measure and vary these separately before attributing a response to stiffness.",
+      "objective_ids": [
+        "cell-biology-24-objective-1",
+        "cell-biology-24-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "cell-biology-hw7-1",
+      "lesson_id": "cell-biology-hw7",
+      "front": "Unit of replication in spreading",
+      "back": "Coverslips from separate gel preparations are the independent units; cells on one coverslip are not independent.",
+      "objective_ids": [
+        "cell-biology-24-objective-1",
+        "cell-biology-24-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "cell-biology-hw7-2",
+      "lesson_id": "cell-biology-hw7",
+      "front": "Shape is not force or fate",
+      "back": "Spread area is a shape readout; traction force, pathway activity and cell fate need their own measurements.",
+      "objective_ids": [
+        "cell-biology-24-objective-1",
+        "cell-biology-24-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "cell-biology-hw8-0",
+      "lesson_id": "cell-biology-hw8",
+      "front": "One marker does not assign a state",
+      "back": "No single marker separates quiescence, senescence and slowed proliferation; use several markers and a functional test.",
+      "objective_ids": [
+        "cell-biology-26-objective-1",
+        "cell-biology-26-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "cell-biology-hw8-1",
+      "lesson_id": "cell-biology-hw8",
+      "front": "Reversibility as a functional test",
+      "back": "Re-entry after stimulation separates arrest types in principle; its answer depends on the stimulus and the time allowed.",
+      "objective_ids": [
+        "cell-biology-26-objective-1",
+        "cell-biology-26-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "cell-biology-hw8-2",
+      "lesson_id": "cell-biology-hw8",
+      "front": "Marker pattern is not potency",
+      "back": "A cell-state marker pattern is not evidence of regenerative function, potency or any clinical effect.",
+      "objective_ids": [
+        "cell-biology-26-objective-1",
+        "cell-biology-26-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "cell-biology-lab3-0",
+      "lesson_id": "cell-biology-lab-03",
+      "front": "Fraction versus count",
+      "back": "A marker-positive fraction is relative; combine it with cell number per well to see whether the absolute number of marker-positive cells changed.",
+      "objective_ids": [
+        "cell-biology-27-objective-1",
+        "cell-biology-27-objective-2",
+        "cell-biology-27-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "cell-biology-lab3-1",
+      "lesson_id": "cell-biology-lab-03",
+      "front": "Conversion versus selection",
+      "back": "A rising marker fraction can come from conversion, loss or slower growth of other cells, or both; per-cell tracing is needed to separate them.",
+      "objective_ids": [
+        "cell-biology-27-objective-1",
+        "cell-biology-27-objective-2",
+        "cell-biology-27-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "cell-biology-lab3-2",
+      "lesson_id": "cell-biology-lab-03",
+      "front": "Concordant markers are not function",
+      "back": "A rising lineage marker with a falling pluripotency-associated marker is a marker pattern, not a demonstration of defined function or potency.",
+      "objective_ids": [
+        "cell-biology-27-objective-1",
+        "cell-biology-27-objective-2",
+        "cell-biology-27-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "cell-biology-lab3-3",
+      "lesson_id": "cell-biology-lab-03",
+      "front": "Destructive time courses",
+      "back": "When each day is a different culture, the P-labels are independent cultures within a day, not one culture followed over time.",
+      "objective_ids": [
+        "cell-biology-27-objective-1",
+        "cell-biology-27-objective-2",
+        "cell-biology-27-objective-3"
+      ],
+      "license": "CC-BY-4.0"
     }
   ]
 }

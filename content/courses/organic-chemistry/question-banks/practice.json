@@ -132,6 +132,130 @@
         "legacy_id": "organic-chemistry-4:check",
         "modifications": []
       }
+    },
+    {
+      "id": "organic-chemistry-1:resonance-carboxylate",
+      "type": "single_choice",
+      "prompt": "Which statement about the carboxylate ion's resonance structures is correct?",
+      "options": [
+        "Only electrons move between the structures; the real ion is a hybrid with two equivalent C–O bonds of intermediate length.",
+        "The ion flips rapidly between two different molecules.",
+        "Each structure is an isolated species present in solution.",
+        "Atoms move to new positions between structures."
+      ],
+      "points": 1,
+      "objective_ids": [
+        "organic-chemistry-1-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0
+      },
+      "feedback": {
+        "hint": "Recall what resonance does and does not describe.",
+        "solution": "Resonance structures differ only in electron placement with the same atom positions and valences. The actual ion is a single delocalized hybrid, so both C–O bonds are equivalent with bond order about 1.5.",
+        "lesson_ids": [
+          "organic-chemistry-1"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "organic-chemistry-2:sn2-stereochemistry-and-rate",
+      "type": "single_choice",
+      "prompt": "A chiral secondary alkyl bromide reacts with cyanide by a concerted backside attack. What are the stereochemical and rate consequences?",
+      "options": [
+        "Retention of configuration with a rate that depends on substrate only.",
+        "Loss of stereochemistry and a zero-order rate.",
+        "Racemization with a first-order rate in substrate.",
+        "Inversion of configuration at carbon, with a rate that depends on both the substrate and the nucleophile concentration."
+      ],
+      "points": 1,
+      "objective_ids": [
+        "organic-chemistry-2-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 3
+      },
+      "feedback": {
+        "hint": "Backside attack in one step gives a specific geometric outcome and a bimolecular rate.",
+        "solution": "A concerted SN2 step inverts the carbon center, and because both reactants are in the one rate-determining step the rate is second order overall: rate = k[RBr][CN⁻].",
+        "lesson_ids": [
+          "organic-chemistry-2"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "organic-chemistry-3:zaitsev-regioselectivity",
+      "type": "single_choice",
+      "prompt": "Acid-catalyzed dehydration of 2-methyl-2-butanol through a carbocation intermediate gives mainly which alkene, assuming Zaitsev selectivity?",
+      "options": [
+        "2-methyl-1-butene as the major product.",
+        "2-methyl-2-butene, the more substituted alkene.",
+        "No alkene forms.",
+        "3-methyl-1-butene as the major product."
+      ],
+      "points": 1,
+      "objective_ids": [
+        "organic-chemistry-3-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 1
+      },
+      "feedback": {
+        "hint": "The more substituted alkene is usually more stable.",
+        "solution": "Loss of a proton from the carbon that leads to the more substituted double bond gives 2-methyl-2-butene as the major product under thermodynamic (Zaitsev) control. The assumption can fail with bulky bases or when other pathways compete.",
+        "lesson_ids": [
+          "organic-chemistry-3"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "organic-chemistry-4:addition-vs-substitution",
+      "type": "single_choice",
+      "prompt": "Which pairing correctly states the reaction type?",
+      "options": [
+        "A Grignard reagent with a ketone undergoes nucleophilic addition; an amine with an acid chloride undergoes nucleophilic acyl substitution.",
+        "Both are electrophilic aromatic substitutions.",
+        "A Grignard reagent with a ketone is an acyl substitution; an amine with an acid chloride is an addition.",
+        "Both are eliminations."
+      ],
+      "points": 1,
+      "objective_ids": [
+        "organic-chemistry-4-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0
+      },
+      "feedback": {
+        "hint": "Look for a leaving group on the carbonyl carbon.",
+        "solution": "Ketones lack a good leaving group, so a nucleophile adds to the carbonyl carbon and the alkoxide is protonated. Acid chlorides have a good leaving group (chloride), so the addition intermediate collapses and expels it, giving net substitution.",
+        "lesson_ids": [
+          "organic-chemistry-4"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
     }
   ]
 }

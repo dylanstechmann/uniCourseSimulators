@@ -128,7 +128,8 @@
           ],
           "worked_example": "A well-mixed vessel of volume V with inflow Q and concentration Cin and equal outflow has V dC/dt=Q(Cin−C)−kVC for first-order consumption.",
           "question_ids": [
-            "transport-1:check"
+            "transport-1:check",
+            "transport-1:accumulation-rate"
           ],
           "card_ids": [
             "transport-0-0",
@@ -155,7 +156,8 @@
           ],
           "worked_example": "If D=2×10⁻⁹ m²/s and L=200 μm, td≈L²/D=20 s, before reaction or geometry corrections.",
           "question_ids": [
-            "transport-2:check"
+            "transport-2:check",
+            "transport-2:diffusion-time"
           ],
           "card_ids": [
             "transport-1-0",
@@ -182,7 +184,8 @@
           ],
           "worked_example": "For water-like fluid with ρ=1000 kg/m³, U=1 mm/s, L=100 μm, and μ=10⁻³ Pa·s, Re=0.1.",
           "question_ids": [
-            "transport-3:check"
+            "transport-3:check",
+            "transport-3:poiseuille-flow"
           ],
           "card_ids": [
             "transport-2-0",
@@ -209,7 +212,8 @@
           ],
           "worked_example": "For a slab, conductive resistance is Rth=L/(kA); doubling thickness doubles resistance while doubling area halves it.",
           "question_ids": [
-            "transport-4:check"
+            "transport-4:check",
+            "transport-4:series-thermal-resistance"
           ],
           "card_ids": [
             "transport-3-0",
@@ -226,12 +230,14 @@
       "mode": "practice",
       "path": "question-banks/practice.json",
       "objective_ids": [
-        "transport-1-objective-1"
+        "transport-1-objective-1",
+        "transport-1-objective-2"
       ],
       "question_ids": [
-        "transport-1:check"
+        "transport-1:check",
+        "transport-1:accumulation-rate"
       ],
-      "points": 1
+      "points": 2
     },
     {
       "id": "transport-2-practice",
@@ -239,12 +245,14 @@
       "mode": "practice",
       "path": "question-banks/practice.json",
       "objective_ids": [
-        "transport-2-objective-1"
+        "transport-2-objective-1",
+        "transport-2-objective-2"
       ],
       "question_ids": [
-        "transport-2:check"
+        "transport-2:check",
+        "transport-2:diffusion-time"
       ],
-      "points": 1
+      "points": 2
     },
     {
       "id": "transport-3-practice",
@@ -252,12 +260,14 @@
       "mode": "practice",
       "path": "question-banks/practice.json",
       "objective_ids": [
-        "transport-3-objective-1"
+        "transport-3-objective-1",
+        "transport-3-objective-2"
       ],
       "question_ids": [
-        "transport-3:check"
+        "transport-3:check",
+        "transport-3:poiseuille-flow"
       ],
-      "points": 1
+      "points": 2
     },
     {
       "id": "transport-4-practice",
@@ -265,12 +275,14 @@
       "mode": "practice",
       "path": "question-banks/practice.json",
       "objective_ids": [
-        "transport-4-objective-1"
+        "transport-4-objective-1",
+        "transport-4-objective-2"
       ],
       "question_ids": [
-        "transport-4:check"
+        "transport-4:check",
+        "transport-4:series-thermal-resistance"
       ],
-      "points": 1
+      "points": 2
     },
     {
       "id": "transport-case",

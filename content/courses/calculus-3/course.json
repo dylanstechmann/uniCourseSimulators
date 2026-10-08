@@ -128,7 +128,8 @@
           ],
           "worked_example": "For f(x,y)=x²+3y², ∇f=(2x,6y), so ∂f/∂y at (1,−1) is −6.",
           "question_ids": [
-            "calculus-3-1:check"
+            "calculus-3-1:check",
+            "calculus-3-1:directional-derivative"
           ],
           "card_ids": [
             "calculus-3-0-0",
@@ -155,7 +156,8 @@
           ],
           "worked_example": "The maximum of f=x+y on the unit circle occurs at x=y=1/√2, so f=√2.",
           "question_ids": [
-            "calculus-3-2:check"
+            "calculus-3-2:check",
+            "calculus-3-2:lagrange-multiplier"
           ],
           "card_ids": [
             "calculus-3-1-0",
@@ -182,7 +184,8 @@
           ],
           "worked_example": "The area of the unit disk is ∫₀²π∫₀¹ r dr dθ=π.",
           "question_ids": [
-            "calculus-3-3:check"
+            "calculus-3-3:check",
+            "calculus-3-3:jacobian-polar-area"
           ],
           "card_ids": [
             "calculus-3-2-0",
@@ -209,7 +212,8 @@
           ],
           "worked_example": "For F=(x,y,z), div F=3. Its outward flux through the unit sphere is 3 times the sphere's volume, or 4π.",
           "question_ids": [
-            "calculus-3-4:check"
+            "calculus-3-4:check",
+            "calculus-3-4:choose-the-theorem"
           ],
           "card_ids": [
             "calculus-3-3-0",
@@ -226,12 +230,14 @@
       "mode": "practice",
       "path": "question-banks/practice.json",
       "objective_ids": [
-        "calculus-3-1-objective-1"
+        "calculus-3-1-objective-1",
+        "calculus-3-1-objective-2"
       ],
       "question_ids": [
-        "calculus-3-1:check"
+        "calculus-3-1:check",
+        "calculus-3-1:directional-derivative"
       ],
-      "points": 1
+      "points": 2
     },
     {
       "id": "calculus-3-2-practice",
@@ -239,12 +245,14 @@
       "mode": "practice",
       "path": "question-banks/practice.json",
       "objective_ids": [
-        "calculus-3-2-objective-1"
+        "calculus-3-2-objective-1",
+        "calculus-3-2-objective-2"
       ],
       "question_ids": [
-        "calculus-3-2:check"
+        "calculus-3-2:check",
+        "calculus-3-2:lagrange-multiplier"
       ],
-      "points": 1
+      "points": 2
     },
     {
       "id": "calculus-3-3-practice",
@@ -252,12 +260,14 @@
       "mode": "practice",
       "path": "question-banks/practice.json",
       "objective_ids": [
-        "calculus-3-3-objective-1"
+        "calculus-3-3-objective-1",
+        "calculus-3-3-objective-2"
       ],
       "question_ids": [
-        "calculus-3-3:check"
+        "calculus-3-3:check",
+        "calculus-3-3:jacobian-polar-area"
       ],
-      "points": 1
+      "points": 2
     },
     {
       "id": "calculus-3-4-practice",
@@ -265,12 +275,14 @@
       "mode": "practice",
       "path": "question-banks/practice.json",
       "objective_ids": [
-        "calculus-3-4-objective-1"
+        "calculus-3-4-objective-1",
+        "calculus-3-4-objective-2"
       ],
       "question_ids": [
-        "calculus-3-4:check"
+        "calculus-3-4:check",
+        "calculus-3-4:choose-the-theorem"
       ],
-      "points": 1
+      "points": 2
     },
     {
       "id": "calculus-3-case",

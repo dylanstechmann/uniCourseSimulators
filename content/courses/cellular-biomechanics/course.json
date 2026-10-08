@@ -129,7 +129,8 @@
           ],
           "worked_example": "A standard linear solid can relax toward a nonzero long-time modulus, unlike a Maxwell element that relaxes fully under an ideal step strain.",
           "question_ids": [
-            "cellular-biomechanics-1:check"
+            "cellular-biomechanics-1:check",
+            "cellular-biomechanics-1:constitutive-regime"
           ],
           "card_ids": [
             "cellular-biomechanics-0-0",
@@ -156,7 +157,8 @@
           ],
           "worked_example": "A stiffer substrate can increase traction only under conditions where cells can engage and remodel adhesions; stiffness alone does not specify cell fate.",
           "question_ids": [
-            "cellular-biomechanics-2:check"
+            "cellular-biomechanics-2:check",
+            "cellular-biomechanics-2:adhesion-geometry"
           ],
           "card_ids": [
             "cellular-biomechanics-1-0",
@@ -183,7 +185,8 @@
           ],
           "worked_example": "If inhibiting a mechanosensitive channel blocks calcium entry and a downstream transcriptional response, channel-specific rescue or an orthogonal perturbation strengthens the causal chain.",
           "question_ids": [
-            "cellular-biomechanics-3:check"
+            "cellular-biomechanics-3:check",
+            "cellular-biomechanics-3:perturbation-and-rescue"
           ],
           "card_ids": [
             "cellular-biomechanics-2-0",
@@ -210,7 +213,8 @@
           ],
           "worked_example": "A 2×2 stiffness-by-ligand-density design estimates both main effects and interaction, provided each combination is independently fabricated and randomized across runs.",
           "question_ids": [
-            "cellular-biomechanics-4:check"
+            "cellular-biomechanics-4:check",
+            "cellular-biomechanics-4:nested-replicates"
           ],
           "card_ids": [
             "cellular-biomechanics-3-0",
@@ -227,12 +231,14 @@
       "mode": "practice",
       "path": "question-banks/practice.json",
       "objective_ids": [
-        "cellular-biomechanics-1-objective-1"
+        "cellular-biomechanics-1-objective-1",
+        "cellular-biomechanics-1-objective-2"
       ],
       "question_ids": [
-        "cellular-biomechanics-1:check"
+        "cellular-biomechanics-1:check",
+        "cellular-biomechanics-1:constitutive-regime"
       ],
-      "points": 1
+      "points": 2
     },
     {
       "id": "cellular-biomechanics-2-practice",
@@ -240,12 +246,14 @@
       "mode": "practice",
       "path": "question-banks/practice.json",
       "objective_ids": [
-        "cellular-biomechanics-2-objective-1"
+        "cellular-biomechanics-2-objective-1",
+        "cellular-biomechanics-2-objective-2"
       ],
       "question_ids": [
-        "cellular-biomechanics-2:check"
+        "cellular-biomechanics-2:check",
+        "cellular-biomechanics-2:adhesion-geometry"
       ],
-      "points": 1
+      "points": 2
     },
     {
       "id": "cellular-biomechanics-3-practice",
@@ -253,12 +261,14 @@
       "mode": "practice",
       "path": "question-banks/practice.json",
       "objective_ids": [
-        "cellular-biomechanics-3-objective-1"
+        "cellular-biomechanics-3-objective-1",
+        "cellular-biomechanics-3-objective-2"
       ],
       "question_ids": [
-        "cellular-biomechanics-3:check"
+        "cellular-biomechanics-3:check",
+        "cellular-biomechanics-3:perturbation-and-rescue"
       ],
-      "points": 1
+      "points": 2
     },
     {
       "id": "cellular-biomechanics-4-practice",
@@ -266,12 +276,14 @@
       "mode": "practice",
       "path": "question-banks/practice.json",
       "objective_ids": [
-        "cellular-biomechanics-4-objective-1"
+        "cellular-biomechanics-4-objective-1",
+        "cellular-biomechanics-4-objective-2"
       ],
       "question_ids": [
-        "cellular-biomechanics-4:check"
+        "cellular-biomechanics-4:check",
+        "cellular-biomechanics-4:nested-replicates"
       ],
-      "points": 1
+      "points": 2
     },
     {
       "id": "cellular-biomechanics-case",

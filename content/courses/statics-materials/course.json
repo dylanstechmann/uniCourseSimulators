@@ -127,7 +127,8 @@
           ],
           "worked_example": "A simply supported beam with a centered point load P has reactions P/2 at each support by symmetry and moment equilibrium.",
           "question_ids": [
-            "statics-materials-1:check"
+            "statics-materials-1:check",
+            "statics-materials-1:reaction-force"
           ],
           "card_ids": [
             "statics-materials-0-0",
@@ -154,7 +155,8 @@
           ],
           "worked_example": "A 100 mm-long bar with A=10 mm², E=2 GPa, and F=20 N extends ΔL=0.1 mm under the simple axial model.",
           "question_ids": [
-            "statics-materials-2:check"
+            "statics-materials-2:check",
+            "statics-materials-2:stress-units"
           ],
           "card_ids": [
             "statics-materials-1-0",
@@ -181,7 +183,8 @@
           ],
           "worked_example": "A circular shaft's maximum torsional shear occurs at its outer radius; doubling radius also changes J strongly, so geometry cannot be ignored.",
           "question_ids": [
-            "statics-materials-3:check"
+            "statics-materials-3:check",
+            "statics-materials-3:bending-stress"
           ],
           "card_ids": [
             "statics-materials-2-0",
@@ -208,7 +211,8 @@
           ],
           "worked_example": "If a component's allowable load is 900 N and design load is 300 N under the stated model, the load factor is 3; the reliability meaning still depends on uncertainty and failure mode.",
           "question_ids": [
-            "statics-materials-4:check"
+            "statics-materials-4:check",
+            "statics-materials-4:factor-of-safety"
           ],
           "card_ids": [
             "statics-materials-3-0",
@@ -225,12 +229,14 @@
       "mode": "practice",
       "path": "question-banks/practice.json",
       "objective_ids": [
-        "statics-materials-1-objective-1"
+        "statics-materials-1-objective-1",
+        "statics-materials-1-objective-2"
       ],
       "question_ids": [
-        "statics-materials-1:check"
+        "statics-materials-1:check",
+        "statics-materials-1:reaction-force"
       ],
-      "points": 1
+      "points": 2
     },
     {
       "id": "statics-materials-2-practice",
@@ -238,12 +244,14 @@
       "mode": "practice",
       "path": "question-banks/practice.json",
       "objective_ids": [
-        "statics-materials-2-objective-1"
+        "statics-materials-2-objective-1",
+        "statics-materials-2-objective-2"
       ],
       "question_ids": [
-        "statics-materials-2:check"
+        "statics-materials-2:check",
+        "statics-materials-2:stress-units"
       ],
-      "points": 1
+      "points": 2
     },
     {
       "id": "statics-materials-3-practice",
@@ -251,12 +259,14 @@
       "mode": "practice",
       "path": "question-banks/practice.json",
       "objective_ids": [
-        "statics-materials-3-objective-1"
+        "statics-materials-3-objective-1",
+        "statics-materials-3-objective-2"
       ],
       "question_ids": [
-        "statics-materials-3:check"
+        "statics-materials-3:check",
+        "statics-materials-3:bending-stress"
       ],
-      "points": 1
+      "points": 2
     },
     {
       "id": "statics-materials-4-practice",
@@ -264,12 +274,14 @@
       "mode": "practice",
       "path": "question-banks/practice.json",
       "objective_ids": [
-        "statics-materials-4-objective-1"
+        "statics-materials-4-objective-1",
+        "statics-materials-4-objective-2"
       ],
       "question_ids": [
-        "statics-materials-4:check"
+        "statics-materials-4:check",
+        "statics-materials-4:factor-of-safety"
       ],
-      "points": 1
+      "points": 2
     },
     {
       "id": "statics-materials-case",

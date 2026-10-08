@@ -128,7 +128,8 @@
           ],
           "worked_example": "For a 1:1 interaction at free ligand concentration [L] = Kd, fractional occupancy θ = [L]/(Kd + [L]) = 0.5.",
           "question_ids": [
-            "biochemistry-1:check"
+            "biochemistry-1:check",
+            "biochemistry-1:affinity-specificity-cooperativity"
           ],
           "card_ids": [
             "biochemistry-0-0",
@@ -155,7 +156,8 @@
           ],
           "worked_example": "If competitive inhibitor raises apparent Km from 2 to 8 mM while Vmax remains 100 μmol/min, sufficiently high substrate can still approach the same Vmax.",
           "question_ids": [
-            "biochemistry-2:check"
+            "biochemistry-2:check",
+            "biochemistry-2:catalytic-efficiency"
           ],
           "card_ids": [
             "biochemistry-1-0",
@@ -182,7 +184,8 @@
           ],
           "worked_example": "Net glycolysis produces 2 ATP and 2 NADH per glucose. If a preparation yields 3 ATP per cytosolic NADH via its chosen shuttle, glycolytic reducing equivalents contribute 6 ATP equivalents in that accounting scheme.",
           "question_ids": [
-            "biochemistry-3:check"
+            "biochemistry-3:check",
+            "biochemistry-3:uncoupler-and-pmf"
           ],
           "card_ids": [
             "biochemistry-2-0",
@@ -209,7 +212,8 @@
           ],
           "worked_example": "If a labeled-carbon pool stays constant while labeled product appearance slows, both production and consumption may have changed; isotope time courses help separate those rates.",
           "question_ids": [
-            "biochemistry-4:check"
+            "biochemistry-4:check",
+            "biochemistry-4:pathway-block-and-fluxes"
           ],
           "card_ids": [
             "biochemistry-3-0",
@@ -226,12 +230,14 @@
       "mode": "practice",
       "path": "question-banks/practice.json",
       "objective_ids": [
-        "biochemistry-1-objective-1"
+        "biochemistry-1-objective-1",
+        "biochemistry-1-objective-2"
       ],
       "question_ids": [
-        "biochemistry-1:check"
+        "biochemistry-1:check",
+        "biochemistry-1:affinity-specificity-cooperativity"
       ],
-      "points": 1
+      "points": 2
     },
     {
       "id": "biochemistry-2-practice",
@@ -239,12 +245,14 @@
       "mode": "practice",
       "path": "question-banks/practice.json",
       "objective_ids": [
-        "biochemistry-2-objective-1"
+        "biochemistry-2-objective-1",
+        "biochemistry-2-objective-2"
       ],
       "question_ids": [
-        "biochemistry-2:check"
+        "biochemistry-2:check",
+        "biochemistry-2:catalytic-efficiency"
       ],
-      "points": 1
+      "points": 2
     },
     {
       "id": "biochemistry-3-practice",
@@ -252,12 +260,14 @@
       "mode": "practice",
       "path": "question-banks/practice.json",
       "objective_ids": [
-        "biochemistry-3-objective-1"
+        "biochemistry-3-objective-1",
+        "biochemistry-3-objective-2"
       ],
       "question_ids": [
-        "biochemistry-3:check"
+        "biochemistry-3:check",
+        "biochemistry-3:uncoupler-and-pmf"
       ],
-      "points": 1
+      "points": 2
     },
     {
       "id": "biochemistry-4-practice",
@@ -265,12 +275,14 @@
       "mode": "practice",
       "path": "question-banks/practice.json",
       "objective_ids": [
-        "biochemistry-4-objective-1"
+        "biochemistry-4-objective-1",
+        "biochemistry-4-objective-2"
       ],
       "question_ids": [
-        "biochemistry-4:check"
+        "biochemistry-4:check",
+        "biochemistry-4:pathway-block-and-fluxes"
       ],
-      "points": 1
+      "points": 2
     },
     {
       "id": "biochemistry-case",

@@ -129,6 +129,127 @@
         "legacy_id": "robotics-4:check",
         "modifications": []
       }
+    },
+    {
+      "id": "robotics-1:end-effector-position",
+      "type": "numeric",
+      "prompt": "A planar two-link arm has link lengths 1.0 m and 0.5 m. The base frame x-axis is horizontal. Joint 1 is at 90° from the x-axis and joint 2 is at 0° relative to link 1. What is the y-coordinate of the end effector in the base frame? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "robotics-1-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 1.5,
+        "unit": "m",
+        "tolerance": 0.01,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Add the link contributions in the base frame, using the cumulative angle.",
+        "solution": "The cumulative angle for both links is 90°, so both extend along +y: y = 1.0 sin 90° + 0.5 sin 90° = 1.5 m and x = 0. Tracking frame labels and cumulative angles prevents mixing joint-relative and base-frame angles.",
+        "lesson_ids": [
+          "robotics-1"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "robotics-2:singularity",
+      "type": "single_choice",
+      "prompt": "A two-link planar arm is fully extended (second joint at 0°). Which statement is correct?",
+      "options": [
+        "Inverse kinematics always has one unique solution.",
+        "It has no singularity because the angles are zero.",
+        "Singularities only occur with three links.",
+        "It is at a kinematic singularity: the end effector cannot move radially inward or outward in the arm's reach direction for small joint motions, and elbow-up and elbow-down inverse solutions merge here but differ elsewhere."
+      ],
+      "points": 1,
+      "objective_ids": [
+        "robotics-2-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 3
+      },
+      "feedback": {
+        "hint": "Think about the Jacobian when the links are collinear.",
+        "solution": "At full extension the arm cannot extend further along its length, so the Jacobian loses rank; away from this pose there are two inverse solutions (elbow up and down), which coincide at the singularity.",
+        "lesson_ids": [
+          "robotics-2"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "robotics-3:gear-ratio-torque",
+      "type": "numeric",
+      "prompt": "A motor delivers 0.10 N·m through a 20:1 gearbox with 80% efficiency. What is the output torque? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "robotics-3-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 1.6,
+        "unit": "N*m",
+        "tolerance": 0.01,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Multiply by the ratio and the efficiency.",
+        "solution": "Output torque = 0.10 × 20 × 0.80 = 1.6 N·m. The output speed is divided by 20 (less friction losses); the convention for efficiency must be stated.",
+        "lesson_ids": [
+          "robotics-3"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "robotics-4:combined-sensor-uncertainty",
+      "type": "numeric",
+      "prompt": "Two independent position sensors each have a standard uncertainty of 3.0 mm. What is the standard uncertainty of their sum, in mm? Enter the value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "robotics-4-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 4.243,
+        "unit": "mm",
+        "tolerance": 0.02,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Independent uncertainties add in quadrature.",
+        "solution": "√(3.0² + 3.0²) = 4.24 mm. A safety margin should be set from the combined uncertainty (for example a multiple of it), not from one sensor alone.",
+        "lesson_ids": [
+          "robotics-4"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
     }
   ]
 }

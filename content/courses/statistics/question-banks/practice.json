@@ -250,6 +250,128 @@
         "kind": "original",
         "modifications": ["Original coordinate-plot assessment built from an authored replicate dataset; no source question or answer was adapted."]
       }
+    },
+    {
+      "id": "statistics-1:standard-error",
+      "type": "numeric",
+      "prompt": "A population has standard deviation 12. For samples of size 36, what is the standard error of the sample mean? Enter a number.",
+      "points": 1,
+      "objective_ids": [
+        "statistics-1-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 2.0,
+        "unit": "",
+        "tolerance": 0.01,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "SE = σ/√n.",
+        "solution": "SE = 12/√36 = 2.0. Sample means vary from sample to sample, and the spread of that variation shrinks with √n.",
+        "lesson_ids": [
+          "statistics-1"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "statistics-2:magnitude-vs-precision",
+      "type": "single_choice",
+      "prompt": "Study A estimates an effect of 5.0 with 95% CI 4.8 to 5.2. Study B estimates 0.5 with CI −0.2 to 1.2. Which statement is correct?",
+      "options": [
+        "A has a larger and more precisely estimated effect; B's interval includes zero, so its direction is uncertain. Magnitude and precision are separate.",
+        "Precision and magnitude are the same quantity.",
+        "B has stronger evidence because its interval is wider.",
+        "A's narrow interval means its effect is small."
+      ],
+      "points": 1,
+      "objective_ids": [
+        "statistics-2-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0
+      },
+      "feedback": {
+        "hint": "Read the estimate for size and the interval for precision.",
+        "solution": "The point estimate gives magnitude and the interval width reflects precision. A is large and precise; B is small and imprecise, with an interval compatible with no effect or a modest one.",
+        "lesson_ids": [
+          "statistics-2"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "statistics-3:bonferroni",
+      "type": "numeric",
+      "prompt": "Twenty independent hypotheses are tested, each at an overall familywise level of 0.05. What per-test threshold does the Bonferroni correction give? Enter a number.",
+      "points": 1,
+      "objective_ids": [
+        "statistics-3-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0.0025,
+        "unit": "",
+        "tolerance": 5e-05,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Divide the familywise level by the number of tests.",
+        "solution": "0.05/20 = 0.0025. Confirmatory tests specified in advance can be corrected this way; exploratory analyses should be labelled as such and confirmed.",
+        "lesson_ids": [
+          "statistics-3"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "statistics-4:pseudoreplication",
+      "type": "single_choice",
+      "prompt": "Five culture dishes per condition each contribute 100 cell measurements. An analysis treats the 500 cells per condition as independent. What is the problem?",
+      "options": [
+        "Cells within a dish are correlated, so the real replication is the number of dishes; treating cells as independent understates the uncertainty.",
+        "The analysis is too conservative.",
+        "Residuals do not matter.",
+        "There is no problem; more cells are always better."
+      ],
+      "points": 1,
+      "objective_ids": [
+        "statistics-4-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0
+      },
+      "feedback": {
+        "hint": "Decide the level at which replication is independent.",
+        "solution": "The independent unit is the dish (or experiment), not the cell. Analyses should average within dish or use a model with dish as a grouping factor, and residual checks should be done at the appropriate level.",
+        "lesson_ids": [
+          "statistics-4"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
     }
   ]
 }

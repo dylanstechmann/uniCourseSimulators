@@ -147,9 +147,9 @@ def test_preserved_inventory_is_honest_partial(repository):
     assert result.ok, result.errors
     assert result.inventory == {
         "courses": 25,
-        "lessons": 132,
-        "questions": 211,
-        "cards": 275,
+        "lessons": 140,
+        "questions": 347,
+        "cards": 300,
         "cases": 25,
     }
     assert sum(warning["code"] == "legacy-depth" for warning in result.warnings) == 98
@@ -351,9 +351,9 @@ def test_structured_rubric_item_is_counted_while_course_remains_partial(reposito
     result = validate_repository(repository)
     assert result.ok, result.errors
     manifest = read(course[0])
-    assert manifest["version"] == "0.18.0"
+    assert manifest["version"] == "0.19.0"
     assert manifest["maturity"] == "partial"
-    assert result.inventory["questions"] == 211
+    assert result.inventory["questions"] == 347
     question = next(
         item
         for item in read(course[0].parent / "question-banks/practice.json")["questions"]
@@ -374,7 +374,7 @@ def test_graph_plot_item_is_counted_while_statistics_course_remains_partial(repo
     assert manifest["maturity"] == "partial"
     assert graph["id"] == "statistics-5:concentration-graph"
     assert len(graph["graph_spec"]["points"]) == 3
-    assert result.inventory["questions"] == 211
+    assert result.inventory["questions"] == 347
 
 
 def test_cell_biology_scope_does_not_claim_unwritten_weeks(repository):
@@ -383,7 +383,7 @@ def test_cell_biology_scope_does_not_claim_unwritten_weeks(repository):
     course_root = repository / "content/courses/cell-biology"
     manifest = read(course_root / "course.json")
     weeks = manifest["duration"]["weeks"]
-    assert manifest["version"] == "0.18.0"
+    assert manifest["version"] == "0.19.0"
     assert manifest["maturity"] == "partial"
     assert len(weeks) == 14
     assert [week["week"] for week in weeks if week["lesson_ids"]] == [1, 2, 3, 4, 5, 6, 7, 9, 10, 11, 12, 13, 14]
@@ -396,14 +396,14 @@ def test_cell_biology_scope_does_not_claim_unwritten_weeks(repository):
     assert homework["type"] == "homework" and homework["mode"] == "practice"
     assert homework["points"] == 24 and len(homework["question_ids"]) == 5
     assert manifest["grading_policy"]["mode"] == "formative-only"
-    assert len(weeks[3]["lesson_ids"]) == 3
+    assert len(weeks[3]["lesson_ids"]) == 4  # lessons 3, 9, 10 and the Homework 2 companion
     assert weeks[4]["lesson_ids"] == ["cell-biology-11", "cell-biology-12", "cell-biology-lab-01"]
     assert weeks[4]["assessment_ids"] == ["cell-biology-week5-practice", "cell-biology-week5-image-quantification-lab"]
     week5_lab = next(item for item in manifest["assessments"] if item["id"] == "cell-biology-week5-image-quantification-lab")
     assert week5_lab["type"] == "lab" and week5_lab["mode"] == "practice"
     assert len(week5_lab["question_ids"]) == 4 and week5_lab["points"] == 13
-    assert len(weeks[5]["lesson_ids"]) == 2
-    assert len(weeks[6]["lesson_ids"]) == 3
+    assert len(weeks[5]["lesson_ids"]) == 3  # lessons 13, 14 and the Homework 3 companion
+    assert len(weeks[6]["lesson_ids"]) == 4  # lessons 15, 16, a prototype reading and the Homework 4 companion
     assert weeks[7]["week"] == 8
     assert "no midterm" in weeks[7]["title"].lower()
     assert weeks[7]["assessment_ids"] == ["cell-biology-week8-cumulative-practice"]
@@ -414,14 +414,14 @@ def test_cell_biology_scope_does_not_claim_unwritten_weeks(repository):
     assert practice_set["mode"] == "practice"
     assert len(practice_set["question_ids"]) == 12
     assert practice_set["points"] == 31
-    assert weeks[8]["lesson_ids"] == ["cell-biology-17", "cell-biology-18"]
-    assert weeks[8]["assessment_ids"] == ["cell-biology-week9-practice"]
+    assert weeks[8]["lesson_ids"] == ["cell-biology-17", "cell-biology-18", "cell-biology-hw5"]
+    assert weeks[8]["assessment_ids"] == ["cell-biology-week9-practice", "cell-biology-hw5-practice"]
     week9_practice = next(item for item in manifest["assessments"] if item["id"] == weeks[8]["assessment_ids"][0])
     assert week9_practice["mode"] == "practice"
     assert len(week9_practice["question_ids"]) == 8
     assert week9_practice["points"] == 14
-    assert weeks[9]["lesson_ids"] == ["cell-biology-19", "cell-biology-20"]
-    assert weeks[9]["assessment_ids"] == ["cell-biology-week10-practice"]
+    assert weeks[9]["lesson_ids"] == ["cell-biology-19", "cell-biology-20", "cell-biology-hw6"]
+    assert weeks[9]["assessment_ids"] == ["cell-biology-week10-practice", "cell-biology-hw6-practice"]
     week10_practice = next(item for item in manifest["assessments"] if item["id"] == weeks[9]["assessment_ids"][0])
     assert week10_practice["mode"] == "practice"
     assert len(week10_practice["question_ids"]) == 7
@@ -432,20 +432,20 @@ def test_cell_biology_scope_does_not_claim_unwritten_weeks(repository):
     assert week11_practice["mode"] == "practice"
     assert len(week11_practice["question_ids"]) == 7
     assert week11_practice["points"] == 13
-    assert weeks[11]["lesson_ids"] == ["cell-biology-23", "cell-biology-24"]
-    assert weeks[11]["assessment_ids"] == ["cell-biology-week12-practice"]
+    assert weeks[11]["lesson_ids"] == ["cell-biology-23", "cell-biology-24", "cell-biology-hw7"]
+    assert weeks[11]["assessment_ids"] == ["cell-biology-week12-practice", "cell-biology-hw7-practice"]
     week12_practice = next(item for item in manifest["assessments"] if item["id"] == weeks[11]["assessment_ids"][0])
     assert week12_practice["mode"] == "practice"
     assert len(week12_practice["question_ids"]) == 7
     assert week12_practice["points"] == 13
-    assert weeks[12]["lesson_ids"] == ["cell-biology-25", "cell-biology-26"]
-    assert weeks[12]["assessment_ids"] == ["cell-biology-week13-practice"]
+    assert weeks[12]["lesson_ids"] == ["cell-biology-25", "cell-biology-26", "cell-biology-hw8"]
+    assert weeks[12]["assessment_ids"] == ["cell-biology-week13-practice", "cell-biology-hw8-practice"]
     week13_practice = next(item for item in manifest["assessments"] if item["id"] == weeks[12]["assessment_ids"][0])
     assert week13_practice["mode"] == "practice"
     assert len(week13_practice["question_ids"]) == 7
     assert week13_practice["points"] == 13
-    assert weeks[13]["lesson_ids"] == ["cell-biology-27", "cell-biology-28"]
-    assert weeks[13]["assessment_ids"] == ["cell-biology-week14-practice"]
+    assert weeks[13]["lesson_ids"] == ["cell-biology-27", "cell-biology-28", "cell-biology-lab-03"]
+    assert weeks[13]["assessment_ids"] == ["cell-biology-week14-practice", "cell-biology-week14-lineage-lab"]
     week14_practice = next(item for item in manifest["assessments"] if item["id"] == weeks[13]["assessment_ids"][0])
     assert week14_practice["mode"] == "practice"
     assert len(week14_practice["question_ids"]) == 7
@@ -698,7 +698,7 @@ def test_public_validation_discloses_unmounted_private_assessment_without_faking
     result = validate_repository(repository)
 
     assert result.ok, result.errors
-    assert result.inventory["questions"] == 211
+    assert result.inventory["questions"] == 347
     assert any(item["code"] == "private-assessment-unchecked" for item in result.warnings)
 
 
@@ -710,7 +710,7 @@ def test_private_assessment_validator_loads_and_validates_key_only_from_separate
     result = validate_repository(repository, private_assessments_root=private_root)
 
     assert result.ok, result.errors
-    assert result.inventory["questions"] == 212
+    assert result.inventory["questions"] == 348
     assert "restricted-key" not in codes(result)
     assert "private-assessment-unchecked" not in {item["code"] for item in result.warnings}
 
@@ -1024,9 +1024,9 @@ def test_week9_schedule_objectives_and_practice_are_mapped(repository):
     questions = {item["id"]: item for item in bank["questions"]}
 
     assert manifest["maturity"] == "partial"
-    assert manifest["version"] == "0.18.0"
-    assert week9["lesson_ids"] == ["cell-biology-17", "cell-biology-18"]
-    assert week9["assessment_ids"] == [assessment["id"]]
+    assert manifest["version"] == "0.19.0"
+    assert week9["lesson_ids"] == ["cell-biology-17", "cell-biology-18", "cell-biology-hw5"]
+    assert week9["assessment_ids"] == [assessment["id"], "cell-biology-hw5-practice"]
     assert sum(questions[item]["points"] for item in assessment["question_ids"]) == assessment["points"] == 14
     assert set(assessment["objective_ids"]) <= {item["id"] for item in manifest["lesson_objectives"]}
     assert all(

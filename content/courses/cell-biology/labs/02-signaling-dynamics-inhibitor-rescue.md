@@ -1,7 +1,7 @@
 # Virtual lab 2: signaling dynamics, inhibitor controls, and rescue
 
 **Activity type:** synthetic-data analysis with public, ungraded formative checks  
-**Course package:** Foundations of Cell and Molecular Biology, version 0.18.0. **Estimated learner time:** 2–3 hours  
+**Course package:** Foundations of Cell and Molecular Biology, version 0.19.0. **Estimated learner time:** 2–3 hours  
 **Data status:** all 120 observations are constructed for instruction; no laboratory measurements or biological samples are represented.
 
 ## Experimental question
