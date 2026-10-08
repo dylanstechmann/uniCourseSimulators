@@ -170,6 +170,85 @@ PHYSIOLOGY_NUMERIC = {
 }
 
 
+def _least_squares_lb(condition: str) -> tuple[float, float]:
+    """Vmax and Km from an ordinary least-squares fit of 1/mean rate on 1/[S], read from the lab CSV."""
+    import csv
+    rows = list(csv.DictReader((COURSES / "biochemistry/labs/enzyme-kinetics-rates.csv").open(encoding="utf-8")))
+    substrates = sorted({float(r["substrate_um"]) for r in rows})
+    means = [
+        sum(float(r["rate_um_per_min"]) for r in rows if r["condition"] == condition and float(r["substrate_um"]) == s)
+        / sum(1 for r in rows if r["condition"] == condition and float(r["substrate_um"]) == s)
+        for s in substrates
+    ]
+    x, y = [1 / s for s in substrates], [1 / v for v in means]
+    mx, my = sum(x) / len(x), sum(y) / len(y)
+    slope = sum((a - mx) * (b - my) for a, b in zip(x, y)) / sum((a - mx) ** 2 for a in x)
+    intercept = my - slope * mx
+    return 1 / intercept, slope / intercept
+
+
+_KM_CTRL = _least_squares_lb("control")[1]
+_KM_INH = _least_squares_lb("inhibitor")[1]
+_RT25 = 8.314 * 298.15 / 1000
+_AK_AMP = 0.3**2 / 3.0
+_PROT = lambda ph, pka: 1 / (1 + 10 ** (ph - pka))       # noqa: E731  protonated fraction of a base
+_DEPROT = lambda ph, pka: 1 / (1 + 10 ** (pka - ph))     # noqa: E731  deprotonated fraction of an acid
+
+BIOCHEMISTRY_NUMERIC = {
+    # items written before 2026-10-08, recomputed from the numbers in their prompts
+    "biochemistry-1:check": 12 / (4 + 12),
+    "biochemistry-3:check": 5 * 2,
+    "biochemistry-2:catalytic-efficiency": 500 / 25e-6,
+    "biochemistry-5:rate-at-20": 100 * 20 / (5 + 20),
+    "biochemistry-5:kcat": 100 / 0.01 / 60,
+    "biochemistry-5:competitive-km": 5 * (1 + 4 / 2),
+    "biochemistry-5:noncompetitive-rate": (100 / 3) * 20 / (5 + 20),
+    "biochemistry-6:atp-actual-dg": -30.5 + 2.577 * math.log((0.3e-3 * 3.0e-3) / 3.0e-3),
+    "biochemistry-6:coupled-dg0": 13.8 + (-30.5),
+    "biochemistry-6:equilibrium-constant": math.exp(-13.8 / 2.577),
+    "biochemistry-6:nadh-oxygen": -2 * 96.485 * (0.815 - (-0.320)),
+    "biochemistry-7:occupancy": 30 / (10 + 30),
+    "biochemistry-7:depletion": (110 - math.sqrt(110**2 - 4 * 50 * 50)) / 2,
+    "biochemistry-7:hill-40": 100 * 40**2.8 / (26**2.8 + 40**2.8),
+    "biochemistry-7:unloading": (97.8 - 77.0) - 3.8,
+    # biochemistry 0.4.0
+    "biochemistry-8:lys-protonated": _PROT(7.4, 10.5),
+    "biochemistry-8:his-protonated": _PROT(7.4, 6.0),
+    "biochemistry-8:pi-alanine": (2.34 + 9.69) / 2,
+    "biochemistry-8:pi-glutamate": (2.2 + 4.25) / 2,
+    "biochemistry-8:lysine-charge": _PROT(7.4, 8.95) + _PROT(7.4, 10.53) - _DEPROT(7.4, 2.18),
+    "biochemistry-9:k-unfold": math.exp(-10 / _RT25),
+    "biochemistry-9:fraction-folded": 1 / (1 + 0.0177),
+    "biochemistry-9:midpoint": 25 / 10,
+    "biochemistry-9:dg-at-2m": 25 - 10 * 2.0,
+    "biochemistry-9:mutation-fold": math.exp(8 / _RT25),
+    "biochemistry-10:amp-from-ak": _AK_AMP,
+    "biochemistry-10:energy-charge": (3.0 + 0.5 * 0.3) / (3.0 + 0.3 + _AK_AMP),
+    "biochemistry-10:amp-fold": (0.527**2 / 2.7) / _AK_AMP,
+    "biochemistry-10:glucose-for-atp": 6.0 / 2,
+    "biochemistry-10:pfk-fold": (1 / (1 + (0.5 / 1.0) ** 2.5)) / (1 / (1 + (2.0 / 1.0) ** 2.5)),
+    "biochemistry-11:pmf": 150 + 61.5 * 0.75,
+    "biochemistry-11:energy-per-proton": 96.485 * 0.1961,
+    "biochemistry-11:min-protons": 51.4 / 18.9,
+    "biochemistry-11:atp-per-glucose": 4 + 10 * (10 / 4) + 2 * (6 / 4),
+    "biochemistry-11:leak-yield": 4 + (10 * 2.5 + 2 * 1.5) * 0.75,
+    "biochemistry-11:atp-rate": 0.25 / 22.4 * 1000 * 5.3,
+    "biochemistry-12:pool-k1-doubled": (2 * 2.0) / 0.5,
+    "biochemistry-12:flux-k2-halved": 2.0,
+    "biochemistry-12:missing-coefficient": 1 - (0.50 + 0.25 + 0.15),
+    "biochemistry-12:flux-increase-e1": 0.50 * 20,
+    "biochemistry-12:turnover-time": math.log(10) / (math.log(2) / 2.0),
+    "biochemistry-13:baseline-glucose": 0.9 * 6.4 / 32 + 0.1 * 6.4 / 2,
+    "biochemistry-13:glucose-after-block": 6.4 / 2,
+    "biochemistry-13:lactate-fold": 6.4 / (0.1 * 6.4 / 2 * 2),
+    "biochemistry-13:nadh-fold": 40 / 10,
+    "biochemistry-13:tracer-fraction": 0.48 / 0.5,
+    "biochemistry-lab1:km-control": _KM_CTRL,
+    "biochemistry-lab1:km-apparent": _KM_INH,
+    "biochemistry-lab1:inhibition-constant": 4 / (_KM_INH / _KM_CTRL - 1),
+}
+
+
 def bank(course: str) -> dict[str, dict]:
     path = COURSES / course / "question-banks" / "practice.json"
     return {item["id"]: item for item in json.loads(path.read_text(encoding="utf-8"))["questions"]}
@@ -219,7 +298,8 @@ def two_sample_t_power(n: int, sd: float, delta: float, alpha: float = 0.05) -> 
 @pytest.mark.parametrize("question_id,expected", sorted(GENETICS_NUMERIC.items()))
 def test_genetics_numeric_key_matches_independent_recalculation(question_id, expected):
     spec = bank("genetics")[question_id]["solution_spec"]
-    assert abs(spec["answer"] - expected) <= spec["tolerance"], (question_id, spec["answer"], expected)
+    allowed = spec["tolerance"] + (spec.get("relative_tolerance") or 0) * abs(spec["answer"])
+    assert abs(spec["answer"] - expected) <= allowed, (question_id, spec["answer"], expected)
 
 
 def test_every_genetics_numeric_item_is_recalculated():
@@ -248,7 +328,8 @@ def test_kosambi_distance_stated_in_the_mapping_lesson():
 @pytest.mark.parametrize("question_id,expected", sorted(PHYSIOLOGY_NUMERIC.items()))
 def test_physiology_numeric_key_matches_independent_recalculation(question_id, expected):
     spec = bank("physiology")[question_id]["solution_spec"]
-    assert abs(spec["answer"] - expected) <= spec["tolerance"], (question_id, spec["answer"], expected)
+    allowed = spec["tolerance"] + (spec.get("relative_tolerance") or 0) * abs(spec["answer"])
+    assert abs(spec["answer"] - expected) <= allowed, (question_id, spec["answer"], expected)
 
 
 def test_every_physiology_numeric_item_is_recalculated():
@@ -278,3 +359,23 @@ def test_hill_peak_power_is_at_the_load_the_lesson_states():
     assert abs(power(best_force) - power(analytic)) < 1e-3
     text = reading("physiology", "physiology-12")
     assert f"F* = {analytic / f0:.3f} F₀ = {analytic:.1f} N" in text
+
+
+@pytest.mark.parametrize("question_id,expected", sorted(BIOCHEMISTRY_NUMERIC.items()))
+def test_biochemistry_numeric_key_matches_independent_recalculation(question_id, expected):
+    spec = bank("biochemistry")[question_id]["solution_spec"]
+    allowed = spec["tolerance"] + (spec.get("relative_tolerance") or 0) * abs(spec["answer"])
+    assert abs(spec["answer"] - expected) <= allowed, (question_id, spec["answer"], expected)
+
+
+def test_every_biochemistry_numeric_item_is_recalculated():
+    numeric = {qid for qid, item in bank("biochemistry").items() if item["type"] == "numeric"}
+    assert numeric == set(BIOCHEMISTRY_NUMERIC)
+
+
+def test_biochemistry_lab_fit_recovers_the_parameters_the_data_were_built_from():
+    vmax, km = _least_squares_lb("control")
+    assert abs(vmax - 100.0) < 0.5 and abs(km - 5.0) < 0.05
+    assert abs(_KM_INH - 15.0) < 0.2 and abs(4 / (_KM_INH / _KM_CTRL - 1) - 2.0) < 0.1
+    field = bank("biochemistry")["biochemistry-lab1:control-fit"]["solution_spec"]["field_specs"][0]
+    assert abs(field["answer"] - vmax) < 0.05

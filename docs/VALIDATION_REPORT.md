@@ -4,7 +4,24 @@
 
 2026-10-06; synthetic local learner data only. Milestones 1 and 2 are implemented. Milestone 3 remains partial; deterministic graders and prototype graded-assignment and review workflows are described below. A Milestone 4 curriculum-map increment is implemented and tested, while subject-matter review and map refinement remain. All 25 course packages are **partial**; zero are beta, complete or externally reviewed. Human score review is limited to saved attempts and does not constitute course-content review. No semester equivalence, university credit, security certification or public production deployment is asserted.
 
-## Current increment: physiology gets a proposed 14-week schedule, seven lessons and a scratch-assay lab (2026-10-08, sixteenth pass)
+## Current increment: biochemistry gets a proposed 14-week schedule, six lessons and an enzyme-kinetics lab (2026-10-08, seventeenth pass)
+
+Written by an AI coding assistant. Biochemistry I: Proteins, Enzymes & Metabolism moves from 0.3.2 to 0.4.0 and stays `partial`, unreviewed and formative-only.
+
+- **Proposed 14-week schedule** (`duration.weeks`) and a regenerated syllabus: the four short prototype units sit in weeks 1, 5, 9 and 12 beside the original lessons; week 7 is a lab and week 14 a lesson that prepares the existing course case. The manifest says the schedule is not evidence of semester equivalence.
+- **Six lessons (8 to 13)**, each about 1,000 to 1,250 words with a worked example, common mistakes, seven items and four cards: amino acids, charge and isoelectric points; protein folding and stability; glycolysis, energy charge and why AMP is a sensitive signal; mitochondrial bioenergetics (proton-motive force, ATP yield, leak); flux control, pool sizes and the layers of regulation; and reading a metabolic perturbation, which prepares the course case on a respiratory-chain inhibitor that lowers ATP and raises lactate.
+- **Virtual lab 1**: synthetic replicate initial rates for an enzyme with and without a competitive inhibitor (36 rows). Seven items (a 10-cell summary upload, a double-reciprocal fit with an interpretation, apparent Km, an inhibition constant, a structured item and a multiple-select item), four cards and a week-7 practice assessment.
+- **Review record:** [biochemistry-0.4.0.md](reviews/ai-assisted/biochemistry-0.4.0.md). All 63 numeric keys in the package, including the 15 that predate this pass, agree with independent recalculation, and the lab fit recovers the parameters its data were built from. All 49 new items earn full credit under the real grader. Six drafting problems were found and fixed before the commit, including a capstone sentence that contradicted its own numbers and a significant-figures request that the grader would have scored wrongly.
+- Tests: 63 recalculation tests for biochemistry; the schedule, the no-protocol statements and the lab keys against its CSV have tests; the recalculation helper now uses the validator's absolute-plus-relative tolerance; the inventory pins moved to 225 lessons, 868 questions and 640 cards.
+
+| Command/check (this container, Python 3.12.3, 2026-10-08) | Result |
+| --- | --- |
+| `python tools/validate_content.py` | PASS: 25 packages, 225 lessons, 868 questions, 640 cards, 25 cases; 0 errors; 98 disclosed legacy-depth warnings |
+| `verify.sh` | see the PROGRESS.md entry for this pass |
+
+Not run: frontend checks, Docker Compose, Playwright for this pass. Not reviewed by a person.
+
+## Previous increment: physiology gets a proposed 14-week schedule, seven lessons and a scratch-assay lab (2026-10-08, sixteenth pass)
 
 Written by an AI coding assistant. Human Physiology for Engineers moves from 0.3.2 to 0.4.0 and stays `partial`, unreviewed and formative-only.
 

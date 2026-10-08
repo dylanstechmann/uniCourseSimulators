@@ -30,7 +30,7 @@ LESSONS = [("geroscience", f"geroscience-{n}") for n in range(9, 15)] + [
     ("statistics", "statistics-7"), ("statistics", "statistics-8"), ("programming", "programming-6"), ("programming", "programming-7"),
     ("geroscience", "geroscience-15"), ("genetics", "genetics-9"), ("biochemistry", "biochemistry-7"), ("physiology", "physiology-7"),
     ("signals-control", "signals-control-6"), ("robotics", "robotics-6"), ("geroscience", "geroscience-16"),
-] + [("genetics", f"genetics-{n}") for n in range(10, 16)] + [("physiology", f"physiology-{n}") for n in range(8, 15)]
+] + [("genetics", f"genetics-{n}") for n in range(10, 16)] + [("physiology", f"physiology-{n}") for n in range(8, 15)] + [("biochemistry", f"biochemistry-{n}") for n in range(8, 14)]
 
 
 def load(course):
@@ -285,3 +285,52 @@ def test_physiology_lab_keys_match_the_dataset_and_the_lab_is_labelled_synthetic
     assert abs(bank["physiology-lab1:division-block"]["solution_spec"]["answer"] - block24 / control24) < 1e-3
     text = (COURSES / "physiology/labs/01-scratch-assay-closure-kinetics.md").read_text(encoding="utf-8")
     assert "nothing here is evidence about any treatment or about human healing" in text
+
+
+def test_biochemistry_schedule_places_every_lesson_once_and_stays_partial():
+    manifest = load("biochemistry")
+    weeks = manifest["duration"]["weeks"]
+    assert [w["week"] for w in weeks] == list(range(1, 15))
+    scheduled = [lesson for w in weeks for lesson in w["lesson_ids"]]
+    all_lessons = [lesson["id"] for m in manifest["modules"] for lesson in m["lessons"]]
+    assert len(all_lessons) == 14
+    assert sorted(scheduled) == sorted(all_lessons) and len(scheduled) == len(set(scheduled))
+    assessments = {a["id"]: a for a in manifest["assessments"]}
+    assert all(a in assessments for w in weeks for a in w["assessment_ids"])
+    assert all(a["mode"] != "graded" for a in manifest["assessments"])
+    assert manifest["maturity"] == "partial" and manifest["review"]["status"] == "unreviewed"
+    assert manifest["grading_policy"]["mode"] == "formative-only"
+    assert "not evidence of semester equivalence" in manifest["duration"]["equivalent_structure"]
+    lab_week = next(w for w in weeks if "biochemistry-lab-01" in w["lesson_ids"])
+    assert lab_week["week"] == 7 and "biochemistry-week7-kinetics-lab" in lab_week["assessment_ids"]
+    assert "biochemistry-case" in weeks[-1]["assessment_ids"] and "biochemistry-13" in weeks[-1]["lesson_ids"]
+
+
+def test_biochemistry_package_gives_no_protocols_or_advice():
+    manifest = load("biochemistry")
+    assert any("gives no laboratory protocols or medical advice" in item for item in manifest["limitations"])
+    for name in ("08-amino-acids-charge-and-isoelectric-points.md", "09-protein-folding-and-stability.md",
+                 "13-reading-a-metabolic-perturbation.md"):
+        text = (COURSES / "biochemistry/modules" / name).read_text(encoding="utf-8")
+        assert "gives no laboratory protocol" in text, name
+
+
+def test_biochemistry_lab_keys_match_the_dataset_and_the_lab_is_labelled_synthetic():
+    import csv
+    rows = list(csv.DictReader((COURSES / "biochemistry/labs/enzyme-kinetics-rates.csv").open(encoding="utf-8")))
+    bank = {q["id"]: q for q in json.loads((COURSES / "biochemistry/question-banks/practice.json").read_text(encoding="utf-8"))["questions"]}
+    assert len(rows) == 36
+    checks = {(c["row_id"], c["column"]): c["answer"] for c in bank["biochemistry-lab1:rate-summary"]["solution_spec"]["validation_spec"]["checks"]}
+
+    def rate_values(condition, substrate):
+        return [float(r["rate_um_per_min"]) for r in rows if r["condition"] == condition and float(r["substrate_um"]) == substrate]
+
+    for condition in ("control", "inhibitor"):
+        assert checks[(condition, "replicates")] == len(rate_values(condition, 5)) == 3
+        for substrate in (1, 5, 20, 50):
+            values = rate_values(condition, substrate)
+            assert abs(checks[(condition, f"mean_v_{substrate}um")] - sum(values) / len(values)) < 1e-4
+    text = (COURSES / "biochemistry/labs/01-enzyme-kinetics-and-inhibition-from-data.md").read_text(encoding="utf-8")
+    assert "nothing here is evidence about any compound or any cell" in text
+    vmax = bank["biochemistry-lab1:control-fit"]["solution_spec"]["field_specs"][0]
+    assert vmax["significant_figures"] == 4

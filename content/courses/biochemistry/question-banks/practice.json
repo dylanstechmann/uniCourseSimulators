@@ -813,6 +813,2083 @@
         "kind": "original",
         "modifications": []
       }
+    },
+    {
+      "id": "biochemistry-8:lys-protonated",
+      "type": "numeric",
+      "prompt": "A lysine side chain has pKa 10.5. What fraction is protonated at pH 7.4? Enter a decimal fraction, number only.",
+      "points": 1,
+      "objective_ids": [
+        "biochemistry-8-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0.99921,
+        "unit": "",
+        "tolerance": 0.0005,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "f = 1/(1 + 10^(pH − pKa)) for a base.",
+        "solution": "1/(1 + 10^(7.4 − 10.5)) = 0.9992, essentially fully protonated.",
+        "lesson_ids": [
+          "biochemistry-8"
+        ],
+        "misconception_ids": [
+          "acid-base-formulas-mixed"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "biochemistry-8:his-protonated",
+      "type": "numeric",
+      "prompt": "A histidine side chain has pKa 6.0. What fraction is protonated at pH 7.4? Enter a decimal fraction, number only.",
+      "points": 1,
+      "objective_ids": [
+        "biochemistry-8-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0.03829,
+        "unit": "",
+        "tolerance": 0.002,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the same base formula with pKa 6.0.",
+        "solution": "1/(1 + 10^(7.4 − 6.0)) = 1/(1 + 25.1) = 0.0383.",
+        "lesson_ids": [
+          "biochemistry-8"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "biochemistry-8:pi-alanine",
+      "type": "numeric",
+      "prompt": "Alanine has α-carboxyl pKa 2.34 and α-amino pKa 9.69 and no ionizable side chain. What is its isoelectric point? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "biochemistry-8-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 6.015,
+        "unit": "",
+        "tolerance": 0.02,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Average the two pKa values that bracket the neutral form.",
+        "solution": "(2.34 + 9.69)/2 = 6.015.",
+        "lesson_ids": [
+          "biochemistry-8"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "biochemistry-8:pi-glutamate",
+      "type": "numeric",
+      "prompt": "Glutamate has pKa values 2.2 (α-carboxyl), 4.25 (side chain) and 9.67 (α-amino). What is its isoelectric point? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "biochemistry-8-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 3.225,
+        "unit": "",
+        "tolerance": 0.02,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "The neutral form lies between the loss of the first and the second acidic proton.",
+        "solution": "(2.2 + 4.25)/2 = 3.225; averaging with the α-amino pKa would be wrong.",
+        "lesson_ids": [
+          "biochemistry-8"
+        ],
+        "misconception_ids": [
+          "wrong-pka-pair"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "biochemistry-8:lysine-charge",
+      "type": "numeric",
+      "prompt": "Lysine has pKa values 2.18, 8.95 (α-amino) and 10.53 (side chain). What is its net charge at pH 7.4? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "biochemistry-8-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0.9719,
+        "unit": "",
+        "tolerance": 0.02,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Add the two basic charges and subtract the acidic one, each weighted by its fraction.",
+        "solution": "0.973 + 0.999 − 1.000 = +0.97.",
+        "lesson_ids": [
+          "biochemistry-8"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "biochemistry-8:anion-exchange",
+      "type": "single_choice",
+      "prompt": "A protein has pI 5.0. At pH 8.0, which statement is correct?",
+      "points": 1,
+      "objective_ids": [
+        "biochemistry-8-objective-3"
+      ],
+      "options": [
+        "It has no charged groups and does not bind either resin.",
+        "It is net positive and binds a cation-exchange resin.",
+        "It is at its isoelectric point and migrates in neither direction.",
+        "It is net negative, migrates toward the positive electrode and binds an anion-exchange resin."
+      ],
+      "solution_spec": {
+        "answer": 3
+      },
+      "feedback": {
+        "hint": "Is pH 8.0 above or below the pI?",
+        "solution": "Above the pI the average charge is negative, so the protein moves toward the positive electrode and binds a resin carrying positive groups.",
+        "lesson_ids": [
+          "biochemistry-8"
+        ],
+        "misconception_ids": [
+          "resin-sign-reversed"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "biochemistry-8:solubility-and-charge",
+      "type": "multiple_select",
+      "prompt": "Which statements about protein charge are correct? Select all that apply.",
+      "points": 2,
+      "objective_ids": [
+        "biochemistry-8-objective-3"
+      ],
+      "options": [
+        "Solubility is often lowest near the isoelectric point.",
+        "Histidine side chains buffer near neutral pH because their pKa is close to 6 to 7.",
+        "A protein is net positive above its isoelectric point.",
+        "A protein with zero net charge can still contain many charged groups.",
+        "The pKa of a group is the same inside a folded protein as in free solution."
+      ],
+      "solution_spec": {
+        "answer": [
+          0,
+          1,
+          3
+        ],
+        "partial_credit": "correct-minus-incorrect-clamped-v1"
+      },
+      "feedback": {
+        "hint": "Think about the sum of charges versus the individual groups, and about what shifts a pKa.",
+        "solution": "Net charge can be zero with positive and negative groups present. Solubility is lowest near the pI and histidine buffers near neutral pH. Above the pI the net charge is negative, and burial shifts pKa values.",
+        "lesson_ids": [
+          "biochemistry-8"
+        ],
+        "misconception_ids": [
+          "net-zero-means-no-charge"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "biochemistry-9:k-unfold",
+      "type": "numeric",
+      "prompt": "A two-state protein has ΔG_unfold = 10 kJ/mol at 25 °C (RT = 2.479 kJ/mol). What is K_u = [U]/[N]? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "biochemistry-9-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0.0177,
+        "unit": "",
+        "tolerance": 0.001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "K_u = exp(−ΔG_unfold/RT).",
+        "solution": "e^(−10/2.479) = 0.0177.",
+        "lesson_ids": [
+          "biochemistry-9"
+        ],
+        "misconception_ids": [
+          "sign-convention-folding"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "biochemistry-9:fraction-folded",
+      "type": "numeric",
+      "prompt": "With K_u = 0.0177, what fraction of the protein is folded? Enter a decimal fraction, number only.",
+      "points": 1,
+      "objective_ids": [
+        "biochemistry-9-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0.9826,
+        "unit": "",
+        "tolerance": 0.002,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "f_N = 1/(1 + K_u).",
+        "solution": "1/(1 + 0.0177) = 0.983.",
+        "lesson_ids": [
+          "biochemistry-9"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "biochemistry-9:midpoint",
+      "type": "numeric",
+      "prompt": "A protein has ΔG_H₂O = 25 kJ/mol and an m-value of 10 kJ/mol per M. What is the denaturant midpoint, in M? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "biochemistry-9-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 2.5,
+        "unit": "",
+        "tolerance": 0.02,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "At the midpoint ΔG_unfold = 0.",
+        "solution": "25/10 = 2.5 M.",
+        "lesson_ids": [
+          "biochemistry-9"
+        ],
+        "misconception_ids": [
+          "midpoint-is-stability"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "biochemistry-9:dg-at-2m",
+      "type": "numeric",
+      "prompt": "For the same protein, what is ΔG_unfold at 2.0 M denaturant? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "biochemistry-9-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 5.0,
+        "unit": "kJ/mol",
+        "tolerance": 0.1,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "ΔG_unfold = ΔG_H₂O − m [D].",
+        "solution": "25 − 10 × 2.0 = 5 kJ/mol.",
+        "lesson_ids": [
+          "biochemistry-9"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "biochemistry-9:mutation-fold",
+      "type": "numeric",
+      "prompt": "A mutation lowers ΔG_unfold by 8 kJ/mol (RT = 2.479 kJ/mol). By what factor does K_u increase? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "biochemistry-9-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 25.213,
+        "unit": "",
+        "tolerance": 0.3,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "The factor is exp(|ΔΔG|/RT).",
+        "solution": "e^(8/2.479) = 25.2.",
+        "lesson_ids": [
+          "biochemistry-9"
+        ],
+        "misconception_ids": [
+          "mutation-small-because-folded"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "biochemistry-9:sign",
+      "type": "single_choice",
+      "prompt": "For a stable protein, which statement about the free energy of the folding reaction U → N and of unfolding N → U is correct?",
+      "points": 1,
+      "objective_ids": [
+        "biochemistry-9-objective-1"
+      ],
+      "options": [
+        "Both are positive.",
+        "Both are negative.",
+        "ΔG_fold is negative and ΔG_unfold is positive, with equal magnitude.",
+        "ΔG_fold is positive and ΔG_unfold is negative."
+      ],
+      "solution_spec": {
+        "answer": 2
+      },
+      "feedback": {
+        "hint": "The two reactions are the reverse of each other.",
+        "solution": "Reversing a reaction changes the sign of ΔG. A stable protein folds spontaneously (negative ΔG_fold), so unfolding is unfavorable (positive ΔG_unfold).",
+        "lesson_ids": [
+          "biochemistry-9"
+        ],
+        "misconception_ids": [
+          "sign-convention-folding"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "biochemistry-9:marginal-stability",
+      "type": "multiple_select",
+      "prompt": "A destabilizing mutation raises a protein's unfolded population 25-fold, from 4×10⁻⁵ to 1×10⁻³. Which statements are appropriate? Select all that apply.",
+      "points": 2,
+      "objective_ids": [
+        "biochemistry-9-objective-3"
+      ],
+      "options": [
+        "The two-state model proves that the mutation will cause aggregation.",
+        "The protein is still more than 99% folded at equilibrium.",
+        "The supply of unfolded molecules that chaperones or degradation must handle has risen about 25-fold.",
+        "A protein with a lower starting stability would be affected more strongly in terms of the folded fraction.",
+        "Because the folded fraction barely changed, the mutation has no consequence for the cell."
+      ],
+      "solution_spec": {
+        "answer": [
+          1,
+          2,
+          3
+        ],
+        "partial_credit": "correct-minus-incorrect-clamped-v1"
+      },
+      "feedback": {
+        "hint": "Separate the folded fraction from the absolute size of the unfolded population, and a model from an outcome.",
+        "solution": "A 25-fold rise in a tiny population leaves the folded fraction near 1 but changes the load on quality control; the model predicts populations, not aggregation, and cannot show that a consequence is absent.",
+        "lesson_ids": [
+          "biochemistry-9"
+        ],
+        "misconception_ids": [
+          "mutation-small-because-folded"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "biochemistry-10:amp-from-ak",
+      "type": "numeric",
+      "prompt": "Adenylate kinase (2 ADP ⇌ ATP + AMP) is at equilibrium with K = 1. With ATP at 3.0 mM and ADP at 0.3 mM, what is the AMP concentration? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "biochemistry-10-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0.03,
+        "unit": "mM",
+        "tolerance": 0.002,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "[AMP] = K [ADP]²/[ATP].",
+        "solution": "1 × 0.3²/3.0 = 0.03 mM.",
+        "lesson_ids": [
+          "biochemistry-10"
+        ],
+        "misconception_ids": [
+          "adenylate-linear"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "biochemistry-10:energy-charge",
+      "type": "numeric",
+      "prompt": "With ATP 3.0 mM, ADP 0.3 mM and AMP 0.03 mM, what is the adenylate energy charge? Enter a decimal fraction, number only.",
+      "points": 1,
+      "objective_ids": [
+        "biochemistry-10-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0.9459,
+        "unit": "",
+        "tolerance": 0.002,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "EC = (ATP + ½ ADP)/(ATP + ADP + AMP).",
+        "solution": "(3.0 + 0.15)/3.33 = 0.946.",
+        "lesson_ids": [
+          "biochemistry-10"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "biochemistry-10:amp-fold",
+      "type": "numeric",
+      "prompt": "After a 10% fall in ATP to 2.7 mM, ADP rises to 0.527 mM (total adenylate unchanged, K = 1). By what factor has AMP increased compared with the resting 0.03 mM? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "biochemistry-10-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 3.43,
+        "unit": "",
+        "tolerance": 0.05,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Compute the new AMP from ADP²/ATP, then divide by the resting AMP.",
+        "solution": "0.527²/2.7 = 0.103 mM; 0.103/0.03 = 3.4.",
+        "lesson_ids": [
+          "biochemistry-10"
+        ],
+        "misconception_ids": [
+          "amplification-missed"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "biochemistry-10:glucose-for-atp",
+      "type": "numeric",
+      "prompt": "A cell meets an ATP demand of 6.0 mmol/(L·h) entirely by glycolysis with lactate as the end product. What glucose uptake does it need? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "biochemistry-10-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 3.0,
+        "unit": "mmol/(L·h)",
+        "tolerance": 0.05,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Net ATP per glucose in lactate fermentation is 2.",
+        "solution": "6.0/2 = 3.0 mmol/(L·h), with 6.0 mmol/(L·h) of lactate released.",
+        "lesson_ids": [
+          "biochemistry-10"
+        ],
+        "misconception_ids": [
+          "gross-atp-counted"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "biochemistry-10:pfk-fold",
+      "type": "numeric",
+      "prompt": "PFK-1 behaves as v/V_max = 1/(1 + (K₀.₅/[S])ⁿ) with n = 2.5 and [S] = 1.0 mM. By what factor does the rate rise when an activator lowers K₀.₅ from 2.0 mM to 0.5 mM? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "biochemistry-10-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 5.657,
+        "unit": "",
+        "tolerance": 0.05,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Evaluate the rate for each K₀.₅, then divide.",
+        "solution": "0.850/0.150 = 5.66.",
+        "lesson_ids": [
+          "biochemistry-10"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "biochemistry-10:pool-vs-flux",
+      "type": "single_choice",
+      "prompt": "After an inhibitor is added, fructose-6-phosphate rises and the product of the next step falls. What does this crossover pattern indicate?",
+      "points": 1,
+      "objective_ids": [
+        "biochemistry-10-objective-3"
+      ],
+      "options": [
+        "The block is at the step between them, which produces the upstream rise and downstream fall.",
+        "Flux through the pathway has increased.",
+        "The metabolite pools are unrelated to flux.",
+        "The pathway has no regulation."
+      ],
+      "solution_spec": {
+        "answer": 0
+      },
+      "feedback": {
+        "hint": "Which step connects the rising and the falling metabolites?",
+        "solution": "A substrate that rises while its product falls localizes the block at the connecting step. A pool size alone does not give flux, but the pattern of pools can locate a constraint.",
+        "lesson_ids": [
+          "biochemistry-10"
+        ],
+        "misconception_ids": [
+          "pool-equals-flux"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "biochemistry-10:regulation",
+      "type": "multiple_select",
+      "prompt": "Which statements about glycolysis are correct? Select all that apply.",
+      "points": 2,
+      "objective_ids": [
+        "biochemistry-10-objective-3"
+      ],
+      "options": [
+        "PFK-1 is inhibited by high AMP and activated by high ATP.",
+        "Lactate fermentation regenerates NAD⁺ so glycolysis can continue without oxygen-dependent reoxidation of NADH.",
+        "A higher pool of a metabolite always means a higher flux through its pathway.",
+        "A 10% fall in ATP can produce a several-fold rise in AMP because AMP depends on the square of ADP.",
+        "Net ATP per glucose in glycolysis is 2."
+      ],
+      "solution_spec": {
+        "answer": [
+          1,
+          3,
+          4
+        ],
+        "partial_credit": "correct-minus-incorrect-clamped-v1"
+      },
+      "feedback": {
+        "hint": "Check each statement against the stoichiometry, the adenylate relation and the effectors of PFK-1.",
+        "solution": "Fermentation reoxidizes NADH, net ATP is 2, and AMP amplifies changes in ATP. PFK-1 is activated by AMP and inhibited by ATP, and pool size alone does not give flux.",
+        "lesson_ids": [
+          "biochemistry-10"
+        ],
+        "misconception_ids": [
+          "pool-equals-flux",
+          "pfk-effectors-reversed"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "biochemistry-11:pmf",
+      "type": "numeric",
+      "prompt": "The mitochondrial membrane potential is 150 mV and the matrix is 0.75 pH unit more alkaline than the intermembrane space. Using 61.5 mV per pH unit, what is the proton-motive force? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "biochemistry-11-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 196.15,
+        "unit": "mV",
+        "tolerance": 0.5,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Δp = Δψ + 61.5 mV × ΔpH.",
+        "solution": "150 + 61.5 × 0.75 = 196 mV.",
+        "lesson_ids": [
+          "biochemistry-11"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "biochemistry-11:energy-per-proton",
+      "type": "numeric",
+      "prompt": "With a proton-motive force of 196.2 mV, what is the free energy released per mole of protons returning to the matrix (F = 96.485 kJ/(V·mol))? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "biochemistry-11-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 18.926,
+        "unit": "kJ/mol",
+        "tolerance": 0.1,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "ΔG = F × Δp, with Δp in volts.",
+        "solution": "96.485 × 0.196 = 18.9 kJ/mol.",
+        "lesson_ids": [
+          "biochemistry-11"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "biochemistry-11:min-protons",
+      "type": "numeric",
+      "prompt": "Making ATP in the cell requires 51.4 kJ/mol and each mole of protons releases 18.9 kJ/mol. What is the minimum number of protons per ATP at perfect efficiency? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "biochemistry-11-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 2.716,
+        "unit": "",
+        "tolerance": 0.05,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Divide the energy required by the energy per mole of protons.",
+        "solution": "51.4/18.9 = 2.72; the measured value of about 4 reflects losses and transport costs.",
+        "lesson_ids": [
+          "biochemistry-11"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "biochemistry-11:atp-per-glucose",
+      "type": "numeric",
+      "prompt": "A glucose is completely oxidized: 4 ATP by substrate-level phosphorylation, 10 NADH at 2.5 ATP each and 2 FADH₂ at 1.5 ATP each. How many ATP are made per glucose? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "biochemistry-11-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 32.0,
+        "unit": "",
+        "tolerance": 0.1,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Add the substrate-level ATP to the contributions of the reduced cofactors.",
+        "solution": "4 + 10 × 2.5 + 2 × 1.5 = 32.",
+        "lesson_ids": [
+          "biochemistry-11"
+        ],
+        "misconception_ids": [
+          "single-atp-number"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "biochemistry-11:leak-yield",
+      "type": "numeric",
+      "prompt": "With 25% of the proton flux leaking, only 75% of the oxidative ATP (28) is made, and the 4 ATP of substrate-level phosphorylation are unchanged. How many ATP are made per glucose? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "biochemistry-11-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 25.0,
+        "unit": "",
+        "tolerance": 0.1,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Scale only the gradient-dependent ATP.",
+        "solution": "4 + 28 × 0.75 = 25.",
+        "lesson_ids": [
+          "biochemistry-11"
+        ],
+        "misconception_ids": [
+          "oxygen-equals-atp"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "biochemistry-11:atp-rate",
+      "type": "numeric",
+      "prompt": "Resting oxygen uptake is 0.25 L/min at standard conditions (22.4 L/mol), and the yield is 5.3 ATP per O₂. What is the implied ATP production rate? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "biochemistry-11-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 59.524,
+        "unit": "mmol/min",
+        "tolerance": 0.5,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Convert liters of O₂ to millimoles, then multiply by the ATP yield per O₂.",
+        "solution": "0.25/22.4 × 1000 = 11.2 mmol O₂/min; × 5.3 = 60 mmol ATP/min.",
+        "lesson_ids": [
+          "biochemistry-11"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "biochemistry-11:uncoupling",
+      "type": "multiple_select",
+      "prompt": "A chemical uncoupler is added to cells that are oxidizing glucose. Which statements are correct? Select all that apply.",
+      "points": 2,
+      "objective_ids": [
+        "biochemistry-11-objective-3"
+      ],
+      "options": [
+        "The proton-motive force rises.",
+        "ATP made per oxygen falls.",
+        "Oxygen consumption can rise while ATP production falls or stays the same.",
+        "ATP production by glycolysis is blocked.",
+        "More of the energy is released as heat."
+      ],
+      "solution_spec": {
+        "answer": [
+          1,
+          2,
+          4
+        ],
+        "partial_credit": "correct-minus-incorrect-clamped-v1"
+      },
+      "feedback": {
+        "hint": "An uncoupler lets protons return without ATP synthase. What happens to the gradient and to electron flow?",
+        "solution": "Proton return without ATP synthesis lowers the gradient, relieves the brake on electron flow, raises oxygen use, lowers ATP per oxygen and releases the energy as heat. Glycolysis is not blocked.",
+        "lesson_ids": [
+          "biochemistry-11"
+        ],
+        "misconception_ids": [
+          "oxygen-equals-atp"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "biochemistry-12:pool-k1-doubled",
+      "type": "numeric",
+      "prompt": "In a two-step pathway with k₁S = 2.0 mM/min and k₂ = 0.5 per minute, enzyme 1 is doubled so that k₁S = 4.0 mM/min. What is the new steady-state concentration of the intermediate A? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "biochemistry-12-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 8.0,
+        "unit": "mM",
+        "tolerance": 0.05,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "A_ss = k₁S/k₂.",
+        "solution": "4.0/0.5 = 8.0 mM, and the flux has doubled to 4.0 mM/min.",
+        "lesson_ids": [
+          "biochemistry-12"
+        ],
+        "misconception_ids": [
+          "pool-equals-flux"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "biochemistry-12:flux-k2-halved",
+      "type": "numeric",
+      "prompt": "With k₁S = 2.0 mM/min, enzyme 2 is halved so that k₂ = 0.25 per minute. What is the steady-state flux through the pathway? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "biochemistry-12-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 2.0,
+        "unit": "mM/min",
+        "tolerance": 0.05,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "At steady state the flux equals the rate of the first step, k₁S.",
+        "solution": "J = k₁S = 2.0 mM/min, unchanged, while A_ss rises to 8.0 mM.",
+        "lesson_ids": [
+          "biochemistry-12"
+        ],
+        "misconception_ids": [
+          "pool-equals-flux"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "biochemistry-12:missing-coefficient",
+      "type": "numeric",
+      "prompt": "Three of the four enzymes in a pathway have flux control coefficients 0.5, 0.25 and 0.15. What is the coefficient of the fourth? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "biochemistry-12-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0.1,
+        "unit": "",
+        "tolerance": 0.005,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "The coefficients sum to 1.",
+        "solution": "1 − (0.5 + 0.25 + 0.15) = 0.10.",
+        "lesson_ids": [
+          "biochemistry-12"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "biochemistry-12:flux-increase-e1",
+      "type": "numeric",
+      "prompt": "Enzyme 1 has a control coefficient of 0.5. By about what percent does flux rise when its amount is increased by 20%? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "biochemistry-12-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 10.0,
+        "unit": "%",
+        "tolerance": 0.2,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "ΔJ/J ≈ C × ΔE/E.",
+        "solution": "0.5 × 20% = 10%.",
+        "lesson_ids": [
+          "biochemistry-12"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "biochemistry-12:turnover-time",
+      "type": "numeric",
+      "prompt": "An enzyme has a half-life of 2 days. After its synthesis rate changes, how many days does it take to reach 90% of its new steady-state amount? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "biochemistry-12-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 6.644,
+        "unit": "",
+        "tolerance": 0.1,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "k = ln 2 / half-life; time to 90% is ln 10 / k.",
+        "solution": "k = 0.347 per day; t = 2.303/0.347 = 6.6 days.",
+        "lesson_ids": [
+          "biochemistry-12"
+        ],
+        "misconception_ids": [
+          "expression-as-fast-as-allosteric"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "biochemistry-12:rate-limiting",
+      "type": "single_choice",
+      "prompt": "Measurements show control coefficients of 0.45, 0.30, 0.15 and 0.10 for the four enzymes of a pathway. Which statement is most accurate?",
+      "points": 1,
+      "objective_ids": [
+        "biochemistry-12-objective-2"
+      ],
+      "options": [
+        "Control is shared; enzyme 1 has the largest share, and the linear estimate for doubling it alone is about +45%, with less expected in practice.",
+        "The coefficients must be wrong because they do not equal 1 for each enzyme.",
+        "Enzyme 1 is the single rate-limiting enzyme and controls all of the flux.",
+        "Enzymes 3 and 4 have no role because their coefficients are small."
+      ],
+      "solution_spec": {
+        "answer": 0
+      },
+      "feedback": {
+        "hint": "Do the coefficients sum to 1, and what does 0.45 mean for a 100% increase?",
+        "solution": "The coefficients sum to 1. The largest share is 0.45, which predicts about +45% flux for a doubling by the linear estimate, and less in practice as control shifts.",
+        "lesson_ids": [
+          "biochemistry-12"
+        ],
+        "misconception_ids": [
+          "single-rate-limiting-step"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "biochemistry-12:layers",
+      "type": "multiple_select",
+      "prompt": "Which statements about the regulation of a metabolic pathway are correct? Select all that apply.",
+      "points": 2,
+      "objective_ids": [
+        "biochemistry-12-objective-3"
+      ],
+      "options": [
+        "The enzyme with the lowest maximal activity always has the highest control coefficient.",
+        "A rise in the pool of an intermediate can result from either more production or less consumption.",
+        "Control coefficients across a pathway sum to 1.",
+        "Doubling any one enzyme doubles the flux.",
+        "Allosteric effectors act within seconds, whereas changes in enzyme amount can take days."
+      ],
+      "solution_spec": {
+        "answer": [
+          1,
+          2,
+          4
+        ],
+        "partial_credit": "correct-minus-incorrect-clamped-v1"
+      },
+      "feedback": {
+        "hint": "Check each statement against the time scales, the steady-state model and the summation theorem.",
+        "solution": "Regulation spans time scales from seconds to days; pools do not identify flux; coefficients sum to 1; control is not determined by activity alone, and doubling an enzyme raises flux by less than a factor of 2 in general.",
+        "lesson_ids": [
+          "biochemistry-12"
+        ],
+        "misconception_ids": [
+          "single-rate-limiting-step",
+          "pool-equals-flux"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "biochemistry-lab1:rate-summary",
+      "type": "file_upload",
+      "prompt": "Using the synthetic rate CSV, upload a summary table with one row per condition (key column `condition`: control, inhibitor) and columns `replicates` (number of replicates at 5 μM), and `mean_v_1um`, `mean_v_5um`, `mean_v_20um` and `mean_v_50um` (mean initial rate in μM/min at those substrate concentrations).",
+      "points": 10,
+      "objective_ids": [
+        "biochemistry-lab-01-objective-1"
+      ],
+      "solution_spec": {
+        "accepted_media_types": [
+          "text/csv"
+        ],
+        "max_bytes": 32768,
+        "validation_spec": {
+          "format": "csv-numeric-table-v1",
+          "delimiter": ",",
+          "key_column": "condition",
+          "columns": [
+            "condition",
+            "replicates",
+            "mean_v_1um",
+            "mean_v_5um",
+            "mean_v_20um",
+            "mean_v_50um"
+          ],
+          "checks": [
+            {
+              "id": "control-replicates",
+              "row_id": "control",
+              "column": "replicates",
+              "type": "numeric",
+              "answer": 3.0,
+              "unit": "",
+              "tolerance": 0,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "count",
+                "values": [
+                  50.3,
+                  49.4,
+                  50.3
+                ]
+              }
+            },
+            {
+              "id": "control-mean_v_1um",
+              "row_id": "control",
+              "column": "mean_v_1um",
+              "type": "numeric",
+              "answer": 16.67,
+              "unit": "μM/min",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  17.27,
+                  16.37,
+                  16.37
+                ]
+              }
+            },
+            {
+              "id": "control-mean_v_5um",
+              "row_id": "control",
+              "column": "mean_v_5um",
+              "type": "numeric",
+              "answer": 50.0,
+              "unit": "μM/min",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  50.3,
+                  49.4,
+                  50.3
+                ]
+              }
+            },
+            {
+              "id": "control-mean_v_20um",
+              "row_id": "control",
+              "column": "mean_v_20um",
+              "type": "numeric",
+              "answer": 80.0,
+              "unit": "μM/min",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  79.6,
+                  80.2,
+                  80.2
+                ]
+              }
+            },
+            {
+              "id": "control-mean_v_50um",
+              "row_id": "control",
+              "column": "mean_v_50um",
+              "type": "numeric",
+              "answer": 90.91,
+              "unit": "μM/min",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  91.21,
+                  90.31,
+                  91.21
+                ]
+              }
+            },
+            {
+              "id": "inhibitor-replicates",
+              "row_id": "inhibitor",
+              "column": "replicates",
+              "type": "numeric",
+              "answer": 3.0,
+              "unit": "",
+              "tolerance": 0,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "count",
+                "values": [
+                  25.6,
+                  24.7,
+                  24.7
+                ]
+              }
+            },
+            {
+              "id": "inhibitor-mean_v_1um",
+              "row_id": "inhibitor",
+              "column": "mean_v_1um",
+              "type": "numeric",
+              "answer": 6.25,
+              "unit": "μM/min",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  5.85,
+                  6.45,
+                  6.45
+                ]
+              }
+            },
+            {
+              "id": "inhibitor-mean_v_5um",
+              "row_id": "inhibitor",
+              "column": "mean_v_5um",
+              "type": "numeric",
+              "answer": 25.0,
+              "unit": "μM/min",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  25.6,
+                  24.7,
+                  24.7
+                ]
+              }
+            },
+            {
+              "id": "inhibitor-mean_v_20um",
+              "row_id": "inhibitor",
+              "column": "mean_v_20um",
+              "type": "numeric",
+              "answer": 57.14,
+              "unit": "μM/min",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  57.44,
+                  56.54,
+                  57.44
+                ]
+              }
+            },
+            {
+              "id": "inhibitor-mean_v_50um",
+              "row_id": "inhibitor",
+              "column": "mean_v_50um",
+              "type": "numeric",
+              "answer": 76.92,
+              "unit": "μM/min",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  77.52,
+                  76.62,
+                  76.62
+                ]
+              }
+            }
+          ]
+        },
+        "rubric": [
+          {
+            "id": "control-replicates",
+            "criterion": "control: replicates",
+            "points": 1,
+            "evidence": [
+              "Recomputes replicates for control from the preparation-level values."
+            ]
+          },
+          {
+            "id": "control-mean_v_1um",
+            "criterion": "control: mean_v_1um",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_v_1um for control from the preparation-level values."
+            ]
+          },
+          {
+            "id": "control-mean_v_5um",
+            "criterion": "control: mean_v_5um",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_v_5um for control from the preparation-level values."
+            ]
+          },
+          {
+            "id": "control-mean_v_20um",
+            "criterion": "control: mean_v_20um",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_v_20um for control from the preparation-level values."
+            ]
+          },
+          {
+            "id": "control-mean_v_50um",
+            "criterion": "control: mean_v_50um",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_v_50um for control from the preparation-level values."
+            ]
+          },
+          {
+            "id": "inhibitor-replicates",
+            "criterion": "inhibitor: replicates",
+            "points": 1,
+            "evidence": [
+              "Recomputes replicates for inhibitor from the preparation-level values."
+            ]
+          },
+          {
+            "id": "inhibitor-mean_v_1um",
+            "criterion": "inhibitor: mean_v_1um",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_v_1um for inhibitor from the preparation-level values."
+            ]
+          },
+          {
+            "id": "inhibitor-mean_v_5um",
+            "criterion": "inhibitor: mean_v_5um",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_v_5um for inhibitor from the preparation-level values."
+            ]
+          },
+          {
+            "id": "inhibitor-mean_v_20um",
+            "criterion": "inhibitor: mean_v_20um",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_v_20um for inhibitor from the preparation-level values."
+            ]
+          },
+          {
+            "id": "inhibitor-mean_v_50um",
+            "criterion": "inhibitor: mean_v_50um",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_v_50um for inhibitor from the preparation-level values."
+            ]
+          }
+        ]
+      },
+      "feedback": {
+        "hint": "Filter by condition and substrate concentration, count the replicates at 5 μM, then average the rates at each concentration.",
+        "solution": "Each point has 3 replicates. Control means are 16.67, 50.00, 80.00 and 90.91 μM/min at 1, 5, 20 and 50 μM; inhibitor means are 6.25, 25.00, 57.14 and 76.92.",
+        "lesson_ids": [
+          "biochemistry-lab-01",
+          "biochemistry-5",
+          "biochemistry-2"
+        ],
+        "misconception_ids": [
+          "replicates-as-points"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "biochemistry-lab1:control-fit",
+      "type": "data_interpretation",
+      "prompt": "For the control group, regress 1/v on 1/[S] (ordinary least squares) using the six mean rates and read Vmax from the intercept as 1/intercept.",
+      "points": 2,
+      "objective_ids": [
+        "biochemistry-lab-01-objective-2",
+        "biochemistry-lab-01-objective-3"
+      ],
+      "response_fields": [
+        {
+          "id": "value",
+          "type": "numeric",
+          "prompt": "What is Vmax? Report exactly 4 significant figures.",
+          "unit": "μM/min",
+          "points": 1
+        },
+        {
+          "id": "inference",
+          "type": "single_choice",
+          "prompt": "Which feature of a double-reciprocal plot makes unweighted least squares a poor way to estimate parameters?",
+          "options": [
+            "Taking reciprocals magnifies the error of the lowest-rate points, which then dominate the fit.",
+            "Reciprocals remove all experimental error.",
+            "The plot cannot be used to compare inhibitors.",
+            "Points at high substrate concentrations are discarded."
+          ],
+          "points": 1
+        }
+      ],
+      "solution_spec": {
+        "field_specs": [
+          {
+            "id": "value",
+            "type": "numeric",
+            "answer": 99.98,
+            "unit": "μM/min",
+            "tolerance": 0.5,
+            "relative_tolerance": 0,
+            "unit_required": true,
+            "significant_figures": 4,
+            "dimensions": null
+          },
+          {
+            "id": "inference",
+            "type": "single_choice",
+            "answer": 0
+          }
+        ]
+      },
+      "feedback": {
+        "hint": "Vmax is 1 divided by the y-intercept of the 1/v versus 1/[S] line.",
+        "solution": "The least-squares line has intercept 0.01000 min/μM, so Vmax = 1/0.01000 = 100.0 μM/min. The method is sensitive to the smallest rates because they have the largest reciprocals.",
+        "lesson_ids": [
+          "biochemistry-lab-01",
+          "biochemistry-5",
+          "biochemistry-2"
+        ],
+        "misconception_ids": [
+          "lb-for-estimation"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "biochemistry-lab1:km-control",
+      "type": "numeric",
+      "prompt": "The control double-reciprocal line (1/v against 1/[S]) has slope 0.0500 and Vmax is 100.0 μM/min. What is Km? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "biochemistry-lab-01-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 4.998,
+        "unit": "μM",
+        "tolerance": 0.1,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "The slope of the double-reciprocal line is Km/Vmax.",
+        "solution": "Km = slope × Vmax = 0.0500 × 100.0 = 5.00 μM.",
+        "lesson_ids": [
+          "biochemistry-lab-01",
+          "biochemistry-5",
+          "biochemistry-2"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "biochemistry-lab1:km-apparent",
+      "type": "numeric",
+      "prompt": "Fitting the inhibitor group's six mean rates the same way gives an intercept of 0.01000 and a slope of 0.1500. What is the apparent Km? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "biochemistry-lab-01-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 15.0029,
+        "unit": "μM",
+        "tolerance": 0.3,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Vmax = 1/intercept; Km(apparent) = slope × Vmax.",
+        "solution": "Vmax = 1/0.01000 = 100.0 μM/min; Km(app) = 0.1500 × 100.0 = 15.0 μM. Vmax is unchanged within error.",
+        "lesson_ids": [
+          "biochemistry-lab-01",
+          "biochemistry-5",
+          "biochemistry-2"
+        ],
+        "misconception_ids": [
+          "noncompetitive-vs-competitive"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "biochemistry-lab1:inhibition-constant",
+      "type": "numeric",
+      "prompt": "The apparent Km under the inhibitor is 15.0 μM against 5.00 μM without it, with the inhibitor at 4 μM and Vmax unchanged. Assuming competitive inhibition, Km(app) = Km (1 + [I]/K_I). What is K_I? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "biochemistry-lab-01-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 1.9982,
+        "unit": "μM",
+        "tolerance": 0.15,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "First find α = Km(app)/Km, then K_I = [I]/(α − 1).",
+        "solution": "α = 15.0/5.00 = 3.00; K_I = 4/(3.00 − 1) = 2.00 μM.",
+        "lesson_ids": [
+          "biochemistry-lab-01",
+          "biochemistry-5",
+          "biochemistry-2"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "biochemistry-lab1:assay-reasoning",
+      "type": "structured",
+      "prompt": "Answer each part about the kinetics experiment.",
+      "points": 3,
+      "objective_ids": [
+        "biochemistry-lab-01-objective-3"
+      ],
+      "response_fields": [
+        {
+          "id": "mode",
+          "type": "single_choice",
+          "prompt": "The inhibitor leaves Vmax unchanged and raises the apparent Km by about threefold. Which mode does this indicate?",
+          "options": [
+            "Competitive inhibition: enough substrate outcompetes the inhibitor, so Vmax is reached.",
+            "Pure noncompetitive inhibition: Vmax falls and Km is unchanged.",
+            "Uncompetitive inhibition: both Vmax and Km fall.",
+            "The inhibitor has no effect on the enzyme."
+          ],
+          "points": 1
+        },
+        {
+          "id": "initial-rates",
+          "type": "single_choice",
+          "prompt": "Which condition makes a measured rate an initial rate?",
+          "options": [
+            "Less than about 10% of the substrate is consumed and product inhibition is negligible during the measurement.",
+            "The reaction has gone to completion.",
+            "The enzyme concentration is higher than the substrate concentration.",
+            "The rate is measured after one hour at every concentration."
+          ],
+          "points": 1
+        },
+        {
+          "id": "range",
+          "type": "single_choice",
+          "prompt": "Which design gives the best estimates of Km and Vmax?",
+          "options": [
+            "Concentrations spread from well below to well above Km (for example 0.2 to 5 times Km or more) with replicates, fitted without distorting the errors.",
+            "Only concentrations far above Km.",
+            "Only concentrations far below Km.",
+            "A single concentration measured many times."
+          ],
+          "points": 1
+        }
+      ],
+      "solution_spec": {
+        "field_specs": [
+          {
+            "id": "mode",
+            "type": "single_choice",
+            "answer": 0
+          },
+          {
+            "id": "initial-rates",
+            "type": "single_choice",
+            "answer": 0
+          },
+          {
+            "id": "range",
+            "type": "single_choice",
+            "answer": 0
+          }
+        ],
+        "rubric": [
+          {
+            "id": "mode",
+            "criterion": "Mode of inhibition",
+            "points": 1,
+            "evidence": [
+              "Recognizes the competitive pattern: unchanged Vmax, higher apparent Km."
+            ]
+          },
+          {
+            "id": "initial-rates",
+            "criterion": "Initial rates",
+            "points": 1,
+            "evidence": [
+              "States the initial-rate condition."
+            ]
+          },
+          {
+            "id": "range",
+            "criterion": "Choosing substrate concentrations",
+            "points": 1,
+            "evidence": [
+              "Spreads substrate concentrations around Km and fits without reciprocal distortion."
+            ]
+          }
+        ]
+      },
+      "feedback": {
+        "hint": "For each part, ask what would change in the data under the alternatives.",
+        "solution": "Competitive inhibition raises apparent Km but not Vmax; initial rates need low substrate consumption; concentrations around Km and a nonlinear or weighted fit give reliable parameters.",
+        "lesson_ids": [
+          "biochemistry-lab-01",
+          "biochemistry-5",
+          "biochemistry-2"
+        ],
+        "misconception_ids": [
+          "lb-for-estimation",
+          "noncompetitive-vs-competitive"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "biochemistry-lab1:supported-conclusions",
+      "type": "multiple_select",
+      "prompt": "Which conclusions does this synthetic experiment support? Select all that apply.",
+      "points": 2,
+      "objective_ids": [
+        "biochemistry-lab-01-objective-3"
+      ],
+      "options": [
+        "The inhibitor behaves as a competitive inhibitor of the enzyme with K_I of about 2.0 μM.",
+        "Vmax is similar with and without the inhibitor, within the scatter of the fits.",
+        "The replicates at each substrate concentration give a basis for judging variability.",
+        "An IC₅₀ measured at 5 μM substrate would apply unchanged at 50 μM substrate.",
+        "The result proves the inhibitor would work in a cell."
+      ],
+      "solution_spec": {
+        "answer": [
+          0,
+          1,
+          2
+        ],
+        "partial_credit": "correct-minus-incorrect-clamped-v1"
+      },
+      "feedback": {
+        "hint": "Keep each conclusion inside what a purified-enzyme experiment shows.",
+        "solution": "The first three follow from the table. A competitive inhibitor's apparent potency depends on substrate concentration, and a purified-enzyme result does not establish cellular activity.",
+        "lesson_ids": [
+          "biochemistry-lab-01",
+          "biochemistry-5",
+          "biochemistry-2"
+        ],
+        "misconception_ids": [
+          "ic50-substrate-independent",
+          "enzyme-to-cell-leap"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "biochemistry-13:baseline-glucose",
+      "type": "numeric",
+      "prompt": "ATP demand is 6.4 mmol/(L·h); 90% comes from complete oxidation of glucose (32 ATP per glucose) and 10% from glycolysis ending in lactate (2 ATP per glucose). What glucose uptake is needed? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "biochemistry-13-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0.5,
+        "unit": "mmol/(L·h)",
+        "tolerance": 0.01,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Add the glucose needed for each source of ATP.",
+        "solution": "0.9 × 6.4/32 + 0.1 × 6.4/2 = 0.50 mmol/(L·h).",
+        "lesson_ids": [
+          "biochemistry-13"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "biochemistry-13:glucose-after-block",
+      "type": "numeric",
+      "prompt": "After a complete block of oxidative phosphorylation, all of the 6.4 mmol/(L·h) of ATP must come from glycolysis to lactate (2 ATP per glucose). What glucose uptake is needed? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "biochemistry-13-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 3.2,
+        "unit": "mmol/(L·h)",
+        "tolerance": 0.02,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Divide the ATP demand by the net ATP per glucose in lactate fermentation.",
+        "solution": "6.4/2 = 3.2 mmol/(L·h), 6.4 times the baseline.",
+        "lesson_ids": [
+          "biochemistry-13"
+        ],
+        "misconception_ids": [
+          "gross-atp-counted"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "biochemistry-13:lactate-fold",
+      "type": "numeric",
+      "prompt": "Baseline lactate output is 0.64 mmol/(L·h) and after the block all ATP is made by glycolysis to lactate (two lactate per glucose). By what factor does lactate output rise? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "biochemistry-13-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 10.0,
+        "unit": "",
+        "tolerance": 0.1,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Lactate output after the block is two times the glucose uptake.",
+        "solution": "6.4/0.64 = 10.0.",
+        "lesson_ids": [
+          "biochemistry-13"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "biochemistry-13:nadh-fold",
+      "type": "numeric",
+      "prompt": "Lactate/pyruvate rises from 10 to 40 at constant pH. By what factor has the cytosolic NADH/NAD⁺ ratio changed, assuming lactate dehydrogenase is at equilibrium? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "biochemistry-13-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 4.0,
+        "unit": "",
+        "tolerance": 0.05,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "At equilibrium, the lactate/pyruvate ratio is proportional to NADH/NAD⁺.",
+        "solution": "40/10 = 4-fold more reduced.",
+        "lesson_ids": [
+          "biochemistry-13"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "biochemistry-13:tracer-fraction",
+      "type": "numeric",
+      "prompt": "The medium glucose is 50% labeled on all six carbons, and 0.48 of lactate is M+3. What fraction of lactate came from medium glucose? Enter a decimal fraction, number only.",
+      "points": 1,
+      "objective_ids": [
+        "biochemistry-13-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0.96,
+        "unit": "",
+        "tolerance": 0.01,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Divide the measured M+3 fraction by the labeled fraction of the medium glucose.",
+        "solution": "0.48/0.5 = 0.96.",
+        "lesson_ids": [
+          "biochemistry-13"
+        ],
+        "misconception_ids": [
+          "tracer-fraction-as-rate"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "biochemistry-13:discriminating-design",
+      "type": "structured",
+      "prompt": "A mitochondrial inhibitor lowers ATP and raises lactate. Answer each part.",
+      "points": 3,
+      "objective_ids": [
+        "biochemistry-13-objective-2",
+        "biochemistry-13-objective-3"
+      ],
+      "response_fields": [
+        {
+          "id": "redox-outlet",
+          "type": "single_choice",
+          "prompt": "Which carbon and electron-flow explanation fits a respiratory-chain block?",
+          "options": [
+            "NADH can no longer be reoxidized at the chain, so lactate dehydrogenase reduces pyruvate to lactate to regenerate NAD⁺ for glycolysis.",
+            "The cell stops glycolysis, and lactate is released from stored glycogen.",
+            "Oxygen consumption rises and makes extra lactate.",
+            "Lactate is made in the chain from NADH."
+          ],
+          "points": 1
+        },
+        {
+          "id": "oxygen-readout",
+          "type": "single_choice",
+          "prompt": "Which measurement would most directly distinguish impaired oxidative phosphorylation from a primary glycolytic defect?",
+          "options": [
+            "Oxygen consumption rate: it falls sharply with a chain inhibitor and stays near normal with a defect in glycolysis alone.",
+            "A single resting ATP measurement.",
+            "The total glucose present in the medium at the end only.",
+            "The cell count at the end of the experiment."
+          ],
+          "points": 1
+        },
+        {
+          "id": "rescue",
+          "type": "single_choice",
+          "prompt": "Adding an electron acceptor that lets NADH be reoxidized outside the chain partly restores the redox balance. What does this support?",
+          "options": [
+            "That the block is in electron transport and NAD⁺ regeneration, not in glycolysis itself.",
+            "That glycolysis has been completely repaired.",
+            "That the inhibitor has been removed from the cells.",
+            "That oxidative phosphorylation has been restored."
+          ],
+          "points": 1
+        }
+      ],
+      "solution_spec": {
+        "field_specs": [
+          {
+            "id": "redox-outlet",
+            "type": "single_choice",
+            "answer": 0
+          },
+          {
+            "id": "oxygen-readout",
+            "type": "single_choice",
+            "answer": 0
+          },
+          {
+            "id": "rescue",
+            "type": "single_choice",
+            "answer": 0
+          }
+        ],
+        "rubric": [
+          {
+            "id": "redox-outlet",
+            "criterion": "Why lactate rises",
+            "points": 1,
+            "evidence": [
+              "Links the chain block to NADH accumulation and lactate as a redox outlet."
+            ]
+          },
+          {
+            "id": "oxygen-readout",
+            "criterion": "Which readout discriminates",
+            "points": 1,
+            "evidence": [
+              "Chooses oxygen consumption, a readout that predicts different values for the two hypotheses."
+            ]
+          },
+          {
+            "id": "rescue",
+            "criterion": "What a rescue would show",
+            "points": 1,
+            "evidence": [
+              "Interprets the rescue as supporting a redox, respiratory-chain problem."
+            ]
+          }
+        ]
+      },
+      "feedback": {
+        "hint": "For each part, ask which hypothesis predicts a different result.",
+        "solution": "A chain block pushes NADH to lactate dehydrogenase; oxygen consumption separates the two hypotheses; a rescue with an electron acceptor tests the redox explanation.",
+        "lesson_ids": [
+          "biochemistry-13",
+          "biochemistry-10",
+          "biochemistry-11"
+        ],
+        "misconception_ids": [
+          "lactate-as-waste",
+          "single-measurement"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "biochemistry-13:interpretation",
+      "type": "multiple_select",
+      "prompt": "Which statements about a respiratory-chain inhibitor and lactate are appropriate? Select all that apply.",
+      "points": 2,
+      "objective_ids": [
+        "biochemistry-13-objective-3"
+      ],
+      "options": [
+        "Oxygen consumption should fall for a chain inhibitor.",
+        "High lactate alone proves that the respiratory chain is the primary defect.",
+        "Lactate output can rise even though ATP falls, because glycolysis is accelerated and lactate regenerates NAD⁺.",
+        "A higher lactate/pyruvate ratio suggests a more reduced cytosol.",
+        "A tracer fraction gives the rate of glycolysis."
+      ],
+      "solution_spec": {
+        "answer": [
+          0,
+          2,
+          3
+        ],
+        "partial_credit": "correct-minus-incorrect-clamped-v1"
+      },
+      "feedback": {
+        "hint": "Separate what each measurement shows from what it cannot show.",
+        "solution": "Lactate rises as a redox outlet, oxygen consumption falls and the ratio rises. A tracer fraction is a source, not a rate, and lactate alone cannot discriminate between hypotheses.",
+        "lesson_ids": [
+          "biochemistry-13"
+        ],
+        "misconception_ids": [
+          "tracer-fraction-as-rate",
+          "single-measurement"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
     }
   ]
 }

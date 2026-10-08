@@ -7,7 +7,7 @@
   "domain": "Biochemistry",
   "level": "Year 2",
   "maturity": "partial",
-  "version": "0.3.2",
+  "version": "0.4.0",
   "license": "MIT OR CC-BY-4.0",
   "content_origin": {
     "kind": "legacy-prototype",
@@ -172,12 +172,333 @@
         "biochemistry-outcome-1",
         "biochemistry-outcome-4"
       ]
+    },
+    {
+      "id": "biochemistry-8-objective-1",
+      "description": "Compute the protonation state and the net charge of an amino acid or a short chain at a given pH from its pKa values.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "biochemistry-outcome-1"
+      ]
+    },
+    {
+      "id": "biochemistry-8-objective-2",
+      "description": "Calculate the isoelectric point of amino acids with and without an ionizable side chain.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "biochemistry-outcome-1"
+      ]
+    },
+    {
+      "id": "biochemistry-8-objective-3",
+      "description": "Predict how a protein's net charge changes with pH and what that implies for solubility, migration and binding to an ion-exchange resin.",
+      "bloom": "analyze",
+      "course_outcome_ids": [
+        "biochemistry-outcome-1",
+        "biochemistry-outcome-4"
+      ]
+    },
+    {
+      "id": "biochemistry-9-objective-1",
+      "description": "Convert between the free energy of unfolding, the equilibrium constant and the fraction of protein that is folded for a two-state protein.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "biochemistry-outcome-1"
+      ]
+    },
+    {
+      "id": "biochemistry-9-objective-2",
+      "description": "Use the linear dependence of unfolding free energy on denaturant concentration to find a stability in water and a denaturation midpoint.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "biochemistry-outcome-1",
+        "biochemistry-outcome-3"
+      ]
+    },
+    {
+      "id": "biochemistry-9-objective-3",
+      "description": "Evaluate how a mutation, temperature or aggregation changes stability, and explain why marginal stability matters for proteostasis.",
+      "bloom": "evaluate",
+      "course_outcome_ids": [
+        "biochemistry-outcome-1",
+        "biochemistry-outcome-4"
+      ]
+    },
+    {
+      "id": "biochemistry-10-objective-1",
+      "description": "Compute AMP from the adenylate kinase equilibrium and the adenylate energy charge, and show how a small fall in ATP amplifies AMP.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "biochemistry-outcome-3",
+        "biochemistry-outcome-4"
+      ]
+    },
+    {
+      "id": "biochemistry-10-objective-2",
+      "description": "Balance carbon, ATP and NADH through glycolysis and lactate fermentation and compute the glucose uptake needed to meet an ATP demand.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "biochemistry-outcome-3"
+      ]
+    },
+    {
+      "id": "biochemistry-10-objective-3",
+      "description": "Explain allosteric control of phosphofructokinase and distinguish a change in a metabolite pool from a change in flux.",
+      "bloom": "analyze",
+      "course_outcome_ids": [
+        "biochemistry-outcome-4"
+      ]
+    },
+    {
+      "id": "biochemistry-11-objective-1",
+      "description": "Calculate the proton-motive force from its electrical and pH components and the free energy per mole of protons.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "biochemistry-outcome-3"
+      ]
+    },
+    {
+      "id": "biochemistry-11-objective-2",
+      "description": "Estimate the minimum and actual protons per ATP and the ATP yield per NADH, FADH₂ and glucose.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "biochemistry-outcome-3",
+        "biochemistry-outcome-4"
+      ]
+    },
+    {
+      "id": "biochemistry-11-objective-3",
+      "description": "Predict how proton leak or an uncoupler changes ATP made per oxygen and the whole-body ATP turnover implied by oxygen uptake.",
+      "bloom": "analyze",
+      "course_outcome_ids": [
+        "biochemistry-outcome-3",
+        "biochemistry-outcome-4"
+      ]
+    },
+    {
+      "id": "biochemistry-12-objective-1",
+      "description": "Distinguish a change in a pool size from a change in flux using a steady-state model of a two-step pathway.",
+      "bloom": "analyze",
+      "course_outcome_ids": [
+        "biochemistry-outcome-4",
+        "biochemistry-outcome-3"
+      ]
+    },
+    {
+      "id": "biochemistry-12-objective-2",
+      "description": "Use flux control coefficients and their summation to predict how a change in one enzyme alters pathway flux.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "biochemistry-outcome-4"
+      ]
+    },
+    {
+      "id": "biochemistry-12-objective-3",
+      "description": "Match the layers of regulation of an enzyme to their time scales and compute the time for a change in enzyme amount to take effect.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "biochemistry-outcome-4"
+      ]
+    },
+    {
+      "id": "biochemistry-lab-01-objective-1",
+      "description": "Summarize replicate initial rates by condition and substrate concentration.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "biochemistry-outcome-2"
+      ]
+    },
+    {
+      "id": "biochemistry-lab-01-objective-2",
+      "description": "Estimate Vmax and Km from a double-reciprocal fit and the apparent Km under an inhibitor, and compute the inhibition constant.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "biochemistry-outcome-2",
+        "biochemistry-outcome-1"
+      ]
+    },
+    {
+      "id": "biochemistry-lab-01-objective-3",
+      "description": "Evaluate the mode of inhibition, the limits of linearized fits and the assay conditions that make initial rates trustworthy.",
+      "bloom": "evaluate",
+      "course_outcome_ids": [
+        "biochemistry-outcome-2",
+        "biochemistry-outcome-4"
+      ]
+    },
+    {
+      "id": "biochemistry-13-objective-1",
+      "description": "Compute the glucose uptake and lactate output a cell needs to maintain ATP when oxidative phosphorylation is blocked.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "biochemistry-outcome-3"
+      ]
+    },
+    {
+      "id": "biochemistry-13-objective-2",
+      "description": "Interpret changes in the lactate/pyruvate ratio and in tracer labeling as signals of redox state and carbon source.",
+      "bloom": "analyze",
+      "course_outcome_ids": [
+        "biochemistry-outcome-3",
+        "biochemistry-outcome-4"
+      ]
+    },
+    {
+      "id": "biochemistry-13-objective-3",
+      "description": "Design a measurement that separates impaired oxidative phosphorylation from a primary glycolytic defect, and state what each result would show.",
+      "bloom": "create",
+      "course_outcome_ids": [
+        "biochemistry-outcome-3",
+        "biochemistry-outcome-4"
+      ]
     }
   ],
   "duration": {
-    "instructional_weeks": null,
-    "equivalent_structure": null,
-    "weeks": []
+    "instructional_weeks": 14,
+    "equivalent_structure": "Proposed 14-week undergraduate scope only. The four compact prototype units sit in weeks 1, 5, 9 and 12 beside original lessons on amino-acid charge, protein stability, binding, enzyme kinetics, free energy, glycolysis, mitochondrial bioenergetics and flux control; week 7 is a synthetic-data enzyme-kinetics lab and week 14 a lesson on reading a metabolic perturbation with the course case. All activities are open, ungraded practice. There are no graded homework sets, exams or project, and workload has not been measured, so this schedule is not evidence of semester equivalence.",
+    "weeks": [
+      {
+        "week": 1,
+        "title": "Protein structure and molecular recognition",
+        "lesson_ids": [
+          "biochemistry-1"
+        ],
+        "assessment_ids": [
+          "biochemistry-1-practice"
+        ]
+      },
+      {
+        "week": 2,
+        "title": "Amino acids, charge and pH: titration, isoelectric points and protein charge",
+        "lesson_ids": [
+          "biochemistry-8"
+        ],
+        "assessment_ids": [
+          "biochemistry-8-practice"
+        ]
+      },
+      {
+        "week": 3,
+        "title": "Protein folding and stability: two-state thermodynamics and denaturant m-values",
+        "lesson_ids": [
+          "biochemistry-9"
+        ],
+        "assessment_ids": [
+          "biochemistry-9-practice"
+        ]
+      },
+      {
+        "week": 4,
+        "title": "Binding equilibria: dissociation constants, depletion and cooperativity",
+        "lesson_ids": [
+          "biochemistry-7"
+        ],
+        "assessment_ids": [
+          "biochemistry-7-practice"
+        ]
+      },
+      {
+        "week": 5,
+        "title": "Enzyme mechanisms and inhibition",
+        "lesson_ids": [
+          "biochemistry-2"
+        ],
+        "assessment_ids": [
+          "biochemistry-2-practice"
+        ]
+      },
+      {
+        "week": 6,
+        "title": "Enzyme kinetics from data: Vmax, Km, turnover and inhibition modes",
+        "lesson_ids": [
+          "biochemistry-5"
+        ],
+        "assessment_ids": [
+          "biochemistry-5-practice"
+        ]
+      },
+      {
+        "week": 7,
+        "title": "Virtual lab: enzyme kinetics and inhibition from replicate rates",
+        "lesson_ids": [
+          "biochemistry-lab-01"
+        ],
+        "assessment_ids": [
+          "biochemistry-week7-kinetics-lab"
+        ]
+      },
+      {
+        "week": 8,
+        "title": "Free energy in the cell: actual ΔG, coupling and redox potential",
+        "lesson_ids": [
+          "biochemistry-6"
+        ],
+        "assessment_ids": [
+          "biochemistry-6-practice"
+        ]
+      },
+      {
+        "week": 9,
+        "title": "Bioenergetics and central carbon metabolism",
+        "lesson_ids": [
+          "biochemistry-3"
+        ],
+        "assessment_ids": [
+          "biochemistry-3-practice"
+        ]
+      },
+      {
+        "week": 10,
+        "title": "Glycolysis and its control: energy charge and the AMP signal",
+        "lesson_ids": [
+          "biochemistry-10"
+        ],
+        "assessment_ids": [
+          "biochemistry-10-practice"
+        ]
+      },
+      {
+        "week": 11,
+        "title": "Mitochondrial bioenergetics: proton-motive force, ATP yield and leak",
+        "lesson_ids": [
+          "biochemistry-11"
+        ],
+        "assessment_ids": [
+          "biochemistry-11-practice"
+        ]
+      },
+      {
+        "week": 12,
+        "title": "Pathway regulation and metabolic integration",
+        "lesson_ids": [
+          "biochemistry-4"
+        ],
+        "assessment_ids": [
+          "biochemistry-4-practice"
+        ]
+      },
+      {
+        "week": 13,
+        "title": "Flux control and the layers of regulation",
+        "lesson_ids": [
+          "biochemistry-12"
+        ],
+        "assessment_ids": [
+          "biochemistry-12-practice"
+        ]
+      },
+      {
+        "week": 14,
+        "title": "Reading a metabolic perturbation: ATP, lactate, redox and oxygen consumption",
+        "lesson_ids": [
+          "biochemistry-13"
+        ],
+        "assessment_ids": [
+          "biochemistry-13-practice",
+          "biochemistry-case"
+        ]
+      }
+    ]
   },
   "workload": {
     "estimated_total_hours": null,
@@ -401,6 +722,258 @@
           ]
         }
       ]
+    },
+    {
+      "id": "biochemistry-module-8",
+      "title": "Amino acids, charge and pH",
+      "source_ids": [
+        "biochemistry",
+        "biology"
+      ],
+      "lessons": [
+        {
+          "id": "biochemistry-8",
+          "title": "Amino acids, charge and pH: titration, isoelectric points and the charge of a protein",
+          "reading": "modules/08-amino-acids-charge-and-isoelectric-points.md",
+          "objectives": [
+            "biochemistry-8-objective-1",
+            "biochemistry-8-objective-2",
+            "biochemistry-8-objective-3"
+          ],
+          "worked_example": "At pH 7.4 a lysine side chain is 99.9% protonated and a histidine side chain 3.8%; alanine has pI 6.015, glutamate 3.225, lysine 9.74 and histidine 7.585; a synthetic protein with 12 basic, 10 acidic and 4 histidine residues has net charge +1.9 at pH 7.4; a protein with pI 5.0 is net negative at pH 8.0 and binds an anion-exchange resin.",
+          "question_ids": [
+            "biochemistry-8:lys-protonated",
+            "biochemistry-8:his-protonated",
+            "biochemistry-8:pi-alanine",
+            "biochemistry-8:pi-glutamate",
+            "biochemistry-8:lysine-charge",
+            "biochemistry-8:anion-exchange",
+            "biochemistry-8:solubility-and-charge"
+          ],
+          "card_ids": [
+            "biochemistry-8-card-1",
+            "biochemistry-8-card-2",
+            "biochemistry-8-card-3",
+            "biochemistry-8-card-4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "biochemistry-module-9",
+      "title": "Protein folding and stability",
+      "source_ids": [
+        "biochemistry",
+        "biology"
+      ],
+      "lessons": [
+        {
+          "id": "biochemistry-9",
+          "title": "Protein folding and stability: two-state thermodynamics, denaturant m-values and marginal stability",
+          "reading": "modules/09-protein-folding-and-stability.md",
+          "objectives": [
+            "biochemistry-9-objective-1",
+            "biochemistry-9-objective-2",
+            "biochemistry-9-objective-3"
+          ],
+          "worked_example": "At 25 °C a ΔG_unfold of 10 kJ/mol gives K_u = 0.0177 and 0.983 folded; ΔG_H₂O = 25 kJ/mol with m = 10 kJ/mol per M gives a midpoint of 2.5 M and 5 kJ/mol at 2.0 M; a destabilization of 8 kJ/mol raises K_u 25-fold while the protein stays 99.9% folded.",
+          "question_ids": [
+            "biochemistry-9:k-unfold",
+            "biochemistry-9:fraction-folded",
+            "biochemistry-9:midpoint",
+            "biochemistry-9:dg-at-2m",
+            "biochemistry-9:mutation-fold",
+            "biochemistry-9:sign",
+            "biochemistry-9:marginal-stability"
+          ],
+          "card_ids": [
+            "biochemistry-9-card-1",
+            "biochemistry-9-card-2",
+            "biochemistry-9-card-3",
+            "biochemistry-9-card-4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "biochemistry-module-10",
+      "title": "Glycolysis and its control",
+      "source_ids": [
+        "biochemistry",
+        "biology"
+      ],
+      "lessons": [
+        {
+          "id": "biochemistry-10",
+          "title": "Glycolysis and its control: stoichiometry, energy charge and why AMP is a sensitive signal",
+          "reading": "modules/10-glycolysis-energy-charge-and-amp-signal.md",
+          "objectives": [
+            "biochemistry-10-objective-1",
+            "biochemistry-10-objective-2",
+            "biochemistry-10-objective-3"
+          ],
+          "worked_example": "With ATP 3.0 mM and ADP 0.3 mM and K = 1, AMP is 0.03 mM and the energy charge 0.946; a 10% fall in ATP raises AMP 3.4-fold; meeting 6.0 mmol/(L·h) of ATP from glycolysis alone needs 3.0 mmol/(L·h) of glucose and releases 6.0 mmol/(L·h) of lactate; an activator that lowers K₀.₅ fourfold raises PFK-1 rate 5.7-fold.",
+          "question_ids": [
+            "biochemistry-10:amp-from-ak",
+            "biochemistry-10:energy-charge",
+            "biochemistry-10:amp-fold",
+            "biochemistry-10:glucose-for-atp",
+            "biochemistry-10:pfk-fold",
+            "biochemistry-10:pool-vs-flux",
+            "biochemistry-10:regulation"
+          ],
+          "card_ids": [
+            "biochemistry-10-card-1",
+            "biochemistry-10-card-2",
+            "biochemistry-10-card-3",
+            "biochemistry-10-card-4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "biochemistry-module-11",
+      "title": "Mitochondrial bioenergetics",
+      "source_ids": [
+        "biochemistry",
+        "biology"
+      ],
+      "lessons": [
+        {
+          "id": "biochemistry-11",
+          "title": "Mitochondrial bioenergetics: the proton-motive force, ATP yield and the cost of leak",
+          "reading": "modules/11-mitochondrial-bioenergetics-and-atp-yield.md",
+          "objectives": [
+            "biochemistry-11-objective-1",
+            "biochemistry-11-objective-2",
+            "biochemistry-11-objective-3"
+          ],
+          "worked_example": "With Δψ = 150 mV and ΔpH = 0.75 the proton-motive force is 196 mV, or 18.9 kJ per mole of protons; making ATP needs at least 2.7 protons (about 4 in practice); complete oxidation of glucose gives 32 ATP, 5.3 per O₂; a 40% leak lowers this to 20.8 ATP per glucose; a resting oxygen uptake of 0.25 L/min implies about 60 mmol ATP/min.",
+          "question_ids": [
+            "biochemistry-11:pmf",
+            "biochemistry-11:energy-per-proton",
+            "biochemistry-11:min-protons",
+            "biochemistry-11:atp-per-glucose",
+            "biochemistry-11:leak-yield",
+            "biochemistry-11:atp-rate",
+            "biochemistry-11:uncoupling"
+          ],
+          "card_ids": [
+            "biochemistry-11-card-1",
+            "biochemistry-11-card-2",
+            "biochemistry-11-card-3",
+            "biochemistry-11-card-4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "biochemistry-module-12",
+      "title": "Flux control and regulation",
+      "source_ids": [
+        "biochemistry",
+        "biology"
+      ],
+      "lessons": [
+        {
+          "id": "biochemistry-12",
+          "title": "Flux control and regulation: control coefficients, pool sizes and the layers of regulation",
+          "reading": "modules/12-flux-control-and-layers-of-regulation.md",
+          "objectives": [
+            "biochemistry-12-objective-1",
+            "biochemistry-12-objective-2",
+            "biochemistry-12-objective-3"
+          ],
+          "worked_example": "In a two-step pathway doubling enzyme 1 raises both flux and the pool of A (4 mM/min, 8 mM), while halving enzyme 2 leaves flux at 2 mM/min and also doubles the pool (8 mM); with coefficients 0.5, 0.25 and 0.15 the fourth is 0.10; a 20% increase in enzyme 1 raises flux about 10%; an enzyme with a 2-day half-life reaches 90% of a new level in 6.6 days.",
+          "question_ids": [
+            "biochemistry-12:pool-k1-doubled",
+            "biochemistry-12:flux-k2-halved",
+            "biochemistry-12:missing-coefficient",
+            "biochemistry-12:flux-increase-e1",
+            "biochemistry-12:turnover-time",
+            "biochemistry-12:rate-limiting",
+            "biochemistry-12:layers"
+          ],
+          "card_ids": [
+            "biochemistry-12-card-1",
+            "biochemistry-12-card-2",
+            "biochemistry-12-card-3",
+            "biochemistry-12-card-4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "biochemistry-module-lab-01",
+      "title": "Virtual laboratory: enzyme kinetics and inhibition",
+      "source_ids": [
+        "biochemistry",
+        "biology"
+      ],
+      "lessons": [
+        {
+          "id": "biochemistry-lab-01",
+          "title": "Virtual lab 1: enzyme kinetics and inhibition from replicate rates",
+          "reading": "labs/01-enzyme-kinetics-and-inhibition-from-data.md",
+          "objectives": [
+            "biochemistry-lab-01-objective-1",
+            "biochemistry-lab-01-objective-2",
+            "biochemistry-lab-01-objective-3"
+          ],
+          "worked_example": "The control double-reciprocal fit gives Vmax 100.0 μM/min and Km 5.00 μM; with 4 μM inhibitor Vmax is unchanged and the apparent Km is 15.0 μM, so α = 3.00 and K_I = 2.00 μM for a competitive inhibitor; the double-reciprocal method is good for showing the pattern and poor for estimating parameters.",
+          "question_ids": [
+            "biochemistry-lab1:rate-summary",
+            "biochemistry-lab1:control-fit",
+            "biochemistry-lab1:km-control",
+            "biochemistry-lab1:km-apparent",
+            "biochemistry-lab1:inhibition-constant",
+            "biochemistry-lab1:assay-reasoning",
+            "biochemistry-lab1:supported-conclusions"
+          ],
+          "card_ids": [
+            "biochemistry-lab1-0",
+            "biochemistry-lab1-1",
+            "biochemistry-lab1-2",
+            "biochemistry-lab1-3"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "biochemistry-module-13",
+      "title": "Reading a metabolic perturbation",
+      "source_ids": [
+        "biochemistry",
+        "biology"
+      ],
+      "lessons": [
+        {
+          "id": "biochemistry-13",
+          "title": "Reading a metabolic perturbation: ATP, lactate, redox and oxygen consumption",
+          "reading": "modules/13-reading-a-metabolic-perturbation.md",
+          "objectives": [
+            "biochemistry-13-objective-1",
+            "biochemistry-13-objective-2",
+            "biochemistry-13-objective-3"
+          ],
+          "worked_example": "With an ATP demand of 6.4 mmol/(L·h), 90% oxidative, glucose uptake is 0.50 mmol/(L·h); blocking oxidative phosphorylation raises it to 3.2 (6.4-fold) and lactate output 10-fold; lactate/pyruvate from 10 to 40 means a 4-fold more reduced cytosol; an M+3 lactate fraction of 0.48 with 50% labeled glucose means 96% came from medium glucose; oxygen consumption, the lactate/pyruvate ratio and an electron-acceptor rescue discriminate a chain block from a glycolytic defect.",
+          "question_ids": [
+            "biochemistry-13:baseline-glucose",
+            "biochemistry-13:glucose-after-block",
+            "biochemistry-13:lactate-fold",
+            "biochemistry-13:nadh-fold",
+            "biochemistry-13:tracer-fraction",
+            "biochemistry-13:discriminating-design",
+            "biochemistry-13:interpretation"
+          ],
+          "card_ids": [
+            "biochemistry-13-card-1",
+            "biochemistry-13-card-2",
+            "biochemistry-13-card-3",
+            "biochemistry-13-card-4"
+          ]
+        }
+      ]
     }
   ],
   "assessments": [
@@ -534,6 +1107,177 @@
       "points": 6
     },
     {
+      "id": "biochemistry-8-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Amino acids, charge and pH practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "biochemistry-8-objective-1",
+        "biochemistry-8-objective-2",
+        "biochemistry-8-objective-3",
+        "biochemistry-outcome-1",
+        "biochemistry-outcome-4"
+      ],
+      "question_ids": [
+        "biochemistry-8:lys-protonated",
+        "biochemistry-8:his-protonated",
+        "biochemistry-8:pi-alanine",
+        "biochemistry-8:pi-glutamate",
+        "biochemistry-8:lysine-charge",
+        "biochemistry-8:anion-exchange",
+        "biochemistry-8:solubility-and-charge"
+      ],
+      "points": 8
+    },
+    {
+      "id": "biochemistry-9-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Protein folding and stability practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "biochemistry-9-objective-1",
+        "biochemistry-9-objective-2",
+        "biochemistry-9-objective-3",
+        "biochemistry-outcome-1",
+        "biochemistry-outcome-3",
+        "biochemistry-outcome-4"
+      ],
+      "question_ids": [
+        "biochemistry-9:k-unfold",
+        "biochemistry-9:fraction-folded",
+        "biochemistry-9:midpoint",
+        "biochemistry-9:dg-at-2m",
+        "biochemistry-9:mutation-fold",
+        "biochemistry-9:sign",
+        "biochemistry-9:marginal-stability"
+      ],
+      "points": 8
+    },
+    {
+      "id": "biochemistry-10-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Glycolysis and its control practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "biochemistry-10-objective-1",
+        "biochemistry-10-objective-2",
+        "biochemistry-10-objective-3",
+        "biochemistry-outcome-3",
+        "biochemistry-outcome-4"
+      ],
+      "question_ids": [
+        "biochemistry-10:amp-from-ak",
+        "biochemistry-10:energy-charge",
+        "biochemistry-10:amp-fold",
+        "biochemistry-10:glucose-for-atp",
+        "biochemistry-10:pfk-fold",
+        "biochemistry-10:pool-vs-flux",
+        "biochemistry-10:regulation"
+      ],
+      "points": 8
+    },
+    {
+      "id": "biochemistry-11-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Mitochondrial bioenergetics practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "biochemistry-11-objective-1",
+        "biochemistry-11-objective-2",
+        "biochemistry-11-objective-3",
+        "biochemistry-outcome-3",
+        "biochemistry-outcome-4"
+      ],
+      "question_ids": [
+        "biochemistry-11:pmf",
+        "biochemistry-11:energy-per-proton",
+        "biochemistry-11:min-protons",
+        "biochemistry-11:atp-per-glucose",
+        "biochemistry-11:leak-yield",
+        "biochemistry-11:atp-rate",
+        "biochemistry-11:uncoupling"
+      ],
+      "points": 8
+    },
+    {
+      "id": "biochemistry-12-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Flux control and regulation practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "biochemistry-12-objective-1",
+        "biochemistry-12-objective-2",
+        "biochemistry-12-objective-3",
+        "biochemistry-outcome-3",
+        "biochemistry-outcome-4"
+      ],
+      "question_ids": [
+        "biochemistry-12:pool-k1-doubled",
+        "biochemistry-12:flux-k2-halved",
+        "biochemistry-12:missing-coefficient",
+        "biochemistry-12:flux-increase-e1",
+        "biochemistry-12:turnover-time",
+        "biochemistry-12:rate-limiting",
+        "biochemistry-12:layers"
+      ],
+      "points": 8
+    },
+    {
+      "id": "biochemistry-13-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Reading a metabolic perturbation practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "biochemistry-13-objective-1",
+        "biochemistry-13-objective-2",
+        "biochemistry-13-objective-3",
+        "biochemistry-outcome-3",
+        "biochemistry-outcome-4"
+      ],
+      "question_ids": [
+        "biochemistry-13:baseline-glucose",
+        "biochemistry-13:glucose-after-block",
+        "biochemistry-13:lactate-fold",
+        "biochemistry-13:nadh-fold",
+        "biochemistry-13:tracer-fraction",
+        "biochemistry-13:discriminating-design",
+        "biochemistry-13:interpretation"
+      ],
+      "points": 10
+    },
+    {
+      "id": "biochemistry-week7-kinetics-lab",
+      "type": "lab",
+      "mode": "practice",
+      "title": "Virtual lab 1: enzyme kinetics and inhibition (ungraded practice)",
+      "path": "question-banks/practice.json",
+      "week": 7,
+      "objective_ids": [
+        "biochemistry-lab-01-objective-1",
+        "biochemistry-lab-01-objective-2",
+        "biochemistry-lab-01-objective-3",
+        "biochemistry-outcome-1",
+        "biochemistry-outcome-2",
+        "biochemistry-outcome-4"
+      ],
+      "question_ids": [
+        "biochemistry-lab1:rate-summary",
+        "biochemistry-lab1:control-fit",
+        "biochemistry-lab1:km-control",
+        "biochemistry-lab1:km-apparent",
+        "biochemistry-lab1:inhibition-constant",
+        "biochemistry-lab1:assay-reasoning",
+        "biochemistry-lab1:supported-conclusions"
+      ],
+      "points": 20
+    },
+    {
       "id": "biochemistry-case",
       "type": "case",
       "mode": "self-assessment",
@@ -595,18 +1339,24 @@
       "version": "0.3.2",
       "date": "2026-10-08",
       "summary": "Added a common-mistakes section to 2 original lessons that lacked one (biochemistry-5, biochemistry-6); each bullet names a mistake that the lesson's own text addresses. Fixed number formatting that an earlier authoring step left in learner-visible text: raw exponent notation (a number written with the letter e and a power of ten) and floating-point artifacts (a decimal with a long run of trailing digits) in item biochemistry-2:catalytic-efficiency. No answer key, tolerance or objective changed. The package remains partial, unreviewed and formative-only."
+    },
+    {
+      "version": "0.4.0",
+      "date": "2026-10-08",
+      "summary": "Added a proposed 14-week schedule; six original lessons (amino acids, charge and the isoelectric point; protein folding and stability; glycolysis, energy charge and the AMP signal; mitochondrial bioenergetics and ATP yield; flux control and the layers of regulation; and reading a metabolic perturbation, which prepares the course case on a respiratory-chain inhibitor that lowers ATP and raises lactate); and a synthetic-data enzyme-kinetics lab with a competitive inhibitor. No new references were added. All activities remain ungraded practice; the package remains partial and unreviewed, gives no laboratory protocol or medical advice, and makes no claim about any compound or person."
     }
   ],
   "limitations": [
-    "Four compact legacy units are preserved; this package is not equivalent to a full university semester.",
-    "There is no authored 12–15 week schedule, substantive homework sequence, laboratory sequence, midterm, cumulative final, or graded integrative project.",
-    "Practice items are short formative checks (two per prototype unit and six per original lesson); they do not demonstrate comprehensive outcome coverage or mastery, and objective associations remain provisional.",
+    "Four compact legacy units are preserved beside ten original readings, including one synthetic-data virtual lab; this package is not equivalent to a full university semester.",
+    "A proposed 14-week schedule exists but is unmeasured and unreviewed. There is one synthetic-data virtual lab and no substantive homework sequence, laboratory sequence, midterm, cumulative final, or graded integrative project.",
+    "Practice items are short formative checks (two per prototype unit and six to seven per original lesson); they do not demonstrate comprehensive outcome coverage or mastery, and objective associations remain provisional.",
     "Bloom labels and structured prerequisite edges are initial authoring classifications awaiting subject-matter review.",
     "Question answers and solution feedback are intentionally public practice authoring specifications, not restricted exam keys.",
-    "Of the 15 numerical answers in this package, 11 require a unit, none checks significant figures and none checks dimensions; the others accept a number within a stated tolerance, with the unit optional.",
-    "Total workload and weekly duration are unknown; former nominal credit values and hardcoded reading times do not establish workload."
+    "Of the 50 numerical answers in this package, 26 require a unit, one checks significant figures and none checks dimensions; the others accept a number within a stated tolerance, with the unit optional.",
+    "Total workload and weekly duration are unknown; former nominal credit values and hardcoded reading times do not establish workload.",
+    "All metabolic scenarios, cells and numbers are synthetic teaching examples; this package gives no laboratory protocols or medical advice and says nothing about any real compound, cell line or person."
   ],
   "intentionally_omitted": [
-    "Full instructional sequence and summative assessments are not authored yet; the original lessons extend a partial package."
+    "Graded assessments and a laboratory sequence are not authored yet (one synthetic-data virtual lab exists); the original lessons extend a partial package."
   ]
 }

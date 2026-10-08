@@ -185,6 +185,286 @@
         "biochemistry-7-objective-3"
       ],
       "license": "CC-BY-4.0"
+    },
+    {
+      "id": "biochemistry-8-card-1",
+      "lesson_id": "biochemistry-8",
+      "front": "Fractional charge",
+      "back": "Base: f(BH⁺) = 1/(1 + 10^(pH − pKa)). Acid: f(A⁻) = 1/(1 + 10^(pKa − pH)). Half at pH = pKa.",
+      "objective_ids": [
+        "biochemistry-8-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "biochemistry-8-card-2",
+      "lesson_id": "biochemistry-8",
+      "front": "Isoelectric point",
+      "back": "pI = average of the two pKa values bracketing the neutral form; neutral amino acids use the α-carboxyl and α-amino pKa values.",
+      "objective_ids": [
+        "biochemistry-8-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "biochemistry-8-card-3",
+      "lesson_id": "biochemistry-8",
+      "front": "Protein charge and pH",
+      "back": "Net charge falls as pH rises; above the pI it is negative (moves toward the positive electrode, binds anion exchange).",
+      "objective_ids": [
+        "biochemistry-8-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "biochemistry-8-card-4",
+      "lesson_id": "biochemistry-8",
+      "front": "Buffering by side chains",
+      "back": "A group buffers within about one unit of its pKa; histidine (pKa about 6) is the main protein buffer near neutral pH.",
+      "objective_ids": [
+        "biochemistry-8-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "biochemistry-9-card-1",
+      "lesson_id": "biochemistry-9",
+      "front": "Two-state stability",
+      "back": "K_u = [U]/[N] = exp(−ΔG_unfold/RT); f_N = 1/(1 + K_u); RT = 2.48 kJ/mol at 25 °C.",
+      "objective_ids": [
+        "biochemistry-9-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "biochemistry-9-card-2",
+      "lesson_id": "biochemistry-9",
+      "front": "Denaturant relation",
+      "back": "ΔG_unfold([D]) = ΔG_H₂O − m[D]; midpoint C_m = ΔG_H₂O/m.",
+      "objective_ids": [
+        "biochemistry-9-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "biochemistry-9-card-3",
+      "lesson_id": "biochemistry-9",
+      "front": "Effect of a mutation",
+      "back": "ΔΔG of −8 kJ/mol multiplies K_u by about 25; the folded fraction may barely change while the unfolded supply rises sharply.",
+      "objective_ids": [
+        "biochemistry-9-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "biochemistry-9-card-4",
+      "lesson_id": "biochemistry-9",
+      "front": "Marginal stability",
+      "back": "Stabilities of a few tens of kJ/mol leave a small unfolded population that chaperones and degradation systems must manage.",
+      "objective_ids": [
+        "biochemistry-9-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "biochemistry-10-card-1",
+      "lesson_id": "biochemistry-10",
+      "front": "Glycolysis stoichiometry",
+      "back": "Glucose → 2 pyruvate with a net 2 ATP and 2 NADH; lactate fermentation reoxidizes the NADH, giving 2 lactate per glucose.",
+      "objective_ids": [
+        "biochemistry-10-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "biochemistry-10-card-2",
+      "lesson_id": "biochemistry-10",
+      "front": "Adenylate relations",
+      "back": "[AMP] ≈ K[ADP]²/[ATP] with K ≈ 1; EC = ([ATP] + ½[ADP])/([ATP] + [ADP] + [AMP]); a 10% fall in ATP can raise AMP several-fold.",
+      "objective_ids": [
+        "biochemistry-10-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "biochemistry-10-card-3",
+      "lesson_id": "biochemistry-10",
+      "front": "PFK-1 control",
+      "back": "Inhibited by ATP and citrate; activated by AMP, ADP and fructose-2,6-bisphosphate; sigmoidal in fructose-6-phosphate.",
+      "objective_ids": [
+        "biochemistry-10-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "biochemistry-10-card-4",
+      "lesson_id": "biochemistry-10",
+      "front": "Pool versus flux",
+      "back": "A pool can rise from more production or less consumption; crossover patterns locate a block; flux needs rate measurements.",
+      "objective_ids": [
+        "biochemistry-10-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "biochemistry-11-card-1",
+      "lesson_id": "biochemistry-11",
+      "front": "Proton-motive force",
+      "back": "Δp = Δψ + 61.5 mV × ΔpH at 37 °C; the free energy per mole of protons is F × Δp, about 19 kJ/mol for Δp near 196 mV.",
+      "objective_ids": [
+        "biochemistry-11-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "biochemistry-11-card-2",
+      "lesson_id": "biochemistry-11",
+      "front": "Protons per ATP",
+      "back": "Minimum ≈ ΔG_ATP/(F Δp) ≈ 2.7; measured about 4 including transport; efficiency about 68% in the synthetic example.",
+      "objective_ids": [
+        "biochemistry-11-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "biochemistry-11-card-3",
+      "lesson_id": "biochemistry-11",
+      "front": "ATP per glucose",
+      "back": "4 substrate-level + 10 NADH × 2.5 + 2 FADH₂ × 1.5 = 32 (30 to 32 depending on shuttles); 5.3 ATP per O₂.",
+      "objective_ids": [
+        "biochemistry-11-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "biochemistry-11-card-4",
+      "lesson_id": "biochemistry-11",
+      "front": "Leak and uncouplers",
+      "back": "Proton return without ATP synthesis lowers ATP per O₂, raises oxygen use and heat, and does not block glycolysis.",
+      "objective_ids": [
+        "biochemistry-11-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "biochemistry-12-card-1",
+      "lesson_id": "biochemistry-12",
+      "front": "Flux versus pool",
+      "back": "J = k₁S in a two-step pathway; A_ss = J/k₂; the same pool can follow more production or less consumption.",
+      "objective_ids": [
+        "biochemistry-12-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "biochemistry-12-card-2",
+      "lesson_id": "biochemistry-12",
+      "front": "Control coefficients",
+      "back": "C_i = (ΔJ/J)/(ΔE_i/E_i); ΣC_i = 1; a linear prediction holds for small changes only.",
+      "objective_ids": [
+        "biochemistry-12-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "biochemistry-12-card-3",
+      "lesson_id": "biochemistry-12",
+      "front": "Rate-limiting step",
+      "back": "Control is shared and condition-dependent; the lowest-activity or most-regulated step need not control flux.",
+      "objective_ids": [
+        "biochemistry-12-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "biochemistry-12-card-4",
+      "lesson_id": "biochemistry-12",
+      "front": "Time scales",
+      "back": "Allosteric: seconds. Covalent: seconds to minutes. Enzyme amount: hours to days (time to 90% = ln 10 × half-life / ln 2).",
+      "objective_ids": [
+        "biochemistry-12-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "biochemistry-lab1-0",
+      "lesson_id": "biochemistry-lab-01",
+      "front": "Summarizing replicate rates",
+      "back": "Average the replicate initial rates at each substrate concentration; report the number of replicates.",
+      "objective_ids": [
+        "biochemistry-lab-01-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "biochemistry-lab1-1",
+      "lesson_id": "biochemistry-lab-01",
+      "front": "Double-reciprocal fit",
+      "back": "1/v = (Km/Vmax)(1/[S]) + 1/Vmax: intercept = 1/Vmax, slope = Km/Vmax; unweighted fits magnify error at low rates.",
+      "objective_ids": [
+        "biochemistry-lab-01-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "biochemistry-lab1-2",
+      "lesson_id": "biochemistry-lab-01",
+      "front": "Competitive inhibition",
+      "back": "Vmax unchanged, Km(app) = Km(1 + [I]/K_I); K_I = [I]/(α − 1) with α = Km(app)/Km.",
+      "objective_ids": [
+        "biochemistry-lab-01-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "biochemistry-lab1-3",
+      "lesson_id": "biochemistry-lab-01",
+      "front": "Initial-rate conditions",
+      "back": "Less than about 10% substrate used, negligible product inhibition, concentrations spread around Km.",
+      "objective_ids": [
+        "biochemistry-lab-01-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "biochemistry-13-card-1",
+      "lesson_id": "biochemistry-13",
+      "front": "Chain block and lactate",
+      "back": "No NADH reoxidation at the chain → NADH rises → lactate dehydrogenase makes lactate to regenerate NAD⁺ → lactate is a redox outlet.",
+      "objective_ids": [
+        "biochemistry-13-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "biochemistry-13-card-2",
+      "lesson_id": "biochemistry-13",
+      "front": "Glucose demand without oxidation",
+      "back": "Glycolysis to lactate gives 2 ATP per glucose; keeping the same ATP with a blocked chain needs glucose uptake of demand/2 and lactate of two per glucose.",
+      "objective_ids": [
+        "biochemistry-13-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "biochemistry-13-card-3",
+      "lesson_id": "biochemistry-13",
+      "front": "Redox and tracer readouts",
+      "back": "Lactate/pyruvate tracks cytosolic NADH/NAD⁺ at equilibrium; an M+3 lactate fraction divided by the labeled fraction of glucose gives the fraction from medium glucose.",
+      "objective_ids": [
+        "biochemistry-13-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "biochemistry-13-card-4",
+      "lesson_id": "biochemistry-13",
+      "front": "Discriminating experiments",
+      "back": "Oxygen consumption, lactate/pyruvate, a glucose tracer and an electron-acceptor rescue; use at least two independent readouts.",
+      "objective_ids": [
+        "biochemistry-13-objective-3"
+      ],
+      "license": "CC-BY-4.0"
     }
   ]
 }

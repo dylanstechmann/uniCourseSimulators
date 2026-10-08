@@ -93,6 +93,97 @@
       "original_content": true,
       "license": "CC-BY-4.0",
       "modifications": []
+    },
+    {
+      "module_id": "biochemistry-module-8",
+      "lesson_id": "biochemistry-8",
+      "reading": "modules/08-amino-acids-charge-and-isoelectric-points.md",
+      "source_ids": [
+        "biochemistry",
+        "biology"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "biochemistry-module-9",
+      "lesson_id": "biochemistry-9",
+      "reading": "modules/09-protein-folding-and-stability.md",
+      "source_ids": [
+        "biochemistry",
+        "biology"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "biochemistry-module-10",
+      "lesson_id": "biochemistry-10",
+      "reading": "modules/10-glycolysis-energy-charge-and-amp-signal.md",
+      "source_ids": [
+        "biochemistry",
+        "biology"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "biochemistry-module-11",
+      "lesson_id": "biochemistry-11",
+      "reading": "modules/11-mitochondrial-bioenergetics-and-atp-yield.md",
+      "source_ids": [
+        "biochemistry",
+        "biology"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "biochemistry-module-12",
+      "lesson_id": "biochemistry-12",
+      "reading": "modules/12-flux-control-and-layers-of-regulation.md",
+      "source_ids": [
+        "biochemistry",
+        "biology"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "biochemistry-module-lab-01",
+      "lesson_id": "biochemistry-lab-01",
+      "reading": "labs/01-enzyme-kinetics-and-inhibition-from-data.md",
+      "source_ids": [
+        "biochemistry",
+        "biology"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "biochemistry-module-13",
+      "lesson_id": "biochemistry-13",
+      "reading": "modules/13-reading-a-metabolic-perturbation.md",
+      "source_ids": [
+        "biochemistry",
+        "biology"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
     }
   ]
 }

@@ -1,5 +1,9 @@
 # Progress review: uniStemCourseSimulators
 
+## Update after the biochemistry schedule (2026-10-08, seventeenth pass)
+
+Written by an AI coding assistant. Biochemistry I is the fifth package with a proposed week-by-week structure (after cell biology, geroscience, genetics and physiology): 14 weeks, 14 readings including a synthetic enzyme-kinetics lab. Its last lesson walks through the package's case, a respiratory-chain inhibitor that lowers ATP and raises lactate, and the AI-assisted check caught a sentence in it that contradicted its own numbers. Nothing is graded, workload is unmeasured and no person has reviewed it. Twenty packages still have only two to four lesson-length readings.
+
 ## Update after the physiology schedule (2026-10-08, sixteenth pass)
 
 Written by an AI coding assistant. Human Physiology for Engineers is the fourth package with a proposed week-by-week structure (after cell biology, geroscience and genetics): 14 weeks, 15 readings including a synthetic scratch-assay lab. The final lesson prepares the package's existing case, in which a normal pressure coexists with reduced reserve, with a worked example in which the same resting pressure hides a halved renal flow and a lost capacity to respond to exercise. As before, nothing is graded, workload is unmeasured and no person has reviewed it. The AI-assisted check found no wrong key but did find a learning objective with no item and an internal inconsistency in a worked example, both fixed. Twenty-one packages still have only two to four lesson-length readings.
