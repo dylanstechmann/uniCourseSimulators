@@ -1,6 +1,6 @@
 # Biomaterials & Tissue Engineering
 
-**Maturity: partial. Version: 0.2.2.**
+**Maturity: partial. Version: 0.3.0.**
 
 Design and evaluate cell-material systems through degradation, protein adsorption, immune response, scaffold transport, and functional regeneration.
 
@@ -15,26 +15,34 @@ Cell biology; Organic Chemistry I; Statics/Materials; Transport recommended. Str
 - Compare scaffold, cell, and signal strategies for a tissue target.
 - Interpret evidence across in-vitro and in-vivo models.
 
-## Units and lessons
+## Proposed 14-week schedule
 
-Units 1–4 keep the short prototype readings preserved from the original project; they need substantial expansion. Units 5 and 6 are original lesson-length readings (about 860 to 890 words) with learning objectives, a worked example, common mistakes, stated limits and explicitly synthetic data. No unit has been reviewed by a qualified instructor.
+This is a proposed scope, not a measured or reviewed semester. Each week lists its readings; the four short prototype readings (about 70 to 80 words each) sit in weeks 1, 3, 9 and 13 beside the original lessons, and every lesson has public formative items and retrieval cards.
 
-| Unit | Lesson | Reading | Practice items | Retrieval cards |
-|---:|---|---|---:|---:|
-| 1 | Material properties at the biological interface | short prototype | 2 | 2 |
-| 2 | Scaffold architecture, degradation, and mechanics | short prototype | 2 | 2 |
-| 3 | Cells, signals, and tissue-specific strategies | short prototype | 2 | 2 |
-| 4 | Translation, biocompatibility, and failure analysis | short prototype | 2 | 2 |
-| 5 | Degradation and release from hydrogels: half-lives, diffusion times and matching a repair timeline | lesson-length original | 6 | 4 |
-| 6 | Porous scaffolds: porosity, stiffness and permeability, and why they pull against each other | lesson-length original | 6 | 4 |
+| Week | Theme | Readings |
+|---|---|---|
+| 1 | Material properties at the biological interface | Material properties at the biological interface |
+| 2 | Protein adsorption: wettability, coverage and the layer that cells actually meet | Protein adsorption: wettability, coverage and the layer that cells actually meet |
+| 3 | Scaffold architecture, degradation and mechanics | Scaffold architecture, degradation, and mechanics |
+| 4 | Hydrogel networks: stiffness, crosslink density and mesh size | Hydrogel networks: stiffness, crosslink density and mesh size |
+| 5 | Porous scaffolds: porosity, stiffness and permeability | Porous scaffolds: porosity, stiffness and permeability, and why they pull against each other |
+| 6 | Degradation and release from hydrogels: half-lives and diffusion times | Degradation and release from hydrogels: half-lives, diffusion times and matching a repair timeline |
+| 7 | Polymer degradation by chain scission: molecular weight, mass loss and erosion mode | Polymer degradation by chain scission: molecular weight, mass loss and erosion mode |
+| 8 | Vascular scaffolds: wall stress, collapse, compliance and wall shear stress | Vascular scaffolds: wall stress, collapse, compliance and wall shear stress |
+| 9 | Cells, signals and tissue-specific strategies | Cells, signals, and tissue-specific strategies |
+| 10 | Cells for a scaffold: how many are needed and what expansion costs | Cells for a scaffold: how many are needed, how much expansion that costs and whether it fits |
+| 11 | Biocompatibility evidence: extract tests, the host response and the unit of analysis | Biocompatibility evidence: extract tests, the host response and the unit of analysis |
+| 12 | Virtual lab: degradation time course of a synthetic scaffold | Virtual lab 1: degradation time course of a synthetic scaffold |
+| 13 | Translation, biocompatibility and failure analysis | Translation, biocompatibility, and failure analysis |
+| 14 | Reading a failure in a degrading vascular scaffold | Reading a failure: mechanics, chemistry and biology in a degrading vascular scaffold |
 
 ## Assessment and study policy
 
-Every lesson has public formative practice items (numeric and single-choice) tagged to its learning objectives. The practice assessments for the original lessons also list the course outcomes those objectives link to; the objectives of the prototype units are not yet linked to course outcomes, so their assessments list none. In total the package has 20 practice items and 16 retrieval cards for the review queue. A course case includes a self-assessment checklist. These are practice activities, with unlimited retries and no institutional grade, university credit, or transferable credit. Workload has not been measured.
+Every lesson has public formative items (numeric, single-choice, multiple-select, data-interpretation, structured-response and CSV-upload) mapped to its objectives, plus retrieval cards for the review queue; each practice assessment also lists the course outcomes its items assess. Week 12 is a synthetic-data virtual lab and week 14 pairs a lesson on reading a failure in a degrading vascular scaffold with the course case and its self-assessment checklist. These are practice activities with unlimited retries and no institutional grade, university credit or transferable credit. Workload has not been measured.
 
-## Schedule and current limitations
+## Current limitations
 
-No full-semester calendar or 14-week structure has been authored. No substantive homework sets, laboratories, midterm, final, or graded cumulative project are included. The four short prototype readings require substantial expansion, and the newer lessons rely on explicitly synthetic data. Nothing in this package has been reviewed by a qualified instructor; qualified human review is required before this course can meet the complete-course quality standard.
+The schedule above is proposed, not measured, and has not been reviewed by a qualified instructor. There are no graded homework sets, midterm, final or graded project. The four prototype readings remain short. The package cites no new papers: the lessons teach standard first-order relations with synthetic data, and the typical values they quote (moduli, diffusion coefficients, viscosities, cell volumes) are textbook-level and vary between sources. All materials, cells, animals and numbers are synthetic; no lesson gives a laboratory protocol or medical advice, and nothing here says anything about any real material, device, cell line or person. Qualified human review is required before this course could meet the complete-course standard.
 
 ## Sources and licensing
 

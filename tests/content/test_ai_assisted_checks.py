@@ -696,3 +696,265 @@ def test_statistics_older_data_interpretation_key_matches_its_prompt():
     field = next(f for f in item["solution_spec"]["field_specs"] if f["id"] == "mean_difference")
     assert "vehicle n=8, mean 10.0 μM, and compound n=8, mean 14.0 μM" in item["prompt"]
     assert field["answer"] == pytest.approx(14.0 - 10.0)
+
+
+# ---- biomaterials 0.3.0 --------------------------------------------------------------------------------------
+_MMHG = 133.322
+_R_GAS, _T_BODY, _K_B = 8.314, 310.0, 1.381e-23
+_NA = 6.022e23
+
+
+def _protein_capacity_mg_m2(kda: float, footprint_nm2: float) -> float:
+    return kda / (_NA * footprint_nm2 * 1e-18) * 1e6
+
+
+def _diffusion_arrival_time_s(gamma_mg_m2: float, d_um2_s: float, c_mg_ml: float) -> float:
+    return math.pi * (gamma_mg_m2 * 1e-6 / (2 * c_mg_ml)) ** 2 / (d_um2_s * 1e-12)
+
+
+def _bonds_cleaved(t: float, k: float) -> float:
+    return 1 - math.exp(-k * t)
+
+
+def _mn_scission(t: float, mn0: float, repeat: float, k: float) -> float:
+    return 1 / (1 / mn0 + _bonds_cleaved(t, k) / repeat)
+
+
+def _buckling_pa(e_pa: float, h: float, r: float, nu: float = 0.3) -> float:
+    return e_pa / (4 * (1 - nu ** 2)) * (h / r) ** 3
+
+
+def _wall_shear_pa(mu: float, q: float, r: float) -> float:
+    return 4 * mu * q / (math.pi * r ** 3)
+
+
+def _biomaterials_lab_rows() -> list[dict[str, str]]:
+    import csv
+    return list(csv.DictReader((COURSES / "biomaterials/labs/scaffold-degradation-time-course.csv").open(encoding="utf-8")))
+
+
+def _lab_mean(rows: list[dict[str, str]], day: int, column: str) -> float:
+    values = [float(r[column]) for r in rows if int(r["day"]) == day]
+    return sum(values) / len(values)
+
+
+_BM_ROWS = _biomaterials_lab_rows()
+_BM_P28 = 72.0 * (1 / (_lab_mean(_BM_ROWS, 28, "mn_kda") * 1000) - 1 / (_lab_mean(_BM_ROWS, 0, "mn_kda") * 1000))
+_BM_KE = math.log(_lab_mean(_BM_ROWS, 0, "modulus_mpa") / _lab_mean(_BM_ROWS, 56, "modulus_mpa")) / 56
+_BM_CRIT_P = 72.0 * (1 / 5000.0 - 1 / 100000.0)
+_BM_TC = -math.log(1 - _BM_CRIT_P) / 0.0002
+_BM_A = [90, 98, 82, 105, 88, 95]
+_BM_B = [78, 86, 70, 92, 74, 82]
+
+
+def _pooled_sd(a: list[float], b: list[float]) -> float:
+    def var(x: list[float]) -> float:
+        m = sum(x) / len(x)
+        return sum((v - m) ** 2 for v in x) / (len(x) - 1)
+    return math.sqrt((var(a) + var(b)) / 2)
+
+
+_BM_SE = _pooled_sd(_BM_A, _BM_B) * math.sqrt(2 / 6)
+_BM_NEED = 5.0e7 * 2.0
+_BM_SEED = _BM_NEED / 0.6
+_BM_PH = 7.2 + math.log10((10 / (1 + 10 ** (7.2 - 7.4)) - 2) / (10 - 10 / (1 + 10 ** (7.2 - 7.4)) + 2))
+
+BIOMATERIALS_NUMERIC = {
+    # items written before 2026-10-08, recomputed from the numbers in their prompts
+    "biomaterials-2:check": 100 * (1 - 0.15),
+    "biomaterials-2:degradation-modulus": 2.0 * math.exp(-0.05 * 14),
+    "biomaterials-5:half-life": math.log(2) / 0.05 * 24,
+    "biomaterials-5:remaining-mass": 100 * math.exp(-0.05 * 30),
+    "biomaterials-5:diffusion-time": (1e-3) ** 2 / 1e-10 / 3600,
+    "biomaterials-5:thinner-slab": (0.5e-3) ** 2 / 1e-10 / 3600,
+    "biomaterials-6:porosity": 100 * (1 - 0.10),
+    "biomaterials-6:gibson-ashby": 1000 * 0.1 ** 2,
+    "biomaterials-6:double-density": 1000 * 0.2 ** 2,
+    "biomaterials-6:darcy-flow": 1e-10 * 1e-4 * 10 / (1e-3 * 5e-3) * 1e6 * 60,
+    # biomaterials-7: protein adsorption
+    "biomaterials-7:work-of-adhesion": 72 * (1 + math.cos(math.radians(65))),
+    "biomaterials-7:contact-angle": math.degrees(math.acos((35 - 10) / 72)),
+    "biomaterials-7:coverage": 0.2 / (0.05 + 0.2),
+    "biomaterials-7:concentration-for-90": 0.9 * 0.05 / 0.1,
+    "biomaterials-7:monolayer-capacity": _protein_capacity_mg_m2(66, 50),
+    "biomaterials-7:arrival-time": _diffusion_arrival_time_s(1.5, 60, 0.2),
+    "biomaterials-7:arrival-ratio": (40 * math.sqrt(61)) / (3 * math.sqrt(20)),
+    # biomaterials-8: hydrogel networks
+    "biomaterials-8:youngs-modulus": 3 * 12.0,
+    "biomaterials-8:chain-density": 12000 / (_R_GAS * _T_BODY),
+    "biomaterials-8:molar-mass-between-crosslinks": 100 / (12000 / (_R_GAS * _T_BODY)),
+    "biomaterials-8:mesh-size": (_K_B * _T_BODY / 12000) ** (1 / 3) * 1e9,
+    "biomaterials-8:mesh-after-doubling": (_K_B * _T_BODY / 24000) ** (1 / 3) * 1e9,
+    "biomaterials-8:mesh-after-loss": (_K_B * _T_BODY / (0.6 * 12000)) ** (1 / 3) * 1e9,
+    "biomaterials-8:free-diffusion": _K_B * _T_BODY / (6 * math.pi * 0.69e-3 * 3.5e-9) * 1e12,
+    # biomaterials-9: chain scission
+    "biomaterials-9:bonds-cleaved": 100 * _bonds_cleaved(28, 0.0002),
+    "biomaterials-9:molar-mass": _mn_scission(28, 100000, 72, 0.0002),
+    "biomaterials-9:onset-time": _BM_TC,
+    "biomaterials-9:cleaved-at-onset": 100 * _BM_CRIT_P,
+    "biomaterials-9:mass-at-100": 100 * math.exp(-0.02 * (100 - _BM_TC)),
+    "biomaterials-9:critical-thickness": math.sqrt(0.0090 / 0.0002),
+    # biomaterials-10: vascular scaffold mechanics
+    "biomaterials-10:hoop-stress": 120 * _MMHG * 2.0 / 0.40 / 1000,
+    "biomaterials-10:pulse-strain": 100 * 40 * _MMHG * 2.0 / (0.40 * 2.0e6),
+    "biomaterials-10:buckling-pressure": _buckling_pa(2.0e6, 0.40e-3, 2.0e-3) / _MMHG,
+    "biomaterials-10:thin-wall-buckling": _buckling_pa(2.0e6, 0.20e-3, 2.0e-3) / _MMHG,
+    "biomaterials-10:time-to-threshold": math.log(2.0e6 / (10 * _MMHG * 4 * (1 - 0.3 ** 2) / (0.4 / 2.0) ** 3)) / 0.02,
+    "biomaterials-10:relative-flow": 0.8 ** 4,
+    "biomaterials-10:wall-shear-after": _wall_shear_pa(3.5e-3, 4e-6, 1.6e-3),
+    # biomaterials-11: biocompatibility evidence
+    "biomaterials-11:relative-viability": 100 * 0.96 / 1.20,
+    "biomaterials-11:independent-units": 3,
+    "biomaterials-11:capsule-difference": sum(_BM_A) / 6 - sum(_BM_B) / 6,
+    "biomaterials-11:animal-level-t": (sum(_BM_A) / 6 - sum(_BM_B) / 6) / _BM_SE,
+    "biomaterials-11:capsule-permeability": 300 / 100,
+    "biomaterials-11:flux-ratio": 100 / 20,
+    # biomaterials-12: cells for a scaffold
+    "biomaterials-12:cells-needed": _BM_NEED / 1e8,
+    "biomaterials-12:cells-to-seed": _BM_SEED / 1e8,
+    "biomaterials-12:doublings": math.log2(_BM_SEED / 5.0e5),
+    "biomaterials-12:expansion-days": math.log2(_BM_SEED / 5.0e5) * 36 / 24,
+    "biomaterials-12:passages": math.ceil(math.log2(_BM_SEED / 5.0e5) / math.log2(4)),
+    "biomaterials-12:volume-fraction": 5.0e7 * 2.0e-9,
+    "biomaterials-12:extra-days": (math.log2(_BM_NEED / 0.4 / 5.0e5) - math.log2(_BM_SEED / 5.0e5)) * 36 / 24,
+    # biomaterials-13: failure analysis
+    "biomaterials-13:lumen-area-loss": 100 * (1 - (1.4 / 1.8) ** 2),
+    "biomaterials-13:flow-fraction": (1.4 / 1.8) ** 4,
+    "biomaterials-13:shear-factor": (1.8 / 1.4) ** 3,
+    "biomaterials-13:buckling-day-60": _buckling_pa(2.0e6 * math.exp(-0.02 * 60), 0.40e-3, 2.0e-3) / _MMHG,
+    "biomaterials-13:local-ph": _BM_PH,
+    # virtual lab 1, recomputed from the CSV
+    "biomaterials-lab1:fraction-cleaved": 100 * _BM_P28,
+    "biomaterials-lab1:scission-rate-constant": -math.log(1 - _BM_P28) / 28,
+    "biomaterials-lab1:support-threshold": math.log(_lab_mean(_BM_ROWS, 0, "modulus_mpa") / 0.8) / _BM_KE,
+    "biomaterials-lab1:first-mass-loss": next(
+        d for d in sorted({int(r["day"]) for r in _BM_ROWS}) if _lab_mean(_BM_ROWS, d, "mass_pct") < 0.95 * _lab_mean(_BM_ROWS, 0, "mass_pct")
+    ),
+}
+
+
+@pytest.mark.parametrize("question_id,expected", sorted(BIOMATERIALS_NUMERIC.items()))
+def test_biomaterials_numeric_key_matches_independent_recalculation(question_id, expected):
+    spec = bank("biomaterials")[question_id]["solution_spec"]
+    allowed = spec["tolerance"] + (spec.get("relative_tolerance") or 0) * abs(spec["answer"])
+    assert abs(spec["answer"] - expected) <= allowed, (question_id, spec["answer"], expected)
+
+
+def test_every_biomaterials_numeric_item_is_recalculated():
+    numeric = {qid for qid, item in bank("biomaterials").items() if item["type"] == "numeric"}
+    assert numeric == set(BIOMATERIALS_NUMERIC)
+
+
+def _fragments_in(text: str, fragments: list[str]) -> None:
+    missing = [f for f in fragments if f not in text]
+    assert not missing, missing
+
+
+def test_biomaterials_protein_and_network_lessons_state_the_computed_numbers():
+    theta = math.degrees(math.acos(25 / 72))
+    capacity_side, capacity_end = _protein_capacity_mg_m2(66, 50), _protein_capacity_mg_m2(66, 20)
+    gamma_1s = 2 * 0.2 * math.sqrt(60e-12 / math.pi) * 1e6
+    capacity2 = _protein_capacity_mg_m2(45, 30)
+    gamma2 = capacity2 * 0.3 / (0.1 + 0.3)
+    _fragments_in(reading("biomaterials", "biomaterials-7"), [
+        f"θ = **{theta:.1f}°**", f"**{72 * (1 + math.cos(math.radians(65))):.1f} mN/m**", f"{72 * (1 + math.cos(math.radians(110))):.1f} mN/m",
+        "Γ = 2.4 mg/m²", "**0.45 mg/mL**", f"**{capacity_side:.2f} mg/m²**", f"{capacity_end:.2f} mg/m²",
+        f"Γ(1 s) = **{gamma_1s:.2f} mg/m²**", f"{gamma_1s / 3.0:.0%} of the capacity", f"**{_diffusion_arrival_time_s(1.5, 60, 0.2):.2f} s**",
+        f"**{40 * math.sqrt(61) / (3 * math.sqrt(20)):.1f} times**", f"{capacity2:.2f} mg/m²", f"{gamma2:.2f} mg/m²",
+        f"= {_diffusion_arrival_time_s(gamma2, 80, 0.3):.2f} s",
+    ])
+    nu = 12000 / (_R_GAS * _T_BODY)
+    xi = lambda g: (_K_B * _T_BODY / g) ** (1 / 3) * 1e9               # noqa: E731  nm
+    d0 = _K_B * _T_BODY / (6 * math.pi * 0.69e-3 * 3.5e-9) * 1e12
+    ratio_small, ratio_large = 3.5 / xi(12000), 6.0 / xi(12000)
+    nu2 = 30000 / (_R_GAS * _T_BODY)
+    _fragments_in(reading("biomaterials", "biomaterials-8"), [
+        f"**{nu:.2f} mol/m³**", "**36 kPa**", f"**{100 / nu:.1f} kg/mol**", f"**{xi(12000):.1f} nm**", f"{2 ** (-1 / 3):.2f}, to {xi(24000):.1f} nm",
+        f"only {10 ** (1 / 3):.2f} times smaller", f"**D₀ = {d0:.0f} μm²/s**", f"{1e-6 / (d0 * 1e-12) / 3600:.2f} h",
+        f"gives {ratio_small:.2f}", f"gives {ratio_large:.2f}", f"**{xi(0.6 * 12000):.1f} nm**", f"from {ratio_large:.2f} to {6.0 / xi(0.6 * 12000):.2f}",
+        f"{nu2:.2f} mol/m³", f"{150 / nu2:.1f} kg/mol", f"{xi(30000):.2f} nm", "E ≈ 3 G = 90 kPa", f"{3.5 / xi(30000):.2f}",
+    ])
+
+
+def test_biomaterials_degradation_and_mechanics_lessons_state_the_computed_numbers():
+    k, mn0, mu = 0.0002, 100000.0, 72.0
+    text = reading("biomaterials", "biomaterials-9")
+    _fragments_in(text, [
+        f"p = **{_bonds_cleaved(28, k):.2%}**", f"**{_mn_scission(28, mn0, mu, k) / 1000:.1f} kDa**", f"p = {_bonds_cleaved(56, k):.2%}",
+        f"{_mn_scission(56, mn0, mu, k) / 1000:.1f} kDa", f"one bond in {1 / _bonds_cleaved(28, k):.0f}", f"{1 - _mn_scission(28, mn0, mu, k) / mn0:.0%}",
+        f"**{_BM_TC:.1f} days**", f"{math.exp(-0.02 * (100 - _BM_TC)):.1%} remains at day 100", f"{_BM_TC + math.log(2) / 0.02:.1f} days",
+        f"{mn0 / _mn_scission(60, mn0, mu, k):.0f} times shorter", f"**{math.sqrt(0.009 / k):.1f} mm**", f"τ_D = {1 / 0.009:.0f} days against 1/k = {1 / k:,.0f} days",
+        f"τ_D k = {1 / 0.009 * k:.2f}", f"τ_D = {100 / 0.009:,.0f} days (τ_D k = {100 / 0.009 * k:.1f})",
+    ])
+    pb = 58.0 * (1 / 4000.0 - 1 / 60000.0)
+    mn30b = _mn_scission(30, 60000.0, 58.0, 0.0004)
+    _fragments_in(text, [f"{_bonds_cleaved(30, 0.0004):.2%}", f"{mn30b:.0f} g/mol ({mn30b / 1000:.1f} kDa)", f"{1 - mn30b / 60000.0:.0%}",
+                         f"{pb:.4f}", f"{-math.log(1 - pb) / 0.0004:.1f} days"])
+    text = reading("biomaterials", "biomaterials-10")
+    sigma = 120 * _MMHG * 2.0 / 0.40
+    _fragments_in(text, [
+        f"**{sigma / 1000:.1f} kPa**", f"{sigma / 2.0e6:.3f}", f"**{100 * 40 * _MMHG * 2.0 / (0.40 * 2.0e6):.2f}%**",
+        f"{100 * 40 * _MMHG * 2.0 / (0.40 * 2.0e6) * 100 / 40:.1f}% per 100 mmHg", f"**{_buckling_pa(2.0e6, 0.4e-3, 2.0e-3) / _MMHG:.1f} mmHg**",
+        f"{_buckling_pa(2.0e6, 0.2e-3, 2.0e-3) / _MMHG:.1f} mmHg", "**59.7 days**" if abs(BIOMATERIALS_NUMERIC["biomaterials-10:time-to-threshold"] - 59.65) < 0.01 else "?",
+        f"{10 * _MMHG * 4 * (1 - 0.3 ** 2) / (0.4 / 2.0) ** 3 / 1e6:.3f} MPa", f"**{_wall_shear_pa(3.5e-3, 4e-6, 2.0e-3):.2f} Pa**",
+        f"**{0.8 ** 4:.2f}**", f"{_wall_shear_pa(3.5e-3, 4e-6, 1.6e-3):.2f} Pa", f"{(1 / 0.8) ** 3:.2f}",
+    ])
+    sig_w = 100 * _MMHG * 1.5 / 0.30
+    _fragments_in(text, [
+        f"{sig_w / 1000:.1f} kPa", f"{sig_w / 1.5e6:.3f}", f"{_buckling_pa(1.5e6, 0.3e-3, 1.5e-3) / _MMHG:.1f} mmHg", f"{(1.2 / 1.5) ** 4:.2f}",
+        f"from {_wall_shear_pa(3.5e-3, 3e-6, 1.5e-3):.2f} Pa to {_wall_shear_pa(3.5e-3, 3e-6, 1.2e-3):.2f} Pa",
+    ])
+
+
+def test_biomaterials_evidence_cells_and_failure_lessons_state_the_computed_numbers():
+    diff = sum(_BM_A) / 6 - sum(_BM_B) / 6
+    t10 = _t_quantile(0.975, 10)
+    text = reading("biomaterials", "biomaterials-11")
+    _fragments_in(text, [
+        "= 80.0%**", f"**{diff:.2f} μm**", f"**{diff / _BM_SE:.2f}** on 10 degrees of freedom", f"p = {_two_sided_p(diff / _BM_SE, 10):.3f}",
+        f"{diff - t10 * _BM_SE:.1f} to {diff + t10 * _BM_SE:.1f} μm", "**3.0 μm/s**", "15.0 μm/s", "48 sections", "46 degrees of freedom",
+    ])
+    c_animals, r_animals = [60, 72, 55, 80, 66], [58, 70, 52, 77, 63]
+    se2 = _pooled_sd(c_animals, r_animals) * math.sqrt(2 / 5)
+    _fragments_in(text, [f"{100 * 0.57 / 0.85:.1f}%", f"t = {(66.6 - 64.0) / se2:.2f} on 8 degrees of freedom"])
+    seed = 1.0e8 / 0.6
+    doublings = math.log2(seed / 5.0e5)
+    text = reading("biomaterials", "biomaterials-12")
+    _fragments_in(text, [
+        "**1.0 × 10⁸ cells**", f"**{seed / 1e8:.2f} × 10⁸ cells**", f"**{doublings:.2f} population doublings**", f"**{doublings * 36 / 24:.1f} days**",
+        f"**{math.ceil(doublings / 2)} passages**", "= 10% of the volume", f"{seed / 2.0 * 2.0e-9:.1%} of the volume", f"{doublings * 36 / 24:.1f} days becomes {doublings * 36 / 24 * 1.25:.1f}",
+    ])
+    doublings2 = math.log2(2.0e7 / 2.0e5)
+    _fragments_in(text, [f"= {doublings2:.2f}", f"{doublings2 * 48 / 24:.1f} days", f"{doublings2 / math.log2(3):.2f}", "cells fill 4% of the volume", "would give 8%"])
+    text = reading("biomaterials", "biomaterials-13")
+    shear = _wall_shear_pa(3.5e-3, 4e-6, 1.4e-3) / _wall_shear_pa(3.5e-3, 4e-6, 1.8e-3)
+    _fragments_in(text, [
+        f"{1 - 1.4 / 1.8:.1%}", f"{1 - (1.4 / 1.8) ** 2:.1%}", f"**{(1.4 / 1.8) ** 4:.3f}**", f"{_wall_shear_pa(3.5e-3, 4e-6, 1.8e-3):.2f} Pa to **{_wall_shear_pa(3.5e-3, 4e-6, 1.4e-3):.2f} Pa**",
+        f"a factor of {shear:.2f}", f"{_buckling_pa(2.0e6, 0.4e-3, 2.0e-3) / _MMHG:.1f} mmHg", f"{BIOMATERIALS_NUMERIC['biomaterials-13:buckling-day-60']:.1f} mmHg",
+        f"e^(1.2) = {math.exp(1.2):.2f}", f"**{_BM_PH:.2f}**", "6.13 mM", "3.87 mM",
+    ])
+    r2 = 1.6 / 1.8
+    _fragments_in(text, [f"({r2:.3f})² = {r2 ** 2:.3f}", f"({r2:.3f})⁴ = {r2 ** 4:.3f}"])
+
+
+def test_biomaterials_lab_text_and_keys_agree_with_the_dataset():
+    assert len(_BM_ROWS) == 21 and sorted({int(r["day"]) for r in _BM_ROWS}) == [0, 14, 28, 42, 56, 70, 84]
+    text = (COURSES / "biomaterials/labs/01-degradation-time-course-of-a-synthetic-scaffold.md").read_text(encoding="utf-8")
+    k_fit = -math.log(1 - _BM_P28) / 28
+    half_time = math.log(2) / _BM_KE
+    t_threshold = math.log(_lab_mean(_BM_ROWS, 0, "modulus_mpa") / 0.8) / _BM_KE
+    _fragments_in(text, [
+        f"{_lab_mean(_BM_ROWS, 28, 'mn_kda'):.2f} kDa at day 28", f"p = 72 × (1/{_lab_mean(_BM_ROWS, 28, 'mn_kda') * 1000:.0f}", f"= {_BM_P28:.5f}",
+        f"{100 * _BM_P28:.2f}% of bonds", f"{k_fit:.5f} per day", f"the half-time is {half_time:.1f} days", f"{t_threshold:.1f} days",
+        f"{_lab_mean(_BM_ROWS, 84, 'mass_pct'):.1f}%", "first falls below 95% of its starting value at day 84",
+    ])
+    spec = bank("biomaterials")["biomaterials-lab1:modulus-half-time"]["solution_spec"]["field_specs"][0]
+    assert abs(spec["answer"] - half_time) <= spec["tolerance"] and spec["significant_figures"] == 3
+    checks = {(c["row_id"], c["column"]): c["answer"] for c in bank("biomaterials")["biomaterials-lab1:time-course-summary"]["solution_spec"]["validation_spec"]["checks"]}
+    assert len(checks) == 20
+    for day in (0, 14, 28, 56, 84):
+        assert checks[(f"d{day}", "replicates")] == 3
+        for column in ("mn_kda", "mass_pct", "modulus_mpa"):
+            assert abs(checks[(f"d{day}", column)] - _lab_mean(_BM_ROWS, day, column)) < 1e-3, (day, column)
+    # the data were built from a random-scission model: the fitted rate recovers the construction value
+    assert abs(k_fit - 0.0002) < 0.00001 and abs(_BM_KE - 0.02) < 0.0005

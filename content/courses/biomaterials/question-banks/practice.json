@@ -630,6 +630,2808 @@
         "kind": "original",
         "modifications": []
       }
+    },
+    {
+      "id": "biomaterials-7:work-of-adhesion",
+      "type": "numeric",
+      "prompt": "Water (surface tension 72 mN/m) makes a contact angle of 65° on a synthetic surface. Using W_a = γ_lv (1 + cos θ), what is the work of adhesion in mN/m? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "biomaterials-7-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 102.429,
+        "unit": "",
+        "tolerance": 0.3,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Take the cosine of the angle first, add 1 and multiply by the surface tension of water.",
+        "solution": "72 × (1 + cos 65°) = 72 × 1.4226 = 102.4 mN/m.",
+        "lesson_ids": [
+          "biomaterials-7"
+        ],
+        "misconception_ids": [
+          "contact-angle-as-adsorption"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "biomaterials-7:contact-angle",
+      "type": "numeric",
+      "prompt": "A synthetic surface has γ_sv = 35 mN/m and γ_sl = 10 mN/m against water with γ_lv = 72 mN/m. Using Young's equation, what is the contact angle in degrees? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "biomaterials-7-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 69.682,
+        "unit": "",
+        "tolerance": 0.2,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Find cos θ = (γ_sv − γ_sl)/γ_lv, then take the inverse cosine.",
+        "solution": "cos θ = (35 − 10)/72 = 0.347, so θ = 69.7°.",
+        "lesson_ids": [
+          "biomaterials-7"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "biomaterials-7:coverage",
+      "type": "numeric",
+      "prompt": "For Γ_max = 3.0 mg/m² and K_d = 0.05 mg/mL, what fraction of the surface is covered at C = 0.2 mg/mL? Enter a decimal fraction, number only.",
+      "points": 1,
+      "objective_ids": [
+        "biomaterials-7-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0.8,
+        "unit": "",
+        "tolerance": 0.005,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Coverage is C/(K_d + C).",
+        "solution": "0.2/(0.05 + 0.2) = 0.80, so Γ = 2.4 mg/m².",
+        "lesson_ids": [
+          "biomaterials-7"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "biomaterials-7:concentration-for-90",
+      "type": "numeric",
+      "prompt": "For K_d = 0.05 mg/mL, what concentration gives 90% coverage? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "biomaterials-7-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0.45,
+        "unit": "mg/mL",
+        "tolerance": 0.005,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Set C/(K_d + C) = 0.9 and solve for C.",
+        "solution": "C = 0.9 K_d/0.1 = 9 K_d = 0.45 mg/mL.",
+        "lesson_ids": [
+          "biomaterials-7"
+        ],
+        "misconception_ids": [
+          "linear-coverage"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "biomaterials-7:monolayer-capacity",
+      "type": "numeric",
+      "prompt": "A 66 kDa protein (66 kg/mol) lies side-on with a footprint of 50 nm². Using Γ_max = M/(N_A A) with N_A = 6.022 × 10²³ per mol, what is the monolayer capacity? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "biomaterials-7-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 2.192,
+        "unit": "mg/m²",
+        "tolerance": 0.02,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Convert the footprint to m² (1 nm² = 10⁻¹⁸ m²) and the result from kg/m² to mg/m².",
+        "solution": "66/(6.022 × 10²³ × 50 × 10⁻¹⁸) kg/m² = 2.19 mg/m²; standing end-on (20 nm²) it would hold 5.48 mg/m².",
+        "lesson_ids": [
+          "biomaterials-7"
+        ],
+        "misconception_ids": [
+          "monolayer-fixed"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "biomaterials-7:arrival-time",
+      "type": "numeric",
+      "prompt": "A surface captures every protein that reaches it from a still solution with C = 0.2 mg/mL and D = 60 μm²/s. Using Γ = 2C√(Dt/π), how long does it take to reach Γ = 1.5 mg/m²? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "biomaterials-7-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 0.7363,
+        "unit": "s",
+        "tolerance": 0.02,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Solve Γ = 2C√(Dt/π) for t, working in SI units (1 mg/mL = 1 kg/m³).",
+        "solution": "t = π (Γ/2C)²/D = π × (1.50 × 10⁻⁶/0.4)²/(6.0 × 10⁻¹¹) = 0.74 s.",
+        "lesson_ids": [
+          "biomaterials-7"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "biomaterials-7:arrival-ratio",
+      "type": "numeric",
+      "prompt": "Albumin (40 mg/mL, D = 61 μm²/s) and fibrinogen (3 mg/mL, D = 20 μm²/s) compete for a bare surface. How many times faster does albumin arrive, using a rate proportional to C√D? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "biomaterials-7-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 23.286,
+        "unit": "",
+        "tolerance": 0.3,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Divide the product C√D of albumin by that of fibrinogen.",
+        "solution": "(40/3) × √(61/20) = 23.3. Higher-affinity proteins can still displace it later.",
+        "lesson_ids": [
+          "biomaterials-7"
+        ],
+        "misconception_ids": [
+          "abundant-stays"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "biomaterials-7:adsorption-statements",
+      "type": "multiple_select",
+      "prompt": "Which statements about protein adsorption are appropriate? Select all that apply.",
+      "points": 2,
+      "objective_ids": [
+        "biomaterials-7-objective-3"
+      ],
+      "options": [
+        "A larger water contact angle means a lower work of adhesion with water.",
+        "The adsorbed mass per area shows that the cell-binding sites of the protein are active.",
+        "Within seconds a concentrated protein solution can fill a surface when transport is the only limit.",
+        "Cells meet the adsorbed protein layer, not the bare material.",
+        "The most abundant protein in a mixture always remains on the surface."
+      ],
+      "solution_spec": {
+        "answer": [
+          0,
+          2,
+          3
+        ],
+        "partial_credit": "correct-minus-incorrect-clamped-v1"
+      },
+      "feedback": {
+        "hint": "Separate what the models give (arrival, capacity, wettability) from what they cannot show.",
+        "solution": "The adsorbed layer is what cells meet, a larger angle gives a lower work of adhesion, and transport to the surface is fast. Competition can displace early arrivers, and adsorbed mass says nothing about activity.",
+        "lesson_ids": [
+          "biomaterials-7"
+        ],
+        "misconception_ids": [
+          "abundant-stays",
+          "adsorbed-mass-as-activity"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "biomaterials-8:youngs-modulus",
+      "type": "numeric",
+      "prompt": "A nearly incompressible hydrogel has a shear modulus of 12 kPa. Using E ≈ 3G, what is its Young's modulus in kPa? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "biomaterials-8-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 36.0,
+        "unit": "",
+        "tolerance": 0.1,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Multiply the shear modulus by 3.",
+        "solution": "E ≈ 3 × 12 = 36 kPa.",
+        "lesson_ids": [
+          "biomaterials-8"
+        ],
+        "misconception_ids": [
+          "modulus-confusion"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "biomaterials-8:chain-density",
+      "type": "numeric",
+      "prompt": "Using G = νRT with G = 12000 Pa, R = 8.314 J/(mol·K) and T = 310 K, what is the density of elastically active chains? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "biomaterials-8-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 4.656,
+        "unit": "mol/m³",
+        "tolerance": 0.02,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Divide the modulus in pascals by R times the absolute temperature.",
+        "solution": "ν = 12000/(8.314 × 310) = 4.66 mol/m³.",
+        "lesson_ids": [
+          "biomaterials-8"
+        ],
+        "misconception_ids": [
+          "celsius-for-kelvin"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "biomaterials-8:molar-mass-between-crosslinks",
+      "type": "numeric",
+      "prompt": "The polymer concentration is 100 kg/m³ and the chain density is 4.66 mol/m³. What is the molar mass per elastically active chain, Mc = c/ν? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "biomaterials-8-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 21.478,
+        "unit": "kg/mol",
+        "tolerance": 0.2,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Divide the polymer mass per volume by the moles of chains per volume.",
+        "solution": "Mc = 100/4.66 = 21.5 kg/mol (21.5 kDa).",
+        "lesson_ids": [
+          "biomaterials-8"
+        ],
+        "misconception_ids": [
+          "crosslinker-as-active-chains"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "biomaterials-8:mesh-size",
+      "type": "numeric",
+      "prompt": "With k_B = 1.381 × 10⁻²³ J/K, T = 310 K and G = 12000 Pa, what is the mesh size ξ = (k_B T/G)^(1/3)? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "biomaterials-8-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 7.0924,
+        "unit": "nm",
+        "tolerance": 0.05,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Compute k_B T/G in m³, take the cube root and convert metres to nanometres.",
+        "solution": "ξ = (1.381 × 10⁻²³ × 310 / 12000)^(1/3) m = 7.09 nm.",
+        "lesson_ids": [
+          "biomaterials-8"
+        ],
+        "misconception_ids": [
+          "mesh-as-pore"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "biomaterials-8:mesh-after-doubling",
+      "type": "numeric",
+      "prompt": "The crosslink density is doubled, so G doubles to 24 kPa. What is the new mesh size? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "biomaterials-8-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 5.6292,
+        "unit": "nm",
+        "tolerance": 0.05,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "The mesh size scales as G^(−1/3).",
+        "solution": "ξ = 7.09 × 2^(−1/3) = 5.63 nm, only 21% smaller.",
+        "lesson_ids": [
+          "biomaterials-8"
+        ],
+        "misconception_ids": [
+          "independent-tuning"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "biomaterials-8:mesh-after-loss",
+      "type": "numeric",
+      "prompt": "The gel above (12 kPa, ξ = 7.1 nm) loses 40% of its elastically active chains. What is the new mesh size? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "biomaterials-8-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 8.4089,
+        "unit": "nm",
+        "tolerance": 0.05,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "G falls to 60% of its value; the mesh size scales as G^(−1/3).",
+        "solution": "ξ = 7.09 × (1/0.6)^(1/3) = 8.41 nm.",
+        "lesson_ids": [
+          "biomaterials-8"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "biomaterials-8:free-diffusion",
+      "type": "numeric",
+      "prompt": "Using D₀ = k_B T/(6π η r_h) with k_B = 1.381 × 10⁻²³ J/K, T = 310 K, η = 0.69 mPa·s and r_h = 3.5 nm, what is the free diffusion coefficient? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "biomaterials-8-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 94.045,
+        "unit": "μm²/s",
+        "tolerance": 0.5,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Work in SI units (η in Pa·s, r_h in metres) and convert m²/s to μm²/s at the end.",
+        "solution": "D₀ = 1.381 × 10⁻²³ × 310 / (6π × 0.00069 × 3.5 × 10⁻⁹) = 94.0 μm²/s.",
+        "lesson_ids": [
+          "biomaterials-8"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "biomaterials-8:network-statements",
+      "type": "multiple_select",
+      "prompt": "Which statements about hydrogel networks are appropriate? Select all that apply.",
+      "points": 2,
+      "objective_ids": [
+        "biomaterials-8-objective-3"
+      ],
+      "options": [
+        "The ideal-network formulas give exact pore diameters for any real gel.",
+        "Losing crosslinks during degradation enlarges the mesh and can speed release of an untethered cargo.",
+        "Doubling the crosslink density doubles the modulus but shrinks the mesh size by only about a fifth.",
+        "A cargo whose hydrodynamic radius approaches the mesh size is strongly hindered.",
+        "Mesh size and stiffness can be set independently by changing the crosslinker alone."
+      ],
+      "solution_spec": {
+        "answer": [
+          1,
+          2,
+          3
+        ],
+        "partial_credit": "correct-minus-incorrect-clamped-v1"
+      },
+      "feedback": {
+        "hint": "Use the cube-root dependence of the mesh on the modulus and the ratio of cargo to mesh size.",
+        "solution": "The mesh depends on the cube root of the modulus, so stiffness changes strongly and mesh size weakly; hindrance grows as the cargo approaches the mesh, and degradation enlarges it. The formulas are estimates and the two properties are coupled.",
+        "lesson_ids": [
+          "biomaterials-8"
+        ],
+        "misconception_ids": [
+          "independent-tuning",
+          "mesh-as-pore"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "biomaterials-9:bonds-cleaved",
+      "type": "numeric",
+      "prompt": "Each bond is cleaved at random with k = 0.0002 per day. What percentage of bonds are cleaved after 28 days? Enter the percentage, number only.",
+      "points": 1,
+      "objective_ids": [
+        "biomaterials-9-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0.5584,
+        "unit": "",
+        "tolerance": 0.01,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use p = 1 − e^(−kt) and convert the fraction to a percentage.",
+        "solution": "p = 1 − e^(−0.0002 × 28) = 0.0056, or 0.56%.",
+        "lesson_ids": [
+          "biomaterials-9"
+        ],
+        "misconception_ids": [
+          "bond-fraction-as-mass-fraction"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "biomaterials-9:molar-mass",
+      "type": "numeric",
+      "prompt": "A polymer with Mn0 = 100000 g/mol and repeat unit 72 g/mol has 0.56% of its bonds cleaved. Using 1/Mn = 1/Mn0 + p/M_u, what is Mn? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "biomaterials-9-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 11420.69,
+        "unit": "g/mol",
+        "tolerance": 60,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Add p/M_u to 1/Mn0 and invert.",
+        "solution": "1/Mn = 1/100000 + 0.00558/72 = 8.756 × 10⁻⁵ mol/g, so Mn = 11421 g/mol.",
+        "lesson_ids": [
+          "biomaterials-9"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "biomaterials-9:onset-time",
+      "type": "numeric",
+      "prompt": "Chains dissolve once Mn falls below 5000 g/mol. With Mn0 = 100000 g/mol, M_u = 72 g/mol and k = 0.0002 per day, when does mass loss begin? Enter the number of days.",
+      "points": 1,
+      "objective_ids": [
+        "biomaterials-9-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 68.872,
+        "unit": "",
+        "tolerance": 0.5,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "First find the fraction of bonds that must be cleaved, p_crit = M_u (1/M_crit − 1/Mn0), then t = −ln(1 − p_crit)/k.",
+        "solution": "p_crit = 0.0137; t = −ln(1 − 0.0137)/0.0002 = 68.9 days.",
+        "lesson_ids": [
+          "biomaterials-9"
+        ],
+        "misconception_ids": [
+          "mass-lag-ignored"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "biomaterials-9:cleaved-at-onset",
+      "type": "numeric",
+      "prompt": "Using the same polymer, what percentage of the bonds has been cleaved when Mn reaches 5000 g/mol? Enter the percentage, number only.",
+      "points": 1,
+      "objective_ids": [
+        "biomaterials-9-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 1.368,
+        "unit": "",
+        "tolerance": 0.01,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use p_crit = M_u (1/M_crit − 1/Mn0).",
+        "solution": "p_crit = 72 × (1/5000 − 1/100000) = 0.0137, or 1.37%: about one bond in 73.",
+        "lesson_ids": [
+          "biomaterials-9"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "biomaterials-9:mass-at-100",
+      "type": "numeric",
+      "prompt": "After mass loss begins at 68.9 days, the mass falls as e^(−k_m (t − t_c)) with k_m = 0.02 per day. What percentage of the mass remains at day 100? Enter the percentage, number only.",
+      "points": 1,
+      "objective_ids": [
+        "biomaterials-9-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 53.657,
+        "unit": "",
+        "tolerance": 0.5,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Compute the time since onset and apply the exponential.",
+        "solution": "e^(−0.02 × (100 − 68.9)) = 0.537, or 53.7%.",
+        "lesson_ids": [
+          "biomaterials-9"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "biomaterials-9:critical-thickness",
+      "type": "numeric",
+      "prompt": "Water and oligomers diffuse in the polymer with D = 0.009 mm²/day and bonds react with k = 0.0002 per day. What is the critical thickness L_c = √(D/k)? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "biomaterials-9-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 6.7082,
+        "unit": "mm",
+        "tolerance": 0.05,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Divide D by k first, then take the square root.",
+        "solution": "L_c = √(0.009/0.0002) = √45 = 6.71 mm.",
+        "lesson_ids": [
+          "biomaterials-9"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "biomaterials-9:erosion-mode",
+      "type": "single_choice",
+      "prompt": "With L_c = 6.7 mm, which description fits a 1 mm wall and a 10 mm block of the same polymer?",
+      "points": 1,
+      "objective_ids": [
+        "biomaterials-9-objective-3"
+      ],
+      "options": [
+        "The 1 mm wall degrades from the surface and the 10 mm block in bulk.",
+        "The 1 mm wall degrades in bulk (τ_D k = 0.02, well below 1) and the 10 mm block more from its surface (τ_D k = 2.2).",
+        "Both degrade in bulk because hydrolysis is always uniform.",
+        "Both degrade only from the surface."
+      ],
+      "solution_spec": {
+        "answer": 1
+      },
+      "feedback": {
+        "hint": "Compare each thickness with the critical thickness, or compare the diffusion time with 1/k.",
+        "solution": "Thicknesses well below L_c let water saturate the device before many bonds break, so they erode in bulk; thicknesses above it erode from the surface inward (with the caveat of interior acid build-up).",
+        "lesson_ids": [
+          "biomaterials-9"
+        ],
+        "misconception_ids": [
+          "thick-same-as-thin"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "biomaterials-9:measurement-statements",
+      "type": "multiple_select",
+      "prompt": "Which statements about measuring degradation are appropriate? Select all that apply.",
+      "points": 2,
+      "objective_ids": [
+        "biomaterials-9-objective-3"
+      ],
+      "options": [
+        "Unchanged mass does not show unchanged chain length or strength.",
+        "A rate constant measured in buffer is a reliable prediction for degradation in tissue.",
+        "A small fraction of bonds cleaved can shorten the average chain by a large factor.",
+        "Molar mass, mass and mechanical tests answer different questions and are best used together.",
+        "The fraction of bonds cleaved equals the fraction of mass lost."
+      ],
+      "solution_spec": {
+        "answer": [
+          0,
+          2,
+          3
+        ],
+        "partial_credit": "correct-minus-incorrect-clamped-v1"
+      },
+      "feedback": {
+        "hint": "Separate scission of bonds from the loss of soluble fragments.",
+        "solution": "Each break creates a new chain, so a few percent of bonds can cut Mn by a large factor while the mass is unchanged. The three kinds of measurement are complementary; buffer rates are starting estimates and the two fractions differ.",
+        "lesson_ids": [
+          "biomaterials-9"
+        ],
+        "misconception_ids": [
+          "mass-lag-ignored",
+          "buffer-rate-as-tissue-rate"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "biomaterials-10:hoop-stress",
+      "type": "numeric",
+      "prompt": "A thin-walled tube has mean radius 2.0 mm and wall thickness 0.40 mm, and carries 120 mmHg (1 mmHg = 133.32 Pa). What is the hoop stress σ = PR/h in kPa? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "biomaterials-10-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 79.993,
+        "unit": "",
+        "tolerance": 0.3,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Convert the pressure to pascals first and keep the radius and thickness in the same unit.",
+        "solution": "σ = 15,999 Pa × 2.0/0.40 = 80.0 kPa.",
+        "lesson_ids": [
+          "biomaterials-10"
+        ],
+        "misconception_ids": [
+          "pressure-units"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "biomaterials-10:pulse-strain",
+      "type": "numeric",
+      "prompt": "The same wall (E = 2.0 MPa) sees a pulse pressure of 40 mmHg. Using Δr/r = ΔP R/(h E), what is the radial strain in percent? Enter the percentage, number only.",
+      "points": 1,
+      "objective_ids": [
+        "biomaterials-10-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 1.3332,
+        "unit": "",
+        "tolerance": 0.02,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Convert 40 mmHg to pascals; E must be in pascals too.",
+        "solution": "Δr/r = 5,333 × 2.0/(0.40 × 2,000,000) = 0.0133, or 1.33%.",
+        "lesson_ids": [
+          "biomaterials-10"
+        ],
+        "misconception_ids": [
+          "pressure-units"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "biomaterials-10:buckling-pressure",
+      "type": "numeric",
+      "prompt": "Using P_cr = E/(4(1 − ν²)) × (h/R)³ with E = 2.0 MPa, ν = 0.3, R = 2.0 mm and h = 0.40 mm, what external pressure buckles the tube, in mmHg? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "biomaterials-10-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 32.97,
+        "unit": "",
+        "tolerance": 0.3,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Compute (h/R)³ first, then multiply by E/(4(1 − ν²)) and convert pascals to mmHg.",
+        "solution": "P_cr = 549,451 × 0.0080 = 4,396 Pa = 33.0 mmHg.",
+        "lesson_ids": [
+          "biomaterials-10"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "biomaterials-10:thin-wall-buckling",
+      "type": "numeric",
+      "prompt": "The wall thickness is halved to 0.20 mm with the same radius, modulus and Poisson ratio. What is the new buckling pressure in mmHg? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "biomaterials-10-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 4.121,
+        "unit": "",
+        "tolerance": 0.1,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "P_cr depends on the cube of h/R.",
+        "solution": "The pressure falls by 2³ = 8 to 4.12 mmHg.",
+        "lesson_ids": [
+          "biomaterials-10"
+        ],
+        "misconception_ids": [
+          "thickness-linear"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "biomaterials-10:time-to-threshold",
+      "type": "numeric",
+      "prompt": "The modulus decays as E(t) = 2.0 MPa × e^(−0.02 t) with t in days. The wall must resist an external load of 10 mmHg, which requires E ≥ 0.607 MPa. At what time does it fall below that? Enter the number of days.",
+      "points": 1,
+      "objective_ids": [
+        "biomaterials-10-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 59.65,
+        "unit": "",
+        "tolerance": 0.5,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Solve E₀ e^(−kt) = E_needed for t.",
+        "solution": "t = ln(2.0/0.607)/0.02 = 59.7 days.",
+        "lesson_ids": [
+          "biomaterials-10"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "biomaterials-10:relative-flow",
+      "type": "numeric",
+      "prompt": "A lumen narrows by 20% in radius at a fixed pressure drop. By what factor does the flow change, using Q ∝ r⁴? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "biomaterials-10-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 0.4096,
+        "unit": "",
+        "tolerance": 0.005,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Raise the radius ratio to the fourth power.",
+        "solution": "(0.8)⁴ = 0.4096: the flow falls to 41% of its value.",
+        "lesson_ids": [
+          "biomaterials-10"
+        ],
+        "misconception_ids": [
+          "linear-flow-narrowing"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "biomaterials-10:wall-shear-after",
+      "type": "numeric",
+      "prompt": "Blood-like fluid (μ = 3.5 mPa·s) flows at 4 mL/s through a lumen narrowed to radius 1.6 mm. Using τ = 4μQ/(πr³), what is the wall shear stress? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "biomaterials-10-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 4.3519,
+        "unit": "Pa",
+        "tolerance": 0.03,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Convert the flow to m³/s and the radius to metres.",
+        "solution": "τ = 4 × 0.0035 × 4 × 10⁻⁶/(π × (1.6 × 10⁻³)³) = 4.35 Pa, 1.95 times the 2.23 Pa at 2.0 mm.",
+        "lesson_ids": [
+          "biomaterials-10"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "biomaterials-10:mechanics-statements",
+      "type": "multiple_select",
+      "prompt": "Which statements about vascular scaffold mechanics are appropriate? Select all that apply.",
+      "points": 2,
+      "objective_ids": [
+        "biomaterials-10-objective-3"
+      ],
+      "options": [
+        "Halving the wall thickness lowers the buckling pressure by a factor of eight, all else equal.",
+        "As the wall's modulus decays, the external load it can resist falls in proportion.",
+        "Pressure in mmHg can be used directly in σ = PR/h with the radius in millimetres.",
+        "A computed wall shear stress explains why a scaffold narrowed.",
+        "A 20% loss of radius at fixed pressure drop removes more than half of the flow."
+      ],
+      "solution_spec": {
+        "answer": [
+          0,
+          1,
+          4
+        ],
+        "partial_credit": "correct-minus-incorrect-clamped-v1"
+      },
+      "feedback": {
+        "hint": "Use the powers of thickness and radius in the formulas.",
+        "solution": "Buckling pressure scales with h³ and E, flow with r⁴, and shear stress with r⁻³. A shear stress is one input among several and does not explain narrowing, and formulas need consistent units.",
+        "lesson_ids": [
+          "biomaterials-10"
+        ],
+        "misconception_ids": [
+          "wss-diagnosis",
+          "pressure-units",
+          "linear-flow-narrowing"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "biomaterials-11:relative-viability",
+      "type": "numeric",
+      "prompt": "Control wells in an extract test average an absorbance of 1.20, and cells in the 100% extract average 0.96. What is the relative viability in percent? Enter the percentage, number only.",
+      "points": 1,
+      "objective_ids": [
+        "biomaterials-11-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 80.0,
+        "unit": "",
+        "tolerance": 0.1,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Divide the treated absorbance by the control absorbance.",
+        "solution": "0.96/1.20 = 0.80, or 80%.",
+        "lesson_ids": [
+          "biomaterials-11"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "biomaterials-11:independent-units",
+      "type": "numeric",
+      "prompt": "3 extracts were prepared independently from the same material, and each was applied to 3 wells of cells. How many independent units does the test have? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "biomaterials-11-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 3,
+        "unit": "",
+        "tolerance": 0,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Wells that share one extract are technical replicates.",
+        "solution": "The 3 independent extracts are the units; the 9 wells are technical replicates.",
+        "lesson_ids": [
+          "biomaterials-11"
+        ],
+        "misconception_ids": [
+          "wells-as-units"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "biomaterials-11:criterion-decision",
+      "type": "single_choice",
+      "prompt": "A criterion of at least 70% viability was fixed before the test, and the 100% extract gave 80%. Which statement is justified?",
+      "points": 1,
+      "objective_ids": [
+        "biomaterials-11-objective-1"
+      ],
+      "options": [
+        "The criterion should be lowered if it is met only narrowly.",
+        "The material is biocompatible in the body.",
+        "The test shows that no substance leaches from the material.",
+        "The 100% extract meets the prior criterion; the test says nothing about contact with the material or about a long implantation."
+      ],
+      "solution_spec": {
+        "answer": 3
+      },
+      "feedback": {
+        "hint": "Compare the result with the criterion and keep the conclusion within what extracts can show.",
+        "solution": "The result meets a criterion that was set in advance, and nothing more follows: extract tests do not examine contact, degradation or the immune response.",
+        "lesson_ids": [
+          "biomaterials-11"
+        ],
+        "misconception_ids": [
+          "extract-to-body-leap"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "biomaterials-11:capsule-difference",
+      "type": "numeric",
+      "prompt": "Per-animal mean capsule thicknesses (μm) are 90, 98, 82, 105, 88, 95 for the test material and 78, 86, 70, 92, 74, 82 for the reference (six animals per group). What is the difference in group means, test minus reference? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "biomaterials-11-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 12.667,
+        "unit": "μm",
+        "tolerance": 0.05,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Average the six animal means in each group, then subtract.",
+        "solution": "93.00 − 80.33 = 12.67 μm.",
+        "lesson_ids": [
+          "biomaterials-11"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "biomaterials-11:animal-level-t",
+      "type": "numeric",
+      "prompt": "Using the animal means as the observations (difference 12.67 μm, pooled SD of the animal means 8.07, six animals per group), what is the pooled-variance t statistic? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "biomaterials-11-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 2.718,
+        "unit": "",
+        "tolerance": 0.03,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "The standard error of the difference is SD × √(2/n) with n = 6 animals per group.",
+        "solution": "SE = 8.07 × √(2/6) = 4.66; t = 12.67/4.66 = 2.72 on 10 degrees of freedom (p = 0.022).",
+        "lesson_ids": [
+          "biomaterials-11"
+        ],
+        "misconception_ids": [
+          "sections-as-units"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "biomaterials-11:capsule-permeability",
+      "type": "numeric",
+      "prompt": "A fibrous capsule is 100 μm thick and a solute diffuses in it with D = 300 μm²/s. What is the permeability P = D/δ? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "biomaterials-11-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 3.0,
+        "unit": "μm/s",
+        "tolerance": 0.05,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Divide the diffusion coefficient by the thickness.",
+        "solution": "P = 300/100 = 3.0 μm/s.",
+        "lesson_ids": [
+          "biomaterials-11"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "biomaterials-11:flux-ratio",
+      "type": "numeric",
+      "prompt": "At the same concentration difference, by what factor is the steady flux through a 100 μm capsule smaller than through a 20 μm capsule? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "biomaterials-11-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 5.0,
+        "unit": "",
+        "tolerance": 0.05,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Steady flux is inversely proportional to the thickness.",
+        "solution": "J ∝ 1/δ, so the ratio is 100/20 = 5.",
+        "lesson_ids": [
+          "biomaterials-11"
+        ],
+        "misconception_ids": [
+          "capsule-harmless"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "biomaterials-11:evidence-statements",
+      "type": "multiple_select",
+      "prompt": "Which statements about biocompatibility evidence are appropriate? Select all that apply.",
+      "points": 2,
+      "objective_ids": [
+        "biomaterials-11-objective-3"
+      ],
+      "options": [
+        "Twenty-four sections per group give twenty-four independent units.",
+        "A thick fibrous capsule can disable a sensor even if there is no toxic response.",
+        "An acceptance criterion should be fixed before the test is run.",
+        "Sections from the same animal are not independent observations.",
+        "A pass in an extract test does not show how the material behaves in contact with tissue."
+      ],
+      "solution_spec": {
+        "answer": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "partial_credit": "correct-minus-incorrect-clamped-v1"
+      },
+      "feedback": {
+        "hint": "Ask what the independent unit is and what question each test can answer.",
+        "solution": "Criteria are fixed in advance, repeated sections or wells share one animal or extract, an extract test is narrow, and encapsulation reduces exchange. Sections are not independent.",
+        "lesson_ids": [
+          "biomaterials-11"
+        ],
+        "misconception_ids": [
+          "wells-as-units",
+          "sections-as-units",
+          "capsule-harmless"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "biomaterials-12:cells-needed",
+      "type": "numeric",
+      "prompt": "A construct of 2.0 mL must reach a density of 5 × 10⁷ cells/mL. How many cells does it need, in units of 10⁸ cells? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "biomaterials-12-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 1.0,
+        "unit": "",
+        "tolerance": 0.01,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Multiply the target density by the volume.",
+        "solution": "5 × 10⁷ × 2.0 = 1.0 × 10⁸ cells, or 1.0 in units of 10⁸.",
+        "lesson_ids": [
+          "biomaterials-12"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "biomaterials-12:cells-to-seed",
+      "type": "numeric",
+      "prompt": "Only 60% of seeded cells attach and remain. How many cells must be seeded to end with 1.0 × 10⁸, in units of 10⁸ cells? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "biomaterials-12-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 1.6667,
+        "unit": "",
+        "tolerance": 0.01,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Divide the cells needed by the seeding efficiency.",
+        "solution": "1.0 × 10⁸/0.6 = 1.67 × 10⁸, or 1.67 in units of 10⁸.",
+        "lesson_ids": [
+          "biomaterials-12"
+        ],
+        "misconception_ids": [
+          "efficiency-ignored"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "biomaterials-12:doublings",
+      "type": "numeric",
+      "prompt": "The starting sample has 5.0 × 10⁵ cells and 1.67 × 10⁸ cells are needed. How many population doublings does that take? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "biomaterials-12-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 8.3808,
+        "unit": "",
+        "tolerance": 0.02,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Doublings are the base-2 logarithm of the fold increase.",
+        "solution": "log₂(333) = 8.38 doublings.",
+        "lesson_ids": [
+          "biomaterials-12"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "biomaterials-12:expansion-days",
+      "type": "numeric",
+      "prompt": "At a doubling time of 36 h and 8.38 doublings, how many days does exponential growth take? Enter the number of days.",
+      "points": 1,
+      "objective_ids": [
+        "biomaterials-12-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 12.5712,
+        "unit": "",
+        "tolerance": 0.05,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Multiply the doublings by the doubling time and convert hours to days.",
+        "solution": "8.38 × 36 h = 302 h = 12.6 days, a lower bound.",
+        "lesson_ids": [
+          "biomaterials-12"
+        ],
+        "misconception_ids": [
+          "exponential-as-prediction"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "biomaterials-12:passages",
+      "type": "numeric",
+      "prompt": "Cells are split 1:4 at each passage, and 8.38 doublings are needed. How many passages are required, rounded up to a whole passage? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "biomaterials-12-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 5,
+        "unit": "",
+        "tolerance": 0,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "A 1:4 split adds log₂(4) = 2 doublings per passage.",
+        "solution": "8.38/2 = 4.19, so 5 passages.",
+        "lesson_ids": [
+          "biomaterials-12"
+        ],
+        "misconception_ids": [
+          "doublings-as-passages"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "biomaterials-12:volume-fraction",
+      "type": "numeric",
+      "prompt": "A cell occupies about 2 pL. At 5.0 × 10⁷ cells/mL, what fraction of the volume do the cells occupy? Enter a decimal fraction, number only.",
+      "points": 1,
+      "objective_ids": [
+        "biomaterials-12-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 0.1,
+        "unit": "",
+        "tolerance": 0.005,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Convert 2 pL to mL (1 pL = 10⁻⁹ mL) and multiply by the density.",
+        "solution": "5.0 × 10⁷ × 2 × 10⁻⁹ = 0.10.",
+        "lesson_ids": [
+          "biomaterials-12"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "biomaterials-12:extra-days",
+      "type": "numeric",
+      "prompt": "If the seeding efficiency were 40% instead of 60%, how many more days of exponential expansion (doubling time 36 h) would be needed? Enter the number of days.",
+      "points": 1,
+      "objective_ids": [
+        "biomaterials-12-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 0.8774,
+        "unit": "",
+        "tolerance": 0.05,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Find the doublings at the lower efficiency and subtract the original number.",
+        "solution": "8.97 − 8.38 = 0.58 doublings, or 0.88 days.",
+        "lesson_ids": [
+          "biomaterials-12"
+        ],
+        "misconception_ids": [
+          "efficiency-ignored"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "biomaterials-12:feasibility-statements",
+      "type": "multiple_select",
+      "prompt": "Which statements about planning a cell-based construct are appropriate? Select all that apply.",
+      "points": 2,
+      "objective_ids": [
+        "biomaterials-12-objective-3"
+      ],
+      "options": [
+        "Cells from one donor, split into many wells, give many independent donors.",
+        "More doublings are a cost, since primary cells have limited divisions and can change phenotype.",
+        "The number of cells to seed exceeds the number needed when only a fraction attach.",
+        "The exponential-growth time is a lower bound on the real expansion time.",
+        "A construct can always be seeded with the full target number of cells at once."
+      ],
+      "solution_spec": {
+        "answer": [
+          1,
+          2,
+          3
+        ],
+        "partial_credit": "correct-minus-incorrect-clamped-v1"
+      },
+      "feedback": {
+        "hint": "Account for losses at seeding, for growth limits and for what counts as independent.",
+        "solution": "Seeding must exceed the target, exponential growth is optimistic, and expansion has biological costs. Wells from one donor are one donor, and the volume fraction can make full seeding impossible.",
+        "lesson_ids": [
+          "biomaterials-12"
+        ],
+        "misconception_ids": [
+          "donor-as-wells",
+          "efficiency-ignored",
+          "exponential-as-prediction"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "biomaterials-lab1:time-course-summary",
+      "type": "file_upload",
+      "prompt": "Using the synthetic time-course CSV, upload a summary table with one row per time point (key column `time_point`: d0, d14, d28, d56 and d84) and columns `replicates` (the number of specimens), `mn_kda` (mean number-average molar mass in kDa), `mass_pct` (mean mass remaining in percent of the initial mass) and `modulus_mpa` (mean modulus in MPa).",
+      "points": 20,
+      "objective_ids": [
+        "biomaterials-lab-01-objective-1"
+      ],
+      "solution_spec": {
+        "accepted_media_types": [
+          "text/csv"
+        ],
+        "max_bytes": 32768,
+        "validation_spec": {
+          "format": "csv-numeric-table-v1",
+          "delimiter": ",",
+          "key_column": "time_point",
+          "columns": [
+            "time_point",
+            "replicates",
+            "mn_kda",
+            "mass_pct",
+            "modulus_mpa"
+          ],
+          "checks": [
+            {
+              "id": "d0-replicates",
+              "row_id": "d0",
+              "column": "replicates",
+              "type": "numeric",
+              "answer": 3.0,
+              "unit": "",
+              "tolerance": 0,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "count",
+                "values": [
+                  103.0,
+                  99.0,
+                  98.0
+                ]
+              }
+            },
+            {
+              "id": "d0-mn_kda",
+              "row_id": "d0",
+              "column": "mn_kda",
+              "type": "numeric",
+              "answer": 100.0,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  103.0,
+                  99.0,
+                  98.0
+                ]
+              }
+            },
+            {
+              "id": "d0-mass_pct",
+              "row_id": "d0",
+              "column": "mass_pct",
+              "type": "numeric",
+              "answer": 100.0,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  99.0,
+                  100.3,
+                  100.7
+                ]
+              }
+            },
+            {
+              "id": "d0-modulus_mpa",
+              "row_id": "d0",
+              "column": "modulus_mpa",
+              "type": "numeric",
+              "answer": 2.0,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  1.98,
+                  1.96,
+                  2.06
+                ]
+              }
+            },
+            {
+              "id": "d14-replicates",
+              "row_id": "d14",
+              "column": "replicates",
+              "type": "numeric",
+              "answer": 3.0,
+              "unit": "",
+              "tolerance": 0,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "count",
+                "values": [
+                  20.07,
+                  21.09,
+                  20.27
+                ]
+              }
+            },
+            {
+              "id": "d14-mn_kda",
+              "row_id": "d14",
+              "column": "mn_kda",
+              "type": "numeric",
+              "answer": 20.4767,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  20.07,
+                  21.09,
+                  20.27
+                ]
+              }
+            },
+            {
+              "id": "d14-mass_pct",
+              "row_id": "d14",
+              "column": "mass_pct",
+              "type": "numeric",
+              "answer": 100.0,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  100.7,
+                  100.3,
+                  99.0
+                ]
+              }
+            },
+            {
+              "id": "d14-modulus_mpa",
+              "row_id": "d14",
+              "column": "modulus_mpa",
+              "type": "numeric",
+              "answer": 1.5117,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  1.542,
+                  1.481,
+                  1.512
+                ]
+              }
+            },
+            {
+              "id": "d28-replicates",
+              "row_id": "d28",
+              "column": "replicates",
+              "type": "numeric",
+              "answer": 3.0,
+              "unit": "",
+              "tolerance": 0,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "count",
+                "values": [
+                  11.53,
+                  11.08,
+                  11.65
+                ]
+              }
+            },
+            {
+              "id": "d28-mn_kda",
+              "row_id": "d28",
+              "column": "mn_kda",
+              "type": "numeric",
+              "answer": 11.42,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  11.53,
+                  11.08,
+                  11.65
+                ]
+              }
+            },
+            {
+              "id": "d28-mass_pct",
+              "row_id": "d28",
+              "column": "mass_pct",
+              "type": "numeric",
+              "answer": 100.0,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  99.7,
+                  99.3,
+                  101.0
+                ]
+              }
+            },
+            {
+              "id": "d28-modulus_mpa",
+              "row_id": "d28",
+              "column": "modulus_mpa",
+              "type": "numeric",
+              "answer": 1.1427,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  1.177,
+                  1.131,
+                  1.12
+                ]
+              }
+            },
+            {
+              "id": "d56-replicates",
+              "row_id": "d56",
+              "column": "replicates",
+              "type": "numeric",
+              "answer": 3.0,
+              "unit": "",
+              "tolerance": 0,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "count",
+                "values": [
+                  6.19,
+                  6.13,
+                  5.89
+                ]
+              }
+            },
+            {
+              "id": "d56-mn_kda",
+              "row_id": "d56",
+              "column": "mn_kda",
+              "type": "numeric",
+              "answer": 6.07,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  6.19,
+                  6.13,
+                  5.89
+                ]
+              }
+            },
+            {
+              "id": "d56-mass_pct",
+              "row_id": "d56",
+              "column": "mass_pct",
+              "type": "numeric",
+              "answer": 100.0,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  101.0,
+                  99.7,
+                  99.3
+                ]
+              }
+            },
+            {
+              "id": "d56-modulus_mpa",
+              "row_id": "d56",
+              "column": "modulus_mpa",
+              "type": "numeric",
+              "answer": 0.6527,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  0.659,
+                  0.633,
+                  0.666
+                ]
+              }
+            },
+            {
+              "id": "d84-replicates",
+              "row_id": "d84",
+              "column": "replicates",
+              "type": "numeric",
+              "answer": 3.0,
+              "unit": "",
+              "tolerance": 0,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "count",
+                "values": [
+                  4.23,
+                  4.06,
+                  4.14
+                ]
+              }
+            },
+            {
+              "id": "d84-mn_kda",
+              "row_id": "d84",
+              "column": "mn_kda",
+              "type": "numeric",
+              "answer": 4.1433,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  4.23,
+                  4.06,
+                  4.14
+                ]
+              }
+            },
+            {
+              "id": "d84-mass_pct",
+              "row_id": "d84",
+              "column": "mass_pct",
+              "type": "numeric",
+              "answer": 73.9,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  74.1,
+                  73.2,
+                  74.4
+                ]
+              }
+            },
+            {
+              "id": "d84-modulus_mpa",
+              "row_id": "d84",
+              "column": "modulus_mpa",
+              "type": "numeric",
+              "answer": 0.3727,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  0.38,
+                  0.376,
+                  0.362
+                ]
+              }
+            }
+          ]
+        },
+        "rubric": [
+          {
+            "id": "d0-replicates",
+            "criterion": "d0: replicates",
+            "points": 1,
+            "evidence": [
+              "Recomputes replicates for d0 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "d0-mn_kda",
+            "criterion": "d0: mn_kda",
+            "points": 1,
+            "evidence": [
+              "Recomputes mn_kda for d0 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "d0-mass_pct",
+            "criterion": "d0: mass_pct",
+            "points": 1,
+            "evidence": [
+              "Recomputes mass_pct for d0 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "d0-modulus_mpa",
+            "criterion": "d0: modulus_mpa",
+            "points": 1,
+            "evidence": [
+              "Recomputes modulus_mpa for d0 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "d14-replicates",
+            "criterion": "d14: replicates",
+            "points": 1,
+            "evidence": [
+              "Recomputes replicates for d14 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "d14-mn_kda",
+            "criterion": "d14: mn_kda",
+            "points": 1,
+            "evidence": [
+              "Recomputes mn_kda for d14 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "d14-mass_pct",
+            "criterion": "d14: mass_pct",
+            "points": 1,
+            "evidence": [
+              "Recomputes mass_pct for d14 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "d14-modulus_mpa",
+            "criterion": "d14: modulus_mpa",
+            "points": 1,
+            "evidence": [
+              "Recomputes modulus_mpa for d14 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "d28-replicates",
+            "criterion": "d28: replicates",
+            "points": 1,
+            "evidence": [
+              "Recomputes replicates for d28 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "d28-mn_kda",
+            "criterion": "d28: mn_kda",
+            "points": 1,
+            "evidence": [
+              "Recomputes mn_kda for d28 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "d28-mass_pct",
+            "criterion": "d28: mass_pct",
+            "points": 1,
+            "evidence": [
+              "Recomputes mass_pct for d28 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "d28-modulus_mpa",
+            "criterion": "d28: modulus_mpa",
+            "points": 1,
+            "evidence": [
+              "Recomputes modulus_mpa for d28 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "d56-replicates",
+            "criterion": "d56: replicates",
+            "points": 1,
+            "evidence": [
+              "Recomputes replicates for d56 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "d56-mn_kda",
+            "criterion": "d56: mn_kda",
+            "points": 1,
+            "evidence": [
+              "Recomputes mn_kda for d56 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "d56-mass_pct",
+            "criterion": "d56: mass_pct",
+            "points": 1,
+            "evidence": [
+              "Recomputes mass_pct for d56 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "d56-modulus_mpa",
+            "criterion": "d56: modulus_mpa",
+            "points": 1,
+            "evidence": [
+              "Recomputes modulus_mpa for d56 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "d84-replicates",
+            "criterion": "d84: replicates",
+            "points": 1,
+            "evidence": [
+              "Recomputes replicates for d84 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "d84-mn_kda",
+            "criterion": "d84: mn_kda",
+            "points": 1,
+            "evidence": [
+              "Recomputes mn_kda for d84 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "d84-mass_pct",
+            "criterion": "d84: mass_pct",
+            "points": 1,
+            "evidence": [
+              "Recomputes mass_pct for d84 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "d84-modulus_mpa",
+            "criterion": "d84: modulus_mpa",
+            "points": 1,
+            "evidence": [
+              "Recomputes modulus_mpa for d84 from the preparation-level values."
+            ]
+          }
+        ]
+      },
+      "feedback": {
+        "hint": "Filter the CSV by day, count the specimens and average each of the three measurements.",
+        "solution": "Each time point has 3 specimens. Mean molar mass falls from 100.00 kDa at day 0 to 11.42 kDa at day 28; mean mass is 100.0% at day 56 and 73.9% at day 84; mean modulus falls from 2.000 to 0.653 MPa by day 56.",
+        "lesson_ids": [
+          "biomaterials-lab-01",
+          "biomaterials-9",
+          "biomaterials-5"
+        ],
+        "misconception_ids": [
+          "specimens-as-points"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "biomaterials-lab1:fraction-cleaved",
+      "type": "numeric",
+      "prompt": "The repeat unit has a molar mass of 72 g/mol. Using the day-0 and day-28 mean molar masses from your summary, compute the percentage of bonds cleaved by day 28 from p = M_u (1/Mn − 1/Mn0). Enter the percentage, number only.",
+      "points": 1,
+      "objective_ids": [
+        "biomaterials-lab-01-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0.5585,
+        "unit": "",
+        "tolerance": 0.02,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Convert the means from kDa to g/mol first.",
+        "solution": "p = 72 × (1/11420 − 1/100000) = 0.00558, or 0.56%.",
+        "lesson_ids": [
+          "biomaterials-lab-01",
+          "biomaterials-9",
+          "biomaterials-5"
+        ],
+        "misconception_ids": [
+          "bond-fraction-as-mass-fraction"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "biomaterials-lab1:scission-rate-constant",
+      "type": "numeric",
+      "prompt": "If the fraction of bonds cleaved by day 28 is 0.00558, what is the first-order rate constant per bond from p = 1 − e^(−kt)? Enter the value per day, number only.",
+      "points": 1,
+      "objective_ids": [
+        "biomaterials-lab-01-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0.0002,
+        "unit": "",
+        "tolerance": 2e-05,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Solve for k with the natural logarithm: k = −ln(1 − p)/t.",
+        "solution": "k = −ln(1 − 0.00558)/28 = 0.00020 per day.",
+        "lesson_ids": [
+          "biomaterials-lab-01",
+          "biomaterials-9",
+          "biomaterials-5"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "biomaterials-lab1:modulus-half-time",
+      "type": "data_interpretation",
+      "prompt": "Assume the modulus decays exponentially. Using the day-0 and day-56 mean moduli, compute the time for the modulus to halve, t½ = 56 ln 2 / ln(E₀/E₅₆).",
+      "points": 2,
+      "objective_ids": [
+        "biomaterials-lab-01-objective-3"
+      ],
+      "response_fields": [
+        {
+          "id": "value",
+          "type": "numeric",
+          "prompt": "What is the half-time in days? Report exactly 3 significant figures.",
+          "unit": "",
+          "points": 1
+        },
+        {
+          "id": "inference",
+          "type": "single_choice",
+          "prompt": "Which statement about mechanical support is justified by this lab?",
+          "options": [
+            "The modulus has halved by about day 35 while the mass is still essentially unchanged, so a design judged on mass alone would overestimate the period of support.",
+            "Mass and modulus follow the same curve, so mass is a sufficient measure of support.",
+            "Support lasts until half of the mass is gone.",
+            "The modulus is unchanged until the polymer is mostly dissolved."
+          ],
+          "points": 1
+        }
+      ],
+      "solution_spec": {
+        "field_specs": [
+          {
+            "id": "value",
+            "type": "numeric",
+            "answer": 34.7,
+            "unit": "",
+            "tolerance": 0.2,
+            "relative_tolerance": 0,
+            "unit_required": false,
+            "significant_figures": 3,
+            "dimensions": null
+          },
+          {
+            "id": "inference",
+            "type": "single_choice",
+            "answer": 0
+          }
+        ]
+      },
+      "feedback": {
+        "hint": "Take the logarithm of the modulus ratio, then compare the half-time with the time of the first mass loss.",
+        "solution": "k_E = ln(2.000/0.653)/56 = 0.0200 per day, so t½ = ln 2/0.0200 = 34.7 days. Mass is still 100.0% at day 56.",
+        "lesson_ids": [
+          "biomaterials-lab-01",
+          "biomaterials-9",
+          "biomaterials-5"
+        ],
+        "misconception_ids": [
+          "mass-as-support"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "biomaterials-lab1:support-threshold",
+      "type": "numeric",
+      "prompt": "The scaffold must keep a modulus of at least 0.8 MPa. Using the fitted exponential rate, on what day does the mean modulus fall to 0.8 MPa? Enter the number of days.",
+      "points": 1,
+      "objective_ids": [
+        "biomaterials-lab-01-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 45.821,
+        "unit": "",
+        "tolerance": 0.5,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Solve E₀ e^(−kt) = 0.8 for t, with k from the day-0 and day-56 means.",
+        "solution": "t = ln(2.000/0.8)/0.0200 = 45.8 days.",
+        "lesson_ids": [
+          "biomaterials-lab-01",
+          "biomaterials-9",
+          "biomaterials-5"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "biomaterials-lab1:first-mass-loss",
+      "type": "numeric",
+      "prompt": "On which sampled day does the mean mass first fall below 95% of its day-0 value? Enter the day.",
+      "points": 1,
+      "objective_ids": [
+        "biomaterials-lab-01-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 84.0,
+        "unit": "",
+        "tolerance": 0,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Compare each mean mass with 95 % of the day-0 mean.",
+        "solution": "The mean mass is 97.7% at day 70 and 73.9% at day 84, so day 84 is the first below 95%.",
+        "lesson_ids": [
+          "biomaterials-lab-01",
+          "biomaterials-9",
+          "biomaterials-5"
+        ],
+        "misconception_ids": [
+          "mass-as-support"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "biomaterials-lab1:time-course-reasoning",
+      "type": "structured",
+      "prompt": "Answer each part about the degradation time course.",
+      "points": 3,
+      "objective_ids": [
+        "biomaterials-lab-01-objective-3"
+      ],
+      "response_fields": [
+        {
+          "id": "order",
+          "type": "single_choice",
+          "prompt": "In what order do the three measurements change?",
+          "options": [
+            "Molar mass falls first, the modulus falls steadily, and mass is lost last, after the chains are small enough to dissolve.",
+            "Mass is lost first, then the modulus, then the molar mass.",
+            "All three change at the same time.",
+            "The modulus changes only after all the mass is gone."
+          ],
+          "points": 1
+        },
+        {
+          "id": "support",
+          "type": "single_choice",
+          "prompt": "Which measurement is the better predictor of the period of mechanical support here?",
+          "options": [
+            "The modulus (or a chain-length measurement), because mass stays near 100% while the scaffold weakens.",
+            "The mass, because it is the easiest to weigh.",
+            "The pH of the buffer only.",
+            "The number of specimens."
+          ],
+          "points": 1
+        },
+        {
+          "id": "transfer",
+          "type": "single_choice",
+          "prompt": "What does a time course in buffer at 37 °C not show?",
+          "options": [
+            "How the scaffold degrades in tissue, where enzymes, cells and flow can change the rates, and how the host responds.",
+            "Any change in molar mass.",
+            "Whether specimens were measured.",
+            "The shape of the exponential."
+          ],
+          "points": 1
+        }
+      ],
+      "solution_spec": {
+        "field_specs": [
+          {
+            "id": "order",
+            "type": "single_choice",
+            "answer": 0
+          },
+          {
+            "id": "support",
+            "type": "single_choice",
+            "answer": 0
+          },
+          {
+            "id": "transfer",
+            "type": "single_choice",
+            "answer": 0
+          }
+        ],
+        "rubric": [
+          {
+            "id": "order",
+            "criterion": "Order of events",
+            "points": 1,
+            "evidence": [
+              "States that molar mass and modulus change before mass."
+            ]
+          },
+          {
+            "id": "support",
+            "criterion": "Which measurement predicts support",
+            "points": 1,
+            "evidence": [
+              "Chooses a mechanical or chain-length measure over mass."
+            ]
+          },
+          {
+            "id": "transfer",
+            "criterion": "What the lab does not show",
+            "points": 1,
+            "evidence": [
+              "Limits the conclusion to the buffer conditions."
+            ]
+          }
+        ]
+      },
+      "feedback": {
+        "hint": "For each part, ask which measurement changes first and under what conditions the data were taken.",
+        "solution": "Chain length and modulus change before mass, so mass is a poor predictor of support, and buffer data are a starting estimate for tissue.",
+        "lesson_ids": [
+          "biomaterials-lab-01",
+          "biomaterials-9",
+          "biomaterials-5"
+        ],
+        "misconception_ids": [
+          "mass-as-support",
+          "buffer-rate-as-tissue-rate"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "biomaterials-lab1:supported-conclusions",
+      "type": "multiple_select",
+      "prompt": "Which conclusions follow from this synthetic time course? Select all that apply.",
+      "points": 2,
+      "objective_ids": [
+        "biomaterials-lab-01-objective-3"
+      ],
+      "options": [
+        "The molar mass has fallen by about 90% by day 28 although the mass is unchanged.",
+        "The modulus falls by about half every 35 days under these conditions.",
+        "A support period judged from mass loss alone would be much longer than the modulus indicates.",
+        "The same time course would occur in a living animal.",
+        "The scaffold is safe to implant."
+      ],
+      "solution_spec": {
+        "answer": [
+          0,
+          1,
+          2
+        ],
+        "partial_credit": "correct-minus-incorrect-clamped-v1"
+      },
+      "feedback": {
+        "hint": "Keep each conclusion inside what three specimens per time point in buffer can show.",
+        "solution": "The first three follow from the table. A buffer experiment does not show the behavior in tissue, and no safety conclusion follows from material properties.",
+        "lesson_ids": [
+          "biomaterials-lab-01",
+          "biomaterials-9",
+          "biomaterials-5"
+        ],
+        "misconception_ids": [
+          "buffer-rate-as-tissue-rate",
+          "mass-as-support"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "biomaterials-13:lumen-area-loss",
+      "type": "numeric",
+      "prompt": "A lumen of radius 1.8 mm narrows to 1.4 mm. By what percentage does the lumen area fall? Enter the percentage, number only.",
+      "points": 1,
+      "objective_ids": [
+        "biomaterials-13-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 39.506,
+        "unit": "",
+        "tolerance": 0.2,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Area scales with the square of the radius.",
+        "solution": "1 − (0.778)² = 0.395, or 39.5%, against a 22.2% fall in radius.",
+        "lesson_ids": [
+          "biomaterials-13"
+        ],
+        "misconception_ids": [
+          "diameter-as-flow"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "biomaterials-13:flow-fraction",
+      "type": "numeric",
+      "prompt": "At a fixed pressure drop, what fraction of the initial flow remains when the radius falls from 1.8 to 1.4 mm (Q ∝ r⁴)? Enter a decimal fraction, number only.",
+      "points": 1,
+      "objective_ids": [
+        "biomaterials-13-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0.366,
+        "unit": "",
+        "tolerance": 0.005,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Raise the radius ratio to the fourth power.",
+        "solution": "(0.778)⁴ = 0.366: 63% of the flow is lost.",
+        "lesson_ids": [
+          "biomaterials-13"
+        ],
+        "misconception_ids": [
+          "diameter-as-flow"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "biomaterials-13:shear-factor",
+      "type": "numeric",
+      "prompt": "At a constant flow, by what factor does the wall shear stress change when the radius falls from 1.8 to 1.4 mm (τ ∝ r⁻³)? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "biomaterials-13-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 2.1254,
+        "unit": "",
+        "tolerance": 0.02,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Invert the radius ratio and cube it.",
+        "solution": "(1.8/1.4)³ = 2.13, from 3.06 to 6.50 Pa at 4 mL/s.",
+        "lesson_ids": [
+          "biomaterials-13"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "biomaterials-13:buckling-day-60",
+      "type": "numeric",
+      "prompt": "The initial buckling pressure is 33.0 mmHg and the modulus decays as e^(−0.02 t). What is the buckling pressure at day 60, in mmHg? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "biomaterials-13-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 9.93,
+        "unit": "",
+        "tolerance": 0.2,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "The buckling pressure is proportional to the modulus.",
+        "solution": "33.0 × e^(−0.02 × 60) = 9.9 mmHg, at the 10 mmHg external load.",
+        "lesson_ids": [
+          "biomaterials-13"
+        ],
+        "misconception_ids": [
+          "collapse-proved"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "biomaterials-13:local-ph",
+      "type": "numeric",
+      "prompt": "A 10 mM buffer with pKa 7.2 holds 6.13 mM base (A⁻) and 3.87 mM acid (HA) at pH 7.4. After 2 mM of strong acid is added, what is the pH from pH = pKa + log₁₀([A⁻]/[HA])? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "biomaterials-13-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 7.0476,
+        "unit": "",
+        "tolerance": 0.02,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "The added acid converts A⁻ to HA one for one.",
+        "solution": "[A⁻] = 6.13 − 2 = 4.13, [HA] = 3.87 + 2 = 5.87; pH = 7.2 + log₁₀(0.704) = 7.05.",
+        "lesson_ids": [
+          "biomaterials-13"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "biomaterials-13:separating-design",
+      "type": "structured",
+      "prompt": "A degradable vascular scaffold is open at first and later narrows. Answer each part about separating the explanations.",
+      "points": 3,
+      "objective_ids": [
+        "biomaterials-13-objective-2",
+        "biomaterials-13-objective-3"
+      ],
+      "response_fields": [
+        {
+          "id": "mechanics",
+          "type": "single_choice",
+          "prompt": "Which observation distinguishes mechanical collapse from tissue growth into the lumen?",
+          "options": [
+            "A flattened lumen with an unchanged wall thickness and no tissue inside favors collapse, while a round lumen with a layer of tissue inside favors growth.",
+            "The final lumen diameter alone.",
+            "The initial modulus of the unimplanted scaffold.",
+            "The total number of animals implanted."
+          ],
+          "points": 1
+        },
+        {
+          "id": "control",
+          "type": "single_choice",
+          "prompt": "Which control best separates an effect of degradation from an effect of geometry and surgery?",
+          "options": [
+            "A scaffold with the same geometry and initial modulus that degrades slowly or not at all.",
+            "A second group of the same degradable scaffold.",
+            "The same degradable scaffold measured at one more time point.",
+            "A scaffold with a different geometry."
+          ],
+          "points": 1
+        },
+        {
+          "id": "endpoint",
+          "type": "single_choice",
+          "prompt": "Which end point is the primary, pre-specified outcome of the experiment?",
+          "options": [
+            "Flow or patency measured by imaging, with geometry, chemistry and histology as explanatory measurements.",
+            "The pH in the wall region.",
+            "The thickness of the new layer.",
+            "The molar mass of the polymer at the end."
+          ],
+          "points": 1
+        }
+      ],
+      "solution_spec": {
+        "field_specs": [
+          {
+            "id": "mechanics",
+            "type": "single_choice",
+            "answer": 0
+          },
+          {
+            "id": "control",
+            "type": "single_choice",
+            "answer": 0
+          },
+          {
+            "id": "endpoint",
+            "type": "single_choice",
+            "answer": 0
+          }
+        ],
+        "rubric": [
+          {
+            "id": "mechanics",
+            "criterion": "Separating collapse",
+            "points": 1,
+            "evidence": [
+              "Uses lumen shape, wall thickness and tissue on the inside to tell collapse from growth."
+            ]
+          },
+          {
+            "id": "control",
+            "criterion": "A control that separates degradation",
+            "points": 1,
+            "evidence": [
+              "Chooses a non-degrading control matched in geometry and modulus."
+            ]
+          },
+          {
+            "id": "endpoint",
+            "criterion": "Function: evidence reasoning",
+            "points": 1,
+            "evidence": [
+              "Names the function of the lumen as the primary outcome."
+            ]
+          }
+        ]
+      },
+      "feedback": {
+        "hint": "For each part, ask which hypothesis predicts a different result and which control isolates one factor.",
+        "solution": "Lumen shape and wall thickness separate collapse from growth, a matched slow- or non-degrading scaffold separates degradation from geometry and surgery, and flow or patency is the function the scaffold exists for.",
+        "lesson_ids": [
+          "biomaterials-13",
+          "biomaterials-9",
+          "biomaterials-10",
+          "biomaterials-11"
+        ],
+        "misconception_ids": [
+          "collapse-proved",
+          "no-control"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "biomaterials-13:failure-statements",
+      "type": "multiple_select",
+      "prompt": "Which statements about reading this failure are appropriate? Select all that apply.",
+      "points": 2,
+      "objective_ids": [
+        "biomaterials-13-objective-3"
+      ],
+      "options": [
+        "A buckling pressure near the external load shows that collapse is possible, not that it happened.",
+        "The three explanations can all contribute, so controls are needed to apportion them.",
+        "The lumen area falls faster than the radius, and the flow falls faster still.",
+        "A narrowing of 22% in diameter is a 22% loss of flow at a fixed pressure drop.",
+        "Local acidity from degradation proves that chemistry caused the narrowing."
+      ],
+      "solution_spec": {
+        "answer": [
+          0,
+          1,
+          2
+        ],
+        "partial_credit": "correct-minus-incorrect-clamped-v1"
+      },
+      "feedback": {
+        "hint": "Separate what a calculation shows is possible from what the experiment shows happened.",
+        "solution": "Area and flow are higher powers of the radius, a threshold shows possibility and not occurrence, and the explanations are not exclusive. Acidity is a candidate cause and a diameter loss is not a flow loss.",
+        "lesson_ids": [
+          "biomaterials-13"
+        ],
+        "misconception_ids": [
+          "collapse-proved",
+          "diameter-as-flow",
+          "no-control"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
     }
   ]
 }

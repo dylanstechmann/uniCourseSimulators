@@ -145,6 +145,326 @@
         "biomaterials-6-objective-3"
       ],
       "license": "CC-BY-4.0"
+    },
+    {
+      "id": "biomaterials-7-card-1",
+      "lesson_id": "biomaterials-7",
+      "front": "Work of adhesion",
+      "back": "W_a = γ_lv (1 + cos θ); a larger contact angle means a lower work of adhesion with water, and contact angle is only a screening measure for protein adsorption.",
+      "objective_ids": [
+        "biomaterials-7-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "biomaterials-7-card-2",
+      "lesson_id": "biomaterials-7",
+      "front": "Langmuir isotherm",
+      "back": "Γ = Γ_max C/(K_d + C); coverage = C/(K_d + C), so 90% coverage needs C = 9 K_d and doubling C past saturation adds little.",
+      "objective_ids": [
+        "biomaterials-7-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "biomaterials-7-card-3",
+      "lesson_id": "biomaterials-7",
+      "front": "Monolayer capacity",
+      "back": "Γ_max = M/(N_A A) for molar mass M and footprint A; end-on packing holds more mass per area than side-on and changes which parts face the cells.",
+      "objective_ids": [
+        "biomaterials-7-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "biomaterials-7-card-4",
+      "lesson_id": "biomaterials-7",
+      "front": "Arrival and competition",
+      "back": "Diffusion-limited uptake Γ = 2C√(Dt/π) fills a surface in seconds; composition later shifts as higher-affinity proteins displace early arrivers (the Vroman effect).",
+      "objective_ids": [
+        "biomaterials-7-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "biomaterials-8-card-1",
+      "lesson_id": "biomaterials-8",
+      "front": "Ideal network modulus",
+      "back": "G = νRT (ν in mol/m³, T in kelvin) and E ≈ 3G for a nearly incompressible gel; Mc = c/ν is the polymer mass per elastically active chain.",
+      "objective_ids": [
+        "biomaterials-8-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "biomaterials-8-card-2",
+      "lesson_id": "biomaterials-8",
+      "front": "Mesh size",
+      "back": "ξ ≈ (k_B T/G)^(1/3): the mesh falls only as the cube root of the modulus, so doubling the crosslink density shrinks it by about 21%.",
+      "objective_ids": [
+        "biomaterials-8-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "biomaterials-8-card-3",
+      "lesson_id": "biomaterials-8",
+      "front": "Cargo against mesh",
+      "back": "Compare the hydrodynamic radius with ξ; hindrance grows steeply as r_h/ξ approaches 1. Stokes–Einstein: D₀ = k_B T/(6π η r_h).",
+      "objective_ids": [
+        "biomaterials-8-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "biomaterials-8-card-4",
+      "lesson_id": "biomaterials-8",
+      "front": "Degradation and release",
+      "back": "Cleaving crosslinks lowers G and enlarges ξ, so an untethered cargo is released more readily even while most of the mass remains.",
+      "objective_ids": [
+        "biomaterials-8-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "biomaterials-9-card-1",
+      "lesson_id": "biomaterials-9",
+      "front": "Random scission",
+      "back": "p = 1 − e^(−kt) is the fraction of bonds cleaved; 1/Mn = 1/Mn0 + p/M_u, so a few percent of bonds cleaved can cut the chain length by a large factor.",
+      "objective_ids": [
+        "biomaterials-9-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "biomaterials-9-card-2",
+      "lesson_id": "biomaterials-9",
+      "front": "Lag before mass loss",
+      "back": "Mass is lost only when fragments are small enough to dissolve (M_crit); t_c = −ln(1 − p_crit)/k with p_crit = M_u (1/M_crit − 1/Mn0).",
+      "objective_ids": [
+        "biomaterials-9-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "biomaterials-9-card-3",
+      "lesson_id": "biomaterials-9",
+      "front": "Bulk or surface erosion",
+      "back": "Compare the diffusion time L²/D with the reaction time 1/k; the critical thickness is L_c = √(D/k). Thinner devices erode in bulk, thicker ones more from the surface.",
+      "objective_ids": [
+        "biomaterials-9-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "biomaterials-9-card-4",
+      "lesson_id": "biomaterials-9",
+      "front": "What to measure",
+      "back": "Use molar mass, mass and mechanical tests together; mass lags chain scission, and buffer rate constants are starting estimates for tissue.",
+      "objective_ids": [
+        "biomaterials-9-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "biomaterials-10-card-1",
+      "lesson_id": "biomaterials-10",
+      "front": "Laplace's law",
+      "back": "Hoop stress σ = PR/h for a thin tube (P in pascals; 1 mmHg = 133.3 Pa); strain = σ/E. Thinner or wider walls carry more stress.",
+      "objective_ids": [
+        "biomaterials-10-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "biomaterials-10-card-2",
+      "lesson_id": "biomaterials-10",
+      "front": "Buckling under external load",
+      "back": "P_cr = E/(4(1 − ν²)) × (h/R)³; halving the thickness lowers P_cr eightfold, and P_cr falls in proportion to E as the wall degrades.",
+      "objective_ids": [
+        "biomaterials-10-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "biomaterials-10-card-3",
+      "lesson_id": "biomaterials-10",
+      "front": "Flow and narrowing",
+      "back": "At fixed pressure drop Q ∝ r⁴, so a 20% loss of radius leaves 41% of the flow; wall shear τ = 4μQ/(πr³) rises by 1.95 at fixed flow.",
+      "objective_ids": [
+        "biomaterials-10-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "biomaterials-10-card-4",
+      "lesson_id": "biomaterials-10",
+      "front": "Limits of the formulas",
+      "back": "Homogeneous, isotropic, linear-elastic wall, steady Newtonian flow; real vessels are pulsatile and viscoelastic, and shear stress is one input among several.",
+      "objective_ids": [
+        "biomaterials-10-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "biomaterials-11-card-1",
+      "lesson_id": "biomaterials-11",
+      "front": "Relative viability",
+      "back": "Relative viability = treated/control × 100; fix the acceptance criterion before the test, and count independent extracts (not wells) as the units.",
+      "objective_ids": [
+        "biomaterials-11-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "biomaterials-11-card-2",
+      "lesson_id": "biomaterials-11",
+      "front": "Animal as the unit",
+      "back": "Average the sections within an animal and compare animals: with 6 per group the t test has 10 degrees of freedom, while counting sections would claim many more.",
+      "objective_ids": [
+        "biomaterials-11-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "biomaterials-11-card-3",
+      "lesson_id": "biomaterials-11",
+      "front": "Fibrous capsule",
+      "back": "A capsule of thickness δ and diffusion coefficient D has permeability P = D/δ; flux falls in inverse proportion to thickness, which can disable sensors or cell-containing devices.",
+      "objective_ids": [
+        "biomaterials-11-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "biomaterials-11-card-4",
+      "lesson_id": "biomaterials-11",
+      "front": "Layers of evidence",
+      "back": "Extract tests, animal implants and device tests answer different questions; none shows the response in a person, and a pass is a statement about a use and a test.",
+      "objective_ids": [
+        "biomaterials-11-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "biomaterials-12-card-1",
+      "lesson_id": "biomaterials-12",
+      "front": "Cells needed and cells seeded",
+      "back": "N_target = density × volume; N_seed = N_target/η, where η is the fraction of seeded cells that attach and remain.",
+      "objective_ids": [
+        "biomaterials-12-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "biomaterials-12-card-2",
+      "lesson_id": "biomaterials-12",
+      "front": "Doublings, time and passages",
+      "back": "n = log₂(N_seed/N₀); time = n × t_d (a lower bound); passages = n/log₂(split ratio), rounded up.",
+      "objective_ids": [
+        "biomaterials-12-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "biomaterials-12-card-3",
+      "lesson_id": "biomaterials-12",
+      "front": "Expansion costs",
+      "back": "Primary cells divide a limited number of times and can change phenotype with expansion, so fewer doublings are better, and a small starting sample is a risk.",
+      "objective_ids": [
+        "biomaterials-12-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "biomaterials-12-card-4",
+      "lesson_id": "biomaterials-12",
+      "front": "Feasibility and donors",
+      "back": "Check the volume fraction (cell volume about 2 pL) before seeding a target number; the independent unit for a claim is the donor, not wells from one donor.",
+      "objective_ids": [
+        "biomaterials-12-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "biomaterials-lab1-0",
+      "lesson_id": "biomaterials-lab-01",
+      "front": "Summarizing a time course",
+      "back": "Count the specimens and average each measurement at each time point; the specimen is the unit.",
+      "objective_ids": [
+        "biomaterials-lab-01-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "biomaterials-lab1-1",
+      "lesson_id": "biomaterials-lab-01",
+      "front": "Bonds cleaved and rate constant",
+      "back": "p = M_u (1/Mn − 1/Mn0); k = −ln(1 − p)/t. A percent or two of bonds cleaved can reduce the molar mass by an order of magnitude.",
+      "objective_ids": [
+        "biomaterials-lab-01-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "biomaterials-lab1-2",
+      "lesson_id": "biomaterials-lab-01",
+      "front": "Modulus half-time",
+      "back": "For exponential decay, t½ = ln 2/k with k = ln(E₀/E)/t; the time to a threshold is ln(E₀/E_min)/k.",
+      "objective_ids": [
+        "biomaterials-lab-01-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "biomaterials-lab1-3",
+      "lesson_id": "biomaterials-lab-01",
+      "front": "Mass is a lagging measure",
+      "back": "Molar mass and modulus change before mass; judge support from a mechanical or chain-length measure, and treat buffer rates as starting estimates for tissue.",
+      "objective_ids": [
+        "biomaterials-lab-01-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "biomaterials-13-card-1",
+      "lesson_id": "biomaterials-13",
+      "front": "What narrowing does",
+      "back": "Area ∝ r², flow at fixed pressure ∝ r⁴ and wall shear at fixed flow ∝ r⁻³: a 22% loss of radius removes 39% of the area, 63% of the flow and more than doubles the shear.",
+      "objective_ids": [
+        "biomaterials-13-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "biomaterials-13-card-2",
+      "lesson_id": "biomaterials-13",
+      "front": "Three explanations",
+      "back": "Mechanical collapse (flattened lumen, thin or soft wall), chemical injury (local pH, products tracking degradation) and biological response (round lumen with tissue inside) predict different observations.",
+      "objective_ids": [
+        "biomaterials-13-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "biomaterials-13-card-3",
+      "lesson_id": "biomaterials-13",
+      "front": "Controls",
+      "back": "A matched slow- or non-degrading scaffold separates degradation from geometry and surgery; a sham group sets the baseline; assessment is blinded and the animal is the unit.",
+      "objective_ids": [
+        "biomaterials-13-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "biomaterials-13-card-4",
+      "lesson_id": "biomaterials-13",
+      "front": "Function first",
+      "back": "Pre-specify the function (flow or patency) as the primary end point; geometry, chemistry and histology explain it, and a threshold calculation shows possibility, not occurrence.",
+      "objective_ids": [
+        "biomaterials-13-objective-3"
+      ],
+      "license": "CC-BY-4.0"
     }
   ]
 }

@@ -4,7 +4,24 @@
 
 2026-10-06; synthetic local learner data only. Milestones 1 and 2 are implemented. Milestone 3 remains partial; deterministic graders and prototype graded-assignment and review workflows are described below. A Milestone 4 curriculum-map increment is implemented and tested, while subject-matter review and map refinement remain. All 25 course packages are **partial**; zero are beta, complete or externally reviewed. Human score review is limited to saved attempts and does not constitute course-content review. No semester equivalence, university credit, security certification or public production deployment is asserted.
 
-## Current increment: statistics gets a proposed 14-week schedule, seven lessons and a nested-design lab (2026-10-08, eighteenth pass)
+## Current increment: biomaterials gets a proposed 14-week schedule, seven lessons and a degradation time-course lab (2026-10-08, nineteenth pass)
+
+Written by an AI coding assistant. Biomaterials & Tissue Engineering moves from 0.2.2 to 0.3.0 and stays `partial`, unreviewed and formative-only.
+
+- **Proposed 14-week schedule** (`duration.weeks`) and a regenerated syllabus: the four short prototype units sit in weeks 1, 3, 9 and 13 beside the original lessons; week 12 is a lab and week 14 a lesson that prepares the existing course case. The manifest says the schedule is not evidence of semester equivalence.
+- **Seven lessons (7 to 13)**, each about 1,000 to 1,200 words with a worked example, common mistakes, seven or eight items and four cards: protein adsorption, wettability and surface coverage; hydrogel networks, modulus and mesh size; polymer chain scission, molecular weight and erosion mode; vascular scaffold wall stress, buckling, flow and wall shear stress; biocompatibility evidence and the unit of analysis; cells for a scaffold (seeding, doublings, passages and a volume check); and reading a failure in a degrading vascular scaffold, which prepares the course case.
+- **Virtual lab 1**: a synthetic degradation time course (seven time points, three specimens each, 21 rows) with molar mass, mass and modulus. Eight items (a 20-cell summary upload, bonds cleaved, a rate constant, a modulus half-time with an interpretation, a time to a threshold, the first day of mass loss, a structured item and a multiple-select item), four cards and a week-12 practice assessment.
+- **Review record:** [biomaterials-0.3.0.md](reviews/ai-assisted/biomaterials-0.3.0.md). All 59 numeric keys in the package, including the 10 that predate this pass, agree with independent recalculation, as do the lab keys against its CSV and the numbers the lessons quote without asking for them. All 63 new items earn full credit under the real grader on the first run. Seven drafting problems were found and fixed before the commit, including a rate constant that would have given a wrong sense of the time scale.
+- Tests: 64 recalculation and statement checks for biomaterials; the schedule, the no-protocol statements, the syllabus outcomes and the lab keys against its CSV have tests; the inventory pins moved to 241 lessons, 989 questions and 704 cards.
+
+| Command/check (this container, Python 3.12.3, 2026-10-08) | Result |
+| --- | --- |
+| `python tools/validate_content.py` | PASS: 25 packages, 241 lessons, 989 questions, 704 cards, 25 cases; 0 errors; 98 disclosed legacy-depth warnings |
+| `verify.sh` | see the PROGRESS.md entry for this pass |
+
+Not run: frontend checks, Docker Compose, Playwright for this pass. Not reviewed by a person.
+
+## Previous increment: statistics gets a proposed 14-week schedule, seven lessons and a nested-design lab (2026-10-08, eighteenth pass)
 
 Written by an AI coding assistant. Probability, Biostatistics & Experimental Design moves from 0.3.2 to 0.4.0 and stays `partial`, unreviewed and formative-only.
 

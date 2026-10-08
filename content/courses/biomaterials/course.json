@@ -7,7 +7,7 @@
   "domain": "Bioengineering",
   "level": "Year 3",
   "maturity": "partial",
-  "version": "0.2.2",
+  "version": "0.3.0",
   "license": "MIT OR CC-BY-4.0",
   "content_origin": {
     "kind": "legacy-prototype",
@@ -153,12 +153,364 @@
         "biomaterials-outcome-2",
         "biomaterials-outcome-4"
       ]
+    },
+    {
+      "id": "biomaterials-7-objective-1",
+      "description": "Use Young's equation and the work of adhesion to compare the wettability of surfaces.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "biomaterials-outcome-1"
+      ]
+    },
+    {
+      "id": "biomaterials-7-objective-2",
+      "description": "Apply the Langmuir isotherm and a molecular footprint to compute coverage, the concentration for a target coverage and the monolayer capacity.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "biomaterials-outcome-1",
+        "biomaterials-outcome-2"
+      ]
+    },
+    {
+      "id": "biomaterials-7-objective-3",
+      "description": "Estimate diffusion-limited protein arrival and evaluate what a measurement of adsorbed protein does and does not show.",
+      "bloom": "evaluate",
+      "course_outcome_ids": [
+        "biomaterials-outcome-1",
+        "biomaterials-outcome-4"
+      ]
+    },
+    {
+      "id": "biomaterials-8-objective-1",
+      "description": "Relate a gel's shear modulus to the density of elastically active chains and the molar mass between crosslinks using ideal rubber elasticity.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "biomaterials-outcome-1",
+        "biomaterials-outcome-2"
+      ]
+    },
+    {
+      "id": "biomaterials-8-objective-2",
+      "description": "Estimate the mesh size from the modulus and how it changes when crosslinks are lost.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "biomaterials-outcome-2"
+      ]
+    },
+    {
+      "id": "biomaterials-8-objective-3",
+      "description": "Compare the size of a cargo with the mesh size to judge diffusion hindrance, and evaluate the limits of the ideal-network picture.",
+      "bloom": "evaluate",
+      "course_outcome_ids": [
+        "biomaterials-outcome-1",
+        "biomaterials-outcome-2",
+        "biomaterials-outcome-4"
+      ]
+    },
+    {
+      "id": "biomaterials-9-objective-1",
+      "description": "Compute the fraction of bonds cleaved and the number-average molar mass for random chain scission.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "biomaterials-outcome-1",
+        "biomaterials-outcome-2"
+      ]
+    },
+    {
+      "id": "biomaterials-9-objective-2",
+      "description": "Estimate when chains become small enough to dissolve and the mass remaining under a lag model.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "biomaterials-outcome-2"
+      ]
+    },
+    {
+      "id": "biomaterials-9-objective-3",
+      "description": "Classify erosion as bulk or surface using a critical thickness and evaluate which measurements show degradation.",
+      "bloom": "evaluate",
+      "course_outcome_ids": [
+        "biomaterials-outcome-1",
+        "biomaterials-outcome-4"
+      ]
+    },
+    {
+      "id": "biomaterials-10-objective-1",
+      "description": "Compute hoop stress, strain and pulsatile distension of a thin-walled tube from pressure, radius, thickness and modulus.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "biomaterials-outcome-2"
+      ]
+    },
+    {
+      "id": "biomaterials-10-objective-2",
+      "description": "Estimate the external pressure at which a tube buckles, and when a degrading wall falls below a given load.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "biomaterials-outcome-2",
+        "biomaterials-outcome-1"
+      ]
+    },
+    {
+      "id": "biomaterials-10-objective-3",
+      "description": "Compute how narrowing changes flow and wall shear stress, and evaluate what these numbers do and do not show.",
+      "bloom": "evaluate",
+      "course_outcome_ids": [
+        "biomaterials-outcome-2",
+        "biomaterials-outcome-4"
+      ]
+    },
+    {
+      "id": "biomaterials-11-objective-1",
+      "description": "Compute relative viability from an extract test and judge it against a criterion fixed in advance.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "biomaterials-outcome-4"
+      ]
+    },
+    {
+      "id": "biomaterials-11-objective-2",
+      "description": "Identify the independent unit in in vitro and in vivo comparisons and analyze animal-level data.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "biomaterials-outcome-4",
+        "biomaterials-outcome-1"
+      ]
+    },
+    {
+      "id": "biomaterials-11-objective-3",
+      "description": "Estimate how a fibrous capsule limits exchange and evaluate what each layer of evidence can and cannot support.",
+      "bloom": "evaluate",
+      "course_outcome_ids": [
+        "biomaterials-outcome-1",
+        "biomaterials-outcome-4"
+      ]
+    },
+    {
+      "id": "biomaterials-12-objective-1",
+      "description": "Compute the number of cells a construct needs and the number to seed given an attachment efficiency.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "biomaterials-outcome-3"
+      ]
+    },
+    {
+      "id": "biomaterials-12-objective-2",
+      "description": "Compute the population doublings, expansion time and passages needed to reach that number from a starting sample.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "biomaterials-outcome-3"
+      ]
+    },
+    {
+      "id": "biomaterials-12-objective-3",
+      "description": "Check feasibility against volume and time, and evaluate how donor variation and expansion limits affect a cell-based strategy.",
+      "bloom": "evaluate",
+      "course_outcome_ids": [
+        "biomaterials-outcome-3",
+        "biomaterials-outcome-4"
+      ]
+    },
+    {
+      "id": "biomaterials-lab-01-objective-1",
+      "description": "Summarize replicate specimens by time point for molar mass, mass and modulus.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "biomaterials-outcome-2"
+      ]
+    },
+    {
+      "id": "biomaterials-lab-01-objective-2",
+      "description": "Estimate the fraction of bonds cleaved, the scission rate constant and the exponential rate of modulus loss from time-course means.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "biomaterials-outcome-1",
+        "biomaterials-outcome-2"
+      ]
+    },
+    {
+      "id": "biomaterials-lab-01-objective-3",
+      "description": "Compare the time courses of molar mass, mass and modulus and state which measurement predicts the period of mechanical support.",
+      "bloom": "evaluate",
+      "course_outcome_ids": [
+        "biomaterials-outcome-1",
+        "biomaterials-outcome-2",
+        "biomaterials-outcome-4"
+      ]
+    },
+    {
+      "id": "biomaterials-13-objective-1",
+      "description": "Quantify how a measured narrowing changes lumen area, flow and wall shear stress.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "biomaterials-outcome-2"
+      ]
+    },
+    {
+      "id": "biomaterials-13-objective-2",
+      "description": "Test whether mechanical collapse, a chemical effect or a biological response could account for the narrowing, using the models of the previous lessons.",
+      "bloom": "analyze",
+      "course_outcome_ids": [
+        "biomaterials-outcome-1",
+        "biomaterials-outcome-2",
+        "biomaterials-outcome-4"
+      ]
+    },
+    {
+      "id": "biomaterials-13-objective-3",
+      "description": "Design a set of measurements, controls and a functional end point that separates the three explanations.",
+      "bloom": "create",
+      "course_outcome_ids": [
+        "biomaterials-outcome-3",
+        "biomaterials-outcome-4"
+      ]
     }
   ],
   "duration": {
-    "instructional_weeks": null,
-    "equivalent_structure": null,
-    "weeks": []
+    "instructional_weeks": 14,
+    "equivalent_structure": "Proposed 14-week undergraduate scope only. The four compact prototype units sit in weeks 1, 3, 9 and 13 beside original lessons on protein adsorption, hydrogel networks, porous scaffolds, degradation and release, chain scission and erosion, vascular scaffold mechanics, cell numbers and expansion, and biocompatibility evidence; week 12 is a synthetic-data lab on a degradation time course and week 14 a lesson on reading a failure in a degrading vascular scaffold, which prepares the course case. All activities are open, ungraded practice. There are no graded homework sets, exams or project, and workload has not been measured, so this schedule is not evidence of semester equivalence.",
+    "weeks": [
+      {
+        "week": 1,
+        "title": "Material properties at the biological interface",
+        "lesson_ids": [
+          "biomaterials-1"
+        ],
+        "assessment_ids": [
+          "biomaterials-1-practice"
+        ]
+      },
+      {
+        "week": 2,
+        "title": "Protein adsorption: wettability, coverage and the layer that cells actually meet",
+        "lesson_ids": [
+          "biomaterials-7"
+        ],
+        "assessment_ids": [
+          "biomaterials-7-practice"
+        ]
+      },
+      {
+        "week": 3,
+        "title": "Scaffold architecture, degradation and mechanics",
+        "lesson_ids": [
+          "biomaterials-2"
+        ],
+        "assessment_ids": [
+          "biomaterials-2-practice"
+        ]
+      },
+      {
+        "week": 4,
+        "title": "Hydrogel networks: stiffness, crosslink density and mesh size",
+        "lesson_ids": [
+          "biomaterials-8"
+        ],
+        "assessment_ids": [
+          "biomaterials-8-practice"
+        ]
+      },
+      {
+        "week": 5,
+        "title": "Porous scaffolds: porosity, stiffness and permeability",
+        "lesson_ids": [
+          "biomaterials-6"
+        ],
+        "assessment_ids": [
+          "biomaterials-6-practice"
+        ]
+      },
+      {
+        "week": 6,
+        "title": "Degradation and release from hydrogels: half-lives and diffusion times",
+        "lesson_ids": [
+          "biomaterials-5"
+        ],
+        "assessment_ids": [
+          "biomaterials-5-practice"
+        ]
+      },
+      {
+        "week": 7,
+        "title": "Polymer degradation by chain scission: molecular weight, mass loss and erosion mode",
+        "lesson_ids": [
+          "biomaterials-9"
+        ],
+        "assessment_ids": [
+          "biomaterials-9-practice"
+        ]
+      },
+      {
+        "week": 8,
+        "title": "Vascular scaffolds: wall stress, collapse, compliance and wall shear stress",
+        "lesson_ids": [
+          "biomaterials-10"
+        ],
+        "assessment_ids": [
+          "biomaterials-10-practice"
+        ]
+      },
+      {
+        "week": 9,
+        "title": "Cells, signals and tissue-specific strategies",
+        "lesson_ids": [
+          "biomaterials-3"
+        ],
+        "assessment_ids": [
+          "biomaterials-3-practice"
+        ]
+      },
+      {
+        "week": 10,
+        "title": "Cells for a scaffold: how many are needed and what expansion costs",
+        "lesson_ids": [
+          "biomaterials-12"
+        ],
+        "assessment_ids": [
+          "biomaterials-12-practice"
+        ]
+      },
+      {
+        "week": 11,
+        "title": "Biocompatibility evidence: extract tests, the host response and the unit of analysis",
+        "lesson_ids": [
+          "biomaterials-11"
+        ],
+        "assessment_ids": [
+          "biomaterials-11-practice"
+        ]
+      },
+      {
+        "week": 12,
+        "title": "Virtual lab: degradation time course of a synthetic scaffold",
+        "lesson_ids": [
+          "biomaterials-lab-01"
+        ],
+        "assessment_ids": [
+          "biomaterials-week12-degradation-lab"
+        ]
+      },
+      {
+        "week": 13,
+        "title": "Translation, biocompatibility and failure analysis",
+        "lesson_ids": [
+          "biomaterials-4"
+        ],
+        "assessment_ids": [
+          "biomaterials-4-practice"
+        ]
+      },
+      {
+        "week": 14,
+        "title": "Reading a failure in a degrading vascular scaffold",
+        "lesson_ids": [
+          "biomaterials-13"
+        ],
+        "assessment_ids": [
+          "biomaterials-13-practice",
+          "biomaterials-case"
+        ]
+      }
+    ]
   },
   "workload": {
     "estimated_total_hours": null,
@@ -347,6 +699,301 @@
           ]
         }
       ]
+    },
+    {
+      "id": "biomaterials-module-7",
+      "title": "Protein adsorption and surface coverage",
+      "source_ids": [
+        "biomaterials",
+        "tissueEngineering"
+      ],
+      "lessons": [
+        {
+          "id": "biomaterials-7",
+          "title": "Protein adsorption: wettability, coverage and the layer that cells actually meet",
+          "reading": "modules/07-protein-adsorption-wettability-and-coverage.md",
+          "objectives": [
+            "biomaterials-7-objective-1",
+            "biomaterials-7-objective-2",
+            "biomaterials-7-objective-3"
+          ],
+          "worked_example": "A synthetic 45 kDa protein with a 30 nm² side-on footprint holds 2.49 mg/m²; at 0.3 mg/mL with K_d 0.1 mg/mL it covers 75% (1.87 mg/m²), reached by diffusion alone in 0.38 s; a surface with θ = 65° has work of adhesion 102.4 mN/m, and a concentrated solution fills a surface within seconds, so later change is rearrangement or competition.",
+          "question_ids": [
+            "biomaterials-7:work-of-adhesion",
+            "biomaterials-7:contact-angle",
+            "biomaterials-7:coverage",
+            "biomaterials-7:concentration-for-90",
+            "biomaterials-7:monolayer-capacity",
+            "biomaterials-7:arrival-time",
+            "biomaterials-7:arrival-ratio",
+            "biomaterials-7:adsorption-statements"
+          ],
+          "card_ids": [
+            "biomaterials-7-card-1",
+            "biomaterials-7-card-2",
+            "biomaterials-7-card-3",
+            "biomaterials-7-card-4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "biomaterials-module-8",
+      "title": "Hydrogel networks",
+      "source_ids": [
+        "biomaterials",
+        "tissueEngineering"
+      ],
+      "lessons": [
+        {
+          "id": "biomaterials-8",
+          "title": "Hydrogel networks: stiffness, crosslink density and mesh size",
+          "reading": "modules/08-hydrogel-networks-modulus-and-mesh-size.md",
+          "objectives": [
+            "biomaterials-8-objective-1",
+            "biomaterials-8-objective-2",
+            "biomaterials-8-objective-3"
+          ],
+          "worked_example": "A synthetic gel with G = 30 kPa at 310 K and 150 kg/m³ polymer has ν = 11.64 mol/m³, Mc = 12.9 kg/mol, E ≈ 90 kPa and a mesh of 5.23 nm; the 12 kPa gel has a 7.1 nm mesh that grows to 8.4 nm when 40% of its chains are cleaved.",
+          "question_ids": [
+            "biomaterials-8:youngs-modulus",
+            "biomaterials-8:chain-density",
+            "biomaterials-8:molar-mass-between-crosslinks",
+            "biomaterials-8:mesh-size",
+            "biomaterials-8:mesh-after-doubling",
+            "biomaterials-8:mesh-after-loss",
+            "biomaterials-8:free-diffusion",
+            "biomaterials-8:network-statements"
+          ],
+          "card_ids": [
+            "biomaterials-8-card-1",
+            "biomaterials-8-card-2",
+            "biomaterials-8-card-3",
+            "biomaterials-8-card-4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "biomaterials-module-9",
+      "title": "Chain scission and erosion",
+      "source_ids": [
+        "biomaterials",
+        "tissueEngineering"
+      ],
+      "lessons": [
+        {
+          "id": "biomaterials-9",
+          "title": "Polymer degradation by chain scission: molecular weight, mass loss and erosion mode",
+          "reading": "modules/09-polymer-chain-scission-molecular-weight-and-erosion.md",
+          "objectives": [
+            "biomaterials-9-objective-1",
+            "biomaterials-9-objective-2",
+            "biomaterials-9-objective-3"
+          ],
+          "worked_example": "A synthetic 60 kDa polymer with k = 0.0004 per day falls to 4.5 kDa by day 30 (1.2% of bonds cleaved) while its mass is unchanged, and mass loss begins at about day 34 when chains drop below 4 kDa; the 100 kDa polymer in the lesson reaches 5 kDa at 68.9 days, and its critical thickness for bulk versus surface erosion is 6.7 mm.",
+          "question_ids": [
+            "biomaterials-9:bonds-cleaved",
+            "biomaterials-9:molar-mass",
+            "biomaterials-9:onset-time",
+            "biomaterials-9:cleaved-at-onset",
+            "biomaterials-9:mass-at-100",
+            "biomaterials-9:critical-thickness",
+            "biomaterials-9:erosion-mode",
+            "biomaterials-9:measurement-statements"
+          ],
+          "card_ids": [
+            "biomaterials-9-card-1",
+            "biomaterials-9-card-2",
+            "biomaterials-9-card-3",
+            "biomaterials-9-card-4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "biomaterials-module-10",
+      "title": "Vascular scaffold mechanics",
+      "source_ids": [
+        "biomaterials",
+        "tissueEngineering"
+      ],
+      "lessons": [
+        {
+          "id": "biomaterials-10",
+          "title": "Vascular scaffolds: wall stress, collapse, compliance and wall shear stress",
+          "reading": "modules/10-vascular-scaffold-wall-stress-collapse-and-shear.md",
+          "objectives": [
+            "biomaterials-10-objective-1",
+            "biomaterials-10-objective-2",
+            "biomaterials-10-objective-3"
+          ],
+          "worked_example": "A synthetic tube with R = 1.5 mm, h = 0.30 mm and E = 1.5 MPa at 100 mmHg has hoop stress 66.7 kPa and strain 0.044, buckles at 24.7 mmHg, and a drop in radius from 1.5 to 1.2 mm leaves 41% of the flow at fixed pressure drop and multiplies shear stress by 1.95 at fixed flow.",
+          "question_ids": [
+            "biomaterials-10:hoop-stress",
+            "biomaterials-10:pulse-strain",
+            "biomaterials-10:buckling-pressure",
+            "biomaterials-10:thin-wall-buckling",
+            "biomaterials-10:time-to-threshold",
+            "biomaterials-10:relative-flow",
+            "biomaterials-10:wall-shear-after",
+            "biomaterials-10:mechanics-statements"
+          ],
+          "card_ids": [
+            "biomaterials-10-card-1",
+            "biomaterials-10-card-2",
+            "biomaterials-10-card-3",
+            "biomaterials-10-card-4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "biomaterials-module-11",
+      "title": "Biocompatibility evidence",
+      "source_ids": [
+        "biomaterials",
+        "tissueEngineering"
+      ],
+      "lessons": [
+        {
+          "id": "biomaterials-11",
+          "title": "Biocompatibility evidence: extract tests, the host response and the unit of analysis",
+          "reading": "modules/11-biocompatibility-evidence-and-the-unit-of-analysis.md",
+          "objectives": [
+            "biomaterials-11-objective-1",
+            "biomaterials-11-objective-2",
+            "biomaterials-11-objective-3"
+          ],
+          "worked_example": "A synthetic extract with control absorbance 0.85 and extract absorbance 0.57 gives 67.1% viability and fails a prior 70% criterion; five animals per group with capsule means of 66.6 and 64.0 μm give t = 0.42 on 8 degrees of freedom, and a capsule 100 μm thick passes a solute at one fifth the flux of a 20 μm capsule.",
+          "question_ids": [
+            "biomaterials-11:relative-viability",
+            "biomaterials-11:independent-units",
+            "biomaterials-11:criterion-decision",
+            "biomaterials-11:capsule-difference",
+            "biomaterials-11:animal-level-t",
+            "biomaterials-11:capsule-permeability",
+            "biomaterials-11:flux-ratio",
+            "biomaterials-11:evidence-statements"
+          ],
+          "card_ids": [
+            "biomaterials-11-card-1",
+            "biomaterials-11-card-2",
+            "biomaterials-11-card-3",
+            "biomaterials-11-card-4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "biomaterials-module-12",
+      "title": "Cells for a scaffold",
+      "source_ids": [
+        "biomaterials",
+        "tissueEngineering"
+      ],
+      "lessons": [
+        {
+          "id": "biomaterials-12",
+          "title": "Cells for a scaffold: how many are needed, how much expansion that costs and whether it fits",
+          "reading": "modules/12-cells-for-a-scaffold-seeding-and-expansion.md",
+          "objectives": [
+            "biomaterials-12-objective-1",
+            "biomaterials-12-objective-2",
+            "biomaterials-12-objective-3"
+          ],
+          "worked_example": "A synthetic 0.5 mL construct at 2.0 × 10⁷ cells/mL with 50% seeding efficiency needs 2.0 × 10⁷ cells seeded, which takes 6.64 doublings from 2.0 × 10⁵ cells (13.3 days at 48 h per doubling and 5 passages at a 1:3 split); the 2.0 mL construct in the lesson needs 1.67 × 10⁸ cells, 8.38 doublings and 5 passages, and seeding all of them at once would fill 17% of its volume.",
+          "question_ids": [
+            "biomaterials-12:cells-needed",
+            "biomaterials-12:cells-to-seed",
+            "biomaterials-12:doublings",
+            "biomaterials-12:expansion-days",
+            "biomaterials-12:passages",
+            "biomaterials-12:volume-fraction",
+            "biomaterials-12:extra-days",
+            "biomaterials-12:feasibility-statements"
+          ],
+          "card_ids": [
+            "biomaterials-12-card-1",
+            "biomaterials-12-card-2",
+            "biomaterials-12-card-3",
+            "biomaterials-12-card-4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "biomaterials-module-lab-01",
+      "title": "Virtual laboratory: degradation time course",
+      "source_ids": [
+        "biomaterials",
+        "tissueEngineering"
+      ],
+      "lessons": [
+        {
+          "id": "biomaterials-lab-01",
+          "title": "Virtual lab 1: degradation time course of a synthetic scaffold",
+          "reading": "labs/01-degradation-time-course-of-a-synthetic-scaffold.md",
+          "objectives": [
+            "biomaterials-lab-01-objective-1",
+            "biomaterials-lab-01-objective-2",
+            "biomaterials-lab-01-objective-3"
+          ],
+          "worked_example": "The synthetic scaffold's mean molar mass falls from 100 to 11.4 kDa by day 28 (0.56% of bonds cleaved, k = 0.00020 per day) and its modulus halves every 35 days while the mass is still 100% at day 56; mass first falls below 95% at day 84, so mass alone overestimates the period of support.",
+          "question_ids": [
+            "biomaterials-lab1:time-course-summary",
+            "biomaterials-lab1:fraction-cleaved",
+            "biomaterials-lab1:scission-rate-constant",
+            "biomaterials-lab1:modulus-half-time",
+            "biomaterials-lab1:support-threshold",
+            "biomaterials-lab1:first-mass-loss",
+            "biomaterials-lab1:time-course-reasoning",
+            "biomaterials-lab1:supported-conclusions"
+          ],
+          "card_ids": [
+            "biomaterials-lab1-0",
+            "biomaterials-lab1-1",
+            "biomaterials-lab1-2",
+            "biomaterials-lab1-3"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "biomaterials-module-13",
+      "title": "Reading a scaffold failure",
+      "source_ids": [
+        "biomaterials",
+        "tissueEngineering"
+      ],
+      "lessons": [
+        {
+          "id": "biomaterials-13",
+          "title": "Reading a failure: mechanics, chemistry and biology in a degrading vascular scaffold",
+          "reading": "modules/13-reading-a-failure-in-a-degrading-vascular-scaffold.md",
+          "objectives": [
+            "biomaterials-13-objective-1",
+            "biomaterials-13-objective-2",
+            "biomaterials-13-objective-3"
+          ],
+          "worked_example": "A synthetic vascular scaffold whose lumen narrows from 1.8 to 1.4 mm loses 40% of its lumen area and 63% of its flow at fixed pressure drop and its wall shear rises 2.13-fold at fixed flow; its buckling pressure falls to 9.9 mmHg by day 60, a local pH of 7.05 is possible in a poorly perfused wall, and a matched non-degrading control, lumen shape and flow end point are needed to separate collapse, chemistry and tissue growth.",
+          "question_ids": [
+            "biomaterials-13:lumen-area-loss",
+            "biomaterials-13:flow-fraction",
+            "biomaterials-13:shear-factor",
+            "biomaterials-13:buckling-day-60",
+            "biomaterials-13:local-ph",
+            "biomaterials-13:separating-design",
+            "biomaterials-13:failure-statements"
+          ],
+          "card_ids": [
+            "biomaterials-13-card-1",
+            "biomaterials-13-card-2",
+            "biomaterials-13-card-3",
+            "biomaterials-13-card-4"
+          ]
+        }
+      ]
     }
   ],
   "assessments": [
@@ -460,6 +1107,213 @@
       "points": 6
     },
     {
+      "id": "biomaterials-7-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Protein adsorption and surface coverage practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "biomaterials-7-objective-1",
+        "biomaterials-7-objective-2",
+        "biomaterials-7-objective-3",
+        "biomaterials-outcome-1",
+        "biomaterials-outcome-2",
+        "biomaterials-outcome-4"
+      ],
+      "question_ids": [
+        "biomaterials-7:work-of-adhesion",
+        "biomaterials-7:contact-angle",
+        "biomaterials-7:coverage",
+        "biomaterials-7:concentration-for-90",
+        "biomaterials-7:monolayer-capacity",
+        "biomaterials-7:arrival-time",
+        "biomaterials-7:arrival-ratio",
+        "biomaterials-7:adsorption-statements"
+      ],
+      "points": 9
+    },
+    {
+      "id": "biomaterials-8-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Hydrogel networks practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "biomaterials-8-objective-1",
+        "biomaterials-8-objective-2",
+        "biomaterials-8-objective-3",
+        "biomaterials-outcome-1",
+        "biomaterials-outcome-2",
+        "biomaterials-outcome-4"
+      ],
+      "question_ids": [
+        "biomaterials-8:youngs-modulus",
+        "biomaterials-8:chain-density",
+        "biomaterials-8:molar-mass-between-crosslinks",
+        "biomaterials-8:mesh-size",
+        "biomaterials-8:mesh-after-doubling",
+        "biomaterials-8:mesh-after-loss",
+        "biomaterials-8:free-diffusion",
+        "biomaterials-8:network-statements"
+      ],
+      "points": 9
+    },
+    {
+      "id": "biomaterials-9-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Chain scission and erosion practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "biomaterials-9-objective-1",
+        "biomaterials-9-objective-2",
+        "biomaterials-9-objective-3",
+        "biomaterials-outcome-1",
+        "biomaterials-outcome-2",
+        "biomaterials-outcome-4"
+      ],
+      "question_ids": [
+        "biomaterials-9:bonds-cleaved",
+        "biomaterials-9:molar-mass",
+        "biomaterials-9:onset-time",
+        "biomaterials-9:cleaved-at-onset",
+        "biomaterials-9:mass-at-100",
+        "biomaterials-9:critical-thickness",
+        "biomaterials-9:erosion-mode",
+        "biomaterials-9:measurement-statements"
+      ],
+      "points": 9
+    },
+    {
+      "id": "biomaterials-10-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Vascular scaffold mechanics practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "biomaterials-10-objective-1",
+        "biomaterials-10-objective-2",
+        "biomaterials-10-objective-3",
+        "biomaterials-outcome-1",
+        "biomaterials-outcome-2",
+        "biomaterials-outcome-4"
+      ],
+      "question_ids": [
+        "biomaterials-10:hoop-stress",
+        "biomaterials-10:pulse-strain",
+        "biomaterials-10:buckling-pressure",
+        "biomaterials-10:thin-wall-buckling",
+        "biomaterials-10:time-to-threshold",
+        "biomaterials-10:relative-flow",
+        "biomaterials-10:wall-shear-after",
+        "biomaterials-10:mechanics-statements"
+      ],
+      "points": 9
+    },
+    {
+      "id": "biomaterials-11-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Biocompatibility evidence practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "biomaterials-11-objective-1",
+        "biomaterials-11-objective-2",
+        "biomaterials-11-objective-3",
+        "biomaterials-outcome-1",
+        "biomaterials-outcome-4"
+      ],
+      "question_ids": [
+        "biomaterials-11:relative-viability",
+        "biomaterials-11:independent-units",
+        "biomaterials-11:criterion-decision",
+        "biomaterials-11:capsule-difference",
+        "biomaterials-11:animal-level-t",
+        "biomaterials-11:capsule-permeability",
+        "biomaterials-11:flux-ratio",
+        "biomaterials-11:evidence-statements"
+      ],
+      "points": 9
+    },
+    {
+      "id": "biomaterials-12-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Cells for a scaffold practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "biomaterials-12-objective-1",
+        "biomaterials-12-objective-2",
+        "biomaterials-12-objective-3",
+        "biomaterials-outcome-3",
+        "biomaterials-outcome-4"
+      ],
+      "question_ids": [
+        "biomaterials-12:cells-needed",
+        "biomaterials-12:cells-to-seed",
+        "biomaterials-12:doublings",
+        "biomaterials-12:expansion-days",
+        "biomaterials-12:passages",
+        "biomaterials-12:volume-fraction",
+        "biomaterials-12:extra-days",
+        "biomaterials-12:feasibility-statements"
+      ],
+      "points": 9
+    },
+    {
+      "id": "biomaterials-13-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Reading a scaffold failure practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "biomaterials-13-objective-1",
+        "biomaterials-13-objective-2",
+        "biomaterials-13-objective-3",
+        "biomaterials-outcome-1",
+        "biomaterials-outcome-2",
+        "biomaterials-outcome-3",
+        "biomaterials-outcome-4"
+      ],
+      "question_ids": [
+        "biomaterials-13:lumen-area-loss",
+        "biomaterials-13:flow-fraction",
+        "biomaterials-13:shear-factor",
+        "biomaterials-13:buckling-day-60",
+        "biomaterials-13:local-ph",
+        "biomaterials-13:separating-design",
+        "biomaterials-13:failure-statements"
+      ],
+      "points": 10
+    },
+    {
+      "id": "biomaterials-week12-degradation-lab",
+      "type": "lab",
+      "mode": "practice",
+      "title": "Virtual lab 1: degradation time course of a synthetic scaffold (ungraded practice)",
+      "path": "question-banks/practice.json",
+      "week": 12,
+      "objective_ids": [
+        "biomaterials-lab-01-objective-1",
+        "biomaterials-lab-01-objective-2",
+        "biomaterials-lab-01-objective-3",
+        "biomaterials-outcome-1",
+        "biomaterials-outcome-2",
+        "biomaterials-outcome-4"
+      ],
+      "question_ids": [
+        "biomaterials-lab1:time-course-summary",
+        "biomaterials-lab1:fraction-cleaved",
+        "biomaterials-lab1:scission-rate-constant",
+        "biomaterials-lab1:modulus-half-time",
+        "biomaterials-lab1:support-threshold",
+        "biomaterials-lab1:first-mass-loss",
+        "biomaterials-lab1:time-course-reasoning",
+        "biomaterials-lab1:supported-conclusions"
+      ],
+      "points": 31
+    },
+    {
       "id": "biomaterials-case",
       "type": "case",
       "mode": "self-assessment",
@@ -521,18 +1375,24 @@
       "version": "0.2.2",
       "date": "2026-10-08",
       "summary": "Added a common-mistakes section to 2 original lessons that lacked one (biomaterials-5, biomaterials-6); each bullet names a mistake that the lesson's own text addresses. No answer key, tolerance or objective changed. The package remains partial, unreviewed and formative-only."
+    },
+    {
+      "version": "0.3.0",
+      "date": "2026-10-08",
+      "summary": "Added a proposed 14-week schedule; seven original lessons (protein adsorption, wettability and surface coverage; hydrogel networks, modulus and mesh size; polymer chain scission, molecular weight and erosion mode; vascular scaffold wall stress, buckling, flow and wall shear stress; cells for a scaffold, seeding and expansion; biocompatibility evidence and the unit of analysis; and reading a failure in a degrading vascular scaffold, which prepares the course case); and a synthetic-data degradation time-course lab. No new references were added. All activities remain ungraded practice; the package remains partial and unreviewed, gives no laboratory protocol or medical advice, and makes no claim about any material, device, cell line or person."
     }
   ],
   "limitations": [
-    "Four compact legacy units are preserved; this package is not equivalent to a full university semester.",
-    "There is no authored 12–15 week schedule, substantive homework sequence, laboratory sequence, midterm, cumulative final, or graded integrative project.",
-    "Practice items are short formative checks (two per prototype unit and six per original lesson); they do not demonstrate comprehensive outcome coverage or mastery, and objective associations remain provisional.",
+    "Four compact legacy units are preserved beside ten original readings, including one synthetic-data virtual lab; this package is not equivalent to a full university semester.",
+    "A proposed 14-week schedule exists but is unmeasured and unreviewed. There is one synthetic-data virtual lab and no substantive homework sequence, laboratory sequence, midterm, cumulative final, or graded integrative project.",
+    "Practice items are short formative checks (two per prototype unit and six to eight per original lesson); they do not demonstrate comprehensive outcome coverage or mastery, and objective associations remain provisional.",
     "Bloom labels and structured prerequisite edges are initial authoring classifications awaiting subject-matter review.",
     "Question answers and solution feedback are intentionally public practice authoring specifications, not restricted exam keys.",
-    "Of the 10 numerical answers in this package, nine require a unit, none checks significant figures and none checks dimensions; the others accept a number within a stated tolerance, with the unit optional.",
-    "Total workload and weekly duration are unknown; former nominal credit values and hardcoded reading times do not establish workload."
+    "Of the 60 numerical answers in this package, 23 require a unit, one checks significant figures and none checks dimensions; the others accept a number within a stated tolerance, with the unit optional.",
+    "Total workload and weekly duration are unknown; former nominal credit values and hardcoded reading times do not establish workload.",
+    "All materials, cells, animals and numbers are synthetic teaching examples; this package gives no laboratory protocols or medical advice and says nothing about any real material, device, cell line or person. The formulas are first-order textbook estimates, not design methods."
   ],
   "intentionally_omitted": [
-    "Full instructional sequence and summative assessments are not authored yet; the original lessons extend a partial package."
+    "Graded assessments and a laboratory sequence are not authored yet (one synthetic-data virtual lab exists); the original lessons extend a partial package."
   ]
 }

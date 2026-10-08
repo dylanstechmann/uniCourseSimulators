@@ -82,6 +82,110 @@
       "original_content": true,
       "license": "CC-BY-4.0",
       "modifications": []
+    },
+    {
+      "module_id": "biomaterials-module-7",
+      "lesson_id": "biomaterials-7",
+      "reading": "modules/07-protein-adsorption-wettability-and-coverage.md",
+      "source_ids": [
+        "biomaterials",
+        "tissueEngineering"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "biomaterials-module-8",
+      "lesson_id": "biomaterials-8",
+      "reading": "modules/08-hydrogel-networks-modulus-and-mesh-size.md",
+      "source_ids": [
+        "biomaterials",
+        "tissueEngineering"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "biomaterials-module-9",
+      "lesson_id": "biomaterials-9",
+      "reading": "modules/09-polymer-chain-scission-molecular-weight-and-erosion.md",
+      "source_ids": [
+        "biomaterials",
+        "tissueEngineering"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "biomaterials-module-10",
+      "lesson_id": "biomaterials-10",
+      "reading": "modules/10-vascular-scaffold-wall-stress-collapse-and-shear.md",
+      "source_ids": [
+        "biomaterials",
+        "tissueEngineering"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "biomaterials-module-11",
+      "lesson_id": "biomaterials-11",
+      "reading": "modules/11-biocompatibility-evidence-and-the-unit-of-analysis.md",
+      "source_ids": [
+        "biomaterials",
+        "tissueEngineering"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "biomaterials-module-12",
+      "lesson_id": "biomaterials-12",
+      "reading": "modules/12-cells-for-a-scaffold-seeding-and-expansion.md",
+      "source_ids": [
+        "biomaterials",
+        "tissueEngineering"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "biomaterials-module-lab-01",
+      "lesson_id": "biomaterials-lab-01",
+      "reading": "labs/01-degradation-time-course-of-a-synthetic-scaffold.md",
+      "source_ids": [
+        "biomaterials",
+        "tissueEngineering"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "biomaterials-module-13",
+      "lesson_id": "biomaterials-13",
+      "reading": "modules/13-reading-a-failure-in-a-degrading-vascular-scaffold.md",
+      "source_ids": [
+        "biomaterials",
+        "tissueEngineering"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
     }
   ]
 }

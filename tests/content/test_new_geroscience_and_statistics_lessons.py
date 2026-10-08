@@ -31,7 +31,7 @@ LESSONS = [("geroscience", f"geroscience-{n}") for n in range(9, 15)] + [
     ("geroscience", "geroscience-15"), ("genetics", "genetics-9"), ("biochemistry", "biochemistry-7"), ("physiology", "physiology-7"),
     ("signals-control", "signals-control-6"), ("robotics", "robotics-6"), ("geroscience", "geroscience-16"),
 ] + [("genetics", f"genetics-{n}") for n in range(10, 16)] + [("physiology", f"physiology-{n}") for n in range(8, 15)] + [("biochemistry", f"biochemistry-{n}") for n in range(8, 14)] + [
-    ("statistics", f"statistics-{n}") for n in range(9, 16)]
+    ("statistics", f"statistics-{n}") for n in range(9, 16)] + [("biomaterials", f"biomaterials-{n}") for n in range(7, 14)]
 
 
 def load(course):
@@ -382,4 +382,50 @@ def test_statistics_lab_keys_match_the_dataset_and_the_lab_is_labelled_synthetic
         assert abs(checks[(animal, "mean_value")] - sum(values) / len(values)) < 1e-4
     text = (COURSES / "statistics/labs/01-pseudoreplication-and-nested-designs.md").read_text(encoding="utf-8")
     assert "nothing here is evidence about any compound or any organism" in text
+
+
+def test_biomaterials_schedule_places_every_lesson_once_and_stays_partial():
+    manifest = load("biomaterials")
+    weeks = manifest["duration"]["weeks"]
+    assert [w["week"] for w in weeks] == list(range(1, 15))
+    scheduled = [lesson for w in weeks for lesson in w["lesson_ids"]]
+    all_lessons = [lesson["id"] for m in manifest["modules"] for lesson in m["lessons"]]
+    assert len(all_lessons) == 14
+    assert sorted(scheduled) == sorted(all_lessons) and len(scheduled) == len(set(scheduled))
+    assessments = {a["id"]: a for a in manifest["assessments"]}
+    assert all(a in assessments for w in weeks for a in w["assessment_ids"])
+    assert all(a["mode"] != "graded" for a in manifest["assessments"])
+    assert manifest["maturity"] == "partial" and manifest["review"]["status"] == "unreviewed"
+    assert manifest["grading_policy"]["mode"] == "formative-only"
+    assert "not evidence of semester equivalence" in manifest["duration"]["equivalent_structure"]
+    prototype_weeks = {lesson: w["week"] for w in weeks for lesson in w["lesson_ids"] if lesson in {f"biomaterials-{n}" for n in range(1, 5)}}
+    assert prototype_weeks == {"biomaterials-1": 1, "biomaterials-2": 3, "biomaterials-3": 9, "biomaterials-4": 13}
+    lab_week = next(w for w in weeks if "biomaterials-lab-01" in w["lesson_ids"])
+    assert lab_week["week"] == 12 and "biomaterials-week12-degradation-lab" in lab_week["assessment_ids"]
+    assert "biomaterials-case" in weeks[-1]["assessment_ids"] and "biomaterials-13" in weeks[-1]["lesson_ids"]
+
+
+def test_biomaterials_package_gives_no_protocols_or_advice_and_no_efficacy_claim():
+    manifest = load("biomaterials")
+    assert any("gives no laboratory protocols or medical advice" in item for item in manifest["limitations"])
+    limits = {
+        "11-biocompatibility-evidence-and-the-unit-of-analysis.md": "says nothing about the response of any real material in any animal or person",
+        "12-cells-for-a-scaffold-seeding-and-expansion.md": "Nothing here is a protocol or a claim about any real cell type or tissue",
+        "13-reading-a-failure-in-a-degrading-vascular-scaffold.md": "not a protocol, a safety plan or a statement about any real device or person",
+    }
+    for name, phrase in limits.items():
+        text = (COURSES / "biomaterials/modules" / name).read_text(encoding="utf-8")
+        assert phrase in text, name
+    syllabus = (COURSES / "biomaterials/syllabus.md").read_text(encoding="utf-8")
+    assert "Version: 0.3.0." in syllabus and "Proposed 14-week schedule" in syllabus
+    assert all(f"- {outcome['description']}" in syllabus for outcome in manifest["outcomes"])
+
+
+def test_biomaterials_lab_keys_match_the_dataset_and_the_lab_is_labelled_synthetic():
+    import csv
+    rows = list(csv.DictReader((COURSES / "biomaterials/labs/scaffold-degradation-time-course.csv").open(encoding="utf-8")))
+    assert len(rows) == 21 and {int(r["specimen"]) for r in rows} == {1, 2, 3}
+    text = (COURSES / "biomaterials/labs/01-degradation-time-course-of-a-synthetic-scaffold.md").read_text(encoding="utf-8")
+    assert "nothing here is evidence about any material or implant" in text
+    assert "values slightly above 100 reflect weighing variability" in text
 
