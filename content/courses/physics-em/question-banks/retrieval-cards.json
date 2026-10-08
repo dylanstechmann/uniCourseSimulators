@@ -105,6 +105,46 @@
         "physics-em-5-objective-3"
       ],
       "license": "CC-BY-4.0"
+    },
+    {
+      "id": "physics-em-6-card-1",
+      "lesson_id": "physics-em-6",
+      "front": "Lorentz force",
+      "back": "F = qv × B, magnitude qvB for perpendicular motion; does no work.",
+      "objective_ids": [
+        "physics-em-6-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "physics-em-6-card-2",
+      "lesson_id": "physics-em-6",
+      "front": "Electromagnetic flow meter",
+      "back": "ε = B d v across a conducting liquid; independent of conductivity.",
+      "objective_ids": [
+        "physics-em-6-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "physics-em-6-card-3",
+      "lesson_id": "physics-em-6",
+      "front": "Faraday and Lenz",
+      "back": "ε = −N dΦ/dt; induced current opposes the flux change.",
+      "objective_ids": [
+        "physics-em-6-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "physics-em-6-card-4",
+      "lesson_id": "physics-em-6",
+      "front": "Current limits",
+      "back": "Series R ≥ V_max/I_limit; measure leakage via V across a known resistor with a high-impedance meter.",
+      "objective_ids": [
+        "physics-em-6-objective-3"
+      ],
+      "license": "CC-BY-4.0"
     }
   ]
 }

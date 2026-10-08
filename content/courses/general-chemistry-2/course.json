@@ -7,7 +7,7 @@
   "domain": "Chemistry",
   "level": "Year 1",
   "maturity": "partial",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "license": "MIT OR CC-BY-4.0",
   "content_origin": {
     "kind": "legacy-prototype",
@@ -142,6 +142,30 @@
       "bloom": "apply",
       "course_outcome_ids": [
         "general-chemistry-2-outcome-2"
+      ]
+    },
+    {
+      "id": "general-chemistry-2-7-objective-1",
+      "description": "Use the Nernst equation to compute the actual reduction potential of a couple from its standard potential and the ratio of oxidized to reduced forms.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "general-chemistry-2-outcome-3"
+      ]
+    },
+    {
+      "id": "general-chemistry-2-7-objective-2",
+      "description": "Predict the direction of electron transfer between two couples and compute the free-energy change from their potential difference.",
+      "bloom": "analyze",
+      "course_outcome_ids": [
+        "general-chemistry-2-outcome-3"
+      ]
+    },
+    {
+      "id": "general-chemistry-2-7-objective-3",
+      "description": "Explain coordination number, geometry and ligand effects for biological metal centers, and calculate the free metal ion left after chelation.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "general-chemistry-2-outcome-4"
       ]
     }
   ],
@@ -337,6 +361,41 @@
           ]
         }
       ]
+    },
+    {
+      "id": "general-chemistry-2-module-7",
+      "title": "Redox potentials and metal centers",
+      "source_ids": [
+        "chemistry",
+        "biochemistry"
+      ],
+      "lessons": [
+        {
+          "id": "general-chemistry-2-7",
+          "title": "Redox direction and metal centers: the Nernst equation, electron flow and why ligands matter",
+          "reading": "modules/07-redox-potentials-and-metal-centers.md",
+          "objectives": [
+            "general-chemistry-2-7-objective-1",
+            "general-chemistry-2-7-objective-2",
+            "general-chemistry-2-7-objective-3"
+          ],
+          "worked_example": "At [NAD⁺]/[NADH] = 10, E = -0.2892 V; transfer to a 0.045 V acceptor has ΔE = 0.3342 V and ΔG = -64.5 kJ/mol; with K_f = 10⁷ M⁻¹, 1 mM complex and 1 mM free EDTA leave 0.1 μM free Ca²⁺.",
+          "question_ids": [
+            "general-chemistry-2-7:nernst",
+            "general-chemistry-2-7:delta-g",
+            "general-chemistry-2-7:direction",
+            "general-chemistry-2-7:heme-coordination",
+            "general-chemistry-2-7:free-calcium",
+            "general-chemistry-2-7:fe3-oxygen"
+          ],
+          "card_ids": [
+            "general-chemistry-2-7-card-1",
+            "general-chemistry-2-7-card-2",
+            "general-chemistry-2-7-card-3",
+            "general-chemistry-2-7-card-4"
+          ]
+        }
+      ]
     }
   ],
   "assessments": [
@@ -443,6 +502,27 @@
       "points": 6
     },
     {
+      "id": "general-chemistry-2-7-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Redox potentials and metal centers practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "general-chemistry-2-7-objective-1",
+        "general-chemistry-2-7-objective-2",
+        "general-chemistry-2-7-objective-3"
+      ],
+      "question_ids": [
+        "general-chemistry-2-7:nernst",
+        "general-chemistry-2-7:delta-g",
+        "general-chemistry-2-7:direction",
+        "general-chemistry-2-7:heme-coordination",
+        "general-chemistry-2-7:free-calcium",
+        "general-chemistry-2-7:fe3-oxygen"
+      ],
+      "points": 6
+    },
+    {
       "id": "general-chemistry-2-case",
       "type": "case",
       "mode": "self-assessment",
@@ -489,6 +569,11 @@
       "version": "0.2.0",
       "date": "2026-10-08",
       "summary": "Added two original lessons (buffer design, capacity and ionization of weak acids and bases; integrated rate laws, reaction order from data and Arrhenius temperature dependence) with synthetic data, formative items with computed keys and retrieval cards. The package remains partial and unreviewed."
+    },
+    {
+      "version": "0.3.0",
+      "date": "2026-10-08",
+      "summary": "Added an original lesson on the Nernst equation, electron-transfer direction, biological metal coordination and chelation with synthetic data, formative items with computed keys and retrieval cards. The package remains partial and unreviewed."
     }
   ],
   "limitations": [

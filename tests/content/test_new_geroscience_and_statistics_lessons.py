@@ -24,6 +24,9 @@ LESSONS = [("geroscience", f"geroscience-{n}") for n in range(9, 15)] + [
     ("linear-algebra", "linear-algebra-5"), ("linear-algebra", "linear-algebra-6"), ("statics-materials", "statics-materials-5"),
     ("physics-mechanics", "physics-mechanics-5"), ("physics-em", "physics-em-5"), ("circuits", "circuits-5"), ("signals-control", "signals-control-5"),
     ("calculus-3", "calculus-3-5"), ("robotics", "robotics-5"),
+    ("bioreactors", "bioreactors-6"), ("transport", "transport-6"), ("calculus-1", "calculus-1-6"), ("calculus-2", "calculus-2-6"),
+    ("calculus-3", "calculus-3-6"), ("circuits", "circuits-6"), ("general-chemistry-1", "general-chemistry-1-6"), ("general-chemistry-2", "general-chemistry-2-7"),
+    ("organic-chemistry", "organic-chemistry-6"), ("physics-em", "physics-em-6"), ("physics-mechanics", "physics-mechanics-6"), ("statics-materials", "statics-materials-6"),
 ]
 
 

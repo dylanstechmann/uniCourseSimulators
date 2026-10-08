@@ -7,7 +7,7 @@
   "domain": "Chemistry",
   "level": "Year 2",
   "maturity": "partial",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "license": "MIT OR CC-BY-4.0",
   "content_origin": {
     "kind": "legacy-prototype",
@@ -121,6 +121,31 @@
       "description": "Model the steady-state level of a nonenzymatic modification as a balance of modification and turnover, and explain why long-lived proteins accumulate damage.",
       "bloom": "evaluate",
       "course_outcome_ids": [
+        "organic-chemistry-outcome-4"
+      ]
+    },
+    {
+      "id": "organic-chemistry-6-objective-1",
+      "description": "Use substrate structure, nucleophile strength, solvent and leaving group to predict whether substitution follows SN1 or SN2, and write each rate law.",
+      "bloom": "analyze",
+      "course_outcome_ids": [
+        "organic-chemistry-outcome-2"
+      ]
+    },
+    {
+      "id": "organic-chemistry-6-objective-2",
+      "description": "Predict the stereochemical outcome at a stereocenter (inversion or racemization) and count possible stereoisomers.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "organic-chemistry-outcome-3"
+      ]
+    },
+    {
+      "id": "organic-chemistry-6-objective-3",
+      "description": "Calculate enantiomeric excess and composition from optical rotation, and explain why stereochemistry matters for biological activity.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "organic-chemistry-outcome-3",
         "organic-chemistry-outcome-4"
       ]
     }
@@ -282,6 +307,41 @@
           ]
         }
       ]
+    },
+    {
+      "id": "organic-chemistry-module-6",
+      "title": "Substitution mechanisms and stereochemistry",
+      "source_ids": [
+        "organic",
+        "chemistry"
+      ],
+      "lessons": [
+        {
+          "id": "organic-chemistry-6",
+          "title": "Substitution mechanisms and stereochemistry: predicting SN1 versus SN2 and tracking what happens at a stereocenter",
+          "reading": "modules/06-substitution-mechanisms-and-stereochemistry.md",
+          "objectives": [
+            "organic-chemistry-6-objective-1",
+            "organic-chemistry-6-objective-2",
+            "organic-chemistry-6-objective-3"
+          ],
+          "worked_example": "An SN2 rate of 2×10⁻³ × 0.1 × 0.2 = 4.0×10⁻⁵ M/s doubles when the nucleophile doubles; 3 stereocenters allow up to 8 stereoisomers; a rotation of -9.2° against -11.5° means ee = 80%, or 90:10.",
+          "question_ids": [
+            "organic-chemistry-6:mechanism-tertiary",
+            "organic-chemistry-6:sn2-rate",
+            "organic-chemistry-6:sn2-stereo",
+            "organic-chemistry-6:stereoisomers",
+            "organic-chemistry-6:enantiomeric-excess",
+            "organic-chemistry-6:major-fraction"
+          ],
+          "card_ids": [
+            "organic-chemistry-6-card-1",
+            "organic-chemistry-6-card-2",
+            "organic-chemistry-6-card-3",
+            "organic-chemistry-6-card-4"
+          ]
+        }
+      ]
     }
   ],
   "assessments": [
@@ -367,6 +427,27 @@
       "points": 6
     },
     {
+      "id": "organic-chemistry-6-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Substitution mechanisms and stereochemistry practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "organic-chemistry-6-objective-1",
+        "organic-chemistry-6-objective-2",
+        "organic-chemistry-6-objective-3"
+      ],
+      "question_ids": [
+        "organic-chemistry-6:mechanism-tertiary",
+        "organic-chemistry-6:sn2-rate",
+        "organic-chemistry-6:sn2-stereo",
+        "organic-chemistry-6:stereoisomers",
+        "organic-chemistry-6:enantiomeric-excess",
+        "organic-chemistry-6:major-fraction"
+      ],
+      "points": 6
+    },
+    {
       "id": "organic-chemistry-case",
       "type": "case",
       "mode": "self-assessment",
@@ -418,6 +499,11 @@
       "version": "0.2.0",
       "date": "2026-10-08",
       "summary": "Added an original lesson on functional groups in biomolecules (acyl reactivity, side-chain ionization, glycation and a steady-state model of modification versus turnover) with synthetic data, formative items with computed keys and retrieval cards. The package remains partial and unreviewed."
+    },
+    {
+      "version": "0.3.0",
+      "date": "2026-10-08",
+      "summary": "Added an original lesson on SN1 versus SN2 mechanisms, stereochemical outcomes and enantiomeric excess with synthetic data, formative items with computed keys and retrieval cards. The package remains partial and unreviewed."
     }
   ],
   "limitations": [

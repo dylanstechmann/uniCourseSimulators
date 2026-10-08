@@ -7,7 +7,7 @@
   "domain": "Mechanical engineering",
   "level": "Year 2",
   "maturity": "partial",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "license": "MIT OR CC-BY-4.0",
   "content_origin": {
     "kind": "legacy-prototype",
@@ -119,6 +119,32 @@
       "description": "Explain why a hollow section is more efficient in bending than a solid one of equal area, and evaluate the limits of applying beam theory to bone and implants.",
       "bloom": "evaluate",
       "course_outcome_ids": [
+        "statics-materials-outcome-3"
+      ]
+    },
+    {
+      "id": "statics-materials-6-objective-1",
+      "description": "Draw a free-body diagram for a body segment and apply force and moment equilibrium to find unknown muscle and joint forces.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "statics-materials-outcome-1"
+      ]
+    },
+    {
+      "id": "statics-materials-6-objective-2",
+      "description": "Resolve an angled muscle force into components and compute the resulting joint compression.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "statics-materials-outcome-1",
+        "statics-materials-outcome-2"
+      ]
+    },
+    {
+      "id": "statics-materials-6-objective-3",
+      "description": "Interpret mechanical advantage and evaluate how changes in geometry and load affect muscle and joint forces.",
+      "bloom": "evaluate",
+      "course_outcome_ids": [
+        "statics-materials-outcome-1",
         "statics-materials-outcome-3"
       ]
     }
@@ -280,6 +306,41 @@
           ]
         }
       ]
+    },
+    {
+      "id": "statics-materials-module-6",
+      "title": "Forearm free-body equilibrium",
+      "source_ids": [
+        "solidMechanics",
+        "mechanics"
+      ],
+      "lessons": [
+        {
+          "id": "statics-materials-6",
+          "title": "Force and moment equilibrium in the body: free-body diagrams of a forearm holding a load",
+          "reading": "modules/06-forearm-free-body-equilibrium.md",
+          "objectives": [
+            "statics-materials-6-objective-1",
+            "statics-materials-6-objective-2",
+            "statics-materials-6-objective-3"
+          ],
+          "worked_example": "Moments about the elbow give a muscle force of 493.8 N for a 50 N load at 35 cm, and the joint pushes down with 428.8 N; at 80° the muscle needs 501.4 N and adds 87.1 N of compression; mechanical advantage 0.114.",
+          "question_ids": [
+            "statics-materials-6:muscle-force",
+            "statics-materials-6:joint-reaction",
+            "statics-materials-6:angled-muscle",
+            "statics-materials-6:compression",
+            "statics-materials-6:mechanical-advantage",
+            "statics-materials-6:moment-center"
+          ],
+          "card_ids": [
+            "statics-materials-6-card-1",
+            "statics-materials-6-card-2",
+            "statics-materials-6-card-3",
+            "statics-materials-6-card-4"
+          ]
+        }
+      ]
     }
   ],
   "assessments": [
@@ -365,6 +426,27 @@
       "points": 6
     },
     {
+      "id": "statics-materials-6-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Forearm free-body equilibrium practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "statics-materials-6-objective-1",
+        "statics-materials-6-objective-2",
+        "statics-materials-6-objective-3"
+      ],
+      "question_ids": [
+        "statics-materials-6:muscle-force",
+        "statics-materials-6:joint-reaction",
+        "statics-materials-6:angled-muscle",
+        "statics-materials-6:compression",
+        "statics-materials-6:mechanical-advantage",
+        "statics-materials-6:moment-center"
+      ],
+      "points": 6
+    },
+    {
       "id": "statics-materials-case",
       "type": "case",
       "mode": "self-assessment",
@@ -411,6 +493,11 @@
       "version": "0.2.0",
       "date": "2026-10-08",
       "summary": "Added an original lesson on bending of a long bone (second moment of area, combined stresses, safety factor, hollow sections and stress shielding) with synthetic data, formative items with computed keys and retrieval cards. The package remains partial and unreviewed."
+    },
+    {
+      "version": "0.3.0",
+      "date": "2026-10-08",
+      "summary": "Added an original lesson on force and moment equilibrium of a forearm holding a load with synthetic data, formative items with computed keys and retrieval cards. The package remains partial and unreviewed."
     }
   ],
   "limitations": [

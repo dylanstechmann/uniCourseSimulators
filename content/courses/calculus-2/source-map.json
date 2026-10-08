@@ -64,6 +64,18 @@
       "original_content": true,
       "license": "CC-BY-4.0",
       "modifications": []
+    },
+    {
+      "module_id": "calculus-2-module-6",
+      "lesson_id": "calculus-2-6",
+      "reading": "modules/06-taylor-approximations-and-error-bounds.md",
+      "source_ids": [
+        "calculus"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
     }
   ]
 }

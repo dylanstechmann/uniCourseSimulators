@@ -1,5 +1,9 @@
 # Progress review: uniStemCourseSimulators
 
+## Update after the outcome-linking lessons (2026-10-08, eighth pass)
+
+Written by an AI coding assistant. Twelve lessons were written specifically for the 19 course outcomes that no lesson objective addressed, so every outcome in every package now has at least one lesson objective and practice items behind it. Twelve packages are at 0.3.0. This closes a measured mapping gap; it does not make any package a semester course, and the validator's outcome-to-assessment warning remains because assessments do not list outcome ids directly. Nothing is reviewed or graded.
+
 ## Update after the biomechanics, physics and engineering lessons (2026-10-08, sixth pass)
 
 Written by an AI coding assistant. Nine more lessons connect the engineering and physics packages to the biology track: cell indentation and viscoelasticity, stiffness versus ligand density, least-squares calibration, Markov chains for cell states, long-bone bending, impact forces, the membrane as a capacitor, sensor loading and ADC resolution, and incubator temperature control. Calculus 3 and robotics followed in a seventh pass, so every package now has at least one lesson-length original reading (19 of 101 outcomes still unlinked). Unlinked course outcomes: 25 of 101. Nothing is reviewed or graded; a lesson-length reading per package is still far from a semester course.

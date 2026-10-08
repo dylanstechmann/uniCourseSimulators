@@ -443,6 +443,195 @@
         "kind": "original",
         "modifications": []
       }
+    },
+    {
+      "id": "organic-chemistry-6:mechanism-tertiary",
+      "type": "single_choice",
+      "prompt": "tert-Butyl bromide is dissolved in water with no added strong nucleophile. Which mechanism and rate law best describe substitution?",
+      "points": 1,
+      "objective_ids": [
+        "organic-chemistry-6-objective-1"
+      ],
+      "options": [
+        "SN2, because water is a strong nucleophile.",
+        "No substitution can occur at a tertiary carbon.",
+        "SN1; rate = k[substrate], because the tertiary carbocation is stabilized and the protic solvent stabilizes ions.",
+        "SN2; rate = k[substrate][water]."
+      ],
+      "solution_spec": {
+        "answer": 2
+      },
+      "feedback": {
+        "hint": "Consider steric access for back-side attack and carbocation stability.",
+        "solution": "Tertiary carbons block back-side attack but form stable carbocations. A polar protic solvent and weak nucleophile favor SN1, whose rate does not depend on the nucleophile.",
+        "lesson_ids": [
+          "organic-chemistry-6"
+        ],
+        "misconception_ids": [
+          "sn2-at-tertiary"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "organic-chemistry-6:sn2-rate",
+      "type": "numeric",
+      "prompt": "An SN2 reaction has k = 2×10⁻³ L mol⁻¹ s⁻¹. What is the rate when [substrate] = 0.1 M and [nucleophile] = 0.4 M? Enter the number only (mol L⁻¹ s⁻¹).",
+      "points": 1,
+      "objective_ids": [
+        "organic-chemistry-6-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 8e-05,
+        "unit": "",
+        "tolerance": 0,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null,
+        "relative_tolerance": 0.01
+      },
+      "feedback": {
+        "hint": "Rate = k[substrate][nucleophile].",
+        "solution": "2×10⁻³ × 0.1 × 0.4 = 8.0×10⁻⁵ mol L⁻¹ s⁻¹, twice the rate at 0.2 M.",
+        "lesson_ids": [
+          "organic-chemistry-6"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "organic-chemistry-6:sn2-stereo",
+      "type": "single_choice",
+      "prompt": "An enantiomerically pure secondary alkyl bromide undergoes clean SN2 substitution. What happens at the stereocenter?",
+      "points": 1,
+      "objective_ids": [
+        "organic-chemistry-6-objective-2"
+      ],
+      "options": [
+        "Its configuration is retained.",
+        "It racemizes.",
+        "The stereocenter is destroyed permanently.",
+        "Its configuration is inverted, because the nucleophile attacks from the side opposite the leaving group."
+      ],
+      "solution_spec": {
+        "answer": 3
+      },
+      "feedback": {
+        "hint": "Picture the back-side attack.",
+        "solution": "SN2 proceeds through a single back-side attack, inverting the geometry (Walden inversion). Racemization is characteristic of SN1 through a planar carbocation.",
+        "lesson_ids": [
+          "organic-chemistry-6"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "organic-chemistry-6:stereoisomers",
+      "type": "numeric",
+      "prompt": "A molecule has 3 stereocenters and no internal symmetry. What is the maximum number of stereoisomers? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "organic-chemistry-6-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 8.0,
+        "unit": "",
+        "tolerance": 0,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Each stereocenter can be R or S.",
+        "solution": "Each stereocenter doubles the count: 2^3 = 8.",
+        "lesson_ids": [
+          "organic-chemistry-6"
+        ],
+        "misconception_ids": [
+          "meso-ignored"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "organic-chemistry-6:enantiomeric-excess",
+      "type": "numeric",
+      "prompt": "A pure enantiomer has specific rotation -11.5°; a sample shows -9.2° under the same conditions. What is the enantiomeric excess? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "organic-chemistry-6-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 80.0,
+        "unit": "%",
+        "tolerance": 0.2,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "ee = observed/pure × 100.",
+        "solution": "|-9.2/-11.5| × 100 = 80%.",
+        "lesson_ids": [
+          "organic-chemistry-6"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "organic-chemistry-6:major-fraction",
+      "type": "numeric",
+      "prompt": "A sample has 80% enantiomeric excess. What percentage of it is the major enantiomer? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "organic-chemistry-6-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 90.0,
+        "unit": "%",
+        "tolerance": 0.2,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Major = (100 + ee)/2.",
+        "solution": "(100 + 80)/2 = 90%; the minor enantiomer is 10%.",
+        "lesson_ids": [
+          "organic-chemistry-6"
+        ],
+        "misconception_ids": [
+          "ee-equals-major-fraction"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
     }
   ]
 }

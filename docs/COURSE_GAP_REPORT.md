@@ -8,80 +8,32 @@ comprehensive coverage. Every package is still `partial` and unreviewed.
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | biochemistry | partial | 6 | 14 | 20 | 16 | 0 | 0 | 4 | 0 |
 | biomaterials | partial | 6 | 14 | 20 | 16 | 0 | 0 | 4 | 0 |
-| bioreactors | partial | 5 | 11 | 14 | 12 | 0 | 0 | 4 | 1 |
-| calculus-1 | partial | 5 | 11 | 15 | 12 | 0 | 0 | 4 | 2 |
-| calculus-2 | partial | 5 | 11 | 14 | 12 | 0 | 0 | 4 | 1 |
-| calculus-3 | partial | 5 | 11 | 14 | 12 | 0 | 0 | 4 | 2 |
+| bioreactors | partial | 6 | 14 | 20 | 16 | 0 | 0 | 4 | 0 |
+| calculus-1 | partial | 6 | 14 | 21 | 16 | 0 | 0 | 4 | 0 |
+| calculus-2 | partial | 6 | 14 | 20 | 16 | 0 | 0 | 4 | 0 |
+| calculus-3 | partial | 6 | 14 | 20 | 16 | 0 | 0 | 4 | 0 |
 | cell-biology | partial | 39 | 69 | 137 | 89 | 0 | 0 | 4 | 0 |
 | cellular-biomechanics | partial | 6 | 14 | 20 | 16 | 0 | 0 | 4 | 0 |
-| circuits | partial | 5 | 11 | 14 | 12 | 0 | 0 | 4 | 1 |
+| circuits | partial | 6 | 14 | 20 | 16 | 0 | 0 | 4 | 0 |
 | differential-equations | partial | 6 | 14 | 21 | 16 | 0 | 0 | 4 | 0 |
-| general-chemistry-1 | partial | 5 | 11 | 14 | 12 | 0 | 0 | 4 | 2 |
-| general-chemistry-2 | partial | 6 | 14 | 20 | 16 | 0 | 0 | 4 | 2 |
+| general-chemistry-1 | partial | 6 | 14 | 20 | 16 | 0 | 0 | 4 | 0 |
+| general-chemistry-2 | partial | 7 | 17 | 26 | 20 | 0 | 0 | 4 | 0 |
 | genetics | partial | 8 | 20 | 33 | 24 | 0 | 0 | 4 | 0 |
 | geroscience | partial | 14 | 38 | 54 | 48 | 0 | 0 | 4 | 0 |
 | linear-algebra | partial | 6 | 14 | 20 | 16 | 0 | 0 | 4 | 0 |
-| organic-chemistry | partial | 5 | 11 | 14 | 12 | 0 | 0 | 4 | 2 |
-| physics-em | partial | 5 | 11 | 14 | 12 | 0 | 0 | 4 | 2 |
-| physics-mechanics | partial | 5 | 11 | 14 | 12 | 0 | 0 | 4 | 1 |
+| organic-chemistry | partial | 6 | 14 | 20 | 16 | 0 | 0 | 4 | 0 |
+| physics-em | partial | 6 | 14 | 20 | 16 | 0 | 0 | 4 | 0 |
+| physics-mechanics | partial | 6 | 14 | 20 | 16 | 0 | 0 | 4 | 0 |
 | physiology | partial | 6 | 14 | 20 | 16 | 0 | 0 | 4 | 0 |
 | programming | partial | 5 | 11 | 14 | 12 | 0 | 0 | 4 | 0 |
 | robotics | partial | 5 | 11 | 14 | 12 | 0 | 0 | 4 | 0 |
 | signals-control | partial | 5 | 11 | 14 | 12 | 0 | 0 | 4 | 0 |
-| statics-materials | partial | 5 | 11 | 14 | 12 | 0 | 0 | 4 | 1 |
+| statics-materials | partial | 6 | 14 | 20 | 16 | 0 | 0 | 4 | 0 |
 | statistics | partial | 6 | 13 | 15 | 15 | 0 | 0 | 5 | 0 |
-| transport | partial | 5 | 11 | 13 | 12 | 0 | 0 | 4 | 2 |
+| transport | partial | 6 | 14 | 19 | 16 | 0 | 0 | 4 | 0 |
 
-Totals: 25 packages, 179 lessons, 392 objectives, 576 practice items, 0 lesson objectives with no assessment mapping, 0 with no practice item, 19 of 101 course outcomes that no lesson objective links to.
+Totals: 25 packages, 191 lessons, 428 objectives, 648 practice items, 0 lesson objectives with no assessment mapping, 0 with no practice item, 0 of 101 course outcomes that no lesson objective links to.
 
 `tools/validate_content.py` counts course outcomes and lesson objectives together, so its `objective-coverage` warning
 persists for packages whose outcomes are not linked from any lesson objective. Linking them is a judgement for a
 subject-matter reviewer; this report does not do it and the warning is not silenced.
-
-## bioreactors
-
-Outcomes with no linking lesson objective: `bioreactors-outcome-1`
-
-## calculus-1
-
-Outcomes with no linking lesson objective: `calculus-1-outcome-1`, `calculus-1-outcome-4`
-
-## calculus-2
-
-Outcomes with no linking lesson objective: `calculus-2-outcome-4`
-
-## calculus-3
-
-Outcomes with no linking lesson objective: `calculus-3-outcome-2`, `calculus-3-outcome-3`
-
-## circuits
-
-Outcomes with no linking lesson objective: `circuits-outcome-2`
-
-## general-chemistry-1
-
-Outcomes with no linking lesson objective: `general-chemistry-1-outcome-2`, `general-chemistry-1-outcome-3`
-
-## general-chemistry-2
-
-Outcomes with no linking lesson objective: `general-chemistry-2-outcome-3`, `general-chemistry-2-outcome-4`
-
-## organic-chemistry
-
-Outcomes with no linking lesson objective: `organic-chemistry-outcome-2`, `organic-chemistry-outcome-3`
-
-## physics-em
-
-Outcomes with no linking lesson objective: `physics-em-outcome-3`, `physics-em-outcome-4`
-
-## physics-mechanics
-
-Outcomes with no linking lesson objective: `physics-mechanics-outcome-3`
-
-## statics-materials
-
-Outcomes with no linking lesson objective: `statics-materials-outcome-1`
-
-## transport
-
-Outcomes with no linking lesson objective: `transport-outcome-1`, `transport-outcome-3`

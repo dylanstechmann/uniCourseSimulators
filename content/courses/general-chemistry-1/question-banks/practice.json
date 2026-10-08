@@ -435,6 +435,194 @@
         "kind": "original",
         "modifications": []
       }
+    },
+    {
+      "id": "general-chemistry-1-6:co2-vs-water",
+      "type": "single_choice",
+      "prompt": "Both CO₂ and H₂O contain polar bonds. Why is water polar while carbon dioxide is not?",
+      "points": 1,
+      "objective_ids": [
+        "general-chemistry-1-6-objective-1"
+      ],
+      "options": [
+        "Carbon is more electronegative than oxygen.",
+        "Water has more electrons.",
+        "CO₂ is linear so its two bond dipoles cancel; water is bent so its bond dipoles add to a net dipole.",
+        "CO₂ has no polar bonds."
+      ],
+      "solution_spec": {
+        "answer": 2
+      },
+      "feedback": {
+        "hint": "Bond dipoles add as vectors; consider each molecule's shape.",
+        "solution": "Geometry decides whether bond dipoles cancel. Two bonding domains and two lone pairs make water bent; CO₂'s two double bonds and no lone pairs on carbon make it linear.",
+        "lesson_ids": [
+          "general-chemistry-1-6"
+        ],
+        "misconception_ids": [
+          "polar-bonds-imply-polar-molecule"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "general-chemistry-1-6:fraction-water-equal",
+      "type": "numeric",
+      "prompt": "A solute has K_ow = 100. After equilibration between equal volumes of octanol and water, what fraction of the solute is in the water? Enter a decimal fraction, number only.",
+      "points": 1,
+      "objective_ids": [
+        "general-chemistry-1-6-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0.0099,
+        "unit": "",
+        "tolerance": 0.0005,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Fraction in water = 1/(1 + K) for equal volumes.",
+        "solution": "1/(1 + 100) = 0.0099.",
+        "lesson_ids": [
+          "general-chemistry-1-6"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "general-chemistry-1-6:fraction-water-unequal",
+      "type": "numeric",
+      "prompt": "The same solute (K_ow = 100) equilibrates between 100 mL water and 10 mL octanol. What fraction of the amount is in the water? Enter a decimal fraction, number only.",
+      "points": 1,
+      "objective_ids": [
+        "general-chemistry-1-6-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0.09091,
+        "unit": "",
+        "tolerance": 0.001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Fraction = V_w/(V_w + K V_o).",
+        "solution": "100/(100 + 100 × 10) = 0.0909.",
+        "lesson_ids": [
+          "general-chemistry-1-6"
+        ],
+        "misconception_ids": [
+          "concentration-for-amount"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "general-chemistry-1-6:q-solution",
+      "type": "numeric",
+      "prompt": "5.35 g of a salt dissolves in 100 g water and the temperature changes by -3.3 °C. Using c = 4.18 J/(g·°C) and the total mass, what is q for the solution? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "general-chemistry-1-6-objective-3"
+      ],
+      "solution_spec": {
+        "answer": -1453.2,
+        "unit": "J",
+        "tolerance": 3,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "q = m c ΔT with m = water + salt.",
+        "solution": "q = 105.35 × 4.18 × (-3.3) = -1453 J.",
+        "lesson_ids": [
+          "general-chemistry-1-6"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "general-chemistry-1-6:delta-h",
+      "type": "numeric",
+      "prompt": "The solution in the previous calorimetry lost 1453 J (so the dissolution absorbed it) while 0.1000 mol of salt dissolved. What is ΔH_soln? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "general-chemistry-1-6-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 14.529,
+        "unit": "kJ/mol",
+        "tolerance": 0.1,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "q_rxn = −q_solution; divide by moles.",
+        "solution": "ΔH = +1453 J / 0.1000 mol = +14.5 kJ/mol (endothermic).",
+        "lesson_ids": [
+          "general-chemistry-1-6"
+        ],
+        "misconception_ids": [
+          "calorimetry-sign"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "general-chemistry-1-6:temperature-solubility",
+      "type": "single_choice",
+      "prompt": "Dissolving this salt is endothermic (ΔH ≈ +15 kJ/mol). How does its solubility change with temperature?",
+      "points": 1,
+      "objective_ids": [
+        "general-chemistry-1-6-objective-3"
+      ],
+      "options": [
+        "It depends only on the volume of water.",
+        "It increases, because raising the temperature favors the endothermic direction.",
+        "It does not change.",
+        "It decreases, because heat drives the salt out of solution."
+      ],
+      "solution_spec": {
+        "answer": 1
+      },
+      "feedback": {
+        "hint": "Apply Le Chatelier's principle with heat as a reactant.",
+        "solution": "For an endothermic process, heat acts like a reactant; adding it shifts the equilibrium toward dissolved ions. Exothermic dissolutions, such as most gases in water, show the opposite trend.",
+        "lesson_ids": [
+          "general-chemistry-1-6"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
     }
   ]
 }

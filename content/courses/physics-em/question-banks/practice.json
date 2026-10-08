@@ -436,6 +436,193 @@
         "kind": "original",
         "modifications": []
       }
+    },
+    {
+      "id": "physics-em-6:flow-emf",
+      "type": "numeric",
+      "prompt": "A conducting liquid flows at 0.3 m/s through a 10 mm pipe in a perpendicular 0.1 T field. What voltage appears across the pipe? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "physics-em-6-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0.3,
+        "unit": "mV",
+        "tolerance": 0.005,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "ε = B d v with d in meters.",
+        "solution": "0.1 × 0.01 × 0.3 = 3.0×10⁻⁴ V = 0.30 mV.",
+        "lesson_ids": [
+          "physics-em-6"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physics-em-6:coil-emf",
+      "type": "numeric",
+      "prompt": "A 50-turn coil of area 2 cm² sits in a perpendicular field changing at 20 T/s. What is the magnitude of the induced voltage? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "physics-em-6-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0.2,
+        "unit": "V",
+        "tolerance": 0.005,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "ε = N A dB/dt; convert cm² to m².",
+        "solution": "50 × 2×10⁻⁴ × 20 = 0.20 V.",
+        "lesson_ids": [
+          "physics-em-6"
+        ],
+        "misconception_ids": [
+          "turns-omitted"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physics-em-6:lenz",
+      "type": "single_choice",
+      "prompt": "A magnet's north pole is pushed toward a closed loop. By Lenz's law, what does the induced current do?",
+      "points": 1,
+      "objective_ids": [
+        "physics-em-6-objective-2"
+      ],
+      "options": [
+        "It flows so as to increase the flux further.",
+        "It flows only if the loop is ferromagnetic.",
+        "No current flows until the magnet stops.",
+        "It flows so that the loop's own field opposes the increasing flux, making the face toward the magnet act as a north pole."
+      ],
+      "solution_spec": {
+        "answer": 3
+      },
+      "feedback": {
+        "hint": "The induced effect opposes the change that causes it.",
+        "solution": "Increasing flux into the loop induces a current whose field points back toward the magnet, repelling it. That opposition is the minus sign in Faraday's law.",
+        "lesson_ids": [
+          "physics-em-6"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physics-em-6:series-resistor",
+      "type": "numeric",
+      "prompt": "A circuit can apply at most 5 V. What minimum series resistance keeps current below a design limit of 10 μA, even with zero other resistance? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "physics-em-6-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 499999.99999999994,
+        "unit": "Ω",
+        "tolerance": 0,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null,
+        "relative_tolerance": 0.005
+      },
+      "feedback": {
+        "hint": "R = V/I_max.",
+        "solution": "5 / 10⁻⁵ = 5×10⁵ Ω = 500 kΩ.",
+        "lesson_ids": [
+          "physics-em-6"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physics-em-6:leakage",
+      "type": "numeric",
+      "prompt": "A 100 kΩ sense resistor in a leakage path shows 0.35 V. What is the leakage current? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "physics-em-6-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 3.5,
+        "unit": "μA",
+        "tolerance": 0.05,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use Ohm's law on the sense resistor, I = V/R.",
+        "solution": "0.35/10⁵ = 3.5×10⁻⁶ A = 3.5 μA.",
+        "lesson_ids": [
+          "physics-em-6"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physics-em-6:limit-design",
+      "type": "single_choice",
+      "prompt": "A designer argues that a stimulator needs no series resistor because tissue resistance is high enough to keep current low. What is the main flaw?",
+      "points": 1,
+      "objective_ids": [
+        "physics-em-6-objective-3"
+      ],
+      "options": [
+        "Tissue has zero resistance.",
+        "Series resistors increase current.",
+        "Tissue and contact resistance vary and can drop sharply (for example with wet contacts), so the limit must be enforced by the circuit itself.",
+        "Current limits only matter for alternating current."
+      ],
+      "solution_spec": {
+        "answer": 2
+      },
+      "feedback": {
+        "hint": "What happens to current if the uncontrolled resistance falls?",
+        "solution": "I = V/R: if R falls, I rises. A fixed series resistance or an active current limiter bounds the worst case regardless of the load.",
+        "lesson_ids": [
+          "physics-em-6"
+        ],
+        "misconception_ids": [
+          "load-limits-current"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
     }
   ]
 }

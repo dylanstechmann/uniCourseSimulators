@@ -7,7 +7,7 @@
   "domain": "Physics",
   "level": "Year 1",
   "maturity": "partial",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "license": "MIT OR CC-BY-4.0",
   "content_origin": {
     "kind": "legacy-prototype",
@@ -120,6 +120,32 @@
       "description": "Check predictions against units and limiting cases, and evaluate what an average force does and does not tell you about peak loads.",
       "bloom": "evaluate",
       "course_outcome_ids": [
+        "physics-mechanics-outcome-4"
+      ]
+    },
+    {
+      "id": "physics-mechanics-6-objective-1",
+      "description": "Convert rotation rate to angular velocity and compute centripetal acceleration and relative centrifugal force, and find the speed for a target force.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "physics-mechanics-outcome-3",
+        "physics-mechanics-outcome-2"
+      ]
+    },
+    {
+      "id": "physics-mechanics-6-objective-2",
+      "description": "Calculate a rotor's moment of inertia, rotational kinetic energy, angular momentum and the torque needed for a given spin-up.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "physics-mechanics-outcome-3"
+      ]
+    },
+    {
+      "id": "physics-mechanics-6-objective-3",
+      "description": "Quantify the rotating force from a mass imbalance and check results with units and limiting cases.",
+      "bloom": "evaluate",
+      "course_outcome_ids": [
+        "physics-mechanics-outcome-3",
         "physics-mechanics-outcome-4"
       ]
     }
@@ -281,6 +307,41 @@
           ]
         }
       ]
+    },
+    {
+      "id": "physics-mechanics-module-6",
+      "title": "Centrifuge rotation and balance",
+      "source_ids": [
+        "mechanics",
+        "engineeringMath"
+      ],
+      "lessons": [
+        {
+          "id": "physics-mechanics-6",
+          "title": "Rotation in the lab: the centrifuge, relative centrifugal force, moment of inertia and why balance matters",
+          "reading": "modules/06-centrifuge-rotation-and-balance.md",
+          "objectives": [
+            "physics-mechanics-6-objective-1",
+            "physics-mechanics-6-objective-2",
+            "physics-mechanics-6-objective-3"
+          ],
+          "worked_example": "3000 rpm at 10 cm is 1006 ×g, and 500 ×g needs 2115 rpm; a 2 kg, 12 cm disk rotor stores 711 J and needs 0.226 N·m to spin up in 20 s; a 1 g imbalance produces 9.9 N.",
+          "question_ids": [
+            "physics-mechanics-6:rcf",
+            "physics-mechanics-6:rpm-target",
+            "physics-mechanics-6:kinetic-energy",
+            "physics-mechanics-6:spin-up-torque",
+            "physics-mechanics-6:imbalance-force",
+            "physics-mechanics-6:protocol-units"
+          ],
+          "card_ids": [
+            "physics-mechanics-6-card-1",
+            "physics-mechanics-6-card-2",
+            "physics-mechanics-6-card-3",
+            "physics-mechanics-6-card-4"
+          ]
+        }
+      ]
     }
   ],
   "assessments": [
@@ -366,6 +427,27 @@
       "points": 6
     },
     {
+      "id": "physics-mechanics-6-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Centrifuge rotation and balance practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "physics-mechanics-6-objective-1",
+        "physics-mechanics-6-objective-2",
+        "physics-mechanics-6-objective-3"
+      ],
+      "question_ids": [
+        "physics-mechanics-6:rcf",
+        "physics-mechanics-6:rpm-target",
+        "physics-mechanics-6:kinetic-energy",
+        "physics-mechanics-6:spin-up-torque",
+        "physics-mechanics-6:imbalance-force",
+        "physics-mechanics-6:protocol-units"
+      ],
+      "points": 6
+    },
+    {
       "id": "physics-mechanics-case",
       "type": "case",
       "mode": "self-assessment",
@@ -412,6 +494,11 @@
       "version": "0.2.0",
       "date": "2026-10-08",
       "summary": "Added an original lesson on impact forces (impulse, work–energy, average versus peak force and scaling checks) with synthetic data, formative items with computed keys and retrieval cards. The package remains partial and unreviewed."
+    },
+    {
+      "version": "0.3.0",
+      "date": "2026-10-08",
+      "summary": "Added an original lesson on centrifuge rotation (relative centrifugal force, moment of inertia, rotational energy, torque and imbalance) with synthetic data, formative items with computed keys and retrieval cards. The package remains partial and unreviewed."
     }
   ],
   "limitations": [

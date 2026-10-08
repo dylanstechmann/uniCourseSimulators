@@ -105,6 +105,46 @@
         "circuits-5-objective-3"
       ],
       "license": "CC-BY-4.0"
+    },
+    {
+      "id": "circuits-6-card-1",
+      "lesson_id": "circuits-6",
+      "front": "RC low-pass",
+      "back": "H = 1/(1 + jωRC); τ = RC; f_c = 1/(2πRC).",
+      "objective_ids": [
+        "circuits-6-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "circuits-6-card-2",
+      "lesson_id": "circuits-6",
+      "front": "Gain and phase",
+      "back": "|H| = 1/√(1 + (f/f_c)²), −3 dB at f_c; φ = −arctan(f/f_c); −20 dB/decade above f_c.",
+      "objective_ids": [
+        "circuits-6-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "circuits-6-card-3",
+      "lesson_id": "circuits-6",
+      "front": "Decibels",
+      "back": "Amplitude: 20 log₁₀; power: 10 log₁₀.",
+      "objective_ids": [
+        "circuits-6-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "circuits-6-card-4",
+      "lesson_id": "circuits-6",
+      "front": "Aliasing",
+      "back": "Content above f_s/2 folds back; filter before the converter, steeply enough.",
+      "objective_ids": [
+        "circuits-6-objective-3"
+      ],
+      "license": "CC-BY-4.0"
     }
   ]
 }

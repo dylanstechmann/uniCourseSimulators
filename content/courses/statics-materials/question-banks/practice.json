@@ -434,6 +434,191 @@
         "kind": "original",
         "modifications": []
       }
+    },
+    {
+      "id": "statics-materials-6:muscle-force",
+      "type": "numeric",
+      "prompt": "A horizontal forearm pivots at the elbow. A muscle pulls straight up 4 cm from the elbow; the forearm's 15 N weight acts at 15 cm; a 50 N load is held at 35 cm. Using moment equilibrium about the elbow, what is the muscle force? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "statics-materials-6-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 493.75,
+        "unit": "N",
+        "tolerance": 1,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Take moments about the elbow so the joint reaction drops out.",
+        "solution": "F × 0.04 = 15 × 0.15 + 50 × 0.35 = 19.75; F = 493.8 N.",
+        "lesson_ids": [
+          "statics-materials-6"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "statics-materials-6:joint-reaction",
+      "type": "numeric",
+      "prompt": "A horizontal forearm pivots at the elbow. A muscle pulls straight up 4 cm from the elbow; the forearm's 15 N weight acts at 15 cm; a 50 N load is held at 35 cm. With the muscle force of 493.8 N, what is the magnitude of the vertical joint reaction on the forearm? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "statics-materials-6-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 428.75,
+        "unit": "N",
+        "tolerance": 1,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Sum vertical forces to zero.",
+        "solution": "R = 493.8 − 15 − 50 = 428.8 N, directed downward on the forearm.",
+        "lesson_ids": [
+          "statics-materials-6"
+        ],
+        "misconception_ids": [
+          "joint-reaction-equals-load"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "statics-materials-6:angled-muscle",
+      "type": "numeric",
+      "prompt": "The muscle must provide a perpendicular component of 493.8 N but pulls at 80° to the forearm. What total muscle force is needed? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "statics-materials-6-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 501.367,
+        "unit": "N",
+        "tolerance": 1,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Only F sin θ produces the moment.",
+        "solution": "F = 493.8/sin 80° = 501.4 N.",
+        "lesson_ids": [
+          "statics-materials-6"
+        ],
+        "misconception_ids": [
+          "full-force-as-moment"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "statics-materials-6:compression",
+      "type": "numeric",
+      "prompt": "A muscle force of 501.4 N acts at 80° to the forearm. What component compresses the forearm along its length toward the joint? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "statics-materials-6-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 87.061,
+        "unit": "N",
+        "tolerance": 0.5,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "The parallel component is F cos θ.",
+        "solution": "501.4 × cos 80° = 87.1 N.",
+        "lesson_ids": [
+          "statics-materials-6"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "statics-materials-6:mechanical-advantage",
+      "type": "numeric",
+      "prompt": "What is the mechanical advantage d_muscle/d_load for the muscle at 4 cm and the load at 35 cm? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "statics-materials-6-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 0.11429,
+        "unit": "",
+        "tolerance": 0.002,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Ratio of lever arms.",
+        "solution": "0.04/0.35 = 0.114: the muscle needs about 8.8 times the load's force for the load term alone.",
+        "lesson_ids": [
+          "statics-materials-6"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "statics-materials-6:moment-center",
+      "type": "single_choice",
+      "prompt": "Why is the elbow the most convenient point about which to take moments in this problem?",
+      "points": 1,
+      "objective_ids": [
+        "statics-materials-6-objective-3"
+      ],
+      "options": [
+        "Taking moments elsewhere gives a different muscle force.",
+        "The unknown joint reaction acts there, so its moment is zero and the muscle force can be found from one equation.",
+        "Moments can only be taken about joints.",
+        "The weight of the forearm acts at the elbow."
+      ],
+      "solution_spec": {
+        "answer": 1
+      },
+      "feedback": {
+        "hint": "Which unknown has zero lever arm about that point?",
+        "solution": "Any point gives the same physics, but choosing the point where an unknown acts eliminates it from the moment equation, leaving one unknown.",
+        "lesson_ids": [
+          "statics-materials-6"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
     }
   ]
 }

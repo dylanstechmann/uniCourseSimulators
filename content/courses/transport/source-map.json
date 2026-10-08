@@ -67,6 +67,19 @@
       "original_content": true,
       "license": "CC-BY-4.0",
       "modifications": []
+    },
+    {
+      "module_id": "transport-module-6",
+      "lesson_id": "transport-6",
+      "reading": "modules/06-perfusion-tubing-balances-and-pressure-drop.md",
+      "source_ids": [
+        "transport",
+        "engineeringMath"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
     }
   ]
 }

@@ -67,6 +67,19 @@
       "original_content": true,
       "license": "CC-BY-4.0",
       "modifications": []
+    },
+    {
+      "module_id": "calculus-1-module-6",
+      "lesson_id": "calculus-1-6",
+      "reading": "modules/06-limits-saturation-and-net-change.md",
+      "source_ids": [
+        "calculus",
+        "engineeringMath"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
     }
   ]
 }

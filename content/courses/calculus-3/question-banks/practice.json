@@ -435,6 +435,192 @@
         "kind": "original",
         "modifications": []
       }
+    },
+    {
+      "id": "calculus-3-6:critical-value",
+      "type": "numeric",
+      "prompt": "Find the critical point of f(x, y) = x² + xy + y² − 3x and report the value of f there. Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "calculus-3-6-objective-1"
+      ],
+      "solution_spec": {
+        "answer": -3.0,
+        "unit": "",
+        "tolerance": 0.01,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Solve f_x = 2x + y − 3 = 0 and f_y = x + 2y = 0 together.",
+        "solution": "(x, y) = (2, -1); f = -3.",
+        "lesson_ids": [
+          "calculus-3-6"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-3-6:classify",
+      "type": "single_choice",
+      "prompt": "At the critical point of f(x, y) = x² + xy + y² − 3x, f_xx = 2, f_yy = 2 and f_xy = 1. What kind of point is it?",
+      "points": 1,
+      "objective_ids": [
+        "calculus-3-6-objective-1"
+      ],
+      "options": [
+        "A local minimum, because D = f_xx f_yy − f_xy² = 3 > 0 and f_xx > 0.",
+        "The test is inconclusive.",
+        "A local maximum.",
+        "A saddle point."
+      ],
+      "solution_spec": {
+        "answer": 0
+      },
+      "feedback": {
+        "hint": "Compute D and check the sign of f_xx.",
+        "solution": "D > 0 with f_xx > 0 means a local minimum. D < 0 would indicate a saddle.",
+        "lesson_ids": [
+          "calculus-3-6"
+        ],
+        "misconception_ids": [
+          "fxx-alone-classifies"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-3-6:vessel-radius",
+      "type": "numeric",
+      "prompt": "A closed cylinder must hold 100 cm³ with minimum surface area. Using the Lagrange result h = 2r, find the radius. Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "calculus-3-6-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 2.5154,
+        "unit": "cm",
+        "tolerance": 0.005,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Substitute h = 2r into πr²h = V.",
+        "solution": "2πr³ = 100 ⇒ r = (100/2π)^(1/3) = 2.515 cm, h = 5.031 cm.",
+        "lesson_ids": [
+          "calculus-3-6"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-3-6:multiplier",
+      "type": "numeric",
+      "prompt": "For the optimal closed cylinder with r = 2.515 cm, the multiplier is λ = 2/r. What is λ, in cm⁻¹? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "calculus-3-6-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0.7951,
+        "unit": "",
+        "tolerance": 0.002,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Evaluate 2/r.",
+        "solution": "λ = 2/2.515 = 0.795 cm⁻¹: about that much extra wall area per extra cm³ of volume.",
+        "lesson_ids": [
+          "calculus-3-6"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-3-6:polar-total",
+      "type": "numeric",
+      "prompt": "A surface density is σ(r) = 100 exp(−r²/5000) molecules/μm². How many molecules lie within r = 50 μm? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "calculus-3-6-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 618060.1944298067,
+        "unit": "",
+        "tolerance": 0,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null,
+        "relative_tolerance": 0.005
+      },
+      "feedback": {
+        "hint": "Use dA = r dr dθ; substitute u = r²/5000.",
+        "solution": "N = 2π × 100 × 2500 × (1 − e^(−0.5)) = 618,060.",
+        "lesson_ids": [
+          "calculus-3-6"
+        ],
+        "misconception_ids": [
+          "jacobian-omitted"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-3-6:disk-fraction",
+      "type": "numeric",
+      "prompt": "What fraction of the total over the whole plane lies within r = 50 μm for that density? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "calculus-3-6-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 39.3469,
+        "unit": "%",
+        "tolerance": 0.1,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "The ratio is 1 − e^(−R²/5000).",
+        "solution": "1 − e^(−0.5) = 0.3935 = 39.3%.",
+        "lesson_ids": [
+          "calculus-3-6"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
     }
   ]
 }

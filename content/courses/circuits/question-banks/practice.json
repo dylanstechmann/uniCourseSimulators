@@ -432,6 +432,193 @@
         "kind": "original",
         "modifications": []
       }
+    },
+    {
+      "id": "circuits-6:cutoff",
+      "type": "numeric",
+      "prompt": "An RC low-pass filter has R = 10 kΩ and C = 10 nF. What is its cutoff frequency? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "circuits-6-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 1591.549,
+        "unit": "Hz",
+        "tolerance": 1,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "f_c = 1/(2πRC).",
+        "solution": "RC = 10⁻⁴ s; f_c = 1/(2π × 10⁻⁴) = 1591.5 Hz.",
+        "lesson_ids": [
+          "circuits-6"
+        ],
+        "misconception_ids": [
+          "omega-for-f"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "circuits-6:noise-gain",
+      "type": "numeric",
+      "prompt": "For f_c = 1591.5 Hz, what is the amplitude gain |H| at 10000 Hz? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "circuits-6-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0.15718,
+        "unit": "",
+        "tolerance": 0.002,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "|H| = 1/√(1 + (f/f_c)²).",
+        "solution": "f/f_c = 6.283; |H| = 0.1572.",
+        "lesson_ids": [
+          "circuits-6"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "circuits-6:decibels",
+      "type": "numeric",
+      "prompt": "Express an amplitude gain of 0.1572 in decibels. Enter the number only (dB).",
+      "points": 1,
+      "objective_ids": [
+        "circuits-6-objective-2"
+      ],
+      "solution_spec": {
+        "answer": -16.0722,
+        "unit": "",
+        "tolerance": 0.05,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Amplitude dB = 20 log₁₀|H|.",
+        "solution": "20 log₁₀(0.1572) = -16.1 dB.",
+        "lesson_ids": [
+          "circuits-6"
+        ],
+        "misconception_ids": [
+          "ten-log-for-amplitude"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "circuits-6:phase",
+      "type": "numeric",
+      "prompt": "What is the phase shift of the filter (f_c = 1591.5 Hz) at 100 Hz? Enter the number only, in degrees (negative for lag).",
+      "points": 1,
+      "objective_ids": [
+        "circuits-6-objective-2"
+      ],
+      "solution_spec": {
+        "answer": -3.5953,
+        "unit": "",
+        "tolerance": 0.05,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "φ = −arctan(f/f_c).",
+        "solution": "−arctan(0.0628) = -3.60°.",
+        "lesson_ids": [
+          "circuits-6"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "circuits-6:alias-gain",
+      "type": "numeric",
+      "prompt": "A signal is sampled at 2000 Hz after the same filter. What amplitude fraction does the filter pass at the Nyquist frequency? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "circuits-6-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 0.84673,
+        "unit": "",
+        "tolerance": 0.002,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Nyquist is f_s/2; evaluate |H| there.",
+        "solution": "At 1000 Hz, |H| = 0.847: little anti-alias protection.",
+        "lesson_ids": [
+          "circuits-6"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "circuits-6:aliasing-fix",
+      "type": "single_choice",
+      "prompt": "Interference at 10 kHz passes this first-order filter at about 16% amplitude before 2000 Hz sampling. Which remedy addresses aliasing correctly?",
+      "points": 1,
+      "objective_ids": [
+        "circuits-6-objective-3"
+      ],
+      "options": [
+        "Use a steeper (higher-order) analog filter or sample much faster and filter digitally, because content above f_s/2 cannot be removed after sampling.",
+        "Increase the amplifier gain.",
+        "Lower the sampling rate so less noise is collected.",
+        "Remove the interference digitally after sampling at 2,000 Hz."
+      ],
+      "solution_spec": {
+        "answer": 0
+      },
+      "feedback": {
+        "hint": "Aliased components look like real low-frequency signal once sampled.",
+        "solution": "After sampling, aliased content is indistinguishable from signal, so suppression must happen before the converter, or the sampling rate must rise so that a digital filter can act before decimation.",
+        "lesson_ids": [
+          "circuits-6"
+        ],
+        "misconception_ids": [
+          "filter-after-sampling-fixes-alias"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
     }
   ]
 }

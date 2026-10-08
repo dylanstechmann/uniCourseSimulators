@@ -437,6 +437,194 @@
         "kind": "original",
         "modifications": []
       }
+    },
+    {
+      "id": "bioreactors-6:balance-form",
+      "type": "single_choice",
+      "prompt": "Which set of equations is a correct batch balance for cell density X, glucose G and lactate P with specific rates μ, q_G and q_P?",
+      "points": 1,
+      "objective_ids": [
+        "bioreactors-6-objective-1"
+      ],
+      "options": [
+        "dX/dt = μX, dG/dt = −q_G G, dP/dt = q_P P.",
+        "dX/dt = −μX, dG/dt = q_G X, dP/dt = −q_P X.",
+        "dX/dt = μ, dG/dt = −q_G, dP/dt = q_P.",
+        "dX/dt = μX, dG/dt = −q_G X, dP/dt = q_P X."
+      ],
+      "solution_spec": {
+        "answer": 3
+      },
+      "feedback": {
+        "hint": "Specific rates are per cell, so each rate is multiplied by the cell density.",
+        "solution": "Consumption and secretion scale with the number of cells present. Rates proportional to G or P would describe first-order chemistry, not cell metabolism.",
+        "lesson_ids": [
+          "bioreactors-6"
+        ],
+        "misconception_ids": [
+          "rate-not-scaled-by-cells"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "bioreactors-6:glucose-used",
+      "type": "numeric",
+      "prompt": "A culture grows from 5.0×10⁵ cells/mL with μ = 0.03 h⁻¹ for 48 h; each cell consumes 2.0×10⁻¹⁰ mmol glucose per hour. How much glucose is consumed, in mM? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "bioreactors-6-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 10.736,
+        "unit": "mM",
+        "tolerance": 0.1,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "ΔG = q_G X₀(e^(μt) − 1)/μ, then convert per mL to per L.",
+        "solution": "∫X dt = 5.368×10⁷ cell·h/mL; ΔG = 2.0×10⁻¹⁰ × 5.368×10⁷ × 1000 = 10.74 mM.",
+        "lesson_ids": [
+          "bioreactors-6"
+        ],
+        "misconception_ids": [
+          "ml-l-thousandfold"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "bioreactors-6:lactate",
+      "type": "numeric",
+      "prompt": "If 10.74 mM glucose is consumed with a lactate yield of 1.6 mol/mol, how much lactate accumulates? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "bioreactors-6-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 17.177,
+        "unit": "mM",
+        "tolerance": 0.1,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Multiply consumption by the yield.",
+        "solution": "1.6 × 10.74 = 17.2 mM.",
+        "lesson_ids": [
+          "bioreactors-6"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "bioreactors-6:exhaustion",
+      "type": "numeric",
+      "prompt": "With G₀ = 25 mM, X₀ = 5.0×10⁵ cells/mL, μ = 0.03 h⁻¹ and q_G = 2.0×10⁻¹⁰ mmol/(cell·h), when is glucose exhausted? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "bioreactors-6-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 71.336,
+        "unit": "h",
+        "tolerance": 0.5,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Set q_G X₀(e^(μt) − 1)/μ × 1000 equal to G₀ and solve for t.",
+        "solution": "t = ln(1 + 25 × 0.03/(2.0×10⁻¹⁰ × 5.0×10⁵ × 1000))/0.03 = 71 h.",
+        "lesson_ids": [
+          "bioreactors-6"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "bioreactors-6:min-perfusion",
+      "type": "numeric",
+      "prompt": "A perfused vessel holds 5.0×10⁶ cells/mL, each consuming 2.0×10⁻¹⁰ mmol glucose per hour, with inlet glucose 25 mM. What is the minimum dilution rate D for steady glucose to stay above zero? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "bioreactors-6-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 0.04,
+        "unit": "1/h",
+        "tolerance": 0.002,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "At steady state G = G_in − q_G X/D; set G = 0.",
+        "solution": "D_min = q_G X/G_in = 2.0×10⁻¹⁰ × 5.0×10⁶ × 1000/25 = 0.040 h⁻¹.",
+        "lesson_ids": [
+          "bioreactors-6"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "bioreactors-6:last-doubling",
+      "type": "single_choice",
+      "prompt": "In an exponentially growing batch, roughly how does glucose consumed in the final doubling compare with all earlier consumption?",
+      "points": 1,
+      "objective_ids": [
+        "bioreactors-6-objective-3"
+      ],
+      "options": [
+        "It cannot be estimated without measuring every time point.",
+        "Much less, because cells slow down.",
+        "Exactly half.",
+        "About equal: each doubling consumes as much as all previous doublings combined, so depletion comes abruptly."
+      ],
+      "solution_spec": {
+        "answer": 3
+      },
+      "feedback": {
+        "hint": "Consumption is proportional to the integral of an exponential.",
+        "solution": "The integral of an exponential over the last doubling time equals the integral over all earlier time (for a long culture), so half of all glucose is consumed in the final doubling.",
+        "lesson_ids": [
+          "bioreactors-6"
+        ],
+        "misconception_ids": [
+          "linear-depletion-intuition"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
     }
   ]
 }

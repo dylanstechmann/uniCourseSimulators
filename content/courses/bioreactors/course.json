@@ -7,7 +7,7 @@
   "domain": "Bioengineering",
   "level": "Year 3",
   "maturity": "partial",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "license": "MIT OR CC-BY-4.0",
   "content_origin": {
     "kind": "legacy-prototype",
@@ -121,6 +121,32 @@
       "description": "Evaluate an empirical kLa correlation's domain of validity.",
       "bloom": "evaluate",
       "course_outcome_ids": [
+        "bioreactors-outcome-3"
+      ]
+    },
+    {
+      "id": "bioreactors-6-objective-1",
+      "description": "Write mass balances for cells, a consumed substrate and a secreted product in a batch culture using specific rates.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "bioreactors-outcome-1"
+      ]
+    },
+    {
+      "id": "bioreactors-6-objective-2",
+      "description": "Integrate the substrate balance for an exponentially growing population to predict substrate remaining, product formed and the time of exhaustion.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "bioreactors-outcome-1",
+        "bioreactors-outcome-2"
+      ]
+    },
+    {
+      "id": "bioreactors-6-objective-3",
+      "description": "Extend the balance to a perfused vessel with dilution, and evaluate the assumptions behind constant specific rates and yields.",
+      "bloom": "evaluate",
+      "course_outcome_ids": [
+        "bioreactors-outcome-1",
         "bioreactors-outcome-3"
       ]
     }
@@ -282,6 +308,41 @@
           ]
         }
       ]
+    },
+    {
+      "id": "bioreactors-module-6",
+      "title": "Cell-culture mass balance",
+      "source_ids": [
+        "transport",
+        "tissueEngineering"
+      ],
+      "lessons": [
+        {
+          "id": "bioreactors-6",
+          "title": "Writing a cell-culture mass balance: substrate use, product accumulation and when a batch runs out",
+          "reading": "modules/06-cell-culture-mass-balance.md",
+          "objectives": [
+            "bioreactors-6-objective-1",
+            "bioreactors-6-objective-2",
+            "bioreactors-6-objective-3"
+          ],
+          "worked_example": "From 5.0×10⁵ cells/mL at μ = 0.03 h⁻¹, 48 h of growth consumes 10.74 mM glucose and makes 17.2 mM lactate; 25 mM glucose is exhausted at about 71 h; perfusion of 5.0×10⁶ cells/mL needs D ≥ 0.040 h⁻¹.",
+          "question_ids": [
+            "bioreactors-6:balance-form",
+            "bioreactors-6:glucose-used",
+            "bioreactors-6:lactate",
+            "bioreactors-6:exhaustion",
+            "bioreactors-6:min-perfusion",
+            "bioreactors-6:last-doubling"
+          ],
+          "card_ids": [
+            "bioreactors-6-card-1",
+            "bioreactors-6-card-2",
+            "bioreactors-6-card-3",
+            "bioreactors-6-card-4"
+          ]
+        }
+      ]
     }
   ],
   "assessments": [
@@ -367,6 +428,27 @@
       "points": 6
     },
     {
+      "id": "bioreactors-6-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Cell-culture mass balance practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "bioreactors-6-objective-1",
+        "bioreactors-6-objective-2",
+        "bioreactors-6-objective-3"
+      ],
+      "question_ids": [
+        "bioreactors-6:balance-form",
+        "bioreactors-6:glucose-used",
+        "bioreactors-6:lactate",
+        "bioreactors-6:exhaustion",
+        "bioreactors-6:min-perfusion",
+        "bioreactors-6:last-doubling"
+      ],
+      "points": 6
+    },
+    {
       "id": "bioreactors-case",
       "type": "case",
       "mode": "self-assessment",
@@ -413,6 +495,11 @@
       "version": "0.2.0",
       "date": "2026-10-08",
       "summary": "Added an original lesson on sizing oxygen supply (kLa, driving force, maximum supportable cell density, static-dish medium depth and the limits of empirical correlations) with six formative items with computed keys and four retrieval cards. The package remains partial and unreviewed."
+    },
+    {
+      "version": "0.3.0",
+      "date": "2026-10-08",
+      "summary": "Added an original lesson on cell-culture mass balances (batch substrate use and product accumulation, time to exhaustion, perfusion balance) with synthetic data, formative items with computed keys and retrieval cards. The package remains partial and unreviewed."
     }
   ],
   "limitations": [

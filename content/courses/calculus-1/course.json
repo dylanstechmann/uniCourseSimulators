@@ -7,7 +7,7 @@
   "domain": "Mathematics",
   "level": "Year 1",
   "maturity": "partial",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "license": "MIT OR CC-BY-4.0",
   "content_origin": {
     "kind": "legacy-prototype",
@@ -119,6 +119,31 @@
       "bloom": "analyze",
       "course_outcome_ids": [
         "calculus-1-outcome-3"
+      ]
+    },
+    {
+      "id": "calculus-1-6-objective-1",
+      "description": "Evaluate limits of a saturating function at large and small input, and justify continuity and limit claims algebraically.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "calculus-1-outcome-1"
+      ]
+    },
+    {
+      "id": "calculus-1-6-objective-2",
+      "description": "Use the limit of a difference quotient to find the initial slope of a response and judge the accuracy of the linear approximation near zero.",
+      "bloom": "analyze",
+      "course_outcome_ids": [
+        "calculus-1-outcome-1",
+        "calculus-1-outcome-2"
+      ]
+    },
+    {
+      "id": "calculus-1-6-objective-3",
+      "description": "Interpret a definite integral of a rate as net change, distinguish net change from total change, and evaluate both from a rate function.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "calculus-1-outcome-4"
       ]
     }
   ],
@@ -280,6 +305,41 @@
           ]
         }
       ]
+    },
+    {
+      "id": "calculus-1-module-6",
+      "title": "Limits, saturation and net change",
+      "source_ids": [
+        "calculus",
+        "engineeringMath"
+      ],
+      "lessons": [
+        {
+          "id": "calculus-1-6",
+          "title": "Limits of saturating responses and the fundamental theorem as net change",
+          "reading": "modules/06-limits-saturation-and-net-change.md",
+          "objectives": [
+            "calculus-1-6-objective-1",
+            "calculus-1-6-objective-2",
+            "calculus-1-6-objective-3"
+          ],
+          "worked_example": "v = 100S/(5 + S) tends to 100 but is 99.50 at S = 1000; its initial slope is 20, and the linear approximation overestimates by 10% at S = 0.5; the rate 6 − 2t gives a net change of 5 mL but 13 mL moved.",
+          "question_ids": [
+            "calculus-1-6:rate-at-1000",
+            "calculus-1-6:initial-slope",
+            "calculus-1-6:linear-error",
+            "calculus-1-6:net-change",
+            "calculus-1-6:total-moved",
+            "calculus-1-6:continuity"
+          ],
+          "card_ids": [
+            "calculus-1-6-card-1",
+            "calculus-1-6-card-2",
+            "calculus-1-6-card-3",
+            "calculus-1-6-card-4"
+          ]
+        }
+      ]
     }
   ],
   "assessments": [
@@ -366,6 +426,27 @@
       "points": 6
     },
     {
+      "id": "calculus-1-6-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Limits, saturation and net change practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "calculus-1-6-objective-1",
+        "calculus-1-6-objective-2",
+        "calculus-1-6-objective-3"
+      ],
+      "question_ids": [
+        "calculus-1-6:rate-at-1000",
+        "calculus-1-6:initial-slope",
+        "calculus-1-6:linear-error",
+        "calculus-1-6:net-change",
+        "calculus-1-6:total-moved",
+        "calculus-1-6:continuity"
+      ],
+      "points": 6
+    },
+    {
       "id": "calculus-1-case",
       "type": "case",
       "mode": "self-assessment",
@@ -417,6 +498,11 @@
       "version": "0.2.0",
       "date": "2026-10-08",
       "summary": "Added an original lesson on derivatives as rates in exponential and logistic growth models with synthetic data, formative items with computed keys and retrieval cards. The package remains partial and unreviewed."
+    },
+    {
+      "version": "0.3.0",
+      "date": "2026-10-08",
+      "summary": "Added an original lesson on limits of saturating responses, continuity, initial slopes and the fundamental theorem as net change with synthetic data, formative items with computed keys and retrieval cards. The package remains partial and unreviewed."
     }
   ],
   "limitations": [

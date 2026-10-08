@@ -105,6 +105,46 @@
         "calculus-3-5-objective-3"
       ],
       "license": "CC-BY-4.0"
+    },
+    {
+      "id": "calculus-3-6-card-1",
+      "lesson_id": "calculus-3-6",
+      "front": "Second-derivative test",
+      "back": "D = f_xx f_yy − f_xy²: D > 0 and f_xx > 0 minimum; D > 0 and f_xx < 0 maximum; D < 0 saddle.",
+      "objective_ids": [
+        "calculus-3-6-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "calculus-3-6-card-2",
+      "lesson_id": "calculus-3-6",
+      "front": "Lagrange multipliers",
+      "back": "At a constrained optimum ∇f = λ∇g; λ is the sensitivity of the optimum to the constraint.",
+      "objective_ids": [
+        "calculus-3-6-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "calculus-3-6-card-3",
+      "lesson_id": "calculus-3-6",
+      "front": "Least-area closed cylinder",
+      "back": "h = 2r; open-topped: h = r.",
+      "objective_ids": [
+        "calculus-3-6-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "calculus-3-6-card-4",
+      "lesson_id": "calculus-3-6",
+      "front": "Polar integrals",
+      "back": "dA = r dr dθ; the factor r is the Jacobian and often makes the integral solvable.",
+      "objective_ids": [
+        "calculus-3-6-objective-3"
+      ],
+      "license": "CC-BY-4.0"
     }
   ]
 }

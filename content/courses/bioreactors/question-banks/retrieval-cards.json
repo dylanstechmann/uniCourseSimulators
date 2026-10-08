@@ -105,6 +105,46 @@
         "bioreactors-5-objective-3"
       ],
       "license": "CC-BY-4.0"
+    },
+    {
+      "id": "bioreactors-6-card-1",
+      "lesson_id": "bioreactors-6",
+      "front": "Batch balances",
+      "back": "dX/dt = μX, dG/dt = −q_G X, dP/dt = q_P X: specific rates times cell density.",
+      "objective_ids": [
+        "bioreactors-6-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "bioreactors-6-card-2",
+      "lesson_id": "bioreactors-6",
+      "front": "Integrated consumption",
+      "back": "ΔG = q_G X₀(e^(μt) − 1)/μ; multiply by 1000 to go from per mL to per L.",
+      "objective_ids": [
+        "bioreactors-6-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "bioreactors-6-card-3",
+      "lesson_id": "bioreactors-6",
+      "front": "Abrupt depletion",
+      "back": "Each doubling consumes as much as all earlier ones combined.",
+      "objective_ids": [
+        "bioreactors-6-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "bioreactors-6-card-4",
+      "lesson_id": "bioreactors-6",
+      "front": "Perfusion balance",
+      "back": "dG/dt = D(G_in − G) − q_G X; D_min = q_G X/G_in, with cell retention.",
+      "objective_ids": [
+        "bioreactors-6-objective-3"
+      ],
+      "license": "CC-BY-4.0"
     }
   ]
 }

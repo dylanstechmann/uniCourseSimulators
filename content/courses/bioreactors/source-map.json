@@ -67,6 +67,19 @@
       "original_content": true,
       "license": "CC-BY-4.0",
       "modifications": []
+    },
+    {
+      "module_id": "bioreactors-module-6",
+      "lesson_id": "bioreactors-6",
+      "reading": "modules/06-cell-culture-mass-balance.md",
+      "source_ids": [
+        "transport",
+        "tissueEngineering"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
     }
   ]
 }

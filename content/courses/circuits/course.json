@@ -7,7 +7,7 @@
   "domain": "Electrical engineering",
   "level": "Year 2",
   "maturity": "partial",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "license": "MIT OR CC-BY-4.0",
   "content_origin": {
     "kind": "legacy-prototype",
@@ -120,6 +120,31 @@
       "description": "Compute ADC resolution and convert it into the smallest change in the measured physical quantity, and evaluate which error dominates.",
       "bloom": "evaluate",
       "course_outcome_ids": [
+        "circuits-outcome-4"
+      ]
+    },
+    {
+      "id": "circuits-6-objective-1",
+      "description": "Derive the transfer function of an RC low-pass filter and compute its time constant and cutoff frequency.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "circuits-outcome-2"
+      ]
+    },
+    {
+      "id": "circuits-6-objective-2",
+      "description": "Calculate the gain (as a ratio and in decibels) and the phase shift at a given frequency.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "circuits-outcome-2"
+      ]
+    },
+    {
+      "id": "circuits-6-objective-3",
+      "description": "Evaluate whether a first-order filter adequately suppresses noise and aliasing for a chosen sampling rate.",
+      "bloom": "evaluate",
+      "course_outcome_ids": [
+        "circuits-outcome-2",
         "circuits-outcome-4"
       ]
     }
@@ -281,6 +306,41 @@
           ]
         }
       ]
+    },
+    {
+      "id": "circuits-module-6",
+      "title": "RC low-pass frequency response",
+      "source_ids": [
+        "circuits",
+        "signals"
+      ],
+      "lessons": [
+        {
+          "id": "circuits-6",
+          "title": "First-order frequency response: an RC low-pass filter for a biological signal",
+          "reading": "modules/06-rc-low-pass-frequency-response.md",
+          "objectives": [
+            "circuits-6-objective-1",
+            "circuits-6-objective-2",
+            "circuits-6-objective-3"
+          ],
+          "worked_example": "R = 10 kΩ and C = 10 nF give τ = 0.10 ms and f_c = 1591.5 Hz; at 100 Hz the gain is 0.9980 with -3.60° phase, while 10 kHz is attenuated only to 0.157 (-16.1 dB), so a single stage protects poorly against aliasing at 2000 Hz sampling.",
+          "question_ids": [
+            "circuits-6:cutoff",
+            "circuits-6:noise-gain",
+            "circuits-6:decibels",
+            "circuits-6:phase",
+            "circuits-6:alias-gain",
+            "circuits-6:aliasing-fix"
+          ],
+          "card_ids": [
+            "circuits-6-card-1",
+            "circuits-6-card-2",
+            "circuits-6-card-3",
+            "circuits-6-card-4"
+          ]
+        }
+      ]
     }
   ],
   "assessments": [
@@ -366,6 +426,27 @@
       "points": 6
     },
     {
+      "id": "circuits-6-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "RC low-pass frequency response practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "circuits-6-objective-1",
+        "circuits-6-objective-2",
+        "circuits-6-objective-3"
+      ],
+      "question_ids": [
+        "circuits-6:cutoff",
+        "circuits-6:noise-gain",
+        "circuits-6:decibels",
+        "circuits-6:phase",
+        "circuits-6:alias-gain",
+        "circuits-6:aliasing-fix"
+      ],
+      "points": 6
+    },
+    {
       "id": "circuits-case",
       "type": "case",
       "mode": "self-assessment",
@@ -412,6 +493,11 @@
       "version": "0.2.0",
       "date": "2026-10-08",
       "summary": "Added an original lesson on sensor loading and ADC resolution (dividers, Thevenin resistance, input-impedance error, resolution versus accuracy) with synthetic data, formative items with computed keys and retrieval cards. The package remains partial and unreviewed."
+    },
+    {
+      "version": "0.3.0",
+      "date": "2026-10-08",
+      "summary": "Added an original lesson on first-order RC low-pass frequency response, decibels, phase and anti-aliasing with synthetic data, formative items with computed keys and retrieval cards. The package remains partial and unreviewed."
     }
   ],
   "limitations": [

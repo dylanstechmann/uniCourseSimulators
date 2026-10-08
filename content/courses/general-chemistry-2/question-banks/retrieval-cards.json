@@ -145,6 +145,46 @@
         "general-chemistry-2-6-objective-3"
       ],
       "license": "CC-BY-4.0"
+    },
+    {
+      "id": "general-chemistry-2-7-card-1",
+      "lesson_id": "general-chemistry-2-7",
+      "front": "Nernst equation",
+      "back": "E = E°′ + (2.303RT/nF) log([Ox]/[Red]); ≈ 62/n mV per decade at 37 °C.",
+      "objective_ids": [
+        "general-chemistry-2-7-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "general-chemistry-2-7-card-2",
+      "lesson_id": "general-chemistry-2-7",
+      "front": "Direction and energy",
+      "back": "Electrons flow to the higher actual potential; ΔG = −nFΔE.",
+      "objective_ids": [
+        "general-chemistry-2-7-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "general-chemistry-2-7-card-3",
+      "lesson_id": "general-chemistry-2-7",
+      "front": "Coordination",
+      "back": "Coordination number and geometry (tetrahedral, square planar, octahedral) and ligands tune a metal's function and potential.",
+      "objective_ids": [
+        "general-chemistry-2-7-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "general-chemistry-2-7-card-4",
+      "lesson_id": "general-chemistry-2-7",
+      "front": "Chelation",
+      "back": "Multidentate ligands like EDTA bind strongly; free metal = [complex]/(K_f [free ligand]).",
+      "objective_ids": [
+        "general-chemistry-2-7-objective-3"
+      ],
+      "license": "CC-BY-4.0"
     }
   ]
 }

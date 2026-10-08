@@ -7,7 +7,7 @@
   "domain": "Mathematics",
   "level": "Year 2",
   "maturity": "partial",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "license": "MIT OR CC-BY-4.0",
   "content_origin": {
     "kind": "legacy-prototype",
@@ -121,6 +121,30 @@
       "course_outcome_ids": [
         "calculus-3-outcome-1",
         "calculus-3-outcome-4"
+      ]
+    },
+    {
+      "id": "calculus-3-6-objective-1",
+      "description": "Find critical points of a two-variable function and classify them with the second-derivative (Hessian) test.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "calculus-3-outcome-2"
+      ]
+    },
+    {
+      "id": "calculus-3-6-objective-2",
+      "description": "Solve a constrained optimization with a Lagrange multiplier and interpret the optimal design.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "calculus-3-outcome-2"
+      ]
+    },
+    {
+      "id": "calculus-3-6-objective-3",
+      "description": "Set up and evaluate a double integral in polar coordinates, including the Jacobian factor r, for a radially symmetric quantity.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "calculus-3-outcome-3"
       ]
     }
   ],
@@ -281,6 +305,41 @@
           ]
         }
       ]
+    },
+    {
+      "id": "calculus-3-module-6",
+      "title": "Constrained optimization and polar integrals",
+      "source_ids": [
+        "multivariable",
+        "transport"
+      ],
+      "lessons": [
+        {
+          "id": "calculus-3-6",
+          "title": "Optimizing with and without constraints, and integrating over a disk in polar coordinates",
+          "reading": "modules/06-constrained-optimization-and-polar-integrals.md",
+          "objectives": [
+            "calculus-3-6-objective-1",
+            "calculus-3-6-objective-2",
+            "calculus-3-6-objective-3"
+          ],
+          "worked_example": "x² + xy + y² − 3x has a minimum -3 at (2, -1); a 100 cm³ closed cylinder of least area has r = 2.515 cm and h = 2r; the polar integral of the synthetic density over r ≤ 50 μm gives 618,060 molecules, 39.3% of the total.",
+          "question_ids": [
+            "calculus-3-6:critical-value",
+            "calculus-3-6:classify",
+            "calculus-3-6:vessel-radius",
+            "calculus-3-6:multiplier",
+            "calculus-3-6:polar-total",
+            "calculus-3-6:disk-fraction"
+          ],
+          "card_ids": [
+            "calculus-3-6-card-1",
+            "calculus-3-6-card-2",
+            "calculus-3-6-card-3",
+            "calculus-3-6-card-4"
+          ]
+        }
+      ]
     }
   ],
   "assessments": [
@@ -366,6 +425,27 @@
       "points": 6
     },
     {
+      "id": "calculus-3-6-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Constrained optimization and polar integrals practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "calculus-3-6-objective-1",
+        "calculus-3-6-objective-2",
+        "calculus-3-6-objective-3"
+      ],
+      "question_ids": [
+        "calculus-3-6:critical-value",
+        "calculus-3-6:classify",
+        "calculus-3-6:vessel-radius",
+        "calculus-3-6:multiplier",
+        "calculus-3-6:polar-total",
+        "calculus-3-6:disk-fraction"
+      ],
+      "points": 6
+    },
+    {
       "id": "calculus-3-case",
       "type": "case",
       "mode": "self-assessment",
@@ -412,6 +492,11 @@
       "version": "0.2.0",
       "date": "2026-10-08",
       "summary": "Added an original lesson on gradients in a concentration field (partial and directional derivatives, steepest ascent, Fick's law and gradient detectability across a cell) with synthetic data, formative items with computed keys and retrieval cards. The package remains partial and unreviewed."
+    },
+    {
+      "version": "0.3.0",
+      "date": "2026-10-08",
+      "summary": "Added an original lesson on unconstrained and Lagrange-multiplier optimization and polar double integrals with synthetic data, formative items with computed keys and retrieval cards. The package remains partial and unreviewed."
     }
   ],
   "limitations": [

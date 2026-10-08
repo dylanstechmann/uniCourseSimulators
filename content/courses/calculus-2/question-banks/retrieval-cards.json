@@ -105,6 +105,46 @@
         "calculus-2-5-objective-3"
       ],
       "license": "CC-BY-4.0"
+    },
+    {
+      "id": "calculus-2-6-card-1",
+      "lesson_id": "calculus-2-6",
+      "front": "Taylor polynomial",
+      "back": "Pₙ(x) = Σ f⁽ᵏ⁾(a)(x − a)ᵏ/k! for k ≤ n.",
+      "objective_ids": [
+        "calculus-2-6-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "calculus-2-6-card-2",
+      "lesson_id": "calculus-2-6",
+      "front": "Lagrange remainder bound",
+      "back": "|Rₙ| ≤ M|x − a|ⁿ⁺¹/(n + 1)! with M bounding |f⁽ⁿ⁺¹⁾| on the interval.",
+      "objective_ids": [
+        "calculus-2-6-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "calculus-2-6-card-3",
+      "lesson_id": "calculus-2-6",
+      "front": "Linear decay",
+      "back": "1 − e^(−kt) ≈ kt with relative error about kt/2.",
+      "objective_ids": [
+        "calculus-2-6-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "calculus-2-6-card-4",
+      "lesson_id": "calculus-2-6",
+      "front": "Small-change logs and angles",
+      "back": "ln(1 + x) ≈ x and sin θ ≈ θ (radians) only for small arguments.",
+      "objective_ids": [
+        "calculus-2-6-objective-3"
+      ],
+      "license": "CC-BY-4.0"
     }
   ]
 }

@@ -7,7 +7,7 @@
   "domain": "Chemistry",
   "level": "Year 1",
   "maturity": "partial",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "license": "MIT OR CC-BY-4.0",
   "content_origin": {
     "kind": "legacy-prototype",
@@ -119,6 +119,31 @@
       "description": "Check a preparation's dimensions, purity correction and propagated uncertainty, and identify the step that dominates the error.",
       "bloom": "evaluate",
       "course_outcome_ids": [
+        "general-chemistry-1-outcome-4"
+      ]
+    },
+    {
+      "id": "general-chemistry-1-6-objective-1",
+      "description": "Predict whether a molecule is polar from bond polarity and geometry and relate polarity and hydrogen bonding to solubility.",
+      "bloom": "analyze",
+      "course_outcome_ids": [
+        "general-chemistry-1-outcome-2"
+      ]
+    },
+    {
+      "id": "general-chemistry-1-6-objective-2",
+      "description": "Use a partition coefficient (an equilibrium constant) to compute how a solute distributes between octanol and water.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "general-chemistry-1-outcome-3"
+      ]
+    },
+    {
+      "id": "general-chemistry-1-6-objective-3",
+      "description": "Apply energy conservation in a simple calorimeter to obtain an enthalpy of solution, and predict how temperature shifts the dissolution equilibrium.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "general-chemistry-1-outcome-3",
         "general-chemistry-1-outcome-4"
       ]
     }
@@ -275,6 +300,40 @@
           ]
         }
       ]
+    },
+    {
+      "id": "general-chemistry-1-module-6",
+      "title": "Polarity, partitioning and heat of solution",
+      "source_ids": [
+        "chemistry"
+      ],
+      "lessons": [
+        {
+          "id": "general-chemistry-1-6",
+          "title": "Molecular shape, polarity and where a molecule goes: solubility, partitioning and the energy of dissolving",
+          "reading": "modules/06-polarity-partitioning-and-heat-of-solution.md",
+          "objectives": [
+            "general-chemistry-1-6-objective-1",
+            "general-chemistry-1-6-objective-2",
+            "general-chemistry-1-6-objective-3"
+          ],
+          "worked_example": "With K_ow = 100, equal volumes leave 0.0099 of the solute in water and 100 mL water with 10 mL octanol leaves 0.0909; dissolving 5.35 g (0.1000 mol) of salt with a -3.3 °C change gives q = -1453 J and ΔH = +14.5 kJ/mol.",
+          "question_ids": [
+            "general-chemistry-1-6:co2-vs-water",
+            "general-chemistry-1-6:fraction-water-equal",
+            "general-chemistry-1-6:fraction-water-unequal",
+            "general-chemistry-1-6:q-solution",
+            "general-chemistry-1-6:delta-h",
+            "general-chemistry-1-6:temperature-solubility"
+          ],
+          "card_ids": [
+            "general-chemistry-1-6-card-1",
+            "general-chemistry-1-6-card-2",
+            "general-chemistry-1-6-card-3",
+            "general-chemistry-1-6-card-4"
+          ]
+        }
+      ]
     }
   ],
   "assessments": [
@@ -360,6 +419,27 @@
       "points": 6
     },
     {
+      "id": "general-chemistry-1-6-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Polarity, partitioning and heat of solution practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "general-chemistry-1-6-objective-1",
+        "general-chemistry-1-6-objective-2",
+        "general-chemistry-1-6-objective-3"
+      ],
+      "question_ids": [
+        "general-chemistry-1-6:co2-vs-water",
+        "general-chemistry-1-6:fraction-water-equal",
+        "general-chemistry-1-6:fraction-water-unequal",
+        "general-chemistry-1-6:q-solution",
+        "general-chemistry-1-6:delta-h",
+        "general-chemistry-1-6:temperature-solubility"
+      ],
+      "points": 6
+    },
+    {
       "id": "general-chemistry-1-case",
       "type": "case",
       "mode": "self-assessment",
@@ -406,6 +486,11 @@
       "version": "0.2.0",
       "date": "2026-10-08",
       "summary": "Added an original lesson on solution preparation (mass and molarity, dilution and serial dilution, purity correction and propagated error) with synthetic data, formative items with computed keys and retrieval cards. The package remains partial and unreviewed."
+    },
+    {
+      "version": "0.3.0",
+      "date": "2026-10-08",
+      "summary": "Added an original lesson on molecular polarity, octanol–water partitioning and coffee-cup calorimetry of dissolution with synthetic data, formative items with computed keys and retrieval cards. The package remains partial and unreviewed."
     }
   ],
   "limitations": [

@@ -434,6 +434,191 @@
         "kind": "original",
         "modifications": []
       }
+    },
+    {
+      "id": "physics-mechanics-6:rcf",
+      "type": "numeric",
+      "prompt": "A sample spins at 3000 rpm at radius 10 cm. What is the relative centrifugal force (in multiples of g = 9.81 m/s²)? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "physics-mechanics-6-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 1006.076,
+        "unit": "",
+        "tolerance": 2,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Convert rpm to rad/s, then RCF = ω²r/g.",
+        "solution": "ω = 314.2 rad/s; ω²r = 9870 m/s²; RCF = 1006.",
+        "lesson_ids": [
+          "physics-mechanics-6"
+        ],
+        "misconception_ids": [
+          "rpm-not-converted"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physics-mechanics-6:rpm-target",
+      "type": "numeric",
+      "prompt": "What speed in rpm gives 500 ×g at radius 10 cm? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "physics-mechanics-6-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 2114.905,
+        "unit": "",
+        "tolerance": 3,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Solve RCF = ω²r/g for ω, then convert to rpm.",
+        "solution": "ω = √(500 × 9.81/0.1) = 221.5 rad/s = 2115 rpm.",
+        "lesson_ids": [
+          "physics-mechanics-6"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physics-mechanics-6:kinetic-energy",
+      "type": "numeric",
+      "prompt": "A rotor modeled as a uniform disk of 2 kg and radius 12 cm spins at 3000 rpm. What is its rotational kinetic energy? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "physics-mechanics-6-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 710.612,
+        "unit": "J",
+        "tolerance": 2,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "I = ½MR², KE = ½Iω².",
+        "solution": "I = 0.0144 kg·m²; KE = ½ × 0.0144 × 314.2² = 711 J.",
+        "lesson_ids": [
+          "physics-mechanics-6"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physics-mechanics-6:spin-up-torque",
+      "type": "numeric",
+      "prompt": "The same rotor (I = 0.0144 kg·m²) reaches 314.2 rad/s in 20 s at constant angular acceleration. What torque is required? Enter the number only (N·m).",
+      "points": 1,
+      "objective_ids": [
+        "physics-mechanics-6-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0.22619,
+        "unit": "",
+        "tolerance": 0.002,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "α = ω/t; τ = Iα.",
+        "solution": "α = 15.71 rad/s²; τ = 0.0144 × 15.71 = 0.226 N·m.",
+        "lesson_ids": [
+          "physics-mechanics-6"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physics-mechanics-6:imbalance-force",
+      "type": "numeric",
+      "prompt": "An extra 1 g sits at 10 cm in a rotor spinning at 3000 rpm. What rotating unbalanced force results? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "physics-mechanics-6-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 9.8696,
+        "unit": "N",
+        "tolerance": 0.05,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "F = Δm ω² r.",
+        "solution": "0.001 × 314.2² × 0.1 = 9.9 N.",
+        "lesson_ids": [
+          "physics-mechanics-6"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physics-mechanics-6:protocol-units",
+      "type": "single_choice",
+      "prompt": "A protocol says 'spin at 5,000 rpm'. A lab has a rotor with a larger radius than the protocol's author used. What should they do?",
+      "points": 1,
+      "objective_ids": [
+        "physics-mechanics-6-objective-3"
+      ],
+      "options": [
+        "Spin longer at 5,000 rpm.",
+        "Double the speed to compensate.",
+        "Use 5,000 rpm; rotation rate is what matters.",
+        "Convert to RCF using the original radius and choose a speed that gives the same ×g at their radius."
+      ],
+      "solution_spec": {
+        "answer": 3
+      },
+      "feedback": {
+        "hint": "Which quantity does sedimentation depend on?",
+        "solution": "Sedimentation depends on acceleration ω²r. The same rpm at a larger radius gives more ×g. Protocols should state ×g, with time and temperature.",
+        "lesson_ids": [
+          "physics-mechanics-6"
+        ],
+        "misconception_ids": [
+          "rpm-is-portable"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
     }
   ]
 }

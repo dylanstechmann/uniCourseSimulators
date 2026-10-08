@@ -105,6 +105,46 @@
         "general-chemistry-1-5-objective-3"
       ],
       "license": "CC-BY-4.0"
+    },
+    {
+      "id": "general-chemistry-1-6-card-1",
+      "lesson_id": "general-chemistry-1-6",
+      "front": "Molecular polarity",
+      "back": "Polar bonds plus asymmetric geometry give a net dipole: water polar (bent), CO₂ nonpolar (linear).",
+      "objective_ids": [
+        "general-chemistry-1-6-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "general-chemistry-1-6-card-2",
+      "lesson_id": "general-chemistry-1-6",
+      "front": "Partition coefficient",
+      "back": "K_ow = [octanol]/[water]; amount fraction in water = V_w/(V_w + K V_o).",
+      "objective_ids": [
+        "general-chemistry-1-6-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "general-chemistry-1-6-card-3",
+      "lesson_id": "general-chemistry-1-6",
+      "front": "Coffee-cup calorimetry",
+      "back": "q_soln = m c ΔT; q_rxn = −q_soln; ΔH = q_rxn/n.",
+      "objective_ids": [
+        "general-chemistry-1-6-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "general-chemistry-1-6-card-4",
+      "lesson_id": "general-chemistry-1-6",
+      "front": "Temperature and solubility",
+      "back": "Endothermic dissolution: solubility rises with T; exothermic (most gases): falls.",
+      "objective_ids": [
+        "general-chemistry-1-6-objective-3"
+      ],
+      "license": "CC-BY-4.0"
     }
   ]
 }

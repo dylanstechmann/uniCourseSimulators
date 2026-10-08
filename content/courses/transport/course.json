@@ -7,7 +7,7 @@
   "domain": "Bioengineering",
   "level": "Year 3",
   "maturity": "partial",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "license": "MIT OR CC-BY-4.0",
   "content_origin": {
     "kind": "legacy-prototype",
@@ -121,6 +121,30 @@
       "course_outcome_ids": [
         "transport-outcome-2",
         "transport-outcome-4"
+      ]
+    },
+    {
+      "id": "transport-6-objective-1",
+      "description": "Write steady control-volume balances for mass and energy across a heated flow line and compute the heating power required.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "transport-outcome-1"
+      ]
+    },
+    {
+      "id": "transport-6-objective-2",
+      "description": "Calculate mean velocity and Reynolds number to determine the flow regime in a tube.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "transport-outcome-3"
+      ]
+    },
+    {
+      "id": "transport-6-objective-3",
+      "description": "Estimate pressure drop and wall shear stress for laminar flow with the Hagen–Poiseuille relation, and evaluate how they scale with diameter.",
+      "bloom": "evaluate",
+      "course_outcome_ids": [
+        "transport-outcome-3"
       ]
     }
   ],
@@ -280,6 +304,41 @@
           ]
         }
       ]
+    },
+    {
+      "id": "transport-module-6",
+      "title": "Perfusion tubing: balances and pressure drop",
+      "source_ids": [
+        "transport",
+        "engineeringMath"
+      ],
+      "lessons": [
+        {
+          "id": "transport-6",
+          "title": "Perfusing a culture through tubing: control-volume balances, Reynolds number and pressure drop",
+          "reading": "modules/06-perfusion-tubing-balances-and-pressure-drop.md",
+          "objectives": [
+            "transport-6-objective-1",
+            "transport-6-objective-2",
+            "transport-6-objective-3"
+          ],
+          "worked_example": "At 2.0 mL/min in a 1.0 mm tube, Re = 54.4 (laminar), ΔP over 0.5 m is 529.7 Pa (sixteen times more at half the diameter), wall shear is 0.2648 Pa, and heating from 22 to 37 °C takes 2.09 W.",
+          "question_ids": [
+            "transport-6:heater-power",
+            "transport-6:reynolds",
+            "transport-6:pressure-drop",
+            "transport-6:half-diameter",
+            "transport-6:wall-shear",
+            "transport-6:mixing"
+          ],
+          "card_ids": [
+            "transport-6-card-1",
+            "transport-6-card-2",
+            "transport-6-card-3",
+            "transport-6-card-4"
+          ]
+        }
+      ]
     }
   ],
   "assessments": [
@@ -364,6 +423,27 @@
       "points": 5
     },
     {
+      "id": "transport-6-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Perfusion tubing: balances and pressure drop practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "transport-6-objective-1",
+        "transport-6-objective-2",
+        "transport-6-objective-3"
+      ],
+      "question_ids": [
+        "transport-6:heater-power",
+        "transport-6:reynolds",
+        "transport-6:pressure-drop",
+        "transport-6:half-diameter",
+        "transport-6:wall-shear",
+        "transport-6:mixing"
+      ],
+      "points": 6
+    },
+    {
       "id": "transport-case",
       "type": "case",
       "mode": "self-assessment",
@@ -410,6 +490,11 @@
       "version": "0.2.0",
       "date": "2026-10-08",
       "summary": "Added an original lesson on oxygen limits in thick constructs (zero-order uptake, critical thickness, a dimensionless diffusion-to-consumption ratio and the failure of the model at depletion) with five formative items with computed keys and four retrieval cards. The package remains partial and unreviewed."
+    },
+    {
+      "version": "0.3.0",
+      "date": "2026-10-08",
+      "summary": "Added an original lesson on perfusion tubing (control-volume mass and energy balances, Reynolds number, Hagen–Poiseuille pressure drop and wall shear) with synthetic data, formative items with computed keys and retrieval cards. The package remains partial and unreviewed."
     }
   ],
   "limitations": [

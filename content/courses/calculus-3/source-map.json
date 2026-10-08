@@ -67,6 +67,19 @@
       "original_content": true,
       "license": "CC-BY-4.0",
       "modifications": []
+    },
+    {
+      "module_id": "calculus-3-module-6",
+      "lesson_id": "calculus-3-6",
+      "reading": "modules/06-constrained-optimization-and-polar-integrals.md",
+      "source_ids": [
+        "multivariable",
+        "transport"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
     }
   ]
 }

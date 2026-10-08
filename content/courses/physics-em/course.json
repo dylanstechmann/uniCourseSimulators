@@ -7,7 +7,7 @@
   "domain": "Physics",
   "level": "Year 1",
   "maturity": "partial",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "license": "MIT OR CC-BY-4.0",
   "content_origin": {
     "kind": "legacy-prototype",
@@ -122,6 +122,30 @@
       "course_outcome_ids": [
         "physics-em-outcome-1",
         "physics-em-outcome-2"
+      ]
+    },
+    {
+      "id": "physics-em-6-objective-1",
+      "description": "Calculate the magnetic force on a moving charge and the voltage across a conducting fluid flowing through a magnetic field.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "physics-em-outcome-3"
+      ]
+    },
+    {
+      "id": "physics-em-6-objective-2",
+      "description": "Apply Faraday's law to compute the voltage induced in a coil by a changing magnetic field, and use Lenz's law to give its direction.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "physics-em-outcome-3"
+      ]
+    },
+    {
+      "id": "physics-em-6-objective-3",
+      "description": "Use circuit measurements to design a current limit and to estimate a leakage current, relating both to a stated safety limit.",
+      "bloom": "evaluate",
+      "course_outcome_ids": [
+        "physics-em-outcome-4"
       ]
     }
   ],
@@ -282,6 +306,41 @@
           ]
         }
       ]
+    },
+    {
+      "id": "physics-em-module-6",
+      "title": "Induction, flow meters and current limits",
+      "source_ids": [
+        "physicsEM",
+        "circuits"
+      ],
+      "lessons": [
+        {
+          "id": "physics-em-6",
+          "title": "Magnetic forces and induction at the bench: flow meters, induced voltages and keeping currents within limits",
+          "reading": "modules/06-induction-flow-meters-and-current-limits.md",
+          "objectives": [
+            "physics-em-6-objective-1",
+            "physics-em-6-objective-2",
+            "physics-em-6-objective-3"
+          ],
+          "worked_example": "A 0.1 T field across a 10 mm pipe at 0.3 m/s gives 0.30 mV; a 50-turn, 2 cm² coil in 20 T/s develops 0.20 V; a 10 μA design limit at 5 V needs at least 500 kΩ in series, and 0.35 V across 100 kΩ means 3.5 μA.",
+          "question_ids": [
+            "physics-em-6:flow-emf",
+            "physics-em-6:coil-emf",
+            "physics-em-6:lenz",
+            "physics-em-6:series-resistor",
+            "physics-em-6:leakage",
+            "physics-em-6:limit-design"
+          ],
+          "card_ids": [
+            "physics-em-6-card-1",
+            "physics-em-6-card-2",
+            "physics-em-6-card-3",
+            "physics-em-6-card-4"
+          ]
+        }
+      ]
     }
   ],
   "assessments": [
@@ -367,6 +426,27 @@
       "points": 6
     },
     {
+      "id": "physics-em-6-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Induction, flow meters and current limits practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "physics-em-6-objective-1",
+        "physics-em-6-objective-2",
+        "physics-em-6-objective-3"
+      ],
+      "question_ids": [
+        "physics-em-6:flow-emf",
+        "physics-em-6:coil-emf",
+        "physics-em-6:lenz",
+        "physics-em-6:series-resistor",
+        "physics-em-6:leakage",
+        "physics-em-6:limit-design"
+      ],
+      "points": 6
+    },
+    {
       "id": "physics-em-case",
       "type": "case",
       "mode": "self-assessment",
@@ -413,6 +493,11 @@
       "version": "0.2.0",
       "date": "2026-10-08",
       "summary": "Added an original lesson on the cell membrane as a capacitor (capacitance, ions per voltage change, transmembrane field and time constant) with synthetic data, formative items with computed keys and retrieval cards. The package remains partial and unreviewed."
+    },
+    {
+      "version": "0.3.0",
+      "date": "2026-10-08",
+      "summary": "Added an original lesson on magnetic force, electromagnetic flow measurement, Faraday and Lenz's laws and circuit current limits with synthetic data, formative items with computed keys and retrieval cards. The package remains partial and unreviewed."
     }
   ],
   "limitations": [

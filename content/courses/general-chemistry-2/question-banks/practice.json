@@ -620,6 +620,191 @@
         "kind": "original",
         "modifications": []
       }
+    },
+    {
+      "id": "general-chemistry-2-7:nernst",
+      "type": "numeric",
+      "prompt": "The NAD⁺/NADH couple has E°′ = -0.32 V and n = 2. At 37 °C (2.303RT/F = 0.06155 V) with [NAD⁺]/[NADH] = 10, what is the actual potential? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "general-chemistry-2-7-objective-1"
+      ],
+      "solution_spec": {
+        "answer": -0.28923,
+        "unit": "V",
+        "tolerance": 0.001,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "E = E°′ + (2.303RT/nF) log₁₀([Ox]/[Red]).",
+        "solution": "-0.32 + (0.06155/2)(1) = -0.2892 V.",
+        "lesson_ids": [
+          "general-chemistry-2-7"
+        ],
+        "misconception_ids": [
+          "nernst-ratio-inverted"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "general-chemistry-2-7:delta-g",
+      "type": "numeric",
+      "prompt": "Electrons pass from a couple at -0.2892 V to one at 0.045 V, two electrons per molecule (F = 96485 C/mol). What is ΔG? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "general-chemistry-2-7-objective-2"
+      ],
+      "solution_spec": {
+        "answer": -64.496,
+        "unit": "kJ/mol",
+        "tolerance": 0.3,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "ΔG = −nF(E_acceptor − E_donor).",
+        "solution": "ΔE = 0.3342 V; ΔG = −2 × 96485 × 0.3342 = -64.5 kJ/mol.",
+        "lesson_ids": [
+          "general-chemistry-2-7"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "general-chemistry-2-7:direction",
+      "type": "single_choice",
+      "prompt": "Couple A has an actual potential of −0.25 V and couple B −0.05 V. In which direction do electrons flow spontaneously?",
+      "points": 1,
+      "objective_ids": [
+        "general-chemistry-2-7-objective-2"
+      ],
+      "options": [
+        "The direction depends only on the standard potentials, not the actual ones.",
+        "From B to A.",
+        "Neither; both potentials are negative.",
+        "From A to B, toward the higher (more positive) potential."
+      ],
+      "solution_spec": {
+        "answer": 3
+      },
+      "feedback": {
+        "hint": "Electrons move toward the couple with the greater tendency to be reduced.",
+        "solution": "The more positive actual potential belongs to the better acceptor. ΔE = −0.05 − (−0.25) = +0.20 V, so ΔG is negative for A → B.",
+        "lesson_ids": [
+          "general-chemistry-2-7"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "general-chemistry-2-7:heme-coordination",
+      "type": "single_choice",
+      "prompt": "In oxygenated myoglobin, how many donor atoms coordinate the iron, and in what geometry?",
+      "points": 1,
+      "objective_ids": [
+        "general-chemistry-2-7-objective-3"
+      ],
+      "options": [
+        "Four, tetrahedral.",
+        "Two, linear.",
+        "Six, octahedral: four porphyrin nitrogens, one histidine nitrogen and the bound O₂.",
+        "Four, square planar, with no protein ligand."
+      ],
+      "solution_spec": {
+        "answer": 2
+      },
+      "feedback": {
+        "hint": "Count the ring nitrogens, then the axial ligands above and below the ring.",
+        "solution": "The planar porphyrin gives four donors; a proximal histidine and O₂ occupy the two axial sites, giving six-coordinate, octahedral iron.",
+        "lesson_ids": [
+          "general-chemistry-2-7"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "general-chemistry-2-7:free-calcium",
+      "type": "numeric",
+      "prompt": "A solution contains 1 mM Ca–EDTA complex and 1 mM free EDTA, with a conditional formation constant of 10⁷ M⁻¹. What is the free Ca²⁺ concentration? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "general-chemistry-2-7-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 0.1,
+        "unit": "μM",
+        "tolerance": 0.005,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "[Ca²⁺] = [CaY]/(K_f [Y]).",
+        "solution": "10⁻³/(10⁷ × 10⁻³) = 10⁻⁷ M = 0.1 μM.",
+        "lesson_ids": [
+          "general-chemistry-2-7"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "general-chemistry-2-7:fe3-oxygen",
+      "type": "single_choice",
+      "prompt": "Why does hemoglobin whose iron has been oxidized to Fe³⁺ fail to carry oxygen?",
+      "points": 1,
+      "objective_ids": [
+        "general-chemistry-2-7-objective-3"
+      ],
+      "options": [
+        "Oxidation removes the histidine ligand.",
+        "Fe³⁺ binds oxygen too weakly only at low temperature.",
+        "Only Fe²⁺ binds O₂ reversibly in the heme pocket; Fe³⁺ binds water or hydroxide at the sixth site instead.",
+        "Fe³⁺ has fewer ligands available because the porphyrin is lost."
+      ],
+      "solution_spec": {
+        "answer": 2
+      },
+      "feedback": {
+        "hint": "The oxidation state of the metal changes what binds at the open site.",
+        "solution": "The binding chemistry depends on oxidation state. In the Fe³⁺ form the sixth site holds water or hydroxide, so the protein cannot transport O₂.",
+        "lesson_ids": [
+          "general-chemistry-2-7"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
     }
   ]
 }

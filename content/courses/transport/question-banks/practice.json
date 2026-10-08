@@ -400,6 +400,191 @@
         "kind": "original",
         "modifications": []
       }
+    },
+    {
+      "id": "transport-6:heater-power",
+      "type": "numeric",
+      "prompt": "Medium (ρ = 1000 kg/m³, c_p = 4180 J/(kg·K)) flows at 2.0 mL/min and is heated from 22 to 37 °C. What steady heating power is needed? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "transport-6-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 2.09,
+        "unit": "W",
+        "tolerance": 0.05,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Q̇ = ṁ c_p ΔT with ṁ = ρQ in kg/s.",
+        "solution": "ṁ = 3.333×10⁻⁵ kg/s; Q̇ = 3.333×10⁻⁵ × 4180 × 15 = 2.09 W.",
+        "lesson_ids": [
+          "transport-6"
+        ],
+        "misconception_ids": [
+          "mlmin-not-converted"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "transport-6:reynolds",
+      "type": "numeric",
+      "prompt": "Medium with ρ = 1000 kg/m³ and μ = 7.80×10⁻⁴ Pa·s flows at 2.0 mL/min through a 1.0 mm diameter tube. Calculate the Reynolds number. Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "transport-6-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 54.412,
+        "unit": "",
+        "tolerance": 0.5,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Find the mean velocity Q/A first.",
+        "solution": "v = 0.0424 m/s; Re = 1000 × 0.0424 × 10⁻³/7.80×10⁻⁴ = 54.4: laminar.",
+        "lesson_ids": [
+          "transport-6"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "transport-6:pressure-drop",
+      "type": "numeric",
+      "prompt": "For laminar flow of μ = 7.80×10⁻⁴ Pa·s medium at 2.0 mL/min through 0.5 m of 1.0 mm tubing, calculate ΔP = 128μLQ/(πD⁴). Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "transport-6-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 529.668,
+        "unit": "Pa",
+        "tolerance": 0.5,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use SI units throughout.",
+        "solution": "ΔP = 529.7 Pa.",
+        "lesson_ids": [
+          "transport-6"
+        ],
+        "misconception_ids": [
+          "radius-for-diameter"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "transport-6:half-diameter",
+      "type": "numeric",
+      "prompt": "The same flow passes through tubing of half the diameter (same length). By what factor does the pressure drop increase? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "transport-6-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 16,
+        "unit": "",
+        "tolerance": 0,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "ΔP scales as 1/D⁴.",
+        "solution": "Because ΔP ∝ 1/D⁴, halving D multiplies ΔP by 2⁴ = 16.",
+        "lesson_ids": [
+          "transport-6"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "transport-6:wall-shear",
+      "type": "numeric",
+      "prompt": "For the same flow and 1.0 mm tube, calculate the wall shear stress τ_w = 32μQ/(πD³). Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "transport-6-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 0.264834,
+        "unit": "Pa",
+        "tolerance": 0.002,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use SI units; D³ in m³.",
+        "solution": "τ_w = 32 × 7.80×10⁻⁴ × 3.333×10⁻⁸/(π × 10⁻⁹) = 0.2648 Pa.",
+        "lesson_ids": [
+          "transport-6"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "transport-6:mixing",
+      "type": "single_choice",
+      "prompt": "Two solutions are pumped side by side into a 0.2 mm channel at Re ≈ 0.3. What happens to them along the channel?",
+      "points": 1,
+      "objective_ids": [
+        "transport-6-objective-2"
+      ],
+      "options": [
+        "They mix immediately by turbulence.",
+        "Low Re means the fluids do not move.",
+        "They separate further apart.",
+        "They flow in parallel layers and mix only by diffusion across the interface, so mixing is slow without special channel features."
+      ],
+      "solution_spec": {
+        "answer": 3
+      },
+      "feedback": {
+        "hint": "Laminar flow has no turbulent eddies.",
+        "solution": "At low Re, viscous forces dominate; streams stay layered and interdiffuse. Microfluidic mixers add geometry (serpentines, herringbones) to fold the streams and shorten diffusion distances.",
+        "lesson_ids": [
+          "transport-6"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
     }
   ]
 }

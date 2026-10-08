@@ -105,6 +105,46 @@
         "transport-5-objective-3"
       ],
       "license": "CC-BY-4.0"
+    },
+    {
+      "id": "transport-6-card-1",
+      "lesson_id": "transport-6",
+      "front": "Control-volume energy balance",
+      "back": "Steady heater: Q̇ = ṁ c_p (T_out − T_in) with ṁ = ρQ.",
+      "objective_ids": [
+        "transport-6-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "transport-6-card-2",
+      "lesson_id": "transport-6",
+      "front": "Reynolds number",
+      "back": "Re = ρvD/μ; tube flow laminar below about 2,000.",
+      "objective_ids": [
+        "transport-6-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "transport-6-card-3",
+      "lesson_id": "transport-6",
+      "front": "Hagen–Poiseuille",
+      "back": "ΔP = 128μLQ/(πD⁴): halving D raises ΔP sixteenfold.",
+      "objective_ids": [
+        "transport-6-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "transport-6-card-4",
+      "lesson_id": "transport-6",
+      "front": "Wall shear",
+      "back": "τ_w = 32μQ/(πD³) in laminar tube flow; cells respond to shear.",
+      "objective_ids": [
+        "transport-6-objective-3"
+      ],
+      "license": "CC-BY-4.0"
     }
   ]
 }

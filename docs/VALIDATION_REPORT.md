@@ -4,7 +4,20 @@
 
 2026-10-06; synthetic local learner data only. Milestones 1 and 2 are implemented. Milestone 3 remains partial; deterministic graders and prototype graded-assignment and review workflows are described below. A Milestone 4 curriculum-map increment is implemented and tested, while subject-matter review and map refinement remain. All 25 course packages are **partial**; zero are beta, complete or externally reviewed. Human score review is limited to saved attempts and does not constitute course-content review. No semester equivalence, university credit, security certification or public production deployment is asserted.
 
-## Current increment: calculus 3 and robotics lessons (2026-10-08, seventh pass)
+## Current increment: twelve lessons that link every course outcome (2026-10-08, eighth pass)
+
+Written by an AI coding assistant. Twelve original lessons of about 810 to 910 words, each with common mistakes, a worked problem, six items and four cards, written for the 19 course outcomes that no lesson objective linked to: bioreactors (cell-culture mass balance), transport (perfusion tubing: balances, Reynolds number, pressure drop), calculus 1 (limits, continuity and net change), calculus 2 (Taylor error bounds), calculus 3 (constrained optimization and polar integrals), circuits (RC frequency response and aliasing), general chemistry 1 (polarity, partitioning and calorimetry), general chemistry 2 (Nernst equation and metal centers), organic chemistry (SN1/SN2 and stereochemistry), physics EM (induction, flow meters and current limits, with a synthetic limit that is explicitly not safety guidance), physics mechanics (centrifuge rotation) and statics (forearm equilibrium). The twelve packages move to 0.3.0 and stay `partial`. 72 keys were graded to full credit. Pre-commit checks caught three short feedback strings, three readings under 800 words, a source id not used by the package and a muscle-stress example whose synthetic area gave an implausible stress; all were fixed.
+
+The [gap report](COURSE_GAP_REPORT.md) now shows 0 of 101 course outcomes without a linking lesson objective. The validator's `objective-coverage` warning still appears for all 25 packages: it counts a course outcome as covered only when an assessment lists the outcome id directly, which no package (including cell biology) does. Listing outcome ids on assessments is an authoring-policy decision for a reviewer, so the warning was left in place rather than silenced.
+
+| Command/check (this container, Python 3.12.3, 2026-10-08) | Result |
+| --- | --- |
+| `python tools/validate_content.py` | PASS: 25 packages, 191 lessons, 648 questions, 504 cards, 25 cases; 0 errors; 123 disclosed warnings |
+| `verify.sh` | all steps PASS: root 190 passed; backend 1545 passed, 2 skipped; security 505 files, 0 findings; ruff clean; legacy 7/7 |
+
+Not run: frontend checks, Docker Compose, Playwright. Not reviewed by a subject-matter expert.
+
+## Previous increment: calculus 3 and robotics lessons (2026-10-08, seventh pass)
 
 Written by an AI coding assistant. Calculus 3 (gradients in a synthetic concentration field: partial and directional derivatives, steepest ascent, Fick's law and what fraction of the concentration differs across a cell) and robotics (planar two-link arm: forward and inverse kinematics, reachability, singularity, joint-error propagation for lab positioning), each 0.2.0 and still `partial`, with six items whose keys were graded to full credit and four cards. Every package now has at least one lesson-length original reading. Unlinked course outcomes: 19 of 101.
 

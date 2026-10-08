@@ -435,6 +435,191 @@
         "kind": "original",
         "modifications": []
       }
+    },
+    {
+      "id": "calculus-2-6:p2-value",
+      "type": "numeric",
+      "prompt": "Evaluate the second-order Maclaurin polynomial of e^(−x), P₂ = 1 − x + x²/2, at x = 0.2. Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "calculus-2-6-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0.82,
+        "unit": "",
+        "tolerance": 0.0002,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Substitute x into the polynomial.",
+        "solution": "1 − 0.2 + 0.04000000000000001/2 = 0.8200, close to e^(−0.2) = 0.8187.",
+        "lesson_ids": [
+          "calculus-2-6"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-2-6:remainder-bound",
+      "type": "numeric",
+      "prompt": "Bound the error of P₂ for e^(−x) at x = 0.2 using |R₂| ≤ M x³/3! with M = 1. Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "calculus-2-6-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0.0013333,
+        "unit": "",
+        "tolerance": 2e-05,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "The third derivative of e^(−x) has magnitude at most 1 on [0, x].",
+        "solution": "0.2³/6 = 0.001333; the actual error is 0.001269.",
+        "lesson_ids": [
+          "calculus-2-6"
+        ],
+        "misconception_ids": [
+          "factorial-omitted"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-2-6:decay-linear-error",
+      "type": "numeric",
+      "prompt": "For decay with k = 0.1 per day over t = 0.5 day, the linear estimate of fraction lost is kt = 0.050. The true fraction is 1 − e^(−kt). What is the percentage by which the linear estimate overstates the true fraction? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "calculus-2-6-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 2.5208,
+        "unit": "%",
+        "tolerance": 0.05,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Compute 1 − e^(−kt), then the relative difference.",
+        "solution": "True = 0.04877; (0.050 − 0.04877)/0.04877 = 2.52%.",
+        "lesson_ids": [
+          "calculus-2-6"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-2-6:small-angle",
+      "type": "numeric",
+      "prompt": "What is the relative error, in percent, of sin θ ≈ θ at θ = 10°? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "calculus-2-6-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0.5095,
+        "unit": "%",
+        "tolerance": 0.03,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Convert 10° to radians before comparing.",
+        "solution": "θ = 0.17453 rad; sin θ = 0.17365; relative error = 0.51%.",
+        "lesson_ids": [
+          "calculus-2-6"
+        ],
+        "misconception_ids": [
+          "degrees-in-small-angle"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-2-6:tolerance-kt",
+      "type": "numeric",
+      "prompt": "For what largest kt is 1 − kt guaranteed to be within 0.01 (absolute) of e^(−kt), using the remainder bound (kt)²/2? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "calculus-2-6-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 0.14142,
+        "unit": "",
+        "tolerance": 0.001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Solve (kt)²/2 = 0.01.",
+        "solution": "kt = √0.02 = 0.141.",
+        "lesson_ids": [
+          "calculus-2-6"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-2-6:log-approx",
+      "type": "single_choice",
+      "prompt": "A gene's expression rises 50%. A student reports the change as ln(1.5) ≈ 0.5. Is the approximation adequate?",
+      "points": 1,
+      "objective_ids": [
+        "calculus-2-6-objective-3"
+      ],
+      "options": [
+        "No, because logarithms cannot describe increases.",
+        "No: ln(1.5) ≈ 0.405, so the approximation is about 23% too high; ln(1 + x) ≈ x holds only for small x.",
+        "Yes, for any change below 100%.",
+        "Yes, ln(1 + x) = x exactly."
+      ],
+      "solution_spec": {
+        "answer": 1
+      },
+      "feedback": {
+        "hint": "Compare ln(1.5) with 0.5, and recall the next Taylor term −x²/2.",
+        "solution": "The next term, −x²/2 = −0.125, is large at x = 0.5. Use the exact log for fold changes of this size.",
+        "lesson_ids": [
+          "calculus-2-6"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
     }
   ]
 }

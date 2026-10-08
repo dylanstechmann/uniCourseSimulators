@@ -105,6 +105,46 @@
         "organic-chemistry-5-objective-3"
       ],
       "license": "CC-BY-4.0"
+    },
+    {
+      "id": "organic-chemistry-6-card-1",
+      "lesson_id": "organic-chemistry-6",
+      "front": "SN2",
+      "back": "One step, back-side attack; rate = k[RX][Nu]; methyl > 1° > 2°; strong Nu, polar aprotic solvent; inversion.",
+      "objective_ids": [
+        "organic-chemistry-6-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "organic-chemistry-6-card-2",
+      "lesson_id": "organic-chemistry-6",
+      "front": "SN1",
+      "back": "Carbocation intermediate; rate = k[RX]; 3° and resonance-stabilized; polar protic solvent; racemization.",
+      "objective_ids": [
+        "organic-chemistry-6-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "organic-chemistry-6-card-3",
+      "lesson_id": "organic-chemistry-6",
+      "front": "Stereoisomer count",
+      "back": "Up to 2ⁿ for n stereocenters, fewer with meso forms.",
+      "objective_ids": [
+        "organic-chemistry-6-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "organic-chemistry-6-card-4",
+      "lesson_id": "organic-chemistry-6",
+      "front": "Enantiomeric excess",
+      "back": "ee = |α_obs/α_pure| × 100; major fraction = (100 + ee)/2.",
+      "objective_ids": [
+        "organic-chemistry-6-objective-3"
+      ],
+      "license": "CC-BY-4.0"
     }
   ]
 }

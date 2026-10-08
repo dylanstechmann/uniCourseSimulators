@@ -105,6 +105,46 @@
         "calculus-1-5-objective-3"
       ],
       "license": "CC-BY-4.0"
+    },
+    {
+      "id": "calculus-1-6-card-1",
+      "lesson_id": "calculus-1-6",
+      "front": "Limit at infinity",
+      "back": "V_max S/(K_m + S) → V_max as S → ∞, never reached at finite S; 99% needs S = 99 K_m.",
+      "objective_ids": [
+        "calculus-1-6-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "calculus-1-6-card-2",
+      "lesson_id": "calculus-1-6",
+      "front": "Initial slope",
+      "back": "v′(0) = lim (v(h) − v(0))/h = V_max/K_m; linear error is S/K_m.",
+      "objective_ids": [
+        "calculus-1-6-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "calculus-1-6-card-3",
+      "lesson_id": "calculus-1-6",
+      "front": "Net change",
+      "back": "∫ₐᵇ r dt = F(b) − F(a): net change of the quantity whose rate is r.",
+      "objective_ids": [
+        "calculus-1-6-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "calculus-1-6-card-4",
+      "lesson_id": "calculus-1-6",
+      "front": "Net versus total",
+      "back": "Total moved is ∫|r| dt; split where the rate changes sign.",
+      "objective_ids": [
+        "calculus-1-6-objective-3"
+      ],
+      "license": "CC-BY-4.0"
     }
   ]
 }

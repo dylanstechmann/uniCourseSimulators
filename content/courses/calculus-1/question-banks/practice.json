@@ -457,6 +457,191 @@
         "kind": "original",
         "modifications": []
       }
+    },
+    {
+      "id": "calculus-1-6:rate-at-1000",
+      "type": "numeric",
+      "prompt": "For v(S) = 100S/(5 + S), evaluate v at S = 1000. Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "calculus-1-6-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 99.5025,
+        "unit": "",
+        "tolerance": 0.01,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Substitute directly; compare with the limit V_max.",
+        "solution": "v = 100 × 1000/1005 = 99.50, below the limit 100.",
+        "lesson_ids": [
+          "calculus-1-6"
+        ],
+        "misconception_ids": [
+          "limit-reached-at-finite-input"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-1-6:initial-slope",
+      "type": "numeric",
+      "prompt": "For v(S) = 100S/(5 + S), compute v′(0) as the limit of the difference quotient. Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "calculus-1-6-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 20.0,
+        "unit": "",
+        "tolerance": 0.01,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Simplify [v(h) − v(0)]/h before letting h → 0.",
+        "solution": "[v(h) − 0]/h = 100/(5 + h) → 20.",
+        "lesson_ids": [
+          "calculus-1-6"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-1-6:linear-error",
+      "type": "numeric",
+      "prompt": "Using the initial slope 20, the linear approximation at S = 0.5 is 10.0, while v(0.5) = 9.0909. What is the percentage overestimate? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "calculus-1-6-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 10.0,
+        "unit": "%",
+        "tolerance": 0.2,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "(approximation − true)/true × 100.",
+        "solution": "(10.0 − 9.0909)/9.0909 = 0.100 = 10%, equal to S/K_m.",
+        "lesson_ids": [
+          "calculus-1-6"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-1-6:net-change",
+      "type": "numeric",
+      "prompt": "A reservoir's net inflow rate is r(t) = 6 − 2t mL/min for 0 ≤ t ≤ 5 min. What is the net change in volume over that interval? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "calculus-1-6-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 5.0,
+        "unit": "mL",
+        "tolerance": 0.05,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Integrate r(t) using an antiderivative.",
+        "solution": "F(t) = 6t − t²; F(5) − F(0) = 5 mL.",
+        "lesson_ids": [
+          "calculus-1-6"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-1-6:total-moved",
+      "type": "numeric",
+      "prompt": "For the same rate r(t) = 6 − 2t mL/min on [0, 5], what total volume passes through the pump in either direction, ∫|r(t)| dt? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "calculus-1-6-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 13.0,
+        "unit": "mL",
+        "tolerance": 0.05,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Split the integral where r(t) changes sign.",
+        "solution": "0–3 min: +9 mL; 3–5 min: −4 mL; total moved 9 + 4 = 13 mL, net 5 mL.",
+        "lesson_ids": [
+          "calculus-1-6"
+        ],
+        "misconception_ids": [
+          "net-equals-total"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-1-6:continuity",
+      "type": "single_choice",
+      "prompt": "A model sets a secretion rate to 0 below a stimulus threshold s* and to a constant k > 0 above it. Which statement is correct at s*?",
+      "points": 1,
+      "objective_ids": [
+        "calculus-1-6-objective-1"
+      ],
+      "options": [
+        "The function is not continuous there, because the left-hand limit is 0 and the right-hand limit is k.",
+        "It is continuous because it is defined at s*.",
+        "It is continuous because both pieces are constant.",
+        "Continuity cannot be assessed for piecewise functions."
+      ],
+      "solution_spec": {
+        "answer": 0
+      },
+      "feedback": {
+        "hint": "Compare one-sided limits at the junction.",
+        "solution": "Continuity at a point needs the one-sided limits to agree with each other and with the value. A jump from 0 to k breaks this, which matters for numerical solvers and for derivative-based reasoning.",
+        "lesson_ids": [
+          "calculus-1-6"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
     }
   ]
 }
