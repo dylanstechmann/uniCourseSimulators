@@ -273,6 +273,190 @@
         "kind": "original",
         "modifications": []
       }
+    },
+    {
+      "id": "calculus-1-5:rate-from-doubling",
+      "type": "numeric",
+      "prompt": "A culture doubles every 24 hours. Calculate the specific growth rate r. Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "calculus-1-5-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0.028881,
+        "unit": "1/h",
+        "tolerance": 0.0002,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Set e^(r t_d) = 2 and solve for r.",
+        "solution": "r = ln 2 / 24 = 0.02888 h⁻¹.",
+        "lesson_ids": [
+          "calculus-1-5"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-1-5:count-at-72h",
+      "type": "numeric",
+      "prompt": "Starting from 10⁵ cells with r = 0.02888 h⁻¹, how many cells are present after 72 h of exponential growth? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "calculus-1-5-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 799999.9999999998,
+        "unit": "",
+        "tolerance": 0,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null,
+        "relative_tolerance": 0.01
+      },
+      "feedback": {
+        "hint": "N = N₀ e^(rt).",
+        "solution": "10⁵ × e^(2.0794) = 8×10⁵ cells: three doublings.",
+        "lesson_ids": [
+          "calculus-1-5"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-1-5:rate-from-two-counts",
+      "type": "numeric",
+      "prompt": "A culture has 2×10⁵ cells at 10 h and 5×10⁵ cells at 40 h. Assuming exponential growth, estimate the doubling time. Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "calculus-1-5-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 22.694,
+        "unit": "h",
+        "tolerance": 0.1,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "r = ln(N₂/N₁)/(t₂ − t₁), then t_d = ln 2 / r.",
+        "solution": "r = ln(2.5)/30 = 0.03054 h⁻¹; t_d = 22.7 h.",
+        "lesson_ids": [
+          "calculus-1-5"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-1-5:max-logistic-rate",
+      "type": "numeric",
+      "prompt": "A logistic population has r = 0.02888 h⁻¹ and K = 10⁶ cells. What is the maximum growth rate in cells per hour? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "calculus-1-5-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 7220.28,
+        "unit": "",
+        "tolerance": 5,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Maximize rN(1 − N/K) with respect to N.",
+        "solution": "The maximum is at N = K/2, where the rate is rK/4 = 0.02888 × 10⁶ / 4 = 7220 cells/h.",
+        "lesson_ids": [
+          "calculus-1-5"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-1-5:time-to-90",
+      "type": "numeric",
+      "prompt": "For the logistic model with r = 0.02888 h⁻¹, K = 10⁶ and N₀ = 10⁵, how long until N reaches 90% of K? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "calculus-1-5-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 152.16,
+        "unit": "h",
+        "tolerance": 0.5,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use t = (1/r) ln[(p/(1 − p))((K − N₀)/N₀)].",
+        "solution": "t = ln(9 × 9)/0.02888 = 4.3944/0.02888 = 152 h.",
+        "lesson_ids": [
+          "calculus-1-5"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-1-5:why-half-capacity",
+      "type": "single_choice",
+      "prompt": "Why is logistic growth fastest when N = K/2?",
+      "points": 1,
+      "objective_ids": [
+        "calculus-1-5-objective-3"
+      ],
+      "options": [
+        "Because the second derivative of N(t) is largest at t = 0.",
+        "The rate rN(1 − N/K) is a downward parabola in N whose derivative r − 2rN/K is zero at N = K/2.",
+        "Because half the cells stop dividing at that point.",
+        "Logistic growth is fastest at N = K."
+      ],
+      "solution_spec": {
+        "answer": 1
+      },
+      "feedback": {
+        "hint": "Treat the rate as a function of N and maximize it.",
+        "solution": "The growth rate is a quadratic in N with roots at 0 and K; its maximum is midway. On the N(t) curve this is the inflection point.",
+        "lesson_ids": [
+          "calculus-1-5"
+        ],
+        "misconception_ids": [
+          "growth-fastest-at-capacity"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
     }
   ]
 }

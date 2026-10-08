@@ -250,6 +250,191 @@
         "kind": "original",
         "modifications": []
       }
+    },
+    {
+      "id": "calculus-2-5:exact-total",
+      "type": "numeric",
+      "prompt": "A culture consumes glucose at q(t) = 0.5 e^(0.03t) mmol/h. Calculate the exact total consumed from t = 0 to 48 h. Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "calculus-2-5-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 53.678,
+        "unit": "mmol",
+        "tolerance": 0.05,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "∫ e^(kt) dt = e^(kt)/k.",
+        "solution": "(0.5/0.03)(e^1.44 − 1) = 53.68 mmol.",
+        "lesson_ids": [
+          "calculus-2-5"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-2-5:trapezoid",
+      "type": "numeric",
+      "prompt": "Sampled rates (mmol/h) are q(0) = 0.5, q(12) = 0.7167, q(24) = 1.0272, q(36) = 1.4723, q(48) = 2.1103 at t in hours. Use the trapezoidal rule to estimate the total consumed from 0 to 48 h. Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "calculus-2-5-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 54.256,
+        "unit": "mmol",
+        "tolerance": 0.05,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "T = h[q₀/2 + q₁ + q₂ + q₃ + q₄/2] with h = 12 h.",
+        "solution": "T = 12 × [0.25 + 0.7167 + 1.0272 + 1.4723 + 1.05515] = 54.26 mmol.",
+        "lesson_ids": [
+          "calculus-2-5"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-2-5:simpson",
+      "type": "numeric",
+      "prompt": "Using the same samples (q(0) = 0.5, q(12) = 0.7167, q(24) = 1.0272, q(36) = 1.4723, q(48) = 2.1103), estimate the total with Simpson's rule. Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "calculus-2-5-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 53.683,
+        "unit": "mmol",
+        "tolerance": 0.05,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "S = (h/3)[q₀ + 4q₁ + 2q₂ + 4q₃ + q₄].",
+        "solution": "S = 4 × [0.5 + 4(0.7167) + 2(1.0272) + 4(1.4723) + 2.1103] = 53.68 mmol, within 0.005 of exact.",
+        "lesson_ids": [
+          "calculus-2-5"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-2-5:error-bound",
+      "type": "numeric",
+      "prompt": "For q(t) = 0.5 e^(0.03t) on [0, 48] with h = 12, compute the trapezoidal error bound (b − a)h²/12 × max|q″|. Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "calculus-2-5-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 1.094,
+        "unit": "mmol",
+        "tolerance": 0.02,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "q″ = 0.5 × 0.03² e^(0.03t) is largest at the right end.",
+        "solution": "max q″ = 0.00190; bound = 48 × 12² / 12 × 0.00190 = 1.09 mmol.",
+        "lesson_ids": [
+          "calculus-2-5"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-2-5:improper-total",
+      "type": "numeric",
+      "prompt": "A gel releases a factor at r(t) = 2.0 e^(−0.1t) μg/h. What total amount is released over all time, ∫₀^∞ r(t) dt? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "calculus-2-5-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 20.0,
+        "unit": "μg",
+        "tolerance": 0.05,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Evaluate up to T and take the limit as T → ∞.",
+        "solution": "(2.0/0.1)(1 − e^(−0.1T)) → 20 μg.",
+        "lesson_ids": [
+          "calculus-2-5"
+        ],
+        "misconception_ids": [
+          "improper-integral-infinite"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-2-5:convergence",
+      "type": "single_choice",
+      "prompt": "A release rate falls off like 5/t μg/h for t ≥ 1 h. Is the total released over [1, ∞) finite?",
+      "points": 1,
+      "objective_ids": [
+        "calculus-2-5-objective-3"
+      ],
+      "options": [
+        "Yes, it equals 5 μg.",
+        "No: ∫ 5/t dt = 5 ln t grows without bound, so the integral diverges even though the rate tends to zero.",
+        "Yes, because the rate tends to zero.",
+        "It cannot be determined."
+      ],
+      "solution_spec": {
+        "answer": 1
+      },
+      "feedback": {
+        "hint": "Compare with the reference integrals of 1/t and 1/t².",
+        "solution": "A rate tending to zero is not enough. 1/t decays too slowly; its integral grows like ln t. Such a model cannot describe a source with finite contents over unlimited time.",
+        "lesson_ids": [
+          "calculus-2-5"
+        ],
+        "misconception_ids": [
+          "rate-to-zero-implies-finite"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
     }
   ]
 }

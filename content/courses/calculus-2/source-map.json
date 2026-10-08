@@ -52,6 +52,18 @@
       "original_content": true,
       "license": "MIT OR CC-BY-4.0",
       "modifications": []
+    },
+    {
+      "module_id": "calculus-2-module-5",
+      "lesson_id": "calculus-2-5",
+      "reading": "modules/05-integrals-as-accumulation-and-numerical-error.md",
+      "source_ids": [
+        "calculus"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
     }
   ]
 }

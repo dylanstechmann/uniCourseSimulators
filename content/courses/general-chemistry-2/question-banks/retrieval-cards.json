@@ -65,6 +65,86 @@
       "back": "The fraction of an element present in a form accessible for uptake or biochemical use.",
       "objective_ids": [],
       "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "general-chemistry-2-5-card-1",
+      "lesson_id": "general-chemistry-2-5",
+      "front": "Henderson–Hasselbalch",
+      "back": "pH = pKa + log₁₀([A⁻]/[HA]); valid when buffer concentrations ≫ [H⁺], using concentrations as activities.",
+      "objective_ids": [
+        "general-chemistry-2-5-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "general-chemistry-2-5-card-2",
+      "lesson_id": "general-chemistry-2-5",
+      "front": "Buffer range",
+      "back": "Buffers work best within about ±1 pH unit of pKa.",
+      "objective_ids": [
+        "general-chemistry-2-5-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "general-chemistry-2-5-card-3",
+      "lesson_id": "general-chemistry-2-5",
+      "front": "Buffer capacity",
+      "back": "β = 2.303 C_T Ka[H⁺]/(Ka + [H⁺])²: proportional to C_T and maximal at pH = pKa.",
+      "objective_ids": [
+        "general-chemistry-2-5-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "general-chemistry-2-5-card-4",
+      "lesson_id": "general-chemistry-2-5",
+      "front": "Ionized fraction",
+      "back": "Weak base un-ionized fraction = 1/(1 + 10^(pKa − pH)); charged forms cross membranes poorly.",
+      "objective_ids": [
+        "general-chemistry-2-5-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "general-chemistry-2-6-card-1",
+      "lesson_id": "general-chemistry-2-6",
+      "front": "First order",
+      "back": "[A] = [A]₀e^(−kt); t½ = ln 2/k, independent of starting concentration; ln[A] vs t is linear.",
+      "objective_ids": [
+        "general-chemistry-2-6-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "general-chemistry-2-6-card-2",
+      "lesson_id": "general-chemistry-2-6",
+      "front": "Second order",
+      "back": "1/[B] = 1/[B]₀ + kt; t½ = 1/(k[B]₀) grows as concentration falls.",
+      "objective_ids": [
+        "general-chemistry-2-6-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "general-chemistry-2-6-card-3",
+      "lesson_id": "general-chemistry-2-6",
+      "front": "Arrhenius",
+      "back": "ln(k₂/k₁) = (Ea/R)(1/T₁ − 1/T₂); Q₁₀ summarizes the rise per 10 °C but depends on the range.",
+      "objective_ids": [
+        "general-chemistry-2-6-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "general-chemistry-2-6-card-4",
+      "lesson_id": "general-chemistry-2-6",
+      "front": "Extrapolation risk",
+      "back": "Accelerated tests assume one mechanism across temperatures; unfolding or new pathways break it.",
+      "objective_ids": [
+        "general-chemistry-2-6-objective-3"
+      ],
+      "license": "CC-BY-4.0"
     }
   ]
 }

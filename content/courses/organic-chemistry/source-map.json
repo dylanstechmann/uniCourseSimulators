@@ -56,6 +56,19 @@
       "original_content": true,
       "license": "MIT OR CC-BY-4.0",
       "modifications": []
+    },
+    {
+      "module_id": "organic-chemistry-module-5",
+      "lesson_id": "organic-chemistry-5",
+      "reading": "modules/05-functional-groups-in-biomolecules-and-slow-damage.md",
+      "source_ids": [
+        "organic",
+        "chemistry"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
     }
   ]
 }

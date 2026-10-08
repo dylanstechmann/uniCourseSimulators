@@ -250,6 +250,191 @@
         "kind": "original",
         "modifications": []
       }
+    },
+    {
+      "id": "general-chemistry-1-5:mass-needed",
+      "type": "numeric",
+      "prompt": "How much sodium chloride (M = 58.44 g/mol) is needed to make 500 mL of a 150 mM solution? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "general-chemistry-1-5-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 4.383,
+        "unit": "g",
+        "tolerance": 0.005,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "m = c × V × M; convert mM to mol/L and mL to L first.",
+        "solution": "0.15 mol/L × 0.5 L × 58.44 g/mol = 4.383 g.",
+        "lesson_ids": [
+          "general-chemistry-1-5"
+        ],
+        "misconception_ids": [
+          "mm-as-molar"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "general-chemistry-1-5:purity-correction",
+      "type": "numeric",
+      "prompt": "The reagent for the 4.383 g preparation is only 98% pure by mass. How much reagent should be weighed? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "general-chemistry-1-5-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 4.4724,
+        "unit": "g",
+        "tolerance": 0.005,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Divide the required mass of pure compound by the mass fraction.",
+        "solution": "4.383 / 0.98 = 4.472 g.",
+        "lesson_ids": [
+          "general-chemistry-1-5"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "general-chemistry-1-5:mgml-to-mm",
+      "type": "numeric",
+      "prompt": "A glucose solution is 4.5 mg/mL; glucose has M = 180.16 g/mol. What is its concentration? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "general-chemistry-1-5-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 24.978,
+        "unit": "mM",
+        "tolerance": 0.1,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "mg/mL equals g/L; divide by molar mass to get mol/L.",
+        "solution": "4.5 g/L ÷ 180.16 g/mol = 0.0250 mol/L = 25.0 mM.",
+        "lesson_ids": [
+          "general-chemistry-1-5"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "general-chemistry-1-5:stock-volume",
+      "type": "numeric",
+      "prompt": "What volume of a 5 M stock is needed to make 200 mL of 150 mM solution? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "general-chemistry-1-5-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 6.0,
+        "unit": "mL",
+        "tolerance": 0.05,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "C₁V₁ = C₂V₂ with consistent units.",
+        "solution": "V₁ = 0.15 M × 200 mL / 5 M = 6.0 mL, made up to 200 mL.",
+        "lesson_ids": [
+          "general-chemistry-1-5"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "general-chemistry-1-5:serial-dilution",
+      "type": "numeric",
+      "prompt": "A 2.0 mM solution undergoes four successive 1:10 dilutions. What is the final concentration? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "general-chemistry-1-5-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0.2,
+        "unit": "μM",
+        "tolerance": 0.005,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Each step divides by the dilution factor.",
+        "solution": "2.0 mM / 10,000 = 0.20 μM.",
+        "lesson_ids": [
+          "general-chemistry-1-5"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "general-chemistry-1-5:dominant-error",
+      "type": "single_choice",
+      "prompt": "A solution is made by weighing 0.012 g on a balance that reads to ±0.001 g, dissolving it in a 100.0 mL volumetric flask (±0.1 mL) and confirming the molar mass from the label. Which step dominates the uncertainty in concentration?",
+      "points": 1,
+      "objective_ids": [
+        "general-chemistry-1-5-objective-3"
+      ],
+      "options": [
+        "All steps contribute equally.",
+        "The volumetric flask.",
+        "The molar mass.",
+        "The weighing, at about 8% relative error, far larger than the flask's 0.1%."
+      ],
+      "solution_spec": {
+        "answer": 3
+      },
+      "feedback": {
+        "hint": "Compare relative, not absolute, errors.",
+        "solution": "0.001/0.012 ≈ 8.3% versus 0.1/100 = 0.1%. Improving the flask would not help; weighing a larger mass for a stock and diluting would.",
+        "lesson_ids": [
+          "general-chemistry-1-5"
+        ],
+        "misconception_ids": [
+          "absolute-error-comparison"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
     }
   ]
 }

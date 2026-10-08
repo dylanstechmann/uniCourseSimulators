@@ -7,7 +7,7 @@
   "domain": "Chemistry",
   "level": "Year 1",
   "maturity": "partial",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "license": "MIT OR CC-BY-4.0",
   "content_origin": {
     "kind": "legacy-prototype",
@@ -96,6 +96,31 @@
       "description": "Predict direction of net change by comparing Q and K.",
       "bloom": "apply",
       "course_outcome_ids": []
+    },
+    {
+      "id": "general-chemistry-1-5-objective-1",
+      "description": "Calculate the mass of solute needed for a target molar concentration and convert between mass and molar concentration units.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "general-chemistry-1-outcome-1",
+        "general-chemistry-1-outcome-4"
+      ]
+    },
+    {
+      "id": "general-chemistry-1-5-objective-2",
+      "description": "Plan single and serial dilutions with C₁V₁ = C₂V₂ and compute the resulting concentrations.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "general-chemistry-1-outcome-1"
+      ]
+    },
+    {
+      "id": "general-chemistry-1-5-objective-3",
+      "description": "Check a preparation's dimensions, purity correction and propagated uncertainty, and identify the step that dominates the error.",
+      "bloom": "evaluate",
+      "course_outcome_ids": [
+        "general-chemistry-1-outcome-4"
+      ]
     }
   ],
   "duration": {
@@ -216,6 +241,40 @@
           ]
         }
       ]
+    },
+    {
+      "id": "general-chemistry-1-module-5",
+      "title": "Solutions, dilution and propagated error",
+      "source_ids": [
+        "chemistry"
+      ],
+      "lessons": [
+        {
+          "id": "general-chemistry-1-5",
+          "title": "Making solutions you can trust: mass, molarity, dilution and propagated error",
+          "reading": "modules/05-solutions-dilution-and-propagated-error.md",
+          "objectives": [
+            "general-chemistry-1-5-objective-1",
+            "general-chemistry-1-5-objective-2",
+            "general-chemistry-1-5-objective-3"
+          ],
+          "worked_example": "For 500 mL of 150 mM NaCl weigh 0.15 × 0.5 × 58.44 = 4.383 g (4.472 g at 98% purity); 6.0 mL of 5 M stock makes 200 mL of 150 mM; four 1:10 steps take 2.0 mM to 0.20 μM.",
+          "question_ids": [
+            "general-chemistry-1-5:mass-needed",
+            "general-chemistry-1-5:purity-correction",
+            "general-chemistry-1-5:mgml-to-mm",
+            "general-chemistry-1-5:stock-volume",
+            "general-chemistry-1-5:serial-dilution",
+            "general-chemistry-1-5:dominant-error"
+          ],
+          "card_ids": [
+            "general-chemistry-1-5-card-1",
+            "general-chemistry-1-5-card-2",
+            "general-chemistry-1-5-card-3",
+            "general-chemistry-1-5-card-4"
+          ]
+        }
+      ]
     }
   ],
   "assessments": [
@@ -280,6 +339,27 @@
       "points": 2
     },
     {
+      "id": "general-chemistry-1-5-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Solutions, dilution and propagated error practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "general-chemistry-1-5-objective-1",
+        "general-chemistry-1-5-objective-2",
+        "general-chemistry-1-5-objective-3"
+      ],
+      "question_ids": [
+        "general-chemistry-1-5:mass-needed",
+        "general-chemistry-1-5:purity-correction",
+        "general-chemistry-1-5:mgml-to-mm",
+        "general-chemistry-1-5:stock-volume",
+        "general-chemistry-1-5:serial-dilution",
+        "general-chemistry-1-5:dominant-error"
+      ],
+      "points": 6
+    },
+    {
       "id": "general-chemistry-1-case",
       "type": "case",
       "mode": "self-assessment",
@@ -321,6 +401,11 @@
       "version": "0.1.0",
       "date": "2026-10-05",
       "summary": "Preserved original compact prototype content in separate manifests and readings; labeled partial without semester or credit equivalency."
+    },
+    {
+      "version": "0.2.0",
+      "date": "2026-10-08",
+      "summary": "Added an original lesson on solution preparation (mass and molarity, dilution and serial dilution, purity correction and propagated error) with synthetic data, formative items with computed keys and retrieval cards. The package remains partial and unreviewed."
     }
   ],
   "limitations": [

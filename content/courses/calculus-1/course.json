@@ -7,7 +7,7 @@
   "domain": "Mathematics",
   "level": "Year 1",
   "maturity": "partial",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "license": "MIT OR CC-BY-4.0",
   "content_origin": {
     "kind": "legacy-prototype",
@@ -95,6 +95,31 @@
       "description": "Use integration to recover a state from its rate.",
       "bloom": "apply",
       "course_outcome_ids": []
+    },
+    {
+      "id": "calculus-1-5-objective-1",
+      "description": "Relate the specific growth rate r of an exponential model to its derivative and to doubling time, and predict population size at a later time.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "calculus-1-outcome-2",
+        "calculus-1-outcome-3"
+      ]
+    },
+    {
+      "id": "calculus-1-5-objective-2",
+      "description": "Estimate r from two measurements using logarithms and explain why a semi-log plot is linear for exponential growth.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "calculus-1-outcome-3"
+      ]
+    },
+    {
+      "id": "calculus-1-5-objective-3",
+      "description": "Use the derivative of the logistic model to find the population of maximum growth rate and solve for the time to reach a fraction of capacity.",
+      "bloom": "analyze",
+      "course_outcome_ids": [
+        "calculus-1-outcome-3"
+      ]
     }
   ],
   "duration": {
@@ -220,6 +245,41 @@
           ]
         }
       ]
+    },
+    {
+      "id": "calculus-1-module-5",
+      "title": "Derivatives as rates in growth models",
+      "source_ids": [
+        "calculus",
+        "engineeringMath"
+      ],
+      "lessons": [
+        {
+          "id": "calculus-1-5",
+          "title": "Derivatives as rates in growth models: exponential and logistic growth, doubling time and the fastest-growth point",
+          "reading": "modules/05-derivatives-as-rates-in-growth-models.md",
+          "objectives": [
+            "calculus-1-5-objective-1",
+            "calculus-1-5-objective-2",
+            "calculus-1-5-objective-3"
+          ],
+          "worked_example": "A 24 h doubling time gives r = 0.02888 h⁻¹ and 8×10⁵ cells after 72 h from 10⁵; with K = 10⁶ the logistic rate peaks at 7220 cells/h at K/2, and 90% of K is reached after about 152 h.",
+          "question_ids": [
+            "calculus-1-5:rate-from-doubling",
+            "calculus-1-5:count-at-72h",
+            "calculus-1-5:rate-from-two-counts",
+            "calculus-1-5:max-logistic-rate",
+            "calculus-1-5:time-to-90",
+            "calculus-1-5:why-half-capacity"
+          ],
+          "card_ids": [
+            "calculus-1-5-card-1",
+            "calculus-1-5-card-2",
+            "calculus-1-5-card-3",
+            "calculus-1-5-card-4"
+          ]
+        }
+      ]
     }
   ],
   "assessments": [
@@ -285,6 +345,27 @@
       "points": 2
     },
     {
+      "id": "calculus-1-5-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Derivatives as rates in growth models practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "calculus-1-5-objective-1",
+        "calculus-1-5-objective-2",
+        "calculus-1-5-objective-3"
+      ],
+      "question_ids": [
+        "calculus-1-5:rate-from-doubling",
+        "calculus-1-5:count-at-72h",
+        "calculus-1-5:rate-from-two-counts",
+        "calculus-1-5:max-logistic-rate",
+        "calculus-1-5:time-to-90",
+        "calculus-1-5:why-half-capacity"
+      ],
+      "points": 6
+    },
+    {
       "id": "calculus-1-case",
       "type": "case",
       "mode": "self-assessment",
@@ -331,6 +412,11 @@
       "version": "0.1.1",
       "date": "2026-10-05",
       "summary": "Added one original quotient-rule item to exercise bounded symbolic-expression grading; the course remains partial."
+    },
+    {
+      "version": "0.2.0",
+      "date": "2026-10-08",
+      "summary": "Added an original lesson on derivatives as rates in exponential and logistic growth models with synthetic data, formative items with computed keys and retrieval cards. The package remains partial and unreviewed."
     }
   ],
   "limitations": [

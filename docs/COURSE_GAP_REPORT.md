@@ -9,19 +9,19 @@ comprehensive coverage. Every package is still `partial` and unreviewed.
 | biochemistry | partial | 6 | 14 | 20 | 16 | 0 | 0 | 4 | 0 |
 | biomaterials | partial | 6 | 14 | 20 | 16 | 0 | 0 | 4 | 0 |
 | bioreactors | partial | 5 | 11 | 14 | 12 | 0 | 0 | 4 | 1 |
-| calculus-1 | partial | 4 | 8 | 9 | 8 | 0 | 0 | 4 | 4 |
-| calculus-2 | partial | 4 | 8 | 8 | 8 | 0 | 0 | 4 | 4 |
+| calculus-1 | partial | 5 | 11 | 15 | 12 | 0 | 0 | 4 | 2 |
+| calculus-2 | partial | 5 | 11 | 14 | 12 | 0 | 0 | 4 | 1 |
 | calculus-3 | partial | 4 | 8 | 8 | 8 | 0 | 0 | 4 | 4 |
 | cell-biology | partial | 39 | 69 | 137 | 89 | 0 | 0 | 4 | 0 |
 | cellular-biomechanics | partial | 4 | 8 | 8 | 8 | 0 | 0 | 4 | 4 |
 | circuits | partial | 4 | 8 | 8 | 8 | 0 | 0 | 4 | 4 |
-| differential-equations | partial | 4 | 8 | 8 | 8 | 0 | 0 | 4 | 4 |
-| general-chemistry-1 | partial | 4 | 8 | 8 | 8 | 0 | 0 | 4 | 4 |
-| general-chemistry-2 | partial | 4 | 8 | 8 | 8 | 0 | 0 | 4 | 4 |
+| differential-equations | partial | 6 | 14 | 21 | 16 | 0 | 0 | 4 | 0 |
+| general-chemistry-1 | partial | 5 | 11 | 14 | 12 | 0 | 0 | 4 | 2 |
+| general-chemistry-2 | partial | 6 | 14 | 20 | 16 | 0 | 0 | 4 | 2 |
 | genetics | partial | 8 | 20 | 33 | 24 | 0 | 0 | 4 | 0 |
 | geroscience | partial | 14 | 38 | 54 | 48 | 0 | 0 | 4 | 0 |
 | linear-algebra | partial | 4 | 8 | 8 | 8 | 0 | 0 | 4 | 4 |
-| organic-chemistry | partial | 4 | 8 | 8 | 8 | 0 | 0 | 4 | 4 |
+| organic-chemistry | partial | 5 | 11 | 14 | 12 | 0 | 0 | 4 | 2 |
 | physics-em | partial | 4 | 8 | 8 | 8 | 0 | 0 | 4 | 4 |
 | physics-mechanics | partial | 4 | 8 | 8 | 8 | 0 | 0 | 4 | 4 |
 | physiology | partial | 6 | 14 | 20 | 16 | 0 | 0 | 4 | 0 |
@@ -32,7 +32,7 @@ comprehensive coverage. Every package is still `partial` and unreviewed.
 | statistics | partial | 6 | 13 | 15 | 15 | 0 | 0 | 5 | 0 |
 | transport | partial | 5 | 11 | 13 | 12 | 0 | 0 | 4 | 2 |
 
-Totals: 25 packages, 160 lessons, 335 objectives, 461 practice items, 0 lesson objectives with no assessment mapping, 0 with no practice item, 63 of 101 course outcomes that no lesson objective links to.
+Totals: 25 packages, 168 lessons, 359 objectives, 510 practice items, 0 lesson objectives with no assessment mapping, 0 with no practice item, 48 of 101 course outcomes that no lesson objective links to.
 
 `tools/validate_content.py` counts course outcomes and lesson objectives together, so its `objective-coverage` warning
 persists for packages whose outcomes are not linked from any lesson objective. Linking them is a judgement for a
@@ -44,11 +44,11 @@ Outcomes with no linking lesson objective: `bioreactors-outcome-1`
 
 ## calculus-1
 
-Outcomes with no linking lesson objective: `calculus-1-outcome-1`, `calculus-1-outcome-2`, `calculus-1-outcome-3`, `calculus-1-outcome-4`
+Outcomes with no linking lesson objective: `calculus-1-outcome-1`, `calculus-1-outcome-4`
 
 ## calculus-2
 
-Outcomes with no linking lesson objective: `calculus-2-outcome-1`, `calculus-2-outcome-2`, `calculus-2-outcome-3`, `calculus-2-outcome-4`
+Outcomes with no linking lesson objective: `calculus-2-outcome-4`
 
 ## calculus-3
 
@@ -62,17 +62,13 @@ Outcomes with no linking lesson objective: `cellular-biomechanics-outcome-1`, `c
 
 Outcomes with no linking lesson objective: `circuits-outcome-1`, `circuits-outcome-2`, `circuits-outcome-3`, `circuits-outcome-4`
 
-## differential-equations
-
-Outcomes with no linking lesson objective: `differential-equations-outcome-1`, `differential-equations-outcome-2`, `differential-equations-outcome-3`, `differential-equations-outcome-4`
-
 ## general-chemistry-1
 
-Outcomes with no linking lesson objective: `general-chemistry-1-outcome-1`, `general-chemistry-1-outcome-2`, `general-chemistry-1-outcome-3`, `general-chemistry-1-outcome-4`
+Outcomes with no linking lesson objective: `general-chemistry-1-outcome-2`, `general-chemistry-1-outcome-3`
 
 ## general-chemistry-2
 
-Outcomes with no linking lesson objective: `general-chemistry-2-outcome-1`, `general-chemistry-2-outcome-2`, `general-chemistry-2-outcome-3`, `general-chemistry-2-outcome-4`
+Outcomes with no linking lesson objective: `general-chemistry-2-outcome-3`, `general-chemistry-2-outcome-4`
 
 ## linear-algebra
 
@@ -80,7 +76,7 @@ Outcomes with no linking lesson objective: `linear-algebra-outcome-1`, `linear-a
 
 ## organic-chemistry
 
-Outcomes with no linking lesson objective: `organic-chemistry-outcome-1`, `organic-chemistry-outcome-2`, `organic-chemistry-outcome-3`, `organic-chemistry-outcome-4`
+Outcomes with no linking lesson objective: `organic-chemistry-outcome-2`, `organic-chemistry-outcome-3`
 
 ## physics-em
 

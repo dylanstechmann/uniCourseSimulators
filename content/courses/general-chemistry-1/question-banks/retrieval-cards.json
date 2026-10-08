@@ -65,6 +65,46 @@
       "back": "The value of the reaction quotient at equilibrium for a specified temperature and standard-state convention.",
       "objective_ids": [],
       "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "general-chemistry-1-5-card-1",
+      "lesson_id": "general-chemistry-1-5",
+      "front": "Mass for a solution",
+      "back": "m = c × V × M; divide by purity; use the hydrate molar mass if weighing a hydrate.",
+      "objective_ids": [
+        "general-chemistry-1-5-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "general-chemistry-1-5-card-2",
+      "lesson_id": "general-chemistry-1-5",
+      "front": "Dilution",
+      "back": "C₁V₁ = C₂V₂; make up to the final volume rather than adding the full volume of solvent.",
+      "objective_ids": [
+        "general-chemistry-1-5-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "general-chemistry-1-5-card-3",
+      "lesson_id": "general-chemistry-1-5",
+      "front": "Serial dilution",
+      "back": "Total factor is the product of step factors; random errors add in quadrature, systematic errors compound.",
+      "objective_ids": [
+        "general-chemistry-1-5-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "general-chemistry-1-5-card-4",
+      "lesson_id": "general-chemistry-1-5",
+      "front": "Error propagation",
+      "back": "For products and quotients, relative errors add in quadrature; the largest relative error dominates.",
+      "objective_ids": [
+        "general-chemistry-1-5-objective-3"
+      ],
+      "license": "CC-BY-4.0"
     }
   ]
 }

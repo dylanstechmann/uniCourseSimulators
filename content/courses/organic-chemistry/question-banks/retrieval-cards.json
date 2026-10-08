@@ -65,6 +65,46 @@
       "back": "The intermediate formed after nucleophilic addition converts trigonal-planar carbonyl carbon to tetrahedral geometry.",
       "objective_ids": [],
       "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "organic-chemistry-5-card-1",
+      "lesson_id": "organic-chemistry-5",
+      "front": "Acyl reactivity ladder",
+      "back": "Acyl phosphate ≈ anhydride > thioester > ester > amide > carboxylate.",
+      "objective_ids": [
+        "organic-chemistry-5-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "organic-chemistry-5-card-2",
+      "lesson_id": "organic-chemistry-5",
+      "front": "Why thioesters are activated",
+      "back": "Poor 3p–2p overlap gives little resonance stabilization, so acetyl-CoA transfers acyl groups readily.",
+      "objective_ids": [
+        "organic-chemistry-5-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "organic-chemistry-5-card-3",
+      "lesson_id": "organic-chemistry-5",
+      "front": "Side-chain ionization",
+      "back": "Protonated fraction of a base = 1/(1 + 10^(pH − pKa)); only the neutral amine is nucleophilic.",
+      "objective_ids": [
+        "organic-chemistry-5-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "organic-chemistry-5-card-4",
+      "lesson_id": "organic-chemistry-5",
+      "front": "Modification steady state",
+      "back": "f_ss = k_m/(k_m + k_d): slow turnover lets slow chemistry modify a large fraction.",
+      "objective_ids": [
+        "organic-chemistry-5-objective-3"
+      ],
+      "license": "CC-BY-4.0"
     }
   ]
 }

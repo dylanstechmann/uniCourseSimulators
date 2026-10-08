@@ -7,7 +7,7 @@
   "domain": "Chemistry",
   "level": "Year 2",
   "maturity": "partial",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "license": "MIT OR CC-BY-4.0",
   "content_origin": {
     "kind": "legacy-prototype",
@@ -98,6 +98,31 @@
       "description": "Predict addition versus substitution from the carbonyl derivative.",
       "bloom": "apply",
       "course_outcome_ids": []
+    },
+    {
+      "id": "organic-chemistry-5-objective-1",
+      "description": "Rank acyl derivatives by reactivity toward nucleophilic acyl substitution and relate the ranking to their biological roles.",
+      "bloom": "analyze",
+      "course_outcome_ids": [
+        "organic-chemistry-outcome-1",
+        "organic-chemistry-outcome-4"
+      ]
+    },
+    {
+      "id": "organic-chemistry-5-objective-2",
+      "description": "Calculate the protonated fraction of an ionizable side chain at a given pH and predict its charge and nucleophilicity.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "organic-chemistry-outcome-1"
+      ]
+    },
+    {
+      "id": "organic-chemistry-5-objective-3",
+      "description": "Model the steady-state level of a nonenzymatic modification as a balance of modification and turnover, and explain why long-lived proteins accumulate damage.",
+      "bloom": "evaluate",
+      "course_outcome_ids": [
+        "organic-chemistry-outcome-4"
+      ]
     }
   ],
   "duration": {
@@ -222,6 +247,41 @@
           ]
         }
       ]
+    },
+    {
+      "id": "organic-chemistry-module-5",
+      "title": "Functional groups in biomolecules",
+      "source_ids": [
+        "organic",
+        "chemistry"
+      ],
+      "lessons": [
+        {
+          "id": "organic-chemistry-5",
+          "title": "Functional groups at work in biomolecules: acyl reactivity, ionization and slow chemical damage",
+          "reading": "modules/05-functional-groups-in-biomolecules-and-slow-damage.md",
+          "objectives": [
+            "organic-chemistry-5-objective-1",
+            "organic-chemistry-5-objective-2",
+            "organic-chemistry-5-objective-3"
+          ],
+          "worked_example": "At pH 7.4, histidine is 3.8% protonated and lysine 99.92%; with modification at 0.01 per year, a protein with a 10-year half-life reaches a steady-state modified fraction of 0.126, while a 2-day protein reaches 7.9×10⁻⁵.",
+          "question_ids": [
+            "organic-chemistry-5:acyl-ranking",
+            "organic-chemistry-5:histidine-fraction",
+            "organic-chemistry-5:lysine-unprotonated",
+            "organic-chemistry-5:steady-state-long-lived",
+            "organic-chemistry-5:steady-state-short-lived",
+            "organic-chemistry-5:glycation-step"
+          ],
+          "card_ids": [
+            "organic-chemistry-5-card-1",
+            "organic-chemistry-5-card-2",
+            "organic-chemistry-5-card-3",
+            "organic-chemistry-5-card-4"
+          ]
+        }
+      ]
     }
   ],
   "assessments": [
@@ -286,6 +346,27 @@
       "points": 2
     },
     {
+      "id": "organic-chemistry-5-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Functional groups in biomolecules practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "organic-chemistry-5-objective-1",
+        "organic-chemistry-5-objective-2",
+        "organic-chemistry-5-objective-3"
+      ],
+      "question_ids": [
+        "organic-chemistry-5:acyl-ranking",
+        "organic-chemistry-5:histidine-fraction",
+        "organic-chemistry-5:lysine-unprotonated",
+        "organic-chemistry-5:steady-state-long-lived",
+        "organic-chemistry-5:steady-state-short-lived",
+        "organic-chemistry-5:glycation-step"
+      ],
+      "points": 6
+    },
+    {
       "id": "organic-chemistry-case",
       "type": "case",
       "mode": "self-assessment",
@@ -332,6 +413,11 @@
       "version": "0.1.0",
       "date": "2026-10-05",
       "summary": "Clarified the typical E2 answer option as anti-periplanar; atypical syn elimination is not presented as equally typical."
+    },
+    {
+      "version": "0.2.0",
+      "date": "2026-10-08",
+      "summary": "Added an original lesson on functional groups in biomolecules (acyl reactivity, side-chain ionization, glycation and a steady-state model of modification versus turnover) with synthetic data, formative items with computed keys and retrieval cards. The package remains partial and unreviewed."
     }
   ],
   "limitations": [

@@ -65,6 +65,86 @@
       "back": "A system with widely separated timescales that can make explicit integration inefficient or unstable.",
       "objective_ids": [],
       "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "differential-equations-5-card-1",
+      "lesson_id": "differential-equations-5",
+      "front": "Well-mixed chamber",
+      "back": "dC/dt = D(C_in − C) − kC with D = Q/V: first-order linear ODE.",
+      "objective_ids": [
+        "differential-equations-5-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "differential-equations-5-card-2",
+      "lesson_id": "differential-equations-5",
+      "front": "Steady state and τ",
+      "back": "C_ss = D C_in/(D + k); τ = 1/(D + k); 90% at τ ln 10.",
+      "objective_ids": [
+        "differential-equations-5-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "differential-equations-5-card-3",
+      "lesson_id": "differential-equations-5",
+      "front": "Euler stability",
+      "back": "Each step multiplies deviation by (1 − λh); need h < 2/λ, and h < 1/λ to avoid oscillation.",
+      "objective_ids": [
+        "differential-equations-5-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "differential-equations-5-card-4",
+      "lesson_id": "differential-equations-5",
+      "front": "Checking numerics",
+      "back": "Bounds, analytic steady state, convergence on halving h and conservation.",
+      "objective_ids": [
+        "differential-equations-5-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "differential-equations-6-card-1",
+      "lesson_id": "differential-equations-6",
+      "front": "Stability in one variable",
+      "back": "Equilibria solve f(N) = 0; stable if f′(N_e) < 0, with recovery time constant 1/|f′(N_e)|.",
+      "objective_ids": [
+        "differential-equations-6-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "differential-equations-6-card-2",
+      "lesson_id": "differential-equations-6",
+      "front": "Harvested logistic",
+      "back": "N* = K(1 − h/r) exists for h < r; maximum sustained yield rK/4 at h = r/2.",
+      "objective_ids": [
+        "differential-equations-6-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "differential-equations-6-card-3",
+      "lesson_id": "differential-equations-6",
+      "front": "Linear 2×2 systems",
+      "back": "Stable iff trace < 0 and det > 0; eigenvalues give fast and slow time scales.",
+      "objective_ids": [
+        "differential-equations-6-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "differential-equations-6-card-4",
+      "lesson_id": "differential-equations-6",
+      "front": "Warning sign",
+      "back": "Recovery slows as a parameter approaches the point where an equilibrium is lost.",
+      "objective_ids": [
+        "differential-equations-6-objective-3"
+      ],
+      "license": "CC-BY-4.0"
     }
   ]
 }

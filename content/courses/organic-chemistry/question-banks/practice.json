@@ -256,6 +256,193 @@
         "kind": "original",
         "modifications": []
       }
+    },
+    {
+      "id": "organic-chemistry-5:acyl-ranking",
+      "type": "single_choice",
+      "prompt": "Which ordering of reactivity toward nucleophilic acyl substitution is correct?",
+      "points": 1,
+      "objective_ids": [
+        "organic-chemistry-5-objective-1"
+      ],
+      "options": [
+        "Amide > ester > thioester, because nitrogen is the most electronegative.",
+        "Thioester > ester > amide, because sulfur donates less resonance stabilization to the carbonyl than oxygen, and nitrogen donates the most.",
+        "All three react at the same rate.",
+        "Ester > thioester > amide, because oxygen is a better leaving group than sulfur."
+      ],
+      "solution_spec": {
+        "answer": 1
+      },
+      "feedback": {
+        "hint": "Consider resonance donation into the carbonyl and leaving-group basicity.",
+        "solution": "Nitrogen's strong resonance donation stabilizes amides; sulfur's poor 3p–2p overlap gives thioesters little stabilization and a weaker-base leaving group. Hence acetyl-CoA is an activated acyl donor while peptide bonds persist.",
+        "lesson_ids": [
+          "organic-chemistry-5"
+        ],
+        "misconception_ids": [
+          "electronegativity-sets-acyl-reactivity"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "organic-chemistry-5:histidine-fraction",
+      "type": "numeric",
+      "prompt": "A histidine side chain has pKa 6.0. What percentage is protonated at pH 7.4? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "organic-chemistry-5-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 3.829,
+        "unit": "%",
+        "tolerance": 0.1,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Protonated fraction of a base = 1/(1 + 10^(pH − pKa)).",
+        "solution": "1/(1 + 10^1.4) = 0.0383 = 3.83%.",
+        "lesson_ids": [
+          "organic-chemistry-5"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "organic-chemistry-5:lysine-unprotonated",
+      "type": "numeric",
+      "prompt": "A lysine side-chain amine has pKa 10.5. What percentage is unprotonated (nucleophilic) at pH 7.4? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "organic-chemistry-5-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0.0794,
+        "unit": "%",
+        "tolerance": 0.005,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Unprotonated fraction = 1 − protonated fraction = 1/(1 + 10^(pKa − pH)).",
+        "solution": "1/(1 + 10^3.1) = 0.00079 = 0.079%. A small but reactive fraction.",
+        "lesson_ids": [
+          "organic-chemistry-5"
+        ],
+        "misconception_ids": [
+          "charged-amine-is-nucleophile"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "organic-chemistry-5:steady-state-long-lived",
+      "type": "numeric",
+      "prompt": "A site is modified with first-order rate constant 0.01 per year; the protein is replaced with a half-life of 10 years. Using f_ss = k_m/(k_m + k_d), calculate the steady-state modified fraction. Enter a decimal fraction, number only.",
+      "points": 1,
+      "objective_ids": [
+        "organic-chemistry-5-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 0.1261,
+        "unit": "",
+        "tolerance": 0.003,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Convert the half-life to k_d = ln 2 / t½ first.",
+        "solution": "k_d = 0.693/10 = 0.0693 per year; f_ss = 0.01/(0.01 + 0.0693) = 0.126.",
+        "lesson_ids": [
+          "organic-chemistry-5"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "organic-chemistry-5:steady-state-short-lived",
+      "type": "numeric",
+      "prompt": "With the same modification rate (0.01 per year), a protein is replaced with a half-life of 2 days. Calculate the steady-state modified fraction. Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "organic-chemistry-5-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 7.904553437197373e-05,
+        "unit": "",
+        "tolerance": 0,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null,
+        "relative_tolerance": 0.02
+      },
+      "feedback": {
+        "hint": "Convert days to years before computing k_d.",
+        "solution": "k_d = 0.693/(2/365) = 126.5 per year; f_ss = 0.01/(0.01 + 126.5) = 7.9×10⁻⁵.",
+        "lesson_ids": [
+          "organic-chemistry-5"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "organic-chemistry-5:glycation-step",
+      "type": "single_choice",
+      "prompt": "Glucose is mostly a cyclic hemiacetal in water, yet it slowly modifies lysine residues. What is the first chemical step?",
+      "points": 1,
+      "objective_ids": [
+        "organic-chemistry-5-objective-3"
+      ],
+      "options": [
+        "The cyclic form transfers a phosphate to lysine.",
+        "The small open-chain fraction's aldehyde is attacked by an unprotonated amine, forming an imine (Schiff base) after loss of water.",
+        "Glucose forms an amide bond with lysine directly.",
+        "Protonated lysine attacks the ring oxygen."
+      ],
+      "solution_spec": {
+        "answer": 1
+      },
+      "feedback": {
+        "hint": "Which functional group of glucose is electrophilic, and which form of lysine is nucleophilic?",
+        "solution": "Carbonyl addition by a neutral amine followed by dehydration gives an imine, which can rearrange to the Amadori ketoamine. Both partners must be in their minor reactive forms, which is one reason the reaction is slow.",
+        "lesson_ids": [
+          "organic-chemistry-5"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
     }
   ]
 }

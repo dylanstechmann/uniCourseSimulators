@@ -65,6 +65,46 @@
       "back": "The error between a function and its finite Taylor polynomial, bounded using higher derivatives.",
       "objective_ids": [],
       "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "calculus-2-5-card-1",
+      "lesson_id": "calculus-2-5",
+      "front": "Accumulation",
+      "back": "Total = ∫ rate dt; units: (amount/time) × time.",
+      "objective_ids": [
+        "calculus-2-5-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "calculus-2-5-card-2",
+      "lesson_id": "calculus-2-5",
+      "front": "Trapezoid and Simpson",
+      "back": "T = h[q₀/2 + … + qₙ/2]; S = (h/3)[q₀ + 4q₁ + 2q₂ + … + qₙ] with n even.",
+      "objective_ids": [
+        "calculus-2-5-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "calculus-2-5-card-3",
+      "lesson_id": "calculus-2-5",
+      "front": "Trapezoidal error",
+      "back": "|E| ≤ (b − a)h²/12 · max|f″|; convex functions are overestimated; halving h quarters the bound.",
+      "objective_ids": [
+        "calculus-2-5-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "calculus-2-5-card-4",
+      "lesson_id": "calculus-2-5",
+      "front": "Improper integrals",
+      "back": "∫₀^∞ e^(−kt) dt = 1/k converges; ∫₁^∞ dt/t diverges; ∫₁^∞ dt/t² converges.",
+      "objective_ids": [
+        "calculus-2-5-objective-3"
+      ],
+      "license": "CC-BY-4.0"
     }
   ]
 }

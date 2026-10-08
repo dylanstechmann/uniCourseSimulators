@@ -65,6 +65,46 @@
       "back": "The result linking derivatives and integrals: accumulation can be evaluated using an antiderivative.",
       "objective_ids": [],
       "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "calculus-1-5-card-1",
+      "lesson_id": "calculus-1-5",
+      "front": "Exponential growth",
+      "back": "dN/dt = rN, N = N₀e^(rt); r = ln 2 / t_d is per-capita, units 1/time.",
+      "objective_ids": [
+        "calculus-1-5-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "calculus-1-5-card-2",
+      "lesson_id": "calculus-1-5",
+      "front": "Estimating r",
+      "back": "ln N is linear in t: r = ln(N₂/N₁)/(t₂ − t₁); more points test whether growth is exponential.",
+      "objective_ids": [
+        "calculus-1-5-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "calculus-1-5-card-3",
+      "lesson_id": "calculus-1-5",
+      "front": "Logistic maximum",
+      "back": "dN/dt = rN(1 − N/K) peaks at N = K/2 with rate rK/4: the inflection point of the S-curve.",
+      "objective_ids": [
+        "calculus-1-5-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "calculus-1-5-card-4",
+      "lesson_id": "calculus-1-5",
+      "front": "Time to a fraction of K",
+      "back": "t = (1/r) ln[(p/(1 − p))((K − N₀)/N₀)]; approach to K slows sharply.",
+      "objective_ids": [
+        "calculus-1-5-objective-3"
+      ],
+      "license": "CC-BY-4.0"
     }
   ]
 }

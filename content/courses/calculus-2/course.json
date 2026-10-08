@@ -7,7 +7,7 @@
   "domain": "Mathematics",
   "level": "Year 1",
   "maturity": "partial",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "license": "MIT OR CC-BY-4.0",
   "content_origin": {
     "kind": "legacy-prototype",
@@ -97,6 +97,32 @@
       "description": "State where a series converges and how truncation error is controlled.",
       "bloom": "understand",
       "course_outcome_ids": []
+    },
+    {
+      "id": "calculus-2-5-objective-1",
+      "description": "Set up and evaluate the definite integral of a rate model to obtain a total accumulated amount.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "calculus-2-outcome-2"
+      ]
+    },
+    {
+      "id": "calculus-2-5-objective-2",
+      "description": "Apply the trapezoidal and Simpson's rules to sampled rate data and bound the trapezoidal error using the second derivative.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "calculus-2-outcome-1",
+        "calculus-2-outcome-2"
+      ]
+    },
+    {
+      "id": "calculus-2-5-objective-3",
+      "description": "Evaluate an improper integral of a decaying rate, test its convergence and interpret the finite total.",
+      "bloom": "evaluate",
+      "course_outcome_ids": [
+        "calculus-2-outcome-3",
+        "calculus-2-outcome-1"
+      ]
     }
   ],
   "duration": {
@@ -217,6 +243,40 @@
           ]
         }
       ]
+    },
+    {
+      "id": "calculus-2-module-5",
+      "title": "Integrals as accumulation",
+      "source_ids": [
+        "calculus"
+      ],
+      "lessons": [
+        {
+          "id": "calculus-2-5",
+          "title": "Integrals as accumulation: total consumption from rate data, numerical rules with error bounds and improper integrals",
+          "reading": "modules/05-integrals-as-accumulation-and-numerical-error.md",
+          "objectives": [
+            "calculus-2-5-objective-1",
+            "calculus-2-5-objective-2",
+            "calculus-2-5-objective-3"
+          ],
+          "worked_example": "The exact total of 0.5e^(0.03t) over 0 to 48 h is 53.68 mmol; 12 h samples give a trapezoidal 54.26 (bound 1.09) and Simpson 53.68 mmol; a release rate 2.0e^(−0.1t) totals 20 μg over all time.",
+          "question_ids": [
+            "calculus-2-5:exact-total",
+            "calculus-2-5:trapezoid",
+            "calculus-2-5:simpson",
+            "calculus-2-5:error-bound",
+            "calculus-2-5:improper-total",
+            "calculus-2-5:convergence"
+          ],
+          "card_ids": [
+            "calculus-2-5-card-1",
+            "calculus-2-5-card-2",
+            "calculus-2-5-card-3",
+            "calculus-2-5-card-4"
+          ]
+        }
+      ]
     }
   ],
   "assessments": [
@@ -281,6 +341,27 @@
       "points": 2
     },
     {
+      "id": "calculus-2-5-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Integrals as accumulation practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "calculus-2-5-objective-1",
+        "calculus-2-5-objective-2",
+        "calculus-2-5-objective-3"
+      ],
+      "question_ids": [
+        "calculus-2-5:exact-total",
+        "calculus-2-5:trapezoid",
+        "calculus-2-5:simpson",
+        "calculus-2-5:error-bound",
+        "calculus-2-5:improper-total",
+        "calculus-2-5:convergence"
+      ],
+      "points": 6
+    },
+    {
       "id": "calculus-2-case",
       "type": "case",
       "mode": "self-assessment",
@@ -327,6 +408,11 @@
       "version": "0.1.0",
       "date": "2026-10-05",
       "summary": "Corrected the geometric-series tail arithmetic; the original approximation and exact sum are preserved."
+    },
+    {
+      "version": "0.2.0",
+      "date": "2026-10-08",
+      "summary": "Added an original lesson on integrals as accumulation (exact totals, trapezoidal and Simpson's rules with an error bound, improper integrals) with synthetic data, formative items with computed keys and retrieval cards. The package remains partial and unreviewed."
     }
   ],
   "limitations": [

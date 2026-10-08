@@ -249,6 +249,409 @@
         "kind": "original",
         "modifications": []
       }
+    },
+    {
+      "id": "differential-equations-5:mass-balance",
+      "type": "single_choice",
+      "prompt": "A well-mixed chamber of volume V receives medium at flow Q with concentration C_in, loses medium at the same flow, and cells consume the solute at rate kVC. Which equation is the correct mass balance, and what type is it?",
+      "points": 1,
+      "objective_ids": [
+        "differential-equations-5-objective-1"
+      ],
+      "options": [
+        "V dC/dt = Q C − Q C_in − kVC: second-order, linear.",
+        "V dC/dt = Q C_in − kVC: the outflow term is not needed because volume is constant.",
+        "V dC/dt = Q C_in − Q C − kVC: first-order, linear, constant-coefficient.",
+        "dC/dt = Q (C_in − C) − kC: first-order, nonlinear."
+      ],
+      "solution_spec": {
+        "answer": 2
+      },
+      "feedback": {
+        "hint": "Account for every flow of solute: in with the feed, out with the outlet, removed by consumption.",
+        "solution": "Accumulation = in − out − consumed. Constant volume means outflow equals inflow, but the outlet still carries solute at C. Dividing by V gives dC/dt = D(C_in − C) − kC, linear in C with constant coefficients.",
+        "lesson_ids": [
+          "differential-equations-5"
+        ],
+        "misconception_ids": [
+          "drop-outflow-term"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "differential-equations-5:steady-state",
+      "type": "numeric",
+      "prompt": "A well-mixed chamber obeys dC/dt = D(C_in − C) − kC with D = 0.05 min⁻¹, k = 0.02 min⁻¹ and C_in = 10 mM. Calculate the steady-state concentration. Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "differential-equations-5-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 7.1429,
+        "unit": "mM",
+        "tolerance": 0.02,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Set dC/dt = 0 and solve for C.",
+        "solution": "C_ss = D C_in/(D + k) = 0.05 × 10/0.07 = 7.14 mM.",
+        "lesson_ids": [
+          "differential-equations-5"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "differential-equations-5:time-constant",
+      "type": "numeric",
+      "prompt": "For the same chamber (D = 0.05 min⁻¹, k = 0.02 min⁻¹), what is the time constant? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "differential-equations-5-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 14.2857,
+        "unit": "min",
+        "tolerance": 0.1,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "The coefficient of C in dC/dt + λC = … is λ; τ = 1/λ.",
+        "solution": "τ = 1/(0.05 + 0.02) = 14.3 min.",
+        "lesson_ids": [
+          "differential-equations-5"
+        ],
+        "misconception_ids": [
+          "tau-from-flow-only"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "differential-equations-5:time-to-90",
+      "type": "numeric",
+      "prompt": "Starting from C = 0 with λ = 0.07 min⁻¹, how long until the chamber reaches 90% of steady state? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "differential-equations-5-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 32.894,
+        "unit": "min",
+        "tolerance": 0.2,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Solve 1 − e^(−λt) = 0.9.",
+        "solution": "t = ln 10/0.07 = 32.9 min.",
+        "lesson_ids": [
+          "differential-equations-5"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "differential-equations-5:euler-step",
+      "type": "numeric",
+      "prompt": "Using Euler's method with h = 10 min on dC/dt = 0.05 × 10 − 0.07 C from C(0) = 0, what is C after one step? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "differential-equations-5-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 5.0,
+        "unit": "mM",
+        "tolerance": 0.02,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "C₁ = C₀ + h f(C₀).",
+        "solution": "C₁ = 0 + 10 × 0.50 = 5.00 mM, versus the exact 3.60 mM.",
+        "lesson_ids": [
+          "differential-equations-5"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "differential-equations-5:stability-limit",
+      "type": "numeric",
+      "prompt": "For dC/dt = D C_in − λC with λ = 0.07 min⁻¹, what is the largest Euler step size for which the numerical solution does not diverge? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "differential-equations-5-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 28.5714,
+        "unit": "min",
+        "tolerance": 0.2,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Each Euler step multiplies the deviation from steady state by (1 − λh).",
+        "solution": "|1 − λh| < 1 requires h < 2/λ = 28.6 min.",
+        "lesson_ids": [
+          "differential-equations-5"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "differential-equations-5:oscillating-output",
+      "type": "single_choice",
+      "prompt": "A simulation of this chamber with Euler steps of 35 min shows concentrations swinging above the inlet value and below zero with growing amplitude. What is the right conclusion?",
+      "points": 1,
+      "objective_ids": [
+        "differential-equations-5-objective-3"
+      ],
+      "options": [
+        "Euler's method is exact for linear equations, so the result is correct.",
+        "The chamber is unstable and will oscillate in reality.",
+        "The step exceeds the stability limit 2/λ; the oscillation is a numerical artifact, and the output violates physical bounds, so the step must be reduced.",
+        "Negative concentrations show that cells produce the solute."
+      ],
+      "solution_spec": {
+        "answer": 2
+      },
+      "feedback": {
+        "hint": "Compare the step with 2/λ and the output with physical limits.",
+        "solution": "With λ = 0.07, 2/λ = 28.6 min, so 35 min is unstable. The exact solution is a smooth approach to C_ss; bounds checks catch the artifact.",
+        "lesson_ids": [
+          "differential-equations-5"
+        ],
+        "misconception_ids": [
+          "numerical-artifact-as-physics"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "differential-equations-6:equilibrium",
+      "type": "numeric",
+      "prompt": "A culture follows dN/dt = rN(1 − N/K) − hN with r = 0.03 h⁻¹, K = 10⁶ cells and h = 0.01 h⁻¹. Calculate the nonzero equilibrium N*. Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "differential-equations-6-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 666666.6666666666,
+        "unit": "",
+        "tolerance": 0,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null,
+        "relative_tolerance": 0.005
+      },
+      "feedback": {
+        "hint": "Divide the equilibrium condition by N and solve r(1 − N/K) = h.",
+        "solution": "N* = K(1 − h/r) = 10⁶ × (1 − 0.01/0.03) = 6.667×10⁵ cells.",
+        "lesson_ids": [
+          "differential-equations-6"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "differential-equations-6:recovery-tau",
+      "type": "numeric",
+      "prompt": "At the equilibrium N* of dN/dt = rN(1 − N/K) − hN, the linearized slope is f′(N*) = −(r − h). With r = 0.03 and h = 0.01 h⁻¹, what is the recovery time constant? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "differential-equations-6-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 50.0,
+        "unit": "h",
+        "tolerance": 0.5,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "A deviation decays as e^(f′(N*) t); τ = 1/|f′(N*)|.",
+        "solution": "τ = 1/(0.03 − 0.01) = 50 h.",
+        "lesson_ids": [
+          "differential-equations-6"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "differential-equations-6:msy",
+      "type": "numeric",
+      "prompt": "For dN/dt = rN(1 − N/K) − hN with r = 0.03 h⁻¹ and K = 10⁶ cells, what is the maximum sustained yield hN* over all harvest rates? Enter the number only (cells per hour).",
+      "points": 1,
+      "objective_ids": [
+        "differential-equations-6-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 7500.0,
+        "unit": "",
+        "tolerance": 5,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Maximize Y(h) = hK(1 − h/r) with respect to h.",
+        "solution": "dY/dh = 0 at h = r/2 = 0.015; Y = rK/4 = 7500 cells/h.",
+        "lesson_ids": [
+          "differential-equations-6"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "differential-equations-6:slow-eigenvalue",
+      "type": "numeric",
+      "prompt": "Two compartments obey dx/dt = −0.5x + 0.1y and dy/dt = 0.3x − 0.1y (rates in h⁻¹). Calculate the eigenvalue of the system matrix closer to zero. Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "differential-equations-6-objective-3"
+      ],
+      "solution_spec": {
+        "answer": -0.03542,
+        "unit": "1/h",
+        "tolerance": 0.002,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use λ² − (trace)λ + det = 0.",
+        "solution": "Trace -0.6, det 0.02; λ = (-0.6 ± 0.5292)/2 gives -0.0354 and -0.5646 h⁻¹. The slow one is -0.0354.",
+        "lesson_ids": [
+          "differential-equations-6"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "differential-equations-6:washout",
+      "type": "single_choice",
+      "prompt": "In the harvested logistic model, what happens if the harvest rate h exceeds r?",
+      "points": 1,
+      "objective_ids": [
+        "differential-equations-6-objective-1"
+      ],
+      "options": [
+        "N* = K(1 − h/r) becomes negative, so the only biologically meaningful equilibrium is N = 0, which is now stable: the population washes out.",
+        "The population settles at K.",
+        "Nothing changes; the equilibrium is independent of h.",
+        "The population oscillates forever."
+      ],
+      "solution_spec": {
+        "answer": 0
+      },
+      "feedback": {
+        "hint": "Check f′(0) = r − h and the sign of N*.",
+        "solution": "When h > r, f′(0) < 0 makes N = 0 stable and the positive equilibrium no longer exists. This is the washout condition familiar from continuous culture.",
+        "lesson_ids": [
+          "differential-equations-6"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "differential-equations-6:trace-det",
+      "type": "single_choice",
+      "prompt": "A 2×2 linear system has trace −0.6 and determinant −0.02. What can you conclude about the equilibrium at the origin?",
+      "points": 1,
+      "objective_ids": [
+        "differential-equations-6-objective-3"
+      ],
+      "options": [
+        "It is a stable spiral.",
+        "It is unstable (a saddle): a negative determinant means the eigenvalues are real with opposite signs.",
+        "It is stable, because the trace is negative.",
+        "Nothing can be concluded without solving the system."
+      ],
+      "solution_spec": {
+        "answer": 1
+      },
+      "feedback": {
+        "hint": "The determinant is the product of the eigenvalues.",
+        "solution": "Stability needs trace < 0 and det > 0. A negative determinant means one positive and one negative eigenvalue, so most trajectories leave the origin.",
+        "lesson_ids": [
+          "differential-equations-6"
+        ],
+        "misconception_ids": [
+          "negative-trace-sufficient"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
     }
   ]
 }

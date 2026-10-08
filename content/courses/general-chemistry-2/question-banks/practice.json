@@ -248,6 +248,378 @@
         "kind": "original",
         "modifications": []
       }
+    },
+    {
+      "id": "general-chemistry-2-5:ratio",
+      "type": "numeric",
+      "prompt": "A buffer has pKa 6.86. What base-to-acid ratio [A⁻]/[HA] gives pH 7.4? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "general-chemistry-2-5-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 3.4674,
+        "unit": "",
+        "tolerance": 0.01,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Rearrange Henderson–Hasselbalch: ratio = 10^(pH − pKa).",
+        "solution": "10^(7.4 − 6.86) = 10^0.54 = 3.467.",
+        "lesson_ids": [
+          "general-chemistry-2-5"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "general-chemistry-2-5:base-concentration",
+      "type": "numeric",
+      "prompt": "With that ratio (3.467) and total buffer concentration 100 mM, what is the concentration of the base form? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "general-chemistry-2-5-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 77.615,
+        "unit": "mM",
+        "tolerance": 0.2,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "[A⁻] = C_T × ratio / (1 + ratio).",
+        "solution": "100 × 3.467 / 4.467 = 77.6 mM; acid form 22.4 mM.",
+        "lesson_ids": [
+          "general-chemistry-2-5"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "general-chemistry-2-5:ph-after-acid",
+      "type": "numeric",
+      "prompt": "A 1 L buffer contains 77.6 mM A⁻ and 22.4 mM HA (pKa 6.86). After adding 10 mmol of strong acid, what is the pH? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "general-chemistry-2-5-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 7.18,
+        "unit": "",
+        "tolerance": 0.02,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Strong acid converts an equal amount of A⁻ to HA.",
+        "solution": "pH = 6.86 + log₁₀(67.6/32.4) = 7.18; water alone would fall to pH 2.0.",
+        "lesson_ids": [
+          "general-chemistry-2-5"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "general-chemistry-2-5:capacity",
+      "type": "numeric",
+      "prompt": "Calculate the buffer capacity β = 2.303 C_T Ka[H⁺]/(Ka + [H⁺])² for C_T = 0.1 mol/L, pKa = 6.86 and pH = 7.4, in mM per pH unit. Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "general-chemistry-2-5-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 40.012,
+        "unit": "",
+        "tolerance": 0.3,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Convert pKa and pH to Ka and [H⁺] first.",
+        "solution": "Ka = 10^−6.86, [H⁺] = 10^−7.4; β = 0.0400 mol/L per pH = 40.0 mM per pH unit.",
+        "lesson_ids": [
+          "general-chemistry-2-5"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "general-chemistry-2-5:unionized-fraction",
+      "type": "numeric",
+      "prompt": "A weak base's conjugate acid has pKa 9.0. What percentage of the base is un-ionized at pH 7.4? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "general-chemistry-2-5-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 2.4503,
+        "unit": "%",
+        "tolerance": 0.05,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "For a base, the un-ionized fraction is 1/(1 + 10^(pKa − pH)).",
+        "solution": "1/(1 + 10^1.6) = 0.0245 = 2.45%.",
+        "lesson_ids": [
+          "general-chemistry-2-5"
+        ],
+        "misconception_ids": [
+          "acid-base-formula-swapped"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "general-chemistry-2-5:dilute-buffer",
+      "type": "single_choice",
+      "prompt": "Two buffers have the same pKa and pH, but one is 5 mM total and the other 50 mM. Which statement is correct?",
+      "points": 1,
+      "objective_ids": [
+        "general-chemistry-2-5-objective-2"
+      ],
+      "options": [
+        "The 5 mM buffer is better because it is closer to pure water.",
+        "The 50 mM buffer has a different pH.",
+        "Both resist acid equally because pH depends only on the ratio.",
+        "The 50 mM buffer has ten times the capacity and resists a given acid load much better, although both start at the same pH."
+      ],
+      "solution_spec": {
+        "answer": 3
+      },
+      "feedback": {
+        "hint": "Capacity scales with total concentration; pH depends on the ratio.",
+        "solution": "Henderson–Hasselbalch fixes pH from the ratio, so both start at the same pH. Capacity is proportional to C_T, so the 50 mM buffer absorbs ten times more acid per unit pH change.",
+        "lesson_ids": [
+          "general-chemistry-2-5"
+        ],
+        "misconception_ids": [
+          "ph-equals-capacity"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "general-chemistry-2-6:first-order-remaining",
+      "type": "numeric",
+      "prompt": "A first-order decomposition has k = 0.0231 min⁻¹. What percentage of the starting compound remains after 60 minutes? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "general-chemistry-2-6-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 25.007,
+        "unit": "%",
+        "tolerance": 0.2,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "[A]/[A]₀ = e^(−kt).",
+        "solution": "e^(−0.0231 × 60) = e^(−1.386) = 0.250, so 25.0% remains.",
+        "lesson_ids": [
+          "general-chemistry-2-6"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "general-chemistry-2-6:second-order-halflife",
+      "type": "numeric",
+      "prompt": "A second-order reaction has k = 0.5 L mol⁻¹ s⁻¹ and starting concentration 0.02 mol/L. Calculate its half-life. Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "general-chemistry-2-6-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 100.0,
+        "unit": "s",
+        "tolerance": 0.5,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "For second order, t½ = 1/(k[B]₀).",
+        "solution": "t½ = 1/(0.5 × 0.02) = 100 s; it doubles if the starting concentration halves.",
+        "lesson_ids": [
+          "general-chemistry-2-6"
+        ],
+        "misconception_ids": [
+          "half-life-always-ln2-over-k"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "general-chemistry-2-6:identify-order",
+      "type": "single_choice",
+      "prompt": "Concentration-time data give a straight line when ln[A] is plotted against time, but curves when [A] or 1/[A] is plotted. What is the order and how is k obtained?",
+      "points": 1,
+      "objective_ids": [
+        "general-chemistry-2-6-objective-2"
+      ],
+      "options": [
+        "The order cannot be determined from these plots.",
+        "First order; k is the negative of the slope of ln[A] versus t.",
+        "Zero order; k is the slope of [A] versus t.",
+        "Second order; k is the slope of 1/[A] versus t."
+      ],
+      "solution_spec": {
+        "answer": 1
+      },
+      "feedback": {
+        "hint": "Each integrated rate law is linear in a different transformation.",
+        "solution": "Linearity of ln[A] versus t is the signature of first-order kinetics, and the slope is −k. Check that the data span more than a half-life before concluding.",
+        "lesson_ids": [
+          "general-chemistry-2-6"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "general-chemistry-2-6:activation-energy",
+      "type": "numeric",
+      "prompt": "A rate constant is 1.0×10⁻³ s⁻¹ at 298.15 K and 2.6×10⁻³ s⁻¹ at 310.15 K. Using R = 8.314 J mol⁻¹ K⁻¹, calculate Ea. Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "general-chemistry-2-6-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 61.217,
+        "unit": "kJ/mol",
+        "tolerance": 0.5,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Ea = R ln(k₂/k₁) / (1/T₁ − 1/T₂).",
+        "solution": "ln(2.6) = 0.9555; 1/T₁ − 1/T₂ = 1.298×10⁻⁴ K⁻¹; Ea = 61217 J/mol = 61.2 kJ/mol.",
+        "lesson_ids": [
+          "general-chemistry-2-6"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "general-chemistry-2-6:cold-rate",
+      "type": "numeric",
+      "prompt": "With Ea = 61.2 kJ/mol and k = 1.0×10⁻³ s⁻¹ at 298.15 K, predict k at 277.15 K. Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "general-chemistry-2-6-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 0.00015393177010346301,
+        "unit": "1/s",
+        "tolerance": 0,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null,
+        "relative_tolerance": 0.02
+      },
+      "feedback": {
+        "hint": "ln(k₃/k₁) = −(Ea/R)(1/T₃ − 1/T₁).",
+        "solution": "k = 1.0×10⁻³ × exp[−(61217/8.314)(1/277.15 − 1/298.15)] = 1.54×10⁻⁴ s⁻¹, about 6.5-fold slower.",
+        "lesson_ids": [
+          "general-chemistry-2-6"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "general-chemistry-2-6:extrapolation-limit",
+      "type": "single_choice",
+      "prompt": "A protein reagent's degradation rate is measured at 50, 60 and 70 °C and extrapolated with Arrhenius to predict shelf life at 4 °C. What is the main risk?",
+      "points": 1,
+      "objective_ids": [
+        "general-chemistry-2-6-objective-3"
+      ],
+      "options": [
+        "Arrhenius plots cannot be extrapolated at all.",
+        "There is no risk if the fit is linear.",
+        "Rates always fall at high temperature.",
+        "The protein may unfold at the high temperatures, so the high-temperature pathway is not the one that operates at 4 °C and the extrapolation can be badly wrong."
+      ],
+      "solution_spec": {
+        "answer": 3
+      },
+      "feedback": {
+        "hint": "Arrhenius extrapolation assumes the same mechanism over the whole range.",
+        "solution": "Accelerated testing assumes one mechanism with constant Ea. A process such as unfolding that appears only at high temperature breaks that assumption, so predictions for cold storage must be checked with real-time data.",
+        "lesson_ids": [
+          "general-chemistry-2-6"
+        ],
+        "misconception_ids": [
+          "linear-fit-validates-extrapolation"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
     }
   ]
 }

@@ -7,7 +7,7 @@
   "domain": "Mathematics",
   "level": "Year 2",
   "maturity": "partial",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "license": "MIT OR CC-BY-4.0",
   "content_origin": {
     "kind": "legacy-prototype",
@@ -97,6 +97,56 @@
       "description": "Choose a step size based on stability and accuracy, not convenience alone.",
       "bloom": "evaluate",
       "course_outcome_ids": []
+    },
+    {
+      "id": "differential-equations-5-objective-1",
+      "description": "Derive a first-order linear ODE for a well-mixed chamber from a mass balance and classify it.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "differential-equations-outcome-1"
+      ]
+    },
+    {
+      "id": "differential-equations-5-objective-2",
+      "description": "Compute the steady state, the time constant and the time to reach 90% of steady state.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "differential-equations-outcome-2"
+      ]
+    },
+    {
+      "id": "differential-equations-5-objective-3",
+      "description": "Apply Euler's method, compare a step with the exact solution, and use the stability limit to check a numerical result against physical constraints.",
+      "bloom": "evaluate",
+      "course_outcome_ids": [
+        "differential-equations-outcome-4"
+      ]
+    },
+    {
+      "id": "differential-equations-6-objective-1",
+      "description": "Find the equilibria of a one-variable nonlinear ODE and classify their stability from the sign of the derivative.",
+      "bloom": "analyze",
+      "course_outcome_ids": [
+        "differential-equations-outcome-2",
+        "differential-equations-outcome-1"
+      ]
+    },
+    {
+      "id": "differential-equations-6-objective-2",
+      "description": "Interpret the linearized slope at a stable equilibrium as a recovery time constant and find the harvest rate that maximizes sustained yield.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "differential-equations-outcome-2"
+      ]
+    },
+    {
+      "id": "differential-equations-6-objective-3",
+      "description": "Write two coupled compartments as a matrix system and use its eigenvalues to determine stability and the slow and fast time scales.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "differential-equations-outcome-3",
+        "differential-equations-outcome-2"
+      ]
     }
   ],
   "duration": {
@@ -225,6 +275,78 @@
           ]
         }
       ]
+    },
+    {
+      "id": "differential-equations-module-5",
+      "title": "A well-mixed perfused chamber",
+      "source_ids": [
+        "diffeqs",
+        "engineeringMath",
+        "numerical"
+      ],
+      "lessons": [
+        {
+          "id": "differential-equations-5",
+          "title": "A well-mixed perfused chamber: first-order linear ODEs, steady state, time constants and a numerical check",
+          "reading": "modules/05-well-mixed-chamber-and-euler-stability.md",
+          "objectives": [
+            "differential-equations-5-objective-1",
+            "differential-equations-5-objective-2",
+            "differential-equations-5-objective-3"
+          ],
+          "worked_example": "With D = 0.05 and k = 0.02 min⁻¹, C_ss = 7.14 mM, τ = 14.3 min and 90% is reached at 32.9 min; one Euler step of 10 min gives 5.00 mM against the exact 3.60 mM, and steps above 28.6 min diverge.",
+          "question_ids": [
+            "differential-equations-5:mass-balance",
+            "differential-equations-5:steady-state",
+            "differential-equations-5:time-constant",
+            "differential-equations-5:time-to-90",
+            "differential-equations-5:euler-step",
+            "differential-equations-5:stability-limit",
+            "differential-equations-5:oscillating-output"
+          ],
+          "card_ids": [
+            "differential-equations-5-card-1",
+            "differential-equations-5-card-2",
+            "differential-equations-5-card-3",
+            "differential-equations-5-card-4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "differential-equations-module-6",
+      "title": "Equilibria, stability and coupled compartments",
+      "source_ids": [
+        "diffeqs",
+        "engineeringMath"
+      ],
+      "lessons": [
+        {
+          "id": "differential-equations-6",
+          "title": "Equilibria and stability: harvesting a logistic population and two coupled compartments",
+          "reading": "modules/06-equilibria-stability-and-coupled-compartments.md",
+          "objectives": [
+            "differential-equations-6-objective-1",
+            "differential-equations-6-objective-2",
+            "differential-equations-6-objective-3"
+          ],
+          "worked_example": "With r = 0.03, K = 10⁶ and h = 0.01, N* = 6.667×10⁵ cells, recovery τ = 50 h and maximum sustained yield rK/4 = 7500 cells/h; the two-compartment matrix has eigenvalues -0.0354 and -0.5646 h⁻¹, both negative, so it is stable.",
+          "question_ids": [
+            "differential-equations-6:equilibrium",
+            "differential-equations-6:recovery-tau",
+            "differential-equations-6:msy",
+            "differential-equations-6:slow-eigenvalue",
+            "differential-equations-6:washout",
+            "differential-equations-6:trace-det"
+          ],
+          "card_ids": [
+            "differential-equations-6-card-1",
+            "differential-equations-6-card-2",
+            "differential-equations-6-card-3",
+            "differential-equations-6-card-4"
+          ]
+        }
+      ]
     }
   ],
   "assessments": [
@@ -289,6 +411,49 @@
       "points": 2
     },
     {
+      "id": "differential-equations-5-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "A well-mixed perfused chamber practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "differential-equations-5-objective-1",
+        "differential-equations-5-objective-2",
+        "differential-equations-5-objective-3"
+      ],
+      "question_ids": [
+        "differential-equations-5:mass-balance",
+        "differential-equations-5:steady-state",
+        "differential-equations-5:time-constant",
+        "differential-equations-5:time-to-90",
+        "differential-equations-5:euler-step",
+        "differential-equations-5:stability-limit",
+        "differential-equations-5:oscillating-output"
+      ],
+      "points": 7
+    },
+    {
+      "id": "differential-equations-6-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Equilibria, stability and coupled compartments practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "differential-equations-6-objective-1",
+        "differential-equations-6-objective-2",
+        "differential-equations-6-objective-3"
+      ],
+      "question_ids": [
+        "differential-equations-6:equilibrium",
+        "differential-equations-6:recovery-tau",
+        "differential-equations-6:msy",
+        "differential-equations-6:slow-eigenvalue",
+        "differential-equations-6:washout",
+        "differential-equations-6:trace-det"
+      ],
+      "points": 6
+    },
+    {
       "id": "differential-equations-case",
       "type": "case",
       "mode": "self-assessment",
@@ -330,6 +495,11 @@
       "version": "0.1.0",
       "date": "2026-10-05",
       "summary": "Preserved original compact prototype content in separate manifests and readings; labeled partial without semester or credit equivalency."
+    },
+    {
+      "version": "0.2.0",
+      "date": "2026-10-08",
+      "summary": "Added two original lessons (a well-mixed perfused chamber with Euler stability; equilibria and stability of a harvested population and two coupled compartments) with synthetic data, formative items with computed keys and retrieval cards. The package remains partial and unreviewed."
     }
   ],
   "limitations": [

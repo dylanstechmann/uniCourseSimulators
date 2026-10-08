@@ -50,6 +50,18 @@
       "original_content": true,
       "license": "MIT OR CC-BY-4.0",
       "modifications": []
+    },
+    {
+      "module_id": "general-chemistry-1-module-5",
+      "lesson_id": "general-chemistry-1-5",
+      "reading": "modules/05-solutions-dilution-and-propagated-error.md",
+      "source_ids": [
+        "chemistry"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
     }
   ]
 }

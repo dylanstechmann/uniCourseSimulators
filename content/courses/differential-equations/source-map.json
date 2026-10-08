@@ -58,6 +58,33 @@
       "original_content": true,
       "license": "MIT OR CC-BY-4.0",
       "modifications": []
+    },
+    {
+      "module_id": "differential-equations-module-5",
+      "lesson_id": "differential-equations-5",
+      "reading": "modules/05-well-mixed-chamber-and-euler-stability.md",
+      "source_ids": [
+        "diffeqs",
+        "engineeringMath",
+        "numerical"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "differential-equations-module-6",
+      "lesson_id": "differential-equations-6",
+      "reading": "modules/06-equilibria-stability-and-coupled-compartments.md",
+      "source_ids": [
+        "diffeqs",
+        "engineeringMath"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
     }
   ]
 }

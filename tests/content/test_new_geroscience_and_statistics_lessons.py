@@ -1,5 +1,6 @@
 """Checks for the 2026-10-08 lessons: geroscience 9 to 14, statistics 6, transport 5, bioreactors 5, programming 5,
-genetics, biochemistry, physiology and biomaterials 5 and 6, and genetics 7 and 8.
+genetics, biochemistry, physiology and biomaterials 5 and 6, genetics 7 and 8,
+and the chemistry, calculus and differential-equations lessons added later the same day.
 
 They check structure, labelling and sources, not scientific quality. Passing does not mean any review.
 """
@@ -15,7 +16,11 @@ ROOT = Path(__file__).resolve().parents[2]
 COURSES = ROOT / "content" / "courses"
 LESSONS = [("geroscience", f"geroscience-{n}") for n in range(9, 15)] + [
     ("statistics", "statistics-6"), ("transport", "transport-5"), ("bioreactors", "bioreactors-5"), ("programming", "programming-5"),
-] + [(c, f"{c}-{n}") for c in ("genetics", "biochemistry", "physiology", "biomaterials") for n in (5, 6)] + [("genetics", "genetics-7"), ("genetics", "genetics-8")]
+] + [(c, f"{c}-{n}") for c in ("genetics", "biochemistry", "physiology", "biomaterials") for n in (5, 6)] + [("genetics", "genetics-7"), ("genetics", "genetics-8")] + [
+    ("general-chemistry-1", "general-chemistry-1-5"), ("general-chemistry-2", "general-chemistry-2-5"), ("general-chemistry-2", "general-chemistry-2-6"),
+    ("organic-chemistry", "organic-chemistry-5"), ("calculus-1", "calculus-1-5"), ("calculus-2", "calculus-2-5"),
+    ("differential-equations", "differential-equations-5"), ("differential-equations", "differential-equations-6"),
+]
 
 
 def load(course):
