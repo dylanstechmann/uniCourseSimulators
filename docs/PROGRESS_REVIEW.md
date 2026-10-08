@@ -1,5 +1,9 @@
 # Progress review: uniStemCourseSimulators
 
+## Update after the physiology schedule (2026-10-08, sixteenth pass)
+
+Written by an AI coding assistant. Human Physiology for Engineers is the fourth package with a proposed week-by-week structure (after cell biology, geroscience and genetics): 14 weeks, 15 readings including a synthetic scratch-assay lab. The final lesson prepares the package's existing case, in which a normal pressure coexists with reduced reserve, with a worked example in which the same resting pressure hides a halved renal flow and a lost capacity to respond to exercise. As before, nothing is graded, workload is unmeasured and no person has reviewed it. The AI-assisted check found no wrong key but did find a learning objective with no item and an internal inconsistency in a worked example, both fixed. Twenty-one packages still have only two to four lesson-length readings.
+
 ## Update after reading the earlier lessons again (2026-10-08, fifteenth pass)
 
 Written by an AI coding assistant. Rereading older lessons to add the common-mistakes sections they lacked turned up display defects that no test had caught: raw exponent notation and floating-point artifacts in about 40 learner-visible places. They were all in lessons written before a formatting step existed. They are fixed and a test now guards against them. The lesson is that a pipeline change does not repair earlier output, and that reading rendered text finds things that checking answer keys cannot. Twenty-two lessons now state the mistakes they address. None of this changes what the package can claim: every package is still partial, unreviewed and formative-only.

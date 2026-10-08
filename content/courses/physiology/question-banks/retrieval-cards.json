@@ -185,6 +185,326 @@
         "physiology-7-objective-3"
       ],
       "license": "CC-BY-4.0"
+    },
+    {
+      "id": "physiology-8-card-1",
+      "lesson_id": "physiology-8",
+      "front": "Single-compartment balance",
+      "back": "C_ss = P/CL; τ = V/CL; 63% at one τ and 90% at τ ln 10; halving clearance doubles both C_ss and τ.",
+      "objective_ids": [
+        "physiology-8-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "physiology-8-card-2",
+      "lesson_id": "physiology-8",
+      "front": "Heat from oxygen",
+      "back": "About 20 kJ per liter of O₂; heat storage S = M − W − H_loss; ΔT rate = S/(mass × 3.5 kJ/(kg·°C)).",
+      "objective_ids": [
+        "physiology-8-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "physiology-8-card-3",
+      "lesson_id": "physiology-8",
+      "front": "Loop gain",
+      "back": "Closed-loop deviation e = d/(1 + G); G = (open-loop deviation / closed-loop deviation) − 1; proportional control leaves a residual error.",
+      "objective_ids": [
+        "physiology-8-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "physiology-8-card-4",
+      "lesson_id": "physiology-8",
+      "front": "Set point or failure",
+      "back": "A changed set point is defended by working effectors; failure shows effectors overwhelmed or absent.",
+      "objective_ids": [
+        "physiology-8-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "physiology-9-card-1",
+      "lesson_id": "physiology-9",
+      "front": "Nernst potential",
+      "back": "E = (RT/zF) ln([out]/[in]); about 61.5 mV × log₁₀(ratio)/z at 37 °C.",
+      "objective_ids": [
+        "physiology-9-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "physiology-9-card-2",
+      "lesson_id": "physiology-9",
+      "front": "Resting potential",
+      "back": "V = Σ g E / Σ g (conductance form) or the GHK equation (permeability form); it sits between E_K and E_Na, closest to the ion with the largest conductance.",
+      "objective_ids": [
+        "physiology-9-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "physiology-9-card-3",
+      "lesson_id": "physiology-9",
+      "front": "Extracellular potassium",
+      "back": "E_K shifts about 61.5 mV per tenfold change; the resting potential shifts less because sodium permeability pulls it toward E_Na.",
+      "objective_ids": [
+        "physiology-9-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "physiology-9-card-4",
+      "lesson_id": "physiology-9",
+      "front": "Excitability caution",
+      "back": "Depolarization moves a cell toward threshold, but sustained depolarization inactivates sodium channels, so the net effect depends on size and duration.",
+      "objective_ids": [
+        "physiology-9-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "physiology-10-card-1",
+      "lesson_id": "physiology-10",
+      "front": "Circulation equation",
+      "back": "MAP − CVP = CO × TPR; Q = ΔP/R for any vessel or bed; CO = HR × SV.",
+      "objective_ids": [
+        "physiology-10-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "physiology-10-card-2",
+      "lesson_id": "physiology-10",
+      "front": "Parallel beds",
+      "back": "1/R_total = Σ 1/R_i; the total is lower than any branch; opening a bed lowers TPR and diverts flow.",
+      "objective_ids": [
+        "physiology-10-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "physiology-10-card-3",
+      "lesson_id": "physiology-10",
+      "front": "Poiseuille scaling",
+      "back": "R = 8μL/(πr⁴): halving the radius multiplies resistance by 16; the law is a scaling guide for rigid laminar flow.",
+      "objective_ids": [
+        "physiology-10-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "physiology-10-card-4",
+      "lesson_id": "physiology-10",
+      "front": "Compliance and pulse pressure",
+      "back": "PP ≈ SV/C; stiffer arteries widen pulse pressure at the same mean pressure; MAP ≈ DBP + PP/3.",
+      "objective_ids": [
+        "physiology-10-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "physiology-11-card-1",
+      "lesson_id": "physiology-11",
+      "front": "Alveolar ventilation",
+      "back": "V̇_A = (V_T − V_D) × f; shallow fast breathing lowers it at the same minute ventilation.",
+      "objective_ids": [
+        "physiology-11-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "physiology-11-card-2",
+      "lesson_id": "physiology-11",
+      "front": "CO₂ and ventilation",
+      "back": "P_ACO₂ ≈ 0.863 × V̇_CO₂/V̇_A: halving alveolar ventilation doubles alveolar CO₂.",
+      "objective_ids": [
+        "physiology-11-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "physiology-11-card-3",
+      "lesson_id": "physiology-11",
+      "front": "Alveolar gas equation",
+      "back": "P_AO₂ = F_IO₂ (P_B − P_H₂O) − P_aCO₂/R; hypoventilation lowers O₂ and raises CO₂ with a normal A–a gradient.",
+      "objective_ids": [
+        "physiology-11-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "physiology-11-card-4",
+      "lesson_id": "physiology-11",
+      "front": "Compliance and shunt",
+      "back": "1/C_total = 1/C_lung + 1/C_wall; shunt fraction = (C_c − C_a)/(C_c − C_v), poorly corrected by extra oxygen.",
+      "objective_ids": [
+        "physiology-11-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "physiology-12-card-1",
+      "lesson_id": "physiology-12",
+      "front": "Maximum isometric force",
+      "back": "F₀ = σ₀ × PCSA; about 25 N/cm² in the synthetic examples; force scales with area, not length.",
+      "objective_ids": [
+        "physiology-12-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "physiology-12-card-2",
+      "lesson_id": "physiology-12",
+      "front": "Length–tension",
+      "back": "Force depends on filament overlap: a plateau near 2.2 μm and a linear descent to zero near 3.6 μm.",
+      "objective_ids": [
+        "physiology-12-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "physiology-12-card-3",
+      "lesson_id": "physiology-12",
+      "front": "Hill force–velocity",
+      "back": "(F + a)(v + b) = (F₀ + a) b; v = b (F₀ − F)/(F + a); v_max = bF₀/a.",
+      "objective_ids": [
+        "physiology-12-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "physiology-12-card-4",
+      "lesson_id": "physiology-12",
+      "front": "Muscle power",
+      "back": "P = F v is zero at F = 0 and v = 0 and peaks at F* = F₀[√((a/F₀)(a/F₀ + 1)) − a/F₀], about 0.31 F₀ for a/F₀ = 0.25.",
+      "objective_ids": [
+        "physiology-12-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "physiology-13-card-1",
+      "lesson_id": "physiology-13",
+      "front": "Phases of skin healing",
+      "back": "Hemostasis (minutes), inflammation (hours–days), proliferation (days–weeks), remodeling (weeks–months); phases overlap.",
+      "objective_ids": [
+        "physiology-13-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "physiology-13-card-2",
+      "lesson_id": "physiology-13",
+      "front": "Repair versus regeneration",
+      "back": "Repair restores continuity, often with a scar; regeneration restores original structure and function and needs structure, function, lineage and controls as evidence.",
+      "objective_ids": [
+        "physiology-13-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "physiology-13-card-3",
+      "lesson_id": "physiology-13",
+      "front": "Front-migration model",
+      "back": "Gap width W closes at 2v: t_c = W/(2v); fraction closed = 2vt/W; speed per edge = closed width/2/time.",
+      "objective_ids": [
+        "physiology-13-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "physiology-13-card-4",
+      "lesson_id": "physiology-13",
+      "front": "Closure assay design",
+      "back": "Separate migration from proliferation, image the same fields, use independent replicates, fit a rate from several time points, and state what a flat culture leaves out.",
+      "objective_ids": [
+        "physiology-13-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "physiology-lab1-0",
+      "lesson_id": "physiology-lab-01",
+      "front": "Summarizing closure data",
+      "back": "Average open area at each time across independent experiments; report the number of experiments.",
+      "objective_ids": [
+        "physiology-lab-01-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "physiology-lab1-1",
+      "lesson_id": "physiology-lab-01",
+      "front": "Closure rate",
+      "back": "Rate = percentage points of area closed / hours, preferably from a fit across several time points.",
+      "objective_ids": [
+        "physiology-lab-01-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "physiology-lab1-2",
+      "lesson_id": "physiology-lab-01",
+      "front": "Division block",
+      "back": "If closure is nearly unchanged when division is blocked, migration accounts for most of it over that time.",
+      "objective_ids": [
+        "physiology-lab-01-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "physiology-lab1-3",
+      "lesson_id": "physiology-lab-01",
+      "front": "Scope of a culture assay",
+      "back": "A flat layer of one cell type shows effects on migration and division in culture, not on healing in tissue.",
+      "objective_ids": [
+        "physiology-lab-01-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "physiology-14-card-1",
+      "lesson_id": "physiology-14",
+      "front": "Compensation",
+      "back": "A regulated value can be held by different combinations of output and resistance; the cost appears in organ flow, extraction and effort.",
+      "objective_ids": [
+        "physiology-14-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "physiology-14-card-2",
+      "lesson_id": "physiology-14",
+      "front": "Reserve",
+      "back": "Reserve = maximum capacity − current use; compensation uses reserve, so a normal resting value can coexist with little reserve.",
+      "objective_ids": [
+        "physiology-14-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "physiology-14-card-3",
+      "lesson_id": "physiology-14",
+      "front": "Revealing reserve",
+      "back": "Apply a graded challenge: reserve shows as how far the controlled value is held when demand rises.",
+      "objective_ids": [
+        "physiology-14-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "physiology-14-card-4",
+      "lesson_id": "physiology-14",
+      "front": "Testing the explanation",
+      "back": "Choose a measurement that could contradict it: challenge response, direct organ flow, venous oxygen or hormone levels, not another resting reading.",
+      "objective_ids": [
+        "physiology-14-objective-3"
+      ],
+      "license": "CC-BY-4.0"
     }
   ]
 }

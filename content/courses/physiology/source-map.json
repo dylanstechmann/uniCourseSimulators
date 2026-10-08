@@ -93,6 +93,110 @@
       "original_content": true,
       "license": "CC-BY-4.0",
       "modifications": []
+    },
+    {
+      "module_id": "physiology-module-8",
+      "lesson_id": "physiology-8",
+      "reading": "modules/08-homeostasis-balance-and-feedback-gain.md",
+      "source_ids": [
+        "biology",
+        "transport"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "physiology-module-9",
+      "lesson_id": "physiology-9",
+      "reading": "modules/09-membrane-potential-nernst-and-ghk.md",
+      "source_ids": [
+        "biology",
+        "transport"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "physiology-module-10",
+      "lesson_id": "physiology-10",
+      "reading": "modules/10-hemodynamics-pressure-flow-resistance-compliance.md",
+      "source_ids": [
+        "biology",
+        "transport"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "physiology-module-11",
+      "lesson_id": "physiology-11",
+      "reading": "modules/11-respiratory-mechanics-and-gas-exchange.md",
+      "source_ids": [
+        "biology",
+        "transport"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "physiology-module-12",
+      "lesson_id": "physiology-12",
+      "reading": "modules/12-skeletal-muscle-mechanics-and-power.md",
+      "source_ids": [
+        "biology",
+        "transport"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "physiology-module-13",
+      "lesson_id": "physiology-13",
+      "reading": "modules/13-tissue-repair-phases-and-closure-kinetics.md",
+      "source_ids": [
+        "biology",
+        "transport"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "physiology-module-lab-01",
+      "lesson_id": "physiology-lab-01",
+      "reading": "labs/01-scratch-assay-closure-kinetics.md",
+      "source_ids": [
+        "biology",
+        "transport"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "physiology-module-14",
+      "lesson_id": "physiology-14",
+      "reading": "modules/14-compensation-and-reserve.md",
+      "source_ids": [
+        "biology",
+        "transport"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
     }
   ]
 }

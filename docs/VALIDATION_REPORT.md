@@ -4,7 +4,24 @@
 
 2026-10-06; synthetic local learner data only. Milestones 1 and 2 are implemented. Milestone 3 remains partial; deterministic graders and prototype graded-assignment and review workflows are described below. A Milestone 4 curriculum-map increment is implemented and tested, while subject-matter review and map refinement remain. All 25 course packages are **partial**; zero are beta, complete or externally reviewed. Human score review is limited to saved attempts and does not constitute course-content review. No semester equivalence, university credit, security certification or public production deployment is asserted.
 
-## Current increment: number-formatting defects fixed and common-mistakes sections backfilled (2026-10-08, fifteenth pass)
+## Current increment: physiology gets a proposed 14-week schedule, seven lessons and a scratch-assay lab (2026-10-08, sixteenth pass)
+
+Written by an AI coding assistant. Human Physiology for Engineers moves from 0.3.2 to 0.4.0 and stays `partial`, unreviewed and formative-only.
+
+- **Proposed 14-week schedule** (`duration.weeks`) and a regenerated syllabus: the four short prototype units sit in weeks 1, 3, 5 and 11 beside the original lessons; week 13 is a lab and week 14 a lesson that prepares the existing course case. The manifest says the schedule is not evidence of semester equivalence.
+- **Seven lessons (8 to 14)**, each about 950 to 1,350 words with a worked example, common mistakes, seven or eight items and four cards: balance and feedback gain (with heat balance); membrane potential (Nernst, GHK, extracellular potassium); hemodynamics; respiratory mechanics and gas exchange (ventilation, the alveolar gas equation, compliance, shunt); skeletal muscle mechanics (length–tension, Hill's relation, power); tissue repair and closure kinetics; and compensation and reserve.
+- **Virtual lab 1**: a synthetic scratch assay with a control, a migration inhibitor and a division block, four independent experiments each and five time points (60 rows). Seven items (a 9-cell summary upload, a rate with an interpretation, three ratio or speed items, a structured item and a multiple-select item), four cards and a week-13 practice assessment.
+- **Review record:** [physiology-0.4.0.md](reviews/ai-assisted/physiology-0.4.0.md). All 57 numeric keys in the package, including the 17 that predate this pass, agree with independent recalculation; all 56 new items earn full credit under the real grader. Five drafting problems were found and fixed before the commit, including an inconsistent resting heat loss and a learning objective with no item.
+- Tests: 57 recalculation tests for physiology (plus a check that the closed-form load for peak muscle power matches a grid search); the schedule, the no-advice statements and the lab keys against its CSV have tests; the inventory pins moved to 218 lessons, 819 questions and 612 cards.
+
+| Command/check (this container, Python 3.12.3, 2026-10-08) | Result |
+| --- | --- |
+| `python tools/validate_content.py` | PASS: 25 packages, 218 lessons, 819 questions, 612 cards, 25 cases; 0 errors; 98 disclosed legacy-depth warnings |
+| `verify.sh` | see the PROGRESS.md entry for this pass |
+
+Not run: frontend checks, Docker Compose, Playwright for this pass. Not reviewed by a person.
+
+## Previous increment: number-formatting defects fixed and common-mistakes sections backfilled (2026-10-08, fifteenth pass)
 
 Written by an AI coding assistant. No answer key, tolerance or objective changed. Thirteen packages move up one patch version and stay `partial`, unreviewed and formative-only.
 

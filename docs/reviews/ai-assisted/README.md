@@ -10,3 +10,4 @@ review that do.
 |---|---|---|
 | Genetics & Genomics 0.4.1 | 2026-10-08 | [genetics-0.4.1.md](genetics-0.4.1.md) |
 | Genetics & Genomics 0.5.0 (new lessons, lab and schedule) | 2026-10-08 | [genetics-0.5.0.md](genetics-0.5.0.md) |
+| Human Physiology for Engineers 0.4.0 (new lessons, lab and schedule) | 2026-10-08 | [physiology-0.4.0.md](physiology-0.4.0.md) |

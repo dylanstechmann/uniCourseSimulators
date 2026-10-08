@@ -86,6 +86,90 @@ GENETICS_NUMERIC = {
 }
 
 
+def _nernst_mv(out: float, inside: float) -> float:
+    return 8.314 * 310.15 / 96485 * 1000 * math.log(out / inside)
+
+
+def _ghk_mv(k_out: float) -> float:
+    return 8.314 * 310.15 / 96485 * 1000 * math.log((1.0 * k_out + 0.04 * 145) / (1.0 * 140 + 0.04 * 12))
+
+
+def _parallel(*resistances: float) -> float:
+    return 1 / sum(1 / r for r in resistances)
+
+
+_B_BEDS = (40, 90, 240)
+_B_CHALLENGE = (40, 45, 240)
+_Q_B = (100 - 4) / _parallel(*_B_BEDS)
+_HILL_B, _HILL_A, _HILL_F0 = 0.1, 0.25 * 500, 500.0          # m/s, N, N
+_F_STAR = (math.sqrt(0.25 * 1.25) - 0.25) * _HILL_F0
+_P_STAR = _F_STAR * _HILL_B * (_HILL_F0 - _F_STAR) / (_F_STAR + _HILL_A)
+
+PHYSIOLOGY_NUMERIC = {
+    # items written before 2026-10-08, recomputed from the numbers in their prompts
+    "physiology-1:check": 12 / (0.3 * 2),
+    "physiology-2:check": 4 * (-50 - 50),
+    "physiology-4:check": 24 * 1.5 / 3,
+    "physiology-2:ionic-current": 10 * (-40 - (-90)) / 1000,
+    "physiology-5:arterial-content": 1.34 * 15 * 0.98 + 0.003 * 100,
+    "physiology-5:fick-output": 250 / ((20.00 - 15.20) * 10),
+    "physiology-5:extraction-ratio": 250 / (5.21 * 200),
+    "physiology-5:anemia-extraction": 250 / (5.21 * 134.3),
+    "physiology-6:inulin-gfr": 30 * 1.0 / 0.25,
+    "physiology-6:filtration-fraction": 120 / 600,
+    "physiology-6:glucose-excretion": 120 * 4.0 - 375,
+    "physiology-6:drug-clearance": 2.4 * 1.0 / 0.04,
+    "physiology-7:arterial-net": (35 - 0) - 0.9 * (25 - 5),
+    "physiology-7:venous-net": (15 - 0) - 0.9 * (25 - 5),
+    "physiology-7:filtration-rate": 0.5 * 7,
+    "physiology-7:low-albumin": (35 - 0) - 0.9 * (15 - 5),
+    # physiology 0.4.0
+    "physiology-8:time-constant": 14 / 7,
+    "physiology-8:new-steady-state": 35 / 3.5,
+    "physiology-8:time-to-90": (14 / 3.5) * math.log(10),
+    "physiology-8:temperature-rise": (1.5 * 20 - 0.2 * 1.5 * 20 - 0.25 * 20) / (70 * 3.5),
+    "physiology-8:closed-loop-deviation": 10 / (1 + 4),
+    "physiology-8:gain-estimate": 12 / 3 - 1,
+    "physiology-9:nernst-k": _nernst_mv(5, 140),
+    "physiology-9:nernst-na": _nernst_mv(145, 12),
+    "physiology-9:ghk-rest": _ghk_mv(5),
+    "physiology-9:ghk-high-k": _ghk_mv(8),
+    "physiology-9:chord-conductance": (1.0 * _nernst_mv(5, 140) + 0.15 * _nernst_mv(145, 12)) / 1.15,
+    "physiology-10:cardiac-output": 80 * 60 / 1000,
+    "physiology-10:tpr": (100 - 4) / 4.8,
+    "physiology-10:parallel-resistance": _parallel(40, 60, 120),
+    "physiology-10:bed-flow": (100 - 4) / 60,
+    "physiology-10:radius-halved": 2**4,
+    "physiology-10:pulse-pressure": 60 / 1.2,
+    "physiology-11:alveolar-ventilation": (250 - 150) * 24 / 1000,
+    "physiology-11:halved-va": 0.863 * 200 / (4.2 / 2),
+    "physiology-11:pao2-room-air": 0.21 * (760 - 47) - 40 / 0.8,
+    "physiology-11:pao2-hypoventilation": 0.21 * (760 - 47) - 80 / 0.8,
+    "physiology-11:stiff-lung-compliance": 1 / (1 / 50 + 1 / 200),
+    "physiology-11:shunt-fraction": (20.1 - 19.0) / (20.1 - 15.2),
+    "physiology-12:isometric-force": 25 * 20,
+    "physiology-12:length-tension": (3.6 - 3.0) / (3.6 - 2.2),
+    "physiology-12:half-load-velocity": 100 * _HILL_B * (_HILL_F0 - 250) / (250 + _HILL_A),
+    "physiology-12:half-load-power": 250 * _HILL_B * (_HILL_F0 - 250) / (250 + _HILL_A),
+    "physiology-12:peak-power": _P_STAR,
+    "physiology-12:smaller-muscle": 0.7 * _P_STAR,
+    "physiology-13:closure-time": 500 / (2 * 25),
+    "physiology-13:percent-closed": 2 * 25 * 6 / 500 * 100,
+    "physiology-13:slowed-closure": 500 / (2 * 25 * 0.6),
+    "physiology-13:edge-speed": 0.40 * 400 / 2 / 8,
+    "physiology-13:half-time": math.log(2) / 0.1,
+    "physiology-14:co-b": _Q_B,
+    "physiology-14:renal-flow-b": (100 - 4) / 240,
+    "physiology-14:extraction-b": 250 / (_Q_B * 200),
+    "physiology-14:reserve-b": 4.5 - _Q_B,
+    "physiology-14:challenge-co-needed": (100 - 4) / _parallel(*_B_CHALLENGE),
+    "physiology-14:map-b-challenge": 4.5 * _parallel(*_B_CHALLENGE) + 4,
+    "physiology-lab1:relative-closure": (100 - 74) / (100 - 47),
+    "physiology-lab1:edge-speed": (100 - 47) / 100 * 400 / 2 / 12,
+    "physiology-lab1:division-block": (100 - 7) / (100 - 4),
+}
+
+
 def bank(course: str) -> dict[str, dict]:
     path = COURSES / course / "question-banks" / "practice.json"
     return {item["id"]: item for item in json.loads(path.read_text(encoding="utf-8"))["questions"]}
@@ -159,3 +243,38 @@ def test_kosambi_distance_stated_in_the_mapping_lesson():
     kosambi_cm = 25 * math.log((1 + 2 * r) / (1 - 2 * r))
     assert round(kosambi_cm, 1) == 22.4
     assert "gives 22.4 cM, close to the 22.6 cM" in reading("genetics", "genetics-7")
+
+
+@pytest.mark.parametrize("question_id,expected", sorted(PHYSIOLOGY_NUMERIC.items()))
+def test_physiology_numeric_key_matches_independent_recalculation(question_id, expected):
+    spec = bank("physiology")[question_id]["solution_spec"]
+    assert abs(spec["answer"] - expected) <= spec["tolerance"], (question_id, spec["answer"], expected)
+
+
+def test_every_physiology_numeric_item_is_recalculated():
+    numeric = {qid for qid, item in bank("physiology").items() if item["type"] == "numeric"}
+    assert numeric == set(PHYSIOLOGY_NUMERIC)
+
+
+def test_physiology_hemodynamic_and_compensation_statements_in_the_lessons():
+    text = reading("physiology", "physiology-14")
+    parallel = _parallel(*_B_BEDS)
+    assert f"R_total = {parallel:.1f}" in text
+    assert f"{_Q_B:.2f} L/min" in text
+    assert f"{_parallel(*_B_CHALLENGE):.1f}" in text
+    f_max_a, f_max_b = 1 - 80 / 150, 1 - 100 / 150
+    assert f"{f_max_a:.2f}" in text and f"{f_max_b:.2f}" in text
+
+
+def test_hill_peak_power_is_at_the_load_the_lesson_states():
+    f0, a, b = 500.0, 125.0, 0.1                      # N, N, m/s (muscle lesson)
+
+    def power(force: float) -> float:
+        return force * b * (f0 - force) / (force + a)
+
+    best_force = max((x / 10 for x in range(1, 5000)), key=power)
+    analytic = (math.sqrt(0.25 * 1.25) - 0.25) * f0
+    assert abs(best_force - analytic) < 0.2
+    assert abs(power(best_force) - power(analytic)) < 1e-3
+    text = reading("physiology", "physiology-12")
+    assert f"F* = {analytic / f0:.3f} F₀ = {analytic:.1f} N" in text

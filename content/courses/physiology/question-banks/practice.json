@@ -808,6 +808,2233 @@
         "kind": "original",
         "modifications": []
       }
+    },
+    {
+      "id": "physiology-8:time-constant",
+      "type": "numeric",
+      "prompt": "A solute is distributed in 14 L and cleared at 7 L/h. What is the time constant τ = V/CL? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "physiology-8-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 2.0,
+        "unit": "h",
+        "tolerance": 0.05,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Divide the distribution volume by the clearance.",
+        "solution": "τ = 14/7 = 2 h.",
+        "lesson_ids": [
+          "physiology-8"
+        ],
+        "misconception_ids": [
+          "clearance-only-sets-level"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physiology-8:new-steady-state",
+      "type": "numeric",
+      "prompt": "Production is 35 mmol/h and clearance falls from 7 to 3.5 L/h. What is the new steady-state concentration? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "physiology-8-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 10.0,
+        "unit": "mmol/L",
+        "tolerance": 0.05,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "C_ss = production divided by clearance.",
+        "solution": "35/3.5 = 10 mmol/L, double the original 5.",
+        "lesson_ids": [
+          "physiology-8"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physiology-8:time-to-90",
+      "type": "numeric",
+      "prompt": "With V = 14 L and the clearance now 3.5 L/h, how long does the concentration take to cover 90% of the way to its new steady state? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "physiology-8-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 9.210340371976184,
+        "unit": "h",
+        "tolerance": 0.1,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Multiply the time constant by ln 10 = 2.303.",
+        "solution": "τ = 14/3.5 = 4 h; t = 4 × 2.303 = 9.2 h.",
+        "lesson_ids": [
+          "physiology-8"
+        ],
+        "misconception_ids": [
+          "approach-time-unchanged"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physiology-8:temperature-rise",
+      "type": "numeric",
+      "prompt": "A 70 kg person (tissue specific heat 3.5 kJ/(kg·°C)) stores heat at 19 kJ/min. At what rate does body temperature rise, in °C per minute? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "physiology-8-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0.07755,
+        "unit": "",
+        "tolerance": 0.0005,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Divide the storage rate by mass times specific heat.",
+        "solution": "19/(70 × 3.5) = 0.078 °C/min, about 4.7 °C/h.",
+        "lesson_ids": [
+          "physiology-8"
+        ],
+        "misconception_ids": [
+          "work-counted-as-heat"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physiology-8:closed-loop-deviation",
+      "type": "numeric",
+      "prompt": "A disturbance would move a regulated variable by 10 units with no feedback. With proportional feedback of loop gain 4, what deviation remains? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "physiology-8-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 2.0,
+        "unit": "",
+        "tolerance": 0.05,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "e = d / (1 + G).",
+        "solution": "10/(1 + 4) = 2 units.",
+        "lesson_ids": [
+          "physiology-8"
+        ],
+        "misconception_ids": [
+          "feedback-removes-error"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physiology-8:gain-estimate",
+      "type": "numeric",
+      "prompt": "A disturbance moves a variable 12 units when the feedback pathway is blocked and 3 units when it is intact. What is the loop gain? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "physiology-8-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 3.0,
+        "unit": "",
+        "tolerance": 0.05,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "G = open-loop deviation / closed-loop deviation − 1.",
+        "solution": "12/3 − 1 = 3.",
+        "lesson_ids": [
+          "physiology-8"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physiology-8:fever",
+      "type": "single_choice",
+      "prompt": "During a fever, core temperature is held at a higher value and the person shivers while it is rising. What does this indicate?",
+      "points": 1,
+      "objective_ids": [
+        "physiology-8-objective-3"
+      ],
+      "options": [
+        "The body has stopped sensing temperature.",
+        "The feedback loop is working and defending a higher set point.",
+        "Heat production has fallen below heat loss.",
+        "The temperature-regulating loop has failed."
+      ],
+      "solution_spec": {
+        "answer": 1
+      },
+      "feedback": {
+        "hint": "Does the effector activity oppose the error from the new target or from the old one?",
+        "solution": "Shivering and skin vasoconstriction while temperature is below the new set point are effector actions of a working loop; the target, not the loop, has changed.",
+        "lesson_ids": [
+          "physiology-8"
+        ],
+        "misconception_ids": [
+          "fever-is-failure"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physiology-9:nernst-k",
+      "type": "numeric",
+      "prompt": "Potassium is 5 mM outside and 140 mM inside at 37 °C. Using 61.5 mV per tenfold ratio for a monovalent ion, what is E_K? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "physiology-9-objective-1"
+      ],
+      "solution_spec": {
+        "answer": -89.05,
+        "unit": "mV",
+        "tolerance": 0.5,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "E = 61.5 mV × log₁₀([out]/[in]); the sign is inside relative to outside.",
+        "solution": "61.5 × log₁₀(5/140) = -89.1 mV.",
+        "lesson_ids": [
+          "physiology-9"
+        ],
+        "misconception_ids": [
+          "ratio-inverted"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physiology-9:nernst-na",
+      "type": "numeric",
+      "prompt": "Sodium is 145 mM outside and 12 mM inside. What is E_Na at 37 °C? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "physiology-9-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 66.59,
+        "unit": "mV",
+        "tolerance": 0.5,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Same equation with the sodium concentrations.",
+        "solution": "61.5 × log₁₀(145/12) = +66.6 mV.",
+        "lesson_ids": [
+          "physiology-9"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physiology-9:ghk-rest",
+      "type": "numeric",
+      "prompt": "A cell has relative permeabilities P_K : P_Na = 1 : 0.04, with K⁺ at 5 mM outside and 140 mM inside and Na⁺ at 145 mM outside and 12 mM inside. Using the GHK equation with 61.5 mV per decade, what is the resting potential? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "physiology-9-objective-2"
+      ],
+      "solution_spec": {
+        "answer": -68.56,
+        "unit": "mV",
+        "tolerance": 0.5,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Numerator: P_K[K]_out + P_Na[Na]_out. Denominator: P_K[K]_in + P_Na[Na]_in.",
+        "solution": "61.5 × log₁₀((1×5 + 0.04×145)/(1×140 + 0.04×12)) = -68.6 mV.",
+        "lesson_ids": [
+          "physiology-9"
+        ],
+        "misconception_ids": [
+          "resting-equals-ek"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physiology-9:ghk-high-k",
+      "type": "numeric",
+      "prompt": "Extracellular K⁺ rises to 8 mM with everything else unchanged. What is the new GHK resting potential? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "physiology-9-objective-3"
+      ],
+      "solution_spec": {
+        "answer": -62.01,
+        "unit": "mV",
+        "tolerance": 0.5,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Replace [K]_out = 5 mM with 8 mM in the numerator only.",
+        "solution": "61.5 × log₁₀((8 + 0.04×145)/(140 + 0.04×12)) = -62.0 mV.",
+        "lesson_ids": [
+          "physiology-9"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physiology-9:chord-conductance",
+      "type": "numeric",
+      "prompt": "A cell has conductances g_K = 1.0 and g_Na = 0.15 (arbitrary units) with E_K = -89.1 mV and E_Na = +66.6 mV. What is the resting potential as the conductance-weighted average? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "physiology-9-objective-2"
+      ],
+      "solution_spec": {
+        "answer": -68.75,
+        "unit": "mV",
+        "tolerance": 0.5,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "V = (g_K E_K + g_Na E_Na)/(g_K + g_Na).",
+        "solution": "(1.0×-89.1 + 0.15×66.6)/1.15 = -68.8 mV.",
+        "lesson_ids": [
+          "physiology-9"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physiology-9:damped-shift",
+      "type": "single_choice",
+      "prompt": "When extracellular K⁺ rises from 5 to 8 mM, E_K shifts by about 13 mV but the resting potential shifts by only about 7 mV. Why?",
+      "points": 1,
+      "objective_ids": [
+        "physiology-9-objective-3"
+      ],
+      "options": [
+        "The cell actively restores its resting potential within seconds.",
+        "Potassium concentration does not affect the GHK equation.",
+        "Sodium permeability pulls the membrane potential toward E_Na, which does not change, so only part of the E_K shift appears.",
+        "The Nernst equation does not apply to potassium."
+      ],
+      "solution_spec": {
+        "answer": 2
+      },
+      "feedback": {
+        "hint": "What other term in the GHK expression is unchanged when [K]_out rises?",
+        "solution": "The sodium term in the numerator and denominator is unchanged, which dilutes the effect of the potassium change on the logarithm.",
+        "lesson_ids": [
+          "physiology-9"
+        ],
+        "misconception_ids": [
+          "resting-equals-ek"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physiology-9:excitability",
+      "type": "multiple_select",
+      "prompt": "In the synthetic cell, extracellular K⁺ is raised from 5 to 8 mM. Which statements are appropriate? Select all that apply.",
+      "points": 2,
+      "objective_ids": [
+        "physiology-9-objective-3"
+      ],
+      "options": [
+        "The resting potential changes by less than the K⁺ equilibrium potential does.",
+        "The result gives dosing advice for a person.",
+        "The resting potential moves toward less negative values.",
+        "The cell becomes more excitable by an amount that depends only on the size of the shift.",
+        "A sustained depolarization can inactivate voltage-gated sodium channels and reduce excitability."
+      ],
+      "solution_spec": {
+        "answer": [
+          0,
+          2,
+          4
+        ],
+        "partial_credit": "correct-minus-incorrect-clamped-v1"
+      },
+      "feedback": {
+        "hint": "Think about both direction and size, and about what depolarization does to sodium channels.",
+        "solution": "Depolarization is smaller than the E_K shift and has competing effects on excitability. A model of a synthetic cell does not give advice for a person.",
+        "lesson_ids": [
+          "physiology-9"
+        ],
+        "misconception_ids": [
+          "depolarization-always-excites"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physiology-10:cardiac-output",
+      "type": "numeric",
+      "prompt": "Heart rate is 80 beats/min and stroke volume 60 mL. What is the cardiac output? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "physiology-10-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 4.8,
+        "unit": "L/min",
+        "tolerance": 0.02,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Multiply the two and convert mL to L.",
+        "solution": "80 × 60 = 4800 mL/min = 4.8 L/min.",
+        "lesson_ids": [
+          "physiology-10"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physiology-10:tpr",
+      "type": "numeric",
+      "prompt": "MAP is 100 mmHg, CVP 4 mmHg and cardiac output 4.8 L/min. What is the total peripheral resistance, in mmHg per L/min? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "physiology-10-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 20.0,
+        "unit": "",
+        "tolerance": 0.1,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "TPR = (MAP − CVP)/CO.",
+        "solution": "(100 − 4)/4.8 = 20.",
+        "lesson_ids": [
+          "physiology-10"
+        ],
+        "misconception_ids": [
+          "pressure-not-difference"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physiology-10:parallel-resistance",
+      "type": "numeric",
+      "prompt": "Three organ beds have resistances 40, 60, 120 (same units) in parallel. What is the total resistance? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "physiology-10-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 20.0,
+        "unit": "",
+        "tolerance": 0.1,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Add the reciprocals, then invert.",
+        "solution": "1/40 + 1/60 + 1/120 = 6/120 = 1/20, so R = 20.",
+        "lesson_ids": [
+          "physiology-10"
+        ],
+        "misconception_ids": [
+          "parallel-added-as-series"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physiology-10:bed-flow",
+      "type": "numeric",
+      "prompt": "With a pressure difference of 96 mmHg across it, how much blood flows through a bed of resistance 60 (mmHg per L/min)? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "physiology-10-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 1.6,
+        "unit": "L/min",
+        "tolerance": 0.02,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use Q = ΔP/R for that bed alone.",
+        "solution": "96/60 = 1.6 L/min.",
+        "lesson_ids": [
+          "physiology-10"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physiology-10:radius-halved",
+      "type": "numeric",
+      "prompt": "At a fixed pressure difference and with constant length and viscosity, by what factor does a vessel's resistance increase when its radius is halved? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "physiology-10-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 16,
+        "unit": "",
+        "tolerance": 0.1,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Resistance varies as 1/r⁴.",
+        "solution": "2⁴ = 16; flow falls to 1/16.",
+        "lesson_ids": [
+          "physiology-10"
+        ],
+        "misconception_ids": [
+          "radius-linear"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physiology-10:pulse-pressure",
+      "type": "numeric",
+      "prompt": "Stroke volume is 60 mL and arterial compliance falls to 1.2 mL/mmHg. Using PP ≈ SV/C, what is the pulse pressure in mmHg? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "physiology-10-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 50.0,
+        "unit": "",
+        "tolerance": 0.5,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Divide stroke volume by compliance.",
+        "solution": "60/1.2 = 50 mmHg, up from 36.",
+        "lesson_ids": [
+          "physiology-10"
+        ],
+        "misconception_ids": [
+          "pulse-pressure-is-mean"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physiology-10:dilation-effects",
+      "type": "multiple_select",
+      "prompt": "One organ bed dilates in a resting person whose cardiac output is held constant. Which statements are correct? Select all that apply.",
+      "points": 2,
+      "objective_ids": [
+        "physiology-10-objective-2"
+      ],
+      "options": [
+        "Arterial pressure is independent of resistance.",
+        "Total peripheral resistance falls.",
+        "Flow through the dilated bed rises.",
+        "Mean arterial pressure would fall unless cardiac output rises or other beds constrict.",
+        "Total resistance is unchanged because the other beds did not change."
+      ],
+      "solution_spec": {
+        "answer": [
+          1,
+          2,
+          3
+        ],
+        "partial_credit": "correct-minus-incorrect-clamped-v1"
+      },
+      "feedback": {
+        "hint": "A new parallel path with lower resistance changes the total resistance. What does MAP − CVP = CO × TPR then imply?",
+        "solution": "Opening a low-resistance parallel path lowers total resistance. With flow held, pressure falls, so the circulation must compensate.",
+        "lesson_ids": [
+          "physiology-10"
+        ],
+        "misconception_ids": [
+          "parallel-added-as-series"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physiology-11:alveolar-ventilation",
+      "type": "numeric",
+      "prompt": "Tidal volume is 250 mL, breathing rate 24 per minute and dead space 150 mL. What is the alveolar ventilation? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "physiology-11-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 2.4,
+        "unit": "L/min",
+        "tolerance": 0.05,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Subtract the dead space from the tidal volume before multiplying by the rate.",
+        "solution": "(250 − 150) × 24 = 2400 mL/min = 2.4 L/min, although minute ventilation is 6.0 L/min.",
+        "lesson_ids": [
+          "physiology-11"
+        ],
+        "misconception_ids": [
+          "minute-equals-alveolar"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physiology-11:halved-va",
+      "type": "numeric",
+      "prompt": "CO₂ production is 200 mL/min and alveolar ventilation is 2.1 L/min. Using P_ACO₂ = 0.863 × V̇_CO₂/V̇_A, what is the alveolar CO₂ pressure in mmHg? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "physiology-11-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 82.19,
+        "unit": "",
+        "tolerance": 0.5,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Divide CO₂ production by alveolar ventilation, then multiply by 0.863.",
+        "solution": "0.863 × 200/2.1 = 82.2 mmHg, twice the value at 4.2 L/min.",
+        "lesson_ids": [
+          "physiology-11"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physiology-11:pao2-room-air",
+      "type": "numeric",
+      "prompt": "At sea level (760 mmHg) breathing room air (F_IO₂ = 0.21) with P_aCO₂ = 40 mmHg, R = 0.8 and water vapor pressure 47 mmHg, what is P_AO₂ in mmHg? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "physiology-11-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 99.73,
+        "unit": "",
+        "tolerance": 0.5,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "P_AO₂ = F_IO₂ (P_B − P_H₂O) − P_aCO₂/R.",
+        "solution": "0.21 × 713 − 40/0.8 = 149.7 − 50 = 99.7 mmHg.",
+        "lesson_ids": [
+          "physiology-11"
+        ],
+        "misconception_ids": [
+          "vapor-pressure-omitted"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physiology-11:pao2-hypoventilation",
+      "type": "numeric",
+      "prompt": "With the same conditions but P_aCO₂ = 80 mmHg from hypoventilation, what is P_AO₂ in mmHg? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "physiology-11-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 49.73,
+        "unit": "",
+        "tolerance": 0.5,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Only the CO₂ term changes.",
+        "solution": "149.7 − 80/0.8 = 49.7 mmHg.",
+        "lesson_ids": [
+          "physiology-11"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physiology-11:stiff-lung-compliance",
+      "type": "numeric",
+      "prompt": "The lungs have compliance 50 mL/cmH₂O and the chest wall 200 mL/cmH₂O, acting in series. What is the total compliance, in mL/cmH₂O? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "physiology-11-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 40.0,
+        "unit": "",
+        "tolerance": 0.5,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "1/C_total = 1/C_lung + 1/C_wall.",
+        "solution": "1/50 + 1/200 = 1/40, so C_total = 40.",
+        "lesson_ids": [
+          "physiology-11"
+        ],
+        "misconception_ids": [
+          "series-as-parallel"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physiology-11:shunt-fraction",
+      "type": "numeric",
+      "prompt": "End-capillary, arterial and mixed venous oxygen contents are 20.1, 19.0 and 15.2 mL/dL. What is the shunt fraction? Enter a decimal fraction, number only.",
+      "points": 1,
+      "objective_ids": [
+        "physiology-11-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 0.2245,
+        "unit": "",
+        "tolerance": 0.005,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "(C_c − C_a)/(C_c − C_v).",
+        "solution": "(20.1 − 19.0)/(20.1 − 15.2) = 1.1/4.9 = 0.22.",
+        "lesson_ids": [
+          "physiology-11"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physiology-11:oxygen-and-shunt",
+      "type": "single_choice",
+      "prompt": "A patient's low arterial oxygen is mainly caused by a large shunt. Why does breathing 100% oxygen raise arterial oxygen only modestly?",
+      "points": 1,
+      "objective_ids": [
+        "physiology-11-objective-3"
+      ],
+      "options": [
+        "Shunted blood never contacts ventilated alveoli, so extra alveolar oxygen does not reach it.",
+        "Extra oxygen cannot dissolve in plasma at all.",
+        "Hemoglobin cannot bind more oxygen at any partial pressure.",
+        "The alveolar gas equation does not apply to shunt."
+      ],
+      "solution_spec": {
+        "answer": 0
+      },
+      "feedback": {
+        "hint": "Where does the shunted blood go?",
+        "solution": "The oxygen content of blood that bypasses ventilated alveoli stays at the mixed venous value, so it dilutes the arterial content however much oxygen is breathed.",
+        "lesson_ids": [
+          "physiology-11"
+        ],
+        "misconception_ids": [
+          "oxygen-cures-shunt"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physiology-12:isometric-force",
+      "type": "numeric",
+      "prompt": "A muscle has specific tension 25 N/cm² and physiological cross-sectional area 20 cm². What is its maximal isometric force? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "physiology-12-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 500.0,
+        "unit": "N",
+        "tolerance": 1.0,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Multiply specific tension by area.",
+        "solution": "25 × 20 = 500 N.",
+        "lesson_ids": [
+          "physiology-12"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physiology-12:length-tension",
+      "type": "numeric",
+      "prompt": "Using F/F₀ = (3.6 − L)/(3.6 − 2.2) on the descending limb, what fraction of maximum force does a sarcomere produce at L = 3.0 μm? Enter a decimal fraction, number only.",
+      "points": 1,
+      "objective_ids": [
+        "physiology-12-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0.4286,
+        "unit": "",
+        "tolerance": 0.005,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Subtract the sarcomere length from 3.6 and divide by 1.4.",
+        "solution": "(3.6 − 3.0)/1.4 = 0.43.",
+        "lesson_ids": [
+          "physiology-12"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physiology-12:half-load-velocity",
+      "type": "numeric",
+      "prompt": "For F₀ = 500 N, a = 125 N and b = 10 cm/s, Hill's equation v = b (F₀ − F)/(F + a) gives the shortening velocity. What is v at F = 250 N, in cm/s? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "physiology-12-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 6.667,
+        "unit": "cm/s",
+        "tolerance": 0.05,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use F₀ − F = 250 N and F + a = 375 N.",
+        "solution": "10 × 250/(250 + 125) = 6.67 cm/s.",
+        "lesson_ids": [
+          "physiology-12"
+        ],
+        "misconception_ids": [
+          "power-at-max-force"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physiology-12:half-load-power",
+      "type": "numeric",
+      "prompt": "At F = 250 N the shortening velocity is 6.67 cm/s. What is the mechanical power? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "physiology-12-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 16.667,
+        "unit": "W",
+        "tolerance": 0.1,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Power is force times velocity; convert cm/s to m/s.",
+        "solution": "250 N × 0.0667 m/s = 16.7 W.",
+        "lesson_ids": [
+          "physiology-12"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physiology-12:peak-power",
+      "type": "numeric",
+      "prompt": "At the load of maximum power, F* = 154.5 N, the velocity from Hill's equation is 12.36 cm/s. What is the power? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "physiology-12-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 19.098,
+        "unit": "W",
+        "tolerance": 0.1,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Multiply force by velocity in SI units.",
+        "solution": "154.5 × 0.1236 = 19.1 W, above the 16.7 W at half load.",
+        "lesson_ids": [
+          "physiology-12"
+        ],
+        "misconception_ids": [
+          "power-at-max-force"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physiology-12:smaller-muscle",
+      "type": "numeric",
+      "prompt": "The same muscle loses 30% of its cross-sectional area with unchanged fiber properties. What is its peak power, in watts, if the original peak power was 19.1 W? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "physiology-12-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 13.369,
+        "unit": "W",
+        "tolerance": 0.1,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Force and power scale with area at every load fraction.",
+        "solution": "0.7 × 19.1 = 13.4 W.",
+        "lesson_ids": [
+          "physiology-12"
+        ],
+        "misconception_ids": [
+          "area-changes-force-not-power"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physiology-12:interpretation",
+      "type": "multiple_select",
+      "prompt": "Which statements about muscle force, velocity and power are correct? Select all that apply.",
+      "points": 2,
+      "objective_ids": [
+        "physiology-12-objective-3"
+      ],
+      "options": [
+        "Power is greatest at an intermediate load, not at the largest or smallest load.",
+        "Power equals maximum force times maximum velocity.",
+        "In this model, 30% less cross-sectional area lowers force and power by the same fraction.",
+        "Force falls as shortening velocity rises.",
+        "The model fully explains age-related changes in muscle power in people."
+      ],
+      "solution_spec": {
+        "answer": [
+          0,
+          2,
+          3
+        ],
+        "partial_credit": "correct-minus-incorrect-clamped-v1"
+      },
+      "feedback": {
+        "hint": "Check each statement against Hill's equation, P = F v and the limits stated in the lesson.",
+        "solution": "Power is the product of force and velocity, so it peaks at an intermediate load; force falls with velocity; area scales force and power; the model leaves out fiber type, activation and tendon.",
+        "lesson_ids": [
+          "physiology-12"
+        ],
+        "misconception_ids": [
+          "power-at-max-force",
+          "model-as-explanation"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physiology-13:phases",
+      "type": "multiple_select",
+      "prompt": "Which statements about the phases of skin wound healing are correct? Select all that apply.",
+      "points": 2,
+      "objective_ids": [
+        "physiology-13-objective-1"
+      ],
+      "options": [
+        "Neutrophils and then macrophages clear microbes and debris during inflammation.",
+        "Keratinocytes at the wound edge migrate to cover the surface during the proliferation phase.",
+        "The phases are strictly separate in time and never overlap.",
+        "Hemostasis begins only after remodeling is complete.",
+        "Remodeling lasts weeks to months and the resulting scar usually differs from the original tissue."
+      ],
+      "solution_spec": {
+        "answer": [
+          0,
+          1,
+          4
+        ],
+        "partial_credit": "correct-minus-incorrect-clamped-v1"
+      },
+      "feedback": {
+        "hint": "Think about the order of the phases, their cell types and their time scales.",
+        "solution": "Hemostasis comes first (minutes), then inflammation, proliferation and remodeling, and the phases overlap; a scar is usually organized differently from the original tissue.",
+        "lesson_ids": [
+          "physiology-13"
+        ],
+        "misconception_ids": [
+          "phases-never-overlap"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physiology-13:closure-time",
+      "type": "numeric",
+      "prompt": "A straight gap 500 μm wide closes with each edge advancing at 25 μm/h. How long does closure take? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "physiology-13-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 10.0,
+        "unit": "h",
+        "tolerance": 0.1,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "The gap closes at twice the edge speed.",
+        "solution": "500/(2 × 25) = 10 h.",
+        "lesson_ids": [
+          "physiology-13"
+        ],
+        "misconception_ids": [
+          "edge-speed-vs-gap-speed"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physiology-13:percent-closed",
+      "type": "numeric",
+      "prompt": "For the same gap, what percent has closed after 6 hours? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "physiology-13-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 60.0,
+        "unit": "%",
+        "tolerance": 0.5,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Fraction closed = 2vt/W.",
+        "solution": "2 × 25 × 6/500 = 0.60, or 60%.",
+        "lesson_ids": [
+          "physiology-13"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physiology-13:slowed-closure",
+      "type": "numeric",
+      "prompt": "A treatment slows the edge speed by 40%. How long does the 500 μm gap now take to close? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "physiology-13-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 16.667,
+        "unit": "h",
+        "tolerance": 0.1,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "The new speed is 60% of 25 μm/h.",
+        "solution": "v = 15 μm/h; t = 500/(2 × 15) = 16.7 h.",
+        "lesson_ids": [
+          "physiology-13"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physiology-13:edge-speed",
+      "type": "numeric",
+      "prompt": "A scratch 400 μm wide is 40% closed after 8 h. Assuming straight edges that advance equally, what is the speed of each edge? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "physiology-13-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 10.0,
+        "unit": "μm/h",
+        "tolerance": 0.1,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Closed width is shared by two edges.",
+        "solution": "40% of 400 = 160 μm; per edge 80 μm in 8 h = 10 μm/h.",
+        "lesson_ids": [
+          "physiology-13"
+        ],
+        "misconception_ids": [
+          "edge-speed-vs-gap-speed"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physiology-13:half-time",
+      "type": "numeric",
+      "prompt": "If open area decays exponentially, A = A₀ e^(−kt), with k = 0.1 per hour, what is the half-time? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "physiology-13-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 6.931,
+        "unit": "h",
+        "tolerance": 0.05,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "t½ = ln 2 / k.",
+        "solution": "0.693/0.1 = 6.9 h.",
+        "lesson_ids": [
+          "physiology-13"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physiology-13:separate-migration",
+      "type": "single_choice",
+      "prompt": "A scratch-assay result shows that a compound speeds closure. Which addition best tests whether it acts on cell migration rather than on cell division?",
+      "points": 1,
+      "objective_ids": [
+        "physiology-13-objective-3"
+      ],
+      "options": [
+        "Repeat the assay with division blocked, or over a time too short for division, and compare closure.",
+        "Use a single plate on one day.",
+        "Image more fields from the same well.",
+        "Report the percent closed at one late time point only."
+      ],
+      "solution_spec": {
+        "answer": 0
+      },
+      "feedback": {
+        "hint": "What else fills a gap besides moving cells?",
+        "solution": "Dividing cells also fill the gap. Blocking division, or measuring before many cells divide, isolates migration. More fields from one well do not add independent replicates.",
+        "lesson_ids": [
+          "physiology-13"
+        ],
+        "misconception_ids": [
+          "proliferation-ignored",
+          "pseudoreplication"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physiology-13:culture-claims",
+      "type": "multiple_select",
+      "prompt": "A synthetic scratch assay shows faster closure with treatment A. Which conclusions are supported? Select all that apply.",
+      "points": 2,
+      "objective_ids": [
+        "physiology-13-objective-3"
+      ],
+      "options": [
+        "Treatment A increased the combined migration and proliferation of this cell type under these culture conditions.",
+        "The result alone does not show that healing in tissue would be faster.",
+        "Independent replicates from separate experiments are needed to estimate the variability.",
+        "Images of several fields from one well count as independent replicates.",
+        "Treatment A accelerates healing in people."
+      ],
+      "solution_spec": {
+        "answer": [
+          0,
+          1,
+          2
+        ],
+        "partial_credit": "correct-minus-incorrect-clamped-v1"
+      },
+      "feedback": {
+        "hint": "Keep each claim inside what a flat layer of one cell type, in a dish, can show.",
+        "solution": "A culture assay shows an effect in that system. It needs independent replicates, and it does not cover inflammation, vessels, matrix, mechanics or people.",
+        "lesson_ids": [
+          "physiology-13"
+        ],
+        "misconception_ids": [
+          "culture-to-person-leap",
+          "pseudoreplication"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physiology-lab1:summary-table",
+      "type": "file_upload",
+      "prompt": "Using the synthetic closure CSV, upload a summary table with one row per condition (key column `condition`: control, migration-inhibitor, division-blocked) and columns `experiments` (number of independent experiments measured at 12 h), `mean_open_12h` and `mean_open_24h` (mean open area as a percent of the starting area).",
+      "points": 9,
+      "objective_ids": [
+        "physiology-lab-01-objective-1"
+      ],
+      "solution_spec": {
+        "accepted_media_types": [
+          "text/csv"
+        ],
+        "max_bytes": 32768,
+        "validation_spec": {
+          "format": "csv-numeric-table-v1",
+          "delimiter": ",",
+          "key_column": "condition",
+          "columns": [
+            "condition",
+            "experiments",
+            "mean_open_12h",
+            "mean_open_24h"
+          ],
+          "checks": [
+            {
+              "id": "control-experiments",
+              "row_id": "control",
+              "column": "experiments",
+              "type": "numeric",
+              "answer": 4.0,
+              "unit": "",
+              "tolerance": 0,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "count",
+                "values": [
+                  48,
+                  45,
+                  49,
+                  46
+                ]
+              }
+            },
+            {
+              "id": "control-mean_open_12h",
+              "row_id": "control",
+              "column": "mean_open_12h",
+              "type": "numeric",
+              "answer": 47.0,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  48,
+                  45,
+                  49,
+                  46
+                ]
+              }
+            },
+            {
+              "id": "control-mean_open_24h",
+              "row_id": "control",
+              "column": "mean_open_24h",
+              "type": "numeric",
+              "answer": 4.0,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  6,
+                  3,
+                  5,
+                  2
+                ]
+              }
+            },
+            {
+              "id": "migration-inhibitor-experiments",
+              "row_id": "migration-inhibitor",
+              "column": "experiments",
+              "type": "numeric",
+              "answer": 4.0,
+              "unit": "",
+              "tolerance": 0,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "count",
+                "values": [
+                  72,
+                  75,
+                  73,
+                  76
+                ]
+              }
+            },
+            {
+              "id": "migration-inhibitor-mean_open_12h",
+              "row_id": "migration-inhibitor",
+              "column": "mean_open_12h",
+              "type": "numeric",
+              "answer": 74.0,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  72,
+                  75,
+                  73,
+                  76
+                ]
+              }
+            },
+            {
+              "id": "migration-inhibitor-mean_open_24h",
+              "row_id": "migration-inhibitor",
+              "column": "mean_open_24h",
+              "type": "numeric",
+              "answer": 47.0,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  46,
+                  49,
+                  45,
+                  48
+                ]
+              }
+            },
+            {
+              "id": "division-blocked-experiments",
+              "row_id": "division-blocked",
+              "column": "experiments",
+              "type": "numeric",
+              "answer": 4.0,
+              "unit": "",
+              "tolerance": 0,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "count",
+                "values": [
+                  52,
+                  49,
+                  51,
+                  48
+                ]
+              }
+            },
+            {
+              "id": "division-blocked-mean_open_12h",
+              "row_id": "division-blocked",
+              "column": "mean_open_12h",
+              "type": "numeric",
+              "answer": 50.0,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  52,
+                  49,
+                  51,
+                  48
+                ]
+              }
+            },
+            {
+              "id": "division-blocked-mean_open_24h",
+              "row_id": "division-blocked",
+              "column": "mean_open_24h",
+              "type": "numeric",
+              "answer": 7.0,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  8,
+                  5,
+                  9,
+                  6
+                ]
+              }
+            }
+          ]
+        },
+        "rubric": [
+          {
+            "id": "control-experiments",
+            "criterion": "control: experiments",
+            "points": 1,
+            "evidence": [
+              "Recomputes experiments for control from the preparation-level values."
+            ]
+          },
+          {
+            "id": "control-mean_open_12h",
+            "criterion": "control: mean_open_12h",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_open_12h for control from the preparation-level values."
+            ]
+          },
+          {
+            "id": "control-mean_open_24h",
+            "criterion": "control: mean_open_24h",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_open_24h for control from the preparation-level values."
+            ]
+          },
+          {
+            "id": "migration-inhibitor-experiments",
+            "criterion": "migration-inhibitor: experiments",
+            "points": 1,
+            "evidence": [
+              "Recomputes experiments for migration-inhibitor from the preparation-level values."
+            ]
+          },
+          {
+            "id": "migration-inhibitor-mean_open_12h",
+            "criterion": "migration-inhibitor: mean_open_12h",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_open_12h for migration-inhibitor from the preparation-level values."
+            ]
+          },
+          {
+            "id": "migration-inhibitor-mean_open_24h",
+            "criterion": "migration-inhibitor: mean_open_24h",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_open_24h for migration-inhibitor from the preparation-level values."
+            ]
+          },
+          {
+            "id": "division-blocked-experiments",
+            "criterion": "division-blocked: experiments",
+            "points": 1,
+            "evidence": [
+              "Recomputes experiments for division-blocked from the preparation-level values."
+            ]
+          },
+          {
+            "id": "division-blocked-mean_open_12h",
+            "criterion": "division-blocked: mean_open_12h",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_open_12h for division-blocked from the preparation-level values."
+            ]
+          },
+          {
+            "id": "division-blocked-mean_open_24h",
+            "criterion": "division-blocked: mean_open_24h",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_open_24h for division-blocked from the preparation-level values."
+            ]
+          }
+        ]
+      },
+      "feedback": {
+        "hint": "Filter the rows by condition and by time, count the experiments at 12 h, then average the open-area values at each time.",
+        "solution": "Each condition has 4 experiments. Mean open area at 12 h is 47%, 74% and 50% for control, migration inhibitor and division block; at 24 h it is 4%, 47% and 7%.",
+        "lesson_ids": [
+          "physiology-lab-01",
+          "physiology-13",
+          "physiology-8"
+        ],
+        "misconception_ids": [
+          "images-as-replicates"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physiology-lab1:control-rate",
+      "type": "data_interpretation",
+      "prompt": "In the control condition the mean open area falls from 100% at 0 h to 47% at 12 h.",
+      "points": 2,
+      "objective_ids": [
+        "physiology-lab-01-objective-2",
+        "physiology-lab-01-objective-3"
+      ],
+      "response_fields": [
+        {
+          "id": "value",
+          "type": "numeric",
+          "prompt": "Calculate the average closure rate over 0 to 12 h in percentage points of starting area per hour. Report exactly 3 significant figures.",
+          "unit": "%/h",
+          "points": 1
+        },
+        {
+          "id": "inference",
+          "type": "single_choice",
+          "prompt": "The migration inhibitor closes 26 percentage points by 12 h against 53 in control. Which statement is best supported?",
+          "options": [
+            "In this synthetic experiment the inhibitor reduced closure at 12 h to about half of the control closure (0.49).",
+            "The inhibitor stopped closure completely.",
+            "The inhibitor must act on cell division, not on migration.",
+            "The result proves the inhibitor would slow healing in a person."
+          ],
+          "points": 1
+        }
+      ],
+      "solution_spec": {
+        "field_specs": [
+          {
+            "id": "value",
+            "type": "numeric",
+            "answer": 4.42,
+            "unit": "%/h",
+            "tolerance": 0.005,
+            "relative_tolerance": 0,
+            "unit_required": true,
+            "significant_figures": 3,
+            "dimensions": null
+          },
+          {
+            "id": "inference",
+            "type": "single_choice",
+            "answer": 0
+          }
+        ]
+      },
+      "feedback": {
+        "hint": "Average rate = percentage points closed / hours.",
+        "solution": "Control closure over 12 h is 53 points, so 4.42 points per hour. The inhibitor group closes 26 points, a ratio of 0.49.",
+        "lesson_ids": [
+          "physiology-lab-01",
+          "physiology-13",
+          "physiology-8"
+        ],
+        "misconception_ids": [
+          "inhibitor-proves-human-effect"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physiology-lab1:relative-closure",
+      "type": "numeric",
+      "prompt": "By 12 h the control group has closed 53 percentage points of area and the migration-inhibitor group 26. What fraction of control closure does the inhibitor group reach? Enter a decimal fraction, number only.",
+      "points": 1,
+      "objective_ids": [
+        "physiology-lab-01-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0.4906,
+        "unit": "",
+        "tolerance": 0.005,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Divide the closure achieved by the inhibitor group by the closure achieved by control, not the open areas.",
+        "solution": "26/53 = 0.491. Dividing the open areas (74/47) would answer a different question.",
+        "lesson_ids": [
+          "physiology-lab-01",
+          "physiology-13",
+          "physiology-8"
+        ],
+        "misconception_ids": [
+          "open-area-ratio"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physiology-lab1:edge-speed",
+      "type": "numeric",
+      "prompt": "The initial gap is 400 μm wide with straight edges. Using the control mean open area at 12 h, what is the speed of each advancing edge? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "physiology-lab-01-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 8.8333,
+        "unit": "μm/h",
+        "tolerance": 0.05,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Closed width = closed fraction × initial width, shared by two edges.",
+        "solution": "Closed fraction 0.53 × 400 μm = 212 μm; per edge 106 μm in 12 h = 8.83 μm/h.",
+        "lesson_ids": [
+          "physiology-lab-01",
+          "physiology-13",
+          "physiology-8"
+        ],
+        "misconception_ids": [
+          "edge-speed-vs-gap-speed"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physiology-lab1:division-block",
+      "type": "numeric",
+      "prompt": "By 24 h the control group has closed 96 percentage points of area and the division-blocked group 93. What fraction of control closure does the division-blocked group reach? Enter a decimal fraction, number only.",
+      "points": 1,
+      "objective_ids": [
+        "physiology-lab-01-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 0.9688,
+        "unit": "",
+        "tolerance": 0.005,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Divide the closure of the division-blocked group by the closure of control.",
+        "solution": "93/96 = 0.969: most of the closure in this synthetic assay happens without cell division.",
+        "lesson_ids": [
+          "physiology-lab-01",
+          "physiology-13",
+          "physiology-8"
+        ],
+        "misconception_ids": [
+          "proliferation-ignored"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physiology-lab1:design-reasoning",
+      "type": "structured",
+      "prompt": "Answer each part about the closure experiment.",
+      "points": 3,
+      "objective_ids": [
+        "physiology-lab-01-objective-3"
+      ],
+      "response_fields": [
+        {
+          "id": "division-block",
+          "type": "single_choice",
+          "prompt": "With division blocked, closure reaches 97% of control by 24 h. What does this suggest?",
+          "options": [
+            "Most closure in this assay over 24 h comes from cell movement, with a small contribution from division.",
+            "Cell movement does not contribute to closure.",
+            "The division block failed and should be ignored.",
+            "Closure is entirely due to division."
+          ],
+          "points": 1
+        },
+        {
+          "id": "replicate-unit",
+          "type": "single_choice",
+          "prompt": "Which counts as an independent replicate in this experiment?",
+          "options": [
+            "A separate experiment with its own plate, performed on a different day.",
+            "Another image of the same well at the same time point.",
+            "Another field in the same well.",
+            "The same well measured again at the next time."
+          ],
+          "points": 1
+        },
+        {
+          "id": "scope",
+          "type": "single_choice",
+          "prompt": "Which statement stays within what the experiment shows?",
+          "options": [
+            "The inhibitor slowed closure of this cell layer in culture; effects on healing in tissue would need other experiments.",
+            "The inhibitor would slow wound healing in people.",
+            "The assay measures inflammation, vessel growth and scarring.",
+            "Closure speed in a dish predicts healing speed in any tissue."
+          ],
+          "points": 1
+        }
+      ],
+      "solution_spec": {
+        "field_specs": [
+          {
+            "id": "division-block",
+            "type": "single_choice",
+            "answer": 0
+          },
+          {
+            "id": "replicate-unit",
+            "type": "single_choice",
+            "answer": 0
+          },
+          {
+            "id": "scope",
+            "type": "single_choice",
+            "answer": 0
+          }
+        ],
+        "rubric": [
+          {
+            "id": "division-block",
+            "criterion": "Meaning of the division block",
+            "points": 1,
+            "evidence": [
+              "Interprets the division block as showing mainly migration-driven closure."
+            ]
+          },
+          {
+            "id": "replicate-unit",
+            "criterion": "Independent replicates",
+            "points": 1,
+            "evidence": [
+              "Identifies separate experiments as the unit of replication."
+            ]
+          },
+          {
+            "id": "scope",
+            "criterion": "Scope of the conclusion",
+            "points": 1,
+            "evidence": [
+              "Limits the claim to the culture system."
+            ]
+          }
+        ]
+      },
+      "feedback": {
+        "hint": "For each part, ask what the experiment actually varied and what was held out.",
+        "solution": "A division block shows how much of the closure depends on division; independent experiments are the replicates; a flat culture does not include inflammation, vessels, matrix or mechanics.",
+        "lesson_ids": [
+          "physiology-lab-01",
+          "physiology-13",
+          "physiology-8"
+        ],
+        "misconception_ids": [
+          "images-as-replicates",
+          "culture-to-person-leap"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physiology-lab1:supported-conclusions",
+      "type": "multiple_select",
+      "prompt": "Which conclusions does this synthetic closure experiment support? Select all that apply.",
+      "points": 2,
+      "objective_ids": [
+        "physiology-lab-01-objective-3"
+      ],
+      "options": [
+        "The migration inhibitor reduced closure by 12 h to about half of control.",
+        "Closure was nearly as fast with division blocked as without, so migration accounts for most of the closure here.",
+        "Four independent experiments per condition give a basis for judging variability.",
+        "The inhibitor would also slow healing of wounds in people.",
+        "The control result shows a constant edge speed through 24 h."
+      ],
+      "solution_spec": {
+        "answer": [
+          0,
+          1,
+          2
+        ],
+        "partial_credit": "correct-minus-incorrect-clamped-v1"
+      },
+      "feedback": {
+        "hint": "Separate what the data show in this culture from what they do not.",
+        "solution": "The first three follow from the table. People are outside the experiment, and the closure curve slows toward the end (about 17 points between 18 and 24 h against about 26 earlier), so a single constant speed does not describe all of it.",
+        "lesson_ids": [
+          "physiology-lab-01",
+          "physiology-13",
+          "physiology-8"
+        ],
+        "misconception_ids": [
+          "culture-to-person-leap"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physiology-14:co-b",
+      "type": "numeric",
+      "prompt": "Person B has organ beds of resistance 40, 90, 240 in parallel (mmHg per L/min), MAP 100 and CVP 4 mmHg. What cardiac output holds this pressure? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "physiology-14-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 3.8667,
+        "unit": "L/min",
+        "tolerance": 0.02,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Combine the beds in parallel, then divide the pressure difference by the total resistance.",
+        "solution": "1/40 + 1/90 + 1/240 gives R = 24.83; CO = 96/24.83 = 3.87 L/min.",
+        "lesson_ids": [
+          "physiology-14"
+        ],
+        "misconception_ids": [
+          "parallel-added-as-series"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physiology-14:renal-flow-b",
+      "type": "numeric",
+      "prompt": "With a pressure difference of 96 mmHg across it, how much blood flows through B's gut-and-kidney bed of resistance 240? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "physiology-14-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0.4,
+        "unit": "L/min",
+        "tolerance": 0.01,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Q = ΔP/R for that bed alone.",
+        "solution": "96/240 = 0.4 L/min, half of A's 0.8 L/min.",
+        "lesson_ids": [
+          "physiology-14"
+        ],
+        "misconception_ids": [
+          "normal-pressure-means-normal-flow"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physiology-14:extraction-b",
+      "type": "numeric",
+      "prompt": "B's oxygen uptake is 250 mL/min, arterial oxygen content 200 mL per liter of blood and cardiac output 3.87 L/min. What is the oxygen extraction ratio? Enter a decimal fraction, number only.",
+      "points": 1,
+      "objective_ids": [
+        "physiology-14-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0.3233,
+        "unit": "",
+        "tolerance": 0.005,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Extraction = uptake / (cardiac output × arterial content).",
+        "solution": "250/(3.87 × 200) = 0.323, higher than A's 0.260.",
+        "lesson_ids": [
+          "physiology-14"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physiology-14:reserve-b",
+      "type": "numeric",
+      "prompt": "B's maximum cardiac output is 4.5 L/min and it uses 3.87 L/min at rest. What is the reserve? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "physiology-14-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0.6333,
+        "unit": "L/min",
+        "tolerance": 0.02,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Reserve is capacity minus use.",
+        "solution": "4.5 − 3.87 = 0.63 L/min, against 3.2 for A.",
+        "lesson_ids": [
+          "physiology-14"
+        ],
+        "misconception_ids": [
+          "capacity-confused-with-use"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physiology-14:challenge-co-needed",
+      "type": "numeric",
+      "prompt": "Exercise halves the resistance of B's muscle-and-skin bed from 90 to 45.0. What cardiac output would hold MAP at 100 mmHg? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "physiology-14-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 4.9333,
+        "unit": "L/min",
+        "tolerance": 0.02,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Recompute the parallel resistance with the new value, then divide the pressure difference by it.",
+        "solution": "R = 19.46; CO = 96/19.46 = 4.93 L/min, above B's maximum of 4.5.",
+        "lesson_ids": [
+          "physiology-14"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physiology-14:map-b-challenge",
+      "type": "numeric",
+      "prompt": "B's output is capped at 4.5 L/min during the exercise above (total resistance 19.46, CVP 4 mmHg). What is MAP in mmHg? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "physiology-14-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 91.568,
+        "unit": "",
+        "tolerance": 0.5,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "MAP = CO × R_total + CVP.",
+        "solution": "4.5 × 19.46 + 4 = 91.6 mmHg, a fall of 8.4.",
+        "lesson_ids": [
+          "physiology-14"
+        ],
+        "misconception_ids": [
+          "resting-value-proves-reserve"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physiology-14:best-measurement",
+      "type": "single_choice",
+      "prompt": "A synthetic person has a normal resting arterial pressure, reduced renal blood flow and high sympathetic activity. Which measurement best tests the explanation that pressure is preserved at the cost of reduced reserve?",
+      "points": 1,
+      "objective_ids": [
+        "physiology-14-objective-3"
+      ],
+      "options": [
+        "Another resting pressure reading, taken more carefully.",
+        "The pressure and heart-rate response to a graded, standardized challenge such as a posture change, together with a direct measure of renal flow.",
+        "A single resting measure of body temperature.",
+        "The resting heart rate alone."
+      ],
+      "solution_spec": {
+        "answer": 1
+      },
+      "feedback": {
+        "hint": "Which measurement could contradict the explanation?",
+        "solution": "Reserve shows under challenge, and the cost of compensation shows in organ flow. A resting pressure cannot distinguish a person with reserve from one without.",
+        "lesson_ids": [
+          "physiology-14"
+        ],
+        "misconception_ids": [
+          "resting-value-proves-reserve"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
     }
   ]
 }

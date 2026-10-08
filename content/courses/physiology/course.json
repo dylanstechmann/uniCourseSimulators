@@ -7,7 +7,7 @@
   "domain": "Life sciences",
   "level": "Year 2",
   "maturity": "partial",
-  "version": "0.3.2",
+  "version": "0.4.0",
   "license": "MIT OR CC-BY-4.0",
   "content_origin": {
     "kind": "legacy-prototype",
@@ -176,12 +176,363 @@
         "physiology-outcome-4",
         "physiology-outcome-1"
       ]
+    },
+    {
+      "id": "physiology-8-objective-1",
+      "description": "Compute the steady state, time constant and approach time of a well-mixed compartment from a mass balance.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "physiology-outcome-1"
+      ]
+    },
+    {
+      "id": "physiology-8-objective-2",
+      "description": "Estimate heat production from oxygen uptake and the rate of temperature rise from an energy imbalance.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "physiology-outcome-1"
+      ]
+    },
+    {
+      "id": "physiology-8-objective-3",
+      "description": "Calculate closed-loop deviation and loop gain, and distinguish a shifted set point from a failure of regulation.",
+      "bloom": "analyze",
+      "course_outcome_ids": [
+        "physiology-outcome-4",
+        "physiology-outcome-1"
+      ]
+    },
+    {
+      "id": "physiology-9-objective-1",
+      "description": "Calculate the Nernst equilibrium potential of an ion from its concentrations on either side of the membrane.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "physiology-outcome-3"
+      ]
+    },
+    {
+      "id": "physiology-9-objective-2",
+      "description": "Compute a resting membrane potential from relative permeabilities with the Goldman–Hodgkin–Katz equation, and as a conductance-weighted average of reversal potentials.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "physiology-outcome-3",
+        "physiology-outcome-2"
+      ]
+    },
+    {
+      "id": "physiology-9-objective-3",
+      "description": "Predict how a change in extracellular potassium shifts the resting potential, and explain why it changes less than the potassium equilibrium potential does.",
+      "bloom": "analyze",
+      "course_outcome_ids": [
+        "physiology-outcome-4",
+        "physiology-outcome-3"
+      ]
+    },
+    {
+      "id": "physiology-10-objective-1",
+      "description": "Compute cardiac output, total peripheral resistance and the flow through a parallel organ bed from pressures and resistances.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "physiology-outcome-2"
+      ]
+    },
+    {
+      "id": "physiology-10-objective-2",
+      "description": "Apply Poiseuille's relation to predict how radius changes alter resistance and flow.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "physiology-outcome-2",
+        "physiology-outcome-4"
+      ]
+    },
+    {
+      "id": "physiology-10-objective-3",
+      "description": "Use compliance to relate stroke volume to pulse pressure, and estimate mean arterial pressure from systolic and diastolic values.",
+      "bloom": "analyze",
+      "course_outcome_ids": [
+        "physiology-outcome-2"
+      ]
+    },
+    {
+      "id": "physiology-11-objective-1",
+      "description": "Compute minute and alveolar ventilation from tidal volume, breathing rate and dead space, and explain why shallow rapid breathing is less effective.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "physiology-outcome-2",
+        "physiology-outcome-1"
+      ]
+    },
+    {
+      "id": "physiology-11-objective-2",
+      "description": "Apply the alveolar gas equation and the relation between alveolar CO₂, CO₂ production and alveolar ventilation.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "physiology-outcome-1",
+        "physiology-outcome-3"
+      ]
+    },
+    {
+      "id": "physiology-11-objective-3",
+      "description": "Calculate lung–chest wall compliance and a shunt fraction, and predict the effects of stiff lungs and of shunt on gas exchange.",
+      "bloom": "analyze",
+      "course_outcome_ids": [
+        "physiology-outcome-4",
+        "physiology-outcome-2"
+      ]
+    },
+    {
+      "id": "physiology-12-objective-1",
+      "description": "Compute the maximum isometric force of a muscle from its physiological cross-sectional area and specific tension.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "physiology-outcome-2"
+      ]
+    },
+    {
+      "id": "physiology-12-objective-2",
+      "description": "Use the length–tension relation and Hill's force–velocity equation to compute force, velocity and power.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "physiology-outcome-2",
+        "physiology-outcome-3"
+      ]
+    },
+    {
+      "id": "physiology-12-objective-3",
+      "description": "Predict how a loss of cross-sectional area changes force and power, and state what the model leaves out.",
+      "bloom": "evaluate",
+      "course_outcome_ids": [
+        "physiology-outcome-4"
+      ]
+    },
+    {
+      "id": "physiology-13-objective-1",
+      "description": "Order the phases of skin wound healing, name their main cell types and compare their time scales.",
+      "bloom": "understand",
+      "course_outcome_ids": [
+        "physiology-outcome-4"
+      ]
+    },
+    {
+      "id": "physiology-13-objective-2",
+      "description": "Compute closure time, percent closed and migration speed from a front-migration model, and a half-time from an exponential model.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "physiology-outcome-1",
+        "physiology-outcome-4"
+      ]
+    },
+    {
+      "id": "physiology-13-objective-3",
+      "description": "Evaluate what a closure assay in culture can and cannot show about healing in a tissue.",
+      "bloom": "evaluate",
+      "course_outcome_ids": [
+        "physiology-outcome-4",
+        "physiology-outcome-3"
+      ]
+    },
+    {
+      "id": "physiology-lab-01-objective-1",
+      "description": "Summarize repeated closure measurements by condition and time, counting independent experiments and averaging open area.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "physiology-outcome-4"
+      ]
+    },
+    {
+      "id": "physiology-lab-01-objective-2",
+      "description": "Calculate a closure rate, a relative closure and an edge migration speed from mean open area.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "physiology-outcome-1",
+        "physiology-outcome-4"
+      ]
+    },
+    {
+      "id": "physiology-lab-01-objective-3",
+      "description": "Evaluate which conclusions a closure assay with a migration inhibitor and a division block supports about migration, division and healing.",
+      "bloom": "evaluate",
+      "course_outcome_ids": [
+        "physiology-outcome-4",
+        "physiology-outcome-3"
+      ]
+    },
+    {
+      "id": "physiology-14-objective-1",
+      "description": "Calculate how a held arterial pressure is achieved by a different combination of output and resistance, and what that does to the flow through an individual organ bed.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "physiology-outcome-2",
+        "physiology-outcome-1"
+      ]
+    },
+    {
+      "id": "physiology-14-objective-2",
+      "description": "Quantify reserve as the difference between maximum capacity and current use, and show how compensation uses it up.",
+      "bloom": "analyze",
+      "course_outcome_ids": [
+        "physiology-outcome-1",
+        "physiology-outcome-4"
+      ]
+    },
+    {
+      "id": "physiology-14-objective-3",
+      "description": "Design a perturbation or an independent measurement that reveals reduced reserve behind a normal resting value.",
+      "bloom": "create",
+      "course_outcome_ids": [
+        "physiology-outcome-4",
+        "physiology-outcome-2"
+      ]
     }
   ],
   "duration": {
-    "instructional_weeks": null,
-    "equivalent_structure": null,
-    "weeks": []
+    "instructional_weeks": 14,
+    "equivalent_structure": "Proposed 14-week undergraduate scope only. The four compact prototype units sit in weeks 1, 3, 5 and 11 beside original lessons on balance and feedback, membrane potential, hemodynamics, respiratory mechanics, oxygen delivery, capillary exchange, muscle mechanics and tissue repair; week 13 is a synthetic-data closure lab and week 14 a compensation-and-reserve lesson with the course case. All activities are open, ungraded practice. There are no graded homework sets, exams or project, and workload has not been measured, so this schedule is not evidence of semester equivalence.",
+    "weeks": [
+      {
+        "week": 1,
+        "title": "Homeostasis and feedback",
+        "lesson_ids": [
+          "physiology-1"
+        ],
+        "assessment_ids": [
+          "physiology-1-practice"
+        ]
+      },
+      {
+        "week": 2,
+        "title": "Homeostasis as balance: mass balance, energy balance and feedback gain",
+        "lesson_ids": [
+          "physiology-8"
+        ],
+        "assessment_ids": [
+          "physiology-8-practice"
+        ]
+      },
+      {
+        "week": 3,
+        "title": "Excitable cells and electrophysiology",
+        "lesson_ids": [
+          "physiology-2"
+        ],
+        "assessment_ids": [
+          "physiology-2-practice"
+        ]
+      },
+      {
+        "week": 4,
+        "title": "Membrane potential: Nernst, Goldman–Hodgkin–Katz and extracellular potassium",
+        "lesson_ids": [
+          "physiology-9"
+        ],
+        "assessment_ids": [
+          "physiology-9-practice"
+        ]
+      },
+      {
+        "week": 5,
+        "title": "Cardiovascular and respiratory transport",
+        "lesson_ids": [
+          "physiology-3"
+        ],
+        "assessment_ids": [
+          "physiology-3-practice"
+        ]
+      },
+      {
+        "week": 6,
+        "title": "Hemodynamics: pressure, flow, resistance and compliance",
+        "lesson_ids": [
+          "physiology-10"
+        ],
+        "assessment_ids": [
+          "physiology-10-practice"
+        ]
+      },
+      {
+        "week": 7,
+        "title": "Respiratory mechanics and gas exchange",
+        "lesson_ids": [
+          "physiology-11"
+        ],
+        "assessment_ids": [
+          "physiology-11-practice"
+        ]
+      },
+      {
+        "week": 8,
+        "title": "Oxygen delivery and the Fick principle",
+        "lesson_ids": [
+          "physiology-5"
+        ],
+        "assessment_ids": [
+          "physiology-5-practice"
+        ]
+      },
+      {
+        "week": 9,
+        "title": "Fluid exchange across capillaries and edema",
+        "lesson_ids": [
+          "physiology-7"
+        ],
+        "assessment_ids": [
+          "physiology-7-practice"
+        ]
+      },
+      {
+        "week": 10,
+        "title": "Skeletal muscle mechanics: length, velocity and power",
+        "lesson_ids": [
+          "physiology-12"
+        ],
+        "assessment_ids": [
+          "physiology-12-practice"
+        ]
+      },
+      {
+        "week": 11,
+        "title": "Renal, endocrine and integrated regulation; renal clearance",
+        "lesson_ids": [
+          "physiology-4",
+          "physiology-6"
+        ],
+        "assessment_ids": [
+          "physiology-4-practice",
+          "physiology-6-practice"
+        ]
+      },
+      {
+        "week": 12,
+        "title": "Tissue repair: phases of healing and closure kinetics",
+        "lesson_ids": [
+          "physiology-13"
+        ],
+        "assessment_ids": [
+          "physiology-13-practice"
+        ]
+      },
+      {
+        "week": 13,
+        "title": "Virtual lab: closure kinetics in a scratch assay",
+        "lesson_ids": [
+          "physiology-lab-01"
+        ],
+        "assessment_ids": [
+          "physiology-week13-closure-lab"
+        ]
+      },
+      {
+        "week": 14,
+        "title": "Compensation and reserve: how a regulated value can hide impaired capacity",
+        "lesson_ids": [
+          "physiology-14"
+        ],
+        "assessment_ids": [
+          "physiology-14-practice",
+          "physiology-case"
+        ]
+      }
+    ]
   },
   "workload": {
     "estimated_total_hours": null,
@@ -405,6 +756,295 @@
           ]
         }
       ]
+    },
+    {
+      "id": "physiology-module-8",
+      "title": "Balance and feedback gain",
+      "source_ids": [
+        "biology",
+        "transport"
+      ],
+      "lessons": [
+        {
+          "id": "physiology-8",
+          "title": "Homeostasis as balance: mass balance, energy balance and the gain of negative feedback",
+          "reading": "modules/08-homeostasis-balance-and-feedback-gain.md",
+          "objectives": [
+            "physiology-8-objective-1",
+            "physiology-8-objective-2",
+            "physiology-8-objective-3"
+          ],
+          "worked_example": "With V = 14 L, clearance 7 L/h and production 35 mmol/h, C_ss = 5 mmol/L with τ = 2 h; halving clearance doubles C_ss and τ; 1.5 L/min of oxygen gives 30 kJ/min, and an imbalance of 19 kJ/min warms a 70 kg body by 0.078 °C/min; a disturbance of 10 with loop gain 4 leaves 2.",
+          "question_ids": [
+            "physiology-8:time-constant",
+            "physiology-8:new-steady-state",
+            "physiology-8:time-to-90",
+            "physiology-8:temperature-rise",
+            "physiology-8:closed-loop-deviation",
+            "physiology-8:gain-estimate",
+            "physiology-8:fever"
+          ],
+          "card_ids": [
+            "physiology-8-card-1",
+            "physiology-8-card-2",
+            "physiology-8-card-3",
+            "physiology-8-card-4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "physiology-module-9",
+      "title": "Membrane potential",
+      "source_ids": [
+        "biology",
+        "transport"
+      ],
+      "lessons": [
+        {
+          "id": "physiology-9",
+          "title": "Membrane potential: the Nernst potential, the Goldman–Hodgkin–Katz equation and why extracellular potassium matters",
+          "reading": "modules/09-membrane-potential-nernst-and-ghk.md",
+          "objectives": [
+            "physiology-9-objective-1",
+            "physiology-9-objective-2",
+            "physiology-9-objective-3"
+          ],
+          "worked_example": "E_K = -89.1 mV and E_Na = +66.6 mV; GHK with P_K : P_Na = 1 : 0.04 gives -68.6 mV; raising K⁺ to 8 mM shifts E_K by 12.6 mV but the resting potential by only 6.6 mV (-62.0 mV); the conductance-weighted average with g_Na = 0.15 g_K is -68.8 mV.",
+          "question_ids": [
+            "physiology-9:nernst-k",
+            "physiology-9:nernst-na",
+            "physiology-9:ghk-rest",
+            "physiology-9:ghk-high-k",
+            "physiology-9:chord-conductance",
+            "physiology-9:damped-shift",
+            "physiology-9:excitability"
+          ],
+          "card_ids": [
+            "physiology-9-card-1",
+            "physiology-9-card-2",
+            "physiology-9-card-3",
+            "physiology-9-card-4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "physiology-module-10",
+      "title": "Hemodynamics",
+      "source_ids": [
+        "biology",
+        "transport"
+      ],
+      "lessons": [
+        {
+          "id": "physiology-10",
+          "title": "Hemodynamics: pressure, flow, resistance and compliance",
+          "reading": "modules/10-hemodynamics-pressure-flow-resistance-compliance.md",
+          "objectives": [
+            "physiology-10-objective-1",
+            "physiology-10-objective-2",
+            "physiology-10-objective-3"
+          ],
+          "worked_example": "With CO = 4.8 L/min, MAP = 100 and CVP = 4 mmHg, TPR = 20; beds of 40, 60 and 120 in parallel give 20; halving a radius multiplies resistance by 16; stiffening arteries to 1.2 mL/mmHg raises pulse pressure from 36 to 50 mmHg; dilating the muscle bed to 30 lowers TPR to 15.00 and would drop MAP to 76 mmHg unless output rises to 6.4 L/min.",
+          "question_ids": [
+            "physiology-10:cardiac-output",
+            "physiology-10:tpr",
+            "physiology-10:parallel-resistance",
+            "physiology-10:bed-flow",
+            "physiology-10:radius-halved",
+            "physiology-10:pulse-pressure",
+            "physiology-10:dilation-effects"
+          ],
+          "card_ids": [
+            "physiology-10-card-1",
+            "physiology-10-card-2",
+            "physiology-10-card-3",
+            "physiology-10-card-4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "physiology-module-11",
+      "title": "Respiratory mechanics and gas exchange",
+      "source_ids": [
+        "biology",
+        "transport"
+      ],
+      "lessons": [
+        {
+          "id": "physiology-11",
+          "title": "Respiratory mechanics and gas exchange: ventilation, dead space, compliance and the alveolar gas equation",
+          "reading": "modules/11-respiratory-mechanics-and-gas-exchange.md",
+          "objectives": [
+            "physiology-11-objective-1",
+            "physiology-11-objective-2",
+            "physiology-11-objective-3"
+          ],
+          "worked_example": "Alveolar ventilation is 4.2 L/min at V_T 500 mL and f 12, but only 2.4 L/min at 250 mL and 24 per minute; halving it doubles alveolar CO₂ to 82 mmHg; room-air P_AO₂ is 99.7 mmHg and falls to 49.7 mmHg with P_aCO₂ 80; series compliance of 50 and 200 is 40; contents 20.1, 19.0 and 15.2 give a shunt fraction of 0.22.",
+          "question_ids": [
+            "physiology-11:alveolar-ventilation",
+            "physiology-11:halved-va",
+            "physiology-11:pao2-room-air",
+            "physiology-11:pao2-hypoventilation",
+            "physiology-11:stiff-lung-compliance",
+            "physiology-11:shunt-fraction",
+            "physiology-11:oxygen-and-shunt"
+          ],
+          "card_ids": [
+            "physiology-11-card-1",
+            "physiology-11-card-2",
+            "physiology-11-card-3",
+            "physiology-11-card-4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "physiology-module-12",
+      "title": "Muscle mechanics",
+      "source_ids": [
+        "biology",
+        "transport"
+      ],
+      "lessons": [
+        {
+          "id": "physiology-12",
+          "title": "Skeletal muscle mechanics: sarcomere length, force–velocity and power",
+          "reading": "modules/12-skeletal-muscle-mechanics-and-power.md",
+          "objectives": [
+            "physiology-12-objective-1",
+            "physiology-12-objective-2",
+            "physiology-12-objective-3"
+          ],
+          "worked_example": "A muscle of 20 cm² at 25 N/cm² has F₀ = 500 N; at a sarcomere length of 3.0 μm it produces 0.43 F₀; Hill's equation gives 6.67 cm/s at half load and 16.7 W, with peak power 19.1 W at 0.31 F₀; losing 30% of the area lowers peak power to 13.4 W.",
+          "question_ids": [
+            "physiology-12:isometric-force",
+            "physiology-12:length-tension",
+            "physiology-12:half-load-velocity",
+            "physiology-12:half-load-power",
+            "physiology-12:peak-power",
+            "physiology-12:smaller-muscle",
+            "physiology-12:interpretation"
+          ],
+          "card_ids": [
+            "physiology-12-card-1",
+            "physiology-12-card-2",
+            "physiology-12-card-3",
+            "physiology-12-card-4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "physiology-module-13",
+      "title": "Tissue repair and closure kinetics",
+      "source_ids": [
+        "biology",
+        "transport"
+      ],
+      "lessons": [
+        {
+          "id": "physiology-13",
+          "title": "Tissue repair: the phases of wound healing, scar versus regeneration and the kinetics of closure",
+          "reading": "modules/13-tissue-repair-phases-and-closure-kinetics.md",
+          "objectives": [
+            "physiology-13-objective-1",
+            "physiology-13-objective-2",
+            "physiology-13-objective-3"
+          ],
+          "worked_example": "A 500 μm gap with edges advancing 25 μm/h each closes in 10 h (60% by 6 h), or in 16.7 h if the speed falls 40%; a 300 μm scratch 75% closed at 12 h implies 9.38 μm/h per edge and closure at 16 h; an exponential decay with k = 0.1 per hour has a half-time of 6.9 h.",
+          "question_ids": [
+            "physiology-13:phases",
+            "physiology-13:closure-time",
+            "physiology-13:percent-closed",
+            "physiology-13:slowed-closure",
+            "physiology-13:edge-speed",
+            "physiology-13:half-time",
+            "physiology-13:separate-migration",
+            "physiology-13:culture-claims"
+          ],
+          "card_ids": [
+            "physiology-13-card-1",
+            "physiology-13-card-2",
+            "physiology-13-card-3",
+            "physiology-13-card-4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "physiology-module-lab-01",
+      "title": "Virtual laboratory: closure kinetics in a scratch assay",
+      "source_ids": [
+        "biology",
+        "transport"
+      ],
+      "lessons": [
+        {
+          "id": "physiology-lab-01",
+          "title": "Virtual lab 1: closure kinetics in a synthetic scratch assay",
+          "reading": "labs/01-scratch-assay-closure-kinetics.md",
+          "objectives": [
+            "physiology-lab-01-objective-1",
+            "physiology-lab-01-objective-2",
+            "physiology-lab-01-objective-3"
+          ],
+          "worked_example": "Mean control open area falls to 47% by 12 h (4.42 points per hour), the migration inhibitor reaches 0.49 of control closure, and a 400 μm gap implies 8.83 μm/h per edge; blocking division leaves 0.97 of control closure at 24 h, so most closure is migration, within a flat culture that says nothing about healing in tissue.",
+          "question_ids": [
+            "physiology-lab1:summary-table",
+            "physiology-lab1:control-rate",
+            "physiology-lab1:relative-closure",
+            "physiology-lab1:edge-speed",
+            "physiology-lab1:division-block",
+            "physiology-lab1:design-reasoning",
+            "physiology-lab1:supported-conclusions"
+          ],
+          "card_ids": [
+            "physiology-lab1-0",
+            "physiology-lab1-1",
+            "physiology-lab1-2",
+            "physiology-lab1-3"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "physiology-module-14",
+      "title": "Compensation and reserve",
+      "source_ids": [
+        "biology",
+        "transport"
+      ],
+      "lessons": [
+        {
+          "id": "physiology-14",
+          "title": "Compensation and reserve: how a regulated value can hide impaired capacity",
+          "reading": "modules/14-compensation-and-reserve.md",
+          "objectives": [
+            "physiology-14-objective-1",
+            "physiology-14-objective-2",
+            "physiology-14-objective-3"
+          ],
+          "worked_example": "Two synthetic people hold MAP at 100 mmHg, A with 4.8 L/min and B with 3.87 L/min through narrowed beds; B's gut-and-kidney flow is 0.4 L/min against 0.8, its extraction 0.32 against 0.26, and its reserve 0.63 against 3.2 L/min; dilating the muscle bed lets A hold pressure but drops B's MAP to 92 mmHg; heart-rate reserve gives maximum tolerable stroke-volume losses of 47% for A and 33% for B.",
+          "question_ids": [
+            "physiology-14:co-b",
+            "physiology-14:renal-flow-b",
+            "physiology-14:extraction-b",
+            "physiology-14:reserve-b",
+            "physiology-14:challenge-co-needed",
+            "physiology-14:map-b-challenge",
+            "physiology-14:best-measurement"
+          ],
+          "card_ids": [
+            "physiology-14-card-1",
+            "physiology-14-card-2",
+            "physiology-14-card-3",
+            "physiology-14-card-4"
+          ]
+        }
+      ]
     }
   ],
   "assessments": [
@@ -543,6 +1183,207 @@
       "points": 6
     },
     {
+      "id": "physiology-8-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Balance and feedback gain practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "physiology-8-objective-1",
+        "physiology-8-objective-2",
+        "physiology-8-objective-3",
+        "physiology-outcome-1",
+        "physiology-outcome-4"
+      ],
+      "question_ids": [
+        "physiology-8:time-constant",
+        "physiology-8:new-steady-state",
+        "physiology-8:time-to-90",
+        "physiology-8:temperature-rise",
+        "physiology-8:closed-loop-deviation",
+        "physiology-8:gain-estimate",
+        "physiology-8:fever"
+      ],
+      "points": 7
+    },
+    {
+      "id": "physiology-9-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Membrane potential practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "physiology-9-objective-1",
+        "physiology-9-objective-2",
+        "physiology-9-objective-3",
+        "physiology-outcome-2",
+        "physiology-outcome-3",
+        "physiology-outcome-4"
+      ],
+      "question_ids": [
+        "physiology-9:nernst-k",
+        "physiology-9:nernst-na",
+        "physiology-9:ghk-rest",
+        "physiology-9:ghk-high-k",
+        "physiology-9:chord-conductance",
+        "physiology-9:damped-shift",
+        "physiology-9:excitability"
+      ],
+      "points": 8
+    },
+    {
+      "id": "physiology-10-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Hemodynamics practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "physiology-10-objective-1",
+        "physiology-10-objective-2",
+        "physiology-10-objective-3",
+        "physiology-outcome-2",
+        "physiology-outcome-4"
+      ],
+      "question_ids": [
+        "physiology-10:cardiac-output",
+        "physiology-10:tpr",
+        "physiology-10:parallel-resistance",
+        "physiology-10:bed-flow",
+        "physiology-10:radius-halved",
+        "physiology-10:pulse-pressure",
+        "physiology-10:dilation-effects"
+      ],
+      "points": 8
+    },
+    {
+      "id": "physiology-11-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Respiratory mechanics and gas exchange practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "physiology-11-objective-1",
+        "physiology-11-objective-2",
+        "physiology-11-objective-3",
+        "physiology-outcome-1",
+        "physiology-outcome-2",
+        "physiology-outcome-3",
+        "physiology-outcome-4"
+      ],
+      "question_ids": [
+        "physiology-11:alveolar-ventilation",
+        "physiology-11:halved-va",
+        "physiology-11:pao2-room-air",
+        "physiology-11:pao2-hypoventilation",
+        "physiology-11:stiff-lung-compliance",
+        "physiology-11:shunt-fraction",
+        "physiology-11:oxygen-and-shunt"
+      ],
+      "points": 7
+    },
+    {
+      "id": "physiology-12-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Muscle mechanics practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "physiology-12-objective-1",
+        "physiology-12-objective-2",
+        "physiology-12-objective-3",
+        "physiology-outcome-2",
+        "physiology-outcome-3",
+        "physiology-outcome-4"
+      ],
+      "question_ids": [
+        "physiology-12:isometric-force",
+        "physiology-12:length-tension",
+        "physiology-12:half-load-velocity",
+        "physiology-12:half-load-power",
+        "physiology-12:peak-power",
+        "physiology-12:smaller-muscle",
+        "physiology-12:interpretation"
+      ],
+      "points": 8
+    },
+    {
+      "id": "physiology-13-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Tissue repair and closure kinetics practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "physiology-13-objective-1",
+        "physiology-13-objective-2",
+        "physiology-13-objective-3",
+        "physiology-outcome-1",
+        "physiology-outcome-3",
+        "physiology-outcome-4"
+      ],
+      "question_ids": [
+        "physiology-13:phases",
+        "physiology-13:closure-time",
+        "physiology-13:percent-closed",
+        "physiology-13:slowed-closure",
+        "physiology-13:edge-speed",
+        "physiology-13:half-time",
+        "physiology-13:separate-migration",
+        "physiology-13:culture-claims"
+      ],
+      "points": 10
+    },
+    {
+      "id": "physiology-14-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Compensation and reserve practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "physiology-14-objective-1",
+        "physiology-14-objective-2",
+        "physiology-14-objective-3",
+        "physiology-outcome-1",
+        "physiology-outcome-2",
+        "physiology-outcome-4"
+      ],
+      "question_ids": [
+        "physiology-14:co-b",
+        "physiology-14:renal-flow-b",
+        "physiology-14:extraction-b",
+        "physiology-14:reserve-b",
+        "physiology-14:challenge-co-needed",
+        "physiology-14:map-b-challenge",
+        "physiology-14:best-measurement"
+      ],
+      "points": 7
+    },
+    {
+      "id": "physiology-week13-closure-lab",
+      "type": "lab",
+      "mode": "practice",
+      "title": "Virtual lab 1: closure kinetics in a scratch assay (ungraded practice)",
+      "path": "question-banks/practice.json",
+      "week": 13,
+      "objective_ids": [
+        "physiology-lab-01-objective-1",
+        "physiology-lab-01-objective-2",
+        "physiology-lab-01-objective-3",
+        "physiology-outcome-1",
+        "physiology-outcome-3",
+        "physiology-outcome-4"
+      ],
+      "question_ids": [
+        "physiology-lab1:summary-table",
+        "physiology-lab1:control-rate",
+        "physiology-lab1:relative-closure",
+        "physiology-lab1:edge-speed",
+        "physiology-lab1:division-block",
+        "physiology-lab1:design-reasoning",
+        "physiology-lab1:supported-conclusions"
+      ],
+      "points": 19
+    },
+    {
       "id": "physiology-case",
       "type": "case",
       "mode": "self-assessment",
@@ -604,18 +1445,24 @@
       "version": "0.3.2",
       "date": "2026-10-08",
       "summary": "Added a common-mistakes section to 2 original lessons that lacked one (physiology-5, physiology-6); each bullet names a mistake that the lesson's own text addresses. No answer key, tolerance or objective changed. The package remains partial, unreviewed and formative-only."
+    },
+    {
+      "version": "0.4.0",
+      "date": "2026-10-08",
+      "summary": "Added a proposed 14-week schedule; seven original lessons (balance and feedback gain with heat balance; membrane potential with the Nernst and Goldman–Hodgkin–Katz equations; hemodynamics; respiratory mechanics and gas exchange; skeletal muscle mechanics with Hill's force–velocity relation; tissue repair and closure kinetics; and compensation and reserve, which prepares the course case); and a synthetic-data scratch-assay lab with a migration inhibitor and a division block. No new references were added. All activities remain ungraded practice; the package remains partial and unreviewed, gives no medical advice, and makes no claim about any person."
     }
   ],
   "limitations": [
-    "Four compact legacy units are preserved; this package is not equivalent to a full university semester.",
-    "There is no authored 12–15 week schedule, substantive homework sequence, laboratory sequence, midterm, cumulative final, or graded integrative project.",
-    "Practice items are short formative checks (two per prototype unit and six per original lesson); they do not demonstrate comprehensive outcome coverage or mastery, and objective associations remain provisional.",
+    "Four compact legacy units are preserved beside eleven original readings, including one synthetic-data virtual lab; this package is not equivalent to a full university semester.",
+    "A proposed 14-week schedule exists but is unmeasured and unreviewed. There is one synthetic-data virtual lab and no substantive homework sequence, laboratory sequence, midterm, cumulative final, or graded integrative project.",
+    "Practice items are short formative checks (two per prototype unit and six to eight per original lesson); they do not demonstrate comprehensive outcome coverage or mastery, and objective associations remain provisional.",
     "Bloom labels and structured prerequisite edges are initial authoring classifications awaiting subject-matter review.",
     "Question answers and solution feedback are intentionally public practice authoring specifications, not restricted exam keys.",
-    "Of the 16 numerical answers in this package, five require a unit, none checks significant figures and none checks dimensions; the others accept a number within a stated tolerance, with the unit optional.",
-    "Total workload and weekly duration are unknown; former nominal credit values and hardcoded reading times do not establish workload."
+    "Of the 60 numerical answers in this package, 32 require a unit, one checks significant figures and none checks dimensions; the others accept a number within a stated tolerance, with the unit optional.",
+    "Total workload and weekly duration are unknown; former nominal credit values and hardcoded reading times do not establish workload.",
+    "All physiological scenarios, people and numbers are synthetic teaching examples; this package gives no medical advice, describes no real person's health and recommends no test or treatment."
   ],
   "intentionally_omitted": [
-    "Full instructional sequence and summative assessments are not authored yet; the original lessons extend a partial package."
+    "Graded assessments and a laboratory sequence are not authored yet (one synthetic-data virtual lab exists); the original lessons extend a partial package."
   ]
 }

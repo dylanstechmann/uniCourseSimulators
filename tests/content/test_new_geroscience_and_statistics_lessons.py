@@ -30,7 +30,7 @@ LESSONS = [("geroscience", f"geroscience-{n}") for n in range(9, 15)] + [
     ("statistics", "statistics-7"), ("statistics", "statistics-8"), ("programming", "programming-6"), ("programming", "programming-7"),
     ("geroscience", "geroscience-15"), ("genetics", "genetics-9"), ("biochemistry", "biochemistry-7"), ("physiology", "physiology-7"),
     ("signals-control", "signals-control-6"), ("robotics", "robotics-6"), ("geroscience", "geroscience-16"),
-] + [("genetics", f"genetics-{n}") for n in range(10, 16)]
+] + [("genetics", f"genetics-{n}") for n in range(10, 16)] + [("physiology", f"physiology-{n}") for n in range(8, 15)]
 
 
 def load(course):
@@ -227,3 +227,61 @@ def test_genetics_lab_keys_match_the_dataset_and_the_lab_is_labelled_synthetic()
     assert abs(numerator / denominator - odds_ratio(*pooled["syn2"])) < 1e-9
     text = (COURSES / "genetics/labs/01-association-study-and-population-structure.md").read_text(encoding="utf-8")
     assert "nothing here is evidence about any gene or about human health" in text
+
+
+def test_physiology_schedule_places_every_lesson_once_and_stays_partial():
+    manifest = load("physiology")
+    weeks = manifest["duration"]["weeks"]
+    assert [w["week"] for w in weeks] == list(range(1, 15))
+    scheduled = [lesson for w in weeks for lesson in w["lesson_ids"]]
+    all_lessons = [lesson["id"] for m in manifest["modules"] for lesson in m["lessons"]]
+    assert len(all_lessons) == 15
+    assert sorted(scheduled) == sorted(all_lessons) and len(scheduled) == len(set(scheduled))
+    assessments = {a["id"]: a for a in manifest["assessments"]}
+    assert all(a in assessments for w in weeks for a in w["assessment_ids"])
+    assert all(a["mode"] != "graded" for a in manifest["assessments"])
+    assert manifest["maturity"] == "partial" and manifest["review"]["status"] == "unreviewed"
+    assert manifest["grading_policy"]["mode"] == "formative-only"
+    assert "not evidence of semester equivalence" in manifest["duration"]["equivalent_structure"]
+    lab_week = next(w for w in weeks if "physiology-lab-01" in w["lesson_ids"])
+    assert lab_week["week"] == 13 and "physiology-week13-closure-lab" in lab_week["assessment_ids"]
+    assert "physiology-case" in weeks[-1]["assessment_ids"] and "physiology-14" in weeks[-1]["lesson_ids"]
+
+
+def test_physiology_lessons_give_no_medical_advice():
+    manifest = load("physiology")
+    assert any("gives no medical advice" in item for item in manifest["limitations"])
+    for name, phrase in (("11-respiratory-mechanics-and-gas-exchange.md", "gives no medical advice"),
+                         ("14-compensation-and-reserve.md", "does not describe any person or recommend any test or treatment"),
+                         ("12-skeletal-muscle-mechanics-and-power.md", "gives no training or medical advice"),
+                         ("09-membrane-potential-nernst-and-ghk.md", "gives no medical advice")):
+        text = (COURSES / "physiology/modules" / name).read_text(encoding="utf-8")
+        assert phrase in text, name
+
+
+def test_physiology_lab_keys_match_the_dataset_and_the_lab_is_labelled_synthetic():
+    import csv
+    rows = list(csv.DictReader((COURSES / "physiology/labs/scratch-assay-closure.csv").open(encoding="utf-8")))
+    bank = {q["id"]: q for q in json.loads((COURSES / "physiology/question-banks/practice.json").read_text(encoding="utf-8"))["questions"]}
+    assert len(rows) == 60
+    checks = {(c["row_id"], c["column"]): c["answer"] for c in bank["physiology-lab1:summary-table"]["solution_spec"]["validation_spec"]["checks"]}
+
+    def open_area(condition, hours):
+        return [float(r["open_area_pct"]) for r in rows if r["condition"] == condition and int(r["time_h"]) == hours]
+
+    for condition in ("control", "migration-inhibitor", "division-blocked"):
+        assert checks[(condition, "experiments")] == len(open_area(condition, 12)) == 4
+        for hours in (12, 24):
+            assert abs(checks[(condition, f"mean_open_{hours}h")] - sum(open_area(condition, hours)) / 4) < 1e-9
+        assert all(value == 100 for value in open_area(condition, 0))
+    control12 = 100 - sum(open_area("control", 12)) / 4
+    inhibitor12 = 100 - sum(open_area("migration-inhibitor", 12)) / 4
+    block24 = 100 - sum(open_area("division-blocked", 24)) / 4
+    control24 = 100 - sum(open_area("control", 24)) / 4
+    rate = bank["physiology-lab1:control-rate"]["solution_spec"]["field_specs"][0]["answer"]
+    assert rate == float(f"{control12 / 12:.3g}")
+    assert abs(bank["physiology-lab1:relative-closure"]["solution_spec"]["answer"] - inhibitor12 / control12) < 1e-3
+    assert abs(bank["physiology-lab1:edge-speed"]["solution_spec"]["answer"] - control12 / 100 * 400 / 2 / 12) < 1e-3
+    assert abs(bank["physiology-lab1:division-block"]["solution_spec"]["answer"] - block24 / control24) < 1e-3
+    text = (COURSES / "physiology/labs/01-scratch-assay-closure-kinetics.md").read_text(encoding="utf-8")
+    assert "nothing here is evidence about any treatment or about human healing" in text
