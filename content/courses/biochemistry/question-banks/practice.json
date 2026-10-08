@@ -179,7 +179,7 @@
       },
       "feedback": {
         "hint": "Convert Km to mol/L before dividing.",
-        "solution": "kcat/Km = 500 s⁻¹ ÷ 25×10⁻⁶ mol/L = 2.0e+07 L mol⁻¹ s⁻¹. It is an apparent second-order rate constant for the free enzyme and substrate at low substrate; it assumes the simple Michaelis–Menten model.",
+        "solution": "kcat/Km = 500 s⁻¹ ÷ 25×10⁻⁶ mol/L = 2.0×10⁷ L mol⁻¹ s⁻¹. It is an apparent second-order rate constant for the free enzyme and substrate at low substrate; it assumes the simple Michaelis–Menten model.",
         "lesson_ids": [
           "biochemistry-2"
         ],

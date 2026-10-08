@@ -47,6 +47,15 @@ The values below are **synthetic teaching data** for a hypothetical plasma prote
 
 The affinity signal falls with age, but a measurement specific to X does not, while Y falls. The knockout plasma still gives a large affinity signal. The pattern points to cross-reactivity: the "X" assay mostly reports Y. Before testing X as a rejuvenating factor, the claimed decline needs a specific assay.
 
+## Common mistakes
+
+- Reading a variant allele fraction as the clone fraction without the factor of 2, or without checking copy-number and X-linked cases.
+- Reading clonal hematopoiesis as a diagnosis of blood cancer, when most carriers never develop one.
+- Treating a cohort association as proof that the clone causes disease.
+- Leaving out isochronic controls when interpreting parabiosis.
+- Crediting young-blood factors for a benefit that may come from diluting or removing inhibitory old-blood factors.
+- Building a mechanism on a circulating-factor claim whose assay has not been shown to be specific.
+
 ## Worked example: estimate a clone
 
 A targeted sequencing run covers a DNMT3A codon at 800 reads; 72 reads carry the variant. VAF = 72/800 = 0.09. Assuming a heterozygous autosomal mutation without copy-number change, about 2 × 0.09 = 0.18, or 18% of sampled nucleated cells, carry it. The binomial standard error √(0.09 × 0.91/800) ≈ 0.010 means a VAF near 0.07–0.11 is plausible from sampling alone, before considering library or caller error.

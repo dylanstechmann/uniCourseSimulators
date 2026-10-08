@@ -206,7 +206,7 @@
       },
       "feedback": {
         "hint": "I = b h³/12 and c = h/2.",
-        "solution": "I = 0.050 × 0.100³ / 12 = 4.167e-06 m⁴, c = 0.050 m, so σ = 500 × 0.050 ÷ 4.167e-06 = 6.00 MPa at the extreme fibers.",
+        "solution": "I = 0.050 × 0.100³ / 12 = 4.167×10⁻⁶ m⁴, c = 0.050 m, so σ = 500 × 0.050 ÷ 4.167×10⁻⁶ = 6.00 MPa at the extreme fibers.",
         "lesson_ids": [
           "statics-materials-3"
         ],

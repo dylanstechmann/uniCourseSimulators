@@ -1,6 +1,6 @@
 # Organic Chemistry I for Life Sciences
 
-**Maturity: partial. Version: 0.3.1.**
+**Maturity: partial. Version: 0.3.2.**
 
 Structure, stereochemistry, substitution, elimination, and carbonyl chemistry taught through mechanism and reactivity rather than reaction memorization.
 

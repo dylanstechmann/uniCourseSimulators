@@ -43,15 +43,24 @@ In an unstirred dish, oxygen reaches cells on the bottom by diffusion through th
 
 **h ≤ D (C\* − C_crit) / (q_O₂ ρ).**
 
-Deeper medium holds more total oxygen but lengthens the diffusion path, so the supply rate falls with depth; this is why dense monolayers are cultured under thin layers or on gas-permeable membranes. With D = 3×10⁻⁹ m²/s (a typical value for oxygen in culture medium at 37 °C), C\* − C_crit = 0.15000000000000002 mol/m³, q_O₂ = 2.0e-10 mmol per cell per hour and a density of 2×10⁵ cells/cm², the largest depth is 4.05 mm. The estimate is for a uniform monolayer at steady state and ignores convection in the medium and any oxygen stored in plastic.
+Deeper medium holds more total oxygen but lengthens the diffusion path, so the supply rate falls with depth; this is why dense monolayers are cultured under thin layers or on gas-permeable membranes. With D = 3×10⁻⁹ m²/s (a typical value for oxygen in culture medium at 37 °C), C\* − C_crit = 0.15 mol/m³, q_O₂ = 2.0×10⁻¹⁰ mmol per cell per hour and a density of 2×10⁵ cells/cm², the largest depth is 4.05 mm. The estimate is for a uniform monolayer at steady state and ignores convection in the medium and any oxygen stored in plastic.
 
 ## Synthetic parameters
 
-**Synthetic teaching values:** kLa = 5.0 h⁻¹, C* = 0.2 mmol/L (air-saturated medium), C_crit = 0.05 mmol/L, q_O₂ = 2.0e-10 mmol per cell per hour.
+**Synthetic teaching values:** kLa = 5.0 h⁻¹, C* = 0.2 mmol/L (air-saturated medium), C_crit = 0.05 mmol/L, q_O₂ = 2.0×10⁻¹⁰ mmol per cell per hour.
+
+## Common mistakes
+
+- Sizing cell density from the total oxygen in the vessel instead of the rate at which oxygen can be transferred.
+- Using C* − C rather than C* − C_crit as the driving force for the largest supply.
+- Raising kLa without counting the costs in shear, foam and carbon dioxide stripping.
+- Applying a kLa correlation outside the range of the data it was fitted to.
+- Assuming that deeper medium gives cells at the bottom of a dish more oxygen, when it lengthens the diffusion path.
+- Treating oxygen enrichment as free, when the dissolved-oxygen level is itself an experimental variable.
 
 ## Worked example
 
-OTR_max = 5.0 × (0.2 − 0.05) = 0.75 mmol/(L·h). X_max = 0.75 / 2.0e-10 = 3.75e+09 cells/L = 3.75e+06 cells/mL. Doubling kLa doubles this to 7.50e+06 cells/mL. Enriching the gas to 50% oxygen (C* = 0.5 mmol/L here) gives OTR_max = 5.0 × (0.5 − 0.05) = 2.25 mmol/(L·h) and X_max = 1.12e+07 cells/mL. A culture at 8e+06 cells/mL has OUR = 1.60 mmol/(L·h), which is above the 0.75 mmol/(L·h) this vessel can deliver.
+OTR_max = 5.0 × (0.2 − 0.05) = 0.75 mmol/(L·h). X_max = 0.75 / (2.0×10⁻¹⁰) = 3.75×10⁹ cells/L = 3.75×10⁶ cells/mL. Doubling kLa doubles this to 7.50×10⁶ cells/mL. Enriching the gas to 50% oxygen (C* = 0.5 mmol/L here) gives OTR_max = 5.0 × (0.5 − 0.05) = 2.25 mmol/(L·h) and X_max = 1.125×10⁷ cells/mL. A culture at 8×10⁶ cells/mL has OUR = 1.60 mmol/(L·h), which is above the 0.75 mmol/(L·h) this vessel can deliver.
 
 ## Limits of this lesson
 

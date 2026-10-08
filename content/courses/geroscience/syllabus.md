@@ -1,6 +1,6 @@
 # Geroscience & Regenerative Biology
 
-**Maturity: partial. Version: 0.5.1.**
+**Maturity: partial. Version: 0.5.2.**
 
 Mechanisms linking aging biology to tissue resilience, damage response, senescence, stem-cell function, and regeneration—taught with evidence appraisal and translational caution.
 

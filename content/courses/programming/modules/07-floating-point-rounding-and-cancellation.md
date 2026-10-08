@@ -14,7 +14,7 @@ By the end of this lesson, you should be able to:
 
 Double-precision (64-bit) floating point stores a number as a sign, a 53-bit binary significand and an exponent. **Machine epsilon**, ε ≈ 2.220×10⁻¹⁶, is the gap between 1 and the next larger representable number. Near any value x, representable numbers are spaced by roughly |x| ε, so every stored value has a relative rounding error up to about ε/2. Near 10⁸ the spacing is about 2.2×10⁻⁸.
 
-Many decimal fractions have no exact binary representation, just as 1/3 has none in decimal. In Python, `0.1 + 0.2 == 0.3` is `False`, because the sum is stored as 0.30000000000000004. The error is tiny in relative terms, but an exact equality test notices it.
+Many decimal fractions have no exact binary representation, just as 1/3 has none in decimal. In Python, `0.1 + 0.2 == 0.3` is `False`, because the sum is stored as `0.30000000000000004`. The error is tiny in relative terms, but an exact equality test notices it.
 
 ## Catastrophic cancellation
 

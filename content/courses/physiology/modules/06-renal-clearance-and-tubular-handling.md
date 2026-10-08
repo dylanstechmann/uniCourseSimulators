@@ -49,6 +49,15 @@ A synthetic drug X with U = 2.4 mg/mL, P = 0.04 mg/mL and V̇ = 1.0 mL/min has C
 
 Infusing inulin is impractical in routine care, so creatinine, produced continuously by muscle, is used instead. Its clearance slightly overestimates GFR because a small amount is secreted. Equations that estimate GFR from plasma creatinine alone assume a stable state and typical creatinine production for the person's characteristics. Lower muscle mass, which is common in older adults, lowers creatinine production, so a "normal" plasma creatinine can coexist with a reduced GFR. GFR on average declines with age, and this is one reason measured values and alternative markers are used when precision matters.
 
+## Common mistakes
+
+- Treating clearance as a mass rate or as plasma that is physically cleaned, when it is a virtual volume per unit time.
+- Using the total plasma concentration for a protein-bound substance, when only the free fraction is filtered.
+- Comparing a substance's clearance with GFR when it is not freely filtered or is metabolized by the kidney.
+- Assuming a sharp transport maximum, when splay makes glucose appear in urine earlier.
+- Reading a normal plasma creatinine as a normal GFR in a person with low muscle mass.
+- Applying clearance equations while plasma levels are changing rather than steady.
+
 ## Worked example
 
 **Problem.** In a synthetic steady state, muscle produces creatinine at 1.2 mg/min and GFR is 120 mL/min. Treat creatinine as filtered only. What is plasma creatinine, and what happens if GFR halves, with and without a parallel fall in production?

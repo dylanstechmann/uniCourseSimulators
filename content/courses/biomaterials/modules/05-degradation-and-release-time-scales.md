@@ -39,6 +39,15 @@ The design question is which process is rate limiting and whether it fits the bi
 
 Regenerating tissues proceed through phases (inflammation, proliferation, remodeling) over days to months, so a single release profile is rarely ideal, and the right target depends on the tissue and the model. Numbers from a bench model are hypotheses for that matching, not evidence that it has been achieved in an animal or a person.
 
+## Common mistakes
+
+- Assuming that mass loss and loss of stiffness follow the same curve.
+- Taking a degradation rate measured in buffer as a prediction for an implant.
+- Using the whole thickness for L in τ ≈ L²/D when the cargo only has to travel half of it.
+- Using the diffusion coefficient in water for cargo inside a gel, whose network slows it, especially when the mesh size approaches the cargo size.
+- Expecting release to follow degradation, when untethered cargo that diffuses quickly leaves long before the gel breaks down.
+- Treating a bench release profile as evidence that the timing fits tissue repair in an animal or a person.
+
 ## Worked example
 
 **Problem.** A synthetic design must keep at least half its mass for 21 days and release a protein (D = 10⁻¹⁰ m²/s) over at least one day. What constraints follow?

@@ -55,6 +55,15 @@ The tables are **synthetic teaching data**. Table 1 gives the mean number of bas
 | 3 | 0.74 | 0.57 |
 | 4 | 0.71 | 0.54 |
 
+## Common mistakes
+
+- Reading an accumulating mutation count as proof that mutations cause decline.
+- Using a mean count per cell and missing that a few cells or clones carry most of the burden.
+- Estimating a rate from cross-sectional data without considering cohort effects and survivor selection.
+- Assuming a higher burden means more damage input, when weaker removal or more time gives the same burden.
+- Treating a repair-deficiency syndrome as proof that normal aging is a sum of such defects.
+- Counting mutations as the amount of damage, when they are the errors that survived repair.
+
 ## Worked example
 
 Between ages 20 and 80, Tissue A rises from 410 to 1990 substitutions per cell, so the average rate is (1990 − 410) / 60 = 26.33 per year. Tissue B rises from 150 to 470, a rate of 5.33 per year, so Tissue A accumulates about 4.9 times as fast. These are averages over six decades; they say nothing about whether the rate was constant, and a straight line through two points cannot show it. In Table 2 the mean fraction removed is 0.7175 for young and 0.545 for old cultures, a ratio of 0.76; that supports slower removal in the old cultures in this assay, and says nothing about whether the damage input differs.

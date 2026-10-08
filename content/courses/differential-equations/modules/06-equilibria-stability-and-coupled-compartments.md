@@ -22,8 +22,8 @@ A culture grows logistically and a constant fraction h of cells is removed per u
 
 Near an equilibrium N_e, write N = N_e + x with x small. Then dx/dt ≈ f′(N_e) x: the deviation grows if f′(N_e) > 0 and decays if f′(N_e) < 0. Here f′(N) = r − 2rN/K − h, so
 
-- f′(0) = r − h = 0.019999999999999997 h⁻¹ > 0: the empty state is unstable, as any few cells grow;
-- f′(N\*) = −(r − h) = -0.019999999999999997 h⁻¹ < 0: the harvested population is stable, and a disturbance decays with time constant 1/(r − h) = 50 h.
+- f′(0) = r − h = 0.02 h⁻¹ > 0: the empty state is unstable, as any few cells grow;
+- f′(N\*) = −(r − h) = −0.02 h⁻¹ < 0: the harvested population is stable, and a disturbance decays with time constant 1/(r − h) = 50 h.
 
 If harvesting exceeds the growth rate (h > r), N\* disappears and the only equilibrium, N = 0, becomes stable: the population is washed out. Recovery also slows as h approaches r, which is a warning sign that a system is close to collapse.
 

@@ -49,6 +49,16 @@ The values are **synthetic teaching data**: LC3-II normalized to a loading contr
 | Young | 1.0 | 3.0 |
 | Old | 1.8 | 2.4 |
 
+## Common mistakes
+
+- Reading a higher LC3-II level as more autophagy, when slower degradation raises it too.
+- Using a lysosomal inhibitor without a control showing that it works.
+- Treating one time point as a rate without checking that accumulation is roughly linear.
+- Treating wells from one culture as independent replicates.
+- Assuming reactive oxygen species simply accumulate and cause aging, or that antioxidants must extend lifespan.
+- Averaging mitochondrial DNA mutation load over a tissue and missing that the number of cells above the threshold matters.
+- Concluding from an association with age that failing quality control causes the decline.
+
 ## Worked example
 
 Young flux = 3.0 − 1.0 = 2.0. Old flux = 2.4 − 1.8 = 0.6. The old cells have a *higher* steady-state LC3-II (1.8 against 1.0) but only 30% of the flux, which fits slower degradation of autophagosomes, not induction. In a separate set of 200 cells scored for mtDNA heteroplasmy, 34 had a mutant fraction above a pre-set 70% threshold, so 17% of cells are above threshold even if the average mutant fraction looks small.

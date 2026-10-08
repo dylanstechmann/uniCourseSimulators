@@ -431,7 +431,7 @@ def test_graph_plot_item_is_counted_while_statistics_course_remains_partial(repo
     manifest = read(course_path)
     bank = read(course_path.parent / "question-banks/practice.json")
     graph = next(item for item in bank["questions"] if item["type"] == "graph")
-    assert manifest["version"] == "0.3.1"
+    assert manifest["version"] == "0.3.2"
     assert manifest["maturity"] == "partial"
     assert graph["id"] == "statistics-5:concentration-graph"
     assert len(graph["graph_spec"]["points"]) == 3
@@ -1252,7 +1252,7 @@ def test_geroscience_original_lessons_are_mapped_synthetic_and_recalculated():
     course_root = ROOT / "content/courses/geroscience"
     manifest = read(course_root / "course.json")
     bank = {item["id"]: item for item in read(course_root / "question-banks/practice.json")["questions"]}
-    assert manifest["version"] == "0.5.1"
+    assert manifest["version"] == "0.5.2"
     assert manifest["maturity"] == "partial"
     assert manifest["review"]["status"] == "unreviewed"
     outcomes = {item["id"] for item in manifest["outcomes"]}

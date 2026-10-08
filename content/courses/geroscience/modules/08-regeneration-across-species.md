@@ -48,6 +48,15 @@ The values are **synthetic teaching data** from a hypothetical mouse apical-rese
 | Resected on day 1 | 3, 4, 2, 3, 4 | 5.2 |
 | Resected on day 7 | 18, 21, 16, 20, 17 | 0.8 |
 
+## Common mistakes
+
+- Treating more dividing cells near an injury as proof of regeneration.
+- Counting restored wall thickness or mass as regeneration when existing cells simply grew larger.
+- Reading a DNA-synthesis label as new cells when polyploidy is possible.
+- Omitting a sham or uninjured control, or judging from one time point.
+- Treating a difference between species or ages as a mechanism.
+- Extending a result from fish or newborn mice to adult mammals.
+
 ## Worked example
 
 The mean scar area is 3.2% after day-1 resection and 18.4% after day-7 resection, a difference of 15.2 percentage points. With a sham mean of 0.5%, the day-1 value is close to baseline and the day-7 value is not. The higher EdU labeling after day-1 injury (5.2% against 0.8%) fits renewed cell-cycle activity, but without lineage tracing and a function measurement it does not show that new cardiomyocytes formed the missing tissue.

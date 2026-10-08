@@ -1,6 +1,6 @@
 # Calculus II: Integration, Series & Applications
 
-**Maturity: partial. Version: 0.3.1.**
+**Maturity: partial. Version: 0.3.2.**
 
 Advanced integration, applications of accumulation, sequences and series, and power-series approximations for quantitative science.
 

@@ -38,6 +38,15 @@ A designer wants high porosity and large interconnected pores for transport and 
 
 Papers often report that a scaffold's modulus "matches" a target tissue. Before accepting that, ask: measured how (compression, tension, indentation), at what strain rate, wet or dry, before or after cell culture, and compared with which tissue values from which method? Native tissues are anisotropic, nonlinear and viscoelastic; a single linear modulus from a dry compression test is a weak basis for a match. Cells respond to the stiffness they sense locally, which can differ from the bulk modulus of the scaffold.
 
+## Common mistakes
+
+- Reporting relative density as porosity instead of φ = 1 − ρ*/ρ_s.
+- Assuming stiffness falls in proportion to density, when for open-cell foams it falls roughly as the square.
+- Assuming that two scaffolds with the same porosity behave alike, when pore size and interconnection also matter.
+- Mixing units in Darcy's law, for example cm² for the area with SI values for the other terms.
+- Overlooking that smaller pores and more material both stiffen a scaffold and lower its permeability.
+- Accepting that a scaffold's stiffness matches a tissue's from a single dry compression modulus.
+
 ## Worked example
 
 **Problem.** A synthetic scaffold made from the 1000 MPa polymer must reach a modulus of at least 40 MPa. What is the highest porosity allowed, and what happens to flow if the required change also shrinks pores from 300 to 200 μm?

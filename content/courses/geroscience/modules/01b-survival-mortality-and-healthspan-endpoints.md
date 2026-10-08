@@ -43,6 +43,15 @@ The values below are **synthetic teaching data** for two groups of 60 geneticall
 
 The **interval death probability** for a band is deaths in the band divided by animals alive at its start. Between 27 and 30 months it is 14/38 ≈ 0.368 for control and 12/47 ≈ 0.255 for treated. Survival to 30 months is 24/60 = 40% versus 35/60 ≈ 58%. These descriptive numbers do not include uncertainty; a real analysis would report a survival test, confidence intervals, and the prespecified primary endpoint.
 
+## Common mistakes
+
+- Counting censored animals as deaths, or deleting them from the cohort.
+- Reporting the single longest-lived animal as the maximum lifespan, or comparing mean lifespans when follow-up is incomplete.
+- Reading a lower Gompertz slope as a direct measurement of a slower rate of aging, when A and G are correlated and depend on the fitted age range.
+- Using one hazard ratio as a summary without checking that the hazards are proportional.
+- Reporting interval probabilities or survival fractions without uncertainty or a prespecified primary endpoint.
+- Comparing a late-life health measure only among survivors.
+
 ## Worked example: a doubling time from two hazards
 
 Suppose a cohort's monthly hazard is 0.010 at 18 months and 0.040 at 30 months. Under the Gompertz form, G = ln(0.040/0.010)/(30 − 18) = ln 4/12 ≈ 0.1155 per month, and MRDT = ln 2/0.1155 ≈ 6.0 months. Now imagine a treated group whose hazard is half the control value at every age. Its G and MRDT are unchanged, yet more animals reach every age, so median lifespan increases. Doubling time and median survival answer different questions, so report both and say which one the claim is about.

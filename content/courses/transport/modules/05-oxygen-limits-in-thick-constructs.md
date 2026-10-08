@@ -48,11 +48,20 @@ Real oxygen uptake falls when oxygen is low (it follows a saturating, Michaelis�
 
 ## Synthetic parameters
 
-These are **synthetic teaching values** in SI units: D = 2e-09 m²/s, C₀ = 0.2 mol/m³ (0.20 mM), and q = 0.02 mol/(m³·s).
+These are **synthetic teaching values** in SI units: D = 2×10⁻⁹ m²/s, C₀ = 0.2 mol/m³ (0.20 mM), and q = 0.02 mol/(m³·s).
+
+## Common mistakes
+
+- Using the zero-order solution beyond the critical thickness, where it predicts a negative concentration.
+- Forgetting that a construct fed from both faces has a critical total thickness of 2L_c.
+- Expecting a doubled surface oxygen level to double the critical thickness, when it grows only as √C₀.
+- Mixing the slab and sphere formulas (2D versus 6D in the denominator).
+- Forgetting that length enters φ² squared.
+- Treating the zero-order critical thickness as exact, when real uptake falls at low oxygen.
 
 ## Worked example
 
-L_c = √(2 × 2e-09 × 0.2 / 0.02) = √(4.0e-08) m = 200 µm. For a 150 µm slab supplied at one face, C_min = 0.2 − 0.02 × (150×10⁻⁶)² / (2 × 2e-09) = 0.0875 mol/m³, about 44% of the surface value. If surface oxygen doubles to 0.4 mol/m³, L_c becomes 283 µm (a factor √2 = 1.41 larger). For L = 100 µm, φ² = 0.02 × (100×10⁻⁶)² / (2e-09 × 0.2) = 0.50, well below the critical value of 2. The sphere's critical radius with the same numbers is 346 µm.
+L_c = √(2 × 2×10⁻⁹ × 0.2 / 0.02) = √(4.0×10⁻⁸) m = 200 µm. For a 150 µm slab supplied at one face, C_min = 0.2 − 0.02 × (150×10⁻⁶)² / (2 × 2×10⁻⁹) = 0.0875 mol/m³, about 44% of the surface value. If surface oxygen doubles to 0.4 mol/m³, L_c becomes 283 µm (a factor √2 = 1.41 larger). For L = 100 µm, φ² = 0.02 × (100×10⁻⁶)² / (2×10⁻⁹ × 0.2) = 0.50, well below the critical value of 2. The sphere's critical radius with the same numbers is 346 µm.
 
 ## Limits of this lesson
 

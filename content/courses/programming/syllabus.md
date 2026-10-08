@@ -1,6 +1,6 @@
 # Programming & Numerical Methods for Bioengineering
 
-**Maturity: partial. Version: 0.3.1.**
+**Maturity: partial. Version: 0.3.2.**
 
 Reproducible scientific computing, data structures, visualization, numerical integration, model fitting, and error analysis for experimental and engineered systems.
 

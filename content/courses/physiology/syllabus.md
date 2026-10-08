@@ -1,6 +1,6 @@
 # Human Physiology for Engineers
 
-**Maturity: partial. Version: 0.3.1.**
+**Maturity: partial. Version: 0.3.2.**
 
 Quantitative homeostasis across excitable, cardiovascular, respiratory, renal, and endocrine systems, with emphasis on feedback and transport.
 

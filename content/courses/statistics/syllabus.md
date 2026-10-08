@@ -1,6 +1,6 @@
 # Probability, Biostatistics & Experimental Design
 
-**Maturity: partial. Version: 0.3.1.**
+**Maturity: partial. Version: 0.3.2.**
 
 Probability, estimation, hypothesis testing, regression, and design principles for biological and engineering experiments, with reproducibility and uncertainty at the center.
 

@@ -1,6 +1,6 @@
 # Statics & Mechanics of Materials
 
-**Maturity: partial. Version: 0.3.1.**
+**Maturity: partial. Version: 0.3.2.**
 
 Equilibrium, internal loads, stress, strain, and failure criteria as tools for safe devices, fixtures, implants, and bioreactor hardware.
 

@@ -7,7 +7,7 @@
   "domain": "Life sciences",
   "level": "Year 3",
   "maturity": "partial",
-  "version": "0.5.1",
+  "version": "0.5.2",
   "license": "MIT OR CC-BY-4.0",
   "content_origin": {
     "kind": "legacy-prototype",
@@ -1603,6 +1603,11 @@
       "version": "0.5.1",
       "date": "2026-10-08",
       "summary": "Assessments with items now also list the course outcomes those items assess, derived from each item's lesson objective and that objective's outcome links. The rubric-only case lists none. No readings, items or keys changed. The syllabus version line was updated. The course limitations shown to learners were also updated: they still described the package before its 14-week schedule, lab and new lessons, and said some objectives had no practice item. The package remains partial, unreviewed and formative-only."
+    },
+    {
+      "version": "0.5.2",
+      "date": "2026-10-08",
+      "summary": "Added a common-mistakes section to 10 original lessons that lacked one (geroscience-5, geroscience-6, geroscience-7, geroscience-8, geroscience-9, geroscience-10, geroscience-11, geroscience-12, geroscience-13, geroscience-14); each bullet names a mistake that the lesson's own text addresses. No answer key, tolerance or objective changed. The package remains partial, unreviewed and formative-only."
     }
   ],
   "limitations": [

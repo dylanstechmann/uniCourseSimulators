@@ -41,6 +41,15 @@ A small p-value says that data like these would be unusual if there were no effe
 
 A hypothetical paper reports that a compound "improves healthspan in mice" with p = 0.03 for grip strength. The methods list twelve healthspan endpoints, no stated primary endpoint, males only, one strain, and ten animals per group. Reading against the checklist: multiplicity is unaddressed (twelve endpoints), the p-value for one is not convincing evidence of an effect on healthspan, sex and strain are limited, and ten animals per group would detect only a very large standardized effect.
 
+## Common mistakes
+
+- Accepting one p-value among many endpoints as a finding, when the chance of at least one false positive is 1 − (1 − α)^k.
+- Equating a small p-value with a large or important effect.
+- Using the normal-approximation sample-size formula for lifespan outcomes that need survival methods.
+- Forgetting that halving the standardized effect quadruples the sample size.
+- Overlooking sex and strain limitations, or controls that are not fair.
+- Counting censored animals as deaths.
+
 ## Worked example
 
 To detect d = 0.5 with 80% power at α = 0.05, n = 2 × (1.96 + 0.84)² / 0.5² = 62.72, so 63 animals per group. With ten per group the study can detect only effects of about d = 1.3 or larger. For twelve independent endpoints at α = 0.05 each, the chance of at least one false positive with no true effects is 1 − 0.95¹² = 0.460.

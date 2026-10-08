@@ -47,6 +47,15 @@ Values are **synthetic teaching data** from a hypothetical study with 60 animals
 | Control | 800 | 1000 |
 | Treated | 880 | 1060 |
 
+## Common mistakes
+
+- Taking an effect of manipulating TOR or insulin/IGF signaling as identifying the downstream process responsible.
+- Comparing dietary restriction with an overfed control, which can inflate the benefit.
+- Declaring one of two conflicting studies right without comparing their designs.
+- Using the median to describe the oldest survivors, or ignoring how noisy late-life survival is.
+- Computing percent change relative to the treated group instead of the control.
+- Reading an intervention used in mice as a recommendation for people.
+
 ## Worked example
 
 The median changes by (880 − 800) / 800 × 100 = 10.0%. The late-life measure changes by (1060 − 1000) / 1000 × 100 = 6.0%. The median gain is larger than the gain at the top, which suggests the treatment mostly protects animals that would otherwise die earlier. Neither number is an estimate of a hazard ratio, and with 60 animals per group the late-life figure rests on only 6 animals per group.

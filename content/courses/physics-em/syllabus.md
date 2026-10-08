@@ -1,6 +1,6 @@
 # Physics: Electricity & Magnetism
 
-**Maturity: partial. Version: 0.3.1.**
+**Maturity: partial. Version: 0.3.2.**
 
 Electric fields, circuits, magnetic forces, and induction as foundations for instrumentation, stimulation, sensing, and electrochemical biology.
 

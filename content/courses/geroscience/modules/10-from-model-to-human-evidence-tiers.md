@@ -45,6 +45,15 @@ A twenty percent relative reduction of a rare event is a small absolute benefit;
 
 A hypothetical trial reports that over three years the event rate was 10% in the control group and 8% in the treated group, with a biomarker "age score" lower by 2 units in the treated group. The report headline reads "treatment cuts events by 20% and reverses biological age."
 
+## Common mistakes
+
+- Placing a claim higher on the evidence ladder than its evidence supports, as when extending mouse lifespan becomes slows aging.
+- Reporting a relative risk reduction without the absolute risk reduction or the number needed to treat.
+- Treating a biomarker change as a surrogate without trials linking its change to the outcome.
+- Presenting the geroscience hypothesis as established.
+- Reading marketing claims for an unproven product as evidence.
+- Computing the number needed to treat as 1 divided by the relative risk reduction.
+
 ## Worked example
 
 ARR = 0.10 − 0.08 = 0.02, or 2 percentage points. RRR = 0.02 / 0.10 = 20%. NNT = 1 / 0.02 = 50: on average 50 people are treated for three years for one to avoid the event. The headline's "reverses biological age" refers to the biomarker; without evidence that the score is a surrogate for the outcome in this setting, it supports a statement about the score, not about aging.

@@ -1,6 +1,6 @@
 # Biomaterials & Tissue Engineering
 
-**Maturity: partial. Version: 0.2.1.**
+**Maturity: partial. Version: 0.2.2.**
 
 Design and evaluate cell-material systems through degradation, protein adsorption, immune response, scaffold transport, and functional regeneration.
 

@@ -1,6 +1,6 @@
 # Thermodynamics & Transport in Bioengineering
 
-**Maturity: partial. Version: 0.3.1.**
+**Maturity: partial. Version: 0.3.2.**
 
 Conservation laws, thermodynamic driving forces, fluid mechanics, heat and mass transfer, and scaling applied to cells, tissues, and bioprocess equipment.
 

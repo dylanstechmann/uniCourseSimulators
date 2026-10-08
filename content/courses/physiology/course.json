@@ -7,7 +7,7 @@
   "domain": "Life sciences",
   "level": "Year 2",
   "maturity": "partial",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "license": "MIT OR CC-BY-4.0",
   "content_origin": {
     "kind": "legacy-prototype",
@@ -599,6 +599,11 @@
       "version": "0.3.1",
       "date": "2026-10-08",
       "summary": "Assessments with items now also list the course outcomes those items assess, derived from each item's lesson objective and that objective's outcome links. The rubric-only case lists none, and neither do the 4 prototype-unit assessments, whose objectives are not yet linked to an outcome. No readings, items or keys changed. The syllabus was regenerated from the manifest: it states the current version, lists every lesson with its item and card counts, and describes the current practice and limitations (it still described only the four original units). The course limitations shown to learners were also updated: they still described one formative check per lesson and the original numerical rules. The package remains partial, unreviewed and formative-only."
+    },
+    {
+      "version": "0.3.2",
+      "date": "2026-10-08",
+      "summary": "Added a common-mistakes section to 2 original lessons that lacked one (physiology-5, physiology-6); each bullet names a mistake that the lesson's own text addresses. No answer key, tolerance or objective changed. The package remains partial, unreviewed and formative-only."
     }
   ],
   "limitations": [

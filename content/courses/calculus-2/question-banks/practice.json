@@ -454,7 +454,7 @@
       },
       "feedback": {
         "hint": "Substitute x into the polynomial.",
-        "solution": "1 − 0.2 + 0.04000000000000001/2 = 0.8200, close to e^(−0.2) = 0.8187.",
+        "solution": "1 − 0.2 + 0.04/2 = 0.8200, close to e^(−0.2) = 0.8187.",
         "lesson_ids": [
           "calculus-2-6"
         ],

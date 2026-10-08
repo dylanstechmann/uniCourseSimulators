@@ -47,6 +47,15 @@ The values are **synthetic teaching data**: follow-up time in months and whether
 | 9 | 12 | censored |
 | 10 | 12 | censored |
 
+## Common mistakes
+
+- Dropping censored subjects, or treating a censoring time as an event time.
+- Forgetting that a censored subject stays in the risk set until the censoring time.
+- Drawing a step down in the curve at a censoring time.
+- Assuming that censoring is unrelated to the outcome when subjects left because they felt worse.
+- Reading a hazard ratio of 0.5 as halving the chance of surviving, or using one hazard ratio when the curves cross.
+- Reading the late part of a curve without the number at risk.
+
 ## Worked example: the Kaplan–Meier table
 
 | Time | At risk n | Events d | Censored | S(t) |

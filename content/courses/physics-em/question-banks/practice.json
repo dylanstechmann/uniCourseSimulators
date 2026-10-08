@@ -146,7 +146,7 @@
       },
       "feedback": {
         "hint": "Use U = ½ C V².",
-        "solution": "U = ½ × 2.0×10⁻⁶ × 10² = 1.0e-04 J. The energy scales with the square of the voltage.",
+        "solution": "U = ½ × 2.0×10⁻⁶ × 10² = 1.0×10⁻⁴ J. The energy scales with the square of the voltage.",
         "lesson_ids": [
           "physics-em-1"
         ],

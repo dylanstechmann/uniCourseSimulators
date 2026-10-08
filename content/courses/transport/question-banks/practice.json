@@ -206,7 +206,7 @@
       },
       "feedback": {
         "hint": "Convert the radius to meters.",
-        "solution": "Q = π (5.0×10⁻⁴)⁴ × 100 ÷ (8 × 1.0×10⁻³ × 0.10) = 2.45e-08 m³/s. The result applies to fully developed laminar flow in a rigid straight tube; flow scales with the fourth power of radius.",
+        "solution": "Q = π (5.0×10⁻⁴)⁴ × 100 ÷ (8 × 1.0×10⁻³ × 0.10) = 2.45×10⁻⁸ m³/s. The result applies to fully developed laminar flow in a rigid straight tube; flow scales with the fourth power of radius.",
         "lesson_ids": [
           "transport-3"
         ],
@@ -251,7 +251,7 @@
     {
       "id": "transport-5:critical-thickness",
       "type": "numeric",
-      "prompt": "A slab is supplied with oxygen at one face held at C₀ = 0.2 mol/m³ and sealed at the other, with D = 2e-09 m²/s and zero-order consumption q = 0.02 mol/(m³·s). Calculate the critical thickness L_c = √(2 D C₀ / q). Enter a value and unit.",
+      "prompt": "A slab is supplied with oxygen at one face held at C₀ = 0.2 mol/m³ and sealed at the other, with D = 2×10⁻⁹ m²/s and zero-order consumption q = 0.02 mol/(m³·s). Calculate the critical thickness L_c = √(2 D C₀ / q). Enter a value and unit.",
       "points": 1,
       "objective_ids": [
         "transport-5-objective-1"
@@ -266,7 +266,7 @@
       },
       "feedback": {
         "hint": "Compute 2DC₀/q in m², take the square root and convert to micrometers.",
-        "solution": "2 × 2e-09 × 0.2 / 0.02 = 4.0e-08 m², so L_c = 200 µm. Thicker slabs have an oxygen-depleted region in the model.",
+        "solution": "2 × 2×10⁻⁹ × 0.2 / 0.02 = 4.0×10⁻⁸ m², so L_c = 200 µm. Thicker slabs have an oxygen-depleted region in the model.",
         "lesson_ids": [
           "transport-5"
         ],
@@ -296,7 +296,7 @@
       },
       "feedback": {
         "hint": "Convert 150 µm to meters before squaring.",
-        "solution": "q L² / (2D) = 0.02 × (1.5×10⁻⁴)² / (2 × 2e-09) = 0.1125, so C_min = 0.0875 mol/m³.",
+        "solution": "q L² / (2D) = 0.02 × (1.5×10⁻⁴)² / (2 × 2×10⁻⁹) = 0.1125, so C_min = 0.0875 mol/m³.",
         "lesson_ids": [
           "transport-5"
         ],
@@ -326,7 +326,7 @@
       },
       "feedback": {
         "hint": "L_c grows as the square root of C₀.",
-        "solution": "L_c = √(2 × 2e-09 × 0.4 / 0.02) = 283 µm, a factor of √2 rather than 2.",
+        "solution": "L_c = √(2 × 2×10⁻⁹ × 0.4 / 0.02) = 283 µm, a factor of √2 rather than 2.",
         "lesson_ids": [
           "transport-5"
         ],
@@ -341,7 +341,7 @@
     {
       "id": "transport-5:thiele-modulus",
       "type": "numeric",
-      "prompt": "Calculate φ² = q L² / (D C₀) for a 100 µm slab with the same parameters (q = 0.02, D = 2e-09, C₀ = 0.2). Enter the number.",
+      "prompt": "Calculate φ² = q L² / (D C₀) for a 100 µm slab with the same parameters (q = 0.02, D = 2×10⁻⁹, C₀ = 0.2). Enter the number.",
       "points": 1,
       "objective_ids": [
         "transport-5-objective-2"
@@ -356,7 +356,7 @@
       },
       "feedback": {
         "hint": "Use L in meters; φ² is dimensionless.",
-        "solution": "φ² = 0.02 × (1.0×10⁻⁴)² / (2e-09 × 0.2) = 0.50. For the slab, φ² = 2 is the critical thickness, so 100 µm is comfortably below it in this model.",
+        "solution": "φ² = 0.02 × (1.0×10⁻⁴)² / (2×10⁻⁹ × 0.2) = 0.50. For the slab, φ² = 2 is the critical thickness, so 100 µm is comfortably below it in this model.",
         "lesson_ids": [
           "transport-5"
         ],

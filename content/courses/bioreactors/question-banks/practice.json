@@ -284,7 +284,7 @@
     {
       "id": "bioreactors-5:max-cell-density",
       "type": "numeric",
-      "prompt": "Cells consume 2.0e-10 mmol O₂ per cell per hour. With a maximum transfer rate of 0.75 mmol/(L·h), what cell density can the vessel support, in cells/mL? Enter the number in scientific notation or as a plain number.",
+      "prompt": "Cells consume 2.0×10⁻¹⁰ mmol O₂ per cell per hour. With a maximum transfer rate of 0.75 mmol/(L·h), what cell density can the vessel support, in cells/mL? Enter the number in scientific notation or as a plain number.",
       "points": 1,
       "objective_ids": [
         "bioreactors-5-objective-1"
@@ -300,7 +300,7 @@
       },
       "feedback": {
         "hint": "Divide the transfer rate by the uptake per cell, then convert liters to milliliters.",
-        "solution": "0.75 / 2.0e-10 = 3.75e+09 cells/L = 3.75e+06 cells/mL.",
+        "solution": "0.75 / 2.0×10⁻¹⁰ = 3.75×10⁹ cells/L = 3.75×10⁶ cells/mL.",
         "lesson_ids": [
           "bioreactors-5"
         ],
@@ -345,7 +345,7 @@
     {
       "id": "bioreactors-5:max-medium-depth",
       "type": "numeric",
-      "prompt": "A monolayer at 2×10⁵ cells/cm² consumes 2.0e-10 mmol O₂ per cell per hour. With D = 3×10⁻⁹ m²/s for oxygen in medium and a driving force C* − C_crit of 0.15 mol/m³, calculate the largest medium depth h = D (C* − C_crit) / (q_O₂ ρ) that keeps the cells at or above the critical level. Enter a value and unit.",
+      "prompt": "A monolayer at 2×10⁵ cells/cm² consumes 2.0×10⁻¹⁰ mmol O₂ per cell per hour. With D = 3×10⁻⁹ m²/s for oxygen in medium and a driving force C* − C_crit of 0.15 mol/m³, calculate the largest medium depth h = D (C* − C_crit) / (q_O₂ ρ) that keeps the cells at or above the critical level. Enter a value and unit.",
       "points": 1,
       "objective_ids": [
         "bioreactors-5-objective-1"
@@ -360,7 +360,7 @@
       },
       "feedback": {
         "hint": "Convert the density to cells/m² and the uptake to mol/(m²·s) before dividing.",
-        "solution": "The areal uptake is 2×10⁹ cells/m² × 2.0e-10 mmol/(cell·h) = 0.4 mmol/(m²·h) = 1.11e-07 mol/(m²·s), so h = 3×10⁻⁹ × 0.15 / 1.11e-07 = 4.05 mm. Deeper medium starves the monolayer in this model.",
+        "solution": "The areal uptake is 2×10⁹ cells/m² × 2.0×10⁻¹⁰ mmol/(cell·h) = 0.4 mmol/(m²·h) = 1.11×10⁻⁷ mol/(m²·s), so h = 3×10⁻⁹ × 0.15 / 1.11×10⁻⁷ = 4.05 mm. Deeper medium starves the monolayer in this model.",
         "lesson_ids": [
           "bioreactors-5"
         ],

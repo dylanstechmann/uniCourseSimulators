@@ -42,6 +42,15 @@ Oxygen delivery is **DO₂ = Q̇ × C_a** = 5.21 L/min × 200 mL/L = 1041 mL/min
 
 During exercise, uptake can rise more than tenfold in trained people, through both higher cardiac output and higher extraction by working muscle. The maximum, V̇O₂max, declines with age on average, and the Fick equation shows the two places such a decline can come from: maximal flow and maximal extraction.
 
+## Common mistakes
+
+- Treating dissolved oxygen as a major part of arterial content, when it is about 1.5% at a normal partial pressure.
+- Using blood from one site as mixed venous blood in the direct Fick method.
+- Mixing units, for example content in mL/dL with flow in L/min, without converting.
+- Confusing delivery with uptake, or the extraction ratio with saturation.
+- Applying the steady-state Fick equation during a rapid change in workload.
+- Assuming that normal arterial saturation guarantees adequate delivery, when hemoglobin and cardiac output matter as much.
+
 ## Worked example
 
 **Problem.** During synthetic hard exercise, whole-body uptake rises to 1500 mL/min. Arterial content stays at 20.0 mL/dL, and mixed-venous saturation falls to 0.4 with P_v = 25 mmHg. Estimate cardiac output and extraction.

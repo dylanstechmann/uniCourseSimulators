@@ -50,6 +50,15 @@ With [I] = 4 μM and K_I = 2 μM, α = 3. At [S] = 20 μM, the uninhibited rate 
 
 The double-reciprocal (Lineweaver–Burk) plot of 1/v against 1/[S] is a straight line with slope Km/Vmax and intercept 1/Vmax. It is useful for showing inhibition patterns but poor for estimation: taking reciprocals magnifies the errors of the lowest-rate points, which then dominate the fit. Nonlinear least-squares fitting of the hyperbola to untransformed data, with substrate concentrations spread around Km (from roughly 0.2 Km to 5 Km or higher), gives better estimates. Initial rates must actually be initial: if more than about 10% of substrate is consumed, or product inhibits, the rates are underestimated.
 
+## Common mistakes
+
+- Treating Km as a plain dissociation constant, which holds only when catalysis is slow compared with substrate release.
+- Reading Vmax from data that stop at moderate substrate concentrations, where the rate is still well below saturation.
+- Trusting the intercepts of an unweighted Lineweaver–Burk line, because taking reciprocals magnifies the error of the lowest-rate points.
+- Using rates measured after more than about 10% of the substrate is consumed, or with product inhibition, as if they were initial rates.
+- Comparing inhibitors by IC₅₀ values measured at different substrate concentrations, which is not valid for a competitive inhibitor.
+- Computing kcat from total protein instead of the concentration of active enzyme.
+
 ## Worked example
 
 **Problem.** Two synthetic inhibitors each halve the rate at [S] = 5 μM (from 50 to 25 μM/min). Inhibitor P is competitive with α = 3; inhibitor Q is pure noncompetitive with α = 2. Which measurement would tell them apart?

@@ -44,6 +44,15 @@ The values below are **synthetic teaching data** for adult human dermal fibrobla
 
 The clock falls steadily with induction. Identity and function are retained only at day 4; by day 8 and day 12 fibroblast markers and collagen secretion fall while pluripotency-marker-positive cells rise. Only the day-4 condition is consistent with a younger-appearing profile that keeps cell identity, and even it needs durability, genome-integrity, and tumorigenicity testing before any claim.
 
+## Common mistakes
+
+- Calling a clock biological age without stating what it was trained to predict.
+- Using the raw difference between clock age and chronological age, instead of a residual, when the calibration slope is not 1.
+- Reading a lower clock value after an intervention as rejuvenation without a randomized comparison group.
+- Assuming that a bigger clock change is a better rejuvenation, when loss of cell identity also makes cells look young.
+- Reading a clock trained on human blood as calibrated years in cultured cells.
+- Ignoring the threshold beyond which partial reprogramming causes dedifferentiation and tumor risk.
+
 ## Worked example: compute and interpret age acceleration
 
 In a reference cohort, a clock calibrates as clock age = 4 + 0.92 × chronological age. A 50-year-old's sample reads 55. The predicted value is 4 + 0.92 × 50 = 50, so age acceleration is 55 − 50 = +5 years. The raw difference happens to be the same here, but for an 80-year-old reading 80 the prediction is 77.6, so acceleration is +2.4 years while the raw difference is zero. If this person were enrolled *because* of high acceleration, a lower value at follow-up would be expected even without treatment, so a randomized control is required to attribute the change.

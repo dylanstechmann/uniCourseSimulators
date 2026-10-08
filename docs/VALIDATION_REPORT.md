@@ -4,7 +4,23 @@
 
 2026-10-06; synthetic local learner data only. Milestones 1 and 2 are implemented. Milestone 3 remains partial; deterministic graders and prototype graded-assignment and review workflows are described below. A Milestone 4 curriculum-map increment is implemented and tested, while subject-matter review and map refinement remain. All 25 course packages are **partial**; zero are beta, complete or externally reviewed. Human score review is limited to saved attempts and does not constitute course-content review. No semester equivalence, university credit, security certification or public production deployment is asserted.
 
-## Current increment: genetics gets a proposed 14-week schedule, six lessons and an association lab (2026-10-08, fourteenth pass)
+## Current increment: number-formatting defects fixed and common-mistakes sections backfilled (2026-10-08, fifteenth pass)
+
+Written by an AI coding assistant. No answer key, tolerance or objective changed. Thirteen packages move up one patch version and stay `partial`, unreviewed and formative-only.
+
+- **Number-formatting defects in learner-visible text.** Reading the earlier lessons for the backfill showed text such as "0.15000000000000002 mol/m³" and "2.0e-10 mmol per cell per hour". A scan of every reading, prompt, option, solution, card and worked-example summary found about 40 instances in eight packages (bioreactors, transport, biochemistry, calculus 2, differential equations, physics EM, statics and materials, programming). They came from early authoring batches that ran before the notation converter existed. They are rewritten as 2.0×10⁻¹⁰ and 0.15, or placed in code spans where they are Python literals (programming). One value, 1.12e+07, was rewritten as 1.125×10⁷ because the exact value is 1.125×10⁷ and rounding it to 1.12 or 1.13 would be arbitrary.
+- **New guard.** `tests/content/test_learner_visible_number_formatting.py` scans readings (outside code spans) and learner-visible JSON text for raw exponent notation and long floating-point runs. It fails on the previous commit's content (2 failures) and passes now. The programming package is exempt because it teaches Python literals.
+- **Common-mistakes sections** were added to 22 original lessons in ten packages that lacked one (biochemistry 5 and 6; biomaterials 5 and 6; bioreactors 5; differential equations 5; geroscience 5 to 14; organic chemistry 5; physiology 5 and 6; programming 5; statistics 6; transport 5). Each bullet names a mistake that the lesson's own text addresses. The two labs and the short statistics unit 5 have a different structure and were left alone. The earlier AI-assisted check of genetics had found the same gap there.
+- Tests: two version pins (statistics 0.3.2, geroscience 0.5.2) were updated. No assertion about maturity or review changed.
+
+| Command/check (this container, Python 3.12.3, 2026-10-08) | Result |
+| --- | --- |
+| `python tools/validate_content.py` | PASS: 25 packages, 210 lessons, 762 questions, 580 cards, 25 cases; 0 errors; 98 disclosed legacy-depth warnings |
+| `verify.sh` | see the PROGRESS.md entry for this pass |
+
+Not run: frontend checks, Docker Compose, Playwright for this pass. Not reviewed by a person.
+
+## Previous increment: genetics gets a proposed 14-week schedule, six lessons and an association lab (2026-10-08, fourteenth pass)
 
 Written by an AI coding assistant. Genetics & Genomics moves from 0.4.2 to 0.5.0 and stays `partial`, unreviewed and formative-only.
 

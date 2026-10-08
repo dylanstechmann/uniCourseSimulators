@@ -1,6 +1,6 @@
 # Biochemistry I: Proteins, Enzymes & Metabolism
 
-**Maturity: partial. Version: 0.3.1.**
+**Maturity: partial. Version: 0.3.2.**
 
 A mechanistic and quantitative introduction to protein structure, enzyme kinetics, thermodynamics, central metabolism, and pathway regulation.
 

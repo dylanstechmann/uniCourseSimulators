@@ -41,6 +41,16 @@ The data below are **synthetic teaching data**. Forty aged mice per arm were ran
 
 Among **survivors only**, improvement is 19/38 = 50.0% with vehicle and 20/32 = 62.5% with the senolytic: an apparent 12.5-percentage-point benefit. An **intention-to-treat** analysis keeps every randomized animal in its assigned arm and needs a prespecified rule for deaths. If death counts as "not improved," the rates are 19/40 = 47.5% and 20/40 = 50.0%, a 2.5-point difference. Treatment-related deaths removed the animals least likely to improve, so the surviving senolytic group looks healthier partly because of who remains. Report deaths as an outcome in their own right, analyze a composite such as "alive and improved," and show both analyses.
 
+## Common mistakes
+
+- Treating a transplantation result as proof that senescent cells arising naturally with age cause the same harm.
+- Assuming that the p16 promoter marks only senescent cells.
+- Analyzing only the survivors of a treatment that causes deaths, instead of every randomized animal.
+- Expecting a cleaner molecule against the same target to remove an on-target toxicity.
+- Presenting an intermittent schedule as an established safety advantage.
+- Forgetting that senescent cells help wound healing, so timing around an injury matters.
+- Reading mouse results as a recommendation for people; no senolytic is approved for treating aging.
+
 ## Worked example: plan a senolytic study
 
 Suppose a candidate inhibits BCL-xL. Prespecify one functional primary endpoint in the tissue of interest and record deaths and dropouts by randomized arm. Measure senescent-cell burden in that tissue with several markers before and after dosing, alongside target engagement. Monitor platelet counts at expected exposure peaks, plus body weight and organ chemistry. Include an injury-and-repair cohort if dosing could overlap healing. Follow animals after dosing stops to measure durability and how quickly burden returns. Include vehicle-treated aged animals and an untreated young reference group so you can tell whether "improvement" approaches a youthful value or merely differs from vehicle.

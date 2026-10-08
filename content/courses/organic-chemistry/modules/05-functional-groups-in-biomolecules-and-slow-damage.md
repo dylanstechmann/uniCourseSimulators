@@ -45,6 +45,15 @@ With a synthetic k_m = 0.01 per year:
 
 The model makes a general point without any claim about specific tissues: when replacement is slow, even a slow chemical reaction can modify a substantial fraction of a protein pool. Proteins such as some extracellular matrix components and lens proteins turn over slowly, and are among the molecules in which accumulated modifications are studied in aging research. The model also says the approach to steady state is slow for such proteins: its half-time is ln 2 / (k_m + k_d) = 8.7 years here.
 
+## Common mistakes
+
+- Ranking acyl derivatives by the strength of the carbonyl instead of by leaving-group ability and resonance donation.
+- Treating a typical pKa as fixed, when burial and neighboring charges inside a protein can shift it by several units.
+- Computing the protonated fraction when the unprotonated fraction, the nucleophile, is what matters, or the reverse.
+- Concluding that a group that is 99.9% protonated cannot react, when its small unprotonated fraction is the reactive form.
+- Dismissing slow chemistry, when with slow replacement f_ss = k_m/(k_m + k_d) can be large.
+- Reading the steady-state model as a statement about particular tissues.
+
 ## Worked example
 
 **Problem.** Using the same k_m = 0.01 per year, how much would doubling the replacement rate of the 10-year protein lower the steady-state modified fraction?

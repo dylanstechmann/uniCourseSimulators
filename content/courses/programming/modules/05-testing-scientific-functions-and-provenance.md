@@ -38,7 +38,7 @@ Compute expected values by a method that is independent of the code: by hand, wi
 
 ## Floating-point numbers and tolerances
 
-Computers store most real numbers approximately. In Python, `0.1 + 0.2` is `0.30000000000000004`, which differs from `0.3` by 5.55e-17. Comparing computed floats with `==` fails for reasons that have nothing to do with correctness. Compare with a tolerance, for example `math.isclose(a, b, rel_tol=1e-9)`, or `assertAlmostEqual`. Choose the tolerance from the problem: a tolerance of 1e-9 relative is about right for a closed-form formula, while a numerical integrator has a method error that you must estimate and allow for. Tolerances that are too tight make tests fail on a different machine; tolerances that are too loose let real bugs through. A test should also use **relative** tolerance for numbers that span orders of magnitude.
+Computers store most real numbers approximately. In Python, `0.1 + 0.2` is `0.30000000000000004`, which differs from `0.3` by `5.55e-17`. Comparing computed floats with `==` fails for reasons that have nothing to do with correctness. Compare with a tolerance, for example `math.isclose(a, b, rel_tol=1e-9)`, or `assertAlmostEqual`. Choose the tolerance from the problem: a tolerance of `1e-9` relative is about right for a closed-form formula, while a numerical integrator has a method error that you must estimate and allow for. Tolerances that are too tight make tests fail on a different machine; tolerances that are too loose let real bugs through. A test should also use **relative** tolerance for numbers that span orders of magnitude.
 
 ## Randomness and reproducibility
 
@@ -47,6 +47,15 @@ Many analyses use random numbers: bootstrap intervals, simulations, train-test s
 ## Provenance: tracing a figure to its inputs
 
 A figure that cannot be traced is hard to trust, including by its author a year later. Record with each result: a **hash** (for example SHA-256) of every input file, so a changed file is detected; the parameters and the random seed; the versions of the language and key libraries; and the code revision. Store these in a small text file next to the output. A useful final check is a clean rerun: delete the outputs, run the pipeline from the raw inputs on another machine or in a fresh environment, and confirm that the numbers match within the stated tolerance.
+
+## Common mistakes
+
+- Computing a test's expected value by running the function being tested.
+- Comparing floating-point results with ==.
+- Choosing a tolerance by trial and error, so that it is either too tight to survive another machine or too loose to catch bugs.
+- Using unseeded random numbers, or never recording the seed with the result.
+- Checking a statistical property with one fixed seed that happens to work.
+- Saving an output without hashes of the inputs, the parameters, the library versions and the code revision.
 
 ## Worked example
 

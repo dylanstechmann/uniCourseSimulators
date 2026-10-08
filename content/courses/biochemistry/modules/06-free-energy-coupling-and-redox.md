@@ -44,6 +44,15 @@ For electron transfer, ΔG°′ = −n F ΔE°′, where n is the number of elec
 
 The respiratory chain releases this energy in steps between carriers of increasing reduction potential, and three of those steps pump protons. The proton gradient, not the redox reaction directly, drives ATP synthase. The ratio of NAD⁺ to NADH in a compartment sets the actual potential of the couple in the same way Q sets the actual ΔG; NAD⁺ metabolism is studied in aging research, and this lesson's arithmetic is the background for reading that work, not an evaluation of it.
 
+## Common mistakes
+
+- Using ΔG°′ alone to decide whether a reaction runs in a cell, when the direction depends on the actual ΔG and so on the concentrations.
+- Dropping the RT ln Q term, or mixing natural and base-10 logarithms.
+- Calling two reactions coupled because they occur in the same cell, when coupling needs a shared intermediate or a direct transfer within one mechanism.
+- Adding free-energy changes of steps that do not sum to the stated overall reaction.
+- Taking ΔE°′ as donor minus acceptor, or leaving out n or F, when computing ΔG°′ = −n F ΔE°′.
+- Saying that the redox reaction itself makes ATP, when the proton gradient drives ATP synthase.
+
 ## Worked example
 
 **Problem.** A synthetic isomerization A ⇌ B has ΔG°′ = +5 kJ/mol. In a cell, the next enzyme keeps [B]/[A] at 0.05. Does the step run forward, and at what ratio would it stop?

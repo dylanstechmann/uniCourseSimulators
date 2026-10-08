@@ -1,6 +1,6 @@
 # Bioreactors & Tissue Culture Engineering
 
-**Maturity: partial. Version: 0.3.1.**
+**Maturity: partial. Version: 0.3.2.**
 
 Scale cell culture and tissue maturation through mass transfer, shear, process monitoring, control, sterility, and design-of-experiments principles.
 

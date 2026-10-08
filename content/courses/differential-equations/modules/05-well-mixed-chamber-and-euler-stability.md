@@ -43,6 +43,14 @@ For this linear equation each Euler step multiplies the deviation from steady st
 - **Convergence:** halving h should change the answer by a predictable amount (about half for Euler, which is first-order accurate).
 - **Conservation:** inflow minus outflow minus consumption over a period should equal the change in amount in the chamber.
 
+## Common mistakes
+
+- Taking the time constant from the flow alone, when τ = 1/(D + k) includes consumption.
+- Reporting the inlet concentration as the steady state and ignoring consumption.
+- Using an Euler step larger than 2/λ and trusting results that oscillate or go negative.
+- Reading stable as accurate: a step inside the stability limit can still overshoot badly.
+- Skipping the checks on bounds, steady state, convergence and conservation because the output looks smooth.
+
 ## Worked example
 
 **Problem.** The team doubles the flow to Q = 1.0 mL/min with everything else unchanged. What are the new steady state and time to 90%?
