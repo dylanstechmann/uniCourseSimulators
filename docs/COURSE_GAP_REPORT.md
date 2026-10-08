@@ -13,26 +13,26 @@ comprehensive coverage. Every package is still `partial` and unreviewed.
 | calculus-2 | partial | 5 | 11 | 14 | 12 | 0 | 0 | 4 | 1 |
 | calculus-3 | partial | 4 | 8 | 8 | 8 | 0 | 0 | 4 | 4 |
 | cell-biology | partial | 39 | 69 | 137 | 89 | 0 | 0 | 4 | 0 |
-| cellular-biomechanics | partial | 4 | 8 | 8 | 8 | 0 | 0 | 4 | 4 |
-| circuits | partial | 4 | 8 | 8 | 8 | 0 | 0 | 4 | 4 |
+| cellular-biomechanics | partial | 6 | 14 | 20 | 16 | 0 | 0 | 4 | 0 |
+| circuits | partial | 5 | 11 | 14 | 12 | 0 | 0 | 4 | 1 |
 | differential-equations | partial | 6 | 14 | 21 | 16 | 0 | 0 | 4 | 0 |
 | general-chemistry-1 | partial | 5 | 11 | 14 | 12 | 0 | 0 | 4 | 2 |
 | general-chemistry-2 | partial | 6 | 14 | 20 | 16 | 0 | 0 | 4 | 2 |
 | genetics | partial | 8 | 20 | 33 | 24 | 0 | 0 | 4 | 0 |
 | geroscience | partial | 14 | 38 | 54 | 48 | 0 | 0 | 4 | 0 |
-| linear-algebra | partial | 4 | 8 | 8 | 8 | 0 | 0 | 4 | 4 |
+| linear-algebra | partial | 6 | 14 | 20 | 16 | 0 | 0 | 4 | 0 |
 | organic-chemistry | partial | 5 | 11 | 14 | 12 | 0 | 0 | 4 | 2 |
-| physics-em | partial | 4 | 8 | 8 | 8 | 0 | 0 | 4 | 4 |
-| physics-mechanics | partial | 4 | 8 | 8 | 8 | 0 | 0 | 4 | 4 |
+| physics-em | partial | 5 | 11 | 14 | 12 | 0 | 0 | 4 | 2 |
+| physics-mechanics | partial | 5 | 11 | 14 | 12 | 0 | 0 | 4 | 1 |
 | physiology | partial | 6 | 14 | 20 | 16 | 0 | 0 | 4 | 0 |
 | programming | partial | 5 | 11 | 14 | 12 | 0 | 0 | 4 | 0 |
 | robotics | partial | 4 | 8 | 8 | 8 | 0 | 0 | 4 | 4 |
-| signals-control | partial | 4 | 8 | 8 | 8 | 0 | 0 | 4 | 4 |
-| statics-materials | partial | 4 | 8 | 8 | 8 | 0 | 0 | 4 | 4 |
+| signals-control | partial | 5 | 11 | 14 | 12 | 0 | 0 | 4 | 0 |
+| statics-materials | partial | 5 | 11 | 14 | 12 | 0 | 0 | 4 | 1 |
 | statistics | partial | 6 | 13 | 15 | 15 | 0 | 0 | 5 | 0 |
 | transport | partial | 5 | 11 | 13 | 12 | 0 | 0 | 4 | 2 |
 
-Totals: 25 packages, 168 lessons, 359 objectives, 510 practice items, 0 lesson objectives with no assessment mapping, 0 with no practice item, 48 of 101 course outcomes that no lesson objective links to.
+Totals: 25 packages, 177 lessons, 386 objectives, 564 practice items, 0 lesson objectives with no assessment mapping, 0 with no practice item, 25 of 101 course outcomes that no lesson objective links to.
 
 `tools/validate_content.py` counts course outcomes and lesson objectives together, so its `objective-coverage` warning
 persists for packages whose outcomes are not linked from any lesson objective. Linking them is a judgement for a
@@ -54,13 +54,9 @@ Outcomes with no linking lesson objective: `calculus-2-outcome-4`
 
 Outcomes with no linking lesson objective: `calculus-3-outcome-1`, `calculus-3-outcome-2`, `calculus-3-outcome-3`, `calculus-3-outcome-4`
 
-## cellular-biomechanics
-
-Outcomes with no linking lesson objective: `cellular-biomechanics-outcome-1`, `cellular-biomechanics-outcome-2`, `cellular-biomechanics-outcome-3`, `cellular-biomechanics-outcome-4`
-
 ## circuits
 
-Outcomes with no linking lesson objective: `circuits-outcome-1`, `circuits-outcome-2`, `circuits-outcome-3`, `circuits-outcome-4`
+Outcomes with no linking lesson objective: `circuits-outcome-2`
 
 ## general-chemistry-1
 
@@ -70,33 +66,25 @@ Outcomes with no linking lesson objective: `general-chemistry-1-outcome-2`, `gen
 
 Outcomes with no linking lesson objective: `general-chemistry-2-outcome-3`, `general-chemistry-2-outcome-4`
 
-## linear-algebra
-
-Outcomes with no linking lesson objective: `linear-algebra-outcome-1`, `linear-algebra-outcome-2`, `linear-algebra-outcome-3`, `linear-algebra-outcome-4`
-
 ## organic-chemistry
 
 Outcomes with no linking lesson objective: `organic-chemistry-outcome-2`, `organic-chemistry-outcome-3`
 
 ## physics-em
 
-Outcomes with no linking lesson objective: `physics-em-outcome-1`, `physics-em-outcome-2`, `physics-em-outcome-3`, `physics-em-outcome-4`
+Outcomes with no linking lesson objective: `physics-em-outcome-3`, `physics-em-outcome-4`
 
 ## physics-mechanics
 
-Outcomes with no linking lesson objective: `physics-mechanics-outcome-1`, `physics-mechanics-outcome-2`, `physics-mechanics-outcome-3`, `physics-mechanics-outcome-4`
+Outcomes with no linking lesson objective: `physics-mechanics-outcome-3`
 
 ## robotics
 
 Outcomes with no linking lesson objective: `robotics-outcome-1`, `robotics-outcome-2`, `robotics-outcome-3`, `robotics-outcome-4`
 
-## signals-control
-
-Outcomes with no linking lesson objective: `signals-control-outcome-1`, `signals-control-outcome-2`, `signals-control-outcome-3`, `signals-control-outcome-4`
-
 ## statics-materials
 
-Outcomes with no linking lesson objective: `statics-materials-outcome-1`, `statics-materials-outcome-2`, `statics-materials-outcome-3`, `statics-materials-outcome-4`
+Outcomes with no linking lesson objective: `statics-materials-outcome-1`
 
 ## transport
 

@@ -7,7 +7,7 @@
   "domain": "Physics",
   "level": "Year 1",
   "maturity": "partial",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "license": "MIT OR CC-BY-4.0",
   "content_origin": {
     "kind": "legacy-prototype",
@@ -97,6 +97,32 @@
       "description": "Distinguish electrode polarization from tissue signal.",
       "bloom": "analyze",
       "course_outcome_ids": []
+    },
+    {
+      "id": "physics-em-5-objective-1",
+      "description": "Calculate a cell's membrane capacitance from specific capacitance and area, and relate it to the dielectric constant and thickness with C = εA/d.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "physics-em-outcome-1",
+        "physics-em-outcome-2"
+      ]
+    },
+    {
+      "id": "physics-em-5-objective-2",
+      "description": "Compute the charge and number of ions needed to change membrane potential and compare it with the ions present in the cell.",
+      "bloom": "analyze",
+      "course_outcome_ids": [
+        "physics-em-outcome-1"
+      ]
+    },
+    {
+      "id": "physics-em-5-objective-3",
+      "description": "Calculate the electric field across the membrane and the membrane RC time constant, and interpret both.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "physics-em-outcome-1",
+        "physics-em-outcome-2"
+      ]
     }
   ],
   "duration": {
@@ -221,6 +247,41 @@
           ]
         }
       ]
+    },
+    {
+      "id": "physics-em-module-5",
+      "title": "The membrane as a capacitor",
+      "source_ids": [
+        "physicsEM",
+        "circuits"
+      ],
+      "lessons": [
+        {
+          "id": "physics-em-5",
+          "title": "The cell membrane as a capacitor: charge, ions, fields and the membrane time constant",
+          "reading": "modules/05-the-membrane-as-a-capacitor.md",
+          "objectives": [
+            "physics-em-5-objective-1",
+            "physics-em-5-objective-2",
+            "physics-em-5-objective-3"
+          ],
+          "worked_example": "A 10 μm sphere has 12.6 pF; a 100 mV swing moves 1.26×10⁻¹² C, about 7.8×10⁶ ions, roughly 2×10⁻⁵ of its potassium; the field at 70 mV is 1.4×10⁷ V/m and τ = 10 ms.",
+          "question_ids": [
+            "physics-em-5:capacitance",
+            "physics-em-5:charge",
+            "physics-em-5:ion-count",
+            "physics-em-5:field",
+            "physics-em-5:time-constant",
+            "physics-em-5:depletion-claim"
+          ],
+          "card_ids": [
+            "physics-em-5-card-1",
+            "physics-em-5-card-2",
+            "physics-em-5-card-3",
+            "physics-em-5-card-4"
+          ]
+        }
+      ]
     }
   ],
   "assessments": [
@@ -285,6 +346,27 @@
       "points": 2
     },
     {
+      "id": "physics-em-5-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "The membrane as a capacitor practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "physics-em-5-objective-1",
+        "physics-em-5-objective-2",
+        "physics-em-5-objective-3"
+      ],
+      "question_ids": [
+        "physics-em-5:capacitance",
+        "physics-em-5:charge",
+        "physics-em-5:ion-count",
+        "physics-em-5:field",
+        "physics-em-5:time-constant",
+        "physics-em-5:depletion-claim"
+      ],
+      "points": 6
+    },
+    {
       "id": "physics-em-case",
       "type": "case",
       "mode": "self-assessment",
@@ -326,6 +408,11 @@
       "version": "0.1.0",
       "date": "2026-10-05",
       "summary": "Preserved original compact prototype content in separate manifests and readings; labeled partial without semester or credit equivalency."
+    },
+    {
+      "version": "0.2.0",
+      "date": "2026-10-08",
+      "summary": "Added an original lesson on the cell membrane as a capacitor (capacitance, ions per voltage change, transmembrane field and time constant) with synthetic data, formative items with computed keys and retrieval cards. The package remains partial and unreviewed."
     }
   ],
   "limitations": [

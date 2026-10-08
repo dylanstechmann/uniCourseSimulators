@@ -7,7 +7,7 @@
   "domain": "Bioengineering",
   "level": "Year 3",
   "maturity": "partial",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "license": "MIT OR CC-BY-4.0",
   "content_origin": {
     "kind": "legacy-prototype",
@@ -98,6 +98,57 @@
       "description": "Choose analysis that respects nested replicates and batch structure.",
       "bloom": "evaluate",
       "course_outcome_ids": []
+    },
+    {
+      "id": "cellular-biomechanics-5-objective-1",
+      "description": "Estimate an apparent Young's modulus from an indentation force and depth with the Hertz model for a spherical tip, stating its assumptions.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "cellular-biomechanics-outcome-1"
+      ]
+    },
+    {
+      "id": "cellular-biomechanics-5-objective-2",
+      "description": "Calculate stress relaxation and the relaxation time for a Maxwell element and the instantaneous and long-time moduli of a standard linear solid.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "cellular-biomechanics-outcome-2"
+      ]
+    },
+    {
+      "id": "cellular-biomechanics-5-objective-3",
+      "description": "Evaluate why reported cell moduli differ between methods and loading rates, and what must be reported for a value to be comparable.",
+      "bloom": "evaluate",
+      "course_outcome_ids": [
+        "cellular-biomechanics-outcome-2",
+        "cellular-biomechanics-outcome-4"
+      ]
+    },
+    {
+      "id": "cellular-biomechanics-6-objective-1",
+      "description": "Design a factorial experiment that varies stiffness and ligand density independently, with the measurements needed to confirm each factor.",
+      "bloom": "create",
+      "course_outcome_ids": [
+        "cellular-biomechanics-outcome-4"
+      ]
+    },
+    {
+      "id": "cellular-biomechanics-6-objective-2",
+      "description": "Calculate main effects and an interaction effect from a 2×2 factorial and interpret them.",
+      "bloom": "analyze",
+      "course_outcome_ids": [
+        "cellular-biomechanics-outcome-4",
+        "cellular-biomechanics-outcome-3"
+      ]
+    },
+    {
+      "id": "cellular-biomechanics-6-objective-3",
+      "description": "Convert a surface ligand density into molecules per area and spacing, and estimate total traction force from traction stress and adhesion area.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "cellular-biomechanics-outcome-3",
+        "cellular-biomechanics-outcome-1"
+      ]
     }
   ],
   "duration": {
@@ -222,6 +273,76 @@
           ]
         }
       ]
+    },
+    {
+      "id": "cellular-biomechanics-module-5",
+      "title": "Indentation and viscoelasticity",
+      "source_ids": [
+        "biomaterials",
+        "transport"
+      ],
+      "lessons": [
+        {
+          "id": "cellular-biomechanics-5",
+          "title": "Measuring how stiff a cell is: Hertz indentation, viscoelastic relaxation and what a single modulus hides",
+          "reading": "modules/05-hertz-indentation-and-viscoelasticity.md",
+          "objectives": [
+            "cellular-biomechanics-5-objective-1",
+            "cellular-biomechanics-5-objective-2",
+            "cellular-biomechanics-5-objective-3"
+          ],
+          "worked_example": "A 0.3 nN force at 0.5 μm with a 2.5 μm sphere gives E ≈ 302 Pa; a Maxwell element with τ = 2.0 s relaxes 100 Pa to 8.2 Pa in 5 s; a standard linear solid reads 1200 Pa fast and 400 Pa slow.",
+          "question_ids": [
+            "cellular-biomechanics-5:hertz-modulus",
+            "cellular-biomechanics-5:hertz-scaling",
+            "cellular-biomechanics-5:maxwell-tau",
+            "cellular-biomechanics-5:maxwell-stress",
+            "cellular-biomechanics-5:sls-instantaneous",
+            "cellular-biomechanics-5:thin-region"
+          ],
+          "card_ids": [
+            "cellular-biomechanics-5-card-1",
+            "cellular-biomechanics-5-card-2",
+            "cellular-biomechanics-5-card-3",
+            "cellular-biomechanics-5-card-4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cellular-biomechanics-module-6",
+      "title": "Stiffness versus ligand density",
+      "source_ids": [
+        "biomaterials",
+        "transport"
+      ],
+      "lessons": [
+        {
+          "id": "cellular-biomechanics-6",
+          "title": "Separating substrate stiffness from ligand density: factorial design, interaction effects and traction forces",
+          "reading": "modules/06-stiffness-versus-ligand-density.md",
+          "objectives": [
+            "cellular-biomechanics-6-objective-1",
+            "cellular-biomechanics-6-objective-2",
+            "cellular-biomechanics-6-objective-3"
+          ],
+          "worked_example": "In the synthetic 2×2 the stiffness main effect is 900 μm², the ligand main effect 800 μm² and the interaction 400 μm²; 10⁻¹² mol/cm² is 6022 molecules/μm² (about 13 nm apart); 300 Pa over 1000 μm² is 300 nN.",
+          "question_ids": [
+            "cellular-biomechanics-6:design-elements",
+            "cellular-biomechanics-6:stiffness-effect",
+            "cellular-biomechanics-6:interaction",
+            "cellular-biomechanics-6:ligand-density",
+            "cellular-biomechanics-6:traction-force",
+            "cellular-biomechanics-6:confounded-claim"
+          ],
+          "card_ids": [
+            "cellular-biomechanics-6-card-1",
+            "cellular-biomechanics-6-card-2",
+            "cellular-biomechanics-6-card-3",
+            "cellular-biomechanics-6-card-4"
+          ]
+        }
+      ]
     }
   ],
   "assessments": [
@@ -286,6 +407,48 @@
       "points": 2
     },
     {
+      "id": "cellular-biomechanics-5-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Indentation and viscoelasticity practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "cellular-biomechanics-5-objective-1",
+        "cellular-biomechanics-5-objective-2",
+        "cellular-biomechanics-5-objective-3"
+      ],
+      "question_ids": [
+        "cellular-biomechanics-5:hertz-modulus",
+        "cellular-biomechanics-5:hertz-scaling",
+        "cellular-biomechanics-5:maxwell-tau",
+        "cellular-biomechanics-5:maxwell-stress",
+        "cellular-biomechanics-5:sls-instantaneous",
+        "cellular-biomechanics-5:thin-region"
+      ],
+      "points": 6
+    },
+    {
+      "id": "cellular-biomechanics-6-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Stiffness versus ligand density practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "cellular-biomechanics-6-objective-1",
+        "cellular-biomechanics-6-objective-2",
+        "cellular-biomechanics-6-objective-3"
+      ],
+      "question_ids": [
+        "cellular-biomechanics-6:design-elements",
+        "cellular-biomechanics-6:stiffness-effect",
+        "cellular-biomechanics-6:interaction",
+        "cellular-biomechanics-6:ligand-density",
+        "cellular-biomechanics-6:traction-force",
+        "cellular-biomechanics-6:confounded-claim"
+      ],
+      "points": 7
+    },
+    {
       "id": "cellular-biomechanics-case",
       "type": "case",
       "mode": "self-assessment",
@@ -327,6 +490,11 @@
       "version": "0.1.0",
       "date": "2026-10-05",
       "summary": "Preserved original compact prototype content in separate manifests and readings; labeled partial without semester or credit equivalency."
+    },
+    {
+      "version": "0.2.0",
+      "date": "2026-10-08",
+      "summary": "Added two original lessons (Hertz indentation and viscoelastic relaxation; separating substrate stiffness from ligand density with a factorial design and traction forces) with synthetic data, formative items with computed keys and retrieval cards. The package remains partial and unreviewed."
     }
   ],
   "limitations": [

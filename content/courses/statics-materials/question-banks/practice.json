@@ -247,6 +247,193 @@
         "kind": "original",
         "modifications": []
       }
+    },
+    {
+      "id": "statics-materials-5:second-moment",
+      "type": "numeric",
+      "prompt": "A hollow circular section has outer radius 13 mm and inner radius 7 mm. Calculate its second moment of area I = (π/4)(r_o⁴ − r_i⁴) in mm⁴. Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "statics-materials-5-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 20546.0,
+        "unit": "",
+        "tolerance": 5,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Raise each radius to the fourth power before subtracting.",
+        "solution": "(π/4)(28561 − 2401) = 20546 mm⁴.",
+        "lesson_ids": [
+          "statics-materials-5"
+        ],
+        "misconception_ids": [
+          "diameter-for-radius"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "statics-materials-5:bending-stress",
+      "type": "numeric",
+      "prompt": "With I = 20546 mm⁴ and outer radius 13 mm, what is the peak bending stress under a moment of 100 N·m? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "statics-materials-5-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 63.273,
+        "unit": "MPa",
+        "tolerance": 0.2,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "σ = My/I; work in N·mm and mm so the result is in N/mm² = MPa.",
+        "solution": "10⁵ N·mm × 13 mm / 20546 mm⁴ = 63.3 MPa.",
+        "lesson_ids": [
+          "statics-materials-5"
+        ],
+        "misconception_ids": [
+          "nm-nmm-confusion"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "statics-materials-5:combined-stress",
+      "type": "numeric",
+      "prompt": "The same section (377 mm² area) also carries a 2000 N axial compression. What is the total compressive stress on the compressive side of the bend, given a bending stress of 63.3 MPa? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "statics-materials-5-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 68.578,
+        "unit": "MPa",
+        "tolerance": 0.2,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Axial stress is P/A; on the compressive side it adds to bending compression.",
+        "solution": "σ_a = 2000/377 = 5.31 MPa; total 63.3 + 5.31 = 68.6 MPa.",
+        "lesson_ids": [
+          "statics-materials-5"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "statics-materials-5:safety-factor",
+      "type": "numeric",
+      "prompt": "With a compressive strength of 150 MPa and a peak compressive stress of 68.6 MPa (maximum-normal-stress criterion), what is the safety factor? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "statics-materials-5-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 2.1873,
+        "unit": "",
+        "tolerance": 0.02,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "SF = strength / stress for the stated criterion.",
+        "solution": "150/68.6 = 2.19.",
+        "lesson_ids": [
+          "statics-materials-5"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "statics-materials-5:solid-equivalent",
+      "type": "numeric",
+      "prompt": "A solid circular rod has the same area (377 mm²) as the hollow section. What is its peak bending stress under the same 100 N·m moment? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "statics-materials-5-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 96.859,
+        "unit": "MPa",
+        "tolerance": 0.3,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Find the solid radius from the area, then I = (π/4)r⁴ and σ = Mr/I.",
+        "solution": "r = 10.95 mm, I = 11310 mm⁴, σ = 10⁵ × 10.95/11310 = 96.9 MPa, 1.53× the hollow value.",
+        "lesson_ids": [
+          "statics-materials-5"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "statics-materials-5:stress-shielding",
+      "type": "single_choice",
+      "prompt": "A titanium stem much stiffer than bone is fixed inside a femur. Which consequence follows from load sharing between parallel members?",
+      "points": 1,
+      "objective_ids": [
+        "statics-materials-5-objective-3"
+      ],
+      "options": [
+        "The bone carries more load because titanium is lighter.",
+        "Stiffness does not affect load sharing; only strength does.",
+        "The stiffer stem carries a larger share of the load, leaving the surrounding bone under-loaded, which can lead to bone loss (stress shielding).",
+        "Load always divides equally between attached members."
+      ],
+      "solution_spec": {
+        "answer": 2
+      },
+      "feedback": {
+        "hint": "Parallel members share load in proportion to stiffness.",
+        "solution": "In parallel, deformation is shared and force divides by stiffness (EI in bending). A much stiffer implant takes most of the load; bone adapts to reduced loading by losing mass.",
+        "lesson_ids": [
+          "statics-materials-5"
+        ],
+        "misconception_ids": [
+          "strength-sets-load-share"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
     }
   ]
 }

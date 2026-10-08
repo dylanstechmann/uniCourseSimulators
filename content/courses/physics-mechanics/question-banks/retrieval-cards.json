@@ -65,6 +65,46 @@
       "back": "The slope of a linear stress-strain relation in a specified regime and test direction.",
       "objective_ids": [],
       "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "physics-mechanics-5-card-1",
+      "lesson_id": "physics-mechanics-5",
+      "front": "Impact speed",
+      "back": "v = √(2gh), independent of mass, neglecting air resistance.",
+      "objective_ids": [
+        "physics-mechanics-5-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "physics-mechanics-5-card-2",
+      "lesson_id": "physics-mechanics-5",
+      "front": "Impulse",
+      "back": "F̄Δt = Δp: longer stopping time means lower average force.",
+      "objective_ids": [
+        "physics-mechanics-5-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "physics-mechanics-5-card-3",
+      "lesson_id": "physics-mechanics-5",
+      "front": "Work–energy",
+      "back": "F̄d = ½mv²: longer stopping distance means lower average force.",
+      "objective_ids": [
+        "physics-mechanics-5-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "physics-mechanics-5-card-4",
+      "lesson_id": "physics-mechanics-5",
+      "front": "Average versus peak",
+      "back": "Peaks can be about twice the average or spike when padding bottoms out; stress also depends on contact area.",
+      "objective_ids": [
+        "physics-mechanics-5-objective-3"
+      ],
+      "license": "CC-BY-4.0"
     }
   ]
 }

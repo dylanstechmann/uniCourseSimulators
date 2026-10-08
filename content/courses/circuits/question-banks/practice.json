@@ -247,6 +247,191 @@
         "kind": "original",
         "modifications": []
       }
+    },
+    {
+      "id": "circuits-5:divider",
+      "type": "numeric",
+      "prompt": "A thermistor of 12.5 kΩ is in series with a 10 kΩ resistor across 3.3 V. What is the voltage across the thermistor? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "circuits-5-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 1.8333,
+        "unit": "V",
+        "tolerance": 0.005,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "V_out = V_s R₂/(R₁ + R₂).",
+        "solution": "3.3 × 12.5/(10 + 12.5) = 1.833 V.",
+        "lesson_ids": [
+          "circuits-5"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "circuits-5:thevenin-r",
+      "type": "numeric",
+      "prompt": "What is the Thevenin resistance seen at the junction of a 10 kΩ and a 12.5 kΩ divider? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "circuits-5-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 5555.6,
+        "unit": "Ω",
+        "tolerance": 10,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "With the supply replaced by a short, the two resistors are in parallel.",
+        "solution": "10 ∥ 12.5 kΩ = 5.56 kΩ.",
+        "lesson_ids": [
+          "circuits-5"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "circuits-5:loading-error",
+      "type": "numeric",
+      "prompt": "An electrode with source resistance 1 MΩ is read by an amplifier with input resistance 10 MΩ. What is the loading error, as a percentage of the true voltage? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "circuits-5-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 9.0909,
+        "unit": "%",
+        "tolerance": 0.05,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Error = R_s/(R_s + R_in).",
+        "solution": "1/(1 + 10) = 0.0909 = 9.09%.",
+        "lesson_ids": [
+          "circuits-5"
+        ],
+        "misconception_ids": [
+          "ignore-source-resistance"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "circuits-5:lsb",
+      "type": "numeric",
+      "prompt": "What is one least significant bit of a 12-bit ADC with a 3.3 V reference? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "circuits-5-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 0.80566,
+        "unit": "mV",
+        "tolerance": 0.005,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Divide the reference by 2ᴺ.",
+        "solution": "3.3/4096 = 0.806 mV.",
+        "lesson_ids": [
+          "circuits-5"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "circuits-5:temperature-resolution",
+      "type": "numeric",
+      "prompt": "A temperature sensor circuit gives 40 mV per °C and is read by an ADC with 1 LSB = 0.806 mV. What is the smallest resolvable temperature change in °C? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "circuits-5-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 0.02014,
+        "unit": "",
+        "tolerance": 0.0005,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Divide the LSB by the sensitivity.",
+        "solution": "0.806/40 = 0.0201 °C; accuracy can be much worse.",
+        "lesson_ids": [
+          "circuits-5"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "circuits-5:resolution-vs-accuracy",
+      "type": "single_choice",
+      "prompt": "A data logger displays incubator temperature to 0.01 °C. Its thermistor divider has a 3% loading error at the logger input and the reference voltage drifts 1% over a day. Which statement is correct?",
+      "points": 1,
+      "objective_ids": [
+        "circuits-5-objective-3"
+      ],
+      "options": [
+        "Loading error cancels out because it is constant.",
+        "The reading is accurate to 0.01 °C because that is what is displayed.",
+        "Reference drift does not affect ratiometric or non-ratiometric readings.",
+        "The display resolution does not reflect accuracy; the loading and reference errors dominate, so the reading can be off by much more than 0.01 °C."
+      ],
+      "solution_spec": {
+        "answer": 3
+      },
+      "feedback": {
+        "hint": "List each error in the same units and find the largest.",
+        "solution": "Resolution is the step size of the display. Gain errors from loading and reference drift shift the reading by percent-level amounts. A constant loading error can be calibrated out only if calibration was done with the same input connected.",
+        "lesson_ids": [
+          "circuits-5"
+        ],
+        "misconception_ids": [
+          "resolution-is-accuracy"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
     }
   ]
 }

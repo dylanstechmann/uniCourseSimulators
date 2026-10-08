@@ -65,6 +65,46 @@
       "back": "A digital implementation that samples a signal and holds the value between updates.",
       "objective_ids": [],
       "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "signals-control-5-card-1",
+      "lesson_id": "signals-control-5",
+      "front": "First-order plant",
+      "back": "τ dy/dt = −y + Ku; G(s) = K/(τs + 1).",
+      "objective_ids": [
+        "signals-control-5-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "signals-control-5-card-2",
+      "lesson_id": "signals-control-5",
+      "front": "Proportional control",
+      "back": "Loop gain L = KK_p; steady-state error r/(1 + L); closed-loop τ/(1 + L).",
+      "objective_ids": [
+        "signals-control-5-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "signals-control-5-card-3",
+      "lesson_id": "signals-control-5",
+      "front": "Saturation",
+      "back": "When the actuator is at its limit, feedback is effectively open and linear speed predictions fail.",
+      "objective_ids": [
+        "signals-control-5-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "signals-control-5-card-4",
+      "lesson_id": "signals-control-5",
+      "front": "Integral action",
+      "back": "Removes steady-state error; needs anti-windup during saturation; noise still passes through.",
+      "objective_ids": [
+        "signals-control-5-objective-3"
+      ],
+      "license": "CC-BY-4.0"
     }
   ]
 }

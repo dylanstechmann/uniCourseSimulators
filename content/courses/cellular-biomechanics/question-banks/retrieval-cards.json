@@ -65,6 +65,86 @@
       "back": "An independent biological unit, such as a donor or independently cultured sample, relevant to the inference.",
       "objective_ids": [],
       "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "cellular-biomechanics-5-card-1",
+      "lesson_id": "cellular-biomechanics-5",
+      "front": "Hertz for a sphere",
+      "back": "F = (4/3)[E/(1 − ν²)]√R δ^(3/2); assumes a homogeneous, elastic half-space and small indentation.",
+      "objective_ids": [
+        "cellular-biomechanics-5-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "cellular-biomechanics-5-card-2",
+      "lesson_id": "cellular-biomechanics-5",
+      "front": "Maxwell element",
+      "back": "Spring and dashpot in series: stress relaxes as e^(−t/τ) with τ = η/E, eventually to zero.",
+      "objective_ids": [
+        "cellular-biomechanics-5-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "cellular-biomechanics-5-card-3",
+      "lesson_id": "cellular-biomechanics-5",
+      "front": "Standard linear solid",
+      "back": "Instantaneous modulus E₁ + E₂, long-time modulus E₁, relaxation time η/E₂.",
+      "objective_ids": [
+        "cellular-biomechanics-5-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "cellular-biomechanics-5-card-4",
+      "lesson_id": "cellular-biomechanics-5",
+      "front": "Reporting cell stiffness",
+      "back": "State method, tip geometry, depth, loading rate, location, model and fitting range.",
+      "objective_ids": [
+        "cellular-biomechanics-5-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "cellular-biomechanics-6-card-1",
+      "lesson_id": "cellular-biomechanics-6",
+      "front": "Stiffness–ligand confounding",
+      "back": "Tuning gel stiffness can change ligand amount, tethering and porosity; measure both factors on each batch.",
+      "objective_ids": [
+        "cellular-biomechanics-6-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "cellular-biomechanics-6-card-2",
+      "lesson_id": "cellular-biomechanics-6",
+      "front": "2×2 factorial effects",
+      "back": "Main effect = average difference across the other factor; interaction = half the difference of differences.",
+      "objective_ids": [
+        "cellular-biomechanics-6-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "cellular-biomechanics-6-card-3",
+      "lesson_id": "cellular-biomechanics-6",
+      "front": "Ligand density units",
+      "back": "mol/cm² × 6.022×10²³ / 10⁸ = molecules/μm²; spacing ≈ 1/√density.",
+      "objective_ids": [
+        "cellular-biomechanics-6-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "cellular-biomechanics-6-card-4",
+      "lesson_id": "cellular-biomechanics-6",
+      "front": "Traction force",
+      "back": "Total force = traction stress × adhesive area; requires the gel modulus.",
+      "objective_ids": [
+        "cellular-biomechanics-6-objective-3"
+      ],
+      "license": "CC-BY-4.0"
     }
   ]
 }

@@ -7,7 +7,7 @@
   "domain": "Electrical engineering",
   "level": "Year 2",
   "maturity": "partial",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "license": "MIT OR CC-BY-4.0",
   "content_origin": {
     "kind": "legacy-prototype",
@@ -97,6 +97,31 @@
       "description": "Propagate uncertainty to a reported measurement.",
       "bloom": "understand",
       "course_outcome_ids": []
+    },
+    {
+      "id": "circuits-5-objective-1",
+      "description": "Analyze a voltage divider and a source with internal resistance using a Thevenin equivalent.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "circuits-outcome-1"
+      ]
+    },
+    {
+      "id": "circuits-5-objective-2",
+      "description": "Calculate the loading error when a measuring input of finite resistance is connected, and choose an input resistance that keeps the error below a target.",
+      "bloom": "analyze",
+      "course_outcome_ids": [
+        "circuits-outcome-4",
+        "circuits-outcome-3"
+      ]
+    },
+    {
+      "id": "circuits-5-objective-3",
+      "description": "Compute ADC resolution and convert it into the smallest change in the measured physical quantity, and evaluate which error dominates.",
+      "bloom": "evaluate",
+      "course_outcome_ids": [
+        "circuits-outcome-4"
+      ]
     }
   ],
   "duration": {
@@ -221,6 +246,41 @@
           ]
         }
       ]
+    },
+    {
+      "id": "circuits-module-5",
+      "title": "Sensor loading and ADC resolution",
+      "source_ids": [
+        "circuits",
+        "signals"
+      ],
+      "lessons": [
+        {
+          "id": "circuits-5",
+          "title": "Reading a sensor without fooling yourself: voltage dividers, loading error and ADC resolution",
+          "reading": "modules/05-sensor-loading-and-adc-resolution.md",
+          "objectives": [
+            "circuits-5-objective-1",
+            "circuits-5-objective-2",
+            "circuits-5-objective-3"
+          ],
+          "worked_example": "The divider gives 1.833 V from 3.3 V; a 1 MΩ electrode read by a 10 MΩ input loses 9.1% (and 0.10% at 1 GΩ); a 12-bit ADC on 3.3 V resolves 0.806 mV, or 0.020 °C at 40 mV/°C.",
+          "question_ids": [
+            "circuits-5:divider",
+            "circuits-5:thevenin-r",
+            "circuits-5:loading-error",
+            "circuits-5:lsb",
+            "circuits-5:temperature-resolution",
+            "circuits-5:resolution-vs-accuracy"
+          ],
+          "card_ids": [
+            "circuits-5-card-1",
+            "circuits-5-card-2",
+            "circuits-5-card-3",
+            "circuits-5-card-4"
+          ]
+        }
+      ]
     }
   ],
   "assessments": [
@@ -285,6 +345,27 @@
       "points": 2
     },
     {
+      "id": "circuits-5-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Sensor loading and ADC resolution practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "circuits-5-objective-1",
+        "circuits-5-objective-2",
+        "circuits-5-objective-3"
+      ],
+      "question_ids": [
+        "circuits-5:divider",
+        "circuits-5:thevenin-r",
+        "circuits-5:loading-error",
+        "circuits-5:lsb",
+        "circuits-5:temperature-resolution",
+        "circuits-5:resolution-vs-accuracy"
+      ],
+      "points": 6
+    },
+    {
       "id": "circuits-case",
       "type": "case",
       "mode": "self-assessment",
@@ -326,6 +407,11 @@
       "version": "0.1.0",
       "date": "2026-10-05",
       "summary": "Preserved original compact prototype content in separate manifests and readings; labeled partial without semester or credit equivalency."
+    },
+    {
+      "version": "0.2.0",
+      "date": "2026-10-08",
+      "summary": "Added an original lesson on sensor loading and ADC resolution (dividers, Thevenin resistance, input-impedance error, resolution versus accuracy) with synthetic data, formative items with computed keys and retrieval cards. The package remains partial and unreviewed."
     }
   ],
   "limitations": [

@@ -65,6 +65,46 @@
       "back": "A sensor response to a variable other than the intended measurand.",
       "objective_ids": [],
       "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "circuits-5-card-1",
+      "lesson_id": "circuits-5",
+      "front": "Voltage divider",
+      "back": "V_out = V_s R₂/(R₁ + R₂); resistive sensors turn resistance into voltage.",
+      "objective_ids": [
+        "circuits-5-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "circuits-5-card-2",
+      "lesson_id": "circuits-5",
+      "front": "Loading error",
+      "back": "Error = R_th/(R_th + R_in); need R_in ≫ source resistance, especially for electrodes.",
+      "objective_ids": [
+        "circuits-5-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "circuits-5-card-3",
+      "lesson_id": "circuits-5",
+      "front": "ADC resolution",
+      "back": "1 LSB = V_ref/2ᴺ; divide by sensitivity for resolution in physical units.",
+      "objective_ids": [
+        "circuits-5-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "circuits-5-card-4",
+      "lesson_id": "circuits-5",
+      "front": "Resolution is not accuracy",
+      "back": "Loading, calibration, reference drift and noise can dominate the last displayed digit.",
+      "objective_ids": [
+        "circuits-5-objective-3"
+      ],
+      "license": "CC-BY-4.0"
     }
   ]
 }

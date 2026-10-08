@@ -246,6 +246,194 @@
         "kind": "original",
         "modifications": []
       }
+    },
+    {
+      "id": "physics-mechanics-5:impact-speed",
+      "type": "numeric",
+      "prompt": "An object is dropped from rest through 0.5 m. Neglecting air resistance and with g = 9.81 m/s², what is its speed at impact? Enter the number only (m/s).",
+      "points": 1,
+      "objective_ids": [
+        "physics-mechanics-5-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 3.1321,
+        "unit": "",
+        "tolerance": 0.02,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Equate mgh to ½mv².",
+        "solution": "v = √(2 × 9.81 × 0.5) = 3.13 m/s, independent of mass.",
+        "lesson_ids": [
+          "physics-mechanics-5"
+        ],
+        "misconception_ids": [
+          "v-equals-gh"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physics-mechanics-5:impulse-force",
+      "type": "numeric",
+      "prompt": "A 70 kg body moving at 3.13 m/s is stopped in 10 ms. What average force does the stop require? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "physics-mechanics-5-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 21924.6,
+        "unit": "N",
+        "tolerance": 30,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "F̄ = Δp/Δt; convert ms to s.",
+        "solution": "p = 70 × 3.13 = 219.2 kg·m/s; F̄ = 219.2/0.01 = 21925 N.",
+        "lesson_ids": [
+          "physics-mechanics-5"
+        ],
+        "misconception_ids": [
+          "ms-as-s"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physics-mechanics-5:padded-force",
+      "type": "numeric",
+      "prompt": "The same momentum (219.2 kg·m/s) is removed over 50 ms on a compliant surface. What is the average force? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "physics-mechanics-5-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 4384.9,
+        "unit": "N",
+        "tolerance": 10,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Same impulse, longer time.",
+        "solution": "219.2/0.05 = 4385 N, one fifth of the hard-surface value.",
+        "lesson_ids": [
+          "physics-mechanics-5"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physics-mechanics-5:work-energy-force",
+      "type": "numeric",
+      "prompt": "A body with 343.4 J of kinetic energy is stopped by padding that compresses 2 cm. What average force does the padding exert? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "physics-mechanics-5-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 17167.5,
+        "unit": "N",
+        "tolerance": 20,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "F̄ d = kinetic energy; use d in meters.",
+        "solution": "343.4 J / 0.02 m = 17168 N.",
+        "lesson_ids": [
+          "physics-mechanics-5"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physics-mechanics-5:scaling-check",
+      "type": "single_choice",
+      "prompt": "A student's formula for the impact force at fixed stopping time predicts that doubling the drop height doubles the force. What does a scaling check show?",
+      "points": 1,
+      "objective_ids": [
+        "physics-mechanics-5-objective-3"
+      ],
+      "options": [
+        "Force should quadruple.",
+        "Force should be independent of height.",
+        "At fixed stopping time, force scales with speed, which scales with √h; doubling h should raise force by about 1.41, so the formula is likely wrong.",
+        "The formula is right; force always scales with height."
+      ],
+      "solution_spec": {
+        "answer": 2
+      },
+      "feedback": {
+        "hint": "Write F̄ = m√(2gh)/Δt and see how it depends on h.",
+        "solution": "Momentum scales with √h. Force doubling with h would be correct at fixed stopping distance, where force scales with energy; a formula must match the stated condition.",
+        "lesson_ids": [
+          "physics-mechanics-5"
+        ],
+        "misconception_ids": [
+          "scaling-not-checked"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physics-mechanics-5:average-vs-peak",
+      "type": "single_choice",
+      "prompt": "Two surfaces produce the same average stopping force, but one bottoms out near the end of compression. Which statement is correct?",
+      "points": 1,
+      "objective_ids": [
+        "physics-mechanics-5-objective-3"
+      ],
+      "options": [
+        "The peak force can be much higher on the surface that bottoms out, so equal averages do not imply equal loading.",
+        "Bottoming out lowers the peak force.",
+        "Peak force does not matter for tissue.",
+        "Equal averages mean equal peaks."
+      ],
+      "solution_spec": {
+        "answer": 0
+      },
+      "feedback": {
+        "hint": "Average force hides how the force varies during the stop.",
+        "solution": "A sudden stiffening at the end produces a spike. Damage often depends on peak force, stress and loading rate, so averages are a starting estimate, not the whole answer.",
+        "lesson_ids": [
+          "physics-mechanics-5"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
     }
   ]
 }

@@ -65,6 +65,46 @@
       "back": "An amplifier's ability to suppress voltage shared by both inputs while amplifying their difference.",
       "objective_ids": [],
       "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "physics-em-5-card-1",
+      "lesson_id": "physics-em-5",
+      "front": "Membrane capacitance",
+      "back": "C_m ≈ 1 μF/cm² = 0.01 F/m²; total C = C_m × area; C = ε₀ε_rA/d.",
+      "objective_ids": [
+        "physics-em-5-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "physics-em-5-card-2",
+      "lesson_id": "physics-em-5",
+      "front": "Ions per voltage change",
+      "back": "Q = CV; ions = Q/e, a tiny fraction of the cell's ions.",
+      "objective_ids": [
+        "physics-em-5-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "physics-em-5-card-3",
+      "lesson_id": "physics-em-5",
+      "front": "Transmembrane field",
+      "back": "E = V/d ≈ 10⁷ V/m for 70 mV across 5 nm.",
+      "objective_ids": [
+        "physics-em-5-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "physics-em-5-card-4",
+      "lesson_id": "physics-em-5",
+      "front": "Membrane time constant",
+      "back": "τ = R_mC_m (specific values), independent of cell size.",
+      "objective_ids": [
+        "physics-em-5-objective-3"
+      ],
+      "license": "CC-BY-4.0"
     }
   ]
 }

@@ -7,7 +7,7 @@
   "domain": "Mathematics",
   "level": "Year 2",
   "maturity": "partial",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "license": "MIT OR CC-BY-4.0",
   "content_origin": {
     "kind": "legacy-prototype",
@@ -97,6 +97,58 @@
       "description": "Interpret residuals and avoid overclaiming from fit quality.",
       "bloom": "analyze",
       "course_outcome_ids": []
+    },
+    {
+      "id": "linear-algebra-5-objective-1",
+      "description": "Write a straight-line fit as an overdetermined system Ax ≈ b and form and solve the normal equations AᵀAx = Aᵀb.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "linear-algebra-outcome-4",
+        "linear-algebra-outcome-1"
+      ]
+    },
+    {
+      "id": "linear-algebra-5-objective-2",
+      "description": "Compute residuals and R², and explain why the residual vector is orthogonal to the columns of A.",
+      "bloom": "analyze",
+      "course_outcome_ids": [
+        "linear-algebra-outcome-4",
+        "linear-algebra-outcome-2"
+      ]
+    },
+    {
+      "id": "linear-algebra-5-objective-3",
+      "description": "Use a fitted calibration to estimate an unknown and evaluate when the fit or its use is unreliable.",
+      "bloom": "evaluate",
+      "course_outcome_ids": [
+        "linear-algebra-outcome-4"
+      ]
+    },
+    {
+      "id": "linear-algebra-6-objective-1",
+      "description": "Write a transition matrix for a two-state Markov chain and propagate a population distribution forward in time.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "linear-algebra-outcome-3",
+        "linear-algebra-outcome-1"
+      ]
+    },
+    {
+      "id": "linear-algebra-6-objective-2",
+      "description": "Compute the stationary distribution as the eigenvector for eigenvalue 1 and interpret it.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "linear-algebra-outcome-3",
+        "linear-algebra-outcome-2"
+      ]
+    },
+    {
+      "id": "linear-algebra-6-objective-3",
+      "description": "Use the second eigenvalue to determine how fast the population approaches the stationary distribution and evaluate the model's assumptions.",
+      "bloom": "evaluate",
+      "course_outcome_ids": [
+        "linear-algebra-outcome-3"
+      ]
     }
   ],
   "duration": {
@@ -221,6 +273,76 @@
           ]
         }
       ]
+    },
+    {
+      "id": "linear-algebra-module-5",
+      "title": "Least squares and calibration",
+      "source_ids": [
+        "linearAlgebra",
+        "engineeringMath"
+      ],
+      "lessons": [
+        {
+          "id": "linear-algebra-5",
+          "title": "Least squares as linear algebra: fitting a calibration line, normal equations and reading residuals",
+          "reading": "modules/05-least-squares-calibration-and-residuals.md",
+          "objectives": [
+            "linear-algebra-5-objective-1",
+            "linear-algebra-5-objective-2",
+            "linear-algebra-5-objective-3"
+          ],
+          "worked_example": "The normal equations for the synthetic standards give y = 0.100 + 1.970x with R² = 0.9984; the residuals sum to zero because they are orthogonal to the column of ones; a signal of 5.0 reads back as 2.487 μM.",
+          "question_ids": [
+            "linear-algebra-5:slope",
+            "linear-algebra-5:intercept",
+            "linear-algebra-5:r-squared",
+            "linear-algebra-5:read-unknown",
+            "linear-algebra-5:orthogonality",
+            "linear-algebra-5:perfect-fit"
+          ],
+          "card_ids": [
+            "linear-algebra-5-card-1",
+            "linear-algebra-5-card-2",
+            "linear-algebra-5-card-3",
+            "linear-algebra-5-card-4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "linear-algebra-module-6",
+      "title": "Markov chains for cell states",
+      "source_ids": [
+        "linearAlgebra",
+        "engineeringMath"
+      ],
+      "lessons": [
+        {
+          "id": "linear-algebra-6",
+          "title": "Cell-state transitions as a Markov chain: transition matrices, the eigenvalue 1 and how fast a population settles",
+          "reading": "modules/06-markov-chains-for-cell-state-transitions.md",
+          "objectives": [
+            "linear-algebra-6-objective-1",
+            "linear-algebra-6-objective-2",
+            "linear-algebra-6-objective-3"
+          ],
+          "worked_example": "With switching probabilities 0.2 (A to B) and 0.1 (B to A) per day, two days take an all-A population to 0.660 in A; the stationary fraction in A is 0.333; the second eigenvalue 0.7 halves deviations every 1.94 days.",
+          "question_ids": [
+            "linear-algebra-6:two-steps",
+            "linear-algebra-6:stationary",
+            "linear-algebra-6:second-eigenvalue",
+            "linear-algebra-6:half-time",
+            "linear-algebra-6:stationary-meaning",
+            "linear-algebra-6:memory"
+          ],
+          "card_ids": [
+            "linear-algebra-6-card-1",
+            "linear-algebra-6-card-2",
+            "linear-algebra-6-card-3",
+            "linear-algebra-6-card-4"
+          ]
+        }
+      ]
     }
   ],
   "assessments": [
@@ -285,6 +407,48 @@
       "points": 2
     },
     {
+      "id": "linear-algebra-5-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Least squares and calibration practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "linear-algebra-5-objective-1",
+        "linear-algebra-5-objective-2",
+        "linear-algebra-5-objective-3"
+      ],
+      "question_ids": [
+        "linear-algebra-5:slope",
+        "linear-algebra-5:intercept",
+        "linear-algebra-5:r-squared",
+        "linear-algebra-5:read-unknown",
+        "linear-algebra-5:orthogonality",
+        "linear-algebra-5:perfect-fit"
+      ],
+      "points": 6
+    },
+    {
+      "id": "linear-algebra-6-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Markov chains for cell states practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "linear-algebra-6-objective-1",
+        "linear-algebra-6-objective-2",
+        "linear-algebra-6-objective-3"
+      ],
+      "question_ids": [
+        "linear-algebra-6:two-steps",
+        "linear-algebra-6:stationary",
+        "linear-algebra-6:second-eigenvalue",
+        "linear-algebra-6:half-time",
+        "linear-algebra-6:stationary-meaning",
+        "linear-algebra-6:memory"
+      ],
+      "points": 6
+    },
+    {
       "id": "linear-algebra-case",
       "type": "case",
       "mode": "self-assessment",
@@ -326,6 +490,11 @@
       "version": "0.1.0",
       "date": "2026-10-05",
       "summary": "Preserved original compact prototype content in separate manifests and readings; labeled partial without semester or credit equivalency."
+    },
+    {
+      "version": "0.2.0",
+      "date": "2026-10-08",
+      "summary": "Added two original lessons (least-squares calibration with normal equations and residuals; Markov chains for cell-state transitions with stationary distributions and convergence rates) with synthetic data, formative items with computed keys and retrieval cards. The package remains partial and unreviewed."
     }
   ],
   "limitations": [

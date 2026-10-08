@@ -4,7 +4,18 @@
 
 2026-10-06; synthetic local learner data only. Milestones 1 and 2 are implemented. Milestone 3 remains partial; deterministic graders and prototype graded-assignment and review workflows are described below. A Milestone 4 curriculum-map increment is implemented and tested, while subject-matter review and map refinement remain. All 25 course packages are **partial**; zero are beta, complete or externally reviewed. Human score review is limited to saved attempts and does not constitute course-content review. No semester equivalence, university credit, security certification or public production deployment is asserted.
 
-## Current increment: chemistry and mathematics lessons (2026-10-08, fifth pass)
+## Current increment: biomechanics, linear algebra, physics and engineering lessons (2026-10-08, sixth pass)
+
+Written by an AI coding assistant. Nine original lessons of about 830 to 950 words, each with a common-mistakes section, a worked problem, six items and four cards, all with synthetic values: cellular biomechanics (Hertz indentation and viscoelastic relaxation; separating substrate stiffness from ligand density with a 2×2 factorial and traction forces), linear algebra (least-squares calibration with normal equations and residuals; Markov chains for cell-state transitions), statics and materials (bending of a long bone), physics mechanics (impact forces), physics EM (the membrane as a capacitor), circuits (sensor loading and ADC resolution) and signals and control (proportional control of an incubator). Seven packages move to 0.2.0 and stay `partial`. 54 keys were graded to full credit by the real grader. Two authoring defects were caught before commit: a hint below the schema's minimum length, and prompts whose very small SI answers invited a ×10ⁿ notation the grader does not parse; those answers now use scaled units (nN, pC, MV/m). Unlinked course outcomes: 25 of 101. Only calculus 3 and robotics remain at legacy depth.
+
+| Command/check (this container, Python 3.12.3, 2026-10-08) | Result |
+| --- | --- |
+| `python tools/validate_content.py` | PASS: 25 packages, 177 lessons, 564 questions, 448 cards, 25 cases; 0 errors; 123 disclosed warnings |
+| `verify.sh` | all steps PASS: root 162 passed; backend 1377 passed, 2 skipped; security 491 files, 0 findings; ruff clean; legacy 7/7 |
+
+Not run: frontend checks (no frontend change), Docker Compose, Playwright. Not reviewed by a subject-matter expert.
+
+## Previous increment: chemistry and mathematics lessons (2026-10-08, fifth pass)
 
 Written by an AI coding assistant. Eight original lessons of about 830 to 900 words, each with a common-mistakes section, a worked problem, six or seven items and four cards, all with synthetic values: general chemistry 1 (solution preparation, dilution and propagated error), general chemistry 2 (buffer design, capacity and ionization; integrated rate laws and Arrhenius), organic chemistry (acyl reactivity, side-chain ionization, glycation and a modification-versus-turnover steady state that makes no claim about any person), calculus 1 (derivatives in exponential and logistic growth), calculus 2 (integrals as accumulation, trapezoid and Simpson with an error bound, improper integrals) and differential equations (a well-mixed perfused chamber with Euler stability; equilibria, harvesting and a two-compartment eigenvalue analysis). The six packages move to 0.2.0 and stay `partial`. 49 keys were graded to full credit by the real grader. The lesson tests found two gaps before commit (a missing synthetic label and an objective with no item); both were fixed. Unlinked course outcomes: 48 of 101.
 

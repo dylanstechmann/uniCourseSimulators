@@ -1,6 +1,6 @@
 """Checks for the 2026-10-08 lessons: geroscience 9 to 14, statistics 6, transport 5, bioreactors 5, programming 5,
 genetics, biochemistry, physiology and biomaterials 5 and 6, genetics 7 and 8,
-and the chemistry, calculus and differential-equations lessons added later the same day.
+and the chemistry, mathematics, biomechanics, physics and engineering lessons added later the same day.
 
 They check structure, labelling and sources, not scientific quality. Passing does not mean any review.
 """
@@ -20,6 +20,9 @@ LESSONS = [("geroscience", f"geroscience-{n}") for n in range(9, 15)] + [
     ("general-chemistry-1", "general-chemistry-1-5"), ("general-chemistry-2", "general-chemistry-2-5"), ("general-chemistry-2", "general-chemistry-2-6"),
     ("organic-chemistry", "organic-chemistry-5"), ("calculus-1", "calculus-1-5"), ("calculus-2", "calculus-2-5"),
     ("differential-equations", "differential-equations-5"), ("differential-equations", "differential-equations-6"),
+    ("cellular-biomechanics", "cellular-biomechanics-5"), ("cellular-biomechanics", "cellular-biomechanics-6"),
+    ("linear-algebra", "linear-algebra-5"), ("linear-algebra", "linear-algebra-6"), ("statics-materials", "statics-materials-5"),
+    ("physics-mechanics", "physics-mechanics-5"), ("physics-em", "physics-em-5"), ("circuits", "circuits-5"), ("signals-control", "signals-control-5"),
 ]
 
 

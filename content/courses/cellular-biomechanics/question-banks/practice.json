@@ -254,6 +254,383 @@
         "kind": "original",
         "modifications": []
       }
+    },
+    {
+      "id": "cellular-biomechanics-5:hertz-modulus",
+      "type": "numeric",
+      "prompt": "A spherical AFM tip of radius 2.5 μm indents a cell by 0.5 μm with a force of 0.3 nN. With ν = 0.5, use E = 3F(1 − ν²)/(4√R δ^(3/2)) to estimate the apparent modulus. Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "cellular-biomechanics-5-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 301.87,
+        "unit": "Pa",
+        "tolerance": 10,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Convert to SI units (N and m) before substituting.",
+        "solution": "E = 3 × 3.0×10⁻¹⁰ × 0.75 / (4 × 1.581×10⁻³ × 3.536×10⁻¹⁰) = 302 Pa.",
+        "lesson_ids": [
+          "cellular-biomechanics-5"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "cellular-biomechanics-5:hertz-scaling",
+      "type": "numeric",
+      "prompt": "In a material that follows the Hertz model exactly, a 0.5 μm indentation needs 0.3 nN. What force is needed for a 1.0 μm indentation with the same tip? Enter the number only, in nanonewtons (nN).",
+      "points": 1,
+      "objective_ids": [
+        "cellular-biomechanics-5-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0.848528137423857,
+        "unit": "",
+        "tolerance": 0,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null,
+        "relative_tolerance": 0.01
+      },
+      "feedback": {
+        "hint": "Force scales with δ^(3/2).",
+        "solution": "F = 0.3 nN × 2^1.5 = 0.849 nN.",
+        "lesson_ids": [
+          "cellular-biomechanics-5"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "cellular-biomechanics-5:maxwell-tau",
+      "type": "numeric",
+      "prompt": "A Maxwell element has viscosity 2×10³ Pa·s and modulus 10³ Pa. Calculate its relaxation time. Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "cellular-biomechanics-5-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 2.0,
+        "unit": "s",
+        "tolerance": 0.05,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "The relaxation time is viscosity divided by modulus, τ = η/E.",
+        "solution": "τ = 2×10³ / 10³ = 2.0 s.",
+        "lesson_ids": [
+          "cellular-biomechanics-5"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "cellular-biomechanics-5:maxwell-stress",
+      "type": "numeric",
+      "prompt": "For that Maxwell element (τ = 2.0 s), an initial stress of 100 Pa is held at fixed strain. What is the stress after 5 s? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "cellular-biomechanics-5-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 8.208,
+        "unit": "Pa",
+        "tolerance": 0.3,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "σ(t) = σ₀ e^(−t/τ).",
+        "solution": "100 × e^(−2.5) = 8.2 Pa.",
+        "lesson_ids": [
+          "cellular-biomechanics-5"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "cellular-biomechanics-5:sls-instantaneous",
+      "type": "numeric",
+      "prompt": "A standard linear solid has a spring E₁ = 400 Pa in parallel with a Maxwell element of E₂ = 800 Pa and η = 1600 Pa·s. What modulus does it show when strained much faster than its relaxation time? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "cellular-biomechanics-5-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 1200.0,
+        "unit": "Pa",
+        "tolerance": 1,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "At short times the dashpot does not move, so both springs carry load.",
+        "solution": "E₁ + E₂ = 1200 Pa; at long times it relaxes to E₁ = 400 Pa with τ = 2 s.",
+        "lesson_ids": [
+          "cellular-biomechanics-5"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "cellular-biomechanics-5:thin-region",
+      "type": "single_choice",
+      "prompt": "An AFM indents a flat region of a spread cell that is only 1 μm tall by 0.8 μm and reports a modulus five times higher than over the nucleus. What is the most likely explanation to check first?",
+      "points": 1,
+      "objective_ids": [
+        "cellular-biomechanics-5-objective-3"
+      ],
+      "options": [
+        "The stiff substrate under the thin region contributes to the measured force, because the indentation is a large fraction of the local height.",
+        "The tip radius changed between measurements.",
+        "The cytoplasm is always five times stiffer than the nucleus.",
+        "The Hertz model overestimates stiffness at small forces."
+      ],
+      "solution_spec": {
+        "answer": 0
+      },
+      "feedback": {
+        "hint": "Compare indentation depth with sample thickness.",
+        "solution": "Hertz assumes a half-space. Indenting more than about 10% of a thin sample's height lets the substrate push back, inflating the apparent modulus; thin-layer corrections or shallower indentations are needed.",
+        "lesson_ids": [
+          "cellular-biomechanics-5"
+        ],
+        "misconception_ids": [
+          "hertz-on-thin-layer"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "cellular-biomechanics-6:design-elements",
+      "type": "multiple_select",
+      "prompt": "Which elements are needed for an experiment that attributes a spreading effect to substrate stiffness rather than to ligand density? Select all that apply.",
+      "points": 2,
+      "objective_ids": [
+        "cellular-biomechanics-6-objective-1"
+      ],
+      "options": [
+        "Soft and stiff gels each prepared at matched low and high ligand levels.",
+        "Measured modulus of each gel batch.",
+        "Measured ligand density on each gel batch.",
+        "Wells from a single gel counted as independent replicates.",
+        "Ligand coupled by the same protocol regardless of how much attaches."
+      ],
+      "solution_spec": {
+        "answer": [
+          0,
+          1,
+          2
+        ],
+        "partial_credit": "correct-minus-incorrect-clamped-v1"
+      },
+      "feedback": {
+        "hint": "The design must vary each factor independently and confirm both.",
+        "solution": "A factorial with measured stiffness and measured ligand separates the factors. Using one protocol regardless of yield can reintroduce confounding, and wells from one gel are technical replicates.",
+        "lesson_ids": [
+          "cellular-biomechanics-6"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "cellular-biomechanics-6:stiffness-effect",
+      "type": "numeric",
+      "prompt": "Synthetic mean spread areas (μm²) by stiffness/ligand: soft/low = 900; soft/high = 1300; stiff/low = 1400; stiff/high = 2600. Calculate the main effect of stiffness (average of stiff minus soft across ligand levels). Enter the number only (μm²).",
+      "points": 1,
+      "objective_ids": [
+        "cellular-biomechanics-6-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 900.0,
+        "unit": "",
+        "tolerance": 1,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Average the stiff−soft difference over the two ligand levels.",
+        "solution": "((1400 + 2600) − (900 + 1300))/2 = 900 μm².",
+        "lesson_ids": [
+          "cellular-biomechanics-6"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "cellular-biomechanics-6:interaction",
+      "type": "numeric",
+      "prompt": "Using the same table (soft/low = 900; soft/high = 1300; stiff/low = 1400; stiff/high = 2600), calculate the interaction effect: half the difference between the ligand effect on stiff gels and the ligand effect on soft gels. Enter the number only (μm²).",
+      "points": 1,
+      "objective_ids": [
+        "cellular-biomechanics-6-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 400.0,
+        "unit": "",
+        "tolerance": 1,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Compute the ligand effect separately at each stiffness, subtract, divide by two.",
+        "solution": "Stiff: 2600 − 1400 = 1200; soft: 1300 − 900 = 400; (1200 − 400)/2 = 400 μm².",
+        "lesson_ids": [
+          "cellular-biomechanics-6"
+        ],
+        "misconception_ids": [
+          "ignore-interaction"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "cellular-biomechanics-6:ligand-density",
+      "type": "numeric",
+      "prompt": "A surface carries 10⁻¹² mol of ligand per cm². How many molecules per μm² is that (Avogadro's number 6.022×10²³ per mol; 1 cm² = 10⁸ μm²)? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "cellular-biomechanics-6-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 6022.0,
+        "unit": "",
+        "tolerance": 1,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Multiply by Avogadro's number and divide by 10⁸.",
+        "solution": "10⁻¹² × 6.022×10²³ / 10⁸ = 6022 molecules/μm², spacing about 13 nm.",
+        "lesson_ids": [
+          "cellular-biomechanics-6"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "cellular-biomechanics-6:traction-force",
+      "type": "numeric",
+      "prompt": "A cell exerts an average traction stress of 300 Pa over 1000 μm² of adhesive area. Estimate the total traction force. Enter the number only, in nanonewtons (nN).",
+      "points": 1,
+      "objective_ids": [
+        "cellular-biomechanics-6-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 300.0,
+        "unit": "",
+        "tolerance": 0,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null,
+        "relative_tolerance": 0.01
+      },
+      "feedback": {
+        "hint": "Convert μm² to m² (1 μm² = 10⁻¹² m²) and multiply.",
+        "solution": "300 × 1000 × 10⁻¹² = 3.0×10⁻⁷ N = 300 nN.",
+        "lesson_ids": [
+          "cellular-biomechanics-6"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "cellular-biomechanics-6:confounded-claim",
+      "type": "single_choice",
+      "prompt": "A paper shows cells spread more on stiffer gels, but the stiffer gels also bound twice as much ligand, which was not measured in the analysis. What is the most accurate conclusion?",
+      "points": 1,
+      "objective_ids": [
+        "cellular-biomechanics-6-objective-1"
+      ],
+      "options": [
+        "Stiffness causes spreading, because it was the variable the authors changed.",
+        "Neither factor matters.",
+        "Stiffness and ligand density are confounded, so the data cannot attribute the spreading difference to stiffness alone.",
+        "Ligand density causes spreading, because it doubled."
+      ],
+      "solution_spec": {
+        "answer": 2
+      },
+      "feedback": {
+        "hint": "Ask what else changed along with stiffness.",
+        "solution": "When two factors change together, their contributions cannot be separated. A factorial design with measured ligand on each gel is needed.",
+        "lesson_ids": [
+          "cellular-biomechanics-6"
+        ],
+        "misconception_ids": [
+          "intended-variable-is-cause"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
     }
   ]
 }

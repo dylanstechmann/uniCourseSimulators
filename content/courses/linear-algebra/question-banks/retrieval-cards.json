@@ -65,6 +65,86 @@
       "back": "Observed value minus model-predicted value.",
       "objective_ids": [],
       "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "linear-algebra-5-card-1",
+      "lesson_id": "linear-algebra-5",
+      "front": "Least squares",
+      "back": "Minimize ‖b − Ax‖²; solution satisfies the normal equations AᵀAx = Aᵀb.",
+      "objective_ids": [
+        "linear-algebra-5-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "linear-algebra-5-card-2",
+      "lesson_id": "linear-algebra-5",
+      "front": "Residual geometry",
+      "back": "Aᵀr = 0: residuals are orthogonal to the columns of A; with an intercept they sum to zero.",
+      "objective_ids": [
+        "linear-algebra-5-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "linear-algebra-5-card-3",
+      "lesson_id": "linear-algebra-5",
+      "front": "R² and residual plots",
+      "back": "R² = 1 − SSR/SST; check residual patterns for curvature, saturation or outliers.",
+      "objective_ids": [
+        "linear-algebra-5-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "linear-algebra-5-card-4",
+      "lesson_id": "linear-algebra-5",
+      "front": "Using a calibration",
+      "back": "Read unknowns only inside the standards' range; uncertainty grows away from the mean.",
+      "objective_ids": [
+        "linear-algebra-5-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "linear-algebra-6-card-1",
+      "lesson_id": "linear-algebra-6",
+      "front": "Transition matrix",
+      "back": "pₙ₊₁ = M pₙ; with column vectors each column of M sums to one.",
+      "objective_ids": [
+        "linear-algebra-6-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "linear-algebra-6-card-2",
+      "lesson_id": "linear-algebra-6",
+      "front": "Stationary distribution",
+      "back": "Mπ = π (eigenvalue 1); for two states π_A = (B→A)/(A→B + B→A).",
+      "objective_ids": [
+        "linear-algebra-6-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "linear-algebra-6-card-3",
+      "lesson_id": "linear-algebra-6",
+      "front": "Convergence rate",
+      "back": "Deviation shrinks by λ₂ per step; for two states λ₂ = 1 − (A→B) − (B→A).",
+      "objective_ids": [
+        "linear-algebra-6-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "linear-algebra-6-card-4",
+      "lesson_id": "linear-algebra-6",
+      "front": "Markov assumption",
+      "back": "Switching depends only on the current state; history effects need extra states.",
+      "objective_ids": [
+        "linear-algebra-6-objective-3"
+      ],
+      "license": "CC-BY-4.0"
     }
   ]
 }

@@ -248,6 +248,378 @@
         "kind": "original",
         "modifications": []
       }
+    },
+    {
+      "id": "linear-algebra-5:slope",
+      "type": "numeric",
+      "prompt": "Calibration standards (concentration in μM, signal) are (0, 0.1), (1, 2.1), (2, 3.9), (3, 6.2), (4, 7.9). Fit y = β₀ + β₁x by least squares. What is the slope β₁? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "linear-algebra-5-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 1.97,
+        "unit": "",
+        "tolerance": 0.005,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use β₁ = (nΣxy − ΣxΣy)/(nΣx² − (Σx)²).",
+        "solution": "Σx = 10, Σy = 20.2, Σx² = 30, Σxy = 60.1; β₁ = (5×60.1 − 10×20.2)/50 = 1.970.",
+        "lesson_ids": [
+          "linear-algebra-5"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "linear-algebra-5:intercept",
+      "type": "numeric",
+      "prompt": "For the same standards ((0, 0.1), (1, 2.1), (2, 3.9), (3, 6.2), (4, 7.9)), what is the least-squares intercept β₀? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "linear-algebra-5-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0.1,
+        "unit": "",
+        "tolerance": 0.005,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "β₀ = (Σy Σx² − Σx Σxy)/det, or ȳ − β₁x̄.",
+        "solution": "β₀ = (20.2×30 − 10×60.1)/50 = 0.100.",
+        "lesson_ids": [
+          "linear-algebra-5"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "linear-algebra-5:r-squared",
+      "type": "numeric",
+      "prompt": "The fitted line has residual sum of squares 0.0630, and the total sum of squares about the mean is 38.872. Calculate R². Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "linear-algebra-5-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0.99838,
+        "unit": "",
+        "tolerance": 0.0005,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "R² = 1 − SSR/SST.",
+        "solution": "1 − 0.0630/38.872 = 0.9984.",
+        "lesson_ids": [
+          "linear-algebra-5"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "linear-algebra-5:read-unknown",
+      "type": "numeric",
+      "prompt": "Using the line y = 0.100 + 1.970x, what concentration corresponds to a signal of 5.0? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "linear-algebra-5-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 2.4873,
+        "unit": "μM",
+        "tolerance": 0.01,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Solve the line for x.",
+        "solution": "x = (5.0 − 0.100)/1.970 = 2.487 μM, inside the calibrated range.",
+        "lesson_ids": [
+          "linear-algebra-5"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "linear-algebra-5:orthogonality",
+      "type": "single_choice",
+      "prompt": "Why do least-squares residuals for a line with an intercept always sum to zero?",
+      "points": 1,
+      "objective_ids": [
+        "linear-algebra-5-objective-2"
+      ],
+      "options": [
+        "Because R² is always less than one.",
+        "Because positive and negative errors are equally likely in nature.",
+        "They do not; it is a coincidence of this data set.",
+        "The normal equations state Aᵀr = 0, and one column of A is all ones, so the dot product of r with that column, Σrᵢ, is zero."
+      ],
+      "solution_spec": {
+        "answer": 3
+      },
+      "feedback": {
+        "hint": "Write out the first row of Aᵀr = 0.",
+        "solution": "Aᵀ(b − Ax̂) = 0 is the normal equation. Its first component is the sum of residuals times one. The residual vector is orthogonal to the column space of A.",
+        "lesson_ids": [
+          "linear-algebra-5"
+        ],
+        "misconception_ids": [
+          "residual-sum-zero-is-coincidence"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "linear-algebra-5:perfect-fit",
+      "type": "single_choice",
+      "prompt": "A student fits a fourth-degree polynomial to the five standards and gets R² = 1. What is the problem?",
+      "points": 1,
+      "objective_ids": [
+        "linear-algebra-5-objective-3"
+      ],
+      "options": [
+        "With five coefficients and five points the polynomial interpolates every standard, so zero residual says nothing about predictive accuracy between or beyond them.",
+        "The normal equations have no solution for polynomials.",
+        "Polynomials cannot be fitted by least squares.",
+        "There is no problem; R² = 1 is ideal."
+      ],
+      "solution_spec": {
+        "answer": 0
+      },
+      "feedback": {
+        "hint": "Count parameters and data points.",
+        "solution": "A model with as many parameters as data points fits any data exactly, including the noise. It has no residual degrees of freedom to estimate error and typically behaves badly between points.",
+        "lesson_ids": [
+          "linear-algebra-5"
+        ],
+        "misconception_ids": [
+          "r2-one-means-correct"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "linear-algebra-6:two-steps",
+      "type": "numeric",
+      "prompt": "Each day, proliferating cells (A) become quiescent (B) with probability 0.2 and quiescent cells return to A with probability 0.1. Starting with all cells in A, what fraction is in A after two days? Enter a decimal fraction, number only.",
+      "points": 1,
+      "objective_ids": [
+        "linear-algebra-6-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0.66,
+        "unit": "",
+        "tolerance": 0.002,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Apply the transition matrix twice.",
+        "solution": "Day 1: [0.80, 0.20]; day 2: A = 0.80×0.8 + 0.20×0.1 = 0.660.",
+        "lesson_ids": [
+          "linear-algebra-6"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "linear-algebra-6:stationary",
+      "type": "numeric",
+      "prompt": "For the same chain (A→B 0.2, B→A 0.1 per day), what fraction of cells is in state A at the stationary distribution? Enter a decimal fraction, number only.",
+      "points": 1,
+      "objective_ids": [
+        "linear-algebra-6-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0.3333,
+        "unit": "",
+        "tolerance": 0.002,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Balance the flows: (A→B) π_A = (B→A) π_B.",
+        "solution": "π_A = 0.1/(0.2 + 0.1) = 0.3333.",
+        "lesson_ids": [
+          "linear-algebra-6"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "linear-algebra-6:second-eigenvalue",
+      "type": "numeric",
+      "prompt": "The transition matrix is [[0.8, 0.1], [0.2, 0.9]]. One eigenvalue is 1. What is the other? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "linear-algebra-6-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 0.7,
+        "unit": "",
+        "tolerance": 0.002,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "The trace equals the sum of the eigenvalues.",
+        "solution": "Trace = 1.7; λ₂ = 1.7 − 1 = 0.7.",
+        "lesson_ids": [
+          "linear-algebra-6"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "linear-algebra-6:half-time",
+      "type": "numeric",
+      "prompt": "Deviations from the stationary distribution shrink by a factor λ₂ = 0.7 per day. How long does it take for a deviation to halve? Enter a value with a time unit in hours (for example 30 h).",
+      "points": 1,
+      "objective_ids": [
+        "linear-algebra-6-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 46.641,
+        "unit": "h",
+        "tolerance": 0.5,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Solve λ₂ⁿ = 0.5; then convert days to hours.",
+        "solution": "n = ln 0.5 / ln 0.7 = 1.94 days = 46.6 h.",
+        "lesson_ids": [
+          "linear-algebra-6"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "linear-algebra-6:stationary-meaning",
+      "type": "single_choice",
+      "prompt": "The model's stationary distribution has 33% of cells proliferating. Which statement is correct?",
+      "points": 1,
+      "objective_ids": [
+        "linear-algebra-6-objective-2"
+      ],
+      "options": [
+        "The stationary fractions depend on the starting mixture.",
+        "Individual cells keep switching between states; only the population fractions stop changing.",
+        "Each cell spends exactly one third of every day proliferating.",
+        "Once reached, no cell changes state."
+      ],
+      "solution_spec": {
+        "answer": 1
+      },
+      "feedback": {
+        "hint": "Stationary refers to the distribution, not to each cell.",
+        "solution": "At stationarity, flows between states balance. Cells still move; the composition is constant and independent of the start.",
+        "lesson_ids": [
+          "linear-algebra-6"
+        ],
+        "misconception_ids": [
+          "stationary-means-static-cells"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "linear-algebra-6:memory",
+      "type": "single_choice",
+      "prompt": "Lineage tracking shows that cells that became quiescent recently re-enter the cycle much more often than cells quiescent for a long time. What does this imply for the two-state model?",
+      "points": 1,
+      "objective_ids": [
+        "linear-algebra-6-objective-3"
+      ],
+      "options": [
+        "The model is still exact.",
+        "The transition matrix must have columns summing to more than one.",
+        "The Markov assumption fails for two states; splitting quiescence into recent and long-term states can restore it.",
+        "The stationary distribution must be 50:50."
+      ],
+      "solution_spec": {
+        "answer": 2
+      },
+      "feedback": {
+        "hint": "The Markov property says the future depends only on the present state.",
+        "solution": "Dependence on time already spent in a state violates the two-state Markov assumption. Adding states that encode that history is the standard fix, at the cost of more parameters to estimate.",
+        "lesson_ids": [
+          "linear-algebra-6"
+        ],
+        "misconception_ids": [
+          "markov-always-applies"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
     }
   ]
 }

@@ -1,5 +1,9 @@
 # Progress review: uniStemCourseSimulators
 
+## Update after the biomechanics, physics and engineering lessons (2026-10-08, sixth pass)
+
+Written by an AI coding assistant. Nine more lessons connect the engineering and physics packages to the biology track: cell indentation and viscoelasticity, stiffness versus ligand density, least-squares calibration, Markov chains for cell states, long-bone bending, impact forces, the membrane as a capacitor, sensor loading and ADC resolution, and incubator temperature control. Only calculus 3 and robotics remain at legacy depth. Unlinked course outcomes: 25 of 101. Nothing is reviewed or graded; a lesson-length reading per package is still far from a semester course.
+
 ## Update after the chemistry and mathematics lessons (2026-10-08, fifth pass)
 
 Written by an AI coding assistant. Eight lessons now give the biology packages their quantitative footing: solution preparation and error, buffers, rate laws, functional groups and slow chemical damage, growth-model derivatives, accumulation integrals, a perfused-chamber ODE with a numerical check, and equilibrium stability. Each uses synthetic values and connects to a biology or bioengineering use. Nine packages remain at legacy depth: calculus 3, linear algebra, physics mechanics, physics electromagnetism, circuits, signals and control, robotics, statics and materials, and cellular biomechanics. Unlinked course outcomes fell to 48 of 101. Nothing is reviewed or graded.

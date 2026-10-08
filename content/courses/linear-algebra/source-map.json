@@ -54,6 +54,32 @@
       "original_content": true,
       "license": "MIT OR CC-BY-4.0",
       "modifications": []
+    },
+    {
+      "module_id": "linear-algebra-module-5",
+      "lesson_id": "linear-algebra-5",
+      "reading": "modules/05-least-squares-calibration-and-residuals.md",
+      "source_ids": [
+        "linearAlgebra",
+        "engineeringMath"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "linear-algebra-module-6",
+      "lesson_id": "linear-algebra-6",
+      "reading": "modules/06-markov-chains-for-cell-state-transitions.md",
+      "source_ids": [
+        "linearAlgebra",
+        "engineeringMath"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
     }
   ]
 }

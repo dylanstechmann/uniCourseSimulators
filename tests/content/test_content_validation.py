@@ -147,9 +147,9 @@ def test_preserved_inventory_is_honest_partial(repository):
     assert result.ok, result.errors
     assert result.inventory == {
         "courses": 25,
-        "lessons": 168,
-        "questions": 510,
-        "cards": 412,
+        "lessons": 177,
+        "questions": 564,
+        "cards": 448,
         "cases": 25,
     }
     assert sum(warning["code"] == "legacy-depth" for warning in result.warnings) == 98
@@ -353,7 +353,7 @@ def test_structured_rubric_item_is_counted_while_course_remains_partial(reposito
     manifest = read(course[0])
     assert manifest["version"] == "0.19.0"
     assert manifest["maturity"] == "partial"
-    assert result.inventory["questions"] == 510
+    assert result.inventory["questions"] == 564
     question = next(
         item
         for item in read(course[0].parent / "question-banks/practice.json")["questions"]
@@ -374,7 +374,7 @@ def test_graph_plot_item_is_counted_while_statistics_course_remains_partial(repo
     assert manifest["maturity"] == "partial"
     assert graph["id"] == "statistics-5:concentration-graph"
     assert len(graph["graph_spec"]["points"]) == 3
-    assert result.inventory["questions"] == 510
+    assert result.inventory["questions"] == 564
 
 
 def test_cell_biology_scope_does_not_claim_unwritten_weeks(repository):
@@ -698,7 +698,7 @@ def test_public_validation_discloses_unmounted_private_assessment_without_faking
     result = validate_repository(repository)
 
     assert result.ok, result.errors
-    assert result.inventory["questions"] == 510
+    assert result.inventory["questions"] == 564
     assert any(item["code"] == "private-assessment-unchecked" for item in result.warnings)
 
 
@@ -710,7 +710,7 @@ def test_private_assessment_validator_loads_and_validates_key_only_from_separate
     result = validate_repository(repository, private_assessments_root=private_root)
 
     assert result.ok, result.errors
-    assert result.inventory["questions"] == 511
+    assert result.inventory["questions"] == 565
     assert "restricted-key" not in codes(result)
     assert "private-assessment-unchecked" not in {item["code"] for item in result.warnings}
 

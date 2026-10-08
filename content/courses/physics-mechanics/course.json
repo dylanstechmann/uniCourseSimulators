@@ -7,7 +7,7 @@
   "domain": "Physics",
   "level": "Year 1",
   "maturity": "partial",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "license": "MIT OR CC-BY-4.0",
   "content_origin": {
     "kind": "legacy-prototype",
@@ -97,6 +97,31 @@
       "description": "Relate stress and strain to a material model.",
       "bloom": "analyze",
       "course_outcome_ids": []
+    },
+    {
+      "id": "physics-mechanics-5-objective-1",
+      "description": "Calculate impact speed and momentum from a drop height using energy conservation.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "physics-mechanics-outcome-2"
+      ]
+    },
+    {
+      "id": "physics-mechanics-5-objective-2",
+      "description": "Compute the average stopping force from impulse (momentum change over time) and from work–energy (kinetic energy over stopping distance).",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "physics-mechanics-outcome-2",
+        "physics-mechanics-outcome-1"
+      ]
+    },
+    {
+      "id": "physics-mechanics-5-objective-3",
+      "description": "Check predictions against units and limiting cases, and evaluate what an average force does and does not tell you about peak loads.",
+      "bloom": "evaluate",
+      "course_outcome_ids": [
+        "physics-mechanics-outcome-4"
+      ]
     }
   ],
   "duration": {
@@ -221,6 +246,41 @@
           ]
         }
       ]
+    },
+    {
+      "id": "physics-mechanics-module-5",
+      "title": "Impact forces",
+      "source_ids": [
+        "mechanics",
+        "engineeringMath"
+      ],
+      "lessons": [
+        {
+          "id": "physics-mechanics-5",
+          "title": "Impact forces: impulse, work–energy and why stopping more slowly protects tissue",
+          "reading": "modules/05-impact-forces-impulse-and-work-energy.md",
+          "objectives": [
+            "physics-mechanics-5-objective-1",
+            "physics-mechanics-5-objective-2",
+            "physics-mechanics-5-objective-3"
+          ],
+          "worked_example": "A 0.5 m drop gives 3.13 m/s; a 70 kg body then has 219.2 kg·m/s and 343.4 J; stopping in 10 ms needs 21925 N on average, in 50 ms 4385 N, and over 2 cm of padding 17168 N.",
+          "question_ids": [
+            "physics-mechanics-5:impact-speed",
+            "physics-mechanics-5:impulse-force",
+            "physics-mechanics-5:padded-force",
+            "physics-mechanics-5:work-energy-force",
+            "physics-mechanics-5:scaling-check",
+            "physics-mechanics-5:average-vs-peak"
+          ],
+          "card_ids": [
+            "physics-mechanics-5-card-1",
+            "physics-mechanics-5-card-2",
+            "physics-mechanics-5-card-3",
+            "physics-mechanics-5-card-4"
+          ]
+        }
+      ]
     }
   ],
   "assessments": [
@@ -285,6 +345,27 @@
       "points": 2
     },
     {
+      "id": "physics-mechanics-5-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Impact forces practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "physics-mechanics-5-objective-1",
+        "physics-mechanics-5-objective-2",
+        "physics-mechanics-5-objective-3"
+      ],
+      "question_ids": [
+        "physics-mechanics-5:impact-speed",
+        "physics-mechanics-5:impulse-force",
+        "physics-mechanics-5:padded-force",
+        "physics-mechanics-5:work-energy-force",
+        "physics-mechanics-5:scaling-check",
+        "physics-mechanics-5:average-vs-peak"
+      ],
+      "points": 6
+    },
+    {
       "id": "physics-mechanics-case",
       "type": "case",
       "mode": "self-assessment",
@@ -326,6 +407,11 @@
       "version": "0.1.0",
       "date": "2026-10-05",
       "summary": "Preserved original compact prototype content in separate manifests and readings; labeled partial without semester or credit equivalency."
+    },
+    {
+      "version": "0.2.0",
+      "date": "2026-10-08",
+      "summary": "Added an original lesson on impact forces (impulse, work–energy, average versus peak force and scaling checks) with synthetic data, formative items with computed keys and retrieval cards. The package remains partial and unreviewed."
     }
   ],
   "limitations": [

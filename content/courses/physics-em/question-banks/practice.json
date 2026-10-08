@@ -248,6 +248,194 @@
         "kind": "original",
         "modifications": []
       }
+    },
+    {
+      "id": "physics-em-5:capacitance",
+      "type": "numeric",
+      "prompt": "A spherical cell of radius 10 μm has a specific membrane capacitance of 1 μF/cm² (0.01 F/m²). What is its total membrane capacitance in picofarads? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "physics-em-5-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 12.566,
+        "unit": "",
+        "tolerance": 0.1,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Area = 4πr² in m²; multiply by 0.01 F/m²; 1 pF = 10⁻¹² F.",
+        "solution": "A = 1.257×10⁻⁹ m²; C = 1.257×10⁻¹¹ F = 12.6 pF.",
+        "lesson_ids": [
+          "physics-em-5"
+        ],
+        "misconception_ids": [
+          "specific-vs-total-capacitance"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physics-em-5:charge",
+      "type": "numeric",
+      "prompt": "A membrane of capacitance 12.6 pF changes potential by 100 mV. How much charge moves? Enter the number only, in picocoulombs (pC).",
+      "points": 1,
+      "objective_ids": [
+        "physics-em-5-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 1.2566370614359175,
+        "unit": "",
+        "tolerance": 0,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null,
+        "relative_tolerance": 0.01
+      },
+      "feedback": {
+        "hint": "Q = CV with C in farads and V in volts.",
+        "solution": "Q = 1.257×10⁻¹¹ × 0.1 = 1.26×10⁻¹² C = 1.26 pC.",
+        "lesson_ids": [
+          "physics-em-5"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physics-em-5:ion-count",
+      "type": "numeric",
+      "prompt": "A charge of 1.257×10⁻¹² C is carried by monovalent ions (e = 1.602×10⁻¹⁹ C). How many ions is that? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "physics-em-5-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 7844176.413457662,
+        "unit": "",
+        "tolerance": 0,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null,
+        "relative_tolerance": 0.01
+      },
+      "feedback": {
+        "hint": "Divide charge by the elementary charge.",
+        "solution": "1.257×10⁻¹²/1.602×10⁻¹⁹ = 7.84×10⁶ ions, about 2.2×10⁻⁵ of the cell's potassium.",
+        "lesson_ids": [
+          "physics-em-5"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physics-em-5:field",
+      "type": "numeric",
+      "prompt": "A resting potential of 70 mV is maintained across a membrane 5 nm thick. What is the electric field? Enter the number only, in megavolts per meter (MV/m).",
+      "points": 1,
+      "objective_ids": [
+        "physics-em-5-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 14.000000000000002,
+        "unit": "",
+        "tolerance": 0,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null,
+        "relative_tolerance": 0.01
+      },
+      "feedback": {
+        "hint": "E = V/d in SI units.",
+        "solution": "0.070 V / 5×10⁻⁹ m = 1.4×10⁷ V/m = 14 MV/m.",
+        "lesson_ids": [
+          "physics-em-5"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physics-em-5:time-constant",
+      "type": "numeric",
+      "prompt": "A membrane has specific resistance 1 Ω·m² (10 kΩ·cm²) and specific capacitance 0.01 F/m². What is its time constant? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "physics-em-5-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 10.0,
+        "unit": "ms",
+        "tolerance": 0.1,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "τ = R_m C_m; the area units cancel.",
+        "solution": "τ = 1 × 0.01 = 0.01 s = 10 ms, independent of cell size.",
+        "lesson_ids": [
+          "physics-em-5"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physics-em-5:depletion-claim",
+      "type": "single_choice",
+      "prompt": "A student argues that each action potential must substantially deplete intracellular potassium because potassium carries the repolarizing current. What does the capacitor calculation show?",
+      "points": 1,
+      "objective_ids": [
+        "physics-em-5-objective-2"
+      ],
+      "options": [
+        "The student is right; about half the potassium leaves each time.",
+        "Only sodium ions can change membrane potential.",
+        "The charge needed is carried by about one ion in tens of thousands of those present, so a single action potential changes bulk concentration negligibly.",
+        "No ions move during an action potential."
+      ],
+      "solution_spec": {
+        "answer": 2
+      },
+      "feedback": {
+        "hint": "Compare Q/e with the number of potassium ions in the cell volume.",
+        "solution": "About 7.8×10⁶ ions carry the charge, against roughly 3.5×10¹¹ potassium ions inside a 10 μm cell. The gradients are maintained over many action potentials and restored by pumps.",
+        "lesson_ids": [
+          "physics-em-5"
+        ],
+        "misconception_ids": [
+          "action-potential-depletes-ions"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
     }
   ]
 }

@@ -65,6 +65,46 @@
       "back": "Progressive damage under repeated or fluctuating loading, potentially below monotonic strength.",
       "objective_ids": [],
       "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "statics-materials-5-card-1",
+      "lesson_id": "statics-materials-5",
+      "front": "Bending stress",
+      "back": "σ = My/I, maximum at the outer surface; I(hollow circle) = (π/4)(r_o⁴ − r_i⁴).",
+      "objective_ids": [
+        "statics-materials-5-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "statics-materials-5-card-2",
+      "lesson_id": "statics-materials-5",
+      "front": "Combined stress",
+      "back": "Axial P/A adds to bending stress where both act in the same direction.",
+      "objective_ids": [
+        "statics-materials-5-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "statics-materials-5-card-3",
+      "lesson_id": "statics-materials-5",
+      "front": "Safety factor",
+      "back": "SF = strength/stress for a named criterion and load case; bone is weaker in tension and fatigue.",
+      "objective_ids": [
+        "statics-materials-5-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "statics-materials-5-card-4",
+      "lesson_id": "statics-materials-5",
+      "front": "Hollow sections and shielding",
+      "back": "Material far from the axis raises I; stiff implants take load from bone.",
+      "objective_ids": [
+        "statics-materials-5-objective-3"
+      ],
+      "license": "CC-BY-4.0"
     }
   ]
 }

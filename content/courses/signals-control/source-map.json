@@ -54,6 +54,19 @@
       "original_content": true,
       "license": "MIT OR CC-BY-4.0",
       "modifications": []
+    },
+    {
+      "module_id": "signals-control-module-5",
+      "lesson_id": "signals-control-5",
+      "reading": "modules/05-proportional-control-of-an-incubator.md",
+      "source_ids": [
+        "signals",
+        "control"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
     }
   ]
 }

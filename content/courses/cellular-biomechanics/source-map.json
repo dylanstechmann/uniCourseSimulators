@@ -54,6 +54,32 @@
       "original_content": true,
       "license": "MIT OR CC-BY-4.0",
       "modifications": []
+    },
+    {
+      "module_id": "cellular-biomechanics-module-5",
+      "lesson_id": "cellular-biomechanics-5",
+      "reading": "modules/05-hertz-indentation-and-viscoelasticity.md",
+      "source_ids": [
+        "biomaterials",
+        "transport"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "cellular-biomechanics-module-6",
+      "lesson_id": "cellular-biomechanics-6",
+      "reading": "modules/06-stiffness-versus-ligand-density.md",
+      "source_ids": [
+        "biomaterials",
+        "transport"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
     }
   ]
 }

@@ -7,7 +7,7 @@
   "domain": "Mechanical engineering",
   "level": "Year 2",
   "maturity": "partial",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "license": "MIT OR CC-BY-4.0",
   "content_origin": {
     "kind": "legacy-prototype",
@@ -96,6 +96,31 @@
       "description": "Calculate and interpret a factor of safety.",
       "bloom": "apply",
       "course_outcome_ids": []
+    },
+    {
+      "id": "statics-materials-5-objective-1",
+      "description": "Compute the second moment of area of a hollow circular section and the maximum bending stress from a moment.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "statics-materials-outcome-2"
+      ]
+    },
+    {
+      "id": "statics-materials-5-objective-2",
+      "description": "Combine axial and bending stresses at a point and calculate a safety factor against a stated failure criterion.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "statics-materials-outcome-2",
+        "statics-materials-outcome-4"
+      ]
+    },
+    {
+      "id": "statics-materials-5-objective-3",
+      "description": "Explain why a hollow section is more efficient in bending than a solid one of equal area, and evaluate the limits of applying beam theory to bone and implants.",
+      "bloom": "evaluate",
+      "course_outcome_ids": [
+        "statics-materials-outcome-3"
+      ]
     }
   ],
   "duration": {
@@ -220,6 +245,41 @@
           ]
         }
       ]
+    },
+    {
+      "id": "statics-materials-module-5",
+      "title": "Bending of a long bone",
+      "source_ids": [
+        "solidMechanics",
+        "mechanics"
+      ],
+      "lessons": [
+        {
+          "id": "statics-materials-5",
+          "title": "Bending of a long bone: second moment of area, combined stresses and why bones are hollow",
+          "reading": "modules/05-bending-of-a-long-bone.md",
+          "objectives": [
+            "statics-materials-5-objective-1",
+            "statics-materials-5-objective-2",
+            "statics-materials-5-objective-3"
+          ],
+          "worked_example": "For r_o = 13 mm and r_i = 7 mm, I = 20546 mm⁴; 100 N·m gives 63.3 MPa bending stress, plus 5.31 MPa from a 2000 N axial load, so 68.6 MPa and a safety factor of 2.19 against 150 MPa; a solid rod of equal area would reach 96.9 MPa.",
+          "question_ids": [
+            "statics-materials-5:second-moment",
+            "statics-materials-5:bending-stress",
+            "statics-materials-5:combined-stress",
+            "statics-materials-5:safety-factor",
+            "statics-materials-5:solid-equivalent",
+            "statics-materials-5:stress-shielding"
+          ],
+          "card_ids": [
+            "statics-materials-5-card-1",
+            "statics-materials-5-card-2",
+            "statics-materials-5-card-3",
+            "statics-materials-5-card-4"
+          ]
+        }
+      ]
     }
   ],
   "assessments": [
@@ -284,6 +344,27 @@
       "points": 2
     },
     {
+      "id": "statics-materials-5-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Bending of a long bone practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "statics-materials-5-objective-1",
+        "statics-materials-5-objective-2",
+        "statics-materials-5-objective-3"
+      ],
+      "question_ids": [
+        "statics-materials-5:second-moment",
+        "statics-materials-5:bending-stress",
+        "statics-materials-5:combined-stress",
+        "statics-materials-5:safety-factor",
+        "statics-materials-5:solid-equivalent",
+        "statics-materials-5:stress-shielding"
+      ],
+      "points": 6
+    },
+    {
       "id": "statics-materials-case",
       "type": "case",
       "mode": "self-assessment",
@@ -325,6 +406,11 @@
       "version": "0.1.0",
       "date": "2026-10-05",
       "summary": "Preserved original compact prototype content in separate manifests and readings; labeled partial without semester or credit equivalency."
+    },
+    {
+      "version": "0.2.0",
+      "date": "2026-10-08",
+      "summary": "Added an original lesson on bending of a long bone (second moment of area, combined stresses, safety factor, hollow sections and stress shielding) with synthetic data, formative items with computed keys and retrieval cards. The package remains partial and unreviewed."
     }
   ],
   "limitations": [

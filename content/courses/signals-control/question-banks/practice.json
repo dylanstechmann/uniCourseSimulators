@@ -250,6 +250,198 @@
         "kind": "original",
         "modifications": []
       }
+    },
+    {
+      "id": "signals-control-5:steady-power",
+      "type": "numeric",
+      "prompt": "A chamber has steady-state gain K = 0.5 °C/W. What heater power holds it 15 °C above ambient at steady state? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "signals-control-5-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 30.0,
+        "unit": "W",
+        "tolerance": 0.5,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "At steady state y = K u.",
+        "solution": "u = 15/0.5 = 30 W.",
+        "lesson_ids": [
+          "signals-control-5"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "signals-control-5:p-error",
+      "type": "numeric",
+      "prompt": "The chamber (K = 0.5 °C/W) is under proportional control with K_p = 20 W/°C and setpoint 15 °C above ambient. What is the steady-state error in °C? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "signals-control-5-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 1.3636,
+        "unit": "",
+        "tolerance": 0.02,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Error = r/(1 + KK_p).",
+        "solution": "L = 10; e = 15/11 = 1.36 °C.",
+        "lesson_ids": [
+          "signals-control-5"
+        ],
+        "misconception_ids": [
+          "p-control-zero-error"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "signals-control-5:closed-loop-tau",
+      "type": "numeric",
+      "prompt": "The open-loop time constant is 600 s and the loop gain KK_p = 10. What is the closed-loop time constant? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "signals-control-5-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 54.545,
+        "unit": "s",
+        "tolerance": 0.5,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "τ_cl = τ/(1 + L).",
+        "solution": "600/11 = 54.5 s.",
+        "lesson_ids": [
+          "signals-control-5"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "signals-control-5:high-gain-error",
+      "type": "numeric",
+      "prompt": "With K_p raised to 100 W/°C (K = 0.5 °C/W, setpoint 15 °C), what is the steady-state error in °C? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "signals-control-5-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0.29412,
+        "unit": "",
+        "tolerance": 0.005,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Recompute the loop gain.",
+        "solution": "L = 50; e = 15/51 = 0.294 °C.",
+        "lesson_ids": [
+          "signals-control-5"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "signals-control-5:saturation",
+      "type": "single_choice",
+      "prompt": "With K_p = 20 W/°C the controller demands 300 W at start-up, but the heater is limited to 50 W. What does that mean for the warm-up?",
+      "points": 1,
+      "objective_ids": [
+        "signals-control-5-objective-3"
+      ],
+      "options": [
+        "The controller output is unaffected by the limit.",
+        "The heater runs at its limit, so the chamber warms at the rate set by the maximum power and open-loop dynamics, not with the faster linear closed-loop time constant.",
+        "Saturation makes the steady-state error zero.",
+        "The chamber warms with the closed-loop time constant regardless."
+      ],
+      "solution_spec": {
+        "answer": 1
+      },
+      "feedback": {
+        "hint": "Linear closed-loop results assume the actuator can deliver what is commanded.",
+        "solution": "While u is clipped at 50 W, feedback is effectively open; the linear prediction applies only once the demand falls within the limit.",
+        "lesson_ids": [
+          "signals-control-5"
+        ],
+        "misconception_ids": [
+          "linear-model-ignores-limits"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "signals-control-5:integral-action",
+      "type": "multiple_select",
+      "prompt": "Which statements about adding integral action to the proportional controller are correct? Select all that apply.",
+      "points": 2,
+      "objective_ids": [
+        "signals-control-5-objective-3"
+      ],
+      "options": [
+        "It removes steady-state error for a constant setpoint and constant disturbance.",
+        "It eliminates the need for any actuator limits.",
+        "It allows meeting an accuracy target with a lower proportional gain.",
+        "It makes sensor noise irrelevant.",
+        "During saturation the integral can wind up and cause overshoot unless it is clamped."
+      ],
+      "solution_spec": {
+        "answer": [
+          0,
+          2,
+          4
+        ],
+        "partial_credit": "correct-minus-incorrect-clamped-v1"
+      },
+      "feedback": {
+        "hint": "Think about what the integral does at steady state and during saturation.",
+        "solution": "The integral keeps changing until the error is zero, removing the offset. It accumulates during saturation (windup). It does not remove physical limits or noise.",
+        "lesson_ids": [
+          "signals-control-5"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
     }
   ]
 }
