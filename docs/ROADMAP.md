@@ -52,6 +52,9 @@ Remaining: verify and refine edges with qualified subject-matter review; align a
 
 Original 14-week syllabus; substantial lessons (two weekly where appropriate), eight homework sets, three data/virtual-lab/simulation activities, midterm, cumulative final, integrative project, seeded bank, specs/rubrics, cards, misconception/feedback catalog and module provenance. Independent scientific/numeric checks; actual human review. Remain beta until complete gates pass; never generate filler or reviewers.
 
+
+**Status 2026-10-08.** Open formative companions for all eight homework sets (H1 to H8) and three virtual data-analysis labs (weeks 5, 11 and 14) are authored with synthetic datasets, public answer specifications, recalculated CSV keys and retrieval cards. The midterm, cumulative final and integrative project exist as specification documents (`content/courses/cell-biology/assessment-specs/`) with draft blueprints and a draft project rubric; no items, keys or review exist, and the package stays `partial`, unreviewed and formative-only. `tools/objective_coverage.py` generates [the gap report](COURSE_GAP_REPORT.md), and every package now has at least one practice item for each lesson objective; 91 of 101 course outcomes are still not linked from any lesson objective, which needs subject-matter judgement. Converting any companion into a graded set still requires protected answer packages, independent recalculation, grader mutation coverage, accessibility review and named human review.
+
 ## 6 — Full gates and deployment
 
 Already delivered early: schema/structural depth/provenance/review-status gates, duplicate checks, CI configuration, local Compose, production Compose/Caddy example, deployment/backup instructions, frontend/backend/Playwright suites, basic axe checks and bundle/secret scans. These foundations do not constitute all full-course quality gates.

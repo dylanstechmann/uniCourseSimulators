@@ -4,7 +4,31 @@
 
 2026-10-06; synthetic local learner data only. Milestones 1 and 2 are implemented. Milestone 3 remains partial; deterministic graders and prototype graded-assignment and review workflows are described below. A Milestone 4 curriculum-map increment is implemented and tested, while subject-matter review and map refinement remain. All 25 course packages are **partial**; zero are beta, complete or externally reviewed. Human score review is limited to saved attempts and does not constitute course-content review. No semester equivalence, university credit, security certification or public production deployment is asserted.
 
-## Current increment: Geroscience & Regenerative Biology original lessons (2026-10-07)
+## Current increment: homework companions, a third lab, specifications and objective items (2026-10-08)
+
+Written by an AI coding assistant. Foundations of Cell and Molecular Biology advances from 0.18.0 to **0.19.0** and remains `partial`, unreviewed and `formative-only`. The increment adds:
+
+- Seven open formative homework companions (Homework 2 to 8) with synthetic datasets, a recalculated CSV summary check, a graph or data-interpretation check where it fits, structured control logic, a multiple-select item and three retrieval cards each (160 practice points in total).
+- A third synthetic virtual lab (week 14, lineage-marker time course, 21 practice points) with fraction-versus-count reasoning.
+- Two practice items for the lesson-3 free-energy objective, which had none.
+- Specification-only documents for the midterm, cumulative final and integrative project (`content/courses/cell-biology/assessment-specs/`): draft blueprints generated from `course.json`, requirements, a draft project rubric and reviewer checklists. They contain no items, keys or scoring and have not been reviewed.
+- 96 practice items, one for each lesson objective that had no assessment mapping in the 24 other packages (55 numeric, 41 single choice). Every numeric key is computed in the authoring script from the numbers in its prompt, and the item feedback carries the explanation because the legacy readings are brief.
+- `tools/objective_coverage.py` and the generated [gap report](COURSE_GAP_REPORT.md). It shows that no lesson objective lacks an assessment mapping or practice item, and that 91 of 101 course outcomes are still not linked from any lesson objective, which is why the validator's `objective-coverage` warning (25) is unchanged and was deliberately not silenced.
+- Tests: `tests/content/test_cell_biology_integrity.py` (links resolve, every CSV key has a recalculation, example tables equal the keys, specifications hold no keys, labels unchanged, gap report current) and `backend/tests/test_authored_items.py`, which grades every public practice item against its own key and checks that a deliberately wrong answer earns nothing (688 checks, 2 symbolic items skipped).
+
+| Command/check (this container, Python 3.12.3, 2026-10-08) | Result |
+| --- | --- |
+| `python tools/validate_content.py` | PASS: 25 packages, 140 lessons, 347 questions, 300 cards, 25 cases; 0 errors; 123 disclosed warnings (98 legacy-depth, 25 objective-coverage) |
+| `python -m pytest tests -q` | 84 passed (75 before; 9 new integrity tests; inventory and schedule pins updated) |
+| `cd backend; python -m pytest -q` | 936 passed, 2 skipped (248 before; the new authored-item tests) |
+| `python tools/check_security.py` | 452 source files, 0 findings |
+| `ruff` | clean |
+| `node --test` legacy | 7 passed |
+| `verify.sh --frontend` (lint, unit tests, build, bundle scan) | PASS |
+
+Not run in this container: Docker Compose, the Playwright end-to-end suite, the production compose file. What the new material does not show: no review of any kind, no accessibility check by a person, no measured workload, no protected answer package, and no evidence that the generated synthetic datasets teach well. The practice keys are public by design.
+
+## Previous increment: Geroscience & Regenerative Biology original lessons (2026-10-07)
 
 Geroscience & Regenerative Biology advances to **0.2.0** and remains `partial`. Four original lessons with explicitly synthetic data follow the four preserved compact units. The package adds 15 formative items, 16 cards and 21 link-only scientific references, each checked against its PubMed title and DOI on 2026-10-07; findings are summarized qualitatively without reproducing source data. Every lesson objective now links to a course outcome. The four legacy checks are retagged to the objectives their prompts assess, and the change is recorded in each item's provenance. Every keyed answer was graded by the production grader (full credit for the key, zero for representative wrong answers, partial credit for split data-interpretation responses), and a new content test independently recalculates each numerical key from the lesson tables.
 

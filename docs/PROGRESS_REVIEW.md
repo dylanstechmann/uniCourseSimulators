@@ -1,6 +1,14 @@
 # Progress review: uniStemCourseSimulators
 
-## Update after Geroscience & Regenerative Biology lessons (2026-10-07)
+## Update after the homework, lab and objective-coverage increment (2026-10-08)
+
+Written by an AI coding assistant. The 2026-10-06 review found grader development ahead of instruction. This increment adds content rather than machinery: open formative companions for Homework 2 to 8, a third synthetic lab, specification-only documents for the midterm, final and project, and one practice item for each of the 96 lesson objectives that had none in the other 24 packages (plus two for the lesson-3 objective in cell-biology). All 8 homework companions and 3 labs are public, ungraded and unreviewed.
+
+What is measured now (see [the generated gap report](COURSE_GAP_REPORT.md)): every lesson objective has an assessment mapping and a practice item; 91 of 101 course outcomes are still not linked from any lesson objective, so the `objective-coverage` validator warning remains at 25. Eight items per thin package is still far below a course, the legacy readings are still about 60 to 80 words each, and 98 legacy-depth warnings remain. Adding items did not add teaching; those readings need real authoring. The cell-biology package is the only one with a deep lesson sequence.
+
+What stayed true: no maturity label changed, nothing is graded, no reviewer is named, no answer package was created, and the specification documents are not exams. The next useful work needs people: a qualified reviewer for the cell-biology package, a decision on whether to build protected assessments at all, and authoring of the thin packages' lessons.
+
+## Earlier update after Geroscience & Regenerative Biology lessons (2026-10-07)
 
 Geroscience & Regenerative Biology advances from 0.1.0 to 0.2.0 and remains `partial` and unreviewed. Each of its four compact legacy units is now followed by an original lesson of roughly 1,100–1,300 words: survival curves, Gompertz mortality hazards and healthspan endpoints; genetic and pharmacologic senescent-cell clearance with dropout-aware efficacy and mechanism-linked toxicity; clonal hematopoiesis and heterochronic blood-sharing evidence, including an assay-specificity case; and epigenetic clocks with partial reprogramming. All tables are explicitly synthetic teaching data. Twenty-one link-only scientific references were checked against PubMed records and summarized qualitatively; no source text, figure or dataset is reproduced. The package gains 15 formative items (numeric, single-choice, multiple-select and data-interpretation), 16 retrieval cards, objective-to-outcome links for all 20 lesson objectives, and corrected objective tags on its four legacy checks. A new content test independently recalculates every new numerical key. The first objective of each legacy unit still has no tagged item, and there is no schedule, homework, laboratory, exam or capstone. Repository inventory: 25 partial packages, 132 lessons, 211 formative questions, 275 cards and 25 cases.
 
