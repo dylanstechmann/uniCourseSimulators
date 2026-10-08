@@ -1507,3 +1507,229 @@ def test_transport_lab_text_and_keys_agree_with_the_dataset():
         z = int(r["depth_um"]) * 1e-6
         model = 0.0 if (z >= lm - 1e-12 and int(r["thickness_um"]) * 1e-6 > lm) else _TC0 - _TQ / (2 * _TD) * z * (2 * lm - z)
         assert abs(float(r["o2_mol_m3"]) - model) <= 0.0045, r
+
+
+# ---- cellular biomechanics 0.3.0 ----------------------------------------------------------------------------
+def _maxwell_moduli(w: float, g: float = 1000.0, tau: float = 2.0) -> tuple[float, float]:
+    x = w * tau
+    return g * x ** 2 / (1 + x ** 2), g * x / (1 + x ** 2)
+
+
+def _pillar_k(e: float, d: float, length: float) -> float:
+    return 3 * math.pi * e * d ** 4 / (64 * length ** 3)
+
+
+def _hill(e: float, ymax: float = 80.0, ec50: float = 10.0, n: float = 2.0) -> float:
+    return ymax * e ** n / (ec50 ** n + e ** n)
+
+
+def _cb_lab_rows() -> list[dict[str, str]]:
+    import csv
+    return list(csv.DictReader((COURSES / "cellular-biomechanics/labs/stiffness-ligand-marker-expression.csv").open(encoding="utf-8")))
+
+
+def _sd(values: list[float]) -> float:
+    m = sum(values) / len(values)
+    return math.sqrt(sum((v - m) ** 2 for v in values) / (len(values) - 1))
+
+
+_CB_ROWS = _cb_lab_rows()
+_CB_CONDITIONS = ["s1_low", "s1_high", "s10_low", "s10_high", "s100_low", "s100_high"]
+
+
+def _cb_gel_means(condition: str) -> list[float]:
+    out = []
+    for gel in (1, 2, 3):
+        cells = [float(r["marker_au"]) for r in _CB_ROWS if r["condition"] == condition and int(r["gel"]) == gel]
+        out.append(sum(cells) / len(cells))
+    return out
+
+
+_CB_COND = {c: sum(_cb_gel_means(c)) / 3 for c in _CB_CONDITIONS}
+_CB_LIG_100 = _CB_COND["s100_high"] - _CB_COND["s100_low"]
+_CB_LIG_1 = _CB_COND["s1_high"] - _CB_COND["s1_low"]
+_CB_SD_GEL = math.sqrt((_sd(_cb_gel_means("s100_low")) ** 2 + _sd(_cb_gel_means("s100_high")) ** 2) / 2)
+_CB_SD_CELL = math.sqrt((_sd([float(r["marker_au"]) for r in _CB_ROWS if r["condition"] == "s100_low"]) ** 2
+                         + _sd([float(r["marker_au"]) for r in _CB_ROWS if r["condition"] == "s100_high"]) ** 2) / 2)
+_KT_PN_NM = 1.381e-23 * 310 * 1e21
+_BELL = math.exp(-10 * 0.5 / _KT_PN_NM)
+_CB_TENSION = 100 / (2 * (1 / 4e-6 - 1 / 8e-6))
+_VIF = 1 / (1 - 0.95 ** 2)
+_SD_GEL_MEAN = math.sqrt(6.0 ** 2 + 15.0 ** 2 / 20)
+
+CELLULAR_BIOMECHANICS_NUMERIC = {
+    # items written before 2026-10-08, recomputed from the numbers in their prompts
+    "cellular-biomechanics-5:hertz-modulus": 3 * 0.3e-9 * (1 - 0.5 ** 2) / (4 * math.sqrt(2.5e-6) * (0.5e-6) ** 1.5),
+    "cellular-biomechanics-5:hertz-scaling": 0.3 * (1.0 / 0.5) ** 1.5,
+    "cellular-biomechanics-5:maxwell-tau": 2e3 / 1e3,
+    "cellular-biomechanics-5:maxwell-stress": 100 * math.exp(-5 / 2.0),
+    "cellular-biomechanics-5:sls-instantaneous": 400 + 800,
+    "cellular-biomechanics-6:stiffness-effect": (1400 + 2600) / 2 - (900 + 1300) / 2,
+    "cellular-biomechanics-6:interaction": ((2600 - 1400) - (1300 - 900)) / 2,
+    "cellular-biomechanics-6:ligand-density": 1e-12 * 6.022e23 / 1e8,
+    "cellular-biomechanics-6:traction-force": 300 * 1000e-12 * 1e9,
+    # cellular-biomechanics-7: oscillatory rheology
+    "cellular-biomechanics-7:storage-modulus": _maxwell_moduli(0.5)[0],
+    "cellular-biomechanics-7:loss-modulus": _maxwell_moduli(5.0)[1],
+    "cellular-biomechanics-7:loss-tangent": _maxwell_moduli(5.0)[1] / _maxwell_moduli(5.0)[0],
+    "cellular-biomechanics-7:crossover-frequency": 1 / 2.0,
+    "cellular-biomechanics-7:complex-modulus": math.hypot(*_maxwell_moduli(0.5)),
+    "cellular-biomechanics-7:phase-angle": math.degrees(math.atan2(_maxwell_moduli(0.05)[1], _maxwell_moduli(0.05)[0])),
+    "cellular-biomechanics-7:young-from-shear": 2 * (1 + 0.5) * 1000,
+    # cellular-biomechanics-8: micropillars
+    "cellular-biomechanics-8:pillar-stiffness": _pillar_k(2.0e6, 2.0e-6, 6.0e-6) * 1e3,
+    "cellular-biomechanics-8:force-from-deflection": _pillar_k(2.0e6, 2.0e-6, 6.0e-6) * 0.2e-6 * 1e9,
+    "cellular-biomechanics-8:traction-stress": _pillar_k(2.0e6, 2.0e-6, 6.0e-6) * 0.2e-6 / (math.pi * (1.0e-6) ** 2),
+    "cellular-biomechanics-8:total-force": 40 * _pillar_k(2.0e6, 2.0e-6, 6.0e-6) * 0.1e-6 * 1e9,
+    "cellular-biomechanics-8:diameter-scaling": _pillar_k(2.0e6, 4.0e-6, 6.0e-6) / _pillar_k(2.0e6, 2.0e-6, 6.0e-6),
+    "cellular-biomechanics-8:height-scaling": _pillar_k(2.0e6, 2.0e-6, 3.0e-6) / _pillar_k(2.0e6, 2.0e-6, 6.0e-6),
+    "cellular-biomechanics-8:force-resolution": _pillar_k(2.0e6, 2.0e-6, 6.0e-6) * 1e3 * 0.02,
+    # cellular-biomechanics-9: bonds under force
+    "cellular-biomechanics-9:thermal-energy": _KT_PN_NM,
+    "cellular-biomechanics-9:lifetime-factor": _BELL,
+    "cellular-biomechanics-9:lifetime-at-force": 1.0 * _BELL,
+    "cellular-biomechanics-9:half-life-force": _KT_PN_NM * math.log(2) / 0.5,
+    "cellular-biomechanics-9:loading-time-stiff": 10 / (1.0 * 100),
+    "cellular-biomechanics-9:loading-time-soft": 10 / (0.1 * 100),
+    "cellular-biomechanics-9:critical-stiffness": 10 / (100 * _BELL),
+    # cellular-biomechanics-10: micropipette aspiration
+    "cellular-biomechanics-10:cortical-tension": _CB_TENSION * 1e3,
+    "cellular-biomechanics-10:double-tension-pressure": 2 * (2 * _CB_TENSION) * (1 / 4e-6 - 1 / 8e-6),
+    "cellular-biomechanics-10:wider-pipette": 2 * _CB_TENSION * (1 / 6e-6 - 1 / 8e-6),
+    "cellular-biomechanics-10:smaller-cell": 2 * _CB_TENSION * (1 / 4e-6 - 1 / 6e-6),
+    "cellular-biomechanics-10:circumference-force": _CB_TENSION * 2 * math.pi * 4e-6 * 1e9,
+    "cellular-biomechanics-10:stress-scale": _CB_TENSION / 0.2e-6,
+    # cellular-biomechanics-11: Hill dose-response
+    "cellular-biomechanics-11:response-at-5kpa": _hill(5),
+    "cellular-biomechanics-11:response-at-ec50": _hill(10),
+    "cellular-biomechanics-11:response-at-40kpa": _hill(40),
+    "cellular-biomechanics-11:stiffness-for-response": _bisect(lambda e: _hill(e) - 64.0, 0.1, 100.0),
+    "cellular-biomechanics-11:slope-at-midpoint": (_hill(10.0 + 1e-4) - _hill(10.0 - 1e-4)) / 2e-4,
+    "cellular-biomechanics-11:increase-5-to-20": _hill(20) - _hill(5),
+    "cellular-biomechanics-11:linear-levels-range": _hill(100) - _hill(20),
+    # cellular-biomechanics-12: applying strain
+    "cellular-biomechanics-12:engineering-strain": 2e-3 / 20e-3,
+    "cellular-biomechanics-12:true-strain": math.log(1.10),
+    "cellular-biomechanics-12:transverse-strain": -0.5 * 0.10,
+    "cellular-biomechanics-12:area-strain": 1.10 * 0.95 - 1,
+    "cellular-biomechanics-12:membrane-stress": 1.5e6 * 0.10 / 1000,
+    "cellular-biomechanics-12:membrane-force": 1.5e6 * 0.10 * 10e-3 * 0.5e-3,
+    "cellular-biomechanics-12:peak-strain-rate": 2 * math.pi * 1.0 * 0.05,
+    # cellular-biomechanics-13: redesign
+    "cellular-biomechanics-13:variance-inflation": _VIF,
+    "cellular-biomechanics-13:se-inflation": math.sqrt(_VIF),
+    "cellular-biomechanics-13:frap-diffusion": 0.224 * 5.0 ** 2 / 12.0,
+    "cellular-biomechanics-13:mobility-ratio": 30.0 / 12.0,
+    "cellular-biomechanics-13:gel-mean-sd": _SD_GEL_MEAN,
+    "cellular-biomechanics-13:gel-level-se": _SD_GEL_MEAN * math.sqrt(2 / 9),
+    "cellular-biomechanics-13:naive-cell-level-se": math.sqrt(6.0 ** 2 + 15.0 ** 2) * math.sqrt(2 / 180),
+    # virtual lab 1, recomputed from the CSV
+    "cellular-biomechanics-lab1:stiffness-effect": (_CB_COND["s100_low"] + _CB_COND["s100_high"]) / 2 - (_CB_COND["s1_low"] + _CB_COND["s1_high"]) / 2,
+    "cellular-biomechanics-lab1:ligand-effect-100": _CB_LIG_100,
+    "cellular-biomechanics-lab1:interaction": (_CB_LIG_100 - _CB_LIG_1) / 2,
+    "cellular-biomechanics-lab1:naive-se": _CB_SD_CELL * math.sqrt(2 / 30),
+}
+
+
+@pytest.mark.parametrize("question_id,expected", sorted(CELLULAR_BIOMECHANICS_NUMERIC.items()))
+def test_cellular_biomechanics_numeric_key_matches_independent_recalculation(question_id, expected):
+    spec = bank("cellular-biomechanics")[question_id]["solution_spec"]
+    allowed = spec["tolerance"] + (spec.get("relative_tolerance") or 0) * abs(spec["answer"])
+    assert abs(spec["answer"] - expected) <= allowed, (question_id, spec["answer"], expected)
+
+
+def test_every_cellular_biomechanics_numeric_item_is_recalculated():
+    numeric = {qid for qid, item in bank("cellular-biomechanics").items() if item["type"] == "numeric"}
+    assert numeric == set(CELLULAR_BIOMECHANICS_NUMERIC)
+
+
+def test_cellular_biomechanics_rheology_pillar_and_clutch_lessons_state_the_computed_numbers():
+    gp = lambda w: _maxwell_moduli(w)[0]                                     # noqa: E731
+    gpp = lambda w: _maxwell_moduli(w)[1]                                    # noqa: E731
+    rows = [f"| {w:g} | {w * 2:g} | {gp(w):.1f} | {gpp(w):.1f} | {gpp(w) / gp(w):.2f} |" for w in (0.05, 0.5, 5.0)]
+    delta_low = math.degrees(math.atan2(gpp(0.05), gp(0.05)))
+    text = reading("cellular-biomechanics", "cellular-biomechanics-7")
+    _fragments_in(text, rows + [
+        f"the phase angle is {delta_low:.1f}°", f"G′ = {gp(5.0):.0f} Pa", f"tan δ = **{gpp(5.0) / gp(5.0):.2f}**", "**ω = 1/τ = 0.5 rad/s**", f"each equals G/2 = {gp(0.5):.0f} Pa",
+        f"|G*| = {math.hypot(gp(0.5), gpp(0.5)):.1f} Pa", "E = **3000 Pa**",
+    ])
+
+    def sls(w: float) -> tuple[float, float]:
+        x = w * 2.0
+        return 400 + 800 * x ** 2 / (1 + x ** 2), 800 * x / (1 + x ** 2)
+
+    _fragments_in(text, [f"G′ = {sls(0.5)[0]:.0f} Pa with G″ = {sls(0.5)[1]:.0f} Pa", f"{sls(0.1)[0]:.1f} Pa; G″", f"{sls(5)[0]:.1f} Pa; G″ = {sls(5)[1]:.1f} Pa"])
+    k = _pillar_k(2.0e6, 2.0e-6, 6.0e-6)
+    k_soft = _pillar_k(2.0e6, 1.5e-6, 8.0e-6)
+    _fragments_in(reading("cellular-biomechanics", "cellular-biomechanics-8"), [
+        f"**{k:.4f} N/m = {k * 1e3:.1f} nN/μm**", f"**{k * 1e3 * 0.2:.2f} nN**", f"{math.pi * 1.0 ** 2:.2f} μm²", f"stress of {k * 0.2e-6 / (math.pi * 1e-12):.0f} Pa", f"**{40 * k * 1e3 * 0.1:.0f} nN**",
+        "**16 times**", "**8 times**", f"k = {k_soft * 1e3:.2f} nN/μm", f"about {k / k_soft:.0f} times softer", f"{k * 1e3 * 0.02:.2f} nN",
+    ])
+    k2 = _pillar_k(1.5e6, 1.0e-6, 4.0e-6)
+    _fragments_in(reading("cellular-biomechanics", "cellular-biomechanics-8"), [f"{k2:.4f} N/m = {k2 * 1e3:.2f} nN/μm", f"= {k2 * 1e3 * 0.05:.2f} nN", f"{k2 * 0.05e-6 / (math.pi * (0.5e-6) ** 2):.0f} Pa", f"{25 * k2 * 1e3 * 0.05:.0f} nN"])
+    text = reading("cellular-biomechanics", "cellular-biomechanics-9")
+    _fragments_in(text, [
+        f"{_KT_PN_NM:.2f} pN·nm", f"**{_BELL:.3f}**", f"**{_BELL:.3f} s**", f"**{_KT_PN_NM * math.log(2) / 0.5:.2f} pN**", "**0.10 s**", "**1.0 s**",
+        f"= {10 / (100 * _BELL):.3f} pN/nm", f"({_BELL:.3f} s)",
+    ])
+    bell2 = math.exp(-8 * 0.8 / _KT_PN_NM)
+    _fragments_in(text, [f"{2 * bell2:.3f} s", f"{_KT_PN_NM * math.log(2) / 0.8:.2f} pN", f"{8 / (80 * 2 * bell2):.3f} pN/nm"])
+
+
+def test_cellular_biomechanics_aspiration_dose_response_strain_and_redesign_lessons_state_the_computed_numbers():
+    t = _CB_TENSION
+    text = reading("cellular-biomechanics", "cellular-biomechanics-10")
+    _fragments_in(text, [
+        "**4.0 × 10⁻⁴ N/m**", f"{t * 1e3:.2f} mN/m", f"{t * 2 * math.pi * 4e-6 * 1e9:.1f} nN", f"needs {2 * t * 2 * (1 / 4e-6 - 1 / 8e-6):.0f} Pa instead of {2 * t * (1 / 4e-6 - 1 / 8e-6):.0f} Pa",
+        f"needs only {2 * t * (1 / 6e-6 - 1 / 8e-6):.1f} Pa", f"needs only {2 * t * (1 / 4e-6 - 1 / 6e-6):.1f} Pa", f"{t / 0.2e-6:.0f} Pa",
+    ])
+    t2 = 60 / (2 * (1 / 3e-6 - 1 / 6e-6))
+    _fragments_in(text, [f"{t2 * 1e3:.2f} mN/m", f"{2 * 1.5e-4 * (1 / 3e-6 - 1 / 6e-6):.0f} Pa"])
+    text = reading("cellular-biomechanics", "cellular-biomechanics-11")
+    _fragments_in(text, [
+        f"| 1 | {_hill(1):.1f} |", f"| 3 | {_hill(3):.1f} |", f"| 10 | {_hill(10):.1f} |", f"| 30 | {_hill(30):.1f} |", f"| 100 | {_hill(100):.1f} |",
+        f"At 5 kPa the response is {_hill(5):.0f}%", f"at 20 kPa {_hill(20):.0f}%", f"by {_hill(20) - _hill(5):.0f} points", f"**{_hill(10):.0f}%**", f"at 40 kPa it is {_hill(40):.1f}%",
+        "**20 kPa**", "**4 percentage points per kPa**", "(responses " + ", ".join(f"{_hill(e):.0f}" for e in (1, 3, 10, 30, 100)) + "%)", "(responses " + ", ".join(f"{_hill(e):.0f}" for e in (20, 40, 60, 80, 100)) + "%)",
+    ])
+    hill2 = lambda e: 60.0 * e ** 3 / (4.0 ** 3 + e ** 3)                    # noqa: E731
+    _fragments_in(text, [f"y(2) = 60 × 2³/(4³ + 2³) = {hill2(2):.1f}%", f"y(8) = 60 × 8³/(4³ + 8³) = {hill2(8):.1f}%", f"E = 4 × (45/15)^(1/3) = {4 * (45 / 15) ** (1 / 3):.2f} kPa"])
+    text = reading("cellular-biomechanics", "cellular-biomechanics-12")
+    ar = 1.10 * 0.95 - 1
+    _fragments_in(text, [
+        "**0.10** (10%)", f"**{math.log(1.10):.4f}** (9.53%)", "**-0.050**".replace("-", "−"), f"**{ar:.3f}** (4.5%)", "**0.21**", "σ = 150 kPa**", "**0.75 N**", f"**{2 * math.pi * 0.05:.3f} per second**",
+    ])
+    e2 = 1.5e-3 / 30e-3
+    ar2 = (1 + e2) * (1 - 0.5 * e2) - 1
+    _fragments_in(text, [f"{e2:.3f}", f"{ar2:.4f}", f"{1.0e6 * e2 / 1000:.0f} kPa", f"{1.0e6 * e2 * 12e-3 * 0.4e-3:.3f} N", f"{2 * math.pi * 0.5 * 0.04:.3f} per second"])
+    text = reading("cellular-biomechanics", "cellular-biomechanics-13")
+    sd_gel = math.sqrt(6.0 ** 2 + 15.0 ** 2 / 20)
+    _fragments_in(text, [
+        f"{_VIF:.2f},", f"**{math.sqrt(_VIF):.2f} times**", f"**{0.224 * 25 / 12:.3f} μm²/s**", f"{0.224 * 25 / 30:.3f} μm²/s", "**2.5**", f"= **{sd_gel:.2f}**",
+        f"= **{sd_gel * math.sqrt(2 / 9):.2f}** points", f"= **{math.sqrt(6.0 ** 2 + 15.0 ** 2) * math.sqrt(2 / 180):.2f}** points", f"{sd_gel * math.sqrt(2 / 9) / (math.sqrt(6.0 ** 2 + 15.0 ** 2) * math.sqrt(2 / 180)):.2f} times too small",
+    ])
+    sd2 = math.sqrt(5.0 ** 2 + 12.0 ** 2 / 15)
+    _fragments_in(text, [f"{1 / (1 - 0.9 ** 2):.2f}.", f"{sd2:.2f}", f"{sd2 * math.sqrt(2 / 6):.2f}", f"{math.sqrt(5.0 ** 2 + 12.0 ** 2) * math.sqrt(2 / 90):.2f}", f"{0.224 * 16 / 20:.3f} μm²/s"])
+
+
+def test_cellular_biomechanics_lab_text_and_keys_agree_with_the_dataset():
+    assert len(_CB_ROWS) == 180 and {int(r["cell"]) for r in _CB_ROWS} == set(range(1, 11))
+    text = (COURSES / "cellular-biomechanics/labs/01-stiffness-ligand-density-and-the-unit-of-analysis.md").read_text(encoding="utf-8")
+    interaction = (_CB_LIG_100 - _CB_LIG_1) / 2
+    se_gel = _CB_SD_GEL * math.sqrt(2 / 3)
+    se_naive = _CB_SD_CELL * math.sqrt(2 / 30)
+    _fragments_in(text, [
+        f"The main effect of stiffness is ({_CB_COND['s100_low']:.0f} + {_CB_COND['s100_high']:.0f})/2 − ({_CB_COND['s1_low']:.0f} + {_CB_COND['s1_high']:.0f})/2 = 30",
+        f"The ligand effect is {_CB_LIG_100:.0f} at 100 kPa and {_CB_LIG_1:.0f} at 1 kPa", f"({_CB_LIG_100:.0f} − {_CB_LIG_1:.0f})/2 = {interaction:.0f}",
+        f"pooled SD of the gel means is {_CB_SD_GEL:.1f}", f"{_CB_SD_GEL:.1f} × √(2/3) = {se_gel:.2f}", f"t = {_CB_LIG_100 / se_gel:.1f} on 4 degrees of freedom",
+        f"a pooled cell-level SD of {_CB_SD_CELL:.1f}", f"would give {se_naive:.2f}", f"about {se_gel / se_naive:.1f} times smaller",
+    ])
+    spec = bank("cellular-biomechanics")["cellular-biomechanics-lab1:gel-level-se"]["solution_spec"]["field_specs"][0]
+    assert abs(spec["answer"] - se_gel) <= spec["tolerance"] and spec["significant_figures"] == 3
+    checks = {(c["row_id"], c["column"]): c["answer"] for c in bank("cellular-biomechanics")["cellular-biomechanics-lab1:condition-summary"]["solution_spec"]["validation_spec"]["checks"]}
+    assert len(checks) == 18
+    for condition in _CB_CONDITIONS:
+        assert checks[(condition, "gels")] == 3 and checks[(condition, "cells")] == 30
+        assert abs(checks[(condition, "mean_of_gels")] - _CB_COND[condition]) < 1e-3
+    # the gel means were built from the stated condition means with a between-gel spread of -6, 0 and +6
+    assert [round(_CB_COND[c]) for c in _CB_CONDITIONS] == [22, 28, 36, 50, 42, 68]
+    assert all(sorted(round(v - _CB_COND[c]) for v in _cb_gel_means(c)) == [-6, 0, 6] for c in _CB_CONDITIONS)

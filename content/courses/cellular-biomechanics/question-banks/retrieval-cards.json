@@ -145,6 +145,326 @@
         "cellular-biomechanics-6-objective-3"
       ],
       "license": "CC-BY-4.0"
+    },
+    {
+      "id": "cellular-biomechanics-7-card-1",
+      "lesson_id": "cellular-biomechanics-7",
+      "front": "Storage and loss moduli",
+      "back": "G′ = (σ₀/ε₀) cos δ (energy stored) and G″ = (σ₀/ε₀) sin δ (energy lost); tan δ = G″/G′; |G*| = √(G′² + G″²).",
+      "objective_ids": [
+        "cellular-biomechanics-7-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "cellular-biomechanics-7-card-2",
+      "lesson_id": "cellular-biomechanics-7",
+      "front": "Maxwell element",
+      "back": "G′ = G(ωτ)²/(1 + (ωτ)²), G″ = G(ωτ)/(1 + (ωτ)²); the moduli cross at ω = 1/τ, where each is G/2 and δ = 45°.",
+      "objective_ids": [
+        "cellular-biomechanics-7-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "cellular-biomechanics-7-card-3",
+      "lesson_id": "cellular-biomechanics-7",
+      "front": "Shear and Young's modulus",
+      "back": "E = 2(1 + ν)G, so E = 3G for ν = 0.5; always say whether a modulus is G or E.",
+      "objective_ids": [
+        "cellular-biomechanics-7-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "cellular-biomechanics-7-card-4",
+      "lesson_id": "cellular-biomechanics-7",
+      "front": "What to report",
+      "back": "G′ and G″ across frequency, in the culture medium at 37 °C, on an equilibrium-swollen gel, within the linear range; a single stiffness hides the relaxation.",
+      "objective_ids": [
+        "cellular-biomechanics-7-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "cellular-biomechanics-8-card-1",
+      "lesson_id": "cellular-biomechanics-8",
+      "front": "Pillar stiffness",
+      "back": "k = 3EI/L³ = 3πEd⁴/(64L³); force F = k x for a tip deflection x; 1 N/m = 1000 nN/μm.",
+      "objective_ids": [
+        "cellular-biomechanics-8-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "cellular-biomechanics-8-card-2",
+      "lesson_id": "cellular-biomechanics-8",
+      "front": "Scaling",
+      "back": "k ∝ d⁴/L³: doubling d gives 16 times the stiffness and halving L gives 8 times; arrays of different stiffness come from geometry.",
+      "objective_ids": [
+        "cellular-biomechanics-8-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "cellular-biomechanics-8-card-3",
+      "lesson_id": "cellular-biomechanics-8",
+      "front": "Stress and total force",
+      "back": "Stress = force/area (1 nN/μm² = 1 kPa), averaged over the contact area; total force is the sum over pillars.",
+      "objective_ids": [
+        "cellular-biomechanics-8-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "cellular-biomechanics-8-card-4",
+      "lesson_id": "cellular-biomechanics-8",
+      "front": "Limits",
+      "back": "Beam theory needs small deflections (about 10% of L); a pillar array is a discrete set of springs, not a continuous gel, and the reference position limits the force resolution.",
+      "objective_ids": [
+        "cellular-biomechanics-8-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "cellular-biomechanics-9-card-1",
+      "lesson_id": "cellular-biomechanics-9",
+      "front": "Bell relation",
+      "back": "τ(F) = τ₀ exp(−F x_b/(k_B T)); k_B T = 4.28 pN·nm at 310 K; the lifetime halves at F = k_B T ln 2/x_b.",
+      "objective_ids": [
+        "cellular-biomechanics-9-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "cellular-biomechanics-9-card-2",
+      "lesson_id": "cellular-biomechanics-9",
+      "front": "Loading time",
+      "back": "A bond anchored to a spring of stiffness k_s pulled at speed v loads at k_s v, so t_load = F/(k_s v); softer substrates load more slowly.",
+      "objective_ids": [
+        "cellular-biomechanics-9-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "cellular-biomechanics-9-card-3",
+      "lesson_id": "cellular-biomechanics-9",
+      "front": "Critical stiffness",
+      "back": "k_s* = F/(v τ(F)) equates loading time and lifetime; stiffer substrates load bonds before they fail. It depends on the assumed force, speed and bond parameters.",
+      "objective_ids": [
+        "cellular-biomechanics-9-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "cellular-biomechanics-9-card-4",
+      "lesson_id": "cellular-biomechanics-9",
+      "front": "What is left out",
+      "back": "Many bonds, rebinding, force-dependent actin flow, catch bonds, recruitment and substrate relaxation; the clutch picture is a hypothesis to test, not a prediction.",
+      "objective_ids": [
+        "cellular-biomechanics-9-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "cellular-biomechanics-10-card-1",
+      "lesson_id": "cellular-biomechanics-10",
+      "front": "Pressure balance",
+      "back": "ΔP = 2T(1/R_p − 1/R_c) for a liquid-drop cell held by a pipette; T = ΔP/(2(1/R_p − 1/R_c)), with radii, not diameters.",
+      "objective_ids": [
+        "cellular-biomechanics-10-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "cellular-biomechanics-10-card-2",
+      "lesson_id": "cellular-biomechanics-10",
+      "front": "Dependence on size",
+      "back": "ΔP ∝ T; ΔP rises as the pipette narrows (1/R_p) and as the cell grows; the method needs R_p clearly below R_c.",
+      "objective_ids": [
+        "cellular-biomechanics-10-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "cellular-biomechanics-10-card-3",
+      "lesson_id": "cellular-biomechanics-10",
+      "front": "Tension and modulus",
+      "back": "Cortical tension (N/m) is a surface property; T/h is a stress scale, not a modulus. The cortex is not the whole cell.",
+      "objective_ids": [
+        "cellular-biomechanics-10-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "cellular-biomechanics-10-card-4",
+      "lesson_id": "cellular-biomechanics-10",
+      "front": "Assumptions",
+      "back": "Uniform surface tension, slow aspiration, a cell in suspension with a dominant cortex; adherent cells, the nucleus and viscous flow need other models.",
+      "objective_ids": [
+        "cellular-biomechanics-10-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "cellular-biomechanics-11-card-1",
+      "lesson_id": "cellular-biomechanics-11",
+      "front": "Hill function",
+      "back": "y = y_max E^n/(EC₅₀^n + E^n); half of y_max at E = EC₅₀; inverse E = EC₅₀ (y/(y_max − y))^(1/n); slope at the midpoint n y_max/(4 EC₅₀).",
+      "objective_ids": [
+        "cellular-biomechanics-11-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "cellular-biomechanics-11-card-2",
+      "lesson_id": "cellular-biomechanics-11",
+      "front": "Spacing the levels",
+      "back": "Space stiffness values logarithmically across the range of interest; levels all in the saturated (or all in the flat) region can hide a large effect.",
+      "objective_ids": [
+        "cellular-biomechanics-11-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "cellular-biomechanics-11-card-3",
+      "lesson_id": "cellular-biomechanics-11",
+      "front": "Fitting",
+      "back": "Fit to gel-level values: the gel, not the cell, is the independent unit; use enough levels (five or more) to estimate the midpoint and the steepness.",
+      "objective_ids": [
+        "cellular-biomechanics-11-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "cellular-biomechanics-11-card-4",
+      "lesson_id": "cellular-biomechanics-11",
+      "front": "What an EC₅₀ is",
+      "back": "A property of a material system (ligand, viscoelasticity, assay time, marker), not of a cell type; it does not separate stiffness from properties that changed with it.",
+      "objective_ids": [
+        "cellular-biomechanics-11-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "cellular-biomechanics-12-card-1",
+      "lesson_id": "cellular-biomechanics-12",
+      "front": "Strain measures",
+      "back": "Engineering strain ε = ΔL/L₀; true strain ln(1 + ε); transverse strain −νε (ν = 0.5 for an incompressible elastomer); area strain (1 + ε)(1 + ε_t) − 1.",
+      "objective_ids": [
+        "cellular-biomechanics-12-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "cellular-biomechanics-12-card-2",
+      "lesson_id": "cellular-biomechanics-12",
+      "front": "Uniaxial against equibiaxial",
+      "back": "A 10% uniaxial stretch changes the area by about 4.5%, a 10% equibiaxial stretch by 21%; always state which.",
+      "objective_ids": [
+        "cellular-biomechanics-12-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "cellular-biomechanics-12-card-3",
+      "lesson_id": "cellular-biomechanics-12",
+      "front": "Stress and force",
+      "back": "σ = Eε and F = σA (area in m²); the strain defines the stimulus the cells follow, the force matters for the apparatus.",
+      "objective_ids": [
+        "cellular-biomechanics-12-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "cellular-biomechanics-12-card-4",
+      "lesson_id": "cellular-biomechanics-12",
+      "front": "Cyclic protocols",
+      "back": "Peak strain rate = 2πf × amplitude; report waveform, frequency, minimum and maximum strain, duration and cycles; measure the strain in the culture area.",
+      "objective_ids": [
+        "cellular-biomechanics-12-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "cellular-biomechanics-lab1-0",
+      "lesson_id": "cellular-biomechanics-lab-01",
+      "front": "Summarizing a crossed design",
+      "back": "Average the cells within each gel, then the gel means within each condition; count gels and cells separately.",
+      "objective_ids": [
+        "cellular-biomechanics-lab-01-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "cellular-biomechanics-lab1-1",
+      "lesson_id": "cellular-biomechanics-lab-01",
+      "front": "Main effects and interaction",
+      "back": "Main effect = mean over the other factor's levels of the difference; interaction = half the difference between the effects of one factor at the two levels of the other.",
+      "objective_ids": [
+        "cellular-biomechanics-lab-01-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "cellular-biomechanics-lab1-2",
+      "lesson_id": "cellular-biomechanics-lab-01",
+      "front": "Gel-level standard error",
+      "back": "SE = SD(gel means) × √(2/n gels per arm); counting cells as independent understates it.",
+      "objective_ids": [
+        "cellular-biomechanics-lab-01-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "cellular-biomechanics-lab1-3",
+      "lesson_id": "cellular-biomechanics-lab-01",
+      "front": "Limits of the design",
+      "back": "Two controlled factors do not cover viscoelasticity or ligand mobility; report them for each formulation.",
+      "objective_ids": [
+        "cellular-biomechanics-lab-01-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "cellular-biomechanics-13-card-1",
+      "lesson_id": "cellular-biomechanics-13",
+      "front": "Variance inflation",
+      "back": "VIF = 1/(1 − r²) for two correlated predictors; the standard error is inflated by √VIF (3.2 at r = 0.95); r = 1 means the effects cannot be separated.",
+      "objective_ids": [
+        "cellular-biomechanics-13-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "cellular-biomechanics-13-card-2",
+      "lesson_id": "cellular-biomechanics-13",
+      "front": "Photobleaching recovery",
+      "back": "For a circular spot of radius w, D ≈ 0.224 w²/t½; a longer recovery means a less mobile ligand; report it for each formulation.",
+      "objective_ids": [
+        "cellular-biomechanics-13-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "cellular-biomechanics-13-card-3",
+      "lesson_id": "cellular-biomechanics-13",
+      "front": "Crossed design",
+      "back": "Cross stiffness (log-spaced) with ligand density independently, add non-adhesive and scrambled-ligand controls, and characterize the moduli, density and mobility of the same gels.",
+      "objective_ids": [
+        "cellular-biomechanics-13-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "cellular-biomechanics-13-card-4",
+      "lesson_id": "cellular-biomechanics-13",
+      "front": "Gels, not cells",
+      "back": "SD of a gel mean = √(σ_b² + σ_w²/m); the SE of an arm difference uses gels; counting cells as independent understates it; more gels help, more cells per gel help little.",
+      "objective_ids": [
+        "cellular-biomechanics-13-objective-3"
+      ],
+      "license": "CC-BY-4.0"
     }
   ]
 }

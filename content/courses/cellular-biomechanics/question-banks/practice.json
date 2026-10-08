@@ -631,6 +631,2917 @@
         "kind": "original",
         "modifications": []
       }
+    },
+    {
+      "id": "cellular-biomechanics-7:storage-modulus",
+      "type": "numeric",
+      "prompt": "A Maxwell element has G = 1000 Pa and τ = 2 s. What is the storage modulus G′ at ω = 0.5 rad/s? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "cellular-biomechanics-7-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 500.0,
+        "unit": "Pa",
+        "tolerance": 0.5,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Compute ωτ first, then G′ = G(ωτ)²/(1 + (ωτ)²).",
+        "solution": "ωτ = 1, so G′ = 1000 × 1/2 = 500 Pa.",
+        "lesson_ids": [
+          "cellular-biomechanics-7"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "cellular-biomechanics-7:loss-modulus",
+      "type": "numeric",
+      "prompt": "For the same element, what is the loss modulus G″ at ω = 5 rad/s? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "cellular-biomechanics-7-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 99.0099,
+        "unit": "Pa",
+        "tolerance": 0.5,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "G″ = G(ωτ)/(1 + (ωτ)²) with ωτ = 10.",
+        "solution": "1000 × 10/101 = 99.0 Pa.",
+        "lesson_ids": [
+          "cellular-biomechanics-7"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "cellular-biomechanics-7:loss-tangent",
+      "type": "numeric",
+      "prompt": "What is the loss tangent tan δ = G″/G′ at ω = 5 rad/s? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "cellular-biomechanics-7-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0.1,
+        "unit": "",
+        "tolerance": 0.005,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Divide the loss modulus by the storage modulus.",
+        "solution": "99.0/990.1 = 0.10: mostly elastic at this frequency.",
+        "lesson_ids": [
+          "cellular-biomechanics-7"
+        ],
+        "misconception_ids": [
+          "gprime-only"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "cellular-biomechanics-7:crossover-frequency",
+      "type": "numeric",
+      "prompt": "At what angular frequency do G′ and G″ cross for the element with τ = 2 s? Enter the value in rad/s.",
+      "points": 1,
+      "objective_ids": [
+        "cellular-biomechanics-7-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0.5,
+        "unit": "",
+        "tolerance": 0.005,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "The moduli are equal when ωτ = 1.",
+        "solution": "ω = 1/τ = 0.5 rad/s.",
+        "lesson_ids": [
+          "cellular-biomechanics-7"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "cellular-biomechanics-7:complex-modulus",
+      "type": "numeric",
+      "prompt": "At the crossover, G′ = G″ = 500 Pa. What is the magnitude |G*| = √(G′² + G″²)? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "cellular-biomechanics-7-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 707.107,
+        "unit": "Pa",
+        "tolerance": 0.5,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Add the squares and take the square root.",
+        "solution": "√(2 × 500²) = 707.1 Pa.",
+        "lesson_ids": [
+          "cellular-biomechanics-7"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "cellular-biomechanics-7:phase-angle",
+      "type": "numeric",
+      "prompt": "What is the phase angle δ, in degrees, at ω = 0.05 rad/s (G′ = 9.9 Pa, G″ = 99.0 Pa)? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "cellular-biomechanics-7-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 84.289,
+        "unit": "",
+        "tolerance": 0.2,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "δ = arctan(G″/G′).",
+        "solution": "arctan(99.0/9.9) = 84.3°, nearly viscous.",
+        "lesson_ids": [
+          "cellular-biomechanics-7"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "cellular-biomechanics-7:young-from-shear",
+      "type": "numeric",
+      "prompt": "A nearly incompressible gel (ν = 0.5) has a shear modulus G = 1000 Pa. What is its Young's modulus, E = 2(1 + ν)G? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "cellular-biomechanics-7-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 3000.0,
+        "unit": "Pa",
+        "tolerance": 1.0,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use ν = 0.5 in the factor 2(1 + ν).",
+        "solution": "E = 2 × 1.5 × 1000 = 3000 Pa.",
+        "lesson_ids": [
+          "cellular-biomechanics-7"
+        ],
+        "misconception_ids": [
+          "g-and-e-confused"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "cellular-biomechanics-7:rheology-statements",
+      "type": "multiple_select",
+      "prompt": "Which statements about oscillatory rheology are appropriate? Select all that apply.",
+      "points": 2,
+      "objective_ids": [
+        "cellular-biomechanics-7-objective-3"
+      ],
+      "options": [
+        "Two gels can have the same G′ at one frequency and different loss tangents.",
+        "A modulus without its frequency, temperature and medium cannot be compared with another.",
+        "G and E are the same quantity.",
+        "A strain sweep should confirm that the measurement is in the linear range.",
+        "The crossover frequency measures the stiffness of the gel."
+      ],
+      "solution_spec": {
+        "answer": [
+          0,
+          1,
+          3
+        ],
+        "partial_credit": "correct-minus-incorrect-clamped-v1"
+      },
+      "feedback": {
+        "hint": "Think about what the measurement depends on and what each quantity means.",
+        "solution": "The linear range, frequency, temperature and medium matter, and gels can match in G′ and differ in tan δ. G and E differ by a factor of 3 for ν = 0.5, and the crossover reads a time scale, not a stiffness.",
+        "lesson_ids": [
+          "cellular-biomechanics-7"
+        ],
+        "misconception_ids": [
+          "gprime-only",
+          "g-and-e-confused"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "cellular-biomechanics-8:pillar-stiffness",
+      "type": "numeric",
+      "prompt": "A cylindrical pillar has E = 2.0 MPa, d = 2 μm and L = 6 μm. Using k = 3πEd⁴/(64L³), what is its tip stiffness in nN/μm? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "cellular-biomechanics-8-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 21.8166,
+        "unit": "",
+        "tolerance": 0.1,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Work in metres to get N/m, then convert (1 N/m = 1000 nN/μm).",
+        "solution": "k = 0.0218 N/m = 21.8 nN/μm.",
+        "lesson_ids": [
+          "cellular-biomechanics-8"
+        ],
+        "misconception_ids": [
+          "units-mix"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "cellular-biomechanics-8:force-from-deflection",
+      "type": "numeric",
+      "prompt": "The pillar stiffness is 21.8 nN/μm. A cell deflects the tip by 0.2 μm. What is the force in nN? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "cellular-biomechanics-8-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 4.3633,
+        "unit": "",
+        "tolerance": 0.05,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Multiply the stiffness by the deflection.",
+        "solution": "21.8 × 0.2 = 4.36 nN.",
+        "lesson_ids": [
+          "cellular-biomechanics-8"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "cellular-biomechanics-8:traction-stress",
+      "type": "numeric",
+      "prompt": "The force of 4.36 nN acts over the top area of the pillar (d = 2 μm). What is the average stress in Pa? (1 nN/μm² = 1000 Pa.) Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "cellular-biomechanics-8-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 1388.889,
+        "unit": "",
+        "tolerance": 10.0,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Divide the force by π d²/4, with the area in μm².",
+        "solution": "4.36 nN/3.14 μm² = 1.39 nN/μm² = 1389 Pa.",
+        "lesson_ids": [
+          "cellular-biomechanics-8"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "cellular-biomechanics-8:total-force",
+      "type": "numeric",
+      "prompt": "A cell deflects 40 pillars of stiffness 21.8 nN/μm by 0.1 μm on average. What is the total force in nN? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "cellular-biomechanics-8-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 87.266,
+        "unit": "",
+        "tolerance": 1.0,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Multiply the number of pillars by the stiffness and the mean deflection.",
+        "solution": "40 × 21.8 × 0.1 = 87 nN.",
+        "lesson_ids": [
+          "cellular-biomechanics-8"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "cellular-biomechanics-8:diameter-scaling",
+      "type": "numeric",
+      "prompt": "By what factor does the pillar stiffness change when the diameter is doubled and the height is unchanged? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "cellular-biomechanics-8-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 16,
+        "unit": "",
+        "tolerance": 0,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "The stiffness is proportional to the fourth power of the diameter.",
+        "solution": "k ∝ d⁴, so 2⁴ = 16.",
+        "lesson_ids": [
+          "cellular-biomechanics-8"
+        ],
+        "misconception_ids": [
+          "linear-scaling"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "cellular-biomechanics-8:height-scaling",
+      "type": "numeric",
+      "prompt": "By what factor does the stiffness change when the height is halved and the diameter is unchanged? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "cellular-biomechanics-8-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 8,
+        "unit": "",
+        "tolerance": 0,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "The stiffness is inversely proportional to the cube of the height.",
+        "solution": "k ∝ 1/L³, so 2³ = 8.",
+        "lesson_ids": [
+          "cellular-biomechanics-8"
+        ],
+        "misconception_ids": [
+          "linear-scaling"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "cellular-biomechanics-8:force-resolution",
+      "type": "numeric",
+      "prompt": "The tip position can be located to 20 nm. For a pillar of stiffness 21.8 nN/μm, what is the corresponding smallest detectable force in nN? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "cellular-biomechanics-8-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 0.4363,
+        "unit": "",
+        "tolerance": 0.005,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Multiply the stiffness by 0.02 μm.",
+        "solution": "21.8 × 0.02 = 0.44 nN.",
+        "lesson_ids": [
+          "cellular-biomechanics-8"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "cellular-biomechanics-8:pillar-statements",
+      "type": "multiple_select",
+      "prompt": "Which statements about micropillar traction measurements are appropriate? Select all that apply.",
+      "points": 2,
+      "objective_ids": [
+        "cellular-biomechanics-8-objective-3"
+      ],
+      "options": [
+        "Doubling the height doubles the stiffness.",
+        "The pillar stiffness scales with the fourth power of the diameter and the inverse cube of the height.",
+        "The beam formula holds for deflections that are small compared with the pillar height.",
+        "A pillar array gives each adhesion a spring of known stiffness but is not the same substrate as a continuous gel.",
+        "The stress on a pillar is the force divided by the area of the whole cell."
+      ],
+      "solution_spec": {
+        "answer": [
+          1,
+          2,
+          3
+        ],
+        "partial_credit": "correct-minus-incorrect-clamped-v1"
+      },
+      "feedback": {
+        "hint": "Check the powers in the formula and what the pillars model.",
+        "solution": "The stiffness scales as d⁴/L³, the formula needs small deflections, and a pillar array differs from a continuous substrate. The stress is force over the adhesion area, and doubling the height lowers the stiffness eightfold.",
+        "lesson_ids": [
+          "cellular-biomechanics-8"
+        ],
+        "misconception_ids": [
+          "linear-scaling",
+          "units-mix"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "cellular-biomechanics-9:thermal-energy",
+      "type": "numeric",
+      "prompt": "At 310 K, k_B T = 1.381 × 10⁻²³ J/K × 310 K. What is it in pN·nm (1 J = 10²¹ pN·nm)? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "cellular-biomechanics-9-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 4.2811,
+        "unit": "",
+        "tolerance": 0.01,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Multiply, then convert joules to pN·nm.",
+        "solution": "1.381 × 10⁻²³ × 310 = 4.281 × 10⁻²¹ J = 4.28 pN·nm.",
+        "lesson_ids": [
+          "cellular-biomechanics-9"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "cellular-biomechanics-9:lifetime-factor",
+      "type": "numeric",
+      "prompt": "With x_b = 0.5 nm and k_B T = 4.28 pN·nm, by what factor does a force of 10 pN multiply the bond lifetime, exp(−F x_b/(k_B T))? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "cellular-biomechanics-9-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0.311,
+        "unit": "",
+        "tolerance": 0.005,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Compute F x_b/(k_B T) first.",
+        "solution": "exp(−1.168) = 0.311.",
+        "lesson_ids": [
+          "cellular-biomechanics-9"
+        ],
+        "misconception_ids": [
+          "lifetime-without-force"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "cellular-biomechanics-9:lifetime-at-force",
+      "type": "numeric",
+      "prompt": "A bond has τ₀ = 1 s at zero force. What is its lifetime at 10 pN? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "cellular-biomechanics-9-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0.311,
+        "unit": "s",
+        "tolerance": 0.005,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Multiply τ₀ by the factor above.",
+        "solution": "1 × 0.311 = 0.311 s.",
+        "lesson_ids": [
+          "cellular-biomechanics-9"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "cellular-biomechanics-9:half-life-force",
+      "type": "numeric",
+      "prompt": "At what force does the lifetime halve, F = k_B T ln 2 / x_b, for x_b = 0.5 nm? Enter the value in pN.",
+      "points": 1,
+      "objective_ids": [
+        "cellular-biomechanics-9-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 5.9349,
+        "unit": "",
+        "tolerance": 0.05,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Set exp(−F x_b/(k_B T)) = 1/2.",
+        "solution": "4.28 × 0.693/0.5 = 5.93 pN.",
+        "lesson_ids": [
+          "cellular-biomechanics-9"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "cellular-biomechanics-9:loading-time-stiff",
+      "type": "numeric",
+      "prompt": "A bond anchored to a substrate of stiffness 1.0 pN/nm is pulled back at 100 nm/s. How long does the force take to reach 10 pN? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "cellular-biomechanics-9-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0.1,
+        "unit": "s",
+        "tolerance": 0.005,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "The force rises at k_s v.",
+        "solution": "10/(1.0 × 100) = 0.10 s.",
+        "lesson_ids": [
+          "cellular-biomechanics-9"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "cellular-biomechanics-9:loading-time-soft",
+      "type": "numeric",
+      "prompt": "On a substrate ten times softer (0.1 pN/nm), how long does it take to reach 10 pN at the same speed? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "cellular-biomechanics-9-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 1.0,
+        "unit": "s",
+        "tolerance": 0.05,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "The loading time is inversely proportional to the stiffness.",
+        "solution": "10/(0.1 × 100) = 1.0 s, longer than the 0.31 s lifetime.",
+        "lesson_ids": [
+          "cellular-biomechanics-9"
+        ],
+        "misconception_ids": [
+          "stiffness-as-modulus"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "cellular-biomechanics-9:critical-stiffness",
+      "type": "numeric",
+      "prompt": "The loading time equals the bond lifetime at 10 pN (0.311 s) when k_s = F/(v τ). What is this critical stiffness at v = 100 nm/s? Enter the value in pN/nm.",
+      "points": 1,
+      "objective_ids": [
+        "cellular-biomechanics-9-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 0.3215,
+        "unit": "",
+        "tolerance": 0.005,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Divide the force by the speed and the lifetime.",
+        "solution": "10/(100 × 0.311) = 0.322 pN/nm.",
+        "lesson_ids": [
+          "cellular-biomechanics-9"
+        ],
+        "misconception_ids": [
+          "universal-threshold"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "cellular-biomechanics-9:clutch-statements",
+      "type": "multiple_select",
+      "prompt": "Which statements about the molecular-clutch picture are appropriate? Select all that apply.",
+      "points": 2,
+      "objective_ids": [
+        "cellular-biomechanics-9-objective-3"
+      ],
+      "options": [
+        "Force shortens a slip bond's lifetime exponentially.",
+        "A viscoelastic substrate that relaxes quickly can behave as a soft one even if its stiffness is high.",
+        "On a soft substrate the force builds slowly, so a bond may break before it carries much load.",
+        "The critical stiffness computed here is a universal property of cells.",
+        "The Bell relation describes catch bonds."
+      ],
+      "solution_spec": {
+        "answer": [
+          0,
+          1,
+          2
+        ],
+        "partial_credit": "correct-minus-incorrect-clamped-v1"
+      },
+      "feedback": {
+        "hint": "Think about the two time scales and what the model assumes.",
+        "solution": "Bond lifetime falls exponentially with force, soft substrates load slowly, and relaxation can mimic softness. The critical stiffness depends on the assumed parameters, and the Bell relation describes slip bonds, not catch bonds.",
+        "lesson_ids": [
+          "cellular-biomechanics-9"
+        ],
+        "misconception_ids": [
+          "universal-threshold",
+          "lifetime-without-force"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "cellular-biomechanics-10:cortical-tension",
+      "type": "numeric",
+      "prompt": "A cell of radius 8 μm aspirated by a pipette of radius 4 μm has a threshold pressure of 100 Pa. Using T = ΔP/(2(1/R_p − 1/R_c)), what is the tension in mN/m? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "cellular-biomechanics-10-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0.4,
+        "unit": "",
+        "tolerance": 0.01,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Convert the radii to metres before inverting them.",
+        "solution": "T = 100/(2 × (2.5 × 10⁵ − 1.25 × 10⁵)) = 4.0 × 10⁻⁴ N/m = 0.40 mN/m.",
+        "lesson_ids": [
+          "cellular-biomechanics-10"
+        ],
+        "misconception_ids": [
+          "diameter-for-radius"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "cellular-biomechanics-10:double-tension-pressure",
+      "type": "numeric",
+      "prompt": "A cell of the same size has twice the tension (0.8 mN/m). What threshold pressure (in Pa) does it need with the same pipette? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "cellular-biomechanics-10-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 200.0,
+        "unit": "",
+        "tolerance": 0.5,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "The threshold is proportional to the tension.",
+        "solution": "2 × 100 = 200 Pa.",
+        "lesson_ids": [
+          "cellular-biomechanics-10"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "cellular-biomechanics-10:wider-pipette",
+      "type": "numeric",
+      "prompt": "With the tension of 0.40 mN/m, what threshold pressure (in Pa) is needed by a pipette of radius 6 μm for the 8 μm cell? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "cellular-biomechanics-10-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 33.333,
+        "unit": "",
+        "tolerance": 0.3,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Evaluate 2T(1/R_p − 1/R_c) with R_p = 6 μm.",
+        "solution": "2 × 4.0 × 10⁻⁴ × (1/6 − 1/8) × 10⁶ = 33.3 Pa.",
+        "lesson_ids": [
+          "cellular-biomechanics-10"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "cellular-biomechanics-10:smaller-cell",
+      "type": "numeric",
+      "prompt": "With the same tension and pipette (R_p = 4 μm), what threshold pressure (in Pa) does a cell of radius 6 μm need? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "cellular-biomechanics-10-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 66.667,
+        "unit": "",
+        "tolerance": 0.3,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Evaluate 2T(1/R_p − 1/R_c) with R_c = 6 μm.",
+        "solution": "2 × 4.0 × 10⁻⁴ × (1/4 − 1/6) × 10⁶ = 66.7 Pa.",
+        "lesson_ids": [
+          "cellular-biomechanics-10"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "cellular-biomechanics-10:circumference-force",
+      "type": "numeric",
+      "prompt": "The tension 0.40 mN/m acts around the pipette's circumference 2πR_p (R_p = 4 μm). What force does it support, in nN? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "cellular-biomechanics-10-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 10.053,
+        "unit": "",
+        "tolerance": 0.1,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Multiply the tension by the circumference in metres, then convert to nN.",
+        "solution": "4.0 × 10⁻⁴ × 2π × 4 × 10⁻⁶ = 10.1 nN.",
+        "lesson_ids": [
+          "cellular-biomechanics-10"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "cellular-biomechanics-10:stress-scale",
+      "type": "numeric",
+      "prompt": "A cortex of thickness 0.2 μm carries a tension of 0.40 mN/m. What is the stress scale T/h in Pa? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "cellular-biomechanics-10-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 2000.0,
+        "unit": "",
+        "tolerance": 5.0,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Divide the tension in N/m by the thickness in metres.",
+        "solution": "4.0 × 10⁻⁴/(0.2 × 10⁻⁶) = 2000 Pa, a scale and not a modulus.",
+        "lesson_ids": [
+          "cellular-biomechanics-10"
+        ],
+        "misconception_ids": [
+          "tension-as-modulus"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "cellular-biomechanics-10:aspiration-statements",
+      "type": "multiple_select",
+      "prompt": "Which statements about micropipette aspiration of a cell are appropriate? Select all that apply.",
+      "points": 2,
+      "objective_ids": [
+        "cellular-biomechanics-10-objective-3"
+      ],
+      "options": [
+        "The method works best when the pipette is clearly smaller than the cell.",
+        "A tension in N/m is a property of a surface and a modulus in Pa a property of a volume.",
+        "The liquid-drop model describes adherent cells with a stiff nucleus well.",
+        "The threshold pressure does not depend on the pipette radius.",
+        "The threshold pressure is proportional to the cortical tension."
+      ],
+      "solution_spec": {
+        "answer": [
+          0,
+          1,
+          4
+        ],
+        "partial_credit": "correct-minus-incorrect-clamped-v1"
+      },
+      "feedback": {
+        "hint": "Check the formula and what the model assumes.",
+        "solution": "The threshold is proportional to T and works best when R_p is clearly below R_c, and tension and modulus are different quantities. The model does not describe a stiff nucleus, and the threshold depends on 1/R_p.",
+        "lesson_ids": [
+          "cellular-biomechanics-10"
+        ],
+        "misconception_ids": [
+          "tension-as-modulus",
+          "diameter-for-radius"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "cellular-biomechanics-11:response-at-5kpa",
+      "type": "numeric",
+      "prompt": "A marker follows a Hill function with y_max = 80%, EC₅₀ = 10 kPa and n = 2. What is the response at 5 kPa, in percent? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "cellular-biomechanics-11-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 16.0,
+        "unit": "",
+        "tolerance": 0.1,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Evaluate y_max E^n/(EC₅₀^n + E^n).",
+        "solution": "80 × 25/(100 + 25) = 16.0%.",
+        "lesson_ids": [
+          "cellular-biomechanics-11"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "cellular-biomechanics-11:response-at-ec50",
+      "type": "numeric",
+      "prompt": "What is the response at the EC₅₀ itself, in percent? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "cellular-biomechanics-11-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 40.0,
+        "unit": "",
+        "tolerance": 0.1,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "At E = EC₅₀ the fraction is 1/2.",
+        "solution": "80/2 = 40%.",
+        "lesson_ids": [
+          "cellular-biomechanics-11"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "cellular-biomechanics-11:response-at-40kpa",
+      "type": "numeric",
+      "prompt": "What is the response at 40 kPa, in percent? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "cellular-biomechanics-11-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 75.2941,
+        "unit": "",
+        "tolerance": 0.1,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Evaluate the Hill function with E = 40.",
+        "solution": "80 × 1600/(100 + 1600) = 75.3%, close to saturation.",
+        "lesson_ids": [
+          "cellular-biomechanics-11"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "cellular-biomechanics-11:stiffness-for-response",
+      "type": "numeric",
+      "prompt": "What stiffness (in kPa) gives a response of 64%? Use E = EC₅₀ (y/(y_max − y))^(1/n). Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "cellular-biomechanics-11-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 20.0,
+        "unit": "",
+        "tolerance": 0.05,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Compute y/(y_max − y) = 64/16 first.",
+        "solution": "E = 10 × (64/16)^(1/2) = 20 kPa.",
+        "lesson_ids": [
+          "cellular-biomechanics-11"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "cellular-biomechanics-11:slope-at-midpoint",
+      "type": "numeric",
+      "prompt": "The slope of the Hill curve at the EC₅₀ is n y_max/(4 EC₅₀). What is it, in percentage points per kPa? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "cellular-biomechanics-11-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 4.0,
+        "unit": "",
+        "tolerance": 0.05,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Substitute n = 2, y_max = 80 and EC₅₀ = 10.",
+        "solution": "2 × 80/(4 × 10) = 4 points per kPa.",
+        "lesson_ids": [
+          "cellular-biomechanics-11"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "cellular-biomechanics-11:increase-5-to-20",
+      "type": "numeric",
+      "prompt": "By how many percentage points does the response rise when the stiffness is raised from 5 to 20 kPa? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "cellular-biomechanics-11-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 48.0,
+        "unit": "",
+        "tolerance": 0.1,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Subtract the response at 5 kPa from the response at 20 kPa.",
+        "solution": "64 − 16 = 48 points for a 4-fold change.",
+        "lesson_ids": [
+          "cellular-biomechanics-11"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "cellular-biomechanics-11:linear-levels-range",
+      "type": "numeric",
+      "prompt": "With linearly spaced levels of 20, 40, 60, 80 and 100 kPa, what is the difference in response (percentage points) between the lowest and highest level? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "cellular-biomechanics-11-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 15.2079,
+        "unit": "",
+        "tolerance": 0.1,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Evaluate the Hill function at 20 and 100 kPa and subtract.",
+        "solution": "79.2 − 64.0 = 15.2 points: the experiment would see little effect, because every level is in the saturated range.",
+        "lesson_ids": [
+          "cellular-biomechanics-11"
+        ],
+        "misconception_ids": [
+          "linear-levels"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "cellular-biomechanics-11:dose-response-statements",
+      "type": "multiple_select",
+      "prompt": "Which statements about a stiffness dose–response are appropriate? Select all that apply.",
+      "points": 2,
+      "objective_ids": [
+        "cellular-biomechanics-11-objective-3"
+      ],
+      "options": [
+        "A fitted EC₅₀ is a property of the cell type alone.",
+        "Stiffness levels should be spaced logarithmically when the range spans a decade or more.",
+        "The fit should use gel-level values, because the gel is the independent unit.",
+        "Levels that all lie in the saturated range can hide a large effect at lower stiffness.",
+        "A dose–response curve proves that stiffness causes the response even if crosslinking also changed other properties."
+      ],
+      "solution_spec": {
+        "answer": [
+          1,
+          2,
+          3
+        ],
+        "partial_credit": "correct-minus-incorrect-clamped-v1"
+      },
+      "feedback": {
+        "hint": "Think about the scale of the response and what varied with stiffness.",
+        "solution": "Logarithmic spacing, coverage of the transition and gel-level fitting are good design. An EC₅₀ belongs to a material system, and a curve does not separate stiffness from other properties that changed.",
+        "lesson_ids": [
+          "cellular-biomechanics-11"
+        ],
+        "misconception_ids": [
+          "linear-levels",
+          "ec50-as-cell-property"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "cellular-biomechanics-12:engineering-strain",
+      "type": "numeric",
+      "prompt": "A membrane of gauge length 20 mm is stretched by 2 mm. What is the engineering strain? Enter a decimal fraction, number only.",
+      "points": 1,
+      "objective_ids": [
+        "cellular-biomechanics-12-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0.1,
+        "unit": "",
+        "tolerance": 0.002,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Divide the extension by the original length, in the same unit.",
+        "solution": "2/20 = 0.10.",
+        "lesson_ids": [
+          "cellular-biomechanics-12"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "cellular-biomechanics-12:true-strain",
+      "type": "numeric",
+      "prompt": "What is the true strain ln(1 + ε) for an engineering strain of 0.10? Enter a decimal fraction, number only.",
+      "points": 1,
+      "objective_ids": [
+        "cellular-biomechanics-12-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0.09531,
+        "unit": "",
+        "tolerance": 0.0005,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Take the natural logarithm of 1.10.",
+        "solution": "ln(1.10) = 0.0953.",
+        "lesson_ids": [
+          "cellular-biomechanics-12"
+        ],
+        "misconception_ids": [
+          "true-engineering-confused"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "cellular-biomechanics-12:transverse-strain",
+      "type": "numeric",
+      "prompt": "For a nearly incompressible membrane (ν = 0.5) with a uniaxial strain of 0.10, what is the transverse strain −νε? Enter a decimal fraction, number only.",
+      "points": 1,
+      "objective_ids": [
+        "cellular-biomechanics-12-objective-1"
+      ],
+      "solution_spec": {
+        "answer": -0.05,
+        "unit": "",
+        "tolerance": 0.001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Multiply the axial strain by −ν.",
+        "solution": "−0.5 × 0.10 = −0.05.",
+        "lesson_ids": [
+          "cellular-biomechanics-12"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "cellular-biomechanics-12:area-strain",
+      "type": "numeric",
+      "prompt": "With an axial strain of 0.10 and a transverse strain of −0.05, what is the area strain (1 + ε)(1 + ε_t) − 1? Enter a decimal fraction, number only.",
+      "points": 1,
+      "objective_ids": [
+        "cellular-biomechanics-12-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0.045,
+        "unit": "",
+        "tolerance": 0.0005,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Multiply the two stretch ratios before subtracting 1.",
+        "solution": "1.10 × 0.95 − 1 = 0.045, less than the 10% axial strain.",
+        "lesson_ids": [
+          "cellular-biomechanics-12"
+        ],
+        "misconception_ids": [
+          "area-equals-axial"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "cellular-biomechanics-12:membrane-stress",
+      "type": "numeric",
+      "prompt": "For E = 1.5 MPa and ε = 0.10, what is the stress σ = Eε in kPa? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "cellular-biomechanics-12-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 150.0,
+        "unit": "",
+        "tolerance": 0.5,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Multiply the modulus in pascals by the strain, then convert to kPa.",
+        "solution": "1.5 × 10⁶ × 0.10 = 150 kPa.",
+        "lesson_ids": [
+          "cellular-biomechanics-12"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "cellular-biomechanics-12:membrane-force",
+      "type": "numeric",
+      "prompt": "The stress is 150 kPa and the cross-section is 10 mm × 0.5 mm. What force does the membrane carry, in N? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "cellular-biomechanics-12-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0.75,
+        "unit": "",
+        "tolerance": 0.005,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Multiply the stress by the area in square metres.",
+        "solution": "150 × 10³ × 5.0 × 10⁻⁶ = 0.75 N.",
+        "lesson_ids": [
+          "cellular-biomechanics-12"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "cellular-biomechanics-12:peak-strain-rate",
+      "type": "numeric",
+      "prompt": "A cyclic stretch ε(t) = 0.05 + 0.05 sin(2πft) is applied at f = 1 Hz. What is the peak strain rate 2πf × amplitude, per second? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "cellular-biomechanics-12-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 0.3142,
+        "unit": "",
+        "tolerance": 0.002,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "The derivative of a sine has the amplitude 2πf times the amplitude of the strain.",
+        "solution": "2π × 1 × 0.05 = 0.314 per second.",
+        "lesson_ids": [
+          "cellular-biomechanics-12"
+        ],
+        "misconception_ids": [
+          "mean-strain-only"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "cellular-biomechanics-12:strain-statements",
+      "type": "multiple_select",
+      "prompt": "Which statements about reporting a stretch of cells are appropriate? Select all that apply.",
+      "points": 2,
+      "objective_ids": [
+        "cellular-biomechanics-12-objective-3"
+      ],
+      "options": [
+        "A uniaxial stretch of 10% of a nearly incompressible membrane changes its area by less than 10%.",
+        "The strain in the culture area can be taken from the clamp displacement without checking.",
+        "A cyclic protocol needs the waveform, frequency, minimum and maximum strain, duration and number of cycles.",
+        "A stretch should be specified as uniaxial or equibiaxial, and engineering or true strain.",
+        "The stress in the membrane is the stress on each cell."
+      ],
+      "solution_spec": {
+        "answer": [
+          0,
+          2,
+          3
+        ],
+        "partial_credit": "correct-minus-incorrect-clamped-v1"
+      },
+      "feedback": {
+        "hint": "Ask what each reported number leaves unspecified.",
+        "solution": "Direction and strain definition, the Poisson effect and the full cyclic protocol are needed. The strain in the culture area should be measured, and the cells sense the deformation of their adhesions, not the stress in the membrane.",
+        "lesson_ids": [
+          "cellular-biomechanics-12"
+        ],
+        "misconception_ids": [
+          "area-equals-axial",
+          "mean-strain-only",
+          "true-engineering-confused"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "cellular-biomechanics-lab1:condition-summary",
+      "type": "file_upload",
+      "prompt": "Using the synthetic marker-expression CSV, first average the cells within each gel, then summarize each condition. Upload a table with one row per condition (key column `condition`: s1_low, s1_high, s10_low, s10_high, s100_low and s100_high) and columns `gels` (the number of gels), `cells` (the number of cells) and `mean_of_gels` (the mean of the gel means, in arbitrary units).",
+      "points": 18,
+      "objective_ids": [
+        "cellular-biomechanics-lab-01-objective-1"
+      ],
+      "solution_spec": {
+        "accepted_media_types": [
+          "text/csv"
+        ],
+        "max_bytes": 32768,
+        "validation_spec": {
+          "format": "csv-numeric-table-v1",
+          "delimiter": ",",
+          "key_column": "condition",
+          "columns": [
+            "condition",
+            "gels",
+            "cells",
+            "mean_of_gels"
+          ],
+          "checks": [
+            {
+              "id": "s1_low-gels",
+              "row_id": "s1_low",
+              "column": "gels",
+              "type": "numeric",
+              "answer": 3.0,
+              "unit": "",
+              "tolerance": 0,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "count",
+                "values": [
+                  16.0,
+                  22.0,
+                  28.0
+                ]
+              }
+            },
+            {
+              "id": "s1_low-cells",
+              "row_id": "s1_low",
+              "column": "cells",
+              "type": "numeric",
+              "answer": 30.0,
+              "unit": "",
+              "tolerance": 0,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "count",
+                "values": [
+                  4.0,
+                  7.0,
+                  10.0,
+                  13.0,
+                  15.0,
+                  17.0,
+                  19.0,
+                  22.0,
+                  25.0,
+                  28.0,
+                  19.0,
+                  21.0,
+                  23.0,
+                  25.0,
+                  28.0,
+                  31.0,
+                  34.0,
+                  10.0,
+                  13.0,
+                  16.0,
+                  31.0,
+                  34.0,
+                  37.0,
+                  40.0,
+                  16.0,
+                  19.0,
+                  22.0,
+                  25.0,
+                  27.0,
+                  29.0
+                ]
+              }
+            },
+            {
+              "id": "s1_low-mean_of_gels",
+              "row_id": "s1_low",
+              "column": "mean_of_gels",
+              "type": "numeric",
+              "answer": 22.0,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  16.0,
+                  22.0,
+                  28.0
+                ]
+              }
+            },
+            {
+              "id": "s1_high-gels",
+              "row_id": "s1_high",
+              "column": "gels",
+              "type": "numeric",
+              "answer": 3.0,
+              "unit": "",
+              "tolerance": 0,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "count",
+                "values": [
+                  28.0,
+                  34.0,
+                  22.0
+                ]
+              }
+            },
+            {
+              "id": "s1_high-cells",
+              "row_id": "s1_high",
+              "column": "cells",
+              "type": "numeric",
+              "answer": 30.0,
+              "unit": "",
+              "tolerance": 0,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "count",
+                "values": [
+                  40.0,
+                  16.0,
+                  19.0,
+                  22.0,
+                  25.0,
+                  27.0,
+                  29.0,
+                  31.0,
+                  34.0,
+                  37.0,
+                  28.0,
+                  31.0,
+                  33.0,
+                  35.0,
+                  37.0,
+                  40.0,
+                  43.0,
+                  46.0,
+                  22.0,
+                  25.0,
+                  23.0,
+                  25.0,
+                  28.0,
+                  31.0,
+                  34.0,
+                  10.0,
+                  13.0,
+                  16.0,
+                  19.0,
+                  21.0
+                ]
+              }
+            },
+            {
+              "id": "s1_high-mean_of_gels",
+              "row_id": "s1_high",
+              "column": "mean_of_gels",
+              "type": "numeric",
+              "answer": 28.0,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  28.0,
+                  34.0,
+                  22.0
+                ]
+              }
+            },
+            {
+              "id": "s10_low-gels",
+              "row_id": "s10_low",
+              "column": "gels",
+              "type": "numeric",
+              "answer": 3.0,
+              "unit": "",
+              "tolerance": 0,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "count",
+                "values": [
+                  42.0,
+                  30.0,
+                  36.0
+                ]
+              }
+            },
+            {
+              "id": "s10_low-cells",
+              "row_id": "s10_low",
+              "column": "cells",
+              "type": "numeric",
+              "answer": 30.0,
+              "unit": "",
+              "tolerance": 0,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "count",
+                "values": [
+                  51.0,
+                  54.0,
+                  30.0,
+                  33.0,
+                  36.0,
+                  39.0,
+                  41.0,
+                  43.0,
+                  45.0,
+                  48.0,
+                  21.0,
+                  24.0,
+                  27.0,
+                  29.0,
+                  31.0,
+                  33.0,
+                  36.0,
+                  39.0,
+                  42.0,
+                  18.0,
+                  35.0,
+                  37.0,
+                  39.0,
+                  42.0,
+                  45.0,
+                  48.0,
+                  24.0,
+                  27.0,
+                  30.0,
+                  33.0
+                ]
+              }
+            },
+            {
+              "id": "s10_low-mean_of_gels",
+              "row_id": "s10_low",
+              "column": "mean_of_gels",
+              "type": "numeric",
+              "answer": 36.0,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  42.0,
+                  30.0,
+                  36.0
+                ]
+              }
+            },
+            {
+              "id": "s10_high-gels",
+              "row_id": "s10_high",
+              "column": "gels",
+              "type": "numeric",
+              "answer": 3.0,
+              "unit": "",
+              "tolerance": 0,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "count",
+                "values": [
+                  44.0,
+                  50.0,
+                  56.0
+                ]
+              }
+            },
+            {
+              "id": "s10_high-cells",
+              "row_id": "s10_high",
+              "column": "cells",
+              "type": "numeric",
+              "answer": 30.0,
+              "unit": "",
+              "tolerance": 0,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "count",
+                "values": [
+                  50.0,
+                  53.0,
+                  56.0,
+                  32.0,
+                  35.0,
+                  38.0,
+                  41.0,
+                  43.0,
+                  45.0,
+                  47.0,
+                  38.0,
+                  41.0,
+                  44.0,
+                  47.0,
+                  49.0,
+                  51.0,
+                  53.0,
+                  56.0,
+                  59.0,
+                  62.0,
+                  53.0,
+                  55.0,
+                  57.0,
+                  59.0,
+                  62.0,
+                  65.0,
+                  68.0,
+                  44.0,
+                  47.0,
+                  50.0
+                ]
+              }
+            },
+            {
+              "id": "s10_high-mean_of_gels",
+              "row_id": "s10_high",
+              "column": "mean_of_gels",
+              "type": "numeric",
+              "answer": 50.0,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  44.0,
+                  50.0,
+                  56.0
+                ]
+              }
+            },
+            {
+              "id": "s100_low-gels",
+              "row_id": "s100_low",
+              "column": "gels",
+              "type": "numeric",
+              "answer": 3.0,
+              "unit": "",
+              "tolerance": 0,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "count",
+                "values": [
+                  42.0,
+                  48.0,
+                  36.0
+                ]
+              }
+            },
+            {
+              "id": "s100_low-cells",
+              "row_id": "s100_low",
+              "column": "cells",
+              "type": "numeric",
+              "answer": 30.0,
+              "unit": "",
+              "tolerance": 0,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "count",
+                "values": [
+                  45.0,
+                  48.0,
+                  51.0,
+                  54.0,
+                  30.0,
+                  33.0,
+                  36.0,
+                  39.0,
+                  41.0,
+                  43.0,
+                  60.0,
+                  36.0,
+                  39.0,
+                  42.0,
+                  45.0,
+                  47.0,
+                  49.0,
+                  51.0,
+                  54.0,
+                  57.0,
+                  30.0,
+                  33.0,
+                  35.0,
+                  37.0,
+                  39.0,
+                  42.0,
+                  45.0,
+                  48.0,
+                  24.0,
+                  27.0
+                ]
+              }
+            },
+            {
+              "id": "s100_low-mean_of_gels",
+              "row_id": "s100_low",
+              "column": "mean_of_gels",
+              "type": "numeric",
+              "answer": 42.0,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  42.0,
+                  48.0,
+                  36.0
+                ]
+              }
+            },
+            {
+              "id": "s100_high-gels",
+              "row_id": "s100_high",
+              "column": "gels",
+              "type": "numeric",
+              "answer": 3.0,
+              "unit": "",
+              "tolerance": 0,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "count",
+                "values": [
+                  74.0,
+                  62.0,
+                  68.0
+                ]
+              }
+            },
+            {
+              "id": "s100_high-cells",
+              "row_id": "s100_high",
+              "column": "cells",
+              "type": "numeric",
+              "answer": 30.0,
+              "unit": "",
+              "tolerance": 0,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "count",
+                "values": [
+                  75.0,
+                  77.0,
+                  80.0,
+                  83.0,
+                  86.0,
+                  62.0,
+                  65.0,
+                  68.0,
+                  71.0,
+                  73.0,
+                  71.0,
+                  74.0,
+                  50.0,
+                  53.0,
+                  56.0,
+                  59.0,
+                  61.0,
+                  63.0,
+                  65.0,
+                  68.0,
+                  59.0,
+                  62.0,
+                  65.0,
+                  67.0,
+                  69.0,
+                  71.0,
+                  74.0,
+                  77.0,
+                  80.0,
+                  56.0
+                ]
+              }
+            },
+            {
+              "id": "s100_high-mean_of_gels",
+              "row_id": "s100_high",
+              "column": "mean_of_gels",
+              "type": "numeric",
+              "answer": 68.0,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  74.0,
+                  62.0,
+                  68.0
+                ]
+              }
+            }
+          ]
+        },
+        "rubric": [
+          {
+            "id": "s1_low-gels",
+            "criterion": "s1_low: gels",
+            "points": 1,
+            "evidence": [
+              "Recomputes gels for s1_low from the preparation-level values."
+            ]
+          },
+          {
+            "id": "s1_low-cells",
+            "criterion": "s1_low: cells",
+            "points": 1,
+            "evidence": [
+              "Recomputes cells for s1_low from the preparation-level values."
+            ]
+          },
+          {
+            "id": "s1_low-mean_of_gels",
+            "criterion": "s1_low: mean_of_gels",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_of_gels for s1_low from the preparation-level values."
+            ]
+          },
+          {
+            "id": "s1_high-gels",
+            "criterion": "s1_high: gels",
+            "points": 1,
+            "evidence": [
+              "Recomputes gels for s1_high from the preparation-level values."
+            ]
+          },
+          {
+            "id": "s1_high-cells",
+            "criterion": "s1_high: cells",
+            "points": 1,
+            "evidence": [
+              "Recomputes cells for s1_high from the preparation-level values."
+            ]
+          },
+          {
+            "id": "s1_high-mean_of_gels",
+            "criterion": "s1_high: mean_of_gels",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_of_gels for s1_high from the preparation-level values."
+            ]
+          },
+          {
+            "id": "s10_low-gels",
+            "criterion": "s10_low: gels",
+            "points": 1,
+            "evidence": [
+              "Recomputes gels for s10_low from the preparation-level values."
+            ]
+          },
+          {
+            "id": "s10_low-cells",
+            "criterion": "s10_low: cells",
+            "points": 1,
+            "evidence": [
+              "Recomputes cells for s10_low from the preparation-level values."
+            ]
+          },
+          {
+            "id": "s10_low-mean_of_gels",
+            "criterion": "s10_low: mean_of_gels",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_of_gels for s10_low from the preparation-level values."
+            ]
+          },
+          {
+            "id": "s10_high-gels",
+            "criterion": "s10_high: gels",
+            "points": 1,
+            "evidence": [
+              "Recomputes gels for s10_high from the preparation-level values."
+            ]
+          },
+          {
+            "id": "s10_high-cells",
+            "criterion": "s10_high: cells",
+            "points": 1,
+            "evidence": [
+              "Recomputes cells for s10_high from the preparation-level values."
+            ]
+          },
+          {
+            "id": "s10_high-mean_of_gels",
+            "criterion": "s10_high: mean_of_gels",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_of_gels for s10_high from the preparation-level values."
+            ]
+          },
+          {
+            "id": "s100_low-gels",
+            "criterion": "s100_low: gels",
+            "points": 1,
+            "evidence": [
+              "Recomputes gels for s100_low from the preparation-level values."
+            ]
+          },
+          {
+            "id": "s100_low-cells",
+            "criterion": "s100_low: cells",
+            "points": 1,
+            "evidence": [
+              "Recomputes cells for s100_low from the preparation-level values."
+            ]
+          },
+          {
+            "id": "s100_low-mean_of_gels",
+            "criterion": "s100_low: mean_of_gels",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_of_gels for s100_low from the preparation-level values."
+            ]
+          },
+          {
+            "id": "s100_high-gels",
+            "criterion": "s100_high: gels",
+            "points": 1,
+            "evidence": [
+              "Recomputes gels for s100_high from the preparation-level values."
+            ]
+          },
+          {
+            "id": "s100_high-cells",
+            "criterion": "s100_high: cells",
+            "points": 1,
+            "evidence": [
+              "Recomputes cells for s100_high from the preparation-level values."
+            ]
+          },
+          {
+            "id": "s100_high-mean_of_gels",
+            "criterion": "s100_high: mean_of_gels",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_of_gels for s100_high from the preparation-level values."
+            ]
+          }
+        ]
+      },
+      "feedback": {
+        "hint": "Compute one mean per gel, then average the three gel means of each condition; count both gels and cells.",
+        "solution": "Each condition has 3 gels and 30 cells. The means of the gel means are 1 kPa, low ligand 22.0, 1 kPa, high ligand 28.0, 10 kPa, low ligand 36.0, 10 kPa, high ligand 50.0, 100 kPa, low ligand 42.0, 100 kPa, high ligand 68.0.",
+        "lesson_ids": [
+          "cellular-biomechanics-lab-01",
+          "cellular-biomechanics-6",
+          "cellular-biomechanics-13"
+        ],
+        "misconception_ids": [
+          "cells-as-units"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "cellular-biomechanics-lab1:stiffness-effect",
+      "type": "numeric",
+      "prompt": "What is the main effect of stiffness, the mean of the two 100 kPa conditions minus the mean of the two 1 kPa conditions (averaging over ligand level)? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "cellular-biomechanics-lab-01-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 30.0,
+        "unit": "",
+        "tolerance": 0.05,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Average the low- and high-ligand means at each stiffness before subtracting.",
+        "solution": "(42 + 68)/2 − (22 + 28)/2 = 30.",
+        "lesson_ids": [
+          "cellular-biomechanics-lab-01",
+          "cellular-biomechanics-6",
+          "cellular-biomechanics-13"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "cellular-biomechanics-lab1:ligand-effect-100",
+      "type": "numeric",
+      "prompt": "At 100 kPa, what is the effect of raising the ligand density from low to high? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "cellular-biomechanics-lab-01-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 26.0,
+        "unit": "",
+        "tolerance": 0.05,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Subtract the low-ligand mean from the high-ligand mean at 100 kPa.",
+        "solution": "68 − 42 = 26; at 1 kPa the same change adds only 6.",
+        "lesson_ids": [
+          "cellular-biomechanics-lab-01",
+          "cellular-biomechanics-6",
+          "cellular-biomechanics-13"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "cellular-biomechanics-lab1:interaction",
+      "type": "numeric",
+      "prompt": "What is the interaction of stiffness and ligand density, half the difference between the ligand effect at 100 kPa and the ligand effect at 1 kPa? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "cellular-biomechanics-lab-01-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 10.0,
+        "unit": "",
+        "tolerance": 0.05,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Subtract the two ligand effects and halve the difference.",
+        "solution": "(26 − 6)/2 = 10: stiffness raises the marker more when the ligand density is high.",
+        "lesson_ids": [
+          "cellular-biomechanics-lab-01",
+          "cellular-biomechanics-6",
+          "cellular-biomechanics-13"
+        ],
+        "misconception_ids": [
+          "additive-assumed"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "cellular-biomechanics-lab1:gel-level-se",
+      "type": "data_interpretation",
+      "prompt": "At 100 kPa the pooled SD of the gel means in the two ligand arms (three gels each) is 6.0. Compute the standard error of the ligand effect, SD × √(2/3), and its t statistic.",
+      "points": 2,
+      "objective_ids": [
+        "cellular-biomechanics-lab-01-objective-3"
+      ],
+      "response_fields": [
+        {
+          "id": "value",
+          "type": "numeric",
+          "prompt": "What is the standard error? Report exactly 3 significant figures.",
+          "unit": "",
+          "points": 1
+        },
+        {
+          "id": "inference",
+          "type": "single_choice",
+          "prompt": "Why is this standard error based on three gels and not on the 60 cells?",
+          "options": [
+            "Cells on the same gel share the gel's preparation and are not independent; the gel is the unit of replication.",
+            "Cells are always independent of each other.",
+            "Gel means have no variability.",
+            "Using cells would give a larger and safer standard error."
+          ],
+          "points": 1
+        }
+      ],
+      "solution_spec": {
+        "field_specs": [
+          {
+            "id": "value",
+            "type": "numeric",
+            "answer": 4.9,
+            "unit": "",
+            "tolerance": 0.02,
+            "relative_tolerance": 0,
+            "unit_required": false,
+            "significant_figures": 3,
+            "dimensions": null
+          },
+          {
+            "id": "inference",
+            "type": "single_choice",
+            "answer": 0
+          }
+        ]
+      },
+      "feedback": {
+        "hint": "Use the SD of the gel means and the number of gels per arm.",
+        "solution": "SE = 6.0 × √(2/3) = 4.90, so t = 26/4.90 = 5.3 on 4 degrees of freedom.",
+        "lesson_ids": [
+          "cellular-biomechanics-lab-01",
+          "cellular-biomechanics-6",
+          "cellular-biomechanics-13"
+        ],
+        "misconception_ids": [
+          "cells-as-units"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "cellular-biomechanics-lab1:naive-se",
+      "type": "numeric",
+      "prompt": "If the 30 cells in each arm were wrongly treated as independent, with a pooled cell-level SD of 9.0, what standard error would be reported, SD × √(2/30)? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "cellular-biomechanics-lab-01-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 2.3223,
+        "unit": "",
+        "tolerance": 0.02,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use 30 observations per arm.",
+        "solution": "9.0 × √(2/30) = 2.32, about 2.1 times smaller than the gel-level 4.90.",
+        "lesson_ids": [
+          "cellular-biomechanics-lab-01",
+          "cellular-biomechanics-6",
+          "cellular-biomechanics-13"
+        ],
+        "misconception_ids": [
+          "cells-as-units"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "cellular-biomechanics-lab1:design-reasoning",
+      "type": "structured",
+      "prompt": "Answer each part about the crossed design.",
+      "points": 3,
+      "objective_ids": [
+        "cellular-biomechanics-lab-01-objective-3"
+      ],
+      "response_fields": [
+        {
+          "id": "interaction",
+          "type": "single_choice",
+          "prompt": "What does the interaction in these data show?",
+          "options": [
+            "The marker responds to stiffness much more when the ligand density is high, so the two factors do not act additively.",
+            "Stiffness has no effect.",
+            "Ligand density has no effect.",
+            "The cells are independent."
+          ],
+          "points": 1
+        },
+        {
+          "id": "unit",
+          "type": "single_choice",
+          "prompt": "What is the independent unit of replication?",
+          "options": [
+            "The gel: three independently made gels per condition.",
+            "The cell.",
+            "The pixel.",
+            "The condition code."
+          ],
+          "points": 1
+        },
+        {
+          "id": "limits",
+          "type": "single_choice",
+          "prompt": "What does this lab not show?",
+          "options": [
+            "Which property of the gel causes the response beyond the two controlled factors, since the viscoelasticity and mobility were not reported here.",
+            "Any effect of stiffness.",
+            "Any effect of ligand density.",
+            "That gels were used."
+          ],
+          "points": 1
+        }
+      ],
+      "solution_spec": {
+        "field_specs": [
+          {
+            "id": "interaction",
+            "type": "single_choice",
+            "answer": 0
+          },
+          {
+            "id": "unit",
+            "type": "single_choice",
+            "answer": 0
+          },
+          {
+            "id": "limits",
+            "type": "single_choice",
+            "answer": 0
+          }
+        ],
+        "rubric": [
+          {
+            "id": "interaction",
+            "criterion": "What the interaction shows",
+            "points": 1,
+            "evidence": [
+              "Reads the interaction as non-additive effects."
+            ]
+          },
+          {
+            "id": "unit",
+            "criterion": "The independent unit",
+            "points": 1,
+            "evidence": [
+              "Identifies the gel as the unit."
+            ]
+          },
+          {
+            "id": "limits",
+            "criterion": "What the lab does not show",
+            "points": 1,
+            "evidence": [
+              "Names the properties not controlled or measured here."
+            ]
+          }
+        ]
+      },
+      "feedback": {
+        "hint": "For each part, ask how the effects combine, what is replicated and what was not measured.",
+        "solution": "The effects interact, the gel is the unit, and viscoelasticity and mobility are other properties that the lab does not report.",
+        "lesson_ids": [
+          "cellular-biomechanics-lab-01",
+          "cellular-biomechanics-6",
+          "cellular-biomechanics-13"
+        ],
+        "misconception_ids": [
+          "cells-as-units",
+          "additive-assumed"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "cellular-biomechanics-lab1:supported-conclusions",
+      "type": "multiple_select",
+      "prompt": "Which conclusions follow from these synthetic data? Select all that apply.",
+      "points": 2,
+      "objective_ids": [
+        "cellular-biomechanics-lab-01-objective-3"
+      ],
+      "options": [
+        "Stiffness and ligand density both raise the marker, and the effect of stiffness is larger at the high ligand density.",
+        "The standard errors should be computed from gel means because the gel is the independent unit.",
+        "Three gels per condition give a wide uncertainty for any single effect.",
+        "The marker would respond to stiffness alone if ligand density were fixed at any value.",
+        "The 180 cells give 180 independent observations."
+      ],
+      "solution_spec": {
+        "answer": [
+          0,
+          1,
+          2
+        ],
+        "partial_credit": "correct-minus-incorrect-clamped-v1"
+      },
+      "feedback": {
+        "hint": "Keep each conclusion inside what three gels per condition can show.",
+        "solution": "The first three follow from the table. The response to stiffness depends on the ligand level, and the cells within a gel are not independent.",
+        "lesson_ids": [
+          "cellular-biomechanics-lab-01",
+          "cellular-biomechanics-6",
+          "cellular-biomechanics-13"
+        ],
+        "misconception_ids": [
+          "additive-assumed",
+          "cells-as-units"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "cellular-biomechanics-13:variance-inflation",
+      "type": "numeric",
+      "prompt": "Stiffness and ligand mobility are correlated with r = 0.95. What is the variance inflation factor 1/(1 − r²)? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "cellular-biomechanics-13-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 10.2564,
+        "unit": "",
+        "tolerance": 0.05,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Square r first.",
+        "solution": "1/(1 − 0.9025) = 10.26.",
+        "lesson_ids": [
+          "cellular-biomechanics-13"
+        ],
+        "misconception_ids": [
+          "confounding-ignored"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "cellular-biomechanics-13:se-inflation",
+      "type": "numeric",
+      "prompt": "By what factor is the standard error of each effect inflated when the VIF is 10.26? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "cellular-biomechanics-13-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 3.2026,
+        "unit": "",
+        "tolerance": 0.02,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "The standard error is inflated by the square root of the VIF.",
+        "solution": "√10.26 = 3.20.",
+        "lesson_ids": [
+          "cellular-biomechanics-13"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "cellular-biomechanics-13:frap-diffusion",
+      "type": "numeric",
+      "prompt": "In a photobleaching experiment a circular spot of radius 5 μm recovers half its fluorescence in 12 s. Using D = 0.224 w²/t½, what is the diffusion coefficient? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "cellular-biomechanics-13-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0.4667,
+        "unit": "μm²/s",
+        "tolerance": 0.005,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the radius in μm and the time in s to get μm²/s.",
+        "solution": "0.224 × 5²/12 = 0.467 μm²/s.",
+        "lesson_ids": [
+          "cellular-biomechanics-13"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "cellular-biomechanics-13:mobility-ratio",
+      "type": "numeric",
+      "prompt": "A more crosslinked gel has t½ = 30 s for the same spot. By what factor is its diffusion coefficient lower than that of the gel with t½ = 12 s? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "cellular-biomechanics-13-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 2.5,
+        "unit": "",
+        "tolerance": 0.02,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "The diffusion coefficient is inversely proportional to t½ for the same spot.",
+        "solution": "30/12 = 2.5.",
+        "lesson_ids": [
+          "cellular-biomechanics-13"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "cellular-biomechanics-13:gel-mean-sd",
+      "type": "numeric",
+      "prompt": "The SD between gels is 6 points and the SD between cells within a gel is 15 points. What is the SD of the mean of 20 cells on one gel, √(σ_b² + σ_w²/m)? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "cellular-biomechanics-13-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 6.8739,
+        "unit": "",
+        "tolerance": 0.02,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Divide the within-gel variance by the number of cells before adding.",
+        "solution": "√(36 + 225/20) = 6.87.",
+        "lesson_ids": [
+          "cellular-biomechanics-13"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "cellular-biomechanics-13:gel-level-se",
+      "type": "numeric",
+      "prompt": "Using that SD (6.87) and 9 gels per arm, what is the standard error of the difference between two arms, SD × √(2/n)? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "cellular-biomechanics-13-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 3.2404,
+        "unit": "",
+        "tolerance": 0.02,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "n is the number of gels per arm.",
+        "solution": "6.87 × √(2/9) = 3.24 points.",
+        "lesson_ids": [
+          "cellular-biomechanics-13"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "cellular-biomechanics-13:naive-cell-level-se",
+      "type": "numeric",
+      "prompt": "If the 180 cells in each arm were wrongly treated as independent, with the total SD √(σ_b² + σ_w²) = 16.16, what standard error would be reported? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "cellular-biomechanics-13-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 1.7029,
+        "unit": "",
+        "tolerance": 0.02,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use n = number of cells per arm.",
+        "solution": "16.16 × √(2/180) = 1.70 points, 1.90 times too small.",
+        "lesson_ids": [
+          "cellular-biomechanics-13"
+        ],
+        "misconception_ids": [
+          "cells-as-units"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "cellular-biomechanics-13:redesign",
+      "type": "structured",
+      "prompt": "A stiff hydrogel raises a marker, but stiffness was raised by crosslinker that also reduced ligand mobility. Answer each part about the redesign.",
+      "points": 3,
+      "objective_ids": [
+        "cellular-biomechanics-13-objective-2",
+        "cellular-biomechanics-13-objective-3"
+      ],
+      "response_fields": [
+        {
+          "id": "confound",
+          "type": "single_choice",
+          "prompt": "What can be concluded from the original experiment alone?",
+          "options": [
+            "That the marker rises with crosslinker; stiffness and ligand mobility cannot be separated because they changed together.",
+            "That stiffness causes the rise in the marker.",
+            "That ligand mobility has no effect.",
+            "That the cells are independent."
+          ],
+          "points": 1
+        },
+        {
+          "id": "characterization",
+          "type": "single_choice",
+          "prompt": "Which characterization is needed before interpreting the cell result?",
+          "options": [
+            "The storage and loss moduli at culture conditions on swollen gels, the ligand density and the ligand mobility of the same formulations.",
+            "The color of the gels.",
+            "The number of cells imaged.",
+            "The volume of medium used."
+          ],
+          "points": 1
+        },
+        {
+          "id": "unit",
+          "type": "single_choice",
+          "prompt": "What is the independent unit in the redesigned experiment?",
+          "options": [
+            "The gel, with several gels made independently for each combination.",
+            "The cell.",
+            "The field of view.",
+            "The pixel."
+          ],
+          "points": 1
+        }
+      ],
+      "solution_spec": {
+        "field_specs": [
+          {
+            "id": "confound",
+            "type": "single_choice",
+            "answer": 0
+          },
+          {
+            "id": "characterization",
+            "type": "single_choice",
+            "answer": 0
+          },
+          {
+            "id": "unit",
+            "type": "single_choice",
+            "answer": 0
+          }
+        ],
+        "rubric": [
+          {
+            "id": "confound",
+            "criterion": "What the original design allows",
+            "points": 1,
+            "evidence": [
+              "States the confounding of stiffness and ligand mobility."
+            ]
+          },
+          {
+            "id": "characterization",
+            "criterion": "A characterization to add",
+            "points": 1,
+            "evidence": [
+              "Names the moduli, ligand density and mobility as the missing characterization."
+            ]
+          },
+          {
+            "id": "unit",
+            "criterion": "The independent unit",
+            "points": 1,
+            "evidence": [
+              "Identifies the gel as the unit and not the cell."
+            ]
+          }
+        ]
+      },
+      "feedback": {
+        "hint": "For each part, ask which properties changed together, what was measured and what counts as independent.",
+        "solution": "The original design confounds stiffness and ligand mobility, a rheology and mobility characterization is needed, and the gel is the independent unit.",
+        "lesson_ids": [
+          "cellular-biomechanics-13",
+          "cellular-biomechanics-6",
+          "cellular-biomechanics-7",
+          "cellular-biomechanics-11"
+        ],
+        "misconception_ids": [
+          "confounding-ignored",
+          "cells-as-units"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "cellular-biomechanics-13:design-statements",
+      "type": "multiple_select",
+      "prompt": "Which statements about the redesigned experiment are appropriate? Select all that apply.",
+      "points": 2,
+      "objective_ids": [
+        "cellular-biomechanics-13-objective-3"
+      ],
+      "options": [
+        "When two explanatory variables are highly correlated, the standard errors of their effects are inflated.",
+        "Counting every cell as an independent replicate gives a correct standard error.",
+        "Raising stiffness by crosslinker alone isolates the effect of stiffness.",
+        "Mobility, ligand density and moduli should be measured on the same formulations as the cell experiment.",
+        "More gels, not more cells per gel, reduce the between-gel part of the uncertainty."
+      ],
+      "solution_spec": {
+        "answer": [
+          0,
+          3,
+          4
+        ],
+        "partial_credit": "correct-minus-incorrect-clamped-v1"
+      },
+      "feedback": {
+        "hint": "Think about what varied together and what counts as independent.",
+        "solution": "Correlated predictors inflate errors, the characterization must be on the same gels, and the gel is the unit. Cells are not independent, and crosslinker alone confounds stiffness with other properties.",
+        "lesson_ids": [
+          "cellular-biomechanics-13"
+        ],
+        "misconception_ids": [
+          "confounding-ignored",
+          "cells-as-units"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
     }
   ]
 }

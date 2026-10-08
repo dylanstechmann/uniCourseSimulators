@@ -80,6 +80,110 @@
       "original_content": true,
       "license": "CC-BY-4.0",
       "modifications": []
+    },
+    {
+      "module_id": "cellular-biomechanics-module-7",
+      "lesson_id": "cellular-biomechanics-7",
+      "reading": "modules/07-oscillatory-rheology-storage-and-loss-moduli.md",
+      "source_ids": [
+        "biomaterials",
+        "transport"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "cellular-biomechanics-module-8",
+      "lesson_id": "cellular-biomechanics-8",
+      "reading": "modules/08-traction-forces-from-micropillars.md",
+      "source_ids": [
+        "biomaterials",
+        "transport"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "cellular-biomechanics-module-9",
+      "lesson_id": "cellular-biomechanics-9",
+      "reading": "modules/09-bonds-under-force-and-the-molecular-clutch.md",
+      "source_ids": [
+        "biomaterials",
+        "transport"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "cellular-biomechanics-module-10",
+      "lesson_id": "cellular-biomechanics-10",
+      "reading": "modules/10-cortical-tension-and-micropipette-aspiration.md",
+      "source_ids": [
+        "biomaterials",
+        "transport"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "cellular-biomechanics-module-11",
+      "lesson_id": "cellular-biomechanics-11",
+      "reading": "modules/11-dose-response-to-stiffness-and-the-hill-function.md",
+      "source_ids": [
+        "biomaterials",
+        "transport"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "cellular-biomechanics-module-12",
+      "lesson_id": "cellular-biomechanics-12",
+      "reading": "modules/12-applying-strain-to-cells.md",
+      "source_ids": [
+        "biomaterials",
+        "transport"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "cellular-biomechanics-module-lab-01",
+      "lesson_id": "cellular-biomechanics-lab-01",
+      "reading": "labs/01-stiffness-ligand-density-and-the-unit-of-analysis.md",
+      "source_ids": [
+        "biomaterials",
+        "transport"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "cellular-biomechanics-module-13",
+      "lesson_id": "cellular-biomechanics-13",
+      "reading": "modules/13-decoupling-stiffness-from-ligand-density.md",
+      "source_ids": [
+        "biomaterials",
+        "transport"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
     }
   ]
 }

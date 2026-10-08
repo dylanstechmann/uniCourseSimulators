@@ -4,7 +4,24 @@
 
 2026-10-06; synthetic local learner data only. Milestones 1 and 2 are implemented. Milestone 3 remains partial; deterministic graders and prototype graded-assignment and review workflows are described below. A Milestone 4 curriculum-map increment is implemented and tested, while subject-matter review and map refinement remain. All 25 course packages are **partial**; zero are beta, complete or externally reviewed. Human score review is limited to saved attempts and does not constitute course-content review. No semester equivalence, university credit, security certification or public production deployment is asserted.
 
-## Current increment: transport gets a proposed 14-week schedule, seven lessons and an oxygen depth-profile lab (2026-10-08, twenty-first pass)
+## Current increment: cellular biomechanics gets a proposed 14-week schedule, seven lessons and a stiffness and ligand-density lab (2026-10-08, twenty-second pass)
+
+Written by an AI coding assistant. Cellular Biomechanics & Mechanobiology moves from 0.2.1 to 0.3.0 and stays `partial`, unreviewed and formative-only.
+
+- **Proposed 14-week schedule** (`duration.weeks`) and a regenerated syllabus: the four short prototype units sit in weeks 1, 5, 8 and 10 beside the original lessons; week 13 is a lab and week 14 a lesson that prepares the existing course case. The manifest says the schedule is not evidence of semester equivalence.
+- **Seven lessons (7 to 13)**, each about 900 to 1,100 words with a worked example, common mistakes, seven to nine items and four cards: oscillatory rheology (storage and loss moduli); micropillar traction forces; bonds under force and the molecular clutch; cortical tension and micropipette aspiration; the Hill function and how to choose stiffness levels; applying strain to cells (engineering and true strain, Poisson contraction, strain rate); and decoupling stiffness from ligand density and mobility, which prepares the course case.
+- **Virtual lab 1**: a synthetic crossed design of stiffness (three levels) and ligand density (two levels), three gels per condition and ten cells per gel (180 rows). Eight items (an 18-cell summary upload by gel and cell counts and means, main effect, ligand effect, interaction, a gel-level standard error with an interpretation, the (wrong) cell-level standard error, a structured item and a multiple-select item), four cards and a week-13 practice assessment.
+- **Review record:** [cellular-biomechanics-0.3.0.md](reviews/ai-assisted/cellular-biomechanics-0.3.0.md). All 61 numeric keys in the package, including the 9 that predate this pass, agree with independent recalculation, as do the lab keys against its CSV and the numbers the lessons quote without asking for them. All 64 new items earn full credit under the real grader on the first run. Four drafting problems were found and fixed before the commit, including a first version of the lab data that contradicted its own point.
+- Tests: 65 recalculation and statement checks for cellular biomechanics; the schedule, the no-protocol statements, the syllabus outcomes and the lab keys against its CSV have tests; the inventory pins moved to 265 lessons, 1,180 questions and 800 cards.
+
+| Command/check (this container, Python 3.12.3, 2026-10-08) | Result |
+| --- | --- |
+| `python tools/validate_content.py` | PASS: 25 packages, 265 lessons, 1180 questions, 800 cards, 25 cases; 0 errors; 98 disclosed legacy-depth warnings |
+| `verify.sh` | see the PROGRESS.md entry for this pass |
+
+Not run: frontend checks, Docker Compose, Playwright for this pass. Not reviewed by a person.
+
+## Previous increment: transport gets a proposed 14-week schedule, seven lessons and an oxygen depth-profile lab (2026-10-08, twenty-first pass)
 
 Written by an AI coding assistant. Thermodynamics & Transport in Bioengineering moves from 0.3.2 to 0.4.0 and stays `partial`, unreviewed and formative-only.
 

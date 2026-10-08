@@ -32,7 +32,8 @@ LESSONS = [("geroscience", f"geroscience-{n}") for n in range(9, 15)] + [
     ("signals-control", "signals-control-6"), ("robotics", "robotics-6"), ("geroscience", "geroscience-16"),
 ] + [("genetics", f"genetics-{n}") for n in range(10, 16)] + [("physiology", f"physiology-{n}") for n in range(8, 15)] + [("biochemistry", f"biochemistry-{n}") for n in range(8, 14)] + [
     ("statistics", f"statistics-{n}") for n in range(9, 16)] + [("biomaterials", f"biomaterials-{n}") for n in range(7, 14)] + [
-    ("bioreactors", f"bioreactors-{n}") for n in range(7, 14)] + [("transport", f"transport-{n}") for n in range(7, 14)]
+    ("bioreactors", f"bioreactors-{n}") for n in range(7, 14)] + [("transport", f"transport-{n}") for n in range(7, 14)] + [
+    ("cellular-biomechanics", f"cellular-biomechanics-{n}") for n in range(7, 14)]
 
 
 def load(course):
@@ -524,4 +525,53 @@ def test_transport_lab_keys_match_the_dataset_and_the_lab_is_labelled_synthetic(
     text = (COURSES / "transport/labs/01-oxygen-depth-profiles-in-cell-laden-slabs.md").read_text(encoding="utf-8")
     assert "nothing here is evidence about any construct or cell" in text
     assert "describes the logic of the measurement, not an operating procedure" in text
+
+
+def test_cellular_biomechanics_schedule_places_every_lesson_once_and_stays_partial():
+    manifest = load("cellular-biomechanics")
+    weeks = manifest["duration"]["weeks"]
+    assert [w["week"] for w in weeks] == list(range(1, 15))
+    scheduled = [lesson for w in weeks for lesson in w["lesson_ids"]]
+    all_lessons = [lesson["id"] for m in manifest["modules"] for lesson in m["lessons"]]
+    assert len(all_lessons) == 14
+    assert sorted(scheduled) == sorted(all_lessons) and len(scheduled) == len(set(scheduled))
+    assessments = {a["id"]: a for a in manifest["assessments"]}
+    assert all(a in assessments for w in weeks for a in w["assessment_ids"])
+    assert all(a["mode"] != "graded" for a in manifest["assessments"])
+    assert manifest["maturity"] == "partial" and manifest["review"]["status"] == "unreviewed"
+    assert manifest["grading_policy"]["mode"] == "formative-only"
+    assert "not evidence of semester equivalence" in manifest["duration"]["equivalent_structure"]
+    prototype_weeks = {lesson: w["week"] for w in weeks for lesson in w["lesson_ids"] if lesson in {f"cellular-biomechanics-{n}" for n in range(1, 5)}}
+    assert prototype_weeks == {"cellular-biomechanics-1": 1, "cellular-biomechanics-2": 5, "cellular-biomechanics-3": 8, "cellular-biomechanics-4": 10}
+    lab_week = next(w for w in weeks if "cellular-biomechanics-lab-01" in w["lesson_ids"])
+    assert lab_week["week"] == 13 and "cellular-biomechanics-week13-stiffness-ligand-lab" in lab_week["assessment_ids"]
+    assert "cellular-biomechanics-case" in weeks[-1]["assessment_ids"] and "cellular-biomechanics-13" in weeks[-1]["lesson_ids"]
+
+
+def test_cellular_biomechanics_package_gives_no_protocols_or_handling_procedures():
+    manifest = load("cellular-biomechanics")
+    assert any("gives no laboratory protocols, handling procedures or medical advice" in item for item in manifest["limitations"])
+    limits = {
+        "07-oscillatory-rheology-storage-and-loss-moduli.md": "Nothing here is a measurement of any real gel or cell",
+        "08-traction-forces-from-micropillars.md": "Nothing here is a measurement of any real cell or array",
+        "09-bonds-under-force-and-the-molecular-clutch.md": "is not a quantitative model of any real adhesion or cell",
+        "10-cortical-tension-and-micropipette-aspiration.md": "the numbers are not measurements of any real cell",
+        "11-dose-response-to-stiffness-and-the-hill-function.md": "Nothing here is a statement about any real cell, gel or marker",
+        "12-applying-strain-to-cells.md": "Nothing here is a protocol for stretching cells",
+        "13-decoupling-stiffness-from-ligand-density.md": "The design is an outline of how to reason, not a protocol",
+    }
+    for name, phrase in limits.items():
+        text = (COURSES / "cellular-biomechanics/modules" / name).read_text(encoding="utf-8")
+        assert phrase in text, name
+    syllabus = (COURSES / "cellular-biomechanics/syllabus.md").read_text(encoding="utf-8")
+    assert "Version: 0.3.0." in syllabus and "Proposed 14-week schedule" in syllabus
+    assert all(f"- {outcome['description']}" in syllabus for outcome in manifest["outcomes"])
+
+
+def test_cellular_biomechanics_lab_keys_match_the_dataset_and_the_lab_is_labelled_synthetic():
+    import csv
+    rows = list(csv.DictReader((COURSES / "cellular-biomechanics/labs/stiffness-ligand-marker-expression.csv").open(encoding="utf-8")))
+    assert len(rows) == 180 and {int(r["gel"]) for r in rows} == {1, 2, 3}
+    text = (COURSES / "cellular-biomechanics/labs/01-stiffness-ligand-density-and-the-unit-of-analysis.md").read_text(encoding="utf-8")
+    assert "nothing here is evidence about any cell type or material" in text
 

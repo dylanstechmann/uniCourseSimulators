@@ -7,7 +7,7 @@
   "domain": "Bioengineering",
   "level": "Year 3",
   "maturity": "partial",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "license": "MIT OR CC-BY-4.0",
   "content_origin": {
     "kind": "legacy-prototype",
@@ -149,12 +149,360 @@
         "cellular-biomechanics-outcome-3",
         "cellular-biomechanics-outcome-1"
       ]
+    },
+    {
+      "id": "cellular-biomechanics-7-objective-1",
+      "description": "Compute the storage modulus, loss modulus, loss tangent and phase angle of a Maxwell element at a given frequency.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "cellular-biomechanics-outcome-2"
+      ]
+    },
+    {
+      "id": "cellular-biomechanics-7-objective-2",
+      "description": "Identify the crossover frequency and relate the moduli to the relaxation time of a gel.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "cellular-biomechanics-outcome-2",
+        "cellular-biomechanics-outcome-1"
+      ]
+    },
+    {
+      "id": "cellular-biomechanics-7-objective-3",
+      "description": "Evaluate what an oscillatory measurement shows and what must be reported with a gel modulus for a cell experiment.",
+      "bloom": "evaluate",
+      "course_outcome_ids": [
+        "cellular-biomechanics-outcome-2",
+        "cellular-biomechanics-outcome-4"
+      ]
+    },
+    {
+      "id": "cellular-biomechanics-8-objective-1",
+      "description": "Compute the bending stiffness of a cylindrical pillar and the force and traction stress from a measured deflection.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "cellular-biomechanics-outcome-1"
+      ]
+    },
+    {
+      "id": "cellular-biomechanics-8-objective-2",
+      "description": "Use the scaling of the stiffness with the pillar's diameter and height to design an array.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "cellular-biomechanics-outcome-1",
+        "cellular-biomechanics-outcome-3"
+      ]
+    },
+    {
+      "id": "cellular-biomechanics-8-objective-3",
+      "description": "Evaluate the limits of the beam model and of pillars as a model of a continuous substrate.",
+      "bloom": "evaluate",
+      "course_outcome_ids": [
+        "cellular-biomechanics-outcome-3",
+        "cellular-biomechanics-outcome-4"
+      ]
+    },
+    {
+      "id": "cellular-biomechanics-9-objective-1",
+      "description": "Compute a bond's lifetime under force from the Bell relation and the force at which it halves.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "cellular-biomechanics-outcome-3"
+      ]
+    },
+    {
+      "id": "cellular-biomechanics-9-objective-2",
+      "description": "Compute the loading time on a substrate of given stiffness and compare it with the bond lifetime.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "cellular-biomechanics-outcome-3",
+        "cellular-biomechanics-outcome-1"
+      ]
+    },
+    {
+      "id": "cellular-biomechanics-9-objective-3",
+      "description": "Evaluate a critical stiffness from the comparison and the limits of this simple clutch picture.",
+      "bloom": "evaluate",
+      "course_outcome_ids": [
+        "cellular-biomechanics-outcome-3",
+        "cellular-biomechanics-outcome-4"
+      ]
+    },
+    {
+      "id": "cellular-biomechanics-10-objective-1",
+      "description": "Compute a cortical tension from the threshold aspiration pressure and the pipette and cell radii.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "cellular-biomechanics-outcome-1"
+      ]
+    },
+    {
+      "id": "cellular-biomechanics-10-objective-2",
+      "description": "Predict how the threshold pressure changes with the tension, the pipette radius and the cell radius.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "cellular-biomechanics-outcome-1",
+        "cellular-biomechanics-outcome-2"
+      ]
+    },
+    {
+      "id": "cellular-biomechanics-10-objective-3",
+      "description": "Evaluate the assumptions of the liquid-drop model and what it cannot distinguish.",
+      "bloom": "evaluate",
+      "course_outcome_ids": [
+        "cellular-biomechanics-outcome-2",
+        "cellular-biomechanics-outcome-3"
+      ]
+    },
+    {
+      "id": "cellular-biomechanics-11-objective-1",
+      "description": "Compute the response at a given stiffness, and the stiffness for a given response, with a Hill function.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "cellular-biomechanics-outcome-4"
+      ]
+    },
+    {
+      "id": "cellular-biomechanics-11-objective-2",
+      "description": "Interpret the maximal response, the half-maximal stiffness and the steepness, and the slope at the midpoint.",
+      "bloom": "analyze",
+      "course_outcome_ids": [
+        "cellular-biomechanics-outcome-4",
+        "cellular-biomechanics-outcome-3"
+      ]
+    },
+    {
+      "id": "cellular-biomechanics-11-objective-3",
+      "description": "Evaluate how the choice of stiffness levels determines what an experiment can show.",
+      "bloom": "evaluate",
+      "course_outcome_ids": [
+        "cellular-biomechanics-outcome-4"
+      ]
+    },
+    {
+      "id": "cellular-biomechanics-12-objective-1",
+      "description": "Compute engineering strain, true strain, transverse strain and area strain for a stretched membrane.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "cellular-biomechanics-outcome-1"
+      ]
+    },
+    {
+      "id": "cellular-biomechanics-12-objective-2",
+      "description": "Compute the stress and total force from a modulus and a strain, and the strain rate of a cyclic stretch.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "cellular-biomechanics-outcome-1",
+        "cellular-biomechanics-outcome-2"
+      ]
+    },
+    {
+      "id": "cellular-biomechanics-12-objective-3",
+      "description": "Evaluate what a reported strain does and does not specify about the mechanical condition of the cells.",
+      "bloom": "evaluate",
+      "course_outcome_ids": [
+        "cellular-biomechanics-outcome-1",
+        "cellular-biomechanics-outcome-4"
+      ]
+    },
+    {
+      "id": "cellular-biomechanics-lab-01-objective-1",
+      "description": "Summarize cell-level values to gel means for each condition of a crossed design.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "cellular-biomechanics-outcome-4"
+      ]
+    },
+    {
+      "id": "cellular-biomechanics-lab-01-objective-2",
+      "description": "Estimate the main effects and the interaction of stiffness and ligand density from the condition means.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "cellular-biomechanics-outcome-4",
+        "cellular-biomechanics-outcome-3"
+      ]
+    },
+    {
+      "id": "cellular-biomechanics-lab-01-objective-3",
+      "description": "Compare gel-level and cell-level standard errors and state what the design supports.",
+      "bloom": "evaluate",
+      "course_outcome_ids": [
+        "cellular-biomechanics-outcome-4",
+        "cellular-biomechanics-outcome-2"
+      ]
+    },
+    {
+      "id": "cellular-biomechanics-13-objective-1",
+      "description": "Quantify the loss of precision caused by two correlated explanatory variables.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "cellular-biomechanics-outcome-4"
+      ]
+    },
+    {
+      "id": "cellular-biomechanics-13-objective-2",
+      "description": "Compute a diffusion coefficient from a photobleaching recovery time and use it to characterize ligand mobility.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "cellular-biomechanics-outcome-4",
+        "cellular-biomechanics-outcome-3"
+      ]
+    },
+    {
+      "id": "cellular-biomechanics-13-objective-3",
+      "description": "Plan a crossed design and its replication, with the gel as the independent unit.",
+      "bloom": "create",
+      "course_outcome_ids": [
+        "cellular-biomechanics-outcome-4"
+      ]
     }
   ],
   "duration": {
-    "instructional_weeks": null,
-    "equivalent_structure": null,
-    "weeks": []
+    "instructional_weeks": 14,
+    "equivalent_structure": "Proposed 14-week undergraduate scope only. The four compact prototype units sit in weeks 1, 5, 8 and 10 beside original lessons on applying strain, indentation and relaxation, oscillatory rheology, micropillar traction forces, bonds under force, cortical tension, stiffness dose-response and factorial design; week 13 is a synthetic-data lab on stiffness, ligand density and the unit of analysis and week 14 a lesson on redesigning the stiffness experiment, which prepares the course case. All activities are open, ungraded practice. There are no graded homework sets, exams or project, and workload has not been measured, so this schedule is not evidence of semester equivalence.",
+    "weeks": [
+      {
+        "week": 1,
+        "title": "Stress, strain and constitutive behavior",
+        "lesson_ids": [
+          "cellular-biomechanics-1"
+        ],
+        "assessment_ids": [
+          "cellular-biomechanics-1-practice"
+        ]
+      },
+      {
+        "week": 2,
+        "title": "Applying strain to cells: engineering and true strain, Poisson contraction and strain rate",
+        "lesson_ids": [
+          "cellular-biomechanics-12"
+        ],
+        "assessment_ids": [
+          "cellular-biomechanics-12-practice"
+        ]
+      },
+      {
+        "week": 3,
+        "title": "Measuring how stiff a cell is: Hertz indentation and viscoelastic relaxation",
+        "lesson_ids": [
+          "cellular-biomechanics-5"
+        ],
+        "assessment_ids": [
+          "cellular-biomechanics-5-practice"
+        ]
+      },
+      {
+        "week": 4,
+        "title": "Oscillatory rheology: storage and loss moduli of a viscoelastic gel",
+        "lesson_ids": [
+          "cellular-biomechanics-7"
+        ],
+        "assessment_ids": [
+          "cellular-biomechanics-7-practice"
+        ]
+      },
+      {
+        "week": 5,
+        "title": "Adhesion, cytoskeleton and force transmission",
+        "lesson_ids": [
+          "cellular-biomechanics-2"
+        ],
+        "assessment_ids": [
+          "cellular-biomechanics-2-practice"
+        ]
+      },
+      {
+        "week": 6,
+        "title": "Traction forces from micropillars: force from deflection",
+        "lesson_ids": [
+          "cellular-biomechanics-8"
+        ],
+        "assessment_ids": [
+          "cellular-biomechanics-8-practice"
+        ]
+      },
+      {
+        "week": 7,
+        "title": "Bonds under force and rigidity sensing: lifetimes, loading rates and the molecular clutch",
+        "lesson_ids": [
+          "cellular-biomechanics-9"
+        ],
+        "assessment_ids": [
+          "cellular-biomechanics-9-practice"
+        ]
+      },
+      {
+        "week": 8,
+        "title": "Mechanotransduction and mechanosensitive pathways",
+        "lesson_ids": [
+          "cellular-biomechanics-3"
+        ],
+        "assessment_ids": [
+          "cellular-biomechanics-3-practice"
+        ]
+      },
+      {
+        "week": 9,
+        "title": "Cortical tension and micropipette aspiration",
+        "lesson_ids": [
+          "cellular-biomechanics-10"
+        ],
+        "assessment_ids": [
+          "cellular-biomechanics-10-practice"
+        ]
+      },
+      {
+        "week": 10,
+        "title": "Experimental design for cell mechanics",
+        "lesson_ids": [
+          "cellular-biomechanics-4"
+        ],
+        "assessment_ids": [
+          "cellular-biomechanics-4-practice"
+        ]
+      },
+      {
+        "week": 11,
+        "title": "Dose–response to stiffness: the Hill function and how to choose the levels",
+        "lesson_ids": [
+          "cellular-biomechanics-11"
+        ],
+        "assessment_ids": [
+          "cellular-biomechanics-11-practice"
+        ]
+      },
+      {
+        "week": 12,
+        "title": "Separating substrate stiffness from ligand density: factorial design and interaction effects",
+        "lesson_ids": [
+          "cellular-biomechanics-6"
+        ],
+        "assessment_ids": [
+          "cellular-biomechanics-6-practice"
+        ]
+      },
+      {
+        "week": 13,
+        "title": "Virtual lab: stiffness, ligand density and the unit of analysis",
+        "lesson_ids": [
+          "cellular-biomechanics-lab-01"
+        ],
+        "assessment_ids": [
+          "cellular-biomechanics-week13-stiffness-ligand-lab"
+        ]
+      },
+      {
+        "week": 14,
+        "title": "Decoupling stiffness from ligand density and mobility: redesigning the experiment",
+        "lesson_ids": [
+          "cellular-biomechanics-13"
+        ],
+        "assessment_ids": [
+          "cellular-biomechanics-13-practice",
+          "cellular-biomechanics-case"
+        ]
+      }
+    ]
   },
   "workload": {
     "estimated_total_hours": null,
@@ -343,6 +691,302 @@
           ]
         }
       ]
+    },
+    {
+      "id": "cellular-biomechanics-module-7",
+      "title": "Oscillatory rheology",
+      "source_ids": [
+        "biomaterials",
+        "transport"
+      ],
+      "lessons": [
+        {
+          "id": "cellular-biomechanics-7",
+          "title": "Oscillatory rheology: storage and loss moduli of a viscoelastic gel",
+          "reading": "modules/07-oscillatory-rheology-storage-and-loss-moduli.md",
+          "objectives": [
+            "cellular-biomechanics-7-objective-1",
+            "cellular-biomechanics-7-objective-2",
+            "cellular-biomechanics-7-objective-3"
+          ],
+          "worked_example": "A synthetic standard linear solid with G₁ 400 Pa, G₂ 800 Pa and τ 2 s has G′ = 431 Pa at 0.1 rad/s and 1192 Pa at 5 rad/s, so its apparent stiffness depends on the frequency by a factor of about three; a Maxwell element with G 1000 Pa and τ 2 s has its crossover at 0.5 rad/s, where G′ = G″ = 500 Pa.",
+          "question_ids": [
+            "cellular-biomechanics-7:storage-modulus",
+            "cellular-biomechanics-7:loss-modulus",
+            "cellular-biomechanics-7:loss-tangent",
+            "cellular-biomechanics-7:crossover-frequency",
+            "cellular-biomechanics-7:complex-modulus",
+            "cellular-biomechanics-7:phase-angle",
+            "cellular-biomechanics-7:young-from-shear",
+            "cellular-biomechanics-7:rheology-statements"
+          ],
+          "card_ids": [
+            "cellular-biomechanics-7-card-1",
+            "cellular-biomechanics-7-card-2",
+            "cellular-biomechanics-7-card-3",
+            "cellular-biomechanics-7-card-4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cellular-biomechanics-module-8",
+      "title": "Micropillar traction forces",
+      "source_ids": [
+        "biomaterials",
+        "transport"
+      ],
+      "lessons": [
+        {
+          "id": "cellular-biomechanics-8",
+          "title": "Traction forces from micropillars: force from deflection, and what the substrate really is",
+          "reading": "modules/08-traction-forces-from-micropillars.md",
+          "objectives": [
+            "cellular-biomechanics-8-objective-1",
+            "cellular-biomechanics-8-objective-2",
+            "cellular-biomechanics-8-objective-3"
+          ],
+          "worked_example": "A synthetic pillar with E 1.5 MPa, d 1 μm and L 4 μm has k = 3.45 nN/μm, so a 0.05 μm deflection is a force of 0.17 nN and a stress of 220 Pa, and 25 such pillars carry 4 nN; the lesson's 2 μm by 6 μm pillar has k = 21.8 nN/μm, and doubling its diameter makes it 16 times stiffer.",
+          "question_ids": [
+            "cellular-biomechanics-8:pillar-stiffness",
+            "cellular-biomechanics-8:force-from-deflection",
+            "cellular-biomechanics-8:traction-stress",
+            "cellular-biomechanics-8:total-force",
+            "cellular-biomechanics-8:diameter-scaling",
+            "cellular-biomechanics-8:height-scaling",
+            "cellular-biomechanics-8:force-resolution",
+            "cellular-biomechanics-8:pillar-statements"
+          ],
+          "card_ids": [
+            "cellular-biomechanics-8-card-1",
+            "cellular-biomechanics-8-card-2",
+            "cellular-biomechanics-8-card-3",
+            "cellular-biomechanics-8-card-4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cellular-biomechanics-module-9",
+      "title": "Bonds under force",
+      "source_ids": [
+        "biomaterials",
+        "transport"
+      ],
+      "lessons": [
+        {
+          "id": "cellular-biomechanics-9",
+          "title": "Bonds under force and rigidity sensing: lifetimes, loading rates and the molecular clutch",
+          "reading": "modules/09-bonds-under-force-and-the-molecular-clutch.md",
+          "objectives": [
+            "cellular-biomechanics-9-objective-1",
+            "cellular-biomechanics-9-objective-2",
+            "cellular-biomechanics-9-objective-3"
+          ],
+          "worked_example": "A synthetic bond with τ₀ 2 s and x_b 0.8 nm lives 0.449 s at 8 pN (its lifetime halves at 3.71 pN) and, with a retrograde flow of 80 nm/s, loads to 8 pN before breaking only on substrates stiffer than 0.223 pN/nm; the lesson's bond has k_s* = 0.322 pN/nm for 10 pN at 100 nm/s.",
+          "question_ids": [
+            "cellular-biomechanics-9:thermal-energy",
+            "cellular-biomechanics-9:lifetime-factor",
+            "cellular-biomechanics-9:lifetime-at-force",
+            "cellular-biomechanics-9:half-life-force",
+            "cellular-biomechanics-9:loading-time-stiff",
+            "cellular-biomechanics-9:loading-time-soft",
+            "cellular-biomechanics-9:critical-stiffness",
+            "cellular-biomechanics-9:clutch-statements"
+          ],
+          "card_ids": [
+            "cellular-biomechanics-9-card-1",
+            "cellular-biomechanics-9-card-2",
+            "cellular-biomechanics-9-card-3",
+            "cellular-biomechanics-9-card-4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cellular-biomechanics-module-10",
+      "title": "Cortical tension",
+      "source_ids": [
+        "biomaterials",
+        "transport"
+      ],
+      "lessons": [
+        {
+          "id": "cellular-biomechanics-10",
+          "title": "Cortical tension and micropipette aspiration: a surface-tension model of a whole cell",
+          "reading": "modules/10-cortical-tension-and-micropipette-aspiration.md",
+          "objectives": [
+            "cellular-biomechanics-10-objective-1",
+            "cellular-biomechanics-10-objective-2",
+            "cellular-biomechanics-10-objective-3"
+          ],
+          "worked_example": "A synthetic cell of radius 6 μm in a 3 μm pipette with a threshold of 60 Pa has a cortical tension of 0.18 mN/m, and a cell with 0.15 mN/m would need 50 Pa; the lesson's cell (8 μm in a 4 μm pipette at 100 Pa) has 0.40 mN/m.",
+          "question_ids": [
+            "cellular-biomechanics-10:cortical-tension",
+            "cellular-biomechanics-10:double-tension-pressure",
+            "cellular-biomechanics-10:wider-pipette",
+            "cellular-biomechanics-10:smaller-cell",
+            "cellular-biomechanics-10:circumference-force",
+            "cellular-biomechanics-10:stress-scale",
+            "cellular-biomechanics-10:aspiration-statements"
+          ],
+          "card_ids": [
+            "cellular-biomechanics-10-card-1",
+            "cellular-biomechanics-10-card-2",
+            "cellular-biomechanics-10-card-3",
+            "cellular-biomechanics-10-card-4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cellular-biomechanics-module-11",
+      "title": "Dose–response to stiffness",
+      "source_ids": [
+        "biomaterials",
+        "transport"
+      ],
+      "lessons": [
+        {
+          "id": "cellular-biomechanics-11",
+          "title": "Dose–response to stiffness: the Hill function, the half-maximal stiffness and how to choose the levels",
+          "reading": "modules/11-dose-response-to-stiffness-and-the-hill-function.md",
+          "objectives": [
+            "cellular-biomechanics-11-objective-1",
+            "cellular-biomechanics-11-objective-2",
+            "cellular-biomechanics-11-objective-3"
+          ],
+          "worked_example": "A synthetic marker with y_max 60%, EC₅₀ 4 kPa and n 3 responds 6.7% at 2 kPa and 53.3% at 8 kPa and needs 5.77 kPa for 45%; the lesson's marker (y_max 80%, EC₅₀ 10 kPa, n 2) has a midpoint slope of 4 points per kPa, and linearly spaced levels from 20 to 100 kPa would span only 15.2 points.",
+          "question_ids": [
+            "cellular-biomechanics-11:response-at-5kpa",
+            "cellular-biomechanics-11:response-at-ec50",
+            "cellular-biomechanics-11:response-at-40kpa",
+            "cellular-biomechanics-11:stiffness-for-response",
+            "cellular-biomechanics-11:slope-at-midpoint",
+            "cellular-biomechanics-11:increase-5-to-20",
+            "cellular-biomechanics-11:linear-levels-range",
+            "cellular-biomechanics-11:dose-response-statements"
+          ],
+          "card_ids": [
+            "cellular-biomechanics-11-card-1",
+            "cellular-biomechanics-11-card-2",
+            "cellular-biomechanics-11-card-3",
+            "cellular-biomechanics-11-card-4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cellular-biomechanics-module-12",
+      "title": "Applying strain",
+      "source_ids": [
+        "biomaterials",
+        "transport"
+      ],
+      "lessons": [
+        {
+          "id": "cellular-biomechanics-12",
+          "title": "Applying strain to cells: engineering and true strain, Poisson contraction and strain rate",
+          "reading": "modules/12-applying-strain-to-cells.md",
+          "objectives": [
+            "cellular-biomechanics-12-objective-1",
+            "cellular-biomechanics-12-objective-2",
+            "cellular-biomechanics-12-objective-3"
+          ],
+          "worked_example": "A synthetic membrane stretched 1.5 mm over 30 mm has an engineering strain of 0.050, an area strain of 0.0237, a stress of 50 kPa and a force of 0.240 N, and a 0.5 Hz cycle of amplitude 0.04 has a peak strain rate of 0.126 per second; the lesson's 10% uniaxial stretch changes the area by 0.045, against 0.21 for an equibiaxial stretch of the same size.",
+          "question_ids": [
+            "cellular-biomechanics-12:engineering-strain",
+            "cellular-biomechanics-12:true-strain",
+            "cellular-biomechanics-12:transverse-strain",
+            "cellular-biomechanics-12:area-strain",
+            "cellular-biomechanics-12:membrane-stress",
+            "cellular-biomechanics-12:membrane-force",
+            "cellular-biomechanics-12:peak-strain-rate",
+            "cellular-biomechanics-12:strain-statements"
+          ],
+          "card_ids": [
+            "cellular-biomechanics-12-card-1",
+            "cellular-biomechanics-12-card-2",
+            "cellular-biomechanics-12-card-3",
+            "cellular-biomechanics-12-card-4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cellular-biomechanics-module-lab-01",
+      "title": "Virtual laboratory: stiffness and ligand density",
+      "source_ids": [
+        "biomaterials",
+        "transport"
+      ],
+      "lessons": [
+        {
+          "id": "cellular-biomechanics-lab-01",
+          "title": "Virtual lab 1: stiffness, ligand density and the unit of analysis",
+          "reading": "labs/01-stiffness-ligand-density-and-the-unit-of-analysis.md",
+          "objectives": [
+            "cellular-biomechanics-lab-01-objective-1",
+            "cellular-biomechanics-lab-01-objective-2",
+            "cellular-biomechanics-lab-01-objective-3"
+          ],
+          "worked_example": "In the synthetic crossed design the main effect of stiffness is 30, the ligand effect is 26 at 100 kPa and 6 at 1 kPa (interaction 10), and the gel-level standard error of the ligand effect at 100 kPa is 4.90 against a naive cell-level 2.32.",
+          "question_ids": [
+            "cellular-biomechanics-lab1:condition-summary",
+            "cellular-biomechanics-lab1:stiffness-effect",
+            "cellular-biomechanics-lab1:ligand-effect-100",
+            "cellular-biomechanics-lab1:interaction",
+            "cellular-biomechanics-lab1:gel-level-se",
+            "cellular-biomechanics-lab1:naive-se",
+            "cellular-biomechanics-lab1:design-reasoning",
+            "cellular-biomechanics-lab1:supported-conclusions"
+          ],
+          "card_ids": [
+            "cellular-biomechanics-lab1-0",
+            "cellular-biomechanics-lab1-1",
+            "cellular-biomechanics-lab1-2",
+            "cellular-biomechanics-lab1-3"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cellular-biomechanics-module-13",
+      "title": "Redesigning the stiffness experiment",
+      "source_ids": [
+        "biomaterials",
+        "transport"
+      ],
+      "lessons": [
+        {
+          "id": "cellular-biomechanics-13",
+          "title": "Decoupling stiffness from ligand density and mobility: redesigning the experiment",
+          "reading": "modules/13-decoupling-stiffness-from-ligand-density.md",
+          "objectives": [
+            "cellular-biomechanics-13-objective-1",
+            "cellular-biomechanics-13-objective-2",
+            "cellular-biomechanics-13-objective-3"
+          ],
+          "worked_example": "Two predictors correlated at r = 0.9 give a variance inflation of 5.26; with a between-gel SD of 5, a within-gel SD of 12, 15 cells per gel and 6 gels per arm, the gel-level standard error is 3.40 against a naive cell-level 1.94; a 4 μm spot recovering in 20 s gives D = 0.179 μm²/s; the lesson's r = 0.95 gives a variance inflation of 10.26 and a gel-level standard error of 3.24.",
+          "question_ids": [
+            "cellular-biomechanics-13:variance-inflation",
+            "cellular-biomechanics-13:se-inflation",
+            "cellular-biomechanics-13:frap-diffusion",
+            "cellular-biomechanics-13:mobility-ratio",
+            "cellular-biomechanics-13:gel-mean-sd",
+            "cellular-biomechanics-13:gel-level-se",
+            "cellular-biomechanics-13:naive-cell-level-se",
+            "cellular-biomechanics-13:redesign",
+            "cellular-biomechanics-13:design-statements"
+          ],
+          "card_ids": [
+            "cellular-biomechanics-13-card-1",
+            "cellular-biomechanics-13-card-2",
+            "cellular-biomechanics-13-card-3",
+            "cellular-biomechanics-13-card-4"
+          ]
+        }
+      ]
     }
   ],
   "assessments": [
@@ -455,6 +1099,213 @@
       "points": 7
     },
     {
+      "id": "cellular-biomechanics-7-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Oscillatory rheology practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "cellular-biomechanics-7-objective-1",
+        "cellular-biomechanics-7-objective-2",
+        "cellular-biomechanics-7-objective-3",
+        "cellular-biomechanics-outcome-1",
+        "cellular-biomechanics-outcome-2",
+        "cellular-biomechanics-outcome-4"
+      ],
+      "question_ids": [
+        "cellular-biomechanics-7:storage-modulus",
+        "cellular-biomechanics-7:loss-modulus",
+        "cellular-biomechanics-7:loss-tangent",
+        "cellular-biomechanics-7:crossover-frequency",
+        "cellular-biomechanics-7:complex-modulus",
+        "cellular-biomechanics-7:phase-angle",
+        "cellular-biomechanics-7:young-from-shear",
+        "cellular-biomechanics-7:rheology-statements"
+      ],
+      "points": 9
+    },
+    {
+      "id": "cellular-biomechanics-8-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Micropillar traction forces practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "cellular-biomechanics-8-objective-1",
+        "cellular-biomechanics-8-objective-2",
+        "cellular-biomechanics-8-objective-3",
+        "cellular-biomechanics-outcome-1",
+        "cellular-biomechanics-outcome-3",
+        "cellular-biomechanics-outcome-4"
+      ],
+      "question_ids": [
+        "cellular-biomechanics-8:pillar-stiffness",
+        "cellular-biomechanics-8:force-from-deflection",
+        "cellular-biomechanics-8:traction-stress",
+        "cellular-biomechanics-8:total-force",
+        "cellular-biomechanics-8:diameter-scaling",
+        "cellular-biomechanics-8:height-scaling",
+        "cellular-biomechanics-8:force-resolution",
+        "cellular-biomechanics-8:pillar-statements"
+      ],
+      "points": 9
+    },
+    {
+      "id": "cellular-biomechanics-9-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Bonds under force practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "cellular-biomechanics-9-objective-1",
+        "cellular-biomechanics-9-objective-2",
+        "cellular-biomechanics-9-objective-3",
+        "cellular-biomechanics-outcome-1",
+        "cellular-biomechanics-outcome-3",
+        "cellular-biomechanics-outcome-4"
+      ],
+      "question_ids": [
+        "cellular-biomechanics-9:thermal-energy",
+        "cellular-biomechanics-9:lifetime-factor",
+        "cellular-biomechanics-9:lifetime-at-force",
+        "cellular-biomechanics-9:half-life-force",
+        "cellular-biomechanics-9:loading-time-stiff",
+        "cellular-biomechanics-9:loading-time-soft",
+        "cellular-biomechanics-9:critical-stiffness",
+        "cellular-biomechanics-9:clutch-statements"
+      ],
+      "points": 9
+    },
+    {
+      "id": "cellular-biomechanics-10-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Cortical tension practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "cellular-biomechanics-10-objective-1",
+        "cellular-biomechanics-10-objective-2",
+        "cellular-biomechanics-10-objective-3",
+        "cellular-biomechanics-outcome-1",
+        "cellular-biomechanics-outcome-2",
+        "cellular-biomechanics-outcome-3"
+      ],
+      "question_ids": [
+        "cellular-biomechanics-10:cortical-tension",
+        "cellular-biomechanics-10:double-tension-pressure",
+        "cellular-biomechanics-10:wider-pipette",
+        "cellular-biomechanics-10:smaller-cell",
+        "cellular-biomechanics-10:circumference-force",
+        "cellular-biomechanics-10:stress-scale",
+        "cellular-biomechanics-10:aspiration-statements"
+      ],
+      "points": 8
+    },
+    {
+      "id": "cellular-biomechanics-11-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Dose–response to stiffness practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "cellular-biomechanics-11-objective-1",
+        "cellular-biomechanics-11-objective-2",
+        "cellular-biomechanics-11-objective-3",
+        "cellular-biomechanics-outcome-3",
+        "cellular-biomechanics-outcome-4"
+      ],
+      "question_ids": [
+        "cellular-biomechanics-11:response-at-5kpa",
+        "cellular-biomechanics-11:response-at-ec50",
+        "cellular-biomechanics-11:response-at-40kpa",
+        "cellular-biomechanics-11:stiffness-for-response",
+        "cellular-biomechanics-11:slope-at-midpoint",
+        "cellular-biomechanics-11:increase-5-to-20",
+        "cellular-biomechanics-11:linear-levels-range",
+        "cellular-biomechanics-11:dose-response-statements"
+      ],
+      "points": 9
+    },
+    {
+      "id": "cellular-biomechanics-12-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Applying strain practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "cellular-biomechanics-12-objective-1",
+        "cellular-biomechanics-12-objective-2",
+        "cellular-biomechanics-12-objective-3",
+        "cellular-biomechanics-outcome-1",
+        "cellular-biomechanics-outcome-2",
+        "cellular-biomechanics-outcome-4"
+      ],
+      "question_ids": [
+        "cellular-biomechanics-12:engineering-strain",
+        "cellular-biomechanics-12:true-strain",
+        "cellular-biomechanics-12:transverse-strain",
+        "cellular-biomechanics-12:area-strain",
+        "cellular-biomechanics-12:membrane-stress",
+        "cellular-biomechanics-12:membrane-force",
+        "cellular-biomechanics-12:peak-strain-rate",
+        "cellular-biomechanics-12:strain-statements"
+      ],
+      "points": 9
+    },
+    {
+      "id": "cellular-biomechanics-13-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Redesigning the stiffness experiment practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "cellular-biomechanics-13-objective-1",
+        "cellular-biomechanics-13-objective-2",
+        "cellular-biomechanics-13-objective-3",
+        "cellular-biomechanics-outcome-3",
+        "cellular-biomechanics-outcome-4"
+      ],
+      "question_ids": [
+        "cellular-biomechanics-13:variance-inflation",
+        "cellular-biomechanics-13:se-inflation",
+        "cellular-biomechanics-13:frap-diffusion",
+        "cellular-biomechanics-13:mobility-ratio",
+        "cellular-biomechanics-13:gel-mean-sd",
+        "cellular-biomechanics-13:gel-level-se",
+        "cellular-biomechanics-13:naive-cell-level-se",
+        "cellular-biomechanics-13:redesign",
+        "cellular-biomechanics-13:design-statements"
+      ],
+      "points": 12
+    },
+    {
+      "id": "cellular-biomechanics-week13-stiffness-ligand-lab",
+      "type": "lab",
+      "mode": "practice",
+      "title": "Virtual lab 1: stiffness, ligand density and the unit of analysis (ungraded practice)",
+      "path": "question-banks/practice.json",
+      "week": 13,
+      "objective_ids": [
+        "cellular-biomechanics-lab-01-objective-1",
+        "cellular-biomechanics-lab-01-objective-2",
+        "cellular-biomechanics-lab-01-objective-3",
+        "cellular-biomechanics-outcome-2",
+        "cellular-biomechanics-outcome-3",
+        "cellular-biomechanics-outcome-4"
+      ],
+      "question_ids": [
+        "cellular-biomechanics-lab1:condition-summary",
+        "cellular-biomechanics-lab1:stiffness-effect",
+        "cellular-biomechanics-lab1:ligand-effect-100",
+        "cellular-biomechanics-lab1:interaction",
+        "cellular-biomechanics-lab1:gel-level-se",
+        "cellular-biomechanics-lab1:naive-se",
+        "cellular-biomechanics-lab1:design-reasoning",
+        "cellular-biomechanics-lab1:supported-conclusions"
+      ],
+      "points": 29
+    },
+    {
       "id": "cellular-biomechanics-case",
       "type": "case",
       "mode": "self-assessment",
@@ -506,18 +1357,24 @@
       "version": "0.2.1",
       "date": "2026-10-08",
       "summary": "Assessments with items now also list the course outcomes those items assess, derived from each item's lesson objective and that objective's outcome links. The rubric-only case lists none, and neither do the 4 prototype-unit assessments, whose objectives are not yet linked to an outcome. No readings, items or keys changed. The syllabus was regenerated from the manifest: it states the current version, lists every lesson with its item and card counts, and describes the current practice and limitations (it still described only the four original units). The course limitations shown to learners were also updated: they still described one formative check per lesson and the original numerical rules. The package remains partial, unreviewed and formative-only."
+    },
+    {
+      "version": "0.3.0",
+      "date": "2026-10-08",
+      "summary": "Added a proposed 14-week schedule; seven original lessons (oscillatory rheology and the storage and loss moduli; micropillar traction forces; bonds under force and the molecular clutch; cortical tension and micropipette aspiration; the Hill function and stiffness dose-response; applying strain to cells; and decoupling stiffness from ligand density, which prepares the course case); and a synthetic-data lab on stiffness, ligand density and the unit of analysis. No new references were added. All activities remain ungraded practice; the package remains partial and unreviewed, gives no laboratory protocol or handling procedure, and makes no claim about any cell, gel or measurement."
     }
   ],
   "limitations": [
-    "Four compact legacy units are preserved; this package is not equivalent to a full university semester.",
-    "There is no authored 12–15 week schedule, substantive homework sequence, laboratory sequence, midterm, cumulative final, or graded integrative project.",
-    "Practice items are short formative checks (two per prototype unit and six per original lesson); they do not demonstrate comprehensive outcome coverage or mastery, and objective associations remain provisional.",
+    "Four compact legacy units are preserved beside ten original readings, including one synthetic-data virtual lab; this package is not equivalent to a full university semester.",
+    "A proposed 14-week schedule exists but is unmeasured and unreviewed. There is one synthetic-data virtual lab and no substantive homework sequence, laboratory sequence, midterm, cumulative final, or graded integrative project.",
+    "Practice items are short formative checks (two per prototype unit and six to nine per original lesson); they do not demonstrate comprehensive outcome coverage or mastery, and objective associations remain provisional.",
     "Bloom labels and structured prerequisite edges are initial authoring classifications awaiting subject-matter review.",
     "Question answers and solution feedback are intentionally public practice authoring specifications, not restricted exam keys.",
-    "Of the 9 numerical answers in this package, four require a unit, none checks significant figures and none checks dimensions; the others accept a number within a stated tolerance, with the unit optional.",
-    "Total workload and weekly duration are unknown; former nominal credit values and hardcoded reading times do not establish workload."
+    "Of the 62 numerical answers in this package, twelve require a unit, one checks significant figures and none checks dimensions; the others accept a number within a stated tolerance, with the unit optional.",
+    "Total workload and weekly duration are unknown; former nominal credit values and hardcoded reading times do not establish workload.",
+    "All gels, cells, forces and numbers are synthetic teaching examples; this package gives no laboratory protocols, handling procedures or medical advice and says nothing about any real cell type, material or measurement. The models are simplified textbook descriptions, not analysis methods for real data."
   ],
   "intentionally_omitted": [
-    "Full instructional sequence and summative assessments are not authored yet; the original lessons extend a partial package."
+    "Graded assessments and a laboratory sequence are not authored yet (one synthetic-data virtual lab exists); the original lessons extend a partial package."
   ]
 }

@@ -1,6 +1,6 @@
 # Cellular Biomechanics & Mechanobiology
 
-**Maturity: partial. Version: 0.2.1.**
+**Maturity: partial. Version: 0.3.0.**
 
 Connect forces, matrix mechanics, cell adhesion, mechanotransduction, and quantitative assays across molecular-to-tissue scales.
 
@@ -15,26 +15,34 @@ Cell biology; Physics: Mechanics; Differential Equations recommended. Structured
 - Connect integrin/cytoskeletal signaling to mechanical context.
 - Design an experiment that separates stiffness from ligand density.
 
-## Units and lessons
+## Proposed 14-week schedule
 
-Units 1–4 keep the short prototype readings preserved from the original project; they need substantial expansion. Units 5 and 6 are original lesson-length readings (about 910 to 960 words) with learning objectives, a worked example, common mistakes, stated limits and explicitly synthetic data. No unit has been reviewed by a qualified instructor.
+This is a proposed scope, not a measured or reviewed semester. Each week lists its readings; the four short prototype readings (about 70 to 75 words each) sit in weeks 1, 5, 8 and 10 beside the original lessons, and every lesson has public formative items and retrieval cards.
 
-| Unit | Lesson | Reading | Practice items | Retrieval cards |
-|---:|---|---|---:|---:|
-| 1 | Stress, strain, and constitutive behavior | short prototype | 2 | 2 |
-| 2 | Adhesion, cytoskeleton, and force transmission | short prototype | 2 | 2 |
-| 3 | Mechanotransduction and mechanosensitive pathways | short prototype | 2 | 2 |
-| 4 | Experimental design for cell mechanics | short prototype | 2 | 2 |
-| 5 | Measuring how stiff a cell is: Hertz indentation, viscoelastic relaxation and what a single modulus hides | lesson-length original | 6 | 4 |
-| 6 | Separating substrate stiffness from ligand density: factorial design, interaction effects and traction forces | lesson-length original | 6 | 4 |
+| Week | Theme | Readings |
+|---|---|---|
+| 1 | Stress, strain and constitutive behavior | Stress, strain, and constitutive behavior |
+| 2 | Applying strain to cells: engineering and true strain, Poisson contraction and strain rate | Applying strain to cells: engineering and true strain, Poisson contraction and strain rate |
+| 3 | Measuring how stiff a cell is: Hertz indentation and viscoelastic relaxation | Measuring how stiff a cell is: Hertz indentation, viscoelastic relaxation and what a single modulus hides |
+| 4 | Oscillatory rheology: storage and loss moduli of a viscoelastic gel | Oscillatory rheology: storage and loss moduli of a viscoelastic gel |
+| 5 | Adhesion, cytoskeleton and force transmission | Adhesion, cytoskeleton, and force transmission |
+| 6 | Traction forces from micropillars: force from deflection | Traction forces from micropillars: force from deflection, and what the substrate really is |
+| 7 | Bonds under force and rigidity sensing: lifetimes, loading rates and the molecular clutch | Bonds under force and rigidity sensing: lifetimes, loading rates and the molecular clutch |
+| 8 | Mechanotransduction and mechanosensitive pathways | Mechanotransduction and mechanosensitive pathways |
+| 9 | Cortical tension and micropipette aspiration | Cortical tension and micropipette aspiration: a surface-tension model of a whole cell |
+| 10 | Experimental design for cell mechanics | Experimental design for cell mechanics |
+| 11 | Dose–response to stiffness: the Hill function and how to choose the levels | Dose–response to stiffness: the Hill function, the half-maximal stiffness and how to choose the levels |
+| 12 | Separating substrate stiffness from ligand density: factorial design and interaction effects | Separating substrate stiffness from ligand density: factorial design, interaction effects and traction forces |
+| 13 | Virtual lab: stiffness, ligand density and the unit of analysis | Virtual lab 1: stiffness, ligand density and the unit of analysis |
+| 14 | Decoupling stiffness from ligand density and mobility: redesigning the experiment | Decoupling stiffness from ligand density and mobility: redesigning the experiment |
 
 ## Assessment and study policy
 
-Every lesson has public formative practice items (numeric, single-choice and multiple-select) tagged to its learning objectives. The practice assessments for the original lessons also list the course outcomes those objectives link to; the objectives of the prototype units are not yet linked to course outcomes, so their assessments list none. In total the package has 20 practice items and 16 retrieval cards for the review queue. A course case includes a self-assessment checklist. These are practice activities, with unlimited retries and no institutional grade, university credit, or transferable credit. Workload has not been measured.
+Every lesson has public formative items (numeric, single-choice, multiple-select, data-interpretation, structured-response and CSV-upload) mapped to its objectives, plus retrieval cards for the review queue; each practice assessment also lists the course outcomes its items assess. Week 13 is a synthetic-data virtual lab and week 14 pairs a lesson on redesigning the stiffness experiment with the course case and its self-assessment checklist. These are practice activities with unlimited retries and no institutional grade, university credit or transferable credit. Workload has not been measured.
 
-## Schedule and current limitations
+## Current limitations
 
-No full-semester calendar or 14-week structure has been authored. No substantive homework sets, laboratories, midterm, final, or graded cumulative project are included. The four short prototype readings require substantial expansion, and the newer lessons rely on explicitly synthetic data. Nothing in this package has been reviewed by a qualified instructor; qualified human review is required before this course can meet the complete-course quality standard.
+The schedule above is proposed, not measured, and has not been reviewed by a qualified instructor. There are no graded homework sets, midterm, final or graded project. The four prototype readings remain short. The package cites no new papers: the lessons teach standard models with synthetic data, and the typical values they quote (moduli, pillar and bond parameters, cortical tensions, water properties) are textbook-level and vary between sources. All gels, cells, forces and numbers are synthetic; no lesson gives a laboratory protocol or handling procedure, and nothing here says anything about any real cell type, material or measurement. Qualified human review is required before this course could meet the complete-course standard.
 
 ## Sources and licensing
 
