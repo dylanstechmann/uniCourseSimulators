@@ -7,7 +7,7 @@
   "domain": "Life sciences",
   "level": "Year 2",
   "maturity": "partial",
-  "version": "0.4.2",
+  "version": "0.5.0",
   "license": "MIT OR CC-BY-4.0",
   "content_origin": {
     "kind": "legacy-prototype",
@@ -219,12 +219,331 @@
       "course_outcome_ids": [
         "genetics-outcome-3"
       ]
+    },
+    {
+      "id": "genetics-10-objective-1",
+      "description": "Predict phenotype ratios for two independently assorting genes, including the modified ratios produced by epistasis (9:3:4, 9:7, 12:3:1 and 15:1).",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "genetics-outcome-1"
+      ]
+    },
+    {
+      "id": "genetics-10-objective-2",
+      "description": "Test an observed ratio against competing genetic hypotheses with a chi-square goodness-of-fit test.",
+      "bloom": "analyze",
+      "course_outcome_ids": [
+        "genetics-outcome-1"
+      ]
+    },
+    {
+      "id": "genetics-10-objective-3",
+      "description": "Use complementation tests and epistasis analysis to decide whether mutations affect the same gene and to order genes in a pathway.",
+      "bloom": "evaluate",
+      "course_outcome_ids": [
+        "genetics-outcome-3"
+      ]
+    },
+    {
+      "id": "genetics-11-objective-1",
+      "description": "Recognize X-linked recessive and dominant inheritance in pedigrees and compute transmission probabilities to sons and daughters.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "genetics-outcome-1"
+      ]
+    },
+    {
+      "id": "genetics-11-objective-2",
+      "description": "Update a carrier probability with Bayes' rule using the evidence of unaffected sons.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "genetics-outcome-1"
+      ]
+    },
+    {
+      "id": "genetics-11-objective-3",
+      "description": "Evaluate how incomplete penetrance, new mutations and X-inactivation complicate pedigree inference.",
+      "bloom": "evaluate",
+      "course_outcome_ids": [
+        "genetics-outcome-1",
+        "genetics-outcome-3"
+      ]
+    },
+    {
+      "id": "genetics-12-objective-1",
+      "description": "Trace the gametes produced by nondisjunction in meiosis I versus meiosis II and the resulting zygotes (normal, trisomic or monosomic).",
+      "bloom": "understand",
+      "course_outcome_ids": [
+        "genetics-outcome-1"
+      ]
+    },
+    {
+      "id": "genetics-12-objective-2",
+      "description": "Calculate expected aneuploid gamete frequencies from per-meiosis error rates, and compare age groups with a relative risk and a risk difference.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "genetics-outcome-1"
+      ]
+    },
+    {
+      "id": "genetics-12-objective-3",
+      "description": "Evaluate evidence about why segregation errors increase with maternal age, distinguishing a description from a mechanism.",
+      "bloom": "evaluate",
+      "course_outcome_ids": [
+        "genetics-outcome-3"
+      ]
+    },
+    {
+      "id": "genetics-13-objective-1",
+      "description": "Estimate a mutation rate from the fraction of parallel cultures that contain no mutants, using the Poisson zero class.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "genetics-outcome-1"
+      ]
+    },
+    {
+      "id": "genetics-13-objective-2",
+      "description": "Explain how the fluctuation test distinguishes mutations that arise before selection from mutations induced by it, using the variance of mutant counts across cultures.",
+      "bloom": "analyze",
+      "course_outcome_ids": [
+        "genetics-outcome-3"
+      ]
+    },
+    {
+      "id": "genetics-13-objective-3",
+      "description": "Calculate somatic mutation accumulation from a per-year rate and evaluate what mutation counts in aging stem cells do and do not show.",
+      "bloom": "evaluate",
+      "course_outcome_ids": [
+        "genetics-outcome-3"
+      ]
+    },
+    {
+      "id": "genetics-14-objective-1",
+      "description": "Normalize read counts for library size (counts per million) and compute a log₂ fold change.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "genetics-outcome-4"
+      ]
+    },
+    {
+      "id": "genetics-14-objective-2",
+      "description": "Explain why testing many genes at once requires false-discovery control, and apply the Benjamini–Hochberg procedure to a short list of p-values.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "genetics-outcome-4",
+        "genetics-outcome-3"
+      ]
+    },
+    {
+      "id": "genetics-14-objective-3",
+      "description": "Design an expression comparison with biological replicates, balanced batches and a pre-specified analysis, and evaluate what a fold change does not show.",
+      "bloom": "create",
+      "course_outcome_ids": [
+        "genetics-outcome-4"
+      ]
+    },
+    {
+      "id": "genetics-lab-01-objective-1",
+      "description": "Summarize genotype data by ancestry and case status with counts and mean allele dosage, and convert dosage to allele frequency.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "genetics-outcome-1"
+      ]
+    },
+    {
+      "id": "genetics-lab-01-objective-2",
+      "description": "Compute an allelic odds ratio and chi-square statistic from allele counts and compare the result with a multiple-testing threshold.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "genetics-outcome-3"
+      ]
+    },
+    {
+      "id": "genetics-lab-01-objective-3",
+      "description": "Evaluate confounding by ancestry with a stratified analysis, and decide which association signals warrant follow-up.",
+      "bloom": "evaluate",
+      "course_outcome_ids": [
+        "genetics-outcome-3",
+        "genetics-outcome-4"
+      ]
+    },
+    {
+      "id": "genetics-15-objective-1",
+      "description": "Narrow an association signal to a credible set of candidate variants from approximate Bayes factors, assuming a single causal variant.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "genetics-outcome-3"
+      ]
+    },
+    {
+      "id": "genetics-15-objective-2",
+      "description": "Quantify allele-specific expression in heterozygous samples and state what an imbalance does and does not show.",
+      "bloom": "analyze",
+      "course_outcome_ids": [
+        "genetics-outcome-3",
+        "genetics-outcome-4"
+      ]
+    },
+    {
+      "id": "genetics-15-objective-3",
+      "description": "Design a staged follow-up, from cell type to variant-to-gene link to perturbation with rescue, naming the confounders and the claim each stage can support.",
+      "bloom": "create",
+      "course_outcome_ids": [
+        "genetics-outcome-4",
+        "genetics-outcome-3"
+      ]
     }
   ],
   "duration": {
-    "instructional_weeks": null,
-    "equivalent_structure": null,
-    "weeks": []
+    "instructional_weeks": 14,
+    "equivalent_structure": "Proposed 14-week undergraduate scope only. The four compact prototype units sit in weeks 1, 4, 9 and 11 beside original lessons on inheritance, mapping, population genetics, mutation, gene regulation, expression measurement, association and causal inference; week 12 is a synthetic-data association lab and week 14 a follow-up design lesson with the course case. All activities are open, ungraded practice. There are no graded homework sets, exams or project, and workload has not been measured, so this schedule is not evidence of semester equivalence.",
+    "weeks": [
+      {
+        "week": 1,
+        "title": "Segregation, penetrance and probability",
+        "lesson_ids": [
+          "genetics-1"
+        ],
+        "assessment_ids": [
+          "genetics-1-practice"
+        ]
+      },
+      {
+        "week": 2,
+        "title": "Gene interaction: epistasis, complementation and modified ratios",
+        "lesson_ids": [
+          "genetics-10"
+        ],
+        "assessment_ids": [
+          "genetics-10-practice"
+        ]
+      },
+      {
+        "week": 3,
+        "title": "Sex linkage, pedigrees and Bayesian carrier risk",
+        "lesson_ids": [
+          "genetics-11"
+        ],
+        "assessment_ids": [
+          "genetics-11-practice"
+        ]
+      },
+      {
+        "week": 4,
+        "title": "Linkage and recombination mapping",
+        "lesson_ids": [
+          "genetics-2"
+        ],
+        "assessment_ids": [
+          "genetics-2-practice"
+        ]
+      },
+      {
+        "week": 5,
+        "title": "Three-point mapping, interference and map functions",
+        "lesson_ids": [
+          "genetics-7"
+        ],
+        "assessment_ids": [
+          "genetics-7-practice"
+        ]
+      },
+      {
+        "week": 6,
+        "title": "Chromosome segregation errors: nondisjunction, aneuploidy and maternal age",
+        "lesson_ids": [
+          "genetics-12"
+        ],
+        "assessment_ids": [
+          "genetics-12-practice"
+        ]
+      },
+      {
+        "week": 7,
+        "title": "Allele frequencies and Hardy–Weinberg proportions",
+        "lesson_ids": [
+          "genetics-5"
+        ],
+        "assessment_ids": [
+          "genetics-5-practice"
+        ]
+      },
+      {
+        "week": 8,
+        "title": "Mutation rates, the fluctuation test and somatic mutation",
+        "lesson_ids": [
+          "genetics-13"
+        ],
+        "assessment_ids": [
+          "genetics-13-practice"
+        ]
+      },
+      {
+        "week": 9,
+        "title": "Gene regulation and designing a controlled perturbation experiment",
+        "lesson_ids": [
+          "genetics-3",
+          "genetics-8"
+        ],
+        "assessment_ids": [
+          "genetics-3-practice",
+          "genetics-8-practice"
+        ]
+      },
+      {
+        "week": 10,
+        "title": "Measuring gene expression: normalization and false discoveries",
+        "lesson_ids": [
+          "genetics-14"
+        ],
+        "assessment_ids": [
+          "genetics-14-practice"
+        ]
+      },
+      {
+        "week": 11,
+        "title": "Association, heritability and polygenic prediction",
+        "lesson_ids": [
+          "genetics-4",
+          "genetics-6"
+        ],
+        "assessment_ids": [
+          "genetics-4-practice",
+          "genetics-6-practice"
+        ]
+      },
+      {
+        "week": 12,
+        "title": "Virtual lab: an association study with population structure",
+        "lesson_ids": [
+          "genetics-lab-01"
+        ],
+        "assessment_ids": [
+          "genetics-week12-association-lab"
+        ]
+      },
+      {
+        "week": 13,
+        "title": "Mendelian randomization and causal inference from genetic variants",
+        "lesson_ids": [
+          "genetics-9"
+        ],
+        "assessment_ids": [
+          "genetics-9-practice"
+        ]
+      },
+      {
+        "week": 14,
+        "title": "From association to mechanism: designing the follow-up of a locus",
+        "lesson_ids": [
+          "genetics-15"
+        ],
+        "assessment_ids": [
+          "genetics-15-practice",
+          "genetics-case"
+        ]
+      }
+    ]
   },
   "workload": {
     "estimated_total_hours": null,
@@ -519,6 +838,256 @@
           ]
         }
       ]
+    },
+    {
+      "id": "genetics-module-10",
+      "title": "Gene interaction and epistasis",
+      "source_ids": [
+        "biology",
+        "molecular",
+        "kenyon-1993-daf2"
+      ],
+      "lessons": [
+        {
+          "id": "genetics-10",
+          "title": "Gene interaction: epistasis, complementation and modified dihybrid ratios",
+          "reading": "modules/10-gene-interaction-epistasis-and-complementation.md",
+          "objectives": [
+            "genetics-10-objective-1",
+            "genetics-10-objective-2",
+            "genetics-10-objective-3"
+          ],
+          "worked_example": "An F2 of 96 purple and 64 white rejects 3:1 (χ² = 19.2) but fits 9:7 (χ² = 0.91); a mouse F2 of 105:39:48 fits 9:3:4 (χ² = 0.33, 2 df); complementation places two white mutations in different genes, and daf-16 is required for daf-2 longevity in worms.",
+          "question_ids": [
+            "genetics-10:expected-971",
+            "genetics-10:chi-3-1",
+            "genetics-10:chi-9-7",
+            "genetics-10:dominant-epistasis",
+            "genetics-10:complementation",
+            "genetics-10:daf-epistasis"
+          ],
+          "card_ids": [
+            "genetics-10-card-1",
+            "genetics-10-card-2",
+            "genetics-10-card-3",
+            "genetics-10-card-4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "genetics-module-11",
+      "title": "Sex linkage and Bayesian carrier risk",
+      "source_ids": [
+        "biology",
+        "molecular"
+      ],
+      "lessons": [
+        {
+          "id": "genetics-11",
+          "title": "Sex-linked inheritance, pedigrees and Bayesian carrier risk",
+          "reading": "modules/11-sex-linkage-pedigrees-and-bayesian-carrier-risk.md",
+          "objectives": [
+            "genetics-11-objective-1",
+            "genetics-11-objective-2",
+            "genetics-11-objective-3"
+          ],
+          "worked_example": "With a prior carrier probability of 1/2, three unaffected sons give a posterior of 1/9 and a next-son risk of 1/18; two unaffected sons give 1/5; at 80% penetrance a carrier's son is unaffected with probability 0.6, so each unaffected son is weaker evidence.",
+          "question_ids": [
+            "genetics-11:pedigree-pattern",
+            "genetics-11:posterior-three-sons",
+            "genetics-11:next-son-risk",
+            "genetics-11:penetrance-likelihood",
+            "genetics-11:posterior-two-sons",
+            "genetics-11:complications"
+          ],
+          "card_ids": [
+            "genetics-11-card-1",
+            "genetics-11-card-2",
+            "genetics-11-card-3",
+            "genetics-11-card-4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "genetics-module-12",
+      "title": "Nondisjunction and aneuploidy",
+      "source_ids": [
+        "biology",
+        "molecular",
+        "hassold-hunt-2001-aneuploidy"
+      ],
+      "lessons": [
+        {
+          "id": "genetics-12",
+          "title": "Chromosome segregation errors: nondisjunction, aneuploidy and maternal age",
+          "reading": "modules/12-nondisjunction-aneuploidy-and-maternal-age.md",
+          "objectives": [
+            "genetics-12-objective-1",
+            "genetics-12-objective-2",
+            "genetics-12-objective-3"
+          ],
+          "worked_example": "With nondisjunction in 4% of meioses, 2% of products are disomic for meiosis I errors and 1% for meiosis II errors; a synthetic registry gives trisomy risks of 1.5 and 12 per 1000 (relative risk 8, risk difference 10.5 per 1000); 38 of 50 centromeric-marker results point to maternal meiosis I.",
+          "question_ids": [
+            "genetics-12:mi-disomic",
+            "genetics-12:mii-disomic",
+            "genetics-12:relative-risk",
+            "genetics-12:risk-difference",
+            "genetics-12:marker-origin",
+            "genetics-12:age-evidence"
+          ],
+          "card_ids": [
+            "genetics-12-card-1",
+            "genetics-12-card-2",
+            "genetics-12-card-3",
+            "genetics-12-card-4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "genetics-module-13",
+      "title": "Mutation rates and somatic mutation",
+      "source_ids": [
+        "biology",
+        "molecular",
+        "luria-delbruck-1943-fluctuation",
+        "blokzijl-2016-stem-cell-mutations"
+      ],
+      "lessons": [
+        {
+          "id": "genetics-13",
+          "title": "Mutation rates, the fluctuation test and somatic mutation with age",
+          "reading": "modules/13-mutation-rates-fluctuation-test-and-somatic-mutation.md",
+          "objectives": [
+            "genetics-13-objective-1",
+            "genetics-13-objective-2",
+            "genetics-13-objective-3"
+          ],
+          "worked_example": "22 of 50 cultures without mutants give m = 0.821 and a rate of 4.10 per 10⁹ divisions; independent cultures (0, 1, 0, 2, 0, 0, 13 and 0) have a variance-to-mean ratio of 10.1, aliquots 0.86; 40 mutations per year give 3000 by age 75, about 45 in coding sequence.",
+          "question_ids": [
+            "genetics-13:events-per-culture",
+            "genetics-13:rate-per-1e9",
+            "genetics-13:variance-to-mean",
+            "genetics-13:fluctuation-inference",
+            "genetics-13:coding-mutations",
+            "genetics-13:somatic-claims"
+          ],
+          "card_ids": [
+            "genetics-13-card-1",
+            "genetics-13-card-2",
+            "genetics-13-card-3",
+            "genetics-13-card-4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "genetics-module-14",
+      "title": "Measuring gene expression",
+      "source_ids": [
+        "biology",
+        "molecular"
+      ],
+      "lessons": [
+        {
+          "id": "genetics-14",
+          "title": "Measuring gene expression: read counts, normalization, fold change and false discoveries",
+          "reading": "modules/14-measuring-gene-expression-normalization-and-false-discoveries.md",
+          "objectives": [
+            "genetics-14-objective-1",
+            "genetics-14-objective-2",
+            "genetics-14-objective-3"
+          ],
+          "worked_example": "450 of 25,000,000 reads is 18 CPM against 20 in control, a log₂ fold change of -0.152 although raw reads rose 1.5-fold; 20,000 null tests at p < 0.05 give about 1,000 false positives; Benjamini–Hochberg at q = 0.05 calls 5 of ten example genes and Bonferroni 1.",
+          "question_ids": [
+            "genetics-14:cpm",
+            "genetics-14:log2-fold-change",
+            "genetics-14:false-positives",
+            "genetics-14:bh-discoveries",
+            "genetics-14:batch-confounding",
+            "genetics-14:fold-change-meaning"
+          ],
+          "card_ids": [
+            "genetics-14-card-1",
+            "genetics-14-card-2",
+            "genetics-14-card-3",
+            "genetics-14-card-4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "genetics-module-lab-01",
+      "title": "Virtual laboratory: association study with population structure",
+      "source_ids": [
+        "biology",
+        "molecular"
+      ],
+      "lessons": [
+        {
+          "id": "genetics-lab-01",
+          "title": "Virtual lab 1: a case–control association study with population structure",
+          "reading": "labs/01-association-study-and-population-structure.md",
+          "objectives": [
+            "genetics-lab-01-objective-1",
+            "genetics-lab-01-objective-2",
+            "genetics-lab-01-objective-3"
+          ],
+          "worked_example": "Pooled SYN1 alleles give an odds ratio of 2.79 and χ² = 12.0, passing the Bonferroni threshold of 0.0167, yet within each population the odds ratio is 1.00, so the signal is confounded by ancestry; SYN2 has an odds ratio of 2.33 pooled, stratified and Mantel–Haenszel, χ² = 8.3, and is a candidate that needs replication; SYN3 shows no association.",
+          "question_ids": [
+            "genetics-lab1:stratum-summary",
+            "genetics-lab1:pooled-or-syn1",
+            "genetics-lab1:chi-square-syn1",
+            "genetics-lab1:bonferroni",
+            "genetics-lab1:mh-syn2",
+            "genetics-lab1:design-reasoning",
+            "genetics-lab1:supported-conclusions"
+          ],
+          "card_ids": [
+            "genetics-lab1-0",
+            "genetics-lab1-1",
+            "genetics-lab1-2",
+            "genetics-lab1-3"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "genetics-module-15",
+      "title": "From association to mechanism",
+      "source_ids": [
+        "biology",
+        "molecular"
+      ],
+      "lessons": [
+        {
+          "id": "genetics-15",
+          "title": "From an association signal to a mechanism: designing the follow-up of a locus",
+          "reading": "modules/15-from-association-to-mechanism-follow-up-design.md",
+          "objectives": [
+            "genetics-15-objective-1",
+            "genetics-15-objective-2",
+            "genetics-15-objective-3"
+          ],
+          "worked_example": "Bayes factors 600, 300, 60, 30, 10 give PIPs 0.60, 0.30, 0.06, 0.03, 0.01 and a 95% credible set of 3 variants; 140 of 200 reference reads give z = 5.66 for allele-specific expression, which localizes an effect to a haplotype, and a base edit in isogenic cells with independent clones and rescue is needed to test the variant.",
+          "question_ids": [
+            "genetics-15:top-pip",
+            "genetics-15:credible-set-size",
+            "genetics-15:ase-z",
+            "genetics-15:ase-control",
+            "genetics-15:follow-up-design",
+            "genetics-15:ladder"
+          ],
+          "card_ids": [
+            "genetics-15-card-1",
+            "genetics-15-card-2",
+            "genetics-15-card-3",
+            "genetics-15-card-4"
+          ]
+        }
+      ]
     }
   ],
   "assessments": [
@@ -698,6 +1267,170 @@
       "points": 7
     },
     {
+      "id": "genetics-10-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Gene interaction and epistasis practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "genetics-10-objective-1",
+        "genetics-10-objective-2",
+        "genetics-10-objective-3",
+        "genetics-outcome-1",
+        "genetics-outcome-3"
+      ],
+      "question_ids": [
+        "genetics-10:expected-971",
+        "genetics-10:chi-3-1",
+        "genetics-10:chi-9-7",
+        "genetics-10:dominant-epistasis",
+        "genetics-10:complementation",
+        "genetics-10:daf-epistasis"
+      ],
+      "points": 7
+    },
+    {
+      "id": "genetics-11-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Sex linkage and Bayesian carrier risk practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "genetics-11-objective-1",
+        "genetics-11-objective-2",
+        "genetics-11-objective-3",
+        "genetics-outcome-1",
+        "genetics-outcome-3"
+      ],
+      "question_ids": [
+        "genetics-11:pedigree-pattern",
+        "genetics-11:posterior-three-sons",
+        "genetics-11:next-son-risk",
+        "genetics-11:penetrance-likelihood",
+        "genetics-11:posterior-two-sons",
+        "genetics-11:complications"
+      ],
+      "points": 7
+    },
+    {
+      "id": "genetics-12-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Nondisjunction and aneuploidy practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "genetics-12-objective-1",
+        "genetics-12-objective-2",
+        "genetics-12-objective-3",
+        "genetics-outcome-1",
+        "genetics-outcome-3"
+      ],
+      "question_ids": [
+        "genetics-12:mi-disomic",
+        "genetics-12:mii-disomic",
+        "genetics-12:relative-risk",
+        "genetics-12:risk-difference",
+        "genetics-12:marker-origin",
+        "genetics-12:age-evidence"
+      ],
+      "points": 7
+    },
+    {
+      "id": "genetics-13-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Mutation rates and somatic mutation practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "genetics-13-objective-1",
+        "genetics-13-objective-2",
+        "genetics-13-objective-3",
+        "genetics-outcome-1",
+        "genetics-outcome-3"
+      ],
+      "question_ids": [
+        "genetics-13:events-per-culture",
+        "genetics-13:rate-per-1e9",
+        "genetics-13:variance-to-mean",
+        "genetics-13:fluctuation-inference",
+        "genetics-13:coding-mutations",
+        "genetics-13:somatic-claims"
+      ],
+      "points": 7
+    },
+    {
+      "id": "genetics-14-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Measuring gene expression practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "genetics-14-objective-1",
+        "genetics-14-objective-2",
+        "genetics-14-objective-3",
+        "genetics-outcome-3",
+        "genetics-outcome-4"
+      ],
+      "question_ids": [
+        "genetics-14:cpm",
+        "genetics-14:log2-fold-change",
+        "genetics-14:false-positives",
+        "genetics-14:bh-discoveries",
+        "genetics-14:batch-confounding",
+        "genetics-14:fold-change-meaning"
+      ],
+      "points": 7
+    },
+    {
+      "id": "genetics-15-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "From association to mechanism practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "genetics-15-objective-1",
+        "genetics-15-objective-2",
+        "genetics-15-objective-3",
+        "genetics-outcome-3",
+        "genetics-outcome-4"
+      ],
+      "question_ids": [
+        "genetics-15:top-pip",
+        "genetics-15:credible-set-size",
+        "genetics-15:ase-z",
+        "genetics-15:ase-control",
+        "genetics-15:follow-up-design",
+        "genetics-15:ladder"
+      ],
+      "points": 9
+    },
+    {
+      "id": "genetics-week12-association-lab",
+      "type": "lab",
+      "mode": "practice",
+      "title": "Virtual lab 1: association study with population structure (ungraded practice)",
+      "path": "question-banks/practice.json",
+      "week": 12,
+      "objective_ids": [
+        "genetics-lab-01-objective-1",
+        "genetics-lab-01-objective-2",
+        "genetics-lab-01-objective-3",
+        "genetics-outcome-1",
+        "genetics-outcome-3",
+        "genetics-outcome-4"
+      ],
+      "question_ids": [
+        "genetics-lab1:stratum-summary",
+        "genetics-lab1:pooled-or-syn1",
+        "genetics-lab1:chi-square-syn1",
+        "genetics-lab1:bonferroni",
+        "genetics-lab1:mh-syn2",
+        "genetics-lab1:design-reasoning",
+        "genetics-lab1:supported-conclusions"
+      ],
+      "points": 23
+    },
+    {
       "id": "genetics-case",
       "type": "case",
       "mode": "self-assessment",
@@ -764,18 +1497,24 @@
       "version": "0.4.2",
       "date": "2026-10-08",
       "summary": "Fixes from an AI-assisted check of 0.4.1 (docs/reviews/ai-assisted/genetics-0.4.1.md), which recomputed every practice answer from its stated data and read each lesson: the perturbation lesson recommended 4 replicates per group right after noting that the normal approximation runs low (an exact t-test calculation gives about 66% power at 4 and needs 6), and its worked example, item solution and card now say so; the mapping lesson now gives Kosambi's 22.4 cM instead of 'intermediate values'; one item and one worked example use the unrounded 0.226; one heritability sentence was reworded. This was not a human review; the package remains partial, unreviewed and formative-only."
+    },
+    {
+      "version": "0.5.0",
+      "date": "2026-10-08",
+      "summary": "Added a proposed 14-week schedule; six original lessons (gene interaction and epistasis; sex linkage and Bayesian carrier risk; nondisjunction and aneuploidy with maternal age; mutation rates, the fluctuation test and somatic mutation; measuring gene expression with normalization and false-discovery control; and the follow-up design of an association locus with fine-mapping and allele-specific expression); a synthetic-data case–control association lab (population structure, stratified analysis and a multiple-testing threshold); and common-mistakes sections for lessons 5 to 8. Four link-only references were added (records checked; three abstracts read, one scanned paper not read). All activities remain ungraded practice; the package remains partial and unreviewed, gives no counselling or medical advice, and makes no claim about any person."
     }
   ],
   "limitations": [
-    "Four compact legacy units are preserved; this package is not equivalent to a full university semester.",
-    "There is no authored 12–15 week schedule, substantive homework sequence, laboratory sequence, midterm, cumulative final, or graded integrative project.",
+    "Four compact legacy units are preserved beside twelve original readings, including one synthetic-data virtual lab; this package is not equivalent to a full university semester.",
+    "A proposed 14-week schedule exists but is unmeasured and unreviewed. There is one synthetic-data virtual lab and no substantive homework sequence, laboratory sequence, midterm, cumulative final, or graded integrative project.",
     "Practice items are short formative checks (two per prototype unit and six to seven per original lesson); they do not demonstrate comprehensive outcome coverage or mastery, and objective associations remain provisional.",
     "Bloom labels and structured prerequisite edges are initial authoring classifications awaiting subject-matter review.",
     "Question answers and solution feedback are intentionally public practice authoring specifications, not restricted exam keys.",
-    "Of the 23 numerical answers in this package, one requires a unit, none checks significant figures and none checks dimensions; the others accept a number within a stated tolerance, with the unit optional.",
-    "Total workload and weekly duration are unknown; former nominal credit values and hardcoded reading times do not establish workload."
+    "Of the 49 numerical answers in this package, one requires a unit, two check significant figures and none checks dimensions; the others accept a number within a stated tolerance, with the unit optional.",
+    "Total workload and weekly duration are unknown; former nominal credit values and hardcoded reading times do not establish workload.",
+    "Risk calculations for families are synthetic teaching examples; this package gives no genetic-counselling or medical advice and says nothing about any person's risk."
   ],
   "intentionally_omitted": [
-    "Full instructional sequence and summative assessments are not authored yet; the original lessons extend a partial package."
+    "Graded assessments and a laboratory sequence are not authored yet (one synthetic-data virtual lab exists); the original lessons extend a partial package."
   ]
 }

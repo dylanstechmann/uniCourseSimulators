@@ -4,7 +4,27 @@
 
 2026-10-06; synthetic local learner data only. Milestones 1 and 2 are implemented. Milestone 3 remains partial; deterministic graders and prototype graded-assignment and review workflows are described below. A Milestone 4 curriculum-map increment is implemented and tested, while subject-matter review and map refinement remain. All 25 course packages are **partial**; zero are beta, complete or externally reviewed. Human score review is limited to saved attempts and does not constitute course-content review. No semester equivalence, university credit, security certification or public production deployment is asserted.
 
-## Current increment: reviewer guide, an AI-assisted check of genetics, and stale limitation text (2026-10-08, thirteenth pass)
+## Current increment: genetics gets a proposed 14-week schedule, six lessons and an association lab (2026-10-08, fourteenth pass)
+
+Written by an AI coding assistant. Genetics & Genomics moves from 0.4.2 to 0.5.0 and stays `partial`, unreviewed and formative-only.
+
+- **Proposed 14-week schedule** (`duration.weeks`) and a regenerated syllabus: the four short prototype units sit in weeks 1, 4, 9 and 11 beside original lessons; week 12 is a lab and week 14 a follow-up design lesson with the course case. The manifest says the schedule is not evidence of semester equivalence.
+- **Six lessons (10 to 15)**, each 1,000 to 1,400 words with a worked example, common mistakes, six items and four cards: epistasis, complementation and modified dihybrid ratios; X-linked inheritance with Bayesian carrier risk; nondisjunction and maternal age; mutation rates, the fluctuation test and somatic mutation; measuring gene expression with normalization and false-discovery control; and the follow-up design of an association locus (fine-mapping, allele-specific expression, perturbation).
+- **Virtual lab 1**: a synthetic case–control study of 100 people in two populations, three variants, with a CSV. One variant's strong pooled signal is entirely confounded by population, one is a real association that survives stratification, and one is null. Seven items (12-cell summary upload, two data-interpretation items, two numeric items, a structured item and a multiple-select item), four cards and a week-12 practice assessment.
+- **Common-mistakes sections** for lessons 5 to 8, which the earlier AI-assisted check found missing.
+- **Four link-only references** (records resolved; three abstracts read; one scanned 1943 paper not read, which the lesson says).
+- **Learner-facing limitations** recomputed for the package; one new limitation says the family calculations give no counselling or medical advice.
+- **Review record:** [genetics-0.5.0.md](reviews/ai-assisted/genetics-0.5.0.md). All 43 new keys agree with independent recalculation and earn full credit under the real grader. Seven drafting problems were found and fixed before the commit, among them a wrong oogenesis simplification and a schema violation that the validator caught.
+- Tests: 24 new numeric keys are recalculated independently (50 recalculation tests in all); the schedule, the no-advice statement and the lab's keys against its CSV (including pooled, stratified and Mantel–Haenszel odds ratios) have tests; the inventory pins moved to 210 lessons, 762 questions and 580 cards.
+
+| Command/check (this container, Python 3.12.3, 2026-10-08) | Result |
+| --- | --- |
+| `python tools/validate_content.py` | PASS: 25 packages, 210 lessons, 762 questions, 580 cards, 25 cases; 0 errors; 98 disclosed legacy-depth warnings |
+| `verify.sh` | see the PROGRESS.md entry for this pass |
+
+Not run: frontend checks, Docker Compose, Playwright for this pass. Not reviewed by a person.
+
+## Previous increment: reviewer guide, an AI-assisted check of genetics, and stale limitation text (2026-10-08, thirteenth pass)
 
 Written by an AI coding assistant. The owner said friends, relatives, university contacts, freelancers, and the owner with AI could all review, and that AI with data processing would do best. The repository's standard still requires actual human review for `complete` and named, qualified, independent review for `externally reviewed`. So AI checks are recorded as a separate, labelled layer that changes no label.
 

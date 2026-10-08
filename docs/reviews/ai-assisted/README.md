@@ -9,3 +9,4 @@ review that do.
 | Package and version | Date | Record |
 |---|---|---|
 | Genetics & Genomics 0.4.1 | 2026-10-08 | [genetics-0.4.1.md](genetics-0.4.1.md) |
+| Genetics & Genomics 0.5.0 (new lessons, lab and schedule) | 2026-10-08 | [genetics-0.5.0.md](genetics-0.5.0.md) |

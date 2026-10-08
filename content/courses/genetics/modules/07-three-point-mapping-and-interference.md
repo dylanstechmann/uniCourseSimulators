@@ -54,6 +54,14 @@ Looking only at the outer loci, a and c appear recombinant in the single-crossov
 
 **Map functions** convert an observed fraction into an additive distance under a model of crossover distribution. Haldane's function assumes no interference: d = −½ ln(1 − 2r) Morgans. For r = 0.210, d = 27.2 cM. It overcorrects here, because Haldane assumes no interference while this cross shows substantial interference; Kosambi's function, d = ¼ ln[(1 + 2r)/(1 − 2r)], allows for interference and gives 22.4 cM, close to the 22.6 cM sum of the two intervals. The choice of function is a modeling assumption that should be stated with the map.
 
+## Common mistakes
+
+- Calling the two most frequent classes recombinant; they are the parental classes.
+- Choosing the middle locus from the common classes instead of comparing the rarest (double-crossover) classes with the parental ones.
+- Leaving the double crossovers out of an interval's recombination fraction.
+- Adding observed recombination fractions over long distances as if they were additive.
+- Using Haldane's map function without noting that it assumes no interference.
+
 ## Worked example
 
 **Problem.** In a separate synthetic cross with order x–y–z, r(x–y) = 0.20 and r(y–z) = 0.15 in 2,000 progeny, and 36 double crossovers are observed. What are the expected double crossovers, the coefficient of coincidence and the interference?

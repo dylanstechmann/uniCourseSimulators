@@ -51,6 +51,14 @@ For a recessive condition, affected individuals are aa. If the population is in 
 
 The estimate inherits every assumption above. Consanguinity raises incidence for a given q and so inflates the estimate of q; several different alleles at the same gene (allelic heterogeneity) do not change the arithmetic but do change what "q" counts; incomplete penetrance means affected counts understate aa frequency.
 
+## Common mistakes
+
+- Dividing by the number of people instead of the number of allele copies (2N) when computing an allele frequency.
+- Running the chi-square test on frequencies or percentages instead of counts.
+- Using the wrong degrees of freedom: here one allele frequency was estimated from the data, so there is 1, not 2.
+- Reading a significant departure as proof of selection, when genotyping error and population structure come first.
+- Applying the square-root-of-incidence carrier estimate when consanguinity or incomplete penetrance is likely.
+
 ## Worked example
 
 **Problem.** Two synthetic villages of 500 people each are individually in Hardy–Weinberg proportions, with allele A at frequency 0.8 in the first and 0.2 in the second. A study pools them without recording village. What heterozygote deficit does the pooled sample show?

@@ -50,6 +50,14 @@ How well a score predicts is summarized by the variance it explains in an indepe
 
 Lifespan and age-related traits are studied with these same tools. The same cautions apply: a heritability estimate for longevity in one cohort describes that cohort, a polygenic score for an age-related trait is a statistical summary with limited individual accuracy, and neither identifies an intervention. Moving from association to mechanism requires the causal designs discussed in the gene-regulation lesson.
 
+## Common mistakes
+
+- Treating h² as the fraction of one person's trait that is caused by genes.
+- Assuming a highly heritable trait cannot be changed by environment.
+- Applying Falconer's formulas without asking whether the equal-environments assumption holds.
+- Quoting a polygenic score's variance explained from the sample it was trained on instead of an independent sample.
+- Assuming a score trained in one ancestry group predicts equally well in another.
+
 ## Worked example
 
 **Problem.** For a second synthetic trait, r_MZ = 0.7 and r_DZ = 0.45. Estimate the three components, then ask how much a polygenic score with R² = 0.08 narrows the spread of the trait among people who share the same score.

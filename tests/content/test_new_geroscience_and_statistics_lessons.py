@@ -30,7 +30,7 @@ LESSONS = [("geroscience", f"geroscience-{n}") for n in range(9, 15)] + [
     ("statistics", "statistics-7"), ("statistics", "statistics-8"), ("programming", "programming-6"), ("programming", "programming-7"),
     ("geroscience", "geroscience-15"), ("genetics", "genetics-9"), ("biochemistry", "biochemistry-7"), ("physiology", "physiology-7"),
     ("signals-control", "signals-control-6"), ("robotics", "robotics-6"), ("geroscience", "geroscience-16"),
-]
+] + [("genetics", f"genetics-{n}") for n in range(10, 16)]
 
 
 def load(course):
@@ -154,3 +154,76 @@ def test_geroscience_lab_key_matches_its_dataset():
     assert bank["geroscience-lab1:km-median"]["solution_spec"]["field_specs"][0]["answer"] == median
     text = (COURSES / "geroscience/labs/01-lifespan-cohort-censoring-and-survivor-bias.md").read_text(encoding="utf-8")
     assert "nothing here is evidence about any compound or about human aging" in text
+
+
+def test_genetics_schedule_places_every_lesson_once_and_stays_partial():
+    manifest = load("genetics")
+    weeks = manifest["duration"]["weeks"]
+    assert [w["week"] for w in weeks] == list(range(1, 15))
+    scheduled = [lesson for w in weeks for lesson in w["lesson_ids"]]
+    all_lessons = [lesson["id"] for m in manifest["modules"] for lesson in m["lessons"]]
+    assert len(all_lessons) == 16
+    assert sorted(scheduled) == sorted(all_lessons) and len(scheduled) == len(set(scheduled))
+    assessments = {a["id"]: a for a in manifest["assessments"]}
+    assert all(a in assessments for w in weeks for a in w["assessment_ids"])
+    assert all(a["mode"] != "graded" for a in manifest["assessments"])
+    assert manifest["maturity"] == "partial" and manifest["review"]["status"] == "unreviewed"
+    assert manifest["grading_policy"]["mode"] == "formative-only"
+    assert "not evidence of semester equivalence" in manifest["duration"]["equivalent_structure"]
+    lab_week = next(w for w in weeks if "genetics-lab-01" in w["lesson_ids"])
+    assert lab_week["week"] == 12 and "genetics-week12-association-lab" in lab_week["assessment_ids"]
+    assert "genetics-case" in weeks[-1]["assessment_ids"]
+
+
+def test_carrier_risk_lesson_gives_no_counselling_advice():
+    text = (COURSES / "genetics/modules/11-sex-linkage-pedigrees-and-bayesian-carrier-risk.md").read_text(encoding="utf-8")
+    assert "is not genetic-counselling advice for any person" in text
+    assert "All families and numbers here are synthetic" in text
+    manifest = load("genetics")
+    assert any("no genetic-counselling or medical advice" in item for item in manifest["limitations"])
+
+
+def test_genetics_lab_keys_match_the_dataset_and_the_lab_is_labelled_synthetic():
+    import csv
+    rows = list(csv.DictReader((COURSES / "genetics/labs/case-control-genotypes.csv").open(encoding="utf-8")))
+    bank = {q["id"]: q for q in json.loads((COURSES / "genetics/question-banks/practice.json").read_text(encoding="utf-8"))["questions"]}
+    assert len(rows) == 100 and len({r["id"] for r in rows}) == 100
+    checks = {(c["row_id"], c["column"]): c["answer"] for c in bank["genetics-lab1:stratum-summary"]["solution_spec"]["validation_spec"]["checks"]}
+    for ancestry in ("A", "B"):
+        for status in ("case", "control"):
+            group = [r for r in rows if r["ancestry"] == ancestry and r["status"] == status]
+            label = f"{ancestry.lower()}-{status}"
+            assert checks[(label, "individuals")] == len(group)
+            for variant in ("syn1", "syn2"):
+                assert abs(checks[(label, f"mean_dosage_{variant}")] - sum(int(r[variant]) for r in group) / len(group)) < 1e-9
+
+    def table(variant, status, ancestry=None):
+        dosage = [int(r[variant]) for r in rows if r["status"] == status and (ancestry is None or r["ancestry"] == ancestry)]
+        return sum(dosage), 2 * len(dosage) - sum(dosage)
+
+    def odds_ratio(a, b, c, d):
+        return (a / b) / (c / d)
+
+    def chi_square(a, b, c, d):
+        n, total = a + b + c + d, 0.0
+        for observed, row, col in ((a, a + b, a + c), (b, a + b, b + d), (c, c + d, a + c), (d, c + d, b + d)):
+            total += (observed - row * col / n) ** 2 / (row * col / n)
+        return total
+
+    pooled = {v: (*table(v, "case"), *table(v, "control")) for v in ("syn1", "syn2", "syn3")}
+    interpretation = {f: bank[i]["solution_spec"]["field_specs"][0]["answer"]
+                      for f, i in (("or1", "genetics-lab1:pooled-or-syn1"), ("mh2", "genetics-lab1:mh-syn2"))}
+    assert interpretation["or1"] == round(odds_ratio(*pooled["syn1"]), 2)
+    assert abs(bank["genetics-lab1:chi-square-syn1"]["solution_spec"]["answer"] - chi_square(*pooled["syn1"])) < 1e-3
+    assert abs(bank["genetics-lab1:bonferroni"]["solution_spec"]["answer"] - 0.05 / 3) < 1e-4
+    for ancestry in ("A", "B"):  # SYN1 is confounded: no association inside either population
+        assert abs(odds_ratio(*table("syn1", "case", ancestry), *table("syn1", "control", ancestry)) - 1) < 1e-9
+    numerator = denominator = 0.0
+    for ancestry in ("A", "B"):
+        (a, b), (c, d) = table("syn2", "case", ancestry), table("syn2", "control", ancestry)
+        numerator += a * d / (a + b + c + d)
+        denominator += b * c / (a + b + c + d)
+    assert interpretation["mh2"] == round(numerator / denominator, 2)
+    assert abs(numerator / denominator - odds_ratio(*pooled["syn2"])) < 1e-9
+    text = (COURSES / "genetics/labs/01-association-study-and-population-structure.md").read_text(encoding="utf-8")
+    assert "nothing here is evidence about any gene or about human health" in text

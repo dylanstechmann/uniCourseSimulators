@@ -17,6 +17,23 @@ ROOT = Path(__file__).resolve().parents[2]
 COURSES = ROOT / "content" / "courses"
 Z80 = 1.96 + 0.8416  # two-sided alpha 0.05 and 80% power, as stated in the genetics items
 
+
+def benjamini_hochberg_count(pvalues: list[float], q: float) -> int:
+    """Largest rank k with p(k) <= (k/m) q, found by scanning from the largest rank down (step-up)."""
+    ranked, m = sorted(pvalues), len(pvalues)
+    return next((k for k in range(m, 0, -1) if ranked[k - 1] <= k / m * q + 1e-12), 0)
+
+
+def credible_set_size(bayes_factors: list[float], level: float) -> int:
+    probabilities = sorted((b / sum(bayes_factors) for b in bayes_factors), reverse=True)
+    total = 0.0
+    for size, probability in enumerate(probabilities, 1):
+        total += probability
+        if total >= level - 1e-12:
+            return size
+    return len(probabilities)
+
+
 GENETICS_NUMERIC = {
     "genetics-2:check": 72 / 400 * 100,
     "genetics-1:genotype-vs-phenotype-frequency": 2 * 0.8 * 0.2,
@@ -41,6 +58,31 @@ GENETICS_NUMERIC = {
     "genetics-9:odds-ratio": math.exp(0.5),
     "genetics-9:wald-se": 0.01 / 0.1,
     "genetics-9:f-statistic": (0.02 / 0.01) ** 2,
+    # genetics 0.5.0: lessons 10 to 15 and the association lab, recomputed from the numbers in each prompt
+    "genetics-10:expected-971": 9 / 16 * 160,
+    "genetics-10:chi-3-1": (96 - 120) ** 2 / 120 + (64 - 40) ** 2 / 40,
+    "genetics-10:chi-9-7": (96 - 90) ** 2 / 90 + (64 - 70) ** 2 / 70,
+    "genetics-11:posterior-three-sons": (0.5 * 0.5**3) / (0.5 * 0.5**3 + 0.5 * 1),
+    "genetics-11:next-son-risk": (0.5 * 0.5**3) / (0.5 * 0.5**3 + 0.5 * 1) * 0.5,
+    "genetics-11:penetrance-likelihood": 1 - 0.5 * 0.8,
+    "genetics-11:posterior-two-sons": (0.5 * 0.5**2) / (0.5 * 0.5**2 + 0.5 * 1),
+    "genetics-12:mi-disomic": 0.04 * 2 / 4,
+    "genetics-12:mii-disomic": 0.04 * 1 / 4,
+    "genetics-12:relative-risk": (12 / 1000) / (6 / 4000),
+    "genetics-12:risk-difference": (12 / 1000 - 6 / 4000) * 1000,
+    "genetics-13:events-per-culture": -math.log(22 / 50),
+    "genetics-13:rate-per-1e9": -math.log(22 / 50) / 2e8 * 1e9,
+    "genetics-13:variance-to-mean": (sum((x - 2.0) ** 2 for x in [0, 1, 0, 2, 0, 0, 13, 0]) / 7) / 2.0,
+    "genetics-13:coding-mutations": 40 * 75 * 0.015,
+    "genetics-14:cpm": 450 / 25_000_000 * 1e6,
+    "genetics-14:log2-fold-change": math.log2((450 / 25_000_000) / (300 / 15_000_000)),
+    "genetics-14:false-positives": 20_000 * 0.05,
+    "genetics-14:bh-discoveries": benjamini_hochberg_count([0.001, 0.008, 0.020, 0.021, 0.024, 0.2, 0.35, 0.6, 0.8, 0.9], 0.05),
+    "genetics-15:top-pip": 600 / (600 + 300 + 60 + 30 + 10),
+    "genetics-15:credible-set-size": credible_set_size([600, 300, 60, 30, 10], 0.95),
+    "genetics-15:ase-z": (140 - 100) / math.sqrt(200 * 0.25),
+    "genetics-lab1:chi-square-syn1": (52 - 40) ** 2 / 40 + (48 - 60) ** 2 / 60 + (28 - 40) ** 2 / 40 + (72 - 60) ** 2 / 60,
+    "genetics-lab1:bonferroni": 0.05 / 3,
 }
 
 

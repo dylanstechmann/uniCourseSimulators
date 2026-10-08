@@ -265,6 +265,286 @@
         "genetics-9-objective-3"
       ],
       "license": "CC-BY-4.0"
+    },
+    {
+      "id": "genetics-10-card-1",
+      "lesson_id": "genetics-10",
+      "front": "Modified dihybrid ratios",
+      "back": "9:7 complementary genes; 9:3:4 recessive epistasis; 12:3:1 dominant epistasis; 15:1 duplicate genes.",
+      "objective_ids": [
+        "genetics-10-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "genetics-10-card-2",
+      "lesson_id": "genetics-10",
+      "front": "Complementation test",
+      "back": "Cross two recessive mutants: wild-type F1 = different genes (complement); mutant F1 = same gene.",
+      "objective_ids": [
+        "genetics-10-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "genetics-10-card-3",
+      "lesson_id": "genetics-10",
+      "front": "Chi-square for ratios",
+      "back": "Use counts; df = classes − 1 − estimated parameters; 5% critical values 3.84 (1 df) and 5.99 (2 df).",
+      "objective_ids": [
+        "genetics-10-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "genetics-10-card-4",
+      "lesson_id": "genetics-10",
+      "front": "Epistasis ordering",
+      "back": "A double mutant resembling one single mutant suggests that gene acts downstream; daf-16 is needed for daf-2 longevity in worms.",
+      "objective_ids": [
+        "genetics-10-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "genetics-11-card-1",
+      "lesson_id": "genetics-11",
+      "front": "X-linked recessive pattern",
+      "back": "Affected males through carrier females; never father to son; each son of a carrier mother 1/2 affected.",
+      "objective_ids": [
+        "genetics-11-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "genetics-11-card-2",
+      "lesson_id": "genetics-11",
+      "front": "Bayes for carrier risk",
+      "back": "Posterior = prior × likelihood / Σ(prior × likelihood); prior 1/2 with three unaffected sons gives 1/9.",
+      "objective_ids": [
+        "genetics-11-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "genetics-11-card-3",
+      "lesson_id": "genetics-11",
+      "front": "Conditional information",
+      "back": "Each unaffected son multiplies the carrier odds by 1/2 (with complete penetrance); it lowers but does not exclude risk.",
+      "objective_ids": [
+        "genetics-11-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "genetics-11-card-4",
+      "lesson_id": "genetics-11",
+      "front": "Complications",
+      "back": "Incomplete penetrance, new mutations and X-inactivation mosaicism all change pedigree-based estimates.",
+      "objective_ids": [
+        "genetics-11-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "genetics-12-card-1",
+      "lesson_id": "genetics-12",
+      "front": "Meiosis I vs II nondisjunction",
+      "back": "MI: no normal products (2 disomic, 2 nullisomic). MII in one cell: 2 normal, 1 disomic, 1 nullisomic.",
+      "objective_ids": [
+        "genetics-12-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "genetics-12-card-2",
+      "lesson_id": "genetics-12",
+      "front": "Aneuploidy frequency",
+      "back": "At least 5% of clinically recognized pregnancies; the leading genetic cause of pregnancy loss.",
+      "objective_ids": [
+        "genetics-12-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "genetics-12-card-3",
+      "lesson_id": "genetics-12",
+      "front": "Relative risk and risk difference",
+      "back": "RR = risk₁/risk₀ shows strength; RD = risk₁ − risk₀ shows how many extra cases per 1000.",
+      "objective_ids": [
+        "genetics-12-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "genetics-12-card-4",
+      "lesson_id": "genetics-12",
+      "front": "Origin markers",
+      "back": "Near the centromere: two different parental alleles = meiosis I error; two identical alleles = meiosis II error.",
+      "objective_ids": [
+        "genetics-12-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "genetics-13-card-1",
+      "lesson_id": "genetics-13",
+      "front": "Mutation rate vs mutant frequency",
+      "back": "Rate = events per cell division; frequency = fraction of mutant cells, inflated by early jackpots.",
+      "objective_ids": [
+        "genetics-13-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "genetics-13-card-2",
+      "lesson_id": "genetics-13",
+      "front": "p0 method",
+      "back": "m = −ln(fraction of cultures with no mutants); rate ≈ m / divisions per culture.",
+      "objective_ids": [
+        "genetics-13-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "genetics-13-card-3",
+      "lesson_id": "genetics-13",
+      "front": "Fluctuation test",
+      "back": "Excess variance across independent cultures (not aliquots) shows mutations arise before selection.",
+      "objective_ids": [
+        "genetics-13-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "genetics-13-card-4",
+      "lesson_id": "genetics-13",
+      "front": "Somatic mutation with age",
+      "back": "Adult stem cells of several tissues gain roughly 40 mutations per year; accumulation alone does not prove causation.",
+      "objective_ids": [
+        "genetics-13-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "genetics-14-card-1",
+      "lesson_id": "genetics-14",
+      "front": "Counts per million",
+      "back": "CPM = gene reads / total reads × 10⁶; compare normalized values, never raw counts.",
+      "objective_ids": [
+        "genetics-14-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "genetics-14-card-2",
+      "lesson_id": "genetics-14",
+      "front": "log₂ fold change",
+      "back": "log₂(treated/control): +1 doubles, −1 halves; noisy for low-count genes.",
+      "objective_ids": [
+        "genetics-14-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "genetics-14-card-3",
+      "lesson_id": "genetics-14",
+      "front": "Benjamini–Hochberg",
+      "back": "Sort p-values; largest k with p(k) ≤ (k/m)q; call the k smallest. Controls the false discovery rate.",
+      "objective_ids": [
+        "genetics-14-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "genetics-14-card-4",
+      "lesson_id": "genetics-14",
+      "front": "Batch confounding",
+      "back": "If a group is processed entirely in its own batch, batch and group effects cannot be separated; balance and record batches.",
+      "objective_ids": [
+        "genetics-14-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "genetics-lab1-0",
+      "lesson_id": "genetics-lab-01",
+      "front": "Allele frequency from dosage",
+      "back": "Mean dosage (0 to 2 effect alleles per person) divided by 2 is the effect-allele frequency.",
+      "objective_ids": [
+        "genetics-lab-01-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "genetics-lab1-1",
+      "lesson_id": "genetics-lab-01",
+      "front": "Allelic odds ratio and chi-square",
+      "back": "OR = (a/b)/(c/d) from effect and other allele counts in cases and controls; χ² = Σ(O − E)²/E with 1 df.",
+      "objective_ids": [
+        "genetics-lab-01-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "genetics-lab1-2",
+      "lesson_id": "genetics-lab-01",
+      "front": "Confounding by ancestry",
+      "back": "If cases and controls differ in ancestry and allele frequencies differ by ancestry, a pooled signal can be spurious; stratify or adjust.",
+      "objective_ids": [
+        "genetics-lab-01-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "genetics-lab1-3",
+      "lesson_id": "genetics-lab-01",
+      "front": "Threshold versus confounding",
+      "back": "A multiple-testing threshold controls chance findings, not confounded ones; a corrected hit is a candidate to replicate.",
+      "objective_ids": [
+        "genetics-lab-01-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "genetics-15-card-1",
+      "lesson_id": "genetics-15",
+      "front": "Posterior inclusion probability",
+      "back": "PIP(i) = BF(i) / Σ BF(j) under one causal variant and equal priors; a 95% credible set sums to at least 0.95.",
+      "objective_ids": [
+        "genetics-15-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "genetics-15-card-2",
+      "lesson_id": "genetics-15",
+      "front": "Allele-specific expression",
+      "back": "In heterozygotes, unequal RNA reads show something on the haplotype acts in cis; check DNA ratios and mapping bias.",
+      "objective_ids": [
+        "genetics-15-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "genetics-15-card-3",
+      "lesson_id": "genetics-15",
+      "front": "Evidence ladder",
+      "back": "Association → region; fine-mapping → candidates; chromatin → cell type; ASE → haplotype; editing → variant; rescue → phenotype in the system.",
+      "objective_ids": [
+        "genetics-15-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "genetics-15-card-4",
+      "lesson_id": "genetics-15",
+      "front": "Follow-up confounders",
+      "back": "Ancestry, cell-type composition, processing batch and linkage disequilibrium must be addressed before naming a causal variant.",
+      "objective_ids": [
+        "genetics-15-objective-3"
+      ],
+      "license": "CC-BY-4.0"
     }
   ]
 }

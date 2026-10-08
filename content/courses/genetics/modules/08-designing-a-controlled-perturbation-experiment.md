@@ -53,6 +53,14 @@ where σ is the standard deviation between biological replicates and δ the smal
 
 Plate position, passage number and processing order can all create effects. Assign conditions to positions and processing order at random, and where the readout involves judgement (for example, scoring images) keep the scorer unaware of condition until analysis is finished.
 
+## Common mistakes
+
+- Attributing a phenotype to the gene without a non-targeting control delivered the same way.
+- Relying on one guide or siRNA and no rescue.
+- Treating wells from one transfection as independent biological replicates.
+- Choosing the reference gene, the readout or the analysis after seeing the data.
+- Confirming knockdown at one time point and measuring the phenotype at another.
+
 ## Worked example
 
 **Problem.** A team reports that knocking down gene G slows proliferation, using one siRNA, three wells from a single transfection and a non-targeting control. Which additions would let the conclusion be about G?

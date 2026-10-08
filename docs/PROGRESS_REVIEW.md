@@ -1,5 +1,9 @@
 # Progress review: uniStemCourseSimulators
 
+## Update after the genetics schedule (2026-10-08, fourteenth pass)
+
+Written by an AI coding assistant. Genetics & Genomics is the third package with a proposed week-by-week structure (after cell biology and geroscience): 14 weeks, 16 readings including a synthetic association lab whose strongest pooled signal is a population-structure artefact. Like the others it has no graded work, no measured workload and no human review. The new lessons were checked by independent recalculation and a second reading, and seven problems were fixed before commit; that is still the same kind of system checking its own output. The honest remaining gaps: the four prototype units are 60 to 80 words each, 22 other packages have only two to four lesson-length readings each, and nothing here has been seen by a geneticist.
+
 ## Update after the reviewer guide and the first AI-assisted check (2026-10-08, thirteenth pass)
 
 Written by an AI coding assistant. Review now has a written path. Anyone can send reader feedback with a short form. AI-assisted checks recompute answers and look for stale or inconsistent text, and are recorded separately. A named, qualified subject-matter review is still what the standard requires before any package moves past `partial`. The first AI-assisted check, of genetics 0.4.1, found no wrong answer key. It did find that one lesson advised a replicate count with about 66% power, and that learner-facing limitation text was stale in all 25 packages. Both are fixed. The check is not independent of the content's author, and it is not a human review.

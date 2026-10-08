@@ -3027,6 +3027,122 @@
       "checksum": null,
       "imported_assets": [],
       "rights_notes": "This record documents link-only use and does not clear linked content for reuse."
+    },
+    {
+      "id": "kenyon-1993-daf2",
+      "title": "A C. elegans mutant that lives twice as long as wild type",
+      "institution": "NIH / National Library of Medicine PubMed",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/8247153/",
+      "accessed_at": "2026-10-08",
+      "license": "Third-party reuse rights not cleared for this package; link-only scientific reference selected",
+      "reuse_mode": "link-only-reference",
+      "permissions": {
+        "linking": true,
+        "quotation": false,
+        "adaptation": false,
+        "redistribution": false
+      },
+      "attribution_requirements": [
+        "Identify A C. elegans mutant that lives twice as long as wild type, NIH / National Library of Medicine PubMed, and the exact URL."
+      ],
+      "third_party_notes": "Used only as a link-only scientific reference. No source text, figure, table, problem, or dataset is copied or adapted; findings are summarized qualitatively in original wording.",
+      "mapped_courses": [
+        "genetics"
+      ],
+      "mapped_modules": [
+        "genetics-module-10"
+      ],
+      "version": "Nature 1993; DOI 10.1038/366461a0; abstract read; PMID 8247153; identifier resolved with the citation-check script on 2026-10-08",
+      "checksum": null,
+      "imported_assets": [],
+      "rights_notes": "This record documents link-only use and does not clear linked content for reuse."
+    },
+    {
+      "id": "hassold-hunt-2001-aneuploidy",
+      "title": "To err (meiotically) is human: the genesis of human aneuploidy",
+      "institution": "NIH / National Library of Medicine PubMed",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/11283700/",
+      "accessed_at": "2026-10-08",
+      "license": "Third-party reuse rights not cleared for this package; link-only scientific reference selected",
+      "reuse_mode": "link-only-reference",
+      "permissions": {
+        "linking": true,
+        "quotation": false,
+        "adaptation": false,
+        "redistribution": false
+      },
+      "attribution_requirements": [
+        "Identify To err (meiotically) is human: the genesis of human aneuploidy, NIH / National Library of Medicine PubMed, and the exact URL."
+      ],
+      "third_party_notes": "Used only as a link-only scientific reference. No source text, figure, table, problem, or dataset is copied or adapted; findings are summarized qualitatively in original wording.",
+      "mapped_courses": [
+        "genetics"
+      ],
+      "mapped_modules": [
+        "genetics-module-12"
+      ],
+      "version": "Nature Reviews Genetics 2001; DOI 10.1038/35066065; abstract read; PMID 11283700; identifier resolved with the citation-check script on 2026-10-08",
+      "checksum": null,
+      "imported_assets": [],
+      "rights_notes": "This record documents link-only use and does not clear linked content for reuse."
+    },
+    {
+      "id": "luria-delbruck-1943-fluctuation",
+      "title": "Mutations of Bacteria from Virus Sensitivity to Virus Resistance",
+      "institution": "NIH / National Library of Medicine PubMed",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/17247100/",
+      "accessed_at": "2026-10-08",
+      "license": "Third-party reuse rights not cleared for this package; link-only scientific reference selected",
+      "reuse_mode": "link-only-reference",
+      "permissions": {
+        "linking": true,
+        "quotation": false,
+        "adaptation": false,
+        "redistribution": false
+      },
+      "attribution_requirements": [
+        "Identify Mutations of Bacteria from Virus Sensitivity to Virus Resistance, NIH / National Library of Medicine PubMed, and the exact URL."
+      ],
+      "third_party_notes": "Used only as a link-only scientific reference. No source text, figure, table, problem, or dataset is copied or adapted; findings are summarized qualitatively in original wording.",
+      "mapped_courses": [
+        "genetics"
+      ],
+      "mapped_modules": [
+        "genetics-module-13"
+      ],
+      "version": "Genetics 1943; DOI 10.1093/genetics/28.6.491; no abstract and the scanned full text was not read; PMID 17247100; identifier resolved with the citation-check script on 2026-10-08",
+      "checksum": null,
+      "imported_assets": [],
+      "rights_notes": "This record documents link-only use and does not clear linked content for reuse."
+    },
+    {
+      "id": "blokzijl-2016-stem-cell-mutations",
+      "title": "Tissue-specific mutation accumulation in human adult stem cells during life",
+      "institution": "NIH / National Library of Medicine PubMed",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/27698416/",
+      "accessed_at": "2026-10-08",
+      "license": "Third-party reuse rights not cleared for this package; link-only scientific reference selected",
+      "reuse_mode": "link-only-reference",
+      "permissions": {
+        "linking": true,
+        "quotation": false,
+        "adaptation": false,
+        "redistribution": false
+      },
+      "attribution_requirements": [
+        "Identify Tissue-specific mutation accumulation in human adult stem cells during life, NIH / National Library of Medicine PubMed, and the exact URL."
+      ],
+      "third_party_notes": "Used only as a link-only scientific reference. No source text, figure, table, problem, or dataset is copied or adapted; findings are summarized qualitatively in original wording.",
+      "mapped_courses": [
+        "genetics"
+      ],
+      "mapped_modules": [
+        "genetics-module-13"
+      ],
+      "version": "Nature 2016; DOI 10.1038/nature19768; abstract read; PMID 27698416; identifier resolved with the citation-check script on 2026-10-08",
+      "checksum": null,
+      "imported_assets": [],
+      "rights_notes": "This record documents link-only use and does not clear linked content for reuse."
     }
   ]
 }

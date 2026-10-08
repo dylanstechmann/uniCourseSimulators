@@ -119,6 +119,101 @@
       "original_content": true,
       "license": "CC-BY-4.0",
       "modifications": []
+    },
+    {
+      "module_id": "genetics-module-10",
+      "lesson_id": "genetics-10",
+      "reading": "modules/10-gene-interaction-epistasis-and-complementation.md",
+      "source_ids": [
+        "biology",
+        "molecular",
+        "kenyon-1993-daf2"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "genetics-module-11",
+      "lesson_id": "genetics-11",
+      "reading": "modules/11-sex-linkage-pedigrees-and-bayesian-carrier-risk.md",
+      "source_ids": [
+        "biology",
+        "molecular"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "genetics-module-12",
+      "lesson_id": "genetics-12",
+      "reading": "modules/12-nondisjunction-aneuploidy-and-maternal-age.md",
+      "source_ids": [
+        "biology",
+        "molecular",
+        "hassold-hunt-2001-aneuploidy"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "genetics-module-13",
+      "lesson_id": "genetics-13",
+      "reading": "modules/13-mutation-rates-fluctuation-test-and-somatic-mutation.md",
+      "source_ids": [
+        "biology",
+        "molecular",
+        "luria-delbruck-1943-fluctuation",
+        "blokzijl-2016-stem-cell-mutations"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "genetics-module-14",
+      "lesson_id": "genetics-14",
+      "reading": "modules/14-measuring-gene-expression-normalization-and-false-discoveries.md",
+      "source_ids": [
+        "biology",
+        "molecular"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "genetics-module-lab-01",
+      "lesson_id": "genetics-lab-01",
+      "reading": "labs/01-association-study-and-population-structure.md",
+      "source_ids": [
+        "biology",
+        "molecular"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "genetics-module-15",
+      "lesson_id": "genetics-15",
+      "reading": "modules/15-from-association-to-mechanism-follow-up-design.md",
+      "source_ids": [
+        "biology",
+        "molecular"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
     }
   ]
 }

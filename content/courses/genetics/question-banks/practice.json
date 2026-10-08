@@ -1237,6 +1237,2259 @@
         "kind": "original",
         "modifications": []
       }
+    },
+    {
+      "id": "genetics-10:expected-971",
+      "type": "numeric",
+      "prompt": "An F2 of 160 plants is expected to segregate 9:7 (purple:white). How many purple plants are expected? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "genetics-10-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 90.0,
+        "unit": "",
+        "tolerance": 0.5,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Multiply the total by the fraction of the purple class.",
+        "solution": "9/16 × 160 = 90 purple and 70 white.",
+        "lesson_ids": [
+          "genetics-10"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "genetics-10:chi-3-1",
+      "type": "numeric",
+      "prompt": "An F2 has 96 purple and 64 white plants. Calculate the chi-square statistic for the one-gene 3:1 hypothesis. Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "genetics-10-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 19.2,
+        "unit": "",
+        "tolerance": 0.05,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Expected counts are 3/4 and 1/4 of the total; sum (O − E)²/E over both classes.",
+        "solution": "Expected 120 and 40: 4.8 + 14.4 = 19.2, above 3.84, so 3:1 is rejected.",
+        "lesson_ids": [
+          "genetics-10"
+        ],
+        "misconception_ids": [
+          "percentages-in-chi-square"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "genetics-10:chi-9-7",
+      "type": "numeric",
+      "prompt": "For the same F2 (96 purple, 64 white), calculate the chi-square statistic for the 9:7 hypothesis. Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "genetics-10-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0.9143,
+        "unit": "",
+        "tolerance": 0.01,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Expected counts are 9/16 and 7/16 of the total.",
+        "solution": "Expected 90 and 70: 0.400 + 0.514 = 0.914, below 3.84, so 9:7 is not rejected.",
+        "lesson_ids": [
+          "genetics-10"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "genetics-10:dominant-epistasis",
+      "type": "single_choice",
+      "prompt": "An F2 from two double heterozygotes shows 12 : 3 : 1 for three phenotypes. Which interaction does this ratio indicate?",
+      "points": 1,
+      "objective_ids": [
+        "genetics-10-objective-1"
+      ],
+      "options": [
+        "Dominant epistasis: a dominant allele of one gene masks the phenotype set by the other gene.",
+        "Duplicate genes: either gene alone is sufficient.",
+        "Linkage between the two genes.",
+        "Complementary gene action: both genes are needed for the phenotype."
+      ],
+      "solution_spec": {
+        "answer": 0
+      },
+      "feedback": {
+        "hint": "Which of the 9 : 3 : 3 : 1 classes have merged to give 12?",
+        "solution": "The 9 A_B_ and 3 A_bb classes merge (12) because a dominant A allele masks B; aaB_ (3) and aabb (1) remain distinct.",
+        "lesson_ids": [
+          "genetics-10"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "genetics-10:complementation",
+      "type": "single_choice",
+      "prompt": "Two independently isolated white-flowered pure lines are crossed, and every F1 plant is purple. What does this show?",
+      "points": 1,
+      "objective_ids": [
+        "genetics-10-objective-3"
+      ],
+      "options": [
+        "The genes must be on different chromosomes.",
+        "The two lines carry mutations in different genes, because each parent supplies a working copy of the gene the other lacks.",
+        "Purple is recessive to white.",
+        "The two lines carry different alleles of the same gene."
+      ],
+      "solution_spec": {
+        "answer": 1
+      },
+      "feedback": {
+        "hint": "In a complementation test, what does a wild-type F1 mean?",
+        "solution": "Complementation (a wild-type F1) places the mutations in different genes. It says nothing about which chromosomes the genes are on; that needs a linkage test.",
+        "lesson_ids": [
+          "genetics-10"
+        ],
+        "misconception_ids": [
+          "complementation-means-same-gene"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "genetics-10:daf-epistasis",
+      "type": "multiple_select",
+      "prompt": "Mutations in the worm gene daf-2 more than double adult lifespan, and the extension requires daf-16. Which conclusions are appropriate? Select all that apply.",
+      "points": 2,
+      "objective_ids": [
+        "genetics-10-objective-3"
+      ],
+      "options": [
+        "The result is consistent with daf-16 acting downstream of daf-2 in one pathway.",
+        "Epistasis analysis proves that the two proteins bind each other directly.",
+        "Any drug that reduces daf-2 signalling will double human lifespan.",
+        "The result was obtained in a nematode and does not by itself show anything about human lifespan.",
+        "daf-16 is epistatic to daf-2 for lifespan: removing daf-16 abolishes the extension."
+      ],
+      "solution_spec": {
+        "answer": [
+          0,
+          3,
+          4
+        ],
+        "partial_credit": "correct-minus-incorrect-clamped-v1"
+      },
+      "feedback": {
+        "hint": "Separate what a genetic interaction in one species shows from claims about mechanism and people.",
+        "solution": "The double-mutant result orders the genes in a pathway in worms. Direct binding needs biochemical evidence, and nothing here supports claims about people.",
+        "lesson_ids": [
+          "genetics-10"
+        ],
+        "misconception_ids": [
+          "epistasis-means-binding",
+          "model-to-human-leap"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "genetics-11:pedigree-pattern",
+      "type": "single_choice",
+      "prompt": "A synthetic pedigree shows affected males in three generations, each related through an unaffected mother, and no affected father has an affected son. Which mode of inheritance best fits?",
+      "points": 1,
+      "objective_ids": [
+        "genetics-11-objective-1"
+      ],
+      "options": [
+        "X-linked recessive",
+        "Y-linked",
+        "Mitochondrial",
+        "Autosomal dominant with complete penetrance"
+      ],
+      "solution_spec": {
+        "answer": 0
+      },
+      "feedback": {
+        "hint": "Who transmits the trait, and does it ever pass from father to son?",
+        "solution": "Affected males linked through unaffected (carrier) females, with no male-to-male transmission, is the X-linked recessive pattern. Y-linked traits pass father to son, and an autosomal dominant trait with full penetrance would affect the transmitting mothers.",
+        "lesson_ids": [
+          "genetics-11"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "genetics-11:posterior-three-sons",
+      "type": "numeric",
+      "prompt": "A woman's prior probability of carrying an X-linked recessive allele (complete penetrance) is 1/2. She has three unaffected sons. What is her posterior carrier probability? Enter a decimal fraction, number only.",
+      "points": 1,
+      "objective_ids": [
+        "genetics-11-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0.11111,
+        "unit": "",
+        "tolerance": 0.002,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Multiply each prior by the probability of three unaffected sons under that hypothesis, then divide by the total.",
+        "solution": "(1/2 × 1/8) / (1/2 × 1/8 + 1/2 × 1) = 1/9 ≈ 0.111.",
+        "lesson_ids": [
+          "genetics-11"
+        ],
+        "misconception_ids": [
+          "unaffected-sons-exclude-carrier"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "genetics-11:next-son-risk",
+      "type": "numeric",
+      "prompt": "With a posterior carrier probability of 1/9, what is the probability that her next son is affected? Enter a decimal fraction, number only.",
+      "points": 1,
+      "objective_ids": [
+        "genetics-11-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0.05556,
+        "unit": "",
+        "tolerance": 0.002,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "A carrier's son is affected with probability 1/2.",
+        "solution": "1/9 × 1/2 = 1/18 ≈ 0.056.",
+        "lesson_ids": [
+          "genetics-11"
+        ],
+        "misconception_ids": [
+          "prior-used-after-conditioning"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "genetics-11:penetrance-likelihood",
+      "type": "numeric",
+      "prompt": "Only 80% of males hemizygous for an X-linked allele are affected. What is the probability that a son of a carrier mother is unaffected? Enter a decimal fraction, number only.",
+      "points": 1,
+      "objective_ids": [
+        "genetics-11-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 0.6,
+        "unit": "",
+        "tolerance": 0.005,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "The son is unaffected if he inherits the normal X, or inherits the variant but does not express it.",
+        "solution": "1/2 + 1/2 × 0.2 = 1 − 1/2 × 0.8 = 0.6.",
+        "lesson_ids": [
+          "genetics-11"
+        ],
+        "misconception_ids": [
+          "penetrance-ignored"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "genetics-11:posterior-two-sons",
+      "type": "numeric",
+      "prompt": "A woman with prior carrier probability 1/2 has two unaffected sons (complete penetrance). What is her posterior carrier probability? Enter a decimal fraction, number only.",
+      "points": 1,
+      "objective_ids": [
+        "genetics-11-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0.2,
+        "unit": "",
+        "tolerance": 0.002,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Likelihood of two unaffected sons if she is a carrier is (1/2)².",
+        "solution": "(1/2 × 1/4)/(1/8 + 1/2) = 1/5 = 0.20.",
+        "lesson_ids": [
+          "genetics-11"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "genetics-11:complications",
+      "type": "multiple_select",
+      "prompt": "Which statements about inferring carrier status from pedigrees are correct? Select all that apply.",
+      "points": 2,
+      "objective_ids": [
+        "genetics-11-objective-3"
+      ],
+      "options": [
+        "Incomplete penetrance makes each unaffected son weaker evidence against carrier status.",
+        "The mother of an isolated affected male is not always a carrier, because new mutations occur.",
+        "An X-linked recessive trait is usually passed from affected fathers to their sons.",
+        "Random X-inactivation makes carrier females mosaics, and some carriers can show symptoms.",
+        "An unaffected son proves that his mother is not a carrier."
+      ],
+      "solution_spec": {
+        "answer": [
+          0,
+          1,
+          3
+        ],
+        "partial_credit": "correct-minus-incorrect-clamped-v1"
+      },
+      "feedback": {
+        "hint": "Which statements describe uncertainty correctly, and which treat evidence as proof?",
+        "solution": "Mosaicism, new mutations and incomplete penetrance all make inference probabilistic. Unaffected sons lower the probability without excluding carrier status, and fathers pass their X only to daughters.",
+        "lesson_ids": [
+          "genetics-11"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "genetics-12:mi-disomic",
+      "type": "numeric",
+      "prompt": "In a synthetic population, a fraction 0.04 of meioses show meiosis I nondisjunction of one chromosome pair. What fraction of all meiotic products is disomic for that chromosome? Enter a decimal fraction, number only.",
+      "points": 1,
+      "objective_ids": [
+        "genetics-12-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0.02,
+        "unit": "",
+        "tolerance": 0.001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "In a meiosis I error, two of the four products are disomic.",
+        "solution": "0.04 × 2/4 = 0.02.",
+        "lesson_ids": [
+          "genetics-12"
+        ],
+        "misconception_ids": [
+          "mi-mii-confused"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "genetics-12:mii-disomic",
+      "type": "numeric",
+      "prompt": "If instead a fraction 0.04 of meioses show nondisjunction in meiosis II of one secondary cell, what fraction of all products is disomic? Enter a decimal fraction, number only.",
+      "points": 1,
+      "objective_ids": [
+        "genetics-12-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0.01,
+        "unit": "",
+        "tolerance": 0.001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "A meiosis II error in one secondary cell gives one disomic, one nullisomic and two normal products.",
+        "solution": "0.04 × 1/4 = 0.01.",
+        "lesson_ids": [
+          "genetics-12"
+        ],
+        "misconception_ids": [
+          "mi-mii-confused"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "genetics-12:relative-risk",
+      "type": "numeric",
+      "prompt": "In a synthetic registry, 6 of 4000 pregnancies in a younger maternal-age band and 12 of 1000 in an older band have trisomy 21. What is the relative risk (older/younger)? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "genetics-12-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 8.0,
+        "unit": "",
+        "tolerance": 0.05,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Compute each risk as cases/pregnancies, then divide.",
+        "solution": "0.012/0.0015 = 8.0.",
+        "lesson_ids": [
+          "genetics-12"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "genetics-12:risk-difference",
+      "type": "numeric",
+      "prompt": "Using the same registry, what is the risk difference (older minus younger) per 1000 pregnancies? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "genetics-12-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 10.5,
+        "unit": "",
+        "tolerance": 0.05,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Subtract the risks, then multiply by 1000.",
+        "solution": "(0.012 − 0.0015) × 1000 = 10.5 per 1000.",
+        "lesson_ids": [
+          "genetics-12"
+        ],
+        "misconception_ids": [
+          "relative-risk-only"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "genetics-12:marker-origin",
+      "type": "single_choice",
+      "prompt": "A trisomic conceptus carries two different maternal alleles at a marker very close to the centromere of the extra chromosome. Which error does this most likely indicate?",
+      "points": 1,
+      "objective_ids": [
+        "genetics-12-objective-1"
+      ],
+      "options": [
+        "A maternal meiosis II error, because sister chromatids failed to separate.",
+        "A mitotic error after fertilization in every case.",
+        "A paternal meiosis I error.",
+        "A maternal meiosis I error, because both maternal homologs were transmitted together."
+      ],
+      "solution_spec": {
+        "answer": 3
+      },
+      "feedback": {
+        "hint": "Which division separates homologs, and which separates sister chromatids?",
+        "solution": "Near the centromere, sister chromatids are identical, so two different maternal alleles mean both homologs went together: a meiosis I error. Recombination can blur this at distal markers.",
+        "lesson_ids": [
+          "genetics-12"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "genetics-12:age-evidence",
+      "type": "multiple_select",
+      "prompt": "Which statements about the maternal-age increase in trisomy are supported by the reasoning in this lesson? Select all that apply.",
+      "points": 2,
+      "objective_ids": [
+        "genetics-12-objective-3"
+      ],
+      "options": [
+        "The age curve proves that cohesin loss causes the increase.",
+        "Human oocytes stay paused in meiosis I for decades, which is why mechanisms acting during the arrest are leading hypotheses.",
+        "Most trisomic conceptions survive to birth.",
+        "Both the relative risk and the risk difference are needed to describe the size of the effect.",
+        "An age-risk curve describes the pattern but does not identify its mechanism."
+      ],
+      "solution_spec": {
+        "answer": [
+          1,
+          3,
+          4
+        ],
+        "partial_credit": "correct-minus-incorrect-clamped-v1"
+      },
+      "feedback": {
+        "hint": "Separate what a description shows from what an experiment would have to show.",
+        "solution": "Age curves describe risk, the long meiotic arrest motivates the hypotheses, and absolute and relative measures are complementary. Mechanisms need direct tests, and most aneuploid conceptuses are lost.",
+        "lesson_ids": [
+          "genetics-12"
+        ],
+        "misconception_ids": [
+          "association-as-mechanism"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "genetics-13:events-per-culture",
+      "type": "numeric",
+      "prompt": "Of 50 parallel cultures, 22 contain no mutants. Using P(0) = e^(−m), estimate m, the mean number of mutation events per culture. Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "genetics-13-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0.82098,
+        "unit": "",
+        "tolerance": 0.005,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Take the natural logarithm of the fraction of cultures with no mutants.",
+        "solution": "p0 = 0.44; m = −ln 0.44 = 0.821.",
+        "lesson_ids": [
+          "genetics-13"
+        ],
+        "misconception_ids": [
+          "mutant-frequency-as-rate"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "genetics-13:rate-per-1e9",
+      "type": "numeric",
+      "prompt": "With m = 0.821 events per culture and 2 × 10⁸ cells (divisions) per culture, what is the mutation rate per 10⁹ cell divisions? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "genetics-13-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 4.1049,
+        "unit": "",
+        "tolerance": 0.03,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Divide m by the number of divisions, then multiply by 10⁹.",
+        "solution": "0.821/(2 × 10⁸) × 10⁹ = 4.10 per 10⁹ divisions.",
+        "lesson_ids": [
+          "genetics-13"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "genetics-13:variance-to-mean",
+      "type": "numeric",
+      "prompt": "Eight independent cultures gave resistant-colony counts 0, 1, 0, 2, 0, 0, 13 and 0. Using the sample variance (n − 1 in the denominator), what is the variance-to-mean ratio? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "genetics-13-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 10.1429,
+        "unit": "",
+        "tolerance": 0.05,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Mean = 2.0; sum the squared deviations and divide by 7.",
+        "solution": "Sample variance = 142/7 = 20.29; ratio = 10.1, far above the ~1 expected for a Poisson count.",
+        "lesson_ids": [
+          "genetics-13"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "genetics-13:fluctuation-inference",
+      "type": "single_choice",
+      "prompt": "Independent cultures give a variance-to-mean ratio of about 10 for resistant colonies, while aliquots of one culture give about 0.9. What does this support?",
+      "points": 1,
+      "objective_ids": [
+        "genetics-13-objective-2"
+      ],
+      "options": [
+        "Exposure to the selective agent induced resistance in a constant fraction of cells.",
+        "Resistant mutants arose at random during growth, before exposure, producing jackpots in some cultures.",
+        "Mutation rates differ between bacteria of the same strain for genetic reasons.",
+        "The plating method was unreliable, because counts should be identical."
+      ],
+      "solution_spec": {
+        "answer": 1
+      },
+      "feedback": {
+        "hint": "Which hypothesis predicts excess variance among independent cultures but not among aliquots?",
+        "solution": "Pre-existing random mutations create jackpots that differ between independent cultures; aliquots share one history and vary only by sampling.",
+        "lesson_ids": [
+          "genetics-13"
+        ],
+        "misconception_ids": [
+          "induced-mutation"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "genetics-13:coding-mutations",
+      "type": "numeric",
+      "prompt": "A synthetic stem-cell lineage gains 40 mutations per year from birth. If 1.5% of mutations fall in protein-coding sequence, about how many coding mutations does it carry at age 75? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "genetics-13-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 45.0,
+        "unit": "",
+        "tolerance": 0.5,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Multiply the yearly rate by age, then by the coding fraction.",
+        "solution": "40 × 75 = 3000 mutations; 3000 × 0.015 = 45 in coding sequence.",
+        "lesson_ids": [
+          "genetics-13"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "genetics-13:somatic-claims",
+      "type": "multiple_select",
+      "prompt": "Sequencing shows that adult stem cells of several human tissues gain mutations steadily with age. Which conclusions are appropriate? Select all that apply.",
+      "points": 2,
+      "objective_ids": [
+        "genetics-13-objective-3"
+      ],
+      "options": [
+        "Whether these mutations cause aging phenotypes needs experiments that change mutation burden and measure function.",
+        "Mutation spectra can differ between tissues, pointing to different mutational processes.",
+        "Somatic mutation burden in these stem cells increases with age.",
+        "The mutations are proven to be the main cause of human aging.",
+        "Every somatic mutation damages the cell that carries it."
+      ],
+      "solution_spec": {
+        "answer": [
+          0,
+          1,
+          2
+        ],
+        "partial_credit": "correct-minus-incorrect-clamped-v1"
+      },
+      "feedback": {
+        "hint": "Separate a measured accumulation from a causal claim.",
+        "solution": "Steady, tissue-specific accumulation is what was measured. Causation and harm need further evidence; most mutations fall where they have little effect.",
+        "lesson_ids": [
+          "genetics-13"
+        ],
+        "misconception_ids": [
+          "correlation-as-cause"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "genetics-14:cpm",
+      "type": "numeric",
+      "prompt": "A gene has 450 reads in a sample with 25,000,000 total reads. What is its expression in counts per million? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "genetics-14-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 18.0,
+        "unit": "",
+        "tolerance": 0.05,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Divide gene reads by total reads, then multiply by one million.",
+        "solution": "450/25,000,000 × 10⁶ = 18 CPM.",
+        "lesson_ids": [
+          "genetics-14"
+        ],
+        "misconception_ids": [
+          "raw-counts-compared"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "genetics-14:log2-fold-change",
+      "type": "numeric",
+      "prompt": "The same gene has 20 CPM in control and 18 CPM in treated cells. What is the log₂ fold change (treated/control)? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "genetics-14-objective-1"
+      ],
+      "solution_spec": {
+        "answer": -0.152,
+        "unit": "",
+        "tolerance": 0.005,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Take log₂ of the ratio of normalized values.",
+        "solution": "log₂(18/20) = -0.152: a small decrease, although raw reads rose 1.5-fold.",
+        "lesson_ids": [
+          "genetics-14"
+        ],
+        "misconception_ids": [
+          "raw-counts-compared"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "genetics-14:false-positives",
+      "type": "numeric",
+      "prompt": "An experiment tests 20,000 genes at p < 0.05, and in truth none differs. How many genes are expected to pass by chance? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "genetics-14-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 1000.0,
+        "unit": "",
+        "tolerance": 0.5,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Multiply the number of tests by the significance level.",
+        "solution": "20,000 × 0.05 = 1,000.",
+        "lesson_ids": [
+          "genetics-14"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "genetics-14:bh-discoveries",
+      "type": "numeric",
+      "prompt": "Ten p-values are 0.001, 0.008, 0.02, 0.021, 0.024, 0.2, 0.35, 0.6, 0.8, 0.9. Using the Benjamini–Hochberg procedure with q = 0.05, how many genes are called significant? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "genetics-14-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 5,
+        "unit": "",
+        "tolerance": 0.1,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Sort the p-values, compare the k-th smallest with (k/10) × 0.05, and take the largest k that passes, not the first failure.",
+        "solution": "Rank 5 passes (0.024 ≤ 0.025) and no larger rank does, so ranks 1 to 5 are called, even though ranks 3 and 4 miss their own thresholds. Bonferroni would call 1.",
+        "lesson_ids": [
+          "genetics-14"
+        ],
+        "misconception_ids": [
+          "bh-stops-at-first-failure"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "genetics-14:batch-confounding",
+      "type": "single_choice",
+      "prompt": "All control samples are prepared and sequenced in week 1 and all treated samples in week 2. What is the main problem?",
+      "points": 1,
+      "objective_ids": [
+        "genetics-14-objective-3"
+      ],
+      "options": [
+        "The sequencing depth will be too low.",
+        "There is no problem if the same kit is used.",
+        "Treatment is confounded with processing batch, so no analysis can separate their effects; each batch should contain both groups.",
+        "The samples are technical replicates."
+      ],
+      "solution_spec": {
+        "answer": 2
+      },
+      "feedback": {
+        "hint": "Could a week-to-week difference produce the same pattern as the treatment?",
+        "solution": "When every treated sample shares a batch that no control shares, batch and treatment effects are inseparable. Balancing groups across batches and recording batch allows both to be modelled.",
+        "lesson_ids": [
+          "genetics-14"
+        ],
+        "misconception_ids": [
+          "confounded-batch"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "genetics-14:fold-change-meaning",
+      "type": "multiple_select",
+      "prompt": "A gene's mRNA is 2-fold higher in old than in young synthetic tissue samples (BH q < 0.05). Which conclusions are appropriate? Select all that apply.",
+      "points": 2,
+      "objective_ids": [
+        "genetics-14-objective-3"
+      ],
+      "options": [
+        "Every cell in the old tissue expresses the gene twice as strongly.",
+        "The gene causes tissue aging.",
+        "The protein level of the gene may not have changed by the same amount.",
+        "The change could partly reflect a shift in the proportions of cell types between young and old tissue.",
+        "An independent method or new samples should confirm the change before it is relied on."
+      ],
+      "solution_spec": {
+        "answer": [
+          2,
+          3,
+          4
+        ],
+        "partial_credit": "correct-minus-incorrect-clamped-v1"
+      },
+      "feedback": {
+        "hint": "What does a tissue-level mRNA ratio measure, and what does it leave open?",
+        "solution": "A bulk mRNA ratio mixes cell composition with per-cell expression, need not match protein and needs confirmation. Causation and per-cell uniformity are not shown.",
+        "lesson_ids": [
+          "genetics-14"
+        ],
+        "misconception_ids": [
+          "fold-change-as-function"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "genetics-lab1:stratum-summary",
+      "type": "file_upload",
+      "prompt": "Using the synthetic genotype CSV, upload a summary table with one row per stratum (key column `stratum`, using the lowercase labels a-case, a-control, b-case and b-control: ancestry first, then status) and columns `individuals` (number of people), `mean_dosage_syn1` and `mean_dosage_syn2` (mean number of effect alleles per person, 0 to 2).",
+      "points": 12,
+      "objective_ids": [
+        "genetics-lab-01-objective-1"
+      ],
+      "solution_spec": {
+        "accepted_media_types": [
+          "text/csv"
+        ],
+        "max_bytes": 32768,
+        "validation_spec": {
+          "format": "csv-numeric-table-v1",
+          "delimiter": ",",
+          "key_column": "stratum",
+          "columns": [
+            "stratum",
+            "individuals",
+            "mean_dosage_syn1",
+            "mean_dosage_syn2"
+          ],
+          "checks": [
+            {
+              "id": "a-case-individuals",
+              "row_id": "a-case",
+              "column": "individuals",
+              "type": "numeric",
+              "answer": 40.0,
+              "unit": "",
+              "tolerance": 0,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "count",
+                "values": [
+                  1,
+                  1,
+                  2,
+                  2,
+                  2,
+                  1,
+                  2,
+                  2,
+                  1,
+                  1,
+                  1,
+                  0,
+                  1,
+                  0,
+                  1,
+                  0,
+                  1,
+                  1,
+                  0,
+                  1,
+                  2,
+                  2,
+                  2,
+                  1,
+                  2,
+                  2,
+                  1,
+                  1,
+                  1,
+                  1,
+                  1,
+                  2,
+                  1,
+                  0,
+                  1,
+                  2,
+                  2,
+                  2,
+                  0,
+                  1
+                ]
+              }
+            },
+            {
+              "id": "a-case-mean_dosage_syn1",
+              "row_id": "a-case",
+              "column": "mean_dosage_syn1",
+              "type": "numeric",
+              "answer": 1.2,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  1,
+                  1,
+                  2,
+                  2,
+                  2,
+                  1,
+                  2,
+                  2,
+                  1,
+                  1,
+                  1,
+                  0,
+                  1,
+                  0,
+                  1,
+                  0,
+                  1,
+                  1,
+                  0,
+                  1,
+                  2,
+                  2,
+                  2,
+                  1,
+                  2,
+                  2,
+                  1,
+                  1,
+                  1,
+                  1,
+                  1,
+                  2,
+                  1,
+                  0,
+                  1,
+                  2,
+                  2,
+                  2,
+                  0,
+                  1
+                ]
+              }
+            },
+            {
+              "id": "a-case-mean_dosage_syn2",
+              "row_id": "a-case",
+              "column": "mean_dosage_syn2",
+              "type": "numeric",
+              "answer": 1.0,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  1,
+                  0,
+                  0,
+                  2,
+                  1,
+                  1,
+                  0,
+                  2,
+                  1,
+                  1,
+                  2,
+                  1,
+                  2,
+                  1,
+                  1,
+                  2,
+                  2,
+                  1,
+                  0,
+                  1,
+                  1,
+                  0,
+                  1,
+                  2,
+                  1,
+                  1,
+                  1,
+                  0,
+                  0,
+                  1,
+                  2,
+                  0,
+                  2,
+                  1,
+                  1,
+                  0,
+                  1,
+                  0,
+                  1,
+                  2
+                ]
+              }
+            },
+            {
+              "id": "a-control-individuals",
+              "row_id": "a-control",
+              "column": "individuals",
+              "type": "numeric",
+              "answer": 10.0,
+              "unit": "",
+              "tolerance": 0,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "count",
+                "values": [
+                  2,
+                  2,
+                  1,
+                  1,
+                  2,
+                  1,
+                  0,
+                  0,
+                  1,
+                  2
+                ]
+              }
+            },
+            {
+              "id": "a-control-mean_dosage_syn1",
+              "row_id": "a-control",
+              "column": "mean_dosage_syn1",
+              "type": "numeric",
+              "answer": 1.2,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  2,
+                  2,
+                  1,
+                  1,
+                  2,
+                  1,
+                  0,
+                  0,
+                  1,
+                  2
+                ]
+              }
+            },
+            {
+              "id": "a-control-mean_dosage_syn2",
+              "row_id": "a-control",
+              "column": "mean_dosage_syn2",
+              "type": "numeric",
+              "answer": 0.6,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  1,
+                  2,
+                  1,
+                  1,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  1
+                ]
+              }
+            },
+            {
+              "id": "b-case-individuals",
+              "row_id": "b-case",
+              "column": "individuals",
+              "type": "numeric",
+              "answer": 10.0,
+              "unit": "",
+              "tolerance": 0,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "count",
+                "values": [
+                  1,
+                  0,
+                  2,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  1,
+                  0
+                ]
+              }
+            },
+            {
+              "id": "b-case-mean_dosage_syn1",
+              "row_id": "b-case",
+              "column": "mean_dosage_syn1",
+              "type": "numeric",
+              "answer": 0.4,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  1,
+                  0,
+                  2,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  1,
+                  0
+                ]
+              }
+            },
+            {
+              "id": "b-case-mean_dosage_syn2",
+              "row_id": "b-case",
+              "column": "mean_dosage_syn2",
+              "type": "numeric",
+              "answer": 1.0,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  2,
+                  2,
+                  0,
+                  1,
+                  0,
+                  1,
+                  2,
+                  0,
+                  1,
+                  1
+                ]
+              }
+            },
+            {
+              "id": "b-control-individuals",
+              "row_id": "b-control",
+              "column": "individuals",
+              "type": "numeric",
+              "answer": 40.0,
+              "unit": "",
+              "tolerance": 0,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "count",
+                "values": [
+                  0,
+                  0,
+                  1,
+                  0,
+                  0,
+                  0,
+                  1,
+                  0,
+                  1,
+                  0,
+                  1,
+                  0,
+                  0,
+                  0,
+                  0,
+                  1,
+                  0,
+                  2,
+                  2,
+                  1,
+                  0,
+                  1,
+                  1,
+                  0,
+                  1,
+                  1,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  1,
+                  1,
+                  0,
+                  0
+                ]
+              }
+            },
+            {
+              "id": "b-control-mean_dosage_syn1",
+              "row_id": "b-control",
+              "column": "mean_dosage_syn1",
+              "type": "numeric",
+              "answer": 0.4,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  0,
+                  0,
+                  1,
+                  0,
+                  0,
+                  0,
+                  1,
+                  0,
+                  1,
+                  0,
+                  1,
+                  0,
+                  0,
+                  0,
+                  0,
+                  1,
+                  0,
+                  2,
+                  2,
+                  1,
+                  0,
+                  1,
+                  1,
+                  0,
+                  1,
+                  1,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  1,
+                  1,
+                  0,
+                  0
+                ]
+              }
+            },
+            {
+              "id": "b-control-mean_dosage_syn2",
+              "row_id": "b-control",
+              "column": "mean_dosage_syn2",
+              "type": "numeric",
+              "answer": 0.6,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  0,
+                  1,
+                  0,
+                  1,
+                  0,
+                  0,
+                  2,
+                  0,
+                  1,
+                  1,
+                  1,
+                  2,
+                  0,
+                  1,
+                  0,
+                  0,
+                  1,
+                  0,
+                  2,
+                  1,
+                  1,
+                  0,
+                  1,
+                  0,
+                  1,
+                  1,
+                  1,
+                  1,
+                  0,
+                  0,
+                  1,
+                  0,
+                  2,
+                  1,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ]
+              }
+            }
+          ]
+        },
+        "rubric": [
+          {
+            "id": "a-case-individuals",
+            "criterion": "a-case: individuals",
+            "points": 1,
+            "evidence": [
+              "Recomputes individuals for a-case from the preparation-level values."
+            ]
+          },
+          {
+            "id": "a-case-mean_dosage_syn1",
+            "criterion": "a-case: mean_dosage_syn1",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_dosage_syn1 for a-case from the preparation-level values."
+            ]
+          },
+          {
+            "id": "a-case-mean_dosage_syn2",
+            "criterion": "a-case: mean_dosage_syn2",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_dosage_syn2 for a-case from the preparation-level values."
+            ]
+          },
+          {
+            "id": "a-control-individuals",
+            "criterion": "a-control: individuals",
+            "points": 1,
+            "evidence": [
+              "Recomputes individuals for a-control from the preparation-level values."
+            ]
+          },
+          {
+            "id": "a-control-mean_dosage_syn1",
+            "criterion": "a-control: mean_dosage_syn1",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_dosage_syn1 for a-control from the preparation-level values."
+            ]
+          },
+          {
+            "id": "a-control-mean_dosage_syn2",
+            "criterion": "a-control: mean_dosage_syn2",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_dosage_syn2 for a-control from the preparation-level values."
+            ]
+          },
+          {
+            "id": "b-case-individuals",
+            "criterion": "b-case: individuals",
+            "points": 1,
+            "evidence": [
+              "Recomputes individuals for b-case from the preparation-level values."
+            ]
+          },
+          {
+            "id": "b-case-mean_dosage_syn1",
+            "criterion": "b-case: mean_dosage_syn1",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_dosage_syn1 for b-case from the preparation-level values."
+            ]
+          },
+          {
+            "id": "b-case-mean_dosage_syn2",
+            "criterion": "b-case: mean_dosage_syn2",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_dosage_syn2 for b-case from the preparation-level values."
+            ]
+          },
+          {
+            "id": "b-control-individuals",
+            "criterion": "b-control: individuals",
+            "points": 1,
+            "evidence": [
+              "Recomputes individuals for b-control from the preparation-level values."
+            ]
+          },
+          {
+            "id": "b-control-mean_dosage_syn1",
+            "criterion": "b-control: mean_dosage_syn1",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_dosage_syn1 for b-control from the preparation-level values."
+            ]
+          },
+          {
+            "id": "b-control-mean_dosage_syn2",
+            "criterion": "b-control: mean_dosage_syn2",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_dosage_syn2 for b-control from the preparation-level values."
+            ]
+          }
+        ]
+      },
+      "feedback": {
+        "hint": "Group the rows by ancestry and status, count each group, then average the dosage column of each variant within the group.",
+        "solution": "The strata hold 40, 10, 10 and 40 people. Mean SYN1 dosage is 1.2 in population A and 0.4 in population B regardless of case status; mean SYN2 dosage is higher in cases than in controls in both populations.",
+        "lesson_ids": [
+          "genetics-lab-01",
+          "genetics-4",
+          "genetics-6",
+          "genetics-14"
+        ],
+        "misconception_ids": [
+          "dosage-is-frequency"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "genetics-lab1:pooled-or-syn1",
+      "type": "data_interpretation",
+      "prompt": "Pooling both populations, 52 of 100 case alleles and 28 of 100 control alleles at SYN1 are the effect allele.",
+      "points": 2,
+      "objective_ids": [
+        "genetics-lab-01-objective-2",
+        "genetics-lab-01-objective-3"
+      ],
+      "response_fields": [
+        {
+          "id": "value",
+          "type": "numeric",
+          "prompt": "Calculate the allelic odds ratio (cases versus controls: odds of the effect allele in cases divided by odds in controls). Report exactly 3 significant figures.",
+          "unit": "",
+          "points": 1
+        },
+        {
+          "id": "inference",
+          "type": "single_choice",
+          "prompt": "Within population A the SYN1 odds ratio is 1.00, and within population B it is also 1.00. What best explains the large pooled odds ratio?",
+          "options": [
+            "Confounding by population: the groups differ in both effect-allele frequency and in the share of cases.",
+            "SYN1 is a strong causal variant, and splitting by population wastes power.",
+            "The chi-square test has the wrong number of degrees of freedom.",
+            "Genotyping error that affects only cases."
+          ],
+          "points": 1
+        }
+      ],
+      "solution_spec": {
+        "field_specs": [
+          {
+            "id": "value",
+            "type": "numeric",
+            "answer": 2.79,
+            "unit": "",
+            "tolerance": 0.005,
+            "relative_tolerance": 0,
+            "unit_required": false,
+            "significant_figures": 3,
+            "dimensions": null
+          },
+          {
+            "id": "inference",
+            "type": "single_choice",
+            "answer": 0
+          }
+        ]
+      },
+      "feedback": {
+        "hint": "Odds = effect alleles / other alleles. Compare each stratum's odds ratio with the pooled one.",
+        "solution": "Pooled OR = (52/48)/(28/72) = 2.79. Within each population the effect-allele frequency is the same in cases and controls (OR 1.00); population A has the higher frequency and contributes most of the cases.",
+        "lesson_ids": [
+          "genetics-lab-01",
+          "genetics-4",
+          "genetics-6",
+          "genetics-14"
+        ],
+        "misconception_ids": [
+          "population-structure-ignored"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "genetics-lab1:chi-square-syn1",
+      "type": "numeric",
+      "prompt": "For the pooled SYN1 allele table (cases 52 effect and 48 other; controls 28 effect and 72 other), calculate the chi-square statistic with one degree of freedom, Σ (O − E)²/E. Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "genetics-lab-01-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 12.0,
+        "unit": "",
+        "tolerance": 0.05,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Expected counts come from the row and column totals: 100 case alleles × 80 effect alleles / 200 total gives 40.",
+        "solution": "Expected effect alleles are 40 in each group and expected other alleles 60; χ² = 3.6 + 2.4 + 3.6 + 2.4 = 12.0.",
+        "lesson_ids": [
+          "genetics-lab-01",
+          "genetics-4",
+          "genetics-6",
+          "genetics-14"
+        ],
+        "misconception_ids": [
+          "chi-square-on-percentages"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "genetics-lab1:bonferroni",
+      "type": "numeric",
+      "prompt": "Three variants (SYN1, SYN2 and SYN3) are tested and the family-wise significance level is 0.05. What per-variant significance threshold does the Bonferroni correction give? Enter a decimal fraction, number only.",
+      "points": 1,
+      "objective_ids": [
+        "genetics-lab-01-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0.01667,
+        "unit": "",
+        "tolerance": 0.0005,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Divide the overall level by the number of tests.",
+        "solution": "0.05/3 = 0.0167. A chi-square of 12.0 (p about 0.0005) passes this threshold even though SYN1's association is not a locus effect, which is why a threshold alone does not protect against confounding.",
+        "lesson_ids": [
+          "genetics-lab-01",
+          "genetics-4",
+          "genetics-6",
+          "genetics-14"
+        ],
+        "misconception_ids": [
+          "threshold-fixes-confounding"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "genetics-lab1:mh-syn2",
+      "type": "data_interpretation",
+      "prompt": "For SYN2, population A has 40 effect and 40 other case alleles and 6 effect and 14 other control alleles; population B has 10 effect and 10 other case alleles and 24 effect and 56 other control alleles.",
+      "points": 2,
+      "objective_ids": [
+        "genetics-lab-01-objective-3"
+      ],
+      "response_fields": [
+        {
+          "id": "value",
+          "type": "numeric",
+          "prompt": "Calculate the Mantel–Haenszel odds ratio, Σ(a·d/n) / Σ(b·c/n) over the two populations, where a, b, c and d are the case-effect, case-other, control-effect and control-other allele counts and n is the stratum total. Report exactly 3 significant figures.",
+          "unit": "",
+          "points": 1
+        },
+        {
+          "id": "inference",
+          "type": "single_choice",
+          "prompt": "The pooled SYN2 odds ratio is 2.33. What does its agreement with the Mantel–Haenszel and within-population odds ratios show?",
+          "options": [
+            "Population structure does not explain the SYN2 association: the effect is the same inside each population and after pooling.",
+            "SYN2 is certainly the causal variant at this locus.",
+            "SYN2 must be removed because it is correlated with population.",
+            "The sample is large enough to confirm SYN2 without replication."
+          ],
+          "points": 1
+        }
+      ],
+      "solution_spec": {
+        "field_specs": [
+          {
+            "id": "value",
+            "type": "numeric",
+            "answer": 2.33,
+            "unit": "",
+            "tolerance": 0.005,
+            "relative_tolerance": 0,
+            "unit_required": false,
+            "significant_figures": 3,
+            "dimensions": null
+          },
+          {
+            "id": "inference",
+            "type": "single_choice",
+            "answer": 0
+          }
+        ]
+      },
+      "feedback": {
+        "hint": "Compute a·d/n and b·c/n in each population, add each set, then divide.",
+        "solution": "Population A contributes 40×14/100 = 5.6 and 40×6/100 = 2.4; population B contributes 10×56/100 = 5.6 and 10×24/100 = 2.4. MH OR = 11.2/4.8 = 2.33, equal to the pooled and within-population values.",
+        "lesson_ids": [
+          "genetics-lab-01",
+          "genetics-4",
+          "genetics-6",
+          "genetics-14"
+        ],
+        "misconception_ids": [
+          "confounding-assumed-everywhere"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "genetics-lab1:design-reasoning",
+      "type": "structured",
+      "prompt": "Answer each part about the SYN1 and SYN2 results and what the study should do next.",
+      "points": 3,
+      "objective_ids": [
+        "genetics-lab-01-objective-2",
+        "genetics-lab-01-objective-3"
+      ],
+      "response_fields": [
+        {
+          "id": "syn1-signal",
+          "type": "single_choice",
+          "prompt": "SYN1 has the strongest pooled association (χ² = 12.0) but no association within either population. What should the study conclude?",
+          "options": [
+            "The pooled signal reflects ancestry differences between cases and controls, so SYN1 is not a candidate for a locus effect.",
+            "SYN1 is the best candidate and should be followed up first.",
+            "Both populations should be dropped to keep the pooled result.",
+            "Increase the significance threshold until SYN1 passes."
+          ],
+          "points": 1
+        },
+        {
+          "id": "design-remedy",
+          "type": "single_choice",
+          "prompt": "Which design or analysis choice best protects an association study against this problem?",
+          "options": [
+            "Match or stratify cases and controls by ancestry, or adjust for ancestry (for example with genetic principal components or relatedness).",
+            "Genotype more variants without recording ancestry.",
+            "Test only variants that are common.",
+            "Report only the pooled odds ratio."
+          ],
+          "points": 1
+        },
+        {
+          "id": "syn2-next",
+          "type": "single_choice",
+          "prompt": "SYN2 has a pooled χ² of 8.3 (p about 0.004), which passes the Bonferroni threshold of 0.0167. What is the appropriate next step?",
+          "options": [
+            "Treat it as a candidate: replicate in independent samples, then fine-map the locus and follow up experimentally.",
+            "Declare it the causal variant of the trait.",
+            "Ignore it because 100 people is too few for any result.",
+            "Apply a less strict threshold so that SYN3 also becomes significant."
+          ],
+          "points": 1
+        }
+      ],
+      "solution_spec": {
+        "field_specs": [
+          {
+            "id": "syn1-signal",
+            "type": "single_choice",
+            "answer": 0
+          },
+          {
+            "id": "design-remedy",
+            "type": "single_choice",
+            "answer": 0
+          },
+          {
+            "id": "syn2-next",
+            "type": "single_choice",
+            "answer": 0
+          }
+        ],
+        "rubric": [
+          {
+            "id": "syn1-signal",
+            "criterion": "Meaning of the SYN1 signal",
+            "points": 1,
+            "evidence": [
+              "Recognizes that a strong pooled signal can be produced by confounding."
+            ]
+          },
+          {
+            "id": "design-remedy",
+            "criterion": "Design remedy for population structure",
+            "points": 1,
+            "evidence": [
+              "Names matching, stratification or adjustment for ancestry."
+            ]
+          },
+          {
+            "id": "syn2-next",
+            "criterion": "Handling the SYN2 result",
+            "points": 1,
+            "evidence": [
+              "Treats a corrected association as a candidate that needs replication and follow-up."
+            ]
+          }
+        ]
+      },
+      "feedback": {
+        "hint": "For each part, ask what the data compare and what remains open.",
+        "solution": "A strong signal that disappears within ancestry groups is confounding; adjust or match for ancestry; a candidate that survives needs replication and mechanistic follow-up.",
+        "lesson_ids": [
+          "genetics-lab-01",
+          "genetics-4",
+          "genetics-6",
+          "genetics-14"
+        ],
+        "misconception_ids": [
+          "population-structure-ignored"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "genetics-lab1:supported-conclusions",
+      "type": "multiple_select",
+      "prompt": "Which conclusions does this synthetic study support? Select all that apply.",
+      "points": 2,
+      "objective_ids": [
+        "genetics-lab-01-objective-3"
+      ],
+      "options": [
+        "SYN1's pooled association is explained by differences in ancestry and case proportion between the groups.",
+        "SYN2 shows a consistent association inside both populations (odds ratio about 2.3) and passes the Bonferroni threshold.",
+        "SYN3 shows no evidence of association (χ² = 0.24).",
+        "SYN1 and SYN2 are both causal variants because both are significant.",
+        "These results show that gene variants cause slow wound healing in people."
+      ],
+      "solution_spec": {
+        "answer": [
+          0,
+          1,
+          2
+        ],
+        "partial_credit": "correct-minus-incorrect-clamped-v1"
+      },
+      "feedback": {
+        "hint": "Keep each conclusion inside the data: association, confounding and candidates, not mechanism or people.",
+        "solution": "The first three follow from the allele counts. Significance alone is not causation, and a synthetic case-control sample says nothing about people.",
+        "lesson_ids": [
+          "genetics-lab-01",
+          "genetics-4",
+          "genetics-6",
+          "genetics-14"
+        ],
+        "misconception_ids": [
+          "significance-as-causation",
+          "model-to-human-leap"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "genetics-15:top-pip",
+      "type": "numeric",
+      "prompt": "Five variants in a region have Bayes factors 600, 300, 60, 30, 10. Assuming exactly one causal variant and equal priors, what is the posterior inclusion probability of the variant with Bayes factor 600? Enter a decimal fraction, number only.",
+      "points": 1,
+      "objective_ids": [
+        "genetics-15-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0.6,
+        "unit": "",
+        "tolerance": 0.005,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Divide this variant's Bayes factor by the sum over all variants.",
+        "solution": "600/1000 = 0.60.",
+        "lesson_ids": [
+          "genetics-15"
+        ],
+        "misconception_ids": [
+          "top-variant-is-causal"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "genetics-15:credible-set-size",
+      "type": "numeric",
+      "prompt": "Using the same Bayes factors, how many variants are in the smallest 95% credible set (variants taken in descending PIP order until the cumulative PIP reaches at least 0.95)? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "genetics-15-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 3,
+        "unit": "",
+        "tolerance": 0.1,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Compute each PIP, then add them from the largest down.",
+        "solution": "Cumulative PIPs are 0.60, 0.90, 0.96, 0.99, 1.00; the sum first reaches 0.95 at 3 variants.",
+        "lesson_ids": [
+          "genetics-15"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "genetics-15:ase-z",
+      "type": "numeric",
+      "prompt": "In a heterozygous sample, 140 of 200 RNA reads carry the reference allele; with no cis effect the expected split is 50:50. Using z = (observed − expected)/√(n p (1 − p)) with p = 0.5, what is z? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "genetics-15-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 5.6569,
+        "unit": "",
+        "tolerance": 0.05,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Expected reference reads are half of the total; the standard deviation is √(200 × 0.25).",
+        "solution": "(140 − 100)/√(200 × 0.25) = 40/7.071 = 5.66.",
+        "lesson_ids": [
+          "genetics-15"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "genetics-15:ase-control",
+      "type": "single_choice",
+      "prompt": "An allelic imbalance of 70:30 favours the reference allele in RNA from a heterozygous sample. Which addition best guards against reference-mapping bias as the explanation?",
+      "points": 1,
+      "objective_ids": [
+        "genetics-15-objective-2"
+      ],
+      "options": [
+        "Average the imbalance over all genes in the sample.",
+        "Nothing: an imbalance always shows that the lead variant is causal.",
+        "Sequence the same RNA library more deeply, which removes mapping bias.",
+        "Check the allele ratio in DNA from the same cells, which should be near 50:50, and align reads to a reference that includes both alleles."
+      ],
+      "solution_spec": {
+        "answer": 3
+      },
+      "feedback": {
+        "hint": "What would a genuine cis effect and a mapping artefact each predict in DNA?",
+        "solution": "A DNA control should show about 50:50 in heterozygotes. Deeper sequencing repeats the same bias, and an imbalance shows only that the haplotype acts in cis.",
+        "lesson_ids": [
+          "genetics-15"
+        ],
+        "misconception_ids": [
+          "reference-bias-ignored",
+          "imbalance-means-lead-variant"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "genetics-15:follow-up-design",
+      "type": "structured",
+      "prompt": "A synthetic locus is associated with slower wound closure. Answer each part about a staged follow-up.",
+      "points": 3,
+      "objective_ids": [
+        "genetics-15-objective-2",
+        "genetics-15-objective-3"
+      ],
+      "response_fields": [
+        {
+          "id": "haplotype-claim",
+          "type": "single_choice",
+          "prompt": "Heterozygous samples show a reproducible imbalance in a nearby gene after controls for mapping bias. Which claim does this support?",
+          "options": [
+            "Something on the haplotype acts in cis on the gene, and could be any variant in linkage with the lead variant.",
+            "The lead variant is proven to be the causal variant.",
+            "The gene causes slow wound closure in people.",
+            "The imbalance shows that cell-type composition is irrelevant."
+          ],
+          "points": 1
+        },
+        {
+          "id": "variant-test",
+          "type": "single_choice",
+          "prompt": "Which experiment most directly tests whether the lead variant changes the gene's expression?",
+          "options": [
+            "Edit only that base in isogenic cells, compare alleles with independent clones and a delivery-matched control, and measure expression.",
+            "Measure expression in more unrelated donors without genotyping them.",
+            "Overexpress the gene and see whether cells move faster.",
+            "Compare two cell lines of unknown, different genetic background."
+          ],
+          "points": 1
+        },
+        {
+          "id": "confounder",
+          "type": "single_choice",
+          "prompt": "In comparing donors who carry different alleles, which confounder must the design address?",
+          "options": [
+            "Differences in ancestry, cell-type composition or processing batch between the donor groups.",
+            "The length of the gene's name.",
+            "The fact that the variant is common.",
+            "None, because genotype is assigned at conception."
+          ],
+          "points": 1
+        }
+      ],
+      "solution_spec": {
+        "field_specs": [
+          {
+            "id": "haplotype-claim",
+            "type": "single_choice",
+            "answer": 0
+          },
+          {
+            "id": "variant-test",
+            "type": "single_choice",
+            "answer": 0
+          },
+          {
+            "id": "confounder",
+            "type": "single_choice",
+            "answer": 0
+          }
+        ],
+        "rubric": [
+          {
+            "id": "haplotype-claim",
+            "criterion": "Claim from allele-specific expression",
+            "points": 1,
+            "evidence": [
+              "Limits the claim to the haplotype rather than the variant."
+            ]
+          },
+          {
+            "id": "variant-test",
+            "criterion": "Experiment that tests the variant",
+            "points": 1,
+            "evidence": [
+              "Chooses a base edit in an isogenic background with matched controls."
+            ]
+          },
+          {
+            "id": "confounder",
+            "criterion": "A confounder the design must address",
+            "points": 1,
+            "evidence": [
+              "Names ancestry, cell composition or batch as confounders of a donor comparison."
+            ]
+          }
+        ]
+      },
+      "feedback": {
+        "hint": "For each part, ask what the evidence is actually about: a haplotype, a variant or a person.",
+        "solution": "Allele-specific expression localizes an effect to a haplotype; editing tests the variant; donor comparisons need ancestry, cell composition and batch addressed.",
+        "lesson_ids": [
+          "genetics-15",
+          "genetics-3",
+          "genetics-8",
+          "genetics-14"
+        ],
+        "misconception_ids": [
+          "imbalance-means-lead-variant",
+          "model-to-human-leap"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "genetics-15:ladder",
+      "type": "multiple_select",
+      "prompt": "Which statements about moving from an association signal to a mechanism are appropriate? Select all that apply.",
+      "points": 2,
+      "objective_ids": [
+        "genetics-15-objective-3"
+      ],
+      "options": [
+        "A result in an edited cell line supports a claim about that cell system, not about a person.",
+        "A credible set of three variants proves that all three variants are causal.",
+        "The variant with the smallest association p-value is the causal variant.",
+        "Rescue and independent clones help show that the phenotype follows from the gene and not from the procedure.",
+        "Fine-mapping gives candidate variants with probabilities that depend on its assumptions."
+      ],
+      "solution_spec": {
+        "answer": [
+          0,
+          3,
+          4
+        ],
+        "partial_credit": "correct-minus-incorrect-clamped-v1"
+      },
+      "feedback": {
+        "hint": "Keep each claim inside what its evidence measured.",
+        "solution": "Fine-mapping is conditional on its assumptions; cell-system results do not transfer automatically to people; rescue and replication address specificity. The top p-value is not proof of causality and a credible set means one of its members is probably causal, not all.",
+        "lesson_ids": [
+          "genetics-15"
+        ],
+        "misconception_ids": [
+          "top-variant-is-causal",
+          "model-to-human-leap"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
     }
   ]
 }
