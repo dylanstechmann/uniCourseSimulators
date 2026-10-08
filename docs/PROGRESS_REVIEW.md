@@ -1,5 +1,11 @@
 # Progress review: uniStemCourseSimulators
 
+## Update after eight lessons in genetics, biochemistry, physiology and biomaterials (2026-10-08, third pass)
+
+Written by an AI coding assistant. Development continued in the four thin packages closest to the owner's interest in aging and regeneration. Each went from 0.1.0 to 0.2.0 with two original lessons of about 810 to 990 words, a worked problem that differs from the body text, six or seven practice items whose keys are computed in the authoring script and graded to full credit by the real grader, and four retrieval cards: Hardy–Weinberg departures and carrier frequency; heritability and polygenic scores; enzyme kinetics and inhibition fingerprints; actual versus standard free energy, coupling and redox; oxygen delivery and the Fick principle; renal clearance; hydrogel degradation and release time scales; scaffold porosity, stiffness and permeability. No new third-party sources were added; the modules reuse each package's existing curriculum-comparator source ids. Course outcomes with no linking lesson objective fell from 79 to 65 of 101 (genetics outcomes 2 and 4 are still unlinked).
+
+What is still true: 15 of the 25 packages have only legacy readings; none of these lessons was reviewed by a subject-matter expert; everything is formative and ungraded.
+
 ## Update after the toggle and the first deep lessons outside cell biology (2026-10-08, second pass)
 
 Written by an AI coding assistant. Direction from the owner: assessments need not be protected, so protection became an explicit toggle (`open` by default, `protected` opt-in, with an operator override), and development continued toward the topics the owner cares about (aging, regeneration, research and engineering practice).

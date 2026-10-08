@@ -65,6 +65,86 @@
       "back": "Use of labeled atoms to follow molecular transformations and estimate pathway flow.",
       "objective_ids": [],
       "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "biochemistry-5-card-1",
+      "lesson_id": "biochemistry-5",
+      "front": "Michaelis–Menten",
+      "back": "v = Vmax[S]/(Km + [S]); Km is the [S] at half Vmax and is not generally a dissociation constant.",
+      "objective_ids": [
+        "biochemistry-5-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "biochemistry-5-card-2",
+      "lesson_id": "biochemistry-5",
+      "front": "kcat and efficiency",
+      "back": "kcat = Vmax/[E]₀ (needs active enzyme); kcat/Km is the low-substrate second-order rate constant.",
+      "objective_ids": [
+        "biochemistry-5-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "biochemistry-5-card-3",
+      "lesson_id": "biochemistry-5",
+      "front": "Inhibition fingerprints",
+      "back": "Competitive: Km×α, Vmax same. Noncompetitive: Vmax/α, Km same. Uncompetitive: both ÷α.",
+      "objective_ids": [
+        "biochemistry-5-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "biochemistry-5-card-4",
+      "lesson_id": "biochemistry-5",
+      "front": "Estimation",
+      "back": "Prefer nonlinear fits over double-reciprocal fits; spread [S] around Km and keep rates initial.",
+      "objective_ids": [
+        "biochemistry-5-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "biochemistry-6-card-1",
+      "lesson_id": "biochemistry-6",
+      "front": "Actual versus standard ΔG",
+      "back": "ΔG = ΔG°′ + RT ln Q; direction depends on ΔG, not ΔG°′. RT ≈ 2.58 kJ/mol at 310 K.",
+      "objective_ids": [
+        "biochemistry-6-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "biochemistry-6-card-2",
+      "lesson_id": "biochemistry-6",
+      "front": "ATP in cells",
+      "back": "Cells hold ATP/ADP far from equilibrium, so cellular ΔG for ATP hydrolysis is more negative than −30.5 kJ/mol.",
+      "objective_ids": [
+        "biochemistry-6-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "biochemistry-6-card-3",
+      "lesson_id": "biochemistry-6",
+      "front": "Coupling",
+      "back": "Standard free energies add when reactions share a mechanism, as in hexokinase's phosphoryl transfer.",
+      "objective_ids": [
+        "biochemistry-6-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "biochemistry-6-card-4",
+      "lesson_id": "biochemistry-6",
+      "front": "Redox free energy",
+      "back": "ΔG°′ = −nFΔE°′; NADH to O₂ releases about −219 kJ/mol, stored stepwise as a proton gradient.",
+      "objective_ids": [
+        "biochemistry-6-objective-3"
+      ],
+      "license": "CC-BY-4.0"
     }
   ]
 }

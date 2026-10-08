@@ -250,6 +250,378 @@
         "kind": "original",
         "modifications": []
       }
+    },
+    {
+      "id": "physiology-5:arterial-content",
+      "type": "numeric",
+      "prompt": "Hemoglobin is 15 g/dL, arterial saturation 0.98 and arterial P_O₂ 100 mmHg. Using C = 1.34 × Hb × S + 0.003 × P_O₂, calculate arterial oxygen content in mL O₂ per dL blood. Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "physiology-5-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 19.998,
+        "unit": "",
+        "tolerance": 0.1,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Add the hemoglobin-bound and dissolved terms.",
+        "solution": "1.34 × 15 × 0.98 = 19.70; plus 0.003 × 100 = 0.3; total 20.0 mL/dL.",
+        "lesson_ids": [
+          "physiology-5"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physiology-5:fick-output",
+      "type": "numeric",
+      "prompt": "Whole-body oxygen uptake is 250 mL/min, arterial content 20.00 mL/dL and mixed-venous content 15.20 mL/dL. Calculate cardiac output. Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "physiology-5-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 5.205,
+        "unit": "L/min",
+        "tolerance": 0.05,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Convert the content difference to mL per liter before dividing.",
+        "solution": "Difference = 4.80 mL/dL = 48.0 mL/L; Q̇ = 250/48.0 = 5.21 L/min.",
+        "lesson_ids": [
+          "physiology-5"
+        ],
+        "misconception_ids": [
+          "dl-to-l-conversion"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physiology-5:extraction-ratio",
+      "type": "numeric",
+      "prompt": "Cardiac output is 5.21 L/min, arterial content 200 mL O₂ per liter and uptake 250 mL/min. Calculate the extraction ratio V̇O₂/DO₂. Enter a decimal fraction, number only.",
+      "points": 1,
+      "objective_ids": [
+        "physiology-5-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0.2399,
+        "unit": "",
+        "tolerance": 0.005,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Delivery is flow times arterial content.",
+        "solution": "DO₂ = 5.21 × 200 = 1042 mL/min; extraction = 250/1042 = 0.24.",
+        "lesson_ids": [
+          "physiology-5"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physiology-5:anemia-extraction",
+      "type": "numeric",
+      "prompt": "Hemoglobin falls to 10 g/dL (saturation 0.98, P_O₂ 100 mmHg), so arterial content is 13.43 mL/dL. If cardiac output stayed at 5.21 L/min and uptake at 250 mL/min, what extraction ratio would be required? Enter a decimal fraction, number only.",
+      "points": 1,
+      "objective_ids": [
+        "physiology-5-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 0.3572,
+        "unit": "",
+        "tolerance": 0.005,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Recompute delivery with the new content.",
+        "solution": "DO₂ = 5.21 × 134.3 = 700 mL/min; extraction = 250/700 = 0.36. In practice cardiac output also rises.",
+        "lesson_ids": [
+          "physiology-5"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physiology-5:supplemental-oxygen",
+      "type": "single_choice",
+      "prompt": "A person with normal lungs and arterial saturation of 98% breathes enriched oxygen, and arterial P_O₂ rises from 100 to 400 mmHg. Approximately how does arterial oxygen content change?",
+      "points": 1,
+      "objective_ids": [
+        "physiology-5-objective-1"
+      ],
+      "options": [
+        "It roughly quadruples, in proportion to P_O₂.",
+        "It falls, because high P_O₂ displaces oxygen from hemoglobin.",
+        "It rises only slightly (about 0.9 mL/dL in dissolved oxygen plus up to 2% more saturation), because hemoglobin is already nearly saturated.",
+        "It doubles."
+      ],
+      "solution_spec": {
+        "answer": 2
+      },
+      "feedback": {
+        "hint": "Compute the dissolved term at both pressures and remember saturation cannot exceed 100%.",
+        "solution": "Dissolved oxygen rises by 0.003 × 300 = 0.9 mL/dL and saturation can rise by at most 2 points; content therefore increases by a few percent. Content is driven by hemoglobin and saturation.",
+        "lesson_ids": [
+          "physiology-5"
+        ],
+        "misconception_ids": [
+          "po2-equals-content"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physiology-5:falling-venous-saturation",
+      "type": "single_choice",
+      "prompt": "During a period of falling cardiac output with constant metabolic demand, what happens to mixed-venous oxygen saturation, and why?",
+      "points": 1,
+      "objective_ids": [
+        "physiology-5-objective-3"
+      ],
+      "options": [
+        "It is unchanged, because uptake is constant.",
+        "It falls, because tissues extract a larger fraction of the reduced delivery to maintain uptake.",
+        "It rises, because tissues stop using oxygen.",
+        "It rises, because slower blood has more time to load oxygen in the lungs."
+      ],
+      "solution_spec": {
+        "answer": 1
+      },
+      "feedback": {
+        "hint": "Use V̇O₂ = Q̇ (C_a − C_v) with V̇O₂ fixed and Q̇ smaller.",
+        "solution": "With uptake constant and flow lower, the arteriovenous difference must widen, so venous content and saturation fall. This is why venous saturation is used as a signal of inadequate delivery.",
+        "lesson_ids": [
+          "physiology-5"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physiology-6:inulin-gfr",
+      "type": "numeric",
+      "prompt": "During a synthetic inulin infusion, urine inulin is 30 mg/mL, urine flow 1.0 mL/min and plasma inulin 0.25 mg/mL. Calculate GFR. Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "physiology-6-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 120.0,
+        "unit": "mL/min",
+        "tolerance": 0.5,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Clearance = U × V̇ / P.",
+        "solution": "GFR = 30 × 1.0 / 0.25 = 120 mL/min.",
+        "lesson_ids": [
+          "physiology-6"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physiology-6:filtration-fraction",
+      "type": "numeric",
+      "prompt": "GFR is 120 mL/min and PAH clearance is 600 mL/min. Calculate the filtration fraction. Enter a decimal fraction, number only.",
+      "points": 1,
+      "objective_ids": [
+        "physiology-6-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0.2,
+        "unit": "",
+        "tolerance": 0.005,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Divide GFR by renal plasma flow.",
+        "solution": "FF = 120/600 = 0.20.",
+        "lesson_ids": [
+          "physiology-6"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physiology-6:glucose-excretion",
+      "type": "numeric",
+      "prompt": "In an idealized kidney with GFR = 120 mL/min and a glucose transport maximum of 375 mg/min, plasma glucose is 4.0 mg/mL. Calculate the rate of glucose excretion in urine. Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "physiology-6-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 105.0,
+        "unit": "mg/min",
+        "tolerance": 1.0,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Filtered load is GFR × P; whatever exceeds the transport maximum is excreted.",
+        "solution": "Load = 120 × 4.0 = 480 mg/min; excretion = 480 − 375 = 105 mg/min.",
+        "lesson_ids": [
+          "physiology-6"
+        ],
+        "misconception_ids": [
+          "excretion-equals-load"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physiology-6:drug-clearance",
+      "type": "numeric",
+      "prompt": "A freely filtered synthetic drug has urine concentration 2.4 mg/mL, plasma concentration 0.04 mg/mL and urine flow 1.0 mL/min. Calculate its clearance. Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "physiology-6-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 60.0,
+        "unit": "mL/min",
+        "tolerance": 0.5,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the clearance formula, then compare with GFR.",
+        "solution": "C = 2.4 × 1.0 / 0.04 = 60 mL/min, less than GFR (120 mL/min), so net reabsorption.",
+        "lesson_ids": [
+          "physiology-6"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physiology-6:clearance-above-gfr",
+      "type": "single_choice",
+      "prompt": "A freely filtered, unbound substance has a clearance of 300 mL/min when GFR is 120 mL/min. What does this indicate?",
+      "points": 1,
+      "objective_ids": [
+        "physiology-6-objective-3"
+      ],
+      "options": [
+        "Net tubular secretion: more is excreted than was filtered.",
+        "The substance is not filtered.",
+        "Net tubular reabsorption.",
+        "The measurement must be wrong, because clearance cannot exceed GFR."
+      ],
+      "solution_spec": {
+        "answer": 0
+      },
+      "feedback": {
+        "hint": "Compare the excretion rate with the filtered load.",
+        "solution": "Clearance above GFR means more leaves in urine than was filtered, so tubules must add the substance by secretion. PAH is the extreme case, with clearance near renal plasma flow.",
+        "lesson_ids": [
+          "physiology-6"
+        ],
+        "misconception_ids": [
+          "clearance-capped-by-gfr"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physiology-6:creatinine-older-adult",
+      "type": "single_choice",
+      "prompt": "An older adult with low muscle mass has a plasma creatinine within the usual reference range. Why might this still be compatible with reduced GFR?",
+      "points": 1,
+      "objective_ids": [
+        "physiology-6-objective-3"
+      ],
+      "options": [
+        "Creatinine is fully reabsorbed in older adults.",
+        "Creatinine is not filtered by the glomerulus.",
+        "Low muscle mass lowers creatinine production, so plasma creatinine can stay low even when filtration is reduced.",
+        "Plasma creatinine rises with muscle loss."
+      ],
+      "solution_spec": {
+        "answer": 2
+      },
+      "feedback": {
+        "hint": "Plasma creatinine reflects a balance between production and excretion.",
+        "solution": "At steady state, production equals excretion ≈ GFR × P_creatinine. Lower production allows a lower plasma value at a given GFR, which can mask reduced filtration.",
+        "lesson_ids": [
+          "physiology-6"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
     }
   ]
 }

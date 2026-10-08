@@ -252,6 +252,381 @@
         "kind": "original",
         "modifications": []
       }
+    },
+    {
+      "id": "biochemistry-5:rate-at-20",
+      "type": "numeric",
+      "prompt": "An enzyme has Vmax = 100 μM/min and Km = 5 μM. Calculate the initial rate at [S] = 20 μM. Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "biochemistry-5-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 80.0,
+        "unit": "μM/min",
+        "tolerance": 0.5,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Substitute into v = Vmax [S] / (Km + [S]).",
+        "solution": "v = 100 × 20 / (5 + 20) = 80 μM/min.",
+        "lesson_ids": [
+          "biochemistry-5"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "biochemistry-5:kcat",
+      "type": "numeric",
+      "prompt": "Vmax = 100 μM/min was measured with 0.01 μM active enzyme. Calculate kcat in s⁻¹. Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "biochemistry-5-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 166.667,
+        "unit": "1/s",
+        "tolerance": 1.0,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Divide Vmax by enzyme concentration, then convert minutes to seconds.",
+        "solution": "kcat = 100 / 0.01 = 10000 min⁻¹ = 166.7 s⁻¹.",
+        "lesson_ids": [
+          "biochemistry-5"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "biochemistry-5:competitive-km",
+      "type": "numeric",
+      "prompt": "A competitive inhibitor with K_I = 2 μM is present at 4 μM. The uninhibited Km is 5 μM. Calculate the apparent Km. Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "biochemistry-5-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 15.0,
+        "unit": "μM",
+        "tolerance": 0.1,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Multiply Km by α = 1 + [I]/K_I.",
+        "solution": "α = 1 + 4/2 = 3; apparent Km = 3 × 5 = 15 μM; Vmax is unchanged.",
+        "lesson_ids": [
+          "biochemistry-5"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "biochemistry-5:noncompetitive-rate",
+      "type": "numeric",
+      "prompt": "A pure noncompetitive inhibitor gives α = 3. With Vmax = 100 μM/min and Km = 5 μM, calculate the rate at [S] = 20 μM. Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "biochemistry-5-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 26.667,
+        "unit": "μM/min",
+        "tolerance": 0.3,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Noncompetitive inhibition divides Vmax by α and leaves Km unchanged.",
+        "solution": "Vmax,app = 100/3 = 33.3 μM/min; v = 33.33 × 20 / 25 = 26.7 μM/min.",
+        "lesson_ids": [
+          "biochemistry-5"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "biochemistry-5:diagnose-mode",
+      "type": "single_choice",
+      "prompt": "In the presence of a compound, the fitted Km rises from 5 to 12 μM while Vmax stays at 100 μM/min within error. Which inhibition mode best fits?",
+      "points": 1,
+      "objective_ids": [
+        "biochemistry-5-objective-2"
+      ],
+      "options": [
+        "Irreversible inactivation of half the enzyme.",
+        "Pure noncompetitive.",
+        "Competitive: high substrate overcomes the inhibitor, so Vmax is unchanged while apparent Km rises.",
+        "Uncompetitive."
+      ],
+      "solution_spec": {
+        "answer": 2
+      },
+      "feedback": {
+        "hint": "Which mode leaves Vmax untouched?",
+        "solution": "Only competitive inhibition raises apparent Km without changing Vmax. Noncompetitive lowers Vmax, uncompetitive lowers both, and inactivation lowers Vmax.",
+        "lesson_ids": [
+          "biochemistry-5"
+        ],
+        "misconception_ids": [
+          "inhibitor-always-lowers-vmax"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "biochemistry-5:double-reciprocal",
+      "type": "single_choice",
+      "prompt": "Why is fitting a straight line to a Lineweaver–Burk plot a poor way to estimate Km and Vmax?",
+      "points": 1,
+      "objective_ids": [
+        "biochemistry-5-objective-3"
+      ],
+      "options": [
+        "Its intercept gives Km directly, which is less precise than Vmax.",
+        "The plot is curved for Michaelis–Menten enzymes.",
+        "Taking reciprocals inflates the errors of the low-rate, low-substrate points so they dominate the fit; nonlinear fitting of untransformed data is preferred.",
+        "It cannot show inhibition patterns."
+      ],
+      "solution_spec": {
+        "answer": 2
+      },
+      "feedback": {
+        "hint": "Think about what 1/v does to a small, noisy rate.",
+        "solution": "A small absolute error in a small v becomes a large error in 1/v, and those points sit far out on the 1/[S] axis with high leverage. The plot remains useful as a visual diagnostic.",
+        "lesson_ids": [
+          "biochemistry-5"
+        ],
+        "misconception_ids": [
+          "linearization-is-neutral"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "biochemistry-6:atp-actual-dg",
+      "type": "numeric",
+      "prompt": "ATP hydrolysis has ΔG°′ = -30.5 kJ/mol. In a synthetic cell at 310 K, [ATP] = 3.0 mM, [ADP] = 0.3 mM and [Pᵢ] = 3.0 mM. Using RT = 2.577 kJ/mol and concentrations in mol/L, calculate the actual ΔG. Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "biochemistry-6-objective-1"
+      ],
+      "solution_spec": {
+        "answer": -51.407,
+        "unit": "kJ/mol",
+        "tolerance": 0.3,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Form Q = [ADP][Pᵢ]/[ATP] in molar units, take its natural log and add RT ln Q to ΔG°′.",
+        "solution": "Q = 3.0×10⁻⁴, ln Q = -8.11; ΔG = -30.5 + 2.577 × (-8.11) = -51.4 kJ/mol.",
+        "lesson_ids": [
+          "biochemistry-6"
+        ],
+        "misconception_ids": [
+          "standard-dg-is-cellular-dg"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "biochemistry-6:coupled-dg0",
+      "type": "numeric",
+      "prompt": "Glucose + Pᵢ → glucose-6-phosphate has ΔG°′ = +13.8 kJ/mol and ATP hydrolysis has ΔG°′ = -30.5 kJ/mol. Calculate ΔG°′ for the coupled hexokinase reaction glucose + ATP → glucose-6-phosphate + ADP. Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "biochemistry-6-objective-2"
+      ],
+      "solution_spec": {
+        "answer": -16.7,
+        "unit": "kJ/mol",
+        "tolerance": 0.1,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "The overall reaction is the sum of the two, so the standard free energies add.",
+        "solution": "13.8 + (-30.5) = -16.7 kJ/mol.",
+        "lesson_ids": [
+          "biochemistry-6"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "biochemistry-6:equilibrium-constant",
+      "type": "numeric",
+      "prompt": "Calculate the equilibrium constant of glucose + Pᵢ → glucose-6-phosphate (ΔG°′ = +13.8 kJ/mol) at 310 K, with RT = 2.577 kJ/mol. Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "biochemistry-6-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0.004727505502547524,
+        "unit": "",
+        "tolerance": 0,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null,
+        "relative_tolerance": 0.02
+      },
+      "feedback": {
+        "hint": "K = exp(−ΔG°′/RT).",
+        "solution": "K = exp(−13.8/2.577) = 4.73×10⁻³: almost no product at equilibrium without coupling.",
+        "lesson_ids": [
+          "biochemistry-6"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "biochemistry-6:nadh-oxygen",
+      "type": "numeric",
+      "prompt": "Electrons pass from NADH (E°′ = −0.320 V) to oxygen (E°′ = +0.815 V); n = 2 and F = 96.485 kJ/(V·mol). Calculate ΔG°′ = −nFΔE°′. Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "biochemistry-6-objective-3"
+      ],
+      "solution_spec": {
+        "answer": -219.02,
+        "unit": "kJ/mol",
+        "tolerance": 1.0,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "ΔE°′ is the acceptor potential minus the donor potential.",
+        "solution": "ΔE°′ = 0.815 − (−0.320) = 1.135 V; ΔG°′ = −2 × 96.485 × 1.135 = -219 kJ/mol.",
+        "lesson_ids": [
+          "biochemistry-6"
+        ],
+        "misconception_ids": [
+          "delta-e-sign-reversed"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "biochemistry-6:positive-dg0-runs",
+      "type": "single_choice",
+      "prompt": "A pathway step has ΔG°′ = +7 kJ/mol, yet flux through it is steadily forward in the cell. What is the most consistent explanation?",
+      "points": 1,
+      "objective_ids": [
+        "biochemistry-6-objective-1"
+      ],
+      "options": [
+        "The step must be coupled to ATP hydrolysis.",
+        "Enzymes make reactions with positive ΔG°′ favorable.",
+        "The product is removed by the next step quickly enough that Q stays small and the actual ΔG is negative.",
+        "ΔG°′ does not apply in living cells."
+      ],
+      "solution_spec": {
+        "answer": 2
+      },
+      "feedback": {
+        "hint": "Direction depends on the actual ΔG, which depends on Q.",
+        "solution": "Enzymes change rates, not equilibria. A step with modest positive ΔG°′ runs forward when its product is consumed downstream, which keeps RT ln Q sufficiently negative. Coupling to ATP is one way, not the only one.",
+        "lesson_ids": [
+          "biochemistry-6"
+        ],
+        "misconception_ids": [
+          "enzyme-shifts-equilibrium"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "biochemistry-6:gradient-drives-synthase",
+      "type": "single_choice",
+      "prompt": "In mitochondria, what directly supplies the free energy used by ATP synthase?",
+      "points": 1,
+      "objective_ids": [
+        "biochemistry-6-objective-3"
+      ],
+      "options": [
+        "Oxygen binding to ATP synthase.",
+        "Hydrolysis of NADH.",
+        "The proton electrochemical gradient across the inner membrane, built by proton pumping during electron transport.",
+        "Direct transfer of electrons from NADH to ATP synthase."
+      ],
+      "solution_spec": {
+        "answer": 2
+      },
+      "feedback": {
+        "hint": "Electron transport and ATP synthesis are linked through an intermediate.",
+        "solution": "Redox energy released stepwise along the chain is stored as a proton gradient; ATP synthase uses proton flow back into the matrix. Uncouplers that dissipate the gradient let electron transport continue without ATP synthesis.",
+        "lesson_ids": [
+          "biochemistry-6"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
     }
   ]
 }

@@ -1,4 +1,5 @@
-"""Checks for the 2026-10-08 lessons: geroscience 9 to 14, statistics 6, transport 5, bioreactors 5 and programming 5.
+"""Checks for the 2026-10-08 lessons: geroscience 9 to 14, statistics 6, transport 5, bioreactors 5, programming 5,
+and genetics, biochemistry, physiology and biomaterials 5 and 6.
 
 They check structure, labelling and sources, not scientific quality. Passing does not mean any review.
 """
@@ -14,7 +15,7 @@ ROOT = Path(__file__).resolve().parents[2]
 COURSES = ROOT / "content" / "courses"
 LESSONS = [("geroscience", f"geroscience-{n}") for n in range(9, 15)] + [
     ("statistics", "statistics-6"), ("transport", "transport-5"), ("bioreactors", "bioreactors-5"), ("programming", "programming-5"),
-]
+] + [(c, f"{c}-{n}") for c in ("genetics", "biochemistry", "physiology", "biomaterials") for n in (5, 6)]
 
 
 def load(course):

@@ -7,7 +7,7 @@
   "domain": "Life sciences",
   "level": "Year 2",
   "maturity": "partial",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "license": "MIT OR CC-BY-4.0",
   "content_origin": {
     "kind": "legacy-prototype",
@@ -95,6 +95,56 @@
       "description": "Separate statistical association from functional causation.",
       "bloom": "analyze",
       "course_outcome_ids": []
+    },
+    {
+      "id": "genetics-5-objective-1",
+      "description": "Compute allele frequencies and Hardy–Weinberg expected genotype counts from observed genotype counts.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "genetics-outcome-1"
+      ]
+    },
+    {
+      "id": "genetics-5-objective-2",
+      "description": "Test and interpret a departure from Hardy–Weinberg proportions, including the heterozygote deficit summarized by F.",
+      "bloom": "analyze",
+      "course_outcome_ids": [
+        "genetics-outcome-1",
+        "genetics-outcome-3"
+      ]
+    },
+    {
+      "id": "genetics-5-objective-3",
+      "description": "Estimate carrier frequency for a recessive trait from its incidence and state the assumptions behind the estimate.",
+      "bloom": "evaluate",
+      "course_outcome_ids": [
+        "genetics-outcome-1"
+      ]
+    },
+    {
+      "id": "genetics-6-objective-1",
+      "description": "Estimate additive genetic, shared-environment and unique-environment variance components from twin correlations under stated assumptions.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "genetics-outcome-1",
+        "genetics-outcome-3"
+      ]
+    },
+    {
+      "id": "genetics-6-objective-2",
+      "description": "Compute a polygenic score from effect sizes and allele dosages and convert variance explained into a correlation.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "genetics-outcome-3"
+      ]
+    },
+    {
+      "id": "genetics-6-objective-3",
+      "description": "Evaluate claims about heritability and polygenic prediction, including portability across populations and the difference between population variance and individual destiny.",
+      "bloom": "evaluate",
+      "course_outcome_ids": [
+        "genetics-outcome-3"
+      ]
     }
   ],
   "duration": {
@@ -219,6 +269,77 @@
           ]
         }
       ]
+    },
+    {
+      "id": "genetics-module-5",
+      "title": "Hardy–Weinberg and allele frequencies",
+      "source_ids": [
+        "biology",
+        "molecular"
+      ],
+      "lessons": [
+        {
+          "id": "genetics-5",
+          "title": "Allele frequencies, Hardy–Weinberg expectations and what a departure can mean",
+          "reading": "modules/05-allele-frequencies-and-hardy-weinberg.md",
+          "objectives": [
+            "genetics-5-objective-1",
+            "genetics-5-objective-2",
+            "genetics-5-objective-3"
+          ],
+          "worked_example": "Count allele copies and compare observed genotypes with random-union expectations. p = (2 × 420 + 360) / 2000 = 0.60; expected 360/480/160; χ² = 62.5 with 1 df; F = 0.25; incidence 1/2500 gives carriers 2pq = 0.0392.",
+          "question_ids": [
+            "genetics-5:allele-frequency",
+            "genetics-5:expected-heterozygotes",
+            "genetics-5:chi-square",
+            "genetics-5:inbreeding-f",
+            "genetics-5:carrier-frequency",
+            "genetics-5:deficit-one-marker",
+            "genetics-5:carrier-assumption"
+          ],
+          "card_ids": [
+            "genetics-5-card-1",
+            "genetics-5-card-2",
+            "genetics-5-card-3",
+            "genetics-5-card-4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "genetics-module-6",
+      "title": "Heritability and polygenic scores",
+      "source_ids": [
+        "biology",
+        "molecular"
+      ],
+      "lessons": [
+        {
+          "id": "genetics-6",
+          "title": "Heritability, polygenic scores and the limits of genetic prediction",
+          "reading": "modules/06-heritability-and-polygenic-scores.md",
+          "objectives": [
+            "genetics-6-objective-1",
+            "genetics-6-objective-2",
+            "genetics-6-objective-3"
+          ],
+          "worked_example": "Under the equal-environments and additivity assumptions, the synthetic twin correlations give h² = 2 × (0.5 − 0.3) = 0.40, c² = 0.10, e² = 0.50; PGS = 0.23 from four synthetic variants; R² = 0.08 corresponds to r = 0.28.",
+          "question_ids": [
+            "genetics-6:falconer-h2",
+            "genetics-6:unique-environment",
+            "genetics-6:polygenic-score",
+            "genetics-6:variance-to-correlation",
+            "genetics-6:heritability-meaning",
+            "genetics-6:pgs-claims"
+          ],
+          "card_ids": [
+            "genetics-6-card-1",
+            "genetics-6-card-2",
+            "genetics-6-card-3",
+            "genetics-6-card-4"
+          ]
+        }
+      ]
     }
   ],
   "assessments": [
@@ -283,6 +404,49 @@
       "points": 2
     },
     {
+      "id": "genetics-5-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Hardy–Weinberg and allele frequencies practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "genetics-5-objective-1",
+        "genetics-5-objective-2",
+        "genetics-5-objective-3"
+      ],
+      "question_ids": [
+        "genetics-5:allele-frequency",
+        "genetics-5:expected-heterozygotes",
+        "genetics-5:chi-square",
+        "genetics-5:inbreeding-f",
+        "genetics-5:carrier-frequency",
+        "genetics-5:deficit-one-marker",
+        "genetics-5:carrier-assumption"
+      ],
+      "points": 7
+    },
+    {
+      "id": "genetics-6-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Heritability and polygenic scores practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "genetics-6-objective-1",
+        "genetics-6-objective-2",
+        "genetics-6-objective-3"
+      ],
+      "question_ids": [
+        "genetics-6:falconer-h2",
+        "genetics-6:unique-environment",
+        "genetics-6:polygenic-score",
+        "genetics-6:variance-to-correlation",
+        "genetics-6:heritability-meaning",
+        "genetics-6:pgs-claims"
+      ],
+      "points": 7
+    },
+    {
       "id": "genetics-case",
       "type": "case",
       "mode": "self-assessment",
@@ -324,6 +488,11 @@
       "version": "0.1.0",
       "date": "2026-10-05",
       "summary": "Preserved original compact prototype content in separate manifests and readings; labeled partial without semester or credit equivalency."
+    },
+    {
+      "version": "0.2.0",
+      "date": "2026-10-08",
+      "summary": "Added two original lessons (Hardy–Weinberg proportions and departures, carrier frequency, twin-based heritability and polygenic scores) with synthetic data, formative items with computed keys and retrieval cards. The package remains partial and unreviewed."
     }
   ],
   "limitations": [

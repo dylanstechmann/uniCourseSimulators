@@ -7,7 +7,7 @@
   "domain": "Bioengineering",
   "level": "Year 3",
   "maturity": "partial",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "license": "MIT OR CC-BY-4.0",
   "content_origin": {
     "kind": "legacy-prototype",
@@ -101,6 +101,58 @@
       "description": "Use case studies to identify clinical failure modes.",
       "bloom": "apply",
       "course_outcome_ids": []
+    },
+    {
+      "id": "biomaterials-5-objective-1",
+      "description": "Calculate degradation half-life and remaining mass for a first-order degradation model.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "biomaterials-outcome-1",
+        "biomaterials-outcome-2"
+      ]
+    },
+    {
+      "id": "biomaterials-5-objective-2",
+      "description": "Estimate a diffusion release time from gel dimension and diffusion coefficient and predict how size and cargo change it.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "biomaterials-outcome-2"
+      ]
+    },
+    {
+      "id": "biomaterials-5-objective-3",
+      "description": "Compare degradation and release time scales with a tissue repair timeline and distinguish bulk from surface erosion.",
+      "bloom": "evaluate",
+      "course_outcome_ids": [
+        "biomaterials-outcome-3",
+        "biomaterials-outcome-4"
+      ]
+    },
+    {
+      "id": "biomaterials-6-objective-1",
+      "description": "Compute porosity from relative density and estimate the modulus of an open-cell scaffold with the Gibson–Ashby scaling.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "biomaterials-outcome-1",
+        "biomaterials-outcome-2"
+      ]
+    },
+    {
+      "id": "biomaterials-6-objective-2",
+      "description": "Apply Darcy's law to compute flow through a scaffold and identify how permeability, pressure drop and thickness enter.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "biomaterials-outcome-2"
+      ]
+    },
+    {
+      "id": "biomaterials-6-objective-3",
+      "description": "Analyze the trade-off between porosity, stiffness and transport and evaluate claims that a scaffold's stiffness matches a tissue.",
+      "bloom": "evaluate",
+      "course_outcome_ids": [
+        "biomaterials-outcome-2",
+        "biomaterials-outcome-4"
+      ]
     }
   ],
   "duration": {
@@ -225,6 +277,76 @@
           ]
         }
       ]
+    },
+    {
+      "id": "biomaterials-module-5",
+      "title": "Degradation and release time scales",
+      "source_ids": [
+        "biomaterials",
+        "tissueEngineering"
+      ],
+      "lessons": [
+        {
+          "id": "biomaterials-5",
+          "title": "Degradation and release from hydrogels: half-lives, diffusion times and matching a repair timeline",
+          "reading": "modules/05-degradation-and-release-time-scales.md",
+          "objectives": [
+            "biomaterials-5-objective-1",
+            "biomaterials-5-objective-2",
+            "biomaterials-5-objective-3"
+          ],
+          "worked_example": "t½ = ln 2/0.05 = 13.9 days; 22.3% remains at 30 days; τ = (10⁻³)²/10⁻¹⁰ = 2.8 h for the 1 mm slab and 0.69 h at 0.5 mm.",
+          "question_ids": [
+            "biomaterials-5:half-life",
+            "biomaterials-5:remaining-mass",
+            "biomaterials-5:diffusion-time",
+            "biomaterials-5:thinner-slab",
+            "biomaterials-5:mismatch",
+            "biomaterials-5:bulk-erosion"
+          ],
+          "card_ids": [
+            "biomaterials-5-card-1",
+            "biomaterials-5-card-2",
+            "biomaterials-5-card-3",
+            "biomaterials-5-card-4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "biomaterials-module-6",
+      "title": "Porosity, stiffness and permeability",
+      "source_ids": [
+        "biomaterials",
+        "tissueEngineering"
+      ],
+      "lessons": [
+        {
+          "id": "biomaterials-6",
+          "title": "Porous scaffolds: porosity, stiffness and permeability, and why they pull against each other",
+          "reading": "modules/06-porosity-stiffness-and-permeability.md",
+          "objectives": [
+            "biomaterials-6-objective-1",
+            "biomaterials-6-objective-2",
+            "biomaterials-6-objective-3"
+          ],
+          "worked_example": "For the synthetic open-cell scaffold, porosity, the square-law modulus and Darcy flow follow directly: φ = 1 − 0.1 = 0.90; E* ≈ 1000 × 0.1² = 10 MPa (and 40 MPa at 0.2); Q = 10⁻¹⁰ × 10⁻⁴ × 10/(10⁻³ × 5×10⁻³) = 1.20 mL/min.",
+          "question_ids": [
+            "biomaterials-6:porosity",
+            "biomaterials-6:gibson-ashby",
+            "biomaterials-6:double-density",
+            "biomaterials-6:darcy-flow",
+            "biomaterials-6:trade-off",
+            "biomaterials-6:stiffness-match-claim"
+          ],
+          "card_ids": [
+            "biomaterials-6-card-1",
+            "biomaterials-6-card-2",
+            "biomaterials-6-card-3",
+            "biomaterials-6-card-4"
+          ]
+        }
+      ]
     }
   ],
   "assessments": [
@@ -289,6 +411,48 @@
       "points": 2
     },
     {
+      "id": "biomaterials-5-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Degradation and release time scales practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "biomaterials-5-objective-1",
+        "biomaterials-5-objective-2",
+        "biomaterials-5-objective-3"
+      ],
+      "question_ids": [
+        "biomaterials-5:half-life",
+        "biomaterials-5:remaining-mass",
+        "biomaterials-5:diffusion-time",
+        "biomaterials-5:thinner-slab",
+        "biomaterials-5:mismatch",
+        "biomaterials-5:bulk-erosion"
+      ],
+      "points": 6
+    },
+    {
+      "id": "biomaterials-6-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Porosity, stiffness and permeability practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "biomaterials-6-objective-1",
+        "biomaterials-6-objective-2",
+        "biomaterials-6-objective-3"
+      ],
+      "question_ids": [
+        "biomaterials-6:porosity",
+        "biomaterials-6:gibson-ashby",
+        "biomaterials-6:double-density",
+        "biomaterials-6:darcy-flow",
+        "biomaterials-6:trade-off",
+        "biomaterials-6:stiffness-match-claim"
+      ],
+      "points": 6
+    },
+    {
       "id": "biomaterials-case",
       "type": "case",
       "mode": "self-assessment",
@@ -335,6 +499,11 @@
       "version": "0.1.0",
       "date": "2026-10-05",
       "summary": "Replaced 'initial mass' with 'remaining mass' to make constant fractional loss agree with the stated first-order model."
+    },
+    {
+      "version": "0.2.0",
+      "date": "2026-10-08",
+      "summary": "Added two original lessons (degradation half-lives and diffusion release times, and porosity, Gibson–Ashby stiffness and Darcy permeability) with synthetic data, formative items with computed keys and retrieval cards. The package remains partial and unreviewed."
     }
   ],
   "limitations": [

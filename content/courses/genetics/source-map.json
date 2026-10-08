@@ -54,6 +54,32 @@
       "original_content": true,
       "license": "MIT OR CC-BY-4.0",
       "modifications": []
+    },
+    {
+      "module_id": "genetics-module-5",
+      "lesson_id": "genetics-5",
+      "reading": "modules/05-allele-frequencies-and-hardy-weinberg.md",
+      "source_ids": [
+        "biology",
+        "molecular"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "genetics-module-6",
+      "lesson_id": "genetics-6",
+      "reading": "modules/06-heritability-and-polygenic-scores.md",
+      "source_ids": [
+        "biology",
+        "molecular"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
     }
   ]
 }

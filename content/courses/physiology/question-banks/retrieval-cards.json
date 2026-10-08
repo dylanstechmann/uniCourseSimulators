@@ -65,6 +65,86 @@
       "back": "A response that helps maintain a regulated variable while potentially changing system load or reserve.",
       "objective_ids": [],
       "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "physiology-5-card-1",
+      "lesson_id": "physiology-5",
+      "front": "Oxygen content",
+      "back": "C = 1.34 × Hb × S + 0.003 × P_O₂ (mL/dL); hemoglobin and saturation dominate.",
+      "objective_ids": [
+        "physiology-5-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "physiology-5-card-2",
+      "lesson_id": "physiology-5",
+      "front": "Fick principle",
+      "back": "V̇O₂ = Q̇ (C_a − C_v); any three determine the fourth.",
+      "objective_ids": [
+        "physiology-5-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "physiology-5-card-3",
+      "lesson_id": "physiology-5",
+      "front": "Delivery and extraction",
+      "back": "DO₂ = Q̇ × C_a; extraction = V̇O₂/DO₂, about 0.25 at rest for the whole body.",
+      "objective_ids": [
+        "physiology-5-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "physiology-5-card-4",
+      "lesson_id": "physiology-5",
+      "front": "Compensation for anemia",
+      "back": "Lower content is offset by higher cardiac output and higher extraction, which lowers venous saturation.",
+      "objective_ids": [
+        "physiology-5-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "physiology-6-card-1",
+      "lesson_id": "physiology-6",
+      "front": "Clearance",
+      "back": "C = U × V̇ / P: plasma volume completely cleared per unit time.",
+      "objective_ids": [
+        "physiology-6-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "physiology-6-card-2",
+      "lesson_id": "physiology-6",
+      "front": "GFR and RPF markers",
+      "back": "Inulin clearance ≈ GFR; PAH clearance ≈ renal plasma flow; filtration fraction = GFR/RPF ≈ 0.2.",
+      "objective_ids": [
+        "physiology-6-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "physiology-6-card-3",
+      "lesson_id": "physiology-6",
+      "front": "Transport maximum",
+      "back": "Excretion = filtered load − T_m once load exceeds T_m; real kidneys show splay.",
+      "objective_ids": [
+        "physiology-6-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "physiology-6-card-4",
+      "lesson_id": "physiology-6",
+      "front": "Clearance versus GFR",
+      "back": "Below GFR: net reabsorption; above GFR: net secretion; use the unbound plasma concentration.",
+      "objective_ids": [
+        "physiology-6-objective-3"
+      ],
+      "license": "CC-BY-4.0"
     }
   ]
 }

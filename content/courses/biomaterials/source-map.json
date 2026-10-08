@@ -56,6 +56,32 @@
       "original_content": true,
       "license": "MIT OR CC-BY-4.0",
       "modifications": []
+    },
+    {
+      "module_id": "biomaterials-module-5",
+      "lesson_id": "biomaterials-5",
+      "reading": "modules/05-degradation-and-release-time-scales.md",
+      "source_ids": [
+        "biomaterials",
+        "tissueEngineering"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "biomaterials-module-6",
+      "lesson_id": "biomaterials-6",
+      "reading": "modules/06-porosity-stiffness-and-permeability.md",
+      "source_ids": [
+        "biomaterials",
+        "tissueEngineering"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
     }
   ]
 }

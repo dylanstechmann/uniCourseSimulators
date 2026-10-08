@@ -65,6 +65,86 @@
       "back": "A documented process linking requirements, risks, verification, validation, and changes to a device or material.",
       "objective_ids": [],
       "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "biomaterials-5-card-1",
+      "lesson_id": "biomaterials-5",
+      "front": "First-order degradation",
+      "back": "M = M₀e^(−kt); t½ = ln 2/k; mass loss and stiffness loss follow different curves.",
+      "objective_ids": [
+        "biomaterials-5-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "biomaterials-5-card-2",
+      "lesson_id": "biomaterials-5",
+      "front": "Diffusion release time",
+      "back": "τ ≈ L²/D: halving size cuts time fourfold; mesh size near cargo size slows diffusion.",
+      "objective_ids": [
+        "biomaterials-5-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "biomaterials-5-card-3",
+      "lesson_id": "biomaterials-5",
+      "front": "Bulk versus surface erosion",
+      "back": "Bulk: water entry faster than bond cleavage, shape kept then fragmentation. Surface: shrinks from outside.",
+      "objective_ids": [
+        "biomaterials-5-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "biomaterials-5-card-4",
+      "lesson_id": "biomaterials-5",
+      "front": "Matching time scales",
+      "back": "Diffusion release often ends long before degradation; tethering ties release to degradation and to repair phases.",
+      "objective_ids": [
+        "biomaterials-5-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "biomaterials-6-card-1",
+      "lesson_id": "biomaterials-6",
+      "front": "Porosity",
+      "back": "φ = 1 − ρ*/ρ_s; pore size, interconnection and tortuosity matter as much as porosity.",
+      "objective_ids": [
+        "biomaterials-6-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "biomaterials-6-card-2",
+      "lesson_id": "biomaterials-6",
+      "front": "Gibson–Ashby open-cell scaling",
+      "back": "E*/E_s ≈ (ρ*/ρ_s)²: doubling relative density quadruples stiffness.",
+      "objective_ids": [
+        "biomaterials-6-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "biomaterials-6-card-3",
+      "lesson_id": "biomaterials-6",
+      "front": "Darcy's law",
+      "back": "Q = k A ΔP/(μ L); permeability rises steeply with pore size.",
+      "objective_ids": [
+        "biomaterials-6-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "biomaterials-6-card-4",
+      "lesson_id": "biomaterials-6",
+      "front": "Stiffness-match claims",
+      "back": "Check test mode, hydration, strain rate, direction and the tissue reference before accepting a match.",
+      "objective_ids": [
+        "biomaterials-6-objective-3"
+      ],
+      "license": "CC-BY-4.0"
     }
   ]
 }

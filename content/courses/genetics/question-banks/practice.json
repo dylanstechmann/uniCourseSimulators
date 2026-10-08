@@ -251,6 +251,417 @@
         "kind": "original",
         "modifications": []
       }
+    },
+    {
+      "id": "genetics-5:allele-frequency",
+      "type": "numeric",
+      "prompt": "A synthetic sample of 1000 people has genotype counts AA = 420, Aa = 360, aa = 220. Calculate the frequency p of allele A. Enter a decimal fraction, number only.",
+      "points": 1,
+      "objective_ids": [
+        "genetics-5-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0.6,
+        "unit": "",
+        "tolerance": 0.005,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Count allele copies: two per homozygote, one per heterozygote, out of 2N copies.",
+        "solution": "p = (2 × 420 + 360) / (2 × 1000) = 0.60.",
+        "lesson_ids": [
+          "genetics-5"
+        ],
+        "misconception_ids": [
+          "counts-people-not-alleles"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "genetics-5:expected-heterozygotes",
+      "type": "numeric",
+      "prompt": "With p = 0.60 and q = 0.40 in 1000 people, how many heterozygotes does the Hardy–Weinberg model predict? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "genetics-5-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 480.0,
+        "unit": "",
+        "tolerance": 0.5,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Expected heterozygote frequency is 2pq; multiply by N.",
+        "solution": "2 × 0.60 × 0.40 × 1000 = 480; 360 were observed.",
+        "lesson_ids": [
+          "genetics-5"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "genetics-5:chi-square",
+      "type": "numeric",
+      "prompt": "Observed AA, Aa, aa = 420, 360, 220; expected = 360, 480, 160. Calculate the chi-square statistic Σ (O − E)² / E. Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "genetics-5-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 62.5,
+        "unit": "",
+        "tolerance": 0.1,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Compute each class's (O − E)² / E and sum the three terms.",
+        "solution": "10.0 + 30.0 + 22.5 = 62.5, well above 3.84 for one degree of freedom.",
+        "lesson_ids": [
+          "genetics-5"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "genetics-5:inbreeding-f",
+      "type": "numeric",
+      "prompt": "The observed heterozygote fraction is 0.36 and 2pq = 0.48. Calculate F = 1 − H_obs / H_exp. Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "genetics-5-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0.25,
+        "unit": "",
+        "tolerance": 0.005,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Divide observed by expected heterozygosity and subtract from one.",
+        "solution": "F = 1 − 0.36/0.48 = 0.25: a quarter fewer heterozygotes than expected.",
+        "lesson_ids": [
+          "genetics-5"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "genetics-5:carrier-frequency",
+      "type": "numeric",
+      "prompt": "A recessive condition affects 1 in 2500 births in a synthetic population assumed to be in Hardy–Weinberg proportions. Estimate the carrier (heterozygote) frequency 2pq. Enter a decimal fraction, number only.",
+      "points": 1,
+      "objective_ids": [
+        "genetics-5-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 0.0392,
+        "unit": "",
+        "tolerance": 0.0005,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Take q as the square root of the incidence, then compute 2pq.",
+        "solution": "q = √(1/2500) = 0.02, p = 0.98, 2pq = 0.0392, about 1 in 26.",
+        "lesson_ids": [
+          "genetics-5"
+        ],
+        "misconception_ids": [
+          "carrier-equals-incidence"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "genetics-5:deficit-one-marker",
+      "type": "single_choice",
+      "prompt": "Across 500 markers genotyped in the same samples, only one shows a strong heterozygote deficit; the other 499 fit Hardy–Weinberg proportions. Which explanation does this pattern favor?",
+      "points": 1,
+      "objective_ids": [
+        "genetics-5-objective-2"
+      ],
+      "options": [
+        "Genome-wide inbreeding in the sample.",
+        "Proof that the marker is under strong natural selection.",
+        "Population structure, because the Wahlund effect acts on one locus at a time.",
+        "A problem specific to that marker, such as allele dropout during genotyping, because structure or inbreeding would affect many markers."
+      ],
+      "solution_spec": {
+        "answer": 3
+      },
+      "feedback": {
+        "hint": "Ask which explanations act on the whole genome and which act on one locus.",
+        "solution": "Structure and inbreeding raise homozygosity across many loci. A deficit confined to one marker points first to a locus-specific cause, most often genotyping error, which is why such markers are re-genotyped or dropped before association testing.",
+        "lesson_ids": [
+          "genetics-5"
+        ],
+        "misconception_ids": [
+          "one-test-identifies-cause"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "genetics-5:carrier-assumption",
+      "type": "single_choice",
+      "prompt": "In which situation would the square-root-of-incidence estimate of a recessive allele's frequency be biased upward?",
+      "points": 1,
+      "objective_ids": [
+        "genetics-5-objective-3"
+      ],
+      "options": [
+        "When the trait is fully penetrant and mating is random.",
+        "When the allele is common.",
+        "When the sample is very large.",
+        "When many affected individuals come from consanguineous unions, which raise homozygosity for a given allele frequency."
+      ],
+      "solution_spec": {
+        "answer": 3
+      },
+      "feedback": {
+        "hint": "The estimate assumes aa frequency equals q², which needs random mating.",
+        "solution": "Consanguinity raises the frequency of aa above q², so taking the square root of incidence overstates q. Random mating with full penetrance is the case where the estimate is unbiased.",
+        "lesson_ids": [
+          "genetics-5"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "genetics-6:falconer-h2",
+      "type": "numeric",
+      "prompt": "In a synthetic twin study the within-pair correlation is r_MZ = 0.5 and r_DZ = 0.3. Estimate narrow-sense heritability with h² = 2 (r_MZ − r_DZ). Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "genetics-6-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0.4,
+        "unit": "",
+        "tolerance": 0.005,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Double the difference between the MZ and DZ correlations.",
+        "solution": "h² = 2 × (0.5 − 0.3) = 0.40.",
+        "lesson_ids": [
+          "genetics-6"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "genetics-6:unique-environment",
+      "type": "numeric",
+      "prompt": "With r_MZ = 0.5, estimate the unique-environment component e² = 1 − r_MZ. Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "genetics-6-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0.5,
+        "unit": "",
+        "tolerance": 0.005,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Whatever makes identical twins differ is unshared environment or measurement error.",
+        "solution": "e² = 1 − 0.5 = 0.50; it includes measurement error.",
+        "lesson_ids": [
+          "genetics-6"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "genetics-6:polygenic-score",
+      "type": "numeric",
+      "prompt": "A synthetic score uses four variants with effects β = [0.1, -0.05, 0.2, 0.04] trait units per effect allele. A person carries [2, 1, 0, 2] copies of the effect alleles. Calculate PGS = Σ β × dosage. Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "genetics-6-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0.23,
+        "unit": "",
+        "tolerance": 0.005,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Multiply each effect by the allele count and add; negative effects subtract.",
+        "solution": "PGS = (0.1)(2) + (-0.05)(1) + (0.2)(0) + (0.04)(2) = 0.23.",
+        "lesson_ids": [
+          "genetics-6"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "genetics-6:variance-to-correlation",
+      "type": "numeric",
+      "prompt": "A polygenic score explains R² = 0.08 of trait variance in an independent test sample. What is the correlation between score and trait? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "genetics-6-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0.2828,
+        "unit": "",
+        "tolerance": 0.005,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Variance explained is the square of the correlation.",
+        "solution": "r = √0.08 = 0.28; individuals with the same score still vary widely.",
+        "lesson_ids": [
+          "genetics-6"
+        ],
+        "misconception_ids": [
+          "r2-is-accuracy-for-individuals"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "genetics-6:heritability-meaning",
+      "type": "single_choice",
+      "prompt": "A cohort study reports that a trait has heritability 0.8. Which statement follows?",
+      "points": 1,
+      "objective_ids": [
+        "genetics-6-objective-3"
+      ],
+      "options": [
+        "The trait cannot be changed by environment.",
+        "80% of each person's trait value is caused by their genes.",
+        "In that population and environment, 80% of the variation between people is statistically attributed to additive genetic differences.",
+        "Any population will show the same heritability."
+      ],
+      "solution_spec": {
+        "answer": 2
+      },
+      "feedback": {
+        "hint": "Heritability is a ratio of variances in a population.",
+        "solution": "Heritability partitions population variance under existing environments. It is not a per-person fraction, says nothing about whether a shared environmental change could shift the mean, and need not transfer to other populations.",
+        "lesson_ids": [
+          "genetics-6"
+        ],
+        "misconception_ids": [
+          "heritability-is-individual-fraction",
+          "heritable-means-fixed"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "genetics-6:pgs-claims",
+      "type": "multiple_select",
+      "prompt": "Which statements about polygenic scores are appropriate? Select all that apply.",
+      "points": 2,
+      "objective_ids": [
+        "genetics-6-objective-3"
+      ],
+      "options": [
+        "A variant in the score may be correlated with, rather than be, the causal variant.",
+        "Variance explained in an independent sample is a fair summary of predictive accuracy.",
+        "A high score shows that a person will develop the trait.",
+        "A score's weights identify which drug target to act on.",
+        "A score trained in one ancestry group often predicts less well in other groups."
+      ],
+      "solution_spec": {
+        "answer": [
+          0,
+          1,
+          4
+        ],
+        "partial_credit": "correct-minus-incorrect-clamped-v1"
+      },
+      "feedback": {
+        "hint": "Separate what a score summarizes from what it would need to establish causation or certainty.",
+        "solution": "Portability, tagging versus causation and out-of-sample variance explained are standard cautions. A high score shifts probability, not certainty, and association weights do not identify mechanisms or targets.",
+        "lesson_ids": [
+          "genetics-6"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
     }
   ]
 }

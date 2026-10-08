@@ -7,7 +7,7 @@
   "domain": "Life sciences",
   "level": "Year 2",
   "maturity": "partial",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "license": "MIT OR CC-BY-4.0",
   "content_origin": {
     "kind": "legacy-prototype",
@@ -98,6 +98,58 @@
       "description": "Predict how hormonal feedback changes transport or set points.",
       "bloom": "apply",
       "course_outcome_ids": []
+    },
+    {
+      "id": "physiology-5-objective-1",
+      "description": "Calculate arterial and venous oxygen content from hemoglobin, saturation and partial pressure.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "physiology-outcome-1",
+        "physiology-outcome-3"
+      ]
+    },
+    {
+      "id": "physiology-5-objective-2",
+      "description": "Apply the Fick principle to compute cardiac output, oxygen delivery and the extraction ratio.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "physiology-outcome-1",
+        "physiology-outcome-2"
+      ]
+    },
+    {
+      "id": "physiology-5-objective-3",
+      "description": "Predict how anemia and changes in cardiac output alter delivery and extraction, and which compensations are available.",
+      "bloom": "analyze",
+      "course_outcome_ids": [
+        "physiology-outcome-4"
+      ]
+    },
+    {
+      "id": "physiology-6-objective-1",
+      "description": "Calculate clearance from urine concentration, urine flow and plasma concentration, and use suitable markers to estimate GFR and renal plasma flow.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "physiology-outcome-1",
+        "physiology-outcome-3"
+      ]
+    },
+    {
+      "id": "physiology-6-objective-2",
+      "description": "Compute filtered load and predict urinary excretion of a reabsorbed solute with a transport maximum.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "physiology-outcome-3",
+        "physiology-outcome-4"
+      ]
+    },
+    {
+      "id": "physiology-6-objective-3",
+      "description": "Infer net tubular secretion or reabsorption by comparing a substance's clearance with GFR, and evaluate the limits of creatinine-based estimates.",
+      "bloom": "evaluate",
+      "course_outcome_ids": [
+        "physiology-outcome-3"
+      ]
     }
   ],
   "duration": {
@@ -222,6 +274,76 @@
           ]
         }
       ]
+    },
+    {
+      "id": "physiology-module-5",
+      "title": "Oxygen delivery and the Fick principle",
+      "source_ids": [
+        "biology",
+        "transport"
+      ],
+      "lessons": [
+        {
+          "id": "physiology-5",
+          "title": "Oxygen delivery: arterial content, the Fick principle and extraction",
+          "reading": "modules/05-oxygen-delivery-and-the-fick-principle.md",
+          "objectives": [
+            "physiology-5-objective-1",
+            "physiology-5-objective-2",
+            "physiology-5-objective-3"
+          ],
+          "worked_example": "C_a = 1.34 × 15 × 0.98 + 0.003 × 100 = 20.0 mL/dL; C_v = 15.20 mL/dL; Q̇ = 250/48.0 = 5.21 L/min; DO₂ = 1041 mL/min; extraction 0.24, rising to 0.36 at Hb 10 g/dL with unchanged flow.",
+          "question_ids": [
+            "physiology-5:arterial-content",
+            "physiology-5:fick-output",
+            "physiology-5:extraction-ratio",
+            "physiology-5:anemia-extraction",
+            "physiology-5:supplemental-oxygen",
+            "physiology-5:falling-venous-saturation"
+          ],
+          "card_ids": [
+            "physiology-5-card-1",
+            "physiology-5-card-2",
+            "physiology-5-card-3",
+            "physiology-5-card-4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "physiology-module-6",
+      "title": "Renal clearance",
+      "source_ids": [
+        "biology",
+        "transport"
+      ],
+      "lessons": [
+        {
+          "id": "physiology-6",
+          "title": "Renal clearance: measuring filtration, plasma flow and tubular handling",
+          "reading": "modules/06-renal-clearance-and-tubular-handling.md",
+          "objectives": [
+            "physiology-6-objective-1",
+            "physiology-6-objective-2",
+            "physiology-6-objective-3"
+          ],
+          "worked_example": "GFR = 30 × 1.0/0.25 = 120 mL/min; RPF ≈ C_PAH = 600 mL/min; FF = 0.20; glucose at 4.0 mg/mL: load 480 mg/min, excretion 105 mg/min; drug X clearance 60 mL/min (net reabsorption).",
+          "question_ids": [
+            "physiology-6:inulin-gfr",
+            "physiology-6:filtration-fraction",
+            "physiology-6:glucose-excretion",
+            "physiology-6:drug-clearance",
+            "physiology-6:clearance-above-gfr",
+            "physiology-6:creatinine-older-adult"
+          ],
+          "card_ids": [
+            "physiology-6-card-1",
+            "physiology-6-card-2",
+            "physiology-6-card-3",
+            "physiology-6-card-4"
+          ]
+        }
+      ]
     }
   ],
   "assessments": [
@@ -286,6 +408,48 @@
       "points": 2
     },
     {
+      "id": "physiology-5-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Oxygen delivery and the Fick principle practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "physiology-5-objective-1",
+        "physiology-5-objective-2",
+        "physiology-5-objective-3"
+      ],
+      "question_ids": [
+        "physiology-5:arterial-content",
+        "physiology-5:fick-output",
+        "physiology-5:extraction-ratio",
+        "physiology-5:anemia-extraction",
+        "physiology-5:supplemental-oxygen",
+        "physiology-5:falling-venous-saturation"
+      ],
+      "points": 6
+    },
+    {
+      "id": "physiology-6-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Renal clearance practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "physiology-6-objective-1",
+        "physiology-6-objective-2",
+        "physiology-6-objective-3"
+      ],
+      "question_ids": [
+        "physiology-6:inulin-gfr",
+        "physiology-6:filtration-fraction",
+        "physiology-6:glucose-excretion",
+        "physiology-6:drug-clearance",
+        "physiology-6:clearance-above-gfr",
+        "physiology-6:creatinine-older-adult"
+      ],
+      "points": 6
+    },
+    {
       "id": "physiology-case",
       "type": "case",
       "mode": "self-assessment",
@@ -327,6 +491,11 @@
       "version": "0.1.0",
       "date": "2026-10-05",
       "summary": "Preserved original compact prototype content in separate manifests and readings; labeled partial without semester or credit equivalency."
+    },
+    {
+      "version": "0.2.0",
+      "date": "2026-10-08",
+      "summary": "Added two original lessons (oxygen content, the Fick principle, delivery and extraction, and renal clearance, filtration and tubular handling) with synthetic data, formative items with computed keys and retrieval cards. The package remains partial and unreviewed."
     }
   ],
   "limitations": [

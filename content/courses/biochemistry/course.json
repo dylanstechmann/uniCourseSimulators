@@ -7,7 +7,7 @@
   "domain": "Biochemistry",
   "level": "Year 2",
   "maturity": "partial",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "license": "MIT OR CC-BY-4.0",
   "content_origin": {
     "kind": "legacy-prototype",
@@ -97,6 +97,56 @@
       "description": "Predict how perturbing one pathway affects connected fluxes.",
       "bloom": "apply",
       "course_outcome_ids": []
+    },
+    {
+      "id": "biochemistry-5-objective-1",
+      "description": "Compute initial rates, turnover number and catalytic efficiency from Michaelis–Menten parameters.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "biochemistry-outcome-2"
+      ]
+    },
+    {
+      "id": "biochemistry-5-objective-2",
+      "description": "Predict apparent Km and Vmax for competitive and pure noncompetitive inhibition and use them to diagnose an inhibitor's mode.",
+      "bloom": "analyze",
+      "course_outcome_ids": [
+        "biochemistry-outcome-2"
+      ]
+    },
+    {
+      "id": "biochemistry-5-objective-3",
+      "description": "Evaluate how linearized plots and assay conditions can distort parameter estimates.",
+      "bloom": "evaluate",
+      "course_outcome_ids": [
+        "biochemistry-outcome-2",
+        "biochemistry-outcome-1"
+      ]
+    },
+    {
+      "id": "biochemistry-6-objective-1",
+      "description": "Calculate the actual free-energy change of a reaction from its standard value and the concentrations of reactants and products.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "biochemistry-outcome-3"
+      ]
+    },
+    {
+      "id": "biochemistry-6-objective-2",
+      "description": "Compute the standard free-energy change and equilibrium constant of a reaction coupled to ATP hydrolysis.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "biochemistry-outcome-3",
+        "biochemistry-outcome-4"
+      ]
+    },
+    {
+      "id": "biochemistry-6-objective-3",
+      "description": "Convert a difference in reduction potential into a free-energy change and interpret where energy is released in electron transport.",
+      "bloom": "analyze",
+      "course_outcome_ids": [
+        "biochemistry-outcome-3"
+      ]
     }
   ],
   "duration": {
@@ -221,6 +271,76 @@
           ]
         }
       ]
+    },
+    {
+      "id": "biochemistry-module-5",
+      "title": "Enzyme kinetics from data",
+      "source_ids": [
+        "biochemistry",
+        "biology"
+      ],
+      "lessons": [
+        {
+          "id": "biochemistry-5",
+          "title": "Enzyme kinetics from data: estimating Vmax and Km, turnover, and diagnosing inhibition",
+          "reading": "modules/05-enzyme-kinetics-from-data-and-inhibition-modes.md",
+          "objectives": [
+            "biochemistry-5-objective-1",
+            "biochemistry-5-objective-2",
+            "biochemistry-5-objective-3"
+          ],
+          "worked_example": "v(20 μM) = 100 × 20/25 = 80 μM/min; kcat = 166.7 s⁻¹; with α = 3, competitive Km,app = 15 μM gives 57.1 μM/min and noncompetitive Vmax,app = 33.3 μM/min gives 26.7 μM/min.",
+          "question_ids": [
+            "biochemistry-5:rate-at-20",
+            "biochemistry-5:kcat",
+            "biochemistry-5:competitive-km",
+            "biochemistry-5:noncompetitive-rate",
+            "biochemistry-5:diagnose-mode",
+            "biochemistry-5:double-reciprocal"
+          ],
+          "card_ids": [
+            "biochemistry-5-card-1",
+            "biochemistry-5-card-2",
+            "biochemistry-5-card-3",
+            "biochemistry-5-card-4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "biochemistry-module-6",
+      "title": "Free energy, coupling and redox",
+      "source_ids": [
+        "biochemistry",
+        "biology"
+      ],
+      "lessons": [
+        {
+          "id": "biochemistry-6",
+          "title": "Free energy in the cell: actual ΔG, coupled reactions and redox potential",
+          "reading": "modules/06-free-energy-coupling-and-redox.md",
+          "objectives": [
+            "biochemistry-6-objective-1",
+            "biochemistry-6-objective-2",
+            "biochemistry-6-objective-3"
+          ],
+          "worked_example": "ATP hydrolysis at synthetic concentrations: ΔG = -30.5 + 2.577 ln(3.0×10⁻⁴) = -51.4 kJ/mol; hexokinase ΔG°′ = -16.7 kJ/mol; NADH to O₂: −2 × 96.485 × 1.135 = -219 kJ/mol.",
+          "question_ids": [
+            "biochemistry-6:atp-actual-dg",
+            "biochemistry-6:coupled-dg0",
+            "biochemistry-6:equilibrium-constant",
+            "biochemistry-6:nadh-oxygen",
+            "biochemistry-6:positive-dg0-runs",
+            "biochemistry-6:gradient-drives-synthase"
+          ],
+          "card_ids": [
+            "biochemistry-6-card-1",
+            "biochemistry-6-card-2",
+            "biochemistry-6-card-3",
+            "biochemistry-6-card-4"
+          ]
+        }
+      ]
     }
   ],
   "assessments": [
@@ -285,6 +405,48 @@
       "points": 2
     },
     {
+      "id": "biochemistry-5-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Enzyme kinetics from data practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "biochemistry-5-objective-1",
+        "biochemistry-5-objective-2",
+        "biochemistry-5-objective-3"
+      ],
+      "question_ids": [
+        "biochemistry-5:rate-at-20",
+        "biochemistry-5:kcat",
+        "biochemistry-5:competitive-km",
+        "biochemistry-5:noncompetitive-rate",
+        "biochemistry-5:diagnose-mode",
+        "biochemistry-5:double-reciprocal"
+      ],
+      "points": 6
+    },
+    {
+      "id": "biochemistry-6-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Free energy, coupling and redox practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "biochemistry-6-objective-1",
+        "biochemistry-6-objective-2",
+        "biochemistry-6-objective-3"
+      ],
+      "question_ids": [
+        "biochemistry-6:atp-actual-dg",
+        "biochemistry-6:coupled-dg0",
+        "biochemistry-6:equilibrium-constant",
+        "biochemistry-6:nadh-oxygen",
+        "biochemistry-6:positive-dg0-runs",
+        "biochemistry-6:gradient-drives-synthase"
+      ],
+      "points": 6
+    },
+    {
       "id": "biochemistry-case",
       "type": "case",
       "mode": "self-assessment",
@@ -326,6 +488,11 @@
       "version": "0.1.0",
       "date": "2026-10-05",
       "summary": "Preserved original compact prototype content in separate manifests and readings; labeled partial without semester or credit equivalency."
+    },
+    {
+      "version": "0.2.0",
+      "date": "2026-10-08",
+      "summary": "Added two original lessons (enzyme kinetics from data with inhibition fingerprints, and actual versus standard free energy, coupling and redox) with synthetic data, formative items with computed keys and retrieval cards. The package remains partial and unreviewed."
     }
   ],
   "limitations": [

@@ -254,6 +254,382 @@
         "kind": "original",
         "modifications": []
       }
+    },
+    {
+      "id": "biomaterials-5:half-life",
+      "type": "numeric",
+      "prompt": "A hydrogel loses mass by first-order kinetics with k = 0.05 per day. Calculate its half-life and enter it as a value with a time unit in hours (for example 100 h).",
+      "points": 1,
+      "objective_ids": [
+        "biomaterials-5-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 332.71,
+        "unit": "h",
+        "tolerance": 2.0,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "t½ = ln 2 / k; then convert days to hours.",
+        "solution": "t½ = 0.693 / 0.05 = 13.9 days = 333 h.",
+        "lesson_ids": [
+          "biomaterials-5"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "biomaterials-5:remaining-mass",
+      "type": "numeric",
+      "prompt": "With first-order degradation at k = 0.05 per day, what percentage of the initial mass remains after 30 days? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "biomaterials-5-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 22.313,
+        "unit": "%",
+        "tolerance": 0.2,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Remaining fraction is e^(−kt).",
+        "solution": "e^(−0.05 × 30) = e^(−1.5) = 0.223, so 22.3% remains.",
+        "lesson_ids": [
+          "biomaterials-5"
+        ],
+        "misconception_ids": [
+          "linear-instead-of-exponential"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "biomaterials-5:diffusion-time",
+      "type": "numeric",
+      "prompt": "A protein with diffusion coefficient 10⁻¹⁰ m²/s in a gel must leave a slab of half-thickness 1 mm. Estimate the characteristic release time τ = L²/D. Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "biomaterials-5-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 2.778,
+        "unit": "h",
+        "tolerance": 0.1,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use L in meters, then convert seconds to hours.",
+        "solution": "τ = (10⁻³ m)² / 10⁻¹⁰ m²/s = 10⁴ s = 2.78 h.",
+        "lesson_ids": [
+          "biomaterials-5"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "biomaterials-5:thinner-slab",
+      "type": "numeric",
+      "prompt": "For the same protein (D = 10⁻¹⁰ m²/s), the slab half-thickness is reduced to 0.5 mm. Estimate the new release time. Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "biomaterials-5-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0.6944,
+        "unit": "h",
+        "tolerance": 0.05,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Release time scales with the square of the distance.",
+        "solution": "τ = (5.0×10⁻⁴)² / 10⁻¹⁰ = 2500 s = 0.69 h, a quarter of the 1 mm value.",
+        "lesson_ids": [
+          "biomaterials-5"
+        ],
+        "misconception_ids": [
+          "diffusion-time-linear-in-length"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "biomaterials-5:mismatch",
+      "type": "single_choice",
+      "prompt": "A growth factor diffuses out of a gel in about 3 hours, while the gel's degradation half-life is about 14 days and the target repair process takes weeks. Which change most directly aligns release with the repair timeline?",
+      "points": 1,
+      "objective_ids": [
+        "biomaterials-5-objective-3"
+      ],
+      "options": [
+        "Use a thinner gel.",
+        "Make the gel degrade faster.",
+        "Tether or affinity-bind the growth factor to the network so it is freed as the gel degrades.",
+        "Load more growth factor so the burst is larger."
+      ],
+      "solution_spec": {
+        "answer": 2
+      },
+      "feedback": {
+        "hint": "Which time scale do you want release to follow?",
+        "solution": "Release is diffusion-controlled and far faster than degradation. Binding the cargo to the network ties release to degradation. Faster degradation, a bigger burst or a thinner gel would all shorten or front-load the release.",
+        "lesson_ids": [
+          "biomaterials-5"
+        ],
+        "misconception_ids": [
+          "more-dose-means-longer-action"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "biomaterials-5:bulk-erosion",
+      "type": "single_choice",
+      "prompt": "A degradable implant keeps its dimensions for weeks while its mass and strength fall steadily, then fragments. Which erosion mode does this describe, and what condition favors it?",
+      "points": 1,
+      "objective_ids": [
+        "biomaterials-5-objective-3"
+      ],
+      "options": [
+        "Surface erosion, favored by hydrophilic materials.",
+        "Surface erosion, favored when bond cleavage is faster than water penetration.",
+        "Bulk erosion, favored when water penetrates the material faster than bonds are cleaved.",
+        "No erosion; the strength loss is due to cell infiltration only."
+      ],
+      "solution_spec": {
+        "answer": 2
+      },
+      "feedback": {
+        "hint": "Compare the speed of water entry with the speed of bond breaking.",
+        "solution": "When water reaches the interior before bonds break, degradation is distributed through the volume: shape is retained while mass and strength fall, and late fragmentation is possible. Surface erosion shrinks the device from outside in.",
+        "lesson_ids": [
+          "biomaterials-5"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "biomaterials-6:porosity",
+      "type": "numeric",
+      "prompt": "A scaffold has an apparent density equal to 10% of the density of its solid polymer. Calculate its porosity as a percentage. Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "biomaterials-6-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 90.0,
+        "unit": "%",
+        "tolerance": 0.2,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Porosity is one minus relative density.",
+        "solution": "φ = 1 − 0.1 = 0.90 = 90%.",
+        "lesson_ids": [
+          "biomaterials-6"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "biomaterials-6:gibson-ashby",
+      "type": "numeric",
+      "prompt": "An open-cell scaffold has relative density 0.1 and is made from a solid with modulus 1000 MPa. Using E*/E_s ≈ (ρ*/ρ_s)², estimate the scaffold modulus. Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "biomaterials-6-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 10.0,
+        "unit": "MPa",
+        "tolerance": 0.2,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Square the relative density and multiply by the solid modulus.",
+        "solution": "E* ≈ 1000 × 0.1² = 10 MPa.",
+        "lesson_ids": [
+          "biomaterials-6"
+        ],
+        "misconception_ids": [
+          "stiffness-linear-in-density"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "biomaterials-6:double-density",
+      "type": "numeric",
+      "prompt": "The same material is made at relative density 0.2 instead of 0.1. Estimate the new modulus with the same scaling. Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "biomaterials-6-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 40.0,
+        "unit": "MPa",
+        "tolerance": 0.5,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Doubling relative density multiplies a square law by four.",
+        "solution": "E* ≈ 1000 × 0.2² = 40 MPa, four times the 10 MPa value.",
+        "lesson_ids": [
+          "biomaterials-6"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "biomaterials-6:darcy-flow",
+      "type": "numeric",
+      "prompt": "Medium (μ = 10⁻³ Pa·s) flows through a scaffold of permeability 10⁻¹⁰ m², cross-section 1 cm² and thickness 5 mm under a pressure drop of 10 Pa. Using Q = k A ΔP / (μ L), calculate the flow rate. Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "biomaterials-6-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 1.2,
+        "unit": "mL/min",
+        "tolerance": 0.02,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Work in SI units (m², m, Pa, Pa·s) to get m³/s, then convert.",
+        "solution": "Q = 10⁻¹⁰ × 10⁻⁴ × 10 / (10⁻³ × 5×10⁻³) = 2.0×10⁻⁸ m³/s = 1.20 mL/min.",
+        "lesson_ids": [
+          "biomaterials-6"
+        ],
+        "misconception_ids": [
+          "mixed-unit-systems"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "biomaterials-6:trade-off",
+      "type": "single_choice",
+      "prompt": "A team lowers scaffold porosity from 90% to 80% to stop collapse during culture. Which combination of effects should they expect for an open-cell scaffold?",
+      "points": 1,
+      "objective_ids": [
+        "biomaterials-6-objective-3"
+      ],
+      "options": [
+        "Stiffness doubles and permeability is unchanged.",
+        "Stiffness roughly quadruples, while void volume falls and permeability typically drops, which can slow nutrient transport and cell infiltration.",
+        "Permeability rises because there is more surface area.",
+        "Stiffness is unchanged because the material is the same."
+      ],
+      "solution_spec": {
+        "answer": 1
+      },
+      "feedback": {
+        "hint": "Apply the square law to relative density 0.1 → 0.2, then think about pores.",
+        "solution": "Relative density doubles, so the square law quadruples the modulus. Less void and usually smaller or fewer pores lower permeability. The fix for collapse costs transport, which is the central scaffold trade-off.",
+        "lesson_ids": [
+          "biomaterials-6"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "biomaterials-6:stiffness-match-claim",
+      "type": "single_choice",
+      "prompt": "A paper states that a scaffold 'matches the stiffness of cartilage' based on one compressive modulus measured on dry samples at a single strain rate. What is the main weakness of this claim?",
+      "points": 1,
+      "objective_ids": [
+        "biomaterials-6-objective-3"
+      ],
+      "options": [
+        "Compression tests cannot measure modulus.",
+        "Tissue and hydrated scaffold mechanics are nonlinear, anisotropic and rate-dependent, so a single dry modulus does not establish a match under physiological conditions.",
+        "Cartilage has no measurable stiffness.",
+        "There is no weakness if the numbers agree."
+      ],
+      "solution_spec": {
+        "answer": 1
+      },
+      "feedback": {
+        "hint": "Ask how, under what conditions and against what reference the comparison was made.",
+        "solution": "Hydration, test mode, strain rate and direction can change measured moduli substantially. A credible match compares like-for-like tests under physiological conditions, and cells sense local rather than bulk stiffness.",
+        "lesson_ids": [
+          "biomaterials-6"
+        ],
+        "misconception_ids": [
+          "single-number-match"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
     }
   ]
 }

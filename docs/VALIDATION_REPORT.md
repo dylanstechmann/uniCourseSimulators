@@ -4,7 +4,25 @@
 
 2026-10-06; synthetic local learner data only. Milestones 1 and 2 are implemented. Milestone 3 remains partial; deterministic graders and prototype graded-assignment and review workflows are described below. A Milestone 4 curriculum-map increment is implemented and tested, while subject-matter review and map refinement remain. All 25 course packages are **partial**; zero are beta, complete or externally reviewed. Human score review is limited to saved attempts and does not constitute course-content review. No semester equivalence, university credit, security certification or public production deployment is asserted.
 
-## Current increment: assessment-protection toggle, six geroscience lessons, a time-to-event lesson (2026-10-08, second pass)
+## Current increment: two lessons each in genetics, biochemistry, physiology and biomaterials (2026-10-08, third pass)
+
+Written by an AI coding assistant.
+
+- **Genetics, biochemistry, physiology and biomaterials 0.2.0** (all still `partial`). Each package gains two original lessons of about 810 to 990 words, each with a worked problem that is not a repeat of the body text, six or seven formative items and four cards: Hardy–Weinberg departures and carrier frequency; heritability and polygenic scores; enzyme kinetics and inhibition fingerprints; actual versus standard free energy, coupling and redox; oxygen delivery and the Fick principle; renal clearance; hydrogel degradation and release; scaffold porosity, stiffness and permeability. All parameters are synthetic. Numeric keys are computed in the authoring script from the prompt values, and all 49 keys were graded to full credit by the real grader before commit. No third-party source was added.
+- The [gap report](COURSE_GAP_REPORT.md) was regenerated: course outcomes with no linking lesson objective fell from 79 to 65 of 101.
+- Tests: the 2026-10-08 lesson checks now cover these eight lessons; inventory pins were updated to the new counts.
+
+| Command/check (this container, Python 3.12.3, 2026-10-08) | Result |
+| --- | --- |
+| `python tools/validate_content.py` | PASS: 25 packages, 158 lessons, 449 questions, 372 cards, 25 cases; 0 errors; 123 disclosed warnings (98 legacy-depth, 25 objective-coverage) |
+| `python -m pytest tests -q` | 124 passed (after the pin fix) |
+| `cd backend; python -m pytest -q` | 1147 passed, 2 skipped |
+| `python tools/check_security.py` | 472 source files, 0 findings |
+| `ruff`, `node --test` legacy | PASS |
+
+The first full run of `verify.sh` failed one root test because an inventory pin (401 → 450 with the private fixture) had not been updated; it was fixed and the root suite rerun. The frontend was not changed, so `--frontend` was not run. Docker Compose and Playwright were not run. No lesson was reviewed by a subject-matter expert.
+
+## Previous increment: assessment-protection toggle, six geroscience lessons, a time-to-event lesson (2026-10-08, second pass)
 
 Written by an AI coding assistant.
 
