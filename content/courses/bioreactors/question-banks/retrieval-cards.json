@@ -145,6 +145,326 @@
         "bioreactors-6-objective-3"
       ],
       "license": "CC-BY-4.0"
+    },
+    {
+      "id": "bioreactors-7-card-1",
+      "lesson_id": "bioreactors-7",
+      "front": "Monod kinetics",
+      "back": "μ = μ_max S/(K_s + S); half of μ_max at S = K_s, and a fraction f needs S = f K_s/(1 − f), so 90% needs 9 K_s.",
+      "objective_ids": [
+        "bioreactors-7-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "bioreactors-7-card-2",
+      "lesson_id": "bioreactors-7",
+      "front": "Yield and maximum density",
+      "back": "X_max = X₀ + Y (S₀ − S_min); doubling S₀ roughly doubles the yield limit, but X_max is an upper bound if another factor stops growth first.",
+      "objective_ids": [
+        "bioreactors-7-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "bioreactors-7-card-3",
+      "lesson_id": "bioreactors-7",
+      "front": "Minimum time",
+      "back": "t = ln(X_max/X₀)/μ_max is a lower bound because of lag, deceleration and inhibition.",
+      "objective_ids": [
+        "bioreactors-7-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "bioreactors-7-card-4",
+      "lesson_id": "bioreactors-7",
+      "front": "Specific uptake",
+      "back": "q_S = μ/Y_X/S, with the yield in cells per mmol; yields and maintenance uptake change with conditions.",
+      "objective_ids": [
+        "bioreactors-7-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "bioreactors-8-card-1",
+      "lesson_id": "bioreactors-8",
+      "front": "Chemostat steady state",
+      "back": "μ = D; S_ss = D K_s/(μ_max − D); X_ss = Y (S₀ − S_ss). The residence time is 1/D.",
+      "objective_ids": [
+        "bioreactors-8-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "bioreactors-8-card-2",
+      "lesson_id": "bioreactors-8",
+      "front": "Washout",
+      "back": "D_crit = μ_max S₀/(K_s + S₀), slightly below μ_max; above it cells are removed faster than they grow and the culture washes out.",
+      "objective_ids": [
+        "bioreactors-8-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "bioreactors-8-card-3",
+      "lesson_id": "bioreactors-8",
+      "front": "Best output",
+      "back": "Output D X_ss peaks at D_opt = μ_max (1 − √(K_s/(K_s + S₀))), close to washout, so a margin is needed.",
+      "objective_ids": [
+        "bioreactors-8-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "bioreactors-8-card-4",
+      "lesson_id": "bioreactors-8",
+      "front": "Cell-specific perfusion rate",
+      "back": "CSPR = perfusion rate/cell density, in pL/(cell·day); the minimum is uptake/(allowed consumption). Retention is never perfect.",
+      "objective_ids": [
+        "bioreactors-8-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "bioreactors-9-card-1",
+      "lesson_id": "bioreactors-9",
+      "front": "Power and Reynolds number",
+      "back": "P = N_p ρ N³ D⁵ (N in rev/s); P/V in W/m³; Re = ρND²/μ above about 10⁴ is turbulent; tip speed = πND.",
+      "objective_ids": [
+        "bioreactors-9-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "bioreactors-9-card-2",
+      "lesson_id": "bioreactors-9",
+      "front": "Scaling laws",
+      "back": "Geometric similarity: P/V ∝ N³D², tip speed ∝ ND, Re ∝ ND², mixing time ∝ 1/N. Constant P/V gives N ∝ D^(−2/3).",
+      "objective_ids": [
+        "bioreactors-9-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "bioreactors-9-card-3",
+      "lesson_id": "bioreactors-9",
+      "front": "Trade-offs",
+      "back": "Constant P/V: higher tip speed and longer mixing time. Constant tip speed: lower P/V. Constant speed: far higher P/V and tip speed.",
+      "objective_ids": [
+        "bioreactors-9-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "bioreactors-9-card-4",
+      "lesson_id": "bioreactors-9",
+      "front": "Scale-down models",
+      "back": "Small vessels operated to reproduce the large vessel's mixing time and gradients expose cells to the large-scale environment before committing to it.",
+      "objective_ids": [
+        "bioreactors-9-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "bioreactors-10-card-1",
+      "lesson_id": "bioreactors-10",
+      "front": "Dissipation and the Kolmogorov scale",
+      "back": "ε = (P/V)/ρ; η_K = (ν³/ε)^(1/4); stress at that scale τ = μ(ε/ν)^(1/2). A hundredfold rise in ε shrinks η_K by 3.16.",
+      "objective_ids": [
+        "bioreactors-10-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "bioreactors-10-card-2",
+      "lesson_id": "bioreactors-10",
+      "front": "Particle size against eddy size",
+      "back": "Cells much smaller than η_K see viscous shear; microcarriers and aggregates larger than η_K are exposed to eddies of their own size. Thresholds are empirical.",
+      "objective_ids": [
+        "bioreactors-10-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "bioreactors-10-card-3",
+      "lesson_id": "bioreactors-10",
+      "front": "Average and local",
+      "back": "Dissipation is concentrated near the impeller; use the local value, with exposure time and frequency, not the average.",
+      "objective_ids": [
+        "bioreactors-10-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "bioreactors-10-card-4",
+      "lesson_id": "bioreactors-10",
+      "front": "Tip speed is a poor proxy",
+      "back": "In geometric similarity ε_max ∝ N³D² ∝ P/V, so constant P/V keeps the local eddy scale though the tip speed rises; bubbles damage cells separately.",
+      "objective_ids": [
+        "bioreactors-10-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "bioreactors-11-card-1",
+      "lesson_id": "bioreactors-11",
+      "front": "Required kLa",
+      "back": "OUR = qX; kLa_req = OUR/(C* − C_set). It grows as e^(μt) with the culture.",
+      "objective_ids": [
+        "bioreactors-11-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "bioreactors-11-card-2",
+      "lesson_id": "bioreactors-11",
+      "front": "Reaching the limit",
+      "back": "The vessel reaches kLa_max when e^(μt) = kLa_max/kLa_req0, so t = ln(kLa_max/kLa_req0)/μ.",
+      "objective_ids": [
+        "bioreactors-11-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "bioreactors-11-card-3",
+      "lesson_id": "bioreactors-11",
+      "front": "Extending the limit",
+      "back": "Oxygen enrichment (higher C*), a lower setpoint or a higher kLa each extend the limit; each moves a hazard (oxidative stress, less margin, shear and foam).",
+      "objective_ids": [
+        "bioreactors-11-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "bioreactors-11-card-4",
+      "lesson_id": "bioreactors-11",
+      "front": "Time constant and sensor lag",
+      "back": "The dissolved oxygen relaxes with 1/kLa; sensor lag matters when kLa times the probe response time is not small. Steady value C_ss = C* − OUR/kLa.",
+      "objective_ids": [
+        "bioreactors-11-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "bioreactors-12-card-1",
+      "lesson_id": "bioreactors-12",
+      "front": "Main effects",
+      "back": "Effect = mean response at the high level − mean at the low level, over all runs; every run contributes to every effect.",
+      "objective_ids": [
+        "bioreactors-12-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "bioreactors-12-card-2",
+      "lesson_id": "bioreactors-12",
+      "front": "Interactions",
+      "back": "AC = half the difference between the effect of A at high C and at low C; one-factor-at-a-time studies cannot see interactions.",
+      "objective_ids": [
+        "bioreactors-12-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "bioreactors-12-card-3",
+      "lesson_id": "bioreactors-12",
+      "front": "Noise and curvature",
+      "back": "Center points give s (with n − 1 degrees of freedom); SE(effect) = 2s/√N; curvature = center mean − factorial mean, with SE s√(1/N + 1/n_c).",
+      "objective_ids": [
+        "bioreactors-12-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "bioreactors-12-card-4",
+      "lesson_id": "bioreactors-12",
+      "front": "Fractions and replication",
+      "back": "2^k runs for k factors; a half fraction aliases effects (I = ABCD: A with BCD); randomize order, block by day or batch, and replicate independent cultures.",
+      "objective_ids": [
+        "bioreactors-12-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "bioreactors-lab1-0",
+      "lesson_id": "bioreactors-lab-01",
+      "front": "Summarizing gassing-out runs",
+      "back": "Count the independent runs and average the dissolved-oxygen readings at each time and speed; the run is the replicate.",
+      "objective_ids": [
+        "bioreactors-lab-01-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "bioreactors-lab1-1",
+      "lesson_id": "bioreactors-lab-01",
+      "front": "kLa from the curve",
+      "back": "ln(1 − C/C*) = −kLa t, with C in the same units as C*; use the time in hours for kLa per hour.",
+      "objective_ids": [
+        "bioreactors-lab-01-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "bioreactors-lab1-2",
+      "lesson_id": "bioreactors-lab-01",
+      "front": "Speed dependence",
+      "back": "If kLa ∝ N^a and P/V ∝ N³, then kLa ∝ (P/V)^(a/3); a ≈ 1.5 means a square-root dependence on power per volume.",
+      "objective_ids": [
+        "bioreactors-lab-01-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "bioreactors-lab1-3",
+      "lesson_id": "bioreactors-lab-01",
+      "front": "Limits of the test",
+      "back": "A cell-free test is a starting estimate; check kLa × τ_probe is small, and remember that cells, antifoam, medium and gas flow change kLa.",
+      "objective_ids": [
+        "bioreactors-lab-01-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "bioreactors-13-card-1",
+      "lesson_id": "bioreactors-13",
+      "front": "Oxygen excursion",
+      "back": "In an unsupplied region DO falls at the uptake: ΔC = OUR × t; time to the critical level = (C_bulk − C_crit)/OUR; Da = OUR t_mix/C_bulk.",
+      "objective_ids": [
+        "bioreactors-13-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "bioreactors-13-card-2",
+      "lesson_id": "bioreactors-13",
+      "front": "Scale-down model",
+      "back": "Match the cell-level excursion (recirculation through an unsupplied region with the large-scale mixing time) at the same density, uptake and medium; keep everything else matched.",
+      "objective_ids": [
+        "bioreactors-13-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "bioreactors-13-card-3",
+      "lesson_id": "bioreactors-13",
+      "front": "Environment by passage",
+      "back": "Cross environment (loop or control) with passage (early or late): the loop effect tests mixing, the passage effect in the control tests instability, and the interaction tests sensitivity.",
+      "objective_ids": [
+        "bioreactors-13-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "bioreactors-13-card-4",
+      "lesson_id": "bioreactors-13",
+      "front": "Replication and sampling",
+      "back": "The independent culture is the replicate; check n with the exact t power; sample at several positions and times, calibrate methods and count blind.",
+      "objective_ids": [
+        "bioreactors-13-objective-3"
+      ],
+      "license": "CC-BY-4.0"
     }
   ]
 }

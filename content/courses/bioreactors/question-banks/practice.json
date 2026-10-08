@@ -625,6 +625,2551 @@
         "kind": "original",
         "modifications": []
       }
+    },
+    {
+      "id": "bioreactors-7:growth-rate",
+      "type": "numeric",
+      "prompt": "With μ_max = 0.04 per hour and K_s = 0.5 mM, what is the specific growth rate at a glucose concentration of 5 mM? Enter the rate per hour, number only.",
+      "points": 1,
+      "objective_ids": [
+        "bioreactors-7-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0.03636,
+        "unit": "",
+        "tolerance": 0.0005,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use μ = μ_max S/(K_s + S).",
+        "solution": "μ = 0.04 × 5/(0.5 + 5) = 0.0364 per hour.",
+        "lesson_ids": [
+          "bioreactors-7"
+        ],
+        "misconception_ids": [
+          "monod-as-linear"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "bioreactors-7:nutrient-for-90",
+      "type": "numeric",
+      "prompt": "What glucose concentration (mM) gives 90% of μ_max when K_s = 0.5 mM? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "bioreactors-7-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 4.5,
+        "unit": "",
+        "tolerance": 0.02,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Solve 0.9 = S/(K_s + S) for S.",
+        "solution": "S = 0.9 K_s/0.1 = 9 K_s = 4.5 mM.",
+        "lesson_ids": [
+          "bioreactors-7"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "bioreactors-7:doubling-time",
+      "type": "numeric",
+      "prompt": "What is the doubling time, in hours, at a glucose concentration of 5 mM (μ = 0.0364 per hour)? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "bioreactors-7-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 19.062,
+        "unit": "",
+        "tolerance": 0.1,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "The doubling time is ln 2 divided by the growth rate.",
+        "solution": "t_d = ln 2/0.0364 = 19.1 h, compared with 17.3 h at saturation.",
+        "lesson_ids": [
+          "bioreactors-7"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "bioreactors-7:max-cell-density",
+      "type": "numeric",
+      "prompt": "A batch starts with 2.0 × 10⁵ cells/mL and 20 mM glucose, and growth stops at 1 mM. With a yield of 1.5 × 10⁵ cells/mL per mM, what is the maximum density, in units of 10⁶ cells/mL? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "bioreactors-7-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 3.05,
+        "unit": "",
+        "tolerance": 0.01,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Add the cells made from the glucose used to the starting cells.",
+        "solution": "2.0 × 10⁵ + 1.5 × 10⁵ × 19 = 3.05 × 10⁶ cells/mL.",
+        "lesson_ids": [
+          "bioreactors-7"
+        ],
+        "misconception_ids": [
+          "yield-prediction"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "bioreactors-7:minimum-time",
+      "type": "numeric",
+      "prompt": "The density rises from 2.0 × 10⁵ to 3.05 × 10⁶ cells/mL at the maximum rate μ_max = 0.04 per hour throughout. What is the minimum time in hours? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "bioreactors-7-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 68.114,
+        "unit": "",
+        "tolerance": 0.3,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Time = ln(fold increase)/μ.",
+        "solution": "ln(15.25)/0.04 = 68.1 h, a lower bound.",
+        "lesson_ids": [
+          "bioreactors-7"
+        ],
+        "misconception_ids": [
+          "exponential-forever"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "bioreactors-7:doubled-glucose",
+      "type": "numeric",
+      "prompt": "The starting glucose is doubled to 40 mM (same X₀, same stop at 1 mM). What is the maximum density in units of 10⁶ cells/mL? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "bioreactors-7-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 6.05,
+        "unit": "",
+        "tolerance": 0.01,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "The glucose consumed is S₀ − S_min; X₀ and the stopping level stay the same.",
+        "solution": "2.0 × 10⁵ + 1.5 × 10⁵ × 39 = 6.05 × 10⁶ cells/mL, about double the 3.05 × 10⁶ of the yield limit, if nothing else stops growth first.",
+        "lesson_ids": [
+          "bioreactors-7"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "bioreactors-7:specific-uptake",
+      "type": "numeric",
+      "prompt": "At μ = 0.04 per hour and a yield of 1.5 × 10⁵ cells/mL per mM (that is 1.5 × 10⁸ cells per mmol), what is the specific glucose uptake in units of 10⁻¹⁰ mmol/(cell·h)? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "bioreactors-7-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 2.6667,
+        "unit": "",
+        "tolerance": 0.02,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Specific uptake = μ / yield, with the yield in cells per mmol.",
+        "solution": "q = 0.04/(1.5 × 10⁸) = 2.67 × 10⁻¹⁰ mmol/(cell·h).",
+        "lesson_ids": [
+          "bioreactors-7"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "bioreactors-7:model-statements",
+      "type": "multiple_select",
+      "prompt": "Which statements about growth kinetics in batch culture are appropriate? Select all that apply.",
+      "points": 2,
+      "objective_ids": [
+        "bioreactors-7-objective-3"
+      ],
+      "options": [
+        "The minimum time computed at μ_max throughout is a lower bound, because of the lag and the deceleration.",
+        "The growth rate falls only when the limiting nutrient approaches K_s, so a culture fed well above K_s grows at nearly its maximum rate.",
+        "A one-nutrient Monod model with constant yield describes animal cell cultures completely.",
+        "The yield-limited maximum density is an upper bound if lactate, ammonia or a second nutrient stops growth first.",
+        "Doubling the starting glucose always doubles the density the culture reaches."
+      ],
+      "solution_spec": {
+        "answer": [
+          0,
+          1,
+          3
+        ],
+        "partial_credit": "correct-minus-incorrect-clamped-v1"
+      },
+      "feedback": {
+        "hint": "Check what limits growth and which assumptions the calculation makes.",
+        "solution": "Rates saturate with the nutrient, the yield-limited density is an upper bound, and the minimum time ignores lag and deceleration. Doubling the nutrient doubles only the yield limit, not necessarily the density reached, since another factor can stop growth first, and the model is a simplification.",
+        "lesson_ids": [
+          "bioreactors-7"
+        ],
+        "misconception_ids": [
+          "yield-prediction",
+          "monod-as-linear"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "bioreactors-8:washout-rate",
+      "type": "numeric",
+      "prompt": "A chemostat is fed 20 mM glucose, with μ_max = 0.04 per hour and K_s = 0.5 mM. What is the critical dilution rate, in per hour? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "bioreactors-8-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0.03902,
+        "unit": "",
+        "tolerance": 0.0005,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Set S = S₀ in the Monod equation.",
+        "solution": "D_crit = 0.04 × 20/(0.5 + 20) = 0.0390 per hour.",
+        "lesson_ids": [
+          "bioreactors-8"
+        ],
+        "misconception_ids": [
+          "mumax-as-washout"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "bioreactors-8:steady-nutrient",
+      "type": "numeric",
+      "prompt": "At a dilution rate of 0.02 per hour (μ_max = 0.04, K_s = 0.5 mM), what is the steady-state glucose concentration in mM? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "bioreactors-8-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0.5,
+        "unit": "",
+        "tolerance": 0.01,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "At steady state μ = D; solve Monod for S.",
+        "solution": "S_ss = 0.02 × 0.5/(0.04 − 0.02) = 0.50 mM.",
+        "lesson_ids": [
+          "bioreactors-8"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "bioreactors-8:steady-cells",
+      "type": "numeric",
+      "prompt": "With S_ss = 0.50 mM, S₀ = 20 mM and a yield of 1.5 × 10⁵ cells/mL per mM, what is the steady-state cell density in units of 10⁶ cells/mL? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "bioreactors-8-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 2.925,
+        "unit": "",
+        "tolerance": 0.005,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "X_ss = Y (S₀ − S_ss).",
+        "solution": "1.5 × 10⁵ × (20 − 0.50) = 2.925 × 10⁶ cells/mL.",
+        "lesson_ids": [
+          "bioreactors-8"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "bioreactors-8:output",
+      "type": "numeric",
+      "prompt": "At D = 0.03 per hour the steady-state cell density is 2.775 × 10⁶ cells/mL. What is the cell output D X_ss in units of 10⁴ cells/(mL·h)? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "bioreactors-8-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 8.325,
+        "unit": "",
+        "tolerance": 0.05,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Multiply the dilution rate by the cell density.",
+        "solution": "0.03 × 2,775,000 = 83,250 cells/(mL·h), or 8.32 × 10⁴.",
+        "lesson_ids": [
+          "bioreactors-8"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "bioreactors-8:optimal-dilution",
+      "type": "numeric",
+      "prompt": "What dilution rate maximizes the cell output, using D_opt = μ_max (1 − √(K_s/(K_s + S₀))) with μ_max = 0.04, K_s = 0.5 mM and S₀ = 20 mM? Enter the number only (per hour).",
+      "points": 1,
+      "objective_ids": [
+        "bioreactors-8-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0.03375,
+        "unit": "",
+        "tolerance": 0.0005,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Evaluate the square root first.",
+        "solution": "D_opt = 0.04 × (1 − √(0.5/20.5)) = 0.0338 per hour, only 0.005 below D_crit.",
+        "lesson_ids": [
+          "bioreactors-8"
+        ],
+        "misconception_ids": [
+          "optimum-without-margin"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "bioreactors-8:perfusion-rate",
+      "type": "numeric",
+      "prompt": "A perfused culture holds 5.0 × 10⁶ cells/mL and is fed 0.04 vessel volumes per hour. What is the cell-specific perfusion rate in pL/(cell·day)? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "bioreactors-8-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 192.0,
+        "unit": "",
+        "tolerance": 0.5,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Convert per hour to per day, divide by the cell density and convert mL to pL (1 mL = 10⁹ pL).",
+        "solution": "0.04 × 24/5.0 × 10⁶ mL/(cell·day) = 192 pL/(cell·day).",
+        "lesson_ids": [
+          "bioreactors-8"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "bioreactors-8:minimum-perfusion",
+      "type": "numeric",
+      "prompt": "Each cell uses 2.0 × 10⁻¹⁰ mmol glucose per hour. The feed has 25 mM glucose and at most 20 mM may be consumed. What is the minimum cell-specific perfusion rate in pL/(cell·day)? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "bioreactors-8-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 240.0,
+        "unit": "",
+        "tolerance": 1.0,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Volume per cell per hour = uptake/(allowed consumption); convert mmol/L to mmol/mL and hours to days.",
+        "solution": "2.0 × 10⁻¹⁰/(20 × 10⁻³ mmol/mL) × 24 = 240 pL/(cell·day).",
+        "lesson_ids": [
+          "bioreactors-8"
+        ],
+        "misconception_ids": [
+          "perfect-retention"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "bioreactors-8:continuous-statements",
+      "type": "multiple_select",
+      "prompt": "Which statements about continuous and perfused culture are appropriate? Select all that apply.",
+      "points": 2,
+      "objective_ids": [
+        "bioreactors-8-objective-3"
+      ],
+      "options": [
+        "Operating at the dilution rate of maximum output leaves little margin from washout.",
+        "A perfusion device retains every cell, so perfusion cultures cannot wash out.",
+        "The critical dilution rate equals μ_max.",
+        "Above the critical dilution rate a chemostat washes out, even at the highest nutrient concentration.",
+        "The steady-state cell density of a chemostat falls as the dilution rate rises."
+      ],
+      "solution_spec": {
+        "answer": [
+          0,
+          3,
+          4
+        ],
+        "partial_credit": "correct-minus-incorrect-clamped-v1"
+      },
+      "feedback": {
+        "hint": "Link each statement to the steady-state equations.",
+        "solution": "Washout occurs above D_crit, X_ss falls as D rises, and the maximum output is near washout. Retention is never perfect, and D_crit is below μ_max because the feed concentration is finite.",
+        "lesson_ids": [
+          "bioreactors-8"
+        ],
+        "misconception_ids": [
+          "perfect-retention",
+          "mumax-as-washout",
+          "optimum-without-margin"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "bioreactors-9:power-input",
+      "type": "numeric",
+      "prompt": "A turbulent vessel has N_p = 1.5, ρ = 1000 kg/m³, impeller diameter 0.06 m and speed 200 rpm. Using P = N_p ρ N³ D⁵ with N in revolutions per second, what is the power? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "bioreactors-9-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0.0432,
+        "unit": "W",
+        "tolerance": 0.0005,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Convert rpm to revolutions per second first.",
+        "solution": "N = 3.333 rev/s; P = 1.5 × 1000 × 3.333³ × 0.06⁵ = 0.0432 W.",
+        "lesson_ids": [
+          "bioreactors-9"
+        ],
+        "misconception_ids": [
+          "rpm-in-power"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "bioreactors-9:power-per-volume",
+      "type": "numeric",
+      "prompt": "The power is 0.0432 W in a 2 L vessel. What is the power per volume in W/m³? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "bioreactors-9-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 21.6,
+        "unit": "",
+        "tolerance": 0.1,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Convert litres to cubic metres (1 L = 10⁻³ m³).",
+        "solution": "0.0432/0.002 = 21.6 W/m³.",
+        "lesson_ids": [
+          "bioreactors-9"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "bioreactors-9:reynolds-number",
+      "type": "numeric",
+      "prompt": "With ρ = 1000 kg/m³, N = 3.33 rev/s, D = 0.06 m and μ = 0.70 mPa·s, what is the Reynolds number ρND²/μ? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "bioreactors-9-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 17142.9,
+        "unit": "",
+        "tolerance": 50,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use μ in Pa·s (0.70 mPa·s = 0.00070 Pa·s).",
+        "solution": "1000 × 3.33 × 0.06² / 0.00070 = 17,143, well into the turbulent range.",
+        "lesson_ids": [
+          "bioreactors-9"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "bioreactors-9:speed-at-constant-pv",
+      "type": "numeric",
+      "prompt": "The vessel is scaled by 10 in every linear dimension at constant power per volume (N ∝ D^(−2/3)). The lab speed is 200 rpm. What is the new speed in rpm? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "bioreactors-9-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 43.089,
+        "unit": "",
+        "tolerance": 0.3,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Multiply the speed by 10 raised to −2/3.",
+        "solution": "200 × 10^(−2/3) = 43.1 rpm.",
+        "lesson_ids": [
+          "bioreactors-9"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "bioreactors-9:tip-speed-at-scale",
+      "type": "numeric",
+      "prompt": "At the new speed (43.1 rpm) and impeller diameter 0.6 m, what is the tip speed πND in m/s? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "bioreactors-9-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 1.3537,
+        "unit": "m/s",
+        "tolerance": 0.02,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Convert rpm to revolutions per second and multiply by πD.",
+        "solution": "π × 0.718 × 0.6 = 1.35 m/s, 2.15 times the lab value.",
+        "lesson_ids": [
+          "bioreactors-9"
+        ],
+        "misconception_ids": [
+          "pv-keeps-shear"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "bioreactors-9:mixing-time-at-scale",
+      "type": "numeric",
+      "prompt": "With N t_mix = 20, what is the mixing time in seconds at the new speed of 0.718 rev/s? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "bioreactors-9-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 27.85,
+        "unit": "",
+        "tolerance": 0.3,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Divide the dimensionless mixing time by the speed in revolutions per second.",
+        "solution": "20/0.718 = 27.8 s, against 6.0 s at lab scale.",
+        "lesson_ids": [
+          "bioreactors-9"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "bioreactors-9:pv-at-constant-speed",
+      "type": "numeric",
+      "prompt": "If the 10-fold scale-up kept the speed unchanged (200 rpm) with D = 0.6 m, by what factor would the power per volume rise (P/V ∝ N³D²)? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "bioreactors-9-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 100.0,
+        "unit": "",
+        "tolerance": 0.5,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "The speed is unchanged and D² grows by 100.",
+        "solution": "P/V rises by 100 to 2,160 W/m³, with a tip speed of 6.28 m/s.",
+        "lesson_ids": [
+          "bioreactors-9"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "bioreactors-9:scale-up-statements",
+      "type": "multiple_select",
+      "prompt": "Which statements about scale-up are appropriate? Select all that apply.",
+      "points": 2,
+      "objective_ids": [
+        "bioreactors-9-objective-3"
+      ],
+      "options": [
+        "Constant tip speed also keeps the power per volume constant.",
+        "A scale-down model reproduces the mixing time of the large vessel in a small one.",
+        "At constant power per volume, the tip speed and the mixing time both rise on scale-up.",
+        "No single stirrer speed keeps power per volume, tip speed and mixing time all constant.",
+        "A culture that is well mixed in 2 L is therefore well mixed in 2,000 L."
+      ],
+      "solution_spec": {
+        "answer": [
+          1,
+          2,
+          3
+        ],
+        "partial_credit": "correct-minus-incorrect-clamped-v1"
+      },
+      "feedback": {
+        "hint": "Use the scaling table: each criterion changes the others.",
+        "solution": "Each criterion changes the others, so scale-up is a compromise; scale-down models test the consequences. Constant tip speed lowers P/V, and gradients appear in large vessels.",
+        "lesson_ids": [
+          "bioreactors-9"
+        ],
+        "misconception_ids": [
+          "pv-keeps-shear",
+          "well-mixed-assumed"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "bioreactors-10:dissipation",
+      "type": "numeric",
+      "prompt": "A vessel is stirred with P/V = 21.6 W/m³ in a medium of density 1000 kg/m³. What is the energy dissipation rate ε = (P/V)/ρ in W/kg? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "bioreactors-10-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0.0216,
+        "unit": "",
+        "tolerance": 0.0005,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Divide the power per volume by the density.",
+        "solution": "ε = 21.6/1000 = 0.0216 W/kg.",
+        "lesson_ids": [
+          "bioreactors-10"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "bioreactors-10:kolmogorov-scale",
+      "type": "numeric",
+      "prompt": "With ε = 0.0216 W/kg and ν = 0.70 × 10⁻⁶ m²/s, what is the Kolmogorov scale η_K = (ν³/ε)^(1/4) in μm? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "bioreactors-10-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 63.126,
+        "unit": "μm",
+        "tolerance": 0.3,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Work in SI units and convert metres to micrometres at the end.",
+        "solution": "η_K = (3.43 × 10⁻¹⁹/0.0216)^(1/4) m = 63.1 μm.",
+        "lesson_ids": [
+          "bioreactors-10"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "bioreactors-10:local-scale",
+      "type": "numeric",
+      "prompt": "Near the impeller the dissipation is 100 times the average (2.16 W/kg). What is the Kolmogorov scale there, in μm? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "bioreactors-10-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 19.962,
+        "unit": "μm",
+        "tolerance": 0.3,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "A hundredfold rise in ε divides η_K by 100^(1/4).",
+        "solution": "η_K = 63.1 × 100^(−1/4) = 20.0 μm.",
+        "lesson_ids": [
+          "bioreactors-10"
+        ],
+        "misconception_ids": [
+          "average-for-local"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "bioreactors-10:kolmogorov-stress",
+      "type": "numeric",
+      "prompt": "At ε = 2.16 W/kg, μ = 0.00070 Pa·s and ν = 0.70 × 10⁻⁶ m²/s, what is the stress at the Kolmogorov scale, τ = μ(ε/ν)^(1/2)? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "bioreactors-10-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 1.2296,
+        "unit": "Pa",
+        "tolerance": 0.02,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Divide ε by ν, take the square root and multiply by μ.",
+        "solution": "τ = 0.00070 × (2.16/(7.0 × 10⁻⁷))^(1/2) = 1.23 Pa.",
+        "lesson_ids": [
+          "bioreactors-10"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "bioreactors-10:ratio-to-carrier",
+      "type": "numeric",
+      "prompt": "Microcarriers are 150 μm across and the local Kolmogorov scale is 20.0 μm. What is the ratio η_K/d? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "bioreactors-10-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0.1331,
+        "unit": "",
+        "tolerance": 0.005,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Divide the eddy size by the carrier diameter.",
+        "solution": "20.0/150 = 0.13: the eddies are well below the carrier size.",
+        "lesson_ids": [
+          "bioreactors-10"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "bioreactors-10:allowed-power",
+      "type": "numeric",
+      "prompt": "To keep the local Kolmogorov scale at or above 50 μm, the local ε must be at most ν³/η⁴ = 0.0549 W/kg. With a local factor of 100 and ρ = 1000 kg/m³, what average power per volume does this allow? Enter the number in W/m³.",
+      "points": 1,
+      "objective_ids": [
+        "bioreactors-10-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0.5488,
+        "unit": "",
+        "tolerance": 0.02,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Average ε is local ε divided by the factor; multiply by the density to get W/m³.",
+        "solution": "P/V = 0.0549 × 1000/100 = 0.55 W/m³.",
+        "lesson_ids": [
+          "bioreactors-10"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "bioreactors-10:scale-shrinks",
+      "type": "numeric",
+      "prompt": "By what factor does the Kolmogorov scale change when the dissipation rate rises 100-fold? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "bioreactors-10-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 0.3162,
+        "unit": "",
+        "tolerance": 0.005,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "η_K depends on ε to the power −1/4.",
+        "solution": "100^(−1/4) = 0.316.",
+        "lesson_ids": [
+          "bioreactors-10"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "bioreactors-10:shear-statements",
+      "type": "multiple_select",
+      "prompt": "Which statements about shear and eddies are appropriate? Select all that apply.",
+      "points": 2,
+      "objective_ids": [
+        "bioreactors-10-objective-3"
+      ],
+      "options": [
+        "Tip speed alone determines the stress on a microcarrier.",
+        "Damage depends on the exposure time and frequency as well as on the peak stress.",
+        "Damage thresholds measured in one system apply to every cell line.",
+        "A cell much smaller than the Kolmogorov scale sees mainly viscous shear.",
+        "In geometrically similar vessels, the maximum local dissipation scales with the power per volume, not with the tip speed."
+      ],
+      "solution_spec": {
+        "answer": [
+          1,
+          3,
+          4
+        ],
+        "partial_credit": "correct-minus-incorrect-clamped-v1"
+      },
+      "feedback": {
+        "hint": "Think about which length scale the particle is compared with.",
+        "solution": "Dissipation, not tip speed, sets the eddy size; small cells see viscous shear; exposure matters. Thresholds are system specific, and tip speed does not alone determine stress.",
+        "lesson_ids": [
+          "bioreactors-10"
+        ],
+        "misconception_ids": [
+          "tip-speed-as-shear",
+          "average-for-local"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "bioreactors-11:our-start",
+      "type": "numeric",
+      "prompt": "A culture of 5.0 × 10⁵ cells/mL consumes 2.0 × 10⁻¹⁰ mmol O₂ per cell per hour. What is the oxygen uptake rate in mmol/(L·h)? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "bioreactors-11-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0.1,
+        "unit": "mmol/(L·h)",
+        "tolerance": 0.002,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Convert cells/mL to cells/L (× 1000) before multiplying by the specific uptake.",
+        "solution": "2.0 × 10⁻¹⁰ × 5.0 × 10⁸ = 0.100 mmol/(L·h).",
+        "lesson_ids": [
+          "bioreactors-11"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "bioreactors-11:kla-required",
+      "type": "numeric",
+      "prompt": "To hold the dissolved oxygen at 0.1 mmol/L with C* = 0.2 mmol/L and OUR = 0.100 mmol/(L·h), what kLa is required? Enter the value per hour, number only.",
+      "points": 1,
+      "objective_ids": [
+        "bioreactors-11-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 1.0,
+        "unit": "",
+        "tolerance": 0.02,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "kLa_req = OUR/(C* − C_set).",
+        "solution": "0.100/(0.2 − 0.1) = 1.0 per hour.",
+        "lesson_ids": [
+          "bioreactors-11"
+        ],
+        "misconception_ids": [
+          "saturation-as-driving-force"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "bioreactors-11:time-to-limit",
+      "type": "numeric",
+      "prompt": "The vessel's ceiling is kLa_max = 5.0 per hour, the starting requirement is 1.0 per hour and the culture grows at μ = 0.03 per hour. When does the requirement reach the ceiling? Enter the number of hours.",
+      "points": 1,
+      "objective_ids": [
+        "bioreactors-11-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 53.648,
+        "unit": "",
+        "tolerance": 0.3,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "The requirement grows as e^(μt); solve e^(μt) = ceiling/requirement.",
+        "solution": "t = ln(5)/0.03 = 53.6 h.",
+        "lesson_ids": [
+          "bioreactors-11"
+        ],
+        "misconception_ids": [
+          "capacity-static"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "bioreactors-11:density-at-limit",
+      "type": "numeric",
+      "prompt": "What cell density has the culture reached at that time, starting from 5.0 × 10⁵ cells/mL? Enter the answer in units of 10⁶ cells/mL, number only.",
+      "points": 1,
+      "objective_ids": [
+        "bioreactors-11-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 2.5,
+        "unit": "",
+        "tolerance": 0.02,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "The density grows by the same factor as the requirement.",
+        "solution": "5.0 × 10⁵ × 5 = 2.5 × 10⁶ cells/mL.",
+        "lesson_ids": [
+          "bioreactors-11"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "bioreactors-11:enriched-capacity",
+      "type": "numeric",
+      "prompt": "With oxygen-enriched gas, C* = 0.5 mmol/L. At kLa_max = 5.0 per hour, C_set = 0.1 mmol/L and q = 2.0 × 10⁻¹⁰ mmol/(cell·h), what cell density can the vessel support, in units of 10⁶ cells/mL? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "bioreactors-11-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 10.0,
+        "unit": "",
+        "tolerance": 0.05,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Capacity = kLa_max (C* − C_set); divide by the specific uptake and convert to cells/mL.",
+        "solution": "5.0 × 0.40 = 2.0 mmol/(L·h); /2.0 × 10⁻¹⁰ = 1.0 × 10¹⁰ cells/L, or 10.0 × 10⁶ cells/mL.",
+        "lesson_ids": [
+          "bioreactors-11"
+        ],
+        "misconception_ids": [
+          "enrichment-free"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "bioreactors-11:time-enriched",
+      "type": "numeric",
+      "prompt": "With enrichment the capacity is 2.0 mmol/(L·h) and the starting uptake is 0.100 mmol/(L·h). At μ = 0.03 per hour, when is the capacity reached? Enter the number of hours.",
+      "points": 1,
+      "objective_ids": [
+        "bioreactors-11-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 99.858,
+        "unit": "",
+        "tolerance": 0.3,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Solve e^(μt) = capacity/OUR₀.",
+        "solution": "t = ln(20)/0.03 = 99.9 h.",
+        "lesson_ids": [
+          "bioreactors-11"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "bioreactors-11:oxygen-time-constant",
+      "type": "numeric",
+      "prompt": "The dissolved oxygen relaxes with a time constant 1/kLa. What is it, in minutes, at kLa = 5.0 per hour? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "bioreactors-11-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 12.0,
+        "unit": "",
+        "tolerance": 0.1,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Invert kLa and convert hours to minutes.",
+        "solution": "1/5.0 h = 12 min.",
+        "lesson_ids": [
+          "bioreactors-11"
+        ],
+        "misconception_ids": [
+          "probe-lag-ignored"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "bioreactors-11:control-statements",
+      "type": "multiple_select",
+      "prompt": "Which statements about dissolved-oxygen control are appropriate? Select all that apply.",
+      "points": 2,
+      "objective_ids": [
+        "bioreactors-11-objective-3"
+      ],
+      "options": [
+        "Setting the setpoint equal to the critical level leaves ample margin.",
+        "Oxygen-enriched gas extends the limit by raising the driving force, but has costs and hazards of its own.",
+        "A cascade puts the least harmful actuator first and adds others as the demand rises.",
+        "A probe's response time can be ignored at any kLa.",
+        "The required kLa grows exponentially when the culture does, so a fixed vessel eventually reaches its limit."
+      ],
+      "solution_spec": {
+        "answer": [
+          1,
+          2,
+          4
+        ],
+        "partial_credit": "correct-minus-incorrect-clamped-v1"
+      },
+      "feedback": {
+        "hint": "Think about demand over time and about what each actuator costs.",
+        "solution": "Demand rises with the culture, enrichment raises C*, and a cascade orders the actuators. Probe lag matters when kLa times the response time is not small, and a setpoint at the critical level leaves no margin.",
+        "lesson_ids": [
+          "bioreactors-11"
+        ],
+        "misconception_ids": [
+          "capacity-static",
+          "probe-lag-ignored",
+          "enrichment-free"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "bioreactors-12:effect-temperature",
+      "type": "numeric",
+      "prompt": "In the 2³ experiment the four runs at 37.0 °C average 4.400 × 10⁶ cells/mL and the four at 36.0 °C average 3.325. What is the main effect of temperature? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "bioreactors-12-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 1.075,
+        "unit": "",
+        "tolerance": 0.005,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Subtract the mean at the low level from the mean at the high level.",
+        "solution": "4.400 − 3.325 = 1.075 × 10⁶ cells/mL.",
+        "lesson_ids": [
+          "bioreactors-12"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "bioreactors-12:effect-oxygen",
+      "type": "numeric",
+      "prompt": "Using the run table (response in 10⁶ cells/mL), what is the main effect of the dissolved-oxygen setpoint C? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "bioreactors-12-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0.525,
+        "unit": "",
+        "tolerance": 0.005,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Average the four runs with C high (c, ac, bc, abc) and the four with C low, and subtract.",
+        "solution": "Mean at high C = 4.125, mean at low C = 3.600; C = 0.525.",
+        "lesson_ids": [
+          "bioreactors-12"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "bioreactors-12:interaction-ac",
+      "type": "numeric",
+      "prompt": "Temperature raises the density by 1.35 at high C and by 0.80 at low C. What is the interaction AC, half the difference? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "bioreactors-12-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0.275,
+        "unit": "",
+        "tolerance": 0.005,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Subtract the two effects of A and divide by 2.",
+        "solution": "(1.35 − 0.80)/2 = 0.275.",
+        "lesson_ids": [
+          "bioreactors-12"
+        ],
+        "misconception_ids": [
+          "ofat-sufficient"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "bioreactors-12:effect-standard-error",
+      "type": "numeric",
+      "prompt": "Three center-point runs (4.2, 4.0, 4.1) give s = 0.10. For a design of N = 8 runs, what is the standard error of an effect, 2s/√N? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "bioreactors-12-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0.07071,
+        "unit": "",
+        "tolerance": 0.002,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Compute 2s first, then divide by the square root of N.",
+        "solution": "2 × 0.10/√8 = 0.0707.",
+        "lesson_ids": [
+          "bioreactors-12"
+        ],
+        "misconception_ids": [
+          "noise-from-samples"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "bioreactors-12:curvature",
+      "type": "numeric",
+      "prompt": "The center runs average 4.10 and the 8 factorial runs average 3.8625. What is the curvature estimate (center mean minus factorial mean)? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "bioreactors-12-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0.2375,
+        "unit": "",
+        "tolerance": 0.005,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Subtract the factorial mean from the center mean.",
+        "solution": "4.10 − 3.8625 = 0.2375, about 3.5 standard errors.",
+        "lesson_ids": [
+          "bioreactors-12"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "bioreactors-12:runs-needed",
+      "type": "numeric",
+      "prompt": "How many runs does a full two-level factorial design with four factors need (no replicates)? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "bioreactors-12-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 16,
+        "unit": "",
+        "tolerance": 0,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "A full two-level design needs 2 to the power of the number of factors.",
+        "solution": "2⁴ = 16 runs; the half fraction 2⁴⁻¹ needs 8.",
+        "lesson_ids": [
+          "bioreactors-12"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "bioreactors-12:ofat-precision",
+      "type": "numeric",
+      "prompt": "A factorial design estimates each effect from four runs per level (standard error 0.707σ), while a duplicated one-factor-at-a-time design with the same eight runs uses two runs per level (standard error σ). By what factor is the one-factor-at-a-time standard error larger? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "bioreactors-12-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 1.4142,
+        "unit": "",
+        "tolerance": 0.01,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Divide σ by 0.707σ.",
+        "solution": "1/0.707 = 1.414 = √2.",
+        "lesson_ids": [
+          "bioreactors-12"
+        ],
+        "misconception_ids": [
+          "ofat-sufficient"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "bioreactors-12:design-statements",
+      "type": "multiple_select",
+      "prompt": "Which statements about factorial experiments are appropriate? Select all that apply.",
+      "points": 2,
+      "objective_ids": [
+        "bioreactors-12-objective-3"
+      ],
+      "options": [
+        "Randomizing the run order protects against drift in medium lots and instruments.",
+        "Noise should be estimated from independent runs, such as replicated center points, not from repeated samples of one culture.",
+        "A one-factor-at-a-time study shows whether factors interact.",
+        "A half fraction aliases effects, so the aliasing should be written down before the data are collected.",
+        "An interaction means that the effect of one factor depends on the level of another."
+      ],
+      "solution_spec": {
+        "answer": [
+          0,
+          1,
+          3,
+          4
+        ],
+        "partial_credit": "correct-minus-incorrect-clamped-v1"
+      },
+      "feedback": {
+        "hint": "Think about what each design can and cannot separate.",
+        "solution": "Interactions, independent noise estimates, randomization and a recorded alias structure are all part of a sound design. A one-factor-at-a-time study cannot reveal interactions.",
+        "lesson_ids": [
+          "bioreactors-12"
+        ],
+        "misconception_ids": [
+          "ofat-sufficient",
+          "noise-from-samples"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "bioreactors-lab1:curve-summary",
+      "type": "file_upload",
+      "prompt": "Using the synthetic gassing-out CSV, upload a summary table with one row per agitation speed (key column `speed`: rpm200, rpm300 and rpm400) and columns `runs` (the number of runs), `do_10` (mean dissolved oxygen in percent of air saturation at 10 min) and `do_30` (mean at 30 min).",
+      "points": 9,
+      "objective_ids": [
+        "bioreactors-lab-01-objective-1"
+      ],
+      "solution_spec": {
+        "accepted_media_types": [
+          "text/csv"
+        ],
+        "max_bytes": 32768,
+        "validation_spec": {
+          "format": "csv-numeric-table-v1",
+          "delimiter": ",",
+          "key_column": "speed",
+          "columns": [
+            "speed",
+            "runs",
+            "do_10",
+            "do_30"
+          ],
+          "checks": [
+            {
+              "id": "rpm200-runs",
+              "row_id": "rpm200",
+              "column": "runs",
+              "type": "numeric",
+              "answer": 3.0,
+              "unit": "",
+              "tolerance": 0,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "count",
+                "values": [
+                  28.0,
+                  27.8,
+                  29.2
+                ]
+              }
+            },
+            {
+              "id": "rpm200-do_10",
+              "row_id": "rpm200",
+              "column": "do_10",
+              "type": "numeric",
+              "answer": 28.3333,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  28.0,
+                  27.8,
+                  29.2
+                ]
+              }
+            },
+            {
+              "id": "rpm200-do_30",
+              "row_id": "rpm200",
+              "column": "do_30",
+              "type": "numeric",
+              "answer": 63.2,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  62.9,
+                  62.6,
+                  64.1
+                ]
+              }
+            },
+            {
+              "id": "rpm300-runs",
+              "row_id": "rpm300",
+              "column": "runs",
+              "type": "numeric",
+              "answer": 3.0,
+              "unit": "",
+              "tolerance": 0,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "count",
+                "values": [
+                  46.7,
+                  45.5,
+                  45.2
+                ]
+              }
+            },
+            {
+              "id": "rpm300-do_10",
+              "row_id": "rpm300",
+              "column": "do_10",
+              "type": "numeric",
+              "answer": 45.8,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  46.7,
+                  45.5,
+                  45.2
+                ]
+              }
+            },
+            {
+              "id": "rpm300-do_30",
+              "row_id": "rpm300",
+              "column": "do_30",
+              "type": "numeric",
+              "answer": 84.1,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  85.0,
+                  83.8,
+                  83.5
+                ]
+              }
+            },
+            {
+              "id": "rpm400-runs",
+              "row_id": "rpm400",
+              "column": "runs",
+              "type": "numeric",
+              "answer": 3.0,
+              "unit": "",
+              "tolerance": 0,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "count",
+                "values": [
+                  60.4,
+                  62.0,
+                  60.8
+                ]
+              }
+            },
+            {
+              "id": "rpm400-do_10",
+              "row_id": "rpm400",
+              "column": "do_10",
+              "type": "numeric",
+              "answer": 61.0667,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  60.4,
+                  62.0,
+                  60.8
+                ]
+              }
+            },
+            {
+              "id": "rpm400-do_30",
+              "row_id": "rpm400",
+              "column": "do_30",
+              "type": "numeric",
+              "answer": 94.1,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  93.5,
+                  95.0,
+                  93.8
+                ]
+              }
+            }
+          ]
+        },
+        "rubric": [
+          {
+            "id": "rpm200-runs",
+            "criterion": "rpm200: runs",
+            "points": 1,
+            "evidence": [
+              "Recomputes runs for rpm200 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "rpm200-do_10",
+            "criterion": "rpm200: do_10",
+            "points": 1,
+            "evidence": [
+              "Recomputes do_10 for rpm200 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "rpm200-do_30",
+            "criterion": "rpm200: do_30",
+            "points": 1,
+            "evidence": [
+              "Recomputes do_30 for rpm200 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "rpm300-runs",
+            "criterion": "rpm300: runs",
+            "points": 1,
+            "evidence": [
+              "Recomputes runs for rpm300 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "rpm300-do_10",
+            "criterion": "rpm300: do_10",
+            "points": 1,
+            "evidence": [
+              "Recomputes do_10 for rpm300 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "rpm300-do_30",
+            "criterion": "rpm300: do_30",
+            "points": 1,
+            "evidence": [
+              "Recomputes do_30 for rpm300 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "rpm400-runs",
+            "criterion": "rpm400: runs",
+            "points": 1,
+            "evidence": [
+              "Recomputes runs for rpm400 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "rpm400-do_10",
+            "criterion": "rpm400: do_10",
+            "points": 1,
+            "evidence": [
+              "Recomputes do_10 for rpm400 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "rpm400-do_30",
+            "criterion": "rpm400: do_30",
+            "points": 1,
+            "evidence": [
+              "Recomputes do_30 for rpm400 from the preparation-level values."
+            ]
+          }
+        ]
+      },
+      "feedback": {
+        "hint": "Filter the CSV by speed and by time, count the runs and average the readings.",
+        "solution": "Each speed has 3 runs. At 10 min the mean readings are 28.3, 45.8 and 61.1%; at 30 min they are 63.2, 84.1 and 94.1%.",
+        "lesson_ids": [
+          "bioreactors-lab-01",
+          "bioreactors-5",
+          "bioreactors-11"
+        ],
+        "misconception_ids": [
+          "runs-as-points"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "bioreactors-lab1:kla-200",
+      "type": "numeric",
+      "prompt": "At 200 rpm the mean dissolved oxygen is 63.2% of air saturation after 30 min. Using ln(1 − C/C*) = −kLa t, what is kLa in per hour? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "bioreactors-lab-01-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 1.9993,
+        "unit": "",
+        "tolerance": 0.06,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Convert 30 min to hours and take the natural logarithm of 1 − C/C*.",
+        "solution": "kLa = −ln(1 − 0.6320)/0.5 h = 2.00 per hour.",
+        "lesson_ids": [
+          "bioreactors-lab-01",
+          "bioreactors-5",
+          "bioreactors-11"
+        ],
+        "misconception_ids": [
+          "percent-as-fraction"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "bioreactors-lab1:kla-400",
+      "type": "numeric",
+      "prompt": "At 400 rpm the mean dissolved oxygen is 61.1% after 10 min. What is kLa in per hour? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "bioreactors-lab-01-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 5.6599,
+        "unit": "",
+        "tolerance": 0.15,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Convert 10 min to hours (1/6 h).",
+        "solution": "kLa = −ln(1 − 0.6107)/(10/60 h) = 5.66 per hour.",
+        "lesson_ids": [
+          "bioreactors-lab-01",
+          "bioreactors-5",
+          "bioreactors-11"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "bioreactors-lab1:speed-exponent",
+      "type": "data_interpretation",
+      "prompt": "Assume kLa ∝ N^a, where N is the agitation speed. Using kLa at 200 rpm and at 400 rpm from your estimates, compute a = ln(kLa₄₀₀/kLa₂₀₀)/ln 2.",
+      "points": 2,
+      "objective_ids": [
+        "bioreactors-lab-01-objective-2"
+      ],
+      "response_fields": [
+        {
+          "id": "value",
+          "type": "numeric",
+          "prompt": "What is a? Report exactly 3 significant figures.",
+          "unit": "",
+          "points": 1
+        },
+        {
+          "id": "inference",
+          "type": "single_choice",
+          "prompt": "What does an exponent of about 1.5 imply for the power input?",
+          "options": [
+            "kLa rises faster than the speed; since the power per volume scales as N³, kLa scales roughly as the square root of P/V.",
+            "kLa is proportional to the speed, so doubling the speed doubles the power.",
+            "kLa is independent of the speed.",
+            "kLa falls as the speed rises."
+          ],
+          "points": 1
+        }
+      ],
+      "solution_spec": {
+        "field_specs": [
+          {
+            "id": "value",
+            "type": "numeric",
+            "answer": 1.5,
+            "unit": "",
+            "tolerance": 0.06,
+            "relative_tolerance": 0,
+            "unit_required": false,
+            "significant_figures": 3,
+            "dimensions": null
+          },
+          {
+            "id": "inference",
+            "type": "single_choice",
+            "answer": 0
+          }
+        ]
+      },
+      "feedback": {
+        "hint": "Take the logarithm of the ratio of the two kLa values and divide by ln 2.",
+        "solution": "a = ln(5.66/2.00)/ln 2 = 1.50. With P/V ∝ N³, kLa ∝ N^1.5 = (N³)^0.5 ∝ (P/V)^0.5.",
+        "lesson_ids": [
+          "bioreactors-lab-01",
+          "bioreactors-5",
+          "bioreactors-11"
+        ],
+        "misconception_ids": [
+          "exponent-as-linear"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "bioreactors-lab1:supportable-density",
+      "type": "numeric",
+      "prompt": "At 400 rpm kLa = 5.66 per hour. With C* = 0.2 mmol/L, a critical level of 0.05 mmol/L and a specific uptake of 2.0 × 10⁻¹⁰ mmol/(cell·h), what cell density can the vessel support, in units of 10⁶ cells/mL? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "bioreactors-lab-01-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 4.245,
+        "unit": "",
+        "tolerance": 0.05,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Capacity = kLa (C* − C_crit); divide by the uptake and convert cells/L to cells/mL.",
+        "solution": "5.66 × 0.15 = 0.849 mmol/(L·h); /(2.0 × 10⁻¹⁰) = 4.245 × 10⁹ cells/L = 4.245 × 10⁶ cells/mL.",
+        "lesson_ids": [
+          "bioreactors-lab-01",
+          "bioreactors-5",
+          "bioreactors-11"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "bioreactors-lab1:probe-lag",
+      "type": "numeric",
+      "prompt": "The dissolved-oxygen probe has a response time of 20 s. At kLa = 5.66 per hour, what is the dimensionless product kLa × τ_p? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "bioreactors-lab-01-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 0.0314,
+        "unit": "",
+        "tolerance": 0.002,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Convert the response time to hours before multiplying.",
+        "solution": "5.66 × 20/3600 = 0.031: small, so the probe follows the curve.",
+        "lesson_ids": [
+          "bioreactors-lab-01",
+          "bioreactors-5",
+          "bioreactors-11"
+        ],
+        "misconception_ids": [
+          "probe-lag-ignored"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "bioreactors-lab1:method-reasoning",
+      "type": "structured",
+      "prompt": "Answer each part about the gassing-out measurement.",
+      "points": 3,
+      "objective_ids": [
+        "bioreactors-lab-01-objective-3"
+      ],
+      "response_fields": [
+        {
+          "id": "linearization",
+          "type": "single_choice",
+          "prompt": "Why is ln(1 − C/C*) plotted against time?",
+          "options": [
+            "For first-order approach to saturation it gives a straight line whose slope is −kLa.",
+            "It makes the readings larger.",
+            "It removes the need to know C*.",
+            "It corrects for the probe response automatically."
+          ],
+          "points": 1
+        },
+        {
+          "id": "replicates",
+          "type": "single_choice",
+          "prompt": "What is the replicate for the kLa at one speed?",
+          "options": [
+            "An independent gassing-out run, each starting from a freshly zeroed vessel.",
+            "Each reading within one run.",
+            "Each time point of the same run.",
+            "Each rpm value."
+          ],
+          "points": 1
+        },
+        {
+          "id": "conditions",
+          "type": "single_choice",
+          "prompt": "What does a cell-free gassing-out kLa not show?",
+          "options": [
+            "The kLa with cells, antifoam, medium components and the gas flow of a real culture, which can differ.",
+            "Any dependence on agitation.",
+            "Whether the probe works.",
+            "The shape of the exponential."
+          ],
+          "points": 1
+        }
+      ],
+      "solution_spec": {
+        "field_specs": [
+          {
+            "id": "linearization",
+            "type": "single_choice",
+            "answer": 0
+          },
+          {
+            "id": "replicates",
+            "type": "single_choice",
+            "answer": 0
+          },
+          {
+            "id": "conditions",
+            "type": "single_choice",
+            "answer": 0
+          }
+        ],
+        "rubric": [
+          {
+            "id": "linearization",
+            "criterion": "Why a logarithmic plot",
+            "points": 1,
+            "evidence": [
+              "States the linearization of the first-order approach."
+            ]
+          },
+          {
+            "id": "replicates",
+            "criterion": "What the replicates are",
+            "points": 1,
+            "evidence": [
+              "Identifies the run, not the reading, as the replicate."
+            ]
+          },
+          {
+            "id": "conditions",
+            "criterion": "What the measurement does not show",
+            "points": 1,
+            "evidence": [
+              "Limits the conclusion to the conditions of the test."
+            ]
+          }
+        ]
+      },
+      "feedback": {
+        "hint": "For each part, ask what the method assumes and which conditions differ in a real culture.",
+        "solution": "The logarithmic plot linearizes a first-order approach, the run is the replicate, and a cell-free test in a given medium and gas flow is only a starting estimate.",
+        "lesson_ids": [
+          "bioreactors-lab-01",
+          "bioreactors-5",
+          "bioreactors-11"
+        ],
+        "misconception_ids": [
+          "runs-as-points",
+          "probe-lag-ignored"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "bioreactors-lab1:supported-conclusions",
+      "type": "multiple_select",
+      "prompt": "Which conclusions follow from this synthetic gassing-out experiment? Select all that apply.",
+      "points": 2,
+      "objective_ids": [
+        "bioreactors-lab-01-objective-3"
+      ],
+      "options": [
+        "kLa rises with the agitation speed, roughly as the speed to the power 1.5, over the range tested.",
+        "At 400 rpm the vessel supports a cell density of about 4 × 10⁶ cells/mL at the stated uptake and critical level.",
+        "The probe lag is small compared with the oxygen time constant at these kLa values.",
+        "The same kLa will hold in a culture with cells and antifoam.",
+        "Three runs per speed prove the exponent exactly."
+      ],
+      "solution_spec": {
+        "answer": [
+          0,
+          1,
+          2
+        ],
+        "partial_credit": "correct-minus-incorrect-clamped-v1"
+      },
+      "feedback": {
+        "hint": "Keep each conclusion inside what three runs per speed without cells can show.",
+        "solution": "The first three follow from the numbers. A cell-free test is a starting estimate for a culture, and three runs cannot prove an exponent exactly.",
+        "lesson_ids": [
+          "bioreactors-lab-01",
+          "bioreactors-5",
+          "bioreactors-11"
+        ],
+        "misconception_ids": [
+          "exponent-as-linear",
+          "probe-lag-ignored"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "bioreactors-13:oxygen-fall",
+      "type": "numeric",
+      "prompt": "A cell spends 120 s in a region with no oxygen supply, where the uptake is 2.0 mmol/(L·h). By how much does the dissolved oxygen fall, in mmol/L? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "bioreactors-13-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0.06667,
+        "unit": "",
+        "tolerance": 0.0005,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Convert the uptake to mmol/(L·s) by dividing by 3600, then multiply by the time.",
+        "solution": "2.0/3600 × 120 = 0.0667 mmol/L.",
+        "lesson_ids": [
+          "bioreactors-13"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "bioreactors-13:time-to-critical",
+      "type": "numeric",
+      "prompt": "Starting from 0.1 mmol/L, how long does it take the dissolved oxygen to reach the critical level of 0.03 mmol/L at an uptake of 2.0 mmol/(L·h)? Enter the number of seconds.",
+      "points": 1,
+      "objective_ids": [
+        "bioreactors-13-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 126.0,
+        "unit": "",
+        "tolerance": 1.0,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Divide the drop to the critical level by the uptake in mmol/(L·s).",
+        "solution": "(0.1 − 0.03)/(2.0/3600) = 126 s.",
+        "lesson_ids": [
+          "bioreactors-13"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "bioreactors-13:time-to-anoxia",
+      "type": "numeric",
+      "prompt": "How long does it take the dissolved oxygen to fall from 0.1 mmol/L to zero in the same region? Enter the number of seconds.",
+      "points": 1,
+      "objective_ids": [
+        "bioreactors-13-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 180.0,
+        "unit": "",
+        "tolerance": 1.0,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Divide the starting concentration by the uptake in mmol/(L·s).",
+        "solution": "0.1/(2.0/3600) = 180 s: a cell that stays 50% longer than the mixing time is anoxic.",
+        "lesson_ids": [
+          "bioreactors-13"
+        ],
+        "misconception_ids": [
+          "average-cell-only"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "bioreactors-13:oxygen-consumed-fraction",
+      "type": "numeric",
+      "prompt": "What fraction of the bulk oxygen is consumed in one mixing time, Da = OUR × t_mix / C_bulk, for t_mix = 120 s? Enter a decimal fraction, number only.",
+      "points": 1,
+      "objective_ids": [
+        "bioreactors-13-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0.6667,
+        "unit": "",
+        "tolerance": 0.005,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the uptake in mmol/(L·s) and the bulk concentration of 0.10 mmol/L.",
+        "solution": "0.000556 × 120/0.1 = 0.67; in the small vessel (15 s) it is 0.08.",
+        "lesson_ids": [
+          "bioreactors-13"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "bioreactors-13:loop-effect",
+      "type": "numeric",
+      "prompt": "Viabilities (%) are early/control 95, early/loop 88, late/control 94 and late/loop 78. What is the main effect of the loop (average of its effects at the two passages), in percentage points? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "bioreactors-13-objective-2"
+      ],
+      "solution_spec": {
+        "answer": -11.5,
+        "unit": "",
+        "tolerance": 0.05,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Average the loop minus control difference at each passage.",
+        "solution": "((88 − 95) + (78 − 94))/2 = −11.5 points.",
+        "lesson_ids": [
+          "bioreactors-13"
+        ],
+        "misconception_ids": [
+          "environment-and-cells-confounded"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "bioreactors-13:interaction",
+      "type": "numeric",
+      "prompt": "Using the same viabilities, what is the interaction between loop and passage, half the difference between the loop effects at late and at early passage? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "bioreactors-13-objective-2"
+      ],
+      "solution_spec": {
+        "answer": -4.5,
+        "unit": "",
+        "tolerance": 0.05,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Subtract the early-passage loop effect from the late-passage one and halve it.",
+        "solution": "((78 − 94) − (88 − 95))/2 = −4.5 points.",
+        "lesson_ids": [
+          "bioreactors-13"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "bioreactors-13:cultures-per-group",
+      "type": "numeric",
+      "prompt": "The standard deviation between cultures is 3 points and the smallest difference of interest is 6 points. Using n = 2 (1.96 + 0.8416)² σ²/δ², how many cultures per group are needed, rounded up? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "bioreactors-13-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 4,
+        "unit": "",
+        "tolerance": 0.5,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Compute the formula, then round up to a whole culture.",
+        "solution": "2 × 7.849 × 9/36 = 3.92, so 4 by this formula; the exact t calculation needs 6.",
+        "lesson_ids": [
+          "bioreactors-13"
+        ],
+        "misconception_ids": [
+          "normal-approximation-exact"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "bioreactors-13:scale-down-design",
+      "type": "structured",
+      "prompt": "A scaled-up perfusion culture has a normal bulk dissolved oxygen but a viability gradient. Answer each part about the scale-down experiment.",
+      "points": 3,
+      "objective_ids": [
+        "bioreactors-13-objective-2",
+        "bioreactors-13-objective-3"
+      ],
+      "response_fields": [
+        {
+          "id": "matching",
+          "type": "single_choice",
+          "prompt": "What must the small system reproduce of the large vessel?",
+          "options": [
+            "The excursion that cells experience: a recirculation through an unsupplied region with a residence time matched to the large-scale mixing time, at the same cell density, uptake and medium.",
+            "The total volume of the large vessel.",
+            "Only the average dissolved oxygen.",
+            "The brand of the impeller."
+          ],
+          "points": 1
+        },
+        {
+          "id": "reading",
+          "type": "single_choice",
+          "prompt": "Viability falls with passage in both the control and the loop arm, and the loop adds little. What does this indicate?",
+          "options": [
+            "Cell-line instability: the loss follows the cells, not the environment.",
+            "A mixing limitation, because the loop arm is lower.",
+            "Nothing, because the arms differ in two ways.",
+            "That the viability method is always wrong."
+          ],
+          "points": 1
+        },
+        {
+          "id": "replicate",
+          "type": "single_choice",
+          "prompt": "What counts as a replicate in this experiment?",
+          "options": [
+            "An independent culture seeded separately from the same bank.",
+            "A sample taken from a culture.",
+            "A reading of the same sample twice.",
+            "A well of one plate from one culture."
+          ],
+          "points": 1
+        }
+      ],
+      "solution_spec": {
+        "field_specs": [
+          {
+            "id": "matching",
+            "type": "single_choice",
+            "answer": 0
+          },
+          {
+            "id": "reading",
+            "type": "single_choice",
+            "answer": 0
+          },
+          {
+            "id": "replicate",
+            "type": "single_choice",
+            "answer": 0
+          }
+        ],
+        "rubric": [
+          {
+            "id": "matching",
+            "criterion": "What the scale-down must reproduce",
+            "points": 1,
+            "evidence": [
+              "Matches the cell-level excursion, not the volume or the average."
+            ]
+          },
+          {
+            "id": "reading",
+            "criterion": "Reading the outcome",
+            "points": 1,
+            "evidence": [
+              "Separates a passage effect in both arms from an environment effect."
+            ]
+          },
+          {
+            "id": "replicate",
+            "criterion": "The independent unit",
+            "points": 1,
+            "evidence": [
+              "Identifies the culture, not the sample, as the unit."
+            ]
+          }
+        ]
+      },
+      "feedback": {
+        "hint": "For each part, ask what the experiment must match, which factor changed and what counts as independent.",
+        "solution": "A scale-down model reproduces the cell-level excursion, a two-by-two design separates environment from passage, and the independent culture is the replicate.",
+        "lesson_ids": [
+          "bioreactors-13",
+          "bioreactors-9",
+          "bioreactors-11",
+          "bioreactors-12"
+        ],
+        "misconception_ids": [
+          "environment-and-cells-confounded",
+          "samples-as-replicates"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "bioreactors-13:design-statements",
+      "type": "multiple_select",
+      "prompt": "Which statements about this scale-down experiment are appropriate? Select all that apply.",
+      "points": 2,
+      "objective_ids": [
+        "bioreactors-13-objective-3"
+      ],
+      "options": [
+        "A bulk dissolved-oxygen probe at one position shows that no region of the vessel is oxygen-limited.",
+        "The number of cultures should be checked with the exact t calculation, not only the normal approximation.",
+        "A plausible mixing mechanism is not evidence until a matched control separates it from cell-line instability.",
+        "Crossing the environment with the passage number lets the two explanations be told apart.",
+        "Several samples from one culture are replicates of the experiment."
+      ],
+      "solution_spec": {
+        "answer": [
+          1,
+          2,
+          3
+        ],
+        "partial_credit": "correct-minus-incorrect-clamped-v1"
+      },
+      "feedback": {
+        "hint": "Ask what each choice does to the separation of the two explanations.",
+        "solution": "A mechanism needs a matched control, the two-by-two design separates environment and passage, and power should be checked exactly. Samples from one culture are not replicates, and one bulk probe cannot show that no region is limited.",
+        "lesson_ids": [
+          "bioreactors-13"
+        ],
+        "misconception_ids": [
+          "samples-as-replicates",
+          "average-cell-only",
+          "normal-approximation-exact"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
     }
   ]
 }

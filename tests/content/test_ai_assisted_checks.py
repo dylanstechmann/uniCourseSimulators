@@ -958,3 +958,258 @@ def test_biomaterials_lab_text_and_keys_agree_with_the_dataset():
             assert abs(checks[(f"d{day}", column)] - _lab_mean(_BM_ROWS, day, column)) < 1e-3, (day, column)
     # the data were built from a random-scission model: the fitted rate recovers the construction value
     assert abs(k_fit - 0.0002) < 0.00001 and abs(_BM_KE - 0.02) < 0.0005
+
+
+# ---- bioreactors 0.4.0 --------------------------------------------------------------------------------------
+def _monod(s: float, mumax: float, ks: float) -> float:
+    return mumax * s / (ks + s)
+
+
+def _chemostat_nutrient(d: float, mumax: float, ks: float) -> float:
+    return d * ks / (mumax - d)
+
+
+def _stirred_power_w(n_rev_s: float, d_m: float, power_number: float = 1.5, rho: float = 1000.0) -> float:
+    return power_number * rho * n_rev_s ** 3 * d_m ** 5
+
+
+def _kolmogorov_um(eps: float, nu: float = 0.70e-6) -> float:
+    return (nu ** 3 / eps) ** 0.25 * 1e6
+
+
+def _factorial_effect(runs: dict[tuple[int, int, int], float], sign) -> float:
+    high = [v for k, v in runs.items() if sign(k) > 0]
+    low = [v for k, v in runs.items() if sign(k) < 0]
+    return sum(high) / len(high) - sum(low) / len(low)
+
+
+def _bioreactors_lab_rows() -> list[dict[str, str]]:
+    import csv
+    return list(csv.DictReader((COURSES / "bioreactors/labs/gassing-out-do-curves.csv").open(encoding="utf-8")))
+
+
+def _gassing_mean(rows: list[dict[str, str]], rpm: int, minutes: int) -> float:
+    values = [float(r["do_pct"]) for r in rows if int(r["rpm"]) == rpm and int(r["time_min"]) == minutes]
+    return sum(values) / len(values)
+
+
+def _kla_per_hour(rows: list[dict[str, str]], rpm: int, minutes: int) -> float:
+    return -math.log(1 - _gassing_mean(rows, rpm, minutes) / 100) / (minutes / 60)
+
+
+_BR_ROWS = _bioreactors_lab_rows()
+_BR_K200, _BR_K400 = _kla_per_hour(_BR_ROWS, 200, 30), _kla_per_hour(_BR_ROWS, 400, 10)
+_FACT = {(-1, -1, -1): 3.1, (1, -1, -1): 3.9, (-1, 1, -1): 3.3, (1, 1, -1): 4.1, (-1, -1, 1): 3.4, (1, -1, 1): 4.6, (-1, 1, 1): 3.5, (1, 1, 1): 5.0}
+_CENTER = [4.2, 4.0, 4.1]
+_CENTER_SD = math.sqrt(sum((c - sum(_CENTER) / 3) ** 2 for c in _CENTER) / 2)
+_T_CRIT_2DF = 0.95 * math.sqrt(2 / (1 - 0.95 ** 2))              # exact two-sided 5 % critical value for 2 degrees of freedom
+_D_OPT = 0.04 * (1 - math.sqrt(0.5 / 20.5))
+_OUR_LARGE_S = 2.0e-10 * 1.0e7 * 1e3 / 3600                   # mmol/(L s)
+_YIELD = 1.5e5                                                 # cells/mL per mM
+_N2_CONST_PV = 200 / 60 * 10 ** (-2 / 3)
+_EPS = 21.6 / 1000
+
+BIOREACTORS_NUMERIC = {
+    # items written before 2026-10-08, recomputed from the numbers in their prompts
+    "bioreactors-1:check": math.log(2) / 30,
+    "bioreactors-2:check": 2e9 * 1e-16 * 3600 * 1000,
+    "bioreactors-1:doubling-time": 24 / math.log2(1.28e6 / 2.0e5),
+    "bioreactors-2:oxygen-supply-vs-demand": 10 * (0.20 - 0.10) - 1.5e10 * 1.0e-10,
+    "bioreactors-5:max-otr": 5.0 * (0.2 - 0.05),
+    "bioreactors-5:max-cell-density": 5.0 * (0.2 - 0.05) / 2.0e-10 / 1e3,
+    "bioreactors-5:oxygen-enriched-gas": 5.0 * (0.5 - 0.05),
+    "bioreactors-5:max-medium-depth": 3e-9 * 0.15 / (2e9 * 2.0e-10 * 1e-3 / 3600) * 1000,
+    "bioreactors-6:glucose-used": 2.0e-10 * 5.0e5 * (math.exp(0.03 * 48) - 1) / 0.03 * 1000,
+    "bioreactors-6:lactate": 1.6 * 10.736,
+    "bioreactors-6:exhaustion": math.log(1 + 25 * 0.03 / (2.0e-10 * 5.0e5 * 1000)) / 0.03,
+    "bioreactors-6:min-perfusion": 2.0e-10 * 5.0e6 * 1000 / 25,
+    # bioreactors-7: Monod growth and yield
+    "bioreactors-7:growth-rate": _monod(5.0, 0.04, 0.5),
+    "bioreactors-7:nutrient-for-90": 0.9 * 0.5 / 0.1,
+    "bioreactors-7:doubling-time": math.log(2) / _monod(5.0, 0.04, 0.5),
+    "bioreactors-7:max-cell-density": (2.0e5 + _YIELD * (20 - 1)) / 1e6,
+    "bioreactors-7:minimum-time": math.log((2.0e5 + _YIELD * 19) / 2.0e5) / 0.04,
+    "bioreactors-7:doubled-glucose": (2.0e5 + _YIELD * (40 - 1)) / 1e6,
+    "bioreactors-7:specific-uptake": 0.04 / (_YIELD * 1e3) / 1e-10,
+    # bioreactors-8: chemostat and perfusion
+    "bioreactors-8:washout-rate": 0.04 * 20 / (0.5 + 20),
+    "bioreactors-8:steady-nutrient": _chemostat_nutrient(0.02, 0.04, 0.5),
+    "bioreactors-8:steady-cells": _YIELD * (20 - _chemostat_nutrient(0.02, 0.04, 0.5)) / 1e6,
+    "bioreactors-8:output": 0.03 * _YIELD * (20 - _chemostat_nutrient(0.03, 0.04, 0.5)) / 1e4,
+    "bioreactors-8:optimal-dilution": _D_OPT,
+    "bioreactors-8:perfusion-rate": 0.04 * 24 / 5.0e6 * 1e9,
+    "bioreactors-8:minimum-perfusion": 2.0e-10 / ((25 - 5) * 1e-3) * 24 * 1e9,
+    # bioreactors-9: mixing and scale-up
+    "bioreactors-9:power-input": _stirred_power_w(200 / 60, 0.060),
+    "bioreactors-9:power-per-volume": _stirred_power_w(200 / 60, 0.060) / 2.0e-3,
+    "bioreactors-9:reynolds-number": 1000 * (200 / 60) * 0.060 ** 2 / 0.70e-3,
+    "bioreactors-9:speed-at-constant-pv": 200 * 10 ** (-2 / 3),
+    "bioreactors-9:tip-speed-at-scale": math.pi * _N2_CONST_PV * 0.60,
+    "bioreactors-9:mixing-time-at-scale": 20 / _N2_CONST_PV,
+    "bioreactors-9:pv-at-constant-speed": (_stirred_power_w(200 / 60, 0.60) / 2.0) / (_stirred_power_w(200 / 60, 0.060) / 2.0e-3),
+    # bioreactors-10: shear and eddies
+    "bioreactors-10:dissipation": _EPS,
+    "bioreactors-10:kolmogorov-scale": _kolmogorov_um(_EPS),
+    "bioreactors-10:local-scale": _kolmogorov_um(100 * _EPS),
+    "bioreactors-10:kolmogorov-stress": 0.70e-3 * math.sqrt(100 * _EPS / 0.70e-6),
+    "bioreactors-10:ratio-to-carrier": _kolmogorov_um(100 * _EPS) / 150,
+    "bioreactors-10:allowed-power": (0.70e-6) ** 3 / (50e-6) ** 4 * 1000 / 100,
+    "bioreactors-10:scale-shrinks": 100 ** -0.25,
+    # bioreactors-11: dissolved-oxygen control
+    "bioreactors-11:our-start": 2.0e-10 * 5.0e5 * 1e3,
+    "bioreactors-11:kla-required": 2.0e-10 * 5.0e5 * 1e3 / (0.20 - 0.10),
+    "bioreactors-11:time-to-limit": math.log(5.0 / 1.0) / 0.03,
+    "bioreactors-11:density-at-limit": 5.0e5 * 5.0 / 1e6,
+    "bioreactors-11:enriched-capacity": 5.0 * (0.50 - 0.10) / 2.0e-10 / 1e3 / 1e6,
+    "bioreactors-11:time-enriched": math.log(5.0 * 0.40 / 0.1) / 0.03,
+    "bioreactors-11:oxygen-time-constant": 60 / 5.0,
+    # bioreactors-12: factorial design
+    "bioreactors-12:effect-temperature": _factorial_effect(_FACT, lambda k: k[0]),
+    "bioreactors-12:effect-oxygen": _factorial_effect(_FACT, lambda k: k[2]),
+    "bioreactors-12:interaction-ac": _factorial_effect(_FACT, lambda k: k[0] * k[2]),
+    "bioreactors-12:effect-standard-error": 2 * _CENTER_SD / math.sqrt(8),
+    "bioreactors-12:curvature": sum(_CENTER) / 3 - sum(_FACT.values()) / 8,
+    "bioreactors-12:runs-needed": 2 ** 4,
+    "bioreactors-12:ofat-precision": math.sqrt(1 / 2 + 1 / 2) / math.sqrt(1 / 4 + 1 / 4),
+    # bioreactors-13: scale-down experiment
+    "bioreactors-13:oxygen-fall": _OUR_LARGE_S * 120,
+    "bioreactors-13:time-to-critical": (0.10 - 0.03) / _OUR_LARGE_S,
+    "bioreactors-13:time-to-anoxia": 0.10 / _OUR_LARGE_S,
+    "bioreactors-13:oxygen-consumed-fraction": _OUR_LARGE_S * 120 / 0.10,
+    "bioreactors-13:loop-effect": ((88 - 95) + (78 - 94)) / 2,
+    "bioreactors-13:interaction": ((78 - 94) - (88 - 95)) / 2,
+    "bioreactors-13:cultures-per-group": math.ceil(2 * (1.96 + 0.8416) ** 2 * 3.0 ** 2 / 6.0 ** 2),
+    # virtual lab 1, recomputed from the CSV
+    "bioreactors-lab1:kla-200": _BR_K200,
+    "bioreactors-lab1:kla-400": _BR_K400,
+    "bioreactors-lab1:supportable-density": 5.66 * (0.20 - 0.05) / 2.0e-10 / 1e3 / 1e6,
+    "bioreactors-lab1:probe-lag": 5.66 * 20 / 3600,
+}
+
+
+@pytest.mark.parametrize("question_id,expected", sorted(BIOREACTORS_NUMERIC.items()))
+def test_bioreactors_numeric_key_matches_independent_recalculation(question_id, expected):
+    spec = bank("bioreactors")[question_id]["solution_spec"]
+    allowed = spec["tolerance"] + (spec.get("relative_tolerance") or 0) * abs(spec["answer"])
+    assert abs(spec["answer"] - expected) <= allowed, (question_id, spec["answer"], expected)
+
+
+def test_every_bioreactors_numeric_item_is_recalculated():
+    numeric = {qid for qid, item in bank("bioreactors").items() if item["type"] == "numeric"}
+    assert numeric == set(BIOREACTORS_NUMERIC)
+
+
+def test_bioreactors_growth_and_culture_lessons_state_the_computed_numbers():
+    mu5 = _monod(5.0, 0.04, 0.5)
+    xmax = 2.0e5 + _YIELD * 19
+    _fragments_in(reading("bioreactors", "bioreactors-7"), [
+        f"**{mu5:.4f} per hour**", f"{mu5 / 0.04:.0%} of the maximum", f"the doubling time is {math.log(2) / mu5:.1f} h", f"{math.log(2) / 0.04:.1f} h",
+        "**4.5 mM**", f"**{xmax / 1e6:.2f} × 10⁶ cells/mL**", f"a {xmax / 2.0e5:.2f}-fold increase", f"**{math.log(xmax / 2.0e5) / 0.04:.1f} h**",
+        f"{(2.0e5 + _YIELD * 39) / 1e6:.2f} × 10⁶ cells/mL, about double",
+        f"μ = 0.05 × 2/(1.0 + 2) = {_monod(2.0, 0.05, 1.0):.4f} per hour", "S = 0.8 K_s/0.2 = 4 K_s = 4.0 mM",
+        f"{(3.0e5 + 1.0e5 * 9.5) / 1e6:.2f} × 10⁶ cells/mL", f"{math.log((3.0e5 + 1.0e5 * 9.5) / 3.0e5) / 0.05:.1f} h at the maximum rate",
+    ])
+    s1, s2 = _chemostat_nutrient(0.02, 0.04, 0.5), _chemostat_nutrient(0.03, 0.04, 0.5)
+    p1, p2 = 0.02 * _YIELD * (20 - s1), 0.03 * _YIELD * (20 - s2)
+    p_opt = _D_OPT * _YIELD * (20 - _chemostat_nutrient(_D_OPT, 0.04, 0.5))
+    ss2 = _chemostat_nutrient(0.03, 0.05, 1.0)
+    xs2 = 1.0e5 * (10 - ss2)
+    text = reading("bioreactors", "bioreactors-8")
+    _fragments_in(text, [
+        f"**{s1:.2f} mM**", f"**{_YIELD * (20 - s1) / 1e6:.3f} × 10⁶ cells/mL**", f"{s2:.2f} mM", f"{_YIELD * (20 - s2) / 1e6:.3f} × 10⁶ cells/mL",
+        f"= {0.04 * 20 / 20.5:.4f} per hour", f"= {_D_OPT:.4f} per hour", f"{p1 / 1e4:.2f} × 10⁴", f"{p2 / 1e4:.2f} × 10⁴", f"{p_opt / 1e4:.2f} × 10⁴",
+        f"**{0.04 * 24 / 5.0e6 * 1e9:.0f} pL/(cell·day)**", f"**{2.0e-10 / (20 * 1e-3) * 24 * 1e9:.0f} pL/(cell·day)**",
+        f"= {0.05 * 10 / 11:.4f} per hour", f"{ss2:.2f} mM", f"{xs2 / 1e6:.3f} × 10⁶ cells/mL", f"{1 / 0.03:.1f} h",
+    ])
+
+
+def test_bioreactors_oxygen_control_and_scale_up_lessons_state_the_computed_numbers():
+    our0 = 2.0e-10 * 5.0e5 * 1e3
+    fold = 5.0 / (our0 / 0.10)
+    _fragments_in(reading("bioreactors", "bioreactors-11"), [
+        f"**{our0:.3f} mmol/(L·h)**", "**1.0 per hour**", f"**{math.log(fold) / 0.03:.1f} h**", f"**{5.0e5 * fold / 1e6:.1f} × 10⁶ cells/mL**",
+        f"**{5.0 * 0.40 / 2.0e-10 / 1e3 / 1e6:.1f} × 10⁶ cells/mL**", f"**{math.log(5.0 * 0.40 / our0) / 0.03:.1f} h**", f"{5.0 * 0.15 / 2.0e-10 / 1e3 / 1e6:.2f} × 10⁶ cells/mL",
+        "**12 min**", f"**{5.0 * 30 / 3600:.3f}**", f"{0.20 - 0.60 / 5:.2f} mmol/L",
+    ])
+    our02 = 1.5e-10 * 4.0e5 * 1e3
+    kr02 = our02 / (0.20 - 0.12)
+    fold2 = 4.0 / kr02
+    _fragments_in(reading("bioreactors", "bioreactors-11"), [f"{our02:.3f} mmol/(L·h)", f"{kr02:.2f} per hour", f"{math.log(fold2) / 0.025:.1f} h", f"{4.0e5 * fold2 / 1e6:.2f} × 10⁶ cells/mL", "= 15 min"])
+    p1 = _stirred_power_w(200 / 60, 0.060)
+    n2 = 200 / 60 * 10 ** (-2 / 3)
+    text = reading("bioreactors", "bioreactors-9")
+    _fragments_in(text, [
+        f"**{p1:.4f} W**", f"**{p1 / 2.0e-3:.1f} W/m³**", f"**{1000 * (200 / 60) * 0.06 ** 2 / 0.70e-3:,.0f}**", f"{math.pi * (200 / 60) * 0.06:.2f} m/s",
+        f"{20 / (200 / 60):.1f} s", "| Constant P/V | 0.215 | 1 | 2.15 | 21.5 | 4.64 |", "| Constant tip speed | 0.100 | 0.10 | 1 | 10 | 10 |",
+        "| Constant speed (mixing time) | 1 | 100 | 10 | 100 | 1 |", f"N = {n2 * 60:.1f} rpm", f"**{math.pi * n2 * 0.60:.2f} m/s**", f"**{20 / n2:.1f} s**",
+        f"{_stirred_power_w(200 / 60 / 10, 0.60) / 2.0:.2f} W/m³", "2,160 W/m³", f"{math.pi * 200 / 60 * 0.60:.2f} m/s",
+    ])
+    pv1w = _stirred_power_w(4.0, 0.05) / 1.0e-3
+    n2w = 4.0 * 5 ** (-2 / 3)
+    _fragments_in(text, [f"{pv1w:.1f} W/m³", f"{n2w * 60:.1f} rpm", f"a factor of {math.pi * n2w * 0.25 / (math.pi * 4.0 * 0.05):.2f}", f"a factor of {(20 / n2w) / (20 / 4.0):.2f}"])
+    text = reading("bioreactors", "bioreactors-10")
+    eta = _kolmogorov_um(_EPS)
+    eta_l = _kolmogorov_um(100 * _EPS)
+    _fragments_in(text, [
+        f"**{_EPS:.4f} W/kg**", f"**{eta:.1f} μm**", f"**{0.70e-3 * math.sqrt(_EPS / 0.70e-6):.3f} Pa**", f"**{100 * _EPS:.2f} W/kg**", f"**{eta_l:.1f} μm**",
+        f"{0.70e-3 * math.sqrt(100 * _EPS / 0.70e-6):.2f} Pa", f"{eta / 150:.2f} (average) to **{eta_l / 150:.2f}**", f"{(0.70e-6) ** 3 / (50e-6) ** 4:.4f} W/kg",
+        f"**{(0.70e-6) ** 3 / (50e-6) ** 4 * 1000 / 100:.2f} W/m³**",
+    ])
+    e2 = 50.0 / 1000
+    _fragments_in(text, [f"{e2:.3f} W/kg", f"{_kolmogorov_um(e2):.1f} μm", f"{_kolmogorov_um(50 * e2):.1f} μm", f"{0.70e-3 * math.sqrt(50 * e2 / 0.70e-6):.2f} Pa"])
+
+
+def test_bioreactors_design_of_experiments_and_scale_down_lessons_state_the_computed_numbers():
+    text = reading("bioreactors", "bioreactors-12")
+    ea, eb, ec = (_factorial_effect(_FACT, lambda k, i=i: k[i]) for i in range(3))
+    eac = _factorial_effect(_FACT, lambda k: k[0] * k[2])
+    hi_a = sum(v for k, v in _FACT.items() if k[0] > 0) / 4
+    lo_a = sum(v for k, v in _FACT.items() if k[0] < 0) / 4
+    fm = sum(_FACT.values()) / 8
+    curv = sum(_CENTER) / 3 - fm
+    se_curv = _CENTER_SD * math.sqrt(1 / 8 + 1 / 3)
+    _fragments_in(text, [
+        f"average {hi_a:.3f}", f"average {lo_a:.3f}", f"**A = {ea:.3f}**", f"B = {eb:.3f}", f"**C = {ec:.3f}**", f"**AC** is half the difference: (1.35 − 0.80)/2 = **{eac:.3f}**",
+        f"s = **{_CENTER_SD:.2f}**", f"**{2 * _CENTER_SD / math.sqrt(8):.4f}**", f"about {_T_CRIT_2DF * 2 * _CENTER_SD / math.sqrt(8):.2f}", f"is **{curv:.4f}**",
+        f"about {curv / se_curv:.1f} standard errors", f"{math.sqrt(2):.3f} times larger",
+    ])
+    runs = {(-1, -1): 2.0, (1, -1): 3.0, (-1, 1): 2.6, (1, 1): 4.2}
+    wa = (runs[(1, -1)] - runs[(-1, -1)] + runs[(1, 1)] - runs[(-1, 1)]) / 2
+    wb = (runs[(-1, 1)] - runs[(-1, -1)] + runs[(1, 1)] - runs[(1, -1)]) / 2
+    wab = ((runs[(1, 1)] - runs[(-1, 1)]) - (runs[(1, -1)] - runs[(-1, -1)])) / 2
+    _fragments_in(text, [f"= {wa:.2f} g/L", f"= {wb:.2f} g/L", f"= {wab:.2f} g/L", "2⁵ = 32", "2⁴ = 16"])
+    text = reading("bioreactors", "bioreactors-13")
+    sd, delta = 3.0, 6.0
+    n_exact = next(n for n in range(2, 100) if two_sample_t_power(n, sd, delta) >= 0.80)
+    _fragments_in(text, [
+        f"= {2.0e-10 * 1.0e7 * 1e3:.1f} mmol/(L·h)", f"**{_OUR_LARGE_S * 120:.4f} mmol/L**", f"{0.10 - _OUR_LARGE_S * 120:.4f} mmol/L", f"**{(0.10 - 0.03) / _OUR_LARGE_S:.0f} s**",
+        f"**{0.10 / _OUR_LARGE_S:.0f} s**", f"{_OUR_LARGE_S * 15:.4f} mmol/L", f"is {_OUR_LARGE_S * 120 / 0.10:.2f} in the large vessel and {_OUR_LARGE_S * 15 / 0.10:.2f}",
+        "**(-7 + (-16))/2 = -11.5**".replace("-", "−"), f"{2 * (1.96 + 0.8416) ** 2 * sd ** 2 / delta ** 2:.2f}", f"a power of {two_sample_t_power(4, sd, delta):.2f} at 4",
+        f"{two_sample_t_power(5, sd, delta):.2f} at 5", f"{two_sample_t_power(n_exact, sd, delta):.2f} at {n_exact}", f"**{n_exact} per group**", f"**{sd / math.sqrt(3):.2f}** points",
+    ])
+    our2 = 2.0e-10 * 6.0e6 * 1e3 / 3600
+    _fragments_in(text, [f"{our2 * 1e4:.2f} × 10⁻⁴ mmol/(L·s)", f"{our2 * 90:.3f} mmol/L", f"{(0.08 - 0.03) / our2:.0f} s", f"Da = {our2 * 90 / 0.08:.2f}"])
+    assert n_exact == 6
+
+
+def test_bioreactors_lab_text_and_keys_agree_with_the_dataset():
+    assert len(_BR_ROWS) == 63 and sorted({int(r["rpm"]) for r in _BR_ROWS}) == [200, 300, 400]
+    text = (COURSES / "bioreactors/labs/01-measuring-kla-by-dynamic-gassing-out.md").read_text(encoding="utf-8")
+    k300 = _kla_per_hour(_BR_ROWS, 300, 20)
+    exponent = math.log(_BR_K400 / _BR_K200) / math.log(2)
+    _fragments_in(text, [
+        f"kLa(200) = −ln(1 − {_gassing_mean(_BR_ROWS, 200, 30) / 100:.4f})/0.5 = {_BR_K200:.2f} per hour", f"kLa(400) = −ln(1 − {_gassing_mean(_BR_ROWS, 400, 10) / 100:.4f})/(10/60) = {_BR_K400:.2f} per hour",
+        f"gives {k300:.2f} per hour", f"a = ln({_BR_K400:.2f}/{_BR_K200:.2f})/ln 2 = {exponent:.2f}", f"{5.66 * 0.15:.3f} mmol/(L·h)", f"supports {5.66 * 0.15 / 2.0e-10 / 1e9:.3f} × 10⁶ cells/mL",
+        f"{5.66 * 20 / 3600:.3f}",
+    ])
+    spec = bank("bioreactors")["bioreactors-lab1:speed-exponent"]["solution_spec"]["field_specs"][0]
+    assert abs(spec["answer"] - exponent) <= spec["tolerance"] and spec["significant_figures"] == 3
+    checks = {(c["row_id"], c["column"]): c["answer"] for c in bank("bioreactors")["bioreactors-lab1:curve-summary"]["solution_spec"]["validation_spec"]["checks"]}
+    assert len(checks) == 9
+    for rpm in (200, 300, 400):
+        assert checks[(f"rpm{rpm}", "runs")] == 3
+        for minutes in (10, 30):
+            assert abs(checks[(f"rpm{rpm}", f"do_{minutes}")] - _gassing_mean(_BR_ROWS, rpm, minutes)) < 1e-3
+    # the curves were built from kLa = 2.0 (N/200)^1.5 per hour; the fits recover it
+    assert abs(_BR_K200 - 2.0) < 0.06 and abs(_BR_K400 - 2.0 * 2 ** 1.5) < 0.15 and abs(exponent - 1.5) < 0.06
+    assert all(0 <= float(r["do_pct"]) <= 100 for r in _BR_ROWS)

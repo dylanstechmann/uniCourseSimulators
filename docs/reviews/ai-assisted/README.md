@@ -14,3 +14,4 @@ review that do.
 | Biochemistry I 0.4.0 (new lessons, lab and schedule) | 2026-10-08 | [biochemistry-0.4.0.md](biochemistry-0.4.0.md) |
 | Probability, Biostatistics & Experimental Design 0.4.0 (new lessons, lab and schedule) | 2026-10-08 | [statistics-0.4.0.md](statistics-0.4.0.md) |
 | Biomaterials & Tissue Engineering 0.3.0 (new lessons, lab and schedule) | 2026-10-08 | [biomaterials-0.3.0.md](biomaterials-0.3.0.md) |
+| Bioreactors & Tissue Culture Engineering 0.4.0 (new lessons, lab and schedule) | 2026-10-08 | [bioreactors-0.4.0.md](bioreactors-0.4.0.md) |

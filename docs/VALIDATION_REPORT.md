@@ -4,7 +4,24 @@
 
 2026-10-06; synthetic local learner data only. Milestones 1 and 2 are implemented. Milestone 3 remains partial; deterministic graders and prototype graded-assignment and review workflows are described below. A Milestone 4 curriculum-map increment is implemented and tested, while subject-matter review and map refinement remain. All 25 course packages are **partial**; zero are beta, complete or externally reviewed. Human score review is limited to saved attempts and does not constitute course-content review. No semester equivalence, university credit, security certification or public production deployment is asserted.
 
-## Current increment: biomaterials gets a proposed 14-week schedule, seven lessons and a degradation time-course lab (2026-10-08, nineteenth pass)
+## Current increment: bioreactors gets a proposed 14-week schedule, seven lessons and a kLa lab (2026-10-08, twentieth pass)
+
+Written by an AI coding assistant. Bioreactors & Tissue Culture Engineering moves from 0.3.2 to 0.4.0 and stays `partial`, unreviewed and formative-only.
+
+- **Proposed 14-week schedule** (`duration.weeks`) and a regenerated syllabus: the four short prototype units sit in weeks 1, 5, 9 and 12 beside the original lessons; week 7 is a lab and week 14 a lesson that prepares the existing course case. The manifest says the schedule is not evidence of semester equivalence.
+- **Seven lessons (7 to 13)**, each about 950 to 1,250 words with a worked example, common mistakes, eight or nine items and four cards: Monod growth and yield; chemostat steady states, washout and cell-specific perfusion; mixing and scale-up (power, tip speed, mixing time under three criteria); shear, eddies and the Kolmogorov scale; dissolved-oxygen control and the capacity limit; factorial design of experiments (effects, interactions, noise and curvature from center points); and designing a scale-down experiment, which prepares the course case.
+- **Virtual lab 1**: synthetic dynamic gassing-out curves at three agitation speeds (three runs each, 63 rows). Eight items (a 9-cell summary upload, two kLa estimates, a speed exponent with an interpretation, a supportable cell density, a probe-lag check, a structured item and a multiple-select item), four cards and a week-7 practice assessment.
+- **Review record:** [bioreactors-0.4.0.md](reviews/ai-assisted/bioreactors-0.4.0.md). All 65 numeric keys in the package, including the 12 that predate this pass, agree with independent recalculation, as do the lab keys against its CSV and the numbers the lessons quote without asking for them. All 65 new items earn full credit under the real grader on the first run. Seven drafting problems were found and fixed before the commit, including a statement that contradicted the lesson's own numbers and a sentence whose meaning was reversed.
+- Tests: 70 recalculation and statement checks for bioreactors; the schedule, the no-protocol statements, the syllabus outcomes and the lab keys against its CSV have tests; the inventory pins moved to 249 lessons, 1,054 questions and 736 cards.
+
+| Command/check (this container, Python 3.12.3, 2026-10-08) | Result |
+| --- | --- |
+| `python tools/validate_content.py` | PASS: 25 packages, 249 lessons, 1054 questions, 736 cards, 25 cases; 0 errors; 98 disclosed legacy-depth warnings |
+| `verify.sh` | see the PROGRESS.md entry for this pass |
+
+Not run: frontend checks, Docker Compose, Playwright for this pass. Not reviewed by a person.
+
+## Previous increment: biomaterials gets a proposed 14-week schedule, seven lessons and a degradation time-course lab (2026-10-08, nineteenth pass)
 
 Written by an AI coding assistant. Biomaterials & Tissue Engineering moves from 0.2.2 to 0.3.0 and stays `partial`, unreviewed and formative-only.
 

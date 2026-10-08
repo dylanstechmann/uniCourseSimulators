@@ -7,7 +7,7 @@
   "domain": "Bioengineering",
   "level": "Year 3",
   "maturity": "partial",
-  "version": "0.3.2",
+  "version": "0.4.0",
   "license": "MIT OR CC-BY-4.0",
   "content_origin": {
     "kind": "legacy-prototype",
@@ -149,12 +149,363 @@
         "bioreactors-outcome-1",
         "bioreactors-outcome-3"
       ]
+    },
+    {
+      "id": "bioreactors-7-objective-1",
+      "description": "Compute the specific growth rate from Monod kinetics and the nutrient level that gives a target fraction of the maximum rate.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "bioreactors-outcome-3"
+      ]
+    },
+    {
+      "id": "bioreactors-7-objective-2",
+      "description": "Compute the yield-limited maximum cell density and the minimum time to reach it.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "bioreactors-outcome-1",
+        "bioreactors-outcome-3"
+      ]
+    },
+    {
+      "id": "bioreactors-7-objective-3",
+      "description": "Evaluate what the single-nutrient Monod model and a constant yield leave out for animal cell culture.",
+      "bloom": "evaluate",
+      "course_outcome_ids": [
+        "bioreactors-outcome-3"
+      ]
+    },
+    {
+      "id": "bioreactors-8-objective-1",
+      "description": "Compute the steady-state nutrient and cell concentrations of a chemostat and the washout dilution rate.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "bioreactors-outcome-1",
+        "bioreactors-outcome-3"
+      ]
+    },
+    {
+      "id": "bioreactors-8-objective-2",
+      "description": "Find the dilution rate that maximizes cell output and compare operating points.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "bioreactors-outcome-3",
+        "bioreactors-outcome-4"
+      ]
+    },
+    {
+      "id": "bioreactors-8-objective-3",
+      "description": "Compute cell-specific perfusion rates and evaluate what they require of a perfused culture.",
+      "bloom": "evaluate",
+      "course_outcome_ids": [
+        "bioreactors-outcome-1",
+        "bioreactors-outcome-4"
+      ]
+    },
+    {
+      "id": "bioreactors-9-objective-1",
+      "description": "Compute the power input, power per volume, Reynolds number and tip speed of a stirred vessel.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "bioreactors-outcome-2"
+      ]
+    },
+    {
+      "id": "bioreactors-9-objective-2",
+      "description": "Apply the scaling laws for geometrically similar vessels under constant power per volume, constant tip speed and constant speed.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "bioreactors-outcome-2",
+        "bioreactors-outcome-4"
+      ]
+    },
+    {
+      "id": "bioreactors-9-objective-3",
+      "description": "Evaluate the trade-offs between criteria and explain why scale-down models are used.",
+      "bloom": "evaluate",
+      "course_outcome_ids": [
+        "bioreactors-outcome-2",
+        "bioreactors-outcome-4"
+      ]
+    },
+    {
+      "id": "bioreactors-10-objective-1",
+      "description": "Convert power per volume into an energy dissipation rate, a Kolmogorov scale and a stress at that scale.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "bioreactors-outcome-2"
+      ]
+    },
+    {
+      "id": "bioreactors-10-objective-2",
+      "description": "Compare the eddy scale with the size of a cell or microcarrier and compute a stirring level that keeps eddies above a chosen size.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "bioreactors-outcome-2",
+        "bioreactors-outcome-4"
+      ]
+    },
+    {
+      "id": "bioreactors-10-objective-3",
+      "description": "Evaluate why average power per volume, tip speed and local dissipation give different pictures of shear.",
+      "bloom": "evaluate",
+      "course_outcome_ids": [
+        "bioreactors-outcome-2",
+        "bioreactors-outcome-4"
+      ]
+    },
+    {
+      "id": "bioreactors-11-objective-1",
+      "description": "Compute the oxygen uptake rate and the kLa required to hold a dissolved-oxygen setpoint as a culture grows.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "bioreactors-outcome-2",
+        "bioreactors-outcome-3"
+      ]
+    },
+    {
+      "id": "bioreactors-11-objective-2",
+      "description": "Find the time at which a vessel reaches its capacity and compare the options for extending it.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "bioreactors-outcome-2",
+        "bioreactors-outcome-4"
+      ]
+    },
+    {
+      "id": "bioreactors-11-objective-3",
+      "description": "Evaluate a dissolved-oxygen control cascade, the oxygen time constant and the role of sensor lag.",
+      "bloom": "evaluate",
+      "course_outcome_ids": [
+        "bioreactors-outcome-2",
+        "bioreactors-outcome-4"
+      ]
+    },
+    {
+      "id": "bioreactors-12-objective-1",
+      "description": "Compute main effects and interactions from a two-level factorial design.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "bioreactors-outcome-4"
+      ]
+    },
+    {
+      "id": "bioreactors-12-objective-2",
+      "description": "Estimate the standard error of an effect and the curvature from center-point replicates.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "bioreactors-outcome-3",
+        "bioreactors-outcome-4"
+      ]
+    },
+    {
+      "id": "bioreactors-12-objective-3",
+      "description": "Evaluate a design for aliasing, randomization and the unit of replication.",
+      "bloom": "evaluate",
+      "course_outcome_ids": [
+        "bioreactors-outcome-4"
+      ]
+    },
+    {
+      "id": "bioreactors-lab-01-objective-1",
+      "description": "Summarize replicate gassing-out runs by agitation speed.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "bioreactors-outcome-3"
+      ]
+    },
+    {
+      "id": "bioreactors-lab-01-objective-2",
+      "description": "Estimate kLa from the dissolved-oxygen curve and its dependence on agitation speed.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "bioreactors-outcome-2",
+        "bioreactors-outcome-3"
+      ]
+    },
+    {
+      "id": "bioreactors-lab-01-objective-3",
+      "description": "Evaluate the cell density a measured kLa can support and the limits of the method, including probe response.",
+      "bloom": "evaluate",
+      "course_outcome_ids": [
+        "bioreactors-outcome-2",
+        "bioreactors-outcome-4"
+      ]
+    },
+    {
+      "id": "bioreactors-13-objective-1",
+      "description": "Estimate the oxygen excursion a cell experiences in a poorly mixed zone and compare it with the critical level and with the mixing time.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "bioreactors-outcome-1",
+        "bioreactors-outcome-2"
+      ]
+    },
+    {
+      "id": "bioreactors-13-objective-2",
+      "description": "Design a scale-down experiment as a two-by-two comparison of environment and passage, and compute its effects and interaction.",
+      "bloom": "analyze",
+      "course_outcome_ids": [
+        "bioreactors-outcome-3",
+        "bioreactors-outcome-4"
+      ]
+    },
+    {
+      "id": "bioreactors-13-objective-3",
+      "description": "Plan the replication and sampling, including the independent unit, the number of cultures and the measurements.",
+      "bloom": "create",
+      "course_outcome_ids": [
+        "bioreactors-outcome-3",
+        "bioreactors-outcome-4"
+      ]
     }
   ],
   "duration": {
-    "instructional_weeks": null,
-    "equivalent_structure": null,
-    "weeks": []
+    "instructional_weeks": 14,
+    "equivalent_structure": "Proposed 14-week undergraduate scope only. The four compact prototype units sit in weeks 1, 5, 9 and 12 beside original lessons on growth kinetics, the culture mass balance, continuous and perfused culture, oxygen supply and its control, scale-up, shear, and design of experiments; week 7 is a synthetic-data lab on measuring kLa and week 14 a lesson on designing a scale-down experiment, which prepares the course case. All activities are open, ungraded practice. There are no graded homework sets, exams or project, and workload has not been measured, so this schedule is not evidence of semester equivalence.",
+    "weeks": [
+      {
+        "week": 1,
+        "title": "Growth kinetics and process mass balance",
+        "lesson_ids": [
+          "bioreactors-1"
+        ],
+        "assessment_ids": [
+          "bioreactors-1-practice"
+        ]
+      },
+      {
+        "week": 2,
+        "title": "Growth kinetics: Monod saturation, yield and what limits a batch",
+        "lesson_ids": [
+          "bioreactors-7"
+        ],
+        "assessment_ids": [
+          "bioreactors-7-practice"
+        ]
+      },
+      {
+        "week": 3,
+        "title": "Writing a cell-culture mass balance: substrate use, product accumulation and when a batch runs out",
+        "lesson_ids": [
+          "bioreactors-6"
+        ],
+        "assessment_ids": [
+          "bioreactors-6-practice"
+        ]
+      },
+      {
+        "week": 4,
+        "title": "Continuous and perfused culture: chemostat steady states, washout and cell-specific perfusion",
+        "lesson_ids": [
+          "bioreactors-8"
+        ],
+        "assessment_ids": [
+          "bioreactors-8-practice"
+        ]
+      },
+      {
+        "week": 5,
+        "title": "Oxygen transfer and consumption",
+        "lesson_ids": [
+          "bioreactors-2"
+        ],
+        "assessment_ids": [
+          "bioreactors-2-practice"
+        ]
+      },
+      {
+        "week": 6,
+        "title": "Sizing oxygen supply: kLa, driving force and the cell density a reactor can support",
+        "lesson_ids": [
+          "bioreactors-5"
+        ],
+        "assessment_ids": [
+          "bioreactors-5-practice"
+        ]
+      },
+      {
+        "week": 7,
+        "title": "Virtual lab: measuring kLa by dynamic gassing-out",
+        "lesson_ids": [
+          "bioreactors-lab-01"
+        ],
+        "assessment_ids": [
+          "bioreactors-week7-kla-lab"
+        ]
+      },
+      {
+        "week": 8,
+        "title": "Controlling dissolved oxygen: the required kLa, the capacity limit and the control cascade",
+        "lesson_ids": [
+          "bioreactors-11"
+        ],
+        "assessment_ids": [
+          "bioreactors-11-practice"
+        ]
+      },
+      {
+        "week": 9,
+        "title": "Mixing, shear and scale-up",
+        "lesson_ids": [
+          "bioreactors-3"
+        ],
+        "assessment_ids": [
+          "bioreactors-3-practice"
+        ]
+      },
+      {
+        "week": 10,
+        "title": "Mixing and scale-up: power, tip speed and what cannot be kept constant",
+        "lesson_ids": [
+          "bioreactors-9"
+        ],
+        "assessment_ids": [
+          "bioreactors-9-practice"
+        ]
+      },
+      {
+        "week": 11,
+        "title": "Shear, eddies and cells: the Kolmogorov scale and when stirring becomes damage",
+        "lesson_ids": [
+          "bioreactors-10"
+        ],
+        "assessment_ids": [
+          "bioreactors-10-practice"
+        ]
+      },
+      {
+        "week": 12,
+        "title": "Process monitoring, control and quality",
+        "lesson_ids": [
+          "bioreactors-4"
+        ],
+        "assessment_ids": [
+          "bioreactors-4-practice"
+        ]
+      },
+      {
+        "week": 13,
+        "title": "Design of experiments: factorial designs, effects, interactions and replication",
+        "lesson_ids": [
+          "bioreactors-12"
+        ],
+        "assessment_ids": [
+          "bioreactors-12-practice"
+        ]
+      },
+      {
+        "week": 14,
+        "title": "Separating a mixing limitation from cell-line instability: designing a scale-down experiment",
+        "lesson_ids": [
+          "bioreactors-13"
+        ],
+        "assessment_ids": [
+          "bioreactors-13-practice",
+          "bioreactors-case"
+        ]
+      }
+    ]
   },
   "workload": {
     "estimated_total_hours": null,
@@ -343,6 +694,303 @@
           ]
         }
       ]
+    },
+    {
+      "id": "bioreactors-module-7",
+      "title": "Monod kinetics and yield",
+      "source_ids": [
+        "transport",
+        "tissueEngineering"
+      ],
+      "lessons": [
+        {
+          "id": "bioreactors-7",
+          "title": "Growth kinetics: Monod saturation, yield and what limits a batch",
+          "reading": "modules/07-growth-kinetics-monod-and-yield.md",
+          "objectives": [
+            "bioreactors-7-objective-1",
+            "bioreactors-7-objective-2",
+            "bioreactors-7-objective-3"
+          ],
+          "worked_example": "A synthetic culture with μ_max 0.05 per hour and K_s 1.0 mM grows at 0.0333 per hour at 2 mM, needs 4.0 mM glucose for 80% of its maximum rate, and can reach at most 1.25 × 10⁶ cells/mL from 3.0 × 10⁵ cells/mL, taking at least 28.5 h; the lesson's culture reaches 3.05 × 10⁶ cells/mL in at least 68.1 h.",
+          "question_ids": [
+            "bioreactors-7:growth-rate",
+            "bioreactors-7:nutrient-for-90",
+            "bioreactors-7:doubling-time",
+            "bioreactors-7:max-cell-density",
+            "bioreactors-7:minimum-time",
+            "bioreactors-7:doubled-glucose",
+            "bioreactors-7:specific-uptake",
+            "bioreactors-7:model-statements"
+          ],
+          "card_ids": [
+            "bioreactors-7-card-1",
+            "bioreactors-7-card-2",
+            "bioreactors-7-card-3",
+            "bioreactors-7-card-4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bioreactors-module-8",
+      "title": "Continuous and perfused culture",
+      "source_ids": [
+        "transport",
+        "tissueEngineering"
+      ],
+      "lessons": [
+        {
+          "id": "bioreactors-8",
+          "title": "Continuous and perfused culture: chemostat steady states, washout and cell-specific perfusion",
+          "reading": "modules/08-continuous-culture-washout-and-perfusion.md",
+          "objectives": [
+            "bioreactors-8-objective-1",
+            "bioreactors-8-objective-2",
+            "bioreactors-8-objective-3"
+          ],
+          "worked_example": "A synthetic chemostat with μ_max 0.05 per hour, K_s 1.0 mM and 10 mM feed washes out above 0.0455 per hour; at D = 0.03 per hour the steady state is 1.50 mM glucose and 0.850 × 10⁶ cells/mL (a residence time of 33.3 h); the lesson's chemostat has D_crit 0.0390 and maximum output near 0.0338 per hour, and its perfusion culture needs at least 240 pL/(cell·day).",
+          "question_ids": [
+            "bioreactors-8:washout-rate",
+            "bioreactors-8:steady-nutrient",
+            "bioreactors-8:steady-cells",
+            "bioreactors-8:output",
+            "bioreactors-8:optimal-dilution",
+            "bioreactors-8:perfusion-rate",
+            "bioreactors-8:minimum-perfusion",
+            "bioreactors-8:continuous-statements"
+          ],
+          "card_ids": [
+            "bioreactors-8-card-1",
+            "bioreactors-8-card-2",
+            "bioreactors-8-card-3",
+            "bioreactors-8-card-4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bioreactors-module-9",
+      "title": "Mixing and scale-up",
+      "source_ids": [
+        "transport",
+        "tissueEngineering"
+      ],
+      "lessons": [
+        {
+          "id": "bioreactors-9",
+          "title": "Mixing and scale-up: power, tip speed and what cannot be kept constant",
+          "reading": "modules/09-mixing-and-scale-up.md",
+          "objectives": [
+            "bioreactors-9-objective-1",
+            "bioreactors-9-objective-2",
+            "bioreactors-9-objective-3"
+          ],
+          "worked_example": "A synthetic 1 L vessel with a 5 cm impeller at 240 rpm draws 30.0 W/m³; scaled by 5 in linear dimension at constant power per volume it runs at 82.1 rpm, its tip speed rises 1.71-fold and its mixing time 2.92-fold; the 2 L lab vessel scaled by 10 at constant P/V reaches 1.35 m/s and 27.8 s.",
+          "question_ids": [
+            "bioreactors-9:power-input",
+            "bioreactors-9:power-per-volume",
+            "bioreactors-9:reynolds-number",
+            "bioreactors-9:speed-at-constant-pv",
+            "bioreactors-9:tip-speed-at-scale",
+            "bioreactors-9:mixing-time-at-scale",
+            "bioreactors-9:pv-at-constant-speed",
+            "bioreactors-9:scale-up-statements"
+          ],
+          "card_ids": [
+            "bioreactors-9-card-1",
+            "bioreactors-9-card-2",
+            "bioreactors-9-card-3",
+            "bioreactors-9-card-4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bioreactors-module-10",
+      "title": "Shear and eddies",
+      "source_ids": [
+        "transport",
+        "tissueEngineering"
+      ],
+      "lessons": [
+        {
+          "id": "bioreactors-10",
+          "title": "Shear, eddies and cells: the Kolmogorov scale and when stirring becomes damage",
+          "reading": "modules/10-shear-eddies-and-cell-damage.md",
+          "objectives": [
+            "bioreactors-10-objective-1",
+            "bioreactors-10-objective-2",
+            "bioreactors-10-objective-3"
+          ],
+          "worked_example": "A synthetic vessel at 50 W/m³ has ε = 0.050 W/kg and an average Kolmogorov scale of 51.2 μm; with a local factor of 50 the scale near the impeller is 19.2 μm and the stress 1.32 Pa, well below a 100 μm carrier; the lab vessel at 21.6 W/m³ would need an average of about 0.5 W/m³ to keep local eddies at 50 μm.",
+          "question_ids": [
+            "bioreactors-10:dissipation",
+            "bioreactors-10:kolmogorov-scale",
+            "bioreactors-10:local-scale",
+            "bioreactors-10:kolmogorov-stress",
+            "bioreactors-10:ratio-to-carrier",
+            "bioreactors-10:allowed-power",
+            "bioreactors-10:scale-shrinks",
+            "bioreactors-10:shear-statements"
+          ],
+          "card_ids": [
+            "bioreactors-10-card-1",
+            "bioreactors-10-card-2",
+            "bioreactors-10-card-3",
+            "bioreactors-10-card-4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bioreactors-module-11",
+      "title": "Dissolved-oxygen control",
+      "source_ids": [
+        "transport",
+        "tissueEngineering"
+      ],
+      "lessons": [
+        {
+          "id": "bioreactors-11",
+          "title": "Controlling dissolved oxygen: the required kLa, the capacity limit and the control cascade",
+          "reading": "modules/11-dissolved-oxygen-control-and-the-capacity-limit.md",
+          "objectives": [
+            "bioreactors-11-objective-1",
+            "bioreactors-11-objective-2",
+            "bioreactors-11-objective-3"
+          ],
+          "worked_example": "A synthetic culture needs kLa 0.75 per hour at the start and, growing at 0.025 per hour, reaches a 4 per hour ceiling after 67.0 h at 2.13 × 10⁶ cells/mL with a 15 min oxygen time constant; the lesson's culture reaches its ceiling after 53.6 h at 2.5 × 10⁶ cells/mL, or after 99.9 h and 10 × 10⁶ cells/mL with oxygen enrichment.",
+          "question_ids": [
+            "bioreactors-11:our-start",
+            "bioreactors-11:kla-required",
+            "bioreactors-11:time-to-limit",
+            "bioreactors-11:density-at-limit",
+            "bioreactors-11:enriched-capacity",
+            "bioreactors-11:time-enriched",
+            "bioreactors-11:oxygen-time-constant",
+            "bioreactors-11:control-statements"
+          ],
+          "card_ids": [
+            "bioreactors-11-card-1",
+            "bioreactors-11-card-2",
+            "bioreactors-11-card-3",
+            "bioreactors-11-card-4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bioreactors-module-12",
+      "title": "Design of experiments",
+      "source_ids": [
+        "transport",
+        "tissueEngineering"
+      ],
+      "lessons": [
+        {
+          "id": "bioreactors-12",
+          "title": "Design of experiments: factorial designs, effects, interactions and replication",
+          "reading": "modules/12-factorial-design-of-experiments.md",
+          "objectives": [
+            "bioreactors-12-objective-1",
+            "bioreactors-12-objective-2",
+            "bioreactors-12-objective-3"
+          ],
+          "worked_example": "A synthetic 2² design with runs 2.0, 3.0, 2.6 and 4.2 g/L has effects A = 1.30, B = 0.90 and interaction AB = 0.30, and a five-factor full design needs 32 runs against 16 for its half fraction; in the 2³ experiment of the lesson, temperature has the main effect 1.075, the AC interaction is 0.275, the effect standard error is 0.0707 and the curvature 0.2375.",
+          "question_ids": [
+            "bioreactors-12:effect-temperature",
+            "bioreactors-12:effect-oxygen",
+            "bioreactors-12:interaction-ac",
+            "bioreactors-12:effect-standard-error",
+            "bioreactors-12:curvature",
+            "bioreactors-12:runs-needed",
+            "bioreactors-12:ofat-precision",
+            "bioreactors-12:design-statements"
+          ],
+          "card_ids": [
+            "bioreactors-12-card-1",
+            "bioreactors-12-card-2",
+            "bioreactors-12-card-3",
+            "bioreactors-12-card-4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bioreactors-module-lab-01",
+      "title": "Virtual laboratory: measuring kLa",
+      "source_ids": [
+        "transport",
+        "tissueEngineering"
+      ],
+      "lessons": [
+        {
+          "id": "bioreactors-lab-01",
+          "title": "Virtual lab 1: measuring kLa by dynamic gassing-out",
+          "reading": "labs/01-measuring-kla-by-dynamic-gassing-out.md",
+          "objectives": [
+            "bioreactors-lab-01-objective-1",
+            "bioreactors-lab-01-objective-2",
+            "bioreactors-lab-01-objective-3"
+          ],
+          "worked_example": "The synthetic gassing-out curves give kLa of 2.00, 3.67 and 5.66 per hour at 200, 300 and 400 rpm, an exponent of 1.50 in the speed (kLa roughly proportional to the square root of power per volume), a supportable density of 4.245 × 10⁶ cells/mL at 400 rpm and a probe-lag product of 0.031; a cell-free test is a starting estimate for a culture.",
+          "question_ids": [
+            "bioreactors-lab1:curve-summary",
+            "bioreactors-lab1:kla-200",
+            "bioreactors-lab1:kla-400",
+            "bioreactors-lab1:speed-exponent",
+            "bioreactors-lab1:supportable-density",
+            "bioreactors-lab1:probe-lag",
+            "bioreactors-lab1:method-reasoning",
+            "bioreactors-lab1:supported-conclusions"
+          ],
+          "card_ids": [
+            "bioreactors-lab1-0",
+            "bioreactors-lab1-1",
+            "bioreactors-lab1-2",
+            "bioreactors-lab1-3"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bioreactors-module-13",
+      "title": "Designing a scale-down experiment",
+      "source_ids": [
+        "transport",
+        "tissueEngineering"
+      ],
+      "lessons": [
+        {
+          "id": "bioreactors-13",
+          "title": "Separating a mixing limitation from cell-line instability: designing a scale-down experiment",
+          "reading": "modules/13-designing-a-scale-down-experiment.md",
+          "objectives": [
+            "bioreactors-13-objective-1",
+            "bioreactors-13-objective-2",
+            "bioreactors-13-objective-3"
+          ],
+          "worked_example": "A synthetic culture at 6.0 × 10⁶ cells/mL with a 90 s mixing time loses 0.030 mmol/L of oxygen per visit to an unsupplied region and reaches the critical level after 150 s; a two-by-two scale-down with viabilities 92, 90, 80 and 78% has a loop effect of −2.0, a passage effect of −12.0 and an interaction of 0.0 points, favoring cell-line instability; the lesson's culture, with a 120 s mixing time, falls 0.067 mmol/L per visit, and a loop effect of −11.5 with 6 cultures per group needed for 80% power.",
+          "question_ids": [
+            "bioreactors-13:oxygen-fall",
+            "bioreactors-13:time-to-critical",
+            "bioreactors-13:time-to-anoxia",
+            "bioreactors-13:oxygen-consumed-fraction",
+            "bioreactors-13:loop-effect",
+            "bioreactors-13:interaction",
+            "bioreactors-13:cultures-per-group",
+            "bioreactors-13:scale-down-design",
+            "bioreactors-13:design-statements"
+          ],
+          "card_ids": [
+            "bioreactors-13-card-1",
+            "bioreactors-13-card-2",
+            "bioreactors-13-card-3",
+            "bioreactors-13-card-4"
+          ]
+        }
+      ]
     }
   ],
   "assessments": [
@@ -455,6 +1103,213 @@
       "points": 6
     },
     {
+      "id": "bioreactors-7-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Monod kinetics and yield practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "bioreactors-7-objective-1",
+        "bioreactors-7-objective-2",
+        "bioreactors-7-objective-3",
+        "bioreactors-outcome-1",
+        "bioreactors-outcome-3"
+      ],
+      "question_ids": [
+        "bioreactors-7:growth-rate",
+        "bioreactors-7:nutrient-for-90",
+        "bioreactors-7:doubling-time",
+        "bioreactors-7:max-cell-density",
+        "bioreactors-7:minimum-time",
+        "bioreactors-7:doubled-glucose",
+        "bioreactors-7:specific-uptake",
+        "bioreactors-7:model-statements"
+      ],
+      "points": 9
+    },
+    {
+      "id": "bioreactors-8-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Continuous and perfused culture practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "bioreactors-8-objective-1",
+        "bioreactors-8-objective-2",
+        "bioreactors-8-objective-3",
+        "bioreactors-outcome-1",
+        "bioreactors-outcome-3",
+        "bioreactors-outcome-4"
+      ],
+      "question_ids": [
+        "bioreactors-8:washout-rate",
+        "bioreactors-8:steady-nutrient",
+        "bioreactors-8:steady-cells",
+        "bioreactors-8:output",
+        "bioreactors-8:optimal-dilution",
+        "bioreactors-8:perfusion-rate",
+        "bioreactors-8:minimum-perfusion",
+        "bioreactors-8:continuous-statements"
+      ],
+      "points": 9
+    },
+    {
+      "id": "bioreactors-9-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Mixing and scale-up practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "bioreactors-9-objective-1",
+        "bioreactors-9-objective-2",
+        "bioreactors-9-objective-3",
+        "bioreactors-outcome-2",
+        "bioreactors-outcome-4"
+      ],
+      "question_ids": [
+        "bioreactors-9:power-input",
+        "bioreactors-9:power-per-volume",
+        "bioreactors-9:reynolds-number",
+        "bioreactors-9:speed-at-constant-pv",
+        "bioreactors-9:tip-speed-at-scale",
+        "bioreactors-9:mixing-time-at-scale",
+        "bioreactors-9:pv-at-constant-speed",
+        "bioreactors-9:scale-up-statements"
+      ],
+      "points": 9
+    },
+    {
+      "id": "bioreactors-10-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Shear and eddies practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "bioreactors-10-objective-1",
+        "bioreactors-10-objective-2",
+        "bioreactors-10-objective-3",
+        "bioreactors-outcome-2",
+        "bioreactors-outcome-4"
+      ],
+      "question_ids": [
+        "bioreactors-10:dissipation",
+        "bioreactors-10:kolmogorov-scale",
+        "bioreactors-10:local-scale",
+        "bioreactors-10:kolmogorov-stress",
+        "bioreactors-10:ratio-to-carrier",
+        "bioreactors-10:allowed-power",
+        "bioreactors-10:scale-shrinks",
+        "bioreactors-10:shear-statements"
+      ],
+      "points": 9
+    },
+    {
+      "id": "bioreactors-11-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Dissolved-oxygen control practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "bioreactors-11-objective-1",
+        "bioreactors-11-objective-2",
+        "bioreactors-11-objective-3",
+        "bioreactors-outcome-2",
+        "bioreactors-outcome-3",
+        "bioreactors-outcome-4"
+      ],
+      "question_ids": [
+        "bioreactors-11:our-start",
+        "bioreactors-11:kla-required",
+        "bioreactors-11:time-to-limit",
+        "bioreactors-11:density-at-limit",
+        "bioreactors-11:enriched-capacity",
+        "bioreactors-11:time-enriched",
+        "bioreactors-11:oxygen-time-constant",
+        "bioreactors-11:control-statements"
+      ],
+      "points": 9
+    },
+    {
+      "id": "bioreactors-12-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Design of experiments practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "bioreactors-12-objective-1",
+        "bioreactors-12-objective-2",
+        "bioreactors-12-objective-3",
+        "bioreactors-outcome-3",
+        "bioreactors-outcome-4"
+      ],
+      "question_ids": [
+        "bioreactors-12:effect-temperature",
+        "bioreactors-12:effect-oxygen",
+        "bioreactors-12:interaction-ac",
+        "bioreactors-12:effect-standard-error",
+        "bioreactors-12:curvature",
+        "bioreactors-12:runs-needed",
+        "bioreactors-12:ofat-precision",
+        "bioreactors-12:design-statements"
+      ],
+      "points": 9
+    },
+    {
+      "id": "bioreactors-13-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Designing a scale-down experiment practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "bioreactors-13-objective-1",
+        "bioreactors-13-objective-2",
+        "bioreactors-13-objective-3",
+        "bioreactors-outcome-1",
+        "bioreactors-outcome-2",
+        "bioreactors-outcome-3",
+        "bioreactors-outcome-4"
+      ],
+      "question_ids": [
+        "bioreactors-13:oxygen-fall",
+        "bioreactors-13:time-to-critical",
+        "bioreactors-13:time-to-anoxia",
+        "bioreactors-13:oxygen-consumed-fraction",
+        "bioreactors-13:loop-effect",
+        "bioreactors-13:interaction",
+        "bioreactors-13:cultures-per-group",
+        "bioreactors-13:scale-down-design",
+        "bioreactors-13:design-statements"
+      ],
+      "points": 12
+    },
+    {
+      "id": "bioreactors-week7-kla-lab",
+      "type": "lab",
+      "mode": "practice",
+      "title": "Virtual lab 1: measuring kLa by dynamic gassing-out (ungraded practice)",
+      "path": "question-banks/practice.json",
+      "week": 7,
+      "objective_ids": [
+        "bioreactors-lab-01-objective-1",
+        "bioreactors-lab-01-objective-2",
+        "bioreactors-lab-01-objective-3",
+        "bioreactors-outcome-2",
+        "bioreactors-outcome-3",
+        "bioreactors-outcome-4"
+      ],
+      "question_ids": [
+        "bioreactors-lab1:curve-summary",
+        "bioreactors-lab1:kla-200",
+        "bioreactors-lab1:kla-400",
+        "bioreactors-lab1:speed-exponent",
+        "bioreactors-lab1:supportable-density",
+        "bioreactors-lab1:probe-lag",
+        "bioreactors-lab1:method-reasoning",
+        "bioreactors-lab1:supported-conclusions"
+      ],
+      "points": 20
+    },
+    {
       "id": "bioreactors-case",
       "type": "case",
       "mode": "self-assessment",
@@ -516,18 +1371,24 @@
       "version": "0.3.2",
       "date": "2026-10-08",
       "summary": "Added a common-mistakes section to 1 original lesson that lacked one (bioreactors-5); each bullet names a mistake that the lesson's own text addresses. Fixed number formatting that an earlier authoring step left in learner-visible text: raw exponent notation (a number written with the letter e and a power of ten) and floating-point artifacts (a decimal with a long run of trailing digits) in a worked-example summary, item bioreactors-5:max-cell-density, item bioreactors-5:max-medium-depth, the oxygen-supply reading. No answer key, tolerance or objective changed. The package remains partial, unreviewed and formative-only."
+    },
+    {
+      "version": "0.4.0",
+      "date": "2026-10-08",
+      "summary": "Added a proposed 14-week schedule; seven original lessons (Monod growth and yield; chemostat steady states, washout and cell-specific perfusion; mixing and scale-up; shear, eddies and the Kolmogorov scale; dissolved-oxygen control and the capacity limit; factorial design of experiments; and designing a scale-down experiment that separates a mixing limitation from cell-line instability, which prepares the course case); and a synthetic-data lab on measuring kLa by dynamic gassing-out. No new references were added. All activities remain ungraded practice; the package remains partial and unreviewed, gives no laboratory protocol or process recipe, and makes no claim about any cell line, vessel or process."
     }
   ],
   "limitations": [
-    "Four compact legacy units are preserved; this package is not equivalent to a full university semester.",
-    "There is no authored 12–15 week schedule, substantive homework sequence, laboratory sequence, midterm, cumulative final, or graded integrative project.",
-    "Practice items are short formative checks (two per prototype unit and six per original lesson); they do not demonstrate comprehensive outcome coverage or mastery, and objective associations remain provisional.",
+    "Four compact legacy units are preserved beside ten original readings, including one synthetic-data virtual lab; this package is not equivalent to a full university semester.",
+    "A proposed 14-week schedule exists but is unmeasured and unreviewed. There is one synthetic-data virtual lab and no substantive homework sequence, laboratory sequence, midterm, cumulative final, or graded integrative project.",
+    "Practice items are short formative checks (two per prototype unit and six to nine per original lesson); they do not demonstrate comprehensive outcome coverage or mastery, and objective associations remain provisional.",
     "Bloom labels and structured prerequisite edges are initial authoring classifications awaiting subject-matter review.",
     "Question answers and solution feedback are intentionally public practice authoring specifications, not restricted exam keys.",
-    "Of the 12 numerical answers in this package, six require a unit, none checks significant figures and none checks dimensions; the others accept a number within a stated tolerance, with the unit optional.",
-    "Total workload and weekly duration are unknown; former nominal credit values and hardcoded reading times do not establish workload."
+    "Of the 66 numerical answers in this package, twelve require a unit, one checks significant figures and none checks dimensions; the others accept a number within a stated tolerance, with the unit optional.",
+    "Total workload and weekly duration are unknown; former nominal credit values and hardcoded reading times do not establish workload.",
+    "All cultures, vessels, cell lines and numbers are synthetic teaching examples; this package gives no laboratory protocols, process recipes or medical advice and says nothing about any real cell line, vessel or process. The formulas are first-order textbook estimates, not design methods."
   ],
   "intentionally_omitted": [
-    "Full instructional sequence and summative assessments are not authored yet; the original lessons extend a partial package."
+    "Graded assessments and a laboratory sequence are not authored yet (one synthetic-data virtual lab exists); the original lessons extend a partial package."
   ]
 }

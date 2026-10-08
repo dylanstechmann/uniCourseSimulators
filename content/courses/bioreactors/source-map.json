@@ -80,6 +80,110 @@
       "original_content": true,
       "license": "CC-BY-4.0",
       "modifications": []
+    },
+    {
+      "module_id": "bioreactors-module-7",
+      "lesson_id": "bioreactors-7",
+      "reading": "modules/07-growth-kinetics-monod-and-yield.md",
+      "source_ids": [
+        "transport",
+        "tissueEngineering"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "bioreactors-module-8",
+      "lesson_id": "bioreactors-8",
+      "reading": "modules/08-continuous-culture-washout-and-perfusion.md",
+      "source_ids": [
+        "transport",
+        "tissueEngineering"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "bioreactors-module-9",
+      "lesson_id": "bioreactors-9",
+      "reading": "modules/09-mixing-and-scale-up.md",
+      "source_ids": [
+        "transport",
+        "tissueEngineering"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "bioreactors-module-10",
+      "lesson_id": "bioreactors-10",
+      "reading": "modules/10-shear-eddies-and-cell-damage.md",
+      "source_ids": [
+        "transport",
+        "tissueEngineering"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "bioreactors-module-11",
+      "lesson_id": "bioreactors-11",
+      "reading": "modules/11-dissolved-oxygen-control-and-the-capacity-limit.md",
+      "source_ids": [
+        "transport",
+        "tissueEngineering"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "bioreactors-module-12",
+      "lesson_id": "bioreactors-12",
+      "reading": "modules/12-factorial-design-of-experiments.md",
+      "source_ids": [
+        "transport",
+        "tissueEngineering"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "bioreactors-module-lab-01",
+      "lesson_id": "bioreactors-lab-01",
+      "reading": "labs/01-measuring-kla-by-dynamic-gassing-out.md",
+      "source_ids": [
+        "transport",
+        "tissueEngineering"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "bioreactors-module-13",
+      "lesson_id": "bioreactors-13",
+      "reading": "modules/13-designing-a-scale-down-experiment.md",
+      "source_ids": [
+        "transport",
+        "tissueEngineering"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
     }
   ]
 }

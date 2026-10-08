@@ -31,7 +31,8 @@ LESSONS = [("geroscience", f"geroscience-{n}") for n in range(9, 15)] + [
     ("geroscience", "geroscience-15"), ("genetics", "genetics-9"), ("biochemistry", "biochemistry-7"), ("physiology", "physiology-7"),
     ("signals-control", "signals-control-6"), ("robotics", "robotics-6"), ("geroscience", "geroscience-16"),
 ] + [("genetics", f"genetics-{n}") for n in range(10, 16)] + [("physiology", f"physiology-{n}") for n in range(8, 15)] + [("biochemistry", f"biochemistry-{n}") for n in range(8, 14)] + [
-    ("statistics", f"statistics-{n}") for n in range(9, 16)] + [("biomaterials", f"biomaterials-{n}") for n in range(7, 14)]
+    ("statistics", f"statistics-{n}") for n in range(9, 16)] + [("biomaterials", f"biomaterials-{n}") for n in range(7, 14)] + [
+    ("bioreactors", f"bioreactors-{n}") for n in range(7, 14)]
 
 
 def load(course):
@@ -428,4 +429,51 @@ def test_biomaterials_lab_keys_match_the_dataset_and_the_lab_is_labelled_synthet
     text = (COURSES / "biomaterials/labs/01-degradation-time-course-of-a-synthetic-scaffold.md").read_text(encoding="utf-8")
     assert "nothing here is evidence about any material or implant" in text
     assert "values slightly above 100 reflect weighing variability" in text
+
+
+def test_bioreactors_schedule_places_every_lesson_once_and_stays_partial():
+    manifest = load("bioreactors")
+    weeks = manifest["duration"]["weeks"]
+    assert [w["week"] for w in weeks] == list(range(1, 15))
+    scheduled = [lesson for w in weeks for lesson in w["lesson_ids"]]
+    all_lessons = [lesson["id"] for m in manifest["modules"] for lesson in m["lessons"]]
+    assert len(all_lessons) == 14
+    assert sorted(scheduled) == sorted(all_lessons) and len(scheduled) == len(set(scheduled))
+    assessments = {a["id"]: a for a in manifest["assessments"]}
+    assert all(a in assessments for w in weeks for a in w["assessment_ids"])
+    assert all(a["mode"] != "graded" for a in manifest["assessments"])
+    assert manifest["maturity"] == "partial" and manifest["review"]["status"] == "unreviewed"
+    assert manifest["grading_policy"]["mode"] == "formative-only"
+    assert "not evidence of semester equivalence" in manifest["duration"]["equivalent_structure"]
+    prototype_weeks = {lesson: w["week"] for w in weeks for lesson in w["lesson_ids"] if lesson in {f"bioreactors-{n}" for n in range(1, 5)}}
+    assert prototype_weeks == {"bioreactors-1": 1, "bioreactors-2": 5, "bioreactors-3": 9, "bioreactors-4": 12}
+    lab_week = next(w for w in weeks if "bioreactors-lab-01" in w["lesson_ids"])
+    assert lab_week["week"] == 7 and "bioreactors-week7-kla-lab" in lab_week["assessment_ids"]
+    assert "bioreactors-case" in weeks[-1]["assessment_ids"] and "bioreactors-13" in weeks[-1]["lesson_ids"]
+
+
+def test_bioreactors_package_gives_no_protocols_recipes_or_advice():
+    manifest = load("bioreactors")
+    assert any("gives no laboratory protocols, process recipes or medical advice" in item for item in manifest["limitations"])
+    limits = {
+        "07-growth-kinetics-monod-and-yield.md": "The lesson says nothing about any real cell line or process",
+        "08-continuous-culture-washout-and-perfusion.md": "Nothing here is a protocol or a statement about any real cell line",
+        "10-shear-eddies-and-cell-damage.md": "Nothing here is a design or a statement about any real cell line",
+        "13-designing-a-scale-down-experiment.md": "not a protocol, a validation plan or a statement about any real process",
+    }
+    for name, phrase in limits.items():
+        text = (COURSES / "bioreactors/modules" / name).read_text(encoding="utf-8")
+        assert phrase in text, name
+    syllabus = (COURSES / "bioreactors/syllabus.md").read_text(encoding="utf-8")
+    assert "Version: 0.4.0." in syllabus and "Proposed 14-week schedule" in syllabus
+    assert all(f"- {outcome['description']}" in syllabus for outcome in manifest["outcomes"])
+
+
+def test_bioreactors_lab_keys_match_the_dataset_and_the_lab_is_labelled_synthetic():
+    import csv
+    rows = list(csv.DictReader((COURSES / "bioreactors/labs/gassing-out-do-curves.csv").open(encoding="utf-8")))
+    assert len(rows) == 63 and {int(r["run"]) for r in rows} == {1, 2, 3}
+    text = (COURSES / "bioreactors/labs/01-measuring-kla-by-dynamic-gassing-out.md").read_text(encoding="utf-8")
+    assert "nothing here is evidence about any culture or process" in text
+    assert "describes the logic of the method, not an operating procedure" in text
 
