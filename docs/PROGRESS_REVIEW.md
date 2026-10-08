@@ -1,5 +1,9 @@
 # Progress review: uniStemCourseSimulators
 
+## Update after browser QA of protected graded assignments (2026-10-08, twelfth pass)
+
+Written by an AI coding assistant. The owner preferred automated testing over trying the protected, graded mode by hand. A throwaway graded copy of genetics with private keys was driven in a headless browser. The first run showed that the mode had never worked end to end. A protected course's gradebook failed, which hid its assignments. Assignments written with the usual question ids could not be submitted. The attempt counter did not update. All three are fixed with regression tests, and the browser run now passes, with no private key reaching the learner. This proves the mechanism on one synthetic setup; it does not create graded content, and every committed package is still formative-only.
+
 ## Update after listing course outcomes on assessments (2026-10-08, eleventh pass)
 
 Written by an AI coding assistant. The owner decided that assignments can list the course outcomes they cover. Outcomes are derived from the items each assessment contains, and the validator now rejects an outcome that none of an assessment's items assesses, so the mapping cannot drift into a claim. The validator's last coverage warning is gone. This is a bookkeeping improvement, not more teaching: 184 objectives of the short prototype units are still linked to no outcome, and one item touching an outcome is not depth. The same pass found that 23 syllabi were stale (version 0.1.0, four units) and regenerated them; a new validator rule keeps the stated version current.

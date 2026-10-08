@@ -4,7 +4,26 @@
 
 2026-10-06; synthetic local learner data only. Milestones 1 and 2 are implemented. Milestone 3 remains partial; deterministic graders and prototype graded-assignment and review workflows are described below. A Milestone 4 curriculum-map increment is implemented and tested, while subject-matter review and map refinement remain. All 25 course packages are **partial**; zero are beta, complete or externally reviewed. Human score review is limited to saved attempts and does not constitute course-content review. No semester equivalence, university credit, security certification or public production deployment is asserted.
 
-## Current increment: assessments list the course outcomes they cover; syllabi brought up to date (2026-10-08, eleventh pass)
+## Current increment: browser QA of protected graded assignments, and three fixes it found (2026-10-08, twelfth pass)
+
+Written by an AI coding assistant, after the owner asked for the protected, graded mode to be tested automatically rather than by hand. Details, commands and limits are in [QA_PROTECTED_GRADED.md](QA_PROTECTED_GRADED.md).
+
+- **Harness.** `tools/qa/build_protected_fixture.py` builds a throwaway deployment outside the repository (genetics switched to a graded, protected policy, three QA assignments whose keys live only in a private store, a sentinel string in every private solution). `tools/qa/run_protected_e2e.sh` migrates a SQLite database and starts the API and the Vite dev server. It then runs `frontend/e2e/protected-graded.spec.ts` in Chromium. The spec is skipped in the default Compose run because the committed packages are formative-only. No committed package changed its grading mode, and no answer key was committed.
+- **Defects found and fixed, each with a regression test that fails without the fix:**
+  1. The grade calculation re-checked protection without the pinned source paths. Every protected graded course therefore answered 409 on its gradebook, which also hid the assessment plan and the assignment (`main.py`; `test_protected_course_gradebook_counts_private_graded_work`).
+  2. Graded submissions accepted only `[a-z0-9_-]` question ids, while content ids may contain `:` and `.`. An assignment written with the usual `lesson:slug` ids could never be submitted (`schemas.py`; `test_graded_assignment_accepts_authored_colon_and_dot_question_ids`).
+  3. The assignment view did not count a just-saved attempt, so the counter stayed at 0 and the form stayed open after the last allowed attempt. The server still refused the extra attempt (`GradedAssessment.tsx`; new unit test).
+- **After the fixes,** both protected browser tests pass. The run covered the plan, accessibility (axe), incomplete submissions, wrong and right attempts with unit diagnosis, the attempt limit, the policy-based course grade, a human-review request, persistence after reload, refusals for past-deadline and unreleased work, and the data export. No API response or page text contained the private sentinel, `solution_spec` or `private://`.
+
+| Command/check (this container, Python 3.12.3, Node with Vite 7, Chromium headless shell 153, 2026-10-08) | Result |
+| --- | --- |
+| `tools/qa/run_protected_e2e.sh` (protected spec) | first run: 3 defects; after fixes: 2 passed |
+| `playwright test` (whole suite, committed content, Vite dev server instead of nginx) | 19 passed, 2 skipped (protected spec), 1 failed: the nginx-only check that `/content`, `/legacy` and `/.env` return 404, which the Vite dev server does not provide. CI runs it against nginx. |
+| `verify.sh --frontend` | all steps PASS: root 221 passed; backend 1689 passed, 2 skipped; frontend 37 unit tests, lint, build (208 modules), bundle scan 0 findings; security 522 files, 0 findings; ruff clean; legacy 7/7 |
+
+Not run: Docker Compose with a protected course, other browsers, load or security testing beyond the leak checks. Not reviewed by a person.
+
+## Previous increment: assessments list the course outcomes they cover; syllabi brought up to date (2026-10-08, eleventh pass)
 
 Written by an AI coding assistant, following the owner's decision that assignments can list the course outcomes they cover.
 

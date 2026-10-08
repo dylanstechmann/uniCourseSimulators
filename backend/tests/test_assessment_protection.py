@@ -105,6 +105,28 @@ def test_course_can_declare_protected_and_then_needs_the_private_store(tmp_path,
     application.state.engine.dispose()
 
 
+def test_protected_course_gradebook_counts_private_graded_work(tmp_path, content_root):
+    # Regression (found by the protected-assignment browser QA): the grade calculation re-checked
+    # protection without the pinned source paths, so every protected graded course answered 409 on
+    # its gradebook, which also hid the assessment plan and the assignment in the learner view.
+    _configure_graded_homework(content_root, private_root=tmp_path / "private-assessments")
+    set_course_protection(content_root, "protected")
+    application = make_app(tmp_path, content_root, "course")
+    with guest_client(application) as client:
+        assert client.post("/api/v1/enrollments", json={"course_id": "test-course"}).status_code == 201
+        before = client.get("/api/v1/gradebook/test-course")
+        assert before.status_code == 200
+        assert before.json()["course_grade"]["status"] == "configured_no_submissions"
+        submitted = client.post("/api/v1/assessments/test-course/homework-1/submissions",
+                                json={"responses": {"choice": {"response": 0}}})
+        assert submitted.status_code == 201
+        after = client.get("/api/v1/gradebook/test-course")
+        assert after.status_code == 200
+        assert after.json()["course_grade"]["score_percent"] == 100
+        assert "private://" not in after.text and "solution_spec" not in after.text
+    application.state.engine.dispose()
+
+
 def test_operator_override_forces_protection_for_a_course_that_chose_open(tmp_path, content_root):
     _configure_graded_homework(content_root)
     set_course_protection(content_root, "open")

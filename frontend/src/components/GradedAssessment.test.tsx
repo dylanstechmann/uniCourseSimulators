@@ -113,6 +113,45 @@ describe("graded assignment submission", () => {
     ).toBeInTheDocument();
   });
 
+  it("counts a saved attempt and closes the form at the attempt limit", async () => {
+    // Regression found by the protected-assignment browser QA: the header kept showing
+    // "attempts used: 0" and the form stayed open after the last allowed attempt.
+    vi.mocked(api.gradedAssessment).mockResolvedValue({
+      ...assessment,
+      attempt_limit: 1,
+    });
+    vi.mocked(api.submitGradedAssessment).mockResolvedValue(submission);
+    const user = userEvent.setup();
+    render(
+      <GradedAssessment
+        courseId="fixture-course"
+        assessmentId="homework-1"
+        enabled
+        history={[]}
+        onSubmitted={vi.fn(async () => undefined)}
+        onAppeal={vi.fn(async () => {
+          throw new Error("No appeal expected in this test");
+        })}
+      />,
+    );
+
+    expect(
+      await screen.findByText(/attempts used: 0 of 1/),
+    ).toBeInTheDocument();
+    await user.click(screen.getByRole("radio", { name: "Vehicle" }));
+    await user.click(screen.getByRole("button", { name: "Submit assignment" }));
+
+    expect(
+      await screen.findByText(/attempts used: 1 of 1/),
+    ).toBeInTheDocument();
+    expect(
+      screen.getByText("The configured attempt limit has been reached."),
+    ).toBeInTheDocument();
+    expect(
+      screen.queryByRole("button", { name: "Submit assignment" }),
+    ).not.toBeInTheDocument();
+  });
+
   it("lets a learner request a separate human review of a saved assignment", async () => {
     vi.mocked(api.gradedAssessment).mockResolvedValue(assessment);
     const failed: GradedSubmission = {

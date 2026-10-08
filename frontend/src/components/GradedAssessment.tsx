@@ -473,6 +473,18 @@ export function GradedAssessment({
       );
       setAnswers({});
       setLocalSubmissions((previous) => [...previous, submission]);
+      // Count the saved attempt so the header and the attempt limit match the server.
+      setAssessment((current) =>
+        current
+          ? {
+              ...current,
+              attempts_used: Math.max(
+                current.attempts_used,
+                submission.attempt_number,
+              ),
+            }
+          : current,
+      );
       await onSubmitted(submission);
     } catch (submitError) {
       setError(errorMessage(submitError));

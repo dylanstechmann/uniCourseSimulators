@@ -366,7 +366,9 @@ class AssessmentSubmissionRequest(StrictModel):
     def valid_responses(cls, value):
         if not 1 <= len(value) <= 100:
             raise ValueError("A submission must contain 1–100 question responses")
-        if any(not re.fullmatch(r"[a-z0-9][a-z0-9_-]{0,99}", key) for key in value):
+        # Same grammar as content ids (content/schemas: ^[a-z0-9][a-z0-9._:-]*$), bounded in length;
+        # authored question ids such as "genetics-8:knockdown" use colons.
+        if any(not re.fullmatch(r"[a-z0-9][a-z0-9._:-]{0,99}", key) for key in value):
             raise ValueError("Question response IDs must be valid identifiers")
         if any(item.variant_token is not None for item in value.values()):
             raise ValueError("Assignment responses cannot include practice variant tokens")

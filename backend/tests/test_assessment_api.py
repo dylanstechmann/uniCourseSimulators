@@ -254,6 +254,35 @@ def test_private_assessment_keys_are_read_from_mount_and_never_returned(guest, a
     assert submitted.status_code == 201 and submitted.json()["score"] == 2
 
 
+def test_graded_assignment_accepts_authored_colon_and_dot_question_ids(guest, app, content_root):
+    # Regression (found by the protected-assignment browser QA): content ids may contain ":" and ".",
+    # but graded submissions accepted only [a-z0-9_-] keys, so an assignment authored with the usual
+    # "lesson:slug" question ids could never be submitted.
+    private_root = app.state.settings.private_assessments_root
+    _configure_graded_homework(content_root, private_root=private_root)
+    key_file = private_root / "courses" / "test-course" / "assignments" / "homework-1.json"
+    bank = json.loads(key_file.read_text(encoding="utf-8"))
+    bank["questions"][0]["id"] = "lesson-one:choice.v2"
+    key_file.write_text(json.dumps(bank), encoding="utf-8")
+    manifest_path = content_root / "courses" / "test-course" / "course.json"
+    manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+    manifest["assessments"][0]["question_ids"] = ["lesson-one:choice.v2"]
+    manifest_path.write_text(json.dumps(manifest), encoding="utf-8")
+
+    assert guest.post("/api/v1/enrollments", json={"course_id": "test-course"}).status_code == 201
+    submitted = guest.post(
+        "/api/v1/assessments/test-course/homework-1/submissions",
+        json={"responses": {"lesson-one:choice.v2": {"response": 0}}},
+    )
+    assert submitted.status_code == 201 and submitted.json()["score"] == 2
+    for bad in ("../choice", "Lesson-one:choice", "a b", "a/b", ":choice", "x" * 101):
+        refused = guest.post(
+            "/api/v1/assessments/test-course/homework-1/submissions",
+            json={"responses": {bad: {"response": 0}}},
+        )
+        assert refused.status_code == 422, bad
+
+
 def _provision_reviewer(app, client, email="reviewer@example.org"):
     registration = client.post("/api/v1/auth/register", json={
         "email": email, "password": "a-reviewer-test-password",

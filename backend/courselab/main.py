@@ -1658,6 +1658,8 @@ def create_app(settings: Settings | None = None) -> FastAPI:
                         {
                             "id": item.assessment_id,
                             "mode": item.mode,
+                            # The pinned source lets the protection check see private:// paths.
+                            "path": item.source_path,
                             "category_id": item.category_id,
                             "points": item.points,
                             "release_at": timestamp(item.release_at) if item.release_at else None,

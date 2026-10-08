@@ -119,7 +119,7 @@ npx playwright install --with-deps chromium
 npm run test:e2e
 ```
 
-Start Compose before E2E. Run `python tools/check_security.py --bundle frontend/dist` from the root after building. `python tools/validate_content.py --check-links` performs network probes; two JHU pages currently deny the automated client with HTTP 403, so live-link validation is **not fully passed**. Offline schema/content validation passes with 98 explicit legacy-depth warnings for the short prototype readings. Detailed commands, test counts and boundaries are in [VALIDATION_REPORT.md](docs/VALIDATION_REPORT.md). Production guidance: [DEPLOYMENT.md](docs/DEPLOYMENT.md).
+Start Compose before E2E. Run `python tools/check_security.py --bundle frontend/dist` from the root after building. `python tools/validate_content.py --check-links` performs network probes; two JHU pages currently deny the automated client with HTTP 403, so live-link validation is **not fully passed**. Offline schema/content validation passes with 98 explicit legacy-depth warnings for the short prototype readings. Detailed commands, test counts and boundaries are in [VALIDATION_REPORT.md](docs/VALIDATION_REPORT.md). Browser QA of the protected, graded mode, which runs outside Docker against a throwaway fixture, is described in [QA_PROTECTED_GRADED.md](docs/QA_PROTECTED_GRADED.md). Production guidance: [DEPLOYMENT.md](docs/DEPLOYMENT.md).
 
 ## Contributing and licensing
 
