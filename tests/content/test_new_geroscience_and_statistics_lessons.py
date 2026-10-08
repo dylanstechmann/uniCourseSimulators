@@ -34,7 +34,8 @@ LESSONS = [("geroscience", f"geroscience-{n}") for n in range(9, 15)] + [
     ("statistics", f"statistics-{n}") for n in range(9, 16)] + [("biomaterials", f"biomaterials-{n}") for n in range(7, 14)] + [
     ("bioreactors", f"bioreactors-{n}") for n in range(7, 14)] + [("transport", f"transport-{n}") for n in range(7, 14)] + [
     ("cellular-biomechanics", f"cellular-biomechanics-{n}") for n in range(7, 14)] + [
-    ("statics-materials", f"statics-materials-{n}") for n in range(7, 14)]
+    ("statics-materials", f"statics-materials-{n}") for n in range(7, 14)] + [
+    ("signals-control", f"signals-control-{n}") for n in range(7, 14)]
 
 
 def load(course):
@@ -627,5 +628,58 @@ def test_statics_materials_lab_keys_match_the_dataset_and_the_lab_is_labelled_sy
     assert len(rows) == 20 and {int(r["specimen"]) for r in rows} == {1, 2, 3, 4, 5}
     assert {r["status"] for r in rows} == {"failed", "runout"}
     text = (COURSES / "statics-materials/labs/01-fatigue-lives-scatter-and-run-outs.md").read_text(encoding="utf-8")
+    assert "nothing here is evidence about any device" in text
+
+
+def test_signals_control_schedule_places_every_lesson_once_and_stays_partial():
+    manifest = load("signals-control")
+    weeks = manifest["duration"]["weeks"]
+    assert [w["week"] for w in weeks] == list(range(1, 15))
+    scheduled = [lesson for w in weeks for lesson in w["lesson_ids"]]
+    all_lessons = [lesson["id"] for m in manifest["modules"] for lesson in m["lessons"]]
+    assert len(all_lessons) == 14
+    assert sorted(scheduled) == sorted(all_lessons) and len(scheduled) == len(set(scheduled))
+    assessments = {a["id"]: a for a in manifest["assessments"]}
+    assert all(a in assessments for w in weeks for a in w["assessment_ids"])
+    assert all(a["mode"] != "graded" for a in manifest["assessments"])
+    assert manifest["maturity"] == "partial" and manifest["review"]["status"] == "unreviewed"
+    assert manifest["grading_policy"]["mode"] == "formative-only"
+    assert "not evidence of semester equivalence" in manifest["duration"]["equivalent_structure"]
+    prototype_weeks = {lesson: w["week"] for w in weeks for lesson in w["lesson_ids"] if lesson in {f"signals-control-{n}" for n in range(1, 5)}}
+    assert prototype_weeks == {"signals-control-1": 1, "signals-control-2": 4, "signals-control-3": 8, "signals-control-4": 12}
+    lab_week = next(w for w in weeks if "signals-control-lab-01" in w["lesson_ids"])
+    assert lab_week["week"] == 11 and "signals-control-week11-identification-lab" in lab_week["assessment_ids"]
+    assert "signals-control-case" in weeks[-1]["assessment_ids"] and "signals-control-13" in weeks[-1]["lesson_ids"]
+    # prerequisites come first: poles before Bode plots, margins before PI tuning, PI tuning before the lab and the capstone
+    order = {lesson: w["week"] for w in weeks for lesson in w["lesson_ids"]}
+    assert order["signals-control-7"] < order["signals-control-9"] < order["signals-control-10"] < order["signals-control-11"] < order["signals-control-lab-01"] < order["signals-control-13"]
+
+
+def test_signals_control_package_gives_no_controller_settings_or_protocols():
+    manifest = load("signals-control")
+    assert any("gives no controller settings, safety procedures or test protocols for any real device" in item for item in manifest["limitations"])
+    limits = {
+        "07-laplace-transforms-poles-zeros-and-the-final-value.md": "Limits of this lesson",
+        "08-second-order-systems-damping-and-overshoot.md": "a real measuring line must be tested",
+        "09-bode-plots-decibels-phase-and-delay.md": "the Bode plot of a real system must be measured, not assumed",
+        "10-stability-margins-gain-phase-and-delay.md": "plants with unstable poles, several crossovers or a changing delay need the full Nyquist criterion",
+        "11-pi-control-tuning-and-integrator-windup.md": "real loops need a measured model, a check of the margins and a test of the saturation behavior",
+        "12-sampling-aliasing-and-discrete-pi-control.md": "the ten-per-time-constant rule is a rule of thumb",
+        "13-sensor-filter-phase-lag-and-safe-retuning.md": "not a procedure for any real incubator or process, whose limits, alarms and safety interlocks come first",
+    }
+    for name, phrase in limits.items():
+        text = (COURSES / "signals-control/modules" / name).read_text(encoding="utf-8")
+        assert phrase in text, name
+    syllabus = (COURSES / "signals-control/syllabus.md").read_text(encoding="utf-8")
+    assert "Version: 0.4.0." in syllabus and "Proposed 14-week schedule" in syllabus
+    assert all(f"- {outcome['description']}" in syllabus for outcome in manifest["outcomes"])
+
+
+def test_signals_control_lab_keys_match_the_dataset_and_the_lab_is_labelled_synthetic():
+    import csv
+    rows = list(csv.DictReader((COURSES / "signals-control/labs/incubator-step-tests.csv").open(encoding="utf-8")))
+    assert len(rows) == 366 and {int(r["run"]) for r in rows} == {1, 2}
+    assert {r["power_w"] for r in rows} == {"10", "20", "30"}
+    text = (COURSES / "signals-control/labs/01-identifying-an-incubator-from-step-tests.md").read_text(encoding="utf-8")
     assert "nothing here is evidence about any device" in text
 

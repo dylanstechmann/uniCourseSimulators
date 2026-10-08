@@ -145,6 +145,326 @@
         "signals-control-6-objective-3"
       ],
       "license": "CC-BY-4.0"
+    },
+    {
+      "id": "signals-control-7-card-1",
+      "lesson_id": "signals-control-7",
+      "front": "Transfer function",
+      "back": "G(s) = Y(s)/U(s) for a system at rest; for τ dy/dt = −y + Ku it is K/(τs + 1), with a pole at −1/τ and DC gain K.",
+      "objective_ids": [
+        "signals-control-7-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "signals-control-7-card-2",
+      "lesson_id": "signals-control-7",
+      "front": "Poles and time constants",
+      "back": "A pole at s = −p contributes e^(−pt) with time constant 1/p; the slowest stable pole dominates late behaviour; a pole with positive real part gives growth.",
+      "objective_ids": [
+        "signals-control-7-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "signals-control-7-card-3",
+      "lesson_id": "signals-control-7",
+      "front": "Step response by partial fractions",
+      "back": "Write G(s)/s as a sum A/s + B/(s + p₁) + …; each coefficient is found by covering its factor and evaluating the rest at its pole.",
+      "objective_ids": [
+        "signals-control-7-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "signals-control-7-card-4",
+      "lesson_id": "signals-control-7",
+      "front": "Final value and zeros",
+      "back": "y(∞) = lim s→0 of sY(s) only if all poles of sY(s) are in the left half-plane; a zero in the right half-plane makes the response start in the wrong direction.",
+      "objective_ids": [
+        "signals-control-7-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "signals-control-8-card-1",
+      "lesson_id": "signals-control-8",
+      "front": "Second-order model",
+      "back": "G(s) = ω_n²/(s² + 2ζω_n s + ω_n²) with poles −ζω_n ± jω_d, ω_d = ω_n√(1 − ζ²); ζ = 1 is critical damping and ζ > 1 has no overshoot.",
+      "objective_ids": [
+        "signals-control-8-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "signals-control-8-card-2",
+      "lesson_id": "signals-control-8",
+      "front": "Step-response measures",
+      "back": "M_p = exp(−πζ/√(1 − ζ²)); t_p = π/ω_d; 2% settling t_s ≈ 4/(ζω_n); ζ for a given M_p is −ln M_p/√(π² + ln² M_p).",
+      "objective_ids": [
+        "signals-control-8-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "signals-control-8-card-3",
+      "lesson_id": "signals-control-8",
+      "front": "Amplitude ratio",
+      "back": "|G| = 1/√((1 − r²)² + (2ζr)²) with r = f/f_n; at r = 1 it is 1/(2ζ); ζ near 0.64 to 0.7 gives the flattest response.",
+      "objective_ids": [
+        "signals-control-8-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "signals-control-8-card-4",
+      "lesson_id": "signals-control-8",
+      "front": "Measuring lines",
+      "back": "Ringing at the natural frequency distorts waveforms with harmonics near it; add damping or raise the natural frequency, and test the line to find both.",
+      "objective_ids": [
+        "signals-control-8-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "signals-control-9-card-1",
+      "lesson_id": "signals-control-9",
+      "front": "Decibels and cascades",
+      "back": "20 log₁₀|G|; a factor of 2 is +6.02 dB and of 10 is +20 dB; series elements multiply magnitudes and add phases, so decibels and angles add.",
+      "objective_ids": [
+        "signals-control-9-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "signals-control-9-card-2",
+      "lesson_id": "signals-control-9",
+      "front": "First-order lag",
+      "back": "|G| = K/√(1 + (ωτ)²), φ = −atan(ωτ); at the corner ω = 1/τ the magnitude is 3.01 dB down and the phase is −45°; above it the magnitude falls 20 dB per decade.",
+      "objective_ids": [
+        "signals-control-9-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "signals-control-9-card-3",
+      "lesson_id": "signals-control-9",
+      "front": "Delay",
+      "back": "e^(−θs) has magnitude 1 and phase −ωθ rad (−57.30 ωθ degrees): no gain change, phase lag growing with frequency; time lag = phase (rad)/ω.",
+      "objective_ids": [
+        "signals-control-9-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "signals-control-9-card-4",
+      "lesson_id": "signals-control-9",
+      "front": "Measuring a Bode plot",
+      "back": "Drive with small sinusoids at several frequencies; the amplitude ratio gives the magnitude and the time shift gives the phase, −360 × shift/period.",
+      "objective_ids": [
+        "signals-control-9-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "signals-control-10-card-1",
+      "lesson_id": "signals-control-10",
+      "front": "Crossovers and margins",
+      "back": "Gain crossover: |L| = 1; phase margin PM = 180° + ∠L there. Phase crossover: ∠L = −180°; gain margin GM = 1/|L| there.",
+      "objective_ids": [
+        "signals-control-10-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "signals-control-10-card-2",
+      "lesson_id": "signals-control-10",
+      "front": "Delay margin",
+      "back": "DM = PM (rad)/ω_gc, the extra delay that brings the loop to the edge of instability; the largest stable gain is the present gain times GM.",
+      "objective_ids": [
+        "signals-control-10-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "signals-control-10-card-3",
+      "lesson_id": "signals-control-10",
+      "front": "Design targets",
+      "back": "Typical targets: PM at least 45° and GM at least 2 (6 dB). For second-order-like loops ζ ≈ PM/100 in degrees; a low margin means a ringing closed loop.",
+      "objective_ids": [
+        "signals-control-10-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "signals-control-10-card-4",
+      "lesson_id": "signals-control-10",
+      "front": "Raising the gain",
+      "back": "A higher gain moves the gain crossover up, where the lag and the delay cost more phase, so the phase margin falls.",
+      "objective_ids": [
+        "signals-control-10-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "signals-control-11-card-1",
+      "lesson_id": "signals-control-11",
+      "front": "PI controller",
+      "back": "C(s) = K_p(1 + 1/(T_i s)), K_i = K_p/T_i; the integral must be constant in steady state, so the error is zero for a step setpoint in a stable loop.",
+      "objective_ids": [
+        "signals-control-11-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "signals-control-11-card-2",
+      "lesson_id": "signals-control-11",
+      "front": "Tuning by cancellation",
+      "back": "T_i = τ and K_p = τ/(K(λ + θ)) give L = (K_pK/τ)e^(−θs)/s: ω_gc = K_pK/τ and PM = 90° − ω_gc θ; a larger λ means a slower loop and more margin.",
+      "objective_ids": [
+        "signals-control-11-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "signals-control-11-card-3",
+      "lesson_id": "signals-control-11",
+      "front": "Ziegler–Nichols closed loop",
+      "back": "From K_u and P_u: PI K_p = 0.45 K_u, T_i = P_u/1.2; PID 0.6 K_u, P_u/2, P_u/8. Aggressive; check the margin.",
+      "objective_ids": [
+        "signals-control-11-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "signals-control-11-card-4",
+      "lesson_id": "signals-control-11",
+      "front": "Windup",
+      "back": "Integral accumulates while the actuator saturates (K_i × error × time) and overshoots later; clamp the integral or use back-calculation. Filter derivative action.",
+      "objective_ids": [
+        "signals-control-11-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "signals-control-12-card-1",
+      "lesson_id": "signals-control-12",
+      "front": "Aliasing",
+      "back": "Sampling at f_s represents only f < f_s/2; a component above that appears at |f − n f_s|, and filtering after sampling cannot remove it.",
+      "objective_ids": [
+        "signals-control-12-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "signals-control-12-card-2",
+      "lesson_id": "signals-control-12",
+      "front": "Anti-alias filter",
+      "back": "A low-pass filter before the converter; a first-order RC has amplitude ratio 1/√(1 + (f/f_c)²), which is gentle, so use higher order or oversampling.",
+      "objective_ids": [
+        "signals-control-12-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "signals-control-12-card-3",
+      "lesson_id": "signals-control-12",
+      "front": "Hold delay and sampling period",
+      "back": "A zero-order hold lags by T/2, costing ω T/2 of phase; sample at least ten times per closed-loop time constant.",
+      "objective_ids": [
+        "signals-control-12-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "signals-control-12-card-4",
+      "lesson_id": "signals-control-12",
+      "front": "Discrete PI and plant",
+      "back": "u[k] = u[k−1] + K_p(e[k] − e[k−1]) + K_p(T/T_i)e[k]; a first-order lag becomes y[k+1] = a y[k] + K(1 − a)u[k] with a = e^(−T/τ). Clamp the stored output.",
+      "objective_ids": [
+        "signals-control-12-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "signals-control-lab1-0",
+      "lesson_id": "signals-control-lab-01",
+      "front": "Summarizing step tests",
+      "back": "Count runs and samples separately; the settled value is the mean of the last few samples over the runs; the gain is the settled rise divided by the step.",
+      "objective_ids": [
+        "signals-control-lab-01-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "signals-control-lab1-1",
+      "lesson_id": "signals-control-lab-01",
+      "front": "Delay and time constant",
+      "back": "Delay: the last time the response is still within 2% of its settled value; t63 is the time to reach 63.2%; for a first-order plant with delay, τ = t63 − θ.",
+      "objective_ids": [
+        "signals-control-lab-01-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "signals-control-lab1-2",
+      "lesson_id": "signals-control-lab-01",
+      "front": "Linearity",
+      "back": "Compare the gains from different step sizes; a falling gain means the plant is only approximately linear and the loop gain varies over the range.",
+      "objective_ids": [
+        "signals-control-lab-01-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "signals-control-lab1-3",
+      "lesson_id": "signals-control-lab-01",
+      "front": "Limits of open-loop tests",
+      "back": "They give a model, not a margin: saturation, disturbances and sensor filters need closed-loop tests and measured stability margins.",
+      "objective_ids": [
+        "signals-control-lab-01-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "signals-control-13-card-1",
+      "lesson_id": "signals-control-13",
+      "front": "Why the filter makes the loop ring",
+      "back": "A filter adds phase lag −atan(ωτ_f) at the crossover and lowers the gain, so the phase margin falls; the loop is not changed in gain but the margin is.",
+      "objective_ids": [
+        "signals-control-13-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "signals-control-13-card-2",
+      "lesson_id": "signals-control-13",
+      "front": "The trade-off",
+      "back": "A slower filter removes more noise but costs more phase; options are a lower gain, a faster filter, lead (which amplifies noise) or filtering the logged signal outside the loop.",
+      "objective_ids": [
+        "signals-control-13-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "signals-control-13-card-3",
+      "lesson_id": "signals-control-13",
+      "front": "Restoring a margin",
+      "back": "Set the phase at the crossover to −180° + PM, solve for ω_gc and take the gain that makes |L| = 1 there; for the cancelled PI loop K_p = (τ/K) ω√(1 + (ωτ_f)²).",
+      "objective_ids": [
+        "signals-control-13-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "signals-control-13-card-4",
+      "lesson_id": "signals-control-13",
+      "front": "Safe retuning sequence",
+      "back": "Baseline step; predict the margin; change one thing at a time; measure the margins; test saturation with anti-windup and a disturbance; check robustness; log the settings.",
+      "objective_ids": [
+        "signals-control-13-objective-3"
+      ],
+      "license": "CC-BY-4.0"
     }
   ]
 }

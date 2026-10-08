@@ -2016,3 +2016,390 @@ def test_statics_materials_lab_text_and_keys_agree_with_the_dataset():
         failed = len(_sm_logs(level))
         assert checks[(level, "specimens")] == 5 and checks[(level, "failures")] == failed
         assert abs(checks[(level, "mean_log10_failed")] - sum(_sm_logs(level)) / failed) < 1e-3
+
+
+# ---- signals and control 0.4.0 -------------------------------------------------------------------------------
+import cmath  # noqa: E402
+
+
+def _sc_rk4(f, x0: list[float], t_end: float, dt: float) -> list[tuple[float, list[float]]]:
+    """Fourth-order Runge-Kutta; returns (t, state) at every step."""
+    t, x, out = 0.0, list(x0), [(0.0, list(x0))]
+    n = int(round(t_end / dt))
+    for _ in range(n):
+        k1 = f(t, x)
+        k2 = f(t + dt / 2, [a + dt / 2 * b for a, b in zip(x, k1)])
+        k3 = f(t + dt / 2, [a + dt / 2 * b for a, b in zip(x, k2)])
+        k4 = f(t + dt, [a + dt * b for a, b in zip(x, k3)])
+        x = [a + dt / 6 * (b + 2 * c + 2 * d + e) for a, b, c, d, e in zip(x, k1, k2, k3, k4)]
+        t += dt
+        out.append((t, list(x)))
+    return out
+
+
+def _sc_step_second_order(a1: float, a0: float, b0: float, t_end: float, dt: float = 1e-3, zero: float = 0.0) -> list[tuple[float, float]]:
+    """Unit-step response of (b0 - zero*s)/(s^2 + a1 s + a0) in controllable canonical form: y = b0 x1 - zero x2."""
+    traj = _sc_rk4(lambda t, x: [x[1], -a0 * x[0] - a1 * x[1] + 1.0], [0.0, 0.0], t_end, dt)
+    return [(t, b0 * x[0] - zero * x[1]) for t, x in traj]
+
+
+def _sc_last_exit(traj: list[tuple[float, float]], final: float, band: float = 0.02) -> float:
+    last = 0.0
+    for t, y in traj:
+        if abs(y - final) > band * abs(final):
+            last = t
+    return last
+
+
+def _sc_G(w: float, k: float = 0.5, tau: float = 10.0, theta: float = 1.0) -> complex:
+    return k * cmath.exp(-1j * w * theta) / (1 + 1j * w * tau)
+
+
+def _sc_pm(loop, lo: float = 1e-3, hi: float = 50.0) -> tuple[float, float]:
+    w = _bisect(lambda x: abs(loop(x)) - 1, lo, hi)
+    return 180 + math.degrees(cmath.phase(loop(w))), w
+
+
+def _sc_phase_crossover(loop, lo: float = 1.0, hi: float = 2.5) -> float:
+    return _bisect(lambda x: loop(x).imag, lo, hi)
+
+
+_SC_LOOP20 = lambda w: 20.0 * _sc_G(w)                                   # noqa: E731
+_SC_PM20, _SC_WGC20 = _sc_pm(_SC_LOOP20)
+_SC_WPC = _sc_phase_crossover(_SC_LOOP20)
+_SC_GM = 1 / abs(_SC_LOOP20(_SC_WPC))
+
+
+def _sc_pi_loop(kp: float, ti: float, k: float = 0.5, tau: float = 10.0, theta: float = 1.0, tf: float = 0.0):
+    return lambda w: kp * (1 + 1 / (1j * w * ti)) * _sc_G(w, k, tau, theta) / (1 + 1j * w * tf)
+
+
+def _sc_kp_for_pm(target: float, tf: float) -> float:
+    def pm_of(kp: float) -> float:
+        return _sc_pm(_sc_pi_loop(kp, 10.0, tf=tf))[0] - target
+    return _bisect(pm_of, 1.0, 13.0)
+
+
+def _sc_lab_rows() -> list[dict[str, str]]:
+    import csv
+    return list(csv.DictReader((COURSES / "signals-control/labs/incubator-step-tests.csv").open(encoding="utf-8")))
+
+
+_SC_ROWS = _sc_lab_rows()
+
+
+def _sc_final(test: str) -> float:
+    vals = [float(r["rise_c"]) for r in _SC_ROWS if r["test"] == test and int(r["time_min"]) >= 56]
+    return sum(vals) / len(vals)
+
+
+def _sc_curve(test: str) -> list[float]:
+    return [sum(float(r["rise_c"]) for r in _SC_ROWS if r["test"] == test and int(r["time_min"]) == t) / 2 for t in range(61)]
+
+
+def _sc_t63(test: str) -> tuple[float, int]:
+    curve, final = _sc_curve(test), _sc_final(test)
+    delay = max(t for t in range(4) if curve[t] <= 0.02 * final)
+    i = next(i for i in range(1, 61) if curve[i] >= 0.632 * final)
+    return i - 1 + (0.632 * final - curve[i - 1]) / (curve[i] - curve[i - 1]), delay
+
+
+_SC_T63, _SC_DELAY = _sc_t63("test_20w")
+_SC_STEP_Y2 = dict(_sc_step_second_order(8.0, 12.0, 18.0, 1.0001))
+_SC_ALIAS_DFT_N = 80
+
+
+def _sc_alias(f: float, fs: float = 80.0) -> float:
+    """Apparent frequency of a sampled cosine, found as the DFT peak of one second of samples."""
+    n = int(fs)
+    xs = [math.cos(2 * math.pi * f * k / fs) for k in range(n)]
+    mags = [abs(sum(x * cmath.exp(-2j * math.pi * b * k / n) for k, x in enumerate(xs))) for b in range(n // 2 + 1)]
+    return float(max(range(len(mags)), key=lambda b: mags[b]))
+
+
+def _sc_closed_loop_amplitude(kp: float, t_end: float = 400.0, dt: float = 0.005) -> float:
+    """Proportional loop around 0.5 exp(-s)/(10 s + 1) with a one-minute delay; returns the peak |y| over the last 40 minutes."""
+    delay_steps = int(round(1.0 / dt))
+    u_hist = [0.0] * delay_steps
+    y, ys = 0.0, []
+    for k in range(int(t_end / dt)):
+        u_delayed = u_hist[k % delay_steps]
+        y += dt * (-y + 0.5 * u_delayed) / 10.0
+        u_hist[k % delay_steps] = kp * (1.0 - y)                       # unit setpoint step
+        ys.append(y)
+    tail = ys[-int(40 / dt):]
+    return max(tail) - min(tail)
+
+
+def _sc_second_order_peak(zeta: float, wn: float) -> tuple[float, float]:
+    traj = _sc_step_second_order(2 * zeta * wn, wn ** 2, wn ** 2, 0.06, dt=1e-6)
+    peak_t, peak_y = max(traj, key=lambda p: p[1])
+    return peak_t * 1000, 100 * (peak_y - 1)
+
+
+_SC_PEAK_T, _SC_OVERSHOOT = _sc_second_order_peak(0.25, 2 * math.pi * 20)
+_SC_ZETA10 = _bisect(lambda z: math.exp(-math.pi * z / math.sqrt(1 - z ** 2)) - 0.10, 0.05, 0.95)
+_SC_KP_ZN = 0.45 * 20 * _SC_GM
+_SC_PU = 2 * math.pi / _SC_WPC
+_SC_PM_PI, _SC_W_PI = _sc_pm(_sc_pi_loop(20 / 3, 10.0))
+_SC_PM0, _SC_W0 = _sc_pm(_sc_pi_loop(40 / 3, 10.0))
+_SC_PM1, _SC_W1 = _sc_pm(_sc_pi_loop(40 / 3, 10.0, tf=1.0))
+_SC_PM_FAST, _ = _sc_pm(_sc_pi_loop(40 / 3, 10.0, tf=0.25))
+_SC_KP45 = _sc_kp_for_pm(45.0, 1.0)
+
+SIGNALS_CONTROL_NUMERIC = {
+    # items written before 2026-10-08, recomputed from the numbers in their prompts
+    "signals-control-2:check": 1 / (2 * math.pi * 0.05),
+    "signals-control-1:dc-gain": 6 / 2,
+    "signals-control-2:aliased-frequency": _sc_alias(120.0, 200.0),
+    "signals-control-3:gain-margin": 1 / 0.4,
+    "signals-control-5:steady-power": 15 / 0.5,
+    "signals-control-5:p-error": 15 / (1 + 0.5 * 20),
+    "signals-control-5:closed-loop-tau": 600 / (1 + 10),
+    "signals-control-5:high-gain-error": 15 / (1 + 0.5 * 100),
+    "signals-control-6:conv-sample": sum(h * x for h, x in zip([0.5, 0.3, 0.2], [1, 1, 1])),
+    "signals-control-6:conv-length": 7 + 3 - 1,
+    "signals-control-6:step-2tau": 100 * (1 - math.exp(-4 / 2)),
+    "signals-control-6:impulse-value": math.exp(-1) / 2,
+    "signals-control-6:ramp-error": 0.5 * 2,
+    # signals-control-7: poles, zeros and the final value
+    "signals-control-7:dc-gain": 18 / 12,
+    "signals-control-7:slow-time-constant": 1 / abs(_bisect(lambda s: (s + 2) * (s + 6), -3.0, -1.0)),
+    "signals-control-7:residue": 18 / ((-2) * (-2 + 6)),
+    "signals-control-7:step-at-one-second": _SC_STEP_Y2[min(_SC_STEP_Y2, key=lambda t: abs(t - 1.0))],
+    "signals-control-7:quadratic-slow-pole": 1 / abs((-8 + math.sqrt(64 - 60)) / 2),
+    "signals-control-7:final-value": 5 * 4 / 10,
+    "signals-control-7:wrong-way-start": dict(_sc_step_second_order(2.0, 1.0, 1.0, 0.5001, zero=0.5))[min(dict(_sc_step_second_order(2.0, 1.0, 1.0, 0.5001, zero=0.5)), key=lambda t: abs(t - 0.5))],
+    # signals-control-8: second-order systems
+    "signals-control-8:overshoot": _SC_OVERSHOOT,
+    "signals-control-8:peak-time": _SC_PEAK_T,
+    "signals-control-8:settling-time": 4 / (0.25 * 2 * math.pi * 20) * 1000,
+    "signals-control-8:damped-frequency": 2 * math.pi * 20 * math.sqrt(1 - 0.25 ** 2),
+    "signals-control-8:damping-from-coefficients": 12 / (2 * math.sqrt(100)),
+    "signals-control-8:damping-for-overshoot": _SC_ZETA10,
+    "signals-control-8:resonance-gain": abs(1 / ((1j) ** 2 + 2 * 0.25 * 1j + 1)),
+    "signals-control-8:amplitude-at-12-hz": abs(1 / ((1j * 0.6) ** 2 + 2 * 0.25 * (1j * 0.6) + 1)),
+    # signals-control-9: Bode plots
+    "signals-control-9:dc-gain-db": 20 * math.log10(0.5),
+    "signals-control-9:corner-frequency": _bisect(lambda w: abs(_sc_G(w, theta=0.0)) - 0.5 / math.sqrt(2), 1e-3, 5.0),
+    "signals-control-9:magnitude-in-db": 20 * math.log10(abs(_sc_G(0.5))),
+    "signals-control-9:lag-phase": math.degrees(cmath.phase(1 / (1 + 5j))),
+    "signals-control-9:delay-phase": math.degrees(0.5 * 1.0),
+    "signals-control-9:total-phase": math.degrees(cmath.phase(_sc_G(0.5))),
+    "signals-control-9:cascade-magnitude": 20 * math.log10(abs(_sc_G(0.5) / (1 + 2j * 0.5))),
+    "signals-control-9:time-lag": -cmath.phase(_sc_G(0.5)) / 0.5,
+    # signals-control-10: stability margins
+    "signals-control-10:gain-crossover": _SC_WGC20,
+    "signals-control-10:phase-at-crossover": math.degrees(cmath.phase(_SC_LOOP20(_SC_WGC20))),
+    "signals-control-10:phase-margin": _SC_PM20,
+    "signals-control-10:phase-crossover": _SC_WPC,
+    "signals-control-10:gain-margin": _SC_GM,
+    "signals-control-10:largest-gain": 20 * _SC_GM,
+    "signals-control-10:delay-margin": math.radians(_SC_PM20) / _SC_WGC20,
+    "signals-control-10:gain-for-45": _bisect(lambda kp: _sc_pm(lambda w: kp * _sc_G(w))[0] - 45.0, 5.0, 25.0),
+    # signals-control-11: PI control
+    "signals-control-11:imc-kp": 10 / (0.5 * (2 + 1)),
+    "signals-control-11:integral-gain": (10 / (0.5 * 3)) / 10,
+    "signals-control-11:crossover-pi": _SC_W_PI,
+    "signals-control-11:pi-phase-margin": _SC_PM_PI,
+    "signals-control-11:ultimate-period": _SC_PU,
+    "signals-control-11:zn-kp": _SC_KP_ZN,
+    "signals-control-11:zn-ti": _SC_PU / 1.2,
+    "signals-control-11:windup-stored": (10 / (0.5 * 3) / 10) * 1.8 * 7,
+    # signals-control-12: sampling
+    "signals-control-12:alias-50": _sc_alias(50.0),
+    "signals-control-12:alias-140": _sc_alias(140.0),
+    "signals-control-12:antialias-attenuation": abs(1 / (1 + 1j * 50 / 20)),
+    "signals-control-12:hold-phase-loss": math.degrees((1 / 3) * (0.5 / 2)),
+    "signals-control-12:longest-period": (1 / (1 / 3)) / 10,
+    "signals-control-12:pi-update": 22.0 + (20 / 3) * (0.9 - 1.2) + (20 / 3) * (0.25 / 10) * 0.9,
+    "signals-control-12:plant-pole": math.exp(-0.25 / 10),
+    "signals-control-12:step-after-40": functools.reduce(lambda y, _: math.exp(-0.025) * y + 0.5 * (1 - math.exp(-0.025)) * 20, range(40), 0.0),
+    # signals-control-13: a sensor filter that makes a loop oscillate
+    "signals-control-13:margin-before": _SC_PM0,
+    "signals-control-13:filter-lag": math.degrees(cmath.phase(1 / (1 + 1j * _SC_W0 * 1.0))) * -1,
+    "signals-control-13:crossover-after": _SC_W1,
+    "signals-control-13:margin-after": _SC_PM1,
+    "signals-control-13:overshoot-estimate": 100 * math.exp(-math.pi * (_SC_PM1 / 100) / math.sqrt(1 - (_SC_PM1 / 100) ** 2)),
+    "signals-control-13:gain-for-45": _SC_KP45,
+    "signals-control-13:gain-reduction": 100 * (40 / 3 - _SC_KP45) / (40 / 3),
+    "signals-control-13:margin-fast-filter": _SC_PM_FAST,
+    # virtual lab 1, recomputed from the CSV
+    "signals-control-lab1:gain-20": _sc_final("test_20w") / 20,
+    "signals-control-lab1:delay": float(_SC_DELAY),
+    "signals-control-lab1:t63": _SC_T63,
+    "signals-control-lab1:time-constant": _SC_T63 - _SC_DELAY,
+    "signals-control-lab1:pi-gain": 10 / (0.49 * (2 + 1)),
+}
+
+
+@pytest.mark.parametrize("question_id,expected", sorted(SIGNALS_CONTROL_NUMERIC.items()))
+def test_signals_control_numeric_key_matches_independent_recalculation(question_id, expected):
+    spec = bank("signals-control")[question_id]["solution_spec"]
+    allowed = spec["tolerance"] + (spec.get("relative_tolerance") or 0) * abs(spec["answer"])
+    assert abs(spec["answer"] - expected) <= allowed, (question_id, spec["answer"], expected)
+
+
+def test_every_signals_control_numeric_item_is_recalculated():
+    numeric = {qid for qid, item in bank("signals-control").items() if item["type"] == "numeric"}
+    assert numeric == set(SIGNALS_CONTROL_NUMERIC)
+
+
+def test_signals_control_closed_loop_simulation_agrees_with_the_margins():
+    """A delay-differential simulation of the proportional loop rings down below the ultimate gain and grows above it."""
+    ku = 20 * _SC_GM
+    assert _sc_closed_loop_amplitude(0.9 * ku) < 0.05
+    assert _sc_closed_loop_amplitude(1.1 * ku) > 1.0
+    # the sustained oscillation near the ultimate gain has the period 2 pi / w_pc found from the phase condition
+    dt = 0.005
+    delay_steps = int(round(1.0 / dt))
+    u_hist, y, ys = [0.0] * delay_steps, 0.0, []
+    for k in range(int(500 / dt)):
+        y += dt * (-y + 0.5 * u_hist[k % delay_steps]) / 10.0
+        u_hist[k % delay_steps] = ku * (1.0 - y)
+        ys.append(y)
+    tail = ys[-int(100 / dt):]
+    crossings = [i for i in range(1, len(tail)) if tail[i - 1] < 0.0 + sum(tail) / len(tail) <= tail[i]]
+    periods = [(b - a) * dt for a, b in zip(crossings, crossings[1:])]
+    assert periods and abs(sum(periods) / len(periods) - _SC_PU) < 0.1
+
+
+def test_signals_control_poles_second_order_and_bode_lessons_state_the_computed_numbers():
+    text = reading("signals-control", "signals-control-7")
+    y1 = dict(_sc_step_second_order(12.0, 20.0, 20.0, 0.5001))
+    t_s1 = _sc_last_exit(_sc_step_second_order(12.0, 20.0, 20.0, 6.0), 1.0)
+    yw = dict(_sc_step_second_order(5.0, 4.0, 12.0, 2.0001))
+    t_sw = _sc_last_exit(_sc_step_second_order(5.0, 4.0, 12.0, 10.0), 3.0)
+    y_rhp = dict(_sc_step_second_order(2.0, 1.0, 1.0, 0.5001, zero=0.5))
+    _fragments_in(text, [
+        "B = 20/((−2)(−2 + 10)) = **−1.25** and C = 20/((−10)(−10 + 2)) = **0.25**", f"= **{y1[min(y1, key=lambda t: abs(t - 0.5))]:.4f}**", f"(the exact value for this response is {t_s1:.2f} s)",
+        "y(∞) = 5 × 4/10 = **2.0**", f"which at t = 0.5 is **−{abs(y_rhp[min(y_rhp, key=lambda t: abs(t - 0.5))]):.4f}**",
+        "G(0) = 12/(1 × 4) = **3**", f"y(2) = 3 − 4 × {math.exp(-2):.4f} + {math.exp(-8):.4f} = **{yw[min(yw, key=lambda t: abs(t - 2.0))]:.3f}**", f"the exact 2% time is {t_sw:.2f} s",
+    ])
+    text = reading("signals-control", "signals-control-8")
+    wn, wd = 2 * math.pi * 20, 2 * math.pi * 20 * math.sqrt(1 - 0.0625)
+    z_c = _bisect(lambda z: math.exp(-math.pi * z / math.sqrt(1 - z ** 2)) - 0.10, 0.05, 0.95)
+    mp_c = dict(_sc_step_second_order(12.0, 100.0, 100.0, 1.0, dt=1e-4))
+    mp_c = 100 * (max(mp_c.values()) - 1)
+    _fragments_in(text, [
+        f"ωn = 2π × 20 = {wn:.1f} rad/s", f"The poles are −{0.25 * wn:.1f} ± j{wd:.1f}", f"ωd = **{wd:.2f} rad/s**", f"the overshoot is **{_SC_OVERSHOOT:.2f}%**",
+        f"the peak time is **{_SC_PEAK_T:.2f} ms**", f"the settling time is **{4 / (0.25 * wn) * 1000:.1f} ms**", f"ζ = **{z_c:.4f}**", f"the overshoot is {mp_c:.2f}%",
+        "which is **2.0** for ζ = 0.25", f"the amplitude ratio is {abs(1 / ((1j * 0.6) ** 2 + 2 * 0.25 * 1j * 0.6 + 1)):.3f}", f"for ζ = 0.64 it is {abs(1 / ((1j * 0.6) ** 2 + 2 * 0.64 * 1j * 0.6 + 1)):.4f}",
+    ])
+    wn2 = 2 * math.pi * 10
+    wd2 = wn2 * math.sqrt(1 - 0.4 ** 2)
+    t2, os2 = _sc_second_order_peak(0.4, wn2)
+    _fragments_in(text, [
+        f"ωn = 2π × 10 = {wn2:.2f} rad/s and ωd = {wn2:.2f} × √(1 − 0.4²) = {wd2:.2f} rad/s", f"= {os2:.2f}%", f"t_p = π/{wd2:.2f} = {math.pi / wd2:.4f} s = {t2:.2f} ms",
+        f"t_s = 4/(0.4 × {wn2:.2f}) = {4 / (0.4 * wn2):.4f} s = {4 / (0.4 * wn2) * 1000:.1f} ms", f"= **{abs(1 / ((1j * 0.6) ** 2 + 2 * 0.4 * 1j * 0.6 + 1)):.3f}**",
+    ])
+    text = reading("signals-control", "signals-control-9")
+    g05 = _sc_G(0.5)
+    ph_total = -math.degrees(cmath.phase(g05))
+    f2 = 1 / (1 + 1j)
+    _fragments_in(text, [
+        f"0.5 = **{20 * math.log10(0.5):.2f} dB**".replace("-", "−"), "1/τ = **0.1 rad/min**", f"the magnitude is {0.5 / math.sqrt(2):.4f}, which is {20 * math.log10(0.5 / math.sqrt(2)):.2f} dB".replace("-", "−"),
+        f"= {abs(0.5 / (1 + 5j)):.5f}, which is **−{abs(20 * math.log10(abs(g05))):.2f} dB**", f"−atan(5) = −{math.degrees(math.atan(5)):.2f}°", f"−0.5 × 1 rad = −{math.degrees(0.5):.2f}°",
+        f"the total phase is **−{ph_total:.2f}°**", f"time lag of {math.radians(ph_total):.4f} rad/0.5 = **{math.radians(ph_total) / 0.5:.3f} min**",
+        f"= {abs(f2):.4f} ({20 * math.log10(abs(f2)):.2f} dB) and adds −45°".replace("-", "−"), f"**−{abs(20 * math.log10(abs(g05 * f2))):.2f} dB**", f"**−{ph_total + 45:.2f}°**",
+    ])
+    g2 = _sc_G(0.5, 2.0, 4.0, 0.5)
+    _fragments_in(text, [
+        f"= {abs(g2):.4f}, which is **{20 * math.log10(abs(g2)):.2f} dB**".replace("-", "−"), f"a total of **−{-math.degrees(cmath.phase(g2)):.2f}°**", f"= **{-cmath.phase(g2) / 0.5:.3f} min**",
+    ])
+
+
+def test_signals_control_margin_pi_sampling_and_capstone_lessons_state_the_computed_numbers():
+    text = reading("signals-control", "signals-control-10")
+    pm10, w10 = _sc_pm(lambda w: 10.0 * _sc_G(w))
+    pm30, w30 = _sc_pm(lambda w: 30.0 * _sc_G(w))
+    kp45 = _bisect(lambda kp: _sc_pm(lambda w: kp * _sc_G(w))[0] - 45.0, 5.0, 25.0)
+    w45 = _sc_pm(lambda w: kp45 * _sc_G(w))[1]
+    zeta = _SC_PM20 / 100
+    mp = 100 * math.exp(-math.pi * zeta / math.sqrt(1 - zeta ** 2))
+    _fragments_in(text, [
+        f"ω_gc = √99/10 = **{_SC_WGC20:.3f} rad/min**", f"= −{-math.degrees(cmath.phase(_SC_LOOP20(_SC_WGC20))):.2f}°, so the **phase margin is {_SC_PM20:.1f}°**",
+        f"ω_pc = **{_SC_WPC:.3f} rad/min**", f"The **gain margin is {_SC_GM:.3f}**", f"= **{20 * _SC_GM:.1f} W/°C**", f"{2 * math.pi / _SC_WPC:.2f} min",
+        f"= **{math.radians(_SC_PM20) / _SC_WGC20:.3f} min**", f"| 10 | 5 | {w10:.3f} | {pm10:.1f}° |", f"| 20 | 10 | {_SC_WGC20:.3f} | {_SC_PM20:.1f}° |", f"| 30 | 15 | {w30:.3f} | {pm30:.1f}° |",
+        f"ζ ≈ {zeta:.2f} and an overshoot of about {mp:.0f}%", f"gives ω_gc = {w45:.3f} rad/min", f"**K_p = {kp45:.2f} W/°C**",
+    ])
+    k2 = _sc_G(1.0, 1.2, 5.0, 2.0)
+    loop2 = lambda w: 2.0 * _sc_G(w, 1.2, 5.0, 2.0)                           # noqa: E731
+    pm2, w2 = _sc_pm(loop2)
+    wpc2 = _sc_phase_crossover(loop2, 0.5, 1.2)
+    gm2 = 1 / abs(loop2(wpc2))
+    _fragments_in(text, [
+        f"ω_gc = {w2:.4f} rad/min", f"so the phase margin is **{pm2:.1f}°**", f"ω_pc = {wpc2:.4f} rad/min", f"so the gain margin is **{gm2:.3f}**", f"= **{math.radians(pm2) / w2:.3f} min**",
+    ])
+    assert k2 != 0
+    text = reading("signals-control", "signals-control-11")
+    pm_c, w_c = _sc_pm(_sc_pi_loop(20 / 3, 10.0))
+    table = []
+    for lam in (4.0, 2.0, 1.0, 0.5):
+        kp = 10 / (0.5 * (lam + 1))
+        pm, w = _sc_pm(_sc_pi_loop(kp, 10.0))
+        table.append(f"| {lam:g} | {kp:.3f} | {w:.4f} | {pm:.1f}° |")
+    pm_zn, w_zn = _sc_pm(_sc_pi_loop(_SC_KP_ZN, _SC_PU / 1.2))
+    _fragments_in(text, table + [
+        f"K_p = 10/(0.5 × (2 + 1)) = **{20 / 3:.3f} W/°C**", f"K_i = {20 / 3:.3f}/10 = **{20 / 30:.3f} W/(°C·min)**", f"ω_gc = {20 / 3:.3f} × 0.5/10 = **{w_c:.4f} rad/min**", f"PM = 90° − {math.degrees(w_c):.2f}° = **{pm_c:.1f}°**",
+        f"K_u = {20 * _SC_GM:.1f} W/°C and P_u = 2π/{_SC_WPC:.3f} = {_SC_PU:.2f} min", f"K_p = 0.45 K_u = **{_SC_KP_ZN:.2f} W/°C**", f"T_i = P_u/1.2 = **{_SC_PU / 1.2:.2f} min**",
+        f"a crossover at {w_zn:.3f} rad/min and a phase margin of only {pm_zn:.1f}°", f"{20 / 30:.3f} × 1.8 × 7 = **{20 / 30 * 1.8 * 7:.1f} W**",
+    ])
+    kp3 = 5 / (1.2 * (3 + 2))
+    pm3, w3 = _sc_pm(_sc_pi_loop(kp3, 5.0, k=1.2, tau=5.0, theta=2.0))
+    _fragments_in(text, [f"= **{kp3:.3f}**", f"ω_gc = {kp3:.3f} × 1.2/5 = {w3:.3f} rad/min", f"= **{pm3:.1f}°**"])
+    text = reading("signals-control", "signals-control-12")
+    zoh_deg = math.degrees((1 / 3) * 0.25)
+    pm_s = _sc_pm(_sc_pi_loop(20 / 3, 10.0))[0] - zoh_deg
+    _fragments_in(text, [
+        f"appears at |50 − 80| = **{_sc_alias(50.0):.0f} Hz**", f"appears at |140 − 2 × 80| = **{_sc_alias(140.0):.0f} Hz**", f"| 50 | {_sc_alias(50.0):.0f} |", f"| 100 | {_sc_alias(100.0):.0f} |",
+        f"is **{abs(1 / (1 + 2.5j)):.4f}** ({20 * math.log10(abs(1 / (1 + 2.5j))):.1f} dB)".replace("-", "−"), f"= {(1 / 3) * 0.25:.4f} rad = **{zoh_deg:.2f}°**, reducing the margin to {pm_s:.1f}°", "should not exceed **0.3 min**",
+        f"the new command is 22.0 + {20 / 3:.3f} × (0.9 − 1.2) + {20 / 3:.3f} × (0.25/10) × 0.9 = **{22.0 + 20 / 3 * -0.3 + 20 / 3 * 0.025 * 0.9:.2f} W**", f"a = **{math.exp(-0.025):.5f}**", f"gives {10 * (1 - math.exp(-1)):.4f} °C".replace(f"{10 * (1 - math.exp(-1)):.4f}", f"{functools.reduce(lambda y, _: math.exp(-0.025) * y + 0.5 * (1 - math.exp(-0.025)) * 20, range(40), 0.0):.4f}"),
+        f"|60 − 100| = **{_sc_alias(60.0, 100.0):.0f} Hz**", f"= **{abs(1 / (1 + 4j)):.4f}**", "= **0.5 min**", "= **2.7083**",
+    ])
+    text = reading("signals-control", "signals-control-13")
+    pm0, w0 = _SC_PM0, _SC_W0
+    pm1, w1 = _SC_PM1, _SC_W1
+    rows = []
+    for tf in (0.0, 0.25, 0.5, 1.0, 2.0):
+        pm, w = _sc_pm(_sc_pi_loop(40 / 3, 10.0, tf=tf))
+        rows.append(f"| {tf:g} | {w:.3f} | {pm:.1f}° | {abs(1 / (1 + 6j * tf)):.3f} |")
+    zeta1 = pm1 / 100
+    os1 = 100 * math.exp(-math.pi * zeta1 / math.sqrt(1 - zeta1 ** 2))
+    w45 = _sc_pm(lambda w: _sc_pi_loop(_SC_KP45, 10.0, tf=1.0)(w))[1]
+    _fragments_in(text, rows + [
+        f"**ω_gc = {w0:.4f} rad/min**", f"= **{pm0:.1f}°**", f"**−{math.degrees(math.atan(w0)):.2f}°**", f"**ω_gc = {w1:.4f} rad/min**", f"**phase margin falls from {pm0:.1f}° to {pm1:.1f}°**",
+        f"overshoot of about {os1:.0f}%", f"The delay margin is {math.radians(pm1):.4f}/{w1:.4f} = {math.radians(pm1) / w1:.2f} min", f"**ω_gc = {w45:.4f} rad/min**", f"= **{_SC_KP45:.2f} W/°C**",
+        f"a reduction of **{100 * (40 / 3 - _SC_KP45) / (40 / 3):.0f}%**",
+    ])
+    kp2 = 5 / (1.2 * (2 + 2))
+    pm2_0, _ = _sc_pm(_sc_pi_loop(kp2, 5.0, k=1.2, tau=5.0, theta=2.0))
+    pm2_1, w2_1 = _sc_pm(_sc_pi_loop(kp2, 5.0, k=1.2, tau=5.0, theta=2.0, tf=1.5))
+    _fragments_in(text, [f"= **{pm2_0:.1f}°**", f"ω_gc = {w2_1:.4f} rad/min, and the phase margin is **{pm2_1:.1f}°**, a loss of {pm2_0 - pm2_1:.1f}°"])
+
+
+def test_signals_control_lab_text_and_keys_agree_with_the_dataset():
+    assert len(_SC_ROWS) == 366 and {r["test"] for r in _SC_ROWS} == {"test_10w", "test_20w", "test_30w"}
+    assert {int(r["run"]) for r in _SC_ROWS} == {1, 2} and {int(r["time_min"]) for r in _SC_ROWS} == set(range(61))
+    # the readings follow a first-order-plus-delay response with gains 0.500, 0.485 and 0.460 degC/W plus noise below 0.06 degC
+    for r in _SC_ROWS:
+        u, t = float(r["power_w"]), int(r["time_min"])
+        gain = {10: 0.500, 20: 0.485, 30: 0.460}[int(u)]
+        model = 0.0 if t < 1 else gain * u * (1 - math.exp(-(t - 1) / 10))
+        assert abs(float(r["rise_c"]) - model) <= 0.06, r
+    gains = {t: _sc_final(t) / int(t.split("_")[1][:-1]) for t in ("test_10w", "test_20w", "test_30w")}
+    text = (COURSES / "signals-control/labs/01-identifying-an-incubator-from-step-tests.md").read_text(encoding="utf-8")
+    final20 = _sc_final("test_20w")
+    _fragments_in(text, [
+        "are " + ", ".join(f"{_sc_final(t):.2f}" for t in gains) + " °C for 10, 20 and 30 W", "so the gains are " + ", ".join(f"{g:.3f}" for g in gains.values()) + " °C/W",
+        f"within 2% of the settled value ({0.02 * final20:.2f} °C) up to minute {_SC_DELAY}", f"reaches 63.2% of {final20:.2f} °C, which is {0.632 * final20:.2f} °C, at {_SC_T63:.2f} min by linear interpolation",
+        f"The time constant is {_SC_T63:.2f} − {_SC_DELAY} = {_SC_T63 - _SC_DELAY:.2f} min", "the proportional gain is 10/(0.49 × 3) = 6.803 W/°C",
+        f"The gain at 30 W is {gains['test_30w'] / gains['test_10w']:.3f} times the gain at 10 W", "nothing here is evidence about any device",
+    ])
+    field = bank("signals-control")["signals-control-lab1:linearity"]["solution_spec"]["field_specs"][0]
+    assert abs(field["answer"] - gains["test_30w"] / gains["test_10w"]) <= field["tolerance"] and field["significant_figures"] == 3
+    checks = {(c["row_id"], c["column"]): c["answer"] for c in bank("signals-control")["signals-control-lab1:step-summary"]["solution_spec"]["validation_spec"]["checks"]}
+    assert len(checks) == 9
+    for test in gains:
+        assert checks[(test, "runs")] == 2 and checks[(test, "samples")] == 61
+        assert abs(checks[(test, "mean_final_rise")] - _sc_final(test)) < 1e-3

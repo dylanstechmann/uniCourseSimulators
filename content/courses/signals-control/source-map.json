@@ -80,6 +80,110 @@
       "original_content": true,
       "license": "CC-BY-4.0",
       "modifications": []
+    },
+    {
+      "module_id": "signals-control-module-7",
+      "lesson_id": "signals-control-7",
+      "reading": "modules/07-laplace-transforms-poles-zeros-and-the-final-value.md",
+      "source_ids": [
+        "signals",
+        "control"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "signals-control-module-8",
+      "lesson_id": "signals-control-8",
+      "reading": "modules/08-second-order-systems-damping-and-overshoot.md",
+      "source_ids": [
+        "signals",
+        "control"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "signals-control-module-9",
+      "lesson_id": "signals-control-9",
+      "reading": "modules/09-bode-plots-decibels-phase-and-delay.md",
+      "source_ids": [
+        "signals",
+        "control"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "signals-control-module-10",
+      "lesson_id": "signals-control-10",
+      "reading": "modules/10-stability-margins-gain-phase-and-delay.md",
+      "source_ids": [
+        "signals",
+        "control"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "signals-control-module-11",
+      "lesson_id": "signals-control-11",
+      "reading": "modules/11-pi-control-tuning-and-integrator-windup.md",
+      "source_ids": [
+        "signals",
+        "control"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "signals-control-module-12",
+      "lesson_id": "signals-control-12",
+      "reading": "modules/12-sampling-aliasing-and-discrete-pi-control.md",
+      "source_ids": [
+        "signals",
+        "control"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "signals-control-module-lab-01",
+      "lesson_id": "signals-control-lab-01",
+      "reading": "labs/01-identifying-an-incubator-from-step-tests.md",
+      "source_ids": [
+        "signals",
+        "control"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "signals-control-module-13",
+      "lesson_id": "signals-control-13",
+      "reading": "modules/13-sensor-filter-phase-lag-and-safe-retuning.md",
+      "source_ids": [
+        "signals",
+        "control"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
     }
   ]
 }

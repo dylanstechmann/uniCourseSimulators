@@ -7,7 +7,7 @@
   "domain": "Electrical engineering",
   "level": "Year 3",
   "maturity": "partial",
-  "version": "0.3.1",
+  "version": "0.4.0",
   "license": "MIT OR CC-BY-4.0",
   "content_origin": {
     "kind": "legacy-prototype",
@@ -149,12 +149,366 @@
         "signals-control-outcome-4",
         "signals-control-outcome-2"
       ]
+    },
+    {
+      "id": "signals-control-7-objective-1",
+      "description": "Find the poles, the DC gain and the dominant time constant of a transfer function.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "signals-control-outcome-1",
+        "signals-control-outcome-2"
+      ]
+    },
+    {
+      "id": "signals-control-7-objective-2",
+      "description": "Use partial fractions to write and evaluate the step response of a stable system with real poles.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "signals-control-outcome-1",
+        "signals-control-outcome-2"
+      ]
+    },
+    {
+      "id": "signals-control-7-objective-3",
+      "description": "Apply the final value theorem and interpret zeros and poles in the right half-plane.",
+      "bloom": "evaluate",
+      "course_outcome_ids": [
+        "signals-control-outcome-2",
+        "signals-control-outcome-3"
+      ]
+    },
+    {
+      "id": "signals-control-8-objective-1",
+      "description": "Compute the poles, damped frequency, overshoot, peak time and settling time of an underdamped second-order system.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "signals-control-outcome-1",
+        "signals-control-outcome-2"
+      ]
+    },
+    {
+      "id": "signals-control-8-objective-2",
+      "description": "Choose a damping ratio for a given overshoot specification.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "signals-control-outcome-2",
+        "signals-control-outcome-4"
+      ]
+    },
+    {
+      "id": "signals-control-8-objective-3",
+      "description": "Evaluate how damping and natural frequency shape the amplitude ratio of a measuring system at the frequencies of its signal.",
+      "bloom": "evaluate",
+      "course_outcome_ids": [
+        "signals-control-outcome-2",
+        "signals-control-outcome-3"
+      ]
+    },
+    {
+      "id": "signals-control-9-objective-1",
+      "description": "Compute the magnitude in decibels and the phase of a first-order lag with a time delay at a given frequency.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "signals-control-outcome-2"
+      ]
+    },
+    {
+      "id": "signals-control-9-objective-2",
+      "description": "Combine the magnitudes and phases of cascaded elements and convert a phase lag into a time lag.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "signals-control-outcome-2",
+        "signals-control-outcome-3"
+      ]
+    },
+    {
+      "id": "signals-control-9-objective-3",
+      "description": "Interpret the corner frequency, slopes and phase of a Bode plot and what a delay does to them.",
+      "bloom": "evaluate",
+      "course_outcome_ids": [
+        "signals-control-outcome-2",
+        "signals-control-outcome-3"
+      ]
+    },
+    {
+      "id": "signals-control-10-objective-1",
+      "description": "Find the gain crossover and phase crossover frequencies of a loop with a lag and a delay.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "signals-control-outcome-2",
+        "signals-control-outcome-3"
+      ]
+    },
+    {
+      "id": "signals-control-10-objective-2",
+      "description": "Compute the phase margin, gain margin and delay margin, and the largest gain that keeps the loop stable.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "signals-control-outcome-3"
+      ]
+    },
+    {
+      "id": "signals-control-10-objective-3",
+      "description": "Choose a controller gain for a target phase margin and relate the margin to the ringing of the closed loop.",
+      "bloom": "evaluate",
+      "course_outcome_ids": [
+        "signals-control-outcome-3",
+        "signals-control-outcome-4"
+      ]
+    },
+    {
+      "id": "signals-control-11-objective-1",
+      "description": "Write a PI controller and compute its tuning for a lag-plus-delay plant by cancelling the plant lag.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "signals-control-outcome-1",
+        "signals-control-outcome-4"
+      ]
+    },
+    {
+      "id": "signals-control-11-objective-2",
+      "description": "Compute the crossover frequency and phase margin of the tuned loop, and the Ziegler–Nichols PI settings from the ultimate gain and period.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "signals-control-outcome-3",
+        "signals-control-outcome-4"
+      ]
+    },
+    {
+      "id": "signals-control-11-objective-3",
+      "description": "Explain integrator windup and the role of the derivative term, and choose where each is needed.",
+      "bloom": "evaluate",
+      "course_outcome_ids": [
+        "signals-control-outcome-3",
+        "signals-control-outcome-4"
+      ]
+    },
+    {
+      "id": "signals-control-12-objective-1",
+      "description": "Compute the apparent frequency of a sampled component and the attenuation of a first-order anti-alias filter.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "signals-control-outcome-2"
+      ]
+    },
+    {
+      "id": "signals-control-12-objective-2",
+      "description": "Estimate the phase margin lost to the zero-order hold and choose a sampling period for a loop.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "signals-control-outcome-3",
+        "signals-control-outcome-4"
+      ]
+    },
+    {
+      "id": "signals-control-12-objective-3",
+      "description": "Write the discrete PI update and the discrete form of a first-order plant, and compute them for given values.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "signals-control-outcome-1",
+        "signals-control-outcome-4"
+      ]
+    },
+    {
+      "id": "signals-control-lab-01-objective-1",
+      "description": "Summarize step-test data by step size, counting runs and samples and averaging the settled response.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "signals-control-outcome-1"
+      ]
+    },
+    {
+      "id": "signals-control-lab-01-objective-2",
+      "description": "Estimate the gain, delay and time constant of a first-order-plus-delay model from step-response data and use them to tune a PI controller.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "signals-control-outcome-1",
+        "signals-control-outcome-4"
+      ]
+    },
+    {
+      "id": "signals-control-lab-01-objective-3",
+      "description": "Evaluate what step tests of different sizes say about linearity and how that limits a tuning.",
+      "bloom": "evaluate",
+      "course_outcome_ids": [
+        "signals-control-outcome-3",
+        "signals-control-outcome-4"
+      ]
+    },
+    {
+      "id": "signals-control-13-objective-1",
+      "description": "Explain, with the phase and the crossover frequency, why a measurement filter can turn a well-damped loop into an oscillatory one.",
+      "bloom": "analyze",
+      "course_outcome_ids": [
+        "signals-control-outcome-2",
+        "signals-control-outcome-3"
+      ]
+    },
+    {
+      "id": "signals-control-13-objective-2",
+      "description": "Compute the phase margin before and after the filter, the gain that restores a target margin, and the trade-off with noise.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "signals-control-outcome-3",
+        "signals-control-outcome-4"
+      ]
+    },
+    {
+      "id": "signals-control-13-objective-3",
+      "description": "Outline a retuning sequence that changes one thing at a time and verifies the measured margin, saturation and disturbance behavior before deployment.",
+      "bloom": "create",
+      "course_outcome_ids": [
+        "signals-control-outcome-3",
+        "signals-control-outcome-4"
+      ]
     }
   ],
   "duration": {
-    "instructional_weeks": null,
-    "equivalent_structure": null,
-    "weeks": []
+    "instructional_weeks": 14,
+    "equivalent_structure": "Proposed 14-week undergraduate scope only. The four compact prototype units sit in weeks 1, 4, 8 and 12 beside original lessons on poles and zeros, second-order systems, Bode plots, stability margins, PI control, sampling and a sensor filter that makes a loop oscillate; week 11 is a synthetic-data lab on identifying an incubator from step tests and week 14 pairs a retuning lesson with the course case. All activities are open, ungraded practice. There are no graded homework sets, exams or project, and workload has not been measured, so this schedule is not evidence of semester equivalence.",
+    "weeks": [
+      {
+        "week": 1,
+        "title": "LTI systems, convolution and transfer functions",
+        "lesson_ids": [
+          "signals-control-1"
+        ],
+        "assessment_ids": [
+          "signals-control-1-practice"
+        ]
+      },
+      {
+        "week": 2,
+        "title": "Convolution and impulse response: why a sensor blurs and delays what it measures",
+        "lesson_ids": [
+          "signals-control-6"
+        ],
+        "assessment_ids": [
+          "signals-control-6-practice"
+        ]
+      },
+      {
+        "week": 3,
+        "title": "From a transfer function to a time response: poles, zeros and the final value",
+        "lesson_ids": [
+          "signals-control-7"
+        ],
+        "assessment_ids": [
+          "signals-control-7-practice"
+        ]
+      },
+      {
+        "week": 4,
+        "title": "Frequency response and filtering",
+        "lesson_ids": [
+          "signals-control-2"
+        ],
+        "assessment_ids": [
+          "signals-control-2-practice"
+        ]
+      },
+      {
+        "week": 5,
+        "title": "Second-order systems: damping, overshoot and ringing",
+        "lesson_ids": [
+          "signals-control-8"
+        ],
+        "assessment_ids": [
+          "signals-control-8-practice"
+        ]
+      },
+      {
+        "week": 6,
+        "title": "Reading Bode plots: decibels, phase and the cost of a delay",
+        "lesson_ids": [
+          "signals-control-9"
+        ],
+        "assessment_ids": [
+          "signals-control-9-practice"
+        ]
+      },
+      {
+        "week": 7,
+        "title": "Proportional control of an incubator: steady-state error and saturation",
+        "lesson_ids": [
+          "signals-control-5"
+        ],
+        "assessment_ids": [
+          "signals-control-5-practice"
+        ]
+      },
+      {
+        "week": 8,
+        "title": "Feedback, stability and robustness",
+        "lesson_ids": [
+          "signals-control-3"
+        ],
+        "assessment_ids": [
+          "signals-control-3-practice"
+        ]
+      },
+      {
+        "week": 9,
+        "title": "Stability margins: gain, phase and delay margins",
+        "lesson_ids": [
+          "signals-control-10"
+        ],
+        "assessment_ids": [
+          "signals-control-10-practice"
+        ]
+      },
+      {
+        "week": 10,
+        "title": "PI control, tuning and integrator windup",
+        "lesson_ids": [
+          "signals-control-11"
+        ],
+        "assessment_ids": [
+          "signals-control-11-practice"
+        ]
+      },
+      {
+        "week": 11,
+        "title": "Virtual lab: identifying an incubator from step tests and checking a PI design",
+        "lesson_ids": [
+          "signals-control-lab-01"
+        ],
+        "assessment_ids": [
+          "signals-control-week11-identification-lab"
+        ]
+      },
+      {
+        "week": 12,
+        "title": "Controller design and sampled implementation",
+        "lesson_ids": [
+          "signals-control-4"
+        ],
+        "assessment_ids": [
+          "signals-control-4-practice"
+        ]
+      },
+      {
+        "week": 13,
+        "title": "Sampling, aliasing and a discrete-time PI controller",
+        "lesson_ids": [
+          "signals-control-12"
+        ],
+        "assessment_ids": [
+          "signals-control-12-practice"
+        ]
+      },
+      {
+        "week": 14,
+        "title": "When a sensor filter makes a fast loop oscillate: phase lag, crossover and a safe retuning sequence",
+        "lesson_ids": [
+          "signals-control-13"
+        ],
+        "assessment_ids": [
+          "signals-control-13-practice",
+          "signals-control-case"
+        ]
+      }
+    ]
   },
   "workload": {
     "estimated_total_hours": null,
@@ -343,6 +697,309 @@
           ]
         }
       ]
+    },
+    {
+      "id": "signals-control-module-7",
+      "title": "Poles, zeros and time response",
+      "source_ids": [
+        "signals",
+        "control"
+      ],
+      "lessons": [
+        {
+          "id": "signals-control-7",
+          "title": "From a transfer function to a time response: Laplace transforms, poles, zeros and the final value",
+          "reading": "modules/07-laplace-transforms-poles-zeros-and-the-final-value.md",
+          "objectives": [
+            "signals-control-7-objective-1",
+            "signals-control-7-objective-2",
+            "signals-control-7-objective-3"
+          ],
+          "worked_example": "A synthetic system with G(s) = 12/((s + 1)(s + 4)) has a DC gain of 3, the step response y(t) = 3 − 4e^(−t) + e^(−4t), a value of 2.459 at 2 s and a 2% settling time of 4.20 s; in the lesson, G(s) = 20/((s + 2)(s + 10)) has a step response of 0.5418 at 0.5 s and a settling time of 2.07 s.",
+          "question_ids": [
+            "signals-control-7:dc-gain",
+            "signals-control-7:slow-time-constant",
+            "signals-control-7:residue",
+            "signals-control-7:step-at-one-second",
+            "signals-control-7:quadratic-slow-pole",
+            "signals-control-7:final-value",
+            "signals-control-7:wrong-way-start",
+            "signals-control-7:transfer-statements"
+          ],
+          "card_ids": [
+            "signals-control-7-card-1",
+            "signals-control-7-card-2",
+            "signals-control-7-card-3",
+            "signals-control-7-card-4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "signals-control-module-8",
+      "title": "Second-order systems",
+      "source_ids": [
+        "signals",
+        "control"
+      ],
+      "lessons": [
+        {
+          "id": "signals-control-8",
+          "title": "Second-order systems: damping, overshoot and ringing in a pressure transducer",
+          "reading": "modules/08-second-order-systems-damping-and-overshoot.md",
+          "objectives": [
+            "signals-control-8-objective-1",
+            "signals-control-8-objective-2",
+            "signals-control-8-objective-3"
+          ],
+          "worked_example": "A synthetic measuring line with natural frequency 10 Hz and damping ratio 0.4 has an overshoot of 25.38%, a peak time of 54.55 ms, a settling time of 159.2 ms and an amplitude ratio of 1.250 at 6 Hz; in the lesson, a 20 Hz line with damping 0.25 overshoots by 44.43% and doubles a 20 Hz signal.",
+          "question_ids": [
+            "signals-control-8:overshoot",
+            "signals-control-8:peak-time",
+            "signals-control-8:settling-time",
+            "signals-control-8:damped-frequency",
+            "signals-control-8:damping-from-coefficients",
+            "signals-control-8:damping-for-overshoot",
+            "signals-control-8:resonance-gain",
+            "signals-control-8:amplitude-at-12-hz",
+            "signals-control-8:second-order-statements"
+          ],
+          "card_ids": [
+            "signals-control-8-card-1",
+            "signals-control-8-card-2",
+            "signals-control-8-card-3",
+            "signals-control-8-card-4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "signals-control-module-9",
+      "title": "Bode plots",
+      "source_ids": [
+        "signals",
+        "control"
+      ],
+      "lessons": [
+        {
+          "id": "signals-control-9",
+          "title": "Reading Bode plots: gain in decibels, phase, corner frequencies and the cost of a delay",
+          "reading": "modules/09-bode-plots-decibels-phase-and-delay.md",
+          "objectives": [
+            "signals-control-9-objective-1",
+            "signals-control-9-objective-2",
+            "signals-control-9-objective-3"
+          ],
+          "worked_example": "A synthetic plant with K 2, τ 4 min and a 0.5 min delay has a magnitude of −0.97 dB, a phase of −77.76° and a time lag of 2.714 min at 0.5 rad/min; in the lesson, G(s) = 0.5e^(−s)/(10s + 1) has −20.17 dB and −107.34° at the same frequency.",
+          "question_ids": [
+            "signals-control-9:dc-gain-db",
+            "signals-control-9:corner-frequency",
+            "signals-control-9:magnitude-in-db",
+            "signals-control-9:lag-phase",
+            "signals-control-9:delay-phase",
+            "signals-control-9:total-phase",
+            "signals-control-9:cascade-magnitude",
+            "signals-control-9:time-lag",
+            "signals-control-9:bode-statements"
+          ],
+          "card_ids": [
+            "signals-control-9-card-1",
+            "signals-control-9-card-2",
+            "signals-control-9-card-3",
+            "signals-control-9-card-4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "signals-control-module-10",
+      "title": "Stability margins",
+      "source_ids": [
+        "signals",
+        "control"
+      ],
+      "lessons": [
+        {
+          "id": "signals-control-10",
+          "title": "Stability margins: gain margin, phase margin and how much delay a loop can take",
+          "reading": "modules/10-stability-margins-gain-phase-and-delay.md",
+          "objectives": [
+            "signals-control-10-objective-1",
+            "signals-control-10-objective-2",
+            "signals-control-10-objective-3"
+          ],
+          "worked_example": "A synthetic loop with G(s) = 1.2 e^(−2s)/(5s + 1) and K_p 2 has a gain crossover at 0.4363 rad/min, a phase margin of 64.6°, a gain margin of 1.911 and a delay margin of 2.585 min; in the lesson, the incubator loop with K_p 20 W/°C has a phase margin of 38.7° and a gain margin of 1.635.",
+          "question_ids": [
+            "signals-control-10:gain-crossover",
+            "signals-control-10:phase-at-crossover",
+            "signals-control-10:phase-margin",
+            "signals-control-10:phase-crossover",
+            "signals-control-10:gain-margin",
+            "signals-control-10:largest-gain",
+            "signals-control-10:delay-margin",
+            "signals-control-10:gain-for-45",
+            "signals-control-10:margin-statements"
+          ],
+          "card_ids": [
+            "signals-control-10-card-1",
+            "signals-control-10-card-2",
+            "signals-control-10-card-3",
+            "signals-control-10-card-4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "signals-control-module-11",
+      "title": "PI control and tuning",
+      "source_ids": [
+        "signals",
+        "control"
+      ],
+      "lessons": [
+        {
+          "id": "signals-control-11",
+          "title": "PI control, tuning and integrator windup: removing steady-state error without losing the margin",
+          "reading": "modules/11-pi-control-tuning-and-integrator-windup.md",
+          "objectives": [
+            "signals-control-11-objective-1",
+            "signals-control-11-objective-2",
+            "signals-control-11-objective-3"
+          ],
+          "worked_example": "A synthetic plant with K 1.2, τ 5 min and θ 2 min, tuned with λ 3 min, has K_p 0.833, T_i 5 min, a crossover of 0.200 rad/min and a phase margin of 67.1°; in the lesson, the incubator tuned with λ 2 min has K_p 6.667 and a phase margin of 70.9°, while the Ziegler–Nichols PI settings give 30.6°.",
+          "question_ids": [
+            "signals-control-11:imc-kp",
+            "signals-control-11:integral-gain",
+            "signals-control-11:crossover-pi",
+            "signals-control-11:pi-phase-margin",
+            "signals-control-11:ultimate-period",
+            "signals-control-11:zn-kp",
+            "signals-control-11:zn-ti",
+            "signals-control-11:windup-stored",
+            "signals-control-11:pi-statements"
+          ],
+          "card_ids": [
+            "signals-control-11-card-1",
+            "signals-control-11-card-2",
+            "signals-control-11-card-3",
+            "signals-control-11-card-4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "signals-control-module-12",
+      "title": "Sampling and discrete control",
+      "source_ids": [
+        "signals",
+        "control"
+      ],
+      "lessons": [
+        {
+          "id": "signals-control-12",
+          "title": "Sampling, aliasing and a discrete-time PI controller",
+          "reading": "modules/12-sampling-aliasing-and-discrete-pi-control.md",
+          "objectives": [
+            "signals-control-12-objective-1",
+            "signals-control-12-objective-2",
+            "signals-control-12-objective-3"
+          ],
+          "worked_example": "A synthetic system sampled at 100 Hz with a 15 Hz first-order anti-alias filter shows 60 Hz interference at 40 Hz, attenuated to 0.2425; a closed-loop time constant of 5 min allows a sampling period up to 0.5 min, and a discrete PI update from e 2.0 to 1.5 gives 2.7083; in the lesson, a 0.5 min hold costs 4.77° of the 70.9° margin of the incubator loop.",
+          "question_ids": [
+            "signals-control-12:alias-50",
+            "signals-control-12:alias-140",
+            "signals-control-12:antialias-attenuation",
+            "signals-control-12:hold-phase-loss",
+            "signals-control-12:longest-period",
+            "signals-control-12:pi-update",
+            "signals-control-12:plant-pole",
+            "signals-control-12:step-after-40",
+            "signals-control-12:sampling-statements"
+          ],
+          "card_ids": [
+            "signals-control-12-card-1",
+            "signals-control-12-card-2",
+            "signals-control-12-card-3",
+            "signals-control-12-card-4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "signals-control-module-lab-01",
+      "title": "Virtual laboratory: step tests",
+      "source_ids": [
+        "signals",
+        "control"
+      ],
+      "lessons": [
+        {
+          "id": "signals-control-lab-01",
+          "title": "Virtual lab 1: identifying an incubator from step tests and checking a PI design",
+          "reading": "labs/01-identifying-an-incubator-from-step-tests.md",
+          "objectives": [
+            "signals-control-lab-01-objective-1",
+            "signals-control-lab-01-objective-2",
+            "signals-control-lab-01-objective-3"
+          ],
+          "worked_example": "In the synthetic step tests the settled gains are 0.499, 0.484 and 0.459 °C/W, the 20 W step gives a delay of 1 min and a time constant of 10.00 min, the cancellation tuning with λ 2 min gives K_p 6.803 W/°C, and the gain falls by about 8% across the range.",
+          "question_ids": [
+            "signals-control-lab1:step-summary",
+            "signals-control-lab1:gain-20",
+            "signals-control-lab1:delay",
+            "signals-control-lab1:t63",
+            "signals-control-lab1:time-constant",
+            "signals-control-lab1:pi-gain",
+            "signals-control-lab1:linearity",
+            "signals-control-lab1:design-reasoning",
+            "signals-control-lab1:supported-statements"
+          ],
+          "card_ids": [
+            "signals-control-lab1-0",
+            "signals-control-lab1-1",
+            "signals-control-lab1-2",
+            "signals-control-lab1-3"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "signals-control-module-13",
+      "title": "Case: a filter that makes a loop oscillate",
+      "source_ids": [
+        "signals",
+        "control"
+      ],
+      "lessons": [
+        {
+          "id": "signals-control-13",
+          "title": "When a sensor filter makes a fast loop oscillate: phase lag, crossover and a safe retuning sequence",
+          "reading": "modules/13-sensor-filter-phase-lag-and-safe-retuning.md",
+          "objectives": [
+            "signals-control-13-objective-1",
+            "signals-control-13-objective-2",
+            "signals-control-13-objective-3"
+          ],
+          "worked_example": "A synthetic loop with K 1.2, τ 5 min and θ 2 min has a phase margin of 61.4° that falls to 43.5° when a 1.5 min filter is added, and a gain of 1.004 (from 1.0417) restores 45°; in the lesson, a 1 min filter takes the incubator loop from 51.8° to 26.9° and a gain of 8.68 W/°C restores 45°.",
+          "question_ids": [
+            "signals-control-13:margin-before",
+            "signals-control-13:filter-lag",
+            "signals-control-13:crossover-after",
+            "signals-control-13:margin-after",
+            "signals-control-13:overshoot-estimate",
+            "signals-control-13:gain-for-45",
+            "signals-control-13:gain-reduction",
+            "signals-control-13:margin-fast-filter",
+            "signals-control-13:retuning-statements"
+          ],
+          "card_ids": [
+            "signals-control-13-card-1",
+            "signals-control-13-card-2",
+            "signals-control-13-card-3",
+            "signals-control-13-card-4"
+          ]
+        }
+      ]
     }
   ],
   "assessments": [
@@ -456,6 +1113,223 @@
       "points": 6
     },
     {
+      "id": "signals-control-7-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Poles, zeros and time response practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "signals-control-7-objective-1",
+        "signals-control-7-objective-2",
+        "signals-control-7-objective-3",
+        "signals-control-outcome-1",
+        "signals-control-outcome-2",
+        "signals-control-outcome-3"
+      ],
+      "question_ids": [
+        "signals-control-7:dc-gain",
+        "signals-control-7:slow-time-constant",
+        "signals-control-7:residue",
+        "signals-control-7:step-at-one-second",
+        "signals-control-7:quadratic-slow-pole",
+        "signals-control-7:final-value",
+        "signals-control-7:wrong-way-start",
+        "signals-control-7:transfer-statements"
+      ],
+      "points": 9
+    },
+    {
+      "id": "signals-control-8-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Second-order systems practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "signals-control-8-objective-1",
+        "signals-control-8-objective-2",
+        "signals-control-8-objective-3",
+        "signals-control-outcome-1",
+        "signals-control-outcome-2",
+        "signals-control-outcome-3",
+        "signals-control-outcome-4"
+      ],
+      "question_ids": [
+        "signals-control-8:overshoot",
+        "signals-control-8:peak-time",
+        "signals-control-8:settling-time",
+        "signals-control-8:damped-frequency",
+        "signals-control-8:damping-from-coefficients",
+        "signals-control-8:damping-for-overshoot",
+        "signals-control-8:resonance-gain",
+        "signals-control-8:amplitude-at-12-hz",
+        "signals-control-8:second-order-statements"
+      ],
+      "points": 10
+    },
+    {
+      "id": "signals-control-9-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Bode plots practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "signals-control-9-objective-1",
+        "signals-control-9-objective-2",
+        "signals-control-9-objective-3",
+        "signals-control-outcome-2",
+        "signals-control-outcome-3"
+      ],
+      "question_ids": [
+        "signals-control-9:dc-gain-db",
+        "signals-control-9:corner-frequency",
+        "signals-control-9:magnitude-in-db",
+        "signals-control-9:lag-phase",
+        "signals-control-9:delay-phase",
+        "signals-control-9:total-phase",
+        "signals-control-9:cascade-magnitude",
+        "signals-control-9:time-lag",
+        "signals-control-9:bode-statements"
+      ],
+      "points": 10
+    },
+    {
+      "id": "signals-control-10-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Stability margins practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "signals-control-10-objective-1",
+        "signals-control-10-objective-2",
+        "signals-control-10-objective-3",
+        "signals-control-outcome-2",
+        "signals-control-outcome-3",
+        "signals-control-outcome-4"
+      ],
+      "question_ids": [
+        "signals-control-10:gain-crossover",
+        "signals-control-10:phase-at-crossover",
+        "signals-control-10:phase-margin",
+        "signals-control-10:phase-crossover",
+        "signals-control-10:gain-margin",
+        "signals-control-10:largest-gain",
+        "signals-control-10:delay-margin",
+        "signals-control-10:gain-for-45",
+        "signals-control-10:margin-statements"
+      ],
+      "points": 10
+    },
+    {
+      "id": "signals-control-11-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "PI control and tuning practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "signals-control-11-objective-1",
+        "signals-control-11-objective-2",
+        "signals-control-11-objective-3",
+        "signals-control-outcome-1",
+        "signals-control-outcome-3",
+        "signals-control-outcome-4"
+      ],
+      "question_ids": [
+        "signals-control-11:imc-kp",
+        "signals-control-11:integral-gain",
+        "signals-control-11:crossover-pi",
+        "signals-control-11:pi-phase-margin",
+        "signals-control-11:ultimate-period",
+        "signals-control-11:zn-kp",
+        "signals-control-11:zn-ti",
+        "signals-control-11:windup-stored",
+        "signals-control-11:pi-statements"
+      ],
+      "points": 10
+    },
+    {
+      "id": "signals-control-12-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Sampling and discrete control practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "signals-control-12-objective-1",
+        "signals-control-12-objective-2",
+        "signals-control-12-objective-3",
+        "signals-control-outcome-1",
+        "signals-control-outcome-2",
+        "signals-control-outcome-3",
+        "signals-control-outcome-4"
+      ],
+      "question_ids": [
+        "signals-control-12:alias-50",
+        "signals-control-12:alias-140",
+        "signals-control-12:antialias-attenuation",
+        "signals-control-12:hold-phase-loss",
+        "signals-control-12:longest-period",
+        "signals-control-12:pi-update",
+        "signals-control-12:plant-pole",
+        "signals-control-12:step-after-40",
+        "signals-control-12:sampling-statements"
+      ],
+      "points": 10
+    },
+    {
+      "id": "signals-control-13-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Case: a filter that makes a loop oscillate practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "signals-control-13-objective-1",
+        "signals-control-13-objective-2",
+        "signals-control-13-objective-3",
+        "signals-control-outcome-2",
+        "signals-control-outcome-3",
+        "signals-control-outcome-4"
+      ],
+      "question_ids": [
+        "signals-control-13:margin-before",
+        "signals-control-13:filter-lag",
+        "signals-control-13:crossover-after",
+        "signals-control-13:margin-after",
+        "signals-control-13:overshoot-estimate",
+        "signals-control-13:gain-for-45",
+        "signals-control-13:gain-reduction",
+        "signals-control-13:margin-fast-filter",
+        "signals-control-13:retuning-statements"
+      ],
+      "points": 10
+    },
+    {
+      "id": "signals-control-week11-identification-lab",
+      "type": "lab",
+      "mode": "practice",
+      "title": "Virtual lab 1: identifying an incubator from step tests and checking a PI design (ungraded practice)",
+      "path": "question-banks/practice.json",
+      "week": 11,
+      "objective_ids": [
+        "signals-control-lab-01-objective-1",
+        "signals-control-lab-01-objective-2",
+        "signals-control-lab-01-objective-3",
+        "signals-control-outcome-1",
+        "signals-control-outcome-3",
+        "signals-control-outcome-4"
+      ],
+      "question_ids": [
+        "signals-control-lab1:step-summary",
+        "signals-control-lab1:gain-20",
+        "signals-control-lab1:delay",
+        "signals-control-lab1:t63",
+        "signals-control-lab1:time-constant",
+        "signals-control-lab1:pi-gain",
+        "signals-control-lab1:linearity",
+        "signals-control-lab1:design-reasoning",
+        "signals-control-lab1:supported-statements"
+      ],
+      "points": 21
+    },
+    {
       "id": "signals-control-case",
       "type": "case",
       "mode": "self-assessment",
@@ -512,18 +1386,24 @@
       "version": "0.3.1",
       "date": "2026-10-08",
       "summary": "Assessments with items now also list the course outcomes those items assess, derived from each item's lesson objective and that objective's outcome links. The rubric-only case lists none, and neither do the 4 prototype-unit assessments, whose objectives are not yet linked to an outcome. No readings, items or keys changed. The syllabus was regenerated from the manifest: it states the current version, lists every lesson with its item and card counts, and describes the current practice and limitations (it still described only the four original units). The course limitations shown to learners were also updated: they still described one formative check per lesson and the original numerical rules. The package remains partial, unreviewed and formative-only."
+    },
+    {
+      "version": "0.4.0",
+      "date": "2026-10-08",
+      "summary": "Added a proposed 14-week schedule; seven original lessons (Laplace transforms, poles, zeros and the final value; second-order systems and damping; Bode plots, decibels and delay; stability margins; PI control, tuning and integrator windup; sampling, aliasing and a discrete PI controller; and a sensor filter that makes a loop oscillate, which prepares the course case on phase lag and a safe retuning sequence); and a synthetic-data lab on identifying an incubator from step tests. No new references were added. All activities remain ungraded practice; the package remains partial and unreviewed, gives no controller settings, safety procedure or test protocol for any real device, and makes no claim about any incubator, instrument or process."
     }
   ],
   "limitations": [
-    "Four compact legacy units are preserved; this package is not equivalent to a full university semester.",
-    "There is no authored 12–15 week schedule, substantive homework sequence, laboratory sequence, midterm, cumulative final, or graded integrative project.",
-    "Practice items are short formative checks (two per prototype unit and six per original lesson); they do not demonstrate comprehensive outcome coverage or mastery, and objective associations remain provisional.",
+    "Four compact legacy units are preserved beside ten original readings, including one synthetic-data virtual lab; this package is not equivalent to a full university semester.",
+    "A proposed 14-week schedule exists but is unmeasured and unreviewed. There is one synthetic-data virtual lab and no substantive homework sequence, laboratory sequence, midterm, cumulative final, or graded integrative project.",
+    "Practice items are short formative checks (two per prototype unit and six to nine per original lesson); they do not demonstrate comprehensive outcome coverage or mastery, and objective associations remain provisional.",
     "Bloom labels and structured prerequisite edges are initial authoring classifications awaiting subject-matter review.",
     "Question answers and solution feedback are intentionally public practice authoring specifications, not restricted exam keys.",
-    "Of the 13 numerical answers in this package, five require a unit, none checks significant figures and none checks dimensions; the others accept a number within a stated tolerance, with the unit optional.",
-    "Total workload and weekly duration are unknown; former nominal credit values and hardcoded reading times do not establish workload."
+    "Of the 74 numerical answers in this package, 18 require a unit, one checks significant figures and none checks dimensions; the others accept a number within a stated tolerance, with the unit optional.",
+    "Total workload and weekly duration are unknown; former nominal credit values and hardcoded reading times do not establish workload.",
+    "All plants, signals, controllers and numbers are synthetic teaching examples; this package gives no controller settings, safety procedures or test protocols for any real device and says nothing about any real incubator, instrument or process. The models are simplified textbook descriptions, not design methods for real equipment."
   ],
   "intentionally_omitted": [
-    "Full instructional sequence and summative assessments are not authored yet; the original lessons extend a partial package."
+    "Graded assessments and a laboratory sequence are not authored yet (one synthetic-data virtual lab exists); the original lessons extend a partial package."
   ]
 }

@@ -627,6 +627,2832 @@
         "kind": "original",
         "modifications": []
       }
+    },
+    {
+      "id": "signals-control-7:dc-gain",
+      "type": "numeric",
+      "prompt": "A system has the transfer function G(s) = 18/((s + 2)(s + 6)) with time in seconds. What is its DC gain G(0)? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "signals-control-7-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 1.5,
+        "unit": "",
+        "tolerance": 0.01,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Put s = 0 in the transfer function.",
+        "solution": "G(0) = 18/(2 × 6) = 1.5.",
+        "lesson_ids": [
+          "signals-control-7"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "signals-control-7:slow-time-constant",
+      "type": "numeric",
+      "prompt": "A system has the transfer function G(s) = 18/((s + 2)(s + 6)) with time in seconds. What is the time constant of its slowest pole? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "signals-control-7-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0.5,
+        "unit": "s",
+        "tolerance": 0.005,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "The time constant is the reciprocal of the distance of the pole from the origin.",
+        "solution": "The poles are −2 and −6; the slowest is −2, so τ = 1/2 = 0.5 s.",
+        "lesson_ids": [
+          "signals-control-7"
+        ],
+        "misconception_ids": [
+          "pole-value-as-time-constant"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "signals-control-7:residue",
+      "type": "numeric",
+      "prompt": "For the unit step response of G(s) = 18/((s + 2)(s + 6)), write Y(s) = A/s + B/(s + 2) + C/(s + 6). What is B? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "signals-control-7-objective-2"
+      ],
+      "solution_spec": {
+        "answer": -2.25,
+        "unit": "",
+        "tolerance": 0.01,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Cover the factor (s + 2) in 18/(s(s + 2)(s + 6)) and evaluate the rest at s = −2.",
+        "solution": "B = 18/((−2)(−2 + 6)) = −2.25.",
+        "lesson_ids": [
+          "signals-control-7"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "signals-control-7:step-at-one-second",
+      "type": "numeric",
+      "prompt": "The unit step response of G(s) = 18/((s + 2)(s + 6)) is y(t) = 1.5 − 2.25e^(−2t) + 0.75e^(−6t). What is y(1) with t in seconds? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "signals-control-7-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 1.19735,
+        "unit": "",
+        "tolerance": 0.005,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Evaluate each exponential at t = 1.",
+        "solution": "1.5 − 2.25 × 0.1353 + 0.75 × 0.00248 = 1.1974.",
+        "lesson_ids": [
+          "signals-control-7"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "signals-control-7:quadratic-slow-pole",
+      "type": "numeric",
+      "prompt": "G(s) = 30/(s² + 8s + 15) has two real poles. What is the time constant of the slower one? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "signals-control-7-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0.33333,
+        "unit": "s",
+        "tolerance": 0.005,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Factor s² + 8s + 15 and take the pole nearer the origin.",
+        "solution": "s² + 8s + 15 = (s + 3)(s + 5), so the slow pole is −3 and τ = 1/3 = 0.333 s.",
+        "lesson_ids": [
+          "signals-control-7"
+        ],
+        "misconception_ids": [
+          "pole-value-as-time-constant"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "signals-control-7:final-value",
+      "type": "numeric",
+      "prompt": "A system's output transform is Y(s) = 5(s + 4)/(s(s² + 6s + 10)). The roots of s² + 6s + 10 are −3 ± j. What is the final value y(∞)? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "signals-control-7-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 2.0,
+        "unit": "",
+        "tolerance": 0.01,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Multiply Y(s) by s and set s = 0; first check the poles of sY(s).",
+        "solution": "s² + 6s + 10 has roots with negative real parts, so y(∞) = 5 × 4/10 = 2.0.",
+        "lesson_ids": [
+          "signals-control-7"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "signals-control-7:wrong-way-start",
+      "type": "numeric",
+      "prompt": "A system with G(s) = (1 − 0.5s)/(s + 1)² has the unit step response y(t) = 1 − e^(−t) − 1.5te^(−t). What is y(0.5) with t in seconds? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "signals-control-7-objective-3"
+      ],
+      "solution_spec": {
+        "answer": -0.06143,
+        "unit": "",
+        "tolerance": 0.005,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Evaluate the expression at t = 0.5; note the sign.",
+        "solution": "1 − 0.6065 − 1.5 × 0.5 × 0.6065 = −0.0614: the output is negative at first even though the final value is +1.",
+        "lesson_ids": [
+          "signals-control-7"
+        ],
+        "misconception_ids": [
+          "zero-speeds-up-response"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "signals-control-7:transfer-statements",
+      "type": "multiple_select",
+      "prompt": "Which statements about poles, zeros and transfer functions are appropriate? Select all that apply.",
+      "points": 2,
+      "objective_ids": [
+        "signals-control-7-objective-3"
+      ],
+      "options": [
+        "The slowest stable pole controls the long-time shape of the response.",
+        "The final value theorem can be applied to any output transform without checking the poles.",
+        "A zero in the right half-plane can make a step response start in the wrong direction.",
+        "A pole with a positive real part makes the step response grow without bound.",
+        "A pole at s = −5 per second has a time constant of 5 seconds."
+      ],
+      "solution_spec": {
+        "answer": [
+          0,
+          2,
+          3
+        ],
+        "partial_credit": "correct-minus-incorrect-clamped-v1"
+      },
+      "feedback": {
+        "hint": "Think about where each pole sits and what each statement assumes.",
+        "solution": "Right-half-plane poles grow, the slowest pole dominates late behaviour, and a right-half-plane zero gives a wrong-way start. The final value theorem needs stable poles, and a pole at −5 has a time constant of 1/5 s.",
+        "lesson_ids": [
+          "signals-control-7"
+        ],
+        "misconception_ids": [
+          "pole-value-as-time-constant"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "signals-control-8:overshoot",
+      "type": "numeric",
+      "prompt": "A synthetic pressure line is a second-order system with natural frequency 20 Hz and damping ratio 0.25. What is the percentage overshoot of its step response? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "signals-control-8-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 44.4344,
+        "unit": "",
+        "tolerance": 0.15,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use M_p = exp(−πζ/√(1 − ζ²)) and convert to a percentage.",
+        "solution": "exp(−π × 0.25/√(1 − 0.25²)) = 0.4443, i.e. 44.4%.",
+        "lesson_ids": [
+          "signals-control-8"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "signals-control-8:peak-time",
+      "type": "numeric",
+      "prompt": "A synthetic pressure line is a second-order system with natural frequency 20 Hz and damping ratio 0.25. What is the time of the first peak of its step response? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "signals-control-8-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 25.8199,
+        "unit": "ms",
+        "tolerance": 0.15,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use t_p = π/ω_d with ω_d = ω_n√(1 − ζ²).",
+        "solution": "ω_n = 125.66 rad/s, ω_d = 121.67 rad/s, so t_p = π/121.67 = 0.02582 s = 25.82 ms.",
+        "lesson_ids": [
+          "signals-control-8"
+        ],
+        "misconception_ids": [
+          "natural-for-damped-frequency"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "signals-control-8:settling-time",
+      "type": "numeric",
+      "prompt": "A synthetic pressure line is a second-order system with natural frequency 20 Hz and damping ratio 0.25. What is its 2% settling time, using t_s ≈ 4/(ζω_n)? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "signals-control-8-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 127.324,
+        "unit": "ms",
+        "tolerance": 1.0,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "The decay rate of the envelope is ζω_n.",
+        "solution": "4/(0.25 × 125.66) = 0.1273 s = 127.3 ms.",
+        "lesson_ids": [
+          "signals-control-8"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "signals-control-8:damped-frequency",
+      "type": "numeric",
+      "prompt": "A synthetic pressure line is a second-order system with natural frequency 20 Hz and damping ratio 0.25. What is its damped frequency ω_d in rad/s? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "signals-control-8-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 121.6734,
+        "unit": "",
+        "tolerance": 0.3,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "ω_n is 2π times the frequency in hertz; then take ω_n√(1 − ζ²).",
+        "solution": "125.66 × √(1 − 0.25²) = 121.67 rad/s.",
+        "lesson_ids": [
+          "signals-control-8"
+        ],
+        "misconception_ids": [
+          "natural-for-damped-frequency"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "signals-control-8:damping-from-coefficients",
+      "type": "numeric",
+      "prompt": "A system has the denominator s² + 12s + 100. What is its damping ratio? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "signals-control-8-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0.6,
+        "unit": "",
+        "tolerance": 0.005,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Compare with s² + 2ζω_n s + ω_n².",
+        "solution": "ω_n = √100 = 10 rad/s and 2ζω_n = 12, so ζ = 12/20 = 0.6.",
+        "lesson_ids": [
+          "signals-control-8"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "signals-control-8:damping-for-overshoot",
+      "type": "numeric",
+      "prompt": "What damping ratio gives an overshoot of exactly 10%? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "signals-control-8-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0.59116,
+        "unit": "",
+        "tolerance": 0.002,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use ζ = −ln M_p/√(π² + (ln M_p)²) with M_p = 0.10.",
+        "solution": "ln 0.10 = −2.3026, so ζ = 2.3026/3.8951 = 0.5912.",
+        "lesson_ids": [
+          "signals-control-8"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "signals-control-8:resonance-gain",
+      "type": "numeric",
+      "prompt": "A synthetic pressure line is a second-order system with natural frequency 20 Hz and damping ratio 0.25. What is the amplitude ratio of a sinusoidal input at the natural frequency, 1/(2ζ)? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "signals-control-8-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 2.0,
+        "unit": "",
+        "tolerance": 0.01,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Put r = 1 in the amplitude-ratio formula.",
+        "solution": "1/(2 × 0.25) = 2.0.",
+        "lesson_ids": [
+          "signals-control-8"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "signals-control-8:amplitude-at-12-hz",
+      "type": "numeric",
+      "prompt": "A synthetic pressure line is a second-order system with natural frequency 20 Hz and damping ratio 0.25. What is its amplitude ratio at 12 Hz, 1/√((1 − r²)² + (2ζr)²) with r = f/f_n? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "signals-control-8-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 1.4148,
+        "unit": "",
+        "tolerance": 0.005,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "r = 12/20 = 0.6.",
+        "solution": "1/√((1 − 0.36)² + (2 × 0.25 × 0.6)²) = 1/√(0.4096 + 0.0900) = 1.415.",
+        "lesson_ids": [
+          "signals-control-8"
+        ],
+        "misconception_ids": [
+          "more-damping-always-better"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "signals-control-8:second-order-statements",
+      "type": "multiple_select",
+      "prompt": "Which statements about second-order measuring systems are appropriate? Select all that apply.",
+      "points": 2,
+      "objective_ids": [
+        "signals-control-8-objective-3"
+      ],
+      "options": [
+        "More damping always improves a measurement because it removes ringing.",
+        "Overshoot depends only on the damping ratio.",
+        "Raising the natural frequency of a measuring line extends the range of frequencies it reproduces faithfully.",
+        "An underdamped system's peak time depends on the damped frequency, not the natural frequency.",
+        "A system with ζ = 1.5 overshoots by about 15%."
+      ],
+      "solution_spec": {
+        "answer": [
+          1,
+          2,
+          3
+        ],
+        "partial_credit": "correct-minus-incorrect-clamped-v1"
+      },
+      "feedback": {
+        "hint": "Recall which parameters appear in each formula.",
+        "solution": "Overshoot is a function of ζ alone, the peak time uses ω_d, and a higher natural frequency extends the flat range. An overdamped system does not overshoot, and extra damping slows the response.",
+        "lesson_ids": [
+          "signals-control-8"
+        ],
+        "misconception_ids": [
+          "natural-for-damped-frequency",
+          "more-damping-always-better"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "signals-control-9:dc-gain-db",
+      "type": "numeric",
+      "prompt": "A synthetic plant has the transfer function G(s) = 0.5e^(−s)/(10s + 1), with time in minutes. What is its DC gain in decibels, 20 log₁₀ of the DC gain? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "signals-control-9-objective-1"
+      ],
+      "solution_spec": {
+        "answer": -6.0206,
+        "unit": "",
+        "tolerance": 0.02,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "The DC gain is G(0) = 0.5.",
+        "solution": "20 log₁₀(0.5) = −6.02 dB.",
+        "lesson_ids": [
+          "signals-control-9"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "signals-control-9:corner-frequency",
+      "type": "numeric",
+      "prompt": "A synthetic plant has the transfer function G(s) = 0.5e^(−s)/(10s + 1), with time in minutes. What is the corner frequency of the lag in rad/min? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "signals-control-9-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0.1,
+        "unit": "",
+        "tolerance": 0.002,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "The corner is at ω = 1/τ.",
+        "solution": "1/10 = 0.1 rad/min.",
+        "lesson_ids": [
+          "signals-control-9"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "signals-control-9:magnitude-in-db",
+      "type": "numeric",
+      "prompt": "A synthetic plant has the transfer function G(s) = 0.5e^(−s)/(10s + 1), with time in minutes. What is the magnitude of G(jω) at ω = 0.5 rad/min, in decibels? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "signals-control-9-objective-1"
+      ],
+      "solution_spec": {
+        "answer": -20.1703,
+        "unit": "",
+        "tolerance": 0.02,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Compute 0.5/√(1 + (0.5 × 10)²) and convert with 20 log₁₀.",
+        "solution": "0.09806 → 20 log₁₀ = −20.17 dB.",
+        "lesson_ids": [
+          "signals-control-9"
+        ],
+        "misconception_ids": [
+          "ten-log-for-amplitude"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "signals-control-9:lag-phase",
+      "type": "numeric",
+      "prompt": "A synthetic plant has the transfer function G(s) = 0.5e^(−s)/(10s + 1), with time in minutes. What is the phase contributed by the lag term −atan(ωτ) at ω = 0.5 rad/min, in degrees? Enter the number only (negative for a lag).",
+      "points": 1,
+      "objective_ids": [
+        "signals-control-9-objective-1"
+      ],
+      "solution_spec": {
+        "answer": -78.6901,
+        "unit": "",
+        "tolerance": 0.05,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Here ωτ = 0.5 × 10 = 5; take atan(5).",
+        "solution": "−atan(5) = −78.69°.",
+        "lesson_ids": [
+          "signals-control-9"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "signals-control-9:delay-phase",
+      "type": "numeric",
+      "prompt": "A synthetic plant has the transfer function G(s) = 0.5e^(−s)/(10s + 1), with time in minutes. What phase lag does the 1 min delay alone contribute at ω = 0.5 rad/min, in degrees? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "signals-control-9-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 28.6479,
+        "unit": "",
+        "tolerance": 0.05,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "The delay phase is ωθ in radians; convert to degrees.",
+        "solution": "0.5 × 1 = 0.5 rad = 28.65°.",
+        "lesson_ids": [
+          "signals-control-9"
+        ],
+        "misconception_ids": [
+          "delay-changes-gain"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "signals-control-9:total-phase",
+      "type": "numeric",
+      "prompt": "A synthetic plant has the transfer function G(s) = 0.5e^(−s)/(10s + 1), with time in minutes. What is the total phase of G(jω) at ω = 0.5 rad/min, in degrees? Enter the number only (negative for a lag).",
+      "points": 1,
+      "objective_ids": [
+        "signals-control-9-objective-2"
+      ],
+      "solution_spec": {
+        "answer": -107.338,
+        "unit": "",
+        "tolerance": 0.05,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Add the phases of the lag and the delay.",
+        "solution": "−78.69° − 28.65° = −107.34°.",
+        "lesson_ids": [
+          "signals-control-9"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "signals-control-9:cascade-magnitude",
+      "type": "numeric",
+      "prompt": "A probe with transfer function 1/(2s + 1) is placed in series with the plant at ω = 0.5 rad/min, where the plant magnitude is −20.17 dB. What is the magnitude of the cascade in decibels? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "signals-control-9-objective-2"
+      ],
+      "solution_spec": {
+        "answer": -23.1806,
+        "unit": "",
+        "tolerance": 0.03,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Find the magnitude of the probe at ω = 0.5 and add the decibels.",
+        "solution": "The probe has 1/√(1 + 1²) = 0.7071, i.e. −3.01 dB; the total is −20.17 + (−3.01) = −23.18 dB.",
+        "lesson_ids": [
+          "signals-control-9"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "signals-control-9:time-lag",
+      "type": "numeric",
+      "prompt": "At ω = 0.5 rad/min the plant output lags the heater power by 107.34°. What is the time lag in minutes? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "signals-control-9-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 3.7468,
+        "unit": "min",
+        "tolerance": 0.02,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Convert the angle to radians and divide by ω.",
+        "solution": "1.8734 rad/0.5 rad/min = 3.747 min.",
+        "lesson_ids": [
+          "signals-control-9"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "signals-control-9:bode-statements",
+      "type": "multiple_select",
+      "prompt": "Which statements about Bode plots are appropriate? Select all that apply.",
+      "points": 2,
+      "objective_ids": [
+        "signals-control-9-objective-3"
+      ],
+      "options": [
+        "Above the corner, a first-order lag keeps its magnitude flat.",
+        "A delay of fixed length costs the same phase at every frequency.",
+        "A pure time delay changes the phase but not the magnitude of the frequency response.",
+        "At the corner frequency of a first-order lag the magnitude is 3 dB below its low-frequency value.",
+        "The decibel gains of elements in series add."
+      ],
+      "solution_spec": {
+        "answer": [
+          2,
+          3,
+          4
+        ],
+        "partial_credit": "correct-minus-incorrect-clamped-v1"
+      },
+      "feedback": {
+        "hint": "Remember how a delay and a lag enter the magnitude and the phase.",
+        "solution": "A delay has unit magnitude and phase −ωθ, so the cost grows with frequency; the lag's corner is 3 dB down and the decibels of series elements add. Above the corner the magnitude falls at 20 dB per decade.",
+        "lesson_ids": [
+          "signals-control-9"
+        ],
+        "misconception_ids": [
+          "delay-changes-gain"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "signals-control-10:gain-crossover",
+      "type": "numeric",
+      "prompt": "A synthetic incubator loop has the plant G(s) = 0.5e^(−s)/(10s + 1) (time in minutes) with a proportional controller K_p = 20 W/°C. At what frequency does |L(jω)| = 1? Enter the number only (rad/min).",
+      "points": 1,
+      "objective_ids": [
+        "signals-control-10-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0.99499,
+        "unit": "",
+        "tolerance": 0.005,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Solve 10/√(1 + 100ω²) = 1.",
+        "solution": "1 + 100ω² = 100, so ω_gc = √99/10 = 0.9950 rad/min.",
+        "lesson_ids": [
+          "signals-control-10"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "signals-control-10:phase-at-crossover",
+      "type": "numeric",
+      "prompt": "A synthetic incubator loop has the plant G(s) = 0.5e^(−s)/(10s + 1) (time in minutes) with a proportional controller K_p = 20 W/°C. What is the phase of L(jω) at the gain crossover ω = 0.995 rad/min, in degrees? Enter the number only (negative for a lag).",
+      "points": 1,
+      "objective_ids": [
+        "signals-control-10-objective-1"
+      ],
+      "solution_spec": {
+        "answer": -141.2694,
+        "unit": "",
+        "tolerance": 0.1,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Add the lag phase −atan(10ω) and the delay phase −ω (in radians, converted).",
+        "solution": "−atan(9.95) − 0.995 rad = −84.26° − 57.01° = −141.27°.",
+        "lesson_ids": [
+          "signals-control-10"
+        ],
+        "misconception_ids": [
+          "margin-at-wrong-frequency"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "signals-control-10:phase-margin",
+      "type": "numeric",
+      "prompt": "A synthetic incubator loop has the plant G(s) = 0.5e^(−s)/(10s + 1) (time in minutes) with a proportional controller K_p = 20 W/°C. What is the phase margin in degrees? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "signals-control-10-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 38.7306,
+        "unit": "",
+        "tolerance": 0.15,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "PM = 180° + (phase at the gain crossover).",
+        "solution": "180° − 141.27° = 38.7°.",
+        "lesson_ids": [
+          "signals-control-10"
+        ],
+        "misconception_ids": [
+          "margin-at-wrong-frequency"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "signals-control-10:phase-crossover",
+      "type": "numeric",
+      "prompt": "A synthetic incubator loop has the plant G(s) = 0.5e^(−s)/(10s + 1) (time in minutes) with a proportional controller K_p = 20 W/°C. At what frequency is the loop phase −180°? Solve atan(10ω) + ω = π and enter the number only (rad/min).",
+      "points": 1,
+      "objective_ids": [
+        "signals-control-10-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 1.63199,
+        "unit": "",
+        "tolerance": 0.005,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Try ω between 1.5 and 1.7; the left side increases with ω.",
+        "solution": "ω_pc = 1.6320 rad/min, where atan(16.32) + 1.6320 = 3.1416 ≈ π.",
+        "lesson_ids": [
+          "signals-control-10"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "signals-control-10:gain-margin",
+      "type": "numeric",
+      "prompt": "A synthetic incubator loop has the plant G(s) = 0.5e^(−s)/(10s + 1) (time in minutes) with a proportional controller K_p = 20 W/°C. What is the gain margin (the factor, not decibels)? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "signals-control-10-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 1.6351,
+        "unit": "",
+        "tolerance": 0.02,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "GM = 1/|L(jω_pc)| with |L| = 10/√(1 + 100ω_pc²).",
+        "solution": "|L| = 10/√(1 + 266.3) = 0.6116, so GM = 1.635.",
+        "lesson_ids": [
+          "signals-control-10"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "signals-control-10:largest-gain",
+      "type": "numeric",
+      "prompt": "A synthetic incubator loop has the plant G(s) = 0.5e^(−s)/(10s + 1) (time in minutes) with a proportional controller K_p. What is the largest proportional gain K_p for which the loop is stable? Enter the number only (W/°C).",
+      "points": 1,
+      "objective_ids": [
+        "signals-control-10-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 32.701,
+        "unit": "",
+        "tolerance": 0.4,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Multiply the gain 20 W/°C by the gain margin.",
+        "solution": "20 × 1.635 = 32.7 W/°C.",
+        "lesson_ids": [
+          "signals-control-10"
+        ],
+        "misconception_ids": [
+          "gain-margin-in-decibels-as-factor"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "signals-control-10:delay-margin",
+      "type": "numeric",
+      "prompt": "A synthetic incubator loop has the plant G(s) = 0.5e^(−s)/(10s + 1) (time in minutes) with a proportional controller K_p = 20 W/°C. What additional delay would bring the loop to the stability limit? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "signals-control-10-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 0.6794,
+        "unit": "min",
+        "tolerance": 0.02,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Convert the phase margin to radians and divide by the gain crossover frequency.",
+        "solution": "0.6760 rad/0.995 rad/min = 0.679 min.",
+        "lesson_ids": [
+          "signals-control-10"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "signals-control-10:gain-for-45",
+      "type": "numeric",
+      "prompt": "A synthetic incubator loop has the plant G(s) = 0.5e^(−s)/(10s + 1) (time in minutes) with a proportional controller K_p. Which gain gives a phase margin of exactly 45°? Find the frequency where atan(10ω) + ω = 3π/4 and enter K_p in W/°C (number only).",
+      "points": 1,
+      "objective_ids": [
+        "signals-control-10-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 18.041,
+        "unit": "",
+        "tolerance": 0.1,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "At that frequency |L| must be 1, so K_p × 0.5 = √(1 + 100ω²).",
+        "solution": "ω = 0.8965 rad/min, so K_p × 0.5 = √(1 + 100 × 0.8965²) = 9.020 and K_p = 18.04 W/°C.",
+        "lesson_ids": [
+          "signals-control-10"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "signals-control-10:margin-statements",
+      "type": "multiple_select",
+      "prompt": "Which statements about stability margins are appropriate? Select all that apply.",
+      "points": 2,
+      "objective_ids": [
+        "signals-control-10-objective-3"
+      ],
+      "options": [
+        "The gain margin is measured at the gain crossover frequency.",
+        "Raising the controller gain moves the gain crossover to a higher frequency.",
+        "The phase margin is measured at the gain crossover frequency.",
+        "A gain margin slightly above 1 leaves comfortable room for model error.",
+        "A larger delay in the plant lowers the phase margin."
+      ],
+      "solution_spec": {
+        "answer": [
+          1,
+          2,
+          4
+        ],
+        "partial_credit": "correct-minus-incorrect-clamped-v1"
+      },
+      "feedback": {
+        "hint": "Recall where each margin is defined and what the delay and gain do to the crossover.",
+        "solution": "The phase margin is read at the gain crossover, a longer delay costs phase at every frequency, and a higher gain moves the crossover up. The gain margin is read at the phase crossover, and a margin near 1 is the edge of instability.",
+        "lesson_ids": [
+          "signals-control-10"
+        ],
+        "misconception_ids": [
+          "margin-at-wrong-frequency"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "signals-control-11:imc-kp",
+      "type": "numeric",
+      "prompt": "A synthetic incubator has the plant G(s) = 0.5e^(−s)/(10s + 1) (time in minutes, gain in °C/W). With the integral time set equal to the plant time constant and the tuning parameter λ = 2 min, what is K_p = τ/(K(λ + θ)) in W/°C? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "signals-control-11-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 6.6667,
+        "unit": "",
+        "tolerance": 0.01,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "τ = 10 min, K = 0.5 °C/W, θ = 1 min.",
+        "solution": "10/(0.5 × 3) = 6.667 W/°C.",
+        "lesson_ids": [
+          "signals-control-11"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "signals-control-11:integral-gain",
+      "type": "numeric",
+      "prompt": "A synthetic incubator has the plant G(s) = 0.5e^(−s)/(10s + 1) (time in minutes, gain in °C/W), tuned with K_p = 6.667 W/°C and T_i = 10 min. What is the integral gain K_i = K_p/T_i in W/(°C·min)? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "signals-control-11-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0.6667,
+        "unit": "",
+        "tolerance": 0.005,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Divide the proportional gain by the integral time.",
+        "solution": "6.667/10 = 0.667.",
+        "lesson_ids": [
+          "signals-control-11"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "signals-control-11:crossover-pi",
+      "type": "numeric",
+      "prompt": "A synthetic incubator has the plant G(s) = 0.5e^(−s)/(10s + 1) (time in minutes, gain in °C/W), tuned with K_p = 6.667 W/°C and T_i = 10 min so that the loop is an integrator with delay. What is the gain crossover frequency ω_gc = K_pK/τ in rad/min? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "signals-control-11-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0.33333,
+        "unit": "",
+        "tolerance": 0.002,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "The loop magnitude is (K_pK/τ)/ω.",
+        "solution": "6.667 × 0.5/10 = 0.3333 rad/min.",
+        "lesson_ids": [
+          "signals-control-11"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "signals-control-11:pi-phase-margin",
+      "type": "numeric",
+      "prompt": "For that loop, L(s) = 0.3333e^(−s)/s with time in minutes. What is the phase margin in degrees? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "signals-control-11-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 70.9014,
+        "unit": "",
+        "tolerance": 0.15,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "PM = 90° minus the delay phase ω_gc θ converted to degrees.",
+        "solution": "90° − 0.3333 rad × 57.30 = 90° − 19.10° = 70.9°.",
+        "lesson_ids": [
+          "signals-control-11"
+        ],
+        "misconception_ids": [
+          "pi-margin-from-p-loop"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "signals-control-11:ultimate-period",
+      "type": "numeric",
+      "prompt": "With proportional control the loop of this incubator oscillates steadily at the phase crossover ω_pc = 1.632 rad/min. What is the ultimate period P_u? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "signals-control-11-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 3.85,
+        "unit": "min",
+        "tolerance": 0.02,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "The period is 2π divided by the angular frequency.",
+        "solution": "2π/1.632 = 3.85 min.",
+        "lesson_ids": [
+          "signals-control-11"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "signals-control-11:zn-kp",
+      "type": "numeric",
+      "prompt": "The ultimate gain of the incubator loop is K_u = 32.7 W/°C. What proportional gain do the Ziegler–Nichols PI rules give, 0.45 K_u? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "signals-control-11-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 14.715,
+        "unit": "",
+        "tolerance": 0.05,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Multiply the ultimate gain by 0.45.",
+        "solution": "0.45 × 32.7 = 14.72 W/°C.",
+        "lesson_ids": [
+          "signals-control-11"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "signals-control-11:zn-ti",
+      "type": "numeric",
+      "prompt": "The ultimate period is P_u = 3.85 min. What integral time do the Ziegler–Nichols PI rules give, P_u/1.2? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "signals-control-11-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 3.208,
+        "unit": "min",
+        "tolerance": 0.02,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Divide the ultimate period by 1.2.",
+        "solution": "3.85/1.2 = 3.21 min.",
+        "lesson_ids": [
+          "signals-control-11"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "signals-control-11:windup-stored",
+      "type": "numeric",
+      "prompt": "A controller with K_i = 0.667 W/(°C·min) sees an error of 1.8 °C for 7 min while the heater is saturated. How much integral action, in watts, has accumulated? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "signals-control-11-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 8.4,
+        "unit": "W",
+        "tolerance": 0.05,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Multiply K_i by the error and the time.",
+        "solution": "0.667 × 1.8 × 7 = 8.4 W.",
+        "lesson_ids": [
+          "signals-control-11"
+        ],
+        "misconception_ids": [
+          "integral-helps-saturation"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "signals-control-11:pi-statements",
+      "type": "multiple_select",
+      "prompt": "Which statements about PI control and windup are appropriate? Select all that apply.",
+      "points": 2,
+      "objective_ids": [
+        "signals-control-11-objective-3"
+      ],
+      "options": [
+        "Derivative action is always safe to add because it adds phase lead.",
+        "Integral action drives the steady-state error to zero for a step setpoint in a stable loop.",
+        "Cancelling the plant lag with T_i = τ turns the loop into an integrator with a delay.",
+        "Ziegler–Nichols settings always give a phase margin above 45°.",
+        "Integrator windup occurs when the integral accumulates while the actuator is saturated."
+      ],
+      "solution_spec": {
+        "answer": [
+          1,
+          2,
+          4
+        ],
+        "partial_credit": "correct-minus-incorrect-clamped-v1"
+      },
+      "feedback": {
+        "hint": "Think about what the integral does in steady state and during saturation.",
+        "solution": "The integral removes steady-state error, it winds up in saturation, and cancellation leaves an integrator with a delay. Ziegler–Nichols settings are aggressive (here the margin is below 45°), and derivative action amplifies noise.",
+        "lesson_ids": [
+          "signals-control-11"
+        ],
+        "misconception_ids": [
+          "pi-margin-from-p-loop",
+          "integral-helps-saturation"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "signals-control-12:alias-50",
+      "type": "numeric",
+      "prompt": "A signal is sampled at 80 Hz. At what apparent frequency in hertz does a 50 Hz interference component appear? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "signals-control-12-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 30.0,
+        "unit": "",
+        "tolerance": 0.2,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "The alias is |f − f_s| when f is between f_s/2 and f_s.",
+        "solution": "|50 − 80| = 30 Hz.",
+        "lesson_ids": [
+          "signals-control-12"
+        ],
+        "misconception_ids": [
+          "alias-same-frequency"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "signals-control-12:alias-140",
+      "type": "numeric",
+      "prompt": "A signal is sampled at 80 Hz. At what apparent frequency in hertz does a 140 Hz component appear? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "signals-control-12-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 20.0,
+        "unit": "",
+        "tolerance": 0.2,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Subtract the nearest multiple of f_s: 140 − 160 = −20.",
+        "solution": "|140 − 2 × 80| = 20 Hz.",
+        "lesson_ids": [
+          "signals-control-12"
+        ],
+        "misconception_ids": [
+          "alias-same-frequency"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "signals-control-12:antialias-attenuation",
+      "type": "numeric",
+      "prompt": "A first-order RC anti-alias filter has a corner frequency of 20 Hz. What is its amplitude ratio at 50 Hz? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "signals-control-12-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0.37139,
+        "unit": "",
+        "tolerance": 0.002,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use 1/√(1 + (f/f_c)²).",
+        "solution": "1/√(1 + 2.5²) = 0.3714.",
+        "lesson_ids": [
+          "signals-control-12"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "signals-control-12:hold-phase-loss",
+      "type": "numeric",
+      "prompt": "A control loop has a gain crossover at ω_gc = 0.3333 rad/min and is sampled every T = 0.5 min with a zero-order hold, which acts like a delay of T/2. How many degrees of phase margin does the hold cost? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "signals-control-12-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 4.7746,
+        "unit": "",
+        "tolerance": 0.05,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Phase lag = ω_gc × (T/2) in radians; convert to degrees.",
+        "solution": "0.3333 × 0.25 = 0.0833 rad = 4.77°.",
+        "lesson_ids": [
+          "signals-control-12"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "signals-control-12:longest-period",
+      "type": "numeric",
+      "prompt": "A loop's closed-loop time constant is 3 min. By the rule of ten samples per time constant, what is the longest sampling period? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "signals-control-12-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0.3,
+        "unit": "min",
+        "tolerance": 0.01,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Divide the time constant by 10.",
+        "solution": "3/10 = 0.3 min.",
+        "lesson_ids": [
+          "signals-control-12"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "signals-control-12:pi-update",
+      "type": "numeric",
+      "prompt": "A discrete PI controller has K_p = 6.667 W/°C, T_i = 10 min and T = 0.25 min. Given e[k−1] = 1.2 °C, e[k] = 0.9 °C and u[k−1] = 22.0 W, what is u[k] = u[k−1] + K_p(e[k] − e[k−1]) + K_p(T/T_i)e[k]? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "signals-control-12-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 20.15,
+        "unit": "W",
+        "tolerance": 0.03,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Compute the three terms separately; the change in error is negative.",
+        "solution": "22.0 + −2.00 + 0.15 = 20.15 W.",
+        "lesson_ids": [
+          "signals-control-12"
+        ],
+        "misconception_ids": [
+          "integral-without-sample-period"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "signals-control-12:plant-pole",
+      "type": "numeric",
+      "prompt": "A first-order plant with time constant τ = 10 min is sampled every T = 0.25 min. What is the discrete pole a = e^(−T/τ)? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "signals-control-12-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 0.97531,
+        "unit": "",
+        "tolerance": 0.0005,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Compute T/τ = 0.025 first.",
+        "solution": "e^(−0.025) = 0.97531.",
+        "lesson_ids": [
+          "signals-control-12"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "signals-control-12:step-after-40",
+      "type": "numeric",
+      "prompt": "A plant with K = 0.5 °C/W and τ = 10 min is sampled every 0.25 min and driven by a constant 20 W (ignore any delay). What is the temperature rise after 40 samples, K u (1 − a⁴⁰) with a = e^(−T/τ)? Enter the number only (°C).",
+      "points": 1,
+      "objective_ids": [
+        "signals-control-12-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 6.3212,
+        "unit": "",
+        "tolerance": 0.02,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "40 samples is 10 min, one time constant.",
+        "solution": "10 × (1 − e^(−1)) = 6.321 °C.",
+        "lesson_ids": [
+          "signals-control-12"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "signals-control-12:sampling-statements",
+      "type": "multiple_select",
+      "prompt": "Which statements about sampling and discrete control are appropriate? Select all that apply.",
+      "points": 2,
+      "objective_ids": [
+        "signals-control-12-objective-3"
+      ],
+      "options": [
+        "Sampling faster than needed can never hurt a controller.",
+        "The anti-alias filter belongs before the converter.",
+        "A zero-order hold adds an average delay of half a sampling period.",
+        "The discrete integral term does not depend on the sampling period.",
+        "A component above half the sampling frequency appears at a lower frequency and cannot be removed after sampling."
+      ],
+      "solution_spec": {
+        "answer": [
+          1,
+          2,
+          4
+        ],
+        "partial_credit": "correct-minus-incorrect-clamped-v1"
+      },
+      "feedback": {
+        "hint": "Think about what happens to frequencies above the Nyquist frequency and to the hold.",
+        "solution": "Aliasing has to be prevented before sampling, and the hold lags by T/2. Sampling very fast raises noise and computation demands, and the integral term of the update contains T/T_i.",
+        "lesson_ids": [
+          "signals-control-12"
+        ],
+        "misconception_ids": [
+          "alias-same-frequency",
+          "integral-without-sample-period"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "signals-control-lab1:step-summary",
+      "type": "file_upload",
+      "prompt": "Using the synthetic step-test CSV, summarize each step size. Upload a table with one row per test (key column `test`: test_10w, test_20w and test_30w) and columns `runs` (the number of runs), `samples` (the number of sampled minutes in each run) and `mean_final_rise` (the mean temperature rise over the last five sampled minutes, 56 to 60, of both runs, in °C).",
+      "points": 9,
+      "objective_ids": [
+        "signals-control-lab-01-objective-1"
+      ],
+      "solution_spec": {
+        "accepted_media_types": [
+          "text/csv"
+        ],
+        "max_bytes": 32768,
+        "validation_spec": {
+          "format": "csv-numeric-table-v1",
+          "delimiter": ",",
+          "key_column": "test",
+          "columns": [
+            "test",
+            "runs",
+            "samples",
+            "mean_final_rise"
+          ],
+          "checks": [
+            {
+              "id": "test_10w-runs",
+              "row_id": "test_10w",
+              "column": "runs",
+              "type": "numeric",
+              "answer": 2.0,
+              "unit": "",
+              "tolerance": 0,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "count",
+                "values": [
+                  1,
+                  2
+                ]
+              }
+            },
+            {
+              "id": "test_10w-samples",
+              "row_id": "test_10w",
+              "column": "samples",
+              "type": "numeric",
+              "answer": 61.0,
+              "unit": "",
+              "tolerance": 0,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "count",
+                "values": [
+                  0.0,
+                  1.0,
+                  2.0,
+                  3.0,
+                  4.0,
+                  5.0,
+                  6.0,
+                  7.0,
+                  8.0,
+                  9.0,
+                  10.0,
+                  11.0,
+                  12.0,
+                  13.0,
+                  14.0,
+                  15.0,
+                  16.0,
+                  17.0,
+                  18.0,
+                  19.0,
+                  20.0,
+                  21.0,
+                  22.0,
+                  23.0,
+                  24.0,
+                  25.0,
+                  26.0,
+                  27.0,
+                  28.0,
+                  29.0,
+                  30.0,
+                  31.0,
+                  32.0,
+                  33.0,
+                  34.0,
+                  35.0,
+                  36.0,
+                  37.0,
+                  38.0,
+                  39.0,
+                  40.0,
+                  41.0,
+                  42.0,
+                  43.0,
+                  44.0,
+                  45.0,
+                  46.0,
+                  47.0,
+                  48.0,
+                  49.0,
+                  50.0,
+                  51.0,
+                  52.0,
+                  53.0,
+                  54.0,
+                  55.0,
+                  56.0,
+                  57.0,
+                  58.0,
+                  59.0,
+                  60.0
+                ]
+              }
+            },
+            {
+              "id": "test_10w-mean_final_rise",
+              "row_id": "test_10w",
+              "column": "mean_final_rise",
+              "type": "numeric",
+              "answer": 4.99,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  4.99,
+                  5.03,
+                  4.94,
+                  4.96,
+                  5.04,
+                  4.99,
+                  5.0,
+                  4.96,
+                  4.97,
+                  5.02
+                ]
+              }
+            },
+            {
+              "id": "test_20w-runs",
+              "row_id": "test_20w",
+              "column": "runs",
+              "type": "numeric",
+              "answer": 2.0,
+              "unit": "",
+              "tolerance": 0,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "count",
+                "values": [
+                  1,
+                  2
+                ]
+              }
+            },
+            {
+              "id": "test_20w-samples",
+              "row_id": "test_20w",
+              "column": "samples",
+              "type": "numeric",
+              "answer": 61.0,
+              "unit": "",
+              "tolerance": 0,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "count",
+                "values": [
+                  0.0,
+                  1.0,
+                  2.0,
+                  3.0,
+                  4.0,
+                  5.0,
+                  6.0,
+                  7.0,
+                  8.0,
+                  9.0,
+                  10.0,
+                  11.0,
+                  12.0,
+                  13.0,
+                  14.0,
+                  15.0,
+                  16.0,
+                  17.0,
+                  18.0,
+                  19.0,
+                  20.0,
+                  21.0,
+                  22.0,
+                  23.0,
+                  24.0,
+                  25.0,
+                  26.0,
+                  27.0,
+                  28.0,
+                  29.0,
+                  30.0,
+                  31.0,
+                  32.0,
+                  33.0,
+                  34.0,
+                  35.0,
+                  36.0,
+                  37.0,
+                  38.0,
+                  39.0,
+                  40.0,
+                  41.0,
+                  42.0,
+                  43.0,
+                  44.0,
+                  45.0,
+                  46.0,
+                  47.0,
+                  48.0,
+                  49.0,
+                  50.0,
+                  51.0,
+                  52.0,
+                  53.0,
+                  54.0,
+                  55.0,
+                  56.0,
+                  57.0,
+                  58.0,
+                  59.0,
+                  60.0
+                ]
+              }
+            },
+            {
+              "id": "test_20w-mean_final_rise",
+              "row_id": "test_20w",
+              "column": "mean_final_rise",
+              "type": "numeric",
+              "answer": 9.674,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  9.67,
+                  9.71,
+                  9.63,
+                  9.65,
+                  9.72,
+                  9.67,
+                  9.68,
+                  9.65,
+                  9.66,
+                  9.7
+                ]
+              }
+            },
+            {
+              "id": "test_30w-runs",
+              "row_id": "test_30w",
+              "column": "runs",
+              "type": "numeric",
+              "answer": 2.0,
+              "unit": "",
+              "tolerance": 0,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "count",
+                "values": [
+                  1,
+                  2
+                ]
+              }
+            },
+            {
+              "id": "test_30w-samples",
+              "row_id": "test_30w",
+              "column": "samples",
+              "type": "numeric",
+              "answer": 61.0,
+              "unit": "",
+              "tolerance": 0,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "count",
+                "values": [
+                  0.0,
+                  1.0,
+                  2.0,
+                  3.0,
+                  4.0,
+                  5.0,
+                  6.0,
+                  7.0,
+                  8.0,
+                  9.0,
+                  10.0,
+                  11.0,
+                  12.0,
+                  13.0,
+                  14.0,
+                  15.0,
+                  16.0,
+                  17.0,
+                  18.0,
+                  19.0,
+                  20.0,
+                  21.0,
+                  22.0,
+                  23.0,
+                  24.0,
+                  25.0,
+                  26.0,
+                  27.0,
+                  28.0,
+                  29.0,
+                  30.0,
+                  31.0,
+                  32.0,
+                  33.0,
+                  34.0,
+                  35.0,
+                  36.0,
+                  37.0,
+                  38.0,
+                  39.0,
+                  40.0,
+                  41.0,
+                  42.0,
+                  43.0,
+                  44.0,
+                  45.0,
+                  46.0,
+                  47.0,
+                  48.0,
+                  49.0,
+                  50.0,
+                  51.0,
+                  52.0,
+                  53.0,
+                  54.0,
+                  55.0,
+                  56.0,
+                  57.0,
+                  58.0,
+                  59.0,
+                  60.0
+                ]
+              }
+            },
+            {
+              "id": "test_30w-mean_final_rise",
+              "row_id": "test_30w",
+              "column": "mean_final_rise",
+              "type": "numeric",
+              "answer": 13.76,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  13.75,
+                  13.8,
+                  13.71,
+                  13.74,
+                  13.81,
+                  13.75,
+                  13.77,
+                  13.73,
+                  13.75,
+                  13.79
+                ]
+              }
+            }
+          ]
+        },
+        "rubric": [
+          {
+            "id": "test_10w-runs",
+            "criterion": "test_10w: runs",
+            "points": 1,
+            "evidence": [
+              "Recomputes runs for test_10w from the preparation-level values."
+            ]
+          },
+          {
+            "id": "test_10w-samples",
+            "criterion": "test_10w: samples",
+            "points": 1,
+            "evidence": [
+              "Recomputes samples for test_10w from the preparation-level values."
+            ]
+          },
+          {
+            "id": "test_10w-mean_final_rise",
+            "criterion": "test_10w: mean_final_rise",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_final_rise for test_10w from the preparation-level values."
+            ]
+          },
+          {
+            "id": "test_20w-runs",
+            "criterion": "test_20w: runs",
+            "points": 1,
+            "evidence": [
+              "Recomputes runs for test_20w from the preparation-level values."
+            ]
+          },
+          {
+            "id": "test_20w-samples",
+            "criterion": "test_20w: samples",
+            "points": 1,
+            "evidence": [
+              "Recomputes samples for test_20w from the preparation-level values."
+            ]
+          },
+          {
+            "id": "test_20w-mean_final_rise",
+            "criterion": "test_20w: mean_final_rise",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_final_rise for test_20w from the preparation-level values."
+            ]
+          },
+          {
+            "id": "test_30w-runs",
+            "criterion": "test_30w: runs",
+            "points": 1,
+            "evidence": [
+              "Recomputes runs for test_30w from the preparation-level values."
+            ]
+          },
+          {
+            "id": "test_30w-samples",
+            "criterion": "test_30w: samples",
+            "points": 1,
+            "evidence": [
+              "Recomputes samples for test_30w from the preparation-level values."
+            ]
+          },
+          {
+            "id": "test_30w-mean_final_rise",
+            "criterion": "test_30w: mean_final_rise",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_final_rise for test_30w from the preparation-level values."
+            ]
+          }
+        ]
+      },
+      "feedback": {
+        "hint": "Count the runs and the samples in one run separately; for the settled value average the rise in minutes 56 to 60 over both runs.",
+        "solution": "Each test has 2 runs of 61 samples (122 rows). The settled rises are 10 W 4.99 °C, 20 W 9.67 °C, 30 W 13.76 °C.",
+        "lesson_ids": [
+          "signals-control-lab-01",
+          "signals-control-9",
+          "signals-control-11"
+        ],
+        "misconception_ids": [
+          "single-run-as-truth"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "signals-control-lab1:gain-20",
+      "type": "numeric",
+      "prompt": "From the 20 W step, what is the plant gain K, the settled rise divided by the step power? Use the mean of minutes 56 to 60 of both runs and enter the number only (°C/W).",
+      "points": 1,
+      "objective_ids": [
+        "signals-control-lab-01-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0.4837,
+        "unit": "",
+        "tolerance": 0.005,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Divide the settled rise from your table by 20 W.",
+        "solution": "9.67 °C/20 W = 0.484 °C/W.",
+        "lesson_ids": [
+          "signals-control-lab-01",
+          "signals-control-9",
+          "signals-control-11"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "signals-control-lab1:delay",
+      "type": "numeric",
+      "prompt": "For the 20 W step, average the two runs at each minute. What is the last sampled minute at which that average is still within 2% of the settled value (and so before the response has visibly started)? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "signals-control-lab-01-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 1.0,
+        "unit": "",
+        "tolerance": 0.05,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "The 2% band is 0.02 times the settled rise; look at the first few minutes.",
+        "solution": "The mean rise is below 0.19 °C up to minute 1 and above 0.88 °C at minute 2, so the delay is about 1 min.",
+        "lesson_ids": [
+          "signals-control-lab-01",
+          "signals-control-9",
+          "signals-control-11"
+        ],
+        "misconception_ids": [
+          "noise-as-delay"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "signals-control-lab1:t63",
+      "type": "numeric",
+      "prompt": "For the 20 W step, at what time does the two-run average first reach 63.2% of the settled value? Interpolate linearly between the two sampled minutes and enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "signals-control-lab-01-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 10.997,
+        "unit": "min",
+        "tolerance": 0.3,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "63.2% of the settled rise is the target; find the minute at which the average crosses it.",
+        "solution": "The target is 6.11 °C; the average crosses it between minutes 10 and 11, at 11.00 min.",
+        "lesson_ids": [
+          "signals-control-lab-01",
+          "signals-control-9",
+          "signals-control-11"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "signals-control-lab1:time-constant",
+      "type": "numeric",
+      "prompt": "For a first-order plant with delay, the 63.2% time equals the delay plus the time constant. With the delay found above (1 min) and the 63.2% time of 11.00 min, what is the time constant? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "signals-control-lab-01-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 9.997,
+        "unit": "min",
+        "tolerance": 0.3,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Subtract the delay from the 63.2% time.",
+        "solution": "11.00 − 1 = 10.00 min.",
+        "lesson_ids": [
+          "signals-control-lab-01",
+          "signals-control-9",
+          "signals-control-11"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "signals-control-lab1:pi-gain",
+      "type": "numeric",
+      "prompt": "Using K = 0.49 °C/W, τ = 10 min, θ = 1 min and λ = 2 min, what proportional gain K_p = τ/(K(λ + θ)) does the cancellation tuning give? Enter the number only (W/°C).",
+      "points": 1,
+      "objective_ids": [
+        "signals-control-lab-01-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 6.8027,
+        "unit": "",
+        "tolerance": 0.02,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "τ/(K(λ + θ)) = 10/(0.49 × 3).",
+        "solution": "10/(0.49 × 3) = 6.803 W/°C.",
+        "lesson_ids": [
+          "signals-control-lab-01",
+          "signals-control-9",
+          "signals-control-11"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "signals-control-lab1:linearity",
+      "type": "data_interpretation",
+      "prompt": "The gains from the three steps are 0.499 (10 W), 0.484 (20 W) and 0.459 (30 W) °C/W. Compute the ratio of the gain at 30 W to the gain at 10 W.",
+      "points": 2,
+      "objective_ids": [
+        "signals-control-lab-01-objective-3"
+      ],
+      "response_fields": [
+        {
+          "id": "value",
+          "type": "numeric",
+          "prompt": "What is the ratio? Report exactly 3 significant figures.",
+          "unit": "",
+          "points": 1
+        },
+        {
+          "id": "inference",
+          "type": "single_choice",
+          "prompt": "What does the ratio say about tuning a controller from the 10 W test alone?",
+          "options": [
+            "The plant gain falls by roughly 8% over this range, so a loop tuned on the 10 W gain has a lower loop gain, and more margin, at high power, and the model is only approximately linear.",
+            "The plant is exactly linear, so any step size gives the same tuning.",
+            "The 30 W test is wrong because the gain should always be 0.5.",
+            "The ratio shows that the delay changes with the step size."
+          ],
+          "points": 1
+        }
+      ],
+      "solution_spec": {
+        "field_specs": [
+          {
+            "id": "value",
+            "type": "numeric",
+            "answer": 0.919,
+            "unit": "",
+            "tolerance": 0.01,
+            "relative_tolerance": 0,
+            "unit_required": false,
+            "significant_figures": 3,
+            "dimensions": null
+          },
+          {
+            "id": "inference",
+            "type": "single_choice",
+            "answer": 0
+          }
+        ]
+      },
+      "feedback": {
+        "hint": "Divide the 30 W gain by the 10 W gain.",
+        "solution": "0.459/0.499 = 0.919: the gain falls with the size of the step, so the loop gain changes by about 8% over the range.",
+        "lesson_ids": [
+          "signals-control-lab-01",
+          "signals-control-9",
+          "signals-control-11"
+        ],
+        "misconception_ids": [
+          "linear-plant-assumed"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "signals-control-lab1:design-reasoning",
+      "type": "structured",
+      "prompt": "Answer each part about the step tests.",
+      "points": 3,
+      "objective_ids": [
+        "signals-control-lab-01-objective-3"
+      ],
+      "response_fields": [
+        {
+          "id": "repeats",
+          "type": "single_choice",
+          "prompt": "Why are two runs at each step size useful?",
+          "options": [
+            "They show the run-to-run noise in the readings, so a settled value or a crossing time can be judged against it.",
+            "They make the plant faster.",
+            "They remove the delay.",
+            "They are required for the settled value to exist."
+          ],
+          "points": 1
+        },
+        {
+          "id": "linearity",
+          "type": "single_choice",
+          "prompt": "How should the three step sizes be used?",
+          "options": [
+            "Compare the gains; if they differ, tune for the operating range of interest and check the margins at the extremes.",
+            "Use only the smallest step because it has the least noise.",
+            "Average the three gains and ignore the difference.",
+            "Discard the largest step because it saturates the model."
+          ],
+          "points": 1
+        },
+        {
+          "id": "limits",
+          "type": "single_choice",
+          "prompt": "What do open-loop step tests not show?",
+          "options": [
+            "How the closed loop behaves with saturation, a disturbance or a sensor filter, which still need closed-loop tests and measured margins.",
+            "That the plant has any delay.",
+            "That the plant has a gain.",
+            "That the plant is first-order for every input."
+          ],
+          "points": 1
+        }
+      ],
+      "solution_spec": {
+        "field_specs": [
+          {
+            "id": "repeats",
+            "type": "single_choice",
+            "answer": 0
+          },
+          {
+            "id": "linearity",
+            "type": "single_choice",
+            "answer": 0
+          },
+          {
+            "id": "limits",
+            "type": "single_choice",
+            "answer": 0
+          }
+        ],
+        "rubric": [
+          {
+            "id": "repeats",
+            "criterion": "Why two runs",
+            "points": 1,
+            "evidence": [
+              "Reads repeated runs as a measure of noise."
+            ]
+          },
+          {
+            "id": "linearity",
+            "criterion": "Linearity: evidence reasoning",
+            "points": 1,
+            "evidence": [
+              "Uses step sizes to check linearity."
+            ]
+          },
+          {
+            "id": "limits",
+            "criterion": "What the tests do not show",
+            "points": 1,
+            "evidence": [
+              "Names the closed-loop tests that remain."
+            ]
+          }
+        ]
+      },
+      "feedback": {
+        "hint": "For each part, ask what the data can and cannot show.",
+        "solution": "Repeats show the noise, the step sizes test linearity, and open-loop steps say nothing about saturation, disturbances or a filter in the loop.",
+        "lesson_ids": [
+          "signals-control-lab-01",
+          "signals-control-9",
+          "signals-control-11"
+        ],
+        "misconception_ids": [
+          "single-run-as-truth",
+          "linear-plant-assumed"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "signals-control-lab1:supported-statements",
+      "type": "multiple_select",
+      "prompt": "Which statements about these synthetic step tests are supported? Select all that apply.",
+      "points": 2,
+      "objective_ids": [
+        "signals-control-lab-01-objective-3"
+      ],
+      "options": [
+        "The plant has a delay of about one minute and a time constant of about ten minutes.",
+        "The settled rise per watt is somewhat lower for the larger steps.",
+        "Averaging the two runs reduces the effect of reading noise on the crossing time.",
+        "The tests prove that the loop will be stable with the tuned gain.",
+        "A single run at one step size would have been enough to design the controller."
+      ],
+      "solution_spec": {
+        "answer": [
+          0,
+          1,
+          2
+        ],
+        "partial_credit": "correct-minus-incorrect-clamped-v1"
+      },
+      "feedback": {
+        "hint": "Keep each statement inside what open-loop tests of three step sizes can show.",
+        "solution": "The first three follow from the data. Stability of the closed loop has to be checked with the margins, and one run at one size would hide the noise and the nonlinearity.",
+        "lesson_ids": [
+          "signals-control-lab-01",
+          "signals-control-9",
+          "signals-control-11"
+        ],
+        "misconception_ids": [
+          "linear-plant-assumed",
+          "single-run-as-truth"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "signals-control-13:margin-before",
+      "type": "numeric",
+      "prompt": "A synthetic incubator loop (plant 0.5e^(−s)/(10s + 1), time in minutes) has a PI controller tuned by cancellation so that the loop is 0.6667e^(−s)/s. What is the phase margin in degrees, 90° minus the delay phase at the crossover ω_gc = 0.6667 rad/min? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "signals-control-13-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 51.8028,
+        "unit": "",
+        "tolerance": 0.15,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Convert ω_gc θ from radians to degrees.",
+        "solution": "90° − 38.20° = 51.8°.",
+        "lesson_ids": [
+          "signals-control-13"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "signals-control-13:filter-lag",
+      "type": "numeric",
+      "prompt": "A first-order measurement filter with time constant 1 min is added to a loop whose gain crossover is 0.6667 rad/min. How many degrees of phase lag does the filter add at that frequency? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "signals-control-13-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 33.6901,
+        "unit": "",
+        "tolerance": 0.1,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "The filter phase is −atan(ωτ_f).",
+        "solution": "atan(0.6667 × 1) = 33.69°.",
+        "lesson_ids": [
+          "signals-control-13"
+        ],
+        "misconception_ids": [
+          "filter-only-reduces-noise"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "signals-control-13:crossover-after",
+      "type": "numeric",
+      "prompt": "A synthetic incubator loop (plant 0.5e^(−s)/(10s + 1), time in minutes) has a PI controller tuned by cancellation so that the loop is 0.6667e^(−s)/s. With the 1 min filter added, the loop is 0.6667e^(−s)/(s(s + 1)). At what frequency is the magnitude 1? Find ω with 0.6667/(ω√(1 + ω²)) = 1 and enter the number only (rad/min).",
+      "points": 1,
+      "objective_ids": [
+        "signals-control-13-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0.57735,
+        "unit": "",
+        "tolerance": 0.003,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "The magnitude falls with ω, so bisect between 0.4 and 0.7.",
+        "solution": "ω_gc = 0.5774 rad/min.",
+        "lesson_ids": [
+          "signals-control-13"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "signals-control-13:margin-after",
+      "type": "numeric",
+      "prompt": "A synthetic incubator loop (plant 0.5e^(−s)/(10s + 1), time in minutes) has a PI controller tuned by cancellation so that the loop is 0.6667e^(−s)/s, then a 1 min filter. At the new crossover ω_gc = 0.5774 rad/min, what is the phase margin in degrees, 90° − (delay phase) − (filter phase)? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "signals-control-13-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 26.9203,
+        "unit": "",
+        "tolerance": 0.2,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Add the delay phase ωθ and the filter phase atan(ωτ_f), both in degrees.",
+        "solution": "90° − 33.08° − 30.00° = 26.9°.",
+        "lesson_ids": [
+          "signals-control-13"
+        ],
+        "misconception_ids": [
+          "margin-before-and-after-equal"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "signals-control-13:overshoot-estimate",
+      "type": "numeric",
+      "prompt": "Using ζ ≈ PM/100 and M_p = 100 exp(−πζ/√(1 − ζ²)), what overshoot in percent does a phase margin of 26.9° predict? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "signals-control-13-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 41.555,
+        "unit": "",
+        "tolerance": 0.8,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Take ζ = PM/100 and apply the overshoot formula.",
+        "solution": "ζ = 0.269, so M_p = 41.6%.",
+        "lesson_ids": [
+          "signals-control-13"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "signals-control-13:gain-for-45",
+      "type": "numeric",
+      "prompt": "A synthetic incubator loop (plant 0.5e^(−s)/(10s + 1), time in minutes) has a PI controller tuned by cancellation so that the loop is 0.6667e^(−s)/s, with the 1 min filter. The phase margin is 45° at ω = 0.4026 rad/min, where the loop gain needed is ω√(1 + ω²). What proportional gain K_p = (that gain) × τ/K gives this, in W/°C? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "signals-control-13-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 8.681,
+        "unit": "",
+        "tolerance": 0.1,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "K_pK/τ = ω√(1 + ω²) with τ = 10 min and K = 0.5 °C/W.",
+        "solution": "0.4026 × √(1 + 0.4026²) = 0.4340, so K_p = 0.4340 × 20 = 8.68 W/°C.",
+        "lesson_ids": [
+          "signals-control-13"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "signals-control-13:gain-reduction",
+      "type": "numeric",
+      "prompt": "The proportional gain is lowered from 13.33 to 8.68 W/°C. By what percentage is the gain reduced? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "signals-control-13-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 34.894,
+        "unit": "",
+        "tolerance": 0.5,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Divide the reduction by the original gain.",
+        "solution": "(13.33 − 8.68)/13.33 = 34.9%.",
+        "lesson_ids": [
+          "signals-control-13"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "signals-control-13:margin-fast-filter",
+      "type": "numeric",
+      "prompt": "A synthetic incubator loop (plant 0.5e^(−s)/(10s + 1), time in minutes) has a PI controller tuned by cancellation so that the loop is 0.6667e^(−s)/s, with the original gain and a faster filter, τ_f = 0.25 min. Solving for the crossover gives ω_gc = 0.6578 rad/min. What is the phase margin in degrees? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "signals-control-13-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 42.97,
+        "unit": "",
+        "tolerance": 0.2,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Phase margin = 90° − (delay phase) − atan(ωτ_f).",
+        "solution": "90° − 37.69° − 9.34° = 43.0°.",
+        "lesson_ids": [
+          "signals-control-13"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "signals-control-13:retuning-statements",
+      "type": "multiple_select",
+      "prompt": "Which elements belong in a safe retuning sequence after a sensor filter makes a loop oscillate? Select all that apply.",
+      "points": 2,
+      "objective_ids": [
+        "signals-control-13-objective-3"
+      ],
+      "options": [
+        "Add derivative action to restore phase without looking at the noise it passes.",
+        "Measure the phase and gain margins with a frequency or relay test, and accept a change only if they meet the targets.",
+        "Record a small-step baseline before any change.",
+        "Change the gain or the filter, one at a time, and repeat the small-step test.",
+        "Test a large start-up step with anti-windup active and a disturbance before deployment."
+      ],
+      "solution_spec": {
+        "answer": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "partial_credit": "correct-minus-incorrect-clamped-v1"
+      },
+      "feedback": {
+        "hint": "Ask what could be attributed to what, and what the loop has not yet been tested for.",
+        "solution": "A baseline, one change at a time, a measured margin and saturation and disturbance tests make the retuning interpretable and safe. Derivative action restores phase but amplifies noise, so it needs its own check.",
+        "lesson_ids": [
+          "signals-control-13"
+        ],
+        "misconception_ids": [
+          "filter-only-reduces-noise"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
     }
   ]
 }
