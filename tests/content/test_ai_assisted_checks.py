@@ -7,6 +7,8 @@ of the teaching, and an AI-assisted check is not a human review.
 
 from __future__ import annotations
 
+import functools
+import itertools
 import json
 import math
 from pathlib import Path
@@ -379,3 +381,318 @@ def test_biochemistry_lab_fit_recovers_the_parameters_the_data_were_built_from()
     assert abs(_KM_INH - 15.0) < 0.2 and abs(4 / (_KM_INH / _KM_CTRL - 1) - 2.0) < 0.1
     field = bank("biochemistry")["biochemistry-lab1:control-fit"]["solution_spec"]["field_specs"][0]
     assert abs(field["answer"] - vmax) < 0.05
+
+
+# ---- statistics 0.4.0 ----------------------------------------------------------------------------------------
+# Student's t is evaluated by integrating over the chi-square mixing distribution above, which does not share code
+# with the scipy functions that produced the stored keys.
+
+
+@functools.lru_cache(maxsize=None)
+def _t_cdf(t: float, df: float) -> float:
+    return _over_chi2(df, lambda v: _phi(t * math.sqrt(v / df)))
+
+
+def _two_sided_p(t: float, df: float) -> float:
+    return 2 * (1 - _t_cdf(abs(t), df))
+
+
+@functools.lru_cache(maxsize=None)
+def _t_quantile(p: float, df: float) -> float:
+    low, high = 0.0, 40.0
+    for _ in range(50):
+        mid = (low + high) / 2
+        low, high = (mid, high) if _t_cdf(mid, df) < p else (low, mid)
+    return (low + high) / 2
+
+
+def _z_quantile(p: float) -> float:
+    low, high = 0.0, 10.0
+    for _ in range(60):
+        mid = (low + high) / 2
+        low, high = (mid, high) if _phi(mid) < p else (low, mid)
+    return (low + high) / 2
+
+
+def _ols(xs: list[float], ys: list[float]) -> tuple[float, float, float, float]:
+    """Slope, intercept, R squared and standard error of the slope for ordinary least squares."""
+    n, mx, my = len(xs), sum(xs) / len(xs), sum(ys) / len(ys)
+    sxx = sum((x - mx) ** 2 for x in xs)
+    slope = sum((x - mx) * (y - my) for x, y in zip(xs, ys)) / sxx
+    intercept = my - slope * mx
+    sse = sum((y - intercept - slope * x) ** 2 for x, y in zip(xs, ys))
+    sst = sum((y - my) ** 2 for y in ys)
+    return slope, intercept, 1 - sse / sst, math.sqrt(sse / (n - 2)) / math.sqrt(sxx)
+
+
+_KM_TIMES = [2, 3, 4, 5, 6, 8, 9, 10, 12, 12]
+_KM_EVENTS = [1, 1, 0, 1, 0, 1, 0, 1, 0, 0]
+
+
+def _km_survival(at: float) -> float:
+    survival = 1.0
+    for t in sorted({t for t, e in zip(_KM_TIMES, _KM_EVENTS) if e and t <= at}):
+        at_risk = sum(1 for u in _KM_TIMES if u >= t)
+        deaths = sum(1 for u, e in zip(_KM_TIMES, _KM_EVENTS) if e and u == t)
+        survival *= 1 - deaths / at_risk
+    return survival
+
+
+_P10 = [0.001, 0.004, 0.012, 0.02, 0.031, 0.04, 0.18, 0.33, 0.52, 0.81]
+_CAL_X, _CAL_Y = [0, 2, 4, 6, 8, 10], [6.0, 24.0, 47.5, 62.0, 88.5, 101.0]
+_SLOPE, _INTERCEPT, _R2, _SE_SLOPE = _ols(_CAL_X, _CAL_Y)
+_CONTROL, _TREATED = [12, 15, 14, 16], [18, 20, 17, 21]
+_RANK = {v: i + 1 for i, v in enumerate(sorted(_CONTROL + _TREATED))}
+_ARRANGEMENT_SUMS = [sum(c) for c in itertools.combinations(range(1, 9), 4)]
+_T10 = _t_quantile(0.975, 10)
+_SE_6 = 2.2 * math.sqrt(2 / 6)
+_SE_WELCH = math.sqrt(2.0 ** 2 / 6 + 2.4 ** 2 / 6)
+_DF_WELCH = (2.0 ** 2 / 6 + 2.4 ** 2 / 6) ** 2 / ((2.0 ** 2 / 6) ** 2 / 5 + (2.4 ** 2 / 6) ** 2 / 5)
+_SB, _ST = 8.5, 5.0                                   # statistics-15: between-animal and technical SD
+
+
+def _animals_needed(readings: int, z_alpha: float = 1.96, delta: float = 5.0) -> float:
+    return 2 * (z_alpha + 0.8416) ** 2 * (_SB ** 2 + _ST ** 2 / readings) / delta ** 2
+
+
+def _ppv(power: float, prior: float, alpha: float = 0.05) -> float:
+    true_positive, false_positive = 1_000_000 * prior * power, 1_000_000 * (1 - prior) * alpha
+    return true_positive / (true_positive + false_positive)
+
+
+def _lab_statistics() -> dict[str, float]:
+    import csv
+    rows = list(csv.DictReader((COURSES / "statistics/labs/nested-biomarker-readings.csv").open(encoding="utf-8")))
+    animals = {a: [float(r["value_au"]) for r in rows if r["animal_id"] == a] for a in dict.fromkeys(r["animal_id"] for r in rows)}
+    group_of = {r["animal_id"]: r["group"] for r in rows}
+    means = {a: sum(v) / len(v) for a, v in animals.items()}
+    ss_within = sum((x - means[a]) ** 2 for a, v in animals.items() for x in v)
+    ms_within = ss_within / sum(len(v) - 1 for v in animals.values())
+
+    def pooled_variance(samples: list[list[float]]) -> float:
+        total = df = 0.0
+        for sample in samples:
+            m = sum(sample) / len(sample)
+            total += sum((x - m) ** 2 for x in sample)
+            df += len(sample) - 1
+        return total / df
+
+    groups = sorted(set(group_of.values()))
+    animal_means = [[means[a] for a in animals if group_of[a] == g] for g in groups]
+    reading_groups = [[float(r["value_au"]) for r in rows if r["group"] == g] for g in groups]
+    ms_animals = 3 * pooled_variance(animal_means)
+    sigma_b2 = (ms_animals - ms_within) / 3
+    diff = sum(animal_means[1]) / len(animal_means[1]) - sum(animal_means[0]) / len(animal_means[0])
+    t_reading = diff / math.sqrt(pooled_variance(reading_groups) * 2 / len(reading_groups[0]))
+    t_animal = diff / math.sqrt(pooled_variance(animal_means) * 2 / len(animal_means[0]))
+    grand = sum(sum(g) for g in reading_groups) / sum(len(g) for g in reading_groups)
+    ms_group = len(reading_groups[0]) * sum((sum(g) / len(g) - grand) ** 2 for g in reading_groups) / (len(groups) - 1)
+    return {"ms_group": ms_group, "ms_animals": ms_animals, "sd_t": math.sqrt(ms_within), "icc": sigma_b2 / (sigma_b2 + ms_within), "t_reading": t_reading, "t_animal": t_animal,
+            "df_reading": 2 * len(reading_groups[0]) - 2, "df_animal": 2 * len(animal_means[0]) - 2, "diff": diff, "n_rows": len(rows)}
+
+
+_LAB = _lab_statistics()
+
+STATISTICS_NUMERIC = {
+    # items written before 2026-10-08, recomputed from the numbers in their prompts
+    "statistics-1:check": 10 / math.sqrt(25),
+    "statistics-1:standard-error": 12 / math.sqrt(36),
+    "statistics-3:check": 100 * (1 - 0.95 ** 10),
+    "statistics-3:bonferroni": 0.05 / 20,
+    "statistics-6:km-at-5": _km_survival(5),
+    "statistics-6:km-at-8": _km_survival(8),
+    "statistics-6:median-survival": min(t for t, e in zip(_KM_TIMES, _KM_EVENTS) if e and _km_survival(t) <= 0.5),
+    "statistics-6:rate-ratio": (12 / 480) / (20 / 400),
+    "statistics-7:fwer": 1 - 0.95 ** 20,
+    "statistics-7:expected-fp": 1000 * 0.05,
+    "statistics-7:bonferroni-count": sum(p <= 0.05 / len(_P10) for p in _P10),
+    "statistics-7:bh-count": benjamini_hochberg_count(_P10, 0.05),
+    "statistics-8:standard-error": 3.0 * math.sqrt(2 / 20),
+    "statistics-8:ci-upper": 1.5 + _t_quantile(0.975, 38) * 3.0 * math.sqrt(2 / 20),
+    "statistics-8:cohens-d": 1.5 / 3.0,
+    "statistics-8:larger-n-se": 3.0 * math.sqrt(2 / 80),
+    "statistics-8:regression-to-mean": 100 + 0.7 * (130 - 100),
+    # statistics-9: variability
+    "statistics-9:technical-sd": 7.07 / math.sqrt(2),
+    "statistics-9:naive-se": math.sqrt(10 ** 2 + 5 ** 2) / math.sqrt(12),
+    "statistics-9:correct-se": math.sqrt(10 ** 2 / 4 + 5 ** 2 / 12),
+    "statistics-9:icc": 10 ** 2 / (10 ** 2 + 5 ** 2),
+    "statistics-9:effective-n": 12 / (1 + (3 - 1) * 0.8),
+    # statistics-10: comparing two groups
+    "statistics-10:se-difference": _SE_WELCH,
+    "statistics-10:t-statistic": (13.0 - 10.2) / _SE_WELCH,
+    "statistics-10:welch-df": _DF_WELCH,
+    "statistics-10:cohens-d": 2.8 / math.sqrt((2.0 ** 2 + 2.4 ** 2) / 2),
+    "statistics-10:paired-t": 2.8 / (1.5 / math.sqrt(6)),
+    # statistics-11: power and sample size
+    "statistics-11:signal-to-noise": 2.8 / _SE_6,
+    "statistics-11:n-80": 2 * Z80 ** 2 * 2.2 ** 2 / 2.8 ** 2,
+    "statistics-11:n-half-effect": 2 * Z80 ** 2 * 2.2 ** 2 / 1.4 ** 2,
+    "statistics-11:min-significant": _T10 * _SE_6,
+    "statistics-11:exaggeration": _T10 * _SE_6 / 1.4,
+    # statistics-12: regression and calibration
+    "statistics-12:slope": _SLOPE,
+    "statistics-12:intercept": _INTERCEPT,
+    "statistics-12:r-squared": _R2,
+    "statistics-12:se-slope": _SE_SLOPE,
+    "statistics-12:inverse-prediction": (55 - _INTERCEPT) / _SLOPE,
+    # statistics-13: resampling
+    "statistics-13:n-arrangements": math.comb(8, 4),
+    "statistics-13:exact-p": sum(1 for total in _ARRANGEMENT_SUMS if total <= 10 or total >= 26) / math.comb(8, 4),
+    "statistics-13:bootstrap-inclusion": 1 - (1 - 1 / 10) ** 10,
+    "statistics-13:rank-sum": sum(_RANK[v] for v in _TREATED),
+    "statistics-13:u-statistic": sum(1 for c in _CONTROL for t in _TREATED if c > t),
+    # statistics-14: base rates
+    "statistics-14:ppv-test": (10_000 * 0.02 * 0.90) / (10_000 * 0.02 * 0.90 + 10_000 * 0.98 * 0.05),
+    "statistics-14:lr-positive": 0.90 / (1 - 0.95),
+    "statistics-14:ppv-study": _ppv(0.5, 0.10),
+    "statistics-14:ppv-high-power": _ppv(0.8, 0.10),
+    "statistics-14:ppv-rare": _ppv(0.8, 0.01),
+    "statistics-14:replication-probability": _ppv(0.5, 0.10) * 0.5 + (1 - _ppv(0.5, 0.10)) * 0.05,
+    # statistics-15: planning a confirmatory study (the sample-size keys are the rounded-up values)
+    "statistics-15:any-false-positive": 1 - 0.95 ** 18,
+    "statistics-15:bonferroni-threshold": 0.05 / 18,
+    "statistics-15:animal-t": 7.0 / (math.sqrt(_SB ** 2 + _ST ** 2 / 3) * math.sqrt(2 / 6)),
+    "statistics-15:n-triplicate": _animals_needed(3),
+    "statistics-15:n-single-reading": _animals_needed(1),
+    "statistics-15:n-all-eighteen": _animals_needed(3, z_alpha=2.99),
+    "statistics-15:optimal-readings": math.sqrt(_ST ** 2 * 20 / (_SB ** 2 * 1)),
+    # virtual lab 1, recomputed from the CSV
+    "statistics-lab1:technical-sd": _LAB["sd_t"],
+    "statistics-lab1:intraclass-correlation": _LAB["icc"],
+}
+
+
+@pytest.mark.parametrize("question_id,expected", sorted(STATISTICS_NUMERIC.items()))
+def test_statistics_numeric_key_matches_independent_recalculation(question_id, expected):
+    spec = bank("statistics")[question_id]["solution_spec"]
+    allowed = spec["tolerance"] + (spec.get("relative_tolerance") or 0) * abs(spec["answer"])
+    assert abs(spec["answer"] - expected) <= allowed, (question_id, spec["answer"], expected)
+
+
+def test_every_statistics_numeric_item_is_recalculated():
+    numeric = {qid for qid, item in bank("statistics").items() if item["type"] == "numeric"}
+    assert numeric == set(STATISTICS_NUMERIC)
+
+
+def test_statistics_quoted_p_values_match_an_independent_t_distribution():
+    comparing = reading("statistics", "statistics-10")
+    t_welch = 2.8 / _SE_WELCH
+    assert f"{_two_sided_p(t_welch, _DF_WELCH):.3f}" == "0.054" and "0.054" in comparing
+    assert f"{_two_sided_p(2.8 / (1.5 / math.sqrt(6)), 5):.3f}" == "0.006" and "p ≈ 0.006" in comparing
+    se_worked = math.sqrt(5.0 ** 2 / 8 + 7.0 ** 2 / 8)
+    df_worked = (5.0 ** 2 / 8 + 7.0 ** 2 / 8) ** 2 / ((5.0 ** 2 / 8) ** 2 / 7 + (7.0 ** 2 / 8) ** 2 / 7)
+    assert f"{df_worked:.2f}" == "12.67" and f"{_two_sided_p(6.0 / se_worked, df_worked):.3f}" == "0.071"
+    assert "Welch df = 12.67, p ≈ 0.071" in comparing
+    planning = reading("statistics", "statistics-15")
+    sd_reading, sd_animal = math.sqrt(_SB ** 2 + _ST ** 2), math.sqrt(_SB ** 2 + _ST ** 2 / 3)
+    t_naive, t_animal = 7.0 / (sd_reading * math.sqrt(2 / 18)), 7.0 / (sd_animal * math.sqrt(2 / 6))
+    assert f"p = {_two_sided_p(t_naive, 34):.3f}" == "p = 0.041" and "p = 0.041" in planning
+    assert f"p = **{_two_sided_p(t_animal, 10):.2f}**" in planning
+    assert f"**{_T10 * sd_animal * math.sqrt(2 / 6):.1f}** units" in planning
+
+
+def test_statistics_power_statements_match_the_exact_t_test():
+    power = reading("statistics", "statistics-11")
+    assert two_sample_t_power(6, 2.2, 2.8) == pytest.approx(0.5126, abs=0.002) and "power 0.51" in power
+    assert f"{two_sample_t_power(6, 2.2, 1.4):.2f}" == "0.17" and "0.17 for a true δ of 1.4" in power
+    assert two_sample_t_power(10, 2.2, 2.8) < 0.80 <= two_sample_t_power(11, 2.2, 2.8)
+    assert "the exact t calculation asks for 11" in power
+    assert two_sample_t_power(38, 2.2, 1.4) < 0.80 and "about 39 or more with the exact test" in power
+    planning = reading("statistics", "statistics-15")
+    sd = math.sqrt(_SB ** 2 + _ST ** 2 / 3)
+    assert two_sample_t_power(51, sd, 5.0) < 0.80 <= two_sample_t_power(52, sd, 5.0)
+    assert "needs 52 animals per group for m = 3" in planning
+    assert f"{two_sample_t_power(6, sd, 5.0):.2f}" == "0.14" and "would have been only 0.14" in planning
+
+
+def test_statistics_planning_table_and_critical_value_in_the_capstone():
+    planning = reading("statistics", "statistics-15")
+    assert [math.ceil(_animals_needed(m)) for m in (1, 3, 6)] == [62, 51, 48]
+    assert math.ceil(_animals_needed(3, z_alpha=2.99)) == 95 and math.ceil(_animals_needed(3) * 1.25 ** 2) == 80
+    assert abs(_z_quantile(1 - 0.05 / 36) - 2.99) < 0.005
+    for row in ("| 1 | 97.25 | 62 |", "| 3 | 80.58 | 51 |", "| 6 | 76.42 | 48 |"):
+        assert row in planning
+    assert "is m = √" in planning and "= **2.63**" in planning
+
+
+def test_statistics_lab_interpretation_keys_and_nested_f_test_match_the_dataset():
+    fields = {q: bank("statistics")[q]["solution_spec"]["field_specs"][0] for q in ("statistics-lab1:reading-level-test", "statistics-lab1:animal-level-test")}
+    assert abs(fields["statistics-lab1:reading-level-test"]["answer"] - _LAB["t_reading"]) <= fields["statistics-lab1:reading-level-test"]["tolerance"]
+    assert abs(fields["statistics-lab1:animal-level-test"]["answer"] - _LAB["t_animal"]) <= fields["statistics-lab1:animal-level-test"]["tolerance"]
+    assert all(f["significant_figures"] == 3 for f in fields.values())
+    assert _LAB["n_rows"] == 24 and _LAB["diff"] == pytest.approx(8.0)
+    lab = (COURSES / "statistics/labs/01-pseudoreplication-and-nested-designs.md").read_text(encoding="utf-8")
+    assert f"p = {_two_sided_p(_LAB['t_reading'], _LAB['df_reading']):.4f}" in lab
+    assert f"p = {_two_sided_p(_LAB['t_animal'], _LAB['df_animal']):.3f}" in lab
+    # balanced nested analysis of variance: F for groups equals the square of the animal-level t statistic
+    f_nested = _LAB["ms_group"] / _LAB["ms_animals"]
+    assert f_nested == pytest.approx(_LAB["t_animal"] ** 2, rel=1e-9)
+    assert f"{_LAB['ms_group']:.0f}/{_LAB['ms_animals']:.0f} = {f_nested:.2f}" in lab
+
+
+def test_statistics_base_rate_lesson_states_the_natural_frequencies():
+    text = reading("statistics", "statistics-14")
+    true_positive, false_positive = 10_000 * 0.02 * 0.90, 10_000 * 0.98 * 0.05
+    assert f"**{true_positive:.0f} true positives**" in text and f"**{false_positive:.0f} false positives**" in text
+    assert f"Of the {true_positive + false_positive:.0f} positive tests, {true_positive:.0f} are true" in text
+    assert f"{true_positive / (true_positive + false_positive):.3f}" in text
+    assert f"{_ppv(0.5, 0.10):.3f}" in text and f"{_ppv(0.8, 0.01):.2f}" in text
+
+
+def test_statistics_worked_examples_and_lesson_statements_agree_with_the_arithmetic():
+    # lesson 9: variability
+    text = reading("statistics", "statistics-9")
+    correct = math.sqrt(6 ** 2 / 5 + 6 ** 2 / (5 * 2))
+    naive = math.sqrt(6 ** 2 + 6 ** 2) / math.sqrt(10)
+    deff = 1 + (2 - 1) * 0.5
+    for fragment in (f"{correct:.2f}", f"{naive:.2f}", f"{correct / naive:.2f} times too small", f"DEFF = 1 + (2 − 1) × 0.50 = {deff:.2f}", f"n_eff = 10/{deff:.2f} = {10 / deff:.1f}"):
+        assert fragment in text, fragment
+    assert f"{math.sqrt(10 ** 2 / 4 + 5 ** 2 / 4):.2f}" in text and f"{math.sqrt(10 ** 2 / 12 + 5 ** 2 / 12):.2f}" in text
+    assert f"{(100 + 25 / 3) / 9:.2f}" not in text and "n = (100 + 25/3)/9 = 12 animals" in text
+    assert f"{10 ** 2 / (10 ** 2 + 5 ** 2 / 3):.0%}" == "92%" and "92%" in text
+    # lesson 11: worked example
+    text = reading("statistics", "statistics-11")
+    assert f"{2 * Z80 ** 2 * 3 ** 2 / 2 ** 2:.1f}" == "35.3" and "35.3, so at least 36 per group" in text
+    se = 3 * math.sqrt(2 / 6)
+    assert f"{_phi(2 / se - 1.96):.2f}" == "0.21" and "Φ(−0.81) = 0.21" in text and f"{2 / se - 1.96:.2f}" == "-0.81"
+    assert f"{Z80 * se:.2f}" == "4.85" and f"{_phi(2.8 / _SE_6 - 1.96):.2f}" == "0.60"
+    # lesson 12: regression
+    text = reading("statistics", "statistics-12")
+    s = _SE_SLOPE * math.sqrt(70)
+    x_hat = (55 - _INTERCEPT) / _SLOPE
+    se_x = s / abs(_SLOPE) * math.sqrt(1 + 1 / 6 + (x_hat - 5) ** 2 / 70)
+    t4 = _t_quantile(0.975, 4)
+    assert f"= {se_x:.3f}" in text and f"±{t4 * se_x:.2f} μM" in text
+    assert f"({_SLOPE - t4 * _SE_SLOPE:.2f}, {_SLOPE + t4 * _SE_SLOPE:.2f})" in text and f"{s:.3f}" in text
+    assert f"{_INTERCEPT + _SLOPE * 20:.0f}" == "201" and "gives 201" in text
+    b, a, r2_saturating, _ = _ols(_CAL_X, [0, 18, 33, 44, 52, 57])
+    residuals = [y - (a + b * x) for x, y in zip(_CAL_X, [0, 18, 33, 44, 52, 57])]
+    assert f"R² = {r2_saturating:.3f}" in text
+    assert "(" + ", ".join(f"{r:+.1f}".replace("-", "−") for r in residuals) + ")" in text
+    assert [(r > 0) for r in residuals] == [False, True, True, True, True, False]
+    wb, wa, wr2, wse = _ols([1, 2, 3, 4, 5], [3.1, 4.9, 7.2, 8.8, 11.1])
+    assert (round(wb, 2), round(wa, 2), f"{wr2:.4f}", f"{wse:.3f}") == (1.99, 1.05, "0.9973", "0.060")
+    assert "R² = 1 − 0.107/39.708 = 0.9973" in text and "SE(b) = 0.189/√10 = 0.060" in text
+    # lesson 13: resampling
+    text = reading("statistics", "statistics-13")
+    values = [11, 14, 13, 18, 15, 17, 16, 19]
+    treated_mean = (15 + 17 + 16 + 19) / 4
+    control_mean = (11 + 14 + 13 + 18) / 4
+    observed = treated_mean - control_mean
+    as_extreme = sum(
+        1 for chosen in itertools.combinations(range(8), 4)
+        if abs(sum(values[i] for i in chosen) / 4 - sum(values[i] for i in range(8) if i not in chosen) / 4) >= observed - 1e-12
+    )
+    assert (observed, as_extreme) == (2.75, 14) and "14 give a difference of at least 2.75" in text and "p = 14/70 = 0.20" in text
+    ranks = {v: i + 1 for i, v in enumerate(sorted(values))}
+    assert sorted(ranks[v] for v in (15, 17, 16, 19)) == [4, 5, 6, 8] and sum(ranks[v] for v in (11, 14, 13, 18)) == 13
+    assert 4 ** 4 == 256 and [f"{1 - (1 - 1 / n) ** n:.3f}" for n in (4, 10)] == ["0.684", "0.651"]
+    assert f"{1 - math.exp(-1):.3f}" == "0.632" and "0.684 for n = 4, 0.651 for n = 10" in text
+
+
+def test_statistics_older_data_interpretation_key_matches_its_prompt():
+    item = bank("statistics")["statistics-5:group-summary"]
+    field = next(f for f in item["solution_spec"]["field_specs"] if f["id"] == "mean_difference")
+    assert "vehicle n=8, mean 10.0 μM, and compound n=8, mean 14.0 μM" in item["prompt"]
+    assert field["answer"] == pytest.approx(14.0 - 10.0)

@@ -215,6 +215,326 @@
         "statistics-8-objective-3"
       ],
       "license": "CC-BY-4.0"
+    },
+    {
+      "id": "statistics-9-card-1",
+      "lesson_id": "statistics-9",
+      "front": "Two sources of variation",
+      "back": "Biological (between units, σ_b) is what a population conclusion needs; technical (σ_t) is error on re-measuring the same unit.",
+      "objective_ids": [
+        "statistics-9-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "statistics-9-card-2",
+      "lesson_id": "statistics-9",
+      "front": "Nested standard error",
+      "back": "Var(mean) = σ_b²/n + σ_t²/(n k): extra readings per unit shrink only the technical term; extra units shrink both.",
+      "objective_ids": [
+        "statistics-9-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "statistics-9-card-3",
+      "lesson_id": "statistics-9",
+      "front": "ICC and design effect",
+      "back": "ICC = σ_b²/(σ_b² + σ_t²); DEFF = 1 + (k − 1) ICC; effective n = N/DEFF; treating readings as independent is pseudoreplication.",
+      "objective_ids": [
+        "statistics-9-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "statistics-9-card-4",
+      "lesson_id": "statistics-9",
+      "front": "Technical error from duplicates",
+      "back": "SD of paired differences = √2 × σ_t; estimate it from repeated measurements of the same unit.",
+      "objective_ids": [
+        "statistics-9-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "statistics-10-card-1",
+      "lesson_id": "statistics-10",
+      "front": "Welch comparison",
+      "back": "SE = √(s₁²/n₁ + s₂²/n₂); t = difference/SE; df from the Welch formula, slightly below n₁ + n₂ − 2.",
+      "objective_ids": [
+        "statistics-10-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "statistics-10-card-2",
+      "lesson_id": "statistics-10",
+      "front": "Interval beside the p-value",
+      "back": "A 95% interval that barely includes zero goes with p just above 0.05; the interval also shows how large the effect could be.",
+      "objective_ids": [
+        "statistics-10-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "statistics-10-card-3",
+      "lesson_id": "statistics-10",
+      "front": "Paired design",
+      "back": "Analyze the within-unit differences: SE = s_d/√n, df = n − 1; pairing helps in proportion to the correlation between the measurements.",
+      "objective_ids": [
+        "statistics-10-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "statistics-10-card-4",
+      "lesson_id": "statistics-10",
+      "front": "Assumptions",
+      "back": "Independent units, roughly normal sampling distributions of means, outliers checked, analysis chosen in advance.",
+      "objective_ids": [
+        "statistics-10-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "statistics-11-card-1",
+      "lesson_id": "statistics-11",
+      "front": "Power",
+      "back": "Probability of a significant result for a stated true effect; depends on δ/SE, the critical value and the number of independent units.",
+      "objective_ids": [
+        "statistics-11-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "statistics-11-card-2",
+      "lesson_id": "statistics-11",
+      "front": "Sample size formula",
+      "back": "n per group = 2(z₁₋α/₂ + z₁₋β)² σ²/δ²; halving δ or doubling σ quadruples n; the normal formula is optimistic for small n.",
+      "objective_ids": [
+        "statistics-11-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "statistics-11-card-3",
+      "lesson_id": "statistics-11",
+      "front": "Small significant studies",
+      "back": "Only differences above t_crit × SE are significant, so significant estimates from small studies overstate the truth.",
+      "objective_ids": [
+        "statistics-11-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "statistics-11-card-4",
+      "lesson_id": "statistics-11",
+      "front": "Non-significant results",
+      "back": "With low power a non-significant result is inconclusive; read the interval, not the verdict.",
+      "objective_ids": [
+        "statistics-11-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "statistics-12-card-1",
+      "lesson_id": "statistics-12",
+      "front": "Least squares",
+      "back": "b = S_xy/S_xx; a = ȳ − b x̄; s = √(SSE/(n − 2)); R² = 1 − SSE/SST; SE(b) = s/√S_xx.",
+      "objective_ids": [
+        "statistics-12-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "statistics-12-card-2",
+      "lesson_id": "statistics-12",
+      "front": "Inverse prediction",
+      "back": "x̂ = (y − a)/b; its uncertainty includes the new reading's scatter and the line's uncertainty, and grows away from x̄.",
+      "objective_ids": [
+        "statistics-12-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "statistics-12-card-3",
+      "lesson_id": "statistics-12",
+      "front": "Residuals",
+      "back": "Plot residuals against x or the fitted value: curvature, funnels and outliers show what R² hides.",
+      "objective_ids": [
+        "statistics-12-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "statistics-12-card-4",
+      "lesson_id": "statistics-12",
+      "front": "Limits of a line",
+      "back": "Do not extrapolate beyond the data; watch leverage; an observational slope is an association.",
+      "objective_ids": [
+        "statistics-12-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "statistics-13-card-1",
+      "lesson_id": "statistics-13",
+      "front": "Permutation test",
+      "back": "Under no effect, labels are exchangeable: p = (number of arrangements at least as extreme)/(total); C(8,4) = 70 arrangements for 4 + 4.",
+      "objective_ids": [
+        "statistics-13-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "statistics-13-card-2",
+      "lesson_id": "statistics-13",
+      "front": "Bootstrap",
+      "back": "Resample the independent units with replacement; an observation appears with probability 1 − (1 − 1/n)ⁿ, about 63% for large n.",
+      "objective_ids": [
+        "statistics-13-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "statistics-13-card-3",
+      "lesson_id": "statistics-13",
+      "front": "Mann–Whitney",
+      "back": "Rank the combined sample; compare rank sums; U counts pairs where one group's value exceeds the other's; report an effect estimate too.",
+      "objective_ids": [
+        "statistics-13-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "statistics-13-card-4",
+      "lesson_id": "statistics-13",
+      "front": "Unit of resampling",
+      "back": "Permute or resample the independent units; technical replicates do not count.",
+      "objective_ids": [
+        "statistics-13-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "statistics-lab1-0",
+      "lesson_id": "statistics-lab-01",
+      "front": "Summarize nested readings",
+      "back": "Average the technical readings within each animal; the animal means are the observations and the number of animals is the sample size.",
+      "objective_ids": [
+        "statistics-lab-01-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "statistics-lab1-1",
+      "lesson_id": "statistics-lab-01",
+      "front": "Technical variance",
+      "back": "Pool each animal's sum of squares about its own mean over animals × (readings − 1) degrees of freedom.",
+      "objective_ids": [
+        "statistics-lab-01-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "statistics-lab1-2",
+      "lesson_id": "statistics-lab-01",
+      "front": "Intraclass correlation",
+      "back": "ICC = σ_b²/(σ_b² + σ_t²), where σ_b² = (MS animals − MS within)/readings; a high ICC means readings of one animal are nearly redundant.",
+      "objective_ids": [
+        "statistics-lab-01-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "statistics-lab1-3",
+      "lesson_id": "statistics-lab-01",
+      "front": "Pseudoreplication",
+      "back": "Treating readings as independent shrinks the standard error and the p-value; compare the reading-level and animal-level tests.",
+      "objective_ids": [
+        "statistics-lab-01-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "statistics-14-card-1",
+      "lesson_id": "statistics-14",
+      "front": "Positive predictive value",
+      "back": "PPV = true positives/(true positives + false positives); for a rare condition a positive result from a good test is often a false alarm.",
+      "objective_ids": [
+        "statistics-14-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "statistics-14-card-2",
+      "lesson_id": "statistics-14",
+      "front": "Likelihood ratio",
+      "back": "LR⁺ = sensitivity/(1 − specificity); posterior odds = prior odds × LR⁺.",
+      "objective_ids": [
+        "statistics-14-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "statistics-14-card-3",
+      "lesson_id": "statistics-14",
+      "front": "Significant findings",
+      "back": "PPV = power π/(power π + α(1 − π)); low power or a low prior makes many significant results false.",
+      "objective_ids": [
+        "statistics-14-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "statistics-14-card-4",
+      "lesson_id": "statistics-14",
+      "front": "Replication",
+      "back": "P(significant replication) = PPV × power + (1 − PPV) × α; a failed replication of an underpowered result is common.",
+      "objective_ids": [
+        "statistics-14-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "statistics-15-card-1",
+      "lesson_id": "statistics-15",
+      "front": "Chance of a hit among many",
+      "back": "With k independent null tests the chance of at least one p < 0.05 is 1 − 0.95^k; Bonferroni uses 0.05/k per test.",
+      "objective_ids": [
+        "statistics-15-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "statistics-15-card-2",
+      "lesson_id": "statistics-15",
+      "front": "Unit of analysis in a pilot",
+      "back": "Animals, not technical readings, are the independent units; readings improve precision of each animal but do not add animals.",
+      "objective_ids": [
+        "statistics-15-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "statistics-15-card-3",
+      "lesson_id": "statistics-15",
+      "front": "Sample size with nested readings",
+      "back": "n per group = 2 (z_α/2 + z_β)² (σ_b² + σ_t²/m) / δ²; beyond about three readings, more readings per animal barely help.",
+      "objective_ids": [
+        "statistics-15-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "statistics-15-card-4",
+      "lesson_id": "statistics-15",
+      "front": "What a pilot is for",
+      "back": "It supplies variance estimates and a hypothesis. The selected effect is inflated; plan from the smallest effect of interest and pre-specify one primary outcome.",
+      "objective_ids": [
+        "statistics-15-objective-3"
+      ],
+      "license": "CC-BY-4.0"
     }
   ]
 }

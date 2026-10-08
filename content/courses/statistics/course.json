@@ -7,7 +7,7 @@
   "domain": "Quantitative methods",
   "level": "Year 2",
   "maturity": "partial",
-  "version": "0.3.2",
+  "version": "0.4.0",
   "license": "MIT OR CC-BY-4.0",
   "content_origin": {
     "kind": "legacy-prototype",
@@ -195,12 +195,369 @@
         "statistics-outcome-4",
         "statistics-outcome-1"
       ]
+    },
+    {
+      "id": "statistics-9-objective-1",
+      "description": "Distinguish biological variation from technical (measurement) error and estimate the technical error from replicate measurements.",
+      "bloom": "understand",
+      "course_outcome_ids": [
+        "statistics-outcome-1"
+      ]
+    },
+    {
+      "id": "statistics-9-objective-2",
+      "description": "Compute the standard error of a mean for nested data, the intraclass correlation and the effective sample size.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "statistics-outcome-1",
+        "statistics-outcome-3"
+      ]
+    },
+    {
+      "id": "statistics-9-objective-3",
+      "description": "Evaluate how replication should be allocated between independent biological units and repeated measurements, and what a naive analysis overstates.",
+      "bloom": "evaluate",
+      "course_outcome_ids": [
+        "statistics-outcome-4",
+        "statistics-outcome-2"
+      ]
+    },
+    {
+      "id": "statistics-10-objective-1",
+      "description": "Compute the standard error, t statistic and Welch degrees of freedom for a difference between two independent group means.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "statistics-outcome-3",
+        "statistics-outcome-2"
+      ]
+    },
+    {
+      "id": "statistics-10-objective-2",
+      "description": "Construct and interpret a confidence interval for the difference and a standardized effect size.",
+      "bloom": "analyze",
+      "course_outcome_ids": [
+        "statistics-outcome-3"
+      ]
+    },
+    {
+      "id": "statistics-10-objective-3",
+      "description": "Choose between independent-groups and paired analyses, and compute a paired t statistic.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "statistics-outcome-2",
+        "statistics-outcome-4"
+      ]
+    },
+    {
+      "id": "statistics-11-objective-1",
+      "description": "Compute the signal-to-noise ratio, the approximate power and the sample size per group for a two-group comparison.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "statistics-outcome-3",
+        "statistics-outcome-4"
+      ]
+    },
+    {
+      "id": "statistics-11-objective-2",
+      "description": "Show how the required sample size scales with the effect size and the variability.",
+      "bloom": "analyze",
+      "course_outcome_ids": [
+        "statistics-outcome-4"
+      ]
+    },
+    {
+      "id": "statistics-11-objective-3",
+      "description": "Evaluate a small study's results, including the smallest significant difference and the exaggeration of significant estimates, and state what a non-significant result does and does not show.",
+      "bloom": "evaluate",
+      "course_outcome_ids": [
+        "statistics-outcome-3",
+        "statistics-outcome-2"
+      ]
+    },
+    {
+      "id": "statistics-12-objective-1",
+      "description": "Compute the least-squares slope, intercept, residual standard deviation, R² and standard error of the slope from data.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "statistics-outcome-2",
+        "statistics-outcome-3"
+      ]
+    },
+    {
+      "id": "statistics-12-objective-2",
+      "description": "Use a calibration line to estimate an unknown and describe how its uncertainty depends on the data.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "statistics-outcome-1",
+        "statistics-outcome-3"
+      ]
+    },
+    {
+      "id": "statistics-12-objective-3",
+      "description": "Evaluate a fit using residuals, and state when R², extrapolation or causal readings of a slope are unjustified.",
+      "bloom": "evaluate",
+      "course_outcome_ids": [
+        "statistics-outcome-2",
+        "statistics-outcome-4"
+      ]
+    },
+    {
+      "id": "statistics-13-objective-1",
+      "description": "Carry out an exact permutation test for a difference in means and compute its p-value by counting arrangements.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "statistics-outcome-3",
+        "statistics-outcome-2"
+      ]
+    },
+    {
+      "id": "statistics-13-objective-2",
+      "description": "Explain the logic of the bootstrap and compute simple properties of bootstrap resamples.",
+      "bloom": "understand",
+      "course_outcome_ids": [
+        "statistics-outcome-1",
+        "statistics-outcome-3"
+      ]
+    },
+    {
+      "id": "statistics-13-objective-3",
+      "description": "Compute rank sums and a Mann–Whitney statistic, and choose among t-test, permutation and rank-based analyses for a given design.",
+      "bloom": "evaluate",
+      "course_outcome_ids": [
+        "statistics-outcome-2"
+      ]
+    },
+    {
+      "id": "statistics-lab-01-objective-1",
+      "description": "Summarize nested readings to one value per animal and identify the number of independent units in each group.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "statistics-outcome-1"
+      ]
+    },
+    {
+      "id": "statistics-lab-01-objective-2",
+      "description": "Estimate the technical variance, the between-animal variance and the intraclass correlation from nested readings.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "statistics-outcome-1",
+        "statistics-outcome-2"
+      ]
+    },
+    {
+      "id": "statistics-lab-01-objective-3",
+      "description": "Compare an analysis that treats readings as independent with an animal-level analysis, and state what the design supports.",
+      "bloom": "evaluate",
+      "course_outcome_ids": [
+        "statistics-outcome-2",
+        "statistics-outcome-3",
+        "statistics-outcome-4"
+      ]
+    },
+    {
+      "id": "statistics-14-objective-1",
+      "description": "Compute the positive predictive value of a diagnostic test from prevalence, sensitivity and specificity, and express the update with a likelihood ratio.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "statistics-outcome-3"
+      ]
+    },
+    {
+      "id": "statistics-14-objective-2",
+      "description": "Compute the probability that a statistically significant finding is true from the prior probability of a real effect, the power and the significance level.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "statistics-outcome-3",
+        "statistics-outcome-4"
+      ]
+    },
+    {
+      "id": "statistics-14-objective-3",
+      "description": "Evaluate what a significant result, a replication and a screening pipeline can support.",
+      "bloom": "evaluate",
+      "course_outcome_ids": [
+        "statistics-outcome-2",
+        "statistics-outcome-3"
+      ]
+    },
+    {
+      "id": "statistics-15-objective-1",
+      "description": "Re-analyze a pilot result with the independent unit and a correction for the number of outcomes examined.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "statistics-outcome-1",
+        "statistics-outcome-3"
+      ]
+    },
+    {
+      "id": "statistics-15-objective-2",
+      "description": "Plan the sample size of a confirmatory study from the smallest effect of interest and the variance components, including the number of technical readings.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "statistics-outcome-2",
+        "statistics-outcome-4"
+      ]
+    },
+    {
+      "id": "statistics-15-objective-3",
+      "description": "Specify the elements of a pre-specified confirmatory plan and state what the pilot supports and does not support.",
+      "bloom": "create",
+      "course_outcome_ids": [
+        "statistics-outcome-3",
+        "statistics-outcome-4"
+      ]
     }
   ],
   "duration": {
-    "instructional_weeks": null,
-    "equivalent_structure": null,
-    "weeks": []
+    "instructional_weeks": 14,
+    "equivalent_structure": "Proposed 14-week undergraduate scope only. The four compact prototype units sit in weeks 1, 4, 6 and 8 beside original lessons on variability and pseudoreplication, comparing two groups, power, regression and calibration, resampling, base rates and replication, and planning a confirmatory study; week 12 is a synthetic-data lab on nested designs and week 14 pairs the planning lesson with the course case. All activities are open, ungraded practice. There are no graded homework sets, exams or project, and workload has not been measured, so this schedule is not evidence of semester equivalence.",
+    "weeks": [
+      {
+        "week": 1,
+        "title": "Probability, distributions and sampling",
+        "lesson_ids": [
+          "statistics-1"
+        ],
+        "assessment_ids": [
+          "statistics-1-practice"
+        ]
+      },
+      {
+        "week": 2,
+        "title": "Sources of variability: biological variation, technical error and the standard error",
+        "lesson_ids": [
+          "statistics-9"
+        ],
+        "assessment_ids": [
+          "statistics-9-practice"
+        ]
+      },
+      {
+        "week": 3,
+        "title": "Descriptive differences and the limits of inference",
+        "lesson_ids": [
+          "statistics-5"
+        ],
+        "assessment_ids": [
+          "statistics-5-practice"
+        ]
+      },
+      {
+        "week": 4,
+        "title": "Estimation, confidence intervals, effect sizes and regression to the mean",
+        "lesson_ids": [
+          "statistics-2",
+          "statistics-8"
+        ],
+        "assessment_ids": [
+          "statistics-2-practice",
+          "statistics-8-practice"
+        ]
+      },
+      {
+        "week": 5,
+        "title": "Comparing two groups: Welch and paired t statistics and intervals for a difference",
+        "lesson_ids": [
+          "statistics-10"
+        ],
+        "assessment_ids": [
+          "statistics-10-practice"
+        ]
+      },
+      {
+        "week": 6,
+        "title": "Hypothesis tests, multiple comparisons and the false discovery rate",
+        "lesson_ids": [
+          "statistics-3",
+          "statistics-7"
+        ],
+        "assessment_ids": [
+          "statistics-3-practice",
+          "statistics-7-practice"
+        ]
+      },
+      {
+        "week": 7,
+        "title": "Power and sample size: what an experiment can detect",
+        "lesson_ids": [
+          "statistics-11"
+        ],
+        "assessment_ids": [
+          "statistics-11-practice"
+        ]
+      },
+      {
+        "week": 8,
+        "title": "Experimental design, regression and reproducibility",
+        "lesson_ids": [
+          "statistics-4"
+        ],
+        "assessment_ids": [
+          "statistics-4-practice"
+        ]
+      },
+      {
+        "week": 9,
+        "title": "Least squares, calibration curves and inverse prediction",
+        "lesson_ids": [
+          "statistics-12"
+        ],
+        "assessment_ids": [
+          "statistics-12-practice"
+        ]
+      },
+      {
+        "week": 10,
+        "title": "Resampling and rank-based methods: permutation tests, the bootstrap and the Mann–Whitney test",
+        "lesson_ids": [
+          "statistics-13"
+        ],
+        "assessment_ids": [
+          "statistics-13-practice"
+        ]
+      },
+      {
+        "week": 11,
+        "title": "Time-to-event data: censoring, Kaplan–Meier estimates and hazard ratios",
+        "lesson_ids": [
+          "statistics-6"
+        ],
+        "assessment_ids": [
+          "statistics-6-practice"
+        ]
+      },
+      {
+        "week": 12,
+        "title": "Virtual lab: pseudoreplication and nested designs",
+        "lesson_ids": [
+          "statistics-lab-01"
+        ],
+        "assessment_ids": [
+          "statistics-week12-nested-design-lab"
+        ]
+      },
+      {
+        "week": 13,
+        "title": "From p-values to evidence: base rates, positive predictive value and replication",
+        "lesson_ids": [
+          "statistics-14"
+        ],
+        "assessment_ids": [
+          "statistics-14-practice"
+        ]
+      },
+      {
+        "week": 14,
+        "title": "Planning a confirmatory study from a pilot",
+        "lesson_ids": [
+          "statistics-15"
+        ],
+        "assessment_ids": [
+          "statistics-15-practice",
+          "statistics-case"
+        ]
+      }
+    ]
   },
   "workload": {
     "estimated_total_hours": null,
@@ -450,6 +807,296 @@
           ]
         }
       ]
+    },
+    {
+      "id": "statistics-module-9",
+      "title": "Sources of variability",
+      "source_ids": [
+        "statistics",
+        "biology"
+      ],
+      "lessons": [
+        {
+          "id": "statistics-9",
+          "title": "Sources of variability: biological variation, technical error and the standard error",
+          "reading": "modules/09-variability-technical-error-and-pseudoreplication.md",
+          "objectives": [
+            "statistics-9-objective-1",
+            "statistics-9-objective-2",
+            "statistics-9-objective-3"
+          ],
+          "worked_example": "With σ_b = 10 and σ_t = 5, four animals measured three times each have a correct standard error of 5.20, not the naive 3.23; the ICC is 0.80, the design effect 2.6 and the 12 readings are worth 4.6 independent observations; tripling the animals cuts the standard error by 42%, tripling the readings by 7%.",
+          "question_ids": [
+            "statistics-9:technical-sd",
+            "statistics-9:naive-se",
+            "statistics-9:correct-se",
+            "statistics-9:icc",
+            "statistics-9:effective-n",
+            "statistics-9:allocation",
+            "statistics-9:pseudoreplication"
+          ],
+          "card_ids": [
+            "statistics-9-card-1",
+            "statistics-9-card-2",
+            "statistics-9-card-3",
+            "statistics-9-card-4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "statistics-module-10",
+      "title": "Comparing two groups",
+      "source_ids": [
+        "statistics",
+        "biology"
+      ],
+      "lessons": [
+        {
+          "id": "statistics-10",
+          "title": "Comparing two groups: the t statistic, Welch's test, paired designs and confidence intervals for a difference",
+          "reading": "modules/10-comparing-two-groups-t-tests-and-pairing.md",
+          "objectives": [
+            "statistics-10-objective-1",
+            "statistics-10-objective-2",
+            "statistics-10-objective-3"
+          ],
+          "worked_example": "Groups of 6 with means 10.2 and 13.0 and standard deviations 2.0 and 2.4 give SE 1.28, t = 2.20, Welch df 9.7 and p about 0.054, with a 95% interval of (−0.05, 5.65) and d = 1.27; the same mean difference in a paired design (SD of differences 1.5) gives t = 4.57, p about 0.006.",
+          "question_ids": [
+            "statistics-10:se-difference",
+            "statistics-10:t-statistic",
+            "statistics-10:welch-df",
+            "statistics-10:cohens-d",
+            "statistics-10:paired-t",
+            "statistics-10:interpret-ci",
+            "statistics-10:design-choice"
+          ],
+          "card_ids": [
+            "statistics-10-card-1",
+            "statistics-10-card-2",
+            "statistics-10-card-3",
+            "statistics-10-card-4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "statistics-module-11",
+      "title": "Power and sample size",
+      "source_ids": [
+        "statistics",
+        "biology"
+      ],
+      "lessons": [
+        {
+          "id": "statistics-11",
+          "title": "Power and sample size: what an experiment can detect, and what a non-significant result means",
+          "reading": "modules/11-power-sample-size-and-small-studies.md",
+          "objectives": [
+            "statistics-11-objective-1",
+            "statistics-11-objective-2",
+            "statistics-11-objective-3"
+          ],
+          "worked_example": "With σ = 2.2, δ = 2.8 and 6 per group the signal-to-noise ratio is 2.20 and power about 0.51; 80% power needs 9.7 per group by the normal formula (11 exactly), and 39 if the effect is halved; with 6 per group only differences above 2.83 are significant, which exaggerates a true difference of 1.4 by at least 2.0-fold.",
+          "question_ids": [
+            "statistics-11:signal-to-noise",
+            "statistics-11:n-80",
+            "statistics-11:n-half-effect",
+            "statistics-11:min-significant",
+            "statistics-11:exaggeration",
+            "statistics-11:nonsignificant",
+            "statistics-11:power-statements"
+          ],
+          "card_ids": [
+            "statistics-11-card-1",
+            "statistics-11-card-2",
+            "statistics-11-card-3",
+            "statistics-11-card-4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "statistics-module-12",
+      "title": "Regression and calibration",
+      "source_ids": [
+        "statistics",
+        "biology"
+      ],
+      "lessons": [
+        {
+          "id": "statistics-12",
+          "title": "Regression and calibration: least squares, residuals, R² and prediction",
+          "reading": "modules/12-regression-calibration-and-residuals.md",
+          "objectives": [
+            "statistics-12-objective-1",
+            "statistics-12-objective-2",
+            "statistics-12-objective-3"
+          ],
+          "worked_example": "A six-point calibration gives slope 9.76, intercept 6.05, residual SD 3.21, R² 0.9939 and SE of the slope 0.384; a signal of 55 corresponds to 5.02 μM; a saturating response has R² 0.96 with curved residuals, which shows that R² does not prove linearity.",
+          "question_ids": [
+            "statistics-12:slope",
+            "statistics-12:intercept",
+            "statistics-12:r-squared",
+            "statistics-12:se-slope",
+            "statistics-12:inverse-prediction",
+            "statistics-12:curved-residuals",
+            "statistics-12:fit-statements"
+          ],
+          "card_ids": [
+            "statistics-12-card-1",
+            "statistics-12-card-2",
+            "statistics-12-card-3",
+            "statistics-12-card-4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "statistics-module-13",
+      "title": "Resampling and rank-based methods",
+      "source_ids": [
+        "statistics",
+        "biology"
+      ],
+      "lessons": [
+        {
+          "id": "statistics-13",
+          "title": "Resampling and rank-based methods: permutation tests, the bootstrap and the Mann–Whitney test",
+          "reading": "modules/13-resampling-permutation-and-rank-tests.md",
+          "objectives": [
+            "statistics-13-objective-1",
+            "statistics-13-objective-2",
+            "statistics-13-objective-3"
+          ],
+          "worked_example": "Eight values in two groups of four have 70 equally likely arrangements; a fully separated split gives an exact two-sided p of 0.029, the smallest attainable with four per group; an observation appears in a bootstrap resample of size 10 with probability 0.651; the treated group's rank sum is 26 and U is 0; a less clean split (2.75) gives p = 0.20.",
+          "question_ids": [
+            "statistics-13:n-arrangements",
+            "statistics-13:exact-p",
+            "statistics-13:bootstrap-inclusion",
+            "statistics-13:rank-sum",
+            "statistics-13:u-statistic",
+            "statistics-13:choose-method",
+            "statistics-13:resampling-statements"
+          ],
+          "card_ids": [
+            "statistics-13-card-1",
+            "statistics-13-card-2",
+            "statistics-13-card-3",
+            "statistics-13-card-4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "statistics-module-lab-01",
+      "title": "Virtual laboratory: pseudoreplication and nested designs",
+      "source_ids": [
+        "statistics",
+        "biology"
+      ],
+      "lessons": [
+        {
+          "id": "statistics-lab-01",
+          "title": "Virtual lab 1: pseudoreplication and nested designs",
+          "reading": "labs/01-pseudoreplication-and-nested-designs.md",
+          "objectives": [
+            "statistics-lab-01-objective-1",
+            "statistics-lab-01-objective-2",
+            "statistics-lab-01-objective-3"
+          ],
+          "worked_example": "With four animals per group and three readings each, a reading-level t test gives t = 3.55 (p = 0.0018) while the animal-level test gives t = 1.93 (p = 0.10), because the intraclass correlation of 0.91 makes 12 readings per group worth about 4.3; the animal is the unit of analysis.",
+          "question_ids": [
+            "statistics-lab1:animal-summary",
+            "statistics-lab1:technical-sd",
+            "statistics-lab1:reading-level-test",
+            "statistics-lab1:animal-level-test",
+            "statistics-lab1:intraclass-correlation",
+            "statistics-lab1:design-reasoning",
+            "statistics-lab1:supported-conclusions"
+          ],
+          "card_ids": [
+            "statistics-lab1-0",
+            "statistics-lab1-1",
+            "statistics-lab1-2",
+            "statistics-lab1-3"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "statistics-module-14",
+      "title": "Base rates and replication",
+      "source_ids": [
+        "statistics",
+        "biology"
+      ],
+      "lessons": [
+        {
+          "id": "statistics-14",
+          "title": "From p-values to evidence: base rates, positive predictive value and replication",
+          "reading": "modules/14-base-rates-positive-predictive-value-and-replication.md",
+          "objectives": [
+            "statistics-14-objective-1",
+            "statistics-14-objective-2",
+            "statistics-14-objective-3"
+          ],
+          "worked_example": "A test with 90% sensitivity and 95% specificity at 2% prevalence has a positive predictive value of 0.27 (LR⁺ 18); with one true hypothesis in ten, α = 0.05 and power 0.5, 0.53 of significant findings are true (0.64 at power 0.8, 0.14 if the prior is 0.01); an exact replication at the same power is significant with probability 0.29.",
+          "question_ids": [
+            "statistics-14:ppv-test",
+            "statistics-14:lr-positive",
+            "statistics-14:ppv-study",
+            "statistics-14:ppv-high-power",
+            "statistics-14:ppv-rare",
+            "statistics-14:replication-probability",
+            "statistics-14:evidence-statements"
+          ],
+          "card_ids": [
+            "statistics-14-card-1",
+            "statistics-14-card-2",
+            "statistics-14-card-3",
+            "statistics-14-card-4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "statistics-module-15",
+      "title": "Planning a confirmatory study",
+      "source_ids": [
+        "statistics",
+        "biology"
+      ],
+      "lessons": [
+        {
+          "id": "statistics-15",
+          "title": "Planning a confirmatory study: what a pilot with one p = 0.04 can and cannot support",
+          "reading": "modules/15-planning-a-confirmatory-study.md",
+          "objectives": [
+            "statistics-15-objective-1",
+            "statistics-15-objective-2",
+            "statistics-15-objective-3"
+          ],
+          "worked_example": "A synthetic pilot of 12 outcomes in 5 animals per group with 4 readings each and a best p of 0.03 has a 0.46 chance of at least one p below 0.05 under no effect, a Bonferroni threshold of 0.0042 (adjusted p 0.36), and 8 animal-level against 38 reading-level degrees of freedom; for the 18-marker pilot, animal-level t is 1.35 (p 0.21), a confirmatory study to detect 5.0 units needs about 51 animals per group with three readings, and 95 if all 18 markers must be confirmed with Bonferroni.",
+          "question_ids": [
+            "statistics-15:any-false-positive",
+            "statistics-15:bonferroni-threshold",
+            "statistics-15:animal-t",
+            "statistics-15:n-triplicate",
+            "statistics-15:n-single-reading",
+            "statistics-15:n-all-eighteen",
+            "statistics-15:optimal-readings",
+            "statistics-15:plan-elements",
+            "statistics-15:pilot-reading"
+          ],
+          "card_ids": [
+            "statistics-15-card-1",
+            "statistics-15-card-2",
+            "statistics-15-card-3",
+            "statistics-15-card-4"
+          ]
+        }
+      ]
     }
   ],
   "assessments": [
@@ -602,6 +1249,213 @@
       "points": 6
     },
     {
+      "id": "statistics-9-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Sources of variability practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "statistics-9-objective-1",
+        "statistics-9-objective-2",
+        "statistics-9-objective-3",
+        "statistics-outcome-1",
+        "statistics-outcome-2",
+        "statistics-outcome-3",
+        "statistics-outcome-4"
+      ],
+      "question_ids": [
+        "statistics-9:technical-sd",
+        "statistics-9:naive-se",
+        "statistics-9:correct-se",
+        "statistics-9:icc",
+        "statistics-9:effective-n",
+        "statistics-9:allocation",
+        "statistics-9:pseudoreplication"
+      ],
+      "points": 8
+    },
+    {
+      "id": "statistics-10-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Comparing two groups practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "statistics-10-objective-1",
+        "statistics-10-objective-2",
+        "statistics-10-objective-3",
+        "statistics-outcome-2",
+        "statistics-outcome-3",
+        "statistics-outcome-4"
+      ],
+      "question_ids": [
+        "statistics-10:se-difference",
+        "statistics-10:t-statistic",
+        "statistics-10:welch-df",
+        "statistics-10:cohens-d",
+        "statistics-10:paired-t",
+        "statistics-10:interpret-ci",
+        "statistics-10:design-choice"
+      ],
+      "points": 8
+    },
+    {
+      "id": "statistics-11-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Power and sample size practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "statistics-11-objective-1",
+        "statistics-11-objective-2",
+        "statistics-11-objective-3",
+        "statistics-outcome-2",
+        "statistics-outcome-3",
+        "statistics-outcome-4"
+      ],
+      "question_ids": [
+        "statistics-11:signal-to-noise",
+        "statistics-11:n-80",
+        "statistics-11:n-half-effect",
+        "statistics-11:min-significant",
+        "statistics-11:exaggeration",
+        "statistics-11:nonsignificant",
+        "statistics-11:power-statements"
+      ],
+      "points": 8
+    },
+    {
+      "id": "statistics-12-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Regression and calibration practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "statistics-12-objective-1",
+        "statistics-12-objective-2",
+        "statistics-12-objective-3",
+        "statistics-outcome-1",
+        "statistics-outcome-2",
+        "statistics-outcome-3",
+        "statistics-outcome-4"
+      ],
+      "question_ids": [
+        "statistics-12:slope",
+        "statistics-12:intercept",
+        "statistics-12:r-squared",
+        "statistics-12:se-slope",
+        "statistics-12:inverse-prediction",
+        "statistics-12:curved-residuals",
+        "statistics-12:fit-statements"
+      ],
+      "points": 8
+    },
+    {
+      "id": "statistics-13-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Resampling and rank-based methods practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "statistics-13-objective-1",
+        "statistics-13-objective-2",
+        "statistics-13-objective-3",
+        "statistics-outcome-1",
+        "statistics-outcome-2",
+        "statistics-outcome-3"
+      ],
+      "question_ids": [
+        "statistics-13:n-arrangements",
+        "statistics-13:exact-p",
+        "statistics-13:bootstrap-inclusion",
+        "statistics-13:rank-sum",
+        "statistics-13:u-statistic",
+        "statistics-13:choose-method",
+        "statistics-13:resampling-statements"
+      ],
+      "points": 8
+    },
+    {
+      "id": "statistics-14-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Base rates and replication practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "statistics-14-objective-1",
+        "statistics-14-objective-2",
+        "statistics-14-objective-3",
+        "statistics-outcome-2",
+        "statistics-outcome-3",
+        "statistics-outcome-4"
+      ],
+      "question_ids": [
+        "statistics-14:ppv-test",
+        "statistics-14:lr-positive",
+        "statistics-14:ppv-study",
+        "statistics-14:ppv-high-power",
+        "statistics-14:ppv-rare",
+        "statistics-14:replication-probability",
+        "statistics-14:evidence-statements"
+      ],
+      "points": 8
+    },
+    {
+      "id": "statistics-15-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Planning a confirmatory study practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "statistics-15-objective-1",
+        "statistics-15-objective-2",
+        "statistics-15-objective-3",
+        "statistics-outcome-1",
+        "statistics-outcome-2",
+        "statistics-outcome-3",
+        "statistics-outcome-4"
+      ],
+      "question_ids": [
+        "statistics-15:any-false-positive",
+        "statistics-15:bonferroni-threshold",
+        "statistics-15:animal-t",
+        "statistics-15:n-triplicate",
+        "statistics-15:n-single-reading",
+        "statistics-15:n-all-eighteen",
+        "statistics-15:optimal-readings",
+        "statistics-15:plan-elements",
+        "statistics-15:pilot-reading"
+      ],
+      "points": 12
+    },
+    {
+      "id": "statistics-week12-nested-design-lab",
+      "type": "lab",
+      "mode": "practice",
+      "title": "Virtual lab 1: pseudoreplication and nested designs (ungraded practice)",
+      "path": "question-banks/practice.json",
+      "week": 12,
+      "objective_ids": [
+        "statistics-lab-01-objective-1",
+        "statistics-lab-01-objective-2",
+        "statistics-lab-01-objective-3",
+        "statistics-outcome-1",
+        "statistics-outcome-2",
+        "statistics-outcome-3",
+        "statistics-outcome-4"
+      ],
+      "question_ids": [
+        "statistics-lab1:animal-summary",
+        "statistics-lab1:technical-sd",
+        "statistics-lab1:reading-level-test",
+        "statistics-lab1:animal-level-test",
+        "statistics-lab1:intraclass-correlation",
+        "statistics-lab1:design-reasoning",
+        "statistics-lab1:supported-conclusions"
+      ],
+      "points": 27
+    },
+    {
       "id": "statistics-case",
       "type": "case",
       "mode": "self-assessment",
@@ -673,19 +1527,25 @@
       "version": "0.3.2",
       "date": "2026-10-08",
       "summary": "Added a common-mistakes section to 1 original lesson that lacked one (statistics-6); each bullet names a mistake that the lesson's own text addresses. No answer key, tolerance or objective changed. The package remains partial, unreviewed and formative-only."
+    },
+    {
+      "version": "0.4.0",
+      "date": "2026-10-08",
+      "summary": "Added a proposed 14-week schedule; seven original lessons (sources of variability and pseudoreplication; comparing two groups with Welch and paired t statistics; power and sample size; regression, calibration and inverse prediction; permutation, bootstrap and rank-based methods; base rates, positive predictive value and replication; and planning a confirmatory study, which prepares the course case on a pilot with one p = 0.04 among 18 biomarkers); and a synthetic-data lab on nested designs. No new references were added. All activities remain ungraded practice; the package remains partial and unreviewed, gives no laboratory protocol or medical advice, and makes no claim about any compound, organism or person."
     }
   ],
   "limitations": [
-    "Four compact legacy units are preserved alongside four original lessons; this package is not equivalent to a full university semester.",
-    "There is no authored 12–15 week schedule, substantive homework sequence, laboratory sequence, midterm, cumulative final, or graded integrative project.",
-    "Practice items are short formative checks (two per prototype unit and two to six per original lesson); they do not demonstrate comprehensive outcome coverage or mastery, and objective associations remain provisional.",
+    "Four compact legacy units are preserved beside twelve original readings, including one synthetic-data virtual lab; this package is not equivalent to a full university semester.",
+    "A proposed 14-week schedule exists but is unmeasured and unreviewed. There is one synthetic-data virtual lab and no substantive homework sequence, laboratory sequence, midterm, cumulative final, or graded integrative project.",
+    "Practice items are short formative checks (two per prototype unit and two to nine per original lesson); they do not demonstrate comprehensive outcome coverage or mastery, and objective associations remain provisional.",
     "Bloom labels and structured prerequisite edges are initial authoring classifications awaiting subject-matter review.",
     "Question answers and solution feedback are intentionally public practice authoring specifications, not restricted exam keys.",
-    "Of the 18 numerical answers in this package, one requires a unit, one checks significant figures and one checks dimensions; the others accept a number within a stated tolerance, with the unit optional.",
+    "Of the 60 numerical answers in this package, two require a unit, three check significant figures and one checks dimensions; the others accept a number within a stated tolerance, with the unit optional.",
     "Total workload and weekly duration are unknown; former nominal credit values and hardcoded reading times do not establish workload.",
-    "The graph exercise checks coordinate placement on author-specified axes; it does not assess axis selection, uncertainty bars, model fitting, or interpretation."
+    "The graph exercise checks coordinate placement on author-specified axes; it does not assess axis selection, uncertainty bars, model fitting, or interpretation.",
+    "All data, animals and numbers are synthetic teaching examples; this package gives no laboratory protocols or medical advice and says nothing about any real compound, organism or person. Sample-size calculations use normal approximations with rounded critical values unless an exact calculation is stated."
   ],
   "intentionally_omitted": [
-    "Full instructional sequence and summative assessments are not authored yet; the original lessons extend a partial package."
+    "Graded assessments and a laboratory sequence are not authored yet (one synthetic-data virtual lab exists); the original lessons extend a partial package."
   ]
 }

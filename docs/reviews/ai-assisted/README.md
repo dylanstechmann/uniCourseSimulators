@@ -12,3 +12,4 @@ review that do.
 | Genetics & Genomics 0.5.0 (new lessons, lab and schedule) | 2026-10-08 | [genetics-0.5.0.md](genetics-0.5.0.md) |
 | Human Physiology for Engineers 0.4.0 (new lessons, lab and schedule) | 2026-10-08 | [physiology-0.4.0.md](physiology-0.4.0.md) |
 | Biochemistry I 0.4.0 (new lessons, lab and schedule) | 2026-10-08 | [biochemistry-0.4.0.md](biochemistry-0.4.0.md) |
+| Probability, Biostatistics & Experimental Design 0.4.0 (new lessons, lab and schedule) | 2026-10-08 | [statistics-0.4.0.md](statistics-0.4.0.md) |

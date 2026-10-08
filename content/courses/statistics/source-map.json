@@ -106,6 +106,110 @@
       "original_content": true,
       "license": "CC-BY-4.0",
       "modifications": []
+    },
+    {
+      "module_id": "statistics-module-9",
+      "lesson_id": "statistics-9",
+      "reading": "modules/09-variability-technical-error-and-pseudoreplication.md",
+      "source_ids": [
+        "statistics",
+        "biology"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "statistics-module-10",
+      "lesson_id": "statistics-10",
+      "reading": "modules/10-comparing-two-groups-t-tests-and-pairing.md",
+      "source_ids": [
+        "statistics",
+        "biology"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "statistics-module-11",
+      "lesson_id": "statistics-11",
+      "reading": "modules/11-power-sample-size-and-small-studies.md",
+      "source_ids": [
+        "statistics",
+        "biology"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "statistics-module-12",
+      "lesson_id": "statistics-12",
+      "reading": "modules/12-regression-calibration-and-residuals.md",
+      "source_ids": [
+        "statistics",
+        "biology"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "statistics-module-13",
+      "lesson_id": "statistics-13",
+      "reading": "modules/13-resampling-permutation-and-rank-tests.md",
+      "source_ids": [
+        "statistics",
+        "biology"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "statistics-module-lab-01",
+      "lesson_id": "statistics-lab-01",
+      "reading": "labs/01-pseudoreplication-and-nested-designs.md",
+      "source_ids": [
+        "statistics",
+        "biology"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "statistics-module-14",
+      "lesson_id": "statistics-14",
+      "reading": "modules/14-base-rates-positive-predictive-value-and-replication.md",
+      "source_ids": [
+        "statistics",
+        "biology"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "statistics-module-15",
+      "lesson_id": "statistics-15",
+      "reading": "modules/15-planning-a-confirmatory-study.md",
+      "source_ids": [
+        "statistics",
+        "biology"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
     }
   ]
 }

@@ -4,7 +4,24 @@
 
 2026-10-06; synthetic local learner data only. Milestones 1 and 2 are implemented. Milestone 3 remains partial; deterministic graders and prototype graded-assignment and review workflows are described below. A Milestone 4 curriculum-map increment is implemented and tested, while subject-matter review and map refinement remain. All 25 course packages are **partial**; zero are beta, complete or externally reviewed. Human score review is limited to saved attempts and does not constitute course-content review. No semester equivalence, university credit, security certification or public production deployment is asserted.
 
-## Current increment: biochemistry gets a proposed 14-week schedule, six lessons and an enzyme-kinetics lab (2026-10-08, seventeenth pass)
+## Current increment: statistics gets a proposed 14-week schedule, seven lessons and a nested-design lab (2026-10-08, eighteenth pass)
+
+Written by an AI coding assistant. Probability, Biostatistics & Experimental Design moves from 0.3.2 to 0.4.0 and stays `partial`, unreviewed and formative-only.
+
+- **Proposed 14-week schedule** (`duration.weeks`) and a regenerated syllabus, which now also lists the package's fifth outcome: the four short prototype units sit in weeks 1, 4, 6 and 8 beside the original lessons; week 12 is a lab and week 14 a lesson that prepares the existing course case. The manifest says the schedule is not evidence of semester equivalence.
+- **Seven lessons (9 to 15)**, each about 1,000 to 1,400 words with a worked example, common mistakes, seven or nine items and four cards: sources of variability and pseudoreplication; comparing two groups (Welch and paired t statistics, intervals for a difference); power and sample size; regression, calibration and inverse prediction; permutation, bootstrap and rank-based methods; base rates, positive predictive value and replication; and planning a confirmatory study from a pilot, which prepares the course case on a pilot with p = 0.04 for one of 18 biomarkers.
+- **Virtual lab 1**: synthetic nested readings (four animals per group, three readings each, 24 rows). Seven items (a 16-cell per-animal summary upload, a technical SD, two data-interpretation items that compare the reading-level and animal-level t tests, an intraclass correlation, a structured item and a multiple-select item), four cards and a week-12 practice assessment.
+- **Review record:** [statistics-0.4.0.md](reviews/ai-assisted/statistics-0.4.0.md). All 57 numeric keys in the package, including the 17 that predate this pass, agree with independent recalculation, as do the lab keys against its CSV and the numbers the lessons quote without asking for them. All 58 new items earn full credit under the real grader. Six drafting problems were found and fixed before the commit, including two lab items that used a unit the grader does not support.
+- Tests: 65 recalculation and statement checks for statistics; the schedule, the no-protocol statements, the syllabus outcomes and the lab keys against its CSV have tests; the inventory pins moved to 233 lessons, 926 questions and 672 cards.
+
+| Command/check (this container, Python 3.12.3, 2026-10-08) | Result |
+| --- | --- |
+| `python tools/validate_content.py` | PASS: 25 packages, 233 lessons, 926 questions, 672 cards, 25 cases; 0 errors; 98 disclosed legacy-depth warnings |
+| `verify.sh` | see the PROGRESS.md entry for this pass |
+
+Not run: frontend checks, Docker Compose, Playwright for this pass. Not reviewed by a person.
+
+## Previous increment: biochemistry gets a proposed 14-week schedule, six lessons and an enzyme-kinetics lab (2026-10-08, seventeenth pass)
 
 Written by an AI coding assistant. Biochemistry I: Proteins, Enzymes & Metabolism moves from 0.3.2 to 0.4.0 and stays `partial`, unreviewed and formative-only.
 

@@ -1,6 +1,6 @@
 # Probability, Biostatistics & Experimental Design
 
-**Maturity: partial. Version: 0.3.2.**
+**Maturity: partial. Version: 0.4.0.**
 
 Probability, estimation, hypothesis testing, regression, and design principles for biological and engineering experiments, with reproducibility and uncertainty at the center.
 
@@ -14,29 +14,36 @@ Algebra; calculus recommended. Structured required, recommended, and concurrent 
 - Choose an analysis matched to design and outcome.
 - Interpret confidence intervals, p-values, and effect sizes.
 - Design controls, replication, randomization, and blinding.
+- Create a labeled quantitative graph using an explicit scale and the units of the measured variables.
 
-## Units and lessons
+## Proposed 14-week schedule
 
-Units 1–4 keep the short prototype readings preserved from the original project; they need substantial expansion. Units 5–8 are original lesson-length readings (about 620 to 1000 words) with learning objectives, a worked example, common mistakes, stated limits and explicitly synthetic data. No unit has been reviewed by a qualified instructor.
+This is a proposed scope, not a measured or reviewed semester. Each week lists its readings; the four short prototype readings (about 70 to 80 words each) sit in weeks 1, 4, 6 and 8 beside the original lessons, and every lesson has public formative items and retrieval cards.
 
-| Unit | Lesson | Reading | Practice items | Retrieval cards |
-|---:|---|---|---:|---:|
-| 1 | Probability, distributions, and sampling | short prototype | 2 | 2 |
-| 2 | Estimation, confidence intervals, and effect sizes | short prototype | 2 | 2 |
-| 3 | Hypothesis tests and multiple comparisons | short prototype | 2 | 2 |
-| 4 | Experimental design, regression, and reproducibility | short prototype | 2 | 2 |
-| 5 | Descriptive differences and inferential limits | lesson-length original | 2 | 3 |
-| 6 | Time-to-event data: censoring, Kaplan–Meier estimates and hazard ratios | lesson-length original | 5 | 4 |
-| 7 | Many tests at once: family-wise error, Bonferroni and the false discovery rate | lesson-length original | 6 | 4 |
-| 8 | Effect sizes, confidence intervals and regression to the mean: reading a result for what it can support | lesson-length original | 6 | 4 |
+| Week | Theme | Readings |
+|---|---|---|
+| 1 | Probability, distributions and sampling | Probability, distributions, and sampling |
+| 2 | Sources of variability: biological variation, technical error and the standard error | Sources of variability: biological variation, technical error and the standard error |
+| 3 | Descriptive differences and the limits of inference | Descriptive differences and inferential limits |
+| 4 | Estimation, confidence intervals, effect sizes and regression to the mean | Estimation, confidence intervals, and effect sizes; Effect sizes, confidence intervals and regression to the mean: reading a result for what it can support |
+| 5 | Comparing two groups: Welch and paired t statistics and intervals for a difference | Comparing two groups: the t statistic, Welch's test, paired designs and confidence intervals for a difference |
+| 6 | Hypothesis tests, multiple comparisons and the false discovery rate | Hypothesis tests and multiple comparisons; Many tests at once: family-wise error, Bonferroni and the false discovery rate |
+| 7 | Power and sample size: what an experiment can detect | Power and sample size: what an experiment can detect, and what a non-significant result means |
+| 8 | Experimental design, regression and reproducibility | Experimental design, regression, and reproducibility |
+| 9 | Least squares, calibration curves and inverse prediction | Regression and calibration: least squares, residuals, R² and prediction |
+| 10 | Resampling and rank-based methods: permutation tests, the bootstrap and the Mann–Whitney test | Resampling and rank-based methods: permutation tests, the bootstrap and the Mann–Whitney test |
+| 11 | Time-to-event data: censoring, Kaplan–Meier estimates and hazard ratios | Time-to-event data: censoring, Kaplan–Meier estimates and hazard ratios |
+| 12 | Virtual lab: pseudoreplication and nested designs | Virtual lab 1: pseudoreplication and nested designs |
+| 13 | From p-values to evidence: base rates, positive predictive value and replication | From p-values to evidence: base rates, positive predictive value and replication |
+| 14 | Planning a confirmatory study from a pilot | Planning a confirmatory study: what a pilot with one p = 0.04 can and cannot support |
 
 ## Assessment and study policy
 
-Every lesson has public formative practice items (numeric, single-choice, data-interpretation and graph) tagged to its learning objectives. The practice assessments for the original lessons also list the course outcomes those objectives link to; the objectives of the prototype units are not yet linked to course outcomes, so their assessments list none. In total the package has 27 practice items and 23 retrieval cards for the review queue. A course case includes a self-assessment checklist. These are practice activities, with unlimited retries and no institutional grade, university credit, or transferable credit. Workload has not been measured.
+Every lesson has public formative items (numeric, single-choice, multiple-select, data-interpretation, structured-response, CSV-upload and graph) mapped to its objectives, plus retrieval cards for the review queue; each practice assessment also lists the course outcomes its items assess. Week 12 is a synthetic-data virtual lab and week 14 pairs a lesson on planning a confirmatory study with the course case and its self-assessment checklist. These are practice activities with unlimited retries and no institutional grade, university credit or transferable credit. Workload has not been measured.
 
-## Schedule and current limitations
+## Current limitations
 
-No full-semester calendar or 14-week structure has been authored. No substantive homework sets, laboratories, midterm, final, or graded cumulative project are included. The four short prototype readings require substantial expansion, and the newer lessons rely on explicitly synthetic data. Nothing in this package has been reviewed by a qualified instructor; qualified human review is required before this course can meet the complete-course quality standard.
+The schedule above is proposed, not measured, and has not been reviewed by a qualified instructor. There are no graded homework sets, midterm, final or graded project. The four prototype readings remain short. The package cites no papers: the lessons teach standard methods with synthetic data, and sample-size calculations use normal approximations with rounded critical values unless an exact calculation is stated. All data and numbers are synthetic; no lesson gives a laboratory protocol or medical advice, and nothing here says anything about any real compound, organism or person. Qualified human review is required before this course could meet the complete-course standard.
 
 ## Sources and licensing
 

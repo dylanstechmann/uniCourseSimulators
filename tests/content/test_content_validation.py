@@ -147,9 +147,9 @@ def test_preserved_inventory_is_honest_partial(repository):
     assert result.ok, result.errors
     assert result.inventory == {
         "courses": 25,
-        "lessons": 225,
-        "questions": 868,
-        "cards": 640,
+        "lessons": 233,
+        "questions": 926,
+        "cards": 672,
         "cases": 25,
     }
     assert sum(warning["code"] == "legacy-depth" for warning in result.warnings) == 98
@@ -414,7 +414,7 @@ def test_structured_rubric_item_is_counted_while_course_remains_partial(reposito
     manifest = read(course[0])
     assert manifest["version"] == "0.19.1"
     assert manifest["maturity"] == "partial"
-    assert result.inventory["questions"] == 868
+    assert result.inventory["questions"] == 926
     question = next(
         item
         for item in read(course[0].parent / "question-banks/practice.json")["questions"]
@@ -431,11 +431,11 @@ def test_graph_plot_item_is_counted_while_statistics_course_remains_partial(repo
     manifest = read(course_path)
     bank = read(course_path.parent / "question-banks/practice.json")
     graph = next(item for item in bank["questions"] if item["type"] == "graph")
-    assert manifest["version"] == "0.3.2"
+    assert manifest["version"] == "0.4.0"
     assert manifest["maturity"] == "partial"
     assert graph["id"] == "statistics-5:concentration-graph"
     assert len(graph["graph_spec"]["points"]) == 3
-    assert result.inventory["questions"] == 868
+    assert result.inventory["questions"] == 926
 
 
 def test_cell_biology_scope_does_not_claim_unwritten_weeks(repository):
@@ -759,7 +759,7 @@ def test_public_validation_discloses_unmounted_private_assessment_without_faking
     result = validate_repository(repository)
 
     assert result.ok, result.errors
-    assert result.inventory["questions"] == 868
+    assert result.inventory["questions"] == 926
     assert any(item["code"] == "private-assessment-unchecked" for item in result.warnings)
 
 
@@ -771,7 +771,7 @@ def test_private_assessment_validator_loads_and_validates_key_only_from_separate
     result = validate_repository(repository, private_assessments_root=private_root)
 
     assert result.ok, result.errors
-    assert result.inventory["questions"] == 869
+    assert result.inventory["questions"] == 927
     assert "restricted-key" not in codes(result)
     assert "private-assessment-unchecked" not in {item["code"] for item in result.warnings}
 

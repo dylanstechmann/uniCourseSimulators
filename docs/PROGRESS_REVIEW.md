@@ -1,5 +1,9 @@
 # Progress review: uniStemCourseSimulators
 
+## Update after the statistics schedule (2026-10-08, eighteenth pass)
+
+Written by an AI coding assistant. Probability, Biostatistics & Experimental Design is the sixth package with a proposed week-by-week structure (after cell biology, geroscience, genetics, physiology and biochemistry): 14 weeks, 16 readings including a synthetic lab on nested designs. Its last lesson plans a confirmatory study from the package's case, a pilot that reports p = 0.04 for one of 18 biomarkers, and the lab shows the same arithmetic on data: a test that counts every reading gives p = 0.002, while the test that counts every animal gives p = 0.10. The AI-assisted check found no wrong key; it found two lab items that the real grader could not score because of a unit, a duplicated prompt and a syllabus that omitted one of the package's five outcomes, all fixed. Nothing is graded, workload is unmeasured and no person has reviewed it. Nineteen packages still have only two to four lesson-length readings.
+
 ## Update after the biochemistry schedule (2026-10-08, seventeenth pass)
 
 Written by an AI coding assistant. Biochemistry I is the fifth package with a proposed week-by-week structure (after cell biology, geroscience, genetics and physiology): 14 weeks, 14 readings including a synthetic enzyme-kinetics lab. Its last lesson walks through the package's case, a respiratory-chain inhibitor that lowers ATP and raises lactate, and the AI-assisted check caught a sentence in it that contradicted its own numbers. Nothing is graded, workload is unmeasured and no person has reviewed it. Twenty packages still have only two to four lesson-length readings.

@@ -30,7 +30,8 @@ LESSONS = [("geroscience", f"geroscience-{n}") for n in range(9, 15)] + [
     ("statistics", "statistics-7"), ("statistics", "statistics-8"), ("programming", "programming-6"), ("programming", "programming-7"),
     ("geroscience", "geroscience-15"), ("genetics", "genetics-9"), ("biochemistry", "biochemistry-7"), ("physiology", "physiology-7"),
     ("signals-control", "signals-control-6"), ("robotics", "robotics-6"), ("geroscience", "geroscience-16"),
-] + [("genetics", f"genetics-{n}") for n in range(10, 16)] + [("physiology", f"physiology-{n}") for n in range(8, 15)] + [("biochemistry", f"biochemistry-{n}") for n in range(8, 14)]
+] + [("genetics", f"genetics-{n}") for n in range(10, 16)] + [("physiology", f"physiology-{n}") for n in range(8, 15)] + [("biochemistry", f"biochemistry-{n}") for n in range(8, 14)] + [
+    ("statistics", f"statistics-{n}") for n in range(9, 16)]
 
 
 def load(course):
@@ -334,3 +335,51 @@ def test_biochemistry_lab_keys_match_the_dataset_and_the_lab_is_labelled_synthet
     assert "nothing here is evidence about any compound or any cell" in text
     vmax = bank["biochemistry-lab1:control-fit"]["solution_spec"]["field_specs"][0]
     assert vmax["significant_figures"] == 4
+
+
+def test_statistics_schedule_places_every_lesson_once_and_stays_partial():
+    manifest = load("statistics")
+    weeks = manifest["duration"]["weeks"]
+    assert [w["week"] for w in weeks] == list(range(1, 15))
+    scheduled = [lesson for w in weeks for lesson in w["lesson_ids"]]
+    all_lessons = [lesson["id"] for m in manifest["modules"] for lesson in m["lessons"]]
+    assert len(all_lessons) == 16
+    assert sorted(scheduled) == sorted(all_lessons) and len(scheduled) == len(set(scheduled))
+    assessments = {a["id"]: a for a in manifest["assessments"]}
+    assert all(a in assessments for w in weeks for a in w["assessment_ids"])
+    assert all(a["mode"] != "graded" for a in manifest["assessments"])
+    assert manifest["maturity"] == "partial" and manifest["review"]["status"] == "unreviewed"
+    assert manifest["grading_policy"]["mode"] == "formative-only"
+    assert "not evidence of semester equivalence" in manifest["duration"]["equivalent_structure"]
+    prototype_weeks = {lesson: w["week"] for w in weeks for lesson in w["lesson_ids"] if lesson in {f"statistics-{n}" for n in range(1, 5)}}
+    assert prototype_weeks == {"statistics-1": 1, "statistics-2": 4, "statistics-3": 6, "statistics-4": 8}
+    lab_week = next(w for w in weeks if "statistics-lab-01" in w["lesson_ids"])
+    assert lab_week["week"] == 12 and "statistics-week12-nested-design-lab" in lab_week["assessment_ids"]
+    assert "statistics-case" in weeks[-1]["assessment_ids"] and "statistics-15" in weeks[-1]["lesson_ids"]
+
+
+def test_statistics_package_gives_no_protocols_or_advice():
+    manifest = load("statistics")
+    assert any("gives no laboratory protocols or medical advice" in item for item in manifest["limitations"])
+    text = (COURSES / "statistics/modules/15-planning-a-confirmatory-study.md").read_text(encoding="utf-8")
+    assert "not guidance for any real study or for any person or animal" in text
+    syllabus = (COURSES / "statistics/syllabus.md").read_text(encoding="utf-8")
+    assert "Version: 0.4.0." in syllabus and "Proposed 14-week schedule" in syllabus
+    assert all(f"- {outcome['description']}" in syllabus for outcome in manifest["outcomes"]) and len(manifest["outcomes"]) == 5
+
+
+def test_statistics_lab_keys_match_the_dataset_and_the_lab_is_labelled_synthetic():
+    import csv
+    rows = list(csv.DictReader((COURSES / "statistics/labs/nested-biomarker-readings.csv").open(encoding="utf-8")))
+    bank = {q["id"]: q for q in json.loads((COURSES / "statistics/question-banks/practice.json").read_text(encoding="utf-8"))["questions"]}
+    assert len(rows) == 24
+    checks = {(c["row_id"], c["column"]): c["answer"] for c in bank["statistics-lab1:animal-summary"]["solution_spec"]["validation_spec"]["checks"]}
+    animals = sorted({r["animal_id"] for r in rows})
+    assert animals == ["c1", "c2", "c3", "c4", "t1", "t2", "t3", "t4"] and len(checks) == 2 * len(animals)
+    for animal in animals:
+        values = [float(r["value_au"]) for r in rows if r["animal_id"] == animal]
+        assert checks[(animal, "readings")] == len(values) == 3
+        assert abs(checks[(animal, "mean_value")] - sum(values) / len(values)) < 1e-4
+    text = (COURSES / "statistics/labs/01-pseudoreplication-and-nested-designs.md").read_text(encoding="utf-8")
+    assert "nothing here is evidence about any compound or any organism" in text
+

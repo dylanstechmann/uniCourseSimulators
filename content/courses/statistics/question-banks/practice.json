@@ -898,6 +898,2578 @@
         "kind": "original",
         "modifications": []
       }
+    },
+    {
+      "id": "statistics-9:technical-sd",
+      "type": "numeric",
+      "prompt": "Each sample is measured twice, and the differences between the two readings have a standard deviation of 7.07. What is the technical (measurement) standard deviation? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "statistics-9-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 4.999,
+        "unit": "",
+        "tolerance": 0.05,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "The difference of two readings has variance 2σ_t².",
+        "solution": "7.07/√2 = 5.00.",
+        "lesson_ids": [
+          "statistics-9"
+        ],
+        "misconception_ids": [
+          "sqrt-two-missed"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "statistics-9:naive-se",
+      "type": "numeric",
+      "prompt": "Four animals are each measured three times (σ_b = 10, σ_t = 5). A naive analysis treats the 12 readings as independent with total standard deviation 11.18. What is its standard error of the mean? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "statistics-9-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 3.227,
+        "unit": "",
+        "tolerance": 0.02,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Divide the total standard deviation by √12.",
+        "solution": "11.18/√12 = 3.23.",
+        "lesson_ids": [
+          "statistics-9"
+        ],
+        "misconception_ids": [
+          "pseudoreplication"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "statistics-9:correct-se",
+      "type": "numeric",
+      "prompt": "For the same design (n = 4, k = 3, σ_b = 10, σ_t = 5), what is the correct standard error of the grand mean, √(σ_b²/n + σ_t²/(n k))? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "statistics-9-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 5.204,
+        "unit": "",
+        "tolerance": 0.02,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Add the biological variance over n and the technical variance over n times k, then take the square root.",
+        "solution": "√(25 + 2.08) = 5.20, 1.61 times the naive value.",
+        "lesson_ids": [
+          "statistics-9"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "statistics-9:icc",
+      "type": "numeric",
+      "prompt": "With σ_b = 10 and σ_t = 5, what is the intraclass correlation σ_b²/(σ_b² + σ_t²)? Enter a decimal fraction, number only.",
+      "points": 1,
+      "objective_ids": [
+        "statistics-9-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0.8,
+        "unit": "",
+        "tolerance": 0.005,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Divide the between-unit variance by the total variance.",
+        "solution": "100/125 = 0.80.",
+        "lesson_ids": [
+          "statistics-9"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "statistics-9:effective-n",
+      "type": "numeric",
+      "prompt": "With ICC 0.80 and k = 3 readings per unit, the design effect is 1 + (k − 1) ICC. How many effectively independent observations are the 12 readings worth? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "statistics-9-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 4.615,
+        "unit": "",
+        "tolerance": 0.05,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Divide the number of readings by the design effect.",
+        "solution": "DEFF = 1 + 2 × 0.80 = 2.6; 12/2.6 = 4.6.",
+        "lesson_ids": [
+          "statistics-9"
+        ],
+        "misconception_ids": [
+          "pseudoreplication"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "statistics-9:allocation",
+      "type": "single_choice",
+      "prompt": "A pilot has σ_b = 10 and σ_t = 5. Which change reduces the standard error of the mean most?",
+      "points": 1,
+      "objective_ids": [
+        "statistics-9-objective-3"
+      ],
+      "options": [
+        "Tripling the number of animals, which cuts the standard error by about 42%.",
+        "Both give the same reduction, because the number of readings is what matters.",
+        "Neither changes the standard error.",
+        "Tripling the number of readings per animal, which cuts it by about 42%."
+      ],
+      "solution_spec": {
+        "answer": 0
+      },
+      "feedback": {
+        "hint": "Which variance term is larger, and which design change can reduce it?",
+        "solution": "Tripling the animals reduces both terms (standard error 3.23); tripling the readings reduces only the small technical term (5.20).",
+        "lesson_ids": [
+          "statistics-9"
+        ],
+        "misconception_ids": [
+          "technical-replicates-as-biological"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "statistics-9:pseudoreplication",
+      "type": "multiple_select",
+      "prompt": "A pilot study reports a significant difference, using three technical replicates for each of five samples per group, analyzed as 15 independent values per group. Which statements are correct? Select all that apply.",
+      "points": 2,
+      "objective_ids": [
+        "statistics-9-objective-3"
+      ],
+      "options": [
+        "More technical replicates would make the biological replication adequate.",
+        "Averaging the technical replicates for each sample first, or fitting a model with the sample as a random effect, respects the design.",
+        "The p-value is unaffected by how the readings are grouped.",
+        "Treating the readings as independent makes the standard error too small and the p-value too small.",
+        "The biological sample size is five per group, not fifteen."
+      ],
+      "solution_spec": {
+        "answer": [
+          1,
+          3,
+          4
+        ],
+        "partial_credit": "correct-minus-incorrect-clamped-v1"
+      },
+      "feedback": {
+        "hint": "Which unit could vary independently, and what does the analysis assume?",
+        "solution": "Readings from one sample share its biology, so the independent unit is the sample. Treating readings as independent overstates precision. Averaging within samples or a mixed model corrects it; more technical replicates cannot add biological n.",
+        "lesson_ids": [
+          "statistics-9"
+        ],
+        "misconception_ids": [
+          "pseudoreplication",
+          "technical-replicates-as-biological"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "statistics-10:se-difference",
+      "type": "numeric",
+      "prompt": "Two independent groups of 6 have standard deviations 2.0 and 2.4. What is the standard error of the difference in means, √(s₁²/n₁ + s₂²/n₂)? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "statistics-10-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 1.2754,
+        "unit": "",
+        "tolerance": 0.005,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Add the two squared standard deviations over n, then take the square root.",
+        "solution": "√(0.667 + 0.960) = 1.275.",
+        "lesson_ids": [
+          "statistics-10"
+        ],
+        "misconception_ids": [
+          "sd-instead-of-se"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "statistics-10:t-statistic",
+      "type": "numeric",
+      "prompt": "The groups' means are 10.2 and 13.0, and the standard error of the difference is 1.275. What is the t statistic? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "statistics-10-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 2.1954,
+        "unit": "",
+        "tolerance": 0.01,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Divide the difference by its standard error.",
+        "solution": "2.8/1.275 = 2.195.",
+        "lesson_ids": [
+          "statistics-10"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "statistics-10:welch-df",
+      "type": "numeric",
+      "prompt": "With n = 6 per group and standard deviations 2.0 and 2.4, what are the Welch degrees of freedom? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "statistics-10-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 9.685,
+        "unit": "",
+        "tolerance": 0.05,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use (s₁²/n + s₂²/n)² / [(s₁²/n)²/(n − 1) + (s₂²/n)²/(n − 1)].",
+        "solution": "2.6460 / 0.2732 = 9.69.",
+        "lesson_ids": [
+          "statistics-10"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "statistics-10:cohens-d",
+      "type": "numeric",
+      "prompt": "The difference in means is 2.8 and the two groups' standard deviations are 2.0 and 2.4 with equal n. What is Cohen's d, using the pooled standard deviation √((s₁² + s₂²)/2)? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "statistics-10-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 1.2675,
+        "unit": "",
+        "tolerance": 0.01,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Compute the pooled standard deviation first.",
+        "solution": "√((4 + 5.76)/2) = 2.209; d = 2.8/2.209 = 1.27.",
+        "lesson_ids": [
+          "statistics-10"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "statistics-10:paired-t",
+      "type": "numeric",
+      "prompt": "The same 6 cultures are measured before and after treatment. The within-culture differences have mean 2.8 and standard deviation 1.5. What is the paired t statistic? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "statistics-10-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 4.5724,
+        "unit": "",
+        "tolerance": 0.02,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "t = mean difference / (s_d/√n).",
+        "solution": "1.5/√6 = 0.612; t = 2.8/0.612 = 4.57.",
+        "lesson_ids": [
+          "statistics-10"
+        ],
+        "misconception_ids": [
+          "paired-treated-as-independent"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "statistics-10:interpret-ci",
+      "type": "single_choice",
+      "prompt": "A difference of 2.8 has a 95% interval of (−0.05, 5.65) and p = 0.054. Which statement is best supported?",
+      "points": 1,
+      "objective_ids": [
+        "statistics-10-objective-2"
+      ],
+      "options": [
+        "The treatment works, because the estimated difference is large.",
+        "The data are compatible with no difference and with differences of more than five units; the result is inconclusive, not evidence of no effect.",
+        "The interval proves that the true difference is between the limits.",
+        "There is no effect, because p is above 0.05."
+      ],
+      "solution_spec": {
+        "answer": 1
+      },
+      "feedback": {
+        "hint": "What range of true differences does the interval allow?",
+        "solution": "A non-significant result with a wide interval cannot distinguish no effect from a large one. The interval is about the procedure's long-run coverage, not a probability for the true value.",
+        "lesson_ids": [
+          "statistics-10"
+        ],
+        "misconception_ids": [
+          "nonsignificant-means-no-effect"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "statistics-10:design-choice",
+      "type": "multiple_select",
+      "prompt": "An experiment measures each of 6 cultures before and after treatment. Which statements are correct? Select all that apply.",
+      "points": 2,
+      "objective_ids": [
+        "statistics-10-objective-3"
+      ],
+      "options": [
+        "A paired analysis uses each culture as its own control and can remove between-culture variation.",
+        "Treating the before and after values as independent groups is always the more powerful choice.",
+        "The decision to pair should be made when the experiment is designed.",
+        "Choosing whichever of the two analyses gives the smaller p-value is acceptable.",
+        "Pairing helps most when the paired measurements are strongly correlated."
+      ],
+      "solution_spec": {
+        "answer": [
+          0,
+          2,
+          4
+        ],
+        "partial_credit": "correct-minus-incorrect-clamped-v1"
+      },
+      "feedback": {
+        "hint": "Think about what the paired analysis removes, and when the choice is made.",
+        "solution": "Pairing removes between-unit variation when measurements on the same unit are correlated; the choice follows from the design. Choosing the smaller p-value inflates false positives.",
+        "lesson_ids": [
+          "statistics-10"
+        ],
+        "misconception_ids": [
+          "paired-treated-as-independent",
+          "analysis-shopping"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "statistics-11:signal-to-noise",
+      "type": "numeric",
+      "prompt": "Two groups of 6 have σ = 2.2 and a true difference of 2.8. What is δ/SE, where SE = σ√(2/n)? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "statistics-11-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 2.2044,
+        "unit": "",
+        "tolerance": 0.01,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Compute SE = σ√(2/n) first.",
+        "solution": "SE = 2.2 × √(2/6) = 1.270; δ/SE = 2.8/1.270 = 2.20.",
+        "lesson_ids": [
+          "statistics-11"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "statistics-11:n-80",
+      "type": "numeric",
+      "prompt": "Using n = 2 (z₁ + z₂)² σ²/δ² with z₁ = 1.96, z₂ = 0.8416, σ = 2.2 and δ = 2.8, what is the sample size per group for 80% power? Enter the unrounded number only.",
+      "points": 1,
+      "objective_ids": [
+        "statistics-11-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 9.691,
+        "unit": "",
+        "tolerance": 0.05,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Square the sum of the z values, then multiply by 2σ² and divide by δ².",
+        "solution": "2 × 7.849 × 4.84 / 7.84 = 9.69; 10 per group by this formula.",
+        "lesson_ids": [
+          "statistics-11"
+        ],
+        "misconception_ids": [
+          "normal-approximation-exact"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "statistics-11:n-half-effect",
+      "type": "numeric",
+      "prompt": "With σ = 2.2 and a smaller effect δ = 1.4, what is the sample size per group for 80% power (same formula, unrounded)? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "statistics-11-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 38.764,
+        "unit": "",
+        "tolerance": 0.1,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "The requirement grows with 1/δ².",
+        "solution": "2 × 7.849 × 4.84 / 1.96 = 38.8: halving the effect quadruples n.",
+        "lesson_ids": [
+          "statistics-11"
+        ],
+        "misconception_ids": [
+          "halve-effect-doubles-n"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "statistics-11:min-significant",
+      "type": "numeric",
+      "prompt": "With n = 6 per group the standard error is 1.270 and the two-sided 5% critical value of t (10 degrees of freedom) is 2.228. What is the smallest observed difference that is significant? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "statistics-11-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 2.83,
+        "unit": "",
+        "tolerance": 0.02,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "A difference is significant when it exceeds the critical value times the standard error.",
+        "solution": "2.228 × 1.270 = 2.83.",
+        "lesson_ids": [
+          "statistics-11"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "statistics-11:exaggeration",
+      "type": "numeric",
+      "prompt": "The true difference is 1.4, and only observed differences above 2.83 are significant. By at least what factor does every significant estimate overstate the truth? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "statistics-11-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 2.022,
+        "unit": "",
+        "tolerance": 0.05,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Divide the smallest significant difference by the true difference.",
+        "solution": "2.83/1.4 = 2.02.",
+        "lesson_ids": [
+          "statistics-11"
+        ],
+        "misconception_ids": [
+          "significant-means-accurate"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "statistics-11:nonsignificant",
+      "type": "single_choice",
+      "prompt": "A study with 6 per group finds no significant difference. Its power for the smallest effect of interest was about 0.5. What can be concluded?",
+      "points": 1,
+      "objective_ids": [
+        "statistics-11-objective-3"
+      ],
+      "options": [
+        "There is no effect.",
+        "The effect is real but small.",
+        "The study proves that the treatment is ineffective.",
+        "The result is inconclusive: such a study would miss a real effect about half the time, so the interval is more informative than the verdict."
+      ],
+      "solution_spec": {
+        "answer": 3
+      },
+      "feedback": {
+        "hint": "What does a power of one half imply about missing a real effect?",
+        "solution": "With a power near one half, a non-significant result is nearly as likely when the effect is real as when it is not. It is inconclusive.",
+        "lesson_ids": [
+          "statistics-11"
+        ],
+        "misconception_ids": [
+          "nonsignificant-means-no-effect"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "statistics-11:power-statements",
+      "type": "multiple_select",
+      "prompt": "Which statements about power and sample size are correct? Select all that apply.",
+      "points": 2,
+      "objective_ids": [
+        "statistics-11-objective-3"
+      ],
+      "options": [
+        "A significant result from a low-power study tends to overestimate the true effect.",
+        "Halving the effect size to be detected roughly quadruples the sample size needed.",
+        "The normal-approximation formula tends to give slightly too small a sample size for small t-tests.",
+        "Power should be calculated from the observed effect after the study ends.",
+        "Technical replicates can be counted in n for a power calculation."
+      ],
+      "solution_spec": {
+        "answer": [
+          0,
+          1,
+          2
+        ],
+        "partial_credit": "correct-minus-incorrect-clamped-v1"
+      },
+      "feedback": {
+        "hint": "Recall how n scales with the effect, what selection on significance does, and what counts as a unit.",
+        "solution": "n scales with 1/δ²; selecting significant results from small studies inflates effects; the normal approximation is optimistic at small n. Only independent units count, and post hoc power from the observed effect is uninformative.",
+        "lesson_ids": [
+          "statistics-11"
+        ],
+        "misconception_ids": [
+          "halve-effect-doubles-n",
+          "significant-means-accurate"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "statistics-12:slope",
+      "type": "numeric",
+      "prompt": "A calibration uses x = 0, 2, 4, 6, 8, 10 μM with signals 6.0, 24.0, 47.5, 62.0, 88.5, 101.0. With S_xx = 70 and S_xy = 683, what is the least-squares slope? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "statistics-12-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 9.7571,
+        "unit": "",
+        "tolerance": 0.01,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "b = S_xy/S_xx.",
+        "solution": "683/70 = 9.757.",
+        "lesson_ids": [
+          "statistics-12"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "statistics-12:intercept",
+      "type": "numeric",
+      "prompt": "The means are x̄ = 5 and ȳ = 54.83, and the slope is 9.757. What is the intercept? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "statistics-12-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 6.0476,
+        "unit": "",
+        "tolerance": 0.02,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "a = ȳ − b x̄.",
+        "solution": "54.83 − 9.757 × 5 = 6.048.",
+        "lesson_ids": [
+          "statistics-12"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "statistics-12:r-squared",
+      "type": "numeric",
+      "prompt": "The sum of squared residuals is 41.20 and the total sum of squares is 6705.3. What is R²? Enter a decimal fraction, number only.",
+      "points": 1,
+      "objective_ids": [
+        "statistics-12-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0.99385,
+        "unit": "",
+        "tolerance": 0.0005,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "R² = 1 − SSE/SST.",
+        "solution": "1 − 41.20/6705.3 = 0.9939.",
+        "lesson_ids": [
+          "statistics-12"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "statistics-12:se-slope",
+      "type": "numeric",
+      "prompt": "The residual standard deviation is 3.210 and S_xx = 70. What is the standard error of the slope? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "statistics-12-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0.3836,
+        "unit": "",
+        "tolerance": 0.005,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "SE(b) = s/√S_xx.",
+        "solution": "3.210/√70 = 0.384.",
+        "lesson_ids": [
+          "statistics-12"
+        ],
+        "misconception_ids": [
+          "slope-se-uses-n"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "statistics-12:inverse-prediction",
+      "type": "numeric",
+      "prompt": "Using the fitted line y = 6.048 + 9.757 x, an unknown sample gives a signal of 55. What concentration does this correspond to? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "statistics-12-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 5.0171,
+        "unit": "μM",
+        "tolerance": 0.02,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Solve for x: x = (y − a)/b.",
+        "solution": "(55 − 6.048)/9.757 = 5.02 μM.",
+        "lesson_ids": [
+          "statistics-12"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "statistics-12:curved-residuals",
+      "type": "single_choice",
+      "prompt": "A straight line fitted to a saturating response has R² = 0.96, with residuals −5.6, +1.1, +4.7, +4.3, +0.9, −5.4 in order of increasing x. What does this pattern show?",
+      "points": 1,
+      "objective_ids": [
+        "statistics-12-objective-3"
+      ],
+      "options": [
+        "The pattern is random scatter and can be ignored.",
+        "The model is wrong: the residuals have a systematic curved pattern, so predictions are biased despite the high R².",
+        "The data contain an outlier at every point.",
+        "The fit is good, because R² is above 0.95."
+      ],
+      "solution_spec": {
+        "answer": 1
+      },
+      "feedback": {
+        "hint": "Do the residuals scatter randomly around zero as x increases?",
+        "solution": "Residuals that run negative, positive, then negative form a curve. R² cannot detect that a straight line is the wrong shape.",
+        "lesson_ids": [
+          "statistics-12"
+        ],
+        "misconception_ids": [
+          "r2-proves-the-model"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "statistics-12:fit-statements",
+      "type": "multiple_select",
+      "prompt": "Which statements about a fitted line are appropriate? Select all that apply.",
+      "points": 2,
+      "objective_ids": [
+        "statistics-12-objective-3"
+      ],
+      "options": [
+        "Residuals should be plotted before the fit is trusted.",
+        "Predictions outside the calibrated range need independent support.",
+        "A slope from observational data shows the effect of changing x.",
+        "The uncertainty of an unknown estimated from the line is larger than that of the slope alone.",
+        "A high R² proves the relationship is linear."
+      ],
+      "solution_spec": {
+        "answer": [
+          0,
+          1,
+          3
+        ],
+        "partial_credit": "correct-minus-incorrect-clamped-v1"
+      },
+      "feedback": {
+        "hint": "Think about what R² measures and what the data cover.",
+        "solution": "Residual plots show misfit, extrapolation is unsupported by the data, and inverse prediction adds the scatter of the new reading. R² does not prove linearity, and an observational slope does not give an intervention effect.",
+        "lesson_ids": [
+          "statistics-12"
+        ],
+        "misconception_ids": [
+          "r2-proves-the-model",
+          "slope-as-causal"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "statistics-13:n-arrangements",
+      "type": "numeric",
+      "prompt": "Eight values are divided into two groups of four. How many equally likely ways can the group labels be assigned? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "statistics-13-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 70,
+        "unit": "",
+        "tolerance": 0.1,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Count the ways to choose which four of the eight values form the first group.",
+        "solution": "C(8, 4) = 70.",
+        "lesson_ids": [
+          "statistics-13"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "statistics-13:exact-p",
+      "type": "numeric",
+      "prompt": "The observed split places the four smallest of eight values in one group, the most extreme arrangement in one direction. Of 70 arrangements, 2 are as extreme (one in each direction). What is the two-sided exact p-value? Enter a decimal fraction, number only.",
+      "points": 1,
+      "objective_ids": [
+        "statistics-13-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0.02857,
+        "unit": "",
+        "tolerance": 0.0005,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Divide the number of arrangements at least as extreme by the total number.",
+        "solution": "2/70 = 0.0286.",
+        "lesson_ids": [
+          "statistics-13"
+        ],
+        "misconception_ids": [
+          "exact-p-assumption-free"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "statistics-13:bootstrap-inclusion",
+      "type": "numeric",
+      "prompt": "A bootstrap resample of size 10 is drawn with replacement. What is the probability that a particular observation appears at least once? Enter a decimal fraction, number only.",
+      "points": 1,
+      "objective_ids": [
+        "statistics-13-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0.65132,
+        "unit": "",
+        "tolerance": 0.002,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "The probability that it is missed in one draw is 0.9; there are 10 draws.",
+        "solution": "1 − 0.9¹⁰ = 0.6513.",
+        "lesson_ids": [
+          "statistics-13"
+        ],
+        "misconception_ids": [
+          "without-replacement"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "statistics-13:rank-sum",
+      "type": "numeric",
+      "prompt": "Control values are 12, 15, 14, 16 and treated values 18, 20, 17, 21. Ranking all eight from smallest (1) to largest (8), what is the rank sum of the treated group? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "statistics-13-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 26,
+        "unit": "",
+        "tolerance": 0.1,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Rank the combined sample, then add the ranks of the treated values.",
+        "solution": "The treated values have ranks 5, 6, 7, 8, summing to 26.",
+        "lesson_ids": [
+          "statistics-13"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "statistics-13:u-statistic",
+      "type": "numeric",
+      "prompt": "For the same data, U counts the pairs in which a control value exceeds a treated value. What is U? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "statistics-13-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 0,
+        "unit": "",
+        "tolerance": 0.1,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Compare each of the four control values with each of the four treated values.",
+        "solution": "Every treated value exceeds every control value, so U = 0.",
+        "lesson_ids": [
+          "statistics-13"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "statistics-13:choose-method",
+      "type": "single_choice",
+      "prompt": "A pilot has 4 independent animals per group, markedly skewed data and a statistic that is the ratio of two group medians. Which approach is most defensible?",
+      "points": 1,
+      "objective_ids": [
+        "statistics-13-objective-3"
+      ],
+      "options": [
+        "A t-test on all readings pooled from the technical replicates.",
+        "A bootstrap that resamples individual technical readings.",
+        "A permutation test for the p-value and a bootstrap interval for the ratio, with a caveat that n = 4 is very small.",
+        "No analysis is possible with four animals per group."
+      ],
+      "solution_spec": {
+        "answer": 2
+      },
+      "feedback": {
+        "hint": "What is the independent unit, and which method needs the fewest distributional assumptions?",
+        "solution": "Permutation and bootstrap methods need few distributional assumptions but still require the independent unit to be resampled. n = 4 limits precision whichever method is used.",
+        "lesson_ids": [
+          "statistics-13"
+        ],
+        "misconception_ids": [
+          "permute-readings"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "statistics-13:resampling-statements",
+      "type": "multiple_select",
+      "prompt": "Which statements about resampling and rank-based methods are correct? Select all that apply.",
+      "points": 2,
+      "objective_ids": [
+        "statistics-13-objective-3"
+      ],
+      "options": [
+        "A bootstrap resample is drawn with replacement, so about a third of the original observations are missing from a large resample.",
+        "A rank test needs no assumptions at all.",
+        "An exact permutation test depends on the assignment mechanism, not on a normal distribution.",
+        "With four per group, a two-sided exact p-value can be smaller than 0.01.",
+        "The permutation or resampling must be done on the independent units, not on technical replicates."
+      ],
+      "solution_spec": {
+        "answer": [
+          0,
+          2,
+          4
+        ],
+        "partial_credit": "correct-minus-incorrect-clamped-v1"
+      },
+      "feedback": {
+        "hint": "Think about what is shuffled or resampled, and what the smallest attainable p-value is.",
+        "solution": "Permutation tests rely on random assignment; bootstrap samples include about 63% of the observations; units must be independent; with four per group the smallest two-sided p-value is 2/70, about 0.029.",
+        "lesson_ids": [
+          "statistics-13"
+        ],
+        "misconception_ids": [
+          "exact-p-assumption-free",
+          "permute-readings"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "statistics-lab1:animal-summary",
+      "type": "file_upload",
+      "prompt": "Using the synthetic readings CSV, upload a summary table with one row per animal (key column `animal_id`: c1 to c4 and t1 to t4) and columns `readings` (the number of readings of that animal) and `mean_value` (the mean of its readings, in arbitrary units).",
+      "points": 16,
+      "objective_ids": [
+        "statistics-lab-01-objective-1"
+      ],
+      "solution_spec": {
+        "accepted_media_types": [
+          "text/csv"
+        ],
+        "max_bytes": 32768,
+        "validation_spec": {
+          "format": "csv-numeric-table-v1",
+          "delimiter": ",",
+          "key_column": "animal_id",
+          "columns": [
+            "animal_id",
+            "readings",
+            "mean_value"
+          ],
+          "checks": [
+            {
+              "id": "c1-readings",
+              "row_id": "c1",
+              "column": "readings",
+              "type": "numeric",
+              "answer": 3.0,
+              "unit": "",
+              "tolerance": 0,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "count",
+                "values": [
+                  52.4,
+                  48.8,
+                  48.8
+                ]
+              }
+            },
+            {
+              "id": "c1-mean_value",
+              "row_id": "c1",
+              "column": "mean_value",
+              "type": "numeric",
+              "answer": 50.0,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  52.4,
+                  48.8,
+                  48.8
+                ]
+              }
+            },
+            {
+              "id": "c2-readings",
+              "row_id": "c2",
+              "column": "readings",
+              "type": "numeric",
+              "answer": 3.0,
+              "unit": "",
+              "tolerance": 0,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "count",
+                "values": [
+                  56.2,
+                  58.6,
+                  59.2
+                ]
+              }
+            },
+            {
+              "id": "c2-mean_value",
+              "row_id": "c2",
+              "column": "mean_value",
+              "type": "numeric",
+              "answer": 58.0,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  56.2,
+                  58.6,
+                  59.2
+                ]
+              }
+            },
+            {
+              "id": "c3-readings",
+              "row_id": "c3",
+              "column": "readings",
+              "type": "numeric",
+              "answer": 3.0,
+              "unit": "",
+              "tolerance": 0,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "count",
+                "values": [
+                  44.9,
+                  45.5,
+                  41.6
+                ]
+              }
+            },
+            {
+              "id": "c3-mean_value",
+              "row_id": "c3",
+              "column": "mean_value",
+              "type": "numeric",
+              "answer": 44.0,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  44.9,
+                  45.5,
+                  41.6
+                ]
+              }
+            },
+            {
+              "id": "c4-readings",
+              "row_id": "c4",
+              "column": "readings",
+              "type": "numeric",
+              "answer": 3.0,
+              "unit": "",
+              "tolerance": 0,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "count",
+                "values": [
+                  51.4,
+                  50.2,
+                  54.4
+                ]
+              }
+            },
+            {
+              "id": "c4-mean_value",
+              "row_id": "c4",
+              "column": "mean_value",
+              "type": "numeric",
+              "answer": 52.0,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  51.4,
+                  50.2,
+                  54.4
+                ]
+              }
+            },
+            {
+              "id": "t1-readings",
+              "row_id": "t1",
+              "column": "readings",
+              "type": "numeric",
+              "answer": 3.0,
+              "unit": "",
+              "tolerance": 0,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "count",
+                "values": [
+                  58.5,
+                  56.1,
+                  56.4
+                ]
+              }
+            },
+            {
+              "id": "t1-mean_value",
+              "row_id": "t1",
+              "column": "mean_value",
+              "type": "numeric",
+              "answer": 57.0,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  58.5,
+                  56.1,
+                  56.4
+                ]
+              }
+            },
+            {
+              "id": "t2-readings",
+              "row_id": "t2",
+              "column": "readings",
+              "type": "numeric",
+              "answer": 3.0,
+              "unit": "",
+              "tolerance": 0,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "count",
+                "values": [
+                  63.9,
+                  67.2,
+                  66.9
+                ]
+              }
+            },
+            {
+              "id": "t2-mean_value",
+              "row_id": "t2",
+              "column": "mean_value",
+              "type": "numeric",
+              "answer": 66.0,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  63.9,
+                  67.2,
+                  66.9
+                ]
+              }
+            },
+            {
+              "id": "t3-readings",
+              "row_id": "t3",
+              "column": "readings",
+              "type": "numeric",
+              "answer": 3.0,
+              "unit": "",
+              "tolerance": 0,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "count",
+                "values": [
+                  52.3,
+                  53.8,
+                  49.9
+                ]
+              }
+            },
+            {
+              "id": "t3-mean_value",
+              "row_id": "t3",
+              "column": "mean_value",
+              "type": "numeric",
+              "answer": 52.0,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  52.3,
+                  53.8,
+                  49.9
+                ]
+              }
+            },
+            {
+              "id": "t4-readings",
+              "row_id": "t4",
+              "column": "readings",
+              "type": "numeric",
+              "answer": 3.0,
+              "unit": "",
+              "tolerance": 0,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "count",
+                "values": [
+                  59.5,
+                  61.3,
+                  62.2
+                ]
+              }
+            },
+            {
+              "id": "t4-mean_value",
+              "row_id": "t4",
+              "column": "mean_value",
+              "type": "numeric",
+              "answer": 61.0,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  59.5,
+                  61.3,
+                  62.2
+                ]
+              }
+            }
+          ]
+        },
+        "rubric": [
+          {
+            "id": "c1-readings",
+            "criterion": "c1: readings",
+            "points": 1,
+            "evidence": [
+              "Recomputes readings for c1 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "c1-mean_value",
+            "criterion": "c1: mean_value",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_value for c1 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "c2-readings",
+            "criterion": "c2: readings",
+            "points": 1,
+            "evidence": [
+              "Recomputes readings for c2 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "c2-mean_value",
+            "criterion": "c2: mean_value",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_value for c2 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "c3-readings",
+            "criterion": "c3: readings",
+            "points": 1,
+            "evidence": [
+              "Recomputes readings for c3 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "c3-mean_value",
+            "criterion": "c3: mean_value",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_value for c3 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "c4-readings",
+            "criterion": "c4: readings",
+            "points": 1,
+            "evidence": [
+              "Recomputes readings for c4 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "c4-mean_value",
+            "criterion": "c4: mean_value",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_value for c4 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "t1-readings",
+            "criterion": "t1: readings",
+            "points": 1,
+            "evidence": [
+              "Recomputes readings for t1 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "t1-mean_value",
+            "criterion": "t1: mean_value",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_value for t1 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "t2-readings",
+            "criterion": "t2: readings",
+            "points": 1,
+            "evidence": [
+              "Recomputes readings for t2 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "t2-mean_value",
+            "criterion": "t2: mean_value",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_value for t2 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "t3-readings",
+            "criterion": "t3: readings",
+            "points": 1,
+            "evidence": [
+              "Recomputes readings for t3 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "t3-mean_value",
+            "criterion": "t3: mean_value",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_value for t3 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "t4-readings",
+            "criterion": "t4: readings",
+            "points": 1,
+            "evidence": [
+              "Recomputes readings for t4 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "t4-mean_value",
+            "criterion": "t4: mean_value",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_value for t4 from the preparation-level values."
+            ]
+          }
+        ]
+      },
+      "feedback": {
+        "hint": "Filter the CSV by animal_id, count its rows, then average its value_au column.",
+        "solution": "Each animal has 3 readings. Control animal means are 50.0, 58.0, 44.0, 52.0; treated animal means are 57.0, 66.0, 52.0, 61.0.",
+        "lesson_ids": [
+          "statistics-lab-01",
+          "statistics-9",
+          "statistics-10"
+        ],
+        "misconception_ids": [
+          "readings-as-animals"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "statistics-lab1:technical-sd",
+      "type": "numeric",
+      "prompt": "Pool the within-animal variance over all eight animals (each animal contributes its sum of squared deviations from its own mean, with 2 degrees of freedom). What is the technical standard deviation, in arbitrary units? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "statistics-lab-01-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 1.8279,
+        "unit": "",
+        "tolerance": 0.02,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Add the eight within-animal sums of squares, divide by 16 and take the square root.",
+        "solution": "Sum of squares 53.46 over 16 degrees of freedom gives a variance of 3.341 and a technical SD of 1.83 au.",
+        "lesson_ids": [
+          "statistics-lab-01",
+          "statistics-9",
+          "statistics-10"
+        ],
+        "misconception_ids": [
+          "readings-as-animals"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "statistics-lab1:reading-level-test",
+      "type": "data_interpretation",
+      "prompt": "Pretend each of the 12 readings per group is an independent observation. Compute the pooled-variance two-sample t statistic for treated minus control (pooled SD of the readings, standard error SD × √(2/12)).",
+      "points": 2,
+      "objective_ids": [
+        "statistics-lab-01-objective-3"
+      ],
+      "response_fields": [
+        {
+          "id": "value",
+          "type": "numeric",
+          "prompt": "What is t? Report exactly 3 significant figures.",
+          "unit": "",
+          "points": 1
+        },
+        {
+          "id": "inference",
+          "type": "single_choice",
+          "prompt": "What is wrong with this test?",
+          "options": [
+            "It treats 12 readings per group as independent when they come from 4 animals, so its standard error is too small and its p-value too small.",
+            "It uses too few readings.",
+            "It uses a t-distribution when the data should be analyzed with a normal distribution.",
+            "Nothing; more readings always give a better test."
+          ],
+          "points": 1
+        }
+      ],
+      "solution_spec": {
+        "field_specs": [
+          {
+            "id": "value",
+            "type": "numeric",
+            "answer": 3.55,
+            "unit": "",
+            "tolerance": 0.02,
+            "relative_tolerance": 0,
+            "unit_required": false,
+            "significant_figures": 3,
+            "dimensions": null
+          },
+          {
+            "id": "inference",
+            "type": "single_choice",
+            "answer": 0
+          }
+        ]
+      },
+      "feedback": {
+        "hint": "Compute the pooled variance of the readings in each group, then the standard error of the difference.",
+        "solution": "The pooled reading-level SD is 5.52, so SE = 5.52 × √(2/12) = 2.26 and t = 8.0/2.26 = 3.55 on 22 degrees of freedom, p = 0.0018. The readings are not independent, so this overstates the evidence.",
+        "lesson_ids": [
+          "statistics-lab-01",
+          "statistics-9",
+          "statistics-10"
+        ],
+        "misconception_ids": [
+          "readings-as-animals",
+          "pseudoreplication"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "statistics-lab1:animal-level-test",
+      "type": "data_interpretation",
+      "prompt": "Now use the eight animal means (4 per group) as the observations. Compute the pooled-variance two-sample t statistic for treated minus control (pooled SD of the animal means, standard error SD × √(2/4)).",
+      "points": 2,
+      "objective_ids": [
+        "statistics-lab-01-objective-3"
+      ],
+      "response_fields": [
+        {
+          "id": "value",
+          "type": "numeric",
+          "prompt": "What is t? Report exactly 3 significant figures.",
+          "unit": "",
+          "points": 1
+        },
+        {
+          "id": "inference",
+          "type": "single_choice",
+          "prompt": "Which conclusion does the animal-level result support?",
+          "options": [
+            "It does not reach p < 0.05 (p is about 0.10); the 8.0 au difference is compatible with no effect and with a sizeable one, so this design cannot settle the question.",
+            "The treated group is shown to be higher, because the group means differ by 8.0 au.",
+            "The treatment has no effect, because p is above 0.05.",
+            "The result is significant, because the reading-level test gave p = 0.002."
+          ],
+          "points": 1
+        }
+      ],
+      "solution_spec": {
+        "field_specs": [
+          {
+            "id": "value",
+            "type": "numeric",
+            "answer": 1.93,
+            "unit": "",
+            "tolerance": 0.02,
+            "relative_tolerance": 0,
+            "unit_required": false,
+            "significant_figures": 3,
+            "dimensions": null
+          },
+          {
+            "id": "inference",
+            "type": "single_choice",
+            "answer": 0
+          }
+        ]
+      },
+      "feedback": {
+        "hint": "Use the four animal means in each group; the standard deviation of those means includes both biological and technical variation.",
+        "solution": "The pooled SD of animal means is 5.86, so SE = 5.86 × √(2/4) = 4.14 and t = 8.0/4.14 = 1.93 on 6 degrees of freedom, p = 0.102. The 95% interval for the difference is −2.1 to 18.1 au.",
+        "lesson_ids": [
+          "statistics-lab-01",
+          "statistics-9",
+          "statistics-10"
+        ],
+        "misconception_ids": [
+          "absence-as-no-effect",
+          "pseudoreplication"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "statistics-lab1:intraclass-correlation",
+      "type": "numeric",
+      "prompt": "Use MS(animals) = 3 × the pooled variance of the animal means within groups, which is 103.0, the technical variance from the earlier item, σ_b² = (MS(animals) − technical variance)/3 and ICC = σ_b²/(σ_b² + technical variance). What is the ICC? Enter a decimal fraction, number only.",
+      "points": 1,
+      "objective_ids": [
+        "statistics-lab-01-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0.9086,
+        "unit": "",
+        "tolerance": 0.005,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Subtract the technical variance from MS(animals), divide by 3, then divide that between-animal variance by the total.",
+        "solution": "σ_b² = (103.0 − 3.341)/3 = 33.22; ICC = 33.22/(33.22 + 3.341) = 0.909. The design effect is 1 + 2 × 0.91 = 2.82, so 12 readings per group carry the information of about 4.3.",
+        "lesson_ids": [
+          "statistics-lab-01",
+          "statistics-9",
+          "statistics-10"
+        ],
+        "misconception_ids": [
+          "icc-ignored"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "statistics-lab1:design-reasoning",
+      "type": "structured",
+      "prompt": "Answer each part about the nested design.",
+      "points": 3,
+      "objective_ids": [
+        "statistics-lab-01-objective-2",
+        "statistics-lab-01-objective-3"
+      ],
+      "response_fields": [
+        {
+          "id": "unit",
+          "type": "single_choice",
+          "prompt": "What is the unit of analysis in this experiment?",
+          "options": [
+            "The animal: four independent units per group; the three readings of an animal are repeated measurements of the same unit.",
+            "The reading: twelve independent units per group.",
+            "The group: one unit per group.",
+            "The assay plate."
+          ],
+          "points": 1
+        },
+        {
+          "id": "icc",
+          "type": "single_choice",
+          "prompt": "The intraclass correlation is about 0.9. What does it imply?",
+          "options": [
+            "Most of the variation is between animals, so extra readings on the same animals add little and the effective sample size is close to the number of animals.",
+            "Readings from the same animal are unrelated.",
+            "The technical error is large compared with the animal differences.",
+            "The groups differ significantly."
+          ],
+          "points": 1
+        },
+        {
+          "id": "remedy",
+          "type": "single_choice",
+          "prompt": "Which change would improve the precision of the group comparison most?",
+          "options": [
+            "More animals per group, with a primary outcome and analysis stated in advance.",
+            "More readings per animal from the same animals.",
+            "Using the reading-level p-value because it is smaller.",
+            "Dropping the animal with the largest mean."
+          ],
+          "points": 1
+        }
+      ],
+      "solution_spec": {
+        "field_specs": [
+          {
+            "id": "unit",
+            "type": "single_choice",
+            "answer": 0
+          },
+          {
+            "id": "icc",
+            "type": "single_choice",
+            "answer": 0
+          },
+          {
+            "id": "remedy",
+            "type": "single_choice",
+            "answer": 0
+          }
+        ],
+        "rubric": [
+          {
+            "id": "unit",
+            "criterion": "Unit of analysis",
+            "points": 1,
+            "evidence": [
+              "Identifies the animal as the unit that could vary independently."
+            ]
+          },
+          {
+            "id": "icc",
+            "criterion": "What a high ICC implies",
+            "points": 1,
+            "evidence": [
+              "Links a high ICC to little gain from more readings per animal."
+            ]
+          },
+          {
+            "id": "remedy",
+            "criterion": "Improving the design",
+            "points": 1,
+            "evidence": [
+              "Chooses more independent animals over more readings."
+            ]
+          }
+        ]
+      },
+      "feedback": {
+        "hint": "Ask which observations could vary independently and where most of the variation lives.",
+        "solution": "The animal is the unit; a high ICC means readings of the same animal are nearly redundant; more animals improve precision most.",
+        "lesson_ids": [
+          "statistics-lab-01",
+          "statistics-9",
+          "statistics-10"
+        ],
+        "misconception_ids": [
+          "readings-as-animals",
+          "icc-ignored"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "statistics-lab1:supported-conclusions",
+      "type": "multiple_select",
+      "prompt": "Which conclusions follow from this nested design and its data? Select all that apply.",
+      "points": 2,
+      "objective_ids": [
+        "statistics-lab-01-objective-3"
+      ],
+      "options": [
+        "Readings of the same animal are strongly correlated, so the effective sample size is close to the number of animals.",
+        "The reading-level p-value (0.002) overstates the evidence because it counts 12 readings per group as independent.",
+        "Averaging the three readings of each animal and comparing four animal means with four animal means is a valid analysis for this balanced design.",
+        "Adding more readings of the same eight animals is the most efficient way to gain power.",
+        "The experiment shows that the treatment has no effect."
+      ],
+      "solution_spec": {
+        "answer": [
+          0,
+          1,
+          2
+        ],
+        "partial_credit": "correct-minus-incorrect-clamped-v1"
+      },
+      "feedback": {
+        "hint": "Keep each conclusion inside what four animals per group can show.",
+        "solution": "The first three follow from the numbers. More readings of the same animals cannot remove the between-animal variance, and a non-significant result with four animals per group is not evidence of no effect.",
+        "lesson_ids": [
+          "statistics-lab-01",
+          "statistics-9",
+          "statistics-10"
+        ],
+        "misconception_ids": [
+          "readings-as-animals",
+          "absence-as-no-effect"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "statistics-14:ppv-test",
+      "type": "numeric",
+      "prompt": "A test has sensitivity 90% and specificity 95%, and the condition has prevalence 2%. What is the positive predictive value? Enter a decimal fraction, number only.",
+      "points": 1,
+      "objective_ids": [
+        "statistics-14-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0.2687,
+        "unit": "",
+        "tolerance": 0.005,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "In 10,000 people, count the true positives and false positives.",
+        "solution": "180/(180 + 490) = 0.269.",
+        "lesson_ids": [
+          "statistics-14"
+        ],
+        "misconception_ids": [
+          "base-rate-ignored"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "statistics-14:lr-positive",
+      "type": "numeric",
+      "prompt": "Using LR⁺ = sensitivity/(1 − specificity), what is the likelihood ratio of a positive result for sensitivity 90% and specificity 95%? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "statistics-14-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 18.0,
+        "unit": "",
+        "tolerance": 0.05,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Divide the true-positive rate by the false-positive rate.",
+        "solution": "0.9/0.05 = 18.",
+        "lesson_ids": [
+          "statistics-14"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "statistics-14:ppv-study",
+      "type": "numeric",
+      "prompt": "One hypothesis in ten tested is true (π = 0.1), α = 0.05 and the power is 0.5. What fraction of significant results are true? Enter a decimal fraction, number only.",
+      "points": 1,
+      "objective_ids": [
+        "statistics-14-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0.5263,
+        "unit": "",
+        "tolerance": 0.005,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "PPV = power π/(power π + α (1 − π)).",
+        "solution": "0.05/(0.05 + 0.045) = 0.526.",
+        "lesson_ids": [
+          "statistics-14"
+        ],
+        "misconception_ids": [
+          "p-value-as-probability-false"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "statistics-14:ppv-high-power",
+      "type": "numeric",
+      "prompt": "Keep π = 0.1 and α = 0.05 but raise the power to 0.8. What fraction of significant results are true now? Enter a decimal fraction, number only.",
+      "points": 1,
+      "objective_ids": [
+        "statistics-14-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0.64,
+        "unit": "",
+        "tolerance": 0.005,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the same formula with the larger power.",
+        "solution": "0.08/(0.08 + 0.045) = 0.64.",
+        "lesson_ids": [
+          "statistics-14"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "statistics-14:ppv-rare",
+      "type": "numeric",
+      "prompt": "The hypotheses are riskier: π = 0.01, with α = 0.05 and power 0.8. What fraction of significant results are true? Enter a decimal fraction, number only.",
+      "points": 1,
+      "objective_ids": [
+        "statistics-14-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0.1391,
+        "unit": "",
+        "tolerance": 0.005,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "A small prior makes false positives dominate.",
+        "solution": "0.008/(0.008 + 0.0495) = 0.139.",
+        "lesson_ids": [
+          "statistics-14"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "statistics-14:replication-probability",
+      "type": "numeric",
+      "prompt": "A result with PPV 0.526 is replicated with a new study of power 0.5 at α = 0.05. What is the probability that the replication is significant? Enter a decimal fraction, number only.",
+      "points": 1,
+      "objective_ids": [
+        "statistics-14-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 0.2868,
+        "unit": "",
+        "tolerance": 0.005,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Add the chance that it is true and detected to the chance that it is false and nevertheless significant.",
+        "solution": "0.526 × 0.5 + 0.474 × 0.05 = 0.287.",
+        "lesson_ids": [
+          "statistics-14"
+        ],
+        "misconception_ids": [
+          "replication-should-be-95"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "statistics-14:evidence-statements",
+      "type": "multiple_select",
+      "prompt": "Which statements about p-values, base rates and replication are correct? Select all that apply.",
+      "points": 2,
+      "objective_ids": [
+        "statistics-14-objective-3"
+      ],
+      "options": [
+        "The prior probability of a hypothesis is supplied by the data.",
+        "A positive result from an accurate test can still be more likely false than true when the condition is rare.",
+        "A significant result replicates with probability 95%.",
+        "A single significant result from a low-powered study is expected to replicate less than half the time.",
+        "A p-value of 0.04 does not mean there is a 4% chance that the finding is false."
+      ],
+      "solution_spec": {
+        "answer": [
+          1,
+          3,
+          4
+        ],
+        "partial_credit": "correct-minus-incorrect-clamped-v1"
+      },
+      "feedback": {
+        "hint": "Work through the natural-frequency table and the PPV formula.",
+        "solution": "The share of positives that are true depends on prevalence and power, a p-value is not the probability that the null is true, and replication probability depends on power and the prior. It is not 95%, and the prior comes from earlier evidence and judgment.",
+        "lesson_ids": [
+          "statistics-14"
+        ],
+        "misconception_ids": [
+          "base-rate-ignored",
+          "p-value-as-probability-false",
+          "replication-should-be-95"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "statistics-15:any-false-positive",
+      "type": "numeric",
+      "prompt": "A pilot measured 18 independent biomarkers. If none truly differs between the groups, what is the probability that at least one has p < 0.05? Enter a decimal fraction, number only.",
+      "points": 1,
+      "objective_ids": [
+        "statistics-15-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0.6028,
+        "unit": "",
+        "tolerance": 0.005,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Find the chance that none is significant, 0.95 per marker, and subtract it from 1.",
+        "solution": "1 − 0.95^18 = 0.603; about 0.9 false positives are expected.",
+        "lesson_ids": [
+          "statistics-15"
+        ],
+        "misconception_ids": [
+          "multiplicity-ignored"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "statistics-15:bonferroni-threshold",
+      "type": "numeric",
+      "prompt": "With 18 tests and a family-wise error rate of 0.05, what per-test p-value threshold does the Bonferroni rule give? Enter a decimal, number only.",
+      "points": 1,
+      "objective_ids": [
+        "statistics-15-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0.002778,
+        "unit": "",
+        "tolerance": 0.0001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Divide the family-wise rate by the number of tests.",
+        "solution": "0.05/18 = 0.0028; the adjusted p-value for 0.04 is 0.72.",
+        "lesson_ids": [
+          "statistics-15"
+        ],
+        "misconception_ids": [
+          "multiplicity-ignored"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "statistics-15:animal-t",
+      "type": "numeric",
+      "prompt": "In the pilot the group means differ by 7.0 units, with 6 animals per group, and the SD of an animal's mean of 3 readings is 8.98. Using animals as the units, what is the t statistic for the difference? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "statistics-15-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 1.3502,
+        "unit": "",
+        "tolerance": 0.01,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "The standard error of a difference of two group means is SD × √(2/n) with n the number of animals per group.",
+        "solution": "SE = 8.98 × √(2/6) = 5.18; t = 7.0/5.18 = 1.35 on 10 degrees of freedom (p = 0.21).",
+        "lesson_ids": [
+          "statistics-15"
+        ],
+        "misconception_ids": [
+          "pseudoreplication"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "statistics-15:n-triplicate",
+      "type": "numeric",
+      "prompt": "Plan a confirmatory study to detect a difference of 5.0 units with power 0.80 and two-sided α = 0.05, using n = 2 (1.96 + 0.8416)² Var / δ². The variance of an animal's mean of three readings is 8.5² + 5.0²/3. How many animals per group are needed, rounded up? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "statistics-15-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 51,
+        "unit": "",
+        "tolerance": 0.5,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Compute the variance of an animal's mean first, then apply the formula.",
+        "solution": "Var = 72.25 + 25/3 = 80.58; n = 2 × 7.849 × 80.58/25 = 50.6, so 51 animals per group.",
+        "lesson_ids": [
+          "statistics-15"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "statistics-15:n-single-reading",
+      "type": "numeric",
+      "prompt": "With only one reading per animal, the variance of an animal's value is 8.5² + 5.0². Using the same formula, power and δ = 5.0, how many animals per group are needed, rounded up? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "statistics-15-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 62,
+        "unit": "",
+        "tolerance": 1.0,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Replace the technical variance divided by 3 by the full technical variance.",
+        "solution": "Var = 97.25; n = 2 × 7.849 × 97.25/25 = 61.1, so 62 animals per group.",
+        "lesson_ids": [
+          "statistics-15"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "statistics-15:n-all-eighteen",
+      "type": "numeric",
+      "prompt": "If all 18 markers were confirmatory outcomes with Bonferroni correction, the critical z for α = 0.05/18 (two-sided) is 2.99. With three readings per animal, δ = 5.0 and z for power 0.80 of 0.8416, how many animals per group are needed, rounded up? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "statistics-15-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 95,
+        "unit": "",
+        "tolerance": 1.0,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the same formula with the larger critical z.",
+        "solution": "n = 2 × (2.99 + 0.8416)² × 80.58/25 = 94.6, so 95 animals per group, against 51 for one pre-specified primary outcome.",
+        "lesson_ids": [
+          "statistics-15"
+        ],
+        "misconception_ids": [
+          "multiplicity-ignored"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "statistics-15:optimal-readings",
+      "type": "numeric",
+      "prompt": "An animal costs 20 times as much as one technical reading. Using m = √(σ_t² c_animal / (σ_b² c_reading)) with σ_b = 8.5 and σ_t = 5.0, how many readings per animal minimize the cost for a fixed precision? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "statistics-15-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 2.6307,
+        "unit": "",
+        "tolerance": 0.05,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Put the cost ratio inside the square root with the technical variance on top and the biological variance below.",
+        "solution": "m = √(25 × 20/(72.25 × 1)) = 2.63, so about three readings per animal.",
+        "lesson_ids": [
+          "statistics-15"
+        ],
+        "misconception_ids": [
+          "technical-replicates-as-animals"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "statistics-15:plan-elements",
+      "type": "multiple_select",
+      "prompt": "Which elements belong in a pre-specified confirmatory plan for this question? Select all that apply.",
+      "points": 2,
+      "objective_ids": [
+        "statistics-15-objective-3"
+      ],
+      "options": [
+        "Choosing the primary outcome after seeing which marker has the smallest p-value.",
+        "Random assignment of animals to groups, randomized processing order and an operator blind to group.",
+        "Using the pilot's observed difference of 7.0 units as the planning effect.",
+        "A single primary outcome, its contrast, the unit of analysis and the test, written down before the data are collected.",
+        "A sample size computed from the smallest effect of interest and the variance components, with a sensitivity range.",
+        "The animal as the unit, with technical readings averaged within animal or modelled as nested."
+      ],
+      "solution_spec": {
+        "answer": [
+          1,
+          3,
+          4,
+          5
+        ],
+        "partial_credit": "correct-minus-incorrect-clamped-v1"
+      },
+      "feedback": {
+        "hint": "Keep the elements that are decided before the data and protect the independent unit.",
+        "solution": "The primary outcome, unit, bias controls and a sample size from a smallest effect of interest and variance components are decided in advance. Picking the outcome after the p-values or planning from a selected, inflated effect undermines the confirmation.",
+        "lesson_ids": [
+          "statistics-15"
+        ],
+        "misconception_ids": [
+          "pseudoreplication",
+          "winners-curse"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "statistics-15:pilot-reading",
+      "type": "structured",
+      "prompt": "Answer each part about the synthetic pilot with p = 0.04 for one of 18 markers.",
+      "points": 3,
+      "objective_ids": [
+        "statistics-15-objective-1",
+        "statistics-15-objective-3"
+      ],
+      "response_fields": [
+        {
+          "id": "supports",
+          "type": "single_choice",
+          "prompt": "What does the pilot support?",
+          "options": [
+            "A hypothesis worth testing and estimates of the variance components, but not a conclusion that the marker differs.",
+            "A conclusion that the marker differs, because p is below 0.05.",
+            "A 4% probability that the marker does not differ.",
+            "An effect size that can be used directly as the planning effect."
+          ],
+          "points": 1
+        },
+        {
+          "id": "unit",
+          "type": "single_choice",
+          "prompt": "How many independent units does each group have, and what do the technical readings add?",
+          "options": [
+            "Six animals; the readings make each animal's value more precise but are not additional animals.",
+            "Eighteen readings; readings count as independent observations.",
+            "Three; one per reading.",
+            "Thirty-six; the readings of both groups together."
+          ],
+          "points": 1
+        },
+        {
+          "id": "multiplicity",
+          "type": "single_choice",
+          "prompt": "Which plan handles the 18 markers appropriately in a confirmatory study?",
+          "options": [
+            "Name one primary outcome in advance and test it at α = 0.05, reporting the others as exploratory, or control the family-wise error or false discovery rate across all of them.",
+            "Test all 18 at α = 0.05 and report the smallest p-value.",
+            "Test only the marker that was significant in the pilot, and call the other 17 non-significant.",
+            "Drop the markers that did not reach p < 0.05 and report the rest without a correction."
+          ],
+          "points": 1
+        }
+      ],
+      "solution_spec": {
+        "field_specs": [
+          {
+            "id": "supports",
+            "type": "single_choice",
+            "answer": 0
+          },
+          {
+            "id": "unit",
+            "type": "single_choice",
+            "answer": 0
+          },
+          {
+            "id": "multiplicity",
+            "type": "single_choice",
+            "answer": 0
+          }
+        ],
+        "rubric": [
+          {
+            "id": "supports",
+            "criterion": "What the pilot supports",
+            "points": 1,
+            "evidence": [
+              "States that the pilot generates a hypothesis and variance estimates only."
+            ]
+          },
+          {
+            "id": "unit",
+            "criterion": "Replication unit",
+            "points": 1,
+            "evidence": [
+              "Identifies the animal as the unit and technical readings as precision only."
+            ]
+          },
+          {
+            "id": "multiplicity",
+            "criterion": "Multiplicity plan",
+            "points": 1,
+            "evidence": [
+              "Pre-specifies the primary outcome or controls the error rate across the family."
+            ]
+          }
+        ]
+      },
+      "feedback": {
+        "hint": "Ask what the data can show given how the marker was selected, how many independent units there are and how many outcomes were examined.",
+        "solution": "The pilot generates a hypothesis and variance estimates; the animals are the replication unit; a primary outcome or a multiplicity correction is fixed before the confirmatory data.",
+        "lesson_ids": [
+          "statistics-15",
+          "statistics-3",
+          "statistics-7"
+        ],
+        "misconception_ids": [
+          "multiplicity-ignored",
+          "pseudoreplication"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
     }
   ]
 }
