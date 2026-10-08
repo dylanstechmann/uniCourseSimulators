@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Measured gap report: which lesson objectives have no authored assessment mapping or practice item.
+"""Measured gap report: which objectives and course outcomes have no assessment mapping, practice item or link.
 
 Reads only the committed course packages. It does not grade, does not judge teaching quality and
 does not change any maturity label. A listed gap is a work item, not a defect claim; an empty list
@@ -47,6 +47,10 @@ def course_rows():
             "unmapped": sorted(set(objectives) - mapped), "no_item": sorted(set(objectives) - practised),
             "assessments": len(course.get("assessments", [])),
             "outcomes": len(outcomes), "outcomes_unlinked": sorted(set(outcomes) - linked),
+            "outcomes_unlisted": sorted(set(outcomes) - mapped),
+            "objectives_no_outcome": sorted(
+                item["id"] for item in course.get("lesson_objectives", []) if not item.get("course_outcome_ids")
+            ),
         }
 
 
@@ -58,23 +62,28 @@ def render(rows) -> str:
         "the committed packages. It does not assess teaching quality, and an empty gap list is not evidence of",
         "comprehensive coverage. Every package is still `partial` and unreviewed.",
         "",
-        "| Package | Maturity | Lessons | Objectives | Practice items | Cards | Objectives with no assessment mapping | Objectives with no practice item | Course outcomes | Outcomes no lesson objective links to |",
-        "|---|---|---:|---:|---:|---:|---:|---:|---:|---:|",
+        "| Package | Maturity | Lessons | Objectives | Practice items | Cards | Objectives with no assessment mapping | Objectives with no practice item | Objectives linked to no outcome | Course outcomes | Outcomes no lesson objective links to | Outcomes no assessment lists |",
+        "|---|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|",
     ]
     for r in rows:
         lines.append(f"| {r['id']} | {r['maturity']} | {r['lessons']} | {r['objectives']} | {r['questions']} | "
-                     f"{r['cards']} | {len(r['unmapped'])} | {len(r['no_item'])} | {r['outcomes']} | {len(r['outcomes_unlinked'])} |")
+                     f"{r['cards']} | {len(r['unmapped'])} | {len(r['no_item'])} | {len(r['objectives_no_outcome'])} | "
+                     f"{r['outcomes']} | {len(r['outcomes_unlinked'])} | {len(r['outcomes_unlisted'])} |")
     total = lambda key: sum(len(r[key]) for r in rows)  # noqa: E731
     lines += ["", f"Totals: {len(rows)} packages, {sum(r['lessons'] for r in rows)} lessons, "
               f"{sum(r['objectives'] for r in rows)} objectives, {sum(r['questions'] for r in rows)} practice items, "
               f"{total('unmapped')} lesson objectives with no assessment mapping, {total('no_item')} with no practice item, "
-              f"{total('outcomes_unlinked')} of {sum(r['outcomes'] for r in rows)} course outcomes that no lesson objective links to.",
+              f"{total('objectives_no_outcome')} linked to no course outcome; "
+              f"{total('outcomes_unlinked')} of {sum(r['outcomes'] for r in rows)} course outcomes that no lesson objective links to, "
+              f"{total('outcomes_unlisted')} that no assessment lists.",
               "",
-              "`tools/validate_content.py` counts course outcomes and lesson objectives together, so its `objective-coverage` warning",
-              "persists for packages whose outcomes are not linked from any lesson objective. Linking them is a judgement for a",
-              "subject-matter reviewer; this report does not do it and the warning is not silenced.", ""]
+              "Each assessment with items lists the course outcomes its own items assess (item, then its tagged lesson objective,",
+              "then that objective's outcome links), and `tools/validate_content.py` rejects an outcome that none of the",
+              "assessment's items assesses. A listed outcome means at least one item touches it, not that it is assessed in depth.",
+              "Objectives linked to no outcome are mostly those of the short prototype units; linking them is a judgement for a",
+              "subject-matter reviewer, so this report lists them rather than doing it.", ""]
     for r in rows:
-        if r["unmapped"] or r["no_item"] or r["outcomes_unlinked"]:
+        if r["unmapped"] or r["no_item"] or r["outcomes_unlinked"] or r["outcomes_unlisted"] or r["objectives_no_outcome"]:
             lines.append(f"## {r['id']}")
             lines.append("")
             if r["unmapped"]:
@@ -85,6 +94,12 @@ def render(rows) -> str:
                 lines.append("")
             if r["no_item"]:
                 lines.append("No practice item: " + ", ".join(f"`{o}`" for o in r["no_item"]))
+                lines.append("")
+            if r["outcomes_unlisted"]:
+                lines.append("Outcomes no assessment lists: " + ", ".join(f"`{o}`" for o in r["outcomes_unlisted"]))
+                lines.append("")
+            if r["objectives_no_outcome"]:
+                lines.append("Objectives linked to no outcome: " + ", ".join(f"`{o}`" for o in r["objectives_no_outcome"]))
                 lines.append("")
     return "\n".join(lines).rstrip() + "\n"
 

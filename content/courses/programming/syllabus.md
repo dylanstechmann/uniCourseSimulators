@@ -1,6 +1,6 @@
 # Programming & Numerical Methods for Bioengineering
 
-**Maturity: partial. Version: 0.1.0.**
+**Maturity: partial. Version: 0.3.1.**
 
 Reproducible scientific computing, data structures, visualization, numerical integration, model fitting, and error analysis for experimental and engineered systems.
 
@@ -15,20 +15,27 @@ Algebra; one programming language helpful. Structured required, recommended, and
 - Fit models without confusing interpolation and validation.
 - Make reproducible plots and document data provenance.
 
-## Existing units
+## Units and lessons
 
-1. Data structures, units, and reproducible code
-2. Numerical integration and differential models
-3. Regression, uncertainty, and validation
-4. Visualization and uncertainty communication
+Units 1–4 keep the short prototype readings preserved from the original project; they need substantial expansion. Units 5–7 are original lesson-length readings (about 820 to 890 words) with learning objectives, a worked example, common mistakes, stated limits and explicitly synthetic data. No unit has been reviewed by a qualified instructor.
+
+| Unit | Lesson | Reading | Practice items | Retrieval cards |
+|---:|---|---|---:|---:|
+| 1 | Data structures, units, and reproducible code | short prototype | 2 | 2 |
+| 2 | Numerical integration and differential models | short prototype | 2 | 2 |
+| 3 | Regression, uncertainty, and validation | short prototype | 2 | 2 |
+| 4 | Visualization and uncertainty communication | short prototype | 2 | 2 |
+| 5 | Testing a scientific function: known answers, tolerances, seeds and provenance | lesson-length original | 6 | 4 |
+| 6 | How long will it take? Algorithmic cost, scaling and choosing data structures for research code | lesson-length original | 6 | 4 |
+| 7 | Floating-point arithmetic in scientific code: rounding, cancellation and comparing numbers safely | lesson-length original | 6 | 4 |
 
 ## Assessment and study policy
 
-Each unit includes one public formative check and two retrieval cards. A course case includes a self-assessment checklist. These are practice activities, with unlimited retries and no institutional grade, university credit, or transferable credit. Workload has not been measured.
+Every lesson has public formative practice items (numeric and single-choice) tagged to its learning objectives. The practice assessments for the original lessons also list the course outcomes those objectives link to; the objectives of the prototype units are not yet linked to course outcomes, so their assessments list none. In total the package has 26 practice items and 20 retrieval cards for the review queue. A course case includes a self-assessment checklist. These are practice activities, with unlimited retries and no institutional grade, university credit, or transferable credit. Workload has not been measured.
 
 ## Schedule and current limitations
 
-No full-semester calendar or 14-week structure has been authored. No substantive homework sets, laboratories, midterm, final, or graded cumulative project are included. The four short readings preserve useful prototype explanations. They require substantial expansion and qualified human review before this course can meet the complete-course quality standard.
+No full-semester calendar or 14-week structure has been authored. No substantive homework sets, laboratories, midterm, final, or graded cumulative project are included. The four short prototype readings require substantial expansion, and the newer lessons rely on explicitly synthetic data. Nothing in this package has been reviewed by a qualified instructor; qualified human review is required before this course can meet the complete-course quality standard.
 
 ## Sources and licensing
 

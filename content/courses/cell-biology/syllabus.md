@@ -1,6 +1,6 @@
 # Foundations of Cell and Molecular Biology
 
-**Maturity: partial. Version: 0.19.0.**
+**Maturity: partial. Version: 0.19.1.**
 
 This original course package develops mechanistic reasoning from molecular structure to cell behavior. It is still not a completed 14-week university course: weeks 1–7 have two original topic lessons each, while weeks 4 and 7 retain short prototype readings in addition; week 5 adds one original virtual fluorescence data-analysis lab and week 11 adds a second signaling-data lab; week 8 has an ungraded cumulative practice set; weeks 9–14 have original lesson pairs and formative practice. No semester equivalency, university credit, or prerequisite equivalency is claimed.
 

@@ -1,5 +1,9 @@
 # Progress review: uniStemCourseSimulators
 
+## Update after listing course outcomes on assessments (2026-10-08, eleventh pass)
+
+Written by an AI coding assistant. The owner decided that assignments can list the course outcomes they cover. Outcomes are derived from the items each assessment contains, and the validator now rejects an outcome that none of an assessment's items assesses, so the mapping cannot drift into a claim. The validator's last coverage warning is gone. This is a bookkeeping improvement, not more teaching: 184 objectives of the short prototype units are still linked to no outcome, and one item touching an outcome is not depth. The same pass found that 23 syllabi were stale (version 0.1.0, four units) and regenerated them; a new validator rule keeps the stated version current.
+
 ## Update after the geroscience schedule (2026-10-08, tenth pass)
 
 Written by an AI coding assistant. Geroscience is the second package with a proposed week-by-week structure (14 weeks, 18 readings including a synthetic lifespan lab and a study-design lesson). Like cell biology, it has no graded homework, exams or project, no measured workload and no human review, so it remains `partial`. The remaining distance to a complete course is the same list: graded work with protected keys, workload evidence and named review.

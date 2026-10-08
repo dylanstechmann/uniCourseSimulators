@@ -7,7 +7,7 @@
   "domain": "Life sciences",
   "level": "Year 2",
   "maturity": "partial",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "license": "MIT OR CC-BY-4.0",
   "content_origin": {
     "kind": "legacy-prototype",
@@ -591,7 +591,9 @@
       "objective_ids": [
         "genetics-5-objective-1",
         "genetics-5-objective-2",
-        "genetics-5-objective-3"
+        "genetics-5-objective-3",
+        "genetics-outcome-1",
+        "genetics-outcome-3"
       ],
       "question_ids": [
         "genetics-5:allele-frequency",
@@ -613,7 +615,9 @@
       "objective_ids": [
         "genetics-6-objective-1",
         "genetics-6-objective-2",
-        "genetics-6-objective-3"
+        "genetics-6-objective-3",
+        "genetics-outcome-1",
+        "genetics-outcome-3"
       ],
       "question_ids": [
         "genetics-6:falconer-h2",
@@ -634,7 +638,9 @@
       "objective_ids": [
         "genetics-7-objective-1",
         "genetics-7-objective-2",
-        "genetics-7-objective-3"
+        "genetics-7-objective-3",
+        "genetics-outcome-1",
+        "genetics-outcome-2"
       ],
       "question_ids": [
         "genetics-7:middle-gene",
@@ -655,7 +661,9 @@
       "objective_ids": [
         "genetics-8-objective-1",
         "genetics-8-objective-2",
-        "genetics-8-objective-3"
+        "genetics-8-objective-3",
+        "genetics-outcome-3",
+        "genetics-outcome-4"
       ],
       "question_ids": [
         "genetics-8:ddct-expression",
@@ -676,7 +684,8 @@
       "objective_ids": [
         "genetics-9-objective-1",
         "genetics-9-objective-2",
-        "genetics-9-objective-3"
+        "genetics-9-objective-3",
+        "genetics-outcome-3"
       ],
       "question_ids": [
         "genetics-9:assumptions",
@@ -745,6 +754,11 @@
       "version": "0.4.0",
       "date": "2026-10-08",
       "summary": "Added an original lesson on Mendelian randomization (instrument assumptions, Wald ratio, instrument strength and pleiotropy) with synthetic data, formative items with computed keys and retrieval cards. The package remains partial and unreviewed."
+    },
+    {
+      "version": "0.4.1",
+      "date": "2026-10-08",
+      "summary": "Assessments with items now also list the course outcomes those items assess, derived from each item's lesson objective and that objective's outcome links. The rubric-only case lists none, and neither do the 4 prototype-unit assessments, whose objectives are not yet linked to an outcome. No readings, items or keys changed. The syllabus was regenerated from the manifest: it states the current version, lists every lesson with its item and card counts, and describes the current practice and limitations (it still described only the four original units). The package remains partial, unreviewed and formative-only."
     }
   ],
   "limitations": [

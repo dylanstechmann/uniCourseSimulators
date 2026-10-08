@@ -7,7 +7,7 @@
   "domain": "Life sciences",
   "level": "Year 3",
   "maturity": "partial",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "license": "MIT OR CC-BY-4.0",
   "content_origin": {
     "kind": "legacy-prototype",
@@ -1187,7 +1187,9 @@
       "path": "question-banks/practice.json",
       "objective_ids": [
         "geroscience-1-objective-2",
-        "geroscience-1-objective-1"
+        "geroscience-1-objective-1",
+        "geroscience-outcome-1",
+        "geroscience-outcome-4"
       ],
       "question_ids": [
         "geroscience-1:check",
@@ -1202,7 +1204,8 @@
       "path": "question-banks/practice.json",
       "objective_ids": [
         "geroscience-2-objective-2",
-        "geroscience-2-objective-1"
+        "geroscience-2-objective-1",
+        "geroscience-outcome-2"
       ],
       "question_ids": [
         "geroscience-2:check",
@@ -1217,7 +1220,8 @@
       "path": "question-banks/practice.json",
       "objective_ids": [
         "geroscience-3-objective-2",
-        "geroscience-3-objective-1"
+        "geroscience-3-objective-1",
+        "geroscience-outcome-2"
       ],
       "question_ids": [
         "geroscience-3:check",
@@ -1232,7 +1236,8 @@
       "path": "question-banks/practice.json",
       "objective_ids": [
         "geroscience-4-objective-2",
-        "geroscience-4-objective-1"
+        "geroscience-4-objective-1",
+        "geroscience-outcome-3"
       ],
       "question_ids": [
         "geroscience-4:check",
@@ -1249,7 +1254,9 @@
       "objective_ids": [
         "geroscience-5-objective-1",
         "geroscience-5-objective-2",
-        "geroscience-5-objective-3"
+        "geroscience-5-objective-3",
+        "geroscience-outcome-3",
+        "geroscience-outcome-4"
       ],
       "question_ids": [
         "geroscience-5:interval-death-probability",
@@ -1268,7 +1275,9 @@
       "objective_ids": [
         "geroscience-6-objective-1",
         "geroscience-6-objective-2",
-        "geroscience-6-objective-3"
+        "geroscience-6-objective-3",
+        "geroscience-outcome-2",
+        "geroscience-outcome-3"
       ],
       "question_ids": [
         "geroscience-6:itt-versus-survivors",
@@ -1286,7 +1295,10 @@
       "objective_ids": [
         "geroscience-7-objective-1",
         "geroscience-7-objective-2",
-        "geroscience-7-objective-3"
+        "geroscience-7-objective-3",
+        "geroscience-outcome-1",
+        "geroscience-outcome-2",
+        "geroscience-outcome-3"
       ],
       "question_ids": [
         "geroscience-7:vaf-clone-size",
@@ -1305,7 +1317,10 @@
       "objective_ids": [
         "geroscience-8-objective-1",
         "geroscience-8-objective-2",
-        "geroscience-8-objective-3"
+        "geroscience-8-objective-3",
+        "geroscience-outcome-1",
+        "geroscience-outcome-3",
+        "geroscience-outcome-4"
       ],
       "question_ids": [
         "geroscience-8:age-acceleration",
@@ -1324,7 +1339,9 @@
       "objective_ids": [
         "geroscience-9-objective-1",
         "geroscience-9-objective-2",
-        "geroscience-9-objective-3"
+        "geroscience-9-objective-3",
+        "geroscience-outcome-1",
+        "geroscience-outcome-3"
       ],
       "question_ids": [
         "geroscience-9:accumulation-rate",
@@ -1344,7 +1361,9 @@
       "objective_ids": [
         "geroscience-10-objective-1",
         "geroscience-10-objective-2",
-        "geroscience-10-objective-3"
+        "geroscience-10-objective-3",
+        "geroscience-outcome-2",
+        "geroscience-outcome-3"
       ],
       "question_ids": [
         "geroscience-10:young-flux",
@@ -1364,7 +1383,10 @@
       "objective_ids": [
         "geroscience-11-objective-1",
         "geroscience-11-objective-2",
-        "geroscience-11-objective-3"
+        "geroscience-11-objective-3",
+        "geroscience-outcome-1",
+        "geroscience-outcome-3",
+        "geroscience-outcome-4"
       ],
       "question_ids": [
         "geroscience-11:median-percent-change",
@@ -1385,7 +1407,9 @@
       "objective_ids": [
         "geroscience-12-objective-1",
         "geroscience-12-objective-2",
-        "geroscience-12-objective-3"
+        "geroscience-12-objective-3",
+        "geroscience-outcome-2",
+        "geroscience-outcome-3"
       ],
       "question_ids": [
         "geroscience-12:mean-scar-day1",
@@ -1405,7 +1429,9 @@
       "objective_ids": [
         "geroscience-13-objective-1",
         "geroscience-13-objective-2",
-        "geroscience-13-objective-3"
+        "geroscience-13-objective-3",
+        "geroscience-outcome-3",
+        "geroscience-outcome-4"
       ],
       "question_ids": [
         "geroscience-13:sample-size-d05",
@@ -1425,7 +1451,9 @@
       "objective_ids": [
         "geroscience-14-objective-1",
         "geroscience-14-objective-2",
-        "geroscience-14-objective-3"
+        "geroscience-14-objective-3",
+        "geroscience-outcome-3",
+        "geroscience-outcome-4"
       ],
       "question_ids": [
         "geroscience-14:nnt",
@@ -1445,7 +1473,10 @@
       "objective_ids": [
         "geroscience-15-objective-1",
         "geroscience-15-objective-2",
-        "geroscience-15-objective-3"
+        "geroscience-15-objective-3",
+        "geroscience-outcome-1",
+        "geroscience-outcome-3",
+        "geroscience-outcome-4"
       ],
       "question_ids": [
         "geroscience-15:icc",
@@ -1466,7 +1497,10 @@
       "objective_ids": [
         "geroscience-16-objective-1",
         "geroscience-16-objective-2",
-        "geroscience-16-objective-3"
+        "geroscience-16-objective-3",
+        "geroscience-outcome-2",
+        "geroscience-outcome-3",
+        "geroscience-outcome-4"
       ],
       "question_ids": [
         "geroscience-16:events-hr08",
@@ -1488,7 +1522,10 @@
       "objective_ids": [
         "geroscience-lab-01-objective-1",
         "geroscience-lab-01-objective-2",
-        "geroscience-lab-01-objective-3"
+        "geroscience-lab-01-objective-3",
+        "geroscience-outcome-1",
+        "geroscience-outcome-3",
+        "geroscience-outcome-4"
       ],
       "question_ids": [
         "geroscience-lab1:summary-table",
@@ -1561,6 +1598,11 @@
       "version": "0.5.0",
       "date": "2026-10-08",
       "summary": "Added a proposed 14-week schedule, a synthetic lifespan-cohort virtual lab (censoring, Kaplan–Meier medians and survivor bias in a late healthspan measure) and an original study-design lesson (endpoints, deaths needed for a survival comparison, safeguards against false positives). All activities remain ungraded practice; the package remains partial and unreviewed and makes no claim about human aging."
+    },
+    {
+      "version": "0.5.1",
+      "date": "2026-10-08",
+      "summary": "Assessments with items now also list the course outcomes those items assess, derived from each item's lesson objective and that objective's outcome links. The rubric-only case lists none. No readings, items or keys changed. The syllabus version line was updated. The package remains partial, unreviewed and formative-only."
     }
   ],
   "limitations": [

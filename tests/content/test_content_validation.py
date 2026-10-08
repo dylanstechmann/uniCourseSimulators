@@ -153,15 +153,76 @@ def test_preserved_inventory_is_honest_partial(repository):
         "cases": 25,
     }
     assert sum(warning["code"] == "legacy-depth" for warning in result.warnings) == 98
-    assert (
-        sum(warning["code"] == "objective-coverage" for warning in result.warnings)
-        == 25
-    )
+    # Assessments list the course outcomes their items assess, so no package has an unmapped outcome.
+    assert not [warning for warning in result.warnings if warning["code"] == "objective-coverage"]
     assert all(
         read(path)["maturity"] == "partial"
         and read(path)["review"]["status"] == "unreviewed"
         for path in (repository / "content/courses").glob("*/course.json")
     )
+
+
+def test_assessment_outcomes_are_exactly_those_their_own_items_assess(repository):
+    for manifest_path in sorted((repository / "content/courses").glob("*/course.json")):
+        manifest = read(manifest_path)
+        bank = {
+            item["id"]: item
+            for item in read(manifest_path.parent / "question-banks/practice.json")["questions"]
+        }
+        links = {item["id"]: set(item.get("course_outcome_ids", [])) for item in manifest["lesson_objectives"]}
+        outcomes = {item["id"] for item in manifest["outcomes"]}
+        listed = set()
+        for assessment in manifest["assessments"]:
+            assessed = {
+                outcome_id
+                for question_id in assessment["question_ids"]
+                for objective_id in bank[question_id]["objective_ids"]
+                for outcome_id in links.get(objective_id, set())
+            }
+            claimed = set(assessment["objective_ids"]) & outcomes
+            assert claimed == assessed, (manifest["id"], assessment["id"])
+            listed |= claimed
+        assert listed == outcomes, manifest["id"]
+
+
+def test_assessment_cannot_claim_an_outcome_its_items_do_not_assess(repository):
+    manifest_path = repository / "content/courses/genetics/course.json"
+    manifest = read(manifest_path)
+    prototype = next(item for item in manifest["assessments"] if item["id"] == "genetics-1-practice")
+    assert not set(prototype["objective_ids"]) & {item["id"] for item in manifest["outcomes"]}
+    prototype["objective_ids"].append("genetics-outcome-4")
+    write(manifest_path, manifest)
+    assert "unsupported-outcome-mapping" in codes(validate_repository(repository))
+
+
+def test_rubric_only_case_cannot_claim_an_outcome(repository):
+    manifest_path = repository / "content/courses/genetics/course.json"
+    manifest = read(manifest_path)
+    case = next(item for item in manifest["assessments"] if item["type"] == "case")
+    case["objective_ids"] = ["genetics-outcome-3"]
+    write(manifest_path, manifest)
+    assert "unsupported-outcome-mapping" in codes(validate_repository(repository))
+
+
+def test_syllabus_must_state_the_manifest_version(repository):
+    manifest = read(repository / "content/courses/genetics/course.json")
+    syllabus = repository / "content/courses/genetics/syllabus.md"
+    text = syllabus.read_text(encoding="utf-8")
+    syllabus.write_text(text.replace(f"Version: {manifest['version']}.", "Version: 0.1.0."), encoding="utf-8")
+    assert "syllabus-version" in codes(validate_repository(repository))
+
+
+def test_syllabi_list_every_lesson_and_drop_the_prototype_unit_description(repository):
+    for manifest_path in sorted((repository / "content/courses").glob("*/course.json")):
+        manifest = read(manifest_path)
+        if manifest["id"] == "cell-biology":  # hand-authored week table; its weeks are tested separately
+            continue
+        text = (manifest_path.parent / manifest["syllabus"]).read_text(encoding="utf-8")
+        assert f"Version: {manifest['version']}." in text
+        for module in manifest["modules"]:
+            for lesson in module["lessons"]:
+                assert lesson["title"] in text, (manifest["id"], lesson["id"])
+        assert "Each unit includes one public formative check and two retrieval cards" not in text
 
 
 def test_curriculum_map_has_eight_pathways_and_separated_engineering_subjects(repository):
@@ -351,7 +412,7 @@ def test_structured_rubric_item_is_counted_while_course_remains_partial(reposito
     result = validate_repository(repository)
     assert result.ok, result.errors
     manifest = read(course[0])
-    assert manifest["version"] == "0.19.0"
+    assert manifest["version"] == "0.19.1"
     assert manifest["maturity"] == "partial"
     assert result.inventory["questions"] == 719
     question = next(
@@ -370,7 +431,7 @@ def test_graph_plot_item_is_counted_while_statistics_course_remains_partial(repo
     manifest = read(course_path)
     bank = read(course_path.parent / "question-banks/practice.json")
     graph = next(item for item in bank["questions"] if item["type"] == "graph")
-    assert manifest["version"] == "0.3.0"
+    assert manifest["version"] == "0.3.1"
     assert manifest["maturity"] == "partial"
     assert graph["id"] == "statistics-5:concentration-graph"
     assert len(graph["graph_spec"]["points"]) == 3
@@ -383,7 +444,7 @@ def test_cell_biology_scope_does_not_claim_unwritten_weeks(repository):
     course_root = repository / "content/courses/cell-biology"
     manifest = read(course_root / "course.json")
     weeks = manifest["duration"]["weeks"]
-    assert manifest["version"] == "0.19.0"
+    assert manifest["version"] == "0.19.1"
     assert manifest["maturity"] == "partial"
     assert len(weeks) == 14
     assert [week["week"] for week in weeks if week["lesson_ids"]] == [1, 2, 3, 4, 5, 6, 7, 9, 10, 11, 12, 13, 14]
@@ -1024,14 +1085,24 @@ def test_week9_schedule_objectives_and_practice_are_mapped(repository):
     questions = {item["id"]: item for item in bank["questions"]}
 
     assert manifest["maturity"] == "partial"
-    assert manifest["version"] == "0.19.0"
+    assert manifest["version"] == "0.19.1"
     assert week9["lesson_ids"] == ["cell-biology-17", "cell-biology-18", "cell-biology-hw5"]
     assert week9["assessment_ids"] == [assessment["id"], "cell-biology-hw5-practice"]
     assert sum(questions[item]["points"] for item in assessment["question_ids"]) == assessment["points"] == 14
-    assert set(assessment["objective_ids"]) <= {item["id"] for item in manifest["lesson_objectives"]}
+    lesson_objectives = {item["id"]: item for item in manifest["lesson_objectives"]}
+    outcomes = {item["id"] for item in manifest["outcomes"]}
+    listed_objectives = [item for item in assessment["objective_ids"] if item in lesson_objectives]
+    listed_outcomes = [item for item in assessment["objective_ids"] if item in outcomes]
+    assert len(listed_objectives) + len(listed_outcomes) == len(assessment["objective_ids"])
+    assert listed_outcomes
     assert all(
         any(objective_id in questions[item]["objective_ids"] for item in assessment["question_ids"])
-        for objective_id in assessment["objective_ids"]
+        for objective_id in listed_objectives
+    )
+    assert all(
+        any(outcome_id in lesson_objectives[objective_id].get("course_outcome_ids", [])
+            for item in assessment["question_ids"] for objective_id in questions[item]["objective_ids"])
+        for outcome_id in listed_outcomes
     )
     assert all(questions[item]["visibility"] == "public-practice-authoring" for item in assessment["question_ids"])
 
@@ -1181,7 +1252,7 @@ def test_geroscience_original_lessons_are_mapped_synthetic_and_recalculated():
     course_root = ROOT / "content/courses/geroscience"
     manifest = read(course_root / "course.json")
     bank = {item["id"]: item for item in read(course_root / "question-banks/practice.json")["questions"]}
-    assert manifest["version"] == "0.5.0"
+    assert manifest["version"] == "0.5.1"
     assert manifest["maturity"] == "partial"
     assert manifest["review"]["status"] == "unreviewed"
     outcomes = {item["id"] for item in manifest["outcomes"]}

@@ -7,7 +7,7 @@
   "domain": "Quantitative methods",
   "level": "Year 2",
   "maturity": "partial",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "license": "MIT OR CC-BY-4.0",
   "content_origin": {
     "kind": "legacy-prototype",
@@ -520,7 +520,9 @@
       "path": "question-banks/practice.json",
       "objective_ids": [
         "statistics-5-objective-1",
-        "statistics-5-objective-2"
+        "statistics-5-objective-2",
+        "statistics-outcome-3",
+        "statistics-outcome-5"
       ],
       "question_ids": [
         "statistics-5:group-summary",
@@ -537,7 +539,11 @@
       "objective_ids": [
         "statistics-6-objective-1",
         "statistics-6-objective-2",
-        "statistics-6-objective-3"
+        "statistics-6-objective-3",
+        "statistics-outcome-1",
+        "statistics-outcome-2",
+        "statistics-outcome-3",
+        "statistics-outcome-4"
       ],
       "question_ids": [
         "statistics-6:km-at-5",
@@ -557,7 +563,9 @@
       "objective_ids": [
         "statistics-7-objective-1",
         "statistics-7-objective-2",
-        "statistics-7-objective-3"
+        "statistics-7-objective-3",
+        "statistics-outcome-2",
+        "statistics-outcome-3"
       ],
       "question_ids": [
         "statistics-7:fwer",
@@ -578,7 +586,10 @@
       "objective_ids": [
         "statistics-8-objective-1",
         "statistics-8-objective-2",
-        "statistics-8-objective-3"
+        "statistics-8-objective-3",
+        "statistics-outcome-1",
+        "statistics-outcome-3",
+        "statistics-outcome-4"
       ],
       "question_ids": [
         "statistics-8:standard-error",
@@ -652,6 +663,11 @@
       "version": "0.3.0",
       "date": "2026-10-08",
       "summary": "Added two original lessons (multiple testing with Bonferroni and Benjamini–Hochberg; effect sizes, confidence intervals and regression to the mean) with synthetic data, formative items with computed keys and retrieval cards. The package remains partial and unreviewed."
+    },
+    {
+      "version": "0.3.1",
+      "date": "2026-10-08",
+      "summary": "Assessments with items now also list the course outcomes those items assess, derived from each item's lesson objective and that objective's outcome links. The rubric-only case lists none, and neither do the 4 prototype-unit assessments, whose objectives are not yet linked to an outcome. No readings, items or keys changed. The syllabus was regenerated from the manifest: it states the current version, lists every lesson with its item and card counts, and describes the current practice and limitations (it still described only the four original units). The package remains partial, unreviewed and formative-only."
     }
   ],
   "limitations": [

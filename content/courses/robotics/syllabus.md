@@ -1,6 +1,6 @@
 # Robotics & Mechatronics
 
-**Maturity: partial. Version: 0.1.0.**
+**Maturity: partial. Version: 0.3.1.**
 
 Frames, kinematics, dynamics, sensing, actuation, planning, and feedback combined in a biomedical or laboratory automation design workflow.
 
@@ -15,20 +15,26 @@ Linear Algebra; Differential Equations; Circuits recommended. Structured require
 - Relate actuator torque, gearing, and load.
 - Design a sensing and control loop with failure limits.
 
-## Existing units
+## Units and lessons
 
-1. Frames, rotations, and homogeneous transforms
-2. Forward and inverse kinematics
-3. Robot dynamics, actuators, and energy
-4. Planning, sensing, and closed-loop execution
+Units 1–4 keep the short prototype readings preserved from the original project; they need substantial expansion. Units 5 and 6 are original lesson-length readings (about 810 to 890 words) with learning objectives, a worked example, common mistakes, stated limits and explicitly synthetic data. No unit has been reviewed by a qualified instructor.
+
+| Unit | Lesson | Reading | Practice items | Retrieval cards |
+|---:|---|---|---:|---:|
+| 1 | Frames, rotations, and homogeneous transforms | short prototype | 2 | 2 |
+| 2 | Forward and inverse kinematics | short prototype | 2 | 2 |
+| 3 | Robot dynamics, actuators, and energy | short prototype | 2 | 2 |
+| 4 | Planning, sensing, and closed-loop execution | short prototype | 2 | 2 |
+| 5 | Positioning a lab robot arm: forward and inverse kinematics of a planar two-link arm and the cost of joint error | lesson-length original | 6 | 4 |
+| 6 | Actuators, gearing and sensing for a lab robot joint: torque budgets, resolution and failure limits | lesson-length original | 6 | 4 |
 
 ## Assessment and study policy
 
-Each unit includes one public formative check and two retrieval cards. A course case includes a self-assessment checklist. These are practice activities, with unlimited retries and no institutional grade, university credit, or transferable credit. Workload has not been measured.
+Every lesson has public formative practice items (numeric and single-choice) tagged to its learning objectives. The practice assessments for the original lessons also list the course outcomes those objectives link to; the objectives of the prototype units are not yet linked to course outcomes, so their assessments list none. In total the package has 20 practice items and 16 retrieval cards for the review queue. A course case includes a self-assessment checklist. These are practice activities, with unlimited retries and no institutional grade, university credit, or transferable credit. Workload has not been measured.
 
 ## Schedule and current limitations
 
-No full-semester calendar or 14-week structure has been authored. No substantive homework sets, laboratories, midterm, final, or graded cumulative project are included. The four short readings preserve useful prototype explanations. They require substantial expansion and qualified human review before this course can meet the complete-course quality standard.
+No full-semester calendar or 14-week structure has been authored. No substantive homework sets, laboratories, midterm, final, or graded cumulative project are included. The four short prototype readings require substantial expansion, and the newer lessons rely on explicitly synthetic data. Nothing in this package has been reviewed by a qualified instructor; qualified human review is required before this course can meet the complete-course quality standard.
 
 ## Sources and licensing
 

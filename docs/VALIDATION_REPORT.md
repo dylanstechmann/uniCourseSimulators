@@ -4,7 +4,24 @@
 
 2026-10-06; synthetic local learner data only. Milestones 1 and 2 are implemented. Milestone 3 remains partial; deterministic graders and prototype graded-assignment and review workflows are described below. A Milestone 4 curriculum-map increment is implemented and tested, while subject-matter review and map refinement remain. All 25 course packages are **partial**; zero are beta, complete or externally reviewed. Human score review is limited to saved attempts and does not constitute course-content review. No semester equivalence, university credit, security certification or public production deployment is asserted.
 
-## Current increment: a proposed 14-week geroscience schedule, a lifespan lab and a design lesson (2026-10-08, tenth pass)
+## Current increment: assessments list the course outcomes they cover; syllabi brought up to date (2026-10-08, eleventh pass)
+
+Written by an AI coding assistant, following the owner's decision that assignments can list the course outcomes they cover.
+
+- **Outcome mapping, derived rather than asserted.** Each assessment with items now also lists the course outcomes that its own items assess: item → the lesson objective it is tagged to → that objective's `course_outcome_ids`. 255 outcome ids were added across 25 packages. Rubric-only cases list none, and neither do the 92 practice assessments of the short prototype units, whose 184 objectives are not linked to any outcome (linking them is a judgement for a subject-matter reviewer; the gap report lists them). Every course outcome is now listed by at least one assessment, so the validator's `objective-coverage` warning is gone (warnings: 123 → 98, all legacy-depth). A listed outcome means at least one item touches it, not that it is assessed in depth.
+- **New validator rules.** `unsupported-outcome-mapping` rejects an outcome that none of the assessment's items assesses (including on rubric-only cases), and `syllabus-version` rejects a syllabus that does not state the manifest version.
+- **Stale syllabi fixed.** 23 of 25 syllabi still said "Version: 0.1.0", listed only the four original units and described "one public formative check and two retrieval cards" per unit. They were regenerated from the manifests: current version, every lesson with its reading type and item and card counts, the current practice description and limitations. Cell biology and geroscience keep their hand-written week tables (version line updated).
+- Every package moves up one patch version with a history entry (for example genetics 0.4.0 → 0.4.1, geroscience 0.5.0 → 0.5.1, cell biology 0.19.0 → 0.19.1); all stay `partial`, unreviewed and formative-only. No reading, item or key changed.
+- Tests: the inventory test now asserts no objective-coverage warning; new tests check that each assessment lists exactly the outcomes its items assess, that unsupported mappings and stale syllabus versions are rejected, and that syllabi list every lesson; five version pins were updated.
+
+| Command/check (this container, Python 3.12.3, 2026-10-08) | Result |
+| --- | --- |
+| `python tools/validate_content.py` | PASS: 25 packages, 203 lessons, 719 questions, 552 cards, 25 cases; 0 errors; 98 disclosed legacy-depth warnings |
+| `verify.sh` | all steps PASS: root 221 passed; backend 1687 passed, 2 skipped; security 518 files, 0 findings; ruff clean; legacy 7/7 |
+
+Not run for this increment: frontend checks, Docker Compose, Playwright. Not reviewed by a subject-matter expert.
+
+## Previous increment: a proposed 14-week geroscience schedule, a lifespan lab and a design lesson (2026-10-08, tenth pass)
 
 Written by an AI coding assistant. Geroscience & Regenerative Biology moves to 0.5.0 and stays `partial`, unreviewed and formative-only.
 

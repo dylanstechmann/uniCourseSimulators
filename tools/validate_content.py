@@ -1295,6 +1295,11 @@ def validate_course(
                 question["id"],
                 "Production restricted answer keys must not be committed in public course packages.",
             )
+    outcome_links = {
+        objective["id"]: set(objective.get("course_outcome_ids", []))
+        for objective in manifest["lesson_objectives"]
+    }
+    question_objectives = {question["id"]: question["objective_ids"] for question in questions}
     for assessment in manifest["assessments"]:
         check_refs(
             assessment["objective_ids"], objective_ids, "objective", course_path, report
@@ -1308,6 +1313,22 @@ def validate_course(
             check_refs(
                 assessment["question_ids"], question_ids, "question", course_path, report
             )
+            # A course outcome may be listed only when one of the assessment's own items
+            # is tagged to it, or to a lesson objective that links to it.
+            supported = set()
+            for question_id in assessment["question_ids"]:
+                for objective_id in question_objectives.get(question_id, []):
+                    supported |= outcome_links.get(objective_id, set())
+                    if objective_id in outcome_ids:
+                        supported.add(objective_id)
+            unsupported = sorted((set(assessment["objective_ids"]) & outcome_ids) - supported)
+            if unsupported:
+                report.error(
+                    "unsupported-outcome-mapping",
+                    course_path,
+                    f"Assessment {assessment['id']} lists course outcome(s) {', '.join(unsupported)} "
+                    "that none of its items assesses through a tagged or linked objective.",
+                )
         covered.update(assessment["objective_ids"])
     uncovered = sorted(objective_ids - covered)
     if uncovered and manifest["maturity"] not in MATURE:
@@ -1513,12 +1534,19 @@ def validate_course(
                 )
     syllabus_path = safe_file(course_root, manifest["syllabus"], report)
     if syllabus_path:
+        syllabus_text = syllabus_path.read_text(encoding="utf-8")
         check_text(
-            syllabus_path.read_text(encoding="utf-8"),
+            syllabus_text,
             syllabus_path,
             report,
             minimum_words=100 if modules else 10,
         )
+        if modules and f"Version: {manifest['version']}." not in syllabus_text:
+            report.error(
+                "syllabus-version",
+                syllabus_path,
+                f"The syllabus must state the manifest version ({manifest['version']}) so learners do not read a stale description.",
+            )
     for reviewer in manifest["review"]["reviewers"]:
         evidence_path = safe_file(course_root, reviewer["evidence"], report)
         if evidence_path:

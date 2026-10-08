@@ -7,7 +7,7 @@
   "domain": "Mathematics",
   "level": "Year 1",
   "maturity": "partial",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "license": "MIT OR CC-BY-4.0",
   "content_origin": {
     "kind": "legacy-prototype",
@@ -407,7 +407,10 @@
       "objective_ids": [
         "calculus-2-5-objective-1",
         "calculus-2-5-objective-2",
-        "calculus-2-5-objective-3"
+        "calculus-2-5-objective-3",
+        "calculus-2-outcome-1",
+        "calculus-2-outcome-2",
+        "calculus-2-outcome-3"
       ],
       "question_ids": [
         "calculus-2-5:exact-total",
@@ -428,7 +431,8 @@
       "objective_ids": [
         "calculus-2-6-objective-1",
         "calculus-2-6-objective-2",
-        "calculus-2-6-objective-3"
+        "calculus-2-6-objective-3",
+        "calculus-2-outcome-4"
       ],
       "question_ids": [
         "calculus-2-6:p2-value",
@@ -497,6 +501,11 @@
       "version": "0.3.0",
       "date": "2026-10-08",
       "summary": "Added an original lesson on Taylor approximations with Lagrange error bounds and when linearizations are accurate enough with synthetic data, formative items with computed keys and retrieval cards. The package remains partial and unreviewed."
+    },
+    {
+      "version": "0.3.1",
+      "date": "2026-10-08",
+      "summary": "Assessments with items now also list the course outcomes those items assess, derived from each item's lesson objective and that objective's outcome links. The rubric-only case lists none, and neither do the 4 prototype-unit assessments, whose objectives are not yet linked to an outcome. No readings, items or keys changed. The syllabus was regenerated from the manifest: it states the current version, lists every lesson with its item and card counts, and describes the current practice and limitations (it still described only the four original units). The package remains partial, unreviewed and formative-only."
     }
   ],
   "limitations": [

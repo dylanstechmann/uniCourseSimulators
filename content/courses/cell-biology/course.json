@@ -7,7 +7,7 @@
   "domain": "Life sciences",
   "level": "Year 1",
   "maturity": "partial",
-  "version": "0.19.0",
+  "version": "0.19.1",
   "license": "MIT OR CC-BY-4.0",
   "content_origin": {
     "kind": "legacy-prototype",
@@ -1931,7 +1931,8 @@
         "cell-biology-1-objective-1",
         "cell-biology-1-objective-2",
         "cell-biology-1-objective-3",
-        "cell-biology-5-objective-1"
+        "cell-biology-5-objective-1",
+        "cell-biology-outcome-1"
       ],
       "points": 6
     },
@@ -1949,7 +1950,10 @@
         "cell-biology-2-objective-1",
         "cell-biology-2-objective-2",
         "cell-biology-6-objective-1",
-        "cell-biology-6-objective-2"
+        "cell-biology-6-objective-2",
+        "cell-biology-outcome-1",
+        "cell-biology-outcome-2",
+        "cell-biology-outcome-4"
       ],
       "points": 5
     },
@@ -1964,7 +1968,9 @@
         "cell-biology-9-objective-2",
         "cell-biology-10-objective-1",
         "cell-biology-10-objective-2",
-        "cell-biology-3-objective-2"
+        "cell-biology-3-objective-2",
+        "cell-biology-outcome-2",
+        "cell-biology-outcome-4"
       ],
       "question_ids": [
         "cell-biology-3:check",
@@ -1987,7 +1993,9 @@
       "objective_ids": [
         "cell-biology-4-objective-1",
         "cell-biology-4-objective-2",
-        "cell-biology-4-objective-3"
+        "cell-biology-4-objective-3",
+        "cell-biology-outcome-3",
+        "cell-biology-outcome-4"
       ],
       "question_ids": [
         "cell-biology-4:check",
@@ -2012,7 +2020,10 @@
       "path": "question-banks/practice.json",
       "objective_ids": [
         "cell-biology-7-objective-1",
-        "cell-biology-7-objective-2"
+        "cell-biology-7-objective-2",
+        "cell-biology-outcome-1",
+        "cell-biology-outcome-3",
+        "cell-biology-outcome-4"
       ],
       "question_ids": [
         "cell-biology-7:secretory-route",
@@ -2027,7 +2038,10 @@
       "path": "question-banks/practice.json",
       "objective_ids": [
         "cell-biology-8-objective-1",
-        "cell-biology-8-objective-2"
+        "cell-biology-8-objective-2",
+        "cell-biology-outcome-1",
+        "cell-biology-outcome-3",
+        "cell-biology-outcome-4"
       ],
       "question_ids": [
         "cell-biology-8:m6p-sorting",
@@ -2046,7 +2060,9 @@
         "cell-biology-11-objective-1",
         "cell-biology-11-objective-2",
         "cell-biology-12-objective-1",
-        "cell-biology-12-objective-2"
+        "cell-biology-12-objective-2",
+        "cell-biology-outcome-2",
+        "cell-biology-outcome-4"
       ],
       "question_ids": [
         "cell-biology-11:resolution-estimate",
@@ -2068,7 +2084,9 @@
       "objective_ids": [
         "cell-biology-11-objective-2",
         "cell-biology-12-objective-1",
-        "cell-biology-12-objective-2"
+        "cell-biology-12-objective-2",
+        "cell-biology-outcome-2",
+        "cell-biology-outcome-4"
       ],
       "question_ids": [
         "cell-biology-11:image-quantification-summary",
@@ -2089,7 +2107,9 @@
         "cell-biology-13-objective-1",
         "cell-biology-13-objective-2",
         "cell-biology-14-objective-1",
-        "cell-biology-14-objective-2"
+        "cell-biology-14-objective-2",
+        "cell-biology-outcome-3",
+        "cell-biology-outcome-4"
       ],
       "question_ids": [
         "cell-biology-13:strand-complement",
@@ -2113,7 +2133,10 @@
         "cell-biology-15-objective-1",
         "cell-biology-15-objective-2",
         "cell-biology-16-objective-1",
-        "cell-biology-16-objective-2"
+        "cell-biology-16-objective-2",
+        "cell-biology-outcome-2",
+        "cell-biology-outcome-3",
+        "cell-biology-outcome-4"
       ],
       "question_ids": [
         "cell-biology-15:chromatin-mark-inference",
@@ -2149,7 +2172,11 @@
         "cell-biology-14-objective-2",
         "cell-biology-15-objective-2",
         "cell-biology-16-objective-1",
-        "cell-biology-16-objective-2"
+        "cell-biology-16-objective-2",
+        "cell-biology-outcome-1",
+        "cell-biology-outcome-2",
+        "cell-biology-outcome-3",
+        "cell-biology-outcome-4"
       ],
       "question_ids": [
         "cell-biology-1:check-all",
@@ -2180,7 +2207,10 @@
         "cell-biology-17-objective-3",
         "cell-biology-18-objective-1",
         "cell-biology-18-objective-2",
-        "cell-biology-18-objective-3"
+        "cell-biology-18-objective-3",
+        "cell-biology-outcome-2",
+        "cell-biology-outcome-3",
+        "cell-biology-outcome-4"
       ],
       "question_ids": [
         "cell-biology-17:processing-vs-transcription",
@@ -2207,7 +2237,11 @@
         "cell-biology-19-objective-3",
         "cell-biology-20-objective-1",
         "cell-biology-20-objective-2",
-        "cell-biology-20-objective-3"
+        "cell-biology-20-objective-3",
+        "cell-biology-outcome-1",
+        "cell-biology-outcome-2",
+        "cell-biology-outcome-3",
+        "cell-biology-outcome-4"
       ],
       "question_ids": [
         "cell-biology-19:transmission-vs-phenotype",
@@ -2233,7 +2267,11 @@
         "cell-biology-21-objective-3",
         "cell-biology-22-objective-1",
         "cell-biology-22-objective-2",
-        "cell-biology-22-objective-3"
+        "cell-biology-22-objective-3",
+        "cell-biology-outcome-1",
+        "cell-biology-outcome-2",
+        "cell-biology-outcome-3",
+        "cell-biology-outcome-4"
       ],
       "question_ids": [
         "cell-biology-21:occupancy-model",
@@ -2259,7 +2297,11 @@
         "cell-biology-23-objective-3",
         "cell-biology-24-objective-1",
         "cell-biology-24-objective-2",
-        "cell-biology-24-objective-3"
+        "cell-biology-24-objective-3",
+        "cell-biology-outcome-1",
+        "cell-biology-outcome-2",
+        "cell-biology-outcome-3",
+        "cell-biology-outcome-4"
       ],
       "question_ids": [
         "cell-biology-24:uniform-stress",
@@ -2285,7 +2327,10 @@
         "cell-biology-25-objective-3",
         "cell-biology-26-objective-1",
         "cell-biology-26-objective-2",
-        "cell-biology-26-objective-3"
+        "cell-biology-26-objective-3",
+        "cell-biology-outcome-2",
+        "cell-biology-outcome-3",
+        "cell-biology-outcome-4"
       ],
       "question_ids": [
         "cell-biology-25:phase-snapshot",
@@ -2311,7 +2356,11 @@
         "cell-biology-27-objective-3",
         "cell-biology-28-objective-1",
         "cell-biology-28-objective-2",
-        "cell-biology-28-objective-3"
+        "cell-biology-28-objective-3",
+        "cell-biology-outcome-1",
+        "cell-biology-outcome-2",
+        "cell-biology-outcome-3",
+        "cell-biology-outcome-4"
       ],
       "question_ids": [
         "cell-biology-27:potency-logic",
@@ -2333,7 +2382,10 @@
       "week": 3,
       "objective_ids": [
         "cell-biology-8-objective-1",
-        "cell-biology-8-objective-2"
+        "cell-biology-8-objective-2",
+        "cell-biology-outcome-1",
+        "cell-biology-outcome-3",
+        "cell-biology-outcome-4"
       ],
       "question_ids": [
         "cell-biology-hw1:sorting-summary",
@@ -2354,7 +2406,10 @@
       "objective_ids": [
         "cell-biology-22-objective-1",
         "cell-biology-22-objective-2",
-        "cell-biology-22-objective-3"
+        "cell-biology-22-objective-3",
+        "cell-biology-outcome-2",
+        "cell-biology-outcome-3",
+        "cell-biology-outcome-4"
       ],
       "question_ids": [
         "cell-biology-lab2:summary-table",
@@ -2373,7 +2428,9 @@
       "week": 4,
       "objective_ids": [
         "cell-biology-10-objective-1",
-        "cell-biology-10-objective-2"
+        "cell-biology-10-objective-2",
+        "cell-biology-outcome-2",
+        "cell-biology-outcome-4"
       ],
       "question_ids": [
         "cell-biology-hw2:rate-summary",
@@ -2393,7 +2450,9 @@
       "week": 6,
       "objective_ids": [
         "cell-biology-14-objective-1",
-        "cell-biology-14-objective-2"
+        "cell-biology-14-objective-2",
+        "cell-biology-outcome-3",
+        "cell-biology-outcome-4"
       ],
       "question_ids": [
         "cell-biology-hw3:lesion-summary",
@@ -2412,7 +2471,10 @@
       "week": 7,
       "objective_ids": [
         "cell-biology-16-objective-1",
-        "cell-biology-16-objective-2"
+        "cell-biology-16-objective-2",
+        "cell-biology-outcome-2",
+        "cell-biology-outcome-3",
+        "cell-biology-outcome-4"
       ],
       "question_ids": [
         "cell-biology-hw4:chip-reporter-summary",
@@ -2432,7 +2494,9 @@
       "week": 9,
       "objective_ids": [
         "cell-biology-18-objective-1",
-        "cell-biology-18-objective-2"
+        "cell-biology-18-objective-2",
+        "cell-biology-outcome-3",
+        "cell-biology-outcome-4"
       ],
       "question_ids": [
         "cell-biology-hw5:layer-summary",
@@ -2452,7 +2516,11 @@
       "week": 10,
       "objective_ids": [
         "cell-biology-20-objective-1",
-        "cell-biology-20-objective-2"
+        "cell-biology-20-objective-2",
+        "cell-biology-outcome-1",
+        "cell-biology-outcome-2",
+        "cell-biology-outcome-3",
+        "cell-biology-outcome-4"
       ],
       "question_ids": [
         "cell-biology-hw6:clone-summary",
@@ -2472,7 +2540,9 @@
       "week": 12,
       "objective_ids": [
         "cell-biology-24-objective-1",
-        "cell-biology-24-objective-2"
+        "cell-biology-24-objective-2",
+        "cell-biology-outcome-2",
+        "cell-biology-outcome-4"
       ],
       "question_ids": [
         "cell-biology-hw7:coverslip-summary",
@@ -2492,7 +2562,9 @@
       "week": 13,
       "objective_ids": [
         "cell-biology-26-objective-1",
-        "cell-biology-26-objective-2"
+        "cell-biology-26-objective-2",
+        "cell-biology-outcome-3",
+        "cell-biology-outcome-4"
       ],
       "question_ids": [
         "cell-biology-hw8:state-summary",
@@ -2513,7 +2585,10 @@
       "objective_ids": [
         "cell-biology-27-objective-1",
         "cell-biology-27-objective-2",
-        "cell-biology-27-objective-3"
+        "cell-biology-27-objective-3",
+        "cell-biology-outcome-1",
+        "cell-biology-outcome-3",
+        "cell-biology-outcome-4"
       ],
       "question_ids": [
         "cell-biology-lab3:summary-table",
@@ -2666,6 +2741,11 @@
       "version": "0.19.0",
       "date": "2026-10-08",
       "summary": "Added seven open formative homework companions (Homework 2 to 8, each with a packet, a synthetic dataset, a CSV summary check, a graph or interpretation check where it fits, structured control logic, a multiple-select item and retrieval cards), a third synthetic virtual data-analysis lab for week 14, two practice items for the lesson-3 free-energy objective, and specification-only documents for the midterm, cumulative final and integrative project (no items, keys or rubric scoring). All additions are public, ungraded practice; the course remains partial, unreviewed and formative-only, and none of the eight homework sets is a graded set."
+    },
+    {
+      "version": "0.19.1",
+      "date": "2026-10-08",
+      "summary": "Assessments with items now also list the course outcomes those items assess, derived from each item's lesson objective and that objective's outcome links. The rubric-only case lists none. No readings, items or keys changed. The syllabus version line was updated. The package remains partial, unreviewed and formative-only."
     }
   ],
   "limitations": [

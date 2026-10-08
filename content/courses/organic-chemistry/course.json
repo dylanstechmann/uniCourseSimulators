@@ -7,7 +7,7 @@
   "domain": "Chemistry",
   "level": "Year 2",
   "maturity": "partial",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "license": "MIT OR CC-BY-4.0",
   "content_origin": {
     "kind": "legacy-prototype",
@@ -414,7 +414,9 @@
       "objective_ids": [
         "organic-chemistry-5-objective-1",
         "organic-chemistry-5-objective-2",
-        "organic-chemistry-5-objective-3"
+        "organic-chemistry-5-objective-3",
+        "organic-chemistry-outcome-1",
+        "organic-chemistry-outcome-4"
       ],
       "question_ids": [
         "organic-chemistry-5:acyl-ranking",
@@ -435,7 +437,10 @@
       "objective_ids": [
         "organic-chemistry-6-objective-1",
         "organic-chemistry-6-objective-2",
-        "organic-chemistry-6-objective-3"
+        "organic-chemistry-6-objective-3",
+        "organic-chemistry-outcome-2",
+        "organic-chemistry-outcome-3",
+        "organic-chemistry-outcome-4"
       ],
       "question_ids": [
         "organic-chemistry-6:mechanism-tertiary",
@@ -504,6 +509,11 @@
       "version": "0.3.0",
       "date": "2026-10-08",
       "summary": "Added an original lesson on SN1 versus SN2 mechanisms, stereochemical outcomes and enantiomeric excess with synthetic data, formative items with computed keys and retrieval cards. The package remains partial and unreviewed."
+    },
+    {
+      "version": "0.3.1",
+      "date": "2026-10-08",
+      "summary": "Assessments with items now also list the course outcomes those items assess, derived from each item's lesson objective and that objective's outcome links. The rubric-only case lists none, and neither do the 4 prototype-unit assessments, whose objectives are not yet linked to an outcome. No readings, items or keys changed. The syllabus was regenerated from the manifest: it states the current version, lists every lesson with its item and card counts, and describes the current practice and limitations (it still described only the four original units). The package remains partial, unreviewed and formative-only."
     }
   ],
   "limitations": [
