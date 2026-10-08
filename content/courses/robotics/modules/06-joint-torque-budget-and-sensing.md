@@ -30,7 +30,7 @@ But a motor-side encoder does not see what happens after the gears. **Backlash**
 
 ## Closing the loop safely
 
-A position controller compares the commanded and measured angles and drives the motor to reduce the error (see the control lessons). Failure limits make the loop safe for people, samples and the machine:
+A position controller compares the commanded and measured angles and drives the motor to reduce the error (see the control lessons). Failure limits reduce the risk of harm to people nearby, to samples and to the machine; they do not by themselves make a machine safe:
 
 - **Current (torque) limit:** caps force if the arm hits something.
 - **Following-error limit:** if the measured position lags the command by more than a set amount, stop; this detects collisions, stalls and sensor faults.
