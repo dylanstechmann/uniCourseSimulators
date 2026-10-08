@@ -251,6 +251,190 @@
         "kind": "original",
         "modifications": []
       }
+    },
+    {
+      "id": "programming-5:three-doublings",
+      "type": "numeric",
+      "prompt": "The function doubling_time_hours(n_start, n_end, hours) returns hours × ln 2 / ln(n_end / n_start). What does it return for doubling_time_hours(1e5, 8e5, 30)? Enter the number of hours.",
+      "points": 1,
+      "objective_ids": [
+        "programming-5-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 10.0,
+        "unit": "",
+        "tolerance": 0.01,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "8 is 2 cubed, so there are three doublings.",
+        "solution": "The fold change is 8, which is three doublings in 30 hours, so each takes 10.0 hours; the formula gives the same: 30 × ln 2 / ln 8 = 10.0.",
+        "lesson_ids": [
+          "programming-5"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "programming-5:culture-doubling-time",
+      "type": "numeric",
+      "prompt": "What does doubling_time_hours(2.0e5, 1.28e6, 24) return? Enter the number of hours.",
+      "points": 1,
+      "objective_ids": [
+        "programming-5-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 8.962,
+        "unit": "",
+        "tolerance": 0.01,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Find the fold change, take log base 2 for the number of doublings, and divide 24 by it.",
+        "solution": "The fold change is 6.4, giving log2(6.4) = 2.678 doublings, so the doubling time is 24 / 2.678 = 8.96 hours.",
+        "lesson_ids": [
+          "programming-5"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "programming-5:float-gap",
+      "type": "numeric",
+      "prompt": "In Python, (0.1 + 0.2) − 0.3 is not zero. To three significant figures, what is its value? Enter the number (scientific notation is accepted).",
+      "points": 1,
+      "objective_ids": [
+        "programming-5-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 5.55e-17,
+        "unit": "",
+        "tolerance": 0,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null,
+        "relative_tolerance": 0.01
+      },
+      "feedback": {
+        "hint": "Both 0.1 and 0.2 are stored as binary approximations; the error is about 5.55e-17.",
+        "solution": "The result is 5.551e-17. Decimal 0.1 and 0.2 have no exact binary representation, so their sum differs from the stored 0.3 by one unit in the last place. This is why floats are compared with a tolerance.",
+        "lesson_ids": [
+          "programming-5"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "programming-5:compare-floats",
+      "type": "single_choice",
+      "prompt": "A test compares a computed floating-point result with its expected value. Which comparison is most appropriate?",
+      "points": 1,
+      "objective_ids": [
+        "programming-5-objective-2"
+      ],
+      "options": [
+        "Round both to the integer part.",
+        "math.isclose(result, expected, rel_tol=1e-9), choosing the tolerance from the problem.",
+        "result > 0, which always passes when the code runs.",
+        "result == expected, so that any difference is caught."
+      ],
+      "solution_spec": {
+        "answer": 1
+      },
+      "feedback": {
+        "hint": "Ask why two correct floating-point computations might differ in the last digits.",
+        "solution": "Equality tests fail for reasons unrelated to correctness, and checks that are too loose miss bugs. A relative tolerance chosen from the expected numerical error compares what matters.",
+        "lesson_ids": [
+          "programming-5"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "programming-5:seeded-simulation",
+      "type": "single_choice",
+      "prompt": "A bootstrap analysis gives a slightly different confidence interval on every run. What is the best fix for repeatability?",
+      "points": 1,
+      "objective_ids": [
+        "programming-5-objective-3"
+      ],
+      "options": [
+        "Run it until the result looks right and keep that run.",
+        "Create a generator with an explicit seed, pass it into the function, and record the seed with the result.",
+        "Use a larger seed on later runs.",
+        "Remove the bootstrap and report a single number."
+      ],
+      "solution_spec": {
+        "answer": 1
+      },
+      "feedback": {
+        "hint": "Make the randomness an input.",
+        "solution": "An explicit, recorded seed makes the run repeatable and exposes the randomness as a parameter. A separate test over many seeds can still check the statistical behavior.",
+        "lesson_ids": [
+          "programming-5"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "programming-5:provenance-record",
+      "type": "single_choice",
+      "prompt": "Which record best lets someone else trace a published figure back to its inputs?",
+      "points": 1,
+      "objective_ids": [
+        "programming-5-objective-3"
+      ],
+      "options": [
+        "The author's initials.",
+        "Hashes of the input files, parameters and seed, software versions and the code revision, stored next to the output.",
+        "The figure file name.",
+        "A note that the analysis was run last week."
+      ],
+      "solution_spec": {
+        "answer": 1
+      },
+      "feedback": {
+        "hint": "Think about what could change between two runs that produce different numbers.",
+        "solution": "Input hashes detect changed data, and parameters, seeds, versions and code revision account for the other things that change a result. A clean rerun then checks the whole chain.",
+        "lesson_ids": [
+          "programming-5"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
     }
   ]
 }

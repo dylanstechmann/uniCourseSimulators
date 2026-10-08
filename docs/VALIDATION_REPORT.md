@@ -4,7 +4,28 @@
 
 2026-10-06; synthetic local learner data only. Milestones 1 and 2 are implemented. Milestone 3 remains partial; deterministic graders and prototype graded-assignment and review workflows are described below. A Milestone 4 curriculum-map increment is implemented and tested, while subject-matter review and map refinement remain. All 25 course packages are **partial**; zero are beta, complete or externally reviewed. Human score review is limited to saved attempts and does not constitute course-content review. No semester equivalence, university credit, security certification or public production deployment is asserted.
 
-## Current increment: homework companions, a third lab, specifications and objective items (2026-10-08)
+## Current increment: assessment-protection toggle, six geroscience lessons, a time-to-event lesson (2026-10-08, second pass)
+
+Written by an AI coding assistant.
+
+- **Assessment protection toggle.** `grading_policy.assessment_protection` is `open` (default) or `protected`; the operator variable `ASSESSMENT_PROTECTION` (`course`, `protected`, `open`) can force either. In protected mode a graded assessment must read from the private store; a public source is refused when the plan is built and when questions are served, so switching a live deployment to protected closes open graded assessments. The plan response reports the mode in force and the plan view labels it. Open mode does not make keys secret and says so. Practice items are public in both modes. Documented in `docs/DEPLOYMENT.md` and `docs/AUTHORING_GUIDE.md`; 7 backend tests and 1 frontend test.
+- **Geroscience 0.3.0.** Six original lessons (genome instability and repair; proteostasis, autophagy and mitochondria; nutrient sensing and lifespan interventions; regeneration across species; reading an aging-intervention paper; evidence tiers from model to human) of about 870 to 1,200 words each, with synthetic tables, worked examples, 31 practice items, 24 cards and link-only references whose identifiers were checked on 2026-10-08 (title resolution only; claim support is a reading judgement). Their objectives are linked to the four course outcomes, so no geroscience outcome is unlinked. The lessons state that no intervention is claimed to slow or reverse human aging.
+- **Transport, bioreactors and programming 0.2.0.** One original lesson each: oxygen limits in thick constructs (zero-order uptake, critical thickness, a diffusion-to-consumption ratio), sizing oxygen supply (kLa, supportable cell density, static-dish medium depth, limits of empirical correlations), and testing a scientific function (known-answer tests, float tolerances, seeds, provenance). Parameters are synthetic; each has 5 to 6 items with computed keys and 4 cards; their modules reuse the packages' existing curriculum-comparator sources.
+- **Statistics 0.2.0.** One lesson on censoring, a hand-checkable Kaplan-Meier table, median survival and rate/hazard ratios, with five items and four cards.
+- Tests: `tests/content/test_new_geroscience_and_statistics_lessons.py` (labelling, synthetic data, no advice phrases, outcome links, link-only sources, labels unchanged).
+
+| Command/check (this container, Python 3.12.3, 2026-10-08) | Result |
+| --- | --- |
+| `python tools/validate_content.py` | PASS: 25 packages, 150 lessons, 400 questions, 340 cards, 25 cases; 0 errors; 123 disclosed warnings (98 legacy-depth, 25 objective-coverage) |
+
+| `python -m pytest tests -q` | 108 passed |
+| `cd backend; python -m pytest -q` | 1049 passed, 2 skipped |
+| `python tools/check_security.py` | 464 source files, 0 findings |
+| `ruff`, `node --test` legacy, `verify.sh --frontend` (lint, unit tests including the protection label, build, bundle scan) | PASS |
+
+Not run here: Docker Compose and the Playwright end-to-end suite. Nothing here is reviewed; the lessons were not read by a subject-matter expert, and the references were checked for existence, not for support of each sentence.
+
+## Previous increment: homework companions, a third lab, specifications and objective items (2026-10-08)
 
 Written by an AI coding assistant. Foundations of Cell and Molecular Biology advances from 0.18.0 to **0.19.0** and remains `partial`, unreviewed and `formative-only`. The increment adds:
 

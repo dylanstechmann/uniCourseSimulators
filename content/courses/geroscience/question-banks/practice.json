@@ -901,6 +901,1001 @@
         "kind": "original",
         "modifications": []
       }
+    },
+    {
+      "id": "geroscience-9:accumulation-rate",
+      "type": "numeric",
+      "prompt": "Tissue A averages 410 base substitutions per cell at age 20 and 1990 at age 80. Calculate the average accumulation rate in substitutions per cell per year. Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "geroscience-9-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 26.33,
+        "unit": "",
+        "tolerance": 0.05,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Divide the change in count by the change in age (60 years).",
+        "solution": "(1990 − 410) / 60 = 26.33 per year. This is an average over 60 years from two cross-sectional points; it does not show a constant rate.",
+        "lesson_ids": [
+          "geroscience-9"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "geroscience-9:rate-ratio",
+      "type": "numeric",
+      "prompt": "Tissue B averages 150 substitutions per cell at age 20 and 470 at age 80. How many times faster does Tissue A accumulate substitutions than Tissue B, using the same two ages for both tissues (Tissue A: 410 to 1990)? Enter the ratio.",
+      "points": 1,
+      "objective_ids": [
+        "geroscience-9-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 4.94,
+        "unit": "",
+        "tolerance": 0.02,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Compute each tissue's rate over the same 60 years, then divide.",
+        "solution": "Tissue A: 26.33 per year; Tissue B: 5.33 per year; ratio 4.94. A tissue difference in rate could reflect input, cell division, or removal, which the counts alone do not separate.",
+        "lesson_ids": [
+          "geroscience-9"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "geroscience-9:removal-ratio",
+      "type": "numeric",
+      "prompt": "Four independent young-donor cultures removed fractions [0.72, 0.7, 0.74, 0.71] of an induced lesion in four hours, and four old-donor cultures removed [0.55, 0.52, 0.57, 0.54]. Calculate the ratio of the mean fraction removed in old cultures to that in young cultures. Enter the ratio.",
+      "points": 1,
+      "objective_ids": [
+        "geroscience-9-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0.76,
+        "unit": "",
+        "tolerance": 0.01,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Average each group first, then divide old by young.",
+        "solution": "Young mean 0.7175, old mean 0.545, ratio 0.76. This supports slower removal in the old cultures in this assay; it does not show a difference in damage input or in function.",
+        "lesson_ids": [
+          "geroscience-9"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "geroscience-9:burden-interpretation",
+      "type": "single_choice",
+      "prompt": "Cells from older donors carry about three times as many somatic mutations as cells from younger donors. Which interpretation is best supported by that count alone?",
+      "points": 1,
+      "objective_ids": [
+        "geroscience-9-objective-2"
+      ],
+      "options": [
+        "The older cells have had more time to accumulate changes; the count does not show whether input was higher, removal was weaker, or the changes affect function.",
+        "The younger cells are free of damage.",
+        "The mutations are what make the tissue old.",
+        "The older cells repair DNA three times worse."
+      ],
+      "solution_spec": {
+        "answer": 0
+      },
+      "feedback": {
+        "hint": "Ask what a count of surviving mutations can and cannot separate.",
+        "solution": "A burden combines input, removal and time. Without a removal measurement or a repair-proficient control, the count cannot assign cause, and burden is not effect on function.",
+        "lesson_ids": [
+          "geroscience-9"
+        ],
+        "misconception_ids": [
+          "association-equals-causation-genetics"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "geroscience-9:progeroid-inference",
+      "type": "single_choice",
+      "prompt": "A rare syndrome caused by loss of a genome-maintenance gene produces several features that resemble early aging. What does this support?",
+      "points": 1,
+      "objective_ids": [
+        "geroscience-9-objective-3"
+      ],
+      "options": [
+        "Normal aging is caused by the same gene losing function.",
+        "Genome maintenance has no role in aging.",
+        "The syndrome is identical to normal aging.",
+        "Failure of one maintenance pathway can accelerate some aging-like features; it does not show that normal aging is the sum of such defects or that every feature follows."
+      ],
+      "solution_spec": {
+        "answer": 3
+      },
+      "feedback": {
+        "hint": "Keep the claim as narrow as the evidence: which features, which pathway.",
+        "solution": "Segmental, pathway-specific acceleration shows maintenance matters for some features. It is not evidence that the pathway is the main driver of normal aging or that other features share the cause.",
+        "lesson_ids": [
+          "geroscience-9"
+        ],
+        "misconception_ids": [
+          "single-cell-system-generalized-universally"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "geroscience-10:young-flux",
+      "type": "numeric",
+      "prompt": "Young cells have normalized LC3-II of 1.0 without a lysosomal inhibitor and 3.0 with it. Calculate autophagic flux as the difference. Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "geroscience-10-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 2.0,
+        "unit": "",
+        "tolerance": 0.02,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Flux is the value with the inhibitor minus the value without it.",
+        "solution": "3.0 − 1.0 = 2.0 normalized LC3-II units over the fixed window. The inhibitor traps what would have been degraded, so the difference estimates delivery to the lysosome.",
+        "lesson_ids": [
+          "geroscience-10"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "geroscience-10:old-to-young-flux",
+      "type": "numeric",
+      "prompt": "Old cells have normalized LC3-II of 1.8 without and 2.4 with the inhibitor; young cells give 1.0 and 3.0. Calculate old flux divided by young flux. Enter the ratio.",
+      "points": 1,
+      "objective_ids": [
+        "geroscience-10-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0.3,
+        "unit": "",
+        "tolerance": 0.01,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Compute each flux, then divide old by young.",
+        "solution": "Old flux 0.6, young flux 2.0, ratio 0.30. Old cells have a higher resting LC3-II but about 30% of the flux.",
+        "lesson_ids": [
+          "geroscience-10"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "geroscience-10:high-marker-meaning",
+      "type": "single_choice",
+      "prompt": "Old cells show a higher steady-state LC3-II level than young cells, but flux is lower. What is the best interpretation?",
+      "points": 1,
+      "objective_ids": [
+        "geroscience-10-objective-2"
+      ],
+      "options": [
+        "Autophagy is more active in old cells because the marker is higher.",
+        "The inhibitor failed, so nothing can be concluded.",
+        "LC3-II level is a direct measure of flux.",
+        "Autophagosomes accumulate because degradation is slower, so the higher level reflects a block, not induction."
+      ],
+      "solution_spec": {
+        "answer": 3
+      },
+      "feedback": {
+        "hint": "A level reflects formation minus degradation; use the flux to decide which changed.",
+        "solution": "Steady-state LC3-II depends on both formation and degradation. A higher level with a lower inhibitor-dependent increase indicates that less is being delivered and degraded, which is the signature of impaired flux.",
+        "lesson_ids": [
+          "geroscience-10"
+        ],
+        "misconception_ids": [
+          "declining-signal-proves-feedback"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "geroscience-10:cells-above-threshold",
+      "type": "numeric",
+      "prompt": "Of 200 cells scored for mtDNA heteroplasmy, 34 have a mutant fraction above a 70% threshold. What percentage of cells are above threshold?",
+      "points": 1,
+      "objective_ids": [
+        "geroscience-10-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 17.0,
+        "unit": "%",
+        "tolerance": 0.05,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Divide the count above threshold by the number scored.",
+        "solution": "34/200 = 17%. The number of cells past the threshold, not the average mutant fraction, predicts how many are biochemically defective.",
+        "lesson_ids": [
+          "geroscience-10"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "geroscience-10:cause-or-consequence",
+      "type": "single_choice",
+      "prompt": "Old tissue shows more protein aggregates and lower autophagic flux than young tissue. Which design best tests whether the flux decline contributes to tissue decline?",
+      "points": 1,
+      "objective_ids": [
+        "geroscience-10-objective-3"
+      ],
+      "options": [
+        "Show that flux is lower in the oldest group.",
+        "Measure aggregates in more old tissue samples.",
+        "Increase or reduce a quality-control component in young and old tissue and measure tissue function and survival.",
+        "Correlate flux with age across more individuals."
+      ],
+      "solution_spec": {
+        "answer": 2
+      },
+      "feedback": {
+        "hint": "Look for an intervention on the pathway followed by a functional endpoint.",
+        "solution": "Association with age cannot separate cause from consequence. Perturbing the pathway and measuring function does, within the limits of the model and the specificity of the manipulation.",
+        "lesson_ids": [
+          "geroscience-10"
+        ],
+        "misconception_ids": [
+          "association-equals-causation-genetics"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "geroscience-11:median-percent-change",
+      "type": "numeric",
+      "prompt": "Median survival is 800 days in control animals and 880 days in treated animals. Calculate the percent change in median survival. Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "geroscience-11-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 10.0,
+        "unit": "",
+        "tolerance": 0.05,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Percent change = (treated − control) / control × 100.",
+        "solution": "(880 − 800) / 800 × 100 = 10.0%. Median survival describes the typical animal.",
+        "lesson_ids": [
+          "geroscience-11"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "geroscience-11:late-life-percent-change",
+      "type": "numeric",
+      "prompt": "The mean age of the longest-lived 10% is 1000 days in control and 1060 days in treated animals. Calculate the percent change. Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "geroscience-11-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 6.0,
+        "unit": "",
+        "tolerance": 0.05,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the same percent-change formula.",
+        "solution": "(1060 − 1000) / 1000 × 100 = 6.0%. The late-life summary rests on very few animals and is noisier than the median.",
+        "lesson_ids": [
+          "geroscience-11"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "geroscience-11:median-vs-top",
+      "type": "single_choice",
+      "prompt": "A treatment raises median survival by 10% and the mean age of the longest-lived 10% by 6%. What is the most reasonable inference?",
+      "points": 1,
+      "objective_ids": [
+        "geroscience-11-objective-1"
+      ],
+      "options": [
+        "The two numbers cannot both be correct.",
+        "It may mostly protect animals that would otherwise die earlier, but the late-life figure is noisy and neither number is a hazard ratio.",
+        "It stops aging in the oldest animals.",
+        "It slows aging in every animal equally."
+      ],
+      "solution_spec": {
+        "answer": 1
+      },
+      "feedback": {
+        "hint": "Ask what each summary is sensitive to.",
+        "solution": "Different survival summaries are sensitive to different parts of the distribution, so they can differ without contradiction. A larger effect at the median than at the top suggests protection earlier in life, subject to the noise of the top-decile estimate.",
+        "lesson_ids": [
+          "geroscience-11"
+        ],
+        "misconception_ids": [
+          "mean-as-causal-proof"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "geroscience-11:rhesus-design-differences",
+      "type": "multiple_select",
+      "prompt": "Select the two design differences that could explain why two long-term monkey studies of caloric restriction reached different conclusions about all-cause survival.",
+      "points": 2,
+      "objective_ids": [
+        "geroscience-11-objective-3"
+      ],
+      "options": [
+        "Monkeys in one study were measured on weekdays only.",
+        "The studies differed in diet composition and in how the control animals were fed.",
+        "The animals came from different sources and restriction began at different ages.",
+        "One study was reported in a journal with a different name.",
+        "Both studies must have used identical protocols, so the difference is random."
+      ],
+      "solution_spec": {
+        "answer": [
+          1,
+          2
+        ],
+        "partial_credit": "correct-minus-incorrect-clamped-v1"
+      },
+      "feedback": {
+        "hint": "Think about what a control group and a study population must have in common for a fair comparison.",
+        "solution": "Control feeding (free feeding may shorten control survival), diet composition, animal origin and age at onset all change the comparison. Journal names and measurement days are not design features that would explain a survival difference, and the studies were not identical.",
+        "lesson_ids": [
+          "geroscience-11"
+        ],
+        "misconception_ids": [
+          "universal-claim-from-one-system"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "geroscience-11:model-to-human",
+      "type": "single_choice",
+      "prompt": "A drug extends lifespan in genetically heterogeneous mice. What does this alone establish about people?",
+      "points": 1,
+      "objective_ids": [
+        "geroscience-11-objective-3"
+      ],
+      "options": [
+        "That people should take the drug.",
+        "That the mouse result applies to every species.",
+        "That the drug slows human aging.",
+        "Nothing about human lifespan or healthspan; it motivates human studies with clinical outcomes and safety assessment."
+      ],
+      "solution_spec": {
+        "answer": 3
+      },
+      "feedback": {
+        "hint": "Match the claim to the species and endpoint tested.",
+        "solution": "A result in mice is evidence about mice under the study's conditions. Human benefit requires human trials with clinical outcomes, and the drug may have effects on immune function or metabolism that matter differently in people.",
+        "lesson_ids": [
+          "geroscience-11"
+        ],
+        "misconception_ids": [
+          "single-cell-system-generalized-universally"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "geroscience-12:mean-scar-day1",
+      "type": "numeric",
+      "prompt": "Five animals resected on day 1 had scar areas of [3, 4, 2, 3, 4] percent of left-ventricular area at day 21. Calculate the mean. Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "geroscience-12-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 3.2,
+        "unit": "",
+        "tolerance": 0.02,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Add the five values and divide by five.",
+        "solution": "(3 + 4 + 2 + 3 + 4) / 5 = 3.2%. Animals, not tissue sections, are the independent units.",
+        "lesson_ids": [
+          "geroscience-12"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "geroscience-12:scar-difference",
+      "type": "numeric",
+      "prompt": "Mean scar area was 3.2% after day-1 resection; five animals resected on day 7 had [18, 21, 16, 20, 17] percent. Calculate the day-7 mean minus the day-1 mean in percentage points. Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "geroscience-12-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 15.2,
+        "unit": "",
+        "tolerance": 0.05,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Average the day-7 values, then subtract the day-1 mean.",
+        "solution": "Day-7 mean 18.4% minus 3.2% = 15.2 percentage points. The sham mean of 0.5% shows how much of the scar is due to injury.",
+        "lesson_ids": [
+          "geroscience-12"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "geroscience-12:edu-is-not-regeneration",
+      "type": "single_choice",
+      "prompt": "Cardiomyocytes near the wound show more EdU incorporation after day-1 injury (5.2%) than after day-7 injury (0.8%). What does this alone show?",
+      "points": 1,
+      "objective_ids": [
+        "geroscience-12-objective-2"
+      ],
+      "options": [
+        "The scar will disappear.",
+        "The hearts have recovered pumping function.",
+        "New heart muscle has been regenerated.",
+        "DNA synthesis is higher; it is consistent with renewed cell-cycle activity but does not show new cardiomyocytes, restored function or the origin of the new tissue."
+      ],
+      "solution_spec": {
+        "answer": 3
+      },
+      "feedback": {
+        "hint": "Name what EdU measures and what it does not.",
+        "solution": "EdU marks DNA synthesis. Polyploidization and DNA repair also incorporate label, so lineage tracing, counts of new cells and functional measurements are needed before claiming regeneration.",
+        "lesson_ids": [
+          "geroscience-12"
+        ],
+        "misconception_ids": [
+          "marker-equals-function-stem-cell"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "geroscience-12:evidence-for-regeneration",
+      "type": "multiple_select",
+      "prompt": "Select the two kinds of evidence that most directly distinguish true regeneration from compensatory thickening of surviving tissue.",
+      "points": 2,
+      "objective_ids": [
+        "geroscience-12-objective-2"
+      ],
+      "options": [
+        "A single image showing more cells near the wound.",
+        "Lineage tracing showing that new muscle arose from labeled cardiomyocytes, with counts of new cells.",
+        "A functional measurement showing that pumping recovers, with a sham control.",
+        "A report that the animals survived the surgery.",
+        "A tissue stain showing a wall of normal thickness."
+      ],
+      "solution_spec": {
+        "answer": [
+          1,
+          2
+        ],
+        "partial_credit": "correct-minus-incorrect-clamped-v1"
+      },
+      "feedback": {
+        "hint": "Look for evidence of new cells and of restored function, with controls.",
+        "solution": "Thickness can be restored by hypertrophy, a nearby image shows only proximity, and survival of surgery says nothing about repair. Lineage tracing with cell counts addresses origin and number, and function with a sham control addresses recovery.",
+        "lesson_ids": [
+          "geroscience-12"
+        ],
+        "misconception_ids": [
+          "marker-equals-function-stem-cell"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "geroscience-12:species-and-age-comparison",
+      "type": "single_choice",
+      "prompt": "The heart regenerates in zebrafish and in one-day-old mice but not in adult mice. What is the most defensible inference?",
+      "points": 1,
+      "objective_ids": [
+        "geroscience-12-objective-3"
+      ],
+      "options": [
+        "Human hearts will regenerate if treated like a fish heart.",
+        "Adult mouse hearts are missing the genes needed for regeneration.",
+        "Regeneration capacity differs by species and developmental stage, which motivates studying what changes; the comparison alone does not identify the mechanism.",
+        "The difference is only because the injuries were different sizes."
+      ],
+      "solution_spec": {
+        "answer": 2
+      },
+      "feedback": {
+        "hint": "Separate an observed difference from an explanation of it.",
+        "solution": "A difference across species or ages is a pattern to explain, with several candidate explanations. It does not show that one factor is responsible, and it does not predict a human outcome.",
+        "lesson_ids": [
+          "geroscience-12"
+        ],
+        "misconception_ids": [
+          "single-cell-system-generalized-universally"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "geroscience-13:sample-size-d05",
+      "type": "numeric",
+      "prompt": "Use n = 2 (z(1−α/2) + z(1−β))² / d² with z(1−α/2) = 1.96 and z(1−β) = 0.84 to find the animals needed per group for a standardized effect d = 0.5. Round up to a whole animal. Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "geroscience-13-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 63,
+        "unit": "",
+        "tolerance": 0.5,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Add the two z values, square the sum, multiply by 2 and divide by d².",
+        "solution": "(1.96 + 0.84)² = 7.8400; 2 × that / 0.25 = 62.72, which rounds up to 63 per group. The formula is a normal approximation.",
+        "lesson_ids": [
+          "geroscience-13"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "geroscience-13:sample-size-d08",
+      "type": "numeric",
+      "prompt": "Use the same formula and z values to find the animals needed per group for a standardized effect d = 0.8. Round up to a whole animal. Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "geroscience-13-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 25,
+        "unit": "",
+        "tolerance": 0.5,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Only d changes from the previous calculation.",
+        "solution": "2 × 7.8400 / 0.64 = 24.50, rounded up to 25 per group. A larger standardized effect needs far fewer animals.",
+        "lesson_ids": [
+          "geroscience-13"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "geroscience-13:multiplicity",
+      "type": "numeric",
+      "prompt": "A study tests 12 independent endpoints, each at α = 0.05, when no true effect exists. What is the probability of at least one false positive? Enter a probability between 0 and 1.",
+      "points": 1,
+      "objective_ids": [
+        "geroscience-13-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0.46,
+        "unit": "",
+        "tolerance": 0.005,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Compute 1 − (1 − α) raised to the number of endpoints.",
+        "solution": "1 − 0.95¹² = 0.460. Reporting only the endpoint that crossed the threshold inflates the false-positive rate.",
+        "lesson_ids": [
+          "geroscience-13"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "geroscience-13:headline-evaluation",
+      "type": "single_choice",
+      "prompt": "A paper reports that a compound 'improves healthspan' because one of twelve measured endpoints had p = 0.03, in males of one strain, with ten animals per group. What is the best assessment?",
+      "points": 1,
+      "objective_ids": [
+        "geroscience-13-objective-2"
+      ],
+      "options": [
+        "The result proves the compound slows aging in mice.",
+        "The evidence is strong because p is below 0.05.",
+        "Sample size does not matter once p is below 0.05.",
+        "The evidence is weak: unaddressed multiplicity, no stated primary endpoint, one sex and strain, and a small sample all limit the claim."
+      ],
+      "solution_spec": {
+        "answer": 3
+      },
+      "feedback": {
+        "hint": "Run the checklist: primary endpoint, multiplicity, sex and strain, sample size.",
+        "solution": "A single nominally significant result among many tests, in a narrow sample with no pre-specified endpoint, is exploratory. It can motivate a confirmatory study, not support the headline claim.",
+        "lesson_ids": [
+          "geroscience-13"
+        ],
+        "misconception_ids": [
+          "mean-as-causal-proof",
+          "universal-claim-from-one-system"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "geroscience-13:significance-vs-importance",
+      "type": "single_choice",
+      "prompt": "A very large study finds that a treatment lowers a biomarker with p < 0.001, but the effect is a fraction of the biomarker's day-to-day variation. What is the best reading?",
+      "points": 1,
+      "objective_ids": [
+        "geroscience-13-objective-3"
+      ],
+      "options": [
+        "The effect must be important because p is tiny.",
+        "A small p-value measures the size of the effect.",
+        "The effect is statistically distinguishable from zero but may be too small to matter; report the size and interval and say what size would be important.",
+        "Large studies cannot be wrong."
+      ],
+      "solution_spec": {
+        "answer": 2
+      },
+      "feedback": {
+        "hint": "Separate how sure we are that an effect is nonzero from how big it is.",
+        "solution": "Significance depends on sample size as well as effect size. Importance is a judgment about what size of change matters for the purpose, compared with the estimate and its interval.",
+        "lesson_ids": [
+          "geroscience-13"
+        ],
+        "misconception_ids": [
+          "mean-as-causal-proof"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "geroscience-14:nnt",
+      "type": "numeric",
+      "prompt": "Over three years the event rate was 10% in control and 8% in treated participants. Calculate the number needed to treat. Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "geroscience-14-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 50.0,
+        "unit": "",
+        "tolerance": 0.5,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "NNT is 1 divided by the absolute risk reduction (as a proportion).",
+        "solution": "ARR = 0.02, so NNT = 1 / 0.02 = 50 over the trial period.",
+        "lesson_ids": [
+          "geroscience-14"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "geroscience-14:rrr",
+      "type": "numeric",
+      "prompt": "With event rates of 10% in control and 8% in treated participants, calculate the relative risk reduction as a percentage. Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "geroscience-14-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 20.0,
+        "unit": "",
+        "tolerance": 0.1,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "RRR = ARR divided by the control risk.",
+        "solution": "RRR = 0.02 / 0.10 = 20%. The same trial's absolute reduction is 2 percentage points, which is the number that tells how many people benefit.",
+        "lesson_ids": [
+          "geroscience-14"
+        ],
+        "misconception_ids": [
+          "percentage-points-confused-with-percent-change"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "geroscience-14:ladder-placement",
+      "type": "single_choice",
+      "prompt": "A study shows that a compound extends median lifespan in genetically heterogeneous mice. A news article says the compound 'slows human aging'. Where does the evidence sit, and what is the gap?",
+      "points": 1,
+      "objective_ids": [
+        "geroscience-14-objective-2"
+      ],
+      "options": [
+        "No evidence of any kind.",
+        "Human randomized trial evidence, with no gap.",
+        "Rodent evidence (rung three); the claim skips nonhuman primate and human studies, including randomized trials with clinical outcomes and safety data.",
+        "Cell-culture evidence only, with a gap in the mouse step."
+      ],
+      "solution_spec": {
+        "answer": 2
+      },
+      "feedback": {
+        "hint": "Name the species and endpoint actually studied.",
+        "solution": "A rodent lifespan result supports a statement about rodents. Human benefit requires human evidence with clinical outcomes, and harms need assessing in people.",
+        "lesson_ids": [
+          "geroscience-14"
+        ],
+        "misconception_ids": [
+          "single-cell-system-generalized-universally",
+          "potency-equals-clinical-efficacy"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "geroscience-14:surrogate-judgement",
+      "type": "single_choice",
+      "prompt": "A treatment lowers an 'aging clock' score by 2 units. When is the score an acceptable surrogate for disease risk?",
+      "points": 1,
+      "objective_ids": [
+        "geroscience-14-objective-3"
+      ],
+      "options": [
+        "Whenever the company that sells the test says so.",
+        "Whenever the score changes after treatment.",
+        "Whenever the score correlates with age.",
+        "When trials show that interventions that lower the score also lower the clinical outcome, ideally across different intervention types."
+      ],
+      "solution_spec": {
+        "answer": 3
+      },
+      "feedback": {
+        "hint": "A surrogate must predict the effect of an intervention on the outcome, not just correlate with it.",
+        "solution": "Correlation with age or risk does not show that moving the marker moves the outcome. Surrogate status needs evidence that changes in the marker produced by interventions are accompanied by changes in the outcome.",
+        "lesson_ids": [
+          "geroscience-14"
+        ],
+        "misconception_ids": [
+          "correlation-proves-direct-regulation"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "geroscience-14:supported-statements",
+      "type": "multiple_select",
+      "prompt": "Select the two statements that the evidence in this lesson supports.",
+      "points": 2,
+      "objective_ids": [
+        "geroscience-14-objective-2"
+      ],
+      "options": [
+        "Rodent lifespan extension shows the same drug extends human life.",
+        "Products marketed as anti-aging are supported if they cite one animal study.",
+        "A relative risk reduction should be reported with the absolute risk reduction so readers can see how many people benefit.",
+        "A lower aging-clock score proves that biological age was reversed.",
+        "The geroscience hypothesis is a rationale for human trials, not an established result."
+      ],
+      "solution_spec": {
+        "answer": [
+          2,
+          4
+        ],
+        "partial_credit": "correct-minus-incorrect-clamped-v1"
+      },
+      "feedback": {
+        "hint": "Choose statements that match the evidence tier and the arithmetic.",
+        "solution": "The hypothesis motivates trials but does not replace them, and absolute effects complete the picture that relative effects start. Animal results, a clock score and a single citation do not establish human benefit.",
+        "lesson_ids": [
+          "geroscience-14"
+        ],
+        "misconception_ids": [
+          "potency-equals-clinical-efficacy"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "geroscience-11:nutrient-rich-signaling",
+      "type": "single_choice",
+      "prompt": "Cells are in a nutrient-rich environment. Which description of insulin/IGF, TOR and AMPK activity is expected?",
+      "points": 1,
+      "objective_ids": [
+        "geroscience-11-objective-2"
+      ],
+      "options": [
+        "All three pathways are inactive.",
+        "Insulin/IGF and TOR signaling are active and favor growth and storage while restraining FOXO-driven stress-resistance programs and autophagy; AMPK is comparatively quiet.",
+        "Insulin/IGF signaling is switched off and FOXO programs are fully active.",
+        "AMPK is strongly active and TOR is switched off."
+      ],
+      "solution_spec": {
+        "answer": 1
+      },
+      "feedback": {
+        "hint": "Match each pathway to the nutrient state it reports.",
+        "solution": "Plentiful nutrients raise insulin/IGF and TOR activity, which promote growth and restrain maintenance programs such as autophagy and FOXO targets, while AMPK reports low energy. Low nutrients reverse the pattern. These are simplified summaries of pathways with many targets.",
+        "lesson_ids": [
+          "geroscience-11"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
     }
   ]
 }

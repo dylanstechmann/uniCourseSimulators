@@ -372,6 +372,159 @@
         "kind": "original",
         "modifications": []
       }
+    },
+    {
+      "id": "statistics-6:km-at-5",
+      "type": "numeric",
+      "prompt": "Ten subjects have follow-up times (months) and status: 2 event, 3 event, 4 censored, 5 event, 6 censored, 8 event, 9 censored, 10 event, 12 censored, 12 censored. Calculate the Kaplan–Meier survival estimate at month 5. Enter a probability.",
+      "points": 1,
+      "objective_ids": [
+        "statistics-6-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0.6857,
+        "unit": "",
+        "tolerance": 0.002,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Multiply (1 − d/n) at each event time up to 5, using the number still at risk each time.",
+        "solution": "At month 2: 9/10; month 3: 8/9; month 4 is a censoring (7 remain at risk); month 5: 6/7. S(5) = 0.9 × 8/9 × 6/7 = 0.6857.",
+        "lesson_ids": [
+          "statistics-6"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "statistics-6:km-at-8",
+      "type": "numeric",
+      "prompt": "Using the same ten subjects (2 event, 3 event, 4 censored, 5 event, 6 censored, 8 event, 9 censored, 10 event, 12 censored, 12 censored), calculate the Kaplan–Meier estimate at month 8. Enter a probability.",
+      "points": 1,
+      "objective_ids": [
+        "statistics-6-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0.5486,
+        "unit": "",
+        "tolerance": 0.002,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Continue from S(5), noting that the subject censored at month 6 leaves the risk set before month 8.",
+        "solution": "After month 5, S = 0.6857. The month-6 censoring leaves 5 at risk at month 8, so S(8) = 0.6857 × 4/5 = 0.5486.",
+        "lesson_ids": [
+          "statistics-6"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "statistics-6:median-survival",
+      "type": "numeric",
+      "prompt": "Using the same ten subjects, what is the median survival time in months, defined as the first time the Kaplan–Meier estimate is 0.5 or lower? Enter the number of months.",
+      "points": 1,
+      "objective_ids": [
+        "statistics-6-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 10,
+        "unit": "",
+        "tolerance": 0.01,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Find the first event time at which S(t) falls to 0.5 or below.",
+        "solution": "S(8) = 0.5486 is above 0.5 and S(10) = 0.3657 is below, so the median survival is 10 months.",
+        "lesson_ids": [
+          "statistics-6"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "statistics-6:rate-ratio",
+      "type": "numeric",
+      "prompt": "Treated participants had 12 events over 480 person-months and controls had 20 events over 400 person-months. Calculate the rate ratio (treated divided by control). Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "statistics-6-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 0.5,
+        "unit": "",
+        "tolerance": 0.005,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Compute events per person-month in each group and divide.",
+        "solution": "0.025 per month for treated and 0.050 per month for controls give a rate ratio of 0.50. It estimates the hazard ratio only if each hazard is roughly constant.",
+        "lesson_ids": [
+          "statistics-6"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "statistics-6:why-keep-censored",
+      "type": "single_choice",
+      "prompt": "A study ends with several animals still alive. An analyst removes them from the data set before estimating survival. What is the effect?",
+      "points": 1,
+      "objective_ids": [
+        "statistics-6-objective-2"
+      ],
+      "options": [
+        "Nothing changes, because they have no event time.",
+        "Survival is overestimated because dead animals are overweighted.",
+        "Survival is underestimated, because animals that lived the longest are discarded; they should stay in the risk set as censored observations.",
+        "The estimate becomes unbiased."
+      ],
+      "solution_spec": {
+        "answer": 2
+      },
+      "feedback": {
+        "hint": "Ask who is left in the data after the longest-lived are removed.",
+        "solution": "Surviving animals are exactly the long survivors. Removing them biases the curve downward. Kaplan–Meier keeps them in the risk set up to the end of follow-up.",
+        "lesson_ids": [
+          "statistics-6"
+        ],
+        "misconception_ids": [
+          "mean-as-causal-proof"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
     }
   ]
 }

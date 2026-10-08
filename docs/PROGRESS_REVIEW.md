@@ -1,6 +1,14 @@
 # Progress review: uniStemCourseSimulators
 
-## Update after the homework, lab and objective-coverage increment (2026-10-08)
+## Update after the toggle and the first deep lessons outside cell biology (2026-10-08, second pass)
+
+Written by an AI coding assistant. Direction from the owner: assessments need not be protected, so protection became an explicit toggle (`open` by default, `protected` opt-in, with an operator override), and development continued toward the topics the owner cares about (aging, regeneration, research and engineering practice).
+
+New original lessons of roughly 700 to 1,200 words each, with synthetic data, worked examples and computed practice keys: six in geroscience (genome instability and repair; proteostasis, autophagy and mitochondria; nutrient sensing and lifespan interventions; regeneration across species; reading an aging-intervention paper; evidence tiers from model to human), one in statistics (time-to-event data), and one each in transport (oxygen limits in thick constructs), bioreactors (sizing oxygen supply) and programming (testing a scientific function and provenance). The geroscience lessons deliberately do not claim that any intervention slows or reverses human aging; they teach how to judge such claims. Ten lesson-length readings now exist outside cell biology, where before the other packages averaged about 70 words per lesson.
+
+What is still true: 19 of the 25 packages still have only the 60 to 80-word legacy readings plus one practice item per objective; no lesson was reviewed by a subject-matter expert; references were checked for existence, not for support of each sentence; nothing is graded. The largest remaining gap is still authored instruction in the thin packages, followed by named human review.
+
+## Earlier update after the homework, lab and objective-coverage increment (2026-10-08)
 
 Written by an AI coding assistant. The 2026-10-06 review found grader development ahead of instruction. This increment adds content rather than machinery: open formative companions for Homework 2 to 8, a third synthetic lab, specification-only documents for the midterm, final and project, and one practice item for each of the 96 lesson objectives that had none in the other 24 packages (plus two for the lesson-3 objective in cell-biology). All 8 homework companions and 3 labs are public, ungraded and unreviewed.
 

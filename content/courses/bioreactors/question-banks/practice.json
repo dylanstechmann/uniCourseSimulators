@@ -250,6 +250,193 @@
         "kind": "original",
         "modifications": []
       }
+    },
+    {
+      "id": "bioreactors-5:max-otr",
+      "type": "numeric",
+      "prompt": "A vessel has kLa = 5.0 h⁻¹, saturation dissolved oxygen 0.2 mmol/L and a critical level of 0.05 mmol/L. Calculate the maximum oxygen transfer rate kLa (C* − C_crit) in mmol/(L·h). Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "bioreactors-5-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0.75,
+        "unit": "",
+        "tolerance": 0.01,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the driving force C* minus the critical level.",
+        "solution": "5.0 × (0.2 − 0.05) = 0.75 mmol/(L·h).",
+        "lesson_ids": [
+          "bioreactors-5"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "bioreactors-5:max-cell-density",
+      "type": "numeric",
+      "prompt": "Cells consume 2.0e-10 mmol O₂ per cell per hour. With a maximum transfer rate of 0.75 mmol/(L·h), what cell density can the vessel support, in cells/mL? Enter the number in scientific notation or as a plain number.",
+      "points": 1,
+      "objective_ids": [
+        "bioreactors-5-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 3750000.0000000005,
+        "unit": "",
+        "tolerance": 0,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null,
+        "relative_tolerance": 0.01
+      },
+      "feedback": {
+        "hint": "Divide the transfer rate by the uptake per cell, then convert liters to milliliters.",
+        "solution": "0.75 / 2.0e-10 = 3.75e+09 cells/L = 3.75e+06 cells/mL.",
+        "lesson_ids": [
+          "bioreactors-5"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "bioreactors-5:oxygen-enriched-gas",
+      "type": "numeric",
+      "prompt": "Gas enrichment raises the equilibrium concentration to 0.5 mmol/L with kLa = 5.0 h⁻¹ and C_crit = 0.05 mmol/L. Calculate the new maximum transfer rate in mmol/(L·h). Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "bioreactors-5-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 2.25,
+        "unit": "",
+        "tolerance": 0.01,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Repeat the calculation with the new C*.",
+        "solution": "5.0 × (0.5 − 0.05) = 2.25 mmol/(L·h), 3.0 times the air-saturated value. Higher dissolved oxygen can itself stress cells, so the level that cells experience is a design variable.",
+        "lesson_ids": [
+          "bioreactors-5"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "bioreactors-5:max-medium-depth",
+      "type": "numeric",
+      "prompt": "A monolayer at 2×10⁵ cells/cm² consumes 2.0e-10 mmol O₂ per cell per hour. With D = 3×10⁻⁹ m²/s for oxygen in medium and a driving force C* − C_crit of 0.15 mol/m³, calculate the largest medium depth h = D (C* − C_crit) / (q_O₂ ρ) that keeps the cells at or above the critical level. Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "bioreactors-5-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 4.05,
+        "unit": "mm",
+        "tolerance": 0.05,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Convert the density to cells/m² and the uptake to mol/(m²·s) before dividing.",
+        "solution": "The areal uptake is 2×10⁹ cells/m² × 2.0e-10 mmol/(cell·h) = 0.4 mmol/(m²·h) = 1.11e-07 mol/(m²·s), so h = 3×10⁻⁹ × 0.15 / 1.11e-07 = 4.05 mm. Deeper medium starves the monolayer in this model.",
+        "lesson_ids": [
+          "bioreactors-5"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "bioreactors-5:raise-kla-cost",
+      "type": "single_choice",
+      "prompt": "Which is a typical cost of raising kLa by increasing agitation and gas flow in a stirred reactor?",
+      "points": 1,
+      "objective_ids": [
+        "bioreactors-5-objective-2"
+      ],
+      "options": [
+        "More shear stress on cells, more foaming and bubble damage, and stronger carbon dioxide stripping that shifts pH.",
+        "No side effects, because kLa is only a mass-transfer property.",
+        "A lower saturation concentration.",
+        "Lower oxygen transfer."
+      ],
+      "solution_spec": {
+        "answer": 0
+      },
+      "feedback": {
+        "hint": "Think about what the agitator and bubbles do to cells and to dissolved gases.",
+        "solution": "Higher power input and gas flow raise kLa but also raise hydrodynamic stress, foam and bubble-cell interactions, and strip carbon dioxide. These constraints cap how far kLa can be pushed.",
+        "lesson_ids": [
+          "bioreactors-5"
+        ],
+        "misconception_ids": [
+          "protein-mediated-means-primary-active"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "bioreactors-5:correlation-domain",
+      "type": "single_choice",
+      "prompt": "A published correlation kLa = a (P/V)^b (v_s)^c was fitted in a 5 L glass vessel with water-like medium. A team applies it unchanged to a 200 L vessel with a different sparger and protein-containing medium. What is the best advice about the prediction?",
+      "points": 1,
+      "objective_ids": [
+        "bioreactors-5-objective-3"
+      ],
+      "options": [
+        "Reject it as always wrong.",
+        "Assume the exponents are the same but the constant a is zero.",
+        "Accept it, because correlations are universal.",
+        "Treat it as uncertain: the constants depend on geometry, scale and medium, so measure kLa in the real system before relying on it."
+      ],
+      "solution_spec": {
+        "answer": 3
+      },
+      "feedback": {
+        "hint": "A fitted correlation is only as general as its data.",
+        "solution": "Empirical constants describe the conditions they were fitted in. Changing vessel, sparger, scale or medium can change them, so a direct kLa measurement is needed.",
+        "lesson_ids": [
+          "bioreactors-5"
+        ],
+        "misconception_ids": [
+          "universal-claim-from-one-system"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
     }
   ]
 }

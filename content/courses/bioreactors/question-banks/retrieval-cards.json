@@ -65,6 +65,46 @@
       "back": "A measurable property that must remain within an appropriate limit or range to ensure product quality.",
       "objective_ids": [],
       "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "bioreactors-5-card-1",
+      "lesson_id": "bioreactors-5",
+      "front": "OTR and OUR",
+      "back": "OTR = kLa (C* − C) and OUR = q_O₂ × X; steady culture needs OTR ≥ OUR.",
+      "objective_ids": [
+        "bioreactors-5-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "bioreactors-5-card-2",
+      "lesson_id": "bioreactors-5",
+      "front": "Maximum cell density from oxygen",
+      "back": "X_max = kLa (C* − C_crit) / q_O₂; supply is limited by kLa and by the driving force.",
+      "objective_ids": [
+        "bioreactors-5-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "bioreactors-5-card-3",
+      "lesson_id": "bioreactors-5",
+      "front": "Costs of raising supply",
+      "back": "Higher kLa costs shear, foam and CO₂ stripping; higher C* raises oxidative-stress risk; both are design trade-offs.",
+      "objective_ids": [
+        "bioreactors-5-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "bioreactors-5-card-4",
+      "lesson_id": "bioreactors-5",
+      "front": "Correlation limits",
+      "back": "Fitted kLa correlations hold inside the range of their data; measure kLa when geometry, scale or medium change.",
+      "objective_ids": [
+        "bioreactors-5-objective-3"
+      ],
+      "license": "CC-BY-4.0"
     }
   ]
 }

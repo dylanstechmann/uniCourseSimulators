@@ -8,7 +8,7 @@ comprehensive coverage. Every package is still `partial` and unreviewed.
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | biochemistry | partial | 4 | 8 | 8 | 8 | 0 | 0 | 4 | 4 |
 | biomaterials | partial | 4 | 8 | 8 | 8 | 0 | 0 | 4 | 4 |
-| bioreactors | partial | 4 | 8 | 8 | 8 | 0 | 0 | 4 | 4 |
+| bioreactors | partial | 5 | 11 | 14 | 12 | 0 | 0 | 4 | 1 |
 | calculus-1 | partial | 4 | 8 | 9 | 8 | 0 | 0 | 4 | 4 |
 | calculus-2 | partial | 4 | 8 | 8 | 8 | 0 | 0 | 4 | 4 |
 | calculus-3 | partial | 4 | 8 | 8 | 8 | 0 | 0 | 4 | 4 |
@@ -19,20 +19,20 @@ comprehensive coverage. Every package is still `partial` and unreviewed.
 | general-chemistry-1 | partial | 4 | 8 | 8 | 8 | 0 | 0 | 4 | 4 |
 | general-chemistry-2 | partial | 4 | 8 | 8 | 8 | 0 | 0 | 4 | 4 |
 | genetics | partial | 4 | 8 | 8 | 8 | 0 | 0 | 4 | 4 |
-| geroscience | partial | 8 | 20 | 23 | 24 | 0 | 0 | 4 | 0 |
+| geroscience | partial | 14 | 38 | 54 | 48 | 0 | 0 | 4 | 0 |
 | linear-algebra | partial | 4 | 8 | 8 | 8 | 0 | 0 | 4 | 4 |
 | organic-chemistry | partial | 4 | 8 | 8 | 8 | 0 | 0 | 4 | 4 |
 | physics-em | partial | 4 | 8 | 8 | 8 | 0 | 0 | 4 | 4 |
 | physics-mechanics | partial | 4 | 8 | 8 | 8 | 0 | 0 | 4 | 4 |
 | physiology | partial | 4 | 8 | 8 | 8 | 0 | 0 | 4 | 4 |
-| programming | partial | 4 | 8 | 8 | 8 | 0 | 0 | 4 | 4 |
+| programming | partial | 5 | 11 | 14 | 12 | 0 | 0 | 4 | 0 |
 | robotics | partial | 4 | 8 | 8 | 8 | 0 | 0 | 4 | 4 |
 | signals-control | partial | 4 | 8 | 8 | 8 | 0 | 0 | 4 | 4 |
 | statics-materials | partial | 4 | 8 | 8 | 8 | 0 | 0 | 4 | 4 |
-| statistics | partial | 5 | 10 | 10 | 11 | 0 | 0 | 5 | 3 |
-| transport | partial | 4 | 8 | 8 | 8 | 0 | 0 | 4 | 4 |
+| statistics | partial | 6 | 13 | 15 | 15 | 0 | 0 | 5 | 0 |
+| transport | partial | 5 | 11 | 13 | 12 | 0 | 0 | 4 | 2 |
 
-Totals: 25 packages, 140 lessons, 275 objectives, 347 practice items, 0 lesson objectives with no assessment mapping, 0 with no practice item, 91 of 101 course outcomes that no lesson objective links to.
+Totals: 25 packages, 150 lessons, 305 objectives, 400 practice items, 0 lesson objectives with no assessment mapping, 0 with no practice item, 79 of 101 course outcomes that no lesson objective links to.
 
 `tools/validate_content.py` counts course outcomes and lesson objectives together, so its `objective-coverage` warning
 persists for packages whose outcomes are not linked from any lesson objective. Linking them is a judgement for a
@@ -48,7 +48,7 @@ Outcomes with no linking lesson objective: `biomaterials-outcome-1`, `biomateria
 
 ## bioreactors
 
-Outcomes with no linking lesson objective: `bioreactors-outcome-1`, `bioreactors-outcome-2`, `bioreactors-outcome-3`, `bioreactors-outcome-4`
+Outcomes with no linking lesson objective: `bioreactors-outcome-1`
 
 ## calculus-1
 
@@ -106,10 +106,6 @@ Outcomes with no linking lesson objective: `physics-mechanics-outcome-1`, `physi
 
 Outcomes with no linking lesson objective: `physiology-outcome-1`, `physiology-outcome-2`, `physiology-outcome-3`, `physiology-outcome-4`
 
-## programming
-
-Outcomes with no linking lesson objective: `programming-outcome-1`, `programming-outcome-2`, `programming-outcome-3`, `programming-outcome-4`
-
 ## robotics
 
 Outcomes with no linking lesson objective: `robotics-outcome-1`, `robotics-outcome-2`, `robotics-outcome-3`, `robotics-outcome-4`
@@ -122,10 +118,6 @@ Outcomes with no linking lesson objective: `signals-control-outcome-1`, `signals
 
 Outcomes with no linking lesson objective: `statics-materials-outcome-1`, `statics-materials-outcome-2`, `statics-materials-outcome-3`, `statics-materials-outcome-4`
 
-## statistics
-
-Outcomes with no linking lesson objective: `statistics-outcome-1`, `statistics-outcome-2`, `statistics-outcome-4`
-
 ## transport
 
-Outcomes with no linking lesson objective: `transport-outcome-1`, `transport-outcome-2`, `transport-outcome-3`, `transport-outcome-4`
+Outcomes with no linking lesson objective: `transport-outcome-1`, `transport-outcome-3`

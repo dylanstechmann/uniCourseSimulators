@@ -65,6 +65,46 @@
       "back": "A design where each unit contributes multiple linked measurements, enabling within-unit comparisons.",
       "objective_ids": [],
       "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "programming-5-card-1",
+      "lesson_id": "programming-5",
+      "front": "Known-answer test",
+      "back": "Choose inputs whose answers you can derive independently and compare the function's output with them, not with its own output.",
+      "objective_ids": [
+        "programming-5-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "programming-5-card-2",
+      "lesson_id": "programming-5",
+      "front": "Tolerance for floats",
+      "back": "Compare floating-point results with a relative tolerance chosen from the expected numerical error; equality tests fail for non-bugs.",
+      "objective_ids": [
+        "programming-5-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "programming-5-card-3",
+      "lesson_id": "programming-5",
+      "front": "Seeds are inputs",
+      "back": "Create a generator with an explicit seed, pass it in and record it; test statistical properties over many seeds as well.",
+      "objective_ids": [
+        "programming-5-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "programming-5-card-4",
+      "lesson_id": "programming-5",
+      "front": "Provenance record",
+      "back": "Store input file hashes, parameters, seed, library versions and code revision next to the result, and check by a clean rerun.",
+      "objective_ids": [
+        "programming-5-objective-3"
+      ],
+      "license": "CC-BY-4.0"
     }
   ]
 }

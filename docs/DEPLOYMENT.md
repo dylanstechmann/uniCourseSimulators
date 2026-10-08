@@ -23,6 +23,17 @@ docker compose exec -T api python -m courselab.manage_instructor USER_ID revoke
 
 The `.env` files, secrets, database files, backups and learner exports are excluded from Git, but an ignore rule is not a substitute for inspecting staged changes.
 
+## Assessment protection: open or protected
+
+Protecting graded assessments is a choice, not a requirement. A course declares it in its manifest as `grading_policy.assessment_protection`, and an operator can force it for every course with the `ASSESSMENT_PROTECTION` environment variable.
+
+| Value | Meaning |
+| --- | --- |
+| `open` (default) | A graded assessment may read its questions and keys from the public package. Anyone with the repository can read the answers, so a graded result depends on the learner's honesty. This suits self-directed study, where the aim is feedback, not certification. The API reports `assessment_protection: "open"` in the assessment plan so the interface can say so. |
+| `protected` | Every graded assessment must read from the private store (`private://` sources, below). A public source is refused when the plan is built and again when questions are served, so switching a live deployment to protected closes any open graded assessment instead of leaving it exposed. |
+
+`ASSESSMENT_PROTECTION` accepts `course` (default, defer to each course), `protected` or `open`. Practice and self-assessment items are public in both modes; protection concerns graded assessments only. Protection does not make an assessment secure by itself: it removes the answers from the repository, nothing more. No current package has a graded assessment.
+
 ## Protected assessment content
 
 Production answer specifications belong in a separate private directory, never in the public `content/` tree, a frontend bundle, or a Git commit. Compose mounts `COURSELAB_PRIVATE_ASSESSMENTS_PATH` read-only at `/run/private-assessments`; the API resolves `private://` assessment sources below `courses/<course-id>/` in that mount. For example, a manifest source `private://assignments/homework-02.json` maps to `courses/cell-biology/assignments/homework-02.json` under the configured host directory. The public lesson and assessment APIs omit source paths and grader specifications. Enrollment pins the source-file checksum; a missing or changed key fails closed instead of silently grading with different content.

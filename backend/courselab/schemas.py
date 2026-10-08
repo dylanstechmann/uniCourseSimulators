@@ -333,6 +333,9 @@ class AssessmentPlanResponse(BaseModel):
     solution_release: str
     late_policy: str
     appeals: str
+    # open: graded keys may be public, so a result relies on the learner's honesty;
+    # protected: graded questions and keys come from the private store.
+    assessment_protection: Literal["protected", "open"] = "open"
     assessments: list[AssessmentInstanceView]
 
 

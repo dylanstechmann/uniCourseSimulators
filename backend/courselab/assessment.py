@@ -30,8 +30,38 @@ def canonical_digest(value: Any) -> str:
     return hashlib.sha256(encoded).hexdigest()
 
 
-def validate_assessment_configuration(assessments: list[dict], policy: dict) -> None:
+PROTECTION_VALUES = ("protected", "open")
+PRIVATE_PREFIX = "private://"
+
+
+def effective_protection(policy: dict, override: str = "course") -> str:
+    """Resolve the assessment-protection mode.
+
+    ``protected`` means a graded assessment's questions and keys must come from the private
+    store (``private://``), so a learner cannot read them from the repository. ``open`` means the
+    course owner has chosen not to protect them: the keys may be public and a graded result is only
+    as trustworthy as a learner's honesty. A course declares its choice in
+    ``grading_policy.assessment_protection`` (default ``open``); an operator can force
+    ``protected`` or ``open`` for every course with ``ASSESSMENT_PROTECTION``. ``course`` defers
+    to the course. Practice and self-assessment items are public in both modes.
+    """
+    if override not in {"course", *PROTECTION_VALUES}:
+        raise ValueError("ASSESSMENT_PROTECTION must be course, protected or open")
+    declared = policy.get("assessment_protection", "open")
+    if declared not in PROTECTION_VALUES:
+        raise ValueError("assessment_protection must be protected or open")
+    return declared if override == "course" else override
+
+
+def validate_assessment_configuration(assessments: list[dict], policy: dict, protection_override: str = "course") -> None:
     """Reject inconsistent categories, schedules, or attempt rules before persistence."""
+    protection = effective_protection(policy, protection_override)
+    for item in assessments:
+        if (protection == "protected" and policy.get("mode") == "graded-course" and item.get("mode") == "graded"
+                and not str(item.get("path", "")).startswith(PRIVATE_PREFIX)):
+            raise ValueError(
+                f"Graded assessment {item.get('id')} reads from a public source while assessment protection is "
+                "protected; move it to the private store or set assessment_protection to open")
     mode = policy.get("mode")
     if mode not in {"formative-only", "graded-course"}:
         raise ValueError("Unknown grading mode")

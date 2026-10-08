@@ -125,6 +125,92 @@
       "original_content": true,
       "license": "CC-BY-4.0",
       "modifications": []
+    },
+    {
+      "module_id": "geroscience-module-9",
+      "lesson_id": "geroscience-9",
+      "reading": "modules/05-genome-instability-and-repair-capacity.md",
+      "source_ids": [
+        "lopez-otin-2013-hallmarks",
+        "lopez-otin-2023-hallmarks",
+        "schumacher-2021-dna-damage"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "geroscience-module-10",
+      "lesson_id": "geroscience-10",
+      "reading": "modules/06-proteostasis-autophagy-and-mitochondria.md",
+      "source_ids": [
+        "lopez-otin-2013-hallmarks",
+        "lopez-otin-2023-hallmarks",
+        "kennedy-2014-geroscience"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "geroscience-module-11",
+      "lesson_id": "geroscience-11",
+      "reading": "modules/07-nutrient-sensing-and-lifespan-interventions.md",
+      "source_ids": [
+        "lopez-otin-2013-hallmarks",
+        "harrison-2009-rapamycin-itp",
+        "colman-2009-rhesus-cr",
+        "mattison-2017-rhesus-cr",
+        "kennedy-2014-geroscience"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "geroscience-module-12",
+      "lesson_id": "geroscience-12",
+      "reading": "modules/08-regeneration-across-species.md",
+      "source_ids": [
+        "poss-2002-zebrafish-heart",
+        "porrello-2011-neonatal-heart",
+        "lopez-otin-2023-hallmarks",
+        "kennedy-2014-geroscience"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "geroscience-module-13",
+      "lesson_id": "geroscience-13",
+      "reading": "modules/09-reading-an-aging-intervention-paper.md",
+      "source_ids": [
+        "harrison-2009-rapamycin-itp",
+        "kennedy-2014-geroscience"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "geroscience-module-14",
+      "lesson_id": "geroscience-14",
+      "reading": "modules/10-from-model-to-human-evidence-tiers.md",
+      "source_ids": [
+        "kennedy-2014-geroscience",
+        "lopez-otin-2023-hallmarks",
+        "harrison-2009-rapamycin-itp"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
     }
   ]
 }

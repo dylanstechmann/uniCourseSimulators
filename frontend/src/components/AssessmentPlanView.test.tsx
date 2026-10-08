@@ -92,4 +92,36 @@ describe("versioned assessment plan", () => {
       screen.getByText(/no graded submissions are saved yet/i),
     ).toBeInTheDocument();
   });
+
+  it("states whether graded answers are protected or open", () => {
+    const base: AssessmentPlan = {
+      course_id: "demo",
+      content_version: "0.1.0",
+      grading_mode: "graded-course",
+      course_grade_status: "configured_no_submissions",
+      categories: [{ id: "homework", title: "Homework", weight: 1 }],
+      category_aggregation: "points",
+      attempt_policy: "Two attempts.",
+      solution_release: "After the due time.",
+      late_policy: "No late work.",
+      appeals: "Request a review.",
+      assessments: [],
+    };
+    const { rerender } = render(
+      <AssessmentPlanView
+        plan={{ ...base, assessment_protection: "open" }}
+        onOpenPractice={vi.fn()}
+      />,
+    );
+    expect(screen.getByText(/graded keys may be public/i)).toBeTruthy();
+    rerender(
+      <AssessmentPlanView
+        plan={{ ...base, assessment_protection: "protected" }}
+        onOpenPractice={vi.fn()}
+      />,
+    );
+    expect(
+      screen.getByText(/kept outside the public repository/i),
+    ).toBeTruthy();
+  });
 });

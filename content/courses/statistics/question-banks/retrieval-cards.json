@@ -95,6 +95,46 @@
         "statistics-5-objective-2"
       ],
       "license": "CC-BY-4.0"
+    },
+    {
+      "id": "statistics-6-card-1",
+      "lesson_id": "statistics-6",
+      "front": "Censoring",
+      "back": "A censored subject was event-free for the time observed; keep them in the risk set until censoring and do not count an event.",
+      "objective_ids": [
+        "statistics-6-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "statistics-6-card-2",
+      "lesson_id": "statistics-6",
+      "front": "Kaplan–Meier estimator",
+      "back": "S(t) is the product of (1 − d/n) over event times up to t, with n the number at risk just before each event.",
+      "objective_ids": [
+        "statistics-6-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "statistics-6-card-3",
+      "lesson_id": "statistics-6",
+      "front": "Rate ratio and hazard ratio",
+      "back": "Events per person-time ratio estimates a hazard ratio if hazards are roughly constant; a single HR misleads when curves cross.",
+      "objective_ids": [
+        "statistics-6-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "statistics-6-card-4",
+      "lesson_id": "statistics-6",
+      "front": "Informative censoring",
+      "back": "If subjects leave because of the outcome, censoring is informative and the estimate is biased; report why subjects were censored.",
+      "objective_ids": [
+        "statistics-6-objective-3"
+      ],
+      "license": "CC-BY-4.0"
     }
   ]
 }

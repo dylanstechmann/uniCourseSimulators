@@ -7,7 +7,7 @@
   "domain": "Computing",
   "level": "Year 2",
   "maturity": "partial",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "license": "MIT OR CC-BY-4.0",
   "content_origin": {
     "kind": "legacy-prototype",
@@ -96,6 +96,31 @@
       "description": "Show distributions and uncertainty without obscuring individual observations.",
       "bloom": "understand",
       "course_outcome_ids": []
+    },
+    {
+      "id": "programming-5-objective-1",
+      "description": "Write known-answer tests for a small scientific function, computing the expected values independently.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "programming-outcome-1"
+      ]
+    },
+    {
+      "id": "programming-5-objective-2",
+      "description": "Choose a tolerance and explain why floating-point numbers are compared with a tolerance.",
+      "bloom": "understand",
+      "course_outcome_ids": [
+        "programming-outcome-2"
+      ]
+    },
+    {
+      "id": "programming-5-objective-3",
+      "description": "Make a stochastic analysis repeatable and record the provenance needed to reproduce a figure.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "programming-outcome-3",
+        "programming-outcome-4"
+      ]
     }
   ],
   "duration": {
@@ -220,6 +245,41 @@
           ]
         }
       ]
+    },
+    {
+      "id": "programming-module-5",
+      "title": "Testing scientific functions and provenance",
+      "source_ids": [
+        "numerical",
+        "engineeringMath"
+      ],
+      "lessons": [
+        {
+          "id": "programming-5",
+          "title": "Testing a scientific function: known answers, tolerances, seeds and provenance",
+          "reading": "modules/05-testing-scientific-functions-and-provenance.md",
+          "objectives": [
+            "programming-5-objective-1",
+            "programming-5-objective-2",
+            "programming-5-objective-3"
+          ],
+          "worked_example": "doubling_time_hours(1e5, 8e5, 30) is 10 hours (three doublings); the culture growing from 2.0×10⁵ to 1.28×10⁶ cells in 24 h has a doubling time of 8.96 h, and (0.1 + 0.2) − 0.3 is 5.55e-17, which is why floats are compared with a tolerance.",
+          "question_ids": [
+            "programming-5:three-doublings",
+            "programming-5:culture-doubling-time",
+            "programming-5:float-gap",
+            "programming-5:compare-floats",
+            "programming-5:seeded-simulation",
+            "programming-5:provenance-record"
+          ],
+          "card_ids": [
+            "programming-5-card-1",
+            "programming-5-card-2",
+            "programming-5-card-3",
+            "programming-5-card-4"
+          ]
+        }
+      ]
     }
   ],
   "assessments": [
@@ -284,6 +344,27 @@
       "points": 2
     },
     {
+      "id": "programming-5-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Testing scientific functions and provenance practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "programming-5-objective-1",
+        "programming-5-objective-2",
+        "programming-5-objective-3"
+      ],
+      "question_ids": [
+        "programming-5:three-doublings",
+        "programming-5:culture-doubling-time",
+        "programming-5:float-gap",
+        "programming-5:compare-floats",
+        "programming-5:seeded-simulation",
+        "programming-5:provenance-record"
+      ],
+      "points": 6
+    },
+    {
       "id": "programming-case",
       "type": "case",
       "mode": "self-assessment",
@@ -325,6 +406,11 @@
       "version": "0.1.0",
       "date": "2026-10-05",
       "summary": "Preserved original compact prototype content in separate manifests and readings; labeled partial without semester or credit equivalency."
+    },
+    {
+      "version": "0.2.0",
+      "date": "2026-10-08",
+      "summary": "Added an original lesson on testing a scientific function (known-answer tests, floating-point tolerances, seeded randomness and provenance records) with six formative items with computed keys and four retrieval cards. The package remains partial and unreviewed."
     }
   ],
   "limitations": [

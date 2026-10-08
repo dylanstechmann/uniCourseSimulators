@@ -68,6 +68,18 @@
       "modifications": [
         "Original explanation and replicate-plot exercise; MIT OCW 18.05 is linked only as a curriculum comparator. No source text or assessment was adapted."
       ]
+    },
+    {
+      "module_id": "statistics-module-6",
+      "lesson_id": "statistics-6",
+      "reading": "modules/06-time-to-event-data-and-kaplan-meier.md",
+      "source_ids": [
+        "bland-altman-1998-km"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
     }
   ]
 }

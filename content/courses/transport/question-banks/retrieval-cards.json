@@ -65,6 +65,46 @@
       "back": "Temperature drop per heat-transfer rate for a specified geometry and boundary model.",
       "objective_ids": [],
       "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "transport-5-card-1",
+      "lesson_id": "transport-5",
+      "front": "Critical thickness",
+      "back": "For a one-sided slab with zero-order uptake, L_c = √(2 D C₀ / q); beyond it the core is oxygen-depleted in the model.",
+      "objective_ids": [
+        "transport-5-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "transport-5-card-2",
+      "lesson_id": "transport-5",
+      "front": "Square-root scaling",
+      "back": "Doubling surface oxygen raises the critical thickness by √2, not 2, so supplying more oxygen has diminishing returns.",
+      "objective_ids": [
+        "transport-5-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "transport-5-card-3",
+      "lesson_id": "transport-5",
+      "front": "Diffusion versus consumption",
+      "back": "φ² = q L² / (D C₀) compares diffusion time L²/D with the depletion time C₀/q; values of order 1 or more mean the interior is depleted.",
+      "objective_ids": [
+        "transport-5-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "transport-5-card-4",
+      "lesson_id": "transport-5",
+      "front": "Model failure at depletion",
+      "back": "A negative predicted concentration means a depleted region where the zero-order assumption fails; use a saturating uptake law.",
+      "objective_ids": [
+        "transport-5-objective-3"
+      ],
+      "license": "CC-BY-4.0"
     }
   ]
 }

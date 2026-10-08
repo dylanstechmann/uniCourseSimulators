@@ -2766,6 +2766,267 @@
       "checksum": null,
       "imported_assets": [],
       "rights_notes": "This record documents link-only use and does not clear linked content for reuse."
+    },
+    {
+      "id": "lopez-otin-2013-hallmarks",
+      "title": "The hallmarks of aging",
+      "institution": "NIH / National Library of Medicine PubMed",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/23746838/",
+      "accessed_at": "2026-10-08",
+      "license": "Third-party reuse rights not cleared for this package; link-only scientific reference selected",
+      "reuse_mode": "link-only-reference",
+      "permissions": {
+        "linking": true,
+        "quotation": false,
+        "adaptation": false,
+        "redistribution": false
+      },
+      "attribution_requirements": [
+        "Identify The hallmarks of aging, NIH / National Library of Medicine PubMed, and the exact URL."
+      ],
+      "third_party_notes": "Used only as a link-only scientific reference. No source text, figure, table, problem, or dataset is copied or adapted; findings are summarized qualitatively in original wording.",
+      "mapped_courses": [
+        "geroscience"
+      ],
+      "mapped_modules": [
+        "geroscience-module-9"
+      ],
+      "version": "Cell 2013; DOI 10.1016/j.cell.2013.05.039; PMID 23746838; identifier resolved with the citation-check script on 2026-10-08",
+      "checksum": null,
+      "imported_assets": [],
+      "rights_notes": "This record documents link-only use and does not clear linked content for reuse."
+    },
+    {
+      "id": "lopez-otin-2023-hallmarks",
+      "title": "Hallmarks of aging: An expanding universe",
+      "institution": "NIH / National Library of Medicine PubMed",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/36599349/",
+      "accessed_at": "2026-10-08",
+      "license": "Third-party reuse rights not cleared for this package; link-only scientific reference selected",
+      "reuse_mode": "link-only-reference",
+      "permissions": {
+        "linking": true,
+        "quotation": false,
+        "adaptation": false,
+        "redistribution": false
+      },
+      "attribution_requirements": [
+        "Identify Hallmarks of aging: An expanding universe, NIH / National Library of Medicine PubMed, and the exact URL."
+      ],
+      "third_party_notes": "Used only as a link-only scientific reference. No source text, figure, table, problem, or dataset is copied or adapted; findings are summarized qualitatively in original wording.",
+      "mapped_courses": [
+        "geroscience"
+      ],
+      "mapped_modules": [
+        "geroscience-module-9"
+      ],
+      "version": "Cell 2023; PMID 36599349; identifier resolved with the citation-check script on 2026-10-08",
+      "checksum": null,
+      "imported_assets": [],
+      "rights_notes": "This record documents link-only use and does not clear linked content for reuse."
+    },
+    {
+      "id": "schumacher-2021-dna-damage",
+      "title": "The central role of DNA damage in the ageing process",
+      "institution": "NIH / National Library of Medicine PubMed",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/33911272/",
+      "accessed_at": "2026-10-08",
+      "license": "Third-party reuse rights not cleared for this package; link-only scientific reference selected",
+      "reuse_mode": "link-only-reference",
+      "permissions": {
+        "linking": true,
+        "quotation": false,
+        "adaptation": false,
+        "redistribution": false
+      },
+      "attribution_requirements": [
+        "Identify The central role of DNA damage in the ageing process, NIH / National Library of Medicine PubMed, and the exact URL."
+      ],
+      "third_party_notes": "Used only as a link-only scientific reference. No source text, figure, table, problem, or dataset is copied or adapted; findings are summarized qualitatively in original wording.",
+      "mapped_courses": [
+        "geroscience"
+      ],
+      "mapped_modules": [
+        "geroscience-module-9"
+      ],
+      "version": "Nature 2021; PMID 33911272; identifier resolved with the citation-check script on 2026-10-08",
+      "checksum": null,
+      "imported_assets": [],
+      "rights_notes": "This record documents link-only use and does not clear linked content for reuse."
+    },
+    {
+      "id": "kennedy-2014-geroscience",
+      "title": "Geroscience: linking aging to chronic disease",
+      "institution": "NIH / National Library of Medicine PubMed",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/25417146/",
+      "accessed_at": "2026-10-08",
+      "license": "Third-party reuse rights not cleared for this package; link-only scientific reference selected",
+      "reuse_mode": "link-only-reference",
+      "permissions": {
+        "linking": true,
+        "quotation": false,
+        "adaptation": false,
+        "redistribution": false
+      },
+      "attribution_requirements": [
+        "Identify Geroscience: linking aging to chronic disease, NIH / National Library of Medicine PubMed, and the exact URL."
+      ],
+      "third_party_notes": "Used only as a link-only scientific reference. No source text, figure, table, problem, or dataset is copied or adapted; findings are summarized qualitatively in original wording.",
+      "mapped_courses": [
+        "geroscience"
+      ],
+      "mapped_modules": [
+        "geroscience-module-10"
+      ],
+      "version": "Cell 2014; PMID 25417146; identifier resolved with the citation-check script on 2026-10-08",
+      "checksum": null,
+      "imported_assets": [],
+      "rights_notes": "This record documents link-only use and does not clear linked content for reuse."
+    },
+    {
+      "id": "colman-2009-rhesus-cr",
+      "title": "Caloric restriction delays disease onset and mortality in rhesus monkeys",
+      "institution": "NIH / National Library of Medicine PubMed",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/19590001/",
+      "accessed_at": "2026-10-08",
+      "license": "Third-party reuse rights not cleared for this package; link-only scientific reference selected",
+      "reuse_mode": "link-only-reference",
+      "permissions": {
+        "linking": true,
+        "quotation": false,
+        "adaptation": false,
+        "redistribution": false
+      },
+      "attribution_requirements": [
+        "Identify Caloric restriction delays disease onset and mortality in rhesus monkeys, NIH / National Library of Medicine PubMed, and the exact URL."
+      ],
+      "third_party_notes": "Used only as a link-only scientific reference. No source text, figure, table, problem, or dataset is copied or adapted; findings are summarized qualitatively in original wording.",
+      "mapped_courses": [
+        "geroscience"
+      ],
+      "mapped_modules": [
+        "geroscience-module-11"
+      ],
+      "version": "Science 2009; PMID 19590001; identifier resolved with the citation-check script on 2026-10-08",
+      "checksum": null,
+      "imported_assets": [],
+      "rights_notes": "This record documents link-only use and does not clear linked content for reuse."
+    },
+    {
+      "id": "mattison-2017-rhesus-cr",
+      "title": "Caloric restriction improves health and survival of rhesus monkeys",
+      "institution": "NIH / National Library of Medicine PubMed",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28094793/",
+      "accessed_at": "2026-10-08",
+      "license": "Third-party reuse rights not cleared for this package; link-only scientific reference selected",
+      "reuse_mode": "link-only-reference",
+      "permissions": {
+        "linking": true,
+        "quotation": false,
+        "adaptation": false,
+        "redistribution": false
+      },
+      "attribution_requirements": [
+        "Identify Caloric restriction improves health and survival of rhesus monkeys, NIH / National Library of Medicine PubMed, and the exact URL."
+      ],
+      "third_party_notes": "Used only as a link-only scientific reference. No source text, figure, table, problem, or dataset is copied or adapted; findings are summarized qualitatively in original wording.",
+      "mapped_courses": [
+        "geroscience"
+      ],
+      "mapped_modules": [
+        "geroscience-module-11"
+      ],
+      "version": "Nature Communications 2017; PMID 28094793; identifier resolved with the citation-check script on 2026-10-08",
+      "checksum": null,
+      "imported_assets": [],
+      "rights_notes": "This record documents link-only use and does not clear linked content for reuse."
+    },
+    {
+      "id": "poss-2002-zebrafish-heart",
+      "title": "Heart regeneration in zebrafish",
+      "institution": "NIH / National Library of Medicine PubMed",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/12481136/",
+      "accessed_at": "2026-10-08",
+      "license": "Third-party reuse rights not cleared for this package; link-only scientific reference selected",
+      "reuse_mode": "link-only-reference",
+      "permissions": {
+        "linking": true,
+        "quotation": false,
+        "adaptation": false,
+        "redistribution": false
+      },
+      "attribution_requirements": [
+        "Identify Heart regeneration in zebrafish, NIH / National Library of Medicine PubMed, and the exact URL."
+      ],
+      "third_party_notes": "Used only as a link-only scientific reference. No source text, figure, table, problem, or dataset is copied or adapted; findings are summarized qualitatively in original wording.",
+      "mapped_courses": [
+        "geroscience"
+      ],
+      "mapped_modules": [
+        "geroscience-module-12"
+      ],
+      "version": "Science 2002; PMID 12481136; identifier resolved with the citation-check script on 2026-10-08",
+      "checksum": null,
+      "imported_assets": [],
+      "rights_notes": "This record documents link-only use and does not clear linked content for reuse."
+    },
+    {
+      "id": "porrello-2011-neonatal-heart",
+      "title": "Transient regenerative potential of the neonatal mouse heart",
+      "institution": "NIH / National Library of Medicine PubMed",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/21350179/",
+      "accessed_at": "2026-10-08",
+      "license": "Third-party reuse rights not cleared for this package; link-only scientific reference selected",
+      "reuse_mode": "link-only-reference",
+      "permissions": {
+        "linking": true,
+        "quotation": false,
+        "adaptation": false,
+        "redistribution": false
+      },
+      "attribution_requirements": [
+        "Identify Transient regenerative potential of the neonatal mouse heart, NIH / National Library of Medicine PubMed, and the exact URL."
+      ],
+      "third_party_notes": "Used only as a link-only scientific reference. No source text, figure, table, problem, or dataset is copied or adapted; findings are summarized qualitatively in original wording.",
+      "mapped_courses": [
+        "geroscience"
+      ],
+      "mapped_modules": [
+        "geroscience-module-12"
+      ],
+      "version": "Science 2011; PMID 21350179; identifier resolved with the citation-check script on 2026-10-08",
+      "checksum": null,
+      "imported_assets": [],
+      "rights_notes": "This record documents link-only use and does not clear linked content for reuse."
+    },
+    {
+      "id": "bland-altman-1998-km",
+      "title": "Survival probabilities (the Kaplan-Meier method)",
+      "institution": "NIH / National Library of Medicine PubMed",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/9836663/",
+      "accessed_at": "2026-10-08",
+      "license": "Third-party reuse rights not cleared for this package; link-only scientific reference selected",
+      "reuse_mode": "link-only-reference",
+      "permissions": {
+        "linking": true,
+        "quotation": false,
+        "adaptation": false,
+        "redistribution": false
+      },
+      "attribution_requirements": [
+        "Identify Survival probabilities (the Kaplan-Meier method), NIH / National Library of Medicine PubMed, and the exact URL."
+      ],
+      "third_party_notes": "Used only as a link-only scientific reference. No source text, figure, table, problem, or dataset is copied or adapted; findings are summarized qualitatively in original wording.",
+      "mapped_courses": [
+        "statistics"
+      ],
+      "mapped_modules": [
+        "statistics-module-6"
+      ],
+      "version": "BMJ 1998; PMID 9836663; identifier resolved with the citation-check script on 2026-10-08",
+      "checksum": null,
+      "imported_assets": [],
+      "rights_notes": "This record documents link-only use and does not clear linked content for reuse."
     }
   ]
 }

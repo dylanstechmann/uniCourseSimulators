@@ -7,7 +7,7 @@
   "domain": "Bioengineering",
   "level": "Year 3",
   "maturity": "partial",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "license": "MIT OR CC-BY-4.0",
   "content_origin": {
     "kind": "legacy-prototype",
@@ -97,6 +97,31 @@
       "description": "Use a resistance network for heat or mass transfer.",
       "bloom": "apply",
       "course_outcome_ids": []
+    },
+    {
+      "id": "transport-5-objective-1",
+      "description": "Compute the oxygen profile minimum and the critical thickness for a slab or sphere with zero-order consumption.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "transport-outcome-2"
+      ]
+    },
+    {
+      "id": "transport-5-objective-2",
+      "description": "Use a dimensionless ratio of consumption to diffusion to decide which process limits oxygen delivery.",
+      "bloom": "analyze",
+      "course_outcome_ids": [
+        "transport-outcome-4"
+      ]
+    },
+    {
+      "id": "transport-5-objective-3",
+      "description": "Evaluate design levers against the assumptions of the model.",
+      "bloom": "evaluate",
+      "course_outcome_ids": [
+        "transport-outcome-2",
+        "transport-outcome-4"
+      ]
     }
   ],
   "duration": {
@@ -221,6 +246,40 @@
           ]
         }
       ]
+    },
+    {
+      "id": "transport-module-5",
+      "title": "Oxygen limits in thick constructs",
+      "source_ids": [
+        "transport",
+        "engineeringMath"
+      ],
+      "lessons": [
+        {
+          "id": "transport-5",
+          "title": "Oxygen limits in thick constructs: zero-order uptake, critical thickness and time scales",
+          "reading": "modules/05-oxygen-limits-in-thick-constructs.md",
+          "objectives": [
+            "transport-5-objective-1",
+            "transport-5-objective-2",
+            "transport-5-objective-3"
+          ],
+          "worked_example": "With D = 2e-09 m²/s, C₀ = 0.2 mol/m³ and q = 0.02 mol/(m³·s), L_c = 200 µm; a 150 µm slab has C_min = 0.0875 mol/m³, doubling C₀ gives 283 µm, and a 100 µm slab has φ² = 0.50.",
+          "question_ids": [
+            "transport-5:critical-thickness",
+            "transport-5:minimum-concentration",
+            "transport-5:doubled-surface-oxygen",
+            "transport-5:thiele-modulus",
+            "transport-5:negative-concentration"
+          ],
+          "card_ids": [
+            "transport-5-card-1",
+            "transport-5-card-2",
+            "transport-5-card-3",
+            "transport-5-card-4"
+          ]
+        }
+      ]
     }
   ],
   "assessments": [
@@ -285,6 +344,26 @@
       "points": 2
     },
     {
+      "id": "transport-5-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Oxygen limits in thick constructs practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "transport-5-objective-1",
+        "transport-5-objective-2",
+        "transport-5-objective-3"
+      ],
+      "question_ids": [
+        "transport-5:critical-thickness",
+        "transport-5:minimum-concentration",
+        "transport-5:doubled-surface-oxygen",
+        "transport-5:thiele-modulus",
+        "transport-5:negative-concentration"
+      ],
+      "points": 5
+    },
+    {
       "id": "transport-case",
       "type": "case",
       "mode": "self-assessment",
@@ -326,6 +405,11 @@
       "version": "0.1.0",
       "date": "2026-10-05",
       "summary": "Preserved original compact prototype content in separate manifests and readings; labeled partial without semester or credit equivalency."
+    },
+    {
+      "version": "0.2.0",
+      "date": "2026-10-08",
+      "summary": "Added an original lesson on oxygen limits in thick constructs (zero-order uptake, critical thickness, a dimensionless diffusion-to-consumption ratio and the failure of the model at depletion) with five formative items with computed keys and four retrieval cards. The package remains partial and unreviewed."
     }
   ],
   "limitations": [

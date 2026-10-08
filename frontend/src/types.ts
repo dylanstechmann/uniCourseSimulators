@@ -170,6 +170,7 @@ export interface AssessmentPlan {
   solution_release: string;
   late_policy: string;
   appeals: string;
+  assessment_protection?: "protected" | "open";
   assessments: {
     id: string;
     title: string;

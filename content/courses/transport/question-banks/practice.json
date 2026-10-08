@@ -247,6 +247,159 @@
         "kind": "original",
         "modifications": []
       }
+    },
+    {
+      "id": "transport-5:critical-thickness",
+      "type": "numeric",
+      "prompt": "A slab is supplied with oxygen at one face held at C₀ = 0.2 mol/m³ and sealed at the other, with D = 2e-09 m²/s and zero-order consumption q = 0.02 mol/(m³·s). Calculate the critical thickness L_c = √(2 D C₀ / q). Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "transport-5-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 200.0,
+        "unit": "µm",
+        "tolerance": 0.5,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Compute 2DC₀/q in m², take the square root and convert to micrometers.",
+        "solution": "2 × 2e-09 × 0.2 / 0.02 = 4.0e-08 m², so L_c = 200 µm. Thicker slabs have an oxygen-depleted region in the model.",
+        "lesson_ids": [
+          "transport-5"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "transport-5:minimum-concentration",
+      "type": "numeric",
+      "prompt": "Using the same parameters, calculate the lowest oxygen concentration (at the sealed face) in a 150 µm slab, C_min = C₀ − q L² / (2D). Enter the number in mol/m³.",
+      "points": 1,
+      "objective_ids": [
+        "transport-5-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0.0875,
+        "unit": "",
+        "tolerance": 0.002,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Convert 150 µm to meters before squaring.",
+        "solution": "q L² / (2D) = 0.02 × (1.5×10⁻⁴)² / (2 × 2e-09) = 0.1125, so C_min = 0.0875 mol/m³.",
+        "lesson_ids": [
+          "transport-5"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "transport-5:doubled-surface-oxygen",
+      "type": "numeric",
+      "prompt": "The surface oxygen is doubled to 0.4 mol/m³ with all other parameters unchanged. Calculate the new critical thickness for the one-sided slab. Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "transport-5-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 282.8,
+        "unit": "µm",
+        "tolerance": 0.5,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "L_c grows as the square root of C₀.",
+        "solution": "L_c = √(2 × 2e-09 × 0.4 / 0.02) = 283 µm, a factor of √2 rather than 2.",
+        "lesson_ids": [
+          "transport-5"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "transport-5:thiele-modulus",
+      "type": "numeric",
+      "prompt": "Calculate φ² = q L² / (D C₀) for a 100 µm slab with the same parameters (q = 0.02, D = 2e-09, C₀ = 0.2). Enter the number.",
+      "points": 1,
+      "objective_ids": [
+        "transport-5-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0.5,
+        "unit": "",
+        "tolerance": 0.005,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use L in meters; φ² is dimensionless.",
+        "solution": "φ² = 0.02 × (1.0×10⁻⁴)² / (2e-09 × 0.2) = 0.50. For the slab, φ² = 2 is the critical thickness, so 100 µm is comfortably below it in this model.",
+        "lesson_ids": [
+          "transport-5"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "transport-5:negative-concentration",
+      "type": "single_choice",
+      "prompt": "For a thick slab the zero-order solution predicts a negative oxygen concentration near the sealed face. What does that mean?",
+      "points": 1,
+      "objective_ids": [
+        "transport-5-objective-3"
+      ],
+      "options": [
+        "The slab contains an oxygen source.",
+        "The slab is perfectly supplied.",
+        "Part of the slab is oxygen-depleted, so the zero-order model no longer applies there; the predicted negative value is not physical.",
+        "The model is wrong everywhere in the slab."
+      ],
+      "solution_spec": {
+        "answer": 2
+      },
+      "feedback": {
+        "hint": "Think about what zero-order consumption assumes about the oxygen available.",
+        "solution": "Zero-order consumption assumes oxygen is present. When the equation says it would be negative, the real concentration is near zero over some depth and consumption falls there, so the model needs a depleted region or a saturating uptake law.",
+        "lesson_ids": [
+          "transport-5"
+        ],
+        "misconception_ids": [
+          "km-always-equals-binding-affinity"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
     }
   ]
 }

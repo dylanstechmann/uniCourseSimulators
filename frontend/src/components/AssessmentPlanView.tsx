@@ -143,6 +143,16 @@ export function AssessmentPlanView({
           <dd>{plan.late_policy}</dd>
           <dt>Appeals</dt>
           <dd>{plan.appeals}</dd>
+          {plan.grading_mode === "graded-course" && (
+            <>
+              <dt>Answer protection</dt>
+              <dd>
+                {plan.assessment_protection === "protected"
+                  ? "Graded questions and keys are kept outside the public repository."
+                  : "Open: graded keys may be public, so a result relies on your own honesty."}
+              </dd>
+            </>
+          )}
         </dl>
       </details>
     </section>

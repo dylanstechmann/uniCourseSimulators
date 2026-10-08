@@ -23,6 +23,7 @@ from sqlalchemy.orm import Session
 from .assessment import (
     calculate_weighted_grade,
     canonical_digest,
+    effective_protection,
     utc_datetime,
     validate_assessment_configuration,
 )
@@ -252,6 +253,8 @@ def create_app(settings: Settings | None = None) -> FastAPI:
         policy.setdefault("solution_release", "Not specified.")
         policy.setdefault("late_policy", "No course grade is configured.")
         policy.setdefault("appeals", "Use the supported formative attempt review workflow.")
+        # Report the protection mode that is actually in force, not only the course's request.
+        policy["assessment_protection"] = effective_protection(policy, settings.assessment_protection)
         return policy
 
     def ensure_assessment_plan(db: Session, enrollment: Enrollment, manifest: dict) -> AssessmentPlan:
@@ -275,7 +278,7 @@ def create_app(settings: Settings | None = None) -> FastAPI:
             item["due_at"] = item.get("due_at")
             normalized_assessments.append(item)
         try:
-            validate_assessment_configuration(normalized_assessments, policy)
+            validate_assessment_configuration(normalized_assessments, policy, settings.assessment_protection)
         except (AttributeError, KeyError, TypeError, ValueError) as exc:
             raise HTTPException(409, "The course assessment configuration is invalid") from exc
 
@@ -336,6 +339,12 @@ def create_app(settings: Settings | None = None) -> FastAPI:
         ))
         if not instance or instance.mode != "graded":
             raise HTTPException(404, "Graded assessment not found")
+        try:
+            protection = effective_protection(dict(plan.policy_json or {}), settings.assessment_protection)
+        except ValueError as exc:
+            raise HTTPException(409, "The assessment protection setting is invalid") from exc
+        if protection == "protected" and not str(instance.source_path).startswith("private://"):
+            raise HTTPException(409, "Assessment protection is on and this assessment is not in the private store")
         try:
             source_path = content.assessment_source_file(enrollment.course_id, instance.source_path)
             source_bytes = source_path.read_bytes()
@@ -836,6 +845,7 @@ def create_app(settings: Settings | None = None) -> FastAPI:
         return {
             "course_id": course_id,
             "content_version": plan.content_version,
+            "assessment_protection": effective_protection(dict(policy or {}), settings.assessment_protection),
             "grading_mode": plan.grading_mode,
             "course_grade_status": (
                 ("configured_with_submissions" if submission_count else "configured_no_submissions")

@@ -225,6 +225,246 @@
         "geroscience-8-objective-2"
       ],
       "license": "MIT OR CC-BY-4.0"
+    },
+    {
+      "id": "geroscience-9-card-1",
+      "lesson_id": "geroscience-9",
+      "front": "Burden versus effect",
+      "back": "A mutation count measures surviving changes. It does not show whether they alter function, and it cannot by itself separate input from removal.",
+      "objective_ids": [
+        "geroscience-9-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "geroscience-9-card-2",
+      "lesson_id": "geroscience-9",
+      "front": "Damage-maintenance balance",
+      "back": "With input i and first-order removal k, steady-state burden is i/k; the same burden can come from high input or weak removal.",
+      "objective_ids": [
+        "geroscience-9-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "geroscience-9-card-3",
+      "lesson_id": "geroscience-9",
+      "front": "Cross-sectional rates",
+      "back": "A rate from different people at different ages assumes the groups differ chiefly in age; cohort effects and survivor selection can bend it.",
+      "objective_ids": [
+        "geroscience-9-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "geroscience-9-card-4",
+      "lesson_id": "geroscience-9",
+      "front": "Segmental progeroid syndromes",
+      "back": "They show that loss of one maintenance pathway can accelerate some aging-like features, not that normal aging is the sum of such defects.",
+      "objective_ids": [
+        "geroscience-9-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "geroscience-10-card-1",
+      "lesson_id": "geroscience-10",
+      "front": "Level versus flux",
+      "back": "A marker level reflects formation minus degradation. Compare with and without a lysosomal inhibitor to estimate flux.",
+      "objective_ids": [
+        "geroscience-10-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "geroscience-10-card-2",
+      "lesson_id": "geroscience-10",
+      "front": "Autophagic flux",
+      "back": "Flux = marker with inhibitor − marker without, over a fixed window; check the inhibitor works and the accumulation is near linear.",
+      "objective_ids": [
+        "geroscience-10-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "geroscience-10-card-3",
+      "lesson_id": "geroscience-10",
+      "front": "Heteroplasmy threshold",
+      "back": "A mitochondrial defect often needs a high mutant fraction in a cell, so count cells above threshold, not just the average.",
+      "objective_ids": [
+        "geroscience-10-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "geroscience-10-card-4",
+      "lesson_id": "geroscience-10",
+      "front": "Cause versus consequence",
+      "back": "An age-associated decline in quality control does not show it causes tissue decline; perturb the pathway and measure function.",
+      "objective_ids": [
+        "geroscience-10-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "geroscience-11-card-1",
+      "lesson_id": "geroscience-11",
+      "front": "Insulin/IGF, TOR, AMPK",
+      "back": "Insulin/IGF and TOR promote growth under plenty and restrain maintenance and autophagy; AMPK signals low energy and shifts toward catabolism and mitochondrial maintenance.",
+      "objective_ids": [
+        "geroscience-11-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "geroscience-11-card-2",
+      "lesson_id": "geroscience-11",
+      "front": "Median versus late-life survival",
+      "back": "Median describes the typical animal; the survival of the longest-lived few is noisier. They can change differently and point to different mechanisms.",
+      "objective_ids": [
+        "geroscience-11-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "geroscience-11-card-3",
+      "lesson_id": "geroscience-11",
+      "front": "Why two studies can disagree",
+      "back": "Diet composition, control feeding, animal origin and starting age change a comparison; read the designs before deciding which result to trust.",
+      "objective_ids": [
+        "geroscience-11-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "geroscience-11-card-4",
+      "lesson_id": "geroscience-11",
+      "front": "Mouse result, human claim",
+      "back": "A lifespan effect in mice does not establish a human effect; human claims need human trials with clinical outcomes and safety data.",
+      "objective_ids": [
+        "geroscience-11-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "geroscience-12-card-1",
+      "lesson_id": "geroscience-12",
+      "front": "Regeneration versus proliferation",
+      "back": "A proliferation label near an injury is not regeneration; the tissue must be restored in structure and function.",
+      "objective_ids": [
+        "geroscience-12-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "geroscience-12-card-2",
+      "lesson_id": "geroscience-12",
+      "front": "Hypertrophy",
+      "back": "Enlargement of existing cells can restore mass or wall thickness without new cells, so thickness alone does not show regeneration.",
+      "objective_ids": [
+        "geroscience-12-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "geroscience-12-card-3",
+      "lesson_id": "geroscience-12",
+      "front": "Lineage tracing",
+      "back": "Permanently labeling a cell population shows which cells formed the new tissue; without it the origin of new cells is inferred.",
+      "objective_ids": [
+        "geroscience-12-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "geroscience-12-card-4",
+      "lesson_id": "geroscience-12",
+      "front": "Neonatal window",
+      "back": "Mouse hearts regenerate after injury in the first days after birth and scar later, showing capacity changes with development.",
+      "objective_ids": [
+        "geroscience-12-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "geroscience-13-card-1",
+      "lesson_id": "geroscience-13",
+      "front": "Sample size scales with 1/d²",
+      "back": "For two groups, n per group is about 2(z + z)²/d²: halving the standardized effect quadruples the sample size.",
+      "objective_ids": [
+        "geroscience-13-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "geroscience-13-card-2",
+      "lesson_id": "geroscience-13",
+      "front": "Multiplicity",
+      "back": "With k independent tests at α = 0.05 and no true effect, the chance of at least one false positive is 1 − 0.95^k.",
+      "objective_ids": [
+        "geroscience-13-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "geroscience-13-card-3",
+      "lesson_id": "geroscience-13",
+      "front": "Primary endpoint",
+      "back": "State the main outcome in advance; label the rest secondary or exploratory, and adjust for multiple comparisons or say you did not.",
+      "objective_ids": [
+        "geroscience-13-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "geroscience-13-card-4",
+      "lesson_id": "geroscience-13",
+      "front": "Significant is not important",
+      "back": "A small p-value says the data are unusual under no effect; it does not give the size of the effect or whether that size matters.",
+      "objective_ids": [
+        "geroscience-13-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "geroscience-14-card-1",
+      "lesson_id": "geroscience-14",
+      "front": "Evidence ladder",
+      "back": "Cell culture, invertebrates, rodents, primates, human observational studies, randomized human trials: place a claim at the highest rung with direct evidence.",
+      "objective_ids": [
+        "geroscience-14-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "geroscience-14-card-2",
+      "lesson_id": "geroscience-14",
+      "front": "ARR, RRR and NNT",
+      "back": "ARR = control − treated risk; RRR = ARR / control risk; NNT = 1 / ARR. Report absolute effects with relative ones.",
+      "objective_ids": [
+        "geroscience-14-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "geroscience-14-card-3",
+      "lesson_id": "geroscience-14",
+      "front": "Surrogate endpoint",
+      "back": "A marker is a surrogate only if interventions that change it change the outcome; correlation with age or risk is not enough.",
+      "objective_ids": [
+        "geroscience-14-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "geroscience-14-card-4",
+      "lesson_id": "geroscience-14",
+      "front": "Geroscience hypothesis",
+      "back": "The proposal that targeting aging biology could delay several age-related diseases at once is a hypothesis awaiting human trials.",
+      "objective_ids": [
+        "geroscience-14-objective-3"
+      ],
+      "license": "CC-BY-4.0"
     }
   ]
 }

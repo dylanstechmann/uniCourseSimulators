@@ -7,7 +7,7 @@
   "domain": "Life sciences",
   "level": "Year 3",
   "maturity": "partial",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "license": "MIT OR CC-BY-4.0",
   "content_origin": {
     "kind": "legacy-prototype",
@@ -213,6 +213,150 @@
       "id": "geroscience-8-objective-3",
       "description": "Design measurements for a partial-reprogramming experiment that separate youthful features from dedifferentiation and tumor risk.",
       "bloom": "create",
+      "course_outcome_ids": [
+        "geroscience-outcome-3"
+      ]
+    },
+    {
+      "id": "geroscience-9-objective-1",
+      "description": "Estimate a mutation-accumulation rate from cross-sectional counts and state the assumptions that make a rate meaningful.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "geroscience-outcome-1"
+      ]
+    },
+    {
+      "id": "geroscience-9-objective-2",
+      "description": "Use the damage-maintenance balance to explain why equal burden can arise from different causes and name measurements that separate them.",
+      "bloom": "analyze",
+      "course_outcome_ids": [
+        "geroscience-outcome-1"
+      ]
+    },
+    {
+      "id": "geroscience-9-objective-3",
+      "description": "Evaluate what a repair-deficiency syndrome does and does not show about normal aging.",
+      "bloom": "evaluate",
+      "course_outcome_ids": [
+        "geroscience-outcome-3"
+      ]
+    },
+    {
+      "id": "geroscience-10-objective-1",
+      "description": "Calculate autophagic flux from marker levels measured with and without a lysosomal inhibitor and interpret the result.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "geroscience-outcome-2"
+      ]
+    },
+    {
+      "id": "geroscience-10-objective-2",
+      "description": "Distinguish induction of a quality-control pathway from blocked degradation when a marker rises.",
+      "bloom": "analyze",
+      "course_outcome_ids": [
+        "geroscience-outcome-2"
+      ]
+    },
+    {
+      "id": "geroscience-10-objective-3",
+      "description": "Evaluate evidence that proteostasis or mitochondrial changes are causes rather than consequences of aging in a tissue.",
+      "bloom": "evaluate",
+      "course_outcome_ids": [
+        "geroscience-outcome-3"
+      ]
+    },
+    {
+      "id": "geroscience-11-objective-1",
+      "description": "Calculate percent change in median and in late-life survival and explain why they answer different questions.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "geroscience-outcome-4"
+      ]
+    },
+    {
+      "id": "geroscience-11-objective-2",
+      "description": "Explain how insulin/IGF, TOR and AMPK signaling link nutrient state to growth and maintenance programs.",
+      "bloom": "understand",
+      "course_outcome_ids": [
+        "geroscience-outcome-1"
+      ]
+    },
+    {
+      "id": "geroscience-11-objective-3",
+      "description": "Evaluate conflicting results from two studies of the same intervention by comparing their designs.",
+      "bloom": "evaluate",
+      "course_outcome_ids": [
+        "geroscience-outcome-3"
+      ]
+    },
+    {
+      "id": "geroscience-12-objective-1",
+      "description": "Calculate and compare scar fraction between injury conditions from replicate measurements.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "geroscience-outcome-2"
+      ]
+    },
+    {
+      "id": "geroscience-12-objective-2",
+      "description": "Distinguish proliferation markers, hypertrophy and true regeneration, and name the evidence needed to claim regeneration.",
+      "bloom": "analyze",
+      "course_outcome_ids": [
+        "geroscience-outcome-2"
+      ]
+    },
+    {
+      "id": "geroscience-12-objective-3",
+      "description": "Explain what comparisons across species and across developmental time can and cannot say about adult mammals.",
+      "bloom": "evaluate",
+      "course_outcome_ids": [
+        "geroscience-outcome-3"
+      ]
+    },
+    {
+      "id": "geroscience-13-objective-1",
+      "description": "Compute a per-group sample size for a two-group comparison from a standardized effect size and state its assumptions.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "geroscience-outcome-3"
+      ]
+    },
+    {
+      "id": "geroscience-13-objective-2",
+      "description": "Evaluate a summary of a lifespan or healthspan study for multiplicity, sex and strain, blinding and endpoint choice.",
+      "bloom": "evaluate",
+      "course_outcome_ids": [
+        "geroscience-outcome-3"
+      ]
+    },
+    {
+      "id": "geroscience-13-objective-3",
+      "description": "Distinguish statistical significance, effect size and importance when reporting an intervention effect.",
+      "bloom": "analyze",
+      "course_outcome_ids": [
+        "geroscience-outcome-4"
+      ]
+    },
+    {
+      "id": "geroscience-14-objective-1",
+      "description": "Convert event rates to absolute and relative risk reduction and the number needed to treat and interpret each.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "geroscience-outcome-4"
+      ]
+    },
+    {
+      "id": "geroscience-14-objective-2",
+      "description": "Place a claim on an evidence ladder from cell culture to randomized human trial and name what is missing at each step.",
+      "bloom": "analyze",
+      "course_outcome_ids": [
+        "geroscience-outcome-3"
+      ]
+    },
+    {
+      "id": "geroscience-14-objective-3",
+      "description": "Evaluate whether a biomarker change is an acceptable surrogate for a clinical outcome.",
+      "bloom": "evaluate",
       "course_outcome_ids": [
         "geroscience-outcome-3"
       ]
@@ -490,6 +634,219 @@
           ]
         }
       ]
+    },
+    {
+      "id": "geroscience-module-9",
+      "title": "Genome instability and repair capacity",
+      "source_ids": [
+        "lopez-otin-2013-hallmarks",
+        "lopez-otin-2023-hallmarks",
+        "schumacher-2021-dna-damage"
+      ],
+      "lessons": [
+        {
+          "id": "geroscience-9",
+          "title": "Genome instability and repair capacity: damage, maintenance and what accumulates",
+          "reading": "modules/05-genome-instability-and-repair-capacity.md",
+          "objectives": [
+            "geroscience-9-objective-1",
+            "geroscience-9-objective-2",
+            "geroscience-9-objective-3"
+          ],
+          "worked_example": "Tissue A rises from 410 to 1990 substitutions per cell over 60 years, an average of 26.33 per year, about 4.9 times Tissue B; old cultures remove a mean fraction 0.545 against 0.7175 for young, a ratio of 0.76.",
+          "question_ids": [
+            "geroscience-9:accumulation-rate",
+            "geroscience-9:rate-ratio",
+            "geroscience-9:removal-ratio",
+            "geroscience-9:burden-interpretation",
+            "geroscience-9:progeroid-inference"
+          ],
+          "card_ids": [
+            "geroscience-9-card-1",
+            "geroscience-9-card-2",
+            "geroscience-9-card-3",
+            "geroscience-9-card-4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "geroscience-module-10",
+      "title": "Proteostasis, autophagy and mitochondria",
+      "source_ids": [
+        "lopez-otin-2013-hallmarks",
+        "lopez-otin-2023-hallmarks",
+        "kennedy-2014-geroscience"
+      ],
+      "lessons": [
+        {
+          "id": "geroscience-10",
+          "title": "Proteostasis, autophagy and mitochondria: quality control and what changes with age",
+          "reading": "modules/06-proteostasis-autophagy-and-mitochondria.md",
+          "objectives": [
+            "geroscience-10-objective-1",
+            "geroscience-10-objective-2",
+            "geroscience-10-objective-3"
+          ],
+          "worked_example": "Young flux is 3.0 − 1.0 = 2.0 and old flux is 2.4 − 1.8 = 0.6, a ratio of 0.30, even though old cells have the higher resting LC3-II; 34 of 200 cells (17%) exceed a 70% heteroplasmy threshold.",
+          "question_ids": [
+            "geroscience-10:young-flux",
+            "geroscience-10:old-to-young-flux",
+            "geroscience-10:high-marker-meaning",
+            "geroscience-10:cells-above-threshold",
+            "geroscience-10:cause-or-consequence"
+          ],
+          "card_ids": [
+            "geroscience-10-card-1",
+            "geroscience-10-card-2",
+            "geroscience-10-card-3",
+            "geroscience-10-card-4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "geroscience-module-11",
+      "title": "Nutrient sensing and lifespan interventions",
+      "source_ids": [
+        "lopez-otin-2013-hallmarks",
+        "harrison-2009-rapamycin-itp",
+        "colman-2009-rhesus-cr",
+        "mattison-2017-rhesus-cr",
+        "kennedy-2014-geroscience"
+      ],
+      "lessons": [
+        {
+          "id": "geroscience-11",
+          "title": "Nutrient sensing and lifespan interventions: what the model organisms show",
+          "reading": "modules/07-nutrient-sensing-and-lifespan-interventions.md",
+          "objectives": [
+            "geroscience-11-objective-1",
+            "geroscience-11-objective-2",
+            "geroscience-11-objective-3"
+          ],
+          "worked_example": "Median survival rises from 800 to 880 days, a 10.0% change, while the longest-lived-decile mean rises from 1000 to 1060, a 6.0% change; with 60 animals per group the decile rests on 6 animals.",
+          "question_ids": [
+            "geroscience-11:median-percent-change",
+            "geroscience-11:late-life-percent-change",
+            "geroscience-11:median-vs-top",
+            "geroscience-11:rhesus-design-differences",
+            "geroscience-11:model-to-human",
+            "geroscience-11:nutrient-rich-signaling"
+          ],
+          "card_ids": [
+            "geroscience-11-card-1",
+            "geroscience-11-card-2",
+            "geroscience-11-card-3",
+            "geroscience-11-card-4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "geroscience-module-12",
+      "title": "Regeneration across species",
+      "source_ids": [
+        "poss-2002-zebrafish-heart",
+        "porrello-2011-neonatal-heart",
+        "lopez-otin-2023-hallmarks",
+        "kennedy-2014-geroscience"
+      ],
+      "lessons": [
+        {
+          "id": "geroscience-12",
+          "title": "Regeneration across species: what regrows, what scars, and what counts as evidence",
+          "reading": "modules/08-regeneration-across-species.md",
+          "objectives": [
+            "geroscience-12-objective-1",
+            "geroscience-12-objective-2",
+            "geroscience-12-objective-3"
+          ],
+          "worked_example": "Mean scar area is 3.2% after day-1 resection and 18.4% after day-7 resection, 15.2 percentage points apart against a sham mean of 0.5%; higher EdU labeling (5.2% against 0.8%) fits renewed cell-cycle activity but does not show new cardiomyocytes.",
+          "question_ids": [
+            "geroscience-12:mean-scar-day1",
+            "geroscience-12:scar-difference",
+            "geroscience-12:edu-is-not-regeneration",
+            "geroscience-12:evidence-for-regeneration",
+            "geroscience-12:species-and-age-comparison"
+          ],
+          "card_ids": [
+            "geroscience-12-card-1",
+            "geroscience-12-card-2",
+            "geroscience-12-card-3",
+            "geroscience-12-card-4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "geroscience-module-13",
+      "title": "Reading an aging-intervention paper",
+      "source_ids": [
+        "harrison-2009-rapamycin-itp",
+        "kennedy-2014-geroscience"
+      ],
+      "lessons": [
+        {
+          "id": "geroscience-13",
+          "title": "Reading an aging-intervention paper: design, power and what a result is worth",
+          "reading": "modules/09-reading-an-aging-intervention-paper.md",
+          "objectives": [
+            "geroscience-13-objective-1",
+            "geroscience-13-objective-2",
+            "geroscience-13-objective-3"
+          ],
+          "worked_example": "For d = 0.5 at α = 0.05 and 80% power, n = 2 × (1.96 + 0.84)² / 0.25 = 62.72, so 63 per group; twelve independent endpoints at α = 0.05 give a 0.460 chance of at least one false positive with no true effects.",
+          "question_ids": [
+            "geroscience-13:sample-size-d05",
+            "geroscience-13:sample-size-d08",
+            "geroscience-13:multiplicity",
+            "geroscience-13:headline-evaluation",
+            "geroscience-13:significance-vs-importance"
+          ],
+          "card_ids": [
+            "geroscience-13-card-1",
+            "geroscience-13-card-2",
+            "geroscience-13-card-3",
+            "geroscience-13-card-4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "geroscience-module-14",
+      "title": "From model to human",
+      "source_ids": [
+        "kennedy-2014-geroscience",
+        "lopez-otin-2023-hallmarks",
+        "harrison-2009-rapamycin-itp"
+      ],
+      "lessons": [
+        {
+          "id": "geroscience-14",
+          "title": "From model to human: evidence tiers, surrogate markers and honest limits",
+          "reading": "modules/10-from-model-to-human-evidence-tiers.md",
+          "objectives": [
+            "geroscience-14-objective-1",
+            "geroscience-14-objective-2",
+            "geroscience-14-objective-3"
+          ],
+          "worked_example": "Event rates of 10% and 8% give ARR 0.02, RRR 20% and NNT 50; a lower biomarker score supports a statement about the score, not about aging, unless it is shown to be a surrogate for the outcome.",
+          "question_ids": [
+            "geroscience-14:nnt",
+            "geroscience-14:rrr",
+            "geroscience-14:ladder-placement",
+            "geroscience-14:surrogate-judgement",
+            "geroscience-14:supported-statements"
+          ],
+          "card_ids": [
+            "geroscience-14-card-1",
+            "geroscience-14-card-2",
+            "geroscience-14-card-3",
+            "geroscience-14-card-4"
+          ]
+        }
+      ]
     }
   ],
   "assessments": [
@@ -629,6 +986,127 @@
       "points": 8
     },
     {
+      "id": "geroscience-9-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Genome instability and repair capacity practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "geroscience-9-objective-1",
+        "geroscience-9-objective-2",
+        "geroscience-9-objective-3"
+      ],
+      "question_ids": [
+        "geroscience-9:accumulation-rate",
+        "geroscience-9:rate-ratio",
+        "geroscience-9:removal-ratio",
+        "geroscience-9:burden-interpretation",
+        "geroscience-9:progeroid-inference"
+      ],
+      "points": 5
+    },
+    {
+      "id": "geroscience-10-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Proteostasis, autophagy and mitochondria practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "geroscience-10-objective-1",
+        "geroscience-10-objective-2",
+        "geroscience-10-objective-3"
+      ],
+      "question_ids": [
+        "geroscience-10:young-flux",
+        "geroscience-10:old-to-young-flux",
+        "geroscience-10:high-marker-meaning",
+        "geroscience-10:cells-above-threshold",
+        "geroscience-10:cause-or-consequence"
+      ],
+      "points": 5
+    },
+    {
+      "id": "geroscience-11-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Nutrient sensing and lifespan interventions practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "geroscience-11-objective-1",
+        "geroscience-11-objective-2",
+        "geroscience-11-objective-3"
+      ],
+      "question_ids": [
+        "geroscience-11:median-percent-change",
+        "geroscience-11:late-life-percent-change",
+        "geroscience-11:median-vs-top",
+        "geroscience-11:rhesus-design-differences",
+        "geroscience-11:model-to-human",
+        "geroscience-11:nutrient-rich-signaling"
+      ],
+      "points": 7
+    },
+    {
+      "id": "geroscience-12-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Regeneration across species practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "geroscience-12-objective-1",
+        "geroscience-12-objective-2",
+        "geroscience-12-objective-3"
+      ],
+      "question_ids": [
+        "geroscience-12:mean-scar-day1",
+        "geroscience-12:scar-difference",
+        "geroscience-12:edu-is-not-regeneration",
+        "geroscience-12:evidence-for-regeneration",
+        "geroscience-12:species-and-age-comparison"
+      ],
+      "points": 6
+    },
+    {
+      "id": "geroscience-13-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Reading an aging-intervention paper practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "geroscience-13-objective-1",
+        "geroscience-13-objective-2",
+        "geroscience-13-objective-3"
+      ],
+      "question_ids": [
+        "geroscience-13:sample-size-d05",
+        "geroscience-13:sample-size-d08",
+        "geroscience-13:multiplicity",
+        "geroscience-13:headline-evaluation",
+        "geroscience-13:significance-vs-importance"
+      ],
+      "points": 5
+    },
+    {
+      "id": "geroscience-14-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "From model to human practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "geroscience-14-objective-1",
+        "geroscience-14-objective-2",
+        "geroscience-14-objective-3"
+      ],
+      "question_ids": [
+        "geroscience-14:nnt",
+        "geroscience-14:rrr",
+        "geroscience-14:ladder-placement",
+        "geroscience-14:surrogate-judgement",
+        "geroscience-14:supported-statements"
+      ],
+      "points": 6
+    },
+    {
       "id": "geroscience-case",
       "type": "case",
       "mode": "self-assessment",
@@ -675,6 +1153,11 @@
       "version": "0.2.0",
       "date": "2026-10-07",
       "summary": "Added four original lessons with explicitly synthetic data tables, worked examples, 15 formative items, 16 retrieval cards, and 21 link-only scientific references: survival curves, Gompertz hazards and healthspan endpoints; genetic and pharmacologic senescent-cell clearance with dropout-aware efficacy; clonal hematopoiesis and circulating-factor claims; and epigenetic clocks with partial reprogramming. Mapped every lesson objective to a course outcome and retagged the four legacy checks to the objectives they assess. The package remains partial and unreviewed."
+    },
+    {
+      "version": "0.3.0",
+      "date": "2026-10-08",
+      "summary": "Added six original lessons with explicitly synthetic data tables, worked examples, 30 formative items with computed keys, 24 retrieval cards and link-only references verified on 2026-10-08: genome instability and repair capacity; proteostasis, autophagy and mitochondria (flux versus level); nutrient sensing and lifespan interventions (including conflicting primate studies); regeneration across species and what counts as evidence; reading an aging-intervention paper (sample size, multiplicity); and evidence tiers from model to human (absolute and relative effects, surrogates). The lessons make no claim that any intervention slows or reverses human aging. The package remains partial and unreviewed."
     }
   ],
   "limitations": [
