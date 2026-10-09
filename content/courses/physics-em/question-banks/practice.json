@@ -623,6 +623,2875 @@
         "kind": "original",
         "modifications": []
       }
+    },
+    {
+      "id": "physics-em-7:midpoint-field",
+      "type": "numeric",
+      "prompt": "With k=9.00×10⁹ N·m²/C², +2 nC at x=−0.10 m and −2 nC at x=+0.10 m, what signed midpoint E_x in V/m follows? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "physics-em-7-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 3600,
+        "unit": "",
+        "tolerance": 0.36000000000000004,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the declared source, geometry, sign convention and unit scale.",
+        "solution": "The stated model gives approximately 3600 in the requested scale. Check the boundary condition or reference convention before interpreting it.",
+        "lesson_ids": [
+          "physics-em-7"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physics-em-7:midpoint-potential",
+      "type": "numeric",
+      "prompt": "For those same two point charges, using potential zero at infinity, what midpoint potential in V follows? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "physics-em-7-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0,
+        "unit": "",
+        "tolerance": 1e-07,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the declared source, geometry, sign convention and unit scale.",
+        "solution": "The stated model gives approximately 0 in the requested scale. Check the boundary condition or reference convention before interpreting it.",
+        "lesson_ids": [
+          "physics-em-7"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physics-em-7:test-force",
+      "type": "numeric",
+      "prompt": "For midpoint E_x=+3600 V/m and independent test charge +1.0 nC, what signed x force in µN follows? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "physics-em-7-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 3.6,
+        "unit": "",
+        "tolerance": 0.00036,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the declared source, geometry, sign convention and unit scale.",
+        "solution": "The stated model gives approximately 3.6 in the requested scale. Check the boundary condition or reference convention before interpreting it.",
+        "lesson_ids": [
+          "physics-em-7"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physics-em-7:point-field",
+      "type": "numeric",
+      "prompt": "For a separate +3 nC point source, k=9.00×10⁹ and observation radius 0.30 m, what outward field magnitude in V/m follows? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "physics-em-7-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 300,
+        "unit": "",
+        "tolerance": 0.030000000000000002,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the declared source, geometry, sign convention and unit scale.",
+        "solution": "The stated model gives approximately 300 in the requested scale. Check the boundary condition or reference convention before interpreting it.",
+        "lesson_ids": [
+          "physics-em-7"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physics-em-7:point-potential",
+      "type": "numeric",
+      "prompt": "For that separate +3 nC point source at radius 0.30 m, with k=9.00×10⁹ and potential zero at infinity, what potential in V follows? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "physics-em-7-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 90,
+        "unit": "",
+        "tolerance": 0.009000000000000001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the declared source, geometry, sign convention and unit scale.",
+        "solution": "The stated model gives approximately 90 in the requested scale. Check the boundary condition or reference convention before interpreting it.",
+        "lesson_ids": [
+          "physics-em-7"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physics-em-7:sphere-inside",
+      "type": "numeric",
+      "prompt": "A separate uniformly volume-charged insulating sphere has Q=3 nC and R=0.30 m. With k=9.00×10⁹, what outward field in V/m follows at r=0.15 m? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "physics-em-7-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 150,
+        "unit": "",
+        "tolerance": 0.015000000000000001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the declared source, geometry, sign convention and unit scale.",
+        "solution": "The stated model gives approximately 150 in the requested scale. Check the boundary condition or reference convention before interpreting it.",
+        "lesson_ids": [
+          "physics-em-7"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physics-em-7:zero-potential",
+      "type": "single_choice",
+      "prompt": "Can the two-charge midpoint have zero potential and nonzero field?",
+      "points": 1,
+      "objective_ids": [
+        "physics-em-7-objective-2"
+      ],
+      "options": [
+        "No; potential and field are the same quantity.",
+        "No; zero potential implies zero field everywhere nearby.",
+        "Yes; scalar potential values cancel while the local gradient remains nonzero."
+      ],
+      "solution_spec": {
+        "answer": 2
+      },
+      "feedback": {
+        "hint": "Check the supplied circuit, field convention or inference boundary.",
+        "solution": "Yes; scalar potential values cancel while the local gradient remains nonzero.",
+        "lesson_ids": [
+          "physics-em-7"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physics-em-7:zero-flux",
+      "type": "single_choice",
+      "prompt": "Does zero net flux through a closed surface imply zero field at each patch?",
+      "points": 1,
+      "objective_ids": [
+        "physics-em-7-objective-3"
+      ],
+      "options": [
+        "No; entering and exiting flux contributions can cancel.",
+        "Yes; flux is a local field measurement.",
+        "Yes; all external sources cease to contribute."
+      ],
+      "solution_spec": {
+        "answer": 0
+      },
+      "feedback": {
+        "hint": "Check the supplied circuit, field convention or inference boundary.",
+        "solution": "No; entering and exiting flux contributions can cancel.",
+        "lesson_ids": [
+          "physics-em-7"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physics-em-7:sphere-model",
+      "type": "single_choice",
+      "prompt": "Can the uniform-volume insulating-sphere interior field be used for a conducting sphere in electrostatic equilibrium?",
+      "points": 1,
+      "objective_ids": [
+        "physics-em-7-objective-3"
+      ],
+      "options": [
+        "No; the stated charge distributions and interior conditions differ.",
+        "Yes; every spherical object has the same interior field.",
+        "Yes; source distribution is irrelevant to Gauss’s law."
+      ],
+      "solution_spec": {
+        "answer": 0
+      },
+      "feedback": {
+        "hint": "Check the supplied circuit, field convention or inference boundary.",
+        "solution": "No; the stated charge distributions and interior conditions differ.",
+        "lesson_ids": [
+          "physics-em-7"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physics-em-8:vacuum-capacitance",
+      "type": "numeric",
+      "prompt": "An ideal parallel-plate vacuum gap has ε₀=8.854×10⁻¹² F/m,A=0.0020 m²,d=0.0010 m. What capacitance in pF follows? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "physics-em-8-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 17.708,
+        "unit": "",
+        "tolerance": 0.0017707999999999999,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the declared source, geometry, sign convention and unit scale.",
+        "solution": "The stated model gives approximately 17.708 in the requested scale. Check the boundary condition or reference convention before interpreting it.",
+        "lesson_ids": [
+          "physics-em-8"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physics-em-8:filled-capacitance",
+      "type": "numeric",
+      "prompt": "The same fixed gap is fully filled with a linear dielectric κ=4. What capacitance in pF follows? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "physics-em-8-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 70.832,
+        "unit": "",
+        "tolerance": 0.0070831999999999996,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the declared source, geometry, sign convention and unit scale.",
+        "solution": "The stated model gives approximately 70.832 in the requested scale. Check the boundary condition or reference convention before interpreting it.",
+        "lesson_ids": [
+          "physics-em-8"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physics-em-8:initial-charge",
+      "type": "numeric",
+      "prompt": "The vacuum gap with capacitance 17.708 pF is at 6.0 V. What plate charge magnitude in pC follows? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "physics-em-8-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 106.24799999999999,
+        "unit": "",
+        "tolerance": 0.0106248,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the declared source, geometry, sign convention and unit scale.",
+        "solution": "The stated model gives approximately 106.248 in the requested scale. Check the boundary condition or reference convention before interpreting it.",
+        "lesson_ids": [
+          "physics-em-8"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physics-em-8:initial-energy",
+      "type": "numeric",
+      "prompt": "For vacuum capacitance 17.708 pF at 6.0 V, what stored energy in pJ follows? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "physics-em-8-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 318.74399999999997,
+        "unit": "",
+        "tolerance": 0.0318744,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the declared source, geometry, sign convention and unit scale.",
+        "solution": "The stated model gives approximately 318.744 in the requested scale. Check the boundary condition or reference convention before interpreting it.",
+        "lesson_ids": [
+          "physics-em-8"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physics-em-8:isolated-voltage",
+      "type": "numeric",
+      "prompt": "A capacitor initially at 6.0 V is isolated without leakage; full dielectric insertion quadruples its capacitance. What final voltage in V follows? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "physics-em-8-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 1.5,
+        "unit": "",
+        "tolerance": 0.00015000000000000001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the declared source, geometry, sign convention and unit scale.",
+        "solution": "The stated model gives approximately 1.5 in the requested scale. Check the boundary condition or reference convention before interpreting it.",
+        "lesson_ids": [
+          "physics-em-8"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physics-em-8:fixed-voltage-energy",
+      "type": "numeric",
+      "prompt": "In a separate fixed-voltage process, an ideal source maintains 6.0 V while capacitance increases from 17.708 to 70.832 pF. What final stored energy in pJ follows? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "physics-em-8-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 1274.9759999999999,
+        "unit": "",
+        "tolerance": 0.1274976,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the declared source, geometry, sign convention and unit scale.",
+        "solution": "The stated model gives approximately 1274.976 in the requested scale. Check the boundary condition or reference convention before interpreting it.",
+        "lesson_ids": [
+          "physics-em-8"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physics-em-8:isolated-charge",
+      "type": "single_choice",
+      "prompt": "During the isolated no-leakage capacitance change, what remains fixed?",
+      "points": 1,
+      "objective_ids": [
+        "physics-em-8-objective-2"
+      ],
+      "options": [
+        "Voltage alone, even with no charge path.",
+        "Both voltage and free charge regardless of capacitance.",
+        "Free plate charge, while voltage and stored energy change."
+      ],
+      "solution_spec": {
+        "answer": 2
+      },
+      "feedback": {
+        "hint": "Check the supplied circuit, field convention or inference boundary.",
+        "solution": "Free plate charge, while voltage and stored energy change.",
+        "lesson_ids": [
+          "physics-em-8"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physics-em-8:source-ledger",
+      "type": "single_choice",
+      "prompt": "In the fixed-voltage dielectric process, does capacitor energy increase equal all source work?",
+      "points": 1,
+      "objective_ids": [
+        "physics-em-8-objective-3"
+      ],
+      "options": [
+        "Yes; no other transfer can occur.",
+        "No; include mechanical transfer and any dissipation in the ledger.",
+        "Yes; source charge never changes."
+      ],
+      "solution_spec": {
+        "answer": 1
+      },
+      "feedback": {
+        "hint": "Check the supplied circuit, field convention or inference boundary.",
+        "solution": "No; include mechanical transfer and any dissipation in the ledger.",
+        "lesson_ids": [
+          "physics-em-8"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physics-em-8:dielectric-neutrality",
+      "type": "single_choice",
+      "prompt": "Does polarization require a dielectric to acquire arbitrary net free charge?",
+      "points": 1,
+      "objective_ids": [
+        "physics-em-8-objective-3"
+      ],
+      "options": [
+        "No; bound charge separation can occur with overall neutrality.",
+        "Yes; every polarized dielectric becomes an ideal conductor.",
+        "Yes; polarization creates unrestricted free charge."
+      ],
+      "solution_spec": {
+        "answer": 0
+      },
+      "feedback": {
+        "hint": "Check the supplied circuit, field convention or inference boundary.",
+        "solution": "No; bound charge separation can occur with overall neutrality.",
+        "lesson_ids": [
+          "physics-em-8"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physics-em-9:loaded-voltage",
+      "type": "numeric",
+      "prompt": "A synthetic open-circuit 3.0 V source has series resistance 200 kΩ and drives a 1.0 MΩ input. What input voltage in V follows? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "physics-em-9-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 2.5,
+        "unit": "",
+        "tolerance": 0.00025,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the declared source, geometry, sign convention and unit scale.",
+        "solution": "The stated model gives approximately 2.5 in the requested scale. Check the boundary condition or reference convention before interpreting it.",
+        "lesson_ids": [
+          "physics-em-9"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physics-em-9:input-current",
+      "type": "numeric",
+      "prompt": "For that 3.0 V source with 200 kΩ series resistance and 1.0 MΩ load, what load current in µA follows? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "physics-em-9-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 2.5,
+        "unit": "",
+        "tolerance": 0.00025,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the declared source, geometry, sign convention and unit scale.",
+        "solution": "The stated model gives approximately 2.5 in the requested scale. Check the boundary condition or reference convention before interpreting it.",
+        "lesson_ids": [
+          "physics-em-9"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physics-em-9:input-power",
+      "type": "numeric",
+      "prompt": "For that 1.0 MΩ input at 2.5 V, what absorbed power in µW follows? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "physics-em-9-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 6.25,
+        "unit": "",
+        "tolerance": 0.000625,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the declared source, geometry, sign convention and unit scale.",
+        "solution": "The stated model gives approximately 6.25 in the requested scale. Check the boundary condition or reference convention before interpreting it.",
+        "lesson_ids": [
+          "physics-em-9"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physics-em-9:thevenin-voltage",
+      "type": "numeric",
+      "prompt": "A separate 6.0 V ideal source drives R₁=200 kΩ to an output node; R₂=100 kΩ connects node to return. With no added load, what output Thevenin voltage in V follows? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "physics-em-9-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 2,
+        "unit": "",
+        "tolerance": 0.0002,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the declared source, geometry, sign convention and unit scale.",
+        "solution": "The stated model gives approximately 2 in the requested scale. Check the boundary condition or reference convention before interpreting it.",
+        "lesson_ids": [
+          "physics-em-9"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physics-em-9:thevenin-resistance",
+      "type": "numeric",
+      "prompt": "For that separate divider with independent ideal source suppressed mathematically, what Thevenin resistance in kΩ follows from R₁=200 kΩ and R₂=100 kΩ? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "physics-em-9-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 66.66666666666667,
+        "unit": "",
+        "tolerance": 0.006666666666666667,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the declared source, geometry, sign convention and unit scale.",
+        "solution": "The stated model gives approximately 66.66667 in the requested scale. Check the boundary condition or reference convention before interpreting it.",
+        "lesson_ids": [
+          "physics-em-9"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physics-em-9:thevenin-loaded",
+      "type": "numeric",
+      "prompt": "That divider port has V_th=2.0 V and R_th=200/3 kΩ. With an added 100 kΩ load to return, what load voltage in V follows? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "physics-em-9-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 1.2,
+        "unit": "",
+        "tolerance": 0.00012,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the declared source, geometry, sign convention and unit scale.",
+        "solution": "The stated model gives approximately 1.2 in the requested scale. Check the boundary condition or reference convention before interpreting it.",
+        "lesson_ids": [
+          "physics-em-9"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physics-em-9:kcl-load",
+      "type": "single_choice",
+      "prompt": "What happens when an extra resistance is connected from the divider node to return?",
+      "points": 1,
+      "objective_ids": [
+        "physics-em-9-objective-1"
+      ],
+      "options": [
+        "It changes branch currents and the upstream drop; solve the loaded network.",
+        "Only the added resistance current changes.",
+        "The original output remains an ideal fixed-voltage source."
+      ],
+      "solution_spec": {
+        "answer": 0
+      },
+      "feedback": {
+        "hint": "Check the supplied circuit, field convention or inference boundary.",
+        "solution": "It changes branch currents and the upstream drop; solve the loaded network.",
+        "lesson_ids": [
+          "physics-em-9"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physics-em-9:equivalent-scope",
+      "type": "single_choice",
+      "prompt": "What does the resistive Thevenin model preserve within its stated domain?",
+      "points": 1,
+      "objective_ids": [
+        "physics-em-9-objective-3"
+      ],
+      "options": [
+        "Port voltage/current behavior, without identifying every internal current or temperature.",
+        "Every internal physical quantity in every realization.",
+        "A unique microscopic electrode mechanism."
+      ],
+      "solution_spec": {
+        "answer": 0
+      },
+      "feedback": {
+        "hint": "Check the supplied circuit, field convention or inference boundary.",
+        "solution": "Port voltage/current behavior, without identifying every internal current or temperature.",
+        "lesson_ids": [
+          "physics-em-9"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physics-em-9:calibration-loading",
+      "type": "single_choice",
+      "prompt": "Does an accurate reporting-gain calibration eliminate physical source loading?",
+      "points": 1,
+      "objective_ids": [
+        "physics-em-9-objective-3"
+      ],
+      "options": [
+        "Yes; all attenuation is reporting gain.",
+        "Yes; finite input resistance becomes infinite after calibration.",
+        "No; recovering open-circuit source voltage still needs the source/input transfer model."
+      ],
+      "solution_spec": {
+        "answer": 2
+      },
+      "feedback": {
+        "hint": "Check the supplied circuit, field convention or inference boundary.",
+        "solution": "No; recovering open-circuit source voltage still needs the source/input transfer model.",
+        "lesson_ids": [
+          "physics-em-9"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physics-em-10:time-constant",
+      "type": "numeric",
+      "prompt": "A synthetic series RC circuit has R=200 kΩ,C=0.50 µF,V_s=3.0 V and initial capacitor voltage 1.0 V. What time constant in s follows? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "physics-em-10-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0.1,
+        "unit": "",
+        "tolerance": 1e-05,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the declared source, geometry, sign convention and unit scale.",
+        "solution": "The stated model gives approximately 0.1 in the requested scale. Check the boundary condition or reference convention before interpreting it.",
+        "lesson_ids": [
+          "physics-em-10"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physics-em-10:one-time-voltage",
+      "type": "numeric",
+      "prompt": "For that circuit, V_C=3−2exp(−t/0.10) V. What capacitor voltage in V follows at t=0.10 s? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "physics-em-10-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 2.2642411176571153,
+        "unit": "",
+        "tolerance": 0.00022642411176571154,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the declared source, geometry, sign convention and unit scale.",
+        "solution": "The stated model gives approximately 2.264241 in the requested scale. Check the boundary condition or reference convention before interpreting it.",
+        "lesson_ids": [
+          "physics-em-10"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physics-em-10:initial-current",
+      "type": "numeric",
+      "prompt": "For that 3.0 V source and 200 kΩ resistance with initial capacitor voltage 1.0 V, what initial charging current in µA follows? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "physics-em-10-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 10,
+        "unit": "",
+        "tolerance": 0.001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the declared source, geometry, sign convention and unit scale.",
+        "solution": "The stated model gives approximately 10 in the requested scale. Check the boundary condition or reference convention before interpreting it.",
+        "lesson_ids": [
+          "physics-em-10"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physics-em-10:final-energy",
+      "type": "numeric",
+      "prompt": "The 0.50 µF capacitor ultimately reaches 3.0 V. What final stored energy in µJ follows? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "physics-em-10-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 2.25,
+        "unit": "",
+        "tolerance": 0.00022500000000000002,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the declared source, geometry, sign convention and unit scale.",
+        "solution": "The stated model gives approximately 2.25 in the requested scale. Check the boundary condition or reference convention before interpreting it.",
+        "lesson_ids": [
+          "physics-em-10"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physics-em-10:source-work",
+      "type": "numeric",
+      "prompt": "For its complete ideal transition from 1.0 to 3.0 V with source held at 3.0 V, what source work in µJ follows? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "physics-em-10-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 3,
+        "unit": "",
+        "tolerance": 0.00030000000000000003,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the declared source, geometry, sign convention and unit scale.",
+        "solution": "The stated model gives approximately 3 in the requested scale. Check the boundary condition or reference convention before interpreting it.",
+        "lesson_ids": [
+          "physics-em-10"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physics-em-10:resistor-heat",
+      "type": "numeric",
+      "prompt": "For that complete transition with C=0.50 µF, initial 1.0 V and final 3.0 V, what resistor dissipation in µJ follows? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "physics-em-10-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 1,
+        "unit": "",
+        "tolerance": 0.0001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the declared source, geometry, sign convention and unit scale.",
+        "solution": "The stated model gives approximately 1 in the requested scale. Check the boundary condition or reference convention before interpreting it.",
+        "lesson_ids": [
+          "physics-em-10"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physics-em-10:transition-fraction",
+      "type": "single_choice",
+      "prompt": "For a capacitor initially at 1 V charging toward 3 V, what is 1−1/e at one τ?",
+      "points": 1,
+      "objective_ids": [
+        "physics-em-10-objective-1"
+      ],
+      "options": [
+        "Its voltage fraction of final 3 V regardless of initial state.",
+        "Its energy fraction under every initial condition.",
+        "The completed fraction of its 2 V transition."
+      ],
+      "solution_spec": {
+        "answer": 2
+      },
+      "feedback": {
+        "hint": "Check the supplied circuit, field convention or inference boundary.",
+        "solution": "The completed fraction of its 2 V transition.",
+        "lesson_ids": [
+          "physics-em-10"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physics-em-10:source-energy",
+      "type": "single_choice",
+      "prompt": "For a complete constant-voltage RC transition, what must source work cover?",
+      "points": 1,
+      "objective_ids": [
+        "physics-em-10-objective-2"
+      ],
+      "options": [
+        "Only final capacitor energy regardless of initial energy.",
+        "The capacitor energy change plus resistor dissipation.",
+        "Only resistor heat, because capacitors cannot store energy."
+      ],
+      "solution_spec": {
+        "answer": 1
+      },
+      "feedback": {
+        "hint": "Check the supplied circuit, field convention or inference boundary.",
+        "solution": "The capacitor energy change plus resistor dissipation.",
+        "lesson_ids": [
+          "physics-em-10"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physics-em-10:time-inference",
+      "type": "single_choice",
+      "prompt": "Does one fitted circuit time constant uniquely identify separate R and C values?",
+      "points": 1,
+      "objective_ids": [
+        "physics-em-10-objective-3"
+      ],
+      "options": [
+        "Yes; every product has a unique factorization.",
+        "No; independent information is needed to separate the parameter combination.",
+        "Yes; any measured exponential proves a membrane mechanism."
+      ],
+      "solution_spec": {
+        "answer": 1
+      },
+      "feedback": {
+        "hint": "Check the supplied circuit, field convention or inference boundary.",
+        "solution": "No; independent information is needed to separate the parameter combination.",
+        "lesson_ids": [
+          "physics-em-10"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physics-em-11:magnetic-force",
+      "type": "numeric",
+      "prompt": "In right-handed x,y,z axes, q=+2 nC,v=(3,0,0) m/s,B=(0,0,0.40) T. What signed y magnetic force in nN follows? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "physics-em-11-objective-1"
+      ],
+      "solution_spec": {
+        "answer": -2.4,
+        "unit": "",
+        "tolerance": 0.00024,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the declared source, geometry, sign convention and unit scale.",
+        "solution": "The stated model gives approximately −2.4 in the requested scale. Check the boundary condition or reference convention before interpreting it.",
+        "lesson_ids": [
+          "physics-em-11"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physics-em-11:orbit-radius",
+      "type": "numeric",
+      "prompt": "For a separate magnetic-only perpendicular orbit with m=10⁻¹² kg,q=+2 nC,v=3 m/s and B=0.40 T, what radius in mm follows? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "physics-em-11-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 3.75,
+        "unit": "",
+        "tolerance": 0.000375,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the declared source, geometry, sign convention and unit scale.",
+        "solution": "The stated model gives approximately 3.75 in the requested scale. Check the boundary condition or reference convention before interpreting it.",
+        "lesson_ids": [
+          "physics-em-11"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physics-em-11:orbit-frequency",
+      "type": "numeric",
+      "prompt": "For that orbit m=10⁻¹² kg,q=+2 nC,B=0.40 T, what angular frequency magnitude in rad/s follows? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "physics-em-11-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 800,
+        "unit": "",
+        "tolerance": 0.08,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the declared source, geometry, sign convention and unit scale.",
+        "solution": "The stated model gives approximately 800 in the requested scale. Check the boundary condition or reference convention before interpreting it.",
+        "lesson_ids": [
+          "physics-em-11"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physics-em-11:wire-force",
+      "type": "numeric",
+      "prompt": "Conventional current 0.20 A flows along a 0.10 m straight x-directed segment in B=(0,0,0.40) T. What magnetic force magnitude in mN follows? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "physics-em-11-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 8,
+        "unit": "",
+        "tolerance": 0.0008,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the declared source, geometry, sign convention and unit scale.",
+        "solution": "The stated model gives approximately 8 in the requested scale. Check the boundary condition or reference convention before interpreting it.",
+        "lesson_ids": [
+          "physics-em-11"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physics-em-11:long-wire-field",
+      "type": "numeric",
+      "prompt": "For an ideal infinitely long wire, use μ₀=4π×10⁻⁷ H/m,I=0.20 A,r=0.010 m. What field magnitude in µT follows? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "physics-em-11-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 4,
+        "unit": "",
+        "tolerance": 0.0004,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the declared source, geometry, sign convention and unit scale.",
+        "solution": "The stated model gives approximately 4 in the requested scale. Check the boundary condition or reference convention before interpreting it.",
+        "lesson_ids": [
+          "physics-em-11"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physics-em-11:solenoid-field",
+      "type": "numeric",
+      "prompt": "For a separate ideal long vacuum solenoid, use μ₀=4π×10⁻⁷ H/m,n=1000 turns/m,I=0.20 A. What interior field in µT follows? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "physics-em-11-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 251.32741228718345,
+        "unit": "",
+        "tolerance": 0.025132741228718346,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the declared source, geometry, sign convention and unit scale.",
+        "solution": "The stated model gives approximately 251.3274 in the requested scale. Check the boundary condition or reference convention before interpreting it.",
+        "lesson_ids": [
+          "physics-em-11"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physics-em-11:negative-charge",
+      "type": "single_choice",
+      "prompt": "If q reverses with the same v and B, what happens to magnetic force?",
+      "points": 1,
+      "objective_ids": [
+        "physics-em-11-objective-1"
+      ],
+      "options": [
+        "It remains unchanged because charge sign is irrelevant.",
+        "It becomes parallel to velocity.",
+        "It reverses direction while keeping the same magnitude."
+      ],
+      "solution_spec": {
+        "answer": 2
+      },
+      "feedback": {
+        "hint": "Check the supplied circuit, field convention or inference boundary.",
+        "solution": "It reverses direction while keeping the same magnitude.",
+        "lesson_ids": [
+          "physics-em-11"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physics-em-11:magnetic-power",
+      "type": "single_choice",
+      "prompt": "For a magnetic-only point charge, what follows from (v×B)·v=0?",
+      "points": 1,
+      "objective_ids": [
+        "physics-em-11-objective-3"
+      ],
+      "options": [
+        "The particle has zero acceleration.",
+        "The magnetic part does no instantaneous work on that point charge, while direction can change.",
+        "All electromagnetic systems can never exchange mechanical energy."
+      ],
+      "solution_spec": {
+        "answer": 1
+      },
+      "feedback": {
+        "hint": "Check the supplied circuit, field convention or inference boundary.",
+        "solution": "The magnetic part does no instantaneous work on that point charge, while direction can change.",
+        "lesson_ids": [
+          "physics-em-11"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physics-em-11:field-symmetry",
+      "type": "single_choice",
+      "prompt": "Does enclosed steady current alone establish a constant local B magnitude along every chosen path?",
+      "points": 1,
+      "objective_ids": [
+        "physics-em-11-objective-3"
+      ],
+      "options": [
+        "No; symmetry and the complete source geometry matter.",
+        "Yes; return paths never contribute.",
+        "Yes; Ampere’s circulation determines every local vector independently of geometry."
+      ],
+      "solution_spec": {
+        "answer": 0
+      },
+      "feedback": {
+        "hint": "Check the supplied circuit, field convention or inference boundary.",
+        "solution": "No; symmetry and the complete source geometry matter.",
+        "lesson_ids": [
+          "physics-em-11"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physics-em-12:turn-flux",
+      "type": "numeric",
+      "prompt": "A stationary loop has area 0.0030 m² and +z normal, in uniform B_z=0.10+0.020t² T. What single-turn signed flux in µWb follows at t=3 s? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "physics-em-12-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 840,
+        "unit": "",
+        "tolerance": 0.084,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the declared source, geometry, sign convention and unit scale.",
+        "solution": "The stated model gives approximately 840 in the requested scale. Check the boundary condition or reference convention before interpreting it.",
+        "lesson_ids": [
+          "physics-em-12"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physics-em-12:signed-emf",
+      "type": "numeric",
+      "prompt": "For 20 such stationary turns, each area 0.0030 m², B_z=0.10+0.020t² T and positive circulation counterclockwise viewed from +z, what signed induced emf in mV follows at t=3 s? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "physics-em-12-objective-1"
+      ],
+      "solution_spec": {
+        "answer": -7.2,
+        "unit": "",
+        "tolerance": 0.00072,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the declared source, geometry, sign convention and unit scale.",
+        "solution": "The stated model gives approximately −7.2 in the requested scale. Check the boundary condition or reference convention before interpreting it.",
+        "lesson_ids": [
+          "physics-em-12"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physics-em-12:bar-emf",
+      "type": "numeric",
+      "prompt": "A separate ideal 0.20 m conducting bar moves at 0.50 m/s across a 0.30 T field, with v×B along the bar. What motional emf magnitude in mV follows? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "physics-em-12-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 30,
+        "unit": "",
+        "tolerance": 0.003,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the declared source, geometry, sign convention and unit scale.",
+        "solution": "The stated model gives approximately 30 in the requested scale. Check the boundary condition or reference convention before interpreting it.",
+        "lesson_ids": [
+          "physics-em-12"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physics-em-12:bar-current",
+      "type": "numeric",
+      "prompt": "That moving-bar closed loop has emf 0.030 V,total resistance 10 Ω and negligible inductance. What current magnitude in mA follows? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "physics-em-12-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 3,
+        "unit": "",
+        "tolerance": 0.00030000000000000003,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the declared source, geometry, sign convention and unit scale.",
+        "solution": "The stated model gives approximately 3 in the requested scale. Check the boundary condition or reference convention before interpreting it.",
+        "lesson_ids": [
+          "physics-em-12"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physics-em-12:rl-time",
+      "type": "numeric",
+      "prompt": "A separate ideal series RL circuit has L=0.040 H,R=20 Ω and constant source 2.0 V. What time constant in ms follows? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "physics-em-12-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 2,
+        "unit": "",
+        "tolerance": 0.0002,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the declared source, geometry, sign convention and unit scale.",
+        "solution": "The stated model gives approximately 2 in the requested scale. Check the boundary condition or reference convention before interpreting it.",
+        "lesson_ids": [
+          "physics-em-12"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physics-em-12:inductor-energy",
+      "type": "numeric",
+      "prompt": "For that RL circuit, final current is 0.10 A and L=0.040 H. What stored magnetic energy in µJ follows? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "physics-em-12-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 200,
+        "unit": "",
+        "tolerance": 0.02,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the declared source, geometry, sign convention and unit scale.",
+        "solution": "The stated model gives approximately 200 in the requested scale. Check the boundary condition or reference convention before interpreting it.",
+        "lesson_ids": [
+          "physics-em-12"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physics-em-12:lenz-direction",
+      "type": "single_choice",
+      "prompt": "Positive +z flux is increasing in the stated closed resistive loop. What induced field direction opposes that change?",
+      "points": 1,
+      "objective_ids": [
+        "physics-em-12-objective-1"
+      ],
+      "options": [
+        "Negative z, from clockwise current when viewed from +z.",
+        "No induced effect until the field stops changing.",
+        "Positive z, because induced field always reinforces the increase."
+      ],
+      "solution_spec": {
+        "answer": 0
+      },
+      "feedback": {
+        "hint": "Check the supplied circuit, field convention or inference boundary.",
+        "solution": "Negative z, from clockwise current when viewed from +z.",
+        "lesson_ids": [
+          "physics-em-12"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physics-em-12:open-loop",
+      "type": "single_choice",
+      "prompt": "Does an induced emf in an open loop establish a circulating conduction current?",
+      "points": 1,
+      "objective_ids": [
+        "physics-em-12-objective-2"
+      ],
+      "options": [
+        "No; a complete conductive path and circuit model are also needed.",
+        "Yes; current is always numerically equal to emf.",
+        "Yes; emf guarantees the same current regardless of connection."
+      ],
+      "solution_spec": {
+        "answer": 0
+      },
+      "feedback": {
+        "hint": "Check the supplied circuit, field convention or inference boundary.",
+        "solution": "No; a complete conductive path and circuit model are also needed.",
+        "lesson_ids": [
+          "physics-em-12"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physics-em-12:rl-ledger",
+      "type": "single_choice",
+      "prompt": "In a sustained ideal RL drive after current becomes constant, what continues?",
+      "points": 1,
+      "objective_ids": [
+        "physics-em-12-objective-3"
+      ],
+      "options": [
+        "Resistor dissipation and source power, even though stored magnetic energy no longer changes.",
+        "Magnetic energy increases forever at the source-power rate.",
+        "All source power becomes zero because dI/dt is zero."
+      ],
+      "solution_spec": {
+        "answer": 0
+      },
+      "feedback": {
+        "hint": "Check the supplied circuit, field convention or inference boundary.",
+        "solution": "Resistor dissipation and source power, even though stored magnetic energy no longer changes.",
+        "lesson_ids": [
+          "physics-em-12"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physics-em-13:transfer-magnitude",
+      "type": "numeric",
+      "prompt": "With exp(jωt) convention, R_s=100 kΩ drives R_in=1 MΩ parallel C_in=1 µF at ω=10 rad/s. H=1/(1.1+j). What voltage-transfer magnitude follows? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "physics-em-13-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0.6726727939963124,
+        "unit": "",
+        "tolerance": 6.726727939963124e-05,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the declared source, geometry, sign convention and unit scale.",
+        "solution": "The stated model gives approximately 0.6726728 in the requested scale. Check the boundary condition or reference convention before interpreting it.",
+        "lesson_ids": [
+          "physics-em-13"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physics-em-13:transfer-phase",
+      "type": "numeric",
+      "prompt": "For that H=1/(1.1+j) under the exp(jωt) convention, what signed phase in degrees follows? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "physics-em-13-objective-1"
+      ],
+      "solution_spec": {
+        "answer": -42.27368900609374,
+        "unit": "",
+        "tolerance": 0.004227368900609374,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the declared source, geometry, sign convention and unit scale.",
+        "solution": "The stated model gives approximately −42.27369 in the requested scale. Check the boundary condition or reference convention before interpreting it.",
+        "lesson_ids": [
+          "physics-em-13"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physics-em-13:input-rms",
+      "type": "numeric",
+      "prompt": "For source peak amplitude 1.0 V and |H|=1/√2.21, what input RMS voltage in V follows? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "physics-em-13-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0.4756514941544941,
+        "unit": "",
+        "tolerance": 4.756514941544941e-05,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the declared source, geometry, sign convention and unit scale.",
+        "solution": "The stated model gives approximately 0.4756515 in the requested scale. Check the boundary condition or reference convention before interpreting it.",
+        "lesson_ids": [
+          "physics-em-13"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physics-em-13:dc-gain",
+      "type": "numeric",
+      "prompt": "For R_s=100 kΩ and R_in=1 MΩ with parallel input capacitor open in the DC limit, what voltage-transfer fraction follows? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "physics-em-13-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0.9090909090909091,
+        "unit": "",
+        "tolerance": 9.090909090909092e-05,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the declared source, geometry, sign convention and unit scale.",
+        "solution": "The stated model gives approximately 0.9090909 in the requested scale. Check the boundary condition or reference convention before interpreting it.",
+        "lesson_ids": [
+          "physics-em-13"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physics-em-13:pole-frequency",
+      "type": "numeric",
+      "prompt": "For R_s=100 kΩ,R_in=1 MΩ,C_in=1 µF, what pole frequency in Hz follows from τ=(R_s parallel R_in)C_in? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "physics-em-13-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 1.7507043740108488,
+        "unit": "",
+        "tolerance": 0.00017507043740108488,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the declared source, geometry, sign convention and unit scale.",
+        "solution": "The stated model gives approximately 1.750704 in the requested scale. Check the boundary condition or reference convention before interpreting it.",
+        "lesson_ids": [
+          "physics-em-13"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physics-em-13:input-real-power",
+      "type": "numeric",
+      "prompt": "For input peak voltage 1/√2.21 V across ideal R_in=1 MΩ, what cycle-average resistor power in µW follows? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "physics-em-13-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0.22624434389140272,
+        "unit": "",
+        "tolerance": 2.262443438914027e-05,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the declared source, geometry, sign convention and unit scale.",
+        "solution": "The stated model gives approximately 0.2262443 in the requested scale. Check the boundary condition or reference convention before interpreting it.",
+        "lesson_ids": [
+          "physics-em-13"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physics-em-13:capacitive-loading",
+      "type": "single_choice",
+      "prompt": "Does high DC input resistance guarantee negligible source loading at all frequencies?",
+      "points": 1,
+      "objective_ids": [
+        "physics-em-13-objective-1"
+      ],
+      "options": [
+        "Yes; capacitance has infinite impedance at every frequency.",
+        "Yes; phase is unrelated to input components.",
+        "No; input capacitance can lower impedance at higher frequency."
+      ],
+      "solution_spec": {
+        "answer": 2
+      },
+      "feedback": {
+        "hint": "Check the supplied circuit, field convention or inference boundary.",
+        "solution": "No; input capacitance can lower impedance at higher frequency.",
+        "lesson_ids": [
+          "physics-em-13"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physics-em-13:reactive-power",
+      "type": "single_choice",
+      "prompt": "Can an ideal capacitor have zero average real power and nonzero instantaneous energy exchange?",
+      "points": 1,
+      "objective_ids": [
+        "physics-em-13-objective-2"
+      ],
+      "options": [
+        "No; complex impedance always implies positive heat.",
+        "No; zero average means zero current at every instant.",
+        "Yes; it stores and returns energy over a steady cycle."
+      ],
+      "solution_spec": {
+        "answer": 2
+      },
+      "feedback": {
+        "hint": "Check the supplied circuit, field convention or inference boundary.",
+        "solution": "Yes; it stores and returns energy over a steady cycle.",
+        "lesson_ids": [
+          "physics-em-13"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physics-em-13:case-inference",
+      "type": "single_choice",
+      "prompt": "If changing only a known input resistance alters gain and time constant in the supplied circuit, what does that establish?",
+      "points": 1,
+      "objective_ids": [
+        "physics-em-13-objective-3"
+      ],
+      "options": [
+        "An electrical observation-model explanation under those assumptions, without unique biological identification.",
+        "That reporting calibration removes every circuit effect.",
+        "A uniquely proven change in the biological generator."
+      ],
+      "solution_spec": {
+        "answer": 0
+      },
+      "feedback": {
+        "hint": "Check the supplied circuit, field convention or inference boundary.",
+        "solution": "An electrical observation-model explanation under those assumptions, without unique biological identification.",
+        "lesson_ids": [
+          "physics-em-13"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physics-em-lab-01:summary",
+      "type": "file_upload",
+      "prompt": "Summarize the synthetic voltage reports by sample. Upload exact columns sample,replicates,mean_reported_v with rows zero,cal,a00,a05,a10,a20,ass,b00,b05,b10,b20,bss. Average raw reporting values before calibration.",
+      "points": 24,
+      "objective_ids": [
+        "physics-em-lab-01-objective-1"
+      ],
+      "solution_spec": {
+        "accepted_media_types": [
+          "text/csv"
+        ],
+        "max_bytes": 32768,
+        "validation_spec": {
+          "format": "csv-numeric-table-v1",
+          "delimiter": ",",
+          "key_column": "sample",
+          "columns": [
+            "sample",
+            "replicates",
+            "mean_reported_v"
+          ],
+          "checks": [
+            {
+              "id": "zero-replicates",
+              "row_id": "zero",
+              "column": "replicates",
+              "type": "numeric",
+              "answer": 3.0,
+              "unit": "",
+              "tolerance": 0,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "count",
+                "values": [
+                  0.018,
+                  0.02,
+                  0.022
+                ]
+              }
+            },
+            {
+              "id": "zero-mean_reported_v",
+              "row_id": "zero",
+              "column": "mean_reported_v",
+              "type": "numeric",
+              "answer": 0.02,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  0.018,
+                  0.02,
+                  0.022
+                ]
+              }
+            },
+            {
+              "id": "cal-replicates",
+              "row_id": "cal",
+              "column": "replicates",
+              "type": "numeric",
+              "answer": 3.0,
+              "unit": "",
+              "tolerance": 0,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "count",
+                "values": [
+                  5.018,
+                  5.02,
+                  5.022
+                ]
+              }
+            },
+            {
+              "id": "cal-mean_reported_v",
+              "row_id": "cal",
+              "column": "mean_reported_v",
+              "type": "numeric",
+              "answer": 5.02,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  5.018,
+                  5.02,
+                  5.022
+                ]
+              }
+            },
+            {
+              "id": "a00-replicates",
+              "row_id": "a00",
+              "column": "replicates",
+              "type": "numeric",
+              "answer": 3.0,
+              "unit": "",
+              "tolerance": 0,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "count",
+                "values": [
+                  0.018,
+                  0.02,
+                  0.022
+                ]
+              }
+            },
+            {
+              "id": "a00-mean_reported_v",
+              "row_id": "a00",
+              "column": "mean_reported_v",
+              "type": "numeric",
+              "answer": 0.02,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  0.018,
+                  0.02,
+                  0.022
+                ]
+              }
+            },
+            {
+              "id": "a05-replicates",
+              "row_id": "a05",
+              "column": "replicates",
+              "type": "numeric",
+              "answer": 3.0,
+              "unit": "",
+              "tolerance": 0,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "count",
+                "values": [
+                  0.787182,
+                  0.789182,
+                  0.791182
+                ]
+              }
+            },
+            {
+              "id": "a05-mean_reported_v",
+              "row_id": "a05",
+              "column": "mean_reported_v",
+              "type": "numeric",
+              "answer": 0.7892,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  0.787182,
+                  0.789182,
+                  0.791182
+                ]
+              }
+            },
+            {
+              "id": "a10-replicates",
+              "row_id": "a10",
+              "column": "replicates",
+              "type": "numeric",
+              "answer": 3.0,
+              "unit": "",
+              "tolerance": 0,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "count",
+                "values": [
+                  1.230962,
+                  1.232962,
+                  1.234962
+                ]
+              }
+            },
+            {
+              "id": "a10-mean_reported_v",
+              "row_id": "a10",
+              "column": "mean_reported_v",
+              "type": "numeric",
+              "answer": 1.233,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  1.230962,
+                  1.232962,
+                  1.234962
+                ]
+              }
+            },
+            {
+              "id": "a20-replicates",
+              "row_id": "a20",
+              "column": "replicates",
+              "type": "numeric",
+              "answer": 3.0,
+              "unit": "",
+              "tolerance": 0,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "count",
+                "values": [
+                  1.634722,
+                  1.636722,
+                  1.638722
+                ]
+              }
+            },
+            {
+              "id": "a20-mean_reported_v",
+              "row_id": "a20",
+              "column": "mean_reported_v",
+              "type": "numeric",
+              "answer": 1.6367,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  1.634722,
+                  1.636722,
+                  1.638722
+                ]
+              }
+            },
+            {
+              "id": "ass-replicates",
+              "row_id": "ass",
+              "column": "replicates",
+              "type": "numeric",
+              "answer": 3.0,
+              "unit": "",
+              "tolerance": 0,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "count",
+                "values": [
+                  1.836182,
+                  1.838182,
+                  1.840182
+                ]
+              }
+            },
+            {
+              "id": "ass-mean_reported_v",
+              "row_id": "ass",
+              "column": "mean_reported_v",
+              "type": "numeric",
+              "answer": 1.8382,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  1.836182,
+                  1.838182,
+                  1.840182
+                ]
+              }
+            },
+            {
+              "id": "b00-replicates",
+              "row_id": "b00",
+              "column": "replicates",
+              "type": "numeric",
+              "answer": 3.0,
+              "unit": "",
+              "tolerance": 0,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "count",
+                "values": [
+                  0.018,
+                  0.02,
+                  0.022
+                ]
+              }
+            },
+            {
+              "id": "b00-mean_reported_v",
+              "row_id": "b00",
+              "column": "mean_reported_v",
+              "type": "numeric",
+              "answer": 0.02,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  0.018,
+                  0.02,
+                  0.022
+                ]
+              }
+            },
+            {
+              "id": "b05-replicates",
+              "row_id": "b05",
+              "column": "replicates",
+              "type": "numeric",
+              "answer": 3.0,
+              "unit": "",
+              "tolerance": 0,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "count",
+                "values": [
+                  0.650121,
+                  0.652121,
+                  0.654121
+                ]
+              }
+            },
+            {
+              "id": "b05-mean_reported_v",
+              "row_id": "b05",
+              "column": "mean_reported_v",
+              "type": "numeric",
+              "answer": 0.6521,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  0.650121,
+                  0.652121,
+                  0.654121
+                ]
+              }
+            },
+            {
+              "id": "b10-replicates",
+              "row_id": "b10",
+              "column": "replicates",
+              "type": "numeric",
+              "answer": 3.0,
+              "unit": "",
+              "tolerance": 0,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "count",
+                "values": [
+                  0.882665,
+                  0.884665,
+                  0.886665
+                ]
+              }
+            },
+            {
+              "id": "b10-mean_reported_v",
+              "row_id": "b10",
+              "column": "mean_reported_v",
+              "type": "numeric",
+              "answer": 0.8847,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  0.882665,
+                  0.884665,
+                  0.886665
+                ]
+              }
+            },
+            {
+              "id": "b20-replicates",
+              "row_id": "b20",
+              "column": "replicates",
+              "type": "numeric",
+              "answer": 3.0,
+              "unit": "",
+              "tolerance": 0,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "count",
+                "values": [
+                  0.999684,
+                  1.001684,
+                  1.003684
+                ]
+              }
+            },
+            {
+              "id": "b20-mean_reported_v",
+              "row_id": "b20",
+              "column": "mean_reported_v",
+              "type": "numeric",
+              "answer": 1.0017,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  0.999684,
+                  1.001684,
+                  1.003684
+                ]
+              }
+            },
+            {
+              "id": "bss-replicates",
+              "row_id": "bss",
+              "column": "replicates",
+              "type": "numeric",
+              "answer": 3.0,
+              "unit": "",
+              "tolerance": 0,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "count",
+                "values": [
+                  1.018,
+                  1.02,
+                  1.022
+                ]
+              }
+            },
+            {
+              "id": "bss-mean_reported_v",
+              "row_id": "bss",
+              "column": "mean_reported_v",
+              "type": "numeric",
+              "answer": 1.02,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  1.018,
+                  1.02,
+                  1.022
+                ]
+              }
+            }
+          ]
+        },
+        "rubric": [
+          {
+            "id": "zero-replicates",
+            "criterion": "zero: replicates",
+            "points": 1,
+            "evidence": [
+              "Recomputes replicates for zero from the preparation-level values."
+            ]
+          },
+          {
+            "id": "zero-mean_reported_v",
+            "criterion": "zero: mean_reported_v",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_reported_v for zero from the preparation-level values."
+            ]
+          },
+          {
+            "id": "cal-replicates",
+            "criterion": "cal: replicates",
+            "points": 1,
+            "evidence": [
+              "Recomputes replicates for cal from the preparation-level values."
+            ]
+          },
+          {
+            "id": "cal-mean_reported_v",
+            "criterion": "cal: mean_reported_v",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_reported_v for cal from the preparation-level values."
+            ]
+          },
+          {
+            "id": "a00-replicates",
+            "criterion": "a00: replicates",
+            "points": 1,
+            "evidence": [
+              "Recomputes replicates for a00 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "a00-mean_reported_v",
+            "criterion": "a00: mean_reported_v",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_reported_v for a00 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "a05-replicates",
+            "criterion": "a05: replicates",
+            "points": 1,
+            "evidence": [
+              "Recomputes replicates for a05 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "a05-mean_reported_v",
+            "criterion": "a05: mean_reported_v",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_reported_v for a05 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "a10-replicates",
+            "criterion": "a10: replicates",
+            "points": 1,
+            "evidence": [
+              "Recomputes replicates for a10 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "a10-mean_reported_v",
+            "criterion": "a10: mean_reported_v",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_reported_v for a10 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "a20-replicates",
+            "criterion": "a20: replicates",
+            "points": 1,
+            "evidence": [
+              "Recomputes replicates for a20 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "a20-mean_reported_v",
+            "criterion": "a20: mean_reported_v",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_reported_v for a20 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "ass-replicates",
+            "criterion": "ass: replicates",
+            "points": 1,
+            "evidence": [
+              "Recomputes replicates for ass from the preparation-level values."
+            ]
+          },
+          {
+            "id": "ass-mean_reported_v",
+            "criterion": "ass: mean_reported_v",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_reported_v for ass from the preparation-level values."
+            ]
+          },
+          {
+            "id": "b00-replicates",
+            "criterion": "b00: replicates",
+            "points": 1,
+            "evidence": [
+              "Recomputes replicates for b00 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "b00-mean_reported_v",
+            "criterion": "b00: mean_reported_v",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_reported_v for b00 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "b05-replicates",
+            "criterion": "b05: replicates",
+            "points": 1,
+            "evidence": [
+              "Recomputes replicates for b05 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "b05-mean_reported_v",
+            "criterion": "b05: mean_reported_v",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_reported_v for b05 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "b10-replicates",
+            "criterion": "b10: replicates",
+            "points": 1,
+            "evidence": [
+              "Recomputes replicates for b10 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "b10-mean_reported_v",
+            "criterion": "b10: mean_reported_v",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_reported_v for b10 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "b20-replicates",
+            "criterion": "b20: replicates",
+            "points": 1,
+            "evidence": [
+              "Recomputes replicates for b20 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "b20-mean_reported_v",
+            "criterion": "b20: mean_reported_v",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_reported_v for b20 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "bss-replicates",
+            "criterion": "bss: replicates",
+            "points": 1,
+            "evidence": [
+              "Recomputes replicates for bss from the preparation-level values."
+            ]
+          },
+          {
+            "id": "bss-mean_reported_v",
+            "criterion": "bss: mean_reported_v",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_reported_v for bss from the preparation-level values."
+            ]
+          }
+        ]
+      },
+      "feedback": {
+        "hint": "Keep the independently known voltage references distinct from loaded transient reports.",
+        "solution": "Each of twelve groups has three deliberately balanced reports. Raw means retain additive offset and gain.",
+        "lesson_ids": [
+          "physics-em-lab-01"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physics-em-lab-01:report-offset",
+      "type": "numeric",
+      "prompt": "Independent zero reference has true node voltage 0 V. What reporting offset in V follows from its raw CSV mean? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "physics-em-lab-01-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0.02,
+        "unit": "",
+        "tolerance": 0.0001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the independently specified zero-voltage reference.",
+        "solution": "The zero reference mean is 0.020 V, identifying the additive reporting offset under the declared affine model.",
+        "lesson_ids": [
+          "physics-em-lab-01"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physics-em-lab-01:report-gain",
+      "type": "numeric",
+      "prompt": "Independent cal reference has true node voltage 2.50 V and raw mean 5.020 V; the zero reference raw mean is 0.020 V. What dimensionless reporting gain follows? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "physics-em-lab-01-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 2,
+        "unit": "",
+        "tolerance": 0.001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Subtract baseline before dividing by the known reference voltage.",
+        "solution": "Gain is (5.020−0.020)/2.50=2. This corrects reporting, without removing physical input loading.",
+        "lesson_ids": [
+          "physics-em-lab-01"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physics-em-lab-01:source-resistance",
+      "type": "numeric",
+      "prompt": "After reporting calibration, condition A steady node voltage is 10/11 V for a known open-circuit 1.0 V source and known input resistance 1.0 MΩ. What source resistance in Ω follows from the DC divider? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "physics-em-lab-01-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 100000,
+        "unit": "",
+        "tolerance": 10,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Solve V_node=V_s R_in/(R_s+R_in) for R_s.",
+        "solution": "R_s=1000000×(1/(10/11)−1)=100000 Ω under the stated DC input model.",
+        "lesson_ids": [
+          "physics-em-lab-01"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physics-em-lab-01:input-capacitance",
+      "type": "numeric",
+      "prompt": "Condition B has R_in=100 kΩ,R_s=100 kΩ,initial voltage zero,calibrated V(0.050 s)=0.316060 V and steady voltage 0.50 V. Infer τ from the normalized transition, then C=τ/(R_s parallel R_in). What C in µF follows? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "physics-em-lab-01-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 1,
+        "unit": "",
+        "tolerance": 0.0001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Normalize by the final voltage, use the remaining fraction logarithm, and identify the resistance seen by the capacitor.",
+        "solution": "The remaining fraction is approximately exp(−1), giving τ≈0.050 s. Effective resistance is 50000 Ω, so C=1.0 µF.",
+        "lesson_ids": [
+          "physics-em-lab-01"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physics-em-lab-01:interpretation",
+      "type": "structured",
+      "prompt": "Select conclusions supported by the supplied references and circuit model.",
+      "points": 3,
+      "objective_ids": [
+        "physics-em-lab-01-objective-3"
+      ],
+      "response_fields": [
+        {
+          "id": "reporting",
+          "type": "single_choice",
+          "prompt": "What does subtracting offset and dividing by gain recover?",
+          "options": [
+            "The loaded node voltage, with physical loading still present.",
+            "The open-circuit source automatically, regardless of impedance.",
+            "A unique biological signal source."
+          ],
+          "points": 1
+        },
+        {
+          "id": "dynamics",
+          "type": "single_choice",
+          "prompt": "Why do A and B have different observed τ in this construction?",
+          "options": [
+            "Their known input resistance changes the resistance seen by the same input capacitance.",
+            "The source generator necessarily changes its intrinsic time scale.",
+            "Reporting gain alone changes the ideal circuit differential equation."
+          ],
+          "points": 1
+        },
+        {
+          "id": "case",
+          "type": "single_choice",
+          "prompt": "What would this dummy-source result establish for the preserved recording case?",
+          "options": [
+            "A conditional electrical loading explanation to compare with independently checked source and input properties.",
+            "Proof that every real electrode signal change is purely electrical.",
+            "A validated patient measurement method."
+          ],
+          "points": 1
+        }
+      ],
+      "solution_spec": {
+        "field_specs": [
+          {
+            "id": "reporting",
+            "type": "single_choice",
+            "answer": 0
+          },
+          {
+            "id": "dynamics",
+            "type": "single_choice",
+            "answer": 0
+          },
+          {
+            "id": "case",
+            "type": "single_choice",
+            "answer": 0
+          }
+        ],
+        "rubric": [
+          {
+            "id": "reporting",
+            "criterion": "Calibration scope",
+            "points": 1,
+            "evidence": [
+              "An affine reporting correction is distinct from circuit transfer correction."
+            ]
+          },
+          {
+            "id": "dynamics",
+            "criterion": "Time-constant cause",
+            "points": 1,
+            "evidence": [
+              "The construction changes one input resistance while retaining source and capacitance."
+            ]
+          },
+          {
+            "id": "case",
+            "criterion": "Case scope",
+            "points": 1,
+            "evidence": [
+              "Synthetic circuit predictions do not identify a unique real biological cause."
+            ]
+          }
+        ]
+      },
+      "feedback": {
+        "hint": "Separate independent reference information, physical node response and real-source inference.",
+        "solution": "Calibration recovers loaded voltage; changed effective resistance explains changed τ in the construction; real-source interpretation still needs independent evidence.",
+        "lesson_ids": [
+          "physics-em-lab-01"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physics-em-lab-01:claims",
+      "type": "multiple_select",
+      "prompt": "Which statements respect the supplied synthetic reports? Select all that apply.",
+      "points": 2,
+      "objective_ids": [
+        "physics-em-lab-01-objective-3"
+      ],
+      "options": [
+        "A finite input capacitance can change the observed transient even when the source step is unchanged.",
+        "Two fitted exponentials uniquely identify every real electrode mechanism.",
+        "The three report variants deliberately balance around each rounded group mean.",
+        "The three variants prove independent Gaussian instrument noise.",
+        "Correcting reporting gain does not by itself undo DC divider attenuation."
+      ],
+      "solution_spec": {
+        "answer": [
+          0,
+          2,
+          4
+        ],
+        "partial_credit": "correct-minus-incorrect-clamped-v1"
+      },
+      "feedback": {
+        "hint": "Distinguish constructed repeats, circuit response and the reporting map.",
+        "solution": "Balanced variants, finite-input filtering and remaining divider attenuation follow from the construction. Independent noise and unique real mechanisms are not demonstrated.",
+        "lesson_ids": [
+          "physics-em-lab-01"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physics-em-lab-01:load-comparison",
+      "type": "single_choice",
+      "prompt": "For the supplied unchanged source and input capacitance, which A/B prediction is consistent?",
+      "points": 1,
+      "objective_ids": [
+        "physics-em-lab-01-objective-3"
+      ],
+      "options": [
+        "A has larger steady node voltage and longer τ than B because its input resistance is larger.",
+        "B has larger steady voltage because its input resistance is smaller.",
+        "A and B have identical steady voltage because reporting is calibrated."
+      ],
+      "solution_spec": {
+        "answer": 0
+      },
+      "feedback": {
+        "hint": "Use both the DC divider and the parallel resistance seen by the capacitor.",
+        "solution": "A steady voltage is 10/11 V and τ=0.090909 s; B gives 0.50 V and τ=0.050 s. Source generator and capacitance remain unchanged.",
+        "lesson_ids": [
+          "physics-em-lab-01"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
     }
   ]
 }

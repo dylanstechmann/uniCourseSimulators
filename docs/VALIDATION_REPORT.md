@@ -4,7 +4,29 @@
 
 2026-10-06; synthetic local learner data only. Milestones 1 and 2 are implemented. Milestone 3 remains partial; deterministic graders and prototype graded-assignment and review workflows are described below. A Milestone 4 curriculum-map increment is implemented and tested, while subject-matter review and map refinement remain. All 25 course packages are **partial**; zero are beta, complete or externally reviewed. Human score review is limited to saved attempts and does not constitute course-content review. No semester equivalence, university credit, security certification or public production deployment is asserted.
 
-## Current increment: Physics I: Mechanics lessons, compliance lab and proposed schedule (0.4.0, 2026-10-09)
+## Current increment: Physics II lessons, loading lab and proposed schedule (0.4.0, 2026-10-09)
+
+Developed with Codex assistance. Physics: Electricity & Magnetism advances from 0.3.2 to 0.4.0 while remaining partial, unreviewed and formative-only. Seven original lessons develop field/potential and Gauss boundaries, dielectric energy conditions, Kirchhoff/Thevenin loading, RC initial states and energy, magnetic vectors and field models, induction/RL energy and phasor measurement inference. Each new lesson has six numeric and three conceptual choices. One synthetic calibration/loading/time-constant lab and a proposed 14-week sequence complete the increment. There are 71 new items and 32 cards; the package contains 14 readings, 91 items and 48 cards. All 20 prior questions, 16 cards and the original high-impedance recording case remain unchanged.
+
+Separate calculations check all 62 numeric keys, including 16 preserved ones, and all 24 CSV cells. Potential gradients, dielectric source-work ledgers, nodal balances, component RC/RL and magnetic-motion integration, finite-difference flux linkage and complex KCL/cycle-average power provide additional checks. Reference voltages identify reporting offset 0.020 V and gain 2; loaded steady amplitudes and normalized transients identify one 100 kΩ source and 1 µF input capacitance under the declared model. The [AI-assisted check record](reviews/ai-assisted/physics-em-0.4.0.md) documents checks and limits. The same AI assistant authored checks and content; no independent or qualified human review occurred.
+
+Four primary OpenStax University Physics Volume 2 sections were retrieved as link-only references. No teaching prose, problem, figure or dataset was imported, permissions were not broadened and no new paper identifier was added. The original text connection map has a verbal description but no assistive-technology review. No workload was measured.
+
+| Command/check (Linux development container, Python 3.12.3) | Result |
+|---|---|
+| `python -B tools/validate_content.py` | PASS before and after display repair: 25 packages, 361 lessons, 2029 questions, 1184 cards, 25 cases; 0 errors; 98 legacy-depth warnings |
+| `bash /workspace/.claude/skills/courselab-dev/scripts/verify.sh --log-dir /workspace/courselab-session-artifacts/codex-physics-em-2026-10-09/verification-final` | PASS: content, legacy (7), security (738 source files, 0 findings), ruff, root (2058), backend (4315 passed, 2 existing symbolic-builder skips) |
+| `python -B /workspace/courselab-session-artifacts/codex-physics-em-2026-10-09/check_grader.py` | PASS on the first run: all 91 package items earn full credit |
+| `python -B -m pytest tests/content/test_physics_em_recalculations.py tests/content/test_new_geroscience_and_statistics_lessons.py tests/content/test_learner_visible_number_formatting.py -q -p no:cacheprovider` | Initial run: 545 passed, 2 display-formatting failures; repaired rerun: 547 passed |
+| `ruff check tests/content/test_physics_em_recalculations.py` | PASS on the first run; file subsequently formatted |
+| `python -B tools/objective_coverage.py --check docs/COURSE_GAP_REPORT.md` | PASS: generated report matches |
+| `python3 -B /workspace/.claude/skills/regen-guardrails/scripts/claims_scan.py --repo uniStemCourseSimulators` | PASS: 0 HIGH, MED or LOW findings |
+
+All numerical and CSV recalculations passed on their first run. Two existing display-format tests initially rejected a long-decimal mass and an overprecise lab prompt voltage. The lesson now displays 1.0×10⁻¹² kg, and the lab prompt uses 0.316060 V with its logarithmic solution described as approximate. No stored key or tolerance changed. Focused rerun and the complete full run pass. Two field-page probes and one initial AC-power probe returned inaccessible; only successful retrieved pages are listed as references, with the Gauss section selected and AC power retrieved on retry.
+
+The preserved series-resistance prompt says “below” while its nominal V/I key is the equality boundary, with grading tolerance. That preserved limitation is disclosed; it establishes no real safety margin or device validation. Existing prompt-rounded numeric keys remain within their stated tolerances. Frontend checks, Docker Compose and Playwright were not run locally for this increment; publication CI runs them. Logs stay outside git in `courselab-session-artifacts/codex-physics-em-2026-10-09`.
+
+## Previous increment: Physics I: Mechanics lessons, compliance lab and proposed schedule (0.4.0, 2026-10-09)
 
 Developed with Codex assistance. Physics: Mechanics for Biomedical Engineers advances from 0.3.1 to 0.4.0 while remaining partial, unreviewed and formative-only. Seven original lessons develop vector/frame kinematics, contact/friction, work/momentum system boundaries, rotation/rolling, damping/energy balance, scalar time-dependent materials and machine-compliance inference. Each new lesson has six numeric and three conceptual choices. One synthetic reference/compliance/orientation lab and a proposed 14-week sequence complete the increment. There are 71 new items and 32 cards; the package contains 14 readings, 91 items and 48 cards. All 20 preexisting questions, 16 cards and the original tendon self-assessment case are preserved.
 

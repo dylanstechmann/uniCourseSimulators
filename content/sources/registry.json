@@ -3580,6 +3580,122 @@
       "checksum": null,
       "imported_assets": [],
       "rights_notes": "Only links and original explanation are selected; no third-party asset reuse is cleared."
+    },
+    {
+      "id": "openstax-em-gauss",
+      "title": "University Physics Volume 2: 6.3 Applying Gauss’s Law",
+      "institution": "OpenStax, Rice University",
+      "url": "https://openstax.org/books/university-physics-volume-2/pages/6-3-applying-gausss-law",
+      "accessed_at": "2026-10-09",
+      "license": "Link-only factual reference selected; no teaching assets imported.",
+      "reuse_mode": "link-only-reference",
+      "permissions": {
+        "linking": true,
+        "quotation": false,
+        "adaptation": false,
+        "redistribution": false
+      },
+      "attribution_requirements": [
+        "Identify OpenStax University Physics Volume 2, the section title and exact URL."
+      ],
+      "third_party_notes": "Primary section retrieved to check conceptual relations. Original text, connection map, numerical constructions and data do not copy source prose, worked problems, figures or datasets.",
+      "mapped_courses": [
+        "physics-em"
+      ],
+      "mapped_modules": [
+        "physics-em-module-7"
+      ],
+      "version": "University Physics Volume 2; primary section retrieved 2026-10-09",
+      "checksum": null,
+      "imported_assets": [],
+      "rights_notes": "Only links and original explanation are selected; no third-party asset reuse is cleared."
+    },
+    {
+      "id": "openstax-em-dielectric",
+      "title": "University Physics Volume 2: 8.4 Capacitor with a Dielectric",
+      "institution": "OpenStax, Rice University",
+      "url": "https://openstax.org/books/university-physics-volume-2/pages/8-4-capacitor-with-a-dielectric",
+      "accessed_at": "2026-10-09",
+      "license": "Link-only factual reference selected; no teaching assets imported.",
+      "reuse_mode": "link-only-reference",
+      "permissions": {
+        "linking": true,
+        "quotation": false,
+        "adaptation": false,
+        "redistribution": false
+      },
+      "attribution_requirements": [
+        "Identify OpenStax University Physics Volume 2, the section title and exact URL."
+      ],
+      "third_party_notes": "Primary section retrieved to check conceptual relations. Original text, connection map, numerical constructions and data do not copy source prose, worked problems, figures or datasets.",
+      "mapped_courses": [
+        "physics-em"
+      ],
+      "mapped_modules": [
+        "physics-em-module-8"
+      ],
+      "version": "University Physics Volume 2; primary section retrieved 2026-10-09",
+      "checksum": null,
+      "imported_assets": [],
+      "rights_notes": "Only links and original explanation are selected; no third-party asset reuse is cleared."
+    },
+    {
+      "id": "openstax-em-motional",
+      "title": "University Physics Volume 2: 13.3 Motional Emf",
+      "institution": "OpenStax, Rice University",
+      "url": "https://openstax.org/books/university-physics-volume-2/pages/13-3-motional-emf",
+      "accessed_at": "2026-10-09",
+      "license": "Link-only factual reference selected; no teaching assets imported.",
+      "reuse_mode": "link-only-reference",
+      "permissions": {
+        "linking": true,
+        "quotation": false,
+        "adaptation": false,
+        "redistribution": false
+      },
+      "attribution_requirements": [
+        "Identify OpenStax University Physics Volume 2, the section title and exact URL."
+      ],
+      "third_party_notes": "Primary section retrieved to check conceptual relations. Original text, connection map, numerical constructions and data do not copy source prose, worked problems, figures or datasets.",
+      "mapped_courses": [
+        "physics-em"
+      ],
+      "mapped_modules": [
+        "physics-em-module-12"
+      ],
+      "version": "University Physics Volume 2; primary section retrieved 2026-10-09",
+      "checksum": null,
+      "imported_assets": [],
+      "rights_notes": "Only links and original explanation are selected; no third-party asset reuse is cleared."
+    },
+    {
+      "id": "openstax-em-ac-power",
+      "title": "University Physics Volume 2: 15.4 Power in an AC Circuit",
+      "institution": "OpenStax, Rice University",
+      "url": "https://openstax.org/books/university-physics-volume-2/pages/15-4-power-in-an-ac-circuit",
+      "accessed_at": "2026-10-09",
+      "license": "Link-only factual reference selected; no teaching assets imported.",
+      "reuse_mode": "link-only-reference",
+      "permissions": {
+        "linking": true,
+        "quotation": false,
+        "adaptation": false,
+        "redistribution": false
+      },
+      "attribution_requirements": [
+        "Identify OpenStax University Physics Volume 2, the section title and exact URL."
+      ],
+      "third_party_notes": "Primary section retrieved to check conceptual relations. Original text, connection map, numerical constructions and data do not copy source prose, worked problems, figures or datasets.",
+      "mapped_courses": [
+        "physics-em"
+      ],
+      "mapped_modules": [
+        "physics-em-module-13"
+      ],
+      "version": "University Physics Volume 2; primary section retrieved 2026-10-09",
+      "checksum": null,
+      "imported_assets": [],
+      "rights_notes": "Only links and original explanation are selected; no third-party asset reuse is cleared."
     }
   ]
 }

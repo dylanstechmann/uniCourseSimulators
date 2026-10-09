@@ -80,6 +80,114 @@
       "original_content": true,
       "license": "CC-BY-4.0",
       "modifications": []
+    },
+    {
+      "module_id": "physics-em-module-7",
+      "lesson_id": "physics-em-7",
+      "reading": "modules/07-superposition-potential-and-gauss-boundaries.md",
+      "source_ids": [
+        "physicsEM",
+        "circuits",
+        "openstax-em-gauss"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "physics-em-module-8",
+      "lesson_id": "physics-em-8",
+      "reading": "modules/08-capacitance-dielectrics-and-energy-boundaries.md",
+      "source_ids": [
+        "physicsEM",
+        "circuits",
+        "openstax-em-dielectric"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "physics-em-module-9",
+      "lesson_id": "physics-em-9",
+      "reading": "modules/09-kirchhoff-thevenin-and-source-loading.md",
+      "source_ids": [
+        "physicsEM",
+        "circuits"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "physics-em-module-10",
+      "lesson_id": "physics-em-10",
+      "reading": "modules/10-rc-switching-initial-conditions-and-energy.md",
+      "source_ids": [
+        "physicsEM",
+        "circuits"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "physics-em-module-11",
+      "lesson_id": "physics-em-11",
+      "reading": "modules/11-magnetic-vectors-fields-and-force-work.md",
+      "source_ids": [
+        "physicsEM",
+        "circuits"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "physics-em-module-12",
+      "lesson_id": "physics-em-12",
+      "reading": "modules/12-induction-lenz-and-inductor-energy.md",
+      "source_ids": [
+        "physicsEM",
+        "circuits",
+        "openstax-em-motional"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "physics-em-module-13",
+      "lesson_id": "physics-em-13",
+      "reading": "modules/13-phasors-loading-and-measurement-inference.md",
+      "source_ids": [
+        "physicsEM",
+        "circuits",
+        "openstax-em-ac-power"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "physics-em-module-lab-01",
+      "lesson_id": "physics-em-lab-01",
+      "reading": "labs/01-calibration-loading-and-time-constants.md",
+      "source_ids": [
+        "physicsEM",
+        "circuits"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
     }
   ]
 }

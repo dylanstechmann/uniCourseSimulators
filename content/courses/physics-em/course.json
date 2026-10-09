@@ -7,7 +7,7 @@
   "domain": "Physics",
   "level": "Year 1",
   "maturity": "partial",
-  "version": "0.3.2",
+  "version": "0.4.0",
   "license": "MIT OR CC-BY-4.0",
   "content_origin": {
     "kind": "legacy-prototype",
@@ -147,12 +147,346 @@
       "course_outcome_ids": [
         "physics-em-outcome-4"
       ]
+    },
+    {
+      "id": "physics-em-7-objective-1",
+      "description": "Add vector source fields and scalar potentials with signed charges.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "physics-em-outcome-1"
+      ]
+    },
+    {
+      "id": "physics-em-7-objective-2",
+      "description": "Relate potential gradients to test-charge force and energy.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "physics-em-outcome-1"
+      ]
+    },
+    {
+      "id": "physics-em-7-objective-3",
+      "description": "Check flux and spherical charge-distribution assumptions.",
+      "bloom": "analyze",
+      "course_outcome_ids": [
+        "physics-em-outcome-1"
+      ]
+    },
+    {
+      "id": "physics-em-8-objective-1",
+      "description": "Calculate capacitance, plate charge and stored energy.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "physics-em-outcome-1"
+      ]
+    },
+    {
+      "id": "physics-em-8-objective-2",
+      "description": "Distinguish fixed-charge and fixed-voltage boundary conditions.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "physics-em-outcome-1"
+      ]
+    },
+    {
+      "id": "physics-em-8-objective-3",
+      "description": "Evaluate source-work and mechanical-transfer energy ledgers.",
+      "bloom": "analyze",
+      "course_outcome_ids": [
+        "physics-em-outcome-1"
+      ]
+    },
+    {
+      "id": "physics-em-9-objective-1",
+      "description": "Apply loaded node-current and loop-voltage balances.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "physics-em-outcome-2"
+      ]
+    },
+    {
+      "id": "physics-em-9-objective-2",
+      "description": "Calculate resistive Thevenin equivalents and finite-input attenuation.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "physics-em-outcome-2"
+      ]
+    },
+    {
+      "id": "physics-em-9-objective-3",
+      "description": "Distinguish power, port-model scope and reporting calibration.",
+      "bloom": "analyze",
+      "course_outcome_ids": [
+        "physics-em-outcome-4"
+      ]
+    },
+    {
+      "id": "physics-em-10-objective-1",
+      "description": "Solve an RC transition with a stated initial voltage.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "physics-em-outcome-2"
+      ]
+    },
+    {
+      "id": "physics-em-10-objective-2",
+      "description": "Balance source work, stored energy and resistor loss.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "physics-em-outcome-2"
+      ]
+    },
+    {
+      "id": "physics-em-10-objective-3",
+      "description": "Evaluate time-constant parameter and measurement inference.",
+      "bloom": "analyze",
+      "course_outcome_ids": [
+        "physics-em-outcome-4"
+      ]
+    },
+    {
+      "id": "physics-em-11-objective-1",
+      "description": "Compute signed magnetic forces with consistent axes.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "physics-em-outcome-3"
+      ]
+    },
+    {
+      "id": "physics-em-11-objective-2",
+      "description": "Calculate ideal orbits and selected current-source fields.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "physics-em-outcome-3"
+      ]
+    },
+    {
+      "id": "physics-em-11-objective-3",
+      "description": "Distinguish magnetic deflection, work and symmetry assumptions.",
+      "bloom": "analyze",
+      "course_outcome_ids": [
+        "physics-em-outcome-3"
+      ]
+    },
+    {
+      "id": "physics-em-12-objective-1",
+      "description": "Calculate signed flux linkage and apply a stated Lenz convention.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "physics-em-outcome-3"
+      ]
+    },
+    {
+      "id": "physics-em-12-objective-2",
+      "description": "Compare motional emf and closed-loop current assumptions.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "physics-em-outcome-3"
+      ]
+    },
+    {
+      "id": "physics-em-12-objective-3",
+      "description": "Balance RL state energy and resistive or mechanical power.",
+      "bloom": "analyze",
+      "course_outcome_ids": [
+        "physics-em-outcome-3"
+      ]
+    },
+    {
+      "id": "physics-em-13-objective-1",
+      "description": "Calculate complex input transfer and its frequency limits.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "physics-em-outcome-2"
+      ]
+    },
+    {
+      "id": "physics-em-13-objective-2",
+      "description": "Distinguish peak/RMS and real/reactive power.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "physics-em-outcome-2"
+      ]
+    },
+    {
+      "id": "physics-em-13-objective-3",
+      "description": "Separate source loading, reporting correction and biological inference.",
+      "bloom": "analyze",
+      "course_outcome_ids": [
+        "physics-em-outcome-4"
+      ]
+    },
+    {
+      "id": "physics-em-lab-01-objective-1",
+      "description": "Summarize raw voltage reports and determine reference-based reporting calibration.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "physics-em-outcome-4"
+      ]
+    },
+    {
+      "id": "physics-em-lab-01-objective-2",
+      "description": "Recover source resistance and input capacitance under a declared loading model.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "physics-em-outcome-4"
+      ]
+    },
+    {
+      "id": "physics-em-lab-01-objective-3",
+      "description": "Distinguish reporting, loading dynamics and conditional case inference.",
+      "bloom": "analyze",
+      "course_outcome_ids": [
+        "physics-em-outcome-4"
+      ]
     }
   ],
   "duration": {
-    "instructional_weeks": null,
-    "equivalent_structure": null,
-    "weeks": []
+    "instructional_weeks": 14,
+    "equivalent_structure": "Proposed 14-week scope retaining compact prototype readings in weeks 1,5,8,12. Workload and qualified review are absent; no semester equivalence is established.",
+    "weeks": [
+      {
+        "week": 1,
+        "title": "Electric fields, potential, and capacitance",
+        "lesson_ids": [
+          "physics-em-1"
+        ],
+        "assessment_ids": [
+          "physics-em-1-practice"
+        ]
+      },
+      {
+        "week": 2,
+        "title": "Superposition, potential and Gauss-law boundaries",
+        "lesson_ids": [
+          "physics-em-7"
+        ],
+        "assessment_ids": [
+          "physics-em-7-practice"
+        ]
+      },
+      {
+        "week": 3,
+        "title": "Capacitance, dielectrics and energy boundaries",
+        "lesson_ids": [
+          "physics-em-8"
+        ],
+        "assessment_ids": [
+          "physics-em-8-practice"
+        ]
+      },
+      {
+        "week": 4,
+        "title": "The cell membrane as a capacitor: charge, ions, fields and the membrane time constant",
+        "lesson_ids": [
+          "physics-em-5"
+        ],
+        "assessment_ids": [
+          "physics-em-5-practice"
+        ]
+      },
+      {
+        "week": 5,
+        "title": "Current, resistance, and RC transients",
+        "lesson_ids": [
+          "physics-em-2"
+        ],
+        "assessment_ids": [
+          "physics-em-2-practice"
+        ]
+      },
+      {
+        "week": 6,
+        "title": "Kirchhoff balances, Thevenin models and source loading",
+        "lesson_ids": [
+          "physics-em-9"
+        ],
+        "assessment_ids": [
+          "physics-em-9-practice"
+        ]
+      },
+      {
+        "week": 7,
+        "title": "RC switching, initial conditions and energy",
+        "lesson_ids": [
+          "physics-em-10"
+        ],
+        "assessment_ids": [
+          "physics-em-10-practice"
+        ]
+      },
+      {
+        "week": 8,
+        "title": "Magnetic forces and induction",
+        "lesson_ids": [
+          "physics-em-3"
+        ],
+        "assessment_ids": [
+          "physics-em-3-practice"
+        ]
+      },
+      {
+        "week": 9,
+        "title": "Magnetic vectors, fields and force-work distinctions",
+        "lesson_ids": [
+          "physics-em-11"
+        ],
+        "assessment_ids": [
+          "physics-em-11-practice"
+        ]
+      },
+      {
+        "week": 10,
+        "title": "Induction, Lenz signs and inductor energy",
+        "lesson_ids": [
+          "physics-em-12"
+        ],
+        "assessment_ids": [
+          "physics-em-12-practice"
+        ]
+      },
+      {
+        "week": 11,
+        "title": "Magnetic forces and induction at the bench: flow meters, induced voltages and keeping currents within limits",
+        "lesson_ids": [
+          "physics-em-6"
+        ],
+        "assessment_ids": [
+          "physics-em-6-practice"
+        ]
+      },
+      {
+        "week": 12,
+        "title": "Electrodes, impedance, and measurement",
+        "lesson_ids": [
+          "physics-em-4"
+        ],
+        "assessment_ids": [
+          "physics-em-4-practice"
+        ]
+      },
+      {
+        "week": 13,
+        "title": "Phasors, loading and measurement inference",
+        "lesson_ids": [
+          "physics-em-13"
+        ],
+        "assessment_ids": [
+          "physics-em-13-practice"
+        ]
+      },
+      {
+        "week": 14,
+        "title": "Virtual lab 1: calibration, loading and observed time constants",
+        "lesson_ids": [
+          "physics-em-lab-01"
+        ],
+        "assessment_ids": [
+          "physics-em-week14-loading-lab",
+          "physics-em-case"
+        ]
+      }
+    ]
   },
   "workload": {
     "estimated_total_hours": null,
@@ -341,6 +675,313 @@
           ]
         }
       ]
+    },
+    {
+      "id": "physics-em-module-7",
+      "title": "Superposition, potential and Gauss-law boundaries",
+      "source_ids": [
+        "physicsEM",
+        "circuits",
+        "openstax-em-gauss"
+      ],
+      "lessons": [
+        {
+          "id": "physics-em-7",
+          "title": "Superposition, potential and Gauss-law boundaries",
+          "reading": "modules/07-superposition-potential-and-gauss-boundaries.md",
+          "objectives": [
+            "physics-em-7-objective-1",
+            "physics-em-7-objective-2",
+            "physics-em-7-objective-3"
+          ],
+          "worked_example": "Draw a one-dimensional source map and label the observation point before assigning signs. At the midpoint add two rightward 1800 V/m fields, but add +180 and −180 V scalar potentials. Multiply the resulting field by the independently chosen test charge for force. For the separate uniform sphere, calculate enclosed charge first and use the interior expression only within its radius.",
+          "question_ids": [
+            "physics-em-7:midpoint-field",
+            "physics-em-7:midpoint-potential",
+            "physics-em-7:test-force",
+            "physics-em-7:point-field",
+            "physics-em-7:point-potential",
+            "physics-em-7:sphere-inside",
+            "physics-em-7:zero-potential",
+            "physics-em-7:zero-flux",
+            "physics-em-7:sphere-model"
+          ],
+          "card_ids": [
+            "physics-em-7-card-1",
+            "physics-em-7-card-2",
+            "physics-em-7-card-3",
+            "physics-em-7-card-4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "physics-em-module-8",
+      "title": "Capacitance, dielectrics and energy boundaries",
+      "source_ids": [
+        "physicsEM",
+        "circuits",
+        "openstax-em-dielectric"
+      ],
+      "lessons": [
+        {
+          "id": "physics-em-8",
+          "title": "Capacitance, dielectrics and energy boundaries",
+          "reading": "modules/08-capacitance-dielectrics-and-energy-boundaries.md",
+          "objectives": [
+            "physics-em-8-objective-1",
+            "physics-em-8-objective-2",
+            "physics-em-8-objective-3"
+          ],
+          "worked_example": "Calculate vacuum C=17.708 pF from geometry, then initial Q=106.248 pC and U=318.744 pJ at 6 V. For the isolated process hold Q fixed, obtaining V=1.5 and U=79.686 pJ. For the separate fixed-voltage process hold V fixed, obtaining Q=424.992 pC and U=1274.976 pJ. Include source work before interpreting the energy difference.",
+          "question_ids": [
+            "physics-em-8:vacuum-capacitance",
+            "physics-em-8:filled-capacitance",
+            "physics-em-8:initial-charge",
+            "physics-em-8:initial-energy",
+            "physics-em-8:isolated-voltage",
+            "physics-em-8:fixed-voltage-energy",
+            "physics-em-8:isolated-charge",
+            "physics-em-8:source-ledger",
+            "physics-em-8:dielectric-neutrality"
+          ],
+          "card_ids": [
+            "physics-em-8-card-1",
+            "physics-em-8-card-2",
+            "physics-em-8-card-3",
+            "physics-em-8-card-4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "physics-em-module-9",
+      "title": "Kirchhoff balances, Thevenin models and source loading",
+      "source_ids": [
+        "physicsEM",
+        "circuits"
+      ],
+      "lessons": [
+        {
+          "id": "physics-em-9",
+          "title": "Kirchhoff balances, Thevenin models and source loading",
+          "reading": "modules/09-kirchhoff-thevenin-and-source-loading.md",
+          "objectives": [
+            "physics-em-9-objective-1",
+            "physics-em-9-objective-2",
+            "physics-em-9-objective-3"
+          ],
+          "worked_example": "For the 3 V series source, use total resistance 1.2 MΩ to get 2.5 µA, then find load voltage and both resistor powers. For the separate 6 V divider, solve the open-circuit node first and calculate the port resistance after suppressing the ideal source. Add the 100 kΩ load using either KCL or the Thevenin divider and verify both yield 1.2 V.",
+          "question_ids": [
+            "physics-em-9:loaded-voltage",
+            "physics-em-9:input-current",
+            "physics-em-9:input-power",
+            "physics-em-9:thevenin-voltage",
+            "physics-em-9:thevenin-resistance",
+            "physics-em-9:thevenin-loaded",
+            "physics-em-9:kcl-load",
+            "physics-em-9:equivalent-scope",
+            "physics-em-9:calibration-loading"
+          ],
+          "card_ids": [
+            "physics-em-9-card-1",
+            "physics-em-9-card-2",
+            "physics-em-9-card-3",
+            "physics-em-9-card-4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "physics-em-module-10",
+      "title": "RC switching, initial conditions and energy",
+      "source_ids": [
+        "physicsEM",
+        "circuits"
+      ],
+      "lessons": [
+        {
+          "id": "physics-em-10",
+          "title": "RC switching, initial conditions and energy",
+          "reading": "modules/10-rc-switching-initial-conditions-and-energy.md",
+          "objectives": [
+            "physics-em-10-objective-1",
+            "physics-em-10-objective-2",
+            "physics-em-10-objective-3"
+          ],
+          "worked_example": "Start with V₀=1 rather than a default zero state. Use τ=0.10 s and transition amplitude 2 V to evaluate V_C(0.10). Check initial current 10 µA from the resistor drop. Independently calculate initial/final capacitor energies, source charge and source work. Verify 3.00 µJ supplied equals 2.00 µJ stored plus 1.00 µJ dissipated, and compare with a numerical time integral.",
+          "question_ids": [
+            "physics-em-10:time-constant",
+            "physics-em-10:one-time-voltage",
+            "physics-em-10:initial-current",
+            "physics-em-10:final-energy",
+            "physics-em-10:source-work",
+            "physics-em-10:resistor-heat",
+            "physics-em-10:transition-fraction",
+            "physics-em-10:source-energy",
+            "physics-em-10:time-inference"
+          ],
+          "card_ids": [
+            "physics-em-10-card-1",
+            "physics-em-10-card-2",
+            "physics-em-10-card-3",
+            "physics-em-10-card-4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "physics-em-module-11",
+      "title": "Magnetic vectors, fields and force-work distinctions",
+      "source_ids": [
+        "physicsEM",
+        "circuits"
+      ],
+      "lessons": [
+        {
+          "id": "physics-em-11",
+          "title": "Magnetic vectors, fields and force-work distinctions",
+          "reading": "modules/11-magnetic-vectors-fields-and-force-work.md",
+          "objectives": [
+            "physics-em-11-objective-1",
+            "physics-em-11-objective-2",
+            "physics-em-11-objective-3"
+          ],
+          "worked_example": "Write v and B components first, evaluate v×B and then multiply by the signed charge for −2.4 nN in y. For the independent magnetic-only circular model, use force balance for radius 3.75 mm and ω=800 rad/s, checking unchanged kinetic energy. For the wire segment, use the current-direction length vector. Compare the ideal long-wire and solenoid field calculations only within their different geometrical assumptions.",
+          "question_ids": [
+            "physics-em-11:magnetic-force",
+            "physics-em-11:orbit-radius",
+            "physics-em-11:orbit-frequency",
+            "physics-em-11:wire-force",
+            "physics-em-11:long-wire-field",
+            "physics-em-11:solenoid-field",
+            "physics-em-11:negative-charge",
+            "physics-em-11:magnetic-power",
+            "physics-em-11:field-symmetry"
+          ],
+          "card_ids": [
+            "physics-em-11-card-1",
+            "physics-em-11-card-2",
+            "physics-em-11-card-3",
+            "physics-em-11-card-4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "physics-em-module-12",
+      "title": "Induction, Lenz signs and inductor energy",
+      "source_ids": [
+        "physicsEM",
+        "circuits",
+        "openstax-em-motional"
+      ],
+      "lessons": [
+        {
+          "id": "physics-em-12",
+          "title": "Induction, Lenz signs and inductor energy",
+          "reading": "modules/12-induction-lenz-and-inductor-energy.md",
+          "objectives": [
+            "physics-em-12-objective-1",
+            "physics-em-12-objective-2",
+            "physics-em-12-objective-3"
+          ],
+          "worked_example": "At t=3, calculate B=0.28 T and each-turn flux 840 µWb, then differentiate the specified field for emf −7.20 mV under the +z/positive-contour convention. For the separate moving bar, find 30 mV and 3 mA, and verify mechanical power equals resistor heat. For the separate RL model, find τ=2 ms, final current 100 mA and stored energy 200 µJ.",
+          "question_ids": [
+            "physics-em-12:turn-flux",
+            "physics-em-12:signed-emf",
+            "physics-em-12:bar-emf",
+            "physics-em-12:bar-current",
+            "physics-em-12:rl-time",
+            "physics-em-12:inductor-energy",
+            "physics-em-12:lenz-direction",
+            "physics-em-12:open-loop",
+            "physics-em-12:rl-ledger"
+          ],
+          "card_ids": [
+            "physics-em-12-card-1",
+            "physics-em-12-card-2",
+            "physics-em-12-card-3",
+            "physics-em-12-card-4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "physics-em-module-13",
+      "title": "Phasors, loading and measurement inference",
+      "source_ids": [
+        "physicsEM",
+        "circuits",
+        "openstax-em-ac-power"
+      ],
+      "lessons": [
+        {
+          "id": "physics-em-13",
+          "title": "Phasors, loading and measurement inference",
+          "reading": "modules/13-phasors-loading-and-measurement-inference.md",
+          "objectives": [
+            "physics-em-13-objective-1",
+            "physics-em-13-objective-2",
+            "physics-em-13-objective-3"
+          ],
+          "worked_example": "Build parallel input admittance, add the series source drop and solve H=1/(1.1+j). Obtain amplitude and negative phase with the stated convention. Convert the input's peak voltage to RMS before calculating resistor power. Independently factor the transfer into H₀ and τ, then predict how changing only input resistance alters both. Keep reporting baseline/gain correction separate from this circuit transfer.",
+          "question_ids": [
+            "physics-em-13:transfer-magnitude",
+            "physics-em-13:transfer-phase",
+            "physics-em-13:input-rms",
+            "physics-em-13:dc-gain",
+            "physics-em-13:pole-frequency",
+            "physics-em-13:input-real-power",
+            "physics-em-13:capacitive-loading",
+            "physics-em-13:reactive-power",
+            "physics-em-13:case-inference"
+          ],
+          "card_ids": [
+            "physics-em-13-card-1",
+            "physics-em-13-card-2",
+            "physics-em-13-card-3",
+            "physics-em-13-card-4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "physics-em-module-lab-01",
+      "title": "Virtual lab 1: calibration, loading and observed time constants",
+      "source_ids": [
+        "physicsEM",
+        "circuits"
+      ],
+      "lessons": [
+        {
+          "id": "physics-em-lab-01",
+          "title": "Virtual lab 1: calibration, loading and observed time constants",
+          "reading": "labs/01-calibration-loading-and-time-constants.md",
+          "objectives": [
+            "physics-em-lab-01-objective-1",
+            "physics-em-lab-01-objective-2",
+            "physics-em-lab-01-objective-3"
+          ],
+          "worked_example": "Independent references identify reporting offset 0.020 V and gain 2. Corrected steady voltages infer 100 kΩ source resistance, and loaded transients infer 1 µF input capacitance. A/B amplitudes 10/11 and 0.5 V have time constants 0.090909 and 0.050 s without changing the source.",
+          "question_ids": [
+            "physics-em-lab-01:summary",
+            "physics-em-lab-01:report-offset",
+            "physics-em-lab-01:report-gain",
+            "physics-em-lab-01:source-resistance",
+            "physics-em-lab-01:input-capacitance",
+            "physics-em-lab-01:interpretation",
+            "physics-em-lab-01:claims",
+            "physics-em-lab-01:load-comparison"
+          ],
+          "card_ids": [
+            "physics-em-lab-01-card-1",
+            "physics-em-lab-01-card-2",
+            "physics-em-lab-01-card-3",
+            "physics-em-lab-01-card-4"
+          ]
+        }
+      ]
     }
   ],
   "assessments": [
@@ -451,6 +1092,209 @@
       "points": 6
     },
     {
+      "id": "physics-em-7-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Superposition, potential and Gauss-law boundaries practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "physics-em-7-objective-1",
+        "physics-em-7-objective-2",
+        "physics-em-7-objective-3",
+        "physics-em-outcome-1"
+      ],
+      "question_ids": [
+        "physics-em-7:midpoint-field",
+        "physics-em-7:midpoint-potential",
+        "physics-em-7:test-force",
+        "physics-em-7:point-field",
+        "physics-em-7:point-potential",
+        "physics-em-7:sphere-inside",
+        "physics-em-7:zero-potential",
+        "physics-em-7:zero-flux",
+        "physics-em-7:sphere-model"
+      ],
+      "points": 9
+    },
+    {
+      "id": "physics-em-8-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Capacitance, dielectrics and energy boundaries practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "physics-em-8-objective-1",
+        "physics-em-8-objective-2",
+        "physics-em-8-objective-3",
+        "physics-em-outcome-1"
+      ],
+      "question_ids": [
+        "physics-em-8:vacuum-capacitance",
+        "physics-em-8:filled-capacitance",
+        "physics-em-8:initial-charge",
+        "physics-em-8:initial-energy",
+        "physics-em-8:isolated-voltage",
+        "physics-em-8:fixed-voltage-energy",
+        "physics-em-8:isolated-charge",
+        "physics-em-8:source-ledger",
+        "physics-em-8:dielectric-neutrality"
+      ],
+      "points": 9
+    },
+    {
+      "id": "physics-em-9-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Kirchhoff balances, Thevenin models and source loading practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "physics-em-9-objective-1",
+        "physics-em-9-objective-2",
+        "physics-em-9-objective-3",
+        "physics-em-outcome-2",
+        "physics-em-outcome-4"
+      ],
+      "question_ids": [
+        "physics-em-9:loaded-voltage",
+        "physics-em-9:input-current",
+        "physics-em-9:input-power",
+        "physics-em-9:thevenin-voltage",
+        "physics-em-9:thevenin-resistance",
+        "physics-em-9:thevenin-loaded",
+        "physics-em-9:kcl-load",
+        "physics-em-9:equivalent-scope",
+        "physics-em-9:calibration-loading"
+      ],
+      "points": 9
+    },
+    {
+      "id": "physics-em-10-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "RC switching, initial conditions and energy practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "physics-em-10-objective-1",
+        "physics-em-10-objective-2",
+        "physics-em-10-objective-3",
+        "physics-em-outcome-2",
+        "physics-em-outcome-4"
+      ],
+      "question_ids": [
+        "physics-em-10:time-constant",
+        "physics-em-10:one-time-voltage",
+        "physics-em-10:initial-current",
+        "physics-em-10:final-energy",
+        "physics-em-10:source-work",
+        "physics-em-10:resistor-heat",
+        "physics-em-10:transition-fraction",
+        "physics-em-10:source-energy",
+        "physics-em-10:time-inference"
+      ],
+      "points": 9
+    },
+    {
+      "id": "physics-em-11-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Magnetic vectors, fields and force-work distinctions practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "physics-em-11-objective-1",
+        "physics-em-11-objective-2",
+        "physics-em-11-objective-3",
+        "physics-em-outcome-3"
+      ],
+      "question_ids": [
+        "physics-em-11:magnetic-force",
+        "physics-em-11:orbit-radius",
+        "physics-em-11:orbit-frequency",
+        "physics-em-11:wire-force",
+        "physics-em-11:long-wire-field",
+        "physics-em-11:solenoid-field",
+        "physics-em-11:negative-charge",
+        "physics-em-11:magnetic-power",
+        "physics-em-11:field-symmetry"
+      ],
+      "points": 9
+    },
+    {
+      "id": "physics-em-12-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Induction, Lenz signs and inductor energy practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "physics-em-12-objective-1",
+        "physics-em-12-objective-2",
+        "physics-em-12-objective-3",
+        "physics-em-outcome-3"
+      ],
+      "question_ids": [
+        "physics-em-12:turn-flux",
+        "physics-em-12:signed-emf",
+        "physics-em-12:bar-emf",
+        "physics-em-12:bar-current",
+        "physics-em-12:rl-time",
+        "physics-em-12:inductor-energy",
+        "physics-em-12:lenz-direction",
+        "physics-em-12:open-loop",
+        "physics-em-12:rl-ledger"
+      ],
+      "points": 9
+    },
+    {
+      "id": "physics-em-13-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Phasors, loading and measurement inference practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "physics-em-13-objective-1",
+        "physics-em-13-objective-2",
+        "physics-em-13-objective-3",
+        "physics-em-outcome-2",
+        "physics-em-outcome-4"
+      ],
+      "question_ids": [
+        "physics-em-13:transfer-magnitude",
+        "physics-em-13:transfer-phase",
+        "physics-em-13:input-rms",
+        "physics-em-13:dc-gain",
+        "physics-em-13:pole-frequency",
+        "physics-em-13:input-real-power",
+        "physics-em-13:capacitive-loading",
+        "physics-em-13:reactive-power",
+        "physics-em-13:case-inference"
+      ],
+      "points": 9
+    },
+    {
+      "id": "physics-em-week14-loading-lab",
+      "type": "lab",
+      "mode": "practice",
+      "title": "Virtual lab 1: calibration, loading and observed time constants (ungraded practice)",
+      "path": "question-banks/practice.json",
+      "week": 14,
+      "objective_ids": [
+        "physics-em-lab-01-objective-1",
+        "physics-em-lab-01-objective-2",
+        "physics-em-lab-01-objective-3",
+        "physics-em-outcome-4"
+      ],
+      "question_ids": [
+        "physics-em-lab-01:summary",
+        "physics-em-lab-01:report-offset",
+        "physics-em-lab-01:report-gain",
+        "physics-em-lab-01:source-resistance",
+        "physics-em-lab-01:input-capacitance",
+        "physics-em-lab-01:interpretation",
+        "physics-em-lab-01:claims",
+        "physics-em-lab-01:load-comparison"
+      ],
+      "points": 34
+    },
+    {
       "id": "physics-em-case",
       "type": "case",
       "mode": "self-assessment",
@@ -512,18 +1356,24 @@
       "version": "0.3.2",
       "date": "2026-10-08",
       "summary": "Fixed number formatting that an earlier authoring step left in learner-visible text: raw exponent notation (a number written with the letter e and a power of ten) and floating-point artifacts (a decimal with a long run of trailing digits) in item physics-em-1:capacitor-energy. No answer key, tolerance or objective changed. The package remains partial, unreviewed and formative-only."
+    },
+    {
+      "version": "0.4.0",
+      "date": "2026-10-09",
+      "summary": "Added seven original lessons on field/potential superposition and Gauss boundaries, dielectric energy conditions, Kirchhoff/Thevenin loading, RC state/energy, magnetic vectors/field models, induction/RL energy and phasor measurement inference; one synthetic reporting/loading/transient lab and a proposed weekly schedule. Developed with Codex assistance. Still partial, unreviewed and formative-only."
     }
   ],
   "limitations": [
-    "Four compact legacy units are preserved; this package is not equivalent to a full university semester.",
-    "There is no authored 12–15 week schedule, substantive homework sequence, laboratory sequence, midterm, cumulative final, or graded integrative project.",
-    "Practice items are short formative checks (two per prototype unit and six per original lesson); they do not demonstrate comprehensive outcome coverage or mastery, and objective associations remain provisional.",
-    "Bloom labels and structured prerequisite edges are initial authoring classifications awaiting subject-matter review.",
-    "Question answers and solution feedback are intentionally public practice authoring specifications, not restricted exam keys.",
-    "Of the 16 numerical answers in this package, eight require a unit, none checks significant figures and none checks dimensions; the others accept a number within a stated tolerance, with the unit optional.",
-    "Total workload and weekly duration are unknown; former nominal credit values and hardcoded reading times do not establish workload."
+    "Four compact prototype readings remain beside nine substantive original lessons and one synthetic data lab; this is not a full university semester.",
+    "The proposed 14-week sequence is unmeasured and unreviewed. Graded homework, exams, a full laboratory sequence and a cumulative graded project remain absent.",
+    "New sources, parameters and reports are synthetic; selected electrostatic, lumped-element and prescribed-field models provide no real apparatus or human-subject procedure.",
+    "Of 62 numeric items, eight preserved items require units; none checks significant figures or dimensions. New numeric items ask for bare numbers in stated scales; choices assess selected field/circuit/evidence decisions, not diagrams or proof quality.",
+    "Public keys and feedback remain formative authoring specifications; practice points are not course grades.",
+    "Subject-matter, accessibility and workload review remain outstanding; the original text circuit map has a verbal description but no assistive-technology review.",
+    "Four primary OpenStax sections were retrieved as link-only references; no teaching text, problem, figure or dataset was imported.",
+    "Preserved nominal current-limit calculations are not device-safety validation; the old series-resistance key is the equality boundary V/I, with grading tolerance."
   ],
   "intentionally_omitted": [
-    "Full instructional sequence and summative assessments are not authored yet; the original lessons extend a partial package."
+    "Graded assessments, complete laboratory sequence, cumulative graded project, measured workload and qualified human review remain outstanding."
   ]
 }

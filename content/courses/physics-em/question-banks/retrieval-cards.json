@@ -145,6 +145,326 @@
         "physics-em-6-objective-3"
       ],
       "license": "CC-BY-4.0"
+    },
+    {
+      "id": "physics-em-7-card-1",
+      "lesson_id": "physics-em-7",
+      "front": "Field versus force",
+      "back": "Sum source fields first; multiply by the signed independent test charge for force.",
+      "objective_ids": [
+        "physics-em-7-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "physics-em-7-card-2",
+      "lesson_id": "physics-em-7",
+      "front": "Potential gradient",
+      "back": "Scalar potential cancellation does not imply cancellation of its spatial gradient.",
+      "objective_ids": [
+        "physics-em-7-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "physics-em-7-card-3",
+      "lesson_id": "physics-em-7",
+      "front": "Gauss interpretation",
+      "back": "Zero net flux can contain nonzero entering and exiting fields.",
+      "objective_ids": [
+        "physics-em-7-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "physics-em-7-card-4",
+      "lesson_id": "physics-em-7",
+      "front": "Distribution symmetry",
+      "back": "A spherical outline does not establish a spherically symmetric charge distribution.",
+      "objective_ids": [
+        "physics-em-7-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "physics-em-8-card-1",
+      "lesson_id": "physics-em-8",
+      "front": "Capacitor state",
+      "back": "Charge, voltage and capacitance must describe the same state when computing stored energy.",
+      "objective_ids": [
+        "physics-em-8-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "physics-em-8-card-2",
+      "lesson_id": "physics-em-8",
+      "front": "Electrical boundaries",
+      "back": "Isolated free charge and source-held voltage produce different dielectric-change endpoints.",
+      "objective_ids": [
+        "physics-em-8-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "physics-em-8-card-3",
+      "lesson_id": "physics-em-8",
+      "front": "Energy ledger",
+      "back": "Source work can supply stored-energy increase, mechanical transfer and dissipation.",
+      "objective_ids": [
+        "physics-em-8-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "physics-em-8-card-4",
+      "lesson_id": "physics-em-8",
+      "front": "Polarization",
+      "back": "Bound charge separation does not require arbitrary added net free charge or ideal conduction.",
+      "objective_ids": [
+        "physics-em-8-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "physics-em-9-card-1",
+      "lesson_id": "physics-em-9",
+      "front": "Node balance",
+      "back": "A new load changes upstream drops; solve all relevant branch currents.",
+      "objective_ids": [
+        "physics-em-9-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "physics-em-9-card-2",
+      "lesson_id": "physics-em-9",
+      "front": "Thevenin port",
+      "back": "Open-circuit voltage and suppressed-independent-source resistance predict the selected linear port.",
+      "objective_ids": [
+        "physics-em-9-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "physics-em-9-card-3",
+      "lesson_id": "physics-em-9",
+      "front": "Loading and reporting",
+      "back": "Accurate loaded-node reporting still differs from open-circuit source voltage.",
+      "objective_ids": [
+        "physics-em-9-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "physics-em-9-card-4",
+      "lesson_id": "physics-em-9",
+      "front": "Equivalent limits",
+      "back": "A terminal equivalent does not uniquely identify internal currents, temperature or mechanism.",
+      "objective_ids": [
+        "physics-em-9-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "physics-em-10-card-1",
+      "lesson_id": "physics-em-10",
+      "front": "Initial condition",
+      "back": "Finite current preserves ideal capacitor voltage at a switch event; retain its initial state.",
+      "objective_ids": [
+        "physics-em-10-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "physics-em-10-card-2",
+      "lesson_id": "physics-em-10",
+      "front": "Transition fraction",
+      "back": "1−exp(−t/τ) describes completed transition fraction, not always final-voltage fraction.",
+      "objective_ids": [
+        "physics-em-10-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "physics-em-10-card-3",
+      "lesson_id": "physics-em-10",
+      "front": "RC energy",
+      "back": "Source work equals stored-energy change plus resistor heat under the supplied simple model.",
+      "objective_ids": [
+        "physics-em-10-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "physics-em-10-card-4",
+      "lesson_id": "physics-em-10",
+      "front": "Time inference",
+      "back": "A fitted time constant identifies a combination of components; independent constraints separate them.",
+      "objective_ids": [
+        "physics-em-10-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "physics-em-11-card-1",
+      "lesson_id": "physics-em-11",
+      "front": "Cross product",
+      "back": "Use the coordinate convention and charge sign after forming v×B.",
+      "objective_ids": [
+        "physics-em-11-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "physics-em-11-card-2",
+      "lesson_id": "physics-em-11",
+      "front": "Circular motion",
+      "back": "Magnetic-only perpendicular motion changes velocity direction while preserving speed.",
+      "objective_ids": [
+        "physics-em-11-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "physics-em-11-card-3",
+      "lesson_id": "physics-em-11",
+      "front": "Magnetic work",
+      "back": "The magnetic point-force contributes zero instantaneous power; complete circuits can still exchange energy.",
+      "objective_ids": [
+        "physics-em-11-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "physics-em-11-card-4",
+      "lesson_id": "physics-em-11",
+      "front": "Current-source symmetry",
+      "back": "Long-wire and solenoid expressions require their declared geometry and steady-current approximations.",
+      "objective_ids": [
+        "physics-em-11-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "physics-em-12-card-1",
+      "lesson_id": "physics-em-12",
+      "front": "Contour signs",
+      "back": "Reverse contour and normal together when interpreting signed flux and emf.",
+      "objective_ids": [
+        "physics-em-12-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "physics-em-12-card-2",
+      "lesson_id": "physics-em-12",
+      "front": "Lenz change",
+      "back": "The induced effect opposes flux change, which need not mean opposing the existing field.",
+      "objective_ids": [
+        "physics-em-12-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "physics-em-12-card-3",
+      "lesson_id": "physics-em-12",
+      "front": "Motional balance",
+      "back": "For the specified resistive bar model, mechanical power equals electrical heat.",
+      "objective_ids": [
+        "physics-em-12-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "physics-em-12-card-4",
+      "lesson_id": "physics-em-12",
+      "front": "RL state",
+      "back": "Finite voltage preserves ideal inductor current; sustained source work also feeds ongoing resistor heat.",
+      "objective_ids": [
+        "physics-em-12-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "physics-em-13-card-1",
+      "lesson_id": "physics-em-13",
+      "front": "Phasor convention",
+      "back": "State exp(jωt), amplitude scale and source/input topology before interpreting phase.",
+      "objective_ids": [
+        "physics-em-13-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "physics-em-13-card-2",
+      "lesson_id": "physics-em-13",
+      "front": "RMS power",
+      "back": "Convert sinusoidal peak to RMS before calculating average resistor power.",
+      "objective_ids": [
+        "physics-em-13-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "physics-em-13-card-3",
+      "lesson_id": "physics-em-13",
+      "front": "Finite input",
+      "back": "Parallel input capacitance can cause frequency-dependent loading despite a large DC resistance.",
+      "objective_ids": [
+        "physics-em-13-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "physics-em-13-card-4",
+      "lesson_id": "physics-em-13",
+      "front": "Inference boundary",
+      "back": "Reporting calibration recovers loaded voltage; source recovery additionally needs the circuit transfer.",
+      "objective_ids": [
+        "physics-em-13-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "physics-em-lab-01-card-1",
+      "lesson_id": "physics-em-lab-01",
+      "front": "Voltage references",
+      "back": "A known zero and nonzero node voltage identify a supplied affine reporting offset and gain.",
+      "objective_ids": [
+        "physics-em-lab-01-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "physics-em-lab-01-card-2",
+      "lesson_id": "physics-em-lab-01",
+      "front": "Physical loading",
+      "back": "Reporting correction recovers loaded voltage; source/input transfer is still needed for open-circuit recovery.",
+      "objective_ids": [
+        "physics-em-lab-01-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "physics-em-lab-01-card-3",
+      "lesson_id": "physics-em-lab-01",
+      "front": "Observed transient",
+      "back": "Parallel input resistance changes both DC gain and the resistance seen by a shared capacitor.",
+      "objective_ids": [
+        "physics-em-lab-01-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "physics-em-lab-01-card-4",
+      "lesson_id": "physics-em-lab-01",
+      "front": "Case evidence",
+      "back": "An informative synthetic dummy-source control supports a conditional electrical explanation, not unique real biological identification.",
+      "objective_ids": [
+        "physics-em-lab-01-objective-3"
+      ],
+      "license": "CC-BY-4.0"
     }
   ]
 }

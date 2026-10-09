@@ -29,3 +29,4 @@ review that do.
 | General Chemistry II 0.4.0 (new lessons, relaxation lab and schedule) | 2026-10-09 | [general-chemistry-2-0.4.0.md](general-chemistry-2-0.4.0.md) |
 | Organic Chemistry 0.4.0 (new lessons, peak-calibration lab and schedule) | 2026-10-09 | [organic-chemistry-0.4.0.md](organic-chemistry-0.4.0.md) |
 | Physics I: Mechanics 0.4.0 (new lessons, compliance lab and schedule) | 2026-10-09 | [physics-mechanics-0.4.0.md](physics-mechanics-0.4.0.md) |
+| Physics II 0.4.0 (new lessons, loading lab and schedule) | 2026-10-09 | [physics-em-0.4.0.md](physics-em-0.4.0.md) |
