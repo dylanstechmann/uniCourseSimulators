@@ -412,7 +412,7 @@ def test_structured_rubric_item_is_counted_while_course_remains_partial(reposito
     result = validate_repository(repository)
     assert result.ok, result.errors
     manifest = read(course[0])
-    assert manifest["version"] == "0.21.0"
+    assert manifest["version"] == "0.22.0"
     assert manifest["maturity"] == "partial"
     assert result.inventory["questions"] == 2233
     question = next(
@@ -444,7 +444,7 @@ def test_cell_biology_scope_does_not_claim_unwritten_weeks(repository):
     course_root = repository / "content/courses/cell-biology"
     manifest = read(course_root / "course.json")
     weeks = manifest["duration"]["weeks"]
-    assert manifest["version"] == "0.21.0"
+    assert manifest["version"] == "0.22.0"
     assert manifest["maturity"] == "partial"
     assert len(weeks) == 14
     assert [week["week"] for week in weeks if week["lesson_ids"]] == [1, 2, 3, 4, 5, 6, 7, 9, 10, 11, 12, 13, 14]
@@ -1085,7 +1085,7 @@ def test_week9_schedule_objectives_and_practice_are_mapped(repository):
     questions = {item["id"]: item for item in bank["questions"]}
 
     assert manifest["maturity"] == "partial"
-    assert manifest["version"] == "0.21.0"
+    assert manifest["version"] == "0.22.0"
     assert week9["lesson_ids"] == ["cell-biology-17", "cell-biology-18", "cell-biology-hw5"]
     assert week9["assessment_ids"] == [assessment["id"], "cell-biology-hw5-practice"]
     assert sum(questions[item]["points"] for item in assessment["question_ids"]) == assessment["points"] == 14

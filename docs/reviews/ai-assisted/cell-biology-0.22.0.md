@@ -1,0 +1,39 @@
+# Cell Biology 0.22.0 — inactive Homework 3 candidate, 2026-10-09
+
+Codex authored the candidate and tests. Separate computations and mutations are same-AI development checks, not independent numerical, scientific, assessment or accessibility review. The course remains partial, unreviewed and formative-only. All 137 enrolled practice items, 89 cards, 39 readings, modules, assessments, review, case and grading policy remain unchanged. No graded assignment is activated.
+
+## Packet and observation contract
+
+The [instructions](../../../content/courses/cell-biology/assessment-specs/homework-03-candidate.md), [matched observations](../../../content/courses/cell-biology/assessment-specs/homework-03-candidate-lesion-reference.csv) and [answer-free metadata/DTOs](../../../content/courses/cell-biology/assessment-specs/homework-03-candidate.json) form an original separate candidate with eight items and 25 proposed points. Twelve independently cultured preparations across three conditions provide matched aliquots at 0,2,6 hours. The 36 rows contain lesion signal/background, a positive DNA-reference channel, loaded DNA, viable-cell counts and DNA-synthesis-label percentages. Loaded DNA describes assay loading, not whole-culture DNA production. Time points and channels are not new independent cultures.
+
+The stipulated corrected lesion and reference channels share a multiplicative loading/recovery factor, with linear response and stable reference meaning. Their ratio removes that common factor under this construction. It is not a measured calibration or proof that real assays share recovery. Matched time-zero normalization precedes culture-level averaging. Synthesis-label fraction is not completed genome doubling; viable-cell counts do not reconstruct lesions in lost cells. A restored line constrains a factor-dependent interpretation without proving direct catalysis or sequence fidelity. One engineered line per condition does not estimate between-clone variability.
+
+The starting corrected ratios are equal by construction. Although the requested analysis retains culture pairing, matching the scored cells cannot certify that a learner used a paired algorithm; some alternative calculations can coincide on this dataset. Numerical grading does not assess the analysis method or understanding of pairing.
+
+Four numeric items, a nine-cell CSV upload, a two-field copying-model interpretation, four categorical control criteria and a multiple-select item assess a limited subset of the instruction. Two standalone percentages and the composite percentage enforce unit/precision/dimension policy. The signed percentage-point contrast is a bare declared scale, and the exact duplex count is bare with no significant-figure rule. CSV means use a declared percentage scale/tolerance without lexical precision or dimensional enforcement. Prose, uncertainty, scripts and mechanistic explanations are ungraded; written-discussion descriptors are a draft unscored rubric. Workload and actual release/attempt policy remain unmeasured/unselected.
+
+The density task is separate from the culture data: it stipulates fully heavy duplexes, three synchronized semiconservative doublings in light medium, no molecule loss or repair replacement and no new heavy isotope. The check enumerates parental strand identities and newly created light strands through each generation. This is a model prediction, not a physical density experiment or a lesion-repair measurement. Actual generations, class recovery and density resolution would require controls.
+
+## Private boundary and preserved history
+
+The private answer package and candidate-specific numerical/mutation tests are outside Git. Public metadata binds its exact file hash and the two prerequisite-reading hashes. Neither that local artifact directory nor this packet is a production provisioning/access-control approval. The candidate is not referenced by the catalog assessment manifest. Protected delivery and synthetic full-credit submission are exercised only in an isolated temporary course copy; its grade-category and attempt settings are fixtures, not deployment changes.
+
+Homework 1 and 2 retain their public files, authored versions 0.20.0/0.21.0 and key bindings. The generic public checks recognize historical authored versions without rewriting old candidates to 0.22.0. That preserves identity and does not establish approval for reuse with changed instruction. Both earlier keys/tests remain at their separate session-artifact roots and are checked again after this version advance.
+
+## Development evidence
+
+The external check file imports no authoring helpers. Fraction arithmetic recomputes each background-corrected ratio, its matched time-zero normalization, descriptive contrasts, viable-cell fraction and nine summary cells. Explicit strand enumeration recalculates the count and composite percentage. Equivalent units, precision, scale/sign/near misses, malformed/injection/partial responses and each numerical/categorical/CSV key/cell mutation are checked. Counterexamples use raw channel ratios, omit background, pool reference-weighted values, count time points as independent cultures or divide lesion burden by viable-cell fraction. These do not receive full table credit. Complementary sequence and conserved-parental-strand checks supplement the numerical evidence.
+
+The temporary private-source API check covers enrollment, complete response requirements, answer-free DTO equality, a full-credit synthetic submission and missing/changed key fail-closed behavior. Publication CI cannot access candidate keys/tests; candidate-specific evidence remains local. No independent or qualified person reviewed these checks or this content.
+
+## Verification record
+
+The external command `python -B -m pytest /workspace/courselab-session-artifacts/codex-biology-h3-2026-10-09/test_private_candidate.py -q -p no:cacheprovider` passed all 84 checks on its first run. The unchanged Homework 1 and 2 private commands passed all 65 and 83 checks after this version advance. Public checks `python -B -m pytest tests/content/test_cell_biology_candidate.py tests/content/test_cell_biology_integrity.py -q -p no:cacheprovider` passed all 27 checks on their first run. Full verification `bash /workspace/.claude/skills/courselab-dev/scripts/verify.sh --log-dir /workspace/courselab-session-artifacts/codex-biology-h3-2026-10-09/verification-final` passed content, legacy seven, security 783 files with zero findings, ruff, 2443 root tests and 4723 backend tests with two existing symbolic-builder skips. The gap report matched and claims scan had zero findings. No check failed and no answer/tolerance/key index changed. Exact commands appear in the current [validation report](../../VALIDATION_REPORT.md). External evidence binds hashes while recording no reviewers or activation approval.
+
+No new outside source, DOI, PMID, NCT, paper link, prose, problem, figure or dataset was introduced. Existing original course lessons provide context, and no new identifier-resolution pass is claimed. Original instructions, stems and constructed observations are CC BY 4.0 with substantial AI assistance. No physical experiment, direct repair flux, measured mutation frequency, unique repair mechanism or clinical outcome was established.
+
+Frontend, Docker Compose and Playwright were not run locally for this increment; publication CI covers them. External keys, tests, logs and hash-bound development evidence remain outside Git in courselab-session-artifacts/codex-biology-h3-2026-10-09.
+
+## Missing activation evidence
+
+Independent numerical review, qualified scientific and assessment review, manual accessibility/fairness review, workload measurement and operator provisioning/release decisions remain absent. No reviewer or approval is invented. Automated checks do not satisfy these requirements or guarantee assessment security. All three candidates remain inactive.

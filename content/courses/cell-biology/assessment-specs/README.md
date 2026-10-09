@@ -17,3 +17,7 @@ Nothing here is graded, reviewed or complete. Blueprints were generated from `co
 ## Homework 2 candidate (2026-10-09)
 
 [Instructions](homework-02-candidate.md), [fluorescence observations](homework-02-candidate-fluorescence.csv) and [answer-free metadata/item DTOs](homework-02-candidate.json) form a separate inactive eight-item, 25-point review candidate. Its key is outside Git. It develops matched calibration, no-enzyme background correction, early/later windows and model limits. Homework 1 remains pinned to its authored 0.20.0 version; a course-version change does not rewrite that candidate or its hash. Neither candidate is activated, independently recalculated or qualified-reviewed.
+
+## Homework 3 candidate (2026-10-09)
+
+[Instructions](homework-03-candidate.md), [lesion/reference observations](homework-03-candidate-lesion-reference.csv) and [answer-free metadata/item DTOs](homework-03-candidate.json) form an inactive eight-item, 25-point review candidate. Its key is outside Git. Matched normalization, synthesis-label and survivor-selection limits precede repair inference; a separate stipulated copying model tests density predictions. Earlier candidate files, versions and key bindings remain unchanged. None is activated or independently/qualified reviewed.

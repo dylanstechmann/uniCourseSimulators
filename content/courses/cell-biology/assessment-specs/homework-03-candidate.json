@@ -1,0 +1,298 @@
+{
+  "candidate_id": "cell-biology-h3-review-v1",
+  "course_id": "cell-biology",
+  "content_version": "0.22.0",
+  "state": "inactive-review-candidate",
+  "title": "Homework 3 candidate: lesion normalization, replication and repair evidence",
+  "instruction_path": "assessment-specs/homework-03-candidate.md",
+  "dataset_path": "assessment-specs/homework-03-candidate-lesion-reference.csv",
+  "private_source_ref": "private://assignments/homework-03-review-v1.json",
+  "private_source_sha256": "f74fd837375c8b3514569f504211c6bc80dbd1e406e1191ecb84071654665360",
+  "points": 25,
+  "lesson_ids": [
+    "cell-biology-13",
+    "cell-biology-14"
+  ],
+  "objective_ids": [
+    "cell-biology-13-objective-1",
+    "cell-biology-13-objective-2",
+    "cell-biology-14-objective-1",
+    "cell-biology-14-objective-2"
+  ],
+  "course_outcome_ids": [
+    "cell-biology-outcome-3",
+    "cell-biology-outcome-4"
+  ],
+  "prerequisite_sha256": {
+    "modules/06a-dna-structure-and-replication.md": "0bd500de49a01748c27881ff5e21a13e8d720aecfe5248e6c59a6cb2101d9ed8",
+    "modules/06b-dna-damage-and-repair-evidence.md": "3f4a3dc4b70b4dcf9826ea16de4db8507d4666aecc79a47da435c722767f53dc"
+  },
+  "review": {
+    "status": "unreviewed",
+    "reviewers": []
+  },
+  "activation_gates": [
+    "independent-recalculation",
+    "grader-mutation-review",
+    "subject-matter-review",
+    "assessment-review",
+    "accessibility-review",
+    "measured-workload",
+    "operator-provisioning-and-release-policy"
+  ],
+  "questions": [
+    {
+      "id": "cell-biology-h3-candidate:normalized-remaining",
+      "type": "numeric",
+      "prompt": "For wt culture w01 at 6 h, subtract its measured lesion background, divide by its DNA-reference channel, then divide by the same culture's time-zero corrected lesion/reference ratio. Express remaining signal as a percent with exactly three significant figures.",
+      "options": [],
+      "unit": "%",
+      "significant_figures": 3,
+      "points": 2.0,
+      "selection": "single",
+      "partial_credit_policy": null,
+      "response_fields": [],
+      "graph_spec": null,
+      "accepted_media_types": [],
+      "max_upload_bytes": null,
+      "variant_id": null,
+      "variant_token": null,
+      "learning_objective_ids": [
+        "cell-biology-14-objective-2"
+      ],
+      "assessment_role": "graded"
+    },
+    {
+      "id": "cell-biology-h3-candidate:condition-contrast",
+      "type": "numeric",
+      "prompt": "At 6 h normalize each culture to its own time-zero corrected lesion/reference ratio. Report mean factor_depleted percentage minus mean wt percentage as a bare signed number in percentage points, not a relative percent change.",
+      "options": [],
+      "unit": "",
+      "significant_figures": null,
+      "points": 2.0,
+      "selection": "single",
+      "partial_credit_policy": null,
+      "response_fields": [],
+      "graph_spec": null,
+      "accepted_media_types": [],
+      "max_upload_bytes": null,
+      "variant_id": null,
+      "variant_token": null,
+      "learning_objective_ids": [
+        "cell-biology-14-objective-2"
+      ],
+      "assessment_role": "graded"
+    },
+    {
+      "id": "cell-biology-h3-candidate:surviving-cells",
+      "type": "numeric",
+      "prompt": "For wt w01, report viable-cell count at 6 h divided by its time-zero viable-cell count as a percent with exactly three significant figures. This is a cell-count fraction, not a correction factor for lesion burden.",
+      "options": [],
+      "unit": "%",
+      "significant_figures": 3,
+      "points": 2.0,
+      "selection": "single",
+      "partial_credit_policy": null,
+      "response_fields": [],
+      "graph_spec": null,
+      "accepted_media_types": [],
+      "max_upload_bytes": null,
+      "variant_id": null,
+      "variant_token": null,
+      "learning_objective_ids": [
+        "cell-biology-14-objective-2"
+      ],
+      "assessment_role": "graded"
+    },
+    {
+      "id": "cell-biology-h3-candidate:heavy-containing-count",
+      "type": "numeric",
+      "prompt": "In a separate ideal semiconservative model, start with 64 fully heavy-labeled DNA duplexes. Complete three synchronized doublings in exclusively light medium, with no molecule loss, repair replacement or new heavy isotope. How many final duplexes contain a parental heavy strand? Report an exact bare count, not a percentage.",
+      "options": [],
+      "unit": "",
+      "significant_figures": null,
+      "points": 2.0,
+      "selection": "single",
+      "partial_credit_policy": null,
+      "response_fields": [],
+      "graph_spec": null,
+      "accepted_media_types": [],
+      "max_upload_bytes": null,
+      "variant_id": null,
+      "variant_token": null,
+      "learning_objective_ids": [
+        "cell-biology-13-objective-2"
+      ],
+      "assessment_role": "graded"
+    },
+    {
+      "id": "cell-biology-h3-candidate:summary",
+      "type": "file_upload",
+      "prompt": "At 6 h calculate remaining lesion/reference percent for each matched culture before averaging. Upload exact columns condition,cultures,mean_remaining_pct,mean_synthesis_label_pct with rows wt,factor_depleted,factor_restored. Counts are exact; means have tolerance 0.005 percentage points. Time points, assay channels and technical DNA loading do not add independent cultures.",
+      "options": [],
+      "unit": null,
+      "significant_figures": null,
+      "points": 9.0,
+      "selection": "single",
+      "partial_credit_policy": null,
+      "response_fields": [],
+      "graph_spec": null,
+      "accepted_media_types": [
+        "text/csv"
+      ],
+      "max_upload_bytes": 32768,
+      "variant_id": null,
+      "variant_token": null,
+      "learning_objective_ids": [
+        "cell-biology-14-objective-2"
+      ],
+      "assessment_role": "graded"
+    },
+    {
+      "id": "cell-biology-h3-candidate:density-model",
+      "type": "data_interpretation",
+      "prompt": "Use the separately stipulated 64-duplex, three-generation ideal semiconservative copying model.",
+      "options": [],
+      "unit": null,
+      "significant_figures": null,
+      "points": 2.0,
+      "selection": "single",
+      "partial_credit_policy": null,
+      "response_fields": [
+        {
+          "id": "hybrid_pct",
+          "type": "numeric",
+          "prompt": "Report the percentage of final duplexes with one heavy and one light strand. Report exactly 2 significant figures.",
+          "options": [],
+          "unit": "%",
+          "points": 1.0
+        },
+        {
+          "id": "inference",
+          "type": "single_choice",
+          "prompt": "What does a single intermediate-density class after only one generation distinguish?",
+          "options": [
+            "It uniquely proves semiconservative copying and excludes dispersive copying.",
+            "It is compatible with both semiconservative and dispersive predictions; a later controlled generation and density calibration are needed.",
+            "It directly measures error-free lesion repair in the culture dataset."
+          ],
+          "unit": null,
+          "points": 1.0
+        }
+      ],
+      "graph_spec": null,
+      "accepted_media_types": [],
+      "max_upload_bytes": null,
+      "variant_id": null,
+      "variant_token": null,
+      "learning_objective_ids": [
+        "cell-biology-13-objective-2"
+      ],
+      "assessment_role": "graded"
+    },
+    {
+      "id": "cell-biology-h3-candidate:control-logic",
+      "type": "structured",
+      "prompt": "Select one response for each independent normalization, replication, selection and restoration criterion.",
+      "options": [],
+      "unit": null,
+      "significant_figures": null,
+      "points": 4.0,
+      "selection": "single",
+      "partial_credit_policy": null,
+      "response_fields": [
+        {
+          "id": "reference",
+          "type": "single_choice",
+          "prompt": "What must hold for the specified normalization?",
+          "options": [
+            "A positive reference and matched background with stable reference meaning and an applicable linear assay relation.",
+            "The largest raw lesion signal must be the denominator for all cultures.",
+            "The viability percentage substitutes for the DNA-reference channel."
+          ],
+          "unit": null,
+          "points": 1.0
+        },
+        {
+          "id": "synthesis",
+          "type": "single_choice",
+          "prompt": "What does a similar synthesis-label fraction establish?",
+          "options": [
+            "Exactly the same number of completed genome doublings.",
+            "A constraint on this measured label fraction, not a complete measurement of genome duplication or lesion dilution.",
+            "Proof that replication cannot affect lesion/reference signal."
+          ],
+          "unit": null,
+          "points": 1.0
+        },
+        {
+          "id": "selection",
+          "type": "single_choice",
+          "prompt": "How can cell loss affect interpretation?",
+          "options": [
+            "Every reduction in cell count proves correct repair.",
+            "Dividing remaining lesion percent by viable-cell fraction identifies lesion removal.",
+            "Loss of highly damaged cells can change the sampled population; counts alone do not reconstruct their lesion burden."
+          ],
+          "unit": null,
+          "points": 1.0
+        },
+        {
+          "id": "restoration",
+          "type": "single_choice",
+          "prompt": "What does a restored condition nearer wt add?",
+          "options": [
+            "Proof of direct catalytic removal by that factor in every cell type.",
+            "Evidence consistent with a factor-dependent contribution under these conditions; expression, independent lines and assay controls still matter.",
+            "A measured mutation rate for the restored line."
+          ],
+          "unit": null,
+          "points": 1.0
+        }
+      ],
+      "graph_spec": null,
+      "accepted_media_types": [],
+      "max_upload_bytes": null,
+      "variant_id": null,
+      "variant_token": null,
+      "learning_objective_ids": [
+        "cell-biology-14-objective-2"
+      ],
+      "assessment_role": "graded"
+    },
+    {
+      "id": "cell-biology-h3-candidate:strand-and-repair",
+      "type": "multiple_select",
+      "prompt": "Select all statements compatible with strand polarity and the lesson's distinctions between copying, repair and bypass. Scoring is two points times (correct selections minus incorrect selections) divided by the total number of correct options, clamped from zero to two.",
+      "options": [
+        "For template 3′-G A T C C A-5′, the antiparallel complementary product is 5′-C T A G G T-3′.",
+        "Each lagging-strand fragment grows 3′ to 5′.",
+        "Translesion synthesis necessarily removes the original lesion and restores the original sequence.",
+        "Post-replicative mismatch repair differs from proofreading at an extending polymerase.",
+        "A lower lesion-associated signal is itself a measurement of mutation frequency."
+      ],
+      "unit": null,
+      "significant_figures": null,
+      "points": 2.0,
+      "selection": "multiple",
+      "partial_credit_policy": "correct-minus-incorrect-clamped-v1",
+      "response_fields": [],
+      "graph_spec": null,
+      "accepted_media_types": [],
+      "max_upload_bytes": null,
+      "variant_id": null,
+      "variant_token": null,
+      "learning_objective_ids": [
+        "cell-biology-13-objective-1",
+        "cell-biology-14-objective-1"
+      ],
+      "assessment_role": "graded"
+    }
+  ],
+  "provenance": {
+    "kind": "original",
+    "license": "CC-BY-4.0",
+    "ai_assistance": "Codex authored the candidate and checks. No independent or qualified human review occurred.",
+    "source_scope": "Existing original lessons only; no new external source, identifier, prose, problem, figure or dataset imported."
+  }
+}

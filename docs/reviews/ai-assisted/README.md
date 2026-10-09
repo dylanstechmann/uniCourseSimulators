@@ -35,3 +35,4 @@ review that do.
 | Robotics 0.4.0 (new lessons, near-extension lab and schedule) | 2026-10-09 | [robotics-0.4.0.md](robotics-0.4.0.md) |
 | Cell Biology 0.20.0 (inactive Homework 1 review candidate) | 2026-10-09 | [cell-biology-0.20.0.md](cell-biology-0.20.0.md) |
 | Cell Biology 0.21.0 (inactive Homework 2 review candidate) | 2026-10-09 | [cell-biology-0.21.0.md](cell-biology-0.21.0.md) |
+| Cell Biology 0.22.0 (inactive Homework 3 review candidate) | 2026-10-09 | [cell-biology-0.22.0.md](cell-biology-0.22.0.md) |

@@ -115,6 +115,21 @@ def test_public_data_keep_observation_units_and_series_consistent(candidate):
     CANDIDATE = candidate
     with (COURSE / CANDIDATE["dataset_path"]).open(newline="") as stream:
         rows = list(csv.DictReader(stream))
+    if "dna_reference_au" in rows[0]:
+        assert len(rows) == 36
+        groups = {}
+        for row in rows:
+            groups.setdefault(row["culture"], []).append(row)
+            assert float(row["dna_reference_au"]) > 0
+            assert float(row["lesion_signal_au"]) >= float(row["lesion_background_au"])
+            assert float(row["loaded_dna_ng"]) > 0
+            assert float(row["viable_cells_thousands"]) >= 0
+            assert 0 <= float(row["dna_synthesis_label_pct"]) <= 100
+        assert len(groups) == 12
+        for observations in groups.values():
+            assert {float(row["time_h"]) for row in observations} == {0, 2, 6}
+            assert len({row["condition"] for row in observations}) == 1
+        return
     if "series" in rows[0]:
         assert len(rows) == 420
         assert len({tuple(row.values())[:-1] for row in rows}) == len(rows)

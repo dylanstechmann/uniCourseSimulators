@@ -7,7 +7,7 @@
   "domain": "Life sciences",
   "level": "Year 1",
   "maturity": "partial",
-  "version": "0.21.0",
+  "version": "0.22.0",
   "license": "MIT OR CC-BY-4.0",
   "content_origin": {
     "kind": "legacy-prototype",
@@ -2756,6 +2756,11 @@
       "version": "0.21.0",
       "date": "2026-10-09",
       "summary": "Prepared a separate inactive Homework 2 review candidate with synthetic calibration/blank/reaction observations, eight answer-free public item DTOs and an external private answer package. Preserved Homework 1 at its authored version and all enrolled practice/assessments. Same-AI checks do not satisfy independent or qualified review, workload or operator release gates; course remains partial, unreviewed and formative-only. Developed with Codex assistance."
+    },
+    {
+      "version": "0.22.0",
+      "date": "2026-10-09",
+      "summary": "Prepared an inactive Homework 3 candidate with original lesion/background/reference time-course data, eight answer-free item DTOs and an external private key. Preserved prior candidates and all enrolled practice/assessments. Same-AI checks do not satisfy independent or qualified review, workload or operator release gates; course remains partial, unreviewed and formative-only. Developed with Codex assistance."
     }
   ],
   "limitations": [
@@ -2771,7 +2776,8 @@
     "Virtual lab 2 uses synthetic phospho-ERK-to-total-ERK relative values and constrained deterministic checks. Its graph task scores points on fixed axes and does not assess axis selection, statistical uncertainty, or biological interpretation; neither the inhibitor nor bypass result alone establishes pathway specificity, normal physiology, or cell fate.",
     "Virtual lab 3 uses synthetic marker percentages and cell numbers. Its checks score summary cells, graph coordinates and structured choices only; it does not assess lineage tracing, potency, function or any clinical claim, and marker patterns do not establish them.",
     "Homework 1 has a separate inactive review candidate under assessment-specs: seven items and new synthetic pulse-chase data, with keys outside Git. It is not enrolled or served as graded coursework; independent and qualified review, workload measurement and operator release gates remain outstanding.",
-    "Homework 2 has a separate inactive review candidate with synthetic fluorescence standards, matched no-enzyme blanks and early/later reaction observations. Eight candidate items have keys outside Git and are not served as graded coursework. Review, measured workload and operator release gates remain outstanding; calibrated rate patterns do not prove a binding mechanism."
+    "Homework 2 has a separate inactive review candidate with synthetic fluorescence standards, matched no-enzyme blanks and early/later reaction observations. Eight candidate items have keys outside Git and are not served as graded coursework. Review, measured workload and operator release gates remain outstanding; calibrated rate patterns do not prove a binding mechanism.",
+    "Homework 3 has a separate inactive review candidate with matched lesion/background/DNA-reference observations, culture counts and a stipulated DNA-copying model. Its eight items have keys outside Git and are not served as graded coursework. Reference normalization, restoration and label proxies do not establish repair flux or mutation frequency; review, workload and operator release requirements remain outstanding."
   ],
   "intentionally_omitted": [
     "Lessons and assessments for most proposed weeks, summative course assessments, and the complete semester workflow are intentionally not represented as finished content."
