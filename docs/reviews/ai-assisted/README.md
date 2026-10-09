@@ -32,3 +32,4 @@ review that do.
 | Physics II 0.4.0 (new lessons, loading lab and schedule) | 2026-10-09 | [physics-em-0.4.0.md](physics-em-0.4.0.md) |
 | Circuits 0.4.0 (new lessons, channel-diagnostic lab and schedule) | 2026-10-09 | [circuits-0.4.0.md](circuits-0.4.0.md) |
 | Programming 0.4.0 (new lessons, pipeline lab and schedule) | 2026-10-09 | [programming-0.4.0.md](programming-0.4.0.md) |
+| Robotics 0.4.0 (new lessons, near-extension lab and schedule) | 2026-10-09 | [robotics-0.4.0.md](robotics-0.4.0.md) |

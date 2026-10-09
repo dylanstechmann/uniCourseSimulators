@@ -86,6 +86,125 @@
       "original_content": true,
       "license": "CC-BY-4.0",
       "modifications": []
+    },
+    {
+      "module_id": "robotics-module-7",
+      "lesson_id": "robotics-7",
+      "reading": "modules/07-frames-calibration-and-position-uncertainty.md",
+      "source_ids": [
+        "robotics",
+        "signals",
+        "numerical",
+        "mr-robotics-transforms"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "robotics-module-8",
+      "lesson_id": "robotics-8",
+      "reading": "modules/08-jacobians-singularities-and-force-mapping.md",
+      "source_ids": [
+        "robotics",
+        "signals",
+        "numerical",
+        "mr-robotics-singularities"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "robotics-module-9",
+      "lesson_id": "robotics-9",
+      "reading": "modules/09-inverse-branches-joint-limits-and-clearance.md",
+      "source_ids": [
+        "robotics",
+        "signals",
+        "numerical",
+        "mr-robotics-singularities"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "robotics-module-10",
+      "lesson_id": "robotics-10",
+      "reading": "modules/10-mass-matrix-gravity-and-energy-ledgers.md",
+      "source_ids": [
+        "robotics",
+        "signals",
+        "numerical",
+        "mr-robotics-mass-matrix"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "robotics-module-11",
+      "lesson_id": "robotics-11",
+      "reading": "modules/11-motor-envelope-backlash-and-sampled-feedback.md",
+      "source_ids": [
+        "robotics",
+        "signals",
+        "numerical",
+        "mr-robotics-torque-control"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "robotics-module-12",
+      "lesson_id": "robotics-12",
+      "reading": "modules/12-time-scaling-clearance-and-stopping-bounds.md",
+      "source_ids": [
+        "robotics",
+        "signals",
+        "numerical",
+        "mr-robotics-trajectories"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "robotics-module-13",
+      "lesson_id": "robotics-13",
+      "reading": "modules/13-sensing-residuals-and-stall-case-evidence.md",
+      "source_ids": [
+        "robotics",
+        "signals",
+        "numerical",
+        "mr-robotics-torque-control"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "robotics-module-lab-01",
+      "lesson_id": "robotics-lab-01",
+      "reading": "labs/01-direction-dependent-motion-near-extension.md",
+      "source_ids": [
+        "robotics",
+        "signals",
+        "mr-robotics-singularities"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
     }
   ]
 }

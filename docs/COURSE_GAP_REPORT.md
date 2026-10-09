@@ -26,13 +26,13 @@ comprehensive coverage. Every package is still `partial` and unreviewed.
 | physics-mechanics | partial | 14 | 38 | 91 | 48 | 0 | 0 | 8 | 4 | 0 | 0 |
 | physiology | partial | 15 | 41 | 83 | 52 | 0 | 0 | 8 | 4 | 0 | 0 |
 | programming | partial | 14 | 38 | 88 | 48 | 0 | 0 | 8 | 4 | 0 | 0 |
-| robotics | partial | 6 | 14 | 20 | 16 | 0 | 0 | 8 | 4 | 0 | 0 |
+| robotics | partial | 14 | 38 | 91 | 48 | 0 | 0 | 8 | 4 | 0 | 0 |
 | signals-control | partial | 14 | 38 | 91 | 48 | 0 | 0 | 8 | 4 | 0 | 0 |
 | statics-materials | partial | 14 | 38 | 88 | 48 | 0 | 0 | 8 | 4 | 0 | 0 |
 | statistics | partial | 16 | 43 | 85 | 55 | 0 | 0 | 8 | 5 | 0 | 0 |
 | transport | partial | 14 | 38 | 81 | 48 | 0 | 0 | 8 | 4 | 0 | 0 |
 
-Totals: 25 packages, 376 lessons, 983 objectives, 2162 practice items, 0 lesson objectives with no assessment mapping, 0 with no practice item, 184 linked to no course outcome; 0 of 101 course outcomes that no lesson objective links to, 0 that no assessment lists.
+Totals: 25 packages, 384 lessons, 1007 objectives, 2233 practice items, 0 lesson objectives with no assessment mapping, 0 with no practice item, 184 linked to no course outcome; 0 of 101 course outcomes that no lesson objective links to, 0 that no assessment lists.
 
 Each assessment with items lists the course outcomes its own items assess (item, then its tagged lesson objective,
 then that objective's outcome links), and `tools/validate_content.py` rejects an outcome that none of the

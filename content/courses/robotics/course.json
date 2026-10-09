@@ -7,7 +7,7 @@
   "domain": "Mechanical engineering",
   "level": "Year 3",
   "maturity": "partial",
-  "version": "0.3.1",
+  "version": "0.4.0",
   "license": "MIT OR CC-BY-4.0",
   "content_origin": {
     "kind": "legacy-prototype",
@@ -151,12 +151,346 @@
         "robotics-outcome-4",
         "robotics-outcome-1"
       ]
+    },
+    {
+      "id": "robotics-7-objective-1",
+      "description": "Transform and invert labeled planar coordinates.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "robotics-outcome-1"
+      ]
+    },
+    {
+      "id": "robotics-7-objective-2",
+      "description": "Distinguish calibration consistency, resolution and accuracy.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "robotics-outcome-1"
+      ]
+    },
+    {
+      "id": "robotics-7-objective-3",
+      "description": "Compare standard uncertainty and deterministic error bounds.",
+      "bloom": "analyze",
+      "course_outcome_ids": [
+        "robotics-outcome-4"
+      ]
+    },
+    {
+      "id": "robotics-8-objective-1",
+      "description": "Calculate and check a planar position Jacobian.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "robotics-outcome-2"
+      ]
+    },
+    {
+      "id": "robotics-8-objective-2",
+      "description": "Evaluate singular directions and damped inverse tracking.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "robotics-outcome-2"
+      ]
+    },
+    {
+      "id": "robotics-8-objective-3",
+      "description": "Check force/torque mapping through power and limit causal claims.",
+      "bloom": "analyze",
+      "course_outcome_ids": [
+        "robotics-outcome-3"
+      ]
+    },
+    {
+      "id": "robotics-9-objective-1",
+      "description": "Recover and forward-check planar inverse branches.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "robotics-outcome-2"
+      ]
+    },
+    {
+      "id": "robotics-9-objective-2",
+      "description": "Apply joint limits and distinguish discrete branches from redundancy.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "robotics-outcome-2"
+      ]
+    },
+    {
+      "id": "robotics-9-objective-3",
+      "description": "Evaluate endpoint, whole-link and swept-path clearance evidence.",
+      "bloom": "analyze",
+      "course_outcome_ids": [
+        "robotics-outcome-4"
+      ]
+    },
+    {
+      "id": "robotics-10-objective-1",
+      "description": "Calculate kinetic energy and coupled acceleration torque.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "robotics-outcome-3"
+      ]
+    },
+    {
+      "id": "robotics-10-objective-2",
+      "description": "Separate signed gravity, velocity-product and force contributions.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "robotics-outcome-3"
+      ]
+    },
+    {
+      "id": "robotics-10-objective-3",
+      "description": "Check energy and distinguish joint inertia from singular task mapping.",
+      "bloom": "analyze",
+      "course_outcome_ids": [
+        "robotics-outcome-3"
+      ]
+    },
+    {
+      "id": "robotics-11-objective-1",
+      "description": "Calculate a conditional motor current/torque envelope.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "robotics-outcome-3"
+      ]
+    },
+    {
+      "id": "robotics-11-objective-2",
+      "description": "Evaluate transmission inertia, backlash and resolution.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "robotics-outcome-3"
+      ]
+    },
+    {
+      "id": "robotics-11-objective-3",
+      "description": "Assess ideal feedback against sampled sensing and saturation.",
+      "bloom": "analyze",
+      "course_outcome_ids": [
+        "robotics-outcome-4"
+      ]
+    },
+    {
+      "id": "robotics-12-objective-1",
+      "description": "Calculate path timing, velocity and acceleration.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "robotics-outcome-2"
+      ]
+    },
+    {
+      "id": "robotics-12-objective-2",
+      "description": "Choose a duration under declared scalar motion constraints.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "robotics-outcome-4"
+      ]
+    },
+    {
+      "id": "robotics-12-objective-3",
+      "description": "Evaluate conditional stopping and sampled-clearance bounds.",
+      "bloom": "analyze",
+      "course_outcome_ids": [
+        "robotics-outcome-4"
+      ]
+    },
+    {
+      "id": "robotics-13-objective-1",
+      "description": "Compute synchronized residuals and differenced sensor rates.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "robotics-outcome-4"
+      ]
+    },
+    {
+      "id": "robotics-13-objective-2",
+      "description": "Compare model and sensing hypotheses using independent information.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "robotics-outcome-4"
+      ]
+    },
+    {
+      "id": "robotics-13-objective-3",
+      "description": "Bound diagnostic claims from the preserved stall case.",
+      "bloom": "analyze",
+      "course_outcome_ids": [
+        "robotics-outcome-4"
+      ]
+    },
+    {
+      "id": "robotics-lab-01-objective-1",
+      "description": "Summarize velocity reports and calculate local inverse joint-rate demands.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "robotics-outcome-4"
+      ]
+    },
+    {
+      "id": "robotics-lab-01-objective-2",
+      "description": "Evaluate common rate limiting and directional tracking.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "robotics-outcome-4"
+      ]
+    },
+    {
+      "id": "robotics-lab-01-objective-3",
+      "description": "Distinguish force mapping from kinematic demands and conditional stall-case evidence.",
+      "bloom": "analyze",
+      "course_outcome_ids": [
+        "robotics-outcome-4"
+      ]
     }
   ],
   "duration": {
-    "instructional_weeks": null,
-    "equivalent_structure": null,
-    "weeks": []
+    "instructional_weeks": 14,
+    "equivalent_structure": "Proposed 14-week scope retaining compact prototype readings in weeks 1,3,7,12. Workload and qualified review are absent; not evidence of semester equivalence.",
+    "weeks": [
+      {
+        "week": 1,
+        "title": "Frames, rotations, and homogeneous transforms",
+        "lesson_ids": [
+          "robotics-1"
+        ],
+        "assessment_ids": [
+          "robotics-1-practice"
+        ]
+      },
+      {
+        "week": 2,
+        "title": "Frames, calibration and position uncertainty",
+        "lesson_ids": [
+          "robotics-7"
+        ],
+        "assessment_ids": [
+          "robotics-7-practice"
+        ]
+      },
+      {
+        "week": 3,
+        "title": "Forward and inverse kinematics",
+        "lesson_ids": [
+          "robotics-2"
+        ],
+        "assessment_ids": [
+          "robotics-2-practice"
+        ]
+      },
+      {
+        "week": 4,
+        "title": "Positioning a lab robot arm: forward and inverse kinematics of a planar two-link arm and the cost of joint error",
+        "lesson_ids": [
+          "robotics-5"
+        ],
+        "assessment_ids": [
+          "robotics-5-practice"
+        ]
+      },
+      {
+        "week": 5,
+        "title": "Jacobians, singularities and force mapping",
+        "lesson_ids": [
+          "robotics-8"
+        ],
+        "assessment_ids": [
+          "robotics-8-practice"
+        ]
+      },
+      {
+        "week": 6,
+        "title": "Inverse branches, joint limits and clearance",
+        "lesson_ids": [
+          "robotics-9"
+        ],
+        "assessment_ids": [
+          "robotics-9-practice"
+        ]
+      },
+      {
+        "week": 7,
+        "title": "Robot dynamics, actuators, and energy",
+        "lesson_ids": [
+          "robotics-3"
+        ],
+        "assessment_ids": [
+          "robotics-3-practice"
+        ]
+      },
+      {
+        "week": 8,
+        "title": "Actuators, gearing and sensing for a lab robot joint: torque budgets, resolution and failure limits",
+        "lesson_ids": [
+          "robotics-6"
+        ],
+        "assessment_ids": [
+          "robotics-6-practice"
+        ]
+      },
+      {
+        "week": 9,
+        "title": "Mass matrix, gravity and energy ledgers",
+        "lesson_ids": [
+          "robotics-10"
+        ],
+        "assessment_ids": [
+          "robotics-10-practice"
+        ]
+      },
+      {
+        "week": 10,
+        "title": "Motor envelope, backlash and sampled feedback",
+        "lesson_ids": [
+          "robotics-11"
+        ],
+        "assessment_ids": [
+          "robotics-11-practice"
+        ]
+      },
+      {
+        "week": 11,
+        "title": "Time scaling, clearance and stopping bounds",
+        "lesson_ids": [
+          "robotics-12"
+        ],
+        "assessment_ids": [
+          "robotics-12-practice"
+        ]
+      },
+      {
+        "week": 12,
+        "title": "Planning, sensing, and closed-loop execution",
+        "lesson_ids": [
+          "robotics-4"
+        ],
+        "assessment_ids": [
+          "robotics-4-practice"
+        ]
+      },
+      {
+        "week": 13,
+        "title": "Sensing residuals and stall-case evidence",
+        "lesson_ids": [
+          "robotics-13"
+        ],
+        "assessment_ids": [
+          "robotics-13-practice"
+        ]
+      },
+      {
+        "week": 14,
+        "title": "Virtual lab 1: direction-dependent motion near extension",
+        "lesson_ids": [
+          "robotics-lab-01"
+        ],
+        "assessment_ids": [
+          "robotics-week14-extension-lab",
+          "robotics-case"
+        ]
+      }
+    ]
   },
   "workload": {
     "estimated_total_hours": null,
@@ -349,6 +683,324 @@
           ]
         }
       ]
+    },
+    {
+      "id": "robotics-module-7",
+      "title": "Frames, calibration and position uncertainty",
+      "source_ids": [
+        "robotics",
+        "signals",
+        "numerical",
+        "mr-robotics-transforms"
+      ],
+      "lessons": [
+        {
+          "id": "robotics-7",
+          "title": "Frames, calibration and position uncertainty",
+          "reading": "modules/07-frames-calibration-and-position-uncertainty.md",
+          "objectives": [
+            "robotics-7-objective-1",
+            "robotics-7-objective-2",
+            "robotics-7-objective-3"
+          ],
+          "worked_example": "A synthetic plate is rotated 90° counterclockwise relative to B, with origin t_BP=(0.30,0.10) m. The point p_P=(0.04,0.02) m rotates to (−0.02,0.04), then translates to p_B=(0.28,0.14) m. Subtracting t and applying Rᵀ returns (0.04,0.02). Translating before rotating as though the translation were expressed in P would give a different answer and violate the stated convention.\n\nAt r=0.10 m, orientation standard uncertainty 0.002 rad contributes 0.0002 m, or 0.2 mm, in its tangential component. Combining that component with independent translation standard uncertainty 0.3 mm gives approximately 0.360555 mm. If the same numbers were instead declared strict error bounds, their sum would be 0.5 mm. Neither value measures actual accuracy; both are conditional calculations from supplied synthetic assumptions.",
+          "question_ids": [
+            "robotics-7:base-x",
+            "robotics-7:base-y",
+            "robotics-7:inverse-x",
+            "robotics-7:orientation-mm",
+            "robotics-7:standard-mm",
+            "robotics-7:bounded-mm",
+            "robotics-7:direction",
+            "robotics-7:calibration",
+            "robotics-7:uncertainty"
+          ],
+          "card_ids": [
+            "robotics-7-card-1",
+            "robotics-7-card-2",
+            "robotics-7-card-3",
+            "robotics-7-card-4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "robotics-module-8",
+      "title": "Jacobians, singularities and force mapping",
+      "source_ids": [
+        "robotics",
+        "signals",
+        "numerical",
+        "mr-robotics-singularities"
+      ],
+      "lessons": [
+        {
+          "id": "robotics-8",
+          "title": "Jacobians, singularities and force mapping",
+          "reading": "modules/08-jacobians-singularities-and-force-mapping.md",
+          "objectives": [
+            "robotics-8-objective-1",
+            "robotics-8-objective-2",
+            "robotics-8-objective-3"
+          ],
+          "worked_example": "Take L₁=0.30 m,L₂=0.20 m,q₁=0,q₂=90°. The Jacobian is approximately [−0.2,−0.2;0.3,0], with determinant 0.06 m². Desired inward velocity (−0.01,0) m/s requires q̇₁=0 and q̇₂=0.05 rad/s. For F=(5,0) N, τ=(−1,−1) N·m. Those signed torques describe JᵀF, not a complete actuator command including gravity or friction.\n\nFor q̇=(0.1,0.2) rad/s, v=(−0.06,0.03) m/s. With F=(5,2) N, endpoint power is −0.24 W and joint power from JᵀF is also −0.24 W. Separately, a synthetic diagonal Jacobian with weak gain 0.01 and requested weak-axis velocity 0.1 gives inverse rate ten. Damping λ=0.05 gives rate about 0.384615 and achieved weak-axis velocity only 0.00384615. The lower command explicitly sacrifices tracking.",
+          "question_ids": [
+            "robotics-8:determinant",
+            "robotics-8:elbow-rate",
+            "robotics-8:force-torque-1",
+            "robotics-8:force-torque-2",
+            "robotics-8:power",
+            "robotics-8:damped-rate",
+            "robotics-8:rank",
+            "robotics-8:damping",
+            "robotics-8:force"
+          ],
+          "card_ids": [
+            "robotics-8-card-1",
+            "robotics-8-card-2",
+            "robotics-8-card-3",
+            "robotics-8-card-4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "robotics-module-9",
+      "title": "Inverse branches, joint limits and clearance",
+      "source_ids": [
+        "robotics",
+        "signals",
+        "numerical",
+        "mr-robotics-singularities"
+      ],
+      "lessons": [
+        {
+          "id": "robotics-9",
+          "title": "Inverse branches, joint limits and clearance",
+          "reading": "modules/09-inverse-branches-joint-limits-and-clearance.md",
+          "objectives": [
+            "robotics-9-objective-1",
+            "robotics-9-objective-2",
+            "robotics-9-objective-3"
+          ],
+          "worked_example": "Take equal links 0.25 m and target (0.25,0.25) m. Then c₂=0 and q₂=±90°. The corresponding shoulders are 0° and 90°. Both produce the same endpoint. If q₁ must remain between −30° and 60° and q₂ between −120° and 120°, only the branch q₁=0°,q₂=90° is allowed. There remains one allowed candidate, not two equivalent control choices.\n\nFor an independent clearance example, a line segment from (0,0) to (1,0) m lies below a circular obstacle centered at (0.5,0.1) m with radius 0.05 m. With zero link radius in this simplified example, the nearest distance is 0.1 m and clearance is 0.05 m. Adding link radius 0.02 m leaves clearance 0.03 m. These differences show why a line drawing is insufficient for a finite-size link.\n\nFinally, move a straight equal-link arm from q₁=0° to 90° while q₂ stays zero. Joint interpolation places its midpoint at q₁=45°, giving tool coordinates approximately (0.353553,0.353553) m. A straight Cartesian segment between the endpoint positions (0.5,0) and (0,0.5) instead has midpoint (0.25,0.25). Both share endpoints, but their swept geometry differs substantially.",
+          "question_ids": [
+            "robotics-9:elbow-cosine",
+            "robotics-9:positive-elbow",
+            "robotics-9:allowed-branches",
+            "robotics-9:outer-reach",
+            "robotics-9:clearance",
+            "robotics-9:joint-midpoint-x",
+            "robotics-9:branches",
+            "robotics-9:redundancy",
+            "robotics-9:swept"
+          ],
+          "card_ids": [
+            "robotics-9-card-1",
+            "robotics-9-card-2",
+            "robotics-9-card-3",
+            "robotics-9-card-4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "robotics-module-10",
+      "title": "Mass matrix, gravity and energy ledgers",
+      "source_ids": [
+        "robotics",
+        "signals",
+        "numerical",
+        "mr-robotics-mass-matrix"
+      ],
+      "lessons": [
+        {
+          "id": "robotics-10",
+          "title": "Mass matrix, gravity and energy ledgers",
+          "reading": "modules/10-mass-matrix-gravity-and-energy-ledgers.md",
+          "objectives": [
+            "robotics-10-objective-1",
+            "robotics-10-objective-2",
+            "robotics-10-objective-3"
+          ],
+          "worked_example": "At q₁=0,q₂=90° and zero joint rates, gravity compensation is G₁=4.4145 N·m,G₂=0. Requesting q̈=(1,0) rad/s² adds inertial torque (0.155,0.020) N·m. Total actuator torque is therefore (4.5695,0.020) N·m under this point-mass model. A motor sized only for gravity would omit the acceleration term.\n\nAt the same posture with q̇=(1,2) rad/s, K=½(0.155+0.080+0.080)=0.1575 J. The cross term is included twice inside the symmetric quadratic form. Separately, raising only the endpoint link from q₂=0 to 90° while keeping q₁=0 changes potential by m₂gL₂=0.981 J. In a quasistatic ideal motion, actuator work against gravity equals that increase, although peak torque and power still depend on the path and timing.",
+          "question_ids": [
+            "robotics-10:kinetic-energy",
+            "robotics-10:matrix-determinant",
+            "robotics-10:gravity-shoulder",
+            "robotics-10:accelerating-shoulder",
+            "robotics-10:potential-rise",
+            "robotics-10:straight-mass-determinant",
+            "robotics-10:cross-term",
+            "robotics-10:gravity-sign",
+            "robotics-10:joint-mass"
+          ],
+          "card_ids": [
+            "robotics-10-card-1",
+            "robotics-10-card-2",
+            "robotics-10-card-3",
+            "robotics-10-card-4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "robotics-module-11",
+      "title": "Motor envelope, backlash and sampled feedback",
+      "source_ids": [
+        "robotics",
+        "signals",
+        "numerical",
+        "mr-robotics-torque-control"
+      ],
+      "lessons": [
+        {
+          "id": "robotics-11",
+          "title": "Motor envelope, backlash and sampled feedback",
+          "reading": "modules/11-motor-envelope-backlash-and-sampled-feedback.md",
+          "objectives": [
+            "robotics-11-objective-1",
+            "robotics-11-objective-2",
+            "robotics-11-objective-3"
+          ],
+          "worked_example": "At 100 rad/s motor speed, the synthetic motor has voltage-limited torque 0.1 N·m. A 50:1 gearbox at efficiency 0.8 gives output torque four N·m at output speed two rad/s. At 20 rad/s, current cap gives eight N·m at 0.4 rad/s. The operating points cannot be combined into eight N·m at two rad/s under the same supplied envelope.\n\nA synthetic output backlash magnitude 0.1° corresponds to approximately 0.523599 mm at a tool radius of 0.30 m. A motor-side encoder can report finely spaced counts during part of a reversal while the output takes up the gap. The preserved resolution reading therefore remains a quantization budget, not an accuracy specification or evidence that a tip actually follows every count.",
+          "question_ids": [
+            "robotics-11:voltage-current",
+            "robotics-11:motor-torque",
+            "robotics-11:low-speed-output",
+            "robotics-11:reflected-inertia",
+            "robotics-11:pd-frequency",
+            "robotics-11:pd-damping",
+            "robotics-11:envelope",
+            "robotics-11:encoder",
+            "robotics-11:pd-limits"
+          ],
+          "card_ids": [
+            "robotics-11-card-1",
+            "robotics-11-card-2",
+            "robotics-11-card-3",
+            "robotics-11-card-4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "robotics-module-12",
+      "title": "Time scaling, clearance and stopping bounds",
+      "source_ids": [
+        "robotics",
+        "signals",
+        "numerical",
+        "mr-robotics-trajectories"
+      ],
+      "lessons": [
+        {
+          "id": "robotics-12",
+          "title": "Time scaling, clearance and stopping bounds",
+          "reading": "modules/12-time-scaling-clearance-and-stopping-bounds.md",
+          "objectives": [
+            "robotics-12-objective-1",
+            "robotics-12-objective-2",
+            "robotics-12-objective-3"
+          ],
+          "worked_example": "A synthetic joint move is Δq=0.4 rad over T=2 s using the cubic. At t=1 s, position has advanced 0.2 rad and speed is 0.3 rad/s. Peak acceleration magnitude is 0.6 rad/s². For speed cap 0.2 rad/s, duration must be at least three seconds. For acceleration cap 0.4 rad/s², duration must be at least √6≈2.44949 seconds. A three-second duration satisfies both scalar bounds, but says nothing about obstacles or torque from a different model.\n\nFor a separate Cartesian stopping example, speed is 0.2 m/s, latency 0.05 s, deceleration one m/s² and deterministic position allowance 0.003 m. Distance allowance is 0.010+0.020+0.003=0.033 m. A supplied static clearance of 0.040 m leaves nominal reserve 0.007 m under those assumptions. This is a synthetic arithmetic reserve, not evidence that a real stop or protective system is safe.",
+          "question_ids": [
+            "robotics-12:cubic-midpoint",
+            "robotics-12:cubic-peak-speed",
+            "robotics-12:cubic-peak-acceleration",
+            "robotics-12:duration-speed",
+            "robotics-12:stop-allowance",
+            "robotics-12:clearance-reserve",
+            "robotics-12:time-scaling",
+            "robotics-12:cubic-endpoints",
+            "robotics-12:stop-scope"
+          ],
+          "card_ids": [
+            "robotics-12-card-1",
+            "robotics-12-card-2",
+            "robotics-12-card-3",
+            "robotics-12-card-4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "robotics-module-13",
+      "title": "Sensing residuals and stall-case evidence",
+      "source_ids": [
+        "robotics",
+        "signals",
+        "numerical",
+        "mr-robotics-torque-control"
+      ],
+      "lessons": [
+        {
+          "id": "robotics-13",
+          "title": "Sensing residuals and stall-case evidence",
+          "reading": "modules/13-sensing-residuals-and-stall-case-evidence.md",
+          "objectives": [
+            "robotics-13-objective-1",
+            "robotics-13-objective-2",
+            "robotics-13-objective-3"
+          ],
+          "worked_example": "Motor-equivalent angle is 0.20 rad and independently reported output angle is 0.19 rad at the same time. The discrepancy is 0.01 rad. At a 0.30 m lever arm, its small-angle endpoint contribution is approximately 0.003 m, or three mm. That exceeds a much finer nominal encoder count spacing, illustrating why count resolution does not settle transmission accuracy.\n\nFor a separate uncertainty calculation, joint standard uncertainty 0.001 rad at radius 0.50 m contributes 0.5 mm tangentially. Combine that component with independent frame standard uncertainty 0.8 mm to obtain approximately 0.943398 mm. This is a conditional standard uncertainty, not a deterministic bound or an actual measured error. Two synthetic fiducial x residuals of two mm have mean two mm; identical residuals provide no estimate that their shared bias is absent.\n\nRevisit the preserved case: an arm reaches a target in simulation but stalls near full extension. First separate geometric reachability, required joint rates and the assumed actuator/dynamic model. Then compare synchronized joint motion, delivered-current information, output position and frame/load checks. The case wording's reference to amplified torque is conditional on dynamic requirements; finite endpoint force mapping alone does not universally diverge. A two-link position arm also lacks continuous redundancy away from singularity, so that proposed option requires a different mechanism or relaxed task.",
+          "question_ids": [
+            "robotics-13:following-error",
+            "robotics-13:jump-speed",
+            "robotics-13:bounded-change",
+            "robotics-13:transmission-gap",
+            "robotics-13:combined-mm",
+            "robotics-13:fiducial-bias",
+            "robotics-13:timestamps",
+            "robotics-13:fault",
+            "robotics-13:case-scope"
+          ],
+          "card_ids": [
+            "robotics-13-card-1",
+            "robotics-13-card-2",
+            "robotics-13-card-3",
+            "robotics-13-card-4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "robotics-module-lab-01",
+      "title": "Virtual lab 1: direction-dependent motion near extension",
+      "source_ids": [
+        "robotics",
+        "signals",
+        "mr-robotics-singularities"
+      ],
+      "lessons": [
+        {
+          "id": "robotics-lab-01",
+          "title": "Virtual lab 1: direction-dependent motion near extension",
+          "reading": "labs/01-direction-dependent-motion-near-extension.md",
+          "objectives": [
+            "robotics-lab-01-objective-1",
+            "robotics-lab-01-objective-2",
+            "robotics-lab-01-objective-3"
+          ],
+          "worked_example": "At elbow 2° the unconstrained inward elbow rate is 2.387227 rad/s; uniform scaling 0.209448 limits it to 0.5 and gives inward speed 2.094480 mm/s. Tangent requests remain at 10 mm/s; finite radial force at exact straight extension has zero joint moment in the ideal model.",
+          "question_ids": [
+            "robotics-lab-01:summary",
+            "robotics-lab-01:in02-demand",
+            "robotics-lab-01:uniform-scale",
+            "robotics-lab-01:achieved-inward",
+            "robotics-lab-01:straight-radial-torque",
+            "robotics-lab-01:interpretation",
+            "robotics-lab-01:supported",
+            "robotics-lab-01:clip-policy"
+          ],
+          "card_ids": [
+            "robotics-lab-01-card-1",
+            "robotics-lab-01-card-2",
+            "robotics-lab-01-card-3",
+            "robotics-lab-01-card-4"
+          ]
+        }
+      ]
     }
   ],
   "assessments": [
@@ -462,6 +1114,211 @@
       "points": 6
     },
     {
+      "id": "robotics-7-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Frames, calibration and position uncertainty practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "robotics-7-objective-1",
+        "robotics-7-objective-2",
+        "robotics-7-objective-3",
+        "robotics-outcome-1",
+        "robotics-outcome-4"
+      ],
+      "question_ids": [
+        "robotics-7:base-x",
+        "robotics-7:base-y",
+        "robotics-7:inverse-x",
+        "robotics-7:orientation-mm",
+        "robotics-7:standard-mm",
+        "robotics-7:bounded-mm",
+        "robotics-7:direction",
+        "robotics-7:calibration",
+        "robotics-7:uncertainty"
+      ],
+      "points": 9
+    },
+    {
+      "id": "robotics-8-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Jacobians, singularities and force mapping practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "robotics-8-objective-1",
+        "robotics-8-objective-2",
+        "robotics-8-objective-3",
+        "robotics-outcome-2",
+        "robotics-outcome-3"
+      ],
+      "question_ids": [
+        "robotics-8:determinant",
+        "robotics-8:elbow-rate",
+        "robotics-8:force-torque-1",
+        "robotics-8:force-torque-2",
+        "robotics-8:power",
+        "robotics-8:damped-rate",
+        "robotics-8:rank",
+        "robotics-8:damping",
+        "robotics-8:force"
+      ],
+      "points": 9
+    },
+    {
+      "id": "robotics-9-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Inverse branches, joint limits and clearance practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "robotics-9-objective-1",
+        "robotics-9-objective-2",
+        "robotics-9-objective-3",
+        "robotics-outcome-2",
+        "robotics-outcome-4"
+      ],
+      "question_ids": [
+        "robotics-9:elbow-cosine",
+        "robotics-9:positive-elbow",
+        "robotics-9:allowed-branches",
+        "robotics-9:outer-reach",
+        "robotics-9:clearance",
+        "robotics-9:joint-midpoint-x",
+        "robotics-9:branches",
+        "robotics-9:redundancy",
+        "robotics-9:swept"
+      ],
+      "points": 9
+    },
+    {
+      "id": "robotics-10-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Mass matrix, gravity and energy ledgers practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "robotics-10-objective-1",
+        "robotics-10-objective-2",
+        "robotics-10-objective-3",
+        "robotics-outcome-3"
+      ],
+      "question_ids": [
+        "robotics-10:kinetic-energy",
+        "robotics-10:matrix-determinant",
+        "robotics-10:gravity-shoulder",
+        "robotics-10:accelerating-shoulder",
+        "robotics-10:potential-rise",
+        "robotics-10:straight-mass-determinant",
+        "robotics-10:cross-term",
+        "robotics-10:gravity-sign",
+        "robotics-10:joint-mass"
+      ],
+      "points": 9
+    },
+    {
+      "id": "robotics-11-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Motor envelope, backlash and sampled feedback practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "robotics-11-objective-1",
+        "robotics-11-objective-2",
+        "robotics-11-objective-3",
+        "robotics-outcome-3",
+        "robotics-outcome-4"
+      ],
+      "question_ids": [
+        "robotics-11:voltage-current",
+        "robotics-11:motor-torque",
+        "robotics-11:low-speed-output",
+        "robotics-11:reflected-inertia",
+        "robotics-11:pd-frequency",
+        "robotics-11:pd-damping",
+        "robotics-11:envelope",
+        "robotics-11:encoder",
+        "robotics-11:pd-limits"
+      ],
+      "points": 9
+    },
+    {
+      "id": "robotics-12-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Time scaling, clearance and stopping bounds practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "robotics-12-objective-1",
+        "robotics-12-objective-2",
+        "robotics-12-objective-3",
+        "robotics-outcome-2",
+        "robotics-outcome-4"
+      ],
+      "question_ids": [
+        "robotics-12:cubic-midpoint",
+        "robotics-12:cubic-peak-speed",
+        "robotics-12:cubic-peak-acceleration",
+        "robotics-12:duration-speed",
+        "robotics-12:stop-allowance",
+        "robotics-12:clearance-reserve",
+        "robotics-12:time-scaling",
+        "robotics-12:cubic-endpoints",
+        "robotics-12:stop-scope"
+      ],
+      "points": 9
+    },
+    {
+      "id": "robotics-13-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Sensing residuals and stall-case evidence practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "robotics-13-objective-1",
+        "robotics-13-objective-2",
+        "robotics-13-objective-3",
+        "robotics-outcome-4"
+      ],
+      "question_ids": [
+        "robotics-13:following-error",
+        "robotics-13:jump-speed",
+        "robotics-13:bounded-change",
+        "robotics-13:transmission-gap",
+        "robotics-13:combined-mm",
+        "robotics-13:fiducial-bias",
+        "robotics-13:timestamps",
+        "robotics-13:fault",
+        "robotics-13:case-scope"
+      ],
+      "points": 9
+    },
+    {
+      "id": "robotics-week14-extension-lab",
+      "type": "lab",
+      "mode": "practice",
+      "title": "Virtual lab 1: direction-dependent motion near extension (ungraded practice)",
+      "path": "question-banks/practice.json",
+      "week": 14,
+      "objective_ids": [
+        "robotics-lab-01-objective-1",
+        "robotics-lab-01-objective-2",
+        "robotics-lab-01-objective-3",
+        "robotics-outcome-4"
+      ],
+      "question_ids": [
+        "robotics-lab-01:summary",
+        "robotics-lab-01:in02-demand",
+        "robotics-lab-01:uniform-scale",
+        "robotics-lab-01:achieved-inward",
+        "robotics-lab-01:straight-radial-torque",
+        "robotics-lab-01:interpretation",
+        "robotics-lab-01:supported",
+        "robotics-lab-01:clip-policy"
+      ],
+      "points": 34
+    },
+    {
       "id": "robotics-case",
       "type": "case",
       "mode": "self-assessment",
@@ -523,18 +1380,24 @@
       "version": "0.3.1",
       "date": "2026-10-08",
       "summary": "Assessments with items now also list the course outcomes those items assess, derived from each item's lesson objective and that objective's outcome links. The rubric-only case lists none, and neither do the 4 prototype-unit assessments, whose objectives are not yet linked to an outcome. No readings, items or keys changed. The syllabus was regenerated from the manifest: it states the current version, lists every lesson with its item and card counts, and describes the current practice and limitations (it still described only the four original units). The course limitations shown to learners were also updated: they still described one formative check per lesson and the original numerical rules. The package remains partial, unreviewed and formative-only."
+    },
+    {
+      "version": "0.4.0",
+      "date": "2026-10-09",
+      "summary": "Added seven original lessons on frames/calibration, Jacobians/force mapping, inverse branches/clearance, dynamics/energy, motor/feedback limits, trajectory/stopping bounds and sensing/case evidence; a synthetic near-extension lab and proposed 14-week schedule. Developed with Codex assistance. Still partial, unreviewed and formative-only."
     }
   ],
   "limitations": [
-    "Four compact legacy units are preserved; this package is not equivalent to a full university semester.",
-    "There is no authored 12–15 week schedule, substantive homework sequence, laboratory sequence, midterm, cumulative final, or graded integrative project.",
-    "Practice items are short formative checks (two per prototype unit and six per original lesson); they do not demonstrate comprehensive outcome coverage or mastery, and objective associations remain provisional.",
-    "Bloom labels and structured prerequisite edges are initial authoring classifications awaiting subject-matter review.",
-    "Question answers and solution feedback are intentionally public practice authoring specifications, not restricted exam keys.",
-    "Of the 16 numerical answers in this package, seven require a unit, none checks significant figures and none checks dimensions; the others accept a number within a stated tolerance, with the unit optional.",
-    "Total workload and weekly duration are unknown; former nominal credit values and hardcoded reading times do not establish workload."
+    "Four compact prototype readings remain beside nine substantive original lessons and one synthetic near-extension lab; this is not a full university semester.",
+    "The proposed weekly sequence is unmeasured and unreviewed; graded homework, exams, a full lab sequence and a cumulative graded project remain absent.",
+    "All new frames, mechanical models, limits, paths and reports are synthetic; no real robot operation, commissioning, protective-function validation or standards compliance is established.",
+    "Of 62 numeric items, seven preserved ones require units; none enforces significant figures or dimensions. New numeric items request bare numbers in explicit scales.",
+    "Choices and CSV cells do not grade a planner, controller, written diagnosis or physical experiment. Public formative points are not course grades.",
+    "The preserved stall-case checklist remains unchanged: inverse velocity can be amplified, but JᵀF need not diverge; continuous redundancy requires extra usable degrees of freedom or a relaxed task. New instruction states these qualifications.",
+    "Subject-matter, accessibility and workload review remain outstanding. An original frame text map includes a verbal description but no assistive review.",
+    "Five primary Modern Robotics supplement pages were retrieved link-only; no examples, prose, figures, problems or datasets were imported."
   ],
   "intentionally_omitted": [
-    "Full instructional sequence and summative assessments are not authored yet; the original lessons extend a partial package."
+    "Graded assessments, a full laboratory sequence, cumulative graded project, measured workload and qualified human review remain outstanding."
   ]
 }

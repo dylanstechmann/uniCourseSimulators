@@ -620,6 +620,2876 @@
         "kind": "original",
         "modifications": []
       }
+    },
+    {
+      "id": "robotics-7:base-x",
+      "type": "numeric",
+      "prompt": "Plate point (0.04,0.02) m is rotated 90° counterclockwise and its origin in base coordinates is (0.30,0.10) m. What base x in m follows? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "robotics-7-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0.28,
+        "unit": "",
+        "tolerance": 2.8000000000000003e-05,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the declared frames, mechanical model, units and domain.",
+        "solution": "Rotate to (−0.02,0.04), then add the base-expressed translation; x=0.28 m.",
+        "lesson_ids": [
+          "robotics-7"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "robotics-7:base-y",
+      "type": "numeric",
+      "prompt": "Under the same declared plate-to-base rotation 90° and translation (0.30,0.10) m, point (0.04,0.02) m has what base y in m? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "robotics-7-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0.14,
+        "unit": "",
+        "tolerance": 1.4000000000000001e-05,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the declared frames, mechanical model, units and domain.",
+        "solution": "Rotated y is 0.04 m and translation y is 0.10 m, totaling 0.14 m.",
+        "lesson_ids": [
+          "robotics-7"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "robotics-7:inverse-x",
+      "type": "numeric",
+      "prompt": "Base point (0.28,0.14) m came from a plate rotation 90° and base-expressed origin (0.30,0.10) m. Invert the mapping. What plate x in m follows? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "robotics-7-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0.04,
+        "unit": "",
+        "tolerance": 4.000000000000001e-06,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the declared frames, mechanical model, units and domain.",
+        "solution": "Subtract translation to get (−0.02,0.04), then apply the inverse rotation; plate x=0.04 m.",
+        "lesson_ids": [
+          "robotics-7"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "robotics-7:orientation-mm",
+      "type": "numeric",
+      "prompt": "At radius 0.10 m, small orientation error magnitude 0.002 rad gives what tangential displacement magnitude in mm? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "robotics-7-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0.2,
+        "unit": "",
+        "tolerance": 2e-05,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the declared frames, mechanical model, units and domain.",
+        "solution": "The small-angle product is 0.10×0.002 m=0.2 mm.",
+        "lesson_ids": [
+          "robotics-7"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "robotics-7:standard-mm",
+      "type": "numeric",
+      "prompt": "Independent translation and tangential orientation components have standard uncertainties 0.3 and 0.2 mm. What combined standard uncertainty in mm follows? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "robotics-7-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 0.3605551275463989,
+        "unit": "",
+        "tolerance": 3.6055512754639895e-05,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the declared frames, mechanical model, units and domain.",
+        "solution": "Independent component variances add, giving sqrt(0.3²+0.2²)≈0.360555 mm.",
+        "lesson_ids": [
+          "robotics-7"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "robotics-7:bounded-mm",
+      "type": "numeric",
+      "prompt": "Translation and orientation contributions are instead strict scalar error bounds of 0.3 and 0.2 mm. What conservative summed bound in mm follows? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "robotics-7-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 0.5,
+        "unit": "",
+        "tolerance": 5e-05,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the declared frames, mechanical model, units and domain.",
+        "solution": "The triangle-bound sum is 0.3+0.2=0.5 mm; this is not the independent standard-uncertainty calculation.",
+        "lesson_ids": [
+          "robotics-7"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "robotics-7:direction",
+      "type": "single_choice",
+      "prompt": "How should a pure direction vector be mapped by the declared rigid point transform?",
+      "points": 1,
+      "objective_ids": [
+        "robotics-7-objective-1"
+      ],
+      "options": [
+        "Treat every direction as an observed point.",
+        "Apply rotation without translation, using homogeneous final entry zero.",
+        "Add the frame-origin translation to every direction."
+      ],
+      "solution_spec": {
+        "answer": 1
+      },
+      "feedback": {
+        "hint": "Separate the stated model calculation from claims that need independent physical evidence.",
+        "solution": "Apply rotation without translation, using homogeneous final entry zero.",
+        "lesson_ids": [
+          "robotics-7"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "robotics-7:calibration",
+      "type": "single_choice",
+      "prompt": "What does a successful point round trip through a transform and its inverse establish?",
+      "points": 1,
+      "objective_ids": [
+        "robotics-7-objective-2"
+      ],
+      "options": [
+        "Independent measurement of frame bias.",
+        "Algebraic consistency, without proving physical calibration accuracy.",
+        "Actual accuracy at every tool position."
+      ],
+      "solution_spec": {
+        "answer": 1
+      },
+      "feedback": {
+        "hint": "Separate the stated model calculation from claims that need independent physical evidence.",
+        "solution": "Algebraic consistency, without proving physical calibration accuracy.",
+        "lesson_ids": [
+          "robotics-7"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "robotics-7:uncertainty",
+      "type": "single_choice",
+      "prompt": "Which statement distinguishes the two uncertainty calculations?",
+      "points": 1,
+      "objective_ids": [
+        "robotics-7-objective-3"
+      ],
+      "options": [
+        "Averaging repeated targets removes every frame bias.",
+        "A standard uncertainty is always a strict maximum error.",
+        "Independent standard uncertainties combine by variance; strict bounds can combine conservatively by magnitudes."
+      ],
+      "solution_spec": {
+        "answer": 2
+      },
+      "feedback": {
+        "hint": "Separate the stated model calculation from claims that need independent physical evidence.",
+        "solution": "Independent standard uncertainties combine by variance; strict bounds can combine conservatively by magnitudes.",
+        "lesson_ids": [
+          "robotics-7"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "robotics-8:determinant",
+      "type": "numeric",
+      "prompt": "For L₁=0.30 m,L₂=0.20 m,q₂=90°, what determinant of the planar position Jacobian in m² follows? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "robotics-8-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0.06,
+        "unit": "",
+        "tolerance": 6e-06,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the declared frames, mechanical model, units and domain.",
+        "solution": "The determinant is L₁L₂sin q₂=0.30×0.20×1=0.06 m².",
+        "lesson_ids": [
+          "robotics-8"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "robotics-8:elbow-rate",
+      "type": "numeric",
+      "prompt": "At q₁=0,q₂=90°, J=[−0.2,−0.2;0.3,0]. Desired velocity is (−0.01,0) m/s. What q̇₂ in rad/s follows? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "robotics-8-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0.05,
+        "unit": "",
+        "tolerance": 5e-06,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the declared frames, mechanical model, units and domain.",
+        "solution": "The y equation gives q̇₁=0, then −0.2q̇₂=−0.01 gives 0.05 rad/s.",
+        "lesson_ids": [
+          "robotics-8"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "robotics-8:force-torque-1",
+      "type": "numeric",
+      "prompt": "For J=[−0.2,−0.2;0.3,0] and endpoint force F=(5,0) N, what first component of JᵀF in N·m follows? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "robotics-8-objective-2"
+      ],
+      "solution_spec": {
+        "answer": -1,
+        "unit": "",
+        "tolerance": 0,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the declared frames, mechanical model, units and domain.",
+        "solution": "The first column dot force is −0.2×5+0.3×0=−1 N·m.",
+        "lesson_ids": [
+          "robotics-8"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "robotics-8:force-torque-2",
+      "type": "numeric",
+      "prompt": "For J=[−0.2,−0.2;0.3,0] and F=(5,0) N, what second component of JᵀF in N·m follows? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "robotics-8-objective-2"
+      ],
+      "solution_spec": {
+        "answer": -1,
+        "unit": "",
+        "tolerance": 0,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the declared frames, mechanical model, units and domain.",
+        "solution": "The second column dot force is −0.2×5+0×0=−1 N·m.",
+        "lesson_ids": [
+          "robotics-8"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "robotics-8:power",
+      "type": "numeric",
+      "prompt": "Endpoint velocity is (−0.06,0.03) m/s and force F=(5,2) N in the same frame. What signed power in W follows? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "robotics-8-objective-3"
+      ],
+      "solution_spec": {
+        "answer": -0.24,
+        "unit": "",
+        "tolerance": 2.4e-05,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the declared frames, mechanical model, units and domain.",
+        "solution": "Force dot velocity is 5×(−0.06)+2×0.03=−0.24 W.",
+        "lesson_ids": [
+          "robotics-8"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "robotics-8:damped-rate",
+      "type": "numeric",
+      "prompt": "A weak scalar Jacobian gain σ=0.01 receives desired velocity 0.1. Damped inverse gain is σ/(σ²+λ²) with λ=0.05 in consistent units. What joint rate follows? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "robotics-8-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 0.38461538461538464,
+        "unit": "",
+        "tolerance": 3.846153846153846e-05,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the declared frames, mechanical model, units and domain.",
+        "solution": "The rate is 0.01×0.1/(0.01²+0.05²)≈0.384615, with nonzero tracking residual.",
+        "lesson_ids": [
+          "robotics-8"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "robotics-8:rank",
+      "type": "single_choice",
+      "prompt": "At straight horizontal extension of the ideal two-link position arm, what instantaneous motion is unavailable?",
+      "points": 1,
+      "objective_ids": [
+        "robotics-8-objective-1"
+      ],
+      "options": [
+        "Every finite bending motion at any later pose.",
+        "Radial x motion from finite joint rates at that pose.",
+        "Every y motion as well as x motion."
+      ],
+      "solution_spec": {
+        "answer": 1
+      },
+      "feedback": {
+        "hint": "Separate the stated model calculation from claims that need independent physical evidence.",
+        "solution": "Radial x motion from finite joint rates at that pose.",
+        "lesson_ids": [
+          "robotics-8"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "robotics-8:damping",
+      "type": "single_choice",
+      "prompt": "What does damped inverse velocity generally trade?",
+      "points": 1,
+      "objective_ids": [
+        "robotics-8-objective-2"
+      ],
+      "options": [
+        "Perfect tracking for all directions at rank loss.",
+        "An automatic increase in physical reach.",
+        "Smaller weak-direction commands for a nonzero task-velocity residual."
+      ],
+      "solution_spec": {
+        "answer": 2
+      },
+      "feedback": {
+        "hint": "Separate the stated model calculation from claims that need independent physical evidence.",
+        "solution": "Smaller weak-direction commands for a nonzero task-velocity residual.",
+        "lesson_ids": [
+          "robotics-8"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "robotics-8:force",
+      "type": "single_choice",
+      "prompt": "What follows for a finite radial x force at straight horizontal extension in the ideal planar model?",
+      "points": 1,
+      "objective_ids": [
+        "robotics-8-objective-3"
+      ],
+      "options": [
+        "The structure experiences no load of any kind.",
+        "Its JᵀF joint-torque contribution is zero; structural loads and dynamic motion are separate.",
+        "Every joint torque must diverge because inverse velocity is singular."
+      ],
+      "solution_spec": {
+        "answer": 1
+      },
+      "feedback": {
+        "hint": "Separate the stated model calculation from claims that need independent physical evidence.",
+        "solution": "Its JᵀF joint-torque contribution is zero; structural loads and dynamic motion are separate.",
+        "lesson_ids": [
+          "robotics-8"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "robotics-9:elbow-cosine",
+      "type": "numeric",
+      "prompt": "Equal links 0.25 m target (0.25,0.25) m. What cosine of the relative elbow angle follows? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "robotics-9-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0,
+        "unit": "",
+        "tolerance": 0,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the declared frames, mechanical model, units and domain.",
+        "solution": "The numerator r²−L₁²−L₂² is zero, so cos q₂=0.",
+        "lesson_ids": [
+          "robotics-9"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "robotics-9:positive-elbow",
+      "type": "numeric",
+      "prompt": "For equal 0.25 m links and target (0.25,0.25) m, what positive elbow branch angle in degrees follows? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "robotics-9-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 90,
+        "unit": "",
+        "tolerance": 0,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the declared frames, mechanical model, units and domain.",
+        "solution": "Cos q₂=0 gives the positive branch q₂=90°.",
+        "lesson_ids": [
+          "robotics-9"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "robotics-9:allowed-branches",
+      "type": "numeric",
+      "prompt": "The two branches for the equal-link target are (q₁,q₂)=(0°,90°) and (90°,−90°). With q₁ in [−30°,60°] and q₂ in [−120°,120°], how many are allowed? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "robotics-9-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 1,
+        "unit": "",
+        "tolerance": 0,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the declared frames, mechanical model, units and domain.",
+        "solution": "Only (0°,90°) respects the shoulder interval; the other shoulder exceeds 60°.",
+        "lesson_ids": [
+          "robotics-9"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "robotics-9:outer-reach",
+      "type": "numeric",
+      "prompt": "For two unrestricted 0.25 m links, what maximum radius in m follows? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "robotics-9-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0.5,
+        "unit": "",
+        "tolerance": 5e-05,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the declared frames, mechanical model, units and domain.",
+        "solution": "The outer radius is the sum of link lengths, 0.50 m.",
+        "lesson_ids": [
+          "robotics-9"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "robotics-9:clearance",
+      "type": "numeric",
+      "prompt": "A zero-radius segment runs (0,0) to (1,0) m. A circular obstacle has center (0.5,0.1) m and radius 0.05 m. What clearance in m follows? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "robotics-9-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 0.05,
+        "unit": "",
+        "tolerance": 5e-06,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the declared frames, mechanical model, units and domain.",
+        "solution": "The projected center distance is 0.10 m; subtracting obstacle radius gives 0.05 m.",
+        "lesson_ids": [
+          "robotics-9"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "robotics-9:joint-midpoint-x",
+      "type": "numeric",
+      "prompt": "An equal-link arm of total straight reach 0.50 m rotates its shoulder from 0° to 90°, keeping elbow zero. What tool x in m occurs at the joint-angle midpoint? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "robotics-9-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 0.35355339059327373,
+        "unit": "",
+        "tolerance": 3.535533905932738e-05,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the declared frames, mechanical model, units and domain.",
+        "solution": "At shoulder 45°, tool x is 0.50cos45°≈0.353553 m, not the Cartesian chord midpoint 0.25 m.",
+        "lesson_ids": [
+          "robotics-9"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "robotics-9:branches",
+      "type": "single_choice",
+      "prompt": "What does a forward check of both inverse candidates establish?",
+      "points": 1,
+      "objective_ids": [
+        "robotics-9-objective-1"
+      ],
+      "options": [
+        "The entire path between them is collision-free.",
+        "Both are physically allowed for every joint interval.",
+        "They reproduce the target geometry, while limits and collision checks remain separate."
+      ],
+      "solution_spec": {
+        "answer": 2
+      },
+      "feedback": {
+        "hint": "Separate the stated model calculation from claims that need independent physical evidence.",
+        "solution": "They reproduce the target geometry, while limits and collision checks remain separate.",
+        "lesson_ids": [
+          "robotics-9"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "robotics-9:redundancy",
+      "type": "single_choice",
+      "prompt": "Does the nonsingular two-joint arm controlling two position coordinates have continuous kinematic redundancy?",
+      "points": 1,
+      "objective_ids": [
+        "robotics-9-objective-2"
+      ],
+      "options": [
+        "No; two discrete inverse branches are not a free continuous joint direction.",
+        "Yes; every arm is redundant whenever a target is reachable.",
+        "Yes; elbow-up and elbow-down create an extra joint."
+      ],
+      "solution_spec": {
+        "answer": 0
+      },
+      "feedback": {
+        "hint": "Separate the stated model calculation from claims that need independent physical evidence.",
+        "solution": "No; two discrete inverse branches are not a free continuous joint direction.",
+        "lesson_ids": [
+          "robotics-9"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "robotics-9:swept",
+      "type": "single_choice",
+      "prompt": "What is supported by positive clearance at finitely sampled tool points?",
+      "points": 1,
+      "objective_ids": [
+        "robotics-9-objective-3"
+      ],
+      "options": [
+        "A validated machine protective function.",
+        "Clearance of those points under that model, without a continuous whole-link guarantee.",
+        "Certified clearance for every link at all intermediate times."
+      ],
+      "solution_spec": {
+        "answer": 1
+      },
+      "feedback": {
+        "hint": "Separate the stated model calculation from claims that need independent physical evidence.",
+        "solution": "Clearance of those points under that model, without a continuous whole-link guarantee.",
+        "lesson_ids": [
+          "robotics-9"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "robotics-10:kinetic-energy",
+      "type": "numeric",
+      "prompt": "At one posture M=[0.155,0.020;0.020,0.020] kg·m² and q̇=(1,2) rad/s. What kinetic energy ½q̇ᵀMq̇ in J follows? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "robotics-10-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0.1575,
+        "unit": "",
+        "tolerance": 1.575e-05,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the declared frames, mechanical model, units and domain.",
+        "solution": "The quadratic form is 0.155+0.080+0.080; half gives 0.1575 J.",
+        "lesson_ids": [
+          "robotics-10"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "robotics-10:matrix-determinant",
+      "type": "numeric",
+      "prompt": "For M=[0.155,0.020;0.020,0.020], what determinant follows? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "robotics-10-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0.0027,
+        "unit": "",
+        "tolerance": 2.7e-07,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the declared frames, mechanical model, units and domain.",
+        "solution": "The determinant is 0.155×0.020−0.020²=0.0027.",
+        "lesson_ids": [
+          "robotics-10"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "robotics-10:gravity-shoulder",
+      "type": "numeric",
+      "prompt": "A vertical-plane point-mass arm has m₁=1 kg at elbow,m₂=0.5 kg at tool,L₁=0.30 m,L₂=0.20 m,g=9.81. At q₁=0,q₂=90°, what gravity-compensation shoulder torque in N·m follows? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "robotics-10-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 4.4145,
+        "unit": "",
+        "tolerance": 0.0004414500000000001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the declared frames, mechanical model, units and domain.",
+        "solution": "The endpoint-link horizontal moment vanishes; (m₁+m₂)gL₁=1.5×9.81×0.30=4.4145 N·m.",
+        "lesson_ids": [
+          "robotics-10"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "robotics-10:accelerating-shoulder",
+      "type": "numeric",
+      "prompt": "At rest, gravity torque is (4.4145,0) N·m and M=[0.155,0.020;0.020,0.020]. Request q̈=(1,0) rad/s². What shoulder actuator torque in N·m follows? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "robotics-10-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 4.5695,
+        "unit": "",
+        "tolerance": 0.00045694999999999997,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the declared frames, mechanical model, units and domain.",
+        "solution": "Inertial shoulder torque is 0.155; adding gravity gives 4.5695 N·m.",
+        "lesson_ids": [
+          "robotics-10"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "robotics-10:potential-rise",
+      "type": "numeric",
+      "prompt": "A 0.5 kg tool on a 0.20 m second link rises from q₂=0 to 90° while q₁=0, with g=9.81. What potential increase in J follows? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "robotics-10-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 0.981,
+        "unit": "",
+        "tolerance": 9.81e-05,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the declared frames, mechanical model, units and domain.",
+        "solution": "The tool rises 0.20 m, so ΔU=0.5×9.81×0.20=0.981 J.",
+        "lesson_ids": [
+          "robotics-10"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "robotics-10:straight-mass-determinant",
+      "type": "numeric",
+      "prompt": "At straight extension the same point-mass model has M=[0.215,0.050;0.050,0.020]. What determinant follows? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "robotics-10-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 0.0018,
+        "unit": "",
+        "tolerance": 1.8e-07,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the declared frames, mechanical model, units and domain.",
+        "solution": "The determinant is 0.215×0.020−0.050²=0.0018>0 despite singular endpoint kinematics.",
+        "lesson_ids": [
+          "robotics-10"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "robotics-10:cross-term",
+      "type": "single_choice",
+      "prompt": "Why does the mass matrix contain off-diagonal entries?",
+      "points": 1,
+      "objective_ids": [
+        "robotics-10-objective-1"
+      ],
+      "options": [
+        "The matrix must be diagonal because there are two joints.",
+        "They represent arbitrary sensor noise added to torque.",
+        "Joint velocities and accelerations are dynamically coupled by the declared moving masses."
+      ],
+      "solution_spec": {
+        "answer": 2
+      },
+      "feedback": {
+        "hint": "Separate the stated model calculation from claims that need independent physical evidence.",
+        "solution": "Joint velocities and accelerations are dynamically coupled by the declared moving masses.",
+        "lesson_ids": [
+          "robotics-10"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "robotics-10:gravity-sign",
+      "type": "single_choice",
+      "prompt": "In τ+JᵀF_external=Mq̈+h+G, what does G represent?",
+      "points": 1,
+      "objective_ids": [
+        "robotics-10-objective-2"
+      ],
+      "options": [
+        "The compensation contribution from the potential-energy gradient.",
+        "The external gravitational generalized force with identical sign.",
+        "The commanded speed cap."
+      ],
+      "solution_spec": {
+        "answer": 0
+      },
+      "feedback": {
+        "hint": "Separate the stated model calculation from claims that need independent physical evidence.",
+        "solution": "The compensation contribution from the potential-energy gradient.",
+        "lesson_ids": [
+          "robotics-10"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "robotics-10:joint-mass",
+      "type": "single_choice",
+      "prompt": "Can the endpoint Jacobian be singular while the stated point-mass joint inertia is positive definite?",
+      "points": 1,
+      "objective_ids": [
+        "robotics-10-objective-3"
+      ],
+      "options": [
+        "Yes; the independently moving elbow mass contributes kinetic energy.",
+        "No; all joint inertia must vanish at straight extension.",
+        "No; every mass matrix is the inverse of J."
+      ],
+      "solution_spec": {
+        "answer": 0
+      },
+      "feedback": {
+        "hint": "Separate the stated model calculation from claims that need independent physical evidence.",
+        "solution": "Yes; the independently moving elbow mass contributes kinetic energy.",
+        "lesson_ids": [
+          "robotics-10"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "robotics-11:voltage-current",
+      "type": "numeric",
+      "prompt": "A steady positive-motoring model has V=12 V,R=2 ohms,k_e=0.1 V·s/rad and speed 100 rad/s. What voltage-limited current in A follows? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "robotics-11-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 1,
+        "unit": "",
+        "tolerance": 0,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the declared frames, mechanical model, units and domain.",
+        "solution": "Current is (12−0.1×100)/2=1 A, below the separate 2 A cap.",
+        "lesson_ids": [
+          "robotics-11"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "robotics-11:motor-torque",
+      "type": "numeric",
+      "prompt": "With current 1 A and k_t=0.1 N·m/A, what motor torque in N·m follows? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "robotics-11-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0.1,
+        "unit": "",
+        "tolerance": 1e-05,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the declared frames, mechanical model, units and domain.",
+        "solution": "Torque is k_t I=0.1×1=0.1 N·m at this operating point.",
+        "lesson_ids": [
+          "robotics-11"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "robotics-11:low-speed-output",
+      "type": "numeric",
+      "prompt": "At a lower-speed operating point, current cap 2 A and k_t=0.1 N·m/A apply. With reduction 50 and motoring efficiency 0.8, what output torque in N·m follows? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "robotics-11-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 8,
+        "unit": "",
+        "tolerance": 0,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the declared frames, mechanical model, units and domain.",
+        "solution": "Output torque is 0.8×50×(0.1×2)=8 N·m under the stated motoring model.",
+        "lesson_ids": [
+          "robotics-11"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "robotics-11:reflected-inertia",
+      "type": "numeric",
+      "prompt": "Rotor inertia 0.0001 kg·m² is reflected through ideal rigid reduction N=50. What output-referred inertia in kg·m² follows? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "robotics-11-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0.25,
+        "unit": "",
+        "tolerance": 2.5e-05,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the declared frames, mechanical model, units and domain.",
+        "solution": "The reflected rotor inertia is N²J_m=2500×0.0001=0.25 kg·m².",
+        "lesson_ids": [
+          "robotics-11"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "robotics-11:pd-frequency",
+      "type": "numeric",
+      "prompt": "For ideal PD dynamics M=0.02 and K_p=2 in consistent SI units, what natural frequency sqrt(K_p/M) in rad/s follows? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "robotics-11-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 10,
+        "unit": "",
+        "tolerance": 0,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the declared frames, mechanical model, units and domain.",
+        "solution": "Natural frequency is sqrt(2/0.02)=10 rad/s before sampling or saturation effects.",
+        "lesson_ids": [
+          "robotics-11"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "robotics-11:pd-damping",
+      "type": "numeric",
+      "prompt": "Ideal PD has M=0.02,b=0.01,K_p=2,K_d=0.39 in consistent SI units. What damping ratio follows? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "robotics-11-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 1,
+        "unit": "",
+        "tolerance": 0,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the declared frames, mechanical model, units and domain.",
+        "solution": "The ratio is (0.01+0.39)/(2sqrt(0.02×2))=1.",
+        "lesson_ids": [
+          "robotics-11"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "robotics-11:envelope",
+      "type": "single_choice",
+      "prompt": "Which pairing is valid under the declared motor envelope?",
+      "points": 1,
+      "objective_ids": [
+        "robotics-11-objective-1"
+      ],
+      "options": [
+        "Maximum low-speed torque combined with maximum high-speed motion regardless of limits.",
+        "Voltage-limited stall current automatically used as a continuous rating.",
+        "Torque and speed from the same voltage/current operating point."
+      ],
+      "solution_spec": {
+        "answer": 2
+      },
+      "feedback": {
+        "hint": "Separate the stated model calculation from claims that need independent physical evidence.",
+        "solution": "Torque and speed from the same voltage/current operating point.",
+        "lesson_ids": [
+          "robotics-11"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "robotics-11:encoder",
+      "type": "single_choice",
+      "prompt": "What does fine motor-side count spacing establish?",
+      "points": 1,
+      "objective_ids": [
+        "robotics-11-objective-2"
+      ],
+      "options": [
+        "The output tracks every count exactly under every load.",
+        "Nominal quantization resolution, without proving output accuracy through backlash.",
+        "Transmission state never matters."
+      ],
+      "solution_spec": {
+        "answer": 1
+      },
+      "feedback": {
+        "hint": "Separate the stated model calculation from claims that need independent physical evidence.",
+        "solution": "Nominal quantization resolution, without proving output accuracy through backlash.",
+        "lesson_ids": [
+          "robotics-11"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "robotics-11:pd-limits",
+      "type": "single_choice",
+      "prompt": "Do ideal continuous-time PD poles establish sampled saturated hardware stability?",
+      "points": 1,
+      "objective_ids": [
+        "robotics-11-objective-3"
+      ],
+      "options": [
+        "No; sampling, delay, actuator bounds and omitted dynamics change the system.",
+        "Yes; positive gains validate every implementation.",
+        "Yes; saturation can only improve tracking."
+      ],
+      "solution_spec": {
+        "answer": 0
+      },
+      "feedback": {
+        "hint": "Separate the stated model calculation from claims that need independent physical evidence.",
+        "solution": "No; sampling, delay, actuator bounds and omitted dynamics change the system.",
+        "lesson_ids": [
+          "robotics-11"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "robotics-12:cubic-midpoint",
+      "type": "numeric",
+      "prompt": "A cubic joint move starts at zero,Δq=0.4 rad,T=2 s. q=Δq(3s²−2s³),s=t/T. What q in rad occurs at t=1 s? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "robotics-12-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0.2,
+        "unit": "",
+        "tolerance": 2e-05,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the declared frames, mechanical model, units and domain.",
+        "solution": "At s=0.5, normalized displacement is 0.5, giving q=0.2 rad.",
+        "lesson_ids": [
+          "robotics-12"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "robotics-12:cubic-peak-speed",
+      "type": "numeric",
+      "prompt": "For cubic move Δq=0.4 rad,T=2 s, what maximum speed 1.5|Δq|/T in rad/s follows? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "robotics-12-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0.3,
+        "unit": "",
+        "tolerance": 3e-05,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the declared frames, mechanical model, units and domain.",
+        "solution": "Peak speed is 1.5×0.4/2=0.3 rad/s.",
+        "lesson_ids": [
+          "robotics-12"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "robotics-12:cubic-peak-acceleration",
+      "type": "numeric",
+      "prompt": "For cubic move Δq=0.4 rad,T=2 s, what maximum acceleration magnitude 6|Δq|/T² in rad/s² follows? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "robotics-12-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0.6,
+        "unit": "",
+        "tolerance": 6e-05,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the declared frames, mechanical model, units and domain.",
+        "solution": "Peak acceleration magnitude is 6×0.4/4=0.6 rad/s².",
+        "lesson_ids": [
+          "robotics-12"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "robotics-12:duration-speed",
+      "type": "numeric",
+      "prompt": "A cubic Δq=0.4 rad move has speed cap 0.2 rad/s. What minimum duration from the speed constraint in s follows? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "robotics-12-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 3,
+        "unit": "",
+        "tolerance": 0,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the declared frames, mechanical model, units and domain.",
+        "solution": "The speed constraint requires T≥1.5×0.4/0.2=3 s.",
+        "lesson_ids": [
+          "robotics-12"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "robotics-12:stop-allowance",
+      "type": "numeric",
+      "prompt": "A 1D model has v=0.2 m/s,latency 0.05 s,deceleration 1 m/s² and deterministic position allowance 0.003 m. What vℓ+v²/(2a)+δ in m follows? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "robotics-12-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 0.033,
+        "unit": "",
+        "tolerance": 3.3e-06,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the declared frames, mechanical model, units and domain.",
+        "solution": "The terms are 0.010+0.020+0.003=0.033 m under the declared assumptions.",
+        "lesson_ids": [
+          "robotics-12"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "robotics-12:clearance-reserve",
+      "type": "numeric",
+      "prompt": "The same synthetic stopping allowance is 0.033 m and supplied static clearance is 0.040 m. What nominal arithmetic reserve in m follows? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "robotics-12-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 0.007,
+        "unit": "",
+        "tolerance": 7.000000000000001e-07,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the declared frames, mechanical model, units and domain.",
+        "solution": "Subtracting allowance from clearance gives 0.007 m; it is not a validated physical stop margin.",
+        "lesson_ids": [
+          "robotics-12"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "robotics-12:time-scaling",
+      "type": "single_choice",
+      "prompt": "What changes when the same geometric path is followed more slowly?",
+      "points": 1,
+      "objective_ids": [
+        "robotics-12-objective-1"
+      ],
+      "options": [
+        "An unreachable interior point becomes reachable without geometry changes.",
+        "The path automatically moves around obstacles.",
+        "Timing-dependent speed and acceleration demands, while a geometric collision remains."
+      ],
+      "solution_spec": {
+        "answer": 2
+      },
+      "feedback": {
+        "hint": "Separate the stated model calculation from claims that need independent physical evidence.",
+        "solution": "Timing-dependent speed and acceleration demands, while a geometric collision remains.",
+        "lesson_ids": [
+          "robotics-12"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "robotics-12:cubic-endpoints",
+      "type": "single_choice",
+      "prompt": "What does the stated cubic scaling guarantee at its endpoints?",
+      "points": 1,
+      "objective_ids": [
+        "robotics-12-objective-2"
+      ],
+      "options": [
+        "Zero velocity and acceleration for any nonzero move.",
+        "Minimum actuator torque for every mechanical model.",
+        "Zero velocity, with generally nonzero endpoint acceleration."
+      ],
+      "solution_spec": {
+        "answer": 2
+      },
+      "feedback": {
+        "hint": "Separate the stated model calculation from claims that need independent physical evidence.",
+        "solution": "Zero velocity, with generally nonzero endpoint acceleration.",
+        "lesson_ids": [
+          "robotics-12"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "robotics-12:stop-scope",
+      "type": "single_choice",
+      "prompt": "What claim is supported by the constructed latency-plus-braking formula?",
+      "points": 1,
+      "objective_ids": [
+        "robotics-12-objective-3"
+      ],
+      "options": [
+        "A measured guarantee for all real robot stops.",
+        "A conditional arithmetic allowance under its supplied speed, latency and braking assumptions.",
+        "Standards compliance without physical evidence."
+      ],
+      "solution_spec": {
+        "answer": 1
+      },
+      "feedback": {
+        "hint": "Separate the stated model calculation from claims that need independent physical evidence.",
+        "solution": "A conditional arithmetic allowance under its supplied speed, latency and braking assumptions.",
+        "lesson_ids": [
+          "robotics-12"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "robotics-13:following-error",
+      "type": "numeric",
+      "prompt": "A same-time command is 0.20 rad and output measurement is 0.12 rad. What signed following error command minus measurement in rad follows? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "robotics-13-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0.08,
+        "unit": "",
+        "tolerance": 8.000000000000001e-06,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the declared frames, mechanical model, units and domain.",
+        "solution": "The same-time following error is 0.20−0.12=0.08 rad, without unique fault identification.",
+        "lesson_ids": [
+          "robotics-13"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "robotics-13:jump-speed",
+      "type": "numeric",
+      "prompt": "A sensor position changes 0.10 rad over 0.01 s. What differenced speed in rad/s follows? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "robotics-13-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 10,
+        "unit": "",
+        "tolerance": 0,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the declared frames, mechanical model, units and domain.",
+        "solution": "The difference rate is 0.10/0.01=10 rad/s under correct timing and units.",
+        "lesson_ids": [
+          "robotics-13"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "robotics-13:bounded-change",
+      "type": "numeric",
+      "prompt": "A trusted conditional speed bound is 2 rad/s for a 0.01 s interval, ignoring sensor allowances. What maximum position change in rad follows? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "robotics-13-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0.02,
+        "unit": "",
+        "tolerance": 2.0000000000000003e-06,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the declared frames, mechanical model, units and domain.",
+        "solution": "The motion bound gives 2×0.01=0.02 rad; commanded limits alone need not establish a physical bound.",
+        "lesson_ids": [
+          "robotics-13"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "robotics-13:transmission-gap",
+      "type": "numeric",
+      "prompt": "Motor-equivalent angle exceeds output angle by 0.01 rad. At lever arm 0.30 m, what small-angle endpoint contribution in mm follows? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "robotics-13-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 3,
+        "unit": "",
+        "tolerance": 0,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the declared frames, mechanical model, units and domain.",
+        "solution": "The small-angle contribution is 0.30×0.01 m=3 mm.",
+        "lesson_ids": [
+          "robotics-13"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "robotics-13:combined-mm",
+      "type": "numeric",
+      "prompt": "Joint standard uncertainty 0.001 rad at radius 0.50 m contributes 0.5 mm. With independent frame component 0.8 mm, what combined standard uncertainty in mm follows? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "robotics-13-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 0.9433981132056605,
+        "unit": "",
+        "tolerance": 9.433981132056605e-05,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the declared frames, mechanical model, units and domain.",
+        "solution": "Independent variances give sqrt(0.5²+0.8²)≈0.943398 mm, not a deterministic bound.",
+        "lesson_ids": [
+          "robotics-13"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "robotics-13:fiducial-bias",
+      "type": "numeric",
+      "prompt": "Two synthetic fiducial x residuals are both 2 mm. What mean residual in mm follows? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "robotics-13-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 2,
+        "unit": "",
+        "tolerance": 0,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the declared frames, mechanical model, units and domain.",
+        "solution": "Their mean is two mm; repetition does not demonstrate that a shared bias is absent.",
+        "lesson_ids": [
+          "robotics-13"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "robotics-13:timestamps",
+      "type": "single_choice",
+      "prompt": "Why are sample timestamps part of a following-error report?",
+      "points": 1,
+      "objective_ids": [
+        "robotics-13-objective-1"
+      ],
+      "options": [
+        "Timestamps alone establish accurate sensing.",
+        "An angle difference is independent of timing during motion.",
+        "Asynchronous command and position values can mix actual lag with timing differences."
+      ],
+      "solution_spec": {
+        "answer": 2
+      },
+      "feedback": {
+        "hint": "Separate the stated model calculation from claims that need independent physical evidence.",
+        "solution": "Asynchronous command and position values can mix actual lag with timing differences.",
+        "lesson_ids": [
+          "robotics-13"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "robotics-13:fault",
+      "type": "single_choice",
+      "prompt": "What follows from a jump exceeding the supplied noiseless speed bound?",
+      "points": 1,
+      "objective_ids": [
+        "robotics-13-objective-2"
+      ],
+      "options": [
+        "Proof that commanded motion limits are physical guarantees.",
+        "A discrepancy needing explanation, not unique identification of a named encoder fault.",
+        "Proof that backlash is the only possible cause."
+      ],
+      "solution_spec": {
+        "answer": 1
+      },
+      "feedback": {
+        "hint": "Separate the stated model calculation from claims that need independent physical evidence.",
+        "solution": "A discrepancy needing explanation, not unique identification of a named encoder fault.",
+        "lesson_ids": [
+          "robotics-13"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "robotics-13:case-scope",
+      "type": "single_choice",
+      "prompt": "Which qualification applies to the preserved stall-case checklist?",
+      "points": 1,
+      "objective_ids": [
+        "robotics-13-objective-3"
+      ],
+      "options": [
+        "Every singularity requires infinite joint torque for every force.",
+        "Large inverse rates and dynamic requirements are conditional; JᵀF need not diverge and two-link position control lacks continuous redundancy.",
+        "A rubric checklist provides actual hardware safety validation."
+      ],
+      "solution_spec": {
+        "answer": 1
+      },
+      "feedback": {
+        "hint": "Separate the stated model calculation from claims that need independent physical evidence.",
+        "solution": "Large inverse rates and dynamic requirements are conditional; JᵀF need not diverge and two-link position control lacks continuous redundancy.",
+        "lesson_ids": [
+          "robotics-13"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "robotics-lab-01:summary",
+      "type": "file_upload",
+      "prompt": "Summarize the 24 constructed near-extension reports. Upload exact headers sample,reports,mean_vx_mm_s,mean_vy_mm_s for in90,in30,in10,in02,ta90,ta30,ta10,ta02.",
+      "points": 24,
+      "objective_ids": [
+        "robotics-lab-01-objective-1"
+      ],
+      "solution_spec": {
+        "accepted_media_types": [
+          "text/csv"
+        ],
+        "max_bytes": 32768,
+        "validation_spec": {
+          "format": "csv-numeric-table-v1",
+          "delimiter": ",",
+          "key_column": "sample",
+          "columns": [
+            "sample",
+            "reports",
+            "mean_vx_mm_s",
+            "mean_vy_mm_s"
+          ],
+          "checks": [
+            {
+              "id": "in90-reports",
+              "row_id": "in90",
+              "column": "reports",
+              "type": "numeric",
+              "answer": 3.0,
+              "unit": "",
+              "tolerance": 0,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "count",
+                "values": [
+                  -10.02,
+                  -10.0,
+                  -9.98
+                ]
+              }
+            },
+            {
+              "id": "in90-mean_vx_mm_s",
+              "row_id": "in90",
+              "column": "mean_vx_mm_s",
+              "type": "numeric",
+              "answer": -10.0,
+              "unit": "mm/s",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  -10.02,
+                  -10.0,
+                  -9.98
+                ]
+              }
+            },
+            {
+              "id": "in90-mean_vy_mm_s",
+              "row_id": "in90",
+              "column": "mean_vy_mm_s",
+              "type": "numeric",
+              "answer": 0.0,
+              "unit": "mm/s",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  0.01,
+                  0,
+                  -0.01
+                ]
+              }
+            },
+            {
+              "id": "in30-reports",
+              "row_id": "in30",
+              "column": "reports",
+              "type": "numeric",
+              "answer": 3.0,
+              "unit": "",
+              "tolerance": 0,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "count",
+                "values": [
+                  -10.02,
+                  -10.0,
+                  -9.98
+                ]
+              }
+            },
+            {
+              "id": "in30-mean_vx_mm_s",
+              "row_id": "in30",
+              "column": "mean_vx_mm_s",
+              "type": "numeric",
+              "answer": -10.0,
+              "unit": "mm/s",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  -10.02,
+                  -10.0,
+                  -9.98
+                ]
+              }
+            },
+            {
+              "id": "in30-mean_vy_mm_s",
+              "row_id": "in30",
+              "column": "mean_vy_mm_s",
+              "type": "numeric",
+              "answer": 0.0,
+              "unit": "mm/s",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  0.01,
+                  0,
+                  -0.01
+                ]
+              }
+            },
+            {
+              "id": "in10-reports",
+              "row_id": "in10",
+              "column": "reports",
+              "type": "numeric",
+              "answer": 3.0,
+              "unit": "",
+              "tolerance": 0,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "count",
+                "values": [
+                  -10.02,
+                  -10.0,
+                  -9.98
+                ]
+              }
+            },
+            {
+              "id": "in10-mean_vx_mm_s",
+              "row_id": "in10",
+              "column": "mean_vx_mm_s",
+              "type": "numeric",
+              "answer": -10.0,
+              "unit": "mm/s",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  -10.02,
+                  -10.0,
+                  -9.98
+                ]
+              }
+            },
+            {
+              "id": "in10-mean_vy_mm_s",
+              "row_id": "in10",
+              "column": "mean_vy_mm_s",
+              "type": "numeric",
+              "answer": 0.0,
+              "unit": "mm/s",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  0.01,
+                  0,
+                  -0.01
+                ]
+              }
+            },
+            {
+              "id": "in02-reports",
+              "row_id": "in02",
+              "column": "reports",
+              "type": "numeric",
+              "answer": 3.0,
+              "unit": "",
+              "tolerance": 0,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "count",
+                "values": [
+                  -2.11448,
+                  -2.09448,
+                  -2.07448
+                ]
+              }
+            },
+            {
+              "id": "in02-mean_vx_mm_s",
+              "row_id": "in02",
+              "column": "mean_vx_mm_s",
+              "type": "numeric",
+              "answer": -2.0945,
+              "unit": "mm/s",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  -2.11448,
+                  -2.09448,
+                  -2.07448
+                ]
+              }
+            },
+            {
+              "id": "in02-mean_vy_mm_s",
+              "row_id": "in02",
+              "column": "mean_vy_mm_s",
+              "type": "numeric",
+              "answer": 0.0,
+              "unit": "mm/s",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  0.01,
+                  0.0,
+                  -0.01
+                ]
+              }
+            },
+            {
+              "id": "ta90-reports",
+              "row_id": "ta90",
+              "column": "reports",
+              "type": "numeric",
+              "answer": 3.0,
+              "unit": "",
+              "tolerance": 0,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "count",
+                "values": [
+                  -0.02,
+                  0,
+                  0.02
+                ]
+              }
+            },
+            {
+              "id": "ta90-mean_vx_mm_s",
+              "row_id": "ta90",
+              "column": "mean_vx_mm_s",
+              "type": "numeric",
+              "answer": 0.0,
+              "unit": "mm/s",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  -0.02,
+                  0,
+                  0.02
+                ]
+              }
+            },
+            {
+              "id": "ta90-mean_vy_mm_s",
+              "row_id": "ta90",
+              "column": "mean_vy_mm_s",
+              "type": "numeric",
+              "answer": 10.0,
+              "unit": "mm/s",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  10.01,
+                  10.0,
+                  9.99
+                ]
+              }
+            },
+            {
+              "id": "ta30-reports",
+              "row_id": "ta30",
+              "column": "reports",
+              "type": "numeric",
+              "answer": 3.0,
+              "unit": "",
+              "tolerance": 0,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "count",
+                "values": [
+                  -0.02,
+                  0,
+                  0.02
+                ]
+              }
+            },
+            {
+              "id": "ta30-mean_vx_mm_s",
+              "row_id": "ta30",
+              "column": "mean_vx_mm_s",
+              "type": "numeric",
+              "answer": 0.0,
+              "unit": "mm/s",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  -0.02,
+                  0,
+                  0.02
+                ]
+              }
+            },
+            {
+              "id": "ta30-mean_vy_mm_s",
+              "row_id": "ta30",
+              "column": "mean_vy_mm_s",
+              "type": "numeric",
+              "answer": 10.0,
+              "unit": "mm/s",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  10.01,
+                  10.0,
+                  9.99
+                ]
+              }
+            },
+            {
+              "id": "ta10-reports",
+              "row_id": "ta10",
+              "column": "reports",
+              "type": "numeric",
+              "answer": 3.0,
+              "unit": "",
+              "tolerance": 0,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "count",
+                "values": [
+                  -0.02,
+                  0,
+                  0.02
+                ]
+              }
+            },
+            {
+              "id": "ta10-mean_vx_mm_s",
+              "row_id": "ta10",
+              "column": "mean_vx_mm_s",
+              "type": "numeric",
+              "answer": 0.0,
+              "unit": "mm/s",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  -0.02,
+                  0,
+                  0.02
+                ]
+              }
+            },
+            {
+              "id": "ta10-mean_vy_mm_s",
+              "row_id": "ta10",
+              "column": "mean_vy_mm_s",
+              "type": "numeric",
+              "answer": 10.0,
+              "unit": "mm/s",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  10.01,
+                  10.0,
+                  9.99
+                ]
+              }
+            },
+            {
+              "id": "ta02-reports",
+              "row_id": "ta02",
+              "column": "reports",
+              "type": "numeric",
+              "answer": 3.0,
+              "unit": "",
+              "tolerance": 0,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "count",
+                "values": [
+                  -0.02,
+                  0,
+                  0.02
+                ]
+              }
+            },
+            {
+              "id": "ta02-mean_vx_mm_s",
+              "row_id": "ta02",
+              "column": "mean_vx_mm_s",
+              "type": "numeric",
+              "answer": 0.0,
+              "unit": "mm/s",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  -0.02,
+                  0,
+                  0.02
+                ]
+              }
+            },
+            {
+              "id": "ta02-mean_vy_mm_s",
+              "row_id": "ta02",
+              "column": "mean_vy_mm_s",
+              "type": "numeric",
+              "answer": 10.0,
+              "unit": "mm/s",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  10.01,
+                  10.0,
+                  9.99
+                ]
+              }
+            }
+          ]
+        },
+        "rubric": [
+          {
+            "id": "in90-reports",
+            "criterion": "in90: reports",
+            "points": 1,
+            "evidence": [
+              "Recomputes reports for in90 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "in90-mean_vx_mm_s",
+            "criterion": "in90: mean_vx_mm_s",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_vx_mm_s for in90 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "in90-mean_vy_mm_s",
+            "criterion": "in90: mean_vy_mm_s",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_vy_mm_s for in90 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "in30-reports",
+            "criterion": "in30: reports",
+            "points": 1,
+            "evidence": [
+              "Recomputes reports for in30 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "in30-mean_vx_mm_s",
+            "criterion": "in30: mean_vx_mm_s",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_vx_mm_s for in30 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "in30-mean_vy_mm_s",
+            "criterion": "in30: mean_vy_mm_s",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_vy_mm_s for in30 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "in10-reports",
+            "criterion": "in10: reports",
+            "points": 1,
+            "evidence": [
+              "Recomputes reports for in10 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "in10-mean_vx_mm_s",
+            "criterion": "in10: mean_vx_mm_s",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_vx_mm_s for in10 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "in10-mean_vy_mm_s",
+            "criterion": "in10: mean_vy_mm_s",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_vy_mm_s for in10 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "in02-reports",
+            "criterion": "in02: reports",
+            "points": 1,
+            "evidence": [
+              "Recomputes reports for in02 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "in02-mean_vx_mm_s",
+            "criterion": "in02: mean_vx_mm_s",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_vx_mm_s for in02 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "in02-mean_vy_mm_s",
+            "criterion": "in02: mean_vy_mm_s",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_vy_mm_s for in02 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "ta90-reports",
+            "criterion": "ta90: reports",
+            "points": 1,
+            "evidence": [
+              "Recomputes reports for ta90 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "ta90-mean_vx_mm_s",
+            "criterion": "ta90: mean_vx_mm_s",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_vx_mm_s for ta90 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "ta90-mean_vy_mm_s",
+            "criterion": "ta90: mean_vy_mm_s",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_vy_mm_s for ta90 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "ta30-reports",
+            "criterion": "ta30: reports",
+            "points": 1,
+            "evidence": [
+              "Recomputes reports for ta30 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "ta30-mean_vx_mm_s",
+            "criterion": "ta30: mean_vx_mm_s",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_vx_mm_s for ta30 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "ta30-mean_vy_mm_s",
+            "criterion": "ta30: mean_vy_mm_s",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_vy_mm_s for ta30 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "ta10-reports",
+            "criterion": "ta10: reports",
+            "points": 1,
+            "evidence": [
+              "Recomputes reports for ta10 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "ta10-mean_vx_mm_s",
+            "criterion": "ta10: mean_vx_mm_s",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_vx_mm_s for ta10 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "ta10-mean_vy_mm_s",
+            "criterion": "ta10: mean_vy_mm_s",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_vy_mm_s for ta10 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "ta02-reports",
+            "criterion": "ta02: reports",
+            "points": 1,
+            "evidence": [
+              "Recomputes reports for ta02 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "ta02-mean_vx_mm_s",
+            "criterion": "ta02: mean_vx_mm_s",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_vx_mm_s for ta02 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "ta02-mean_vy_mm_s",
+            "criterion": "ta02: mean_vy_mm_s",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_vy_mm_s for ta02 from the preparation-level values."
+            ]
+          }
+        ]
+      },
+      "feedback": {
+        "hint": "Group by both task direction and elbow posture; report both velocity components.",
+        "solution": "Each group has three deterministic reports. In02 has reduced inward speed about 2.09448 mm/s; other inward groups retain 10 mm/s and all tangential groups retain 10 mm/s.",
+        "lesson_ids": [
+          "robotics-lab-01"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "robotics-lab-01:in02-demand",
+      "type": "numeric",
+      "prompt": "For q₁=0,q₂=2°,L₁=0.30 m,L₂=0.20 m and desired v=(−0.01,0) m/s, unconstrained q̇₂=0.01(L₁+L₂cosq₂)/(L₁L₂sinq₂). What q̇₂ in rad/s follows? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "robotics-lab-01-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 2.3872271934893776,
+        "unit": "",
+        "tolerance": 0.0001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Convert the elbow angle to radians when evaluating the trigonometric terms.",
+        "solution": "The requested elbow rate is approximately 2.387227 rad/s, exceeding the supplied 0.5 rad/s cap.",
+        "lesson_ids": [
+          "robotics-lab-01"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "robotics-lab-01:uniform-scale",
+      "type": "numeric",
+      "prompt": "At in02, unconstrained joint rates are approximately (−0.954542,2.387227) rad/s and both caps are 0.5 rad/s. What uniform scale min(1,0.5/max|q̇|) follows? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "robotics-lab-01-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0.20944801624396578,
+        "unit": "",
+        "tolerance": 1e-05,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "The elbow rate has the largest magnitude and determines the common scale.",
+        "solution": "The common scale is approximately 0.209448, preserving the frozen-Jacobian motion direction while reducing speed.",
+        "lesson_ids": [
+          "robotics-lab-01"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "robotics-lab-01:achieved-inward",
+      "type": "numeric",
+      "prompt": "At in02, the requested inward speed is 10 mm/s and common scale is approximately 0.209448. What achieved inward speed magnitude in mm/s follows? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "robotics-lab-01-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 2.0944801624396576,
+        "unit": "",
+        "tolerance": 0.0001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Scale the desired task velocity by the same factor used for all joint rates.",
+        "solution": "The achieved inward magnitude is approximately 2.094480 mm/s; it is a stipulated limiter effect, not measured hardware stalling.",
+        "lesson_ids": [
+          "robotics-lab-01"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "robotics-lab-01:straight-radial-torque",
+      "type": "numeric",
+      "prompt": "At exact straight horizontal extension, J=[0,0;0.5,0.2] and radial endpoint force F=(5,0) N. What first component of JᵀF in N·m follows? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "robotics-lab-01-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 0,
+        "unit": "",
+        "tolerance": 0,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Take the first column dot the stated force; do not invert J.",
+        "solution": "The first torque contribution is zero, despite lost instantaneous radial motion. Internal structural load and dynamic motion are separate.",
+        "lesson_ids": [
+          "robotics-lab-01"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "robotics-lab-01:interpretation",
+      "type": "structured",
+      "prompt": "Choose conclusions supported by this direction-dependent motion construction.",
+      "points": 3,
+      "objective_ids": [
+        "robotics-lab-01-objective-3"
+      ],
+      "response_fields": [
+        {
+          "id": "limiter",
+          "type": "single_choice",
+          "prompt": "What explains in02’s reduced mean inward speed?",
+          "options": [
+            "The supplied uniform joint-speed limiter is active for its large inverse-rate demand.",
+            "A measured current limit proves a physical motor stalled.",
+            "A radial force always produces infinite joint torque."
+          ],
+          "points": 1
+        },
+        {
+          "id": "direction",
+          "type": "single_choice",
+          "prompt": "Why do the tangent groups retain 10 mm/s at every sampled posture?",
+          "options": [
+            "Their inverse joint rates are ±1/30 rad/s and stay below the supplied caps.",
+            "Every task direction is equally conditioned near extension.",
+            "Tangential motion proves all hardware constraints are satisfied."
+          ],
+          "points": 1
+        },
+        {
+          "id": "case",
+          "type": "single_choice",
+          "prompt": "What additional information does the preserved hardware-stall case need?",
+          "options": [
+            "Synchronized joint/output motion, delivered actuation and calibrated load/frame information.",
+            "Only this toy CSV because it uniquely identifies the hardware fault.",
+            "Only endpoint reachability in an unconstrained simulation."
+          ],
+          "points": 1
+        }
+      ],
+      "solution_spec": {
+        "field_specs": [
+          {
+            "id": "limiter",
+            "type": "single_choice",
+            "answer": 0
+          },
+          {
+            "id": "direction",
+            "type": "single_choice",
+            "answer": 0
+          },
+          {
+            "id": "case",
+            "type": "single_choice",
+            "answer": 0
+          }
+        ],
+        "rubric": [
+          {
+            "id": "limiter",
+            "criterion": "Limiter mechanism",
+            "points": 1,
+            "evidence": [
+              "The dataset is constructed from a known rate limiter, without current or hardware observations."
+            ]
+          },
+          {
+            "id": "direction",
+            "criterion": "Directional comparison",
+            "points": 1,
+            "evidence": [
+              "The specific tangential request remains compatible with the supplied kinematic speed limits."
+            ]
+          },
+          {
+            "id": "case",
+            "criterion": "Case evidence scope",
+            "points": 1,
+            "evidence": [
+              "Geometry and the toy limiter do not identify a real stall cause."
+            ]
+          }
+        ]
+      },
+      "feedback": {
+        "hint": "Keep known construction mechanisms separate from claims about a physical robot.",
+        "solution": "The active common speed cap explains only the constructed inward slowdown; tangential feasibility and zero radial force moments do not establish actual hardware behavior.",
+        "lesson_ids": [
+          "robotics-lab-01"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "robotics-lab-01:supported",
+      "type": "multiple_select",
+      "prompt": "Which statements about the in90–in02 and ta90–ta02 near-extension reports follow from their declared construction? Select all that apply.",
+      "points": 2,
+      "objective_ids": [
+        "robotics-lab-01-objective-3"
+      ],
+      "options": [
+        "The in02 elbow command reaches the stipulated 0.5 rad/s cap.",
+        "The observed slowdown uniquely proves a physical gearbox fault.",
+        "Every singularity makes JᵀF diverge for every finite force.",
+        "Three report variants are deterministic and establish no real sensor-error distribution.",
+        "Uniform scaling preserves the desired direction under each frozen nonsingular Jacobian."
+      ],
+      "solution_spec": {
+        "answer": [
+          0,
+          3,
+          4
+        ],
+        "partial_credit": "correct-minus-incorrect-clamped-v1"
+      },
+      "feedback": {
+        "hint": "Read the limiter, report-variation and force-map assumptions separately.",
+        "solution": "The construction supports common scaling, an active elbow cap and deterministic variants. It contains no physical fault diagnosis or universal torque divergence.",
+        "lesson_ids": [
+          "robotics-lab-01"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "robotics-lab-01:clip-policy",
+      "type": "single_choice",
+      "prompt": "What can change if each unconstrained in02 joint rate is clipped independently to ±0.5 rad/s instead of scaled together?",
+      "points": 1,
+      "objective_ids": [
+        "robotics-lab-01-objective-3"
+      ],
+      "options": [
+        "The entire original desired velocity is always recovered.",
+        "The requested inward direction must be preserved because both commands are bounded.",
+        "The endpoint direction can change; with this J, the clipped rates (−0.5,+0.5) give approximately (0,−0.15) m/s."
+      ],
+      "solution_spec": {
+        "answer": 2
+      },
+      "feedback": {
+        "hint": "Multiply the clipped joint rates by the current Jacobian.",
+        "solution": "Independent clipping gives zero x velocity and −0.15 m/s y velocity in this frozen model. A common scale instead retains the requested inward direction.",
+        "lesson_ids": [
+          "robotics-lab-01"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
     }
   ]
 }

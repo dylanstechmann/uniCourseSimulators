@@ -47,7 +47,8 @@ LESSONS = [("geroscience", f"geroscience-{n}") for n in range(9, 15)] + [
     ("physics-mechanics", f"physics-mechanics-{n}") for n in range(7, 14)] + [
     ("physics-em", f"physics-em-{n}") for n in range(7, 14)] + [
     ("circuits", f"circuits-{n}") for n in range(7, 14)] + [
-    ("programming", f"programming-{n}") for n in range(8, 14)]
+    ("programming", f"programming-{n}") for n in range(8, 14)] + [
+    ("robotics", f"robotics-{n}") for n in range(7, 14)]
 
 
 def load(course):

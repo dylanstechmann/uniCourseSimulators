@@ -4,7 +4,38 @@
 
 2026-10-06; synthetic local learner data only. Milestones 1 and 2 are implemented. Milestone 3 remains partial; deterministic graders and prototype graded-assignment and review workflows are described below. A Milestone 4 curriculum-map increment is implemented and tested, while subject-matter review and map refinement remain. All 25 course packages are **partial**; zero are beta, complete or externally reviewed. Human score review is limited to saved attempts and does not constitute course-content review. No semester equivalence, university credit, security certification or public production deployment is asserted.
 
-## Current increment: Programming lessons, pipeline lab and proposed schedule (0.4.0, 2026-10-09)
+## Current increment: Robotics lessons, near-extension lab and proposed schedule (0.4.0, 2026-10-09)
+
+Developed with Codex assistance. Robotics advances from 0.3.1 to 0.4.0 while remaining partial, unreviewed and formative-only. Seven original lessons develop frames/calibration/uncertainty, Jacobians/singularities/force mapping, inverse branches/limits/clearance, mass matrices/gravity/energy, motor envelopes/backlash/feedback, trajectory timing/stopping bounds and sensing/case evidence. Each has six numeric and three conceptual choices. One synthetic near-extension motion lab and a proposed 14-week sequence complete this increment. There are 71 new items and 32 new cards; the package has 14 readings, 91 items and 48 cards. All 20 prior questions, 16 cards, six module definitions, seven assessments and the original stall case remain unchanged. All 25 packages now have proposed weekly sequences; none is a complete or reviewed semester course.
+
+Separate calculations cover all 62 numeric keys, including 16 preserved ones, and twenty-four CSV cells. Frame round trips and composition, Jacobian finite differences and power duality, inverse branches and limits, segment clearance edge cases, point-mass inertia and nonzero-rate energy balance, same-point motor power, trajectory extrema and stopping arithmetic add evidence. A common speed limiter preserves the requested Cartesian direction under the frozen Jacobian, whereas independent joint clipping does not. The [AI-assisted record](reviews/ai-assisted/robotics-0.4.0.md) documents construction and limits. The same AI authored content and tests; no independent or qualified human review occurred.
+
+Five primary Modern Robotics web supplements by Kevin M. Lynch and Frank C. Park were retrieved and metadata checked directly, covering transforms, singularities, mass matrices, torque control and trajectories. They remain link-only with no imported prose, problems, examples, figures or data and no broadened permissions. An initial Lagrangian part-one retrieval failed; the retrieved mass-matrix supplement was selected. No DOI/PMID/NCT or paper link was introduced and no identifier-resolution pass is claimed.
+
+| Command/check (Linux development container, Python 3.12.3) | Result |
+|---|---|
+| `python -B tools/validate_content.py` | PASS on first run: 25 packages, 384 lessons, 2233 questions, 1276 cards, 25 cases; 0 errors; 98 legacy-depth warnings |
+| `ruff format tests/content/test_robotics_recalculations.py` | Formatted initially; unchanged after comparison repair |
+| `ruff check tests/content/test_robotics_recalculations.py` | PASS initially and after comparison repair |
+| `python -B -m pytest tests/content/test_robotics_recalculations.py -q -p no:cacheprovider` | Initial FAIL: 104 passed, two binary floating-point exact-comparison failures in the checks; repaired |
+| `python -B -m pytest tests/content/test_robotics_recalculations.py tests/content/test_new_geroscience_and_statistics_lessons.py tests/content/test_learner_visible_number_formatting.py -q -p no:cacheprovider` | PASS after comparison repair: 590 |
+| `python -B /workspace/courselab-session-artifacts/claude-resume-2026-10-08/selfcheck.py robotics robotics-` | PASS on first run: all 91 items earn full credit in the actual grader |
+| `bash /workspace/.claude/skills/courselab-dev/scripts/verify.sh --log-dir /workspace/courselab-session-artifacts/codex-robotics-2026-10-09/verification-final` | PASS: content, legacy (7), security (770 source files, 0 findings), ruff, root (2425), backend (4723 passed, 2 existing symbolic-builder skips) |
+| `python -B tools/objective_coverage.py --check docs/COURSE_GAP_REPORT.md` | PASS: generated report matches |
+| `python3 -B /workspace/.claude/skills/regen-guardrails/scripts/claims_scan.py --repo uniStemCourseSimulators` | PASS: 0 HIGH, MED or LOW findings |
+| `git diff --check` | PASS |
+
+The failed comparisons evaluated 1.5×0.4/0.2 as 3.0000000000000004 and 6×0.4/4 as 0.6000000000000001. The separate test now uses exact rational arithmetic for duration and bounds and an approximate assertion for the floating acceleration evaluation. No authored answer or tolerance changed. Full verification began after a separate successful schema pass and the repaired focused run.
+
+Read-only inspection probes for nonexistent `content/schemas/solution-spec.schema.json` and `.github/workflows/ci.yml` failed. The normative question schema and actual `.github/workflows/ci.yaml` were read instead. These were path-inspection errors, not verification passes.
+
+Twenty-four synthetic reports cover four elbow angles and two fixed-base velocity directions. The 2-degree inward request demands elbow rate approximately 2.387227 rad/s; a common scale approximately 0.209448 keeps its command at 0.5 rad/s, yielding approximately 2.094480 mm/s inward motion. All tangent requests retain scale one. Deterministic component offsets are construction values, not actual sensor errors. There is no integration between postures or dynamic robot simulation. The inward/tangent labels refer to base x/y, not exact radial/tangent directions at all bent postures.
+
+Instruction explicitly qualifies the preserved case: inverse velocity and dynamic requirements differ from direct finite-force mapping JᵀF, which does not universally diverge; continuous redundancy requires added degrees of freedom or task relaxation. The point-mass joint inertia stays positive definite at a singular endpoint Jacobian. Stopping-distance arithmetic is conditional and establishes no physical stopping performance or safety approval. Seven preserved numeric items require units; none enforces significant figures or dimensions. Written diagnoses and planner/controller implementations are ungraded.
+
+Frontend checks, Docker Compose and Playwright were not run locally for this increment; publication CI runs them. Logs and helpers remain outside git in courselab-session-artifacts/codex-robotics-2026-10-09. Qualified review, assistive-technology review and measured workload remain absent.
+
+## Previous increment: Programming lessons, pipeline lab and proposed schedule (0.4.0, 2026-10-09)
 
 Developed with Codex assistance. Programming advances from 0.3.2 to 0.4.0 while remaining partial, unreviewed and formative-only. Six original lessons develop input contracts/parsing/pure functions, array axes/broadcasting/memory, root brackets/residual conditioning, quadrature/refinement/stability, least-squares rank/scaling and grouped validation/thresholds. Each has six numeric and three conceptual choices. One synthetic pipeline lab and a proposed 14-week sequence complete the increment. There are 62 new items and 28 new cards; the package has 14 readings, 88 items and 48 cards. All 26 prior questions, 20 cards, seven module definitions, eight assessments and the original classifier case remain unchanged. Learner code execution remains disabled.
 

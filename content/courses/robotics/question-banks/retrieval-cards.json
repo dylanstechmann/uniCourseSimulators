@@ -145,6 +145,326 @@
         "robotics-6-objective-3"
       ],
       "license": "CC-BY-4.0"
+    },
+    {
+      "id": "robotics-7-card-1",
+      "lesson_id": "robotics-7",
+      "front": "What does T_BP mean here?",
+      "back": "It maps plate coordinates into base coordinates: p_B=R_BP p_P+t_BP.",
+      "objective_ids": [
+        "robotics-7-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "robotics-7-card-2",
+      "lesson_id": "robotics-7",
+      "front": "What does a frame round trip establish?",
+      "back": "Algebraic consistency, not measured physical calibration accuracy.",
+      "objective_ids": [
+        "robotics-7-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "robotics-7-card-3",
+      "lesson_id": "robotics-7",
+      "front": "How does small orientation error move a point?",
+      "back": "Its tangential displacement is approximately radius times angular error in radians.",
+      "objective_ids": [
+        "robotics-7-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "robotics-7-card-4",
+      "lesson_id": "robotics-7",
+      "front": "Standard uncertainty or bound?",
+      "back": "Variance combination requires stated covariance assumptions; magnitude sums can represent conservative bounds.",
+      "objective_ids": [
+        "robotics-7-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "robotics-8-card-1",
+      "lesson_id": "robotics-8",
+      "front": "What do the Jacobian columns describe?",
+      "back": "Instantaneous endpoint velocity per unit rate of each joint at the current pose.",
+      "objective_ids": [
+        "robotics-8-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "robotics-8-card-2",
+      "lesson_id": "robotics-8",
+      "front": "What does damping sacrifice?",
+      "back": "Exact weak-direction tracking in exchange for reduced inverse-rate amplification.",
+      "objective_ids": [
+        "robotics-8-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "robotics-8-card-3",
+      "lesson_id": "robotics-8",
+      "front": "How is force mapped to joint torque?",
+      "back": "JᵀF, with consistent frame and sign convention, preserves virtual power.",
+      "objective_ids": [
+        "robotics-8-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "robotics-8-card-4",
+      "lesson_id": "robotics-8",
+      "front": "Does singular inverse velocity imply divergent JᵀF?",
+      "back": "No; prescribed velocity and prescribed force are different calculations.",
+      "objective_ids": [
+        "robotics-8-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "robotics-9-card-1",
+      "lesson_id": "robotics-9",
+      "front": "How are inverse candidates checked?",
+      "back": "Substitute them into forward geometry, then check joint intervals and collision constraints.",
+      "objective_ids": [
+        "robotics-9-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "robotics-9-card-2",
+      "lesson_id": "robotics-9",
+      "front": "Are two elbow branches continuous redundancy?",
+      "back": "No; a nonsingular two-joint position arm has no extra continuous degree of freedom.",
+      "objective_ids": [
+        "robotics-9-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "robotics-9-card-3",
+      "lesson_id": "robotics-9",
+      "front": "Is tool clearance whole-link clearance?",
+      "back": "No; elbows, link bodies and swept geometry need their own checks.",
+      "objective_ids": [
+        "robotics-9-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "robotics-9-card-4",
+      "lesson_id": "robotics-9",
+      "front": "Do sampled clearances prove continuous clearance?",
+      "back": "Only with additional valid motion bounds or a continuous geometric argument.",
+      "objective_ids": [
+        "robotics-9-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "robotics-10-card-1",
+      "lesson_id": "robotics-10",
+      "front": "What defines the mass matrix?",
+      "back": "The quadratic kinetic-energy form K=½q̇ᵀMq̇ for the declared mechanics.",
+      "objective_ids": [
+        "robotics-10-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "robotics-10-card-2",
+      "lesson_id": "robotics-10",
+      "front": "What is gravity compensation here?",
+      "back": "The potential-energy gradient included with positive sign in the actuator balance.",
+      "objective_ids": [
+        "robotics-10-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "robotics-10-card-3",
+      "lesson_id": "robotics-10",
+      "front": "Can M stay positive definite at endpoint rank loss?",
+      "back": "Yes; other moving masses can still constrain every joint-velocity direction.",
+      "objective_ids": [
+        "robotics-10-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "robotics-10-card-4",
+      "lesson_id": "robotics-10",
+      "front": "What checks a no-loss dynamic equation?",
+      "back": "Actuator power equals the derivative of kinetic plus potential energy under the declared forces.",
+      "objective_ids": [
+        "robotics-10-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "robotics-11-card-1",
+      "lesson_id": "robotics-11",
+      "front": "Which operating point determines torque availability?",
+      "back": "Voltage, current cap and speed together under the stated motoring model.",
+      "objective_ids": [
+        "robotics-11-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "robotics-11-card-2",
+      "lesson_id": "robotics-11",
+      "front": "How is rotor inertia reflected?",
+      "back": "An ideal rigid reduction reflects J_m as N²J_m at the output.",
+      "objective_ids": [
+        "robotics-11-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "robotics-11-card-3",
+      "lesson_id": "robotics-11",
+      "front": "What limits a motor-side encoder claim?",
+      "back": "Its count spacing does not observe all output backlash, compliance or frame error.",
+      "objective_ids": [
+        "robotics-11-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "robotics-11-card-4",
+      "lesson_id": "robotics-11",
+      "front": "What does ideal PD analysis omit?",
+      "back": "Sampling, delay, saturation and omitted mechanics can change the response and stability.",
+      "objective_ids": [
+        "robotics-11-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "robotics-12-card-1",
+      "lesson_id": "robotics-12",
+      "front": "Path versus trajectory?",
+      "back": "A path specifies geometry; time scaling specifies its execution timing.",
+      "objective_ids": [
+        "robotics-12-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "robotics-12-card-2",
+      "lesson_id": "robotics-12",
+      "front": "What is the cubic peak speed?",
+      "back": "For a scalar move it is 1.5|Δq|/T, with generally nonzero endpoint acceleration.",
+      "objective_ids": [
+        "robotics-12-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "robotics-12-card-3",
+      "lesson_id": "robotics-12",
+      "front": "What is the conditional stop allowance?",
+      "back": "Latency travel plus braking travel plus a separately declared position allowance.",
+      "objective_ids": [
+        "robotics-12-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "robotics-12-card-4",
+      "lesson_id": "robotics-12",
+      "front": "Can slower timing remove a collision?",
+      "back": "No; slowing the same path changes dynamics but leaves its geometry.",
+      "objective_ids": [
+        "robotics-12-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "robotics-13-card-1",
+      "lesson_id": "robotics-13",
+      "front": "What defines a following error?",
+      "back": "A stated command-minus-measurement convention with synchronized time, units and sensor identity.",
+      "objective_ids": [
+        "robotics-13-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "robotics-13-card-2",
+      "lesson_id": "robotics-13",
+      "front": "Does an excessive sensor jump identify one fault?",
+      "back": "No; it flags a discrepancy relative to a justified bound and error model.",
+      "objective_ids": [
+        "robotics-13-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "robotics-13-card-3",
+      "lesson_id": "robotics-13",
+      "front": "What information distinguishes transmission effects?",
+      "back": "Independent output sensing, reversal/load dependence and a declared mechanical model.",
+      "objective_ids": [
+        "robotics-13-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "robotics-13-card-4",
+      "lesson_id": "robotics-13",
+      "front": "How is the stall case bounded?",
+      "back": "Check inverse rates, delivered actuation, dynamics and sensing separately; a checklist is not hardware validation.",
+      "objective_ids": [
+        "robotics-13-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "robotics-lab-01-card-1",
+      "lesson_id": "robotics-lab-01",
+      "front": "Group identity",
+      "back": "Keep task direction and posture together when summarizing signed velocity components.",
+      "objective_ids": [
+        "robotics-lab-01-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "robotics-lab-01-card-2",
+      "lesson_id": "robotics-lab-01",
+      "front": "Common limiter",
+      "back": "Scale all inverse rates together to preserve the desired direction under the frozen Jacobian while reducing speed.",
+      "objective_ids": [
+        "robotics-lab-01-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "robotics-lab-01-card-3",
+      "lesson_id": "robotics-lab-01",
+      "front": "Force versus motion",
+      "back": "A finite radial force can have zero joint moment at rank loss even though instantaneous radial motion is unavailable.",
+      "objective_ids": [
+        "robotics-lab-01-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "robotics-lab-01-card-4",
+      "lesson_id": "robotics-lab-01",
+      "front": "Case scope",
+      "back": "Toy limiter reports constrain one mathematical explanation without identifying a physical stall or validating a protective function.",
+      "objective_ids": [
+        "robotics-lab-01-objective-3"
+      ],
+      "license": "CC-BY-4.0"
     }
   ]
 }
