@@ -185,6 +185,286 @@
         "programming-7-objective-3"
       ],
       "license": "CC-BY-4.0"
+    },
+    {
+      "id": "programming-8-card-1",
+      "lesson_id": "programming-8",
+      "front": "What is a function contract?",
+      "back": "Inputs, units, permitted domain, return meaning and explicit failure behavior.",
+      "objective_ids": [
+        "programming-8-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "programming-8-card-2",
+      "lesson_id": "programming-8",
+      "front": "Does float conversion prove an observation is valid?",
+      "back": "No; blankness, finiteness, unit and scientific domain checks remain.",
+      "objective_ids": [
+        "programming-8-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "programming-8-card-3",
+      "lesson_id": "programming-8",
+      "front": "What makes a small calculation pure?",
+      "back": "Explicit inputs determine its return without hidden state or raw-data mutation.",
+      "objective_ids": [
+        "programming-8-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "programming-8-card-4",
+      "lesson_id": "programming-8",
+      "front": "What belongs beside an accepted-row mean?",
+      "back": "Its denominator, exclusions and source identifiers.",
+      "objective_ids": [
+        "programming-8-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "programming-9-card-1",
+      "lesson_id": "programming-9",
+      "front": "What are the trailing-axis broadcasting rules?",
+      "back": "Dimensions match or one is one; missing leading dimensions behave as one.",
+      "objective_ids": [
+        "programming-9-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "programming-9-card-2",
+      "lesson_id": "programming-9",
+      "front": "Which axis does mean(axis=0) remove from samples-by-channels data?",
+      "back": "The sample axis, leaving one mean per channel.",
+      "objective_ids": [
+        "programming-9-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "programming-9-card-3",
+      "lesson_id": "programming-9",
+      "front": "What does an outer grid add?",
+      "back": "Comparisons and storage, not independent observed subjects.",
+      "objective_ids": [
+        "programming-9-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "programming-9-card-4",
+      "lesson_id": "programming-9",
+      "front": "How can a slice edit preserve raw input?",
+      "back": "Create an independent copy and verify the parent array is unchanged.",
+      "objective_ids": [
+        "programming-9-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "programming-10-card-1",
+      "lesson_id": "programming-10",
+      "front": "What supports a sign bracket?",
+      "back": "Continuity on a valid domain and opposite endpoint signs, with endpoint-root handling.",
+      "objective_ids": [
+        "programming-10-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "programming-10-card-2",
+      "lesson_id": "programming-10",
+      "front": "What bound follows after k bracket halvings?",
+      "back": "The final interval midpoint is within initial width divided by 2^(k+1) of an enclosed root.",
+      "objective_ids": [
+        "programming-10-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "programming-10-card-3",
+      "lesson_id": "programming-10",
+      "front": "Does a small residual guarantee a small location error?",
+      "back": "No; local derivative and equation scale determine the relationship.",
+      "objective_ids": [
+        "programming-10-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "programming-10-card-4",
+      "lesson_id": "programming-10",
+      "front": "What makes a Newton step unacceptable?",
+      "back": "A zero or unsuitable derivative, invalid domain step, or failed convergence requirements.",
+      "objective_ids": [
+        "programming-10-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "programming-11-card-1",
+      "lesson_id": "programming-11",
+      "front": "What gives a trapezoid integral its units?",
+      "back": "Each average endpoint value is multiplied by its own interval width.",
+      "objective_ids": [
+        "programming-11-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "programming-11-card-2",
+      "lesson_id": "programming-11",
+      "front": "What is the fine-grid Richardson error estimate?",
+      "back": "The refinement difference divided by 2^p−1 under a valid leading-order model.",
+      "objective_ids": [
+        "programming-11-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "programming-11-card-3",
+      "lesson_id": "programming-11",
+      "front": "Does Euler stability guarantee positivity?",
+      "back": "No; a stable negative multiplier can alternate the sign.",
+      "objective_ids": [
+        "programming-11-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "programming-11-card-4",
+      "lesson_id": "programming-11",
+      "front": "Does numerical convergence validate the physical model?",
+      "back": "No; accuracy is conditional on the declared equation and inputs.",
+      "objective_ids": [
+        "programming-11-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "programming-12-card-1",
+      "lesson_id": "programming-12",
+      "front": "Why center an affine predictor?",
+      "back": "It separates offset and slope columns and reduces avoidable cancellation from a large common baseline.",
+      "objective_ids": [
+        "programming-12-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "programming-12-card-2",
+      "lesson_id": "programming-12",
+      "front": "What is identified when every x equals two?",
+      "back": "Only a+2b; a and b cannot be recovered separately from those observations.",
+      "objective_ids": [
+        "programming-12-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "programming-12-card-3",
+      "lesson_id": "programming-12",
+      "front": "Does an empty least-squares residual array imply zero SSE?",
+      "back": "No; inspect rank and shape and calculate residuals explicitly.",
+      "objective_ids": [
+        "programming-12-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "programming-12-card-4",
+      "lesson_id": "programming-12",
+      "front": "What does a stable solver establish?",
+      "back": "A better numerical calculation under the model, not held-out validity or freedom from bias.",
+      "objective_ids": [
+        "programming-12-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "programming-13-card-1",
+      "lesson_id": "programming-13",
+      "front": "Which denominator defines precision?",
+      "back": "All predicted positives, TP+FP; zero makes this ratio undefined.",
+      "objective_ids": [
+        "programming-13-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "programming-13-card-2",
+      "lesson_id": "programming-13",
+      "front": "Which split targets unseen donors?",
+      "back": "All rows from each donor stay in one split; preprocessing is fitted using training data.",
+      "objective_ids": [
+        "programming-13-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "programming-13-card-3",
+      "lesson_id": "programming-13",
+      "front": "When does final evaluation become selection data?",
+      "back": "When its results guide threshold, model or preprocessing choices.",
+      "objective_ids": [
+        "programming-13-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "programming-13-card-4",
+      "lesson_id": "programming-13",
+      "front": "Is a seed a complete provenance record?",
+      "back": "No; retain input identity, splits, code, dependencies, transformations and selection rules.",
+      "objective_ids": [
+        "programming-13-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "programming-lab-01-card-1",
+      "lesson_id": "programming-lab-01",
+      "front": "Quarantine versus zero",
+      "back": "An invalid record keeps its identifier and reason; missing concentration is not measured zero.",
+      "objective_ids": [
+        "programming-lab-01-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "programming-lab-01-card-2",
+      "lesson_id": "programming-lab-01",
+      "front": "Donor summary denominator",
+      "back": "Each lab donor mean has two accepted concentrations; invalid extra records are excluded explicitly.",
+      "objective_ids": [
+        "programming-lab-01-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "programming-lab-01-card-3",
+      "lesson_id": "programming-lab-01",
+      "front": "Frozen held-out metric",
+      "back": "Use accepted evaluation rows and the stated equality-positive threshold rule.",
+      "objective_ids": [
+        "programming-lab-01-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "programming-lab-01-card-4",
+      "lesson_id": "programming-lab-01",
+      "front": "Classifier case scope",
+      "back": "Repeatability and accuracy need class-sensitive metrics and target-appropriate validation; toy records establish no real utility.",
+      "objective_ids": [
+        "programming-lab-01-objective-3"
+      ],
+      "license": "CC-BY-4.0"
     }
   ]
 }

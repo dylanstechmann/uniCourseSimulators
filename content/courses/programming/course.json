@@ -7,7 +7,7 @@
   "domain": "Computing",
   "level": "Year 2",
   "maturity": "partial",
-  "version": "0.3.2",
+  "version": "0.4.0",
   "license": "MIT OR CC-BY-4.0",
   "content_origin": {
     "kind": "legacy-prototype",
@@ -173,12 +173,322 @@
         "programming-outcome-1",
         "programming-outcome-4"
       ]
+    },
+    {
+      "id": "programming-8-objective-1",
+      "description": "Trace concentration functions with explicit units and domain checks.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "programming-outcome-1"
+      ]
+    },
+    {
+      "id": "programming-8-objective-2",
+      "description": "Classify missing, malformed and nonfinite records under a declared contract.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "programming-outcome-1"
+      ]
+    },
+    {
+      "id": "programming-8-objective-3",
+      "description": "Separate parsing, pure calculation and auditable reporting.",
+      "bloom": "analyze",
+      "course_outcome_ids": [
+        "programming-outcome-4"
+      ]
+    },
+    {
+      "id": "programming-9-objective-1",
+      "description": "Predict array broadcast shapes and selected entries.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "programming-outcome-1"
+      ]
+    },
+    {
+      "id": "programming-9-objective-2",
+      "description": "Distinguish axis reductions, paired changes and outer comparisons.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "programming-outcome-2"
+      ]
+    },
+    {
+      "id": "programming-9-objective-3",
+      "description": "Estimate storage and preserve input arrays when transforming data.",
+      "bloom": "analyze",
+      "course_outcome_ids": [
+        "programming-outcome-1"
+      ]
+    },
+    {
+      "id": "programming-10-objective-1",
+      "description": "Trace valid root brackets and midpoint error bounds.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "programming-outcome-2"
+      ]
+    },
+    {
+      "id": "programming-10-objective-2",
+      "description": "Diagnose continuity and equation-scaling limits on root convergence.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "programming-outcome-2"
+      ]
+    },
+    {
+      "id": "programming-10-objective-3",
+      "description": "Evaluate Newton updates against domains and derivative information.",
+      "bloom": "analyze",
+      "course_outcome_ids": [
+        "programming-outcome-1"
+      ]
+    },
+    {
+      "id": "programming-11-objective-1",
+      "description": "Calculate quadrature on explicit uniform and nonuniform grids.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "programming-outcome-2"
+      ]
+    },
+    {
+      "id": "programming-11-objective-2",
+      "description": "Evaluate refinement-based error estimates under a stated order model.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "programming-outcome-2"
+      ]
+    },
+    {
+      "id": "programming-11-objective-3",
+      "description": "Distinguish solver stability, positivity and accuracy.",
+      "bloom": "analyze",
+      "course_outcome_ids": [
+        "programming-outcome-2"
+      ]
+    },
+    {
+      "id": "programming-12-objective-1",
+      "description": "Calculate and verify a centered affine least-squares fit.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "programming-outcome-3"
+      ]
+    },
+    {
+      "id": "programming-12-objective-2",
+      "description": "Diagnose rank loss and residual degrees of freedom.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "programming-outcome-2"
+      ]
+    },
+    {
+      "id": "programming-12-objective-3",
+      "description": "Distinguish numerical stability from statistical validation.",
+      "bloom": "analyze",
+      "course_outcome_ids": [
+        "programming-outcome-3"
+      ]
+    },
+    {
+      "id": "programming-13-objective-1",
+      "description": "Calculate threshold metrics with explicit denominators.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "programming-outcome-3"
+      ]
+    },
+    {
+      "id": "programming-13-objective-2",
+      "description": "Choose splits and preprocessing that respect a prediction target.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "programming-outcome-3"
+      ]
+    },
+    {
+      "id": "programming-13-objective-3",
+      "description": "Document model selection and reproducible final evaluation.",
+      "bloom": "analyze",
+      "course_outcome_ids": [
+        "programming-outcome-4"
+      ]
+    },
+    {
+      "id": "programming-lab-01-objective-1",
+      "description": "Filter and summarize records under explicit unit and finite-value contracts.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "programming-outcome-1"
+      ]
+    },
+    {
+      "id": "programming-lab-01-objective-2",
+      "description": "Calculate frozen held-out threshold metrics with explicit denominators.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "programming-outcome-3"
+      ]
+    },
+    {
+      "id": "programming-lab-01-objective-3",
+      "description": "Evaluate group separation, exclusions and classifier case evidence.",
+      "bloom": "analyze",
+      "course_outcome_ids": [
+        "programming-outcome-4"
+      ]
     }
   ],
   "duration": {
-    "instructional_weeks": null,
-    "equivalent_structure": null,
-    "weeks": []
+    "instructional_weeks": 14,
+    "equivalent_structure": "Proposed 14-week scope retaining compact prototype readings in weeks 1,7,10,12. Workload and qualified review are absent; not evidence of semester equivalence.",
+    "weeks": [
+      {
+        "week": 1,
+        "title": "Data structures, units, and reproducible code",
+        "lesson_ids": [
+          "programming-1"
+        ],
+        "assessment_ids": [
+          "programming-1-practice"
+        ]
+      },
+      {
+        "week": 2,
+        "title": "Input contracts, parsing and pure scientific functions",
+        "lesson_ids": [
+          "programming-8"
+        ],
+        "assessment_ids": [
+          "programming-8-practice"
+        ]
+      },
+      {
+        "week": 3,
+        "title": "Testing a scientific function: known answers, tolerances, seeds and provenance",
+        "lesson_ids": [
+          "programming-5"
+        ],
+        "assessment_ids": [
+          "programming-5-practice"
+        ]
+      },
+      {
+        "week": 4,
+        "title": "How long will it take? Algorithmic cost, scaling and choosing data structures for research code",
+        "lesson_ids": [
+          "programming-6"
+        ],
+        "assessment_ids": [
+          "programming-6-practice"
+        ]
+      },
+      {
+        "week": 5,
+        "title": "Array shapes, broadcasting and memory-aware reductions",
+        "lesson_ids": [
+          "programming-9"
+        ],
+        "assessment_ids": [
+          "programming-9-practice"
+        ]
+      },
+      {
+        "week": 6,
+        "title": "Floating-point arithmetic in scientific code: rounding, cancellation and comparing numbers safely",
+        "lesson_ids": [
+          "programming-7"
+        ],
+        "assessment_ids": [
+          "programming-7-practice"
+        ]
+      },
+      {
+        "week": 7,
+        "title": "Numerical integration and differential models",
+        "lesson_ids": [
+          "programming-2"
+        ],
+        "assessment_ids": [
+          "programming-2-practice"
+        ]
+      },
+      {
+        "week": 8,
+        "title": "Root brackets, residuals and conditioning",
+        "lesson_ids": [
+          "programming-10"
+        ],
+        "assessment_ids": [
+          "programming-10-practice"
+        ]
+      },
+      {
+        "week": 9,
+        "title": "Quadrature, step error and stability checks",
+        "lesson_ids": [
+          "programming-11"
+        ],
+        "assessment_ids": [
+          "programming-11-practice"
+        ]
+      },
+      {
+        "week": 10,
+        "title": "Regression, uncertainty, and validation",
+        "lesson_ids": [
+          "programming-3"
+        ],
+        "assessment_ids": [
+          "programming-3-practice"
+        ]
+      },
+      {
+        "week": 11,
+        "title": "Least squares, rank and scaled coordinates",
+        "lesson_ids": [
+          "programming-12"
+        ],
+        "assessment_ids": [
+          "programming-12-practice"
+        ]
+      },
+      {
+        "week": 12,
+        "title": "Visualization and uncertainty communication",
+        "lesson_ids": [
+          "programming-4"
+        ],
+        "assessment_ids": [
+          "programming-4-practice"
+        ]
+      },
+      {
+        "week": 13,
+        "title": "Grouped validation, thresholds and reproducible reports",
+        "lesson_ids": [
+          "programming-13"
+        ],
+        "assessment_ids": [
+          "programming-13-practice"
+        ]
+      },
+      {
+        "week": 14,
+        "title": "Virtual lab 1: contract checks and held-out donor reports",
+        "lesson_ids": [
+          "programming-lab-01"
+        ],
+        "assessment_ids": [
+          "programming-week14-pipeline-lab",
+          "programming-case"
+        ]
+      }
+    ]
   },
   "workload": {
     "estimated_total_hours": null,
@@ -402,6 +712,278 @@
           ]
         }
       ]
+    },
+    {
+      "id": "programming-module-8",
+      "title": "Input contracts, parsing and pure scientific functions",
+      "source_ids": [
+        "numerical",
+        "engineeringMath",
+        "python-programming-csv"
+      ],
+      "lessons": [
+        {
+          "id": "programming-8",
+          "title": "Input contracts, parsing and pure scientific functions",
+          "reading": "modules/08-contracts-parsing-and-pure-functions.md",
+          "objectives": [
+            "programming-8-objective-1",
+            "programming-8-objective-2",
+            "programming-8-objective-3"
+          ],
+          "worked_example": "A synthetic record reports mass 1.5 mg and volume 500 uL. Convert volume to 0.5 mL, then calculate 1.5/0.5=3 mg/mL. The equivalent record in mL must give the same answer. Scaling both mass and volume by two gives 3/1=3 mg/mL, another invariant. Scaling only mass by two doubles the result; these are useful tests because they check the meaning of the calculation rather than copying its internal statements.\n\nSuppose a six-row file has two valid records, one blank mass, one zero volume, one `nan` mass and one unknown unit. The declared policy accepts two rows and quarantines four with distinct reasons. Computing a mean requires reporting both the accepted count and the exclusions. A report that says only “mean concentration 3” hides whether that value came from two observations or all six. Its denominator is part of the evidence.\n\nFor a separate synthetic calibration, convert a reading of 2.4 arbitrary units using baseline 0.4 and scale 2 arbitrary units per mg/mL. The corrected concentration is (2.4−0.4)/2=1 mg/mL. Applying this correction before parsing, or forgetting the baseline, changes the scientific meaning even if the code runs without exceptions.",
+          "question_ids": [
+            "programming-8:concentration",
+            "programming-8:scaled-inputs",
+            "programming-8:accepted",
+            "programming-8:quarantined",
+            "programming-8:calibrated",
+            "programming-8:unit-factor",
+            "programming-8:blank-rule",
+            "programming-8:pure-function",
+            "programming-8:audit-trail"
+          ],
+          "card_ids": [
+            "programming-8-card-1",
+            "programming-8-card-2",
+            "programming-8-card-3",
+            "programming-8-card-4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "programming-module-9",
+      "title": "Array shapes, broadcasting and memory-aware reductions",
+      "source_ids": [
+        "numerical",
+        "engineeringMath",
+        "numpy-programming-broadcast"
+      ],
+      "lessons": [
+        {
+          "id": "programming-9",
+          "title": "Array shapes, broadcasting and memory-aware reductions",
+          "reading": "modules/09-array-shapes-broadcasting-and-memory.md",
+          "objectives": [
+            "programming-9-objective-1",
+            "programming-9-objective-2",
+            "programming-9-objective-3"
+          ],
+          "worked_example": "Compare sample corrections [1,2,3] against the same 3-by-2 signal matrix. Convert them to a column and subtract to get [9,99], [12,102] and [15,105]. The overall mean becomes 57. Using channel baselines instead gave overall mean four. These are different operations with different metadata, not competing estimates of one quantity. A shape assertion plus a hand-check of the first and last row can distinguish them.\n\nA slice may share storage with its parent array. If a preprocessing stage needs an independent buffer, an explicit copy avoids changing the raw matrix through a view. Checking that the original signal remains unchanged after transformation provides a behavioral test; merely checking a variable name such as `cleaned` does not prove independence. An advanced-index selection often copies, while basic slicing often returns a view, so the actual operation matters.",
+          "question_ids": [
+            "programming-9:broadcast-size",
+            "programming-9:channel-mean",
+            "programming-9:sample-mean",
+            "programming-9:paired-change",
+            "programming-9:memory-mb",
+            "programming-9:sample-correction",
+            "programming-9:square-trap",
+            "programming-9:outer-pairing",
+            "programming-9:aliasing"
+          ],
+          "card_ids": [
+            "programming-9-card-1",
+            "programming-9-card-2",
+            "programming-9-card-3",
+            "programming-9-card-4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "programming-module-10",
+      "title": "Root brackets, residuals and conditioning",
+      "source_ids": [
+        "numerical",
+        "engineeringMath",
+        "scipy-programming-bisect"
+      ],
+      "lessons": [
+        {
+          "id": "programming-10",
+          "title": "Root brackets, residuals and conditioning",
+          "reading": "modules/10-root-brackets-residuals-and-conditioning.md",
+          "objectives": [
+            "programming-10-objective-1",
+            "programming-10-objective-2",
+            "programming-10-objective-3"
+          ],
+          "worked_example": "Use f(x)=x²−2 on [1,2]. The first midpoint 1.5 has positive residual, so retain [1,1.5]. The next midpoint 1.25 has negative residual, so retain [1.25,1.5]. After two halvings the width is 0.25 and the final midpoint is 1.375, with a location bound 0.125. Its actual error from √2 is about 0.039214, smaller than the bound.\n\nStarting instead with [0,4], eight halvings give width 4/256=0.015625 and final-midpoint error bound 0.0078125. To guarantee a bound no greater than 0.001, solve 4/2^(k+1)≤0.001. The minimum integer k is eleven. These bounds require the valid root-containing interval to be preserved at every update. They are deterministic algorithmic guarantees, not confidence intervals for an estimated physical parameter.",
+          "question_ids": [
+            "programming-10:retained-midpoint",
+            "programming-10:retained-bound",
+            "programming-10:width-eight",
+            "programming-10:minimum-halvings",
+            "programming-10:newton-first",
+            "programming-10:newton-domain",
+            "programming-10:discontinuous",
+            "programming-10:residual-scale",
+            "programming-10:newton-safeguard"
+          ],
+          "card_ids": [
+            "programming-10-card-1",
+            "programming-10-card-2",
+            "programming-10-card-3",
+            "programming-10-card-4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "programming-module-11",
+      "title": "Quadrature, step error and stability checks",
+      "source_ids": [
+        "numerical",
+        "engineeringMath"
+      ],
+      "lessons": [
+        {
+          "id": "programming-11",
+          "title": "Quadrature, step error and stability checks",
+          "reading": "modules/11-quadrature-step-error-and-stability.md",
+          "objectives": [
+            "programming-11-objective-1",
+            "programming-11-objective-2",
+            "programming-11-objective-3"
+          ],
+          "worked_example": "Three nonuniform synthetic observations at times [0,1,3] seconds have rates [0,2,2] mg/s. The first area is one mg and the second is four mg, so total area is five mg. Replacing both interval widths by one second gives three mg and incorrectly shortens the experiment. Plotting the points and intervals makes the difference visible before choosing a method.\n\nFor Euler with λ=2 and h=0.1, ten steps yield 0.8¹⁰≈0.107374 after one second. Halving h gives 0.9²⁰≈0.121577, closer to exp(−2). The refinement difference is about 0.014202. A first-order estimate uses divisor one, but the exact fine-grid error is about 0.013759: the leading-order estimate is approximate at these finite steps. Report that distinction rather than calling the refinement difference a measured uncertainty interval.",
+          "question_ids": [
+            "programming-11:trapezoid-coarse",
+            "programming-11:trapezoid-fine",
+            "programming-11:simpson",
+            "programming-11:fine-error",
+            "programming-11:irregular-area",
+            "programming-11:euler-end",
+            "programming-11:grid-rule",
+            "programming-11:refinement-scope",
+            "programming-11:stable-positive"
+          ],
+          "card_ids": [
+            "programming-11-card-1",
+            "programming-11-card-2",
+            "programming-11-card-3",
+            "programming-11-card-4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "programming-module-12",
+      "title": "Least squares, rank and scaled coordinates",
+      "source_ids": [
+        "numerical",
+        "engineeringMath",
+        "numpy-programming-lstsq"
+      ],
+      "lessons": [
+        {
+          "id": "programming-12",
+          "title": "Least squares, rank and scaled coordinates",
+          "reading": "modules/12-least-squares-rank-and-scaled-coordinates.md",
+          "objectives": [
+            "programming-12-objective-1",
+            "programming-12-objective-2",
+            "programming-12-objective-3"
+          ],
+          "worked_example": "For z=[−1,0,1] and y=[2,3,5], the mean response is 10/3 and slope is 1.5. Predictions are [11/6,10/3,29/6], with residuals [1/6,−1/3,1/6]. Their sum is zero, and their dot product with z is zero. These orthogonality checks follow from the least-squares conditions and provide a separate way to assess the fit. Sum of squared residuals is 1/6.\n\nThere are three observations and two fitted coefficients, so residual degrees of freedom are one. A residual standard error computed as sqrt(SSE/(n−p)) is sqrt(1/6)≈0.408248. That quantity requires an appropriate error model to support inference. It is neither a held-out prediction score nor an automatic confidence interval. A line with two observations has no residual degrees of freedom for this estimate even if it fits exactly.\n\nNow label x as [100000001,100000002,100000003] and z=x−100000002. The centered fit still has slope 1.5 and centered intercept 10/3. The uncentered intercept is approximately −149999999.666667. Its huge magnitude reflects the remote origin, not a large local measured response. Reporting the centered equation makes the observed-domain meaning clearer.\n\nThe preserved floating-point lesson estimates spacing near 10⁸ using |x| times epsilon. That is a scale estimate, not the exact adjacent-float spacing. In binary64, 10⁸ lies in the binade [2²⁶,2²⁷), so spacing is 2^(26−52)=2⁻²⁶≈1.490116×10⁻⁸. The existing approximate question and key are preserved. Distinguishing the exact binade value prevents treating the approximation as a library result.",
+          "question_ids": [
+            "programming-12:centered-intercept",
+            "programming-12:slope",
+            "programming-12:sse",
+            "programming-12:residual-df",
+            "programming-12:rse",
+            "programming-12:exact-spacing",
+            "programming-12:rank-loss",
+            "programming-12:residual-array",
+            "programming-12:stable-fit"
+          ],
+          "card_ids": [
+            "programming-12-card-1",
+            "programming-12-card-2",
+            "programming-12-card-3",
+            "programming-12-card-4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "programming-module-13",
+      "title": "Grouped validation, thresholds and reproducible reports",
+      "source_ids": [
+        "numerical",
+        "engineeringMath",
+        "sklearn-programming-cross-validation"
+      ],
+      "lessons": [
+        {
+          "id": "programming-13",
+          "title": "Grouped validation, thresholds and reproducible reports",
+          "reading": "modules/13-grouped-validation-thresholds-and-reproducibility.md",
+          "objectives": [
+            "programming-13-objective-1",
+            "programming-13-objective-2",
+            "programming-13-objective-3"
+          ],
+          "worked_example": "Eight synthetic observations have labels [1,0,1,0,0,1,0,0] and scores [0.9,0.8,0.7,0.6,0.5,0.4,0.3,0.2]. At threshold 0.5 with equality positive, TP=2, FP=3, FN=1 and TN=2. Sensitivity is 2/3, precision is 2/5, specificity is 2/5 and accuracy is 4/8. F1, defined as 2TP/(2TP+FP+FN), is 0.5.\n\nAt threshold 0.7, TP stays two while FP falls to one, FN stays one and TN rises to four. Accuracy becomes 6/8=0.75 and precision becomes 2/3. This synthetic comparison illustrates threshold effects; it supplies no decision cost or validated threshold for a real setting. Choosing 0.7 only because this small evaluation table looks better would turn the table into selection data.\n\nNow assign two adjacent records to each of four donors. A split placing each donor's first record in training and second in evaluation has four overlapping donors, even though row identifiers are unique. A split keeping donors one and two in training and donors three and four in evaluation has no donor overlap. It has fewer independent groups than rows, and does not establish generalization to another site or future time.\n\n## Reproducibility is a chain of artifacts\n\nRecord immutable raw inputs, parsing and exclusion rules, split assignments, training-only transformations, code revision, dependency versions, candidate-selection procedure and final threshold. A pseudorandom seed alone does not specify the algorithm, software version or order of inputs. Preserve split identifiers directly when exact reconstruction matters. A plot should expose counts, units, threshold and grouping rather than present a single score without context.\n\nKeep the final evaluation report separate from exploratory selection reports. If the final set is consulted to change the model, disclose that use and treat its later score accordingly. Reproducible leakage is still leakage; provenance allows it to be detected, not excused.",
+          "question_ids": [
+            "programming-13:sensitivity",
+            "programming-13:precision",
+            "programming-13:specificity",
+            "programming-13:accuracy",
+            "programming-13:higher-threshold",
+            "programming-13:donor-overlap",
+            "programming-13:undefined-precision",
+            "programming-13:split-target",
+            "programming-13:threshold-selection"
+          ],
+          "card_ids": [
+            "programming-13-card-1",
+            "programming-13-card-2",
+            "programming-13-card-3",
+            "programming-13-card-4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "programming-module-lab-01",
+      "title": "Virtual lab 1: contract checks and held-out donor reports",
+      "source_ids": [
+        "numerical",
+        "engineeringMath",
+        "python-programming-csv",
+        "sklearn-programming-cross-validation"
+      ],
+      "lessons": [
+        {
+          "id": "programming-lab-01",
+          "title": "Virtual lab 1: contract checks and held-out donor reports",
+          "reading": "labs/01-contracts-and-held-out-donor-reports.md",
+          "objectives": [
+            "programming-lab-01-objective-1",
+            "programming-lab-01-objective-2",
+            "programming-lab-01-objective-3"
+          ],
+          "worked_example": "d05 has accepted concentrations five and seven mg/mL and mean six; nan record X03 is quarantined. Frozen evaluation at score≥0.5 gives TP=2,FP=3,FN=1,TN=2,precision 0.4 and sensitivity 2/3.",
+          "question_ids": [
+            "programming-lab-01:summary",
+            "programming-lab-01:accepted",
+            "programming-lab-01:excluded",
+            "programming-lab-01:precision",
+            "programming-lab-01:sensitivity",
+            "programming-lab-01:interpretation",
+            "programming-lab-01:evidence",
+            "programming-lab-01:case-link"
+          ],
+          "card_ids": [
+            "programming-lab-01-card-1",
+            "programming-lab-01-card-2",
+            "programming-lab-01-card-3",
+            "programming-lab-01-card-4"
+          ]
+        }
+      ]
     }
   ],
   "assessments": [
@@ -538,6 +1120,188 @@
       "points": 6
     },
     {
+      "id": "programming-8-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Input contracts, parsing and pure scientific functions practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "programming-8-objective-1",
+        "programming-8-objective-2",
+        "programming-8-objective-3",
+        "programming-outcome-1",
+        "programming-outcome-4"
+      ],
+      "question_ids": [
+        "programming-8:concentration",
+        "programming-8:scaled-inputs",
+        "programming-8:accepted",
+        "programming-8:quarantined",
+        "programming-8:calibrated",
+        "programming-8:unit-factor",
+        "programming-8:blank-rule",
+        "programming-8:pure-function",
+        "programming-8:audit-trail"
+      ],
+      "points": 9
+    },
+    {
+      "id": "programming-9-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Array shapes, broadcasting and memory-aware reductions practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "programming-9-objective-1",
+        "programming-9-objective-2",
+        "programming-9-objective-3",
+        "programming-outcome-1",
+        "programming-outcome-2"
+      ],
+      "question_ids": [
+        "programming-9:broadcast-size",
+        "programming-9:channel-mean",
+        "programming-9:sample-mean",
+        "programming-9:paired-change",
+        "programming-9:memory-mb",
+        "programming-9:sample-correction",
+        "programming-9:square-trap",
+        "programming-9:outer-pairing",
+        "programming-9:aliasing"
+      ],
+      "points": 9
+    },
+    {
+      "id": "programming-10-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Root brackets, residuals and conditioning practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "programming-10-objective-1",
+        "programming-10-objective-2",
+        "programming-10-objective-3",
+        "programming-outcome-1",
+        "programming-outcome-2"
+      ],
+      "question_ids": [
+        "programming-10:retained-midpoint",
+        "programming-10:retained-bound",
+        "programming-10:width-eight",
+        "programming-10:minimum-halvings",
+        "programming-10:newton-first",
+        "programming-10:newton-domain",
+        "programming-10:discontinuous",
+        "programming-10:residual-scale",
+        "programming-10:newton-safeguard"
+      ],
+      "points": 9
+    },
+    {
+      "id": "programming-11-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Quadrature, step error and stability checks practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "programming-11-objective-1",
+        "programming-11-objective-2",
+        "programming-11-objective-3",
+        "programming-outcome-2"
+      ],
+      "question_ids": [
+        "programming-11:trapezoid-coarse",
+        "programming-11:trapezoid-fine",
+        "programming-11:simpson",
+        "programming-11:fine-error",
+        "programming-11:irregular-area",
+        "programming-11:euler-end",
+        "programming-11:grid-rule",
+        "programming-11:refinement-scope",
+        "programming-11:stable-positive"
+      ],
+      "points": 9
+    },
+    {
+      "id": "programming-12-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Least squares, rank and scaled coordinates practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "programming-12-objective-1",
+        "programming-12-objective-2",
+        "programming-12-objective-3",
+        "programming-outcome-2",
+        "programming-outcome-3"
+      ],
+      "question_ids": [
+        "programming-12:centered-intercept",
+        "programming-12:slope",
+        "programming-12:sse",
+        "programming-12:residual-df",
+        "programming-12:rse",
+        "programming-12:exact-spacing",
+        "programming-12:rank-loss",
+        "programming-12:residual-array",
+        "programming-12:stable-fit"
+      ],
+      "points": 9
+    },
+    {
+      "id": "programming-13-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Grouped validation, thresholds and reproducible reports practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "programming-13-objective-1",
+        "programming-13-objective-2",
+        "programming-13-objective-3",
+        "programming-outcome-3",
+        "programming-outcome-4"
+      ],
+      "question_ids": [
+        "programming-13:sensitivity",
+        "programming-13:precision",
+        "programming-13:specificity",
+        "programming-13:accuracy",
+        "programming-13:higher-threshold",
+        "programming-13:donor-overlap",
+        "programming-13:undefined-precision",
+        "programming-13:split-target",
+        "programming-13:threshold-selection"
+      ],
+      "points": 9
+    },
+    {
+      "id": "programming-week14-pipeline-lab",
+      "type": "lab",
+      "mode": "practice",
+      "title": "Virtual lab 1: contract checks and held-out donor reports (ungraded practice)",
+      "path": "question-banks/practice.json",
+      "week": 14,
+      "objective_ids": [
+        "programming-lab-01-objective-1",
+        "programming-lab-01-objective-2",
+        "programming-lab-01-objective-3",
+        "programming-outcome-1",
+        "programming-outcome-3",
+        "programming-outcome-4"
+      ],
+      "question_ids": [
+        "programming-lab-01:summary",
+        "programming-lab-01:accepted",
+        "programming-lab-01:excluded",
+        "programming-lab-01:precision",
+        "programming-lab-01:sensitivity",
+        "programming-lab-01:interpretation",
+        "programming-lab-01:evidence",
+        "programming-lab-01:case-link"
+      ],
+      "points": 26
+    },
+    {
       "id": "programming-case",
       "type": "case",
       "mode": "self-assessment",
@@ -599,18 +1363,24 @@
       "version": "0.3.2",
       "date": "2026-10-08",
       "summary": "Added a common-mistakes section to 1 original lesson that lacked one (programming-5); each bullet names a mistake that the lesson's own text addresses. Fixed number formatting that an earlier authoring step left in learner-visible text: raw exponent notation (a number written with the letter e and a power of ten) and floating-point artifacts (a decimal with a long run of trailing digits) in the floating-point reading (Python output now in a code span), the testing reading (Python literals now in code spans). No answer key, tolerance or objective changed. The package remains partial, unreviewed and formative-only."
+    },
+    {
+      "version": "0.4.0",
+      "date": "2026-10-09",
+      "summary": "Added six original lessons on contracts/parsing/pure functions, array axes/broadcasting/memory, roots/conditioning, quadrature/stability, least-squares rank/scaling and grouped validation; a synthetic pipeline lab and proposed 14-week schedule. Developed with Codex assistance. Still partial, unreviewed and formative-only."
     }
   ],
   "limitations": [
-    "Four compact legacy units are preserved; this package is not equivalent to a full university semester.",
-    "There is no authored 12–15 week schedule, substantive homework sequence, laboratory sequence, midterm, cumulative final, or graded integrative project.",
-    "Practice items are short formative checks (two per prototype unit and six per original lesson); they do not demonstrate comprehensive outcome coverage or mastery, and objective associations remain provisional.",
-    "Bloom labels and structured prerequisite edges are initial authoring classifications awaiting subject-matter review.",
-    "Question answers and solution feedback are intentionally public practice authoring specifications, not restricted exam keys.",
-    "Of the 14 numerical answers in this package, two require a unit, none checks significant figures and none checks dimensions; the others accept a number within a stated tolerance, with the unit optional.",
-    "Total workload and weekly duration are unknown; former nominal credit values and hardcoded reading times do not establish workload."
+    "Four compact prototype readings remain beside nine substantial original lessons and one synthetic pipeline lab; this is not a full university semester.",
+    "Proposed weekly structure is unmeasured and unreviewed; graded homework, exams, full labs and a cumulative graded project remain absent.",
+    "Examples, functions, observations, labels and classifier scores are synthetic; no actual experimental or classifier utility evidence is established.",
+    "Of 54 numeric items, two preserved items require units; none enforces significant figures or dimensions. New numeric items request bare numbers in explicit scales.",
+    "Learner code execution remains disabled. Choices, numerical outputs and CSV cells do not grade implementations, exception handling, essays or plots.",
+    "The preserved spacing key is the approximate |x| times epsilon scale; lesson 12 distinguishes exact binade spacing near 10⁸ without changing the preserved item.",
+    "Qualified subject, code, accessibility and workload review remain absent. Public formative keys and practice points are not course grades.",
+    "Five official documentation pages were retrieved link-only; no teaching prose, code example, figure or dataset was imported."
   ],
   "intentionally_omitted": [
-    "Full instructional sequence and summative assessments are not authored yet; the original lessons extend a partial package."
+    "Graded assessments, a full laboratory sequence, a cumulative graded project, measured workload and qualified human review remain outstanding."
   ]
 }

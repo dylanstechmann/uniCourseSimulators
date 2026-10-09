@@ -3812,6 +3812,153 @@
       "checksum": null,
       "imported_assets": [],
       "rights_notes": "Only linking and original explanation are selected; no third-party asset reuse is cleared."
+    },
+    {
+      "id": "python-programming-csv",
+      "title": "csv — CSV File Reading and Writing",
+      "institution": "Python Software Foundation",
+      "url": "https://docs.python.org/3/library/csv.html",
+      "accessed_at": "2026-10-09",
+      "license": "Link-only official software reference selected; no assets imported.",
+      "reuse_mode": "link-only-reference",
+      "permissions": {
+        "linking": true,
+        "quotation": false,
+        "adaptation": false,
+        "redistribution": false
+      },
+      "attribution_requirements": [
+        "Identify Python Software Foundation, the document title and exact URL."
+      ],
+      "third_party_notes": "Official documentation retrieved to verify behavior and metadata. Original explanation, functions, arrays and data are not copied from the source. All numerical examples and records are synthetic.",
+      "mapped_courses": [
+        "programming"
+      ],
+      "mapped_modules": [
+        "programming-module-8",
+        "programming-module-lab-01"
+      ],
+      "version": "Python 3 documentation, retrieved 2026-10-09",
+      "checksum": null,
+      "imported_assets": [],
+      "rights_notes": "Only linking and original explanation are selected; no third-party teaching asset reuse is cleared."
+    },
+    {
+      "id": "numpy-programming-broadcast",
+      "title": "Broadcasting",
+      "institution": "NumPy",
+      "url": "https://numpy.org/doc/stable/user/basics.broadcasting.html",
+      "accessed_at": "2026-10-09",
+      "license": "Link-only official software reference selected; no assets imported.",
+      "reuse_mode": "link-only-reference",
+      "permissions": {
+        "linking": true,
+        "quotation": false,
+        "adaptation": false,
+        "redistribution": false
+      },
+      "attribution_requirements": [
+        "Identify NumPy, the document title and exact URL."
+      ],
+      "third_party_notes": "Official documentation retrieved to verify behavior and metadata. Original explanation, functions, arrays and data are not copied from the source. All numerical examples and records are synthetic.",
+      "mapped_courses": [
+        "programming"
+      ],
+      "mapped_modules": [
+        "programming-module-9"
+      ],
+      "version": "NumPy v2.5 manual, retrieved 2026-10-09",
+      "checksum": null,
+      "imported_assets": [],
+      "rights_notes": "Only linking and original explanation are selected; no third-party teaching asset reuse is cleared."
+    },
+    {
+      "id": "scipy-programming-bisect",
+      "title": "bisect",
+      "institution": "SciPy community",
+      "url": "https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.bisect.html",
+      "accessed_at": "2026-10-09",
+      "license": "Link-only official software reference selected; no assets imported.",
+      "reuse_mode": "link-only-reference",
+      "permissions": {
+        "linking": true,
+        "quotation": false,
+        "adaptation": false,
+        "redistribution": false
+      },
+      "attribution_requirements": [
+        "Identify SciPy community, the document title and exact URL."
+      ],
+      "third_party_notes": "Official documentation retrieved to verify behavior and metadata. Original explanation, functions, arrays and data are not copied from the source. All numerical examples and records are synthetic.",
+      "mapped_courses": [
+        "programming"
+      ],
+      "mapped_modules": [
+        "programming-module-10"
+      ],
+      "version": "SciPy v1.18.0 manual, retrieved 2026-10-09",
+      "checksum": null,
+      "imported_assets": [],
+      "rights_notes": "Only linking and original explanation are selected; no third-party teaching asset reuse is cleared."
+    },
+    {
+      "id": "numpy-programming-lstsq",
+      "title": "numpy.linalg.lstsq",
+      "institution": "NumPy",
+      "url": "https://numpy.org/doc/stable/reference/generated/numpy.linalg.lstsq.html",
+      "accessed_at": "2026-10-09",
+      "license": "Link-only official software reference selected; no assets imported.",
+      "reuse_mode": "link-only-reference",
+      "permissions": {
+        "linking": true,
+        "quotation": false,
+        "adaptation": false,
+        "redistribution": false
+      },
+      "attribution_requirements": [
+        "Identify NumPy, the document title and exact URL."
+      ],
+      "third_party_notes": "Official documentation retrieved to verify behavior and metadata. Original explanation, functions, arrays and data are not copied from the source. All numerical examples and records are synthetic.",
+      "mapped_courses": [
+        "programming"
+      ],
+      "mapped_modules": [
+        "programming-module-12"
+      ],
+      "version": "NumPy v2.5 manual, retrieved 2026-10-09",
+      "checksum": null,
+      "imported_assets": [],
+      "rights_notes": "Only linking and original explanation are selected; no third-party teaching asset reuse is cleared."
+    },
+    {
+      "id": "sklearn-programming-cross-validation",
+      "title": "Cross-validation: evaluating estimator performance",
+      "institution": "scikit-learn",
+      "url": "https://scikit-learn.org/stable/modules/cross_validation.html",
+      "accessed_at": "2026-10-09",
+      "license": "Link-only official software reference selected; no assets imported.",
+      "reuse_mode": "link-only-reference",
+      "permissions": {
+        "linking": true,
+        "quotation": false,
+        "adaptation": false,
+        "redistribution": false
+      },
+      "attribution_requirements": [
+        "Identify scikit-learn, the document title and exact URL."
+      ],
+      "third_party_notes": "Official documentation retrieved to verify behavior and metadata. Original explanation, functions, arrays and data are not copied from the source. All numerical examples and records are synthetic.",
+      "mapped_courses": [
+        "programming"
+      ],
+      "mapped_modules": [
+        "programming-module-13",
+        "programming-module-lab-01"
+      ],
+      "version": "scikit-learn 1.9.1 documentation, retrieved 2026-10-09",
+      "checksum": null,
+      "imported_assets": [],
+      "rights_notes": "Only linking and original explanation are selected; no third-party teaching asset reuse is cleared."
     }
   ]
 }

@@ -809,6 +809,2374 @@
         "kind": "original",
         "modifications": []
       }
+    },
+    {
+      "id": "programming-8:concentration",
+      "type": "numeric",
+      "prompt": "A synthetic record has 1.5 mg mass and 500 uL volume. Convert to mL and compute concentration in mg/mL. Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "programming-8-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 3,
+        "unit": "",
+        "tolerance": 0,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the stated contract, axes, method, domain or denominator.",
+        "solution": "Volume is 0.5 mL, so 1.5/0.5=3 mg/mL.",
+        "lesson_ids": [
+          "programming-8"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "programming-8:scaled-inputs",
+      "type": "numeric",
+      "prompt": "Both mass 1.5 mg and volume 0.5 mL are doubled. What concentration in mg/mL does the pure mass/volume function return? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "programming-8-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 3,
+        "unit": "",
+        "tolerance": 0,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the stated contract, axes, method, domain or denominator.",
+        "solution": "Scaling numerator and denominator equally leaves the ratio 3 mg/mL.",
+        "lesson_ids": [
+          "programming-8"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "programming-8:accepted",
+      "type": "numeric",
+      "prompt": "Six synthetic records contain two valid records, one blank mass, one zero volume, one nan mass and one unknown volume unit. Under the lesson contract, how many records are accepted? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "programming-8-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 2,
+        "unit": "",
+        "tolerance": 0,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the stated contract, axes, method, domain or denominator.",
+        "solution": "Only the two valid records satisfy parsing, finite values, positive volume and recognized units.",
+        "lesson_ids": [
+          "programming-8"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "programming-8:quarantined",
+      "type": "numeric",
+      "prompt": "In a six-row contract check with two valid rows and distinct blank-mass, zero-volume, nonfinite-mass and unknown-unit rows, how many are quarantined? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "programming-8-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 4,
+        "unit": "",
+        "tolerance": 0,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the stated contract, axes, method, domain or denominator.",
+        "solution": "Four rows fail distinct documented rules; they are not converted to measured zeros.",
+        "lesson_ids": [
+          "programming-8"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "programming-8:calibrated",
+      "type": "numeric",
+      "prompt": "A reading is 2.4 arbitrary units, baseline is 0.4 and scale is 2 arbitrary units per mg/mL. What corrected concentration in mg/mL follows? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "programming-8-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 1,
+        "unit": "",
+        "tolerance": 0,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the stated contract, axes, method, domain or denominator.",
+        "solution": "Subtract baseline first: (2.4−0.4)/2=1 mg/mL.",
+        "lesson_ids": [
+          "programming-8"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "programming-8:unit-factor",
+      "type": "numeric",
+      "prompt": "What numerical factor converts a finite volume expressed in mL into the equivalent value expressed in uL? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "programming-8-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 1000,
+        "unit": "",
+        "tolerance": 0,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the stated contract, axes, method, domain or denominator.",
+        "solution": "One mL equals 1000 uL; boundary conversion must be applied once.",
+        "lesson_ids": [
+          "programming-8"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "programming-8:blank-rule",
+      "type": "single_choice",
+      "prompt": "Under the stated nonnegative-mass/positive-volume contract, how should a blank mass token be handled?",
+      "points": 1,
+      "objective_ids": [
+        "programming-8-objective-2"
+      ],
+      "options": [
+        "Quarantine the row with a missing-mass reason.",
+        "Use the preceding row’s mass without recording imputation.",
+        "Convert it to zero and include it as measured."
+      ],
+      "solution_spec": {
+        "answer": 0
+      },
+      "feedback": {
+        "hint": "Check the declared assumptions and information available.",
+        "solution": "Quarantine the row with a missing-mass reason.",
+        "lesson_ids": [
+          "programming-8"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "programming-8:pure-function",
+      "type": "single_choice",
+      "prompt": "Which design makes the concentration calculation independently checkable?",
+      "points": 1,
+      "objective_ids": [
+        "programming-8-objective-1"
+      ],
+      "options": [
+        "Read a mutable global calibration and rewrite the raw file inside the function.",
+        "Catch every exception and return zero.",
+        "Pass explicit converted mass and volume and return a result without mutating raw records."
+      ],
+      "solution_spec": {
+        "answer": 2
+      },
+      "feedback": {
+        "hint": "Check the declared assumptions and information available.",
+        "solution": "Pass explicit converted mass and volume and return a result without mutating raw records.",
+        "lesson_ids": [
+          "programming-8"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "programming-8:audit-trail",
+      "type": "single_choice",
+      "prompt": "Which report best preserves the meaning of an accepted-row mean?",
+      "points": 1,
+      "objective_ids": [
+        "programming-8-objective-3"
+      ],
+      "options": [
+        "Delete invalid rows and retain no record of them.",
+        "Include the accepted denominator and each exclusion reason with source identifiers.",
+        "Report only the mean with extra decimal places."
+      ],
+      "solution_spec": {
+        "answer": 1
+      },
+      "feedback": {
+        "hint": "Check the declared assumptions and information available.",
+        "solution": "Include the accepted denominator and each exclusion reason with source identifiers.",
+        "lesson_ids": [
+          "programming-8"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "programming-9:broadcast-size",
+      "type": "numeric",
+      "prompt": "Broadcasting shapes (4,3) and (3,) produces how many result entries? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "programming-9-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 12,
+        "unit": "",
+        "tolerance": 0,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the stated contract, axes, method, domain or denominator.",
+        "solution": "The result shape is (4,3), with 4×3=12 entries.",
+        "lesson_ids": [
+          "programming-9"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "programming-9:channel-mean",
+      "type": "numeric",
+      "prompt": "The corrected samples-by-channels matrix is [[0,0],[4,4],[8,8]]. What is its first channel mean over samples? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "programming-9-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 4,
+        "unit": "",
+        "tolerance": 0,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the stated contract, axes, method, domain or denominator.",
+        "solution": "The first column averages (0+4+8)/3=4.",
+        "lesson_ids": [
+          "programming-9"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "programming-9:sample-mean",
+      "type": "numeric",
+      "prompt": "For corrected samples-by-channels rows [[0,0],[4,4],[8,8]], what is the last sample mean over channels? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "programming-9-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 8,
+        "unit": "",
+        "tolerance": 0,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the stated contract, axes, method, domain or denominator.",
+        "solution": "The last row averages (8+8)/2=8; the sample axis remains.",
+        "lesson_ids": [
+          "programming-9"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "programming-9:paired-change",
+      "type": "numeric",
+      "prompt": "Paired baseline values are [1,2,3] and follow-up values are [2,4,8]. What is the mean paired change? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "programming-9-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 2.6666666666666665,
+        "unit": "",
+        "tolerance": 0.0002666666666666667,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the stated contract, axes, method, domain or denominator.",
+        "solution": "Pairwise differences are 1,2,5, so the mean change is 8/3.",
+        "lesson_ids": [
+          "programming-9"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "programming-9:memory-mb",
+      "type": "numeric",
+      "prompt": "A 2000-by-3000 float64 result has eight bytes per entry. What is its storage in decimal MB, excluding inputs, overhead and temporaries? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "programming-9-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 48,
+        "unit": "",
+        "tolerance": 0,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the stated contract, axes, method, domain or denominator.",
+        "solution": "2000×3000×8 bytes divided by one million is 48 MB.",
+        "lesson_ids": [
+          "programming-9"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "programming-9:sample-correction",
+      "type": "numeric",
+      "prompt": "Subtract sample corrections [1,2,3] as a column from signal rows [[10,100],[14,104],[18,108]]. What is the first corrected entry? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "programming-9-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 9,
+        "unit": "",
+        "tolerance": 0,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the stated contract, axes, method, domain or denominator.",
+        "solution": "The first sample correction is one, so the first entry is 10−1=9.",
+        "lesson_ids": [
+          "programming-9"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "programming-9:square-trap",
+      "type": "single_choice",
+      "prompt": "A (3,3) samples-by-channels matrix accepts subtraction of a (3,) vector. What follows?",
+      "points": 1,
+      "objective_ids": [
+        "programming-9-objective-1"
+      ],
+      "options": [
+        "Compatibility alone does not reveal whether the vector represents channels or samples.",
+        "The vector must contain channel baselines because the operation succeeded.",
+        "Broadcasting proves each resulting entry is an independent observation."
+      ],
+      "solution_spec": {
+        "answer": 0
+      },
+      "feedback": {
+        "hint": "Check the declared assumptions and information available.",
+        "solution": "Compatibility alone does not reveal whether the vector represents channels or samples.",
+        "lesson_ids": [
+          "programming-9"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "programming-9:outer-pairing",
+      "type": "single_choice",
+      "prompt": "Reshaping three follow-up values to (3,1) and subtracting a baseline vector of shape (3,) creates what?",
+      "points": 1,
+      "objective_ids": [
+        "programming-9-objective-2"
+      ],
+      "options": [
+        "Nine outer comparisons, not three paired changes or nine independent subjects.",
+        "Exactly the three intended paired differences.",
+        "Nine additional observed subjects."
+      ],
+      "solution_spec": {
+        "answer": 0
+      },
+      "feedback": {
+        "hint": "Check the declared assumptions and information available.",
+        "solution": "Nine outer comparisons, not three paired changes or nine independent subjects.",
+        "lesson_ids": [
+          "programming-9"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "programming-9:aliasing",
+      "type": "single_choice",
+      "prompt": "A transformation needs to preserve the parent array while editing a slice. Which decision follows?",
+      "points": 1,
+      "objective_ids": [
+        "programming-9-objective-3"
+      ],
+      "options": [
+        "Use an explicit independent copy and check that the parent remains unchanged.",
+        "Assume every slice automatically copies.",
+        "Rename the slice cleaned so it cannot share storage."
+      ],
+      "solution_spec": {
+        "answer": 0
+      },
+      "feedback": {
+        "hint": "Check the declared assumptions and information available.",
+        "solution": "Use an explicit independent copy and check that the parent remains unchanged.",
+        "lesson_ids": [
+          "programming-9"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "programming-10:retained-midpoint",
+      "type": "numeric",
+      "prompt": "For f(x)=x²−2 on [1,2], perform two interval halvings and then report the midpoint of the retained interval. What estimate follows? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "programming-10-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 1.375,
+        "unit": "",
+        "tolerance": 0.0001375,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the stated contract, axes, method, domain or denominator.",
+        "solution": "The retained interval is [1.25,1.5]; its midpoint is 1.375.",
+        "lesson_ids": [
+          "programming-10"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "programming-10:retained-bound",
+      "type": "numeric",
+      "prompt": "For f(x)=x²−2 on [1,2], after two interval halvings what is the final-interval midpoint location-error bound? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "programming-10-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0.125,
+        "unit": "",
+        "tolerance": 1.25e-05,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the stated contract, axes, method, domain or denominator.",
+        "solution": "The interval width is 1/4, so the final midpoint bound is 1/8.",
+        "lesson_ids": [
+          "programming-10"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "programming-10:width-eight",
+      "type": "numeric",
+      "prompt": "A valid continuous root bracket starts with width four. What width remains after eight completed interval halvings? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "programming-10-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0.015625,
+        "unit": "",
+        "tolerance": 1.5625e-06,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the stated contract, axes, method, domain or denominator.",
+        "solution": "Four divided by 2⁸ is 0.015625.",
+        "lesson_ids": [
+          "programming-10"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "programming-10:minimum-halvings",
+      "type": "numeric",
+      "prompt": "A valid root bracket starts with width four. How many completed interval halvings are minimally required so that its final midpoint location bound is at most 0.001? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "programming-10-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 11,
+        "unit": "",
+        "tolerance": 0,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the stated contract, axes, method, domain or denominator.",
+        "solution": "The bound is 4/2^(k+1); k=10 is too coarse and k=11 suffices.",
+        "lesson_ids": [
+          "programming-10"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "programming-10:newton-first",
+      "type": "numeric",
+      "prompt": "For f(x)=x²−2, Newton starts at x=1. What is its first updated value? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "programming-10-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 1.5,
+        "unit": "",
+        "tolerance": 0.00015000000000000001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the stated contract, axes, method, domain or denominator.",
+        "solution": "Newton gives 1−(1−2)/2=1.5.",
+        "lesson_ids": [
+          "programming-10"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "programming-10:newton-domain",
+      "type": "numeric",
+      "prompt": "For f(c)=c/(2+c)−0.5, Newton starts at c=10 with f=1/3 and derivative 1/72. What proposed c follows before domain rejection? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "programming-10-objective-3"
+      ],
+      "solution_spec": {
+        "answer": -14,
+        "unit": "",
+        "tolerance": 0,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the stated contract, axes, method, domain or denominator.",
+        "solution": "The proposed step is 10−(1/3)/(1/72)=−14, outside c≥0.",
+        "lesson_ids": [
+          "programming-10"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "programming-10:discontinuous",
+      "type": "single_choice",
+      "prompt": "For f(x)=1/(x−1), endpoints zero and two have opposite signs. Is this a justified continuous root bracket?",
+      "points": 1,
+      "objective_ids": [
+        "programming-10-objective-1"
+      ],
+      "options": [
+        "Yes: a tighter tolerance repairs the pole.",
+        "No: the interval includes a pole, so a sign change does not establish a zero.",
+        "Yes: every sign change guarantees a zero without other assumptions."
+      ],
+      "solution_spec": {
+        "answer": 1
+      },
+      "feedback": {
+        "hint": "Check the declared assumptions and information available.",
+        "solution": "No: the interval includes a pole, so a sign change does not establish a zero.",
+        "lesson_ids": [
+          "programming-10"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "programming-10:residual-scale",
+      "type": "single_choice",
+      "prompt": "For f(x)=0.001(x−2), estimate x=3 has residual 0.001. What parameter-error conclusion follows?",
+      "points": 1,
+      "objective_ids": [
+        "programming-10-objective-2"
+      ],
+      "options": [
+        "The estimate is exact because the residual is small.",
+        "The location error is one; residual size depends on the equation scale.",
+        "The location error must be at most 0.001."
+      ],
+      "solution_spec": {
+        "answer": 1
+      },
+      "feedback": {
+        "hint": "Check the declared assumptions and information available.",
+        "solution": "The location error is one; residual size depends on the equation scale.",
+        "lesson_ids": [
+          "programming-10"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "programming-10:newton-safeguard",
+      "type": "single_choice",
+      "prompt": "A Newton update for concentration proposes −14 although the domain is c≥0. What is justified?",
+      "points": 1,
+      "objective_ids": [
+        "programming-10-objective-3"
+      ],
+      "options": [
+        "Accept it because a Newton formula was evaluated.",
+        "Treat negative concentration as independent evidence of a real effect.",
+        "Reject or safeguard the step and retain valid domain/convergence checks."
+      ],
+      "solution_spec": {
+        "answer": 2
+      },
+      "feedback": {
+        "hint": "Check the declared assumptions and information available.",
+        "solution": "Reject or safeguard the step and retain valid domain/convergence checks.",
+        "lesson_ids": [
+          "programming-10"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "programming-11:trapezoid-coarse",
+      "type": "numeric",
+      "prompt": "Integrate t² on [0,1] by trapezoids at t=0,0.5,1. What approximation follows? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "programming-11-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0.375,
+        "unit": "",
+        "tolerance": 3.7500000000000003e-05,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the stated contract, axes, method, domain or denominator.",
+        "solution": "Each interval is width 0.5; endpoint-weighted areas total 0.375.",
+        "lesson_ids": [
+          "programming-11"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "programming-11:trapezoid-fine",
+      "type": "numeric",
+      "prompt": "Integrate t² on [0,1] by trapezoids at spacing 0.25. What approximation follows? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "programming-11-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0.34375,
+        "unit": "",
+        "tolerance": 3.4375e-05,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the stated contract, axes, method, domain or denominator.",
+        "solution": "The weighted values give 0.25×(0.0625+0.25+0.5625+0.5)=0.34375.",
+        "lesson_ids": [
+          "programming-11"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "programming-11:simpson",
+      "type": "numeric",
+      "prompt": "Apply equal-grid Simpson weights to t² at t=0,0.5,1. What approximation follows? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "programming-11-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0.3333333333333333,
+        "unit": "",
+        "tolerance": 3.3333333333333335e-05,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the stated contract, axes, method, domain or denominator.",
+        "solution": "The result is (0.5/3)×(0+4×0.25+1)=1/3.",
+        "lesson_ids": [
+          "programming-11"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "programming-11:fine-error",
+      "type": "numeric",
+      "prompt": "Trapezoid approximations are 0.375 at h=0.5 and 0.34375 at h=0.25. Under second-order leading error, what fine-grid error magnitude is estimated? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "programming-11-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0.010416666666666666,
+        "unit": "",
+        "tolerance": 1.0416666666666667e-06,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the stated contract, axes, method, domain or denominator.",
+        "solution": "Divide the refinement difference 0.03125 by 2²−1=3, giving 1/96.",
+        "lesson_ids": [
+          "programming-11"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "programming-11:irregular-area",
+      "type": "numeric",
+      "prompt": "Rates [0,2,2] mg/s occur at times [0,1,3] s. What nonuniform trapezoid total in mg follows? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "programming-11-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 5,
+        "unit": "",
+        "tolerance": 0,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the stated contract, axes, method, domain or denominator.",
+        "solution": "Areas are 1×(0+2)/2=1 and 2×(2+2)/2=4 mg, totaling five.",
+        "lesson_ids": [
+          "programming-11"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "programming-11:euler-end",
+      "type": "numeric",
+      "prompt": "For y′=−2y, y(0)=1, use four explicit Euler steps h=0.25 to reach one second. What state follows? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "programming-11-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 0.0625,
+        "unit": "",
+        "tolerance": 6.25e-06,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the stated contract, axes, method, domain or denominator.",
+        "solution": "Each multiplier is 0.5; four steps give 0.5⁴=0.0625.",
+        "lesson_ids": [
+          "programming-11"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "programming-11:grid-rule",
+      "type": "single_choice",
+      "prompt": "Which condition supports the usual equal-grid composite Simpson weights?",
+      "points": 1,
+      "objective_ids": [
+        "programming-11-objective-1"
+      ],
+      "options": [
+        "Equal spacing and an even number of intervals, with a suitable integrand.",
+        "Only the presence of three column names in the input file.",
+        "Arbitrary timestamps and any number of intervals without changing weights."
+      ],
+      "solution_spec": {
+        "answer": 0
+      },
+      "feedback": {
+        "hint": "Check the declared assumptions and information available.",
+        "solution": "Equal spacing and an even number of intervals, with a suitable integrand.",
+        "lesson_ids": [
+          "programming-11"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "programming-11:refinement-scope",
+      "type": "single_choice",
+      "prompt": "When does the stated Richardson leading-error estimate have a mathematical basis?",
+      "points": 1,
+      "objective_ids": [
+        "programming-11-objective-2"
+      ],
+      "options": [
+        "Adding arbitrary noisy measurements and treating them as exact evaluations.",
+        "Changing endpoints and model coefficients at each resolution.",
+        "Refining the same problem in a regime where the assumed order dominates."
+      ],
+      "solution_spec": {
+        "answer": 2
+      },
+      "feedback": {
+        "hint": "Check the declared assumptions and information available.",
+        "solution": "Refining the same problem in a regime where the assumed order dominates.",
+        "lesson_ids": [
+          "programming-11"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "programming-11:stable-positive",
+      "type": "single_choice",
+      "prompt": "Euler on y′=−2y has h=0.75 and multiplier −0.5. What follows?",
+      "points": 1,
+      "objective_ids": [
+        "programming-11-objective-3"
+      ],
+      "options": [
+        "The scalar mode is stable in magnitude but alternates sign and violates positivity for a concentration.",
+        "The state magnitude grows because the multiplier is negative.",
+        "A stable multiplier guarantees physical positivity and high accuracy."
+      ],
+      "solution_spec": {
+        "answer": 0
+      },
+      "feedback": {
+        "hint": "Check the declared assumptions and information available.",
+        "solution": "The scalar mode is stable in magnitude but alternates sign and violates positivity for a concentration.",
+        "lesson_ids": [
+          "programming-11"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "programming-12:centered-intercept",
+      "type": "numeric",
+      "prompt": "Fit y≈a+bz by ordinary least squares to z=[−1,0,1], y=[2,3,5]. What centered intercept a follows? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "programming-12-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 3.3333333333333335,
+        "unit": "",
+        "tolerance": 0.0003333333333333334,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the stated contract, axes, method, domain or denominator.",
+        "solution": "Centered z has mean zero, so a is the response mean 10/3.",
+        "lesson_ids": [
+          "programming-12"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "programming-12:slope",
+      "type": "numeric",
+      "prompt": "For the affine least-squares fit to z=[−1,0,1], y=[2,3,5], what slope b follows? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "programming-12-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 1.5,
+        "unit": "",
+        "tolerance": 0.00015000000000000001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the stated contract, axes, method, domain or denominator.",
+        "solution": "The centered cross-product is three and squared-coordinate sum is two, giving b=1.5.",
+        "lesson_ids": [
+          "programming-12"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "programming-12:sse",
+      "type": "numeric",
+      "prompt": "An affine fit has residuals [1/6,−1/3,1/6]. What sum of squared residuals follows? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "programming-12-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0.16666666666666666,
+        "unit": "",
+        "tolerance": 1.6666666666666667e-05,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the stated contract, axes, method, domain or denominator.",
+        "solution": "Squared residuals sum to 1/36+1/9+1/36=1/6.",
+        "lesson_ids": [
+          "programming-12"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "programming-12:residual-df",
+      "type": "numeric",
+      "prompt": "A full-rank affine fit has three observations and two fitted coefficients. How many residual degrees of freedom remain? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "programming-12-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 1,
+        "unit": "",
+        "tolerance": 0,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the stated contract, axes, method, domain or denominator.",
+        "solution": "Residual degrees of freedom are n−p=3−2=1.",
+        "lesson_ids": [
+          "programming-12"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "programming-12:rse",
+      "type": "numeric",
+      "prompt": "An affine fit has SSE=1/6, three observations and two coefficients. What residual standard error sqrt(SSE/(n−p)) follows? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "programming-12-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 0.408248290463863,
+        "unit": "",
+        "tolerance": 4.0824829046386304e-05,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the stated contract, axes, method, domain or denominator.",
+        "solution": "Divide SSE by one residual degree of freedom and take its square root, approximately 0.408248.",
+        "lesson_ids": [
+          "programming-12"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "programming-12:exact-spacing",
+      "type": "numeric",
+      "prompt": "Binary64 number 10⁸ lies in [2²⁶,2²⁷). With 52 fraction bits, what exact adjacent spacing follows? Scientific notation is accepted. Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "programming-12-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 1.4901161193847656e-08,
+        "unit": "",
+        "tolerance": 1.4901161193847657e-12,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null,
+        "relative_tolerance": 0.0001
+      },
+      "feedback": {
+        "hint": "Use the stated contract, axes, method, domain or denominator.",
+        "solution": "Binade spacing is 2^(26−52)=2⁻²⁶, approximately 1.490116×10⁻⁸, unlike the preserved scale estimate.",
+        "lesson_ids": [
+          "programming-12"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "programming-12:rank-loss",
+      "type": "single_choice",
+      "prompt": "All predictor values equal two in y≈a+bx. What do repeated y=5 observations identify?",
+      "points": 1,
+      "objective_ids": [
+        "programming-12-objective-2"
+      ],
+      "options": [
+        "A unique extrapolation at every other x.",
+        "The combination a+2b, not a and b separately.",
+        "A unique slope because there are many observations."
+      ],
+      "solution_spec": {
+        "answer": 1
+      },
+      "feedback": {
+        "hint": "Check the declared assumptions and information available.",
+        "solution": "The combination a+2b, not a and b separately.",
+        "lesson_ids": [
+          "programming-12"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "programming-12:residual-array",
+      "type": "single_choice",
+      "prompt": "A least-squares routine returns an empty residual array. Which response is supported?",
+      "points": 1,
+      "objective_ids": [
+        "programming-12-objective-1"
+      ],
+      "options": [
+        "Treat the array as a confidence interval.",
+        "Declare the fit error exactly zero automatically.",
+        "Check rank and matrix shape and recompute the intended residual loss."
+      ],
+      "solution_spec": {
+        "answer": 2
+      },
+      "feedback": {
+        "hint": "Check the declared assumptions and information available.",
+        "solution": "Check rank and matrix shape and recompute the intended residual loss.",
+        "lesson_ids": [
+          "programming-12"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "programming-12:stable-fit",
+      "type": "single_choice",
+      "prompt": "Which statement about QR/SVD fitting is justified?",
+      "points": 1,
+      "objective_ids": [
+        "programming-12-objective-3"
+      ],
+      "options": [
+        "It supplies held-out validation from training residuals alone.",
+        "It can avoid unnecessary normal-equation sensitivity but does not establish model validity or remove sampling bias.",
+        "It proves a biological mechanism whenever SSE is small."
+      ],
+      "solution_spec": {
+        "answer": 1
+      },
+      "feedback": {
+        "hint": "Check the declared assumptions and information available.",
+        "solution": "It can avoid unnecessary normal-equation sensitivity but does not establish model validity or remove sampling bias.",
+        "lesson_ids": [
+          "programming-12"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "programming-13:sensitivity",
+      "type": "numeric",
+      "prompt": "At the synthetic threshold, TP=2, FP=3, FN=1 and TN=2. What sensitivity as a fraction follows? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "programming-13-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0.6666666666666666,
+        "unit": "",
+        "tolerance": 6.666666666666667e-05,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the stated contract, axes, method, domain or denominator.",
+        "solution": "Sensitivity divides two true positives by all three actual positives.",
+        "lesson_ids": [
+          "programming-13"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "programming-13:precision",
+      "type": "numeric",
+      "prompt": "At the synthetic threshold, TP=2, FP=3, FN=1 and TN=2. What precision as a fraction follows? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "programming-13-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0.4,
+        "unit": "",
+        "tolerance": 4e-05,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the stated contract, axes, method, domain or denominator.",
+        "solution": "Precision is TP/(TP+FP)=2/5=0.4.",
+        "lesson_ids": [
+          "programming-13"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "programming-13:specificity",
+      "type": "numeric",
+      "prompt": "At the synthetic threshold, TP=2, FP=3, FN=1 and TN=2. What specificity as a fraction follows? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "programming-13-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0.4,
+        "unit": "",
+        "tolerance": 4e-05,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the stated contract, axes, method, domain or denominator.",
+        "solution": "Specificity is TN/(TN+FP)=2/5=0.4.",
+        "lesson_ids": [
+          "programming-13"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "programming-13:accuracy",
+      "type": "numeric",
+      "prompt": "At the synthetic threshold, TP=2, FP=3, FN=1 and TN=2. What accuracy as a fraction follows? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "programming-13-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0.5,
+        "unit": "",
+        "tolerance": 5e-05,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the stated contract, axes, method, domain or denominator.",
+        "solution": "Four of eight predictions are correct, giving accuracy 0.5.",
+        "lesson_ids": [
+          "programming-13"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "programming-13:higher-threshold",
+      "type": "numeric",
+      "prompt": "Scores [0.9,0.8,0.7,0.6,0.5,0.4,0.3,0.2] have labels [1,0,1,0,0,1,0,0]. With score≥0.7 positive, what accuracy as a fraction follows? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "programming-13-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 0.75,
+        "unit": "",
+        "tolerance": 7.500000000000001e-05,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the stated contract, axes, method, domain or denominator.",
+        "solution": "The counts become TP=2,FP=1,FN=1,TN=4, so six of eight are correct.",
+        "lesson_ids": [
+          "programming-13"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "programming-13:donor-overlap",
+      "type": "numeric",
+      "prompt": "Four donors each have two rows. Training takes each donor’s first row and evaluation each second row. How many donor identifiers overlap? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "programming-13-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 4,
+        "unit": "",
+        "tolerance": 0,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the stated contract, axes, method, domain or denominator.",
+        "solution": "All four donors occur on both sides despite disjoint row identifiers.",
+        "lesson_ids": [
+          "programming-13"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "programming-13:undefined-precision",
+      "type": "single_choice",
+      "prompt": "An all-negative classifier predicts no positives. Under the declared ratio definition, how is precision reported?",
+      "points": 1,
+      "objective_ids": [
+        "programming-13-objective-1"
+      ],
+      "options": [
+        "Exactly 99% regardless of prevalence.",
+        "Undefined because TP+FP is zero, with the convention stated.",
+        "Exactly one because false positives are zero."
+      ],
+      "solution_spec": {
+        "answer": 1
+      },
+      "feedback": {
+        "hint": "Check the declared assumptions and information available.",
+        "solution": "Undefined because TP+FP is zero, with the convention stated.",
+        "lesson_ids": [
+          "programming-13"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "programming-13:split-target",
+      "type": "single_choice",
+      "prompt": "The target is prediction for unseen donors with repeated rows per donor. Which split respects that target?",
+      "points": 1,
+      "objective_ids": [
+        "programming-13-objective-2"
+      ],
+      "options": [
+        "Keep every donor wholly in one split and fit preprocessing on training data.",
+        "Fit a scaler on all rows before splitting to guarantee fairness.",
+        "Randomize individual rows until both sides contain every donor."
+      ],
+      "solution_spec": {
+        "answer": 0
+      },
+      "feedback": {
+        "hint": "Check the declared assumptions and information available.",
+        "solution": "Keep every donor wholly in one split and fit preprocessing on training data.",
+        "lesson_ids": [
+          "programming-13"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "programming-13:threshold-selection",
+      "type": "single_choice",
+      "prompt": "A threshold is chosen by maximizing the final test-set score. How should that use be described?",
+      "points": 1,
+      "objective_ids": [
+        "programming-13-objective-3"
+      ],
+      "options": [
+        "The set has been used for selection and is no longer an untouched final evaluation.",
+        "A fixed random seed makes test-based selection unbiased.",
+        "The score remains independent because only the threshold changed."
+      ],
+      "solution_spec": {
+        "answer": 0
+      },
+      "feedback": {
+        "hint": "Check the declared assumptions and information available.",
+        "solution": "The set has been used for selection and is no longer an untouched final evaluation.",
+        "lesson_ids": [
+          "programming-13"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "programming-lab-01:summary",
+      "type": "file_upload",
+      "prompt": "After applying the declared concentration contract to pipeline-records.csv, upload exact columns donor,accepted_records,mean_concentration_mg_ml with rows d01 through d08. Do not include quarantined records or change the frozen split.",
+      "points": 16,
+      "objective_ids": [
+        "programming-lab-01-objective-1"
+      ],
+      "solution_spec": {
+        "accepted_media_types": [
+          "text/csv"
+        ],
+        "max_bytes": 32768,
+        "validation_spec": {
+          "format": "csv-numeric-table-v1",
+          "delimiter": ",",
+          "key_column": "donor",
+          "columns": [
+            "donor",
+            "accepted_records",
+            "mean_concentration_mg_ml"
+          ],
+          "checks": [
+            {
+              "id": "d01-accepted_records",
+              "row_id": "d01",
+              "column": "accepted_records",
+              "type": "numeric",
+              "answer": 2.0,
+              "unit": "",
+              "tolerance": 0,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "count",
+                "values": [
+                  1,
+                  3
+                ]
+              }
+            },
+            {
+              "id": "d01-mean_concentration_mg_ml",
+              "row_id": "d01",
+              "column": "mean_concentration_mg_ml",
+              "type": "numeric",
+              "answer": 2.0,
+              "unit": "mg/mL",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  1,
+                  3
+                ]
+              }
+            },
+            {
+              "id": "d02-accepted_records",
+              "row_id": "d02",
+              "column": "accepted_records",
+              "type": "numeric",
+              "answer": 2.0,
+              "unit": "",
+              "tolerance": 0,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "count",
+                "values": [
+                  2,
+                  4
+                ]
+              }
+            },
+            {
+              "id": "d02-mean_concentration_mg_ml",
+              "row_id": "d02",
+              "column": "mean_concentration_mg_ml",
+              "type": "numeric",
+              "answer": 3.0,
+              "unit": "mg/mL",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  2,
+                  4
+                ]
+              }
+            },
+            {
+              "id": "d03-accepted_records",
+              "row_id": "d03",
+              "column": "accepted_records",
+              "type": "numeric",
+              "answer": 2.0,
+              "unit": "",
+              "tolerance": 0,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "count",
+                "values": [
+                  3,
+                  5
+                ]
+              }
+            },
+            {
+              "id": "d03-mean_concentration_mg_ml",
+              "row_id": "d03",
+              "column": "mean_concentration_mg_ml",
+              "type": "numeric",
+              "answer": 4.0,
+              "unit": "mg/mL",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  3,
+                  5
+                ]
+              }
+            },
+            {
+              "id": "d04-accepted_records",
+              "row_id": "d04",
+              "column": "accepted_records",
+              "type": "numeric",
+              "answer": 2.0,
+              "unit": "",
+              "tolerance": 0,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "count",
+                "values": [
+                  4,
+                  6
+                ]
+              }
+            },
+            {
+              "id": "d04-mean_concentration_mg_ml",
+              "row_id": "d04",
+              "column": "mean_concentration_mg_ml",
+              "type": "numeric",
+              "answer": 5.0,
+              "unit": "mg/mL",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  4,
+                  6
+                ]
+              }
+            },
+            {
+              "id": "d05-accepted_records",
+              "row_id": "d05",
+              "column": "accepted_records",
+              "type": "numeric",
+              "answer": 2.0,
+              "unit": "",
+              "tolerance": 0,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "count",
+                "values": [
+                  5,
+                  7
+                ]
+              }
+            },
+            {
+              "id": "d05-mean_concentration_mg_ml",
+              "row_id": "d05",
+              "column": "mean_concentration_mg_ml",
+              "type": "numeric",
+              "answer": 6.0,
+              "unit": "mg/mL",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  5,
+                  7
+                ]
+              }
+            },
+            {
+              "id": "d06-accepted_records",
+              "row_id": "d06",
+              "column": "accepted_records",
+              "type": "numeric",
+              "answer": 2.0,
+              "unit": "",
+              "tolerance": 0,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "count",
+                "values": [
+                  6,
+                  8
+                ]
+              }
+            },
+            {
+              "id": "d06-mean_concentration_mg_ml",
+              "row_id": "d06",
+              "column": "mean_concentration_mg_ml",
+              "type": "numeric",
+              "answer": 7.0,
+              "unit": "mg/mL",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  6,
+                  8
+                ]
+              }
+            },
+            {
+              "id": "d07-accepted_records",
+              "row_id": "d07",
+              "column": "accepted_records",
+              "type": "numeric",
+              "answer": 2.0,
+              "unit": "",
+              "tolerance": 0,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "count",
+                "values": [
+                  7,
+                  9
+                ]
+              }
+            },
+            {
+              "id": "d07-mean_concentration_mg_ml",
+              "row_id": "d07",
+              "column": "mean_concentration_mg_ml",
+              "type": "numeric",
+              "answer": 8.0,
+              "unit": "mg/mL",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  7,
+                  9
+                ]
+              }
+            },
+            {
+              "id": "d08-accepted_records",
+              "row_id": "d08",
+              "column": "accepted_records",
+              "type": "numeric",
+              "answer": 2.0,
+              "unit": "",
+              "tolerance": 0,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "count",
+                "values": [
+                  8,
+                  10
+                ]
+              }
+            },
+            {
+              "id": "d08-mean_concentration_mg_ml",
+              "row_id": "d08",
+              "column": "mean_concentration_mg_ml",
+              "type": "numeric",
+              "answer": 9.0,
+              "unit": "mg/mL",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  8,
+                  10
+                ]
+              }
+            }
+          ]
+        },
+        "rubric": [
+          {
+            "id": "d01-accepted_records",
+            "criterion": "d01: accepted_records",
+            "points": 1,
+            "evidence": [
+              "Recomputes accepted_records for d01 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "d01-mean_concentration_mg_ml",
+            "criterion": "d01: mean_concentration_mg_ml",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_concentration_mg_ml for d01 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "d02-accepted_records",
+            "criterion": "d02: accepted_records",
+            "points": 1,
+            "evidence": [
+              "Recomputes accepted_records for d02 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "d02-mean_concentration_mg_ml",
+            "criterion": "d02: mean_concentration_mg_ml",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_concentration_mg_ml for d02 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "d03-accepted_records",
+            "criterion": "d03: accepted_records",
+            "points": 1,
+            "evidence": [
+              "Recomputes accepted_records for d03 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "d03-mean_concentration_mg_ml",
+            "criterion": "d03: mean_concentration_mg_ml",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_concentration_mg_ml for d03 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "d04-accepted_records",
+            "criterion": "d04: accepted_records",
+            "points": 1,
+            "evidence": [
+              "Recomputes accepted_records for d04 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "d04-mean_concentration_mg_ml",
+            "criterion": "d04: mean_concentration_mg_ml",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_concentration_mg_ml for d04 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "d05-accepted_records",
+            "criterion": "d05: accepted_records",
+            "points": 1,
+            "evidence": [
+              "Recomputes accepted_records for d05 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "d05-mean_concentration_mg_ml",
+            "criterion": "d05: mean_concentration_mg_ml",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_concentration_mg_ml for d05 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "d06-accepted_records",
+            "criterion": "d06: accepted_records",
+            "points": 1,
+            "evidence": [
+              "Recomputes accepted_records for d06 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "d06-mean_concentration_mg_ml",
+            "criterion": "d06: mean_concentration_mg_ml",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_concentration_mg_ml for d06 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "d07-accepted_records",
+            "criterion": "d07: accepted_records",
+            "points": 1,
+            "evidence": [
+              "Recomputes accepted_records for d07 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "d07-mean_concentration_mg_ml",
+            "criterion": "d07: mean_concentration_mg_ml",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_concentration_mg_ml for d07 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "d08-accepted_records",
+            "criterion": "d08: accepted_records",
+            "points": 1,
+            "evidence": [
+              "Recomputes accepted_records for d08 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "d08-mean_concentration_mg_ml",
+            "criterion": "d08: mean_concentration_mg_ml",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_concentration_mg_ml for d08 from the preparation-level values."
+            ]
+          }
+        ]
+      },
+      "feedback": {
+        "hint": "Validate and convert each record before grouping accepted concentrations by donor.",
+        "solution": "Every donor has two accepted rows; the concentrations are i and i+2 mg/mL for donor Di. Four additional records fail the contract.",
+        "lesson_ids": [
+          "programming-lab-01"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "programming-lab-01:accepted",
+      "type": "numeric",
+      "prompt": "The pipeline file contains sixteen valid rows and four distinct contract failures. How many concentration records are accepted? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "programming-lab-01-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 16,
+        "unit": "",
+        "tolerance": 0,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Separate accepted records from quarantine events.",
+        "solution": "There are sixteen accepted records, two per donor. Missing, zero-volume, nonfinite and unknown-unit rows are excluded.",
+        "lesson_ids": [
+          "programming-lab-01"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "programming-lab-01:excluded",
+      "type": "numeric",
+      "prompt": "The pipeline file has one blank-mass, one zero-volume, one nan-mass and one unknown-unit row, all distinct. How many records are quarantined? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "programming-lab-01-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 4,
+        "unit": "",
+        "tolerance": 0,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Count failures as excluded records, not measured zeros.",
+        "solution": "Four distinct records fail the declared contract; their reasons are retained separately.",
+        "lesson_ids": [
+          "programming-lab-01"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "programming-lab-01:precision",
+      "type": "numeric",
+      "prompt": "For the frozen evaluation scores in E01–E08, with positive defined as score≥0.5, TP=2 and FP=3. What precision as a fraction follows? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "programming-lab-01-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0.4,
+        "unit": "",
+        "tolerance": 0.0001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use predicted positives as the denominator.",
+        "solution": "Precision is 2/(2+3)=0.4 on the eight accepted evaluation records.",
+        "lesson_ids": [
+          "programming-lab-01"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "programming-lab-01:sensitivity",
+      "type": "numeric",
+      "prompt": "For the frozen evaluation scores in E01–E08 at score≥0.5, TP=2 and FN=1. What sensitivity as a fraction follows? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "programming-lab-01-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0.6666666666666666,
+        "unit": "",
+        "tolerance": 0.0001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use actual positives as the denominator.",
+        "solution": "Sensitivity is 2/(2+1)=2/3. The constructed score table does not establish real utility.",
+        "lesson_ids": [
+          "programming-lab-01"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "programming-lab-01:interpretation",
+      "type": "structured",
+      "prompt": "Select conclusions supported by the declared pipeline and frozen split.",
+      "points": 3,
+      "objective_ids": [
+        "programming-lab-01-objective-3"
+      ],
+      "response_fields": [
+        {
+          "id": "missing",
+          "type": "single_choice",
+          "prompt": "What does X01’s blank mass mean under the declared policy?",
+          "options": [
+            "The concentration is missing and the row is quarantined.",
+            "The concentration is measured as zero.",
+            "The donor is automatically removed from both splits."
+          ],
+          "points": 1
+        },
+        {
+          "id": "split",
+          "type": "single_choice",
+          "prompt": "Which claim describes the accepted split assignments?",
+          "options": [
+            "Training donors d01–d04 and evaluation donors d05–d08 are disjoint.",
+            "Every donor occurs in both splits because each has repeated measurements.",
+            "Disjoint donors prove validation at every future site."
+          ],
+          "points": 1
+        },
+        {
+          "id": "threshold",
+          "type": "single_choice",
+          "prompt": "If evaluation performance is used to choose threshold 0.7 instead of 0.5, what follows?",
+          "options": [
+            "These evaluation rows have been consulted for selection.",
+            "They remain untouched because scores did not change.",
+            "The four excluded rows become valid automatically."
+          ],
+          "points": 1
+        }
+      ],
+      "solution_spec": {
+        "field_specs": [
+          {
+            "id": "missing",
+            "type": "single_choice",
+            "answer": 0
+          },
+          {
+            "id": "split",
+            "type": "single_choice",
+            "answer": 0
+          },
+          {
+            "id": "threshold",
+            "type": "single_choice",
+            "answer": 0
+          }
+        ],
+        "rubric": [
+          {
+            "id": "missing",
+            "criterion": "Missingness interpretation",
+            "points": 1,
+            "evidence": [
+              "The policy excludes the record without inventing a measurement."
+            ]
+          },
+          {
+            "id": "split",
+            "criterion": "Evaluation domain",
+            "points": 1,
+            "evidence": [
+              "Split identifiers are frozen by donor, but other shifts are untested."
+            ]
+          },
+          {
+            "id": "threshold",
+            "criterion": "Selection scope",
+            "points": 1,
+            "evidence": [
+              "Threshold selection consumes evaluation information."
+            ]
+          }
+        ]
+      },
+      "feedback": {
+        "hint": "Track record exclusions, donor membership and selection decisions separately.",
+        "solution": "Quarantine preserves missingness, the declared donor split is disjoint and evaluation-driven threshold tuning changes its role.",
+        "lesson_ids": [
+          "programming-lab-01"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "programming-lab-01:evidence",
+      "type": "multiple_select",
+      "prompt": "Which statements about the contract-filtered pipeline-records.csv donor summaries and frozen evaluation are supported? Select all that apply.",
+      "points": 2,
+      "objective_ids": [
+        "programming-lab-01-objective-3"
+      ],
+      "options": [
+        "Invalid volumes should be replaced with one mL to preserve every row.",
+        "Repeated donor rows establish sixteen independent donors.",
+        "Sixteen concentration rows satisfy the supplied contract.",
+        "The original 0.5-threshold evaluation has two true positives and three false positives.",
+        "Each reported donor mean is based on two accepted records."
+      ],
+      "solution_spec": {
+        "answer": [
+          2,
+          3,
+          4
+        ],
+        "partial_credit": "correct-minus-incorrect-clamped-v1"
+      },
+      "feedback": {
+        "hint": "Keep record counts, donor counts and threshold decisions distinct.",
+        "solution": "Sixteen valid records produce eight two-record donor summaries. The declared threshold gives TP=2,FP=3; imputation and independent-donor claims are unsupported.",
+        "lesson_ids": [
+          "programming-lab-01"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "programming-lab-01:case-link",
+      "type": "single_choice",
+      "prompt": "How does the preserved 99%-accuracy classifier case connect to this constructed pipeline?",
+      "points": 1,
+      "objective_ids": [
+        "programming-lab-01-objective-3"
+      ],
+      "options": [
+        "A reproducible CSV makes accuracy sufficient evidence of usefulness.",
+        "Any threshold with higher observed accuracy is clinically validated.",
+        "Accuracy needs class-sensitive metrics, a stated threshold and validation that respects the prediction target."
+      ],
+      "solution_spec": {
+        "answer": 2
+      },
+      "feedback": {
+        "hint": "Separate repeatability, metrics and validation scope.",
+        "solution": "The case requires additional metrics and appropriate held-out evidence; neither this toy dataset nor reproducible processing establishes real classifier utility.",
+        "lesson_ids": [
+          "programming-lab-01"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
     }
   ]
 }

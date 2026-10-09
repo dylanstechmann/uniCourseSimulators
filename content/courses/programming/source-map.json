@@ -93,6 +93,104 @@
       "original_content": true,
       "license": "CC-BY-4.0",
       "modifications": []
+    },
+    {
+      "module_id": "programming-module-8",
+      "lesson_id": "programming-8",
+      "reading": "modules/08-contracts-parsing-and-pure-functions.md",
+      "source_ids": [
+        "numerical",
+        "engineeringMath",
+        "python-programming-csv"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "programming-module-9",
+      "lesson_id": "programming-9",
+      "reading": "modules/09-array-shapes-broadcasting-and-memory.md",
+      "source_ids": [
+        "numerical",
+        "engineeringMath",
+        "numpy-programming-broadcast"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "programming-module-10",
+      "lesson_id": "programming-10",
+      "reading": "modules/10-root-brackets-residuals-and-conditioning.md",
+      "source_ids": [
+        "numerical",
+        "engineeringMath",
+        "scipy-programming-bisect"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "programming-module-11",
+      "lesson_id": "programming-11",
+      "reading": "modules/11-quadrature-step-error-and-stability.md",
+      "source_ids": [
+        "numerical",
+        "engineeringMath"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "programming-module-12",
+      "lesson_id": "programming-12",
+      "reading": "modules/12-least-squares-rank-and-scaled-coordinates.md",
+      "source_ids": [
+        "numerical",
+        "engineeringMath",
+        "numpy-programming-lstsq"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "programming-module-13",
+      "lesson_id": "programming-13",
+      "reading": "modules/13-grouped-validation-thresholds-and-reproducibility.md",
+      "source_ids": [
+        "numerical",
+        "engineeringMath",
+        "sklearn-programming-cross-validation"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "programming-module-lab-01",
+      "lesson_id": "programming-lab-01",
+      "reading": "labs/01-contracts-and-held-out-donor-reports.md",
+      "source_ids": [
+        "numerical",
+        "engineeringMath",
+        "python-programming-csv",
+        "sklearn-programming-cross-validation"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
     }
   ]
 }

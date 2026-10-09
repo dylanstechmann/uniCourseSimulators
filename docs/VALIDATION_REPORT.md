@@ -4,7 +4,35 @@
 
 2026-10-06; synthetic local learner data only. Milestones 1 and 2 are implemented. Milestone 3 remains partial; deterministic graders and prototype graded-assignment and review workflows are described below. A Milestone 4 curriculum-map increment is implemented and tested, while subject-matter review and map refinement remain. All 25 course packages are **partial**; zero are beta, complete or externally reviewed. Human score review is limited to saved attempts and does not constitute course-content review. No semester equivalence, university credit, security certification or public production deployment is asserted.
 
-## Current increment: Circuits lessons, channel-diagnostic lab and proposed schedule (0.4.0, 2026-10-09)
+## Current increment: Programming lessons, pipeline lab and proposed schedule (0.4.0, 2026-10-09)
+
+Developed with Codex assistance. Programming advances from 0.3.2 to 0.4.0 while remaining partial, unreviewed and formative-only. Six original lessons develop input contracts/parsing/pure functions, array axes/broadcasting/memory, root brackets/residual conditioning, quadrature/refinement/stability, least-squares rank/scaling and grouped validation/thresholds. Each has six numeric and three conceptual choices. One synthetic pipeline lab and a proposed 14-week sequence complete the increment. There are 62 new items and 28 new cards; the package has 14 readings, 88 items and 48 cards. All 26 prior questions, 20 cards, seven module definitions, eight assessments and the original classifier case remain unchanged. Learner code execution remains disabled.
+
+Separate calculations cover all 54 numeric keys, including 14 preserved ones, and sixteen CSV cells. Root bracket invariants and domain counterexamples, quadrature order, stability versus positivity, residual orthogonality/rank, exact binade spacing, group separation and frozen threshold counts add evidence. The trusted authored concentration snippet is checked on valid, invalid, nonfinite and overflow-result inputs. All three new code blocks have syntax checks; the NumPy snippets are not executed in these tests. Array and affine-fit outputs are recalculated with standard Python arithmetic. This is developer-side checking, not execution of learner code. The [AI-assisted record](reviews/ai-assisted/programming-0.4.0.md) documents models and limits. The same AI authored content and tests; no independent or qualified human review occurred.
+
+Five official documentation pages were opened and relevant behavior/metadata checked directly: Python CSV, NumPy broadcasting and least squares, SciPy bisection and scikit-learn cross-validation. They remain link-only with no imported prose, examples, figures or data, no broadened permissions and no new DOI/PMID/NCT or paper link. No identifier-resolution pass is claimed. Displayed documentation versions do not describe the project's installed dependencies.
+
+| Command/check (Linux development container, Python 3.12.3) | Result |
+|---|---|
+| `python -B tools/validate_content.py` | Initial FAIL: uppercase CSV check/rubric IDs, with cascading missing references; IDs repaired |
+| `python -B tools/validate_content.py` | Second FAIL: uppercase CSV row codes, with cascading missing references; dataset/guide/key codes repaired |
+| `python -B tools/validate_content.py --json` | PASS after repairs: 25 packages, 376 lessons, 2162 questions, 1244 cards, 25 cases; 0 errors; 98 legacy-depth warnings |
+| `ruff format tests/content/test_programming_recalculations.py` | Formatted; formatted again after naming repair |
+| `ruff check tests/content/test_programming_recalculations.py` | Initial FAIL: four E741 ambiguous locals; renamed; rerun PASS |
+| `python -B -m pytest tests/content/test_programming_recalculations.py tests/content/test_new_geroscience_and_statistics_lessons.py tests/content/test_learner_visible_number_formatting.py -q -p no:cacheprovider` | PASS: 573 on first run; 573 again after ID/naming repairs; no numeric answer or tolerance changed |
+| `python -B /workspace/courselab-session-artifacts/claude-resume-2026-10-08/selfcheck.py programming programming-` | PASS on first run: all 88 items earn full credit in the actual grader |
+| `bash /workspace/.claude/skills/courselab-dev/scripts/verify.sh --log-dir /workspace/courselab-session-artifacts/codex-programming-2026-10-09/verification-final` | PASS: content, legacy (7), security (759 source files, 0 findings), ruff, root (2305), backend (4581 passed, 2 existing symbolic-builder skips) |
+| `python -B tools/objective_coverage.py --check docs/COURSE_GAP_REPORT.md` | PASS: generated report matches |
+| `python3 -B /workspace/.claude/skills/regen-guardrails/scripts/claims_scan.py --repo uniStemCourseSimulators` | PASS: 0 HIGH, MED or LOW findings |
+| `git diff --check` | PASS |
+
+Schema initially rejected uppercase check/rubric IDs and then row codes. Final row codes d01–d08 are consistent in the dataset, guide and summary specifications. These repairs changed identifiers only; no numerical key or tolerance was changed to make a recalculation pass. Full verification began after a separate repaired schema pass. The preserved approximate spacing key stays |x| times epsilon near 10⁸; new instruction and a separately checked item distinguish exact binade spacing 2⁻²⁶. Its original tolerance does not validate the approximate key as exact.
+
+The pipeline has twenty synthetic records, sixteen valid concentrations and four distinct failures. Eight donors have two accepted rows each, with disjoint training/evaluation membership. Scores and labels are supplied toy values without a fitted classifier. The stipulated complete-record evaluation rule is not a universal or unbiased policy. At frozen score≥0.5, evaluation counts are 2,3,1,2 for TP,FP,FN,TN; at the predefined 0.7 comparison they are 2,1,1,4. Selection from that comparison consults evaluation information. No real utility, clinical decision or external validation is inferred.
+
+Frontend checks, Docker Compose and Playwright were not run locally for this increment; publication CI runs them. Logs and helpers remain outside git in courselab-session-artifacts/codex-programming-2026-10-09. Qualified review and measured workload remain absent.
+
+## Previous increment: Circuits lessons, channel-diagnostic lab and proposed schedule (0.4.0, 2026-10-09)
 
 Developed with Codex assistance. Electrical Circuits & Instrumentation advances from 0.3.1 to 0.4.0 while remaining partial, unreviewed and formative-only. Seven original lessons develop nodal/port/power analysis, finite feedback/bias/range, differential/common-mode/interface imbalance, filter loading/recovery, noise/covariance/uncertainty, ADC acquisition/aliasing and calibration/clipping evidence. Each has six numeric and three conceptual choices. One synthetic channel-diagnostic lab and a proposed 14-week sequence complete the increment. There are 71 new items and 32 cards; the package has 14 readings, 91 items and 48 cards. All 20 prior questions, 16 cards, six module definitions, seven assessments and the original movement-clipping/rest-drift case remain unchanged.
 
