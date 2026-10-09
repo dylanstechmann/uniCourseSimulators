@@ -805,6 +805,2605 @@
         "kind": "original",
         "modifications": []
       }
+    },
+    {
+      "id": "general-chemistry-2-8:standard-g",
+      "type": "numeric",
+      "prompt": "Use synthetic ΔH°=12.0 kJ/mol, ΔS°=50.0 J/(mol·K), T=300 K with the stated constant-parameter comparison. What ΔG° in kJ/mol results? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "general-chemistry-2-8-objective-1"
+      ],
+      "solution_spec": {
+        "answer": -3,
+        "unit": "",
+        "tolerance": 0,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the stated equation, convention and conserved amounts.",
+        "solution": "The declared model gives approximately −3 in the requested scale; check units and domain before interpreting it.",
+        "lesson_ids": [
+          "general-chemistry-2-8"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "general-chemistry-2-8:crossing",
+      "type": "numeric",
+      "prompt": "Hold those same ΔH° and ΔS° constant. What T in K makes ΔG° zero? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "general-chemistry-2-8-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 240,
+        "unit": "",
+        "tolerance": 0,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the stated equation, convention and conserved amounts.",
+        "solution": "The declared model gives approximately 240 in the requested scale; check units and domain before interpreting it.",
+        "lesson_ids": [
+          "general-chemistry-2-8"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "general-chemistry-2-8:equilibrium-constant",
+      "type": "numeric",
+      "prompt": "For ΔG°=−3000 J/mol, R=8.314 J/(mol·K) and T=300 K, what dimensionless K follows? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "general-chemistry-2-8-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 3.329394560835822,
+        "unit": "",
+        "tolerance": 0.00033293945608358223,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the stated equation, convention and conserved amounts.",
+        "solution": "The declared model gives approximately 3.32939 in the requested scale; check units and domain before interpreting it.",
+        "lesson_ids": [
+          "general-chemistry-2-8"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "general-chemistry-2-8:current-g",
+      "type": "numeric",
+      "prompt": "For ΔG°=−3000 J/mol, Q=10, R=8.314 J/(mol·K), T=300 K, what current ΔG in kJ/mol results? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "general-chemistry-2-8-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 2.7431077389457488,
+        "unit": "",
+        "tolerance": 0.0002743107738945749,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the stated equation, convention and conserved amounts.",
+        "solution": "The declared model gives approximately 2.74311 in the requested scale; check units and domain before interpreting it.",
+        "lesson_ids": [
+          "general-chemistry-2-8"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "general-chemistry-2-8:equilibrium-b",
+      "type": "numeric",
+      "prompt": "For ideal A⇌B, total 1.0 mol/L, K=exp(3000/(8.314×300)), what equilibrium B concentration in mol/L results? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "general-chemistry-2-8-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0.7690208212838557,
+        "unit": "",
+        "tolerance": 7.690208212838557e-05,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the stated equation, convention and conserved amounts.",
+        "solution": "The declared model gives approximately 0.769021 in the requested scale; check units and domain before interpreting it.",
+        "lesson_ids": [
+          "general-chemistry-2-8"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "general-chemistry-2-8:coupled-k",
+      "type": "numeric",
+      "prompt": "Two compatible reactions have dimensionless constants 4 and 0.5 at matching conditions. What is their summed-reaction K? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "general-chemistry-2-8-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 2,
+        "unit": "",
+        "tolerance": 0,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the stated equation, convention and conserved amounts.",
+        "solution": "The declared model gives approximately 2 in the requested scale; check units and domain before interpreting it.",
+        "lesson_ids": [
+          "general-chemistry-2-8"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "general-chemistry-2-8:direction",
+      "type": "single_choice",
+      "prompt": "For ΔG°<0 but Q>K at the current composition, which forward direction statement is correct?",
+      "points": 1,
+      "objective_ids": [
+        "general-chemistry-2-8-objective-2"
+      ],
+      "options": [
+        "The reaction must stop microscopically.",
+        "Forward ΔG is positive under the stated model; reverse change is favored.",
+        "Forward reaction must be favored because ΔG° is negative."
+      ],
+      "solution_spec": {
+        "answer": 1
+      },
+      "feedback": {
+        "hint": "Check the stated conditions rather than infer more than the model supports.",
+        "solution": "Forward ΔG is positive under the stated model; reverse change is favored.",
+        "lesson_ids": [
+          "general-chemistry-2-8"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "general-chemistry-2-8:speed",
+      "type": "single_choice",
+      "prompt": "What does negative reaction free energy alone establish?",
+      "points": 1,
+      "objective_ids": [
+        "general-chemistry-2-8-objective-3"
+      ],
+      "options": [
+        "A measured operating energy efficiency.",
+        "A rapid reaction regardless of barriers.",
+        "Thermodynamic direction under its stated conditions, without a reaction time scale."
+      ],
+      "solution_spec": {
+        "answer": 2
+      },
+      "feedback": {
+        "hint": "Check the stated conditions rather than infer more than the model supports.",
+        "solution": "Thermodynamic direction under its stated conditions, without a reaction time scale.",
+        "lesson_ids": [
+          "general-chemistry-2-8"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "general-chemistry-2-8:scaling",
+      "type": "single_choice",
+      "prompt": "Doubling all reaction coefficients does what at fixed conventions?",
+      "points": 1,
+      "objective_ids": [
+        "general-chemistry-2-8-objective-1"
+      ],
+      "options": [
+        "Leaves every extensive reaction quantity unchanged.",
+        "Doubles ΔG° and squares K.",
+        "Doubles K without changing ΔG°."
+      ],
+      "solution_spec": {
+        "answer": 1
+      },
+      "feedback": {
+        "hint": "Check the stated conditions rather than infer more than the model supports.",
+        "solution": "Doubles ΔG° and squares K.",
+        "lesson_ids": [
+          "general-chemistry-2-8"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "general-chemistry-2-9:neutral-fraction",
+      "type": "numeric",
+      "prompt": "At h=10⁻⁶ mol/L, K₁=10⁻⁵ mol/L and K₂=10⁻⁸ mol/L, what H₂A fraction h²/(h²+K₁h+K₁K₂) results? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "general-chemistry-2-9-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0.0900900900900901,
+        "unit": "",
+        "tolerance": 9.009009009009011e-06,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the stated equation, convention and conserved amounts.",
+        "solution": "The declared model gives approximately 0.0900901 in the requested scale; check units and domain before interpreting it.",
+        "lesson_ids": [
+          "general-chemistry-2-9"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "general-chemistry-2-9:mono-fraction",
+      "type": "numeric",
+      "prompt": "Under those same parameters, what HA⁻ fraction K₁h/(h²+K₁h+K₁K₂) results? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "general-chemistry-2-9-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0.9009009009009009,
+        "unit": "",
+        "tolerance": 9.009009009009009e-05,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the stated equation, convention and conserved amounts.",
+        "solution": "The declared model gives approximately 0.900901 in the requested scale; check units and domain before interpreting it.",
+        "lesson_ids": [
+          "general-chemistry-2-9"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "general-chemistry-2-9:di-fraction",
+      "type": "numeric",
+      "prompt": "Under those same parameters, what A²⁻ fraction K₁K₂/(h²+K₁h+K₁K₂) results? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "general-chemistry-2-9-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0.009009009009009009,
+        "unit": "",
+        "tolerance": 9.00900900900901e-07,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the stated equation, convention and conserved amounts.",
+        "solution": "The declared model gives approximately 0.00900901 in the requested scale; check units and domain before interpreting it.",
+        "lesson_ids": [
+          "general-chemistry-2-9"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "general-chemistry-2-9:mean-charge",
+      "type": "numeric",
+      "prompt": "For those fractions, what mean negative charge magnitude per acid-family entity α₁+2α₂ results? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "general-chemistry-2-9-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0.9189189189189189,
+        "unit": "",
+        "tolerance": 9.189189189189189e-05,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the stated equation, convention and conserved amounts.",
+        "solution": "The declared model gives approximately 0.918919 in the requested scale; check units and domain before interpreting it.",
+        "lesson_ids": [
+          "general-chemistry-2-9"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "general-chemistry-2-9:spectator-difference",
+      "type": "numeric",
+      "prompt": "At h=10⁻⁶ mol/L, K₁=10⁻⁵ mol/L,K₂=10⁻⁸ mol/L,C_T=0.0100 mol/L,K_w,c=10⁻¹⁴ (mol/L)², what spectator charge difference S=C_T(α₁+2α₂)+K_w,c/h−h in mol/L of charge equivalents makes the imposed pH compatible? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "general-chemistry-2-9-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0.00918819918918919,
+        "unit": "",
+        "tolerance": 9.18819918918919e-07,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the stated equation, convention and conserved amounts.",
+        "solution": "The declared model gives approximately 0.0091882 in the requested scale; check units and domain before interpreting it.",
+        "lesson_ids": [
+          "general-chemistry-2-9"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "general-chemistry-2-9:amphiprotic-ph",
+      "type": "numeric",
+      "prompt": "Using only the declared amphiprotic approximation h=√(K₁K₂) with K₁=10⁻⁵ and K₂=10⁻⁸ mol/L, what ideal pH results? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "general-chemistry-2-9-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 6.5,
+        "unit": "",
+        "tolerance": 0.0006500000000000001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the stated equation, convention and conserved amounts.",
+        "solution": "The declared model gives approximately 6.5 in the requested scale; check units and domain before interpreting it.",
+        "lesson_ids": [
+          "general-chemistry-2-9"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "general-chemistry-2-9:charge",
+      "type": "single_choice",
+      "prompt": "How does A²⁻ contribute to diprotic balances?",
+      "points": 1,
+      "objective_ids": [
+        "general-chemistry-2-9-objective-2"
+      ],
+      "options": [
+        "Twice to family concentration and once to charge.",
+        "Once to family concentration and twice to negative charge equivalents.",
+        "Not at all because its fraction can be small."
+      ],
+      "solution_spec": {
+        "answer": 1
+      },
+      "feedback": {
+        "hint": "Check the stated conditions rather than infer more than the model supports.",
+        "solution": "Once to family concentration and twice to negative charge equivalents.",
+        "lesson_ids": [
+          "general-chemistry-2-9"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "general-chemistry-2-9:imposed",
+      "type": "single_choice",
+      "prompt": "What does a fraction calculation at imposed h establish?",
+      "points": 1,
+      "objective_ids": [
+        "general-chemistry-2-9-objective-3"
+      ],
+      "options": [
+        "Speciation at that h; a closed solution also needs a compatible charge balance.",
+        "That every acid is fully dissociated.",
+        "That arbitrary spectator amounts have the same pH."
+      ],
+      "solution_spec": {
+        "answer": 0
+      },
+      "feedback": {
+        "hint": "Check the stated conditions rather than infer more than the model supports.",
+        "solution": "Speciation at that h; a closed solution also needs a compatible charge balance.",
+        "lesson_ids": [
+          "general-chemistry-2-9"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "general-chemistry-2-9:approximation",
+      "type": "single_choice",
+      "prompt": "When may an amphiprotic shortcut be used?",
+      "points": 1,
+      "objective_ids": [
+        "general-chemistry-2-9-objective-3"
+      ],
+      "options": [
+        "Only by setting every other acid species exactly to zero.",
+        "Whenever HA⁻ appears anywhere.",
+        "When its concentration and separated-scale assumptions hold and neglected terms are checked."
+      ],
+      "solution_spec": {
+        "answer": 2
+      },
+      "feedback": {
+        "hint": "Check the stated conditions rather than infer more than the model supports.",
+        "solution": "When its concentration and separated-scale assumptions hold and neglected terms are checked.",
+        "lesson_ids": [
+          "general-chemistry-2-9"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "general-chemistry-2-10:a-order",
+      "type": "numeric",
+      "prompt": "At fixed B and temperature, doubling A quadruples a synthetic initial rate. What A order follows from 2^m=4? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "general-chemistry-2-10-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 2,
+        "unit": "",
+        "tolerance": 0,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the stated equation, convention and conserved amounts.",
+        "solution": "The declared model gives approximately 2 in the requested scale; check units and domain before interpreting it.",
+        "lesson_ids": [
+          "general-chemistry-2-10"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "general-chemistry-2-10:b-order",
+      "type": "numeric",
+      "prompt": "At fixed A and temperature, doubling B doubles that rate. What B order follows? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "general-chemistry-2-10-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 1,
+        "unit": "",
+        "tolerance": 0,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the stated equation, convention and conserved amounts.",
+        "solution": "The declared model gives approximately 1 in the requested scale; check units and domain before interpreting it.",
+        "lesson_ids": [
+          "general-chemistry-2-10"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "general-chemistry-2-10:rate-constant",
+      "type": "numeric",
+      "prompt": "For r=k[A]²[B], r=0.002 mol/(L·s), A=0.10 mol/L and B=0.20 mol/L, what k in L²/(mol²·s) results? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "general-chemistry-2-10-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 1,
+        "unit": "",
+        "tolerance": 0,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the stated equation, convention and conserved amounts.",
+        "solution": "The declared model gives approximately 1 in the requested scale; check units and domain before interpreting it.",
+        "lesson_ids": [
+          "general-chemistry-2-10"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "general-chemistry-2-10:predicted-rate",
+      "type": "numeric",
+      "prompt": "For r=k[A]²[B], k=1.0 L²/(mol²·s), A=0.15 and B=0.30 mol/L, what rate in mol/(L·s) results? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "general-chemistry-2-10-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0.00675,
+        "unit": "",
+        "tolerance": 6.75e-07,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the stated equation, convention and conserved amounts.",
+        "solution": "The declared model gives approximately 0.00675 in the requested scale; check units and domain before interpreting it.",
+        "lesson_ids": [
+          "general-chemistry-2-10"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "general-chemistry-2-10:pre-equilibrium-rate",
+      "type": "numeric",
+      "prompt": "For a separate hypothetical A+B⇌I fast pre-equilibrium, K_c=5 L/mol, k₂=0.2 s⁻¹ for I→P, free A=0.1 and B=0.2 mol/L. What k₂K_c[A][B] in mol/(L·s) results? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "general-chemistry-2-10-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0.02,
+        "unit": "",
+        "tolerance": 2.0000000000000003e-06,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the stated equation, convention and conserved amounts.",
+        "solution": "The declared model gives approximately 0.02 in the requested scale; check units and domain before interpreting it.",
+        "lesson_ids": [
+          "general-chemistry-2-10"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "general-chemistry-2-10:pseudo-first",
+      "type": "numeric",
+      "prompt": "For bimolecular k=0.5 L/(mol·s) with B held nearly constant at 0.20 mol/L, what k_obs in s⁻¹ results? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "general-chemistry-2-10-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 0.1,
+        "unit": "",
+        "tolerance": 1e-05,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the stated equation, convention and conserved amounts.",
+        "solution": "The declared model gives approximately 0.1 in the requested scale; check units and domain before interpreting it.",
+        "lesson_ids": [
+          "general-chemistry-2-10"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "general-chemistry-2-10:mechanism",
+      "type": "single_choice",
+      "prompt": "Does an observed rate law uniquely identify a multistep mechanism?",
+      "points": 1,
+      "objective_ids": [
+        "general-chemistry-2-10-objective-3"
+      ],
+      "options": [
+        "Yes; empirical powers prove every elementary event.",
+        "No; distinct compatible mechanisms can share a rate law over the observed range.",
+        "Yes; balanced coefficients alone supply the mechanism."
+      ],
+      "solution_spec": {
+        "answer": 1
+      },
+      "feedback": {
+        "hint": "Check the stated conditions rather than infer more than the model supports.",
+        "solution": "No; distinct compatible mechanisms can share a rate law over the observed range.",
+        "lesson_ids": [
+          "general-chemistry-2-10"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "general-chemistry-2-10:rate-definition",
+      "type": "single_choice",
+      "prompt": "For 2A+B→C with normalized r, what A disappearance magnitude applies?",
+      "points": 1,
+      "objective_ids": [
+        "general-chemistry-2-10-objective-1"
+      ],
+      "options": [
+        "2r, rather than r.",
+        "r/2, regardless of rate convention.",
+        "Zero, because A is a reactant."
+      ],
+      "solution_spec": {
+        "answer": 0
+      },
+      "feedback": {
+        "hint": "Check the stated conditions rather than infer more than the model supports.",
+        "solution": "2r, rather than r.",
+        "lesson_ids": [
+          "general-chemistry-2-10"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "general-chemistry-2-10:intermediate",
+      "type": "single_choice",
+      "prompt": "When is the pre-equilibrium substitution I=K_cAB appropriate?",
+      "points": 1,
+      "objective_ids": [
+        "general-chemistry-2-10-objective-2"
+      ],
+      "options": [
+        "Only after replacing free concentrations by arbitrary totals.",
+        "For every intermediate under any rates.",
+        "When the stated fast reversible redistribution assumption is justified relative to product drain."
+      ],
+      "solution_spec": {
+        "answer": 2
+      },
+      "feedback": {
+        "hint": "Check the stated conditions rather than infer more than the model supports.",
+        "solution": "When the stated fast reversible redistribution assumption is justified relative to product drain.",
+        "lesson_ids": [
+          "general-chemistry-2-10"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "general-chemistry-2-11:relaxation",
+      "type": "numeric",
+      "prompt": "Closed first-order A⇌B has k_f=0.048 and k_r=0.012 min⁻¹. What relaxation constant in min⁻¹ results? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "general-chemistry-2-11-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0.06,
+        "unit": "",
+        "tolerance": 6e-06,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the stated equation, convention and conserved amounts.",
+        "solution": "The declared model gives approximately 0.06 in the requested scale; check units and domain before interpreting it.",
+        "lesson_ids": [
+          "general-chemistry-2-11"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "general-chemistry-2-11:plateau",
+      "type": "numeric",
+      "prompt": "For the same system with total 1.0 mM, what equilibrium A in mM results? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "general-chemistry-2-11-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0.2,
+        "unit": "",
+        "tolerance": 2e-05,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the stated equation, convention and conserved amounts.",
+        "solution": "The declared model gives approximately 0.2 in the requested scale; check units and domain before interpreting it.",
+        "lesson_ids": [
+          "general-chemistry-2-11"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "general-chemistry-2-11:twenty",
+      "type": "numeric",
+      "prompt": "For that system with A₀=1.0 mM, what A after 20 min in mM results? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "general-chemistry-2-11-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0.4409553695297617,
+        "unit": "",
+        "tolerance": 4.409553695297617e-05,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the stated equation, convention and conserved amounts.",
+        "solution": "The declared model gives approximately 0.440955 in the requested scale; check units and domain before interpreting it.",
+        "lesson_ids": [
+          "general-chemistry-2-11"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "general-chemistry-2-11:displacement-half",
+      "type": "numeric",
+      "prompt": "What is the half-life in minutes of A−A_eq for relaxation constant 0.060 min⁻¹? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "general-chemistry-2-11-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 11.552453009332423,
+        "unit": "",
+        "tolerance": 0.0011552453009332424,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the stated equation, convention and conserved amounts.",
+        "solution": "The declared model gives approximately 11.5525 in the requested scale; check units and domain before interpreting it.",
+        "lesson_ids": [
+          "general-chemistry-2-11"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "general-chemistry-2-11:actual-half",
+      "type": "numeric",
+      "prompt": "For A(t)=0.20+0.80exp(−0.060t) in mM, what time in minutes gives A=0.50 mM? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "general-chemistry-2-11-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 16.34715421686211,
+        "unit": "",
+        "tolerance": 0.0016347154216862108,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the stated equation, convention and conserved amounts.",
+        "solution": "The declared model gives approximately 16.3472 in the requested scale; check units and domain before interpreting it.",
+        "lesson_ids": [
+          "general-chemistry-2-11"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "general-chemistry-2-11:intermediate-peak",
+      "type": "numeric",
+      "prompt": "For the separate irreversible A→I→P chain, k₁=0.10,k₂=0.05 min⁻¹ and initial A=1,I=P=0, what intermediate peak time ln(k₂/k₁)/(k₂−k₁) in minutes results? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "general-chemistry-2-11-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 13.862943611198904,
+        "unit": "",
+        "tolerance": 0.0013862943611198904,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the stated equation, convention and conserved amounts.",
+        "solution": "The declared model gives approximately 13.8629 in the requested scale; check units and domain before interpreting it.",
+        "lesson_ids": [
+          "general-chemistry-2-11"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "general-chemistry-2-11:half-life",
+      "type": "single_choice",
+      "prompt": "What halves at ln 2/(k_f+k_r) in this reversible model?",
+      "points": 1,
+      "objective_ids": [
+        "general-chemistry-2-11-objective-2"
+      ],
+      "options": [
+        "Only the forward constant.",
+        "Both total concentration and equilibrium A.",
+        "The displacement from equilibrium, not necessarily A itself."
+      ],
+      "solution_spec": {
+        "answer": 2
+      },
+      "feedback": {
+        "hint": "Check the stated conditions rather than infer more than the model supports.",
+        "solution": "The displacement from equilibrium, not necessarily A itself.",
+        "lesson_ids": [
+          "general-chemistry-2-11"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "general-chemistry-2-11:directional",
+      "type": "single_choice",
+      "prompt": "What additional information partitions a relaxation sum into directional constants?",
+      "points": 1,
+      "objective_ids": [
+        "general-chemistry-2-11-objective-2"
+      ],
+      "options": [
+        "The sum alone always uniquely partitions itself.",
+        "Independent equilibrium ratio under the stated two-state model.",
+        "Only a reporting background with no composition information."
+      ],
+      "solution_spec": {
+        "answer": 1
+      },
+      "feedback": {
+        "hint": "Check the stated conditions rather than infer more than the model supports.",
+        "solution": "Independent equilibrium ratio under the stated two-state model.",
+        "lesson_ids": [
+          "general-chemistry-2-11"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "general-chemistry-2-11:observed-a",
+      "type": "single_choice",
+      "prompt": "In an irreversible A→I→P chain, observing only A decay identifies what here?",
+      "points": 1,
+      "objective_ids": [
+        "general-chemistry-2-11-objective-3"
+      ],
+      "options": [
+        "Both constants uniquely regardless of observations.",
+        "The first constant, while intermediate/product information is needed for the second.",
+        "A nonzero equilibrium A plateau."
+      ],
+      "solution_spec": {
+        "answer": 1
+      },
+      "feedback": {
+        "hint": "Check the stated conditions rather than infer more than the model supports.",
+        "solution": "The first constant, while intermediate/product information is needed for the second.",
+        "lesson_ids": [
+          "general-chemistry-2-11"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "general-chemistry-2-12:standard-potential",
+      "type": "numeric",
+      "prompt": "For cathode and anode reduction potentials +0.40 and −0.10 V, what standard cell potential in V results? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "general-chemistry-2-12-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0.5,
+        "unit": "",
+        "tolerance": 5e-05,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the stated equation, convention and conserved amounts.",
+        "solution": "The declared model gives approximately 0.5 in the requested scale; check units and domain before interpreting it.",
+        "lesson_ids": [
+          "general-chemistry-2-12"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "general-chemistry-2-12:standard-g",
+      "type": "numeric",
+      "prompt": "For the combined two-electron reaction with E°=0.50 V and F=96485 C/mol, what ΔG° in kJ/mol of written reaction extent results? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "general-chemistry-2-12-objective-2"
+      ],
+      "solution_spec": {
+        "answer": -96.485,
+        "unit": "",
+        "tolerance": 0.0096485,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the stated equation, convention and conserved amounts.",
+        "solution": "The declared model gives approximately −96.485 in the requested scale; check units and domain before interpreting it.",
+        "lesson_ids": [
+          "general-chemistry-2-12"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "general-chemistry-2-12:nernst-potential",
+      "type": "numeric",
+      "prompt": "For E°=0.50 V,n=2,F=96485 C/mol,R=8.314 J/(mol·K),T=300 K,Q=100, what E=E°−RT ln Q/(nF) in V results? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "general-chemistry-2-12-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0.4404766778364953,
+        "unit": "",
+        "tolerance": 4.404766778364953e-05,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the stated equation, convention and conserved amounts.",
+        "solution": "The declared model gives approximately 0.440477 in the requested scale; check units and domain before interpreting it.",
+        "lesson_ids": [
+          "general-chemistry-2-12"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "general-chemistry-2-12:ln-k",
+      "type": "numeric",
+      "prompt": "For those standard cell parameters, what natural logarithm of K equals nFE°/(RT)? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "general-chemistry-2-12-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 38.68374629139604,
+        "unit": "",
+        "tolerance": 0.003868374629139604,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the stated equation, convention and conserved amounts.",
+        "solution": "The declared model gives approximately 38.6837 in the requested scale; check units and domain before interpreting it.",
+        "lesson_ids": [
+          "general-chemistry-2-12"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "general-chemistry-2-12:charge",
+      "type": "numeric",
+      "prompt": "A stipulated current magnitude 0.50 A lasts 120 s. What charge magnitude in C is transferred? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "general-chemistry-2-12-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 60,
+        "unit": "",
+        "tolerance": 0,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the stated equation, convention and conserved amounts.",
+        "solution": "The declared model gives approximately 60 in the requested scale; check units and domain before interpreting it.",
+        "lesson_ids": [
+          "general-chemistry-2-12"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "general-chemistry-2-12:target-amount",
+      "type": "numeric",
+      "prompt": "That 60 C serves a two-electron target product with stipulated current efficiency 80%, F=96485 C/mol. What target product amount in mol results? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "general-chemistry-2-12-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 0.00024874332797844226,
+        "unit": "",
+        "tolerance": 2.4874332797844227e-08,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the stated equation, convention and conserved amounts.",
+        "solution": "The declared model gives approximately 2.48743 × 10⁻⁴ in the requested scale; check units and domain before interpreting it.",
+        "lesson_ids": [
+          "general-chemistry-2-12"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "general-chemistry-2-12:potential-scale",
+      "type": "single_choice",
+      "prompt": "Doubling the entire two-electron cell equation changes E° how?",
+      "points": 1,
+      "objective_ids": [
+        "general-chemistry-2-12-objective-2"
+      ],
+      "options": [
+        "It stays the same; electron count and reaction free energy both double.",
+        "It becomes zero because electrons cancel.",
+        "It doubles because ΔG° doubles."
+      ],
+      "solution_spec": {
+        "answer": 0
+      },
+      "feedback": {
+        "hint": "Check the stated conditions rather than infer more than the model supports.",
+        "solution": "It stays the same; electron count and reaction free energy both double.",
+        "lesson_ids": [
+          "general-chemistry-2-12"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "general-chemistry-2-12:efficiency",
+      "type": "single_choice",
+      "prompt": "What does stipulated 80% target current efficiency mean?",
+      "points": 1,
+      "objective_ids": [
+        "general-chemistry-2-12-objective-3"
+      ],
+      "options": [
+        "80% of all electrical energy must become useful work.",
+        "80% of transferred charge is assigned to the specified target reaction.",
+        "80% recovered mass proves a charge balance."
+      ],
+      "solution_spec": {
+        "answer": 1
+      },
+      "feedback": {
+        "hint": "Check the stated conditions rather than infer more than the model supports.",
+        "solution": "80% of transferred charge is assigned to the specified target reaction.",
+        "lesson_ids": [
+          "general-chemistry-2-12"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "general-chemistry-2-12:operating",
+      "type": "single_choice",
+      "prompt": "Does a positive E° guarantee positive E for every mixture?",
+      "points": 1,
+      "objective_ids": [
+        "general-chemistry-2-12-objective-1"
+      ],
+      "options": [
+        "No; the matching activity quotient and conditions can reverse the sign.",
+        "Yes; composition has no effect.",
+        "Only if the reaction coefficients are doubled."
+      ],
+      "solution_spec": {
+        "answer": 0
+      },
+      "feedback": {
+        "hint": "Check the stated conditions rather than infer more than the model supports.",
+        "solution": "No; the matching activity quotient and conditions can reverse the sign.",
+        "lesson_ids": [
+          "general-chemistry-2-12"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "general-chemistry-2-13:donor-count",
+      "type": "numeric",
+      "prompt": "Three bidentate ligands each provide two directly bound donor atoms. What coordination number follows? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "general-chemistry-2-13-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 6,
+        "unit": "",
+        "tolerance": 0,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the stated equation, convention and conserved amounts.",
+        "solution": "The declared model gives approximately 6 in the requested scale; check units and domain before interpreting it.",
+        "lesson_ids": [
+          "general-chemistry-2-13"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "general-chemistry-2-13:complex-charge",
+      "type": "numeric",
+      "prompt": "A constructed M²⁺ complex has two X⁻ and two neutral L ligands. What signed net charge follows? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "general-chemistry-2-13-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0,
+        "unit": "",
+        "tolerance": 0,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the stated equation, convention and conserved amounts.",
+        "solution": "The declared model gives approximately 0 in the requested scale; check units and domain before interpreting it.",
+        "lesson_ids": [
+          "general-chemistry-2-13"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "general-chemistry-2-13:bound-metal",
+      "type": "numeric",
+      "prompt": "For M+L⇌ML with K_f=10⁴ L/mol,M_T=0.0010,L_T=0.0015 mol/L, solve x=K_f(M_T−x)(L_T−x). What physically admissible complex concentration x in mol/L results? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "general-chemistry-2-13-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0.0008641101056459327,
+        "unit": "",
+        "tolerance": 8.641101056459328e-08,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the stated equation, convention and conserved amounts.",
+        "solution": "The declared model gives approximately 0.00086411 in the requested scale; check units and domain before interpreting it.",
+        "lesson_ids": [
+          "general-chemistry-2-13"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "general-chemistry-2-13:free-metal",
+      "type": "numeric",
+      "prompt": "Under that same one-to-one closed-total model, what free metal concentration in mol/L remains? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "general-chemistry-2-13-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0.0001358898943540673,
+        "unit": "",
+        "tolerance": 1.358898943540673e-08,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the stated equation, convention and conserved amounts.",
+        "solution": "The declared model gives approximately 0.00013589 in the requested scale; check units and domain before interpreting it.",
+        "lesson_ids": [
+          "general-chemistry-2-13"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "general-chemistry-2-13:fixed-ligand-fraction",
+      "type": "numeric",
+      "prompt": "For the different boundary condition of fixed free ligand 0.0001 mol/L and K_f=10⁴ L/mol, what bound metal fraction K_fl/(1+K_fl) results? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "general-chemistry-2-13-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0.5,
+        "unit": "",
+        "tolerance": 5e-05,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the stated equation, convention and conserved amounts.",
+        "solution": "The declared model gives approximately 0.5 in the requested scale; check units and domain before interpreting it.",
+        "lesson_ids": [
+          "general-chemistry-2-13"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "general-chemistry-2-13:spin-energy",
+      "type": "numeric",
+      "prompt": "For the limited d⁶ octahedral model, low-minus-high energy is −2Δ_o+2P. With synthetic Δ_o=200 and P=150 kJ/mol, what signed difference in kJ/mol results? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "general-chemistry-2-13-objective-3"
+      ],
+      "solution_spec": {
+        "answer": -100,
+        "unit": "",
+        "tolerance": 0,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the stated equation, convention and conserved amounts.",
+        "solution": "The declared model gives approximately −100 in the requested scale; check units and domain before interpreting it.",
+        "lesson_ids": [
+          "general-chemistry-2-13"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "general-chemistry-2-13:free-total",
+      "type": "single_choice",
+      "prompt": "Why is analytical ligand generally different from free ligand?",
+      "points": 1,
+      "objective_ids": [
+        "general-chemistry-2-13-objective-2"
+      ],
+      "options": [
+        "Analytical totals can never include bound forms.",
+        "Ligand binding creates metal atoms.",
+        "Some ligand is bound and must be included in its amount balance."
+      ],
+      "solution_spec": {
+        "answer": 2
+      },
+      "feedback": {
+        "hint": "Check the stated conditions rather than infer more than the model supports.",
+        "solution": "Some ligand is bound and must be included in its amount balance.",
+        "lesson_ids": [
+          "general-chemistry-2-13"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "general-chemistry-2-13:geometry",
+      "type": "single_choice",
+      "prompt": "Does coordination number four uniquely establish geometry?",
+      "points": 1,
+      "objective_ids": [
+        "general-chemistry-2-13-objective-1"
+      ],
+      "options": [
+        "Yes; it always means square planar.",
+        "No; candidate geometries need additional electronic or structural information.",
+        "Yes; it always means tetrahedral."
+      ],
+      "solution_spec": {
+        "answer": 1
+      },
+      "feedback": {
+        "hint": "Check the stated conditions rather than infer more than the model supports.",
+        "solution": "No; candidate geometries need additional electronic or structural information.",
+        "lesson_ids": [
+          "general-chemistry-2-13"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "general-chemistry-2-13:spin",
+      "type": "single_choice",
+      "prompt": "How many unpaired electrons occur in the limited octahedral low-spin d⁶ occupation?",
+      "points": 1,
+      "objective_ids": [
+        "general-chemistry-2-13-objective-3"
+      ],
+      "options": [
+        "Zero in its fully paired lower set.",
+        "Six because d⁶ counts six unpaired electrons.",
+        "Four regardless of splitting and pairing."
+      ],
+      "solution_spec": {
+        "answer": 0
+      },
+      "feedback": {
+        "hint": "Check the stated conditions rather than infer more than the model supports.",
+        "solution": "Zero in its fully paired lower set.",
+        "lesson_ids": [
+          "general-chemistry-2-13"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "general-chemistry-2-14:pure-solubility",
+      "type": "numeric",
+      "prompt": "Hypothetical MX(s)⇌M⁺+X⁻ has K_sp,c=10⁻⁸ (mol/L)², with solid present and no initial dissolved ions. What ideal solubility in mol/L results? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "general-chemistry-2-14-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0.0001,
+        "unit": "",
+        "tolerance": 1e-08,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the stated equation, convention and conserved amounts.",
+        "solution": "The declared model gives approximately 0.0001 in the requested scale; check units and domain before interpreting it.",
+        "lesson_ids": [
+          "general-chemistry-2-14"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "general-chemistry-2-14:common-ion",
+      "type": "numeric",
+      "prompt": "For that MX with initial free X=0.0100 mol/L and no initial M, solve s(0.0100+s)=10⁻⁸. What positive solubility s in mol/L results? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "general-chemistry-2-14-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 9.999000199950013e-07,
+        "unit": "",
+        "tolerance": 1e-10,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the stated equation, convention and conserved amounts.",
+        "solution": "The declared model gives approximately 9.999×10⁻⁷ in the requested scale; check units and domain before interpreting it.",
+        "lesson_ids": [
+          "general-chemistry-2-14"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "general-chemistry-2-14:two-anions",
+      "type": "numeric",
+      "prompt": "For hypothetical MX₂(s)⇌M²⁺+2X⁻ with K_sp,c=4×10⁻¹² (mol/L)³ and no initial dissolved ions, what ideal solubility in mol/L results? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "general-chemistry-2-14-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0.0001,
+        "unit": "",
+        "tolerance": 1e-08,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the stated equation, convention and conserved amounts.",
+        "solution": "The declared model gives approximately 0.0001 in the requested scale; check units and domain before interpreting it.",
+        "lesson_ids": [
+          "general-chemistry-2-14"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "general-chemistry-2-14:saturation-ratio",
+      "type": "numeric",
+      "prompt": "For MX with K_sp,c=10⁻⁸ (mol/L)², free M=0.0010 and X=0.000020 mol/L, what Q_sp,c/K_sp,c results? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "general-chemistry-2-14-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 2,
+        "unit": "",
+        "tolerance": 0,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the stated equation, convention and conserved amounts.",
+        "solution": "The declared model gives approximately 2 in the requested scale; check units and domain before interpreting it.",
+        "lesson_ids": [
+          "general-chemistry-2-14"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "general-chemistry-2-14:complexed-total",
+      "type": "numeric",
+      "prompt": "For saturated hypothetical MX, K_sp,c=10⁻⁸ (mol/L)², K_f=10⁴ L/mol and externally fixed free neutral ligand l=0.0100 mol/L, what total dissolved metal S=√(K_sp,c(1+K_fl)) in mol/L results? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "general-chemistry-2-14-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0.001004987562112089,
+        "unit": "",
+        "tolerance": 1.004987562112089e-07,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the stated equation, convention and conserved amounts.",
+        "solution": "The declared model gives approximately 0.00100499 in the requested scale; check units and domain before interpreting it.",
+        "lesson_ids": [
+          "general-chemistry-2-14"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "general-chemistry-2-14:complexed-free",
+      "type": "numeric",
+      "prompt": "For that same fixed-free-ligand MX model, what free metal S/(1+K_fl) in mol/L results? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "general-chemistry-2-14-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 9.950371902099892e-06,
+        "unit": "",
+        "tolerance": 9.950371902099893e-10,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the stated equation, convention and conserved amounts.",
+        "solution": "The declared model gives approximately 9.95037×10⁻⁶ in the requested scale; check units and domain before interpreting it.",
+        "lesson_ids": [
+          "general-chemistry-2-14"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "general-chemistry-2-14:phase",
+      "type": "single_choice",
+      "prompt": "When can a solubility equality be imposed?",
+      "points": 1,
+      "objective_ids": [
+        "general-chemistry-2-14-objective-1"
+      ],
+      "options": [
+        "After any tiny amount of solid has completely dissolved.",
+        "Whenever total metal is measured, regardless of species.",
+        "When the specified solid phase remains available at saturation under the stated model."
+      ],
+      "solution_spec": {
+        "answer": 2
+      },
+      "feedback": {
+        "hint": "Check the stated conditions rather than infer more than the model supports.",
+        "solution": "When the specified solid phase remains available at saturation under the stated model.",
+        "lesson_ids": [
+          "general-chemistry-2-14"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "general-chemistry-2-14:ligand",
+      "type": "single_choice",
+      "prompt": "What changes when only closed total ligand is given instead of fixed free ligand?",
+      "points": 1,
+      "objective_ids": [
+        "general-chemistry-2-14-objective-2"
+      ],
+      "options": [
+        "The fixed-free-ligand expression remains exact automatically.",
+        "Metal balance is no longer required.",
+        "Ligand depletion must be solved with the other balances."
+      ],
+      "solution_spec": {
+        "answer": 2
+      },
+      "feedback": {
+        "hint": "Check the stated conditions rather than infer more than the model supports.",
+        "solution": "Ligand depletion must be solved with the other balances.",
+        "lesson_ids": [
+          "general-chemistry-2-14"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "general-chemistry-2-14:selectivity",
+      "type": "single_choice",
+      "prompt": "What does a conditional saturation-threshold window establish?",
+      "points": 1,
+      "objective_ids": [
+        "general-chemistry-2-14-objective-3"
+      ],
+      "options": [
+        "Instantaneous nucleation of every real solid.",
+        "A model interval needing further equilibrium and recovery evidence for practical selectivity.",
+        "Complete separation and product purity."
+      ],
+      "solution_spec": {
+        "answer": 1
+      },
+      "feedback": {
+        "hint": "Check the stated conditions rather than infer more than the model supports.",
+        "solution": "A model interval needing further equilibrium and recovery evidence for practical selectivity.",
+        "lesson_ids": [
+          "general-chemistry-2-14"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "general-chemistry-2-lab-01:summary",
+      "type": "file_upload",
+      "prompt": "Group the supplied concentration reports by sample. Upload exact columns sample,replicates,mean_reported_mm and rows t00,t10,t20,t30,t40,t60,blank. Use raw arithmetic means before correction.",
+      "points": 14,
+      "objective_ids": [
+        "general-chemistry-2-lab-01-objective-1"
+      ],
+      "solution_spec": {
+        "accepted_media_types": [
+          "text/csv"
+        ],
+        "max_bytes": 32768,
+        "validation_spec": {
+          "format": "csv-numeric-table-v1",
+          "delimiter": ",",
+          "key_column": "sample",
+          "columns": [
+            "sample",
+            "replicates",
+            "mean_reported_mm"
+          ],
+          "checks": [
+            {
+              "id": "t00-replicates",
+              "row_id": "t00",
+              "column": "replicates",
+              "type": "numeric",
+              "answer": 3.0,
+              "unit": "",
+              "tolerance": 0,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "count",
+                "values": [
+                  1.045,
+                  1.05,
+                  1.055
+                ]
+              }
+            },
+            {
+              "id": "t00-mean_reported_mm",
+              "row_id": "t00",
+              "column": "mean_reported_mm",
+              "type": "numeric",
+              "answer": 1.05,
+              "unit": "mM",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  1.045,
+                  1.05,
+                  1.055
+                ]
+              }
+            },
+            {
+              "id": "t10-replicates",
+              "row_id": "t10",
+              "column": "replicates",
+              "type": "numeric",
+              "answer": 3.0,
+              "unit": "",
+              "tolerance": 0,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "count",
+                "values": [
+                  0.684,
+                  0.689,
+                  0.694
+                ]
+              }
+            },
+            {
+              "id": "t10-mean_reported_mm",
+              "row_id": "t10",
+              "column": "mean_reported_mm",
+              "type": "numeric",
+              "answer": 0.689,
+              "unit": "mM",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  0.684,
+                  0.689,
+                  0.694
+                ]
+              }
+            },
+            {
+              "id": "t20-replicates",
+              "row_id": "t20",
+              "column": "replicates",
+              "type": "numeric",
+              "answer": 3.0,
+              "unit": "",
+              "tolerance": 0,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "count",
+                "values": [
+                  0.486,
+                  0.491,
+                  0.496
+                ]
+              }
+            },
+            {
+              "id": "t20-mean_reported_mm",
+              "row_id": "t20",
+              "column": "mean_reported_mm",
+              "type": "numeric",
+              "answer": 0.491,
+              "unit": "mM",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  0.486,
+                  0.491,
+                  0.496
+                ]
+              }
+            },
+            {
+              "id": "t30-replicates",
+              "row_id": "t30",
+              "column": "replicates",
+              "type": "numeric",
+              "answer": 3.0,
+              "unit": "",
+              "tolerance": 0,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "count",
+                "values": [
+                  0.3772,
+                  0.3822,
+                  0.3872
+                ]
+              }
+            },
+            {
+              "id": "t30-mean_reported_mm",
+              "row_id": "t30",
+              "column": "mean_reported_mm",
+              "type": "numeric",
+              "answer": 0.3822,
+              "unit": "mM",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  0.3772,
+                  0.3822,
+                  0.3872
+                ]
+              }
+            },
+            {
+              "id": "t40-replicates",
+              "row_id": "t40",
+              "column": "replicates",
+              "type": "numeric",
+              "answer": 3.0,
+              "unit": "",
+              "tolerance": 0,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "count",
+                "values": [
+                  0.3176,
+                  0.3226,
+                  0.3276
+                ]
+              }
+            },
+            {
+              "id": "t40-mean_reported_mm",
+              "row_id": "t40",
+              "column": "mean_reported_mm",
+              "type": "numeric",
+              "answer": 0.3226,
+              "unit": "mM",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  0.3176,
+                  0.3226,
+                  0.3276
+                ]
+              }
+            },
+            {
+              "id": "t60-replicates",
+              "row_id": "t60",
+              "column": "replicates",
+              "type": "numeric",
+              "answer": 3.0,
+              "unit": "",
+              "tolerance": 0,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "count",
+                "values": [
+                  0.2669,
+                  0.2719,
+                  0.2769
+                ]
+              }
+            },
+            {
+              "id": "t60-mean_reported_mm",
+              "row_id": "t60",
+              "column": "mean_reported_mm",
+              "type": "numeric",
+              "answer": 0.2719,
+              "unit": "mM",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  0.2669,
+                  0.2719,
+                  0.2769
+                ]
+              }
+            },
+            {
+              "id": "blank-replicates",
+              "row_id": "blank",
+              "column": "replicates",
+              "type": "numeric",
+              "answer": 3.0,
+              "unit": "",
+              "tolerance": 0,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "count",
+                "values": [
+                  0.045,
+                  0.05,
+                  0.055
+                ]
+              }
+            },
+            {
+              "id": "blank-mean_reported_mm",
+              "row_id": "blank",
+              "column": "mean_reported_mm",
+              "type": "numeric",
+              "answer": 0.05,
+              "unit": "mM",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  0.045,
+                  0.05,
+                  0.055
+                ]
+              }
+            }
+          ]
+        },
+        "rubric": [
+          {
+            "id": "t00-replicates",
+            "criterion": "t00: replicates",
+            "points": 1,
+            "evidence": [
+              "Recomputes replicates for t00 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "t00-mean_reported_mm",
+            "criterion": "t00: mean_reported_mm",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_reported_mm for t00 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "t10-replicates",
+            "criterion": "t10: replicates",
+            "points": 1,
+            "evidence": [
+              "Recomputes replicates for t10 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "t10-mean_reported_mm",
+            "criterion": "t10: mean_reported_mm",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_reported_mm for t10 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "t20-replicates",
+            "criterion": "t20: replicates",
+            "points": 1,
+            "evidence": [
+              "Recomputes replicates for t20 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "t20-mean_reported_mm",
+            "criterion": "t20: mean_reported_mm",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_reported_mm for t20 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "t30-replicates",
+            "criterion": "t30: replicates",
+            "points": 1,
+            "evidence": [
+              "Recomputes replicates for t30 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "t30-mean_reported_mm",
+            "criterion": "t30: mean_reported_mm",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_reported_mm for t30 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "t40-replicates",
+            "criterion": "t40: replicates",
+            "points": 1,
+            "evidence": [
+              "Recomputes replicates for t40 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "t40-mean_reported_mm",
+            "criterion": "t40: mean_reported_mm",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_reported_mm for t40 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "t60-replicates",
+            "criterion": "t60: replicates",
+            "points": 1,
+            "evidence": [
+              "Recomputes replicates for t60 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "t60-mean_reported_mm",
+            "criterion": "t60: mean_reported_mm",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_reported_mm for t60 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "blank-replicates",
+            "criterion": "blank: replicates",
+            "points": 1,
+            "evidence": [
+              "Recomputes replicates for blank from the preparation-level values."
+            ]
+          },
+          {
+            "id": "blank-mean_reported_mm",
+            "criterion": "blank: mean_reported_mm",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_reported_mm for blank from the preparation-level values."
+            ]
+          }
+        ]
+      },
+      "feedback": {
+        "hint": "Group by sample and average the supplied raw reports.",
+        "solution": "Each group has three balanced reports; the means equal the constructed rounded central values.",
+        "lesson_ids": [
+          "general-chemistry-2-lab-01"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "general-chemistry-2-lab-01:background",
+      "type": "numeric",
+      "prompt": "The independent blank has stipulated true A=0 mM. What additive reporting background in mM follows from its CSV mean? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "general-chemistry-2-lab-01-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0.05,
+        "unit": "",
+        "tolerance": 0.0001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Subtract the blank target from its mean.",
+        "solution": "The blank mean is 0.0500 mM, identifying the supplied common additive offset.",
+        "lesson_ids": [
+          "general-chemistry-2-lab-01"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "general-chemistry-2-lab-01:relaxation",
+      "type": "numeric",
+      "prompt": "After blank subtraction, independent equilibrium A is 0.20 mM. Use only t00 and t20 CSV means to compute λ=−ln((A20−A_eq)/(A0−A_eq))/20. What λ in min⁻¹ results? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "general-chemistry-2-lab-01-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0.059990739708863615,
+        "unit": "",
+        "tolerance": 2e-05,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Subtract both the reporting background and the physical equilibrium plateau before taking the ratio.",
+        "solution": "The rounded data give λ≈0.059991 min⁻¹, close to the stipulated construction value 0.060.",
+        "lesson_ids": [
+          "general-chemistry-2-lab-01"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "general-chemistry-2-lab-01:forward",
+      "type": "numeric",
+      "prompt": "Using that t00/t20 fitted λ and independently supplied equilibrium B/A=4 in the closed first-order pair, what k_f=4λ/5 in min⁻¹ results? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "general-chemistry-2-lab-01-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0.04799259176709089,
+        "unit": "",
+        "tolerance": 2e-05,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Partition the relaxation sum with the independent equilibrium ratio.",
+        "solution": "The fitted forward constant is approximately 0.047993 min⁻¹; λ itself is not k_f.",
+        "lesson_ids": [
+          "general-chemistry-2-lab-01"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "general-chemistry-2-lab-01:reserved-prediction",
+      "type": "numeric",
+      "prompt": "Before inspecting t60, use the t00/t20 fitted λ, blank-corrected A0 and independent A_eq=0.20 mM. What A60=0.20+(A0−0.20)exp(−60λ) in mM is predicted? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "general-chemistry-2-lab-01-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0.22187112656250002,
+        "unit": "",
+        "tolerance": 0.0002,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the plateau relaxation equation and keep t60 out of the fit.",
+        "solution": "The prediction is approximately 0.221871 mM and agrees with the corrected reserved t60 mean to the declared rounding scale.",
+        "lesson_ids": [
+          "general-chemistry-2-lab-01"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "general-chemistry-2-lab-01:interpretation",
+      "type": "structured",
+      "prompt": "Select conclusions supported by the reference, equilibrium information and time series.",
+      "points": 3,
+      "objective_ids": [
+        "general-chemistry-2-lab-01-objective-3"
+      ],
+      "response_fields": [
+        {
+          "id": "reference",
+          "type": "single_choice",
+          "prompt": "What does the blank determine here?",
+          "options": [
+            "The stipulated common additive reporting background, not the equilibrium A amount.",
+            "The entire late concentration must be zero.",
+            "Every possible real calibration effect is removed."
+          ],
+          "points": 1
+        },
+        {
+          "id": "plateau",
+          "type": "single_choice",
+          "prompt": "What remains after subtracting the blank?",
+          "options": [
+            "A nonzero equilibrium A plateau in the supplied reversible model.",
+            "Proof that the reporting correction failed.",
+            "An irreversible decay to zero at the same fitted rate."
+          ],
+          "points": 1
+        },
+        {
+          "id": "mechanism",
+          "type": "single_choice",
+          "prompt": "What does agreement at the reserved time establish?",
+          "options": [
+            "Consistency with this constructed trajectory, not unique identification of a real mechanism.",
+            "A uniquely discovered actual reaction mechanism.",
+            "Independent Gaussian errors in every repeat."
+          ],
+          "points": 1
+        }
+      ],
+      "solution_spec": {
+        "field_specs": [
+          {
+            "id": "reference",
+            "type": "single_choice",
+            "answer": 0
+          },
+          {
+            "id": "plateau",
+            "type": "single_choice",
+            "answer": 0
+          },
+          {
+            "id": "mechanism",
+            "type": "single_choice",
+            "answer": 0
+          }
+        ],
+        "rubric": [
+          {
+            "id": "reference",
+            "criterion": "Reference calibration scope",
+            "points": 1,
+            "evidence": [
+              "Blank correction is a reporting operation distinct from equilibrium composition."
+            ]
+          },
+          {
+            "id": "plateau",
+            "criterion": "Physical plateau meaning",
+            "points": 1,
+            "evidence": [
+              "Independent equilibrium A supplies the physical displacement baseline."
+            ]
+          },
+          {
+            "id": "mechanism",
+            "criterion": "Mechanism inference scope",
+            "points": 1,
+            "evidence": [
+              "Parameters and balanced repeats are constructed, not experimentally discovered."
+            ]
+          }
+        ]
+      },
+      "feedback": {
+        "hint": "Keep reference evidence, independent composition and trajectory agreement separate.",
+        "solution": "The blank identifies background; independent equilibrium composition fixes the plateau; a reserved prediction checks the synthetic model without proving a unique real mechanism.",
+        "lesson_ids": [
+          "general-chemistry-2-lab-01"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "general-chemistry-2-lab-01:claims",
+      "type": "multiple_select",
+      "prompt": "Which statements respect the supplied construction? Select all that apply.",
+      "points": 2,
+      "objective_ids": [
+        "general-chemistry-2-lab-01-objective-3"
+      ],
+      "options": [
+        "The blank makes every reaction irreversible.",
+        "A reserved t60 prediction should use t00/t20 without fitting t60.",
+        "Subtracting the blank leaves the genuine equilibrium plateau.",
+        "The apparent zero-plateau decay constant must equal k_f.",
+        "The repeated report offsets deliberately balance around each central value."
+      ],
+      "solution_spec": {
+        "answer": [
+          1,
+          2,
+          4
+        ],
+        "partial_credit": "correct-minus-incorrect-clamped-v1"
+      },
+      "feedback": {
+        "hint": "Distinguish constructed repeats and observation correction from reaction structure.",
+        "solution": "Balanced reports, a physical plateau after correction and an unfitted reserved point are supported; irreversibility and equality of naive/forward rates are not.",
+        "lesson_ids": [
+          "general-chemistry-2-lab-01"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "general-chemistry-2-lab-01:naive-rate",
+      "type": "single_choice",
+      "prompt": "A blank-corrected zero-plateau endpoint fit uses −ln(A40/A0)/40. Why is it below the supplied relaxation rate?",
+      "points": 1,
+      "objective_ids": [
+        "general-chemistry-2-lab-01-objective-3"
+      ],
+      "options": [
+        "The lower apparent rate uniquely proves a different elementary mechanism.",
+        "The corrected A still includes a positive equilibrium plateau, so ln A is not the displacement transform.",
+        "Every reporting offset remains because the blank is independent."
+      ],
+      "solution_spec": {
+        "answer": 1
+      },
+      "feedback": {
+        "hint": "Use A−A_eq for the reversible relaxation transform.",
+        "solution": "The naive endpoint value is approximately 0.032494 min⁻¹. The nonzero physical plateau explains the discrepancy in this stipulated model.",
+        "lesson_ids": [
+          "general-chemistry-2-lab-01"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
     }
   ]
 }

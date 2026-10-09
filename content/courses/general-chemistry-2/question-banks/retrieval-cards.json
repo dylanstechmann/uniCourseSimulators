@@ -185,6 +185,326 @@
         "general-chemistry-2-7-objective-3"
       ],
       "license": "CC-BY-4.0"
+    },
+    {
+      "id": "general-chemistry-2-8-card-1",
+      "lesson_id": "general-chemistry-2-8",
+      "front": "Standard versus current",
+      "back": "ΔG=ΔG°+RT ln Q; current composition can reverse a direction favored in the standard comparison.",
+      "objective_ids": [
+        "general-chemistry-2-8-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "general-chemistry-2-8-card-2",
+      "lesson_id": "general-chemistry-2-8",
+      "front": "Equilibrium constant",
+      "back": "ΔG°=−RT ln K uses a dimensionless K and matching reaction/temperature conventions.",
+      "objective_ids": [
+        "general-chemistry-2-8-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "general-chemistry-2-8-card-3",
+      "lesson_id": "general-chemistry-2-8",
+      "front": "Coupling",
+      "back": "Compatible reaction free energies add and their constants multiply; an equation sum alone does not establish physical coupling.",
+      "objective_ids": [
+        "general-chemistry-2-8-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "general-chemistry-2-8-card-4",
+      "lesson_id": "general-chemistry-2-8",
+      "front": "Direction and rate",
+      "back": "A thermodynamic sign supplies no reaction time scale; useful-work bounds do not establish operating efficiency.",
+      "objective_ids": [
+        "general-chemistry-2-8-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "general-chemistry-2-9-card-1",
+      "lesson_id": "general-chemistry-2-9",
+      "front": "Diprotic fractions",
+      "back": "Normalize h²,K₁h,K₁K₂ by their sum for neutral, singly and doubly deprotonated forms.",
+      "objective_ids": [
+        "general-chemistry-2-9-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "general-chemistry-2-9-card-2",
+      "lesson_id": "general-chemistry-2-9",
+      "front": "Charge weights",
+      "back": "HA⁻ counts once and A²⁻ twice in negative charge, while each counts once in family mass balance.",
+      "objective_ids": [
+        "general-chemistry-2-9-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "general-chemistry-2-9-card-3",
+      "lesson_id": "general-chemistry-2-9",
+      "front": "Imposed versus solved",
+      "back": "Given h determines fractions; predicting closed-solution h also requires compatible charge and analytical balances.",
+      "objective_ids": [
+        "general-chemistry-2-9-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "general-chemistry-2-9-card-4",
+      "lesson_id": "general-chemistry-2-9",
+      "front": "Approximation check",
+      "back": "Dominant-form and amphiprotic shortcuts require scale and concentration checks, not just a species name.",
+      "objective_ids": [
+        "general-chemistry-2-9-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "general-chemistry-2-10-card-1",
+      "lesson_id": "general-chemistry-2-10",
+      "front": "Empirical powers",
+      "back": "Controlled initial-rate ratios determine empirical orders; overall coefficients alone do not.",
+      "objective_ids": [
+        "general-chemistry-2-10-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "general-chemistry-2-10-card-2",
+      "lesson_id": "general-chemistry-2-10",
+      "front": "Elementary model",
+      "back": "Elementary mass action and justified pre-equilibrium/steady-state assumptions can predict a mechanism rate law.",
+      "objective_ids": [
+        "general-chemistry-2-10-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "general-chemistry-2-10-card-3",
+      "lesson_id": "general-chemistry-2-10",
+      "front": "Pseudo-first-order",
+      "back": "A nearly constant excess reactant can hide a concentration dependence in an apparent first-order constant.",
+      "objective_ids": [
+        "general-chemistry-2-10-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "general-chemistry-2-10-card-4",
+      "lesson_id": "general-chemistry-2-10",
+      "front": "Mechanism compatibility",
+      "back": "Matching a rate law can make a mechanism compatible without uniquely identifying it.",
+      "objective_ids": [
+        "general-chemistry-2-10-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "general-chemistry-2-11-card-1",
+      "lesson_id": "general-chemistry-2-11",
+      "front": "Relaxation",
+      "back": "For closed first-order A⇌B, λ=k_f+k_r and A−A_eq decays exponentially.",
+      "objective_ids": [
+        "general-chemistry-2-11-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "general-chemistry-2-11-card-2",
+      "lesson_id": "general-chemistry-2-11",
+      "front": "Half-life definition",
+      "back": "Displacement half-life differs from time to half the initial A when a nonzero equilibrium plateau exists.",
+      "objective_ids": [
+        "general-chemistry-2-11-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "general-chemistry-2-11-card-3",
+      "lesson_id": "general-chemistry-2-11",
+      "front": "Directional constants",
+      "back": "Independent equilibrium ratio and relaxation sum together partition the constants under the specified two-state model.",
+      "objective_ids": [
+        "general-chemistry-2-11-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "general-chemistry-2-11-card-4",
+      "lesson_id": "general-chemistry-2-11",
+      "front": "Observation scope",
+      "back": "A reporting background, equilibrium plateau and sequential intermediate are distinct sources of nonzero signals.",
+      "objective_ids": [
+        "general-chemistry-2-11-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "general-chemistry-2-12-card-1",
+      "lesson_id": "general-chemistry-2-12",
+      "front": "Cell convention",
+      "back": "Subtract anode reduction potential from cathode reduction potential for the written forward cell.",
+      "objective_ids": [
+        "general-chemistry-2-12-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "general-chemistry-2-12-card-2",
+      "lesson_id": "general-chemistry-2-12",
+      "front": "Equation scaling",
+      "back": "Doubling n and ΔG leaves E unchanged; Q and K powers scale with the equation.",
+      "objective_ids": [
+        "general-chemistry-2-12-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "general-chemistry-2-12-card-3",
+      "lesson_id": "general-chemistry-2-12",
+      "front": "Charge amount",
+      "back": "q=It and q/(nF) give reaction amount when all charge serves the specified reaction.",
+      "objective_ids": [
+        "general-chemistry-2-12-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "general-chemistry-2-12-card-4",
+      "lesson_id": "general-chemistry-2-12",
+      "front": "Current efficiency",
+      "back": "Target current efficiency partitions charge; it is different from energy efficiency and product recovery.",
+      "objective_ids": [
+        "general-chemistry-2-12-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "general-chemistry-2-13-card-1",
+      "lesson_id": "general-chemistry-2-13",
+      "front": "Coordination count",
+      "back": "Count directly bound donor atoms; denticity, ionic charge and oxidation state are different quantities.",
+      "objective_ids": [
+        "general-chemistry-2-13-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "general-chemistry-2-13-card-2",
+      "lesson_id": "general-chemistry-2-13",
+      "front": "Closed ligand balance",
+      "back": "For M+L⇌ML, complex formation subtracts the same amount from both free-species totals.",
+      "objective_ids": [
+        "general-chemistry-2-13-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "general-chemistry-2-13-card-3",
+      "lesson_id": "general-chemistry-2-13",
+      "front": "Octahedral d⁶",
+      "back": "Limited high-spin and low-spin occupations have different unpaired counts and crystal-field/pairing energies.",
+      "objective_ids": [
+        "general-chemistry-2-13-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "general-chemistry-2-13-card-4",
+      "lesson_id": "general-chemistry-2-13",
+      "front": "Model evidence",
+      "back": "An equilibrium constant does not supply exchange speed, and a donor count alone does not identify geometry.",
+      "objective_ids": [
+        "general-chemistry-2-13-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "general-chemistry-2-14-card-1",
+      "lesson_id": "general-chemistry-2-14",
+      "front": "Saturation",
+      "back": "Apply the matching free-ion product at saturation while the specified solid remains available.",
+      "objective_ids": [
+        "general-chemistry-2-14-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "general-chemistry-2-14-card-2",
+      "lesson_id": "general-chemistry-2-14",
+      "front": "Complexation",
+      "back": "A larger total dissolved metal can coexist with a smaller free-metal fraction when ligand binding is included.",
+      "objective_ids": [
+        "general-chemistry-2-14-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "general-chemistry-2-14-card-3",
+      "lesson_id": "general-chemistry-2-14",
+      "front": "Ligand condition",
+      "back": "Fixed free ligand and a closed analytical ligand total are different boundary conditions.",
+      "objective_ids": [
+        "general-chemistry-2-14-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "general-chemistry-2-14-card-4",
+      "lesson_id": "general-chemistry-2-14",
+      "front": "Selectivity limits",
+      "back": "Saturation onset and a threshold interval do not establish complete separation, kinetics or recovered purity.",
+      "objective_ids": [
+        "general-chemistry-2-14-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "general-chemistry-2-lab-01-card-1",
+      "lesson_id": "general-chemistry-2-lab-01",
+      "front": "Reference background",
+      "back": "Subtract the independent blank target from its report mean; this constrains the supplied additive reporting background.",
+      "objective_ids": [
+        "general-chemistry-2-lab-01-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "general-chemistry-2-lab-01-card-2",
+      "lesson_id": "general-chemistry-2-lab-01",
+      "front": "Relaxation displacement",
+      "back": "Subtract equilibrium A as well as the reporting background before using the reversible logarithmic transform.",
+      "objective_ids": [
+        "general-chemistry-2-lab-01-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "general-chemistry-2-lab-01-card-3",
+      "lesson_id": "general-chemistry-2-lab-01",
+      "front": "Separate information",
+      "back": "Relaxation gives the sum of directional constants; independent equilibrium ratio partitions that sum under the stated model.",
+      "objective_ids": [
+        "general-chemistry-2-lab-01-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "general-chemistry-2-lab-01-card-4",
+      "lesson_id": "general-chemistry-2-lab-01",
+      "front": "Reserved prediction",
+      "back": "Exclude the reserved time from fitting; agreement checks the construction without uniquely identifying a real mechanism.",
+      "objective_ids": [
+        "general-chemistry-2-lab-01-objective-3"
+      ],
+      "license": "CC-BY-4.0"
     }
   ]
 }

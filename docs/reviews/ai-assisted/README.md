@@ -26,3 +26,4 @@ review that do.
 | Calculus II 0.4.0 (new lessons, force-work lab and schedule) | 2026-10-09 | [calculus-2-0.4.0.md](calculus-2-0.4.0.md) |
 | Calculus III 0.4.0 (new lessons, flux-balance lab and schedule) | 2026-10-09 | [calculus-3-0.4.0.md](calculus-3-0.4.0.md) |
 | General Chemistry I 0.4.0 (new lessons, buffer lab and schedule) | 2026-10-09 | [general-chemistry-1-0.4.0.md](general-chemistry-1-0.4.0.md) |
+| General Chemistry II 0.4.0 (new lessons, relaxation lab and schedule) | 2026-10-09 | [general-chemistry-2-0.4.0.md](general-chemistry-2-0.4.0.md) |

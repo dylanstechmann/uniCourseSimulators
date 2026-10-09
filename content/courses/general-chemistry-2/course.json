@@ -7,7 +7,7 @@
   "domain": "Chemistry",
   "level": "Year 1",
   "maturity": "partial",
-  "version": "0.3.1",
+  "version": "0.4.0",
   "license": "MIT OR CC-BY-4.0",
   "content_origin": {
     "kind": "legacy-prototype",
@@ -167,12 +167,348 @@
       "course_outcome_ids": [
         "general-chemistry-2-outcome-4"
       ]
+    },
+    {
+      "id": "general-chemistry-2-8-objective-1",
+      "description": "Calculate free energy and temperature comparisons with consistent units.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "general-chemistry-2-outcome-1"
+      ]
+    },
+    {
+      "id": "general-chemistry-2-8-objective-2",
+      "description": "Relate standard/current free energy to equilibrium and composition.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "general-chemistry-2-outcome-1"
+      ]
+    },
+    {
+      "id": "general-chemistry-2-8-objective-3",
+      "description": "Distinguish reaction coupling, work bounds and kinetic information.",
+      "bloom": "analyze",
+      "course_outcome_ids": [
+        "general-chemistry-2-outcome-3"
+      ]
+    },
+    {
+      "id": "general-chemistry-2-9-objective-1",
+      "description": "Calculate diprotic acid fractions under declared ideal conventions.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "general-chemistry-2-outcome-1"
+      ]
+    },
+    {
+      "id": "general-chemistry-2-9-objective-2",
+      "description": "Reconcile family mass balance, spectator charge and water contributions.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "general-chemistry-2-outcome-1"
+      ]
+    },
+    {
+      "id": "general-chemistry-2-9-objective-3",
+      "description": "Evaluate imposed-pH and approximation domains.",
+      "bloom": "analyze",
+      "course_outcome_ids": [
+        "general-chemistry-2-outcome-1"
+      ]
+    },
+    {
+      "id": "general-chemistry-2-10-objective-1",
+      "description": "Infer empirical orders, constants and species-rate conventions.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "general-chemistry-2-outcome-2"
+      ]
+    },
+    {
+      "id": "general-chemistry-2-10-objective-2",
+      "description": "Derive and qualify a pre-equilibrium mechanism rate law.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "general-chemistry-2-outcome-2"
+      ]
+    },
+    {
+      "id": "general-chemistry-2-10-objective-3",
+      "description": "Evaluate pseudo-first-order and mechanism-identification limits.",
+      "bloom": "analyze",
+      "course_outcome_ids": [
+        "general-chemistry-2-outcome-2"
+      ]
+    },
+    {
+      "id": "general-chemistry-2-11-objective-1",
+      "description": "Calculate conserved reversible trajectories and equilibrium plateaus.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "general-chemistry-2-outcome-2"
+      ]
+    },
+    {
+      "id": "general-chemistry-2-11-objective-2",
+      "description": "Resolve relaxation, directional constants and half-life definitions.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "general-chemistry-2-outcome-2"
+      ]
+    },
+    {
+      "id": "general-chemistry-2-11-objective-3",
+      "description": "Compare sequential intermediate kinetics and observation limitations.",
+      "bloom": "analyze",
+      "course_outcome_ids": [
+        "general-chemistry-2-outcome-2"
+      ]
+    },
+    {
+      "id": "general-chemistry-2-12-objective-1",
+      "description": "Calculate cell potentials using matching activity/reduction conventions.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "general-chemistry-2-outcome-3"
+      ]
+    },
+    {
+      "id": "general-chemistry-2-12-objective-2",
+      "description": "Relate electrochemical potential, reaction free energy and equation scaling.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "general-chemistry-2-outcome-3"
+      ]
+    },
+    {
+      "id": "general-chemistry-2-12-objective-3",
+      "description": "Account for charge and stipulated target current efficiency.",
+      "bloom": "analyze",
+      "course_outcome_ids": [
+        "general-chemistry-2-outcome-3"
+      ]
+    },
+    {
+      "id": "general-chemistry-2-13-objective-1",
+      "description": "Distinguish donor counts, charge and geometry evidence.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "general-chemistry-2-outcome-4"
+      ]
+    },
+    {
+      "id": "general-chemistry-2-13-objective-2",
+      "description": "Solve ligand and metal balances under distinct boundary conditions.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "general-chemistry-2-outcome-4"
+      ]
+    },
+    {
+      "id": "general-chemistry-2-13-objective-3",
+      "description": "Compare limited octahedral occupations and pairing energies.",
+      "bloom": "analyze",
+      "course_outcome_ids": [
+        "general-chemistry-2-outcome-4"
+      ]
+    },
+    {
+      "id": "general-chemistry-2-14-objective-1",
+      "description": "Calculate saturation and solubility with correct stoichiometry.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "general-chemistry-2-outcome-1"
+      ]
+    },
+    {
+      "id": "general-chemistry-2-14-objective-2",
+      "description": "Combine ideal complexation, ligand and solubility constraints.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "general-chemistry-2-outcome-4"
+      ]
+    },
+    {
+      "id": "general-chemistry-2-14-objective-3",
+      "description": "Qualify saturation and separation interpretations.",
+      "bloom": "analyze",
+      "course_outcome_ids": [
+        "general-chemistry-2-outcome-1"
+      ]
+    },
+    {
+      "id": "general-chemistry-2-lab-01-objective-1",
+      "description": "Summarize concentration reports and correct a supplied reference background.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "general-chemistry-2-outcome-2"
+      ]
+    },
+    {
+      "id": "general-chemistry-2-lab-01-objective-2",
+      "description": "Fit a reversible relaxation using independent equilibrium composition and a reserved prediction.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "general-chemistry-2-outcome-2"
+      ]
+    },
+    {
+      "id": "general-chemistry-2-lab-01-objective-3",
+      "description": "Distinguish reporting correction, plateau models and causal-identification limits.",
+      "bloom": "analyze",
+      "course_outcome_ids": [
+        "general-chemistry-2-outcome-2"
+      ]
     }
   ],
   "duration": {
-    "instructional_weeks": null,
-    "equivalent_structure": null,
-    "weeks": []
+    "instructional_weeks": 14,
+    "equivalent_structure": "Proposed 14-week scope with two readings in week 12; compact prototype readings remain in weeks 1,5,9,12. Workload and qualified review are absent; no semester equivalence is established.",
+    "weeks": [
+      {
+        "week": 1,
+        "title": "Acid-base equilibria and buffers",
+        "lesson_ids": [
+          "general-chemistry-2-1"
+        ],
+        "assessment_ids": [
+          "general-chemistry-2-1-practice"
+        ]
+      },
+      {
+        "week": 2,
+        "title": "Free energy, equilibrium and reaction direction",
+        "lesson_ids": [
+          "general-chemistry-2-8"
+        ],
+        "assessment_ids": [
+          "general-chemistry-2-8-practice"
+        ]
+      },
+      {
+        "week": 3,
+        "title": "Buffers by design: Henderson–Hasselbalch, capacity and the ionization of weak acids and bases",
+        "lesson_ids": [
+          "general-chemistry-2-5"
+        ],
+        "assessment_ids": [
+          "general-chemistry-2-5-practice"
+        ]
+      },
+      {
+        "week": 4,
+        "title": "Coupled acid speciation and charge balance",
+        "lesson_ids": [
+          "general-chemistry-2-9"
+        ],
+        "assessment_ids": [
+          "general-chemistry-2-9-practice"
+        ]
+      },
+      {
+        "week": 5,
+        "title": "Kinetics and reaction mechanisms",
+        "lesson_ids": [
+          "general-chemistry-2-2"
+        ],
+        "assessment_ids": [
+          "general-chemistry-2-2-practice"
+        ]
+      },
+      {
+        "week": 6,
+        "title": "Rate laws in practice: integrated forms, half-lives, Arrhenius temperature dependence and how to tell the order",
+        "lesson_ids": [
+          "general-chemistry-2-6"
+        ],
+        "assessment_ids": [
+          "general-chemistry-2-6-practice"
+        ]
+      },
+      {
+        "week": 7,
+        "title": "Rate laws and mechanism inference",
+        "lesson_ids": [
+          "general-chemistry-2-10"
+        ],
+        "assessment_ids": [
+          "general-chemistry-2-10-practice"
+        ]
+      },
+      {
+        "week": 8,
+        "title": "Reversible and sequential kinetics",
+        "lesson_ids": [
+          "general-chemistry-2-11"
+        ],
+        "assessment_ids": [
+          "general-chemistry-2-11-practice"
+        ]
+      },
+      {
+        "week": 9,
+        "title": "Redox and electrochemical cells",
+        "lesson_ids": [
+          "general-chemistry-2-3"
+        ],
+        "assessment_ids": [
+          "general-chemistry-2-3-practice"
+        ]
+      },
+      {
+        "week": 10,
+        "title": "Electrochemical stoichiometry, composition and work",
+        "lesson_ids": [
+          "general-chemistry-2-12"
+        ],
+        "assessment_ids": [
+          "general-chemistry-2-12-practice"
+        ]
+      },
+      {
+        "week": 11,
+        "title": "Redox direction and metal centers: the Nernst equation, electron flow and why ligands matter",
+        "lesson_ids": [
+          "general-chemistry-2-7"
+        ],
+        "assessment_ids": [
+          "general-chemistry-2-7-practice"
+        ]
+      },
+      {
+        "week": 12,
+        "title": "Coordination chemistry and biologically relevant metals / Ligand balance and coordination models",
+        "lesson_ids": [
+          "general-chemistry-2-4",
+          "general-chemistry-2-13"
+        ],
+        "assessment_ids": [
+          "general-chemistry-2-4-practice",
+          "general-chemistry-2-13-practice"
+        ]
+      },
+      {
+        "week": 13,
+        "title": "Solubility, complexation and competing equilibria",
+        "lesson_ids": [
+          "general-chemistry-2-14"
+        ],
+        "assessment_ids": [
+          "general-chemistry-2-14-practice"
+        ]
+      },
+      {
+        "week": 14,
+        "title": "Virtual lab 1: reporting background and reversible relaxation",
+        "lesson_ids": [
+          "general-chemistry-2-lab-01"
+        ],
+        "assessment_ids": [
+          "general-chemistry-2-week14-relaxation-lab",
+          "general-chemistry-2-case"
+        ]
+      }
+    ]
   },
   "workload": {
     "estimated_total_hours": null,
@@ -396,6 +732,312 @@
           ]
         }
       ]
+    },
+    {
+      "id": "general-chemistry-2-module-8",
+      "title": "Free energy, equilibrium and reaction direction",
+      "source_ids": [
+        "chemistry",
+        "biochemistry",
+        "openstax-chem2-free-energy"
+      ],
+      "lessons": [
+        {
+          "id": "general-chemistry-2-8",
+          "title": "Free energy, equilibrium and reaction direction",
+          "reading": "modules/08-free-energy-and-equilibrium.md",
+          "objectives": [
+            "general-chemistry-2-8-objective-1",
+            "general-chemistry-2-8-objective-2",
+            "general-chemistry-2-8-objective-3"
+          ],
+          "worked_example": "Convert 50.0 J/(mol·K) to 0.0500 kJ/(mol·K), then calculate 12.0−300×0.0500=−3.0 kJ/mol. Convert back to joules for K=exp(3000/(8.314×300)). For Q=10, add RT ln 10 to the standard free energy and obtain positive current ΔG. For the separate ideal A/B inventory with total 1.0 mol/L, combine K with conservation instead of claiming complete conversion. Finally, combine compatible constants 4 and 0.5 to obtain net K=2.",
+          "question_ids": [
+            "general-chemistry-2-8:standard-g",
+            "general-chemistry-2-8:crossing",
+            "general-chemistry-2-8:equilibrium-constant",
+            "general-chemistry-2-8:current-g",
+            "general-chemistry-2-8:equilibrium-b",
+            "general-chemistry-2-8:coupled-k",
+            "general-chemistry-2-8:direction",
+            "general-chemistry-2-8:speed",
+            "general-chemistry-2-8:scaling"
+          ],
+          "card_ids": [
+            "general-chemistry-2-8-card-1",
+            "general-chemistry-2-8-card-2",
+            "general-chemistry-2-8-card-3",
+            "general-chemistry-2-8-card-4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "general-chemistry-2-module-9",
+      "title": "Coupled acid speciation and charge balance",
+      "source_ids": [
+        "chemistry",
+        "biochemistry"
+      ],
+      "lessons": [
+        {
+          "id": "general-chemistry-2-9",
+          "title": "Coupled acid speciation and charge balance",
+          "reading": "modules/09-coupled-acid-speciation-and-charge-balance.md",
+          "objectives": [
+            "general-chemistry-2-9-objective-1",
+            "general-chemistry-2-9-objective-2",
+            "general-chemistry-2-9-objective-3"
+          ],
+          "worked_example": "At h=10⁻⁶, divide the denominator terms by h² to obtain 1,10,0.1. Normalize by 11.1 and multiply each fraction by C_T=0.0100. Compute family negative charge with one weight for HA⁻ and two for A²⁻. Add hydroxide 10⁻⁸ mol/L and subtract h to find the required spectator difference. This calculation gives both a normalized species table and the spectator inventory compatible with the imposed pH.",
+          "question_ids": [
+            "general-chemistry-2-9:neutral-fraction",
+            "general-chemistry-2-9:mono-fraction",
+            "general-chemistry-2-9:di-fraction",
+            "general-chemistry-2-9:mean-charge",
+            "general-chemistry-2-9:spectator-difference",
+            "general-chemistry-2-9:amphiprotic-ph",
+            "general-chemistry-2-9:charge",
+            "general-chemistry-2-9:imposed",
+            "general-chemistry-2-9:approximation"
+          ],
+          "card_ids": [
+            "general-chemistry-2-9-card-1",
+            "general-chemistry-2-9-card-2",
+            "general-chemistry-2-9-card-3",
+            "general-chemistry-2-9-card-4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "general-chemistry-2-module-10",
+      "title": "Rate laws and mechanism inference",
+      "source_ids": [
+        "chemistry",
+        "biochemistry",
+        "openstax-chem2-mechanisms"
+      ],
+      "lessons": [
+        {
+          "id": "general-chemistry-2-10",
+          "title": "Rate laws and mechanism inference",
+          "reading": "modules/10-rate-laws-and-mechanism-inference.md",
+          "objectives": [
+            "general-chemistry-2-10-objective-1",
+            "general-chemistry-2-10-objective-2",
+            "general-chemistry-2-10-objective-3"
+          ],
+          "worked_example": "Take initial-rate ratios 4 for a twofold A increase and 2 for a twofold B increase. Solve 2^m=4 and 2^n=2, giving m=2,n=1. Compute k from the reference mixture and predict the new rate 0.00675. For the separate hypothetical pre-equilibrium mechanism, calculate I from K_c[A][B], then form k₂[I]. Keep the empirical example and proposed mechanism separate: they describe different synthetic models and do not claim to explain the same reaction.",
+          "question_ids": [
+            "general-chemistry-2-10:a-order",
+            "general-chemistry-2-10:b-order",
+            "general-chemistry-2-10:rate-constant",
+            "general-chemistry-2-10:predicted-rate",
+            "general-chemistry-2-10:pre-equilibrium-rate",
+            "general-chemistry-2-10:pseudo-first",
+            "general-chemistry-2-10:mechanism",
+            "general-chemistry-2-10:rate-definition",
+            "general-chemistry-2-10:intermediate"
+          ],
+          "card_ids": [
+            "general-chemistry-2-10-card-1",
+            "general-chemistry-2-10-card-2",
+            "general-chemistry-2-10-card-3",
+            "general-chemistry-2-10-card-4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "general-chemistry-2-module-11",
+      "title": "Reversible and sequential kinetics",
+      "source_ids": [
+        "chemistry",
+        "biochemistry"
+      ],
+      "lessons": [
+        {
+          "id": "general-chemistry-2-11",
+          "title": "Reversible and sequential kinetics",
+          "reading": "modules/11-reversible-and-sequential-kinetics.md",
+          "objectives": [
+            "general-chemistry-2-11-objective-1",
+            "general-chemistry-2-11-objective-2",
+            "general-chemistry-2-11-objective-3"
+          ],
+          "worked_example": "Add the reversible constants to obtain λ=0.060 and use the reverse fraction of that sum to find A_eq=0.20. Calculate A at 20 min and recover B from conserved total. Distinguish displacement half-life from time to A=0.50. In the separate chain, differentiate the intermediate expression or set its production equal to removal, find the peak time and check the conserved amounts 0.25+0.50+0.25=1. These calculations describe two different kinetic structures.",
+          "question_ids": [
+            "general-chemistry-2-11:relaxation",
+            "general-chemistry-2-11:plateau",
+            "general-chemistry-2-11:twenty",
+            "general-chemistry-2-11:displacement-half",
+            "general-chemistry-2-11:actual-half",
+            "general-chemistry-2-11:intermediate-peak",
+            "general-chemistry-2-11:half-life",
+            "general-chemistry-2-11:directional",
+            "general-chemistry-2-11:observed-a"
+          ],
+          "card_ids": [
+            "general-chemistry-2-11-card-1",
+            "general-chemistry-2-11-card-2",
+            "general-chemistry-2-11-card-3",
+            "general-chemistry-2-11-card-4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "general-chemistry-2-module-12",
+      "title": "Electrochemical stoichiometry, composition and work",
+      "source_ids": [
+        "chemistry",
+        "biochemistry"
+      ],
+      "lessons": [
+        {
+          "id": "general-chemistry-2-12",
+          "title": "Electrochemical stoichiometry, composition and work",
+          "reading": "modules/12-electrochemical-stoichiometry-and-work.md",
+          "objectives": [
+            "general-chemistry-2-12-objective-1",
+            "general-chemistry-2-12-objective-2",
+            "general-chemistry-2-12-objective-3"
+          ],
+          "worked_example": "Subtract the stipulated reduction values for E°=0.50 V. Form −2×96485×0.50 and convert joules to kilojoules for ΔG°. At Q=100, subtract the natural-log composition term for E≈0.440478. Double the whole equation and verify that potential stays fixed while reaction free energy doubles. Separately, use 0.50×120=60 C, divide by 2F and apply the stated 80% current efficiency to calculate target amount.",
+          "question_ids": [
+            "general-chemistry-2-12:standard-potential",
+            "general-chemistry-2-12:standard-g",
+            "general-chemistry-2-12:nernst-potential",
+            "general-chemistry-2-12:ln-k",
+            "general-chemistry-2-12:charge",
+            "general-chemistry-2-12:target-amount",
+            "general-chemistry-2-12:potential-scale",
+            "general-chemistry-2-12:efficiency",
+            "general-chemistry-2-12:operating"
+          ],
+          "card_ids": [
+            "general-chemistry-2-12-card-1",
+            "general-chemistry-2-12-card-2",
+            "general-chemistry-2-12-card-3",
+            "general-chemistry-2-12-card-4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "general-chemistry-2-module-13",
+      "title": "Ligand balance and coordination models",
+      "source_ids": [
+        "chemistry",
+        "biochemistry",
+        "openstax-chem2-coordination-properties"
+      ],
+      "lessons": [
+        {
+          "id": "general-chemistry-2-13",
+          "title": "Ligand balance and coordination models",
+          "reading": "modules/13-ligand-balance-and-coordination-models.md",
+          "objectives": [
+            "general-chemistry-2-13-objective-1",
+            "general-chemistry-2-13-objective-2",
+            "general-chemistry-2-13-objective-3"
+          ],
+          "worked_example": "Set complex concentration x and subtract it from both analytical totals. Solve x=10⁴(0.0010−x)(0.0015−x), retain the bounded root and reconstruct both free species. Check K_f and both totals. Separately count six donors from three bidentate ligands. For the distinct d⁶ model, compare lower/upper occupations and add the pairing-cost difference to obtain −100 kJ/mol. These examples do not identify one real complex.",
+          "question_ids": [
+            "general-chemistry-2-13:donor-count",
+            "general-chemistry-2-13:complex-charge",
+            "general-chemistry-2-13:bound-metal",
+            "general-chemistry-2-13:free-metal",
+            "general-chemistry-2-13:fixed-ligand-fraction",
+            "general-chemistry-2-13:spin-energy",
+            "general-chemistry-2-13:free-total",
+            "general-chemistry-2-13:geometry",
+            "general-chemistry-2-13:spin"
+          ],
+          "card_ids": [
+            "general-chemistry-2-13-card-1",
+            "general-chemistry-2-13-card-2",
+            "general-chemistry-2-13-card-3",
+            "general-chemistry-2-13-card-4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "general-chemistry-2-module-14",
+      "title": "Solubility, complexation and competing equilibria",
+      "source_ids": [
+        "chemistry",
+        "biochemistry"
+      ],
+      "lessons": [
+        {
+          "id": "general-chemistry-2-14",
+          "title": "Solubility, complexation and competing equilibria",
+          "reading": "modules/14-solubility-complexation-and-competing-equilibria.md",
+          "objectives": [
+            "general-chemistry-2-14-objective-1",
+            "general-chemistry-2-14-objective-2",
+            "general-chemistry-2-14-objective-3"
+          ],
+          "worked_example": "For MX in pure water, use s²=10⁻⁸. For common-ion conditions, retain s in 0.0100+s and check the small-change approximation. For MX₂, use 4s³ rather than s². In the fixed-free-ligand example, form 1+K_fl=101, solve for total S, then divide by 101 for free metal. Check the metal and charge totals before interpreting the larger dissolved amount.",
+          "question_ids": [
+            "general-chemistry-2-14:pure-solubility",
+            "general-chemistry-2-14:common-ion",
+            "general-chemistry-2-14:two-anions",
+            "general-chemistry-2-14:saturation-ratio",
+            "general-chemistry-2-14:complexed-total",
+            "general-chemistry-2-14:complexed-free",
+            "general-chemistry-2-14:phase",
+            "general-chemistry-2-14:ligand",
+            "general-chemistry-2-14:selectivity"
+          ],
+          "card_ids": [
+            "general-chemistry-2-14-card-1",
+            "general-chemistry-2-14-card-2",
+            "general-chemistry-2-14-card-3",
+            "general-chemistry-2-14-card-4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "general-chemistry-2-module-lab-01",
+      "title": "Virtual lab 1: reporting background and reversible relaxation",
+      "source_ids": [
+        "chemistry",
+        "biochemistry"
+      ],
+      "lessons": [
+        {
+          "id": "general-chemistry-2-lab-01",
+          "title": "Virtual lab 1: reporting background and reversible relaxation",
+          "reading": "labs/01-reporting-background-and-relaxation.md",
+          "objectives": [
+            "general-chemistry-2-lab-01-objective-1",
+            "general-chemistry-2-lab-01-objective-2",
+            "general-chemistry-2-lab-01-objective-3"
+          ],
+          "worked_example": "A synthetic blank identifies 0.0500 mM reporting background. Independent equilibrium A=0.20 mM defines a separate physical plateau. The t00/t20 displacement fit gives λ≈0.059991 min⁻¹ and a reserved t60 prediction; this checks the construction without identifying a real mechanism.",
+          "question_ids": [
+            "general-chemistry-2-lab-01:summary",
+            "general-chemistry-2-lab-01:background",
+            "general-chemistry-2-lab-01:relaxation",
+            "general-chemistry-2-lab-01:forward",
+            "general-chemistry-2-lab-01:reserved-prediction",
+            "general-chemistry-2-lab-01:interpretation",
+            "general-chemistry-2-lab-01:claims",
+            "general-chemistry-2-lab-01:naive-rate"
+          ],
+          "card_ids": [
+            "general-chemistry-2-lab-01-card-1",
+            "general-chemistry-2-lab-01-card-2",
+            "general-chemistry-2-lab-01-card-3",
+            "general-chemistry-2-lab-01-card-4"
+          ]
+        }
+      ]
     }
   ],
   "assessments": [
@@ -527,6 +1169,208 @@
       "points": 6
     },
     {
+      "id": "general-chemistry-2-8-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Free energy, equilibrium and reaction direction practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "general-chemistry-2-8-objective-1",
+        "general-chemistry-2-8-objective-2",
+        "general-chemistry-2-8-objective-3",
+        "general-chemistry-2-outcome-1",
+        "general-chemistry-2-outcome-3"
+      ],
+      "question_ids": [
+        "general-chemistry-2-8:standard-g",
+        "general-chemistry-2-8:crossing",
+        "general-chemistry-2-8:equilibrium-constant",
+        "general-chemistry-2-8:current-g",
+        "general-chemistry-2-8:equilibrium-b",
+        "general-chemistry-2-8:coupled-k",
+        "general-chemistry-2-8:direction",
+        "general-chemistry-2-8:speed",
+        "general-chemistry-2-8:scaling"
+      ],
+      "points": 9
+    },
+    {
+      "id": "general-chemistry-2-9-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Coupled acid speciation and charge balance practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "general-chemistry-2-9-objective-1",
+        "general-chemistry-2-9-objective-2",
+        "general-chemistry-2-9-objective-3",
+        "general-chemistry-2-outcome-1"
+      ],
+      "question_ids": [
+        "general-chemistry-2-9:neutral-fraction",
+        "general-chemistry-2-9:mono-fraction",
+        "general-chemistry-2-9:di-fraction",
+        "general-chemistry-2-9:mean-charge",
+        "general-chemistry-2-9:spectator-difference",
+        "general-chemistry-2-9:amphiprotic-ph",
+        "general-chemistry-2-9:charge",
+        "general-chemistry-2-9:imposed",
+        "general-chemistry-2-9:approximation"
+      ],
+      "points": 9
+    },
+    {
+      "id": "general-chemistry-2-10-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Rate laws and mechanism inference practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "general-chemistry-2-10-objective-1",
+        "general-chemistry-2-10-objective-2",
+        "general-chemistry-2-10-objective-3",
+        "general-chemistry-2-outcome-2"
+      ],
+      "question_ids": [
+        "general-chemistry-2-10:a-order",
+        "general-chemistry-2-10:b-order",
+        "general-chemistry-2-10:rate-constant",
+        "general-chemistry-2-10:predicted-rate",
+        "general-chemistry-2-10:pre-equilibrium-rate",
+        "general-chemistry-2-10:pseudo-first",
+        "general-chemistry-2-10:mechanism",
+        "general-chemistry-2-10:rate-definition",
+        "general-chemistry-2-10:intermediate"
+      ],
+      "points": 9
+    },
+    {
+      "id": "general-chemistry-2-11-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Reversible and sequential kinetics practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "general-chemistry-2-11-objective-1",
+        "general-chemistry-2-11-objective-2",
+        "general-chemistry-2-11-objective-3",
+        "general-chemistry-2-outcome-2"
+      ],
+      "question_ids": [
+        "general-chemistry-2-11:relaxation",
+        "general-chemistry-2-11:plateau",
+        "general-chemistry-2-11:twenty",
+        "general-chemistry-2-11:displacement-half",
+        "general-chemistry-2-11:actual-half",
+        "general-chemistry-2-11:intermediate-peak",
+        "general-chemistry-2-11:half-life",
+        "general-chemistry-2-11:directional",
+        "general-chemistry-2-11:observed-a"
+      ],
+      "points": 9
+    },
+    {
+      "id": "general-chemistry-2-12-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Electrochemical stoichiometry, composition and work practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "general-chemistry-2-12-objective-1",
+        "general-chemistry-2-12-objective-2",
+        "general-chemistry-2-12-objective-3",
+        "general-chemistry-2-outcome-3"
+      ],
+      "question_ids": [
+        "general-chemistry-2-12:standard-potential",
+        "general-chemistry-2-12:standard-g",
+        "general-chemistry-2-12:nernst-potential",
+        "general-chemistry-2-12:ln-k",
+        "general-chemistry-2-12:charge",
+        "general-chemistry-2-12:target-amount",
+        "general-chemistry-2-12:potential-scale",
+        "general-chemistry-2-12:efficiency",
+        "general-chemistry-2-12:operating"
+      ],
+      "points": 9
+    },
+    {
+      "id": "general-chemistry-2-13-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Ligand balance and coordination models practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "general-chemistry-2-13-objective-1",
+        "general-chemistry-2-13-objective-2",
+        "general-chemistry-2-13-objective-3",
+        "general-chemistry-2-outcome-4"
+      ],
+      "question_ids": [
+        "general-chemistry-2-13:donor-count",
+        "general-chemistry-2-13:complex-charge",
+        "general-chemistry-2-13:bound-metal",
+        "general-chemistry-2-13:free-metal",
+        "general-chemistry-2-13:fixed-ligand-fraction",
+        "general-chemistry-2-13:spin-energy",
+        "general-chemistry-2-13:free-total",
+        "general-chemistry-2-13:geometry",
+        "general-chemistry-2-13:spin"
+      ],
+      "points": 9
+    },
+    {
+      "id": "general-chemistry-2-14-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Solubility, complexation and competing equilibria practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "general-chemistry-2-14-objective-1",
+        "general-chemistry-2-14-objective-2",
+        "general-chemistry-2-14-objective-3",
+        "general-chemistry-2-outcome-1",
+        "general-chemistry-2-outcome-4"
+      ],
+      "question_ids": [
+        "general-chemistry-2-14:pure-solubility",
+        "general-chemistry-2-14:common-ion",
+        "general-chemistry-2-14:two-anions",
+        "general-chemistry-2-14:saturation-ratio",
+        "general-chemistry-2-14:complexed-total",
+        "general-chemistry-2-14:complexed-free",
+        "general-chemistry-2-14:phase",
+        "general-chemistry-2-14:ligand",
+        "general-chemistry-2-14:selectivity"
+      ],
+      "points": 9
+    },
+    {
+      "id": "general-chemistry-2-week14-relaxation-lab",
+      "type": "lab",
+      "mode": "practice",
+      "title": "Virtual lab 1: reporting background and reversible relaxation (ungraded practice)",
+      "path": "question-banks/practice.json",
+      "week": 14,
+      "objective_ids": [
+        "general-chemistry-2-lab-01-objective-1",
+        "general-chemistry-2-lab-01-objective-2",
+        "general-chemistry-2-lab-01-objective-3",
+        "general-chemistry-2-outcome-2"
+      ],
+      "question_ids": [
+        "general-chemistry-2-lab-01:summary",
+        "general-chemistry-2-lab-01:background",
+        "general-chemistry-2-lab-01:relaxation",
+        "general-chemistry-2-lab-01:forward",
+        "general-chemistry-2-lab-01:reserved-prediction",
+        "general-chemistry-2-lab-01:interpretation",
+        "general-chemistry-2-lab-01:claims",
+        "general-chemistry-2-lab-01:naive-rate"
+      ],
+      "points": 24
+    },
+    {
       "id": "general-chemistry-2-case",
       "type": "case",
       "mode": "self-assessment",
@@ -583,18 +1427,23 @@
       "version": "0.3.1",
       "date": "2026-10-08",
       "summary": "Assessments with items now also list the course outcomes those items assess, derived from each item's lesson objective and that objective's outcome links. The rubric-only case lists none, and neither do the 4 prototype-unit assessments, whose objectives are not yet linked to an outcome. No readings, items or keys changed. The syllabus was regenerated from the manifest: it states the current version, lists every lesson with its item and card counts, and describes the current practice and limitations (it still described only the four original units). The course limitations shown to learners were also updated: they still described one formative check per lesson and the original numerical rules. The package remains partial, unreviewed and formative-only."
+    },
+    {
+      "version": "0.4.0",
+      "date": "2026-10-09",
+      "summary": "Added seven original lessons on free energy, coupled acid speciation, empirical/mechanistic rate laws, reversible/sequential kinetics, electrochemical accounting, ligand balance and solubility/complexation; one synthetic reference-and-plateau relaxation lab and a proposed weekly schedule. Developed with Codex assistance. Still partial, unreviewed and formative-only."
     }
   ],
   "limitations": [
-    "Four compact legacy units are preserved; this package is not equivalent to a full university semester.",
-    "There is no authored 12–15 week schedule, substantive homework sequence, laboratory sequence, midterm, cumulative final, or graded integrative project.",
-    "Practice items are short formative checks (two per prototype unit and six per original lesson); they do not demonstrate comprehensive outcome coverage or mastery, and objective associations remain provisional.",
-    "Bloom labels and structured prerequisite edges are initial authoring classifications awaiting subject-matter review.",
-    "Question answers and solution feedback are intentionally public practice authoring specifications, not restricted exam keys.",
-    "Of the 18 numerical answers in this package, ten require a unit, none checks significant figures and none checks dimensions; the others accept a number within a stated tolerance, with the unit optional.",
-    "Total workload and weekly duration are unknown; former nominal credit values and hardcoded reading times do not establish workload."
+    "Four compact prototype readings remain beside ten substantive original lessons and one synthetic lab; this is not a full university semester.",
+    "The proposed 14-week scope is unmeasured and unreviewed; no graded homework sequence, exams, full laboratory sequence or cumulative graded project exists.",
+    "Public practice points are study feedback, not course grades. All keys/feedback remain public formative authoring specifications.",
+    "All new parameters and observations are synthetic, with explicitly restricted ideal, concentration-form or kinetic assumptions; no handling protocol or biological recommendation is supplied.",
+    "Of 64 numeric items, ten preserved items require units, none checks significant figures or dimensions; new items explicitly ask for a bare number in a stated scale.",
+    "Subject-matter, accessibility and workload review remain outstanding; objective associations are provisional.",
+    "Three primary OpenStax section pages were retrieved as link-only references; no prose, problem, figure or dataset was imported."
   ],
   "intentionally_omitted": [
-    "Full instructional sequence and summative assessments are not authored yet; the original lessons extend a partial package."
+    "Graded assessments, complete laboratory sequence, cumulative graded project, measured workload and qualified human review remain outstanding."
   ]
 }

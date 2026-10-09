@@ -1,12 +1,12 @@
 # General Chemistry II
 
-**Maturity: partial. Version: 0.3.1.**
+**Maturity: partial. Version: 0.4.0.** Personal hobby and learning project with substantial AI assistance; no institutional credit or university equivalence.
 
-Kinetics, acid-base systems, electrochemistry, and coordination chemistry connected to buffers, redox biology, and metal-dependent biomolecules.
+Original instruction develops equilibrium, kinetic inference, electrochemical amount accounting and coordination models through declared synthetic examples.
 
 ## Prerequisites
 
-General Chemistry I. Structured required, recommended, and concurrent relationships appear in the manifest and remain subject to author review. This package establishes no university prerequisite equivalency.
+General Chemistry I. Manifest relationships remain provisional and establish no university equivalency.
 
 ## Authored outcomes
 
@@ -15,28 +15,35 @@ General Chemistry I. Structured required, recommended, and concurrent relationsh
 - Relate redox potential to electron-transfer direction.
 - Explain coordination geometry and ligand effects.
 
-## Units and lessons
+## Proposed 14-week schedule
 
-Units 1–4 keep the short prototype readings preserved from the original project; they need substantial expansion. Units 5–7 are original lesson-length readings (about 830 to 920 words) with learning objectives, a worked example, common mistakes, stated limits and explicitly synthetic data. No unit has been reviewed by a qualified instructor.
+This sequence is planning scope, not measured workload or a reviewed semester. Compact prototype readings remain in weeks 1,5,9,12; week 12 pairs a prototype with the new ligand-balance lesson. Week 14 is a synthetic relaxation lab and revisits the preserved redox/metal case. All activities are public formative practice.
 
-| Unit | Lesson | Reading | Practice items | Retrieval cards |
-|---:|---|---|---:|---:|
-| 1 | Acid-base equilibria and buffers | short prototype | 2 | 2 |
-| 2 | Kinetics and reaction mechanisms | short prototype | 2 | 2 |
-| 3 | Redox and electrochemical cells | short prototype | 2 | 2 |
-| 4 | Coordination chemistry and biologically relevant metals | short prototype | 2 | 2 |
-| 5 | Buffers by design: Henderson–Hasselbalch, capacity and the ionization of weak acids and bases | lesson-length original | 6 | 4 |
-| 6 | Rate laws in practice: integrated forms, half-lives, Arrhenius temperature dependence and how to tell the order | lesson-length original | 6 | 4 |
-| 7 | Redox direction and metal centers: the Nernst equation, electron flow and why ligands matter | lesson-length original | 6 | 4 |
+| Week | Reading | Items | Cards |
+|---|---|---:|---:|
+| 1 | Acid-base equilibria and buffers | 2 | 2 |
+| 2 | Free energy, equilibrium and reaction direction | 9 | 4 |
+| 3 | Buffers by design: Henderson–Hasselbalch, capacity and the ionization of weak acids and bases | 6 | 4 |
+| 4 | Coupled acid speciation and charge balance | 9 | 4 |
+| 5 | Kinetics and reaction mechanisms | 2 | 2 |
+| 6 | Rate laws in practice: integrated forms, half-lives, Arrhenius temperature dependence and how to tell the order | 6 | 4 |
+| 7 | Rate laws and mechanism inference | 9 | 4 |
+| 8 | Reversible and sequential kinetics | 9 | 4 |
+| 9 | Redox and electrochemical cells | 2 | 2 |
+| 10 | Electrochemical stoichiometry, composition and work | 9 | 4 |
+| 11 | Redox direction and metal centers: the Nernst equation, electron flow and why ligands matter | 6 | 4 |
+| 12 | Coordination chemistry and biologically relevant metals / Ligand balance and coordination models | 11 | 6 |
+| 13 | Solubility, complexation and competing equilibria | 9 | 4 |
+| 14 | Virtual lab 1: reporting background and reversible relaxation | 8 | 4 |
 
-## Assessment and study policy
+## Assessment policy
 
-Every lesson has public formative practice items (numeric and single-choice) tagged to its learning objectives. The practice assessments for the original lessons also list the course outcomes those objectives link to; the objectives of the prototype units are not yet linked to course outcomes, so their assessments list none. In total the package has 26 practice items and 20 retrieval cards for the review queue. A course case includes a self-assessment checklist. These are practice activities, with unlimited retries and no institutional grade, university credit, or transferable credit. Workload has not been measured.
+There are 15 readings, 97 public practice items and 52 retrieval cards, plus the preserved self-assessment case. Numeric, single-choice, CSV-upload, structured-choice and multiple-select checks provide selected feedback with unlimited retries. New numeric items request a bare number in an explicit scale; ten preserved items require units. Significant figures, dimensions and written derivations are not scored. Points are study feedback, not an institutional grade. Outcome lists reflect the objectives their items assess; these associations still require subject-matter review.
 
-## Schedule and current limitations
+## Current limitations
 
-No full-semester calendar or 14-week structure has been authored. No substantive homework sets, laboratories, midterm, final, or graded cumulative project are included. The four short prototype readings require substantial expansion, and the newer lessons rely on explicitly synthetic data. Nothing in this package has been reviewed by a qualified instructor; qualified human review is required before this course can meet the complete-course quality standard.
+Four compact prototype readings remain. One constructed data lab is not a laboratory sequence. Graded homework, exams and a graded cumulative project are absent. Workload, accessibility and chemical quality await qualified review. New parameters and observations are synthetic and provide no chemical handling procedure or biological recommendation. The package remains partial, unreviewed and formative-only.
 
 ## Sources and licensing
 
-Read source-map.json for module provenance and content/SOURCES_AND_LICENSES.md for the software/content license boundary. Listed source courses are public curriculum comparators; no affiliation or equivalency is implied.
+Existing MIT chemistry/biochemistry sources remain scope comparators. Three OpenStax Chemistry 2e section pages were retrieved as link-only factual references for standard free-energy, mechanism and coordination-property concepts. No teaching prose, problem, figure or dataset was copied. No new paper identifier was introduced. Original instruction and synthetic data are CC BY 4.0 with substantial AI assistance. See source-map.json and content/SOURCES_AND_LICENSES.md for rights and the software/content boundary. Links establish no endorsement or review.

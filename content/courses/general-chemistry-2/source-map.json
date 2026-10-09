@@ -93,6 +93,113 @@
       "original_content": true,
       "license": "CC-BY-4.0",
       "modifications": []
+    },
+    {
+      "module_id": "general-chemistry-2-module-8",
+      "lesson_id": "general-chemistry-2-8",
+      "reading": "modules/08-free-energy-and-equilibrium.md",
+      "source_ids": [
+        "chemistry",
+        "biochemistry",
+        "openstax-chem2-free-energy"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "general-chemistry-2-module-9",
+      "lesson_id": "general-chemistry-2-9",
+      "reading": "modules/09-coupled-acid-speciation-and-charge-balance.md",
+      "source_ids": [
+        "chemistry",
+        "biochemistry"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "general-chemistry-2-module-10",
+      "lesson_id": "general-chemistry-2-10",
+      "reading": "modules/10-rate-laws-and-mechanism-inference.md",
+      "source_ids": [
+        "chemistry",
+        "biochemistry",
+        "openstax-chem2-mechanisms"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "general-chemistry-2-module-11",
+      "lesson_id": "general-chemistry-2-11",
+      "reading": "modules/11-reversible-and-sequential-kinetics.md",
+      "source_ids": [
+        "chemistry",
+        "biochemistry"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "general-chemistry-2-module-12",
+      "lesson_id": "general-chemistry-2-12",
+      "reading": "modules/12-electrochemical-stoichiometry-and-work.md",
+      "source_ids": [
+        "chemistry",
+        "biochemistry"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "general-chemistry-2-module-13",
+      "lesson_id": "general-chemistry-2-13",
+      "reading": "modules/13-ligand-balance-and-coordination-models.md",
+      "source_ids": [
+        "chemistry",
+        "biochemistry",
+        "openstax-chem2-coordination-properties"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "general-chemistry-2-module-14",
+      "lesson_id": "general-chemistry-2-14",
+      "reading": "modules/14-solubility-complexation-and-competing-equilibria.md",
+      "source_ids": [
+        "chemistry",
+        "biochemistry"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "general-chemistry-2-module-lab-01",
+      "lesson_id": "general-chemistry-2-lab-01",
+      "reading": "labs/01-reporting-background-and-relaxation.md",
+      "source_ids": [
+        "chemistry",
+        "biochemistry"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
     }
   ]
 }

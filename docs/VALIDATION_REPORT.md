@@ -4,7 +4,29 @@
 
 2026-10-06; synthetic local learner data only. Milestones 1 and 2 are implemented. Milestone 3 remains partial; deterministic graders and prototype graded-assignment and review workflows are described below. A Milestone 4 curriculum-map increment is implemented and tested, while subject-matter review and map refinement remain. All 25 course packages are **partial**; zero are beta, complete or externally reviewed. Human score review is limited to saved attempts and does not constitute course-content review. No semester equivalence, university credit, security certification or public production deployment is asserted.
 
-## Current increment: General Chemistry I lessons, buffer lab and proposed schedule (0.4.0, 2026-10-09)
+## Current increment: General Chemistry II lessons, relaxation lab and proposed schedule (0.4.0, 2026-10-09)
+
+Developed with Codex assistance. General Chemistry II advances from 0.3.1 to 0.4.0 while remaining partial, unreviewed and formative-only. Seven original lessons develop free energy and equilibrium, coupled acid mass/charge balance, empirical/mechanistic rates, reversible/sequential kinetics, electrochemical amount accounting, ligand balance and limited coordination models, and competing solubility/complexation. One synthetic reporting-background/plateau lab and a proposed 14-week sequence complete the increment. There are 71 new items and 32 cards; the package contains 15 readings, 97 items and 52 cards. Week 12 pairs two readings. All 26 preexisting question objects and 20 cards are unchanged.
+
+Separate calculations check all 64 numeric keys, including 18 preserved keys, and all 14 CSV cells. Root finding, component ODE integration, acid ratio normalization and free-metal balance provide alternative calculations alongside conservation and domain checks. The lab distinguishes the independent blank background from the independent equilibrium plateau, fits t00/t20 and predicts reserved t60. New numeric checks request bare numbers in stated scales; ten preserved items require units, with no significant-figure/dimensional enforcement added. The [AI-assisted check record](reviews/ai-assisted/general-chemistry-2-0.4.0.md) documents methods and repairs. The same AI assistant authored content and checks; this is not independent chemical or human review.
+
+Three primary OpenStax Chemistry 2e pages were retrieved as link-only factual references for free energy, mechanisms and coordination properties. No teaching prose, worked problem, figure or dataset was imported, source permissions were not broadened, and no new paper identifier was introduced.
+
+| Command/check (Linux development container, Python 3.12.3) | Result |
+|---|---|
+| `python -B tools/validate_content.py` | PASS: 25 packages, 337 lessons, 1816 questions, 1088 cards, 25 cases; 0 errors; 98 legacy-depth warnings |
+| `bash /workspace/.claude/skills/courselab-dev/scripts/verify.sh --log-dir /workspace/courselab-session-artifacts/codex-general-chemistry-2-2026-10-09/verification` | PASS: content, legacy (7), security (705 source files, 0 findings), ruff, root (1730), backend (3889 passed, 2 existing symbolic-builder skips) |
+| `python -B /workspace/courselab-session-artifacts/codex-general-chemistry-2-2026-10-09/check_grader.py` | PASS: all 97 package items earn full credit |
+| `python -B -m pytest tests/content/test_general_chemistry_two_recalculations.py tests/content/test_new_geroscience_and_statistics_lessons.py tests/content/test_learner_visible_number_formatting.py -q -p no:cacheprovider` | PASS after presentation/assertion repairs: 503 focused checks |
+| `ruff check tests/content/test_general_chemistry_two_recalculations.py` | PASS after renaming three ambiguous variables; file formatted |
+| `python -B tools/objective_coverage.py --check docs/COURSE_GAP_REPORT.md` | PASS: generated report matches |
+| `python3 -B /workspace/.claude/skills/regen-guardrails/scripts/claims_scan.py --repo uniStemCourseSimulators` | PASS: 0 HIGH, MED or LOW findings |
+
+Draft length inspection prompted a substantive reversible initial-condition paragraph before integration. An arithmetic spot-check corrected displayed ln K from 38.683145 to 38.683746; the practice key was already correct. Initial lint failed on three ambiguous variable names, then passed after renaming and formatting. The first focused suite had 493 passes and ten failures: seven standard limitation headings were missing, two number-format checks found long decimal displays, and one exact floating-point comparison needed a tolerance. Standard sections, scientific-notation displays and a tolerant assertion repaired these checks; numeric keys did not change. The complete real-grader check passed all 97 items on its first run, and all numeric-key calculations passed on their first run. The full six-step local run passed on its first run. A preliminary nonexistent `cases/` path read was replaced by the manifest's preserved self-assessment entry.
+
+Logs remain outside git in `courselab-session-artifacts/codex-general-chemistry-2-2026-10-09/verification`. Frontend checks, the Docker Compose application stack and Playwright were not run locally for this content increment; publication CI runs them. No person reviewed the chemistry or measured workload.
+
+## Previous increment: General Chemistry I lessons, buffer lab and proposed schedule (0.4.0, 2026-10-09)
 
 Developed with Codex assistance. General Chemistry I advances from 0.3.1 to 0.4.0 while remaining partial, unreviewed and formative-only. Seven new lessons cover atom/amount/photon accounting, bonding and geometry, reaction extent, gases and model deviations, energy and calorimetry, equilibrium and activity conventions, and acid–base discrepancy checks. One synthetic buffer lab and a proposed 14-week sequence complete the increment. There are 71 new public items and 32 cards; the package contains 14 readings, 91 items and 48 cards. All 20 preexisting question objects and 16 cards are unchanged.
 

@@ -3203,6 +3203,93 @@
       "checksum": null,
       "imported_assets": [],
       "rights_notes": "This record selects links and original explanation only; it does not clear third-party assets for reuse."
+    },
+    {
+      "id": "openstax-chem2-free-energy",
+      "title": "Chemistry 2e: 16.4 Free Energy",
+      "institution": "OpenStax, Rice University",
+      "url": "https://openstax.org/books/chemistry-2e/pages/16-4-free-energy",
+      "accessed_at": "2026-10-09",
+      "license": "Link-only factual reference selected; no teaching material imported.",
+      "reuse_mode": "link-only-reference",
+      "permissions": {
+        "linking": true,
+        "quotation": false,
+        "adaptation": false,
+        "redistribution": false
+      },
+      "attribution_requirements": [
+        "Identify OpenStax Chemistry 2e, the section title and exact URL."
+      ],
+      "third_party_notes": "Primary page retrieved for standard conceptual relations. Instruction, worked parameters and synthetic data are original; no source problem, prose, figure or dataset is copied.",
+      "mapped_courses": [
+        "general-chemistry-2"
+      ],
+      "mapped_modules": [
+        "general-chemistry-2-module-8"
+      ],
+      "version": "Chemistry 2e; primary section retrieved 2026-10-09",
+      "checksum": null,
+      "imported_assets": [],
+      "rights_notes": "Link-only selection does not clear imported third-party teaching assets."
+    },
+    {
+      "id": "openstax-chem2-mechanisms",
+      "title": "Chemistry 2e: 12.6 Reaction Mechanisms",
+      "institution": "OpenStax, Rice University",
+      "url": "https://openstax.org/books/chemistry-2e/pages/12-6-reaction-mechanisms",
+      "accessed_at": "2026-10-09",
+      "license": "Link-only factual reference selected; no teaching material imported.",
+      "reuse_mode": "link-only-reference",
+      "permissions": {
+        "linking": true,
+        "quotation": false,
+        "adaptation": false,
+        "redistribution": false
+      },
+      "attribution_requirements": [
+        "Identify OpenStax Chemistry 2e, the section title and exact URL."
+      ],
+      "third_party_notes": "Primary page retrieved for standard conceptual relations. Instruction, worked parameters and synthetic data are original; no source problem, prose, figure or dataset is copied.",
+      "mapped_courses": [
+        "general-chemistry-2"
+      ],
+      "mapped_modules": [
+        "general-chemistry-2-module-10"
+      ],
+      "version": "Chemistry 2e; primary section retrieved 2026-10-09",
+      "checksum": null,
+      "imported_assets": [],
+      "rights_notes": "Link-only selection does not clear imported third-party teaching assets."
+    },
+    {
+      "id": "openstax-chem2-coordination-properties",
+      "title": "Chemistry 2e: 19.3 Spectroscopic and Magnetic Properties of Coordination Compounds",
+      "institution": "OpenStax, Rice University",
+      "url": "https://openstax.org/books/chemistry-2e/pages/19-3-spectroscopic-and-magnetic-properties-of-coordination-compounds",
+      "accessed_at": "2026-10-09",
+      "license": "Link-only factual reference selected; no teaching material imported.",
+      "reuse_mode": "link-only-reference",
+      "permissions": {
+        "linking": true,
+        "quotation": false,
+        "adaptation": false,
+        "redistribution": false
+      },
+      "attribution_requirements": [
+        "Identify OpenStax Chemistry 2e, the section title and exact URL."
+      ],
+      "third_party_notes": "Primary page retrieved for standard conceptual relations. Instruction, worked parameters and synthetic data are original; no source problem, prose, figure or dataset is copied.",
+      "mapped_courses": [
+        "general-chemistry-2"
+      ],
+      "mapped_modules": [
+        "general-chemistry-2-module-13"
+      ],
+      "version": "Chemistry 2e; primary section retrieved 2026-10-09",
+      "checksum": null,
+      "imported_assets": [],
+      "rights_notes": "Link-only selection does not clear imported third-party teaching assets."
     }
   ]
 }

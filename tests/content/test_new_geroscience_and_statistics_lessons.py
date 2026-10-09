@@ -41,7 +41,8 @@ LESSONS = [("geroscience", f"geroscience-{n}") for n in range(9, 15)] + [
     ("calculus-1", f"calculus-1-{n}") for n in range(7, 14)] + [
     ("calculus-2", f"calculus-2-{n}") for n in range(7, 14)] + [
     ("calculus-3", f"calculus-3-{n}") for n in range(7, 14)] + [
-    ("general-chemistry-1", f"general-chemistry-1-{n}") for n in range(7, 14)]
+    ("general-chemistry-1", f"general-chemistry-1-{n}") for n in range(7, 14)] + [
+    ("general-chemistry-2", f"general-chemistry-2-{n}") for n in range(8, 15)]
 
 
 def load(course):
