@@ -145,6 +145,326 @@
         "calculus-1-6-objective-3"
       ],
       "license": "CC-BY-4.0"
+    },
+    {
+      "id": "calculus-1-7-card-1",
+      "lesson_id": "calculus-1-7",
+      "front": "Limit versus value",
+      "back": "A limit describes nearby values. Continuity also requires that the function is defined and its value equals that limit.",
+      "objective_ids": [
+        "calculus-1-7-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "calculus-1-7-card-2",
+      "lesson_id": "calculus-1-7",
+      "front": "Epsilon–delta criterion",
+      "back": "For every positive output tolerance ε, choose a positive input radius δ that guarantees the required closeness on the punctured neighborhood.",
+      "objective_ids": [
+        "calculus-1-7-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "calculus-1-7-card-3",
+      "lesson_id": "calculus-1-7",
+      "front": "Derivative definition",
+      "back": "f′(a)=lim_(h→0)[f(a+h)−f(a)]/h. A finite derivative implies continuity, but a continuous corner can lack a derivative.",
+      "objective_ids": [
+        "calculus-1-7-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "calculus-1-7-card-4",
+      "lesson_id": "calculus-1-7",
+      "front": "Numerical limits",
+      "back": "A finite table suggests behavior. Algebra and assumptions are needed to establish the limit; cancellation can spoil tiny-step calculations.",
+      "objective_ids": [
+        "calculus-1-7-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "calculus-1-8-card-1",
+      "lesson_id": "calculus-1-8",
+      "front": "Chain rule",
+      "back": "Differentiate the outer function and multiply by the inner derivative; intermediate units cancel.",
+      "objective_ids": [
+        "calculus-1-8-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "calculus-1-8-card-2",
+      "lesson_id": "calculus-1-8",
+      "front": "Implicit slope",
+      "back": "Differentiate y as a dependent function. The formula dy/dx=−x/y for a circle requires y≠0.",
+      "objective_ids": [
+        "calculus-1-8-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "calculus-1-8-card-3",
+      "lesson_id": "calculus-1-8",
+      "front": "Related rates",
+      "back": "Differentiate the constraint before substituting instantaneous values. Include every changing factor.",
+      "objective_ids": [
+        "calculus-1-8-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "calculus-1-8-card-4",
+      "lesson_id": "calculus-1-8",
+      "front": "Slope versus time rate",
+      "back": "dy/dx and dy/dt answer different questions. Their relationship requires dx/dt and a valid local dependency.",
+      "objective_ids": [
+        "calculus-1-8-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "calculus-1-9-card-1",
+      "lesson_id": "calculus-1-9",
+      "front": "Shape analysis",
+      "back": "The sign of f′ controls increase/decrease; the sign of f″ controls concavity. Zeros alone do not certify extrema or inflections.",
+      "objective_ids": [
+        "calculus-1-9-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "calculus-1-9-card-2",
+      "lesson_id": "calculus-1-9",
+      "front": "Absolute extrema",
+      "back": "For a continuous function on a closed bounded interval, compare feasible interior critical points and endpoints; optima can tie.",
+      "objective_ids": [
+        "calculus-1-9-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "calculus-1-9-card-3",
+      "lesson_id": "calculus-1-9",
+      "front": "Constraint elimination",
+      "back": "Express the objective in one feasible variable before differentiating. Discard infeasible stationary candidates.",
+      "objective_ids": [
+        "calculus-1-9-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "calculus-1-9-card-4",
+      "lesson_id": "calculus-1-9",
+      "front": "Model dependence",
+      "back": "An optimum belongs to the stated objective and constraints; changing the cost or feasible set changes the problem.",
+      "objective_ids": [
+        "calculus-1-9-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "calculus-1-10-card-1",
+      "lesson_id": "calculus-1-10",
+      "front": "Integral as accumulation",
+      "back": "A definite integral of a rate is signed net change with rate×input units. Add an initial state to obtain the final state.",
+      "objective_ids": [
+        "calculus-1-10-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "calculus-1-10-card-2",
+      "lesson_id": "calculus-1-10",
+      "front": "Moving bounds",
+      "back": "d/dt ∫_(a(t))^(b(t))v(s)ds=v(b(t))b′(t)−v(a(t))a′(t), under the stated smoothness conditions.",
+      "objective_ids": [
+        "calculus-1-10-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "calculus-1-10-card-3",
+      "lesson_id": "calculus-1-10",
+      "front": "Substitution",
+      "back": "Change the integrand, differential and endpoint bounds consistently. Differentiate an antiderivative to check the chain factor.",
+      "objective_ids": [
+        "calculus-1-10-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "calculus-1-10-card-4",
+      "lesson_id": "calculus-1-10",
+      "front": "Average rate",
+      "back": "The time average is the definite integral divided by interval length. It need not equal the midpoint rate.",
+      "objective_ids": [
+        "calculus-1-10-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "calculus-1-11-card-1",
+      "lesson_id": "calculus-1-11",
+      "front": "Central derivative",
+      "back": "[f(t+h)−f(t−h)]/(2h) has leading smooth truncation error proportional to h², but measurement error can be amplified by 1/h.",
+      "objective_ids": [
+        "calculus-1-11-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "calculus-1-11-card-2",
+      "lesson_id": "calculus-1-11",
+      "front": "Composite quadrature",
+      "back": "Trapezoids integrate straight chords; Simpson uses 1,4,2,...,4,1 weights on an even number of uniform panels.",
+      "objective_ids": [
+        "calculus-1-11-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "calculus-1-11-card-3",
+      "lesson_id": "calculus-1-11",
+      "front": "Error bounds",
+      "back": "Trapezoid error≤LM₂h²/12; Simpson error≤LM₄h⁴/180, with derivative bounds across the interval and their required smoothness.",
+      "objective_ids": [
+        "calculus-1-11-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "calculus-1-11-card-4",
+      "lesson_id": "calculus-1-11",
+      "front": "Error budget",
+      "back": "Separate truncation, rounding, measurement and model error. A deterministic bound is not a standard deviation.",
+      "objective_ids": [
+        "calculus-1-11-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "calculus-1-12-card-1",
+      "lesson_id": "calculus-1-12",
+      "front": "Linearization",
+      "back": "f(a+h)≈f(a)+f′(a)h; if |f″|≤M throughout the connecting interval, the error is at most Mh²/2.",
+      "objective_ids": [
+        "calculus-1-12-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "calculus-1-12-card-2",
+      "lesson_id": "calculus-1-12",
+      "front": "Newton step",
+      "back": "x_(n+1)=x_n−f(x_n)/f′(x_n). Check nonzero derivative, domain and convergence evidence.",
+      "objective_ids": [
+        "calculus-1-12-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "calculus-1-12-card-3",
+      "lesson_id": "calculus-1-12",
+      "front": "Elasticity",
+      "back": "For nonzero reference input/output, E=(x/f)f′ is dimensionless and δf/f≈Eδx/x locally.",
+      "objective_ids": [
+        "calculus-1-12-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "calculus-1-12-card-4",
+      "lesson_id": "calculus-1-12",
+      "front": "Local validity",
+      "back": "Tangent approximations and Newton convergence are local statements. They do not supply global accuracy or extend a function domain.",
+      "objective_ids": [
+        "calculus-1-12-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "calculus-1-13-card-1",
+      "lesson_id": "calculus-1-13",
+      "front": "Semilog slope",
+      "back": "ln(C/C₀)=−kt for a single exponential; a base-10 slope is −k/ln 10. State the base and time units.",
+      "objective_ids": [
+        "calculus-1-13-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "calculus-1-13-card-2",
+      "lesson_id": "calculus-1-13",
+      "front": "Background curvature",
+      "back": "For Y=C+B, d ln Y/dt=−kC/(C+B). A positive constant background flattens the logarithmic curve.",
+      "objective_ids": [
+        "calculus-1-13-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "calculus-1-13-card-3",
+      "lesson_id": "calculus-1-13",
+      "front": "Alternative models",
+      "back": "Mixed rates, background and sensor dynamics can produce similar curvature. Independent evidence is needed to identify the cause.",
+      "objective_ids": [
+        "calculus-1-13-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "calculus-1-13-card-4",
+      "lesson_id": "calculus-1-13",
+      "front": "Validation",
+      "back": "Use positive dimensionless log ratios, state corrections and uncertainty, and reserve independent observations for prediction checks.",
+      "objective_ids": [
+        "calculus-1-13-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "calculus-1-lab-01-card-1",
+      "lesson_id": "calculus-1-lab-01",
+      "front": "Endpoint rate",
+      "back": "For positive exponential values, k=ln(C₁/C₂)/(t₂−t₁). Two points give an apparent rate, not a model-shape test.",
+      "objective_ids": [
+        "calculus-1-lab-01-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "calculus-1-lab-01-card-2",
+      "lesson_id": "calculus-1-lab-01",
+      "front": "Background and logarithms",
+      "back": "Subtract a justified additive background before logging; ln(C+B) is not ln C+ln B. Propagate correction uncertainty.",
+      "objective_ids": [
+        "calculus-1-lab-01-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "calculus-1-lab-01-card-3",
+      "lesson_id": "calculus-1-lab-01",
+      "front": "Prediction check",
+      "back": "Fit and tune on the specified early window, then compare predictions with reserved later observations.",
+      "objective_ids": [
+        "calculus-1-lab-01-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "calculus-1-lab-01-card-4",
+      "lesson_id": "calculus-1-lab-01",
+      "front": "Constructed replicates",
+      "back": "Balanced offsets simplify the lab; they do not establish a real noise distribution or independent experimental replication.",
+      "objective_ids": [
+        "calculus-1-lab-01-objective-3"
+      ],
+      "license": "CC-BY-4.0"
     }
   ]
 }

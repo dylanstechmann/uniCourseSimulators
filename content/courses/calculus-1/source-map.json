@@ -80,6 +80,110 @@
       "original_content": true,
       "license": "CC-BY-4.0",
       "modifications": []
+    },
+    {
+      "module_id": "calculus-1-module-7",
+      "lesson_id": "calculus-1-7",
+      "reading": "modules/07-limits-continuity-and-derivative-definition.md",
+      "source_ids": [
+        "calculus",
+        "engineeringMath"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "calculus-1-module-8",
+      "lesson_id": "calculus-1-8",
+      "reading": "modules/08-composite-implicit-and-related-rates.md",
+      "source_ids": [
+        "calculus",
+        "engineeringMath"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "calculus-1-module-9",
+      "lesson_id": "calculus-1-9",
+      "reading": "modules/09-shape-analysis-and-constrained-optimization.md",
+      "source_ids": [
+        "calculus",
+        "engineeringMath"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "calculus-1-module-10",
+      "lesson_id": "calculus-1-10",
+      "reading": "modules/10-accumulation-ftc-and-substitution.md",
+      "source_ids": [
+        "calculus",
+        "engineeringMath"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "calculus-1-module-11",
+      "lesson_id": "calculus-1-11",
+      "reading": "modules/11-numerical-derivatives-integrals-and-error.md",
+      "source_ids": [
+        "calculus",
+        "engineeringMath"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "calculus-1-module-12",
+      "lesson_id": "calculus-1-12",
+      "reading": "modules/12-local-approximations-newton-and-sensitivity.md",
+      "source_ids": [
+        "calculus",
+        "engineeringMath"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "calculus-1-module-13",
+      "lesson_id": "calculus-1-13",
+      "reading": "modules/13-washout-semilog-and-model-checks.md",
+      "source_ids": [
+        "calculus",
+        "engineeringMath"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "calculus-1-module-lab-01",
+      "lesson_id": "calculus-1-lab-01",
+      "reading": "labs/01-washout-background.md",
+      "source_ids": [
+        "calculus",
+        "engineeringMath"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
     }
   ]
 }

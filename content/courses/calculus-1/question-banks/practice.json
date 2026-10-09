@@ -642,6 +642,2606 @@
         "kind": "original",
         "modifications": []
       }
+    },
+    {
+      "id": "calculus-1-7:delta",
+      "type": "numeric",
+      "prompt": "For f(x)=2x+1 at x=3, what is the largest δ such that 0<|x−3|<δ guarantees |f(x)−7|<0.1? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "calculus-1-7-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0.05,
+        "unit": "",
+        "tolerance": 0.0001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use |f(x)−7|=2|x−3|.",
+        "solution": "Choose δ=0.1/2=0.05; the neighborhood inequality is strict.",
+        "lesson_ids": [
+          "calculus-1-7"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-1-7:continuous-hole",
+      "type": "numeric",
+      "prompt": "For g(x)=(x²−4)/(x−2) away from 2, what value of g(2) makes it continuous? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "calculus-1-7-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 4,
+        "unit": "",
+        "tolerance": 0.001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Factor the numerator on the punctured domain.",
+        "solution": "g(x)=x+2 for x≠2, so the limit and continuous extension value are 4.",
+        "lesson_ids": [
+          "calculus-1-7"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-1-7:derivative-definition",
+      "type": "numeric",
+      "prompt": "Using the difference quotient for f(x)=x², what is f′(3)? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "calculus-1-7-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 6,
+        "unit": "",
+        "tolerance": 0.001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Expand (3+h)² before canceling h.",
+        "solution": "The quotient is 6+h; its limit is 6.",
+        "lesson_ids": [
+          "calculus-1-7"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-1-7:secant-slope",
+      "type": "numeric",
+      "prompt": "For f(x)=x² at 3, what is [f(3+0.1)−f(3)]/0.1? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "calculus-1-7-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 6.1,
+        "unit": "",
+        "tolerance": 0.001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "The exact quotient simplifies to 6+h.",
+        "solution": "With h=0.1, the secant slope is 6.1.",
+        "lesson_ids": [
+          "calculus-1-7"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-1-7:sqrt-limit",
+      "type": "numeric",
+      "prompt": "What is lim_(h→0)[√(9+h)−3]/h? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "calculus-1-7-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0.16666666666666666,
+        "unit": "",
+        "tolerance": 0.0001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Multiply by the conjugate.",
+        "solution": "For nonzero h, the quotient equals 1/(√(9+h)+3), with limit 1/6.",
+        "lesson_ids": [
+          "calculus-1-7"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-1-7:slope-step",
+      "type": "numeric",
+      "prompt": "For f(x)=x² at 3, the secant-slope error is |h|. What is the largest allowed |h| for error at most 0.01, with h nonzero? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "calculus-1-7-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 0.01,
+        "unit": "",
+        "tolerance": 0.0001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the exact error rather than a heuristic.",
+        "solution": "The condition |h|≤0.01 gives error at most 0.01.",
+        "lesson_ids": [
+          "calculus-1-7"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-1-7:corner",
+      "type": "single_choice",
+      "prompt": "What is true of |x| at 0?",
+      "points": 1,
+      "objective_ids": [
+        "calculus-1-7-objective-2"
+      ],
+      "options": [
+        "Its derivative equals the mean of its one-sided slopes.",
+        "It is continuous but has different one-sided slopes and no derivative.",
+        "It is discontinuous because its derivative fails."
+      ],
+      "solution_spec": {
+        "answer": 1
+      },
+      "feedback": {
+        "hint": "Compare values and slopes separately.",
+        "solution": "Both values tend to zero; slope limits are −1 and +1.",
+        "lesson_ids": [
+          "calculus-1-7"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-1-7:derivative-continuity",
+      "type": "single_choice",
+      "prompt": "Which implication is valid at an interior point?",
+      "points": 1,
+      "objective_ids": [
+        "calculus-1-7-objective-3"
+      ],
+      "options": [
+        "A hole filled with any value is differentiable.",
+        "A finite derivative implies continuity.",
+        "Continuity always implies a derivative."
+      ],
+      "solution_spec": {
+        "answer": 1
+      },
+      "feedback": {
+        "hint": "Return to the difference quotient.",
+        "solution": "A finite derivative forces f(a+h)−f(a) to tend to zero.",
+        "lesson_ids": [
+          "calculus-1-7"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-1-7:table-proof",
+      "type": "single_choice",
+      "prompt": "A finite table of values looks smooth near a. What follows?",
+      "points": 1,
+      "objective_ids": [
+        "calculus-1-7-objective-1"
+      ],
+      "options": [
+        "It proves continuity at every nearby point.",
+        "It suggests behavior but cannot establish a limit without additional assumptions.",
+        "It proves differentiability between all samples."
+      ],
+      "solution_spec": {
+        "answer": 1
+      },
+      "feedback": {
+        "hint": "A table omits unsampled points.",
+        "solution": "A limit concerns every sufficiently near point, beyond the finite table.",
+        "lesson_ids": [
+          "calculus-1-7"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-1-8:concentration",
+      "type": "numeric",
+      "prompt": "For c(t)=1+0.5t, with t in hours, what is c(2) in the stated concentration units? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "calculus-1-8-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 2,
+        "unit": "",
+        "tolerance": 0.001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Substitute t=2.",
+        "solution": "c(2)=1+0.5×2=2.",
+        "lesson_ids": [
+          "calculus-1-8"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-1-8:sensor-time-rate",
+      "type": "numeric",
+      "prompt": "For R(c)=100c/(2+c) and c(t)=1+0.5t, what is dR/dt at t=2 in signal units per hour? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "calculus-1-8-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 6.25,
+        "unit": "",
+        "tolerance": 0.001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Multiply R′(2) by c′.",
+        "solution": "R′(2)=200/4²=12.5; c′=0.5, so the time rate is 6.25.",
+        "lesson_ids": [
+          "calculus-1-8"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-1-8:product-rate",
+      "type": "numeric",
+      "prompt": "For F(t)=t²e^(−t), what is F′(3)? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "calculus-1-8-objective-1"
+      ],
+      "solution_spec": {
+        "answer": -0.14936120510359183,
+        "unit": "",
+        "tolerance": 0.0001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Differentiate both factors.",
+        "solution": "F′=e^(−t)(2t−t²), giving −3e^(−3)=−0.149361.",
+        "lesson_ids": [
+          "calculus-1-8"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-1-8:implicit-slope",
+      "type": "numeric",
+      "prompt": "For x²+y²=25, what is dy/dx at (3,4)? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "calculus-1-8-objective-2"
+      ],
+      "solution_spec": {
+        "answer": -0.75,
+        "unit": "",
+        "tolerance": 0.001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Differentiate y as a function of x.",
+        "solution": "2x+2y y′=0 gives y′=−x/y=−3/4.",
+        "lesson_ids": [
+          "calculus-1-8"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-1-8:sphere-volume-rate",
+      "type": "numeric",
+      "prompt": "A sphere has r=2 cm and dr/dt=0.1 cm/min. What is dV/dt in cm³/min? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "calculus-1-8-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 5.026548245743669,
+        "unit": "",
+        "tolerance": 0.001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Differentiate V=(4/3)πr³ before substituting.",
+        "solution": "V′=4πr²r′=1.6π=5.026548 cm³/min.",
+        "lesson_ids": [
+          "calculus-1-8"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-1-8:cylinder-volume-rate",
+      "type": "numeric",
+      "prompt": "A cylinder has r=2 cm, h=3 cm, r′=0.1 cm/min and h′=−0.2 cm/min. What is V′ in cm³/min? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "calculus-1-8-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 1.2566370614359172,
+        "unit": "",
+        "tolerance": 0.001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Include both the radius and height terms.",
+        "solution": "π(2r r′h+r²h′)=π(1.2−0.8)=0.4π.",
+        "lesson_ids": [
+          "calculus-1-8"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-1-8:units",
+      "type": "single_choice",
+      "prompt": "R depends on concentration c and c depends on time. What units does R′(c)c′(t) have?",
+      "points": 1,
+      "objective_ids": [
+        "calculus-1-8-objective-1"
+      ],
+      "options": [
+        "Signal units per time.",
+        "Concentration units squared per time.",
+        "Signal units per concentration squared."
+      ],
+      "solution_spec": {
+        "answer": 0
+      },
+      "feedback": {
+        "hint": "Cancel the intermediate concentration units.",
+        "solution": "Signal/concentration times concentration/time gives signal/time.",
+        "lesson_ids": [
+          "calculus-1-8"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-1-8:vertical",
+      "type": "single_choice",
+      "prompt": "Why does dy/dx=−x/y fail at (5,0) on x²+y²=25?",
+      "points": 1,
+      "objective_ids": [
+        "calculus-1-8-objective-2"
+      ],
+      "options": [
+        "The slope equals zero because y equals zero.",
+        "The circle has no tangent anywhere.",
+        "The tangent is vertical, so a finite dy/dx is unavailable there."
+      ],
+      "solution_spec": {
+        "answer": 2
+      },
+      "feedback": {
+        "hint": "The denominator condition matters.",
+        "solution": "One may use x as a function of y locally; it does not give a finite original slope.",
+        "lesson_ids": [
+          "calculus-1-8"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-1-8:changing-height",
+      "type": "single_choice",
+      "prompt": "In V=πr²h with changing r and h, which derivative is the total time rate?",
+      "points": 1,
+      "objective_ids": [
+        "calculus-1-8-objective-3"
+      ],
+      "options": [
+        "π(2r r′h+r²h′).",
+        "πr²h with instantaneous numbers inserted before differentiation.",
+        "2πr r′h regardless of h′."
+      ],
+      "solution_spec": {
+        "answer": 0
+      },
+      "feedback": {
+        "hint": "Differentiate both changing factors.",
+        "solution": "The total derivative includes the independent height-change term.",
+        "lesson_ids": [
+          "calculus-1-8"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-1-9:maximum-location",
+      "type": "numeric",
+      "prompt": "For f(x)=x³−6x²+9x+1 on [0,3], where does its absolute maximum occur? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "calculus-1-9-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 1,
+        "unit": "",
+        "tolerance": 0.001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Find stationary points and compare endpoints.",
+        "solution": "f(0)=1, f(1)=5, f(3)=1, so the maximum occurs at x=1.",
+        "lesson_ids": [
+          "calculus-1-9"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-1-9:maximum-value",
+      "type": "numeric",
+      "prompt": "For that explicitly stated cubic f(x)=x³−6x²+9x+1 on [0,3], what is the maximum value? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "calculus-1-9-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 5,
+        "unit": "",
+        "tolerance": 0.001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Evaluate the feasible candidates.",
+        "solution": "The largest candidate value is f(1)=5.",
+        "lesson_ids": [
+          "calculus-1-9"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-1-9:inflection",
+      "type": "numeric",
+      "prompt": "For f(x)=x³−6x²+9x+1, at what x does concavity change? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "calculus-1-9-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 2,
+        "unit": "",
+        "tolerance": 0.001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use f″=6x−12 and check both signs.",
+        "solution": "f″ changes from negative to positive at x=2.",
+        "lesson_ids": [
+          "calculus-1-9"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-1-9:feasible-cost-minimum",
+      "type": "numeric",
+      "prompt": "For C(p)=4p²−12p+15 on [0,1], what feasible p minimizes C? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "calculus-1-9-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 1,
+        "unit": "",
+        "tolerance": 0.001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "The stationary p=1.5 is infeasible.",
+        "solution": "C′=8p−12 is negative throughout [0,1], so p=1 minimizes C.",
+        "lesson_ids": [
+          "calculus-1-9"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-1-9:cylinder-radius",
+      "type": "numeric",
+      "prompt": "A closed cylinder has volume 16π cm³ and uniform surface-area cost. What radius in cm minimizes its area, with positive dimensions? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "calculus-1-9-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 2,
+        "unit": "",
+        "tolerance": 0.001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Eliminate h=16/r², then differentiate area.",
+        "solution": "S=2πr²+32π/r; S′=0 gives r³=8 and r=2.",
+        "lesson_ids": [
+          "calculus-1-9"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-1-9:cylinder-area",
+      "type": "numeric",
+      "prompt": "For a closed cylinder of volume 16π cm³, what is the minimum surface area in cm²? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "calculus-1-9-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 75.39822368615503,
+        "unit": "",
+        "tolerance": 0.001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use r=2 and h=4 at the optimum.",
+        "solution": "S=2π(2²)+2π(2)(4)=24π=75.398224 cm².",
+        "lesson_ids": [
+          "calculus-1-9"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-1-9:stationary",
+      "type": "single_choice",
+      "prompt": "A differentiable function has f′(a)=0. What follows?",
+      "points": 1,
+      "objective_ids": [
+        "calculus-1-9-objective-1"
+      ],
+      "options": [
+        "It must have an inflection.",
+        "It must have a minimum.",
+        "It is a stationary candidate; an extremum still needs further evidence."
+      ],
+      "solution_spec": {
+        "answer": 2
+      },
+      "feedback": {
+        "hint": "Consider x³ at zero.",
+        "solution": "A zero derivative alone does not determine a sign change or an extremum.",
+        "lesson_ids": [
+          "calculus-1-9"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-1-9:endpoints",
+      "type": "single_choice",
+      "prompt": "Which search is complete for a continuous function on a closed bounded feasible interval?",
+      "points": 1,
+      "objective_ids": [
+        "calculus-1-9-objective-2"
+      ],
+      "options": [
+        "Compare only points with derivative zero.",
+        "Compare endpoints and interior critical candidates, including nondifferentiable ones.",
+        "Use any stationary point, even outside the interval."
+      ],
+      "solution_spec": {
+        "answer": 1
+      },
+      "feedback": {
+        "hint": "Absolute extrema include feasible boundaries.",
+        "solution": "Continuity ensures attainment; candidate comparisons identify the attained value.",
+        "lesson_ids": [
+          "calculus-1-9"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-1-9:design",
+      "type": "single_choice",
+      "prompt": "The optimal closed-cylinder ratio h=2r is derived from uniform total surface-area cost. What can change it?",
+      "points": 1,
+      "objective_ids": [
+        "calculus-1-9-objective-3"
+      ],
+      "options": [
+        "Changing only the algebraic spelling of the same objective.",
+        "Taking the same derivative twice.",
+        "Changing the objective or feasible constraints, such as an open top or a height limit."
+      ],
+      "solution_spec": {
+        "answer": 2
+      },
+      "feedback": {
+        "hint": "A mathematical optimum belongs to a stated problem.",
+        "solution": "Different cost or constraints define a different optimization problem.",
+        "lesson_ids": [
+          "calculus-1-9"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-1-10:accumulation",
+      "type": "numeric",
+      "prompt": "For v(t)=6t−t² mL/min with t in minutes, what volume accumulates on [0,6] in mL? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "calculus-1-10-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 36,
+        "unit": "",
+        "tolerance": 0.001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use antiderivative 3t²−t³/3.",
+        "solution": "At 6, 108−72=36; at 0 the antiderivative is zero.",
+        "lesson_ids": [
+          "calculus-1-10"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-1-10:average-rate",
+      "type": "numeric",
+      "prompt": "For v(t)=6t−t² on [0,6], what is the average rate in mL/min? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "calculus-1-10-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 6,
+        "unit": "",
+        "tolerance": 0.001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Divide the integral by interval length.",
+        "solution": "36/6=6 mL/min.",
+        "lesson_ids": [
+          "calculus-1-10"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-1-10:moving-upper",
+      "type": "numeric",
+      "prompt": "For H(t)=∫₀^(t²)e^(−s)ds, what is H′(1)? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "calculus-1-10-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0.7357588823428847,
+        "unit": "",
+        "tolerance": 0.001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Apply the fundamental theorem and the derivative of t².",
+        "solution": "H′(t)=2t e^(−t²), so H′(1)=2/e.",
+        "lesson_ids": [
+          "calculus-1-10"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-1-10:moving-both",
+      "type": "numeric",
+      "prompt": "For M(t)=∫ₜ^(2t)s²ds, what is M′(2)? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "calculus-1-10-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 28,
+        "unit": "",
+        "tolerance": 0.001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Upper bound adds a chain factor; lower bound subtracts.",
+        "solution": "M′=8t²−t²=7t², giving 28 at t=2.",
+        "lesson_ids": [
+          "calculus-1-10"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-1-10:log-substitution",
+      "type": "numeric",
+      "prompt": "Evaluate ∫₀² 2t/(1+t²) dt. Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "calculus-1-10-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 1.6094379124341003,
+        "unit": "",
+        "tolerance": 0.001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Set u=1+t² and change the bounds to 1 and 5.",
+        "solution": "The integral becomes ∫₁⁵du/u=ln 5=1.609438.",
+        "lesson_ids": [
+          "calculus-1-10"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-1-10:linear-substitution",
+      "type": "numeric",
+      "prompt": "Evaluate ∫₀³(2s+1)²ds. Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "calculus-1-10-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 57,
+        "unit": "",
+        "tolerance": 0.001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Set u=2s+1 and ds=du/2.",
+        "solution": "(1/2)∫₁⁷u²du=(343−1)/6=57.",
+        "lesson_ids": [
+          "calculus-1-10"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-1-10:initial-state",
+      "type": "single_choice",
+      "prompt": "An integral of x′ on [0,T] equals 12. What does it give?",
+      "points": 1,
+      "objective_ids": [
+        "calculus-1-10-objective-1"
+      ],
+      "options": [
+        "The total absolute motion must be 12.",
+        "The net change x(T)−x(0), not the final state unless the initial state is supplied.",
+        "The final state must be 12."
+      ],
+      "solution_spec": {
+        "answer": 1
+      },
+      "feedback": {
+        "hint": "Distinguish state and change.",
+        "solution": "An initial value is needed to recover the final state.",
+        "lesson_ids": [
+          "calculus-1-10"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-1-10:substitution-bounds",
+      "type": "single_choice",
+      "prompt": "Under u=1+t² for an integral from t=0 to t=2, which bounds apply?",
+      "points": 1,
+      "objective_ids": [
+        "calculus-1-10-objective-3"
+      ],
+      "options": [
+        "u=−1 to u=1.",
+        "u=0 to u=2.",
+        "u=1 to u=5."
+      ],
+      "solution_spec": {
+        "answer": 2
+      },
+      "feedback": {
+        "hint": "Transform the endpoint coordinates.",
+        "solution": "The differential and bounds must match the new variable.",
+        "lesson_ids": [
+          "calculus-1-10"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-1-10:midpoint-average",
+      "type": "single_choice",
+      "prompt": "For a continuous rate, what does the integral mean-value statement ensure?",
+      "points": 1,
+      "objective_ids": [
+        "calculus-1-10-objective-3"
+      ],
+      "options": [
+        "There is exactly one average-rate time.",
+        "The midpoint rate always equals the average.",
+        "The time-average rate occurs somewhere in the interval, not necessarily at the midpoint."
+      ],
+      "solution_spec": {
+        "answer": 2
+      },
+      "feedback": {
+        "hint": "Existence is not uniqueness or a location formula.",
+        "solution": "The parabola example has two times with the average rate.",
+        "lesson_ids": [
+          "calculus-1-10"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-1-11:central-h5",
+      "type": "numeric",
+      "prompt": "For C(t)=20e^(−0.1t), calculate [C(15)−C(5)]/10, the central derivative at t=10 with h=5. Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "calculus-1-11-objective-1"
+      ],
+      "solution_spec": {
+        "answer": -0.7668009991284072,
+        "unit": "",
+        "tolerance": 0.0001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Evaluate both concentrations before subtracting.",
+        "solution": "The central estimate is −0.766801, compared with exact −0.735759.",
+        "lesson_ids": [
+          "calculus-1-11"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-1-11:central-h1",
+      "type": "numeric",
+      "prompt": "For C(t)=20e^(−0.1t), calculate [C(11)−C(9)]/2. Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "calculus-1-11-objective-1"
+      ],
+      "solution_spec": {
+        "answer": -0.7369857604251959,
+        "unit": "",
+        "tolerance": 0.0001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use observations symmetric about 10.",
+        "solution": "The central estimate is −0.736986; h=1 reduces smooth truncation bias.",
+        "lesson_ids": [
+          "calculus-1-11"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-1-11:trapezoid",
+      "type": "numeric",
+      "prompt": "For exact C(t)=20e^(−0.1t) samples at t=0,5,10,15,20, compute the composite trapezoidal integral on [0,20]. Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "calculus-1-11-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 176.5207902650812,
+        "unit": "",
+        "tolerance": 0.001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use spacing 5 and half weight at each endpoint.",
+        "solution": "T=176.520790 concentration-unit hours.",
+        "lesson_ids": [
+          "calculus-1-11"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-1-11:simpson",
+      "type": "numeric",
+      "prompt": "For those exact C(t)=20e^(−0.1t) samples at t=0,5,10,15,20, compute composite Simpson quadrature. Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "calculus-1-11-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 172.99124816745837,
+        "unit": "",
+        "tolerance": 0.001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use (5/3) times weights 1,4,2,4,1.",
+        "solution": "S=172.991248 concentration-unit hours.",
+        "lesson_ids": [
+          "calculus-1-11"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-1-11:trapezoid-bound",
+      "type": "numeric",
+      "prompt": "For interval length 20, spacing h=5 and |C″|≤0.2, what is the trapezoidal error bound L M₂ h²/12? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "calculus-1-11-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 8.333333333333334,
+        "unit": "",
+        "tolerance": 0.001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Substitute the length, derivative bound and squared spacing.",
+        "solution": "20×0.2×25/12=8.333333.",
+        "lesson_ids": [
+          "calculus-1-11"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-1-11:noise-bound",
+      "type": "numeric",
+      "prompt": "Each central-difference endpoint has absolute measurement error at most 0.02. With h=0.1, what worst-case derivative error is contributed by those errors alone? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "calculus-1-11-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 0.2,
+        "unit": "",
+        "tolerance": 0.0001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Two endpoint errors divide by 2h.",
+        "solution": "(0.02+0.02)/(2×0.1)=0.2; it is a deterministic bound.",
+        "lesson_ids": [
+          "calculus-1-11"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-1-11:smaller-step",
+      "type": "single_choice",
+      "prompt": "Why can a smaller h worsen a measured central derivative?",
+      "points": 1,
+      "objective_ids": [
+        "calculus-1-11-objective-1"
+      ],
+      "options": [
+        "The exact derivative changes when h changes.",
+        "The central formula becomes exact for all noisy data.",
+        "Measurement errors are divided by h even while smooth truncation bias decreases."
+      ],
+      "solution_spec": {
+        "answer": 2
+      },
+      "feedback": {
+        "hint": "Separate truncation and measurement contributions.",
+        "solution": "A smaller denominator amplifies endpoint errors.",
+        "lesson_ids": [
+          "calculus-1-11"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-1-11:bound-scope",
+      "type": "single_choice",
+      "prompt": "A trapezoid bound uses |f″|≤M₂. What must hold?",
+      "points": 1,
+      "objective_ids": [
+        "calculus-1-11-objective-3"
+      ],
+      "options": [
+        "The bound includes every possible model error automatically.",
+        "The bound must apply over the entire interval with the required smoothness.",
+        "Only f″ at one endpoint matters."
+      ],
+      "solution_spec": {
+        "answer": 1
+      },
+      "feedback": {
+        "hint": "Check the theorem assumptions.",
+        "solution": "A smooth-function quadrature bound does not cover omitted physical behavior.",
+        "lesson_ids": [
+          "calculus-1-11"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-1-11:simpson-setup",
+      "type": "single_choice",
+      "prompt": "Which setup supports the displayed composite Simpson weights?",
+      "points": 1,
+      "objective_ids": [
+        "calculus-1-11-objective-2"
+      ],
+      "options": [
+        "An odd number of panels with the same alternating weights.",
+        "An even number of equally spaced panels, with smoothness for the error bound.",
+        "Any irregular time grid with unchanged weights."
+      ],
+      "solution_spec": {
+        "answer": 1
+      },
+      "feedback": {
+        "hint": "Distinguish samples from panels.",
+        "solution": "The displayed 1,4,2,...,4,1 formula requires an even uniform panel count.",
+        "lesson_ids": [
+          "calculus-1-11"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-1-12:sqrt-linearization",
+      "type": "numeric",
+      "prompt": "Use the tangent to √x at x=9 to estimate √9.3. Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "calculus-1-12-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 3.05,
+        "unit": "",
+        "tolerance": 0.001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use f(9)=3 and f′(9)=1/6.",
+        "solution": "3+(9.3−9)/6=3.05.",
+        "lesson_ids": [
+          "calculus-1-12"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-1-12:log-error-bound",
+      "type": "numeric",
+      "prompt": "For ln x on [1,1.1], |f″|≤1. What is the first-order remainder bound for linearization at 1 evaluated at 1.1? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "calculus-1-12-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0.005,
+        "unit": "",
+        "tolerance": 1e-05,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use Mh²/2.",
+        "solution": "1×0.1²/2=0.005.",
+        "lesson_ids": [
+          "calculus-1-12"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-1-12:newton-first",
+      "type": "numeric",
+      "prompt": "For f(x)=x²−2 with x₀=1.5, what is x₁ from Newton iteration? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "calculus-1-12-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 1.4166666666666667,
+        "unit": "",
+        "tolerance": 1e-05,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use x−(x²−2)/(2x).",
+        "solution": "x₁=1.5−0.25/3=17/12=1.416667.",
+        "lesson_ids": [
+          "calculus-1-12"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-1-12:newton-second",
+      "type": "numeric",
+      "prompt": "For f(x)=x²−2 and x₁=17/12, what is the next Newton iterate? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "calculus-1-12-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 1.4142156862745099,
+        "unit": "",
+        "tolerance": 1e-06,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Apply the same Newton formula to 17/12.",
+        "solution": "x₂=577/408=1.414216.",
+        "lesson_ids": [
+          "calculus-1-12"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-1-12:elasticity",
+      "type": "numeric",
+      "prompt": "For R(c)=100c/(2+c), what is the dimensionless elasticity (c/R)R′ at c=2? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "calculus-1-12-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 0.5,
+        "unit": "",
+        "tolerance": 0.001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Simplify the elasticity before substituting.",
+        "solution": "E=2/(2+c), so E(2)=0.5.",
+        "lesson_ids": [
+          "calculus-1-12"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-1-12:relative-response",
+      "type": "numeric",
+      "prompt": "At c=2, R(c)=100c/(2+c) has elasticity 0.5. What is the linearized relative response increase for a relative input increase of 0.02? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "calculus-1-12-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 0.01,
+        "unit": "",
+        "tolerance": 0.0001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Multiply elasticity by relative input change.",
+        "solution": "δR/R≈0.5×0.02=0.01; this is an approximation, not an exact finite change.",
+        "lesson_ids": [
+          "calculus-1-12"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-1-12:log-domain",
+      "type": "single_choice",
+      "prompt": "Can a real tangent approximation to ln x at 1 justify evaluating ln(−1)?",
+      "points": 1,
+      "objective_ids": [
+        "calculus-1-12-objective-1"
+      ],
+      "options": [
+        "Yes, because every tangent is globally exact.",
+        "No; the real function is outside its domain even though the line can be evaluated.",
+        "Yes, if a smaller error tolerance is requested."
+      ],
+      "solution_spec": {
+        "answer": 1
+      },
+      "feedback": {
+        "hint": "A line has a larger domain than this logarithm.",
+        "solution": "Local algebra does not extend the real logarithm domain.",
+        "lesson_ids": [
+          "calculus-1-12"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-1-12:newton-zero",
+      "type": "single_choice",
+      "prompt": "For f(x)=x²−2, why is Newton iteration from x₀=0 unavailable?",
+      "points": 1,
+      "objective_ids": [
+        "calculus-1-12-objective-2"
+      ],
+      "options": [
+        "Every other starting point is forbidden.",
+        "Its derivative denominator is zero.",
+        "Its residual is already zero."
+      ],
+      "solution_spec": {
+        "answer": 1
+      },
+      "feedback": {
+        "hint": "Evaluate f′(0).",
+        "solution": "f′(0)=0 makes the standard step undefined.",
+        "lesson_ids": [
+          "calculus-1-12"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-1-12:sensitivity",
+      "type": "single_choice",
+      "prompt": "Elasticity predicts a finite 2% input change gives about 1% output change. How should it be reported?",
+      "points": 1,
+      "objective_ids": [
+        "calculus-1-12-objective-3"
+      ],
+      "options": [
+        "As a global exact law for every input change.",
+        "As a measurement of noise covariance.",
+        "As a local first-order prediction that can differ from the exact finite change."
+      ],
+      "solution_spec": {
+        "answer": 2
+      },
+      "feedback": {
+        "hint": "The derivative describes local behavior.",
+        "solution": "The exact response increase here is 0.009901 rather than 0.01.",
+        "lesson_ids": [
+          "calculus-1-12"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-1-13:log10-slope",
+      "type": "numeric",
+      "prompt": "For C(t)=20e^(−0.1t) with time in hours, what is the magnitude of the slope of log₁₀(C/20) against t? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "calculus-1-13-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0.04342944819032518,
+        "unit": "",
+        "tolerance": 1e-05,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Convert natural logarithm to base 10.",
+        "solution": "Magnitude is 0.1/ln 10=0.043429 per hour.",
+        "lesson_ids": [
+          "calculus-1-13"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-1-13:half-life",
+      "type": "numeric",
+      "prompt": "For exponential decay rate k=0.1 h⁻¹, what is the half-life in hours? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "calculus-1-13-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 6.931471805599452,
+        "unit": "",
+        "tolerance": 0.001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Solve e^(−kt)=1/2.",
+        "solution": "t_half=ln 2/0.1=6.931472 h.",
+        "lesson_ids": [
+          "calculus-1-13"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-1-13:instantaneous-rate",
+      "type": "numeric",
+      "prompt": "For C(t)=20e^(−0.1t), what is C′(10) in concentration units per hour? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "calculus-1-13-objective-1"
+      ],
+      "solution_spec": {
+        "answer": -0.7357588823428847,
+        "unit": "",
+        "tolerance": 0.0001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Differentiate the exponential.",
+        "solution": "C′=−2e^(−0.1t), giving −2/e=−0.735759.",
+        "lesson_ids": [
+          "calculus-1-13"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-1-13:uncorrected-rate",
+      "type": "numeric",
+      "prompt": "For Y(t)=20e^(−0.1t)+2, calculate ln(Y(0)/Y(20))/20 in inverse hours. Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "calculus-1-13-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0.07710271121438347,
+        "unit": "",
+        "tolerance": 1e-05,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the supplied sensor signal, including its background.",
+        "solution": "ln(22/4.706706)/20=0.077103 h⁻¹, less than the underlying rate.",
+        "lesson_ids": [
+          "calculus-1-13"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-1-13:corrected-rate",
+      "type": "numeric",
+      "prompt": "For Y(t)=20e^(−0.1t)+2 and known background 2, calculate ln((Y(0)−2)/(Y(20)−2))/20. Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "calculus-1-13-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0.1,
+        "unit": "",
+        "tolerance": 1e-05,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Subtract background before taking the ratio.",
+        "solution": "ln(20/(20e^(−2)))/20=0.1 h⁻¹.",
+        "lesson_ids": [
+          "calculus-1-13"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-1-13:mixed-rate",
+      "type": "numeric",
+      "prompt": "For C_mix(t)=12e^(−0.2t)+8e^(−0.05t), what is −C_mix′(10)/C_mix(10)? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "calculus-1-13-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0.08761479364009869,
+        "unit": "",
+        "tolerance": 1e-05,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "The fractional rate is a concentration-weighted average.",
+        "solution": "At 10 h the effective fractional rate is 0.087615 h⁻¹.",
+        "lesson_ids": [
+          "calculus-1-13"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-1-13:background",
+      "type": "single_choice",
+      "prompt": "What background treatment supports a semilog analysis of positive corrected concentrations?",
+      "points": 1,
+      "objective_ids": [
+        "calculus-1-13-objective-2"
+      ],
+      "options": [
+        "Silently remove negative corrected values and call the remaining slope unbiased.",
+        "Take ln(C+B)=ln C+ln B.",
+        "Subtract an independently established background, propagate its uncertainty and state the usable range."
+      ],
+      "solution_spec": {
+        "answer": 2
+      },
+      "feedback": {
+        "hint": "A logarithm does not separate an additive offset.",
+        "solution": "Background correction is a modeling and uncertainty step, not a logarithm identity.",
+        "lesson_ids": [
+          "calculus-1-13"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-1-13:curvature",
+      "type": "single_choice",
+      "prompt": "A semilog washout curve flattens. What is justified?",
+      "points": 1,
+      "objective_ids": [
+        "calculus-1-13-objective-3"
+      ],
+      "options": [
+        "The fitted rate must be constant because two points can be connected.",
+        "The curve alone proves two biological compartments.",
+        "Multiple explanations remain; use independent background and response checks to distinguish them."
+      ],
+      "solution_spec": {
+        "answer": 2
+      },
+      "feedback": {
+        "hint": "Different models can imitate the same window.",
+        "solution": "Curvature is descriptive evidence, not a uniquely identified mechanism.",
+        "lesson_ids": [
+          "calculus-1-13"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-1-13:log-units",
+      "type": "single_choice",
+      "prompt": "For ln(C/C₀)=−kt, what units must k have?",
+      "points": 1,
+      "objective_ids": [
+        "calculus-1-13-objective-1"
+      ],
+      "options": [
+        "Concentration per time.",
+        "Inverse time, so kt and the logarithm argument are dimensionless.",
+        "Concentration squared."
+      ],
+      "solution_spec": {
+        "answer": 1
+      },
+      "feedback": {
+        "hint": "The exponent is dimensionless.",
+        "solution": "k is a fractional decay rate; C′ has concentration/time units.",
+        "lesson_ids": [
+          "calculus-1-13"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-1-lab-01:summary",
+      "type": "file_upload",
+      "prompt": "Use the lesson CSV to count replicates and average signal at each time. Upload a CSV with columns time, replicates, mean_signal and seven rows t00,t05,t10,t15,t20,t30,t40.",
+      "points": 14,
+      "objective_ids": [
+        "calculus-1-lab-01-objective-1"
+      ],
+      "solution_spec": {
+        "accepted_media_types": [
+          "text/csv"
+        ],
+        "max_bytes": 32768,
+        "validation_spec": {
+          "format": "csv-numeric-table-v1",
+          "delimiter": ",",
+          "key_column": "time",
+          "columns": [
+            "time",
+            "replicates",
+            "mean_signal"
+          ],
+          "checks": [
+            {
+              "id": "t00-replicates",
+              "row_id": "t00",
+              "column": "replicates",
+              "type": "numeric",
+              "answer": 3.0,
+              "unit": "",
+              "tolerance": 0,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "count",
+                "values": [
+                  21.9,
+                  22.0,
+                  22.1
+                ]
+              }
+            },
+            {
+              "id": "t00-mean_signal",
+              "row_id": "t00",
+              "column": "mean_signal",
+              "type": "numeric",
+              "answer": 22.0,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  21.9,
+                  22.0,
+                  22.1
+                ]
+              }
+            },
+            {
+              "id": "t05-replicates",
+              "row_id": "t05",
+              "column": "replicates",
+              "type": "numeric",
+              "answer": 3.0,
+              "unit": "",
+              "tolerance": 0,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "count",
+                "values": [
+                  14.031,
+                  14.131,
+                  14.231
+                ]
+              }
+            },
+            {
+              "id": "t05-mean_signal",
+              "row_id": "t05",
+              "column": "mean_signal",
+              "type": "numeric",
+              "answer": 14.131,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  14.031,
+                  14.131,
+                  14.231
+                ]
+              }
+            },
+            {
+              "id": "t10-replicates",
+              "row_id": "t10",
+              "column": "replicates",
+              "type": "numeric",
+              "answer": 3.0,
+              "unit": "",
+              "tolerance": 0,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "count",
+                "values": [
+                  9.258,
+                  9.358,
+                  9.458
+                ]
+              }
+            },
+            {
+              "id": "t10-mean_signal",
+              "row_id": "t10",
+              "column": "mean_signal",
+              "type": "numeric",
+              "answer": 9.358,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  9.258,
+                  9.358,
+                  9.458
+                ]
+              }
+            },
+            {
+              "id": "t15-replicates",
+              "row_id": "t15",
+              "column": "replicates",
+              "type": "numeric",
+              "answer": 3.0,
+              "unit": "",
+              "tolerance": 0,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "count",
+                "values": [
+                  6.363,
+                  6.463,
+                  6.563
+                ]
+              }
+            },
+            {
+              "id": "t15-mean_signal",
+              "row_id": "t15",
+              "column": "mean_signal",
+              "type": "numeric",
+              "answer": 6.463,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  6.363,
+                  6.463,
+                  6.563
+                ]
+              }
+            },
+            {
+              "id": "t20-replicates",
+              "row_id": "t20",
+              "column": "replicates",
+              "type": "numeric",
+              "answer": 3.0,
+              "unit": "",
+              "tolerance": 0,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "count",
+                "values": [
+                  4.607,
+                  4.707,
+                  4.807
+                ]
+              }
+            },
+            {
+              "id": "t20-mean_signal",
+              "row_id": "t20",
+              "column": "mean_signal",
+              "type": "numeric",
+              "answer": 4.707,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  4.607,
+                  4.707,
+                  4.807
+                ]
+              }
+            },
+            {
+              "id": "t30-replicates",
+              "row_id": "t30",
+              "column": "replicates",
+              "type": "numeric",
+              "answer": 3.0,
+              "unit": "",
+              "tolerance": 0,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "count",
+                "values": [
+                  2.896,
+                  2.996,
+                  3.096
+                ]
+              }
+            },
+            {
+              "id": "t30-mean_signal",
+              "row_id": "t30",
+              "column": "mean_signal",
+              "type": "numeric",
+              "answer": 2.996,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  2.896,
+                  2.996,
+                  3.096
+                ]
+              }
+            },
+            {
+              "id": "t40-replicates",
+              "row_id": "t40",
+              "column": "replicates",
+              "type": "numeric",
+              "answer": 3.0,
+              "unit": "",
+              "tolerance": 0,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "count",
+                "values": [
+                  2.266,
+                  2.366,
+                  2.466
+                ]
+              }
+            },
+            {
+              "id": "t40-mean_signal",
+              "row_id": "t40",
+              "column": "mean_signal",
+              "type": "numeric",
+              "answer": 2.366,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  2.266,
+                  2.366,
+                  2.466
+                ]
+              }
+            }
+          ]
+        },
+        "rubric": [
+          {
+            "id": "t00-replicates",
+            "criterion": "t00: replicates",
+            "points": 1,
+            "evidence": [
+              "Recomputes replicates for t00 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "t00-mean_signal",
+            "criterion": "t00: mean_signal",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_signal for t00 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "t05-replicates",
+            "criterion": "t05: replicates",
+            "points": 1,
+            "evidence": [
+              "Recomputes replicates for t05 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "t05-mean_signal",
+            "criterion": "t05: mean_signal",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_signal for t05 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "t10-replicates",
+            "criterion": "t10: replicates",
+            "points": 1,
+            "evidence": [
+              "Recomputes replicates for t10 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "t10-mean_signal",
+            "criterion": "t10: mean_signal",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_signal for t10 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "t15-replicates",
+            "criterion": "t15: replicates",
+            "points": 1,
+            "evidence": [
+              "Recomputes replicates for t15 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "t15-mean_signal",
+            "criterion": "t15: mean_signal",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_signal for t15 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "t20-replicates",
+            "criterion": "t20: replicates",
+            "points": 1,
+            "evidence": [
+              "Recomputes replicates for t20 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "t20-mean_signal",
+            "criterion": "t20: mean_signal",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_signal for t20 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "t30-replicates",
+            "criterion": "t30: replicates",
+            "points": 1,
+            "evidence": [
+              "Recomputes replicates for t30 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "t30-mean_signal",
+            "criterion": "t30: mean_signal",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_signal for t30 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "t40-replicates",
+            "criterion": "t40: replicates",
+            "points": 1,
+            "evidence": [
+              "Recomputes replicates for t40 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "t40-mean_signal",
+            "criterion": "t40: mean_signal",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_signal for t40 from the preparation-level values."
+            ]
+          }
+        ]
+      },
+      "feedback": {
+        "hint": "Group by time, not by replicate ID.",
+        "solution": "Each time has three constructed readings. Their average is the center value because the offsets −0.1, 0 and +0.1 balance.",
+        "lesson_ids": [
+          "calculus-1-lab-01"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-1-lab-01:uncorrected-rate",
+      "type": "numeric",
+      "prompt": "From the committed CSV means at 0 and 20 h, calculate ln(mean_signal(0)/mean_signal(20))/20 in h⁻¹. Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "calculus-1-lab-01-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0.07709958454696553,
+        "unit": "",
+        "tolerance": 1e-05,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use raw means, including the background.",
+        "solution": "ln(22.000/4.707)/20=0.077100 h⁻¹.",
+        "lesson_ids": [
+          "calculus-1-lab-01"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-1-lab-01:corrected-rate",
+      "type": "numeric",
+      "prompt": "Subtract the known blank 2 from those CSV means, then calculate ln((mean(0)−2)/(mean(20)−2))/20 in h⁻¹. Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "calculus-1-lab-01-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0.09999456314609136,
+        "unit": "",
+        "tolerance": 1e-05,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Subtract first, then form the positive ratio.",
+        "solution": "ln(20.000/2.707)/20=0.099995 h⁻¹; rounding of the supplied CSV makes it slightly different from 0.1.",
+        "lesson_ids": [
+          "calculus-1-lab-01"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-1-lab-01:half-life",
+      "type": "numeric",
+      "prompt": "Using the background-corrected rate from the committed 0 and 20 h CSV means, calculate ln 2/k in hours. Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "calculus-1-lab-01-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 6.931848680085357,
+        "unit": "",
+        "tolerance": 0.001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the corrected endpoint rate, retaining intermediate precision.",
+        "solution": "ln 2/0.099995=6.931849 h using the unrounded calculated rate.",
+        "lesson_ids": [
+          "calculus-1-lab-01"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-1-lab-01:naive-prediction",
+      "type": "numeric",
+      "prompt": "Fit a zero-background exponential through the raw mean signals at 0 and 20 h in the CSV. What does it predict at 40 h in signal units? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "calculus-1-lab-01-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 1.0070840454545456,
+        "unit": "",
+        "tolerance": 0.001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use mean(0)×exp(−k_raw×40).",
+        "solution": "The prediction is 1.007084, compared with observed mean 2.366; the zero-background model underpredicts.",
+        "lesson_ids": [
+          "calculus-1-lab-01"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-1-lab-01:evidence",
+      "type": "structured",
+      "prompt": "Select conclusions justified by this synthetic washout analysis.",
+      "points": 3,
+      "objective_ids": [
+        "calculus-1-lab-01-objective-3"
+      ],
+      "response_fields": [
+        {
+          "id": "base",
+          "type": "single_choice",
+          "prompt": "Which rate comes directly from minus the slope of a natural-log concentration ratio?",
+          "options": [
+            "The fractional decay rate k in inverse hours.",
+            "The concentration derivative in signal units per hour.",
+            "The total concentration-time integral."
+          ],
+          "points": 1
+        },
+        {
+          "id": "blank",
+          "type": "single_choice",
+          "prompt": "What is required when a real estimated blank is subtracted?",
+          "options": [
+            "Propagate its uncertainty and avoid logging nonpositive corrected values.",
+            "Treat every corrected point as error-free.",
+            "Silently discard all inconvenient corrected points."
+          ],
+          "points": 1
+        },
+        {
+          "id": "test",
+          "type": "single_choice",
+          "prompt": "How should the 40 h observation be used for a prediction check?",
+          "options": [
+            "Reserve it from fitting and tuning the model being evaluated.",
+            "Choose a correction using it, then label it fully independent.",
+            "Omit it because it disagrees with the early fit."
+          ],
+          "points": 1
+        }
+      ],
+      "solution_spec": {
+        "field_specs": [
+          {
+            "id": "base",
+            "type": "single_choice",
+            "answer": 0
+          },
+          {
+            "id": "blank",
+            "type": "single_choice",
+            "answer": 0
+          },
+          {
+            "id": "test",
+            "type": "single_choice",
+            "answer": 0
+          }
+        ],
+        "rubric": [
+          {
+            "id": "base",
+            "criterion": "Logarithm base and rate",
+            "points": 1,
+            "evidence": [
+              "ln(C/C₀)=−kt has slope −k."
+            ]
+          },
+          {
+            "id": "blank",
+            "criterion": "Background correction uncertainty",
+            "points": 1,
+            "evidence": [
+              "A common estimated blank can induce shared uncertainty."
+            ]
+          },
+          {
+            "id": "test",
+            "criterion": "Held-out model evaluation",
+            "points": 1,
+            "evidence": [
+              "A prediction check needs data outside the fitting decisions."
+            ]
+          }
+        ]
+      },
+      "feedback": {
+        "hint": "Separate slope units, correction and evaluation.",
+        "solution": "The log ratio has inverse-time slope. Estimated blanks add uncertainty; a held-out point must be kept outside the fitting choices.",
+        "lesson_ids": [
+          "calculus-1-lab-01",
+          "calculus-1-13"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-1-lab-01:assumptions",
+      "type": "multiple_select",
+      "prompt": "Which statements respect this lab construction? Select all that apply.",
+      "points": 2,
+      "objective_ids": [
+        "calculus-1-lab-01-objective-3"
+      ],
+      "options": [
+        "The independently stated constant blank explains curvature in this teaching construction.",
+        "The synthetic repeats prove an actual sensor has independent Gaussian noise.",
+        "The three offsets at each time deliberately balance around a constructed mean.",
+        "A corrected signal must be positive to form the stated real logarithm.",
+        "A flattening semilog curve uniquely proves a biological compartment."
+      ],
+      "solution_spec": {
+        "answer": [
+          0,
+          2,
+          3
+        ],
+        "partial_credit": "correct-minus-incorrect-clamped-v1"
+      },
+      "feedback": {
+        "hint": "Distinguish the known construction from evidence about a real device.",
+        "solution": "The offsets balance and the known background explains this constructed example. Positive corrected signals are needed; neither real noise properties nor a unique biological mechanism are established.",
+        "lesson_ids": [
+          "calculus-1-lab-01"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-1-lab-01:difference",
+      "type": "single_choice",
+      "prompt": "The corrected endpoint rate is near 0.1 and the uncorrected rate is near 0.0771. What explains the difference here?",
+      "points": 1,
+      "objective_ids": [
+        "calculus-1-lab-01-objective-2"
+      ],
+      "options": [
+        "An additive known background flattens the raw semilog curve.",
+        "The natural logarithm changes the time unit from hours to minutes.",
+        "The zero-background model is exact because it passes through two points."
+      ],
+      "solution_spec": {
+        "answer": 0
+      },
+      "feedback": {
+        "hint": "Use Y=C+B, not a logarithm product identity.",
+        "solution": "A fixed positive background contributes increasingly to the signal as C decays, reducing the apparent log slope.",
+        "lesson_ids": [
+          "calculus-1-lab-01"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
     }
   ]
 }

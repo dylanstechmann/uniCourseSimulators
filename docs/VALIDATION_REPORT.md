@@ -4,7 +4,25 @@
 
 2026-10-06; synthetic local learner data only. Milestones 1 and 2 are implemented. Milestone 3 remains partial; deterministic graders and prototype graded-assignment and review workflows are described below. A Milestone 4 curriculum-map increment is implemented and tested, while subject-matter review and map refinement remain. All 25 course packages are **partial**; zero are beta, complete or externally reviewed. Human score review is limited to saved attempts and does not constitute course-content review. No semester equivalence, university credit, security certification or public production deployment is asserted.
 
-## Current increment: linear algebra lessons, sensor lab and proposed schedule (0.3.0, 2026-10-09)
+## Current increment: Calculus I lessons, washout lab and proposed schedule (0.4.0, 2026-10-09)
+
+Developed with Codex assistance. Calculus I advances from 0.3.1 to 0.4.0, retaining partial, unreviewed and formative-only status. Seven new lessons cover limits and derivative definitions, composite/implicit and related rates, constrained optimization, accumulation/substitution, numerical calculus and error, local approximation/Newton iteration, and the original semilog washout case. One synthetic-data lab and a proposed 14-week sequence complete this increment. There are 71 new items and 32 cards; the package has 14 readings, 92 items and 48 cards. All 21 preexisting item objects are unchanged.
+
+Separate calculations check all 64 numeric keys, including the 18 preexisting ones, and all 14 lab CSV cells. The lab distinguishes a known additive background from an apparent zero-background decay rate and checks a reserved late prediction. The [AI-assisted record](reviews/ai-assisted/calculus-1-0.4.0.md) documents methods, failed focused checks and authoring repairs. These checks are not human or independent scientific review.
+
+| Command/check (Linux development container, Python 3.12.3) | Result |
+|---|---|
+| `python -B tools/validate_content.py` | PASS: 25 packages, 305 lessons, 1532 questions, 960 cards, 25 cases; 0 errors; 98 legacy-depth warnings |
+| `bash /workspace/.claude/skills/courselab-dev/scripts/verify.sh --log-dir /workspace/courselab-session-artifacts/codex-calculus-1-2026-10-09/verification` | PASS: content, legacy (7), security (660 files, 0 findings), ruff, root (1321), backend (3315 passed, 2 existing symbolic-builder skips) |
+| `python -B /workspace/courselab-session-artifacts/codex-calculus-1-2026-10-09/check_grader.py` | PASS: all 92 package items earn full credit, including the preserved symbolic item |
+| `python -B -m pytest tests/content/test_calculus_one_recalculations.py tests/content/test_new_geroscience_and_statistics_lessons.py tests/content/test_learner_visible_number_formatting.py -q -p no:cacheprovider` | PASS: 421 focused checks |
+| `python -B -m pytest tests/content/test_calculus_one_recalculations.py tests/content/test_learner_visible_number_formatting.py -q -p no:cacheprovider` | PASS after style conversion: 78 checks |
+| `python -B tools/objective_coverage.py --check docs/COURSE_GAP_REPORT.md` | PASS: generated report matches |
+| `python3 -B /workspace/.claude/skills/regen-guardrails/scripts/claims_scan.py --repo uniStemCourseSimulators` | PASS: 0 HIGH, MED or LOW findings |
+
+The first focused run had 77 passes and one test-string membership error; the assertion was repaired. The first lint run found 21 assigned-lambda style violations, converted to named functions before the full run. No numeric key failed, and the full verification above passed on its first run. Logs remain outside git under `courselab-session-artifacts/codex-calculus-1-2026-10-09/verification`. Frontend, the Docker Compose application stack and Playwright were not run locally for this increment; publication CI runs them. No person reviewed the content or measured workload.
+
+## Previous increment: linear algebra lessons, sensor lab and proposed schedule (0.3.0, 2026-10-09)
 
 Claude's four recovered drafts were corrected and extended with Codex assistance. Linear Algebra for Modeling & Robotics advances from 0.2.1 to 0.3.0, retaining partial, unreviewed and formative-only status. Seven new lessons cover rank and identifiability, projection and QR, symmetric spectra, SVD, conditioning and ridge, centered PCA, and the existing displacement case. One synthetic sensor-geometry lab and a proposed 14-week schedule complete this increment. There are 71 new public items and 32 cards; the package has 14 readings, 91 items and 48 cards. The 20 preexisting items are unchanged.
 
