@@ -7,7 +7,7 @@
   "domain": "Mathematics",
   "level": "Year 2",
   "maturity": "partial",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "license": "MIT OR CC-BY-4.0",
   "content_origin": {
     "kind": "legacy-prototype",
@@ -149,12 +149,361 @@
       "course_outcome_ids": [
         "linear-algebra-outcome-3"
       ]
+    },
+    {
+      "id": "linear-algebra-7-objective-1",
+      "description": "Compute the rank and nullity of a matrix by elimination and relate them through the rank–nullity theorem.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "linear-algebra-outcome-2"
+      ]
+    },
+    {
+      "id": "linear-algebra-7-objective-2",
+      "description": "Decide whether a system Ax = b is consistent and describe all of its solutions.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "linear-algebra-outcome-1",
+        "linear-algebra-outcome-2"
+      ]
+    },
+    {
+      "id": "linear-algebra-7-objective-3",
+      "description": "Identify unknowns that cannot be identified, and compute the minimum-norm solution.",
+      "bloom": "evaluate",
+      "course_outcome_ids": [
+        "linear-algebra-outcome-1",
+        "linear-algebra-outcome-2"
+      ]
+    },
+    {
+      "id": "linear-algebra-8-objective-1",
+      "description": "Compute the orthogonal projection of a vector onto another and verify that the residual is orthogonal to it.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "linear-algebra-outcome-2",
+        "linear-algebra-outcome-4"
+      ]
+    },
+    {
+      "id": "linear-algebra-8-objective-2",
+      "description": "Build an orthonormal basis for two vectors by Gram–Schmidt and write the QR factorization.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "linear-algebra-outcome-2",
+        "linear-algebra-outcome-4"
+      ]
+    },
+    {
+      "id": "linear-algebra-8-objective-3",
+      "description": "Solve a least-squares problem by back-substitution with R and compute the residual norm.",
+      "bloom": "evaluate",
+      "course_outcome_ids": [
+        "linear-algebra-outcome-1",
+        "linear-algebra-outcome-4"
+      ]
+    },
+    {
+      "id": "linear-algebra-9-objective-1",
+      "description": "Compute the eigenvalues and orthonormal eigenvectors of a 2 × 2 symmetric matrix and check the trace and determinant.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "linear-algebra-outcome-3"
+      ]
+    },
+    {
+      "id": "linear-algebra-9-objective-2",
+      "description": "Evaluate a quadratic form and determine from the eigenvalues whether a symmetric matrix is positive definite.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "linear-algebra-outcome-2",
+        "linear-algebra-outcome-3"
+      ]
+    },
+    {
+      "id": "linear-algebra-9-objective-3",
+      "description": "Interpret the largest eigenvalue and its eigenvector as the direction of greatest variance of a covariance matrix.",
+      "bloom": "evaluate",
+      "course_outcome_ids": [
+        "linear-algebra-outcome-3",
+        "linear-algebra-outcome-4"
+      ]
+    },
+    {
+      "id": "linear-algebra-10-objective-1",
+      "description": "Compute the singular values of a small matrix from the eigenvalues of AᵀA.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "linear-algebra-outcome-2",
+        "linear-algebra-outcome-3"
+      ]
+    },
+    {
+      "id": "linear-algebra-10-objective-2",
+      "description": "Compute the energy captured by a rank-k approximation and the error of the approximation.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "linear-algebra-outcome-2",
+        "linear-algebra-outcome-4"
+      ]
+    },
+    {
+      "id": "linear-algebra-10-objective-3",
+      "description": "Count the storage saved by a low-rank approximation and evaluate when it is useful.",
+      "bloom": "evaluate",
+      "course_outcome_ids": [
+        "linear-algebra-outcome-2",
+        "linear-algebra-outcome-4"
+      ]
+    },
+    {
+      "id": "linear-algebra-11-objective-1",
+      "description": "Apply condition numbers and fixed-matrix perturbation bounds.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "linear-algebra-outcome-1",
+        "linear-algebra-outcome-2"
+      ]
+    },
+    {
+      "id": "linear-algebra-11-objective-2",
+      "description": "Distinguish residual size, conditioning and numerical stability.",
+      "bloom": "analyze",
+      "course_outcome_ids": [
+        "linear-algebra-outcome-4"
+      ]
+    },
+    {
+      "id": "linear-algebra-11-objective-3",
+      "description": "Calculate and interpret a scaled ridge estimate.",
+      "bloom": "evaluate",
+      "course_outcome_ids": [
+        "linear-algebra-outcome-4"
+      ]
+    },
+    {
+      "id": "linear-algebra-12-objective-1",
+      "description": "Compute centered sample covariance and its principal axes.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "linear-algebra-outcome-2",
+        "linear-algebra-outcome-3"
+      ]
+    },
+    {
+      "id": "linear-algebra-12-objective-2",
+      "description": "Calculate PCA scores, variance fractions and reconstruction errors.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "linear-algebra-outcome-4"
+      ]
+    },
+    {
+      "id": "linear-algebra-12-objective-3",
+      "description": "Evaluate scaling, confounding and held-out preprocessing.",
+      "bloom": "evaluate",
+      "course_outcome_ids": [
+        "linear-algebra-outcome-4"
+      ]
+    },
+    {
+      "id": "linear-algebra-13-objective-1",
+      "description": "Diagnose directional sensitivity despite a small residual.",
+      "bloom": "analyze",
+      "course_outcome_ids": [
+        "linear-algebra-outcome-1",
+        "linear-algebra-outcome-2"
+      ]
+    },
+    {
+      "id": "linear-algebra-13-objective-2",
+      "description": "Propagate noise covariance and distinguish precision from bias.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "linear-algebra-outcome-4"
+      ]
+    },
+    {
+      "id": "linear-algebra-13-objective-3",
+      "description": "Specify geometry redesign and independent reference validation.",
+      "bloom": "evaluate",
+      "course_outcome_ids": [
+        "linear-algebra-outcome-4"
+      ]
+    },
+    {
+      "id": "linear-algebra-lab-01-objective-1",
+      "description": "Solve repeated synthetic sensor pairs and summarize parameter errors.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "linear-algebra-outcome-1",
+        "linear-algebra-outcome-4"
+      ]
+    },
+    {
+      "id": "linear-algebra-lab-01-objective-2",
+      "description": "Compare directional sensitivity and independent-noise uncertainty.",
+      "bloom": "analyze",
+      "course_outcome_ids": [
+        "linear-algebra-outcome-2",
+        "linear-algebra-outcome-4"
+      ]
+    },
+    {
+      "id": "linear-algebra-lab-01-objective-3",
+      "description": "Evaluate residuals, calibration bias and validation design.",
+      "bloom": "evaluate",
+      "course_outcome_ids": [
+        "linear-algebra-outcome-4"
+      ]
     }
   ],
   "duration": {
-    "instructional_weeks": null,
-    "equivalent_structure": null,
-    "weeks": []
+    "instructional_weeks": 14,
+    "equivalent_structure": "Proposed 14-week scope only, with unmeasured workload and no human review. Four short prototype units remain beside original readings and one synthetic-data lab. All activities are formative; this is not evidence of semester equivalence.",
+    "weeks": [
+      {
+        "week": 1,
+        "title": "Linear systems, elimination, and rank",
+        "lesson_ids": [
+          "linear-algebra-1"
+        ],
+        "assessment_ids": [
+          "linear-algebra-1-practice"
+        ]
+      },
+      {
+        "week": 2,
+        "title": "Vector spaces, bases, and coordinate transforms",
+        "lesson_ids": [
+          "linear-algebra-2"
+        ],
+        "assessment_ids": [
+          "linear-algebra-2-practice"
+        ]
+      },
+      {
+        "week": 3,
+        "title": "Rank, null space and identifiability: counting the independent information in an experiment",
+        "lesson_ids": [
+          "linear-algebra-7"
+        ],
+        "assessment_ids": [
+          "linear-algebra-7-practice"
+        ]
+      },
+      {
+        "week": 4,
+        "title": "Least squares and data fitting",
+        "lesson_ids": [
+          "linear-algebra-4"
+        ],
+        "assessment_ids": [
+          "linear-algebra-4-practice"
+        ]
+      },
+      {
+        "week": 5,
+        "title": "Least squares as linear algebra: fitting a calibration line, normal equations and reading residuals",
+        "lesson_ids": [
+          "linear-algebra-5"
+        ],
+        "assessment_ids": [
+          "linear-algebra-5-practice"
+        ]
+      },
+      {
+        "week": 6,
+        "title": "Orthogonality, projections and QR: the geometry behind least squares",
+        "lesson_ids": [
+          "linear-algebra-8"
+        ],
+        "assessment_ids": [
+          "linear-algebra-8-practice"
+        ]
+      },
+      {
+        "week": 7,
+        "title": "Eigenvalues and linear dynamical systems",
+        "lesson_ids": [
+          "linear-algebra-3"
+        ],
+        "assessment_ids": [
+          "linear-algebra-3-practice"
+        ]
+      },
+      {
+        "week": 8,
+        "title": "Symmetric matrices, the spectral theorem and quadratic forms",
+        "lesson_ids": [
+          "linear-algebra-9"
+        ],
+        "assessment_ids": [
+          "linear-algebra-9-practice"
+        ]
+      },
+      {
+        "week": 9,
+        "title": "Cell-state transitions as a Markov chain: transition matrices, the eigenvalue 1 and how fast a population settles",
+        "lesson_ids": [
+          "linear-algebra-6"
+        ],
+        "assessment_ids": [
+          "linear-algebra-6-practice"
+        ]
+      },
+      {
+        "week": 10,
+        "title": "The singular value decomposition and low-rank approximation",
+        "lesson_ids": [
+          "linear-algebra-10"
+        ],
+        "assessment_ids": [
+          "linear-algebra-10-practice"
+        ]
+      },
+      {
+        "week": 11,
+        "title": "Conditioning, error bounds and regularization",
+        "lesson_ids": [
+          "linear-algebra-11"
+        ],
+        "assessment_ids": [
+          "linear-algebra-11-practice"
+        ]
+      },
+      {
+        "week": 12,
+        "title": "Centered PCA, scaling and interpretation",
+        "lesson_ids": [
+          "linear-algebra-12"
+        ],
+        "assessment_ids": [
+          "linear-algebra-12-practice"
+        ]
+      },
+      {
+        "week": 13,
+        "title": "Virtual lab 1: sensor geometry, noise and displacement estimates",
+        "lesson_ids": [
+          "linear-algebra-lab-01"
+        ],
+        "assessment_ids": [
+          "linear-algebra-week13-sensors-lab"
+        ]
+      },
+      {
+        "week": 14,
+        "title": "Two displacement sensors: a small residual and an unreliable answer",
+        "lesson_ids": [
+          "linear-algebra-13"
+        ],
+        "assessment_ids": [
+          "linear-algebra-13-practice",
+          "linear-algebra-case"
+        ]
+      }
+    ]
   },
   "workload": {
     "estimated_total_hours": null,
@@ -343,6 +692,309 @@
           ]
         }
       ]
+    },
+    {
+      "id": "linear-algebra-module-7",
+      "title": "Rank and identifiability",
+      "source_ids": [
+        "linearAlgebra",
+        "engineeringMath"
+      ],
+      "lessons": [
+        {
+          "id": "linear-algebra-7",
+          "title": "Rank, null space and identifiability: counting the independent information in an experiment",
+          "reading": "modules/07-rank-null-space-and-identifiability.md",
+          "objectives": [
+            "linear-algebra-7-objective-1",
+            "linear-algebra-7-objective-2",
+            "linear-algebra-7-objective-3"
+          ],
+          "worked_example": "For A = [[1, 2, 1], [2, 4, 2], [3, 6, 3]] the rank is 1 and the nullity 2, b = (2, 4, 6) is in the column space (x = (2, 0, 0)) and the solutions form a plane; in the lesson, the mixing matrix of rank 2 has the null vector (1, 1, −1), no solution for b = (6, 11, 4), and a minimum-norm solution of length 1.6330 for b = (6, 12, 4).",
+          "question_ids": [
+            "linear-algebra-7:rank",
+            "linear-algebra-7:nullity",
+            "linear-algebra-7:nullity-4-by-6",
+            "linear-algebra-7:consistent-entry",
+            "linear-algebra-7:solution-parameter",
+            "linear-algebra-7:min-norm-third",
+            "linear-algebra-7:min-norm-length",
+            "linear-algebra-7:design-rank",
+            "linear-algebra-7:rank-statements"
+          ],
+          "card_ids": [
+            "linear-algebra-7-card-1",
+            "linear-algebra-7-card-2",
+            "linear-algebra-7-card-3",
+            "linear-algebra-7-card-4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "linear-algebra-module-8",
+      "title": "Projections and QR",
+      "source_ids": [
+        "linearAlgebra",
+        "engineeringMath"
+      ],
+      "lessons": [
+        {
+          "id": "linear-algebra-8",
+          "title": "Orthogonality, projections and QR: the geometry behind least squares",
+          "reading": "modules/08-orthogonality-projections-and-qr.md",
+          "objectives": [
+            "linear-algebra-8-objective-1",
+            "linear-algebra-8-objective-2",
+            "linear-algebra-8-objective-3"
+          ],
+          "worked_example": "Projecting b = (1, 4, 1) onto a = (2, 1, 2) gives the coefficient 0.8889 and a residual of length 3.2998, and the QR solution of A = [[3, 1], [0, 2]] with b = (6, 4) is x = (1.3333, 2); in the lesson, the line fitted to (1, 1), (2, 2), (3, 2) is y = 0.6667 + 0.5x with residual norm 0.4082.",
+          "question_ids": [
+            "linear-algebra-8:projection-coefficient",
+            "linear-algebra-8:residual-length",
+            "linear-algebra-8:r11",
+            "linear-algebra-8:r12",
+            "linear-algebra-8:r22",
+            "linear-algebra-8:slope-by-qr",
+            "linear-algebra-8:intercept-by-qr",
+            "linear-algebra-8:residual-norm",
+            "linear-algebra-8:orthogonality-statements"
+          ],
+          "card_ids": [
+            "linear-algebra-8-card-1",
+            "linear-algebra-8-card-2",
+            "linear-algebra-8-card-3",
+            "linear-algebra-8-card-4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "linear-algebra-module-9",
+      "title": "Symmetric matrices",
+      "source_ids": [
+        "linearAlgebra",
+        "engineeringMath"
+      ],
+      "lessons": [
+        {
+          "id": "linear-algebra-9",
+          "title": "Symmetric matrices, the spectral theorem and quadratic forms",
+          "reading": "modules/09-symmetric-matrices-spectral-theorem-and-quadratic-forms.md",
+          "objectives": [
+            "linear-algebra-9-objective-1",
+            "linear-algebra-9-objective-2",
+            "linear-algebra-9-objective-3"
+          ],
+          "worked_example": "For C = [[5, 2], [2, 2]] the eigenvalues are 6.0000 and 1.0000, the dominant eigenvector is at 26.57° and carries 0.857 of the total variance; in the lesson, A = [[4, 1], [1, 3]] has eigenvalues 4.6180 and 2.3820, a dominant direction at 31.72° and a variance of 4.5 along (1, 1)/√2.",
+          "question_ids": [
+            "linear-algebra-9:determinant",
+            "linear-algebra-9:largest-eigenvalue",
+            "linear-algebra-9:smallest-eigenvalue",
+            "linear-algebra-9:eigenvector-angle",
+            "linear-algebra-9:variance-diagonal",
+            "linear-algebra-9:variance-fraction",
+            "linear-algebra-9:negative-eigenvalue",
+            "linear-algebra-9:quadratic-form-negative",
+            "linear-algebra-9:spectral-statements"
+          ],
+          "card_ids": [
+            "linear-algebra-9-card-1",
+            "linear-algebra-9-card-2",
+            "linear-algebra-9-card-3",
+            "linear-algebra-9-card-4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "linear-algebra-module-10",
+      "title": "Singular value decomposition",
+      "source_ids": [
+        "linearAlgebra",
+        "engineeringMath"
+      ],
+      "lessons": [
+        {
+          "id": "linear-algebra-10",
+          "title": "The singular value decomposition and low-rank approximation",
+          "reading": "modules/10-singular-value-decomposition-and-low-rank-approximation.md",
+          "objectives": [
+            "linear-algebra-10-objective-1",
+            "linear-algebra-10-objective-2",
+            "linear-algebra-10-objective-3"
+          ],
+          "worked_example": "For A = [[1, 1], [1, −1], [2, 0]] the singular values are 2.4495 and 1.4142, the first carries 0.75 of the energy and the rank-one error is 1.4142; in the lesson, A = [[3, 1], [2, 2], [1, 3]] has singular values 4.8990 and 2.0, a rank-one error of 2.0 and a relative error of 0.378.",
+          "question_ids": [
+            "linear-algebra-10:first-singular-value",
+            "linear-algebra-10:second-singular-value",
+            "linear-algebra-10:frobenius-norm",
+            "linear-algebra-10:energy-fraction",
+            "linear-algebra-10:rank-one-error",
+            "linear-algebra-10:relative-error",
+            "linear-algebra-10:storage-rank-3",
+            "linear-algebra-10:compression",
+            "linear-algebra-10:svd-statements"
+          ],
+          "card_ids": [
+            "linear-algebra-10-card-1",
+            "linear-algebra-10-card-2",
+            "linear-algebra-10-card-3",
+            "linear-algebra-10-card-4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "linear-algebra-module-11",
+      "title": "Conditioning, error bounds and regularization",
+      "source_ids": [
+        "linearAlgebra",
+        "engineeringMath"
+      ],
+      "lessons": [
+        {
+          "id": "linear-algebra-11",
+          "title": "Conditioning, error bounds and regularization",
+          "reading": "modules/11-conditioning-and-regularization.md",
+          "objectives": [
+            "linear-algebra-11-objective-1",
+            "linear-algebra-11-objective-2",
+            "linear-algebra-11-objective-3"
+          ],
+          "worked_example": "For the synthetic matrix A = [[1, 0.99], [0.99, 1]], the singular gains are 1.99 and 0.01 and the condition number is 199. An opposite signal perturbation of (0.01, −0.01) changes the estimate by (1, −1). Ridge introduces a stated preference; the better geometry has condition number 1.5.",
+          "question_ids": [
+            "linear-algebra-11:condition-number",
+            "linear-algebra-11:gram-condition",
+            "linear-algebra-11:relative-bound",
+            "linear-algebra-11:error-first",
+            "linear-algebra-11:ridge-first",
+            "linear-algebra-11:improved-condition",
+            "linear-algebra-11:zero-residual",
+            "linear-algebra-11:solver",
+            "linear-algebra-11:ridge-meaning"
+          ],
+          "card_ids": [
+            "linear-algebra-11-card-1",
+            "linear-algebra-11-card-2",
+            "linear-algebra-11-card-3",
+            "linear-algebra-11-card-4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "linear-algebra-module-12",
+      "title": "Centered PCA, scaling and interpretation",
+      "source_ids": [
+        "linearAlgebra",
+        "engineeringMath"
+      ],
+      "lessons": [
+        {
+          "id": "linear-algebra-12",
+          "title": "Centered PCA, scaling and interpretation",
+          "reading": "modules/12-centered-pca-and-scaling.md",
+          "objectives": [
+            "linear-algebra-12-objective-1",
+            "linear-algebra-12-objective-2",
+            "linear-algebra-12-objective-3"
+          ],
+          "worked_example": "Centering four synthetic observations gives covariance [[8/3, 4/3], [4/3, 4/3]], with eigenvalues 3.490712 and 0.509288. The first component explains 0.872678 of variance, and the rank-one reconstruction error is 1.236068. Standardization changes the variance fraction and axes; confounded separation does not establish mechanism.",
+          "question_ids": [
+            "linear-algebra-12:mean-first",
+            "linear-algebra-12:covariance",
+            "linear-algebra-12:leading-eigenvalue",
+            "linear-algebra-12:explained-fraction",
+            "linear-algebra-12:second-score",
+            "linear-algebra-12:rank-one-error",
+            "linear-algebra-12:standardized-fraction",
+            "linear-algebra-12:confounding",
+            "linear-algebra-12:held-out"
+          ],
+          "card_ids": [
+            "linear-algebra-12-card-1",
+            "linear-algebra-12-card-2",
+            "linear-algebra-12-card-3",
+            "linear-algebra-12-card-4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "linear-algebra-module-13",
+      "title": "Two displacement sensors: a small residual and an unreliable answer",
+      "source_ids": [
+        "linearAlgebra",
+        "engineeringMath"
+      ],
+      "lessons": [
+        {
+          "id": "linear-algebra-13",
+          "title": "Two displacement sensors: a small residual and an unreliable answer",
+          "reading": "modules/13-displacement-sensor-case.md",
+          "objectives": [
+            "linear-algebra-13-objective-1",
+            "linear-algebra-13-objective-2",
+            "linear-algebra-13-objective-3"
+          ],
+          "worked_example": "A poor sensor geometry fits the noisy signal pair exactly yet swaps reference displacement (2, 3) to (3, 2). With independent equal signal noise of standard deviation 0.01, coordinate standard deviation is 0.707116 for poor geometry and 0.010623 for improved geometry. Fixed calibration bias does not average away.",
+          "question_ids": [
+            "linear-algebra-13:noisy-first",
+            "linear-algebra-13:parameter-error",
+            "linear-algebra-13:coordinate-sd",
+            "linear-algebra-13:repeat-sd",
+            "linear-algebra-13:offset-bias",
+            "linear-algebra-13:better-sd",
+            "linear-algebra-13:repeats",
+            "linear-algebra-13:validation",
+            "linear-algebra-13:regularization"
+          ],
+          "card_ids": [
+            "linear-algebra-13-card-1",
+            "linear-algebra-13-card-2",
+            "linear-algebra-13-card-3",
+            "linear-algebra-13-card-4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "linear-algebra-module-lab-01",
+      "title": "Virtual lab 1: sensor geometry, noise and displacement estimates",
+      "source_ids": [
+        "linearAlgebra",
+        "engineeringMath"
+      ],
+      "lessons": [
+        {
+          "id": "linear-algebra-lab-01",
+          "title": "Virtual lab 1: sensor geometry, noise and displacement estimates",
+          "reading": "labs/01-sensor-geometry.md",
+          "objectives": [
+            "linear-algebra-lab-01-objective-1",
+            "linear-algebra-lab-01-objective-2",
+            "linear-algebra-lab-01-objective-3"
+          ],
+          "worked_example": "Ten synthetic paired-error signal observations are solved row by row. Both geometries give mean displacement (2, 3) because the errors deliberately balance, while parameter RMSE is 2 for poor geometry and 0.025 for improved geometry. Zero residual and an accurate mean do not establish real calibration accuracy.",
+          "question_ids": [
+            "linear-algebra-lab-01:summary",
+            "linear-algebra-lab-01:poor-rmse",
+            "linear-algebra-lab-01:improved-rmse",
+            "linear-algebra-lab-01:rmse-ratio",
+            "linear-algebra-lab-01:predicted-weak-sd",
+            "linear-algebra-lab-01:evidence",
+            "linear-algebra-lab-01:noise-assumptions",
+            "linear-algebra-lab-01:redesign"
+          ],
+          "card_ids": [
+            "linear-algebra-lab-01-card-1",
+            "linear-algebra-lab-01-card-2",
+            "linear-algebra-lab-01-card-3",
+            "linear-algebra-lab-01-card-4"
+          ]
+        }
+      ]
     }
   ],
   "assessments": [
@@ -455,6 +1107,221 @@
       "points": 6
     },
     {
+      "id": "linear-algebra-7-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Rank and identifiability practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "linear-algebra-7-objective-1",
+        "linear-algebra-7-objective-2",
+        "linear-algebra-7-objective-3",
+        "linear-algebra-outcome-1",
+        "linear-algebra-outcome-2"
+      ],
+      "question_ids": [
+        "linear-algebra-7:rank",
+        "linear-algebra-7:nullity",
+        "linear-algebra-7:nullity-4-by-6",
+        "linear-algebra-7:consistent-entry",
+        "linear-algebra-7:solution-parameter",
+        "linear-algebra-7:min-norm-third",
+        "linear-algebra-7:min-norm-length",
+        "linear-algebra-7:design-rank",
+        "linear-algebra-7:rank-statements"
+      ],
+      "points": 10
+    },
+    {
+      "id": "linear-algebra-8-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Projections and QR practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "linear-algebra-8-objective-1",
+        "linear-algebra-8-objective-2",
+        "linear-algebra-8-objective-3",
+        "linear-algebra-outcome-1",
+        "linear-algebra-outcome-2",
+        "linear-algebra-outcome-4"
+      ],
+      "question_ids": [
+        "linear-algebra-8:projection-coefficient",
+        "linear-algebra-8:residual-length",
+        "linear-algebra-8:r11",
+        "linear-algebra-8:r12",
+        "linear-algebra-8:r22",
+        "linear-algebra-8:slope-by-qr",
+        "linear-algebra-8:intercept-by-qr",
+        "linear-algebra-8:residual-norm",
+        "linear-algebra-8:orthogonality-statements"
+      ],
+      "points": 10
+    },
+    {
+      "id": "linear-algebra-9-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Symmetric matrices practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "linear-algebra-9-objective-1",
+        "linear-algebra-9-objective-2",
+        "linear-algebra-9-objective-3",
+        "linear-algebra-outcome-2",
+        "linear-algebra-outcome-3",
+        "linear-algebra-outcome-4"
+      ],
+      "question_ids": [
+        "linear-algebra-9:determinant",
+        "linear-algebra-9:largest-eigenvalue",
+        "linear-algebra-9:smallest-eigenvalue",
+        "linear-algebra-9:eigenvector-angle",
+        "linear-algebra-9:variance-diagonal",
+        "linear-algebra-9:variance-fraction",
+        "linear-algebra-9:negative-eigenvalue",
+        "linear-algebra-9:quadratic-form-negative",
+        "linear-algebra-9:spectral-statements"
+      ],
+      "points": 10
+    },
+    {
+      "id": "linear-algebra-10-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Singular value decomposition practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "linear-algebra-10-objective-1",
+        "linear-algebra-10-objective-2",
+        "linear-algebra-10-objective-3",
+        "linear-algebra-outcome-2",
+        "linear-algebra-outcome-3",
+        "linear-algebra-outcome-4"
+      ],
+      "question_ids": [
+        "linear-algebra-10:first-singular-value",
+        "linear-algebra-10:second-singular-value",
+        "linear-algebra-10:frobenius-norm",
+        "linear-algebra-10:energy-fraction",
+        "linear-algebra-10:rank-one-error",
+        "linear-algebra-10:relative-error",
+        "linear-algebra-10:storage-rank-3",
+        "linear-algebra-10:compression",
+        "linear-algebra-10:svd-statements"
+      ],
+      "points": 10
+    },
+    {
+      "id": "linear-algebra-11-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Conditioning, error bounds and regularization practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "linear-algebra-11-objective-1",
+        "linear-algebra-11-objective-2",
+        "linear-algebra-11-objective-3",
+        "linear-algebra-outcome-1",
+        "linear-algebra-outcome-2",
+        "linear-algebra-outcome-4"
+      ],
+      "question_ids": [
+        "linear-algebra-11:condition-number",
+        "linear-algebra-11:gram-condition",
+        "linear-algebra-11:relative-bound",
+        "linear-algebra-11:error-first",
+        "linear-algebra-11:ridge-first",
+        "linear-algebra-11:improved-condition",
+        "linear-algebra-11:zero-residual",
+        "linear-algebra-11:solver",
+        "linear-algebra-11:ridge-meaning"
+      ],
+      "points": 9
+    },
+    {
+      "id": "linear-algebra-12-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Centered PCA, scaling and interpretation practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "linear-algebra-12-objective-1",
+        "linear-algebra-12-objective-2",
+        "linear-algebra-12-objective-3",
+        "linear-algebra-outcome-2",
+        "linear-algebra-outcome-3",
+        "linear-algebra-outcome-4"
+      ],
+      "question_ids": [
+        "linear-algebra-12:mean-first",
+        "linear-algebra-12:covariance",
+        "linear-algebra-12:leading-eigenvalue",
+        "linear-algebra-12:explained-fraction",
+        "linear-algebra-12:second-score",
+        "linear-algebra-12:rank-one-error",
+        "linear-algebra-12:standardized-fraction",
+        "linear-algebra-12:confounding",
+        "linear-algebra-12:held-out"
+      ],
+      "points": 9
+    },
+    {
+      "id": "linear-algebra-13-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Two displacement sensors: a small residual and an unreliable answer practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "linear-algebra-13-objective-1",
+        "linear-algebra-13-objective-2",
+        "linear-algebra-13-objective-3",
+        "linear-algebra-outcome-1",
+        "linear-algebra-outcome-2",
+        "linear-algebra-outcome-4"
+      ],
+      "question_ids": [
+        "linear-algebra-13:noisy-first",
+        "linear-algebra-13:parameter-error",
+        "linear-algebra-13:coordinate-sd",
+        "linear-algebra-13:repeat-sd",
+        "linear-algebra-13:offset-bias",
+        "linear-algebra-13:better-sd",
+        "linear-algebra-13:repeats",
+        "linear-algebra-13:validation",
+        "linear-algebra-13:regularization"
+      ],
+      "points": 9
+    },
+    {
+      "id": "linear-algebra-week13-sensors-lab",
+      "type": "lab",
+      "mode": "practice",
+      "title": "Virtual lab 1: sensor geometry, noise and displacement estimates (ungraded practice)",
+      "path": "question-banks/practice.json",
+      "week": 13,
+      "objective_ids": [
+        "linear-algebra-lab-01-objective-1",
+        "linear-algebra-lab-01-objective-2",
+        "linear-algebra-lab-01-objective-3",
+        "linear-algebra-outcome-1",
+        "linear-algebra-outcome-2",
+        "linear-algebra-outcome-4"
+      ],
+      "question_ids": [
+        "linear-algebra-lab-01:summary",
+        "linear-algebra-lab-01:poor-rmse",
+        "linear-algebra-lab-01:improved-rmse",
+        "linear-algebra-lab-01:rmse-ratio",
+        "linear-algebra-lab-01:predicted-weak-sd",
+        "linear-algebra-lab-01:evidence",
+        "linear-algebra-lab-01:noise-assumptions",
+        "linear-algebra-lab-01:redesign"
+      ],
+      "points": 14
+    },
+    {
       "id": "linear-algebra-case",
       "type": "case",
       "mode": "self-assessment",
@@ -506,18 +1373,24 @@
       "version": "0.2.1",
       "date": "2026-10-08",
       "summary": "Assessments with items now also list the course outcomes those items assess, derived from each item's lesson objective and that objective's outcome links. The rubric-only case lists none, and neither do the 4 prototype-unit assessments, whose objectives are not yet linked to an outcome. No readings, items or keys changed. The syllabus was regenerated from the manifest: it states the current version, lists every lesson with its item and card counts, and describes the current practice and limitations (it still described only the four original units). The course limitations shown to learners were also updated: they still described one formative check per lesson and the original numerical rules. The package remains partial, unreviewed and formative-only."
+    },
+    {
+      "version": "0.3.0",
+      "date": "2026-10-09",
+      "summary": "Added seven original lessons on rank and identifiability, projection and QR, symmetric spectra, SVD, conditioning and ridge, centered PCA, and a two-sensor displacement case; one synthetic sensor-geometry lab; and a proposed 14-week schedule. Recovered Claude drafts were corrected and extended with Codex assistance. No new sources. Still partial, unreviewed and formative-only."
     }
   ],
   "limitations": [
-    "Four compact legacy units are preserved; this package is not equivalent to a full university semester.",
-    "There is no authored 12–15 week schedule, substantive homework sequence, laboratory sequence, midterm, cumulative final, or graded integrative project.",
-    "Practice items are short formative checks (two per prototype unit and six per original lesson); they do not demonstrate comprehensive outcome coverage or mastery, and objective associations remain provisional.",
-    "Bloom labels and structured prerequisite edges are initial authoring classifications awaiting subject-matter review.",
-    "Question answers and solution feedback are intentionally public practice authoring specifications, not restricted exam keys.",
-    "Of the 14 numerical answers in this package, two require a unit, none checks significant figures and none checks dimensions; the others accept a number within a stated tolerance, with the unit optional.",
-    "Total workload and weekly duration are unknown; former nominal credit values and hardcoded reading times do not establish workload."
+    "Four compact legacy units are preserved beside ten original readings, including one synthetic-data virtual lab; this package is not equivalent to a full university semester.",
+    "A proposed 14-week schedule exists but is unmeasured and unreviewed. There is one synthetic-data lab and no substantive homework sequence, laboratory sequence, midterm, final or graded integrative project.",
+    "Public formative items and objective associations remain provisional and do not demonstrate comprehensive coverage or mastery.",
+    "Bloom labels and prerequisite edges are authoring classifications awaiting subject-matter review.",
+    "Answers and solution feedback are intentionally public practice authoring specifications, not restricted exam keys.",
+    "Of the 69 numeric item answers, 2 require a unit; none checks significant figures or dimensions. CSV checks use explicit tolerances and optional units.",
+    "Total workload and weekly duration are unknown; a proposed sequence is not workload evidence.",
+    "All new matrices, displacements and observations are synthetic. Sensor comparisons assume stated calibration scales and noise; no real tissue experiment, clinical interpretation or device specification is established."
   ],
   "intentionally_omitted": [
-    "Full instructional sequence and summative assessments are not authored yet; the original lessons extend a partial package."
+    "Graded assessments, a laboratory sequence, cumulative project, measured workload and qualified human review remain unauthored."
   ]
 }

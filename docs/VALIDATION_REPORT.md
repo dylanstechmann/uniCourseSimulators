@@ -4,7 +4,25 @@
 
 2026-10-06; synthetic local learner data only. Milestones 1 and 2 are implemented. Milestone 3 remains partial; deterministic graders and prototype graded-assignment and review workflows are described below. A Milestone 4 curriculum-map increment is implemented and tested, while subject-matter review and map refinement remain. All 25 course packages are **partial**; zero are beta, complete or externally reviewed. Human score review is limited to saved attempts and does not constitute course-content review. No semester equivalence, university credit, security certification or public production deployment is asserted.
 
-## Current patch: differential equations prompt clarification (0.3.1, 2026-10-08)
+## Current increment: linear algebra lessons, sensor lab and proposed schedule (0.3.0, 2026-10-09)
+
+Claude's four recovered drafts were corrected and extended with Codex assistance. Linear Algebra for Modeling & Robotics advances from 0.2.1 to 0.3.0, retaining partial, unreviewed and formative-only status. Seven new lessons cover rank and identifiability, projection and QR, symmetric spectra, SVD, conditioning and ridge, centered PCA, and the existing displacement case. One synthetic sensor-geometry lab and a proposed 14-week schedule complete this increment. There are 71 new public items and 32 cards; the package has 14 readings, 91 items and 48 cards. The 20 preexisting items are unchanged.
+
+All 69 numeric item keys and four CSV cells agree with recalculation by separate matrix operations. The lab explicitly distinguishes paired opposite demonstration errors from its separate independent-noise model. The [AI-assisted check record](reviews/ai-assisted/linear-algebra-0.3.0.md) documents corrections, failed runs and limits; these checks are not human review.
+
+| Command/check (Linux development container, Python 3.12.3) | Result |
+|---|---|
+| `python -B tools/validate_content.py` | PASS: 25 packages, 297 lessons, 1461 questions, 928 cards, 25 cases; 0 errors; 98 legacy-depth warnings |
+| `bash /workspace/.claude/skills/courselab-dev/scripts/verify.sh --log-dir /workspace/courselab-session-artifacts/codex-linear-algebra-2026-10-09/verification-final` | PASS: content, legacy (7), security (649 files, 0 findings), ruff, root (1232), backend (3173 passed, 2 existing symbolic-builder skips) |
+| `python -B /workspace/courselab-session-artifacts/claude-resume-2026-10-08/selfcheck.py linear-algebra linear-algebra-` | PASS: all 91 package items earn full credit |
+| `python -B -m pytest tests/content/test_linear_algebra_recalculations.py tests/content/test_new_geroscience_and_statistics_lessons.py -q -p no:cacheprovider` | PASS: 407 focused content checks |
+| `python -B -m pytest tests/content/test_content_validation.py::test_private_assessment_validator_loads_and_validates_key_only_from_separate_root tests/content/test_learner_visible_number_formatting.py tests/content/test_linear_algebra_recalculations.py -q -p no:cacheprovider` | PASS: 82 regression checks |
+| `python -B tools/objective_coverage.py --check docs/COURSE_GAP_REPORT.md` | PASS: generated report matches |
+| `python3 -B /workspace/.claude/skills/regen-guardrails/scripts/claims_scan.py --repo uniStemCourseSimulators` | PASS: 0 HIGH, MED or LOW findings |
+
+The first full root run had 1229 passes and three failures: a stale synthetic private-fixture inventory count, a long decimal display, and an earlier literal test assertion loaded before its repair. The fresh full run above includes all corrections. Logs are retained outside git in `courselab-session-artifacts/codex-linear-algebra-2026-10-09/verification-final`. Frontend, the Docker Compose application stack and Playwright were not run locally for this increment; publication CI runs them. No person reviewed this content or measured its workload.
+
+## Previous patch: differential equations prompt clarification (0.3.1, 2026-10-08)
 
 Written by Codex. Three Euler-boundary prompts now ask for a nonnegative result and explain the zero value
 at equality; the resonance statements item specifies the lesson's lightly damped, directly forced system.

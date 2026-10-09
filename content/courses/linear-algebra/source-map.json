@@ -80,6 +80,110 @@
       "original_content": true,
       "license": "CC-BY-4.0",
       "modifications": []
+    },
+    {
+      "module_id": "linear-algebra-module-7",
+      "lesson_id": "linear-algebra-7",
+      "reading": "modules/07-rank-null-space-and-identifiability.md",
+      "source_ids": [
+        "linearAlgebra",
+        "engineeringMath"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "linear-algebra-module-8",
+      "lesson_id": "linear-algebra-8",
+      "reading": "modules/08-orthogonality-projections-and-qr.md",
+      "source_ids": [
+        "linearAlgebra",
+        "engineeringMath"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "linear-algebra-module-9",
+      "lesson_id": "linear-algebra-9",
+      "reading": "modules/09-symmetric-matrices-spectral-theorem-and-quadratic-forms.md",
+      "source_ids": [
+        "linearAlgebra",
+        "engineeringMath"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "linear-algebra-module-10",
+      "lesson_id": "linear-algebra-10",
+      "reading": "modules/10-singular-value-decomposition-and-low-rank-approximation.md",
+      "source_ids": [
+        "linearAlgebra",
+        "engineeringMath"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "linear-algebra-module-11",
+      "lesson_id": "linear-algebra-11",
+      "reading": "modules/11-conditioning-and-regularization.md",
+      "source_ids": [
+        "linearAlgebra",
+        "engineeringMath"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "linear-algebra-module-12",
+      "lesson_id": "linear-algebra-12",
+      "reading": "modules/12-centered-pca-and-scaling.md",
+      "source_ids": [
+        "linearAlgebra",
+        "engineeringMath"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "linear-algebra-module-13",
+      "lesson_id": "linear-algebra-13",
+      "reading": "modules/13-displacement-sensor-case.md",
+      "source_ids": [
+        "linearAlgebra",
+        "engineeringMath"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "linear-algebra-module-lab-01",
+      "lesson_id": "linear-algebra-lab-01",
+      "reading": "labs/01-sensor-geometry.md",
+      "source_ids": [
+        "linearAlgebra",
+        "engineeringMath"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
     }
   ]
 }

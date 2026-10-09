@@ -620,6 +620,2405 @@
         "kind": "original",
         "modifications": []
       }
+    },
+    {
+      "id": "linear-algebra-7:rank",
+      "type": "numeric",
+      "prompt": "A mixing matrix is A = [[1, 2, 3], [2, 4, 6], [1, 1, 2]]. What is its rank? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "linear-algebra-7-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 2,
+        "unit": "",
+        "tolerance": 0.01,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Row 2 is twice row 1; count the independent rows after elimination.",
+        "solution": "Elimination leaves two nonzero rows, so the rank is 2.",
+        "lesson_ids": [
+          "linear-algebra-7"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "linear-algebra-7:nullity",
+      "type": "numeric",
+      "prompt": "A mixing matrix is A = [[1, 2, 3], [2, 4, 6], [1, 1, 2]]. What is the dimension of its null space? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "linear-algebra-7-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 1,
+        "unit": "",
+        "tolerance": 0.01,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use rank + nullity = number of columns.",
+        "solution": "3 − 2 = 1.",
+        "lesson_ids": [
+          "linear-algebra-7"
+        ],
+        "misconception_ids": [
+          "rank-nullity-rows"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "linear-algebra-7:nullity-4-by-6",
+      "type": "numeric",
+      "prompt": "A 4 × 6 matrix has rank 3. What is the dimension of its null space? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "linear-algebra-7-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 3,
+        "unit": "",
+        "tolerance": 0.01,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Rank–nullity counts columns.",
+        "solution": "6 − 3 = 3.",
+        "lesson_ids": [
+          "linear-algebra-7"
+        ],
+        "misconception_ids": [
+          "rank-nullity-rows"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "linear-algebra-7:consistent-entry",
+      "type": "numeric",
+      "prompt": "A mixing matrix is A = [[1, 2, 3], [2, 4, 6], [1, 1, 2]]. For Ax = b to have a solution, the second entry of b must equal a multiple of the first. What is the value of b₂ when b₁ = 6? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "linear-algebra-7-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 12,
+        "unit": "",
+        "tolerance": 0.01,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Every column has its second entry equal to twice its first.",
+        "solution": "b₂ = 2 × b₁ = 12.",
+        "lesson_ids": [
+          "linear-algebra-7"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "linear-algebra-7:solution-parameter",
+      "type": "numeric",
+      "prompt": "A mixing matrix is A = [[1, 2, 3], [2, 4, 6], [1, 1, 2]], with b = (6, 12, 4). The solutions are x = (1 + t, 1 + t, 1 − t). For what t is the third component zero? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "linear-algebra-7-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 1,
+        "unit": "",
+        "tolerance": 0.01,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Solve 1 − t = 0.",
+        "solution": "t = 1, giving x = (2, 2, 0).",
+        "lesson_ids": [
+          "linear-algebra-7"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "linear-algebra-7:min-norm-third",
+      "type": "numeric",
+      "prompt": "A mixing matrix is A = [[1, 2, 3], [2, 4, 6], [1, 1, 2]], with b = (6, 12, 4). The minimum-norm solution is x₀ + t n with x₀ = (1, 1, 1), n = (1, 1, −1) and t = −(x₀·n)/(n·n). What is its third component? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "linear-algebra-7-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 1.33333,
+        "unit": "",
+        "tolerance": 0.002,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "x₀·n = 1, n·n = 3.",
+        "solution": "t = −1/3, so x₃ = 1 + (−1/3)(−1) = 4/3 = 1.3333.",
+        "lesson_ids": [
+          "linear-algebra-7"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "linear-algebra-7:min-norm-length",
+      "type": "numeric",
+      "prompt": "A mixing matrix is A = [[1, 2, 3], [2, 4, 6], [1, 1, 2]], with b = (6, 12, 4). What is the length of the minimum-norm solution x = (2/3, 2/3, 4/3)? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "linear-algebra-7-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 1.63299,
+        "unit": "",
+        "tolerance": 0.003,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Take the square root of the sum of squares.",
+        "solution": "√(4/9 + 4/9 + 16/9) = √(24/9) = 1.6330.",
+        "lesson_ids": [
+          "linear-algebra-7"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "linear-algebra-7:design-rank",
+      "type": "numeric",
+      "prompt": "A design matrix has an intercept column and one indicator column for each of two groups, with two samples per group. What is its rank? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "linear-algebra-7-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 2,
+        "unit": "",
+        "tolerance": 0.01,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "The intercept equals the sum of the two indicator columns.",
+        "solution": "Three columns, one dependency: rank 2.",
+        "lesson_ids": [
+          "linear-algebra-7"
+        ],
+        "misconception_ids": [
+          "dummy-variable-trap"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "linear-algebra-7:rank-statements",
+      "type": "multiple_select",
+      "prompt": "Which statements about rank and null space are appropriate? Select all that apply.",
+      "points": 2,
+      "objective_ids": [
+        "linear-algebra-7-objective-3"
+      ],
+      "options": [
+        "The rank of a matrix equals the number of independent columns.",
+        "A regression with an intercept and a full set of group indicators has unidentifiable coefficients.",
+        "If Ax = b has one solution and the nullity is positive, it has infinitely many.",
+        "The minimum-norm solution is the true amount of each unknown.",
+        "A system with more equations than unknowns always has a solution."
+      ],
+      "solution_spec": {
+        "answer": [
+          0,
+          1,
+          2
+        ],
+        "partial_credit": "correct-minus-incorrect-clamped-v1"
+      },
+      "feedback": {
+        "hint": "Think about solution families and about what rank counts.",
+        "solution": "A positive nullity gives a whole family of solutions, rank counts independent columns and the intercept is the sum of the indicators. The minimum-norm solution is a convention, and consistency depends on whether b lies in the column space, rather than the equation count alone.",
+        "lesson_ids": [
+          "linear-algebra-7"
+        ],
+        "misconception_ids": [
+          "dummy-variable-trap"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "linear-algebra-8:projection-coefficient",
+      "type": "numeric",
+      "prompt": "What is the coefficient of the orthogonal projection of b = (4, 1, 2) onto a = (1, 2, 2), (a·b)/(a·a)? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "linear-algebra-8-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 1.11111,
+        "unit": "",
+        "tolerance": 0.002,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "a·b = 4 + 2 + 4 and a·a = 1 + 4 + 4.",
+        "solution": "10/9 = 1.1111.",
+        "lesson_ids": [
+          "linear-algebra-8"
+        ],
+        "misconception_ids": [
+          "divide-by-a-dot-b"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "linear-algebra-8:residual-length",
+      "type": "numeric",
+      "prompt": "What is the length of the residual b − p when b = (4, 1, 2) is projected onto a = (1, 2, 2)? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "linear-algebra-8-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 3.14466,
+        "unit": "",
+        "tolerance": 0.003,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Compute p = (10/9) a first, then subtract it from b.",
+        "solution": "p = (1.1111, 2.2222, 2.2222), r = (2.8889, −1.2222, −0.2222), length 3.1447.",
+        "lesson_ids": [
+          "linear-algebra-8"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "linear-algebra-8:r11",
+      "type": "numeric",
+      "prompt": "In the QR factorization of A with columns a₁ = (1, 1, 1) and a₂ = (1, 2, 3), what is R₁₁ = ‖a₁‖? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "linear-algebra-8-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 1.73205,
+        "unit": "",
+        "tolerance": 0.002,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "R₁₁ is the length of the first column.",
+        "solution": "√(1 + 1 + 1) = 1.7321.",
+        "lesson_ids": [
+          "linear-algebra-8"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "linear-algebra-8:r12",
+      "type": "numeric",
+      "prompt": "For A (columns (1, 1, 1) and (1, 2, 3)), what is R₁₂ = q₁·a₂ with q₁ = (1, 1, 1)/√3? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "linear-algebra-8-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 3.4641,
+        "unit": "",
+        "tolerance": 0.002,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "q₁·a₂ = (1 + 2 + 3)/√3.",
+        "solution": "6/√3 = 3.4641.",
+        "lesson_ids": [
+          "linear-algebra-8"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "linear-algebra-8:r22",
+      "type": "numeric",
+      "prompt": "For the line-fit design with columns (1, 1, 1) and (1, 2, 3), v₂ = a₂ − R₁₂q₁ = (−1, 0, 1). What is R₂₂ = ‖v₂‖? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "linear-algebra-8-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 1.41421,
+        "unit": "",
+        "tolerance": 0.002,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Take the length of v₂.",
+        "solution": "√(1 + 0 + 1) = 1.4142.",
+        "lesson_ids": [
+          "linear-algebra-8"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "linear-algebra-8:slope-by-qr",
+      "type": "numeric",
+      "prompt": "Fit y = β₀ + β₁x to (1, 1), (2, 2), (3, 2) by solving Rx = Qᵀb with R = [[1.7321, 3.4641], [0, 1.4142]] and Qᵀb = (2.8868, 0.7071). What is β₁? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "linear-algebra-8-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 0.5,
+        "unit": "",
+        "tolerance": 0.002,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Back-substitute from the bottom row.",
+        "solution": "β₁ = 0.7071/1.4142 = 0.5000.",
+        "lesson_ids": [
+          "linear-algebra-8"
+        ],
+        "misconception_ids": [
+          "solve-r-from-top"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "linear-algebra-8:intercept-by-qr",
+      "type": "numeric",
+      "prompt": "For the line fit to (1, 1), (2, 2), (3, 2), R = [[1.7321, 3.4641], [0, 1.4142]], Qᵀb = (2.8868, 0.7071) and β₁ = 0.5. What is β₀? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "linear-algebra-8-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 0.66667,
+        "unit": "",
+        "tolerance": 0.002,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "β₀ = (2.8868 − 3.4641 × 0.5)/1.7321.",
+        "solution": "(2.8868 − 1.7321)/1.7321 = 0.6667.",
+        "lesson_ids": [
+          "linear-algebra-8"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "linear-algebra-8:residual-norm",
+      "type": "numeric",
+      "prompt": "For a full-column-rank QR line fit, ‖b‖² = 9 and Qᵀb = (2.8868, 0.7071). What is the residual norm ‖r‖ = √(‖b‖² − ‖Qᵀb‖²)? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "linear-algebra-8-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 0.40825,
+        "unit": "",
+        "tolerance": 0.003,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "‖Qᵀb‖² = 8.3333 + 0.5.",
+        "solution": "√(9 − 8.8333) = √0.1667 = 0.4082.",
+        "lesson_ids": [
+          "linear-algebra-8"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "linear-algebra-8:orthogonality-statements",
+      "type": "multiple_select",
+      "prompt": "Which statements about projections, QR and least squares are appropriate? Select all that apply.",
+      "points": 2,
+      "objective_ids": [
+        "linear-algebra-8-objective-3"
+      ],
+      "options": [
+        "The residual of an orthogonal projection is perpendicular to the vector projected onto.",
+        "Solving Rx = Qᵀb avoids forming AᵀA.",
+        "R in A = QR is lower triangular, so the system is solved from the top.",
+        "With an orthonormal basis, the component of b along q_i is q_i·b.",
+        "Gram–Schmidt applied to dependent vectors gives a zero vector at some step, showing the dependence."
+      ],
+      "solution_spec": {
+        "answer": [
+          0,
+          1,
+          3,
+          4
+        ],
+        "partial_credit": "correct-minus-incorrect-clamped-v1"
+      },
+      "feedback": {
+        "hint": "Recall what each factor of QR does.",
+        "solution": "The residual is perpendicular, components are dot products, R x = Qᵀ b avoids AᵀA, and a zero v₂ signals dependence. R is upper triangular and is solved from the bottom.",
+        "lesson_ids": [
+          "linear-algebra-8"
+        ],
+        "misconception_ids": [
+          "solve-r-from-top"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "linear-algebra-9:determinant",
+      "type": "numeric",
+      "prompt": "A symmetric matrix is A = [[4, 1], [1, 3]]. What is its determinant? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "linear-algebra-9-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 11.0,
+        "unit": "",
+        "tolerance": 0.01,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "ad − bc for a symmetric matrix is a₁₁a₂₂ − a₁₂².",
+        "solution": "4 × 3 − 1 = 11.",
+        "lesson_ids": [
+          "linear-algebra-9"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "linear-algebra-9:largest-eigenvalue",
+      "type": "numeric",
+      "prompt": "A symmetric matrix is A = [[4, 1], [1, 3]]. What is its larger eigenvalue? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "linear-algebra-9-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 4.61803,
+        "unit": "",
+        "tolerance": 0.002,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Solve λ² − 7λ + 11 = 0.",
+        "solution": "(7 + √5)/2 = 4.6180.",
+        "lesson_ids": [
+          "linear-algebra-9"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "linear-algebra-9:smallest-eigenvalue",
+      "type": "numeric",
+      "prompt": "A symmetric matrix is A = [[4, 1], [1, 3]]. What is its smaller eigenvalue? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "linear-algebra-9-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 2.38197,
+        "unit": "",
+        "tolerance": 0.002,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "The eigenvalues add up to the trace and multiply to the determinant.",
+        "solution": "(7 − √5)/2 = 2.3820; check: 4.618 + 2.382 = 7.",
+        "lesson_ids": [
+          "linear-algebra-9"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "linear-algebra-9:eigenvector-angle",
+      "type": "numeric",
+      "prompt": "A symmetric matrix is A = [[4, 1], [1, 3]]. At what angle in degrees from the first axis does the eigenvector of the larger eigenvalue point? Use θ = ½ atan2(2a₁₂, a₁₁ − a₂₂), with θ between −90° and 90° and enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "linear-algebra-9-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 31.7175,
+        "unit": "",
+        "tolerance": 0.05,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the two-argument arctangent to retain the quadrant, then halve the angle.",
+        "solution": "2θ = atan2(2, 1) = 63.43°, θ = 31.72°.",
+        "lesson_ids": [
+          "linear-algebra-9"
+        ],
+        "misconception_ids": [
+          "angle-without-halving"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "linear-algebra-9:variance-diagonal",
+      "type": "numeric",
+      "prompt": "A symmetric matrix is A = [[4, 1], [1, 3]] is a covariance matrix. What is the variance of the data along the unit direction (1, 1)/√2, wᵀCw? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "linear-algebra-9-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 4.5,
+        "unit": "",
+        "tolerance": 0.01,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "wᵀCw = (4 + 2 × 1 + 3)/2.",
+        "solution": "(4 + 2 + 3)/2 = 4.5.",
+        "lesson_ids": [
+          "linear-algebra-9"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "linear-algebra-9:variance-fraction",
+      "type": "numeric",
+      "prompt": "A symmetric matrix is A = [[4, 1], [1, 3]] is a covariance matrix. What fraction of the total variance lies along the direction of the larger eigenvalue? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "linear-algebra-9-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 0.65972,
+        "unit": "",
+        "tolerance": 0.002,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "The total variance is the trace, 7.",
+        "solution": "4.6180/7 = 0.660.",
+        "lesson_ids": [
+          "linear-algebra-9"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "linear-algebra-9:negative-eigenvalue",
+      "type": "numeric",
+      "prompt": "The symmetric matrix B = [[1, 2], [2, 1]] has eigenvalues 3 and one other. What is the other? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "linear-algebra-9-objective-2"
+      ],
+      "solution_spec": {
+        "answer": -1.0,
+        "unit": "",
+        "tolerance": 0.01,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "The trace is 2 and the determinant is −3.",
+        "solution": "λ² − 2λ − 3 = 0 gives 3 and −1.",
+        "lesson_ids": [
+          "linear-algebra-9"
+        ],
+        "misconception_ids": [
+          "positive-diagonal-positive-definite"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "linear-algebra-9:quadratic-form-negative",
+      "type": "numeric",
+      "prompt": "For B = [[1, 2], [2, 1]], what is the quadratic form xᵀBx at x = (1, −1)? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "linear-algebra-9-objective-2"
+      ],
+      "solution_spec": {
+        "answer": -2.0,
+        "unit": "",
+        "tolerance": 0.01,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "xᵀBx = x₁² + 4x₁x₂ + x₂².",
+        "solution": "1 − 4 + 1 = −2.",
+        "lesson_ids": [
+          "linear-algebra-9"
+        ],
+        "misconception_ids": [
+          "positive-diagonal-positive-definite"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "linear-algebra-9:spectral-statements",
+      "type": "multiple_select",
+      "prompt": "Which statements about symmetric matrices and quadratic forms are appropriate? Select all that apply.",
+      "points": 2,
+      "objective_ids": [
+        "linear-algebra-9-objective-3"
+      ],
+      "options": [
+        "A symmetric matrix with all positive diagonal entries is positive definite.",
+        "The variance of data along a unit direction w with covariance C is wᵀCw.",
+        "The eigenvectors of a symmetric matrix can be chosen perpendicular.",
+        "The eigenvalues of a real symmetric matrix are real.",
+        "The trace of a symmetric matrix is the sum of its eigenvalues."
+      ],
+      "solution_spec": {
+        "answer": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "partial_credit": "correct-minus-incorrect-clamped-v1"
+      },
+      "feedback": {
+        "hint": "Recall the spectral theorem and what definiteness requires.",
+        "solution": "Real eigenvalues, perpendicular eigenvectors, wᵀCw as the variance and the trace as the sum of the eigenvalues are all true. Positive diagonal entries do not make a matrix positive definite (B has diagonal 1 and eigenvalue −1).",
+        "lesson_ids": [
+          "linear-algebra-9"
+        ],
+        "misconception_ids": [
+          "positive-diagonal-positive-definite"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "linear-algebra-10:first-singular-value",
+      "type": "numeric",
+      "prompt": "A data matrix is A = [[3, 1], [2, 2], [1, 3]], with AᵀA = [[14, 10], [10, 14]]. What is the largest singular value σ₁, the square root of the larger eigenvalue of AᵀA? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "linear-algebra-10-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 4.89898,
+        "unit": "",
+        "tolerance": 0.003,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "The eigenvalues of [[14, 10], [10, 14]] are 14 ± 10.",
+        "solution": "√24 = 4.8990.",
+        "lesson_ids": [
+          "linear-algebra-10"
+        ],
+        "misconception_ids": [
+          "eigenvalue-for-singular-value"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "linear-algebra-10:second-singular-value",
+      "type": "numeric",
+      "prompt": "A data matrix is A = [[3, 1], [2, 2], [1, 3]], with AᵀA = [[14, 10], [10, 14]]. What is the second singular value σ₂? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "linear-algebra-10-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 2.0,
+        "unit": "",
+        "tolerance": 0.003,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "The smaller eigenvalue is 4.",
+        "solution": "The smaller eigenvalue of AᵀA is 4; its square root is the singular value σ₂ = 2.",
+        "lesson_ids": [
+          "linear-algebra-10"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "linear-algebra-10:frobenius-norm",
+      "type": "numeric",
+      "prompt": "A data matrix is A = [[3, 1], [2, 2], [1, 3]], with AᵀA = [[14, 10], [10, 14]]. What is the Frobenius norm of A, the square root of the sum of the squares of all entries? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "linear-algebra-10-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 5.2915,
+        "unit": "",
+        "tolerance": 0.003,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "9 + 1 + 4 + 4 + 1 + 9 = 28.",
+        "solution": "√28 = 5.2915, which equals √(σ₁² + σ₂²) = √(24 + 4).",
+        "lesson_ids": [
+          "linear-algebra-10"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "linear-algebra-10:energy-fraction",
+      "type": "numeric",
+      "prompt": "A data matrix is A = [[3, 1], [2, 2], [1, 3]], with AᵀA = [[14, 10], [10, 14]]. What fraction of ‖A‖²_F is captured by the first singular value, σ₁²/(σ₁² + σ₂²)? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "linear-algebra-10-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0.85714,
+        "unit": "",
+        "tolerance": 0.002,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "σ₁² = 24 and the total is 28.",
+        "solution": "24/28 = 0.8571.",
+        "lesson_ids": [
+          "linear-algebra-10"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "linear-algebra-10:rank-one-error",
+      "type": "numeric",
+      "prompt": "A data matrix is A = [[3, 1], [2, 2], [1, 3]], with AᵀA = [[14, 10], [10, 14]]. What is the Frobenius norm of the error A − A₁ of the best rank-one approximation? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "linear-algebra-10-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 2.0,
+        "unit": "",
+        "tolerance": 0.003,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "By the Eckart–Young theorem the error is the dropped singular value.",
+        "solution": "The error is σ₂ = 2.",
+        "lesson_ids": [
+          "linear-algebra-10"
+        ],
+        "misconception_ids": [
+          "error-without-dropped-values"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "linear-algebra-10:relative-error",
+      "type": "numeric",
+      "prompt": "A data matrix is A = [[3, 1], [2, 2], [1, 3]], with AᵀA = [[14, 10], [10, 14]]. What is the relative error of the best rank-one approximation, ‖A − A₁‖_F/‖A‖_F? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "linear-algebra-10-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0.37796,
+        "unit": "",
+        "tolerance": 0.002,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Divide σ₂ by √28.",
+        "solution": "2/5.2915 = 0.3780.",
+        "lesson_ids": [
+          "linear-algebra-10"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "linear-algebra-10:storage-rank-3",
+      "type": "numeric",
+      "prompt": "A 1000 × 50 data matrix is approximated by a rank-3 SVD, stored as 3 columns of U, 3 rows of V and 3 singular values. How many numbers are stored, k(m + n + 1)? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "linear-algebra-10-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 3153,
+        "unit": "",
+        "tolerance": 0.5,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Compute 1000 + 50 + 1 first.",
+        "solution": "3 × 1051 = 3,153.",
+        "lesson_ids": [
+          "linear-algebra-10"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "linear-algebra-10:compression",
+      "type": "numeric",
+      "prompt": "For the same 1000 × 50 matrix and rank 3, by what factor is the storage reduced compared with storing all 50,000 entries? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "linear-algebra-10-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 15.8579,
+        "unit": "",
+        "tolerance": 0.05,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Divide 50,000 by 3,153.",
+        "solution": "50,000/3,153 = 15.86.",
+        "lesson_ids": [
+          "linear-algebra-10"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "linear-algebra-10:svd-statements",
+      "type": "multiple_select",
+      "prompt": "Which statements about the singular value decomposition are appropriate? Select all that apply.",
+      "points": 2,
+      "objective_ids": [
+        "linear-algebra-10-objective-3"
+      ],
+      "options": [
+        "The singular values of A are the eigenvalues of A.",
+        "Each positive singular value is the square root of a nonzero eigenvalue of AᵀA.",
+        "A low-rank approximation always saves storage, whatever the singular values.",
+        "The number of nonzero singular values is the rank of the matrix.",
+        "The best rank-k approximation keeps the k largest singular values, and its error is set by the dropped ones."
+      ],
+      "solution_spec": {
+        "answer": [
+          1,
+          3,
+          4
+        ],
+        "partial_credit": "correct-minus-incorrect-clamped-v1"
+      },
+      "feedback": {
+        "hint": "Recall how σ relates to AᵀA and what the Eckart–Young theorem says.",
+        "solution": "Positive σ² are the nonzero eigenvalues of AᵀA, the rank counts nonzero σ, and Eckart–Young gives the best approximation and its error. Savings require k(m + n + 1) < mn and acceptable approximation error, and σ is not an eigenvalue of A in general.",
+        "lesson_ids": [
+          "linear-algebra-10"
+        ],
+        "misconception_ids": [
+          "eigenvalue-for-singular-value",
+          "error-without-dropped-values"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "linear-algebra-11:condition-number",
+      "type": "numeric",
+      "prompt": "For A = [[1, 0.99], [0.99, 1]], what is κ₂(A)? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "linear-algebra-11-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 199.0,
+        "unit": "",
+        "tolerance": 0.01,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use singular values 1.99 and 0.01.",
+        "solution": "1.99/0.01 = 199.",
+        "lesson_ids": [
+          "linear-algebra-11"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "linear-algebra-11:gram-condition",
+      "type": "numeric",
+      "prompt": "For that full-rank A, what is κ₂(AᵀA)? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "linear-algebra-11-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 39601.0,
+        "unit": "",
+        "tolerance": 0.5,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "The Gram condition number is squared.",
+        "solution": "199² = 39601.",
+        "lesson_ids": [
+          "linear-algebra-11"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "linear-algebra-11:relative-bound",
+      "type": "numeric",
+      "prompt": "For κ₂(A) = 199 and relative right-hand-side error at most 0.001, what is the relative solution error bound? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "linear-algebra-11-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0.199,
+        "unit": "",
+        "tolerance": 0.0005,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Multiply the two dimensionless quantities.",
+        "solution": "199 × 0.001 = 0.199.",
+        "lesson_ids": [
+          "linear-algebra-11"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "linear-algebra-11:error-first",
+      "type": "numeric",
+      "prompt": "For A = [[1, 0.99], [0.99, 1]] and δb = (0.01, −0.01), what is δx₁? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "linear-algebra-11-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 1,
+        "unit": "",
+        "tolerance": 0.001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "The difference direction has gain 0.01.",
+        "solution": "δx = (1, −1).",
+        "lesson_ids": [
+          "linear-algebra-11"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "linear-algebra-11:ridge-first",
+      "type": "numeric",
+      "prompt": "For that A, noiseless b = (4.97, 4.98), and α = 0.01, what is the first component of the ridge estimate? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "linear-algebra-11-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 2.4887524343477394,
+        "unit": "",
+        "tolerance": 0.0005,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Shrink common and difference components separately.",
+        "solution": "2.5 × 3.9601/3.9701 − 0.5 × 0.0001/0.0101 = 2.4887524.",
+        "lesson_ids": [
+          "linear-algebra-11"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "linear-algebra-11:improved-condition",
+      "type": "numeric",
+      "prompt": "For G = [[1, 0.2], [0.2, 1]], what is κ₂(G)? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "linear-algebra-11-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 1.5,
+        "unit": "",
+        "tolerance": 0.001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Its singular values are 1.2 and 0.8.",
+        "solution": "1.2/0.8 = 1.5.",
+        "lesson_ids": [
+          "linear-algebra-11"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "linear-algebra-11:zero-residual",
+      "type": "single_choice",
+      "prompt": "A square invertible measurement model fits noisy signals with zero residual. What follows?",
+      "points": 1,
+      "objective_ids": [
+        "linear-algebra-11-objective-2"
+      ],
+      "options": [
+        "The noise must have been zero.",
+        "The physical displacement is exact.",
+        "The supplied signals are fitted, but parameter error can still be large."
+      ],
+      "solution_spec": {
+        "answer": 2
+      },
+      "feedback": {
+        "hint": "Separate data fit from truth.",
+        "solution": "Zero residual does not bound parameter error without conditioning and a noise budget.",
+        "lesson_ids": [
+          "linear-algebra-11"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "linear-algebra-11:solver",
+      "type": "single_choice",
+      "prompt": "What does a stable QR solver change for a nearly collinear experiment?",
+      "points": 1,
+      "objective_ids": [
+        "linear-algebra-11-objective-2"
+      ],
+      "options": [
+        "It makes the columns physically independent.",
+        "It removes calibration uncertainty.",
+        "It limits numerical error while the measurement sensitivity remains."
+      ],
+      "solution_spec": {
+        "answer": 2
+      },
+      "feedback": {
+        "hint": "Distinguish algorithm and experiment.",
+        "solution": "Backward stability cannot repair missing measurement information.",
+        "lesson_ids": [
+          "linear-algebra-11"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "linear-algebra-11:ridge-meaning",
+      "type": "single_choice",
+      "prompt": "Which report describes ridge appropriately?",
+      "points": 1,
+      "objective_ids": [
+        "linear-algebra-11-objective-3"
+      ],
+      "options": [
+        "Assume changing units leaves α unchanged.",
+        "Report the estimate as an extra independent sensor reading.",
+        "State the penalty scale, α, validation method and resulting bias."
+      ],
+      "solution_spec": {
+        "answer": 2
+      },
+      "feedback": {
+        "hint": "The penalty supplies a preference.",
+        "solution": "Ridge is an estimator with a stated convention and bias.",
+        "lesson_ids": [
+          "linear-algebra-11"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "linear-algebra-12:mean-first",
+      "type": "numeric",
+      "prompt": "For rows (8, 19), (12, 21), (10, 19), (10, 21), using centered sample covariance with denominator n − 1, what is the first column mean? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "linear-algebra-12-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 10,
+        "unit": "",
+        "tolerance": 0.001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Average the first coordinates.",
+        "solution": "(8 + 12 + 10 + 10)/4 = 10.",
+        "lesson_ids": [
+          "linear-algebra-12"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "linear-algebra-12:covariance",
+      "type": "numeric",
+      "prompt": "For rows (8, 19), (12, 21), (10, 19), (10, 21), using centered sample covariance with denominator n − 1, what is covariance C₁₂? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "linear-algebra-12-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 1.3333333333333333,
+        "unit": "",
+        "tolerance": 0.0005,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Sum centered products, divide by 3.",
+        "solution": "(2 + 2 + 0 + 0)/3 = 4/3.",
+        "lesson_ids": [
+          "linear-algebra-12"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "linear-algebra-12:leading-eigenvalue",
+      "type": "numeric",
+      "prompt": "For rows (8, 19), (12, 21), (10, 19), (10, 21), using centered sample covariance with denominator n − 1, what is the largest covariance eigenvalue? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "linear-algebra-12-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 3.49071198499986,
+        "unit": "",
+        "tolerance": 0.0005,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Trace 4, determinant 16/9.",
+        "solution": "(6 + √20)/3 = 3.490712.",
+        "lesson_ids": [
+          "linear-algebra-12"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "linear-algebra-12:explained-fraction",
+      "type": "numeric",
+      "prompt": "For rows (8, 19), (12, 21), (10, 19), (10, 21), using centered sample covariance with denominator n − 1, what fraction of variance is in the first component? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "linear-algebra-12-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0.872677996249965,
+        "unit": "",
+        "tolerance": 0.0005,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Divide the largest eigenvalue by trace 4.",
+        "solution": "3.490712/4 = 0.872678.",
+        "lesson_ids": [
+          "linear-algebra-12"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "linear-algebra-12:second-score",
+      "type": "numeric",
+      "prompt": "For rows (8, 19), (12, 21), (10, 19), (10, 21), using centered sample covariance with denominator n − 1, choose q₁ = (cos θ, sin θ) with θ = ½ atan2(8/3, 4/3). What is the score of observation (12, 21)? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "linear-algebra-12-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 2.2270327288232137,
+        "unit": "",
+        "tolerance": 0.0005,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Project its centered row (2, 1).",
+        "solution": "2 cos θ + sin θ = 2.227033.",
+        "lesson_ids": [
+          "linear-algebra-12"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "linear-algebra-12:rank-one-error",
+      "type": "numeric",
+      "prompt": "For rows (8, 19), (12, 21), (10, 19), (10, 21), using centered sample covariance with denominator n − 1, what is the Frobenius error of the rank-one reconstruction of the centered matrix? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "linear-algebra-12-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 1.2360679774997896,
+        "unit": "",
+        "tolerance": 0.0005,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "The discarded squared singular value is 3λ₂.",
+        "solution": "√(6 − √20) = 1.236068.",
+        "lesson_ids": [
+          "linear-algebra-12"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "linear-algebra-12:standardized-fraction",
+      "type": "numeric",
+      "prompt": "For the standardized correlation matrix [[1, 1/√2], [1/√2, 1]], what fraction of variance is in the leading component? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "linear-algebra-12-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 0.8535533905932737,
+        "unit": "",
+        "tolerance": 0.0005,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Trace 2; leading eigenvalue 1 + 1/√2.",
+        "solution": "(1 + 1/√2)/2 = 0.853553.",
+        "lesson_ids": [
+          "linear-algebra-12"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "linear-algebra-12:confounding",
+      "type": "single_choice",
+      "prompt": "Treatment and batch are perfectly confounded and PCA separates the groups. What conclusion is justified?",
+      "points": 1,
+      "objective_ids": [
+        "linear-algebra-12-objective-3"
+      ],
+      "options": [
+        "Removing the first component proves the remaining treatment effect.",
+        "The separation describes variation; the design cannot distinguish treatment from batch.",
+        "The leading component proves the treatment mechanism."
+      ],
+      "solution_spec": {
+        "answer": 1
+      },
+      "feedback": {
+        "hint": "Consider which factors the design separates.",
+        "solution": "PCA cannot resolve perfect confounding without additional evidence.",
+        "lesson_ids": [
+          "linear-algebra-12"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "linear-algebra-12:held-out",
+      "type": "single_choice",
+      "prompt": "Which workflow preserves a held-out evaluation?",
+      "points": 1,
+      "objective_ids": [
+        "linear-algebra-12-objective-3"
+      ],
+      "options": [
+        "Choose component count using final test performance.",
+        "Fit means, scales and axes on training data, then apply them to held-out rows.",
+        "Fit PCA on all rows before splitting."
+      ],
+      "solution_spec": {
+        "answer": 1
+      },
+      "feedback": {
+        "hint": "Preprocessing is part of model fitting.",
+        "solution": "Training-only preprocessing avoids using evaluation information to set axes.",
+        "lesson_ids": [
+          "linear-algebra-12"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "linear-algebra-13:noisy-first",
+      "type": "numeric",
+      "prompt": "For A = [[1, 0.99], [0.99, 1]] and measured b = (4.98, 4.97), what is x₁? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "linear-algebra-13-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 3,
+        "unit": "",
+        "tolerance": 0.001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Add and subtract the equations.",
+        "solution": "Sum 5, difference 1: x₁ = 3.",
+        "lesson_ids": [
+          "linear-algebra-13"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "linear-algebra-13:parameter-error",
+      "type": "numeric",
+      "prompt": "That solution is (3, 2), while the reference is (2, 3). What is the Euclidean parameter error? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "linear-algebra-13-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 1.4142135623730951,
+        "unit": "",
+        "tolerance": 0.0005,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "The error is (1, −1).",
+        "solution": "√(1² + (−1)²) = √2.",
+        "lesson_ids": [
+          "linear-algebra-13"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "linear-algebra-13:coordinate-sd",
+      "type": "numeric",
+      "prompt": "For that A and independent signal errors with standard deviation 0.01, what is the unregularized x₁ standard deviation? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "linear-algebra-13-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0.707115709020659,
+        "unit": "",
+        "tolerance": 0.0005,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use covariance s² A⁻¹A⁻ᵀ.",
+        "solution": "√[(0.0001/2)(1/1.99² + 1/0.01²)] = 0.707116.",
+        "lesson_ids": [
+          "linear-algebra-13"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "linear-algebra-13:repeat-sd",
+      "type": "numeric",
+      "prompt": "The weak-direction standard deviation is 1 for one signal pair. What is it after averaging 25 independent pairs at a fixed displacement? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "linear-algebra-13-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0.2,
+        "unit": "",
+        "tolerance": 0.0005,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Standard deviation scales as 1/√n.",
+        "solution": "1/√25 = 0.2.",
+        "lesson_ids": [
+          "linear-algebra-13"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "linear-algebra-13:offset-bias",
+      "type": "numeric",
+      "prompt": "For A = [[1, 0.99], [0.99, 1]], a fixed signal offset (0, 0.01) gives what bias in x₁? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "linear-algebra-13-objective-2"
+      ],
+      "solution_spec": {
+        "answer": -0.49748743718592964,
+        "unit": "",
+        "tolerance": 0.0005,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Solve Aδx = (0, 0.01).",
+        "solution": "−0.0099/0.0199 = −0.497487.",
+        "lesson_ids": [
+          "linear-algebra-13"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "linear-algebra-13:better-sd",
+      "type": "numeric",
+      "prompt": "For G = [[1, 0.2], [0.2, 1]] and independent signal errors with standard deviation 0.01, what is the x₁ standard deviation? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "linear-algebra-13-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 0.010622957319984968,
+        "unit": "",
+        "tolerance": 5e-05,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use singular gains 1.2 and 0.8.",
+        "solution": "√[(0.0001/2)(1/1.2² + 1/0.8²)] = 0.010623.",
+        "lesson_ids": [
+          "linear-algebra-13"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "linear-algebra-13:repeats",
+      "type": "single_choice",
+      "prompt": "Which error is reduced by averaging independent repeats at the same fixed displacement?",
+      "points": 1,
+      "objective_ids": [
+        "linear-algebra-13-objective-2"
+      ],
+      "options": [
+        "Zero-mean independent random signal error.",
+        "Unmodeled shared drift of identical size in every repeat.",
+        "A fixed calibration offset."
+      ],
+      "solution_spec": {
+        "answer": 0
+      },
+      "feedback": {
+        "hint": "Averaging reduces variance, not a fixed bias.",
+        "solution": "The independence and zero-mean assumptions are essential.",
+        "lesson_ids": [
+          "linear-algebra-13"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "linear-algebra-13:validation",
+      "type": "single_choice",
+      "prompt": "Which validation directly challenges the weak direction?",
+      "points": 1,
+      "objective_ids": [
+        "linear-algebra-13-objective-3"
+      ],
+      "options": [
+        "New known displacements with the same sum and opposite differences.",
+        "Only repetitions of equal displacement components.",
+        "The data used to tune the penalty."
+      ],
+      "solution_spec": {
+        "answer": 0
+      },
+      "feedback": {
+        "hint": "Exercise the fragile component difference.",
+        "solution": "Independent opposing differences test the weak singular direction.",
+        "lesson_ids": [
+          "linear-algebra-13"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "linear-algebra-13:regularization",
+      "type": "single_choice",
+      "prompt": "A ridge estimate reports almost equal components. What must accompany that report?",
+      "points": 1,
+      "objective_ids": [
+        "linear-algebra-13-objective-3"
+      ],
+      "options": [
+        "The penalty choice, scaling, bias tradeoff and independent validation.",
+        "A claim that the equal components were independently measured.",
+        "A claim that the sensors became orthogonal."
+      ],
+      "solution_spec": {
+        "answer": 0
+      },
+      "feedback": {
+        "hint": "Separate estimator preferences from observations.",
+        "solution": "The penalty can suppress the scientifically important difference.",
+        "lesson_ids": [
+          "linear-algebra-13"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "linear-algebra-lab-01:summary",
+      "type": "file_upload",
+      "prompt": "Solve all ten rows in the lesson CSV. Upload a summary CSV with columns geometry, mean_x1, mean_x2 and rows poor, improved. Use arithmetic means.",
+      "points": 4,
+      "objective_ids": [
+        "linear-algebra-lab-01-objective-1"
+      ],
+      "solution_spec": {
+        "accepted_media_types": [
+          "text/csv"
+        ],
+        "max_bytes": 32768,
+        "validation_spec": {
+          "format": "csv-numeric-table-v1",
+          "delimiter": ",",
+          "key_column": "geometry",
+          "columns": [
+            "geometry",
+            "mean_x1",
+            "mean_x2"
+          ],
+          "checks": [
+            {
+              "id": "poor-mean_x1",
+              "row_id": "poor",
+              "column": "mean_x1",
+              "type": "numeric",
+              "answer": 2.0,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  1.7763568394002505e-15,
+                  1.0000000000000009,
+                  2.0,
+                  2.999999999999999,
+                  3.9999999999999982
+                ]
+              }
+            },
+            {
+              "id": "poor-mean_x2",
+              "row_id": "poor",
+              "column": "mean_x2",
+              "type": "numeric",
+              "answer": 3.0,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  4.999999999999998,
+                  3.999999999999999,
+                  3.0,
+                  2.000000000000001,
+                  1.0000000000000018
+                ]
+              }
+            },
+            {
+              "id": "improved-mean_x1",
+              "row_id": "improved",
+              "column": "mean_x1",
+              "type": "numeric",
+              "answer": 2.0,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  1.975,
+                  1.9875,
+                  2.0,
+                  2.0125,
+                  2.025
+                ]
+              }
+            },
+            {
+              "id": "improved-mean_x2",
+              "row_id": "improved",
+              "column": "mean_x2",
+              "type": "numeric",
+              "answer": 3.0,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  3.025,
+                  3.0125,
+                  3.0,
+                  2.9875,
+                  2.975
+                ]
+              }
+            }
+          ]
+        },
+        "rubric": [
+          {
+            "id": "poor-mean_x1",
+            "criterion": "poor: mean_x1",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_x1 for poor from the preparation-level values."
+            ]
+          },
+          {
+            "id": "poor-mean_x2",
+            "criterion": "poor: mean_x2",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_x2 for poor from the preparation-level values."
+            ]
+          },
+          {
+            "id": "improved-mean_x1",
+            "criterion": "improved: mean_x1",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_x1 for improved from the preparation-level values."
+            ]
+          },
+          {
+            "id": "improved-mean_x2",
+            "criterion": "improved: mean_x2",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_x2 for improved from the preparation-level values."
+            ]
+          }
+        ]
+      },
+      "feedback": {
+        "hint": "Solve each pair before averaging errors.",
+        "solution": "The mean estimate equals (2, 3) in both geometries because the constructed errors balance. RMSE remains 2 for poor geometry and 0.025 for improved geometry.",
+        "lesson_ids": [
+          "linear-algebra-lab-01",
+          "linear-algebra-11",
+          "linear-algebra-13"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "linear-algebra-lab-01:poor-rmse",
+      "type": "numeric",
+      "prompt": "For poor geometry, compute √[mean((x̂₁ − 2)² + (x̂₂ − 3)²)] across the five CSV pairs. Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "linear-algebra-lab-01-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 1.9999999999999982,
+        "unit": "",
+        "tolerance": 0.001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Average squared errors, then take the square root.",
+        "solution": "Errors are (−2, 2), (−1, 1), (0, 0), (1, −1), (2, −2). Mean squared norm is 4; RMSE = 2.",
+        "lesson_ids": [
+          "linear-algebra-lab-01"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "linear-algebra-lab-01:improved-rmse",
+      "type": "numeric",
+      "prompt": "For improved geometry, compute the same Euclidean parameter RMSE from the five CSV pairs. Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "linear-algebra-lab-01-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0.024999999999999977,
+        "unit": "",
+        "tolerance": 0.0001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "The difference gain is 0.8 instead of 0.01.",
+        "solution": "The errors are (−0.025, 0.025), (−0.0125, 0.0125), (0, 0), (0.0125, −0.0125), (0.025, −0.025); RMSE = 0.025.",
+        "lesson_ids": [
+          "linear-algebra-lab-01"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "linear-algebra-lab-01:rmse-ratio",
+      "type": "numeric",
+      "prompt": "What is poor RMSE divided by improved RMSE in the synthetic CSV? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "linear-algebra-lab-01-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 80,
+        "unit": "",
+        "tolerance": 0.01,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Divide the two RMSE values.",
+        "solution": "2/0.025 = 80.",
+        "lesson_ids": [
+          "linear-algebra-lab-01"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "linear-algebra-lab-01:predicted-weak-sd",
+      "type": "numeric",
+      "prompt": "For poor geometry, now assume independent signal errors with standard deviation 0.01, rather than the paired opposite errors in the CSV. What is the predicted weak-direction parameter standard deviation? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "linear-algebra-lab-01-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 1,
+        "unit": "",
+        "tolerance": 0.001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Divide signal SD by σ_min = 0.01.",
+        "solution": "0.01/0.01 = 1. This separate independent-noise model is not the correlation structure of the demonstration CSV.",
+        "lesson_ids": [
+          "linear-algebra-lab-01"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "linear-algebra-lab-01:evidence",
+      "type": "structured",
+      "prompt": "Select the conclusions supported by this lab.",
+      "points": 3,
+      "objective_ids": [
+        "linear-algebra-lab-01-objective-3"
+      ],
+      "response_fields": [
+        {
+          "id": "residual",
+          "type": "single_choice",
+          "prompt": "What does zero signal residual establish?",
+          "options": [
+            "Fit to the supplied signals, with no guarantee of parameter accuracy.",
+            "Exact physical displacement.",
+            "No measurement error."
+          ],
+          "points": 1
+        },
+        {
+          "id": "bias",
+          "type": "single_choice",
+          "prompt": "Why do both mean estimates match the reference?",
+          "options": [
+            "The constructed errors sum to zero; this does not guarantee unbiased real calibration.",
+            "The condition numbers are identical.",
+            "The residuals prove an unbiased device."
+          ],
+          "points": 1
+        },
+        {
+          "id": "validation",
+          "type": "single_choice",
+          "prompt": "Which follow-up directly tests the weak direction?",
+          "options": [
+            "New calibrated displacements with opposite component differences.",
+            "Only equal-component displacements.",
+            "The same rows used for tuning."
+          ],
+          "points": 1
+        }
+      ],
+      "solution_spec": {
+        "field_specs": [
+          {
+            "id": "residual",
+            "type": "single_choice",
+            "answer": 0
+          },
+          {
+            "id": "bias",
+            "type": "single_choice",
+            "answer": 0
+          },
+          {
+            "id": "validation",
+            "type": "single_choice",
+            "answer": 0
+          }
+        ],
+        "rubric": [
+          {
+            "id": "residual",
+            "criterion": "Residual versus accuracy",
+            "points": 1,
+            "evidence": [
+              "Square full-rank systems can fit noisy signals exactly."
+            ]
+          },
+          {
+            "id": "bias",
+            "criterion": "Balanced synthetic errors",
+            "points": 1,
+            "evidence": [
+              "Balance was deliberately imposed, not experimentally established."
+            ]
+          },
+          {
+            "id": "validation",
+            "criterion": "Independent weak-direction validation",
+            "points": 1,
+            "evidence": [
+              "Independent references must exercise the vulnerable combination."
+            ]
+          }
+        ]
+      },
+      "feedback": {
+        "hint": "Separate supplied signals, constructed balance and independent evidence.",
+        "solution": "An exact fit does not establish accuracy; the balanced demonstration is not proof of real calibration; test the weak direction independently.",
+        "lesson_ids": [
+          "linear-algebra-lab-01",
+          "linear-algebra-13"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "linear-algebra-lab-01:noise-assumptions",
+      "type": "multiple_select",
+      "prompt": "Which statements respect the lab noise assumptions? Select all that apply.",
+      "points": 2,
+      "objective_ids": [
+        "linear-algebra-lab-01-objective-3"
+      ],
+      "options": [
+        "A fixed calibration offset disappears after many repeats.",
+        "The ten constructed rows establish a real tissue sensor noise distribution.",
+        "Independent equal-variance signal noise is a separate hypothetical model.",
+        "The CSV deliberately pairs equal and opposite signal errors.",
+        "More independent repeats reduce random error but leave a fixed offset."
+      ],
+      "solution_spec": {
+        "answer": [
+          2,
+          3,
+          4
+        ],
+        "partial_credit": "correct-minus-incorrect-clamped-v1"
+      },
+      "feedback": {
+        "hint": "Read how the rows were constructed.",
+        "solution": "The CSV has paired opposite errors; the independent-noise calculation is separate. Repeats do not remove fixed bias, and synthetic rows establish no real device distribution.",
+        "lesson_ids": [
+          "linear-algebra-lab-01"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "linear-algebra-lab-01:redesign",
+      "type": "single_choice",
+      "prompt": "What additional information is needed before claiming improved real sensor uncertainty?",
+      "points": 1,
+      "objective_ids": [
+        "linear-algebra-lab-01-objective-2"
+      ],
+      "options": [
+        "Only the mean of the five constructed estimates.",
+        "Only the smaller determinant.",
+        "Calibrated sensitivities and comparable noise covariance for both geometries."
+      ],
+      "solution_spec": {
+        "answer": 2
+      },
+      "feedback": {
+        "hint": "The gain comparison assumes comparable signal noise.",
+        "solution": "A better matrix can be offset by worse physical noise or calibration uncertainty.",
+        "lesson_ids": [
+          "linear-algebra-lab-01"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
     }
   ]
 }

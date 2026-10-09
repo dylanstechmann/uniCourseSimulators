@@ -145,6 +145,326 @@
         "linear-algebra-6-objective-3"
       ],
       "license": "CC-BY-4.0"
+    },
+    {
+      "id": "linear-algebra-7-card-1",
+      "lesson_id": "linear-algebra-7",
+      "front": "Rank and null space",
+      "back": "Rank = number of independent columns = dimension of the column space; null space = {x : Ax = 0}; rank + nullity = number of columns.",
+      "objective_ids": [
+        "linear-algebra-7-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "linear-algebra-7-card-2",
+      "lesson_id": "linear-algebra-7",
+      "front": "Consistency and solution families",
+      "back": "Ax = b is solvable only if b is in the column space; if a solution x₀ exists, all solutions are x₀ + null space, so unknowns with a null component are not identifiable.",
+      "objective_ids": [
+        "linear-algebra-7-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "linear-algebra-7-card-3",
+      "lesson_id": "linear-algebra-7",
+      "front": "Minimum-norm solution",
+      "back": "The solution of smallest length is orthogonal to the null space; it is a convention, not a measurement.",
+      "objective_ids": [
+        "linear-algebra-7-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "linear-algebra-7-card-4",
+      "lesson_id": "linear-algebra-7",
+      "front": "Design matrices",
+      "back": "An intercept plus a full set of indicators is rank deficient; drop one column or impose a constraint; near-dependence is the practical version.",
+      "objective_ids": [
+        "linear-algebra-7-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "linear-algebra-8-card-1",
+      "lesson_id": "linear-algebra-8",
+      "front": "Projection onto a vector",
+      "back": "p = (a·b/a·a) a; the residual r = b − p is perpendicular to a; ‖b‖² = ‖p‖² + ‖r‖².",
+      "objective_ids": [
+        "linear-algebra-8-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "linear-algebra-8-card-2",
+      "lesson_id": "linear-algebra-8",
+      "front": "Gram–Schmidt",
+      "back": "q₁ = a₁/‖a₁‖; v₂ = a₂ − (q₁·a₂)q₁; q₂ = v₂/‖v₂‖; a zero v₂ means a₂ was dependent.",
+      "objective_ids": [
+        "linear-algebra-8-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "linear-algebra-8-card-3",
+      "lesson_id": "linear-algebra-8",
+      "front": "QR and least squares",
+      "back": "A = QR with R upper triangular; solve Rx = Qᵀb by back-substitution; the residual norm is √(‖b‖² − ‖Qᵀb‖²).",
+      "objective_ids": [
+        "linear-algebra-8-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "linear-algebra-8-card-4",
+      "lesson_id": "linear-algebra-8",
+      "front": "Why QR",
+      "back": "AᵀA squares the condition number; QR does not form it, so it is the stable way to solve least-squares problems.",
+      "objective_ids": [
+        "linear-algebra-8-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "linear-algebra-9-card-1",
+      "lesson_id": "linear-algebra-9",
+      "front": "Spectral theorem",
+      "back": "A real symmetric matrix has real eigenvalues and orthonormal eigenvectors: A = QΛQᵀ, with trace = sum and determinant = product of the eigenvalues.",
+      "objective_ids": [
+        "linear-algebra-9-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "linear-algebra-9-card-2",
+      "lesson_id": "linear-algebra-9",
+      "front": "2 × 2 eigenvector angle",
+      "back": "For [[a, b], [b, d]], θ = ½ atan2(2b, a − d) gives a dominant axis, modulo 180°, when the eigenvalues differ. A repeated eigenvalue has no unique dominant axis.",
+      "objective_ids": [
+        "linear-algebra-9-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "linear-algebra-9-card-3",
+      "lesson_id": "linear-algebra-9",
+      "front": "Quadratic form and definiteness",
+      "back": "xᵀAx = a₁₁x₁² + 2a₁₂x₁x₂ + a₂₂x₂²; over unit vectors it ranges from λ_min to λ_max; positive definite means all eigenvalues are positive.",
+      "objective_ids": [
+        "linear-algebra-9-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "linear-algebra-9-card-4",
+      "lesson_id": "linear-algebra-9",
+      "front": "Variance along a direction",
+      "back": "For a covariance matrix C and a unit vector w the variance is wᵀCw; the maximum is λ_max along its eigenvector; the total variance is the trace.",
+      "objective_ids": [
+        "linear-algebra-9-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "linear-algebra-10-card-1",
+      "lesson_id": "linear-algebra-10",
+      "front": "SVD",
+      "back": "For an m × n matrix, A = UΣVᵀ with orthogonal U (m × m), V (n × n) and rectangular diagonal Σ (m × n). Positive σ² are the nonzero eigenvalues shared by AᵀA and AAᵀ; rank counts nonzero σ. Orthogonal factors can include reflections.",
+      "objective_ids": [
+        "linear-algebra-10-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "linear-algebra-10-card-2",
+      "lesson_id": "linear-algebra-10",
+      "front": "Best low-rank approximation",
+      "back": "Eckart–Young: keep the k largest terms; the error in the Frobenius norm is √(sum of the dropped σ²); ‖A‖²_F = Σ σ².",
+      "objective_ids": [
+        "linear-algebra-10-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "linear-algebra-10-card-3",
+      "lesson_id": "linear-algebra-10",
+      "front": "Storage",
+      "back": "A rank-k approximation of an m × n matrix needs k(m + n + 1) numbers instead of mn; saves storage only if k(m + n + 1) < mn; usefulness also requires acceptable error.",
+      "objective_ids": [
+        "linear-algebra-10-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "linear-algebra-10-card-4",
+      "lesson_id": "linear-algebra-10",
+      "front": "Diagnostic",
+      "back": "A very small last singular value means near rank deficiency; For full column rank, σ₁/σ_min is the 2-norm condition number; rank deficiency makes inversion nonunique.",
+      "objective_ids": [
+        "linear-algebra-10-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "linear-algebra-11-card-1",
+      "lesson_id": "linear-algebra-11",
+      "front": "Condition number",
+      "back": "For invertible A, κ₂ = σ_max/σ_min; fixed-A relative signal errors have a worst-case multiplier κ₂.",
+      "objective_ids": [
+        "linear-algebra-11-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "linear-algebra-11-card-2",
+      "lesson_id": "linear-algebra-11",
+      "front": "Residual and error",
+      "back": "Small residual means a close fit to supplied data; poorly conditioned columns can still give large parameter errors.",
+      "objective_ids": [
+        "linear-algebra-11-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "linear-algebra-11-card-3",
+      "lesson_id": "linear-algebra-11",
+      "front": "Ridge filter",
+      "back": "In a singular direction ridge multiplies the unregularized coefficient by σ²/(σ² + α). This introduces bias.",
+      "objective_ids": [
+        "linear-algebra-11-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "linear-algebra-11-card-4",
+      "lesson_id": "linear-algebra-11",
+      "front": "Scaling",
+      "back": "Condition numbers and penalties depend on coordinate scales. Report units, scaling, calibration uncertainty and tuning.",
+      "objective_ids": [
+        "linear-algebra-11-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "linear-algebra-12-card-1",
+      "lesson_id": "linear-algebra-12",
+      "front": "Centered covariance",
+      "back": "For n sample rows, subtract column means and use C = ZᵀZ/(n − 1). Uncentered SVD answers a different question.",
+      "objective_ids": [
+        "linear-algebra-12-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "linear-algebra-12-card-2",
+      "lesson_id": "linear-algebra-12",
+      "front": "PCA score and reconstruction",
+      "back": "Score t = z·q; rank-one centered reconstruction is tq. Add the training mean to recover original coordinates.",
+      "objective_ids": [
+        "linear-algebra-12-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "linear-algebra-12-card-3",
+      "lesson_id": "linear-algebra-12",
+      "front": "Scaling choice",
+      "back": "Covariance PCA preserves the stated units; standardized PCA uses a correlation matrix and weights each variable to unit variance.",
+      "objective_ids": [
+        "linear-algebra-12-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "linear-algebra-12-card-4",
+      "lesson_id": "linear-algebra-12",
+      "front": "PCA interpretation",
+      "back": "Explained variance is descriptive. Assess confounding and fit preprocessing on training data only.",
+      "objective_ids": [
+        "linear-algebra-12-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "linear-algebra-13-card-1",
+      "lesson_id": "linear-algebra-13",
+      "front": "Directional uncertainty",
+      "back": "For independent signal noise s²I, singular-direction parameter variance is s²/σ_i².",
+      "objective_ids": [
+        "linear-algebra-13-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "linear-algebra-13-card-2",
+      "lesson_id": "linear-algebra-13",
+      "front": "Independent repeats",
+      "back": "Averaging n independent signal pairs divides covariance by n. Shared calibration offsets do not average away.",
+      "objective_ids": [
+        "linear-algebra-13-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "linear-algebra-13-card-3",
+      "lesson_id": "linear-algebra-13",
+      "front": "Redesign",
+      "back": "Compare geometry using calibrated gains and a stated noise covariance; exercise the weak direction.",
+      "objective_ids": [
+        "linear-algebra-13-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "linear-algebra-13-card-4",
+      "lesson_id": "linear-algebra-13",
+      "front": "Case report",
+      "back": "State units, matrix, noise assumptions, singular values, parameter uncertainty, estimator convention and independent validation.",
+      "objective_ids": [
+        "linear-algebra-13-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "linear-algebra-lab-01-card-1",
+      "lesson_id": "linear-algebra-lab-01",
+      "front": "Parameter RMSE",
+      "back": "Compute √[mean of squared Euclidean errors], using an independent reference; mean error can cancel while RMSE is large.",
+      "objective_ids": [
+        "linear-algebra-lab-01-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "linear-algebra-lab-01-card-2",
+      "lesson_id": "linear-algebra-lab-01",
+      "front": "Demonstration noise",
+      "back": "The lab pairs opposite errors deliberately. Its independent-noise uncertainty calculation uses a separate stated model.",
+      "objective_ids": [
+        "linear-algebra-lab-01-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "linear-algebra-lab-01-card-3",
+      "lesson_id": "linear-algebra-lab-01",
+      "front": "Zero residual",
+      "back": "An invertible two-equation model fits two noisy signals exactly; the residual does not certify displacement accuracy.",
+      "objective_ids": [
+        "linear-algebra-lab-01-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "linear-algebra-lab-01-card-4",
+      "lesson_id": "linear-algebra-lab-01",
+      "front": "Geometry comparison",
+      "back": "Compare weak gains, calibrated units and error covariance. Validate new reference displacements in the weak direction.",
+      "objective_ids": [
+        "linear-algebra-lab-01-objective-3"
+      ],
+      "license": "CC-BY-4.0"
     }
   ]
 }

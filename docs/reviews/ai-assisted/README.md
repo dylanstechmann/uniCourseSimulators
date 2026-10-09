@@ -21,3 +21,4 @@ review that do.
 | Signals, Systems & Feedback Control 0.4.0 (new lessons, lab and schedule) | 2026-10-08 | [signals-control-0.4.0.md](signals-control-0.4.0.md) |
 | Differential Equations for Living & Engineered Systems 0.3.0 (new lessons, lab and schedule) | 2026-10-08 | [differential-equations-0.3.0.md](differential-equations-0.3.0.md) |
 | Differential Equations for Living & Engineered Systems 0.3.1 (Euler-boundary and resonance prompt clarification) | 2026-10-08 | [differential-equations-0.3.1.md](differential-equations-0.3.1.md) |
+| Linear Algebra for Modeling & Robotics 0.3.0 (new lessons, lab and schedule) | 2026-10-09 | [linear-algebra-0.3.0.md](linear-algebra-0.3.0.md) |
