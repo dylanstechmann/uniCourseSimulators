@@ -92,7 +92,7 @@ def test_example_summary_tables_in_packets_equal_the_authored_keys():
     assert not mismatches, mismatches
 
 
-def test_assessment_specifications_contain_no_items_or_keys_and_say_so():
+def test_assessment_specifications_contain_no_keys_and_describe_inactive_drafts():
     folder = COURSE / "assessment-specs"
     documents = sorted(folder.glob("*.md"))
     assert {p.name for p in documents} >= {"midterm-specification.md", "final-specification.md",
@@ -101,15 +101,26 @@ def test_assessment_specifications_contain_no_items_or_keys_and_say_so():
         text = path.read_text(encoding="utf-8")
         assert '"solution_spec"' not in text and '"answer"' not in text, path.name
         if path.name.endswith("-specification.md"):
-            assert "not authored" in text.lower()
-            assert "No question, answer key" in text
+            assert "inactive" in text.lower()
+            assert "no protected answer package is committed" in text.lower()
             assert "No reviewer has examined this specification" in text
-    other = [p for p in folder.iterdir() if p.suffix not in {".md"}]
+    other = [p for p in folder.iterdir() if p.is_file() and p.suffix not in {".md"}]
     assert {path.name for path in other} == {
         "homework-01-candidate-pulse-chase.csv", "homework-01-candidate.json",
         "homework-02-candidate-fluorescence.csv", "homework-02-candidate.json",
         "homework-03-candidate-lesion-reference.csv", "homework-03-candidate.json",
-        "homework-04-candidate-chip.csv", "homework-04-candidate-reporter.csv", "homework-04-candidate.json"
+        "homework-04-candidate-chip.csv", "homework-04-candidate-reporter.csv", "homework-04-candidate.json",
+        "homework-05-candidate-baseline.csv", "homework-05-candidate-chase.csv", "homework-05-candidate.json",
+        "homework-06-candidate-clones.csv", "homework-06-candidate.json",
+        "homework-07-candidate-matrix.csv", "homework-07-candidate.json",
+        "homework-08-candidate-fate.csv", "homework-08-candidate.json",
+        "midterm-candidate.json", "midterm-candidate-observations.csv",
+        "final-candidate.json", "final-candidate-observations.csv",
+        "lab-01-candidate.json", "lab-01-candidate-observations.csv",
+        "lab-02-candidate.json", "lab-02-candidate-observations.csv",
+        "lab-03-candidate.json", "lab-03-candidate-observations.csv",
+        "integrative-project-candidate.json", "integrative-project-candidate-observations.csv",
+        "integrative-project-candidate-cultures.csv", "generate_project_dataset.py"
     }, f"unexpected non-document files beside the specifications: {other}"
 
 

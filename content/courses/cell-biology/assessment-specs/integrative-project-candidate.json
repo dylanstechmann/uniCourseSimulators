@@ -1,0 +1,491 @@
+{
+  "candidate_id": "cell-biology-integrative-project-review-v1",
+  "course_id": "cell-biology",
+  "content_version": "0.33.0",
+  "state": "inactive-review-candidate",
+  "title": "Integrative project: machine data checks plus separate ungraded human portfolio",
+  "points": 18,
+  "lesson_ids": [
+    "cell-biology-17",
+    "cell-biology-22",
+    "cell-biology-28"
+  ],
+  "objective_ids": [
+    "cell-biology-17-objective-1",
+    "cell-biology-17-objective-2",
+    "cell-biology-17-objective-3",
+    "cell-biology-22-objective-1",
+    "cell-biology-22-objective-2",
+    "cell-biology-22-objective-3",
+    "cell-biology-28-objective-1",
+    "cell-biology-28-objective-2",
+    "cell-biology-28-objective-3"
+  ],
+  "objective_evidence": [
+    {
+      "question_id": "cell-biology-integrative-project-candidate:case-17",
+      "field_id": "criterion-1",
+      "objective_ids": [
+        "cell-biology-17-objective-1"
+      ],
+      "points": 2,
+      "evidence_type": "single_choice"
+    },
+    {
+      "question_id": "cell-biology-integrative-project-candidate:case-17",
+      "field_id": "criterion-2",
+      "objective_ids": [
+        "cell-biology-17-objective-2"
+      ],
+      "points": 2,
+      "evidence_type": "numeric"
+    },
+    {
+      "question_id": "cell-biology-integrative-project-candidate:case-17",
+      "field_id": "criterion-3",
+      "objective_ids": [
+        "cell-biology-17-objective-3"
+      ],
+      "points": 2,
+      "evidence_type": "single_choice"
+    },
+    {
+      "question_id": "cell-biology-integrative-project-candidate:case-22",
+      "field_id": "criterion-1",
+      "objective_ids": [
+        "cell-biology-22-objective-1"
+      ],
+      "points": 2,
+      "evidence_type": "numeric"
+    },
+    {
+      "question_id": "cell-biology-integrative-project-candidate:case-22",
+      "field_id": "criterion-2",
+      "objective_ids": [
+        "cell-biology-22-objective-2"
+      ],
+      "points": 2,
+      "evidence_type": "single_choice"
+    },
+    {
+      "question_id": "cell-biology-integrative-project-candidate:case-22",
+      "field_id": "criterion-3",
+      "objective_ids": [
+        "cell-biology-22-objective-3"
+      ],
+      "points": 2,
+      "evidence_type": "single_choice"
+    },
+    {
+      "question_id": "cell-biology-integrative-project-candidate:case-28",
+      "field_id": "criterion-1",
+      "objective_ids": [
+        "cell-biology-28-objective-1"
+      ],
+      "points": 2,
+      "evidence_type": "numeric"
+    },
+    {
+      "question_id": "cell-biology-integrative-project-candidate:case-28",
+      "field_id": "criterion-2",
+      "objective_ids": [
+        "cell-biology-28-objective-2"
+      ],
+      "points": 2,
+      "evidence_type": "single_choice"
+    },
+    {
+      "question_id": "cell-biology-integrative-project-candidate:case-28",
+      "field_id": "criterion-3",
+      "objective_ids": [
+        "cell-biology-28-objective-3"
+      ],
+      "points": 2,
+      "evidence_type": "single_choice"
+    }
+  ],
+  "objective_link_occurrences": 9,
+  "course_outcome_ids": [
+    "cell-biology-outcome-1",
+    "cell-biology-outcome-2",
+    "cell-biology-outcome-3",
+    "cell-biology-outcome-4"
+  ],
+  "instruction_path": "assessment-specs/integrative-project-candidate.md",
+  "dataset_path": "assessment-specs/integrative-project-candidate-observations.csv",
+  "private_source_ref": "private://assignments/integrative-project-review-v1.json",
+  "private_source_sha256": "37d4c6cdd08a91229eaa35d2777fdef04f155612b995b8ce410365258909421d",
+  "prerequisite_sha256": {
+    "modules/08a-rna-processing-and-isoform-evidence.md": "dfb570ca69d8b0ad03b8fcee8b533b81cb12279b03ea0e47b38772899084bd0c",
+    "modules/10b-signaling-dynamics-feedback-and-perturbations.md": "b26c444c22bb08d2d65e1acc844902a81ad6aa32d593ca269f865e0b80ab90a1",
+    "modules/13b-integrative-regenerative-study-design.md": "d0e03df201f0ee14b9903eed3195a5d6f37432f3f13d75647b7919c4968c03a4"
+  },
+  "review": {
+    "status": "unreviewed",
+    "reviewers": []
+  },
+  "activation_gates": [
+    "independent-recalculation",
+    "grader-mutation-review",
+    "subject-matter-review",
+    "assessment-review",
+    "accessibility-review",
+    "measured-workload",
+    "operator-provisioning-and-release-policy",
+    "immutable-source-archive-and-appeal-replay",
+    "human-explanation-design-rubric-review",
+    "protected-variant-delivery-and-retake-policy"
+  ],
+  "questions": [
+    {
+      "id": "cell-biology-integrative-project-candidate:case-17",
+      "type": "data_interpretation",
+      "prompt": "RNA-layer normalization and processing controls. Authored form A. Use form A of integrative-project-candidate-cultures.csv. Each of six conditions has four separately prepared cultures measured at 0 and 48 h, not matched donors across conditions. RNA and protein have backgrounds and recovery references; marker/function counts use viable cells. Signaling channels summarize matched 0,10,30-min aliquots from that culture. Cells and repeated times are not independent cultures. Matrix-high conditions also have different accessible ligand, so matrix effects are confounded. No calibrated uncertainty, joint cell states or clinical inference is supplied.",
+      "options": [],
+      "unit": null,
+      "significant_figures": null,
+      "points": 6.0,
+      "selection": "single",
+      "partial_credit_policy": null,
+      "response_fields": [
+        {
+          "id": "criterion-1",
+          "type": "single_choice",
+          "prompt": "Which RNA interpretation respects processing and abundance?",
+          "options": [
+            "A shared-region abundance proves every transcript has the same splice pattern.",
+            "A shared-region abundance readout does not specify isoform composition or a processing route.",
+            "More RNA proves a unique spliceosome defect."
+          ],
+          "unit": null,
+          "points": 2.0
+        },
+        {
+          "id": "criterion-2",
+          "type": "numeric",
+          "prompt": "For signal_high culture 01 at 48 h calculate corrected RNA eq per 1000 viable cells on a bare eq-per-1000 scale. Report exactly 3 significant figures.",
+          "options": [],
+          "unit": "",
+          "points": 2.0
+        },
+        {
+          "id": "criterion-3",
+          "type": "single_choice",
+          "prompt": "Which RNA assay follow-up separates a processing claim?",
+          "options": [
+            "Only repeat the same shared amplicon and call it isoform resolution.",
+            "Isoform-specific and precursor readouts with no-RT, recovery and perturbation controls, plus production/decay evidence.",
+            "Use total protein as a no-RT control."
+          ],
+          "unit": null,
+          "points": 2.0
+        }
+      ],
+      "graph_spec": null,
+      "accepted_media_types": [],
+      "max_upload_bytes": null,
+      "variant_id": null,
+      "variant_token": null,
+      "learning_objective_ids": [
+        "cell-biology-17-objective-1",
+        "cell-biology-17-objective-2",
+        "cell-biology-17-objective-3"
+      ],
+      "assessment_role": "graded"
+    },
+    {
+      "id": "cell-biology-integrative-project-candidate:case-22",
+      "type": "data_interpretation",
+      "prompt": "Signaling trajectory and intervention alternatives. Authored form A. Use form A of integrative-project-candidate-cultures.csv. Each of six conditions has four separately prepared cultures measured at 0 and 48 h, not matched donors across conditions. RNA and protein have backgrounds and recovery references; marker/function counts use viable cells. Signaling channels summarize matched 0,10,30-min aliquots from that culture. Cells and repeated times are not independent cultures. Matrix-high conditions also have different accessible ligand, so matrix effects are confounded. No calibrated uncertainty, joint cell states or clinical inference is supplied.",
+      "options": [],
+      "unit": null,
+      "significant_figures": null,
+      "points": 6.0,
+      "selection": "single",
+      "partial_credit_policy": null,
+      "response_fields": [
+        {
+          "id": "criterion-1",
+          "type": "numeric",
+          "prompt": "Calculate equal-culture mean both-condition signaling trapezoidal area on the bare AU-minute scale. Report exactly 3 significant figures.",
+          "options": [],
+          "unit": "",
+          "points": 2.0
+        },
+        {
+          "id": "criterion-2",
+          "type": "single_choice",
+          "prompt": "Which intervention interpretation respects these data?",
+          "options": [
+            "Any condition named rescue proves a unique pathway.",
+            "The condition contrasts describe measured output; the named rescue alone does not locate one unique pathway or prove on-target specificity.",
+            "An endpoint marker directly measures upstream target engagement."
+          ],
+          "unit": null,
+          "points": 2.0
+        },
+        {
+          "id": "criterion-3",
+          "type": "single_choice",
+          "prompt": "Which signaling follow-up tests alternatives?",
+          "options": [
+            "Use cell count alone as a direct feedback assay.",
+            "Match exposure, ligand availability and receptor state; add target-engagement and orthogonal interventions over time.",
+            "Pool culture aliquots to create independent biological repeats."
+          ],
+          "unit": null,
+          "points": 2.0
+        }
+      ],
+      "graph_spec": null,
+      "accepted_media_types": [],
+      "max_upload_bytes": null,
+      "variant_id": null,
+      "variant_token": null,
+      "learning_objective_ids": [
+        "cell-biology-22-objective-1",
+        "cell-biology-22-objective-2",
+        "cell-biology-22-objective-3"
+      ],
+      "assessment_role": "graded"
+    },
+    {
+      "id": "cell-biology-integrative-project-candidate:case-28",
+      "type": "data_interpretation",
+      "prompt": "Factorial marker contrast and separate function boundary. Authored form A. Use form A of integrative-project-candidate-cultures.csv. Each of six conditions has four separately prepared cultures measured at 0 and 48 h, not matched donors across conditions. RNA and protein have backgrounds and recovery references; marker/function counts use viable cells. Signaling channels summarize matched 0,10,30-min aliquots from that culture. Cells and repeated times are not independent cultures. Matrix-high conditions also have different accessible ligand, so matrix effects are confounded. No calibrated uncertainty, joint cell states or clinical inference is supplied.",
+      "options": [],
+      "unit": null,
+      "significant_figures": null,
+      "points": 6.0,
+      "selection": "single",
+      "partial_credit_policy": null,
+      "response_fields": [
+        {
+          "id": "criterion-1",
+          "type": "numeric",
+          "prompt": "Calculate endpoint marker interaction (both-matrix_high)-(signal_high-control) on a bare percentage-point scale. Report exactly 3 significant figures.",
+          "options": [],
+          "unit": "",
+          "points": 2.0
+        },
+        {
+          "id": "criterion-2",
+          "type": "single_choice",
+          "prompt": "Which follow-up resolves the deliberate confound and marker/function gap?",
+          "options": [
+            "Factorially match accessible ligand and cell state, measure geometry/material time dependence and analyze marker and function separately.",
+            "Use marker positivity to replace the distinct function readout.",
+            "Declare the matrix-modulus difference the unique cause despite ligand mismatch."
+          ],
+          "unit": null,
+          "points": 2.0
+        },
+        {
+          "id": "criterion-3",
+          "type": "single_choice",
+          "prompt": "Which interpretation of the project is justified?",
+          "options": [
+            "A positive interaction is proof of clinical regeneration.",
+            "Synthetic in-vitro contrasts support only the stated measurements; clinical benefit requires much more evidence and oversight.",
+            "A nominal rescue eliminates all alternatives and safety questions."
+          ],
+          "unit": null,
+          "points": 2.0
+        }
+      ],
+      "graph_spec": null,
+      "accepted_media_types": [],
+      "max_upload_bytes": null,
+      "variant_id": null,
+      "variant_token": null,
+      "learning_objective_ids": [
+        "cell-biology-28-objective-1",
+        "cell-biology-28-objective-2",
+        "cell-biology-28-objective-3"
+      ],
+      "assessment_role": "graded"
+    }
+  ],
+  "variant_questions": {
+    "cell-biology-integrative-project-candidate:case-17": {
+      "id": "cell-biology-integrative-project-candidate:case-17",
+      "type": "data_interpretation",
+      "prompt": "RNA-layer normalization and processing controls. Authored form B. Use form B of integrative-project-candidate-cultures.csv. Each of six conditions has four separately prepared cultures measured at 0 and 48 h, not matched donors across conditions. RNA and protein have backgrounds and recovery references; marker/function counts use viable cells. Signaling channels summarize matched 0,10,30-min aliquots from that culture. Cells and repeated times are not independent cultures. Matrix-high conditions also have different accessible ligand, so matrix effects are confounded. No calibrated uncertainty, joint cell states or clinical inference is supplied.",
+      "options": [],
+      "unit": null,
+      "significant_figures": null,
+      "points": 6.0,
+      "selection": "single",
+      "partial_credit_policy": null,
+      "response_fields": [
+        {
+          "id": "criterion-1",
+          "type": "single_choice",
+          "prompt": "Which RNA interpretation respects processing and abundance?",
+          "options": [
+            "A shared-region abundance proves every transcript has the same splice pattern.",
+            "A shared-region abundance readout does not specify isoform composition or a processing route.",
+            "More RNA proves a unique spliceosome defect."
+          ],
+          "unit": null,
+          "points": 2.0
+        },
+        {
+          "id": "criterion-2",
+          "type": "numeric",
+          "prompt": "For signal_high culture 01 at 48 h calculate corrected RNA eq per 1000 viable cells on a bare eq-per-1000 scale. Report exactly 3 significant figures.",
+          "options": [],
+          "unit": "",
+          "points": 2.0
+        },
+        {
+          "id": "criterion-3",
+          "type": "single_choice",
+          "prompt": "Which RNA assay follow-up separates a processing claim?",
+          "options": [
+            "Only repeat the same shared amplicon and call it isoform resolution.",
+            "Isoform-specific and precursor readouts with no-RT, recovery and perturbation controls, plus production/decay evidence.",
+            "Use total protein as a no-RT control."
+          ],
+          "unit": null,
+          "points": 2.0
+        }
+      ],
+      "graph_spec": null,
+      "accepted_media_types": [],
+      "max_upload_bytes": null,
+      "variant_id": "form-b",
+      "variant_token": null,
+      "learning_objective_ids": [
+        "cell-biology-17-objective-1",
+        "cell-biology-17-objective-2",
+        "cell-biology-17-objective-3"
+      ],
+      "assessment_role": "graded"
+    },
+    "cell-biology-integrative-project-candidate:case-22": {
+      "id": "cell-biology-integrative-project-candidate:case-22",
+      "type": "data_interpretation",
+      "prompt": "Signaling trajectory and intervention alternatives. Authored form B. Use form B of integrative-project-candidate-cultures.csv. Each of six conditions has four separately prepared cultures measured at 0 and 48 h, not matched donors across conditions. RNA and protein have backgrounds and recovery references; marker/function counts use viable cells. Signaling channels summarize matched 0,10,30-min aliquots from that culture. Cells and repeated times are not independent cultures. Matrix-high conditions also have different accessible ligand, so matrix effects are confounded. No calibrated uncertainty, joint cell states or clinical inference is supplied.",
+      "options": [],
+      "unit": null,
+      "significant_figures": null,
+      "points": 6.0,
+      "selection": "single",
+      "partial_credit_policy": null,
+      "response_fields": [
+        {
+          "id": "criterion-1",
+          "type": "numeric",
+          "prompt": "Calculate equal-culture mean both-condition signaling trapezoidal area on the bare AU-minute scale. Report exactly 3 significant figures.",
+          "options": [],
+          "unit": "",
+          "points": 2.0
+        },
+        {
+          "id": "criterion-2",
+          "type": "single_choice",
+          "prompt": "Which intervention interpretation respects these data?",
+          "options": [
+            "Any condition named rescue proves a unique pathway.",
+            "The condition contrasts describe measured output; the named rescue alone does not locate one unique pathway or prove on-target specificity.",
+            "An endpoint marker directly measures upstream target engagement."
+          ],
+          "unit": null,
+          "points": 2.0
+        },
+        {
+          "id": "criterion-3",
+          "type": "single_choice",
+          "prompt": "Which signaling follow-up tests alternatives?",
+          "options": [
+            "Use cell count alone as a direct feedback assay.",
+            "Match exposure, ligand availability and receptor state; add target-engagement and orthogonal interventions over time.",
+            "Pool culture aliquots to create independent biological repeats."
+          ],
+          "unit": null,
+          "points": 2.0
+        }
+      ],
+      "graph_spec": null,
+      "accepted_media_types": [],
+      "max_upload_bytes": null,
+      "variant_id": "form-b",
+      "variant_token": null,
+      "learning_objective_ids": [
+        "cell-biology-22-objective-1",
+        "cell-biology-22-objective-2",
+        "cell-biology-22-objective-3"
+      ],
+      "assessment_role": "graded"
+    },
+    "cell-biology-integrative-project-candidate:case-28": {
+      "id": "cell-biology-integrative-project-candidate:case-28",
+      "type": "data_interpretation",
+      "prompt": "Factorial marker contrast and separate function boundary. Authored form B. Use form B of integrative-project-candidate-cultures.csv. Each of six conditions has four separately prepared cultures measured at 0 and 48 h, not matched donors across conditions. RNA and protein have backgrounds and recovery references; marker/function counts use viable cells. Signaling channels summarize matched 0,10,30-min aliquots from that culture. Cells and repeated times are not independent cultures. Matrix-high conditions also have different accessible ligand, so matrix effects are confounded. No calibrated uncertainty, joint cell states or clinical inference is supplied.",
+      "options": [],
+      "unit": null,
+      "significant_figures": null,
+      "points": 6.0,
+      "selection": "single",
+      "partial_credit_policy": null,
+      "response_fields": [
+        {
+          "id": "criterion-1",
+          "type": "numeric",
+          "prompt": "Calculate endpoint marker interaction (both-matrix_high)-(signal_high-control) on a bare percentage-point scale. Report exactly 3 significant figures.",
+          "options": [],
+          "unit": "",
+          "points": 2.0
+        },
+        {
+          "id": "criterion-2",
+          "type": "single_choice",
+          "prompt": "Which follow-up resolves the deliberate confound and marker/function gap?",
+          "options": [
+            "Factorially match accessible ligand and cell state, measure geometry/material time dependence and analyze marker and function separately.",
+            "Use marker positivity to replace the distinct function readout.",
+            "Declare the matrix-modulus difference the unique cause despite ligand mismatch."
+          ],
+          "unit": null,
+          "points": 2.0
+        },
+        {
+          "id": "criterion-3",
+          "type": "single_choice",
+          "prompt": "Which interpretation of the project is justified?",
+          "options": [
+            "A positive interaction is proof of clinical regeneration.",
+            "Synthetic in-vitro contrasts support only the stated measurements; clinical benefit requires much more evidence and oversight.",
+            "A nominal rescue eliminates all alternatives and safety questions."
+          ],
+          "unit": null,
+          "points": 2.0
+        }
+      ],
+      "graph_spec": null,
+      "accepted_media_types": [],
+      "max_upload_bytes": null,
+      "variant_id": "form-b",
+      "variant_token": null,
+      "learning_objective_ids": [
+        "cell-biology-28-objective-1",
+        "cell-biology-28-objective-2",
+        "cell-biology-28-objective-3"
+      ],
+      "assessment_role": "graded"
+    }
+  },
+  "provenance": {
+    "kind": "original",
+    "license": "CC-BY-4.0",
+    "ai_assistance": "Codex authored cases and checks; no independent or qualified review occurred.",
+    "source_scope": "Existing original lessons, original synthetic measurements and explicitly stipulated models; no copied assessment or licensed asset."
+  },
+  "additional_dataset_paths": [
+    "assessment-specs/integrative-project-candidate-cultures.csv"
+  ],
+  "generator_path": "assessment-specs/generate_project_dataset.py",
+  "human_portfolio_path": "assessment-specs/integrative-project-portfolio.md",
+  "machine_score_is_project_grade": false
+}

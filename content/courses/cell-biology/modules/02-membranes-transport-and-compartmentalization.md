@@ -8,15 +8,15 @@ Membrane proteins do different jobs. A **channel** provides a selective pathway 
 
 ## Electrochemical potential balances concentration and charge
 
-For an ion, the chemical contribution favors movement from higher concentration to lower concentration, while the electrical contribution favors or opposes movement depending on ion charge and membrane voltage. The Nernst equation describes the voltage at which these contributions for one ion balance. At approximately 25 °C for a monovalent cation:
+For an ion, the chemical contribution favors movement from higher concentration to lower concentration, while the electrical contribution favors or opposes movement depending on ion charge and membrane voltage. The Nernst equation describes the voltage at which these contributions for one ion balance. At approximately 37 °C for a monovalent cation:
 
 `E = 61.5 mV × log10([ion]outside / [ion]inside)`
 
-This expression uses the ideal-solution approximation, a specified temperature, and a single ion. Real cellular membranes can be permeable to several ions at once; the membrane potential then depends on their relative permeabilities and concentrations, not one Nernst value alone.
+The general ideal expression is `E = (RT/zF) ln([ion]outside/[ion]inside)`, with temperature T in kelvin and signed ion charge z. The base-10 coefficient for a monovalent cation is `1000 ln(10) RT/F` in millivolts: approximately 59.16 mV at 25 °C and 61.54 mV at 37 °C. Here the latter is rounded to 61.5 mV. R=N_A k and F=N_A e can be derived from the SI defining constants; changing temperature changes the coefficient. This expression uses the ideal-solution approximation, a specified temperature, and a single ion. Real cellular membranes can be permeable to several ions at once; the membrane potential then depends on their relative permeabilities and concentrations, not one Nernst value alone.
 
 ### Worked calculation: potassium at equilibrium
 
-Assume a cell has 5 mM potassium outside and 140 mM inside at 25 °C. The idealized potassium equilibrium potential is `61.5 × log10(5/140) ≈ -89 mV`. At a membrane voltage of about −89 mV (inside relative to outside), the electrical and chemical contributions for potassium balance. Concentrations remain unequal at this electrochemical equilibrium. A potassium channel does not consume ATP per ion and does not force the two concentrations to become equal.
+Assume a cell has 5 mM potassium outside and 140 mM inside at 37 °C. The idealized potassium equilibrium potential is `61.5 × log10(5/140) ≈ -89 mV`. At a membrane voltage of about −89 mV (inside relative to outside), the electrical and chemical contributions for potassium balance. Concentrations remain unequal at this electrochemical equilibrium. A potassium channel does not consume ATP per ion and does not force the two concentrations to become equal.
 
 This calculation does not predict the whole-cell voltage, because other permeant ions and transport processes contribute. It also does not tell how fast the membrane approaches equilibrium; channel number, open probability, membrane area, and transport kinetics affect flux.
 
@@ -38,4 +38,4 @@ At electrochemical equilibrium, net flux of that ion is zero even though individ
 
 ## Provenance
 
-Original instructional text, released under CC BY 4.0. MIT OpenCourseWare 7.01SC and 7.28x are topic-level, link-only curriculum comparators; no course text, figure, question, or exam was copied or adapted. See the package [source map](../source-map.json) and the repository [source registry](../../../sources/registry.json).
+Original instructional text, released under CC BY 4.0. MIT OpenCourseWare 7.01SC and 7.28x are topic-level, link-only curriculum comparators; no course text, figure, question, or exam was copied or adapted. [NIST SP 330 Section 2: SI defining constants](https://www.nist.gov/pml/special-publication-330/sp-330-section-2) supplies the factual k, e and N_A values for the original coefficient calculation (verified 2026-10-09); no NIST prose or asset is reproduced. The 2026-10-09 AI-assisted correction replaces an inconsistent 25 °C label on the 61.5-mV example with 37 °C and adds the temperature-dependent expression. See the package [source map](../source-map.json) and the repository [source registry](../../../sources/registry.json).

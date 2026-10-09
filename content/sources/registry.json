@@ -3161,13 +3161,15 @@
       "attribution_requirements": [
         "Identify SP 330 Section 2: SI defining constants, National Institute of Standards and Technology and the exact source URL."
       ],
-      "third_party_notes": "Primary page verified the exact h, c, N_A and k values. Only factual constants and original calculations are used; no source prose, illustration or dataset is copied.",
+      "third_party_notes": "Primary page verified the exact h, c, N_A and k values. Only factual constants and original calculations are used; no source prose, illustration or dataset is copied. Biology coefficient verification derives R=N_A k and F=N_A e from the exact SI constants. No source prose, figure or table imported.",
       "mapped_courses": [
-        "general-chemistry-1"
+        "general-chemistry-1",
+        "cell-biology"
       ],
       "mapped_modules": [
         "general-chemistry-1-module-7",
-        "general-chemistry-1-module-10"
+        "general-chemistry-1-module-10",
+        "cell-biology-module-2"
       ],
       "version": "Current displayed SI definitions; primary page retrieved 2026-10-09",
       "checksum": null,

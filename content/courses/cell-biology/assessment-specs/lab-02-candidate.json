@@ -1,0 +1,196 @@
+{
+  "candidate_id": "cell-biology-lab-02-review-v1",
+  "course_id": "cell-biology",
+  "content_version": "0.31.0",
+  "state": "inactive-review-candidate",
+  "title": "Lab-02 candidate: cumulative evidence and models",
+  "points": 12,
+  "lesson_ids": [
+    "cell-biology-lab-02"
+  ],
+  "objective_ids": [
+    "cell-biology-22-objective-1",
+    "cell-biology-22-objective-2",
+    "cell-biology-22-objective-3"
+  ],
+  "objective_evidence": [
+    {
+      "question_id": "cell-biology-lab-02-candidate:case-02",
+      "field_id": "criterion-1",
+      "objective_ids": [
+        "cell-biology-22-objective-1"
+      ],
+      "points": 4,
+      "evidence_type": "numeric"
+    },
+    {
+      "question_id": "cell-biology-lab-02-candidate:case-02",
+      "field_id": "criterion-2",
+      "objective_ids": [
+        "cell-biology-22-objective-2"
+      ],
+      "points": 4,
+      "evidence_type": "single_choice"
+    },
+    {
+      "question_id": "cell-biology-lab-02-candidate:case-02",
+      "field_id": "criterion-3",
+      "objective_ids": [
+        "cell-biology-22-objective-3"
+      ],
+      "points": 4,
+      "evidence_type": "single_choice"
+    }
+  ],
+  "objective_link_occurrences": 3,
+  "course_outcome_ids": [
+    "cell-biology-outcome-2",
+    "cell-biology-outcome-3",
+    "cell-biology-outcome-4"
+  ],
+  "instruction_path": "assessment-specs/lab-02-candidate.md",
+  "dataset_path": "assessment-specs/lab-02-candidate-observations.csv",
+  "private_source_ref": "private://assignments/lab-02-review-v1.json",
+  "private_source_sha256": "826d9097f68584c7cb61a7f6042bb40b56d570ac1f379bddc34d11d81937b7d0",
+  "prerequisite_sha256": {
+    "labs/02-signaling-dynamics-inhibitor-rescue.md": "b71e7d70d2d4b0a7f69aece49cf021d05ea8b57b26aafd965a4a53bb7fbb48c5"
+  },
+  "review": {
+    "status": "unreviewed",
+    "reviewers": []
+  },
+  "activation_gates": [
+    "independent-recalculation",
+    "grader-mutation-review",
+    "subject-matter-review",
+    "assessment-review",
+    "accessibility-review",
+    "measured-workload",
+    "operator-provisioning-and-release-policy",
+    "immutable-source-archive-and-appeal-replay",
+    "human-explanation-design-rubric-review",
+    "protected-variant-delivery-and-retake-policy"
+  ],
+  "questions": [
+    {
+      "id": "cell-biology-lab-02-candidate:case-02",
+      "type": "data_interpretation",
+      "prompt": "Virtual lab 2: original bounded data evidence. Authored form A. Four independently prepared cultures each have matched ligand exposure verified. Their background-corrected signaling trajectories at 0,10,30 min are (0,50,10), (0,60,20), (0,70,30), (0,80,40). Two technical wells are averaged within each culture. Use trapezoidal area in bare readout-minutes. An upstream perturbation suppresses output with target engagement; downstream bypass restores it. Direct feedback activity and intervention specificity are unmeasured.",
+      "options": [],
+      "unit": null,
+      "significant_figures": null,
+      "points": 12.0,
+      "selection": "single",
+      "partial_credit_policy": null,
+      "response_fields": [
+        {
+          "id": "criterion-1",
+          "type": "numeric",
+          "prompt": "Calculate the equal-culture mean trapezoidal area from 0 to 30 min on a bare readout-minute scale. Report exactly 3 significant figures.",
+          "options": [],
+          "unit": "",
+          "points": 4.0
+        },
+        {
+          "id": "criterion-2",
+          "type": "single_choice",
+          "prompt": "Which pathway-position claim is warranted?",
+          "options": [
+            "The perturbation/bypass pattern is consistent with upstream dependence in this model; it does not exclude parallel routes or off-target effects.",
+            "Target engagement proves the downstream effect has no alternative.",
+            "Bypass proves one unique native pathway."
+          ],
+          "unit": null,
+          "points": 4.0
+        },
+        {
+          "id": "criterion-3",
+          "type": "single_choice",
+          "prompt": "Which follow-up separates adaptation alternatives?",
+          "options": [
+            "Only add more wells from one culture.",
+            "Measure ligand, receptor state and feedback over time with matched independent cultures and an orthogonal intervention.",
+            "Assume every declining trace is a direct measurement of feedback."
+          ],
+          "unit": null,
+          "points": 4.0
+        }
+      ],
+      "graph_spec": null,
+      "accepted_media_types": [],
+      "max_upload_bytes": null,
+      "variant_id": null,
+      "variant_token": null,
+      "learning_objective_ids": [
+        "cell-biology-22-objective-1",
+        "cell-biology-22-objective-2",
+        "cell-biology-22-objective-3"
+      ],
+      "assessment_role": "graded"
+    }
+  ],
+  "variant_questions": {
+    "cell-biology-lab-02-candidate:case-02": {
+      "id": "cell-biology-lab-02-candidate:case-02",
+      "type": "data_interpretation",
+      "prompt": "Virtual lab 2: original bounded data evidence. Authored form B. Four independently prepared cultures each have matched ligand exposure verified. Their background-corrected signaling trajectories at 0,10,30 min are (0,60,20), (0,70,30), (0,80,40), (0,90,50). Two technical wells are averaged within each culture. Use trapezoidal area in bare readout-minutes. An upstream perturbation suppresses output with target engagement; downstream bypass restores it. Direct feedback activity and intervention specificity are unmeasured.",
+      "options": [],
+      "unit": null,
+      "significant_figures": null,
+      "points": 12.0,
+      "selection": "single",
+      "partial_credit_policy": null,
+      "response_fields": [
+        {
+          "id": "criterion-1",
+          "type": "numeric",
+          "prompt": "Calculate the equal-culture mean trapezoidal area from 0 to 30 min on a bare readout-minute scale. Report exactly 3 significant figures.",
+          "options": [],
+          "unit": "",
+          "points": 4.0
+        },
+        {
+          "id": "criterion-2",
+          "type": "single_choice",
+          "prompt": "Which pathway-position claim is warranted?",
+          "options": [
+            "The perturbation/bypass pattern is consistent with upstream dependence in this model; it does not exclude parallel routes or off-target effects.",
+            "Target engagement proves the downstream effect has no alternative.",
+            "Bypass proves one unique native pathway."
+          ],
+          "unit": null,
+          "points": 4.0
+        },
+        {
+          "id": "criterion-3",
+          "type": "single_choice",
+          "prompt": "Which follow-up separates adaptation alternatives?",
+          "options": [
+            "Only add more wells from one culture.",
+            "Measure ligand, receptor state and feedback over time with matched independent cultures and an orthogonal intervention.",
+            "Assume every declining trace is a direct measurement of feedback."
+          ],
+          "unit": null,
+          "points": 4.0
+        }
+      ],
+      "graph_spec": null,
+      "accepted_media_types": [],
+      "max_upload_bytes": null,
+      "variant_id": "form-b",
+      "variant_token": null,
+      "learning_objective_ids": [
+        "cell-biology-22-objective-1",
+        "cell-biology-22-objective-2",
+        "cell-biology-22-objective-3"
+      ],
+      "assessment_role": "graded"
+    }
+  },
+  "provenance": {
+    "kind": "original",
+    "license": "CC-BY-4.0",
+    "ai_assistance": "Codex authored cases and checks; no independent or qualified review occurred.",
+    "source_scope": "Existing original lessons, original synthetic measurements and explicitly stipulated models; no copied assessment or licensed asset."
+  }
+}

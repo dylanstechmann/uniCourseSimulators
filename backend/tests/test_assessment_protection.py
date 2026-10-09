@@ -5,10 +5,11 @@ from copy import deepcopy
 
 import pytest
 from fastapi.testclient import TestClient
+from sqlalchemy import func, select
 
 from courselab.assessment import effective_protection, validate_assessment_configuration
 from courselab.config import Settings
-from courselab.db import Base
+from courselab.db import Base, GradedSubmission
 from courselab.main import create_app
 from tests.test_assessment_api import _configure_graded_homework
 
@@ -16,6 +17,36 @@ ORIGIN = "http://localhost:8080"
 POLICY = {"mode": "graded-course", "categories": [{"id": "homework", "weight": 1}]}
 PUBLIC = [{"id": "h", "mode": "graded", "path": "question-banks/h.json", "points": 1, "category_id": "homework",
            "type": "homework", "week": 1, "objective_ids": [], "question_ids": ["q"]}]
+
+
+@pytest.mark.parametrize("private", [False, True])
+@pytest.mark.parametrize("configuration", [{}, None, {
+    "seeded": True, "generator_id": "authored-variants-v1",
+    "variants": [{"id": "alternate", "prompt": "An alternate assigned case with a different correct response.",
+                  "solution_spec": {"answer": 1}}],
+}])
+def test_graded_variants_fail_closed_before_delivery_or_submission(tmp_path, content_root, private, configuration):
+    private_root = tmp_path / "private-assessments" if private else None
+    _configure_graded_homework(content_root, private_root=private_root)
+    if private:
+        source = private_root / "courses/test-course/assignments/homework-1.json"
+    else:
+        source = content_root / "courses/test-course/question-banks/private-homework.json"
+    bank = json.loads(source.read_text())
+    bank["questions"][0]["randomization"] = configuration
+    source.write_text(json.dumps(bank))
+    application = make_app(tmp_path, content_root, "protected" if private else "open")
+    with guest_client(application) as client:
+        assert client.post("/api/v1/enrollments", json={"course_id": "test-course"}).status_code == 201
+        route = "/api/v1/assessments/test-course/homework-1"
+        served = client.get(route + "/questions")
+        assert served.status_code == 409
+        assert "variants are not supported" in served.json()["detail"]
+        submitted = client.post(route + "/submissions", json={"responses": {"choice": {"response": 0}}})
+        assert submitted.status_code == 409
+        with application.state.sessions() as db:
+            assert db.scalar(select(func.count()).select_from(GradedSubmission)) == 0
+    application.state.engine.dispose()
 
 
 def test_effective_protection_resolution():

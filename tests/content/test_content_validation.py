@@ -152,7 +152,7 @@ def test_preserved_inventory_is_honest_partial(repository):
         "cards": 1276,
         "cases": 25,
     }
-    assert sum(warning["code"] == "legacy-depth" for warning in result.warnings) == 98
+    assert sum(warning["code"] == "legacy-depth" for warning in result.warnings) == 96
     # Assessments list the course outcomes their items assess, so no package has an unmapped outcome.
     assert not [warning for warning in result.warnings if warning["code"] == "objective-coverage"]
     assert all(
@@ -284,13 +284,13 @@ def test_unknown_catalog_prerequisite_is_rejected(repository):
 
 
 @pytest.mark.parametrize("maturity", ["complete", "externally reviewed"])
-def test_four_lessons_cannot_be_promoted(repository, course, maturity):
+def test_unreviewed_course_cannot_be_promoted(repository, course, maturity):
     path, manifest = course
     manifest["maturity"] = maturity
     write(path, manifest)
     result = validate_repository(repository)
     assert not result.ok
-    assert {"complete-gate", "depth"} <= codes(result)
+    assert "complete-gate" in codes(result)
     assert any(
         "review" in error["message"].lower()
         for error in result.errors
@@ -308,6 +308,8 @@ def test_missing_or_invalid_maturity_fails_schema(repository, course):
 def test_new_short_material_cannot_claim_legacy_exception(repository, course):
     path, manifest = course
     manifest["content_origin"]["kind"] = "original"
+    reading = path.parent / manifest["modules"][0]["lessons"][0]["reading"]
+    reading.write_text("# Original but inadequate reading\n\nA short sentence about cells.\n", encoding="utf-8")
     write(path, manifest)
     assert "depth" in codes(validate_repository(repository))
 
@@ -412,7 +414,7 @@ def test_structured_rubric_item_is_counted_while_course_remains_partial(reposito
     result = validate_repository(repository)
     assert result.ok, result.errors
     manifest = read(course[0])
-    assert manifest["version"] == "0.23.0"
+    assert manifest["version"] == "0.34.0"
     assert manifest["maturity"] == "partial"
     assert result.inventory["questions"] == 2233
     question = next(
@@ -444,7 +446,7 @@ def test_cell_biology_scope_does_not_claim_unwritten_weeks(repository):
     course_root = repository / "content/courses/cell-biology"
     manifest = read(course_root / "course.json")
     weeks = manifest["duration"]["weeks"]
-    assert manifest["version"] == "0.23.0"
+    assert manifest["version"] == "0.34.0"
     assert manifest["maturity"] == "partial"
     assert len(weeks) == 14
     assert [week["week"] for week in weeks if week["lesson_ids"]] == [1, 2, 3, 4, 5, 6, 7, 9, 10, 11, 12, 13, 14]
@@ -521,7 +523,8 @@ def test_cell_biology_scope_does_not_claim_unwritten_weeks(repository):
     assert "Weeks 1–7" in (course_root / "syllabus.md").read_text(encoding="utf-8")
     crosswalk = (course_root / "assessment-crosswalk.md").read_text(encoding="utf-8")
     assert "not a midterm" in crosswalk
-    assert "No exam questions" in crosswalk
+    assert "Inactive exam drafts" in crosswalk
+    assert "accepted human components" in crosswalk
 
     for lesson_id in (
         "cell-biology-1",
@@ -1085,7 +1088,7 @@ def test_week9_schedule_objectives_and_practice_are_mapped(repository):
     questions = {item["id"]: item for item in bank["questions"]}
 
     assert manifest["maturity"] == "partial"
-    assert manifest["version"] == "0.23.0"
+    assert manifest["version"] == "0.34.0"
     assert week9["lesson_ids"] == ["cell-biology-17", "cell-biology-18", "cell-biology-hw5"]
     assert week9["assessment_ids"] == [assessment["id"], "cell-biology-hw5-practice"]
     assert sum(questions[item]["points"] for item in assessment["question_ids"]) == assessment["points"] == 14

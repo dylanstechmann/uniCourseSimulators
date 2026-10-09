@@ -1,0 +1,196 @@
+{
+  "candidate_id": "cell-biology-lab-03-review-v1",
+  "course_id": "cell-biology",
+  "content_version": "0.32.0",
+  "state": "inactive-review-candidate",
+  "title": "Lab-03 candidate: cumulative evidence and models",
+  "points": 12,
+  "lesson_ids": [
+    "cell-biology-lab-03"
+  ],
+  "objective_ids": [
+    "cell-biology-27-objective-1",
+    "cell-biology-27-objective-2",
+    "cell-biology-27-objective-3"
+  ],
+  "objective_evidence": [
+    {
+      "question_id": "cell-biology-lab-03-candidate:case-03",
+      "field_id": "criterion-1",
+      "objective_ids": [
+        "cell-biology-27-objective-1"
+      ],
+      "points": 4,
+      "evidence_type": "single_choice"
+    },
+    {
+      "question_id": "cell-biology-lab-03-candidate:case-03",
+      "field_id": "criterion-2",
+      "objective_ids": [
+        "cell-biology-27-objective-2"
+      ],
+      "points": 4,
+      "evidence_type": "numeric"
+    },
+    {
+      "question_id": "cell-biology-lab-03-candidate:case-03",
+      "field_id": "criterion-3",
+      "objective_ids": [
+        "cell-biology-27-objective-3"
+      ],
+      "points": 4,
+      "evidence_type": "single_choice"
+    }
+  ],
+  "objective_link_occurrences": 3,
+  "course_outcome_ids": [
+    "cell-biology-outcome-1",
+    "cell-biology-outcome-3",
+    "cell-biology-outcome-4"
+  ],
+  "instruction_path": "assessment-specs/lab-03-candidate.md",
+  "dataset_path": "assessment-specs/lab-03-candidate-observations.csv",
+  "private_source_ref": "private://assignments/lab-03-review-v1.json",
+  "private_source_sha256": "fdd318901aba54988a77500cdc4c3451bc17de95c5e3c875551e101f15d55793",
+  "prerequisite_sha256": {
+    "labs/03-lineage-time-course-and-state-inference.md": "e8fff0afc1939f7851770808e300b146b97d67297b0835322fe400de406c5c1b"
+  },
+  "review": {
+    "status": "unreviewed",
+    "reviewers": []
+  },
+  "activation_gates": [
+    "independent-recalculation",
+    "grader-mutation-review",
+    "subject-matter-review",
+    "assessment-review",
+    "accessibility-review",
+    "measured-workload",
+    "operator-provisioning-and-release-policy",
+    "immutable-source-archive-and-appeal-replay",
+    "human-explanation-design-rubric-review",
+    "protected-variant-delivery-and-retake-policy"
+  ],
+  "questions": [
+    {
+      "id": "cell-biology-lab-03-candidate:case-03",
+      "type": "data_interpretation",
+      "prompt": "Virtual lab 3: original bounded data evidence. Authored form A. Four independently prepared cultures have [1000, 2000, 3000, 4000] viable cells and [500, 1200, 2100, 3200] lineage-marker-positive viable cells, paired by culture order. A lineage-restricted clone maintains its phenotype across passages; no broad potency assay is supplied. A defined mature-function assay is below its positive control; matrix ligand accessibility and exposure duration differ between conditions. Marker counts are marginal, not joint states. Use equal-culture summaries.",
+      "options": [],
+      "unit": null,
+      "significant_figures": null,
+      "points": 12.0,
+      "selection": "single",
+      "partial_credit_policy": null,
+      "response_fields": [
+        {
+          "id": "criterion-1",
+          "type": "single_choice",
+          "prompt": "Which potency/self-renewal conclusion is bounded?",
+          "options": [
+            "Serial maintenance supports self-renewal in the tested context; restricted lineage production does not establish totipotency.",
+            "Self-renewal and differentiation are the same assay.",
+            "Marker positivity alone proves totipotency."
+          ],
+          "unit": null,
+          "points": 4.0
+        },
+        {
+          "id": "criterion-2",
+          "type": "numeric",
+          "prompt": "Calculate equal-culture mean marker-positive percent. Report exactly 3 significant figures.",
+          "options": [],
+          "unit": "%",
+          "points": 4.0
+        },
+        {
+          "id": "criterion-3",
+          "type": "single_choice",
+          "prompt": "Which environmental/function follow-up is justified?",
+          "options": [
+            "Use the marker as proof of mature function.",
+            "Match signals, neighbors, accessible matrix ligand and duration; assay marker and defined function separately with controls.",
+            "Ignore timing and ligand presentation because the lineage name is fixed."
+          ],
+          "unit": null,
+          "points": 4.0
+        }
+      ],
+      "graph_spec": null,
+      "accepted_media_types": [],
+      "max_upload_bytes": null,
+      "variant_id": null,
+      "variant_token": null,
+      "learning_objective_ids": [
+        "cell-biology-27-objective-1",
+        "cell-biology-27-objective-2",
+        "cell-biology-27-objective-3"
+      ],
+      "assessment_role": "graded"
+    }
+  ],
+  "variant_questions": {
+    "cell-biology-lab-03-candidate:case-03": {
+      "id": "cell-biology-lab-03-candidate:case-03",
+      "type": "data_interpretation",
+      "prompt": "Virtual lab 3: original bounded data evidence. Authored form B. Four independently prepared cultures have [1000, 2000, 3000, 4000] viable cells and [600, 1400, 2400, 3600] lineage-marker-positive viable cells, paired by culture order. A lineage-restricted clone maintains its phenotype across passages; no broad potency assay is supplied. A defined mature-function assay is below its positive control; matrix ligand accessibility and exposure duration differ between conditions. Marker counts are marginal, not joint states. Use equal-culture summaries.",
+      "options": [],
+      "unit": null,
+      "significant_figures": null,
+      "points": 12.0,
+      "selection": "single",
+      "partial_credit_policy": null,
+      "response_fields": [
+        {
+          "id": "criterion-1",
+          "type": "single_choice",
+          "prompt": "Which potency/self-renewal conclusion is bounded?",
+          "options": [
+            "Serial maintenance supports self-renewal in the tested context; restricted lineage production does not establish totipotency.",
+            "Self-renewal and differentiation are the same assay.",
+            "Marker positivity alone proves totipotency."
+          ],
+          "unit": null,
+          "points": 4.0
+        },
+        {
+          "id": "criterion-2",
+          "type": "numeric",
+          "prompt": "Calculate equal-culture mean marker-positive percent. Report exactly 3 significant figures.",
+          "options": [],
+          "unit": "%",
+          "points": 4.0
+        },
+        {
+          "id": "criterion-3",
+          "type": "single_choice",
+          "prompt": "Which environmental/function follow-up is justified?",
+          "options": [
+            "Use the marker as proof of mature function.",
+            "Match signals, neighbors, accessible matrix ligand and duration; assay marker and defined function separately with controls.",
+            "Ignore timing and ligand presentation because the lineage name is fixed."
+          ],
+          "unit": null,
+          "points": 4.0
+        }
+      ],
+      "graph_spec": null,
+      "accepted_media_types": [],
+      "max_upload_bytes": null,
+      "variant_id": "form-b",
+      "variant_token": null,
+      "learning_objective_ids": [
+        "cell-biology-27-objective-1",
+        "cell-biology-27-objective-2",
+        "cell-biology-27-objective-3"
+      ],
+      "assessment_role": "graded"
+    }
+  },
+  "provenance": {
+    "kind": "original",
+    "license": "CC-BY-4.0",
+    "ai_assistance": "Codex authored cases and checks; no independent or qualified review occurred.",
+    "source_scope": "Existing original lessons, original synthetic measurements and explicitly stipulated models; no copied assessment or licensed asset."
+  }
+}

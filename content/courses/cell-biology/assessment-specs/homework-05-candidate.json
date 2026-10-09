@@ -1,0 +1,309 @@
+{
+  "candidate_id": "cell-biology-h5-review-v1",
+  "course_id": "cell-biology",
+  "content_version": "0.24.0",
+  "state": "inactive-review-candidate",
+  "title": "Homework 5 candidate: RNA composition and protein-cohort loss",
+  "instruction_path": "assessment-specs/homework-05-candidate.md",
+  "dataset_path": "assessment-specs/homework-05-candidate-baseline.csv",
+  "additional_dataset_paths": [
+    "assessment-specs/homework-05-candidate-chase.csv"
+  ],
+  "private_source_ref": "private://assignments/homework-05-review-v1.json",
+  "private_source_sha256": "00f77584b850d94ca829876e676068cd383bb2df0098eff776ce7d49834d2cca",
+  "points": 25,
+  "lesson_ids": [
+    "cell-biology-17",
+    "cell-biology-18"
+  ],
+  "objective_ids": [
+    "cell-biology-17-objective-1",
+    "cell-biology-17-objective-2",
+    "cell-biology-17-objective-3",
+    "cell-biology-18-objective-1",
+    "cell-biology-18-objective-2",
+    "cell-biology-18-objective-3"
+  ],
+  "course_outcome_ids": [
+    "cell-biology-outcome-2",
+    "cell-biology-outcome-3",
+    "cell-biology-outcome-4"
+  ],
+  "prerequisite_sha256": {
+    "modules/08a-rna-processing-and-isoform-evidence.md": "dfb570ca69d8b0ad03b8fcee8b533b81cb12279b03ea0e47b38772899084bd0c",
+    "modules/08b-translation-and-protein-turnover.md": "7baf2592741ec0a850b9c7944f3c7c6e698e3362b8856e0780857ba6c46cdc92"
+  },
+  "review": {
+    "status": "unreviewed",
+    "reviewers": []
+  },
+  "activation_gates": [
+    "independent-recalculation",
+    "grader-mutation-review",
+    "subject-matter-review",
+    "assessment-review",
+    "accessibility-review",
+    "measured-workload",
+    "operator-provisioning-and-release-policy"
+  ],
+  "questions": [
+    {
+      "id": "cell-biology-h5-candidate:skipped-fraction",
+      "type": "numeric",
+      "prompt": "For control c01, subtract included and skipped assay backgrounds and use the two measured mutually exclusive mature forms as the denominator. Report skipped-isoform percent with exactly three significant figures and a percent unit.",
+      "options": [],
+      "unit": "%",
+      "significant_figures": 3,
+      "points": 2.0,
+      "selection": "single",
+      "partial_credit_policy": null,
+      "response_fields": [],
+      "graph_spec": null,
+      "accepted_media_types": [],
+      "max_upload_bytes": null,
+      "variant_id": null,
+      "variant_token": null,
+      "learning_objective_ids": [
+        "cell-biology-17-objective-2"
+      ],
+      "assessment_role": "graded"
+    },
+    {
+      "id": "cell-biology-h5-candidate:shared-per-cell",
+      "type": "numeric",
+      "prompt": "For control c02, subtract the shared-assay background, divide by recovered/input RNA-spike fraction, then divide by viable_cells_thousands. Report exactly three significant figures as a bare shared-region copy-equivalent value per 1,000 viable cells.",
+      "options": [],
+      "unit": "",
+      "significant_figures": 3,
+      "points": 2.0,
+      "selection": "single",
+      "partial_credit_policy": null,
+      "response_fields": [],
+      "graph_spec": null,
+      "accepted_media_types": [],
+      "max_upload_bytes": null,
+      "variant_id": null,
+      "variant_token": null,
+      "learning_objective_ids": [
+        "cell-biology-17-objective-2",
+        "cell-biology-17-objective-3"
+      ],
+      "assessment_role": "graded"
+    },
+    {
+      "id": "cell-biology-h5-candidate:nascent-ratio",
+      "type": "numeric",
+      "prompt": "Compute each culture's background-corrected nascent signal divided by nascent_reference_au. Report depleted d01 divided by control c01 as a bare dimensionless ratio with exactly three significant figures. This compares two specified cultures, not a group effect estimate or an initiation rate.",
+      "options": [],
+      "unit": "",
+      "significant_figures": 3,
+      "points": 2.0,
+      "selection": "single",
+      "partial_credit_policy": null,
+      "response_fields": [],
+      "graph_spec": null,
+      "accepted_media_types": [],
+      "max_upload_bytes": null,
+      "variant_id": null,
+      "variant_token": null,
+      "learning_objective_ids": [
+        "cell-biology-18-objective-2"
+      ],
+      "assessment_role": "graded"
+    },
+    {
+      "id": "cell-biology-h5-candidate:half-life",
+      "type": "numeric",
+      "prompt": "For control c01, correct the labeled-target chase background and divide by its matched recovery reference at each time. Normalize its 4-hour corrected ratio to its time-zero ratio. Under the stated first-order labeled-cohort loss model, report half-life in hours with exactly three significant figures.",
+      "options": [],
+      "unit": "h",
+      "significant_figures": 3,
+      "points": 2.0,
+      "selection": "single",
+      "partial_credit_policy": null,
+      "response_fields": [],
+      "graph_spec": null,
+      "accepted_media_types": [],
+      "max_upload_bytes": null,
+      "variant_id": null,
+      "variant_token": null,
+      "learning_objective_ids": [
+        "cell-biology-18-objective-3"
+      ],
+      "assessment_role": "graded"
+    },
+    {
+      "id": "cell-biology-h5-candidate:summary",
+      "type": "file_upload",
+      "prompt": "Upload exact columns condition,cultures,mean_skipped_pct,mean_half_life_h with rows control,depleted,restored. Calculate RNA fraction per culture before averaging. Calculate each culture's half-life from its normalized 0-to-4-hour chase before averaging half-lives. Repeated times/channels do not add independent cultures. Counts are exact; means have tolerance 0.005 in the declared percent or hour column scale.",
+      "options": [],
+      "unit": null,
+      "significant_figures": null,
+      "points": 9.0,
+      "selection": "single",
+      "partial_credit_policy": null,
+      "response_fields": [],
+      "graph_spec": null,
+      "accepted_media_types": [
+        "text/csv"
+      ],
+      "max_upload_bytes": 32768,
+      "variant_id": null,
+      "variant_token": null,
+      "learning_objective_ids": [
+        "cell-biology-17-objective-2",
+        "cell-biology-18-objective-3"
+      ],
+      "assessment_role": "graded"
+    },
+    {
+      "id": "cell-biology-h5-candidate:steady-state-model",
+      "type": "data_interpretation",
+      "prompt": "Use a separate hypothetical constant-rate model P_ss=s/k, not a calibration of the pulse-label assay. New synthesis is 0.50 times its original rate and the loss constant is 1.25 times its original value.",
+      "options": [],
+      "unit": null,
+      "significant_figures": null,
+      "points": 2.0,
+      "selection": "single",
+      "partial_credit_policy": null,
+      "response_fields": [
+        {
+          "id": "new_abundance_pct",
+          "type": "numeric",
+          "prompt": "Report the new steady-state abundance as a percent of the original. Report exactly 3 significant figures.",
+          "options": [],
+          "unit": "%",
+          "points": 1.0
+        },
+        {
+          "id": "inference",
+          "type": "single_choice",
+          "prompt": "What is needed before applying this model prediction to observed protein abundance?",
+          "options": [
+            "Unchanged total mRNA alone proves the protein pool has reached its new steady state.",
+            "Applicable constant synthesis/loss rates, a compatible measured protein pool, and evidence the new steady state was reached; the pulse-label proxy alone does not supply all those facts.",
+            "The measured skipped-isoform fraction is the protein degradation constant."
+          ],
+          "unit": null,
+          "points": 1.0
+        }
+      ],
+      "graph_spec": null,
+      "accepted_media_types": [],
+      "max_upload_bytes": null,
+      "variant_id": null,
+      "variant_token": null,
+      "learning_objective_ids": [
+        "cell-biology-18-objective-2",
+        "cell-biology-18-objective-3"
+      ],
+      "assessment_role": "graded"
+    },
+    {
+      "id": "cell-biology-h5-candidate:control-logic",
+      "type": "structured",
+      "prompt": "Select one response for each independent RNA or turnover criterion.",
+      "options": [],
+      "unit": null,
+      "significant_figures": null,
+      "points": 4.0,
+      "selection": "single",
+      "partial_credit_policy": null,
+      "response_fields": [
+        {
+          "id": "rna",
+          "type": "single_choice",
+          "prompt": "What does unchanged shared-region signal with altered junction proportions support?",
+          "options": [
+            "Proof that transcription and RNA decay are both unchanged.",
+            "A change in the measured isoform composition; production, processing and stability need separate measurements.",
+            "Proof that every transcript in the cell uses the skipped junction."
+          ],
+          "unit": null,
+          "points": 1.0
+        },
+        {
+          "id": "rt",
+          "type": "single_choice",
+          "prompt": "Which matched control addresses genomic-DNA contamination in an RT-dependent RNA assay?",
+          "options": [
+            "A no-reverse-transcriptase control with suitable junction/amplicon checks.",
+            "Extra wells from the same reverse-transcription sample only.",
+            "An unchanged protein signal without an RNA control."
+          ],
+          "unit": null,
+          "points": 1.0
+        },
+        {
+          "id": "chase",
+          "type": "single_choice",
+          "prompt": "What is required to interpret normalized chase loss as first-order protein turnover?",
+          "options": [
+            "Any drop in raw signal proves proteasomal degradation.",
+            "A stable total RNA signal replaces recovery and label-recycling controls.",
+            "Applicable reference/recovery, negligible new labeled input or recycling, stable sampled population and a suitable first-order regime."
+          ],
+          "unit": null,
+          "points": 1.0
+        },
+        {
+          "id": "rescue",
+          "type": "single_choice",
+          "prompt": "What does movement toward control after factor restoration establish?",
+          "options": [
+            "Direct binding of that factor to every target RNA and a specific initiation step.",
+            "Evidence consistent with factor involvement here, while indirect pathways, state shifts and assay biases remain alternatives.",
+            "A measured change in therapeutic function."
+          ],
+          "unit": null,
+          "points": 1.0
+        }
+      ],
+      "graph_spec": null,
+      "accepted_media_types": [],
+      "max_upload_bytes": null,
+      "variant_id": null,
+      "variant_token": null,
+      "learning_objective_ids": [
+        "cell-biology-17-objective-3",
+        "cell-biology-18-objective-2",
+        "cell-biology-18-objective-3"
+      ],
+      "assessment_role": "graded"
+    },
+    {
+      "id": "cell-biology-h5-candidate:processing-and-translation",
+      "type": "multiple_select",
+      "prompt": "Select all supported statements. Scoring is two points times (correct selections minus incorrect selections) divided by the number of correct options, clamped from zero to two.",
+      "options": [
+        "The ribosome reads mRNA 5′ to 3′ and the polypeptide grows from its amino terminus toward its carboxyl terminus.",
+        "A common 5′ cap guarantees completion, correct splicing and a fixed translation rate.",
+        "Every eukaryotic protein-coding transcript necessarily has the same poly(A) tail and processing route.",
+        "Changing splice junctions or 3′ processing can alter RNA fate without proving a new functional protein was produced.",
+        "A fall in labeled-cohort signal uniquely identifies the proteasome as the removal route."
+      ],
+      "unit": null,
+      "significant_figures": null,
+      "points": 2.0,
+      "selection": "multiple",
+      "partial_credit_policy": "correct-minus-incorrect-clamped-v1",
+      "response_fields": [],
+      "graph_spec": null,
+      "accepted_media_types": [],
+      "max_upload_bytes": null,
+      "variant_id": null,
+      "variant_token": null,
+      "learning_objective_ids": [
+        "cell-biology-17-objective-1",
+        "cell-biology-18-objective-1"
+      ],
+      "assessment_role": "graded"
+    }
+  ],
+  "provenance": {
+    "kind": "original",
+    "license": "CC-BY-4.0",
+    "ai_assistance": "Codex authored the candidate and checks. No independent or qualified human review occurred.",
+    "source_scope": "Existing original lessons and explicitly stipulated synthetic assumptions; no outside source, identifier, prose, problem, figure or dataset imported."
+  }
+}

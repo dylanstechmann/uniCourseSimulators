@@ -29,3 +29,10 @@ The enabled `data_interpretation` practice type supports a limited composite of 
 Audited preserved seeds have an explicit brevity exception while partial. Newly authored placeholders, duplicated readings/questions and trivial teaching are rejected. Do not add filler to pass counts.
 
 Complete promotion requires all quality gates, independent numerical checks, accessibility, current source links and actual human review. External review requires a named qualified person and specified version. Workload estimates must not imply credit equivalence.
+
+
+## Audit inactive assessment drafts
+
+Use `python tools/assessment_candidates.py --write docs/ASSESSMENT_CANDIDATE_REPORT.md` to record public candidate inventories and artifact hashes, and `--check` to detect drift. `--json` emits the same public evidence without opening private answer stores. The audit rejects exposed grader fields, invalid point/objective/version mappings, prerequisite drift and enrolled inactive IDs; it leaves all activation gates unresolved. Candidate labels and counts do not certify review, instructional quality or readiness.
+
+Authored `randomization` is supported for formative practice. Graded assignment routes currently cannot assign/replay those forms and reject any selected question carrying that field, including null/empty configurations. Content validation reports `graded-variant-unsupported`. An inactive two-form review packet may be checked standalone, while a disposable fixed-form fixture resolves one form and removes randomization; that fixture is not permission to activate the packet or choose a retake policy. Numeric/categorical mixed cases use `data_interpretation`; `structured` is for categorical fields only. Written explanations/design and project portfolios require human grading, which a deterministic score cannot replace.

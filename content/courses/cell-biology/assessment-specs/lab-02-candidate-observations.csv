@@ -1,0 +1,17 @@
+case_id,form,metric,value,unit
+lab-02-02,A,culture_1_t10,50,readout units
+lab-02-02,A,culture_1_t30,10,readout units
+lab-02-02,A,culture_2_t10,60,readout units
+lab-02-02,A,culture_2_t30,20,readout units
+lab-02-02,A,culture_3_t10,70,readout units
+lab-02-02,A,culture_3_t30,30,readout units
+lab-02-02,A,culture_4_t10,80,readout units
+lab-02-02,A,culture_4_t30,40,readout units
+lab-02-02,B,culture_1_t10,60,readout units
+lab-02-02,B,culture_1_t30,20,readout units
+lab-02-02,B,culture_2_t10,70,readout units
+lab-02-02,B,culture_2_t30,30,readout units
+lab-02-02,B,culture_3_t10,80,readout units
+lab-02-02,B,culture_3_t30,40,readout units
+lab-02-02,B,culture_4_t10,90,readout units
+lab-02-02,B,culture_4_t30,50,readout units

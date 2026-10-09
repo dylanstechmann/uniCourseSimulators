@@ -7,7 +7,7 @@
   "domain": "Life sciences",
   "level": "Year 1",
   "maturity": "partial",
-  "version": "0.23.0",
+  "version": "0.34.0",
   "license": "MIT OR CC-BY-4.0",
   "content_origin": {
     "kind": "legacy-prototype",
@@ -953,12 +953,12 @@
         {
           "id": "cell-biology-3",
           "title": "Enzymes and cellular energetics",
-          "reading": "modules/03-enzymes-and-cellular-energetics.md",
+          "reading": "modules/03c-kinetics-coupling-and-model-limits.md",
           "objectives": [
             "cell-biology-3-objective-1",
             "cell-biology-3-objective-2"
           ],
-          "worked_example": "If [S] = Km, the model predicts v = Vmax/2. Doubling enzyme concentration doubles Vmax but leaves Km unchanged in the simple model.",
+          "worked_example": "A stipulated stable preparation has active enzyme 3 nM and kcat 12 per second, so Vmax is 36 nM/s. With free substrate 4 mM and Km 2 mM, the initial-rate model predicts 24 nM/s. Explain why this Km is not automatically a binding dissociation constant and why a faster reaction does not change the equilibrium constant. State the model and assay controls.",
           "question_ids": [
             "cell-biology-3:check",
             "cell-biology-3:delta-g-from-k",
@@ -982,13 +982,13 @@
         {
           "id": "cell-biology-4",
           "title": "Gene expression and experimental logic",
-          "reading": "modules/04-gene-expression-and-experimental-logic.md",
+          "reading": "modules/04c-expression-controls-and-replicate-reasoning.md",
           "objectives": [
             "cell-biology-4-objective-1",
             "cell-biology-4-objective-2",
             "cell-biology-4-objective-3"
           ],
-          "worked_example": "In a knockdown experiment, a non-targeting RNA control tests for delivery or off-target effects; a rescue with a perturbation-resistant construct strengthens causal attribution.",
+          "worked_example": "Three independent reference cultures have reporter/input ratios 2, 3 and 2; three perturbed cultures have ratios 3, 3 and 4. Their equally weighted means are 7/3 and 10/3, with descriptive difference 1.00 ratio unit. Technical wells were averaged within cultures. Distinguish positive, negative and input controls, and explain why this endpoint difference alone cannot identify transcription as the changed step.",
           "question_ids": [
             "cell-biology-4:check",
             "cell-biology-4:experimental-logic-structured",
@@ -2766,11 +2766,66 @@
       "version": "0.23.0",
       "date": "2026-10-09",
       "summary": "Prepared an inactive Homework 4 candidate with original ChIP technical-well and matched-reporter observations, eight answer-free item DTOs and an external private key. Preserved earlier candidates and enrolled formative coursework. Same-AI checks do not satisfy independent review, workload or operator release gates; course remains partial, unreviewed and formative-only. Developed with Codex assistance."
+    },
+    {
+      "version": "0.24.0",
+      "date": "2026-10-09",
+      "summary": "Prepared an inactive Homework 5 RNA/isoform/protein-cohort review candidate with original baseline/chase observations and eight answer-free DTOs. Keys and candidate tests outside Git, earlier candidates preserved, enrolled coursework remains formative-only. Independent review, workload and release gates absent. Developed with Codex assistance."
+    },
+    {
+      "version": "0.25.0",
+      "date": "2026-10-09",
+      "summary": "Prepared an inactive Homework 6 candidate with24 nested clone/culture observations, a fictional inheritance model and eight answer-free DTOs. Key/tests outside Git, earlier candidates preserved, enrolled coursework formative-only. Independent review, workload and release absent. Developed with Codex assistance."
+    },
+    {
+      "version": "0.26.0",
+      "date": "2026-10-09",
+      "summary": "Prepared inactive Homework7 review candidate with original synthetic observations and eight answer-free items. Keys/tests outside Git, earlier candidates preserved, enrolled coursework formative-only. Independent review/workload/operator release absent. Developed with Codex assistance."
+    },
+    {
+      "version": "0.27.0",
+      "date": "2026-10-09",
+      "summary": "Prepared inactive Homework8 review candidate with original synthetic observations and eight answer-free items. Keys/tests outside Git, earlier candidates preserved, enrolled coursework formative-only. Independent review/workload/operator release absent. Developed with Codex assistance."
+    },
+    {
+      "version": "0.28.0",
+      "date": "2026-10-09",
+      "summary": "Prepared inactive midterm candidate with original two-form authored variants and field-level objective mapping. Corrected membrane Nernst coefficient temperature from registered SI constants. Keys/checks outside Git; course partial/unreviewed/formative-only, review/workload/operator gates missing. Developed with Codex assistance."
+    },
+    {
+      "version": "0.29.0",
+      "date": "2026-10-09",
+      "summary": "Prepared inactive final candidate with original two-form authored variants and field-level objective mapping. Keys/checks outside Git; course partial/unreviewed/formative-only, review/workload/operator gates missing. Developed with Codex assistance."
+    },
+    {
+      "version": "0.30.0",
+      "date": "2026-10-09",
+      "summary": "Prepared inactive lab-01 candidate with original two-form authored variants and field-level objective mapping. Keys/checks outside Git; course partial/unreviewed/formative-only, review/workload/operator gates missing. Developed with Codex assistance."
+    },
+    {
+      "version": "0.31.0",
+      "date": "2026-10-09",
+      "summary": "Prepared inactive lab-02 candidate with original two-form authored variants and field-level objective mapping. Keys/checks outside Git; course partial/unreviewed/formative-only, review/workload/operator gates missing. Developed with Codex assistance."
+    },
+    {
+      "version": "0.32.0",
+      "date": "2026-10-09",
+      "summary": "Prepared inactive lab-03 candidate with original two-form authored variants and field-level objective mapping. Keys/checks outside Git; course partial/unreviewed/formative-only, review/workload/operator gates missing. Developed with Codex assistance."
+    },
+    {
+      "version": "0.33.0",
+      "date": "2026-10-09",
+      "summary": "Prepared inactive integrative-project candidate with original two-form authored variants and field-level objective mapping. Keys/checks outside Git; course partial/unreviewed/formative-only, review/workload/operator gates missing. Developed with Codex assistance."
+    },
+    {
+      "version": "0.34.0",
+      "date": "2026-10-09",
+      "summary": "Assembled all eight inactive homework candidates, three limited lab check candidates, two cumulative exam forms and an integrative-project portfolio with separate machine checks. Extended compact kinetics/expression readings while preserving prototypes. Substantial Codex assistance; no independent review, measured workload, human project grade or activation."
     }
   ],
   "limitations": [
-    "Weeks 1-7 each have two original topic lessons; weeks 4 and 7 retain compact prototype readings. Weeks 3, 4, 6, 7, 9, 10, 12 and 13 each have an open formative homework companion (Homework 1 to 8) with a synthetic dataset; none is a graded homework set. Weeks 9-14 add twelve original lessons. Weeks 5, 11 and 14 each include one synthetic data-analysis lab with deterministic formative components; workload evidence, summative exams, a protected assessment store with real keys, and instructor review remain unfinished.",
-    "Week 8 is an ungraded cumulative practice set, not an exam or midterm. The midterm, cumulative final and integrative project exist only as specifications under assessment-specs; they contain no items, keys or scoring and have not been reviewed. Week 8 remains practice-only with no lesson pair. Workload evidence and independent review are still missing.",
+    "Weeks 1-7 each have two original topic lessons; weeks 4 and 7 have expanded reader entries with compact prototype files preserved. Weeks 3, 4, 6, 7, 9, 10, 12 and 13 each have an open formative homework companion (Homework 1 to 8) with a synthetic dataset; none is a graded homework set. Weeks 9-14 add twelve original lessons. Weeks 5, 11 and 14 each include one synthetic data-analysis lab with deterministic formative components; workload evidence, summative exams, operator-approved protected assessment deployment, and instructor review remain unfinished.",
+    "Week 8 is an ungraded cumulative practice set, not an exam or midterm. The midterm, final and project have specifications and inactive authoring drafts with external machine keys; none is accepted, activated or reviewed. Week 8 remains practice-only with no lesson pair. Workload evidence and independent review are still missing.",
     "Current formative checks across the developed lessons do not demonstrate comprehensive outcome coverage or mastery; every lesson objective now has at least one practice item, but one item is not depth.",
     "Bloom labels and structured prerequisite edges are initial authoring classifications awaiting subject-matter review.",
     "Question answers and solution feedback are intentionally public practice authoring specifications, not restricted exam keys.",
@@ -2783,9 +2838,20 @@
     "Homework 1 has a separate inactive review candidate under assessment-specs: seven items and new synthetic pulse-chase data, with keys outside Git. It is not enrolled or served as graded coursework; independent and qualified review, workload measurement and operator release gates remain outstanding.",
     "Homework 2 has a separate inactive review candidate with synthetic fluorescence standards, matched no-enzyme blanks and early/later reaction observations. Eight candidate items have keys outside Git and are not served as graded coursework. Review, measured workload and operator release gates remain outstanding; calibrated rate patterns do not prove a binding mechanism.",
     "Homework 3 has a separate inactive review candidate with matched lesion/background/DNA-reference observations, culture counts and a stipulated DNA-copying model. Its eight items have keys outside Git and are not served as graded coursework. Reference normalization, restoration and label proxies do not establish repair flux or mutation frequency; review, workload and operator release requirements remain outstanding.",
-    "Homework 4 has an inactive ChIP/reporter review candidate and a key outside Git. Stipulated efficiency/input normalization and reporter shared-factor correction do not establish direct binding or native transcriptional causation. Technical wells and assays do not add independent cultures; actual calibration, review, workload and release evidence remain missing."
+    "Homework 4 has an inactive ChIP/reporter review candidate and a key outside Git. Stipulated efficiency/input normalization and reporter shared-factor correction do not establish direct binding or native transcriptional causation. Technical wells and assays do not add independent cultures; actual calibration, review, workload and release evidence remain missing.",
+    "Homework 5 has a separate inactive eight-item RNA/protein review candidate with an external key. Stipulated recovery, mutually exclusive isoforms and first-order labeled-cohort loss do not prove unchanged transcription, a translation-initiation mechanism, a degradation route or a real steady state. Review, workload and operator release remain missing.",
+    "Homework 6 has an inactive nested-clone/inheritance review candidate with an external key. Ratio scales, recovery and clone equal-weighting are stipulated; cell evidence is not a clinical classification or penetrance estimate. Independent review, workload and operator release remain missing.",
+    "Homework7 is a separate inactive review candidate with an external key. Synthetic measurement/model assumptions do not establish unobserved mechanisms or cell fate; independent review,workload and operator release remain missing.",
+    "Homework8 is a separate inactive review candidate with an external key. Synthetic measurement/model assumptions do not establish unobserved mechanisms or cell fate; independent review,workload and operator release remain missing.",
+    "The midterm has an inactive multi-field candidate with external keys and fixed authored variants. Field coverage is not independent review or full evidence for written explanation/design; workload, accessibility, source-archive and operator gates remain missing.",
+    "The final has an inactive multi-field candidate with external keys and fixed authored variants. Field coverage is not independent review or full evidence for written explanation/design; workload, accessibility, source-archive and operator gates remain missing.",
+    "The lab-01 has an inactive multi-field candidate with external keys and fixed authored variants. Field coverage is not independent review or full evidence for written explanation/design; workload, accessibility, source-archive and operator gates remain missing.",
+    "The lab-02 has an inactive multi-field candidate with external keys and fixed authored variants. Field coverage is not independent review or full evidence for written explanation/design; workload, accessibility, source-archive and operator gates remain missing.",
+    "The lab-03 has an inactive multi-field candidate with external keys and fixed authored variants. Field coverage is not independent review or full evidence for written explanation/design; workload, accessibility, source-archive and operator gates remain missing.",
+    "The integrative-project has an inactive multi-field candidate with external keys and fixed authored variants. Field coverage is not independent review or full evidence for written explanation/design; workload, accessibility, source-archive and operator gates remain missing.",
+    "All proposed components now have authoring drafts. Candidate machine checks assess limited calculation/choice evidence; no full written-design mastery, human project grading or accepted summative forms are established. The course remains partial, unreviewed and formative-only."
   ],
   "intentionally_omitted": [
-    "Lessons and assessments for most proposed weeks, summative course assessments, and the complete semester workflow are intentionally not represented as finished content."
+    "Accepted summative assessments, human portfolio grading, measured workload and the complete enrolled semester workflow are intentionally not represented as finished content."
   ]
 }

@@ -1,0 +1,195 @@
+{
+  "candidate_id": "cell-biology-lab-01-review-v1",
+  "course_id": "cell-biology",
+  "content_version": "0.30.0",
+  "state": "inactive-review-candidate",
+  "title": "Lab-01 candidate: cumulative evidence and models",
+  "points": 12,
+  "lesson_ids": [
+    "cell-biology-lab-01"
+  ],
+  "objective_ids": [
+    "cell-biology-11-objective-2",
+    "cell-biology-12-objective-1",
+    "cell-biology-12-objective-2"
+  ],
+  "objective_evidence": [
+    {
+      "question_id": "cell-biology-lab-01-candidate:case-01",
+      "field_id": "criterion-1",
+      "objective_ids": [
+        "cell-biology-11-objective-2"
+      ],
+      "points": 4,
+      "evidence_type": "single_choice"
+    },
+    {
+      "question_id": "cell-biology-lab-01-candidate:case-01",
+      "field_id": "criterion-2",
+      "objective_ids": [
+        "cell-biology-12-objective-1"
+      ],
+      "points": 4,
+      "evidence_type": "numeric"
+    },
+    {
+      "question_id": "cell-biology-lab-01-candidate:case-01",
+      "field_id": "criterion-3",
+      "objective_ids": [
+        "cell-biology-12-objective-2"
+      ],
+      "points": 4,
+      "evidence_type": "single_choice"
+    }
+  ],
+  "objective_link_occurrences": 3,
+  "course_outcome_ids": [
+    "cell-biology-outcome-2",
+    "cell-biology-outcome-4"
+  ],
+  "instruction_path": "assessment-specs/lab-01-candidate.md",
+  "dataset_path": "assessment-specs/lab-01-candidate-observations.csv",
+  "private_source_ref": "private://assignments/lab-01-review-v1.json",
+  "private_source_sha256": "80249a20915d1296bae6a4edb65314efd6cbbbe7e267a737aec959954a1abd54",
+  "prerequisite_sha256": {
+    "labs/01-fluorescence-image-quantification.md": "4517f8930bef288ab8b3f917af68d644551e79322b6bc16a629739e700f01db7"
+  },
+  "review": {
+    "status": "unreviewed",
+    "reviewers": []
+  },
+  "activation_gates": [
+    "independent-recalculation",
+    "grader-mutation-review",
+    "subject-matter-review",
+    "assessment-review",
+    "accessibility-review",
+    "measured-workload",
+    "operator-provisioning-and-release-policy",
+    "immutable-source-archive-and-appeal-replay",
+    "human-explanation-design-rubric-review",
+    "protected-variant-delivery-and-retake-policy"
+  ],
+  "questions": [
+    {
+      "id": "cell-biology-lab-01-candidate:case-01",
+      "type": "data_interpretation",
+      "prompt": "Virtual lab 1: original bounded data evidence. Authored form A. Four independently prepared cultures have input marker activities [100, 120, 140, 160] and collected fraction activities [50, 60, 70, 80] in matched arbitrary activity units, indexed in the same culture order. Each culture has two technical image fields. Channel overlap occurs within a conventional optical spot and single-label controls show cross-talk. A contaminating compartment marker is present; missing fractions and integrity measurements are absent. Calculate per-culture recovery then its equal-culture mean.",
+      "options": [],
+      "unit": null,
+      "significant_figures": null,
+      "points": 12.0,
+      "selection": "single",
+      "partial_credit_policy": null,
+      "response_fields": [
+        {
+          "id": "criterion-1",
+          "type": "single_choice",
+          "prompt": "Which image conclusion/control is justified?",
+          "options": [
+            "Overlap proves binding, so omit controls.",
+            "Correct cross-talk with single-label controls; optical overlap alone does not prove direct molecular binding.",
+            "Count eight fields as eight independently prepared cultures."
+          ],
+          "unit": null,
+          "points": 4.0
+        },
+        {
+          "id": "criterion-2",
+          "type": "numeric",
+          "prompt": "Calculate equal-culture mean marker recovery as percent. Report exactly 3 significant figures.",
+          "options": [],
+          "unit": "%",
+          "points": 4.0
+        },
+        {
+          "id": "criterion-3",
+          "type": "single_choice",
+          "prompt": "Which next fractionation design addresses missing evidence?",
+          "options": [
+            "Use only the enriched marker to declare purity.",
+            "Measure matched input, all fractions, multi-marker contamination and integrity controls; recovery is distinct from purity.",
+            "Replace input with exposure time and ignore missing fractions."
+          ],
+          "unit": null,
+          "points": 4.0
+        }
+      ],
+      "graph_spec": null,
+      "accepted_media_types": [],
+      "max_upload_bytes": null,
+      "variant_id": null,
+      "variant_token": null,
+      "learning_objective_ids": [
+        "cell-biology-11-objective-2",
+        "cell-biology-12-objective-1",
+        "cell-biology-12-objective-2"
+      ],
+      "assessment_role": "graded"
+    }
+  ],
+  "variant_questions": {
+    "cell-biology-lab-01-candidate:case-01": {
+      "id": "cell-biology-lab-01-candidate:case-01",
+      "type": "data_interpretation",
+      "prompt": "Virtual lab 1: original bounded data evidence. Authored form B. Four independently prepared cultures have input marker activities [100, 120, 140, 160] and collected fraction activities [60, 70, 80, 90] in matched arbitrary activity units, indexed in the same culture order. Each culture has two technical image fields. Channel overlap occurs within a conventional optical spot and single-label controls show cross-talk. A contaminating compartment marker is present; missing fractions and integrity measurements are absent. Calculate per-culture recovery then its equal-culture mean.",
+      "options": [],
+      "unit": null,
+      "significant_figures": null,
+      "points": 12.0,
+      "selection": "single",
+      "partial_credit_policy": null,
+      "response_fields": [
+        {
+          "id": "criterion-1",
+          "type": "single_choice",
+          "prompt": "Which image conclusion/control is justified?",
+          "options": [
+            "Overlap proves binding, so omit controls.",
+            "Correct cross-talk with single-label controls; optical overlap alone does not prove direct molecular binding.",
+            "Count eight fields as eight independently prepared cultures."
+          ],
+          "unit": null,
+          "points": 4.0
+        },
+        {
+          "id": "criterion-2",
+          "type": "numeric",
+          "prompt": "Calculate equal-culture mean marker recovery as percent. Report exactly 3 significant figures.",
+          "options": [],
+          "unit": "%",
+          "points": 4.0
+        },
+        {
+          "id": "criterion-3",
+          "type": "single_choice",
+          "prompt": "Which next fractionation design addresses missing evidence?",
+          "options": [
+            "Use only the enriched marker to declare purity.",
+            "Measure matched input, all fractions, multi-marker contamination and integrity controls; recovery is distinct from purity.",
+            "Replace input with exposure time and ignore missing fractions."
+          ],
+          "unit": null,
+          "points": 4.0
+        }
+      ],
+      "graph_spec": null,
+      "accepted_media_types": [],
+      "max_upload_bytes": null,
+      "variant_id": "form-b",
+      "variant_token": null,
+      "learning_objective_ids": [
+        "cell-biology-11-objective-2",
+        "cell-biology-12-objective-1",
+        "cell-biology-12-objective-2"
+      ],
+      "assessment_role": "graded"
+    }
+  },
+  "provenance": {
+    "kind": "original",
+    "license": "CC-BY-4.0",
+    "ai_assistance": "Codex authored cases and checks; no independent or qualified review occurred.",
+    "source_scope": "Existing original lessons, original synthetic measurements and explicitly stipulated models; no copied assessment or licensed asset."
+  }
+}

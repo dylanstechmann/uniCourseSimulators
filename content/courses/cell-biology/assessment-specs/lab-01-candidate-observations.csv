@@ -1,0 +1,17 @@
+case_id,form,metric,value,unit
+lab-01-01,A,culture_1_input,100,activity units
+lab-01-01,A,culture_1_fraction,50,activity units
+lab-01-01,A,culture_2_input,120,activity units
+lab-01-01,A,culture_2_fraction,60,activity units
+lab-01-01,A,culture_3_input,140,activity units
+lab-01-01,A,culture_3_fraction,70,activity units
+lab-01-01,A,culture_4_input,160,activity units
+lab-01-01,A,culture_4_fraction,80,activity units
+lab-01-01,B,culture_1_input,100,activity units
+lab-01-01,B,culture_1_fraction,60,activity units
+lab-01-01,B,culture_2_input,120,activity units
+lab-01-01,B,culture_2_fraction,70,activity units
+lab-01-01,B,culture_3_input,140,activity units
+lab-01-01,B,culture_3_fraction,80,activity units
+lab-01-01,B,culture_4_input,160,activity units
+lab-01-01,B,culture_4_fraction,90,activity units

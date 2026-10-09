@@ -1300,6 +1300,7 @@ def validate_course(
         for objective in manifest["lesson_objectives"]
     }
     question_objectives = {question["id"]: question["objective_ids"] for question in questions}
+    variant_question_ids = {question["id"] for question in questions if "randomization" in question}
     for assessment in manifest["assessments"]:
         check_refs(
             assessment["objective_ids"], objective_ids, "objective", course_path, report
@@ -1310,6 +1311,11 @@ def validate_course(
             and assessment["path"].startswith(PRIVATE_ASSESSMENT_PREFIX)
         )
         if not source_unavailable:
+            if assessment["mode"] == "graded" and variant_question_ids.intersection(assessment["question_ids"]):
+                report.error(
+                    "graded-variant-unsupported", course_path,
+                    f"Assessment {assessment['id']} selects authored variants, which graded assignment delivery does not support.",
+                )
             check_refs(
                 assessment["question_ids"], question_ids, "question", course_path, report
             )

@@ -1,12 +1,12 @@
-# Cumulative final: specification (not authored)
+# Cumulative final: specification with inactive authoring draft
 
-**Course:** Foundations of Cell and Molecular Biology. **Planned week:** 14. **Status:** specification only; not authored, not graded, not reviewed.
+**Course:** Foundations of Cell and Molecular Biology. **Planned week:** 14. **Status:** specification plus inactive draft; not accepted, not graded, not reviewed.
 
 ## What this document is not
 
-- It is a **specification**, not an exam. No question, answer key, scoring script or protected answer package exists for this component, and none was created or committed.
+- This is a **specification**. A separate inactive candidate now has original questions and external machine keys; no protected answer package is committed. No accepted exam or project grade exists.
 - It does not make the course graded. The package remains `formative-only` and `partial`, with no deadlines, categories or weighted grade, and nothing here raises a maturity label or claims review.
-- The planned item types and point allocations are a first draft by an AI coding assistant. They need review by a qualified subject-matter reviewer and an assessment reviewer before any item is written. No reviewer has examined this specification.
+- The planned item types and point allocations are a first draft by an AI coding assistant. They need review by a qualified subject-matter reviewer and an assessment reviewer before any form is accepted or activated. The owner authorized inactive draft authoring before review; that authoring does not satisfy review gates. No reviewer has examined this specification.
 
 ## Scope and purpose
 
@@ -20,7 +20,7 @@ The final would sample all lessons, with extra weight on integration across laye
 
 ## Blueprint (draft)
 
-28 lessons, 70 lesson objectives. Points are proportional to objective count with a two-point floor. Objectives from lessons already sampled on the midterm are sampled again at a new level where the verb allows (apply, then evaluate).
+28 lessons, 70 objective-link occurrences covering 69 distinct objectives (one objective is reused across lessons). Points are proportional to objective count with a two-point floor. Objectives from lessons already sampled on the midterm are sampled again at a new level where the verb allows (apply, then evaluate).
 
 | Lesson | Title | Objectives | Objective numbers | Points | Planned item types (draft) |
 |---|---|---:|---|---:|---|
@@ -81,3 +81,7 @@ Same as the midterm, plus: every integration item names the layers it connects, 
 - [ ] Accessibility and fairness reviewed by named people.
 - [ ] Pilot data support the time limit; no item is trivial or unanswerable.
 - [ ] Reviewer details recorded only after the review has happened.
+
+## Current inactive implementation
+
+See the [final candidate](final-candidate.md). This draft uses bounded numeric/categorical fields and two fixed authored forms, with external keys and inspectable mappings. Planned written design, uncertainty and any broader item-type mix require human review and implementation; the candidate is not an accepted realization of every blueprint requirement. Independent and qualified reviews, workload and release policy remain absent.

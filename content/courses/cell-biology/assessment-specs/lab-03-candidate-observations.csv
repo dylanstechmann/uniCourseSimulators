@@ -1,0 +1,17 @@
+case_id,form,metric,value,unit
+lab-03-03,A,culture_1_viable,1000,cells
+lab-03-03,A,culture_1_positive,500,cells
+lab-03-03,A,culture_2_viable,2000,cells
+lab-03-03,A,culture_2_positive,1200,cells
+lab-03-03,A,culture_3_viable,3000,cells
+lab-03-03,A,culture_3_positive,2100,cells
+lab-03-03,A,culture_4_viable,4000,cells
+lab-03-03,A,culture_4_positive,3200,cells
+lab-03-03,B,culture_1_viable,1000,cells
+lab-03-03,B,culture_1_positive,600,cells
+lab-03-03,B,culture_2_viable,2000,cells
+lab-03-03,B,culture_2_positive,1400,cells
+lab-03-03,B,culture_3_viable,3000,cells
+lab-03-03,B,culture_3_positive,2400,cells
+lab-03-03,B,culture_4_viable,4000,cells
+lab-03-03,B,culture_4_positive,3600,cells

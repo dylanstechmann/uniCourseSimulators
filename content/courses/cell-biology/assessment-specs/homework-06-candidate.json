@@ -1,0 +1,307 @@
+{
+  "candidate_id": "cell-biology-h6-review-v1",
+  "course_id": "cell-biology",
+  "content_version": "0.25.0",
+  "state": "inactive-review-candidate",
+  "title": "Homework 6 candidate: nested clone evidence and genotype probabilities",
+  "instruction_path": "assessment-specs/homework-06-candidate.md",
+  "dataset_path": "assessment-specs/homework-06-candidate-clones.csv",
+  "private_source_ref": "private://assignments/homework-06-review-v1.json",
+  "private_source_sha256": "b9b9cfba37799f454588714fe9311f378cff612f718bc8dd457368e47da60b10",
+  "points": 25,
+  "lesson_ids": [
+    "cell-biology-19",
+    "cell-biology-20"
+  ],
+  "objective_ids": [
+    "cell-biology-19-objective-1",
+    "cell-biology-19-objective-2",
+    "cell-biology-19-objective-3",
+    "cell-biology-20-objective-1",
+    "cell-biology-20-objective-2",
+    "cell-biology-20-objective-3"
+  ],
+  "course_outcome_ids": [
+    "cell-biology-outcome-1",
+    "cell-biology-outcome-2",
+    "cell-biology-outcome-3",
+    "cell-biology-outcome-4"
+  ],
+  "prerequisite_sha256": {
+    "modules/09a-inheritance-penetrance-and-pedigree-evidence.md": "b3a3b53edbb7c5afb9fa2917b5604841ae7e41904389123de7cd1b32f1e60369",
+    "modules/09b-variant-mechanism-and-isogenic-evidence.md": "e69279e78afc5d06ec1ab2acd5af047cef4ccf0a5f3fcb5a5116a1903bdd6fe5"
+  },
+  "review": {
+    "status": "unreviewed",
+    "reviewers": []
+  },
+  "activation_gates": [
+    "independent-recalculation",
+    "grader-mutation-review",
+    "subject-matter-review",
+    "assessment-review",
+    "accessibility-review",
+    "measured-workload",
+    "operator-provisioning-and-release-policy"
+  ],
+  "questions": [
+    {
+      "id": "cell-biology-h6-candidate:specific-activity",
+      "type": "numeric",
+      "prompt": "For knockin culture v01a, subtract activity and protein backgrounds and divide corrected activity by corrected protein. Report exactly three significant figures as a bare number on the declared nmol min⁻¹ µg⁻¹ scale. This is not activity per cell.",
+      "options": [],
+      "unit": "",
+      "significant_figures": 3,
+      "points": 2.0,
+      "selection": "single",
+      "partial_credit_policy": null,
+      "response_fields": [],
+      "graph_spec": null,
+      "accepted_media_types": [],
+      "max_upload_bytes": null,
+      "variant_id": null,
+      "variant_token": null,
+      "learning_objective_ids": [
+        "cell-biology-20-objective-2"
+      ],
+      "assessment_role": "graded"
+    },
+    {
+      "id": "cell-biology-h6-candidate:protein-per-cell",
+      "type": "numeric",
+      "prompt": "For knockin v01a, subtract protein background, correct by recovery_fraction, and divide by viable_cells_thousands. Report exactly three significant figures as a bare µg-per-1,000-viable-cells value.",
+      "options": [],
+      "unit": "",
+      "significant_figures": 3,
+      "points": 2.0,
+      "selection": "single",
+      "partial_credit_policy": null,
+      "response_fields": [],
+      "graph_spec": null,
+      "accepted_media_types": [],
+      "max_upload_bytes": null,
+      "variant_id": null,
+      "variant_token": null,
+      "learning_objective_ids": [
+        "cell-biology-20-objective-2"
+      ],
+      "assessment_role": "graded"
+    },
+    {
+      "id": "cell-biology-h6-candidate:cell-response",
+      "type": "numeric",
+      "prompt": "For knockin v01a, report response_positive_cells/response_cells_assayed as a percent with exactly three significant figures. Counted cells are within a culture, not independent clones.",
+      "options": [],
+      "unit": "%",
+      "significant_figures": 3,
+      "points": 2.0,
+      "selection": "single",
+      "partial_credit_policy": null,
+      "response_fields": [],
+      "graph_spec": null,
+      "accepted_media_types": [],
+      "max_upload_bytes": null,
+      "variant_id": null,
+      "variant_token": null,
+      "learning_objective_ids": [
+        "cell-biology-20-objective-2"
+      ],
+      "assessment_role": "graded"
+    },
+    {
+      "id": "cell-biology-h6-candidate:phenotype-model",
+      "type": "numeric",
+      "prompt": "In a separate fictional nonclinical trait model, A/a × a/a has ordinary Mendelian transmission with no distortion. Probability of meeting a prespecified fluorescence threshold by the stated age is0.60 for A/a and0.10 for a/a. Report the unconditional threshold-positive probability per offspring as a percent with three significant figures; include both genotype branches.",
+      "options": [],
+      "unit": "%",
+      "significant_figures": 3,
+      "points": 2.0,
+      "selection": "single",
+      "partial_credit_policy": null,
+      "response_fields": [],
+      "graph_spec": null,
+      "accepted_media_types": [],
+      "max_upload_bytes": null,
+      "variant_id": null,
+      "variant_token": null,
+      "learning_objective_ids": [
+        "cell-biology-19-objective-1",
+        "cell-biology-19-objective-2"
+      ],
+      "assessment_role": "graded"
+    },
+    {
+      "id": "cell-biology-h6-candidate:summary",
+      "type": "file_upload",
+      "prompt": "Upload exact columns condition,clones,mean_protein_ug_per_1000_cells,mean_specific_activity with rows reference,knockin,corrected. Compute corrected per-cell protein and protein-specific activity per culture, average the two cultures within each clone, then give equal weight to the four clone summaries. Counts are exact; protein means have tolerance0.000005 on the µg-per-1,000-cells scale, specific-activity means tolerance0.005 on nmol min⁻¹ µg⁻¹ scale.",
+      "options": [],
+      "unit": null,
+      "significant_figures": null,
+      "points": 9.0,
+      "selection": "single",
+      "partial_credit_policy": null,
+      "response_fields": [],
+      "graph_spec": null,
+      "accepted_media_types": [
+        "text/csv"
+      ],
+      "max_upload_bytes": 32768,
+      "variant_id": null,
+      "variant_token": null,
+      "learning_objective_ids": [
+        "cell-biology-20-objective-2",
+        "cell-biology-20-objective-3"
+      ],
+      "assessment_role": "graded"
+    },
+    {
+      "id": "cell-biology-h6-candidate:amount-versus-function",
+      "type": "data_interpretation",
+      "prompt": "Use the equal-clone condition summaries of recovery-corrected protein per1,000 viable cells.",
+      "options": [],
+      "unit": null,
+      "significant_figures": null,
+      "points": 2.0,
+      "selection": "single",
+      "partial_credit_policy": null,
+      "response_fields": [
+        {
+          "id": "protein_pct",
+          "type": "numeric",
+          "prompt": "Report knockin mean protein divided by reference mean protein as a percent. Report exactly 3 significant figures.",
+          "options": [],
+          "unit": "%",
+          "points": 1.0
+        },
+        {
+          "id": "inference",
+          "type": "single_choice",
+          "prompt": "What does lower protein amount with similar protein-normalized activity support?",
+          "options": [
+            "It uniquely identifies accelerated proteasomal degradation caused directly by the variant.",
+            "It is consistent with less measured protein contributing to lower total activity; synthesis, removal, localization, clone effects and assay validity still need tests.",
+            "It proves a clinical phenotype and a penetrance estimate in people."
+          ],
+          "unit": null,
+          "points": 1.0
+        }
+      ],
+      "graph_spec": null,
+      "accepted_media_types": [],
+      "max_upload_bytes": null,
+      "variant_id": null,
+      "variant_token": null,
+      "learning_objective_ids": [
+        "cell-biology-20-objective-1",
+        "cell-biology-20-objective-2"
+      ],
+      "assessment_role": "graded"
+    },
+    {
+      "id": "cell-biology-h6-candidate:control-logic",
+      "type": "structured",
+      "prompt": "Select one response for each inheritance or clone-evidence criterion.",
+      "options": [],
+      "unit": null,
+      "significant_figures": null,
+      "points": 4.0,
+      "selection": "single",
+      "partial_credit_policy": null,
+      "response_fields": [
+        {
+          "id": "pedigree",
+          "type": "single_choice",
+          "prompt": "What is needed before interpreting a referred family's observed carrier fraction as penetrance?",
+          "options": [
+            "The allele must be molecularly dominant in every tissue.",
+            "A defined trait/age, confirmed genotypes, inclusion independent of outcome where possible, and attention to shared ancestry/environment and ascertainment.",
+            "One affected carrier defines penetrance for all future offspring."
+          ],
+          "unit": null,
+          "points": 1.0
+        },
+        {
+          "id": "clone",
+          "type": "single_choice",
+          "prompt": "Which design strengthens the edited-cell comparison?",
+          "options": [
+            "Independent derivations, mock edits, sequence/copy-number checks, matched culture state and reciprocal introduction/correction.",
+            "More assay wells from one selected clone only.",
+            "Assume every corrected clone is identical because its intended base was changed."
+          ],
+          "unit": null,
+          "points": 1.0
+        },
+        {
+          "id": "mechanism",
+          "type": "single_choice",
+          "prompt": "Which measurements help separate synthesis from removal?",
+          "options": [
+            "An allele annotation alone gives a degradation constant.",
+            "Protein amount alone uniquely identifies catalytic loss.",
+            "Matched nascent-protein and multi-time chase with assay/recovery/state controls and appropriate references."
+          ],
+          "unit": null,
+          "points": 1.0
+        },
+        {
+          "id": "association",
+          "type": "single_choice",
+          "prompt": "What can explain a genotype–trait association without direct action by the tested base?",
+          "options": [
+            "All measured associations are necessarily causal.",
+            "Linkage, ancestry/recruitment, environment and measurement selection can alter the association; functional and replicated designs address different alternatives.",
+            "Dominance means the allele is common."
+          ],
+          "unit": null,
+          "points": 1.0
+        }
+      ],
+      "graph_spec": null,
+      "accepted_media_types": [],
+      "max_upload_bytes": null,
+      "variant_id": null,
+      "variant_token": null,
+      "learning_objective_ids": [
+        "cell-biology-19-objective-2",
+        "cell-biology-19-objective-3",
+        "cell-biology-20-objective-3"
+      ],
+      "assessment_role": "graded"
+    },
+    {
+      "id": "cell-biology-h6-candidate:genotype-boundaries",
+      "type": "multiple_select",
+      "prompt": "Select all supported statements. Scoring is two points times (correct selections minus incorrect selections) divided by the number of correct options, clamped from zero to two.",
+      "options": [
+        "Dominance compares heterozygote phenotype with homozygotes for a stated trait; it does not specify allele frequency or a universal biochemical mechanism.",
+        "Four offspring of A/a × A/a must contain exactly one A/A, two A/a and one a/a.",
+        "A synonymous annotation proves no possible RNA or context-dependent effect.",
+        "Penetrance describes a conditional probability under defined observation conditions; expressivity describes how the phenotype appears among those expressing it.",
+        "A cell-assay change establishes pathogenicity without organism-level evidence."
+      ],
+      "unit": null,
+      "significant_figures": null,
+      "points": 2.0,
+      "selection": "multiple",
+      "partial_credit_policy": "correct-minus-incorrect-clamped-v1",
+      "response_fields": [],
+      "graph_spec": null,
+      "accepted_media_types": [],
+      "max_upload_bytes": null,
+      "variant_id": null,
+      "variant_token": null,
+      "learning_objective_ids": [
+        "cell-biology-19-objective-2",
+        "cell-biology-20-objective-1"
+      ],
+      "assessment_role": "graded"
+    }
+  ],
+  "provenance": {
+    "kind": "original",
+    "license": "CC-BY-4.0",
+    "ai_assistance": "Codex authored the candidate and checks; no independent or qualified human review occurred.",
+    "source_scope": "Existing original lessons and explicitly stipulated synthetic assumptions; no outside source or identifier imported."
+  }
+}

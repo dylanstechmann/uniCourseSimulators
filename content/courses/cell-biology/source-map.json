@@ -48,17 +48,20 @@
       "reading": "modules/02-membranes-transport-and-compartmentalization.md",
       "source_ids": [
         "biology",
-        "molecular"
+        "molecular",
+        "nist-si-defining-constants"
       ],
       "relationship": "curriculum-comparator",
       "original_content": true,
       "license": "CC-BY-4.0",
-      "modifications": []
+      "modifications": [
+        "2026-10-09 Codex correction:61.5mV monovalent coefficient belongs near37°C, not25°C. Added general expression and original calculation from registered NIST SI constants."
+      ]
     },
     {
       "module_id": "cell-biology-module-3",
       "lesson_id": "cell-biology-3",
-      "reading": "modules/03-enzymes-and-cellular-energetics.md",
+      "reading": "modules/03c-kinetics-coupling-and-model-limits.md",
       "source_ids": [
         "biology",
         "molecular"
@@ -66,12 +69,14 @@
       "relationship": "curriculum-comparator",
       "original_content": true,
       "license": "MIT OR CC-BY-4.0",
-      "modifications": []
+      "modifications": [
+        "2026-10-09 original Codex-assisted extension; preserved compact prototype modules/03-enzymes-and-cellular-energetics.md. No outside prose, asset or assessment copied; unreviewed."
+      ]
     },
     {
       "module_id": "cell-biology-module-4",
       "lesson_id": "cell-biology-4",
-      "reading": "modules/04-gene-expression-and-experimental-logic.md",
+      "reading": "modules/04c-expression-controls-and-replicate-reasoning.md",
       "source_ids": [
         "biology",
         "molecular"
@@ -79,7 +84,9 @@
       "relationship": "curriculum-comparator",
       "original_content": true,
       "license": "MIT OR CC-BY-4.0",
-      "modifications": []
+      "modifications": [
+        "2026-10-09 original Codex-assisted extension; preserved compact prototype modules/04-gene-expression-and-experimental-logic.md. No outside prose, asset or assessment copied; unreviewed."
+      ]
     },
     {
       "module_id": "cell-biology-module-7",

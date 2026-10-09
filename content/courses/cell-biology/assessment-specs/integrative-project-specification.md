@@ -1,18 +1,18 @@
 # Integrative project: specification and rubric (not authored)
 
-**Course:** Foundations of Cell and Molecular Biology. **Planned week:** 14, with milestones across weeks 10 to 14. **Status:** specification only; not authored, not graded, not reviewed.
+**Course:** Foundations of Cell and Molecular Biology. **Planned week:** 14, with milestones across weeks 10 to 14. **Status:** specification plus inactive draft; not accepted, not graded, not reviewed.
 
 ## What this document is not
 
-- It is a **specification**, not an exam. No question, answer key, scoring script or protected answer package exists for this component, and none was created or committed.
+- This is a **specification**. A separate inactive candidate now has original questions and external machine keys; no protected answer package is committed. No accepted exam or project grade exists.
 - It does not make the course graded. The package remains `formative-only` and `partial`, with no deadlines, categories or weighted grade, and nothing here raises a maturity label or claims review.
-- The planned item types and point allocations are a first draft by an AI coding assistant. They need review by a qualified subject-matter reviewer and an assessment reviewer before any item is written. No reviewer has examined this specification.
+- The planned item types and point allocations are a first draft by an AI coding assistant. They need review by a qualified subject-matter reviewer and an assessment reviewer before any form is accepted or activated. The owner authorized inactive draft authoring before review; that authoring does not satisfy review gates. No reviewer has examined this specification.
 
 ## Purpose
 
 Learners would analyze a supplied synthetic multi-layer dataset, state a bounded conclusion, name alternative explanations and design a follow-up. The project would exercise outcomes O2 to O4 together. It is not an independent research project, uses no real samples and makes no claim about any therapy.
 
-## Proposed dataset requirements (to be built)
+## Dataset requirements and current draft
 
 A single original synthetic dataset with at least three layers (for example a molecular readout, a cellular readout and a cell-state or mechanics readout), at least two perturbations with a rescue or control, four independent units per condition, a documented data dictionary, and deliberately included confounds (for example unequal cell number or a viability trend) that the learner is expected to notice. The dataset and its generator are published; the answer specification is not.
 
@@ -66,3 +66,9 @@ Four levels per criterion would map to 3, 2, 1 and 0 points; weights are not set
 - [ ] Accessibility and fairness reviewed by named people.
 - [ ] Policy on collaboration and AI-tool use set by the course owner.
 - [ ] Reviewer details recorded only after the review has happened.
+
+## Current inactive implementation
+
+See the [integrative-project candidate](integrative-project-candidate.md). This draft uses bounded numeric/categorical fields and two fixed authored forms, with external keys and inspectable mappings. Planned written design, uncertainty and any broader item-type mix require human review and implementation; the candidate is not an accepted realization of every blueprint requirement. Independent and qualified reviews, workload and release policy remain absent.
+
+The [portfolio](integrative-project-portfolio.md) now supplies milestones, a published reproducible dataset generator and four distinct rubric levels per criterion. Human weights/grading and submission workflow are unset. Its 18 machine-check points must not be presented as the project grade.

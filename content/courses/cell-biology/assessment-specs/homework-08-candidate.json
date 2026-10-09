@@ -1,0 +1,310 @@
+{
+  "candidate_id": "cell-biology-h8-review-v1",
+  "course_id": "cell-biology",
+  "content_version": "0.27.0",
+  "state": "inactive-review-candidate",
+  "title": "Homework8 candidate: time-resolved cell-state denominators",
+  "instruction_path": "assessment-specs/homework-08-candidate.md",
+  "dataset_path": "assessment-specs/homework-08-candidate-fate.csv",
+  "private_source_ref": "private://assignments/homework-08-review-v1.json",
+  "private_source_sha256": "84a0cdb75bdedd48f423f7193778e3b59e1b385187ad70676c69e6ffd1997af1",
+  "points": 25,
+  "lesson_ids": [
+    "cell-biology-25",
+    "cell-biology-26"
+  ],
+  "objective_ids": [
+    "cell-biology-25-objective-1",
+    "cell-biology-25-objective-2",
+    "cell-biology-25-objective-3",
+    "cell-biology-26-objective-1",
+    "cell-biology-26-objective-2",
+    "cell-biology-26-objective-3"
+  ],
+  "course_outcome_ids": [
+    "cell-biology-outcome-2",
+    "cell-biology-outcome-3",
+    "cell-biology-outcome-4"
+  ],
+  "prerequisite_sha256": {
+    "modules/12a-cell-cycle-checkpoints-and-mitosis.md": "5e9f426b79302b8c59d81164c939123e4919ab418055967a90177db9f30407f4",
+    "modules/12b-senescence-apoptosis-and-cell-fate.md": "c87a8e6cb7f6bf5f9d2294bf8e835a4f92cee375f4b1549cc213d0e1911a8179"
+  },
+  "review": {
+    "status": "unreviewed",
+    "reviewers": []
+  },
+  "activation_gates": [
+    "independent-recalculation",
+    "grader-mutation-review",
+    "subject-matter-review",
+    "assessment-review",
+    "accessibility-review",
+    "measured-workload",
+    "operator-provisioning-and-release-policy"
+  ],
+  "questions": [
+    {
+      "id": "cell-biology-h8-candidate:edu-fraction",
+      "type": "numeric",
+      "prompt": "For damage_challenge culture g01 at72h, report edu_positive_viable/viable_singlets as a percent with exactly three significant figures. Other recovered cells and seeded cells are different denominators.",
+      "options": [],
+      "unit": "%",
+      "significant_figures": 3,
+      "points": 2.0,
+      "selection": "single",
+      "partial_credit_policy": null,
+      "response_fields": [],
+      "graph_spec": null,
+      "accepted_media_types": [],
+      "max_upload_bytes": null,
+      "variant_id": null,
+      "variant_token": null,
+      "learning_objective_ids": [
+        "cell-biology-25-objective-2"
+      ],
+      "assessment_role": "graded"
+    },
+    {
+      "id": "cell-biology-h8-candidate:viable-recovery",
+      "type": "numeric",
+      "prompt": "For damage_challenge g01 at72h, report viable_singlets/seeded_cells as a percent with exactly three significant figures. This is recovered viable count relative to seeded input, not proof of a unique death mechanism.",
+      "options": [],
+      "unit": "%",
+      "significant_figures": 3,
+      "points": 2.0,
+      "selection": "single",
+      "partial_credit_policy": null,
+      "response_fields": [],
+      "graph_spec": null,
+      "accepted_media_types": [],
+      "max_upload_bytes": null,
+      "variant_id": null,
+      "variant_token": null,
+      "learning_objective_ids": [
+        "cell-biology-25-objective-2",
+        "cell-biology-26-objective-3"
+      ],
+      "assessment_role": "graded"
+    },
+    {
+      "id": "cell-biology-h8-candidate:mitotic-proxy",
+      "type": "numeric",
+      "prompt": "For vehicle c01 at72h, report mitotic_marker_positive_viable/viable_singlets as a percent with exactly three significant figures. The DNA4N bin is not the denominator requested here.",
+      "options": [],
+      "unit": "%",
+      "significant_figures": 3,
+      "points": 2.0,
+      "selection": "single",
+      "partial_credit_policy": null,
+      "response_fields": [],
+      "graph_spec": null,
+      "accepted_media_types": [],
+      "max_upload_bytes": null,
+      "variant_id": null,
+      "variant_token": null,
+      "learning_objective_ids": [
+        "cell-biology-25-objective-2"
+      ],
+      "assessment_role": "graded"
+    },
+    {
+      "id": "cell-biology-h8-candidate:edu-relative-decrease",
+      "type": "numeric",
+      "prompt": "At72h first calculate EdU percent among viable singlets within each culture, then equal-culture group means. Report100×(vehicle_mean−damage_challenge_mean)/vehicle_mean as a percent with exactly three significant figures, not a percentage-point difference.",
+      "options": [],
+      "unit": "%",
+      "significant_figures": 3,
+      "points": 2.0,
+      "selection": "single",
+      "partial_credit_policy": null,
+      "response_fields": [],
+      "graph_spec": null,
+      "accepted_media_types": [],
+      "max_upload_bytes": null,
+      "variant_id": null,
+      "variant_token": null,
+      "learning_objective_ids": [
+        "cell-biology-25-objective-2",
+        "cell-biology-25-objective-3"
+      ],
+      "assessment_role": "graded"
+    },
+    {
+      "id": "cell-biology-h8-candidate:summary",
+      "type": "file_upload",
+      "prompt": "Upload exact columns condition,cultures,mean_edu_pct_viable,mean_caspase_pct_all_recovered with rows vehicle,withdrawal_refeed,damage_challenge. Use72h values, calculate percentages with their distinct stated gates per culture, then average equally. Counts are exact; percentage means have tolerance0.005points. Times and counted cells do not add independent cultures.",
+      "options": [],
+      "unit": null,
+      "significant_figures": null,
+      "points": 9.0,
+      "selection": "single",
+      "partial_credit_policy": null,
+      "response_fields": [],
+      "graph_spec": null,
+      "accepted_media_types": [
+        "text/csv"
+      ],
+      "max_upload_bytes": 32768,
+      "variant_id": null,
+      "variant_token": null,
+      "learning_objective_ids": [
+        "cell-biology-25-objective-2",
+        "cell-biology-26-objective-3"
+      ],
+      "assessment_role": "graded"
+    },
+    {
+      "id": "cell-biology-h8-candidate:reentry-boundary",
+      "type": "data_interpretation",
+      "prompt": "Compare equal-culture mean EdU-positive fractions at72h after the stipulated cue removal/challenge.",
+      "options": [],
+      "unit": null,
+      "significant_figures": null,
+      "points": 2.0,
+      "selection": "single",
+      "partial_credit_policy": null,
+      "response_fields": [
+        {
+          "id": "reentry_ratio",
+          "type": "numeric",
+          "prompt": "Report withdrawal_refeed mean divided by damage_challenge mean as a bare ratio. Report exactly 3 significant figures.",
+          "options": [],
+          "unit": "",
+          "points": 1.0
+        },
+        {
+          "id": "inference",
+          "type": "single_choice",
+          "prompt": "Which inference fits that descriptive ratio and the time course?",
+          "options": [
+            "The ratio proves that every damaged cell is permanently senescent.",
+            "It proves that caspase activity initiated the lower EdU fraction.",
+            "It indicates more measured pulse incorporation after refeed than after the damage challenge in this window; pure cell identities, long-term persistence and causal pathways need further evidence."
+          ],
+          "unit": null,
+          "points": 1.0
+        }
+      ],
+      "graph_spec": null,
+      "accepted_media_types": [],
+      "max_upload_bytes": null,
+      "variant_id": null,
+      "variant_token": null,
+      "learning_objective_ids": [
+        "cell-biology-26-objective-1",
+        "cell-biology-26-objective-3"
+      ],
+      "assessment_role": "graded"
+    },
+    {
+      "id": "cell-biology-h8-candidate:control-logic",
+      "type": "structured",
+      "prompt": "Select one response for each longitudinal or pathway criterion.",
+      "options": [],
+      "unit": null,
+      "significant_figures": null,
+      "points": 4.0,
+      "selection": "single",
+      "partial_credit_policy": null,
+      "response_fields": [
+        {
+          "id": "persistence",
+          "type": "single_choice",
+          "prompt": "How should low post-challenge EdU with p21/beta-gal features be described?",
+          "options": [
+            "A unique diagnosis from one marker in every sampled cell.",
+            "Proof of irreversible arrest for all future conditions.",
+            "A pattern compatible with a persistent senescence-associated arrest in the tested window; repeated/orthogonal recovery, state and viability evidence is still needed."
+          ],
+          "unit": null,
+          "points": 1.0
+        },
+        {
+          "id": "gates",
+          "type": "single_choice",
+          "prompt": "Why are caspase and EdU percentages not interchangeable?",
+          "options": [
+            "Both use exactly the seeded population.",
+            "Caspase uses all recovered cells; EdU uses viable singlets, and neither measures marker states in lost cells.",
+            "They are exhaustive mutually exclusive cell-state categories."
+          ],
+          "unit": null,
+          "points": 1.0
+        },
+        {
+          "id": "apoptosis",
+          "type": "single_choice",
+          "prompt": "Which statement distinguishes the instructional routes without overreading the assay?",
+          "options": [
+            "Intrinsic mitochondrial signaling can involve BAX/BAK, cytochrome-c/APAF-1 and caspase9; death-receptor signaling can involve caspase8, while an effector-caspase marker alone does not identify the initiating route.",
+            "Effector-caspase positivity uniquely proves the mitochondrial trigger.",
+            "All loss of viable cells is necessarily apoptosis."
+          ],
+          "unit": null,
+          "points": 1.0
+        },
+        {
+          "id": "checkpoint",
+          "type": "single_choice",
+          "prompt": "What would strengthen a claim about a named checkpoint pathway?",
+          "options": [
+            "A4N DNA peak alone measures every spindle attachment and DNA base.",
+            "Cyclin abundance alone is kinase activity.",
+            "Time-resolved pathway/target-engagement evidence, matched perturbation and orthogonal DNA-content/incorporation/mitotic imaging with gate and viability controls."
+          ],
+          "unit": null,
+          "points": 1.0
+        }
+      ],
+      "graph_spec": null,
+      "accepted_media_types": [],
+      "max_upload_bytes": null,
+      "variant_id": null,
+      "variant_token": null,
+      "learning_objective_ids": [
+        "cell-biology-25-objective-1",
+        "cell-biology-25-objective-3",
+        "cell-biology-26-objective-1",
+        "cell-biology-26-objective-2",
+        "cell-biology-26-objective-3"
+      ],
+      "assessment_role": "graded"
+    },
+    {
+      "id": "cell-biology-h8-candidate:cycle-and-state",
+      "type": "multiple_select",
+      "prompt": "Select all supported statements. Scoring is two points times (correct selections minus incorrect selections) divided by the number of correct options, clamped from zero to two.",
+      "options": [
+        "A4N DNA signal uniquely distinguishes mitosis fromG2.",
+        "A short EdU pulse reports incorporation within its stated collection/gate; it does not directly measure each cell's lifetimeS-phase duration.",
+        "Beta-gal activity alone identifies a universal permanent senescence state.",
+        "Caspase-positive, p21-high and beta-gal-high counts can be added to obtain exhaustive nonoverlapping fates.",
+        "A snapshot phase-like fraction and a stable cell-state claim require different longitudinal and orthogonal evidence."
+      ],
+      "unit": null,
+      "significant_figures": null,
+      "points": 2.0,
+      "selection": "multiple",
+      "partial_credit_policy": "correct-minus-incorrect-clamped-v1",
+      "response_fields": [],
+      "graph_spec": null,
+      "accepted_media_types": [],
+      "max_upload_bytes": null,
+      "variant_id": null,
+      "variant_token": null,
+      "learning_objective_ids": [
+        "cell-biology-25-objective-1",
+        "cell-biology-25-objective-2",
+        "cell-biology-26-objective-1"
+      ],
+      "assessment_role": "graded"
+    }
+  ],
+  "provenance": {
+    "kind": "original",
+    "license": "CC-BY-4.0",
+    "ai_assistance": "Codex authored the candidate and checks. No independent or qualified human review occurred.",
+    "source_scope": "Existing original lessons and explicit synthetic assumptions only; no outside source or identifier imported."
+  }
+}

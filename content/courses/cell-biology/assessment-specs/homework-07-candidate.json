@@ -1,0 +1,306 @@
+{
+  "candidate_id": "cell-biology-h7-review-v1",
+  "course_id": "cell-biology",
+  "content_version": "0.26.0",
+  "state": "inactive-review-candidate",
+  "title": "Homework7 candidate: matched matrix inputs and localization evidence",
+  "instruction_path": "assessment-specs/homework-07-candidate.md",
+  "dataset_path": "assessment-specs/homework-07-candidate-matrix.csv",
+  "private_source_ref": "private://assignments/homework-07-review-v1.json",
+  "private_source_sha256": "85dd5a0a642b3705650d74c19924d24134d071f1c269b6af6c0e5d3ec1b67a17",
+  "points": 25,
+  "lesson_ids": [
+    "cell-biology-23",
+    "cell-biology-24"
+  ],
+  "objective_ids": [
+    "cell-biology-23-objective-1",
+    "cell-biology-23-objective-2",
+    "cell-biology-23-objective-3",
+    "cell-biology-24-objective-1",
+    "cell-biology-24-objective-2",
+    "cell-biology-24-objective-3"
+  ],
+  "course_outcome_ids": [
+    "cell-biology-outcome-1",
+    "cell-biology-outcome-2",
+    "cell-biology-outcome-3",
+    "cell-biology-outcome-4"
+  ],
+  "prerequisite_sha256": {
+    "modules/11a-cytoskeleton-adhesion-and-extracellular-matrix.md": "60f467bbd01fc79766612554d3495c14357e6153b3473f5399f66cc97419754f",
+    "modules/11b-matrix-mechanics-and-mechanotransduction.md": "7d8aa6ac8fcabc871be4207a0904e064f265953f3d000777bb7af971eef43269"
+  },
+  "review": {
+    "status": "unreviewed",
+    "reviewers": []
+  },
+  "activation_gates": [
+    "independent-recalculation",
+    "grader-mutation-review",
+    "subject-matter-review",
+    "assessment-review",
+    "accessibility-review",
+    "measured-workload",
+    "operator-provisioning-and-release-policy"
+  ],
+  "questions": [
+    {
+      "id": "cell-biology-h7-candidate:modulus",
+      "type": "numeric",
+      "prompt": "For stiff_high preparation b01, subtract force background, convert the original area from mm² to m², calculate engineering strain and infer E under the stated linear-elastic-through-origin model. Report modulus in Pa with exactly three significant figures.",
+      "options": [],
+      "unit": "Pa",
+      "significant_figures": 3,
+      "points": 2.0,
+      "selection": "single",
+      "partial_credit_policy": null,
+      "response_fields": [],
+      "graph_spec": null,
+      "accepted_media_types": [],
+      "max_upload_bytes": null,
+      "variant_id": null,
+      "variant_token": null,
+      "learning_objective_ids": [
+        "cell-biology-24-objective-1"
+      ],
+      "assessment_role": "graded"
+    },
+    {
+      "id": "cell-biology-h7-candidate:mean-area",
+      "type": "numeric",
+      "prompt": "For stiff_high b01, divide summed_cell_area_um2 by viable_attached_cells. Report mean area in µm² with exactly three significant figures; seeded cells are a different denominator.",
+      "options": [],
+      "unit": "um^2",
+      "significant_figures": 3,
+      "points": 2.0,
+      "selection": "single",
+      "partial_credit_policy": null,
+      "response_fields": [],
+      "graph_spec": null,
+      "accepted_media_types": [],
+      "max_upload_bytes": null,
+      "variant_id": null,
+      "variant_token": null,
+      "learning_objective_ids": [
+        "cell-biology-24-objective-2"
+      ],
+      "assessment_role": "graded"
+    },
+    {
+      "id": "cell-biology-h7-candidate:marker-fraction",
+      "type": "numeric",
+      "prompt": "For stiff_high b01, report nuclear_marker_positive_cells/viable_attached_cells as a percent with exactly three significant figures.",
+      "options": [],
+      "unit": "%",
+      "significant_figures": 3,
+      "points": 2.0,
+      "selection": "single",
+      "partial_credit_policy": null,
+      "response_fields": [],
+      "graph_spec": null,
+      "accepted_media_types": [],
+      "max_upload_bytes": null,
+      "variant_id": null,
+      "variant_token": null,
+      "learning_objective_ids": [
+        "cell-biology-24-objective-2"
+      ],
+      "assessment_role": "graded"
+    },
+    {
+      "id": "cell-biology-h7-candidate:interaction",
+      "type": "numeric",
+      "prompt": "For each independent preparation compute (stiff_high−stiff_low)−(soft_high−soft_low) using nuclear-marker percentages among viable attached cells, then average the four preparation contrasts. Report a bare signed percentage-point difference, not a relative percent or significance test.",
+      "options": [],
+      "unit": "",
+      "significant_figures": null,
+      "points": 2.0,
+      "selection": "single",
+      "partial_credit_policy": null,
+      "response_fields": [],
+      "graph_spec": null,
+      "accepted_media_types": [],
+      "max_upload_bytes": null,
+      "variant_id": null,
+      "variant_token": null,
+      "learning_objective_ids": [
+        "cell-biology-24-objective-2",
+        "cell-biology-24-objective-3"
+      ],
+      "assessment_role": "graded"
+    },
+    {
+      "id": "cell-biology-h7-candidate:summary",
+      "type": "file_upload",
+      "prompt": "Upload exact columns condition,preparations,mean_area_um2,mean_marker_pct with rows soft_high,stiff_high,stiff_high_block. Derive area and marker fraction within each preparation before averaging with equal preparation weight. Counts are exact; means have tolerance0.005 on their µm² or percent column scales. Matched condition splits are repeated observations of the same independent preparation.",
+      "options": [],
+      "unit": null,
+      "significant_figures": null,
+      "points": 9.0,
+      "selection": "single",
+      "partial_credit_policy": null,
+      "response_fields": [],
+      "graph_spec": null,
+      "accepted_media_types": [
+        "text/csv"
+      ],
+      "max_upload_bytes": 32768,
+      "variant_id": null,
+      "variant_token": null,
+      "learning_objective_ids": [
+        "cell-biology-24-objective-2",
+        "cell-biology-24-objective-3"
+      ],
+      "assessment_role": "graded"
+    },
+    {
+      "id": "cell-biology-h7-candidate:rescue-boundary",
+      "type": "data_interpretation",
+      "prompt": "Using equal-preparation mean nuclear-marker percentages, compute the fraction of the stiff_high-versus-block difference recovered by the rescue condition.",
+      "options": [],
+      "unit": null,
+      "significant_figures": null,
+      "points": 2.0,
+      "selection": "single",
+      "partial_credit_policy": null,
+      "response_fields": [
+        {
+          "id": "gap_recovered_pct",
+          "type": "numeric",
+          "prompt": "Report100×(rescue−block)/(stiff_high−block) as a percent. Report exactly 3 significant figures.",
+          "options": [],
+          "unit": "%",
+          "points": 1.0
+        },
+        {
+          "id": "inference",
+          "type": "single_choice",
+          "prompt": "What does this recovery support?",
+          "options": [
+            "The intervention uniquely proves a single direct force pathway and mature tissue function.",
+            "It supports restoration of this localization readout under the tested conditions; attachment/selection, target engagement and alternative pathways still need tests.",
+            "The nuclear-marker fraction measures Young modulus directly."
+          ],
+          "unit": null,
+          "points": 1.0
+        }
+      ],
+      "graph_spec": null,
+      "accepted_media_types": [],
+      "max_upload_bytes": null,
+      "variant_id": null,
+      "variant_token": null,
+      "learning_objective_ids": [
+        "cell-biology-24-objective-2",
+        "cell-biology-24-objective-3"
+      ],
+      "assessment_role": "graded"
+    },
+    {
+      "id": "cell-biology-h7-candidate:control-logic",
+      "type": "structured",
+      "prompt": "Select one response for each distinct matrix or inference criterion.",
+      "options": [],
+      "unit": null,
+      "significant_figures": null,
+      "points": 4.0,
+      "selection": "single",
+      "partial_credit_policy": null,
+      "response_fields": [
+        {
+          "id": "ligand",
+          "type": "single_choice",
+          "prompt": "Which comparison holds the stated accessible ligand level fixed while changing measured modulus?",
+          "options": [
+            "soft_low versus stiff_high",
+            "soft_high versus stiff_high, with other stated conditions and measurement limits retained",
+            "Any two conditions because the coating solution was prepared once"
+          ],
+          "unit": null,
+          "points": 1.0
+        },
+        {
+          "id": "selection",
+          "type": "single_choice",
+          "prompt": "Why retain seeded and viable-attached cell counts?",
+          "options": [
+            "Perturbations can alter attachment/recovery and the sampled population; percentages among attached cells do not describe lost cells.",
+            "A higher marker fraction always means more positive cells per seeded culture.",
+            "Viable-cell counts prove the exact molecular route."
+          ],
+          "unit": null,
+          "points": 1.0
+        },
+        {
+          "id": "mechanics",
+          "type": "single_choice",
+          "prompt": "What limits the single corrected stress/strain modulus?",
+          "options": [
+            "One secant value identifies all relaxation and anisotropy.",
+            "Force divided by area is already a modulus.",
+            "It equals the linear model slope only under the stated assumptions; hydration, geometry, rate, relaxation and nonlinear response need measurements."
+          ],
+          "unit": null,
+          "points": 1.0
+        },
+        {
+          "id": "route",
+          "type": "single_choice",
+          "prompt": "Which follow-up strengthens a proposed integrin/actomyosin route?",
+          "options": [
+            "A nuclear-marker image alone gives adhesion force and cell fate.",
+            "Matched target/pathway perturbations, target engagement, attachment/state controls and orthogonal force or function readouts.",
+            "Ignore ligand and viability because a rescue was present."
+          ],
+          "unit": null,
+          "points": 1.0
+        }
+      ],
+      "graph_spec": null,
+      "accepted_media_types": [],
+      "max_upload_bytes": null,
+      "variant_id": null,
+      "variant_token": null,
+      "learning_objective_ids": [
+        "cell-biology-23-objective-3",
+        "cell-biology-24-objective-3"
+      ],
+      "assessment_role": "graded"
+    },
+    {
+      "id": "cell-biology-h7-candidate:filaments-and-junctions",
+      "type": "multiple_select",
+      "prompt": "Select all supported statements. Scoring is two points times (correct selections minus incorrect selections) divided by the number of correct options, clamped from zero to two.",
+      "options": [
+        "Actin, microtubules and intermediate filaments have interchangeable assembly and motor roles.",
+        "Integrin-associated focal adhesions can connect matrix to actin-associated structures; a cadherin cell–cell junction asks a different connection question.",
+        "A nuclear localization readout alone establishes stable differentiation and tissue function.",
+        "Matching one instantaneous modulus proves all matrices have identical ligand accessibility and relaxation.",
+        "Intermediate-filament-linked junctions and microtubule-based transport illustrate distinct network roles; context and direct measurements remain necessary."
+      ],
+      "unit": null,
+      "significant_figures": null,
+      "points": 2.0,
+      "selection": "multiple",
+      "partial_credit_policy": "correct-minus-incorrect-clamped-v1",
+      "response_fields": [],
+      "graph_spec": null,
+      "accepted_media_types": [],
+      "max_upload_bytes": null,
+      "variant_id": null,
+      "variant_token": null,
+      "learning_objective_ids": [
+        "cell-biology-23-objective-1",
+        "cell-biology-23-objective-2"
+      ],
+      "assessment_role": "graded"
+    }
+  ],
+  "provenance": {
+    "kind": "original",
+    "license": "CC-BY-4.0",
+    "ai_assistance": "Codex authored the candidate and checks. No independent or qualified human review occurred.",
+    "source_scope": "Existing original lessons and explicit synthetic assumptions only; no outside source or identifier imported."
+  }
+}

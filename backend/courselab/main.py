@@ -379,6 +379,8 @@ def create_app(settings: Settings | None = None) -> FastAPI:
         ):
             raise HTTPException(409, "The pinned assessment question mapping is invalid")
         questions = [questions_by_id[question_id] for question_id in question_ids]
+        if any("randomization" in question for question in questions):
+            raise HTTPException(409, "Authored variants are not supported for graded assignments")
         try:
             question_points = sum(float(question["points"]) for question in questions)
         except (KeyError, TypeError, ValueError) as exc:

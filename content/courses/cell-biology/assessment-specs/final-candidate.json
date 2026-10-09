@@ -1,0 +1,3656 @@
+{
+  "candidate_id": "cell-biology-final-review-v1",
+  "course_id": "cell-biology",
+  "content_version": "0.29.0",
+  "state": "inactive-review-candidate",
+  "title": "Final candidate: cumulative evidence and models",
+  "points": 150,
+  "lesson_ids": [
+    "cell-biology-1",
+    "cell-biology-5",
+    "cell-biology-6",
+    "cell-biology-2",
+    "cell-biology-7",
+    "cell-biology-8",
+    "cell-biology-3",
+    "cell-biology-9",
+    "cell-biology-10",
+    "cell-biology-11",
+    "cell-biology-12",
+    "cell-biology-13",
+    "cell-biology-14",
+    "cell-biology-4",
+    "cell-biology-15",
+    "cell-biology-16",
+    "cell-biology-17",
+    "cell-biology-18",
+    "cell-biology-19",
+    "cell-biology-20",
+    "cell-biology-21",
+    "cell-biology-22",
+    "cell-biology-23",
+    "cell-biology-24",
+    "cell-biology-25",
+    "cell-biology-26",
+    "cell-biology-27",
+    "cell-biology-28"
+  ],
+  "objective_ids": [
+    "cell-biology-1-objective-1",
+    "cell-biology-1-objective-2",
+    "cell-biology-1-objective-3",
+    "cell-biology-10-objective-1",
+    "cell-biology-10-objective-2",
+    "cell-biology-11-objective-1",
+    "cell-biology-11-objective-2",
+    "cell-biology-12-objective-1",
+    "cell-biology-12-objective-2",
+    "cell-biology-13-objective-1",
+    "cell-biology-13-objective-2",
+    "cell-biology-14-objective-1",
+    "cell-biology-14-objective-2",
+    "cell-biology-15-objective-1",
+    "cell-biology-15-objective-2",
+    "cell-biology-16-objective-1",
+    "cell-biology-16-objective-2",
+    "cell-biology-17-objective-1",
+    "cell-biology-17-objective-2",
+    "cell-biology-17-objective-3",
+    "cell-biology-18-objective-1",
+    "cell-biology-18-objective-2",
+    "cell-biology-18-objective-3",
+    "cell-biology-19-objective-1",
+    "cell-biology-19-objective-2",
+    "cell-biology-19-objective-3",
+    "cell-biology-2-objective-1",
+    "cell-biology-2-objective-2",
+    "cell-biology-20-objective-1",
+    "cell-biology-20-objective-2",
+    "cell-biology-20-objective-3",
+    "cell-biology-21-objective-1",
+    "cell-biology-21-objective-2",
+    "cell-biology-21-objective-3",
+    "cell-biology-22-objective-1",
+    "cell-biology-22-objective-2",
+    "cell-biology-22-objective-3",
+    "cell-biology-23-objective-1",
+    "cell-biology-23-objective-2",
+    "cell-biology-23-objective-3",
+    "cell-biology-24-objective-1",
+    "cell-biology-24-objective-2",
+    "cell-biology-24-objective-3",
+    "cell-biology-25-objective-1",
+    "cell-biology-25-objective-2",
+    "cell-biology-25-objective-3",
+    "cell-biology-26-objective-1",
+    "cell-biology-26-objective-2",
+    "cell-biology-26-objective-3",
+    "cell-biology-27-objective-1",
+    "cell-biology-27-objective-2",
+    "cell-biology-27-objective-3",
+    "cell-biology-28-objective-1",
+    "cell-biology-28-objective-2",
+    "cell-biology-28-objective-3",
+    "cell-biology-3-objective-1",
+    "cell-biology-3-objective-2",
+    "cell-biology-4-objective-1",
+    "cell-biology-4-objective-2",
+    "cell-biology-4-objective-3",
+    "cell-biology-5-objective-1",
+    "cell-biology-6-objective-1",
+    "cell-biology-6-objective-2",
+    "cell-biology-7-objective-1",
+    "cell-biology-7-objective-2",
+    "cell-biology-8-objective-1",
+    "cell-biology-8-objective-2",
+    "cell-biology-9-objective-1",
+    "cell-biology-9-objective-2"
+  ],
+  "objective_evidence": [
+    {
+      "question_id": "cell-biology-final-candidate:case-01",
+      "field_id": "criterion-1",
+      "objective_ids": [
+        "cell-biology-1-objective-1"
+      ],
+      "points": 3,
+      "evidence_type": "single_choice"
+    },
+    {
+      "question_id": "cell-biology-final-candidate:case-01",
+      "field_id": "criterion-2",
+      "objective_ids": [
+        "cell-biology-1-objective-2"
+      ],
+      "points": 2,
+      "evidence_type": "single_choice"
+    },
+    {
+      "question_id": "cell-biology-final-candidate:case-01",
+      "field_id": "criterion-3",
+      "objective_ids": [
+        "cell-biology-1-objective-3"
+      ],
+      "points": 2,
+      "evidence_type": "single_choice"
+    },
+    {
+      "question_id": "cell-biology-final-candidate:case-05",
+      "field_id": "criterion-1",
+      "objective_ids": [
+        "cell-biology-1-objective-2"
+      ],
+      "points": 2,
+      "evidence_type": "single_choice"
+    },
+    {
+      "question_id": "cell-biology-final-candidate:case-05",
+      "field_id": "criterion-2",
+      "objective_ids": [
+        "cell-biology-5-objective-1"
+      ],
+      "points": 2,
+      "evidence_type": "numeric"
+    },
+    {
+      "question_id": "cell-biology-final-candidate:case-06",
+      "field_id": "criterion-1",
+      "objective_ids": [
+        "cell-biology-6-objective-1"
+      ],
+      "points": 2,
+      "evidence_type": "single_choice"
+    },
+    {
+      "question_id": "cell-biology-final-candidate:case-06",
+      "field_id": "criterion-2",
+      "objective_ids": [
+        "cell-biology-6-objective-2"
+      ],
+      "points": 2,
+      "evidence_type": "numeric"
+    },
+    {
+      "question_id": "cell-biology-final-candidate:case-02",
+      "field_id": "criterion-1",
+      "objective_ids": [
+        "cell-biology-2-objective-1"
+      ],
+      "points": 2,
+      "evidence_type": "numeric"
+    },
+    {
+      "question_id": "cell-biology-final-candidate:case-02",
+      "field_id": "criterion-2",
+      "objective_ids": [
+        "cell-biology-2-objective-2"
+      ],
+      "points": 2,
+      "evidence_type": "single_choice"
+    },
+    {
+      "question_id": "cell-biology-final-candidate:case-07",
+      "field_id": "criterion-1",
+      "objective_ids": [
+        "cell-biology-7-objective-1"
+      ],
+      "points": 2,
+      "evidence_type": "single_choice"
+    },
+    {
+      "question_id": "cell-biology-final-candidate:case-07",
+      "field_id": "criterion-2",
+      "objective_ids": [
+        "cell-biology-7-objective-2"
+      ],
+      "points": 2,
+      "evidence_type": "single_choice"
+    },
+    {
+      "question_id": "cell-biology-final-candidate:case-08",
+      "field_id": "criterion-1",
+      "objective_ids": [
+        "cell-biology-8-objective-1"
+      ],
+      "points": 2,
+      "evidence_type": "single_choice"
+    },
+    {
+      "question_id": "cell-biology-final-candidate:case-08",
+      "field_id": "criterion-2",
+      "objective_ids": [
+        "cell-biology-8-objective-2"
+      ],
+      "points": 2,
+      "evidence_type": "single_choice"
+    },
+    {
+      "question_id": "cell-biology-final-candidate:case-03",
+      "field_id": "criterion-1",
+      "objective_ids": [
+        "cell-biology-3-objective-1"
+      ],
+      "points": 2,
+      "evidence_type": "numeric"
+    },
+    {
+      "question_id": "cell-biology-final-candidate:case-03",
+      "field_id": "criterion-2",
+      "objective_ids": [
+        "cell-biology-3-objective-2"
+      ],
+      "points": 2,
+      "evidence_type": "numeric"
+    },
+    {
+      "question_id": "cell-biology-final-candidate:case-09",
+      "field_id": "criterion-1",
+      "objective_ids": [
+        "cell-biology-9-objective-1"
+      ],
+      "points": 2,
+      "evidence_type": "single_choice"
+    },
+    {
+      "question_id": "cell-biology-final-candidate:case-09",
+      "field_id": "criterion-2",
+      "objective_ids": [
+        "cell-biology-9-objective-2"
+      ],
+      "points": 2,
+      "evidence_type": "numeric"
+    },
+    {
+      "question_id": "cell-biology-final-candidate:case-10",
+      "field_id": "criterion-1",
+      "objective_ids": [
+        "cell-biology-10-objective-1"
+      ],
+      "points": 2,
+      "evidence_type": "numeric"
+    },
+    {
+      "question_id": "cell-biology-final-candidate:case-10",
+      "field_id": "criterion-2",
+      "objective_ids": [
+        "cell-biology-10-objective-2"
+      ],
+      "points": 2,
+      "evidence_type": "single_choice"
+    },
+    {
+      "question_id": "cell-biology-final-candidate:case-11",
+      "field_id": "criterion-1",
+      "objective_ids": [
+        "cell-biology-11-objective-1"
+      ],
+      "points": 2,
+      "evidence_type": "numeric"
+    },
+    {
+      "question_id": "cell-biology-final-candidate:case-11",
+      "field_id": "criterion-2",
+      "objective_ids": [
+        "cell-biology-11-objective-2"
+      ],
+      "points": 2,
+      "evidence_type": "single_choice"
+    },
+    {
+      "question_id": "cell-biology-final-candidate:case-12",
+      "field_id": "criterion-1",
+      "objective_ids": [
+        "cell-biology-12-objective-1"
+      ],
+      "points": 2,
+      "evidence_type": "numeric"
+    },
+    {
+      "question_id": "cell-biology-final-candidate:case-12",
+      "field_id": "criterion-2",
+      "objective_ids": [
+        "cell-biology-12-objective-2"
+      ],
+      "points": 2,
+      "evidence_type": "single_choice"
+    },
+    {
+      "question_id": "cell-biology-final-candidate:case-13",
+      "field_id": "criterion-1",
+      "objective_ids": [
+        "cell-biology-13-objective-1"
+      ],
+      "points": 2,
+      "evidence_type": "single_choice"
+    },
+    {
+      "question_id": "cell-biology-final-candidate:case-13",
+      "field_id": "criterion-2",
+      "objective_ids": [
+        "cell-biology-13-objective-2"
+      ],
+      "points": 2,
+      "evidence_type": "single_choice"
+    },
+    {
+      "question_id": "cell-biology-final-candidate:case-14",
+      "field_id": "criterion-1",
+      "objective_ids": [
+        "cell-biology-14-objective-1"
+      ],
+      "points": 2,
+      "evidence_type": "single_choice"
+    },
+    {
+      "question_id": "cell-biology-final-candidate:case-14",
+      "field_id": "criterion-2",
+      "objective_ids": [
+        "cell-biology-14-objective-2"
+      ],
+      "points": 2,
+      "evidence_type": "single_choice"
+    },
+    {
+      "question_id": "cell-biology-final-candidate:case-15",
+      "field_id": "criterion-1",
+      "objective_ids": [
+        "cell-biology-15-objective-1"
+      ],
+      "points": 2,
+      "evidence_type": "single_choice"
+    },
+    {
+      "question_id": "cell-biology-final-candidate:case-15",
+      "field_id": "criterion-2",
+      "objective_ids": [
+        "cell-biology-15-objective-2"
+      ],
+      "points": 2,
+      "evidence_type": "single_choice"
+    },
+    {
+      "question_id": "cell-biology-final-candidate:case-04",
+      "field_id": "criterion-1",
+      "objective_ids": [
+        "cell-biology-4-objective-1"
+      ],
+      "points": 3,
+      "evidence_type": "single_choice"
+    },
+    {
+      "question_id": "cell-biology-final-candidate:case-04",
+      "field_id": "criterion-2",
+      "objective_ids": [
+        "cell-biology-4-objective-2"
+      ],
+      "points": 2,
+      "evidence_type": "single_choice"
+    },
+    {
+      "question_id": "cell-biology-final-candidate:case-04",
+      "field_id": "criterion-3",
+      "objective_ids": [
+        "cell-biology-4-objective-3"
+      ],
+      "points": 2,
+      "evidence_type": "numeric"
+    },
+    {
+      "question_id": "cell-biology-final-candidate:case-16",
+      "field_id": "criterion-1",
+      "objective_ids": [
+        "cell-biology-16-objective-1"
+      ],
+      "points": 2,
+      "evidence_type": "numeric"
+    },
+    {
+      "question_id": "cell-biology-final-candidate:case-16",
+      "field_id": "criterion-2",
+      "objective_ids": [
+        "cell-biology-16-objective-2"
+      ],
+      "points": 2,
+      "evidence_type": "single_choice"
+    },
+    {
+      "question_id": "cell-biology-final-candidate:case-17",
+      "field_id": "criterion-1",
+      "objective_ids": [
+        "cell-biology-17-objective-1"
+      ],
+      "points": 3,
+      "evidence_type": "single_choice"
+    },
+    {
+      "question_id": "cell-biology-final-candidate:case-17",
+      "field_id": "criterion-2",
+      "objective_ids": [
+        "cell-biology-17-objective-2"
+      ],
+      "points": 2,
+      "evidence_type": "numeric"
+    },
+    {
+      "question_id": "cell-biology-final-candidate:case-17",
+      "field_id": "criterion-3",
+      "objective_ids": [
+        "cell-biology-17-objective-3"
+      ],
+      "points": 2,
+      "evidence_type": "single_choice"
+    },
+    {
+      "question_id": "cell-biology-final-candidate:case-18",
+      "field_id": "criterion-1",
+      "objective_ids": [
+        "cell-biology-18-objective-1"
+      ],
+      "points": 3,
+      "evidence_type": "single_choice"
+    },
+    {
+      "question_id": "cell-biology-final-candidate:case-18",
+      "field_id": "criterion-2",
+      "objective_ids": [
+        "cell-biology-18-objective-2"
+      ],
+      "points": 2,
+      "evidence_type": "single_choice"
+    },
+    {
+      "question_id": "cell-biology-final-candidate:case-18",
+      "field_id": "criterion-3",
+      "objective_ids": [
+        "cell-biology-18-objective-3"
+      ],
+      "points": 2,
+      "evidence_type": "numeric"
+    },
+    {
+      "question_id": "cell-biology-final-candidate:case-19",
+      "field_id": "criterion-1",
+      "objective_ids": [
+        "cell-biology-19-objective-1"
+      ],
+      "points": 3,
+      "evidence_type": "numeric"
+    },
+    {
+      "question_id": "cell-biology-final-candidate:case-19",
+      "field_id": "criterion-2",
+      "objective_ids": [
+        "cell-biology-19-objective-2"
+      ],
+      "points": 2,
+      "evidence_type": "single_choice"
+    },
+    {
+      "question_id": "cell-biology-final-candidate:case-19",
+      "field_id": "criterion-3",
+      "objective_ids": [
+        "cell-biology-19-objective-3"
+      ],
+      "points": 2,
+      "evidence_type": "single_choice"
+    },
+    {
+      "question_id": "cell-biology-final-candidate:case-20",
+      "field_id": "criterion-1",
+      "objective_ids": [
+        "cell-biology-20-objective-1"
+      ],
+      "points": 3,
+      "evidence_type": "single_choice"
+    },
+    {
+      "question_id": "cell-biology-final-candidate:case-20",
+      "field_id": "criterion-2",
+      "objective_ids": [
+        "cell-biology-20-objective-2"
+      ],
+      "points": 2,
+      "evidence_type": "numeric"
+    },
+    {
+      "question_id": "cell-biology-final-candidate:case-20",
+      "field_id": "criterion-3",
+      "objective_ids": [
+        "cell-biology-20-objective-3"
+      ],
+      "points": 2,
+      "evidence_type": "single_choice"
+    },
+    {
+      "question_id": "cell-biology-final-candidate:case-21",
+      "field_id": "criterion-1",
+      "objective_ids": [
+        "cell-biology-21-objective-1"
+      ],
+      "points": 3,
+      "evidence_type": "numeric"
+    },
+    {
+      "question_id": "cell-biology-final-candidate:case-21",
+      "field_id": "criterion-2",
+      "objective_ids": [
+        "cell-biology-21-objective-2"
+      ],
+      "points": 2,
+      "evidence_type": "single_choice"
+    },
+    {
+      "question_id": "cell-biology-final-candidate:case-21",
+      "field_id": "criterion-3",
+      "objective_ids": [
+        "cell-biology-21-objective-3"
+      ],
+      "points": 2,
+      "evidence_type": "single_choice"
+    },
+    {
+      "question_id": "cell-biology-final-candidate:case-22",
+      "field_id": "criterion-1",
+      "objective_ids": [
+        "cell-biology-22-objective-1"
+      ],
+      "points": 3,
+      "evidence_type": "numeric"
+    },
+    {
+      "question_id": "cell-biology-final-candidate:case-22",
+      "field_id": "criterion-2",
+      "objective_ids": [
+        "cell-biology-22-objective-2"
+      ],
+      "points": 2,
+      "evidence_type": "single_choice"
+    },
+    {
+      "question_id": "cell-biology-final-candidate:case-22",
+      "field_id": "criterion-3",
+      "objective_ids": [
+        "cell-biology-22-objective-3"
+      ],
+      "points": 2,
+      "evidence_type": "single_choice"
+    },
+    {
+      "question_id": "cell-biology-final-candidate:case-23",
+      "field_id": "criterion-1",
+      "objective_ids": [
+        "cell-biology-23-objective-1"
+      ],
+      "points": 3,
+      "evidence_type": "single_choice"
+    },
+    {
+      "question_id": "cell-biology-final-candidate:case-23",
+      "field_id": "criterion-2",
+      "objective_ids": [
+        "cell-biology-23-objective-2"
+      ],
+      "points": 2,
+      "evidence_type": "single_choice"
+    },
+    {
+      "question_id": "cell-biology-final-candidate:case-23",
+      "field_id": "criterion-3",
+      "objective_ids": [
+        "cell-biology-23-objective-3"
+      ],
+      "points": 2,
+      "evidence_type": "single_choice"
+    },
+    {
+      "question_id": "cell-biology-final-candidate:case-24",
+      "field_id": "criterion-1",
+      "objective_ids": [
+        "cell-biology-24-objective-1"
+      ],
+      "points": 3,
+      "evidence_type": "numeric"
+    },
+    {
+      "question_id": "cell-biology-final-candidate:case-24",
+      "field_id": "criterion-2",
+      "objective_ids": [
+        "cell-biology-24-objective-2"
+      ],
+      "points": 2,
+      "evidence_type": "single_choice"
+    },
+    {
+      "question_id": "cell-biology-final-candidate:case-24",
+      "field_id": "criterion-3",
+      "objective_ids": [
+        "cell-biology-24-objective-3"
+      ],
+      "points": 2,
+      "evidence_type": "single_choice"
+    },
+    {
+      "question_id": "cell-biology-final-candidate:case-25",
+      "field_id": "criterion-1",
+      "objective_ids": [
+        "cell-biology-25-objective-1"
+      ],
+      "points": 2,
+      "evidence_type": "single_choice"
+    },
+    {
+      "question_id": "cell-biology-final-candidate:case-25",
+      "field_id": "criterion-2",
+      "objective_ids": [
+        "cell-biology-25-objective-2"
+      ],
+      "points": 2,
+      "evidence_type": "numeric"
+    },
+    {
+      "question_id": "cell-biology-final-candidate:case-25",
+      "field_id": "criterion-3",
+      "objective_ids": [
+        "cell-biology-25-objective-3"
+      ],
+      "points": 2,
+      "evidence_type": "single_choice"
+    },
+    {
+      "question_id": "cell-biology-final-candidate:case-26",
+      "field_id": "criterion-1",
+      "objective_ids": [
+        "cell-biology-26-objective-1"
+      ],
+      "points": 2,
+      "evidence_type": "single_choice"
+    },
+    {
+      "question_id": "cell-biology-final-candidate:case-26",
+      "field_id": "criterion-2",
+      "objective_ids": [
+        "cell-biology-26-objective-2"
+      ],
+      "points": 2,
+      "evidence_type": "single_choice"
+    },
+    {
+      "question_id": "cell-biology-final-candidate:case-26",
+      "field_id": "criterion-3",
+      "objective_ids": [
+        "cell-biology-26-objective-3"
+      ],
+      "points": 2,
+      "evidence_type": "single_choice"
+    },
+    {
+      "question_id": "cell-biology-final-candidate:case-27",
+      "field_id": "criterion-1",
+      "objective_ids": [
+        "cell-biology-27-objective-1"
+      ],
+      "points": 2,
+      "evidence_type": "single_choice"
+    },
+    {
+      "question_id": "cell-biology-final-candidate:case-27",
+      "field_id": "criterion-2",
+      "objective_ids": [
+        "cell-biology-27-objective-2"
+      ],
+      "points": 2,
+      "evidence_type": "single_choice"
+    },
+    {
+      "question_id": "cell-biology-final-candidate:case-27",
+      "field_id": "criterion-3",
+      "objective_ids": [
+        "cell-biology-27-objective-3"
+      ],
+      "points": 2,
+      "evidence_type": "single_choice"
+    },
+    {
+      "question_id": "cell-biology-final-candidate:case-28",
+      "field_id": "criterion-1",
+      "objective_ids": [
+        "cell-biology-28-objective-1"
+      ],
+      "points": 2,
+      "evidence_type": "numeric"
+    },
+    {
+      "question_id": "cell-biology-final-candidate:case-28",
+      "field_id": "criterion-2",
+      "objective_ids": [
+        "cell-biology-28-objective-2"
+      ],
+      "points": 2,
+      "evidence_type": "single_choice"
+    },
+    {
+      "question_id": "cell-biology-final-candidate:case-28",
+      "field_id": "criterion-3",
+      "objective_ids": [
+        "cell-biology-28-objective-3"
+      ],
+      "points": 2,
+      "evidence_type": "single_choice"
+    }
+  ],
+  "objective_link_occurrences": 70,
+  "course_outcome_ids": [
+    "cell-biology-outcome-1",
+    "cell-biology-outcome-2",
+    "cell-biology-outcome-3",
+    "cell-biology-outcome-4"
+  ],
+  "instruction_path": "assessment-specs/final-candidate.md",
+  "dataset_path": "assessment-specs/final-candidate-observations.csv",
+  "private_source_ref": "private://assignments/final-review-v1.json",
+  "private_source_sha256": "bbf4f6c8a9f8d1fbeab13b322298aa846b77bd74530653f4b72b5f09956b39f0",
+  "prerequisite_sha256": {
+    "modules/01-molecular-structure-and-noncovalent-forces.md": "05a0f6dfe65b9cbf783bd06c9840d9be1b964ba1ce25690f91a1622c77ecf8d9",
+    "modules/01b-water-ph-and-interactions.md": "f3020c5d71d95b486a18b1f95b24dfb64112beacbb8fbe8ec6013e79eec4b998",
+    "modules/02a-protein-sequence-and-structure.md": "01312c53a64f7f2c25d586d961801dd70098916b8e585361adb883aff3cc20a7",
+    "modules/02-membranes-transport-and-compartmentalization.md": "82189f92527a8b55378098cbc75854fda30f2036c040ce3537a70b369f849d61",
+    "modules/03a-organelle-compartments-and-protein-targeting.md": "70eb41ab9548397b6b4f18d035cc5a5a43d37873faf19a959501763cfc26e678",
+    "modules/03b-protein-sorting-and-vesicle-traffic.md": "c00033c9355a2ac27cdc766e331bcc9e693b7c36b993d03af5a535fa560b7682",
+    "modules/03-enzymes-and-cellular-energetics.md": "22a5c8917cf25959432577418a398962173a37f33fe9a75ceb6a5ed58bcb91ac",
+    "modules/04a-enzyme-catalysis-and-free-energy.md": "9dafddf1546d361d1a2bd2979c8c3277e5cb04fdac42a8af09140ee096fb9ee8",
+    "modules/04b-initial-rates-and-enzyme-inhibition.md": "d8b4a01483c57c56b4d063f13756ca1ad9be3bb36468cd35fe34804d4312a18e",
+    "modules/05a-cell-imaging-resolution-and-quantification.md": "8eb79b52348691357b4e20e1fce9eadac95d65d9b6dbc79d6b8c0f359e20f0a8",
+    "modules/05b-cell-fractionation-enrichment-and-recovery.md": "167adfe315fc2ae4d6b6ac53a9bc61d49c3a7be2d6335c171e9b5643eeca9323",
+    "modules/06a-dna-structure-and-replication.md": "0bd500de49a01748c27881ff5e21a13e8d720aecfe5248e6c59a6cb2101d9ed8",
+    "modules/06b-dna-damage-and-repair-evidence.md": "3f4a3dc4b70b4dcf9826ea16de4db8507d4666aecc79a47da435c722767f53dc",
+    "modules/04-gene-expression-and-experimental-logic.md": "e98dcd9c9145deaeeadb5b378644f12f75dc14b25232b88b3da67152b9889bb4",
+    "modules/07a-chromatin-accessibility-and-regulatory-dna.md": "f183cf089f4cd924cb5c1e42dd54df4d84736c86066aec1796e953ca31391c73",
+    "modules/07b-transcription-occupancy-and-reporter-evidence.md": "7a54429020dfbe72fa4d06a91688b1d2b2d498348a3464dd1f3396bb019428c6",
+    "modules/08a-rna-processing-and-isoform-evidence.md": "dfb570ca69d8b0ad03b8fcee8b533b81cb12279b03ea0e47b38772899084bd0c",
+    "modules/08b-translation-and-protein-turnover.md": "7baf2592741ec0a850b9c7944f3c7c6e698e3362b8856e0780857ba6c46cdc92",
+    "modules/09a-inheritance-penetrance-and-pedigree-evidence.md": "b3a3b53edbb7c5afb9fa2917b5604841ae7e41904389123de7cd1b32f1e60369",
+    "modules/09b-variant-mechanism-and-isogenic-evidence.md": "e69279e78afc5d06ec1ab2acd5af047cef4ccf0a5f3fcb5a5116a1903bdd6fe5",
+    "modules/10a-receptor-signaling-and-network-logic.md": "9cd896d71f125a4876604546ff61efcab9f1f72e4f322fe72c641640989ec060",
+    "modules/10b-signaling-dynamics-feedback-and-perturbations.md": "b26c444c22bb08d2d65e1acc844902a81ad6aa32d593ca269f865e0b80ab90a1",
+    "modules/11a-cytoskeleton-adhesion-and-extracellular-matrix.md": "60f467bbd01fc79766612554d3495c14357e6153b3473f5399f66cc97419754f",
+    "modules/11b-matrix-mechanics-and-mechanotransduction.md": "7d8aa6ac8fcabc871be4207a0904e064f265953f3d000777bb7af971eef43269",
+    "modules/12a-cell-cycle-checkpoints-and-mitosis.md": "5e9f426b79302b8c59d81164c939123e4919ab418055967a90177db9f30407f4",
+    "modules/12b-senescence-apoptosis-and-cell-fate.md": "c87a8e6cb7f6bf5f9d2294bf8e835a4f92cee375f4b1549cc213d0e1911a8179",
+    "modules/13a-developmental-potency-and-lineage-evidence.md": "528352e893b4449c6612d27de7b0d242e6d1ed480e85a8c234a8d082b5aca2db",
+    "modules/13b-integrative-regenerative-study-design.md": "d0e03df201f0ee14b9903eed3195a5d6f37432f3f13d75647b7919c4968c03a4"
+  },
+  "review": {
+    "status": "unreviewed",
+    "reviewers": []
+  },
+  "activation_gates": [
+    "independent-recalculation",
+    "grader-mutation-review",
+    "subject-matter-review",
+    "assessment-review",
+    "accessibility-review",
+    "measured-workload",
+    "operator-provisioning-and-release-policy",
+    "immutable-source-archive-and-appeal-replay",
+    "human-explanation-design-rubric-review",
+    "protected-variant-delivery-and-retake-policy"
+  ],
+  "questions": [
+    {
+      "id": "cell-biology-final-candidate:case-01",
+      "type": "structured",
+      "prompt": "Ionizable substitution in an assembly. Authored form A. A fictional protein has a aspartate side chain on a water-exposed surface at pH 7; its measured pKa is 3.8. It is changed to alanine. Other covalent bonds remain intact; assembly has not been measured.",
+      "options": [],
+      "unit": null,
+      "significant_figures": null,
+      "points": 7.0,
+      "selection": "single",
+      "partial_credit_policy": null,
+      "response_fields": [
+        {
+          "id": "criterion-1",
+          "type": "single_choice",
+          "prompt": "Which description distinguishes the mutation from ordinary molecular association?",
+          "options": [
+            "Association necessarily changes every peptide bond.",
+            "The side-chain covalent structure changes; reversible association can occur without new covalent bonds.",
+            "The mutation only changes noncovalent contacts, never structure."
+          ],
+          "unit": null,
+          "points": 3.0
+        },
+        {
+          "id": "criterion-2",
+          "type": "single_choice",
+          "prompt": "What bounded prediction follows at the specified pH?",
+          "options": [
+            "Charge loss proves the protein cannot assemble.",
+            "Alanine adds an ionized carboxylate at pH 7.",
+            "The original side chain is predominantly negative; alanine removes that charge and may change assembly."
+          ],
+          "unit": null,
+          "points": 2.0
+        },
+        {
+          "id": "criterion-3",
+          "type": "single_choice",
+          "prompt": "Which chemical feature is directly removed by this substitution?",
+          "options": [
+            "The side-chain carboxyl group, without necessarily removing the backbone amide.",
+            "A side-chain phosphate that neither residue contains.",
+            "Every backbone amide."
+          ],
+          "unit": null,
+          "points": 2.0
+        }
+      ],
+      "graph_spec": null,
+      "accepted_media_types": [],
+      "max_upload_bytes": null,
+      "variant_id": null,
+      "variant_token": null,
+      "learning_objective_ids": [
+        "cell-biology-1-objective-1",
+        "cell-biology-1-objective-2",
+        "cell-biology-1-objective-3"
+      ],
+      "assessment_role": "graded"
+    },
+    {
+      "id": "cell-biology-final-candidate:case-05",
+      "type": "data_interpretation",
+      "prompt": "A titratable group in water. Authored form A. An isolated carboxyl group in water has pKa 6.0; the solution pH is 4.0. Use [A-]/[HA] = 10^(pH-pKa), with no coupled groups. A separate nonpolar solute aggregates in water without new covalent bonds.",
+      "options": [],
+      "unit": null,
+      "significant_figures": null,
+      "points": 4.0,
+      "selection": "single",
+      "partial_credit_policy": null,
+      "response_fields": [
+        {
+          "id": "criterion-1",
+          "type": "single_choice",
+          "prompt": "Which interpretation of the nonpolar aggregate is justified?",
+          "options": [
+            "Nonpolar solutes must become permanently charged.",
+            "Aggregation proves new peptide bonds form.",
+            "Water-mediated hydrophobic association is plausible; aggregation alone does not establish covalent bonding."
+          ],
+          "unit": null,
+          "points": 2.0
+        },
+        {
+          "id": "criterion-2",
+          "type": "numeric",
+          "prompt": "Calculate the ratio of deprotonated to protonated group on a bare ratio scale. Report exactly 3 significant figures.",
+          "options": [],
+          "unit": "",
+          "points": 2.0
+        }
+      ],
+      "graph_spec": null,
+      "accepted_media_types": [],
+      "max_upload_bytes": null,
+      "variant_id": null,
+      "variant_token": null,
+      "learning_objective_ids": [
+        "cell-biology-1-objective-2",
+        "cell-biology-5-objective-1"
+      ],
+      "assessment_role": "graded"
+    },
+    {
+      "id": "cell-biology-final-candidate:case-06",
+      "type": "data_interpretation",
+      "prompt": "Protein quantity and function. Authored form A. A buried hydrophobic residue is replaced by a charged residue. In matched recovered protein, reference abundance is 80 and variant abundance is 20 arbitrary amount units. Total activities are 640 and 128 arbitrary rate units. Folding measurements and localization are missing.",
+      "options": [],
+      "unit": null,
+      "significant_figures": null,
+      "points": 4.0,
+      "selection": "single",
+      "partial_credit_policy": null,
+      "response_fields": [
+        {
+          "id": "criterion-1",
+          "type": "single_choice",
+          "prompt": "Which prediction respects residue environment and missing measurements?",
+          "options": [
+            "A buried charge proves loss of all activity in every context.",
+            "Any charged substitution necessarily increases native folding.",
+            "A buried charge may disrupt stability or packing, but the actual fold and localization need measurement."
+          ],
+          "unit": null,
+          "points": 2.0
+        },
+        {
+          "id": "criterion-2",
+          "type": "numeric",
+          "prompt": "Calculate variant/reference specific activity: (variant activity/amount)/(reference activity/amount), a bare ratio. Report exactly 3 significant figures.",
+          "options": [],
+          "unit": "",
+          "points": 2.0
+        }
+      ],
+      "graph_spec": null,
+      "accepted_media_types": [],
+      "max_upload_bytes": null,
+      "variant_id": null,
+      "variant_token": null,
+      "learning_objective_ids": [
+        "cell-biology-6-objective-1",
+        "cell-biology-6-objective-2"
+      ],
+      "assessment_role": "graded"
+    },
+    {
+      "id": "cell-biology-final-candidate:case-02",
+      "type": "data_interpretation",
+      "prompt": "Passive potassium and transport classes. Authored form A. Only K+ is permeant in an ideal membrane. Inside K+ is 80 mM; outside is 20 mM; at 37 C use E_K = 61.5 log10(outside/inside) mV. Membrane voltage is 0 mV. A separate carrier moves a substrate uphill only when coupled to ATP hydrolysis.",
+      "options": [],
+      "unit": null,
+      "significant_figures": null,
+      "points": 4.0,
+      "selection": "single",
+      "partial_credit_policy": null,
+      "response_fields": [
+        {
+          "id": "criterion-1",
+          "type": "numeric",
+          "prompt": "Calculate E_K using the stipulated rounded coefficient. Report exactly 3 significant figures.",
+          "options": [],
+          "unit": "mV",
+          "points": 2.0
+        },
+        {
+          "id": "criterion-2",
+          "type": "single_choice",
+          "prompt": "Classify the ATP-dependent uphill carrier.",
+          "options": [
+            "Passive transport because all carriers are passive.",
+            "Simple diffusion through the lipid bilayer.",
+            "Active transport; downhill carrier-mediated flux would be facilitated diffusion."
+          ],
+          "unit": null,
+          "points": 2.0
+        }
+      ],
+      "graph_spec": null,
+      "accepted_media_types": [],
+      "max_upload_bytes": null,
+      "variant_id": null,
+      "variant_token": null,
+      "learning_objective_ids": [
+        "cell-biology-2-objective-1",
+        "cell-biology-2-objective-2"
+      ],
+      "assessment_role": "graded"
+    },
+    {
+      "id": "cell-biology-final-candidate:case-07",
+      "type": "structured",
+      "prompt": "Compartment boundary evidence. Authored form A. A fictional protein with a cleavable ER-targeting peptide enters a lumen. Intact vesicles protect 85% of its immunoreactivity from added protease; detergent plus protease removes the signal. A cytosolic marker is digested without detergent. Vesicle recovery is matched. These are biochemical aliquots, not independent living cells.",
+      "options": [],
+      "unit": null,
+      "significant_figures": null,
+      "points": 4.0,
+      "selection": "single",
+      "partial_credit_policy": null,
+      "response_fields": [
+        {
+          "id": "criterion-1",
+          "type": "single_choice",
+          "prompt": "What topology follows if the stated targeting and translocation succeed?",
+          "options": [
+            "A cleaved ER peptide necessarily places the mature protein in the nucleus.",
+            "The mature soluble protein is on the luminal side and remains topologically outside the cytosol.",
+            "The protein must cross the bilayer at every secretory step."
+          ],
+          "unit": null,
+          "points": 2.0
+        },
+        {
+          "id": "criterion-2",
+          "type": "single_choice",
+          "prompt": "What is the bounded protease conclusion?",
+          "options": [
+            "Protection proves a unique living-cell organelle and direct binding.",
+            "Protection is consistent with enclosed antigen; detergent sensitivity and markers address integrity, not exact native location by themselves.",
+            "The cytosolic digestion control is interchangeable with vesicle integrity."
+          ],
+          "unit": null,
+          "points": 2.0
+        }
+      ],
+      "graph_spec": null,
+      "accepted_media_types": [],
+      "max_upload_bytes": null,
+      "variant_id": null,
+      "variant_token": null,
+      "learning_objective_ids": [
+        "cell-biology-7-objective-1",
+        "cell-biology-7-objective-2"
+      ],
+      "assessment_role": "graded"
+    },
+    {
+      "id": "cell-biology-final-candidate:case-08",
+      "type": "structured",
+      "prompt": "Receptor recycling and cargo sorting. Authored form A. Pulse-labeled extracellular cargo binds equally to reference and perturbed cells at time zero. At a matched chase, receptor returns to the surface in both; cargo in a degradative compartment changes from 70% to 35%. Total recovered label and new synthesis are matched, but degradation fragments and spatial resolution are not measured.",
+      "options": [],
+      "unit": null,
+      "significant_figures": null,
+      "points": 4.0,
+      "selection": "single",
+      "partial_credit_policy": null,
+      "response_fields": [
+        {
+          "id": "criterion-1",
+          "type": "single_choice",
+          "prompt": "Which route preserves topology?",
+          "options": [
+            "A surface receptor and all its cargo must always share their terminal destination.",
+            "Recycling requires cargo to become cytosolic by membrane inversion.",
+            "Endocytosed luminal cargo can remain enclosed while its receptor recycles to the surface."
+          ],
+          "unit": null,
+          "points": 2.0
+        },
+        {
+          "id": "criterion-2",
+          "type": "single_choice",
+          "prompt": "What can the matched measurements support?",
+          "options": [
+            "A redistribution consistent with altered sorting; unresolved label loss and compartment assignment still need controls.",
+            "A late compartment percentage proves changed transcription.",
+            "Equal initial binding proves normal sorting and degradation."
+          ],
+          "unit": null,
+          "points": 2.0
+        }
+      ],
+      "graph_spec": null,
+      "accepted_media_types": [],
+      "max_upload_bytes": null,
+      "variant_id": null,
+      "variant_token": null,
+      "learning_objective_ids": [
+        "cell-biology-8-objective-1",
+        "cell-biology-8-objective-2"
+      ],
+      "assessment_role": "graded"
+    },
+    {
+      "id": "cell-biology-final-candidate:case-03",
+      "type": "data_interpretation",
+      "prompt": "Catalysis and coupling. Authored form A. Use v = Vmax*S/(Km+S), with Vmax 96 arbitrary rate units, Km 3 mM and S 9 mM. At matched conditions reaction X has deltaG +15 kJ/mol and coupled reaction Y has deltaG -27 kJ/mol; stoichiometry is 1:1.",
+      "options": [],
+      "unit": null,
+      "significant_figures": null,
+      "points": 4.0,
+      "selection": "single",
+      "partial_credit_policy": null,
+      "response_fields": [
+        {
+          "id": "criterion-1",
+          "type": "numeric",
+          "prompt": "Calculate v on the declared bare rate-unit scale. Report exactly 3 significant figures.",
+          "options": [],
+          "unit": "",
+          "points": 2.0
+        },
+        {
+          "id": "criterion-2",
+          "type": "numeric",
+          "prompt": "Calculate the net deltaG per mole of coupled events. Report exactly 3 significant figures.",
+          "options": [],
+          "unit": "kJ/mol",
+          "points": 2.0
+        }
+      ],
+      "graph_spec": null,
+      "accepted_media_types": [],
+      "max_upload_bytes": null,
+      "variant_id": null,
+      "variant_token": null,
+      "learning_objective_ids": [
+        "cell-biology-3-objective-1",
+        "cell-biology-3-objective-2"
+      ],
+      "assessment_role": "graded"
+    },
+    {
+      "id": "cell-biology-final-candidate:case-09",
+      "type": "data_interpretation",
+      "prompt": "Active enzyme and equilibrium. Authored form A. A purified catalyst changes the activation barrier without changing initial/final state free energies. In an ideal initial-rate assay active enzyme is 4 nM, kcat 9 per second, S 6 mM and Km 3 mM; v = kcat*E*S/(Km+S). No inhibition or enzyme loss occurs.",
+      "options": [],
+      "unit": null,
+      "significant_figures": null,
+      "points": 4.0,
+      "selection": "single",
+      "partial_credit_policy": null,
+      "response_fields": [
+        {
+          "id": "criterion-1",
+          "type": "single_choice",
+          "prompt": "Which effect is compatible with a catalyst?",
+          "options": [
+            "A catalyst makes every uphill reaction have a negative deltaG.",
+            "Faster forward and reverse equilibration with unchanged equilibrium constant for the same states.",
+            "A catalyst changes equilibrium by consuming itself irreversibly."
+          ],
+          "unit": null,
+          "points": 2.0
+        },
+        {
+          "id": "criterion-2",
+          "type": "numeric",
+          "prompt": "Calculate initial v on a bare nM-per-second scale. Report exactly 3 significant figures.",
+          "options": [],
+          "unit": "",
+          "points": 2.0
+        }
+      ],
+      "graph_spec": null,
+      "accepted_media_types": [],
+      "max_upload_bytes": null,
+      "variant_id": null,
+      "variant_token": null,
+      "learning_objective_ids": [
+        "cell-biology-9-objective-1",
+        "cell-biology-9-objective-2"
+      ],
+      "assessment_role": "graded"
+    },
+    {
+      "id": "cell-biology-final-candidate:case-10",
+      "type": "data_interpretation",
+      "prompt": "Inhibitor model and optical control. Authored form A. An initial-rate fit gives Vmax 84 and apparent Km 7 mM with inhibitor; use v=Vmax*S/(Km+S) at S 7 mM. Without inhibitor Vmax is the same and Km is smaller. Blank wells show negligible optical interference; direct binding and uncertainty estimates are unavailable.",
+      "options": [],
+      "unit": null,
+      "significant_figures": null,
+      "points": 4.0,
+      "selection": "single",
+      "partial_credit_policy": null,
+      "response_fields": [
+        {
+          "id": "criterion-1",
+          "type": "numeric",
+          "prompt": "Calculate the fitted inhibited initial rate on the bare rate-unit scale. Report exactly 3 significant figures.",
+          "options": [],
+          "unit": "",
+          "points": 2.0
+        },
+        {
+          "id": "criterion-2",
+          "type": "single_choice",
+          "prompt": "Which statement is warranted by the parameter pattern and controls?",
+          "options": [
+            "An optical blank proves a particular active-site structure.",
+            "The pattern proves irreversible enzyme destruction.",
+            "It is consistent with an ideal competitive pattern; the fit and optical blank do not prove a molecular binding route."
+          ],
+          "unit": null,
+          "points": 2.0
+        }
+      ],
+      "graph_spec": null,
+      "accepted_media_types": [],
+      "max_upload_bytes": null,
+      "variant_id": null,
+      "variant_token": null,
+      "learning_objective_ids": [
+        "cell-biology-10-objective-1",
+        "cell-biology-10-objective-2"
+      ],
+      "assessment_role": "graded"
+    },
+    {
+      "id": "cell-biology-final-candidate:case-11",
+      "type": "data_interpretation",
+      "prompt": "Sampling and overlap. Authored form A. For a conventional image estimate lateral resolution d=0.61*lambda/NA with lambda 540 nm and NA 1.35. Sample-plane pixel size is 80 nm. Two fluorescent channels overlap within the optical spot; single-label controls show measurable bleed-through.",
+      "options": [],
+      "unit": null,
+      "significant_figures": null,
+      "points": 4.0,
+      "selection": "single",
+      "partial_credit_policy": null,
+      "response_fields": [
+        {
+          "id": "criterion-1",
+          "type": "numeric",
+          "prompt": "Calculate nominal lateral resolution in nm. This estimate is distinct from pixel size. Report exactly 3 significant figures.",
+          "options": [],
+          "unit": "nm",
+          "points": 2.0
+        },
+        {
+          "id": "criterion-2",
+          "type": "single_choice",
+          "prompt": "Which follow-up and conclusion fit this image?",
+          "options": [
+            "Discard single-label controls because colors differ on screen.",
+            "Increase magnification and declare direct binding from overlap.",
+            "Correct spectral cross-talk with matched controls; overlap at optical resolution does not establish direct molecular binding."
+          ],
+          "unit": null,
+          "points": 2.0
+        }
+      ],
+      "graph_spec": null,
+      "accepted_media_types": [],
+      "max_upload_bytes": null,
+      "variant_id": null,
+      "variant_token": null,
+      "learning_objective_ids": [
+        "cell-biology-11-objective-1",
+        "cell-biology-11-objective-2"
+      ],
+      "assessment_role": "graded"
+    },
+    {
+      "id": "cell-biology-final-candidate:case-12",
+      "type": "data_interpretation",
+      "prompt": "Recovery and enrichment. Authored form A. Input target marker activity is 160 units; the collected fraction contains 64 units. Fraction total protein is 3 mg. A second compartment marker is also detected. Only one collected fraction is supplied; missing fractions and rupture controls are absent.",
+      "options": [],
+      "unit": null,
+      "significant_figures": null,
+      "points": 4.0,
+      "selection": "single",
+      "partial_credit_policy": null,
+      "response_fields": [
+        {
+          "id": "criterion-1",
+          "type": "numeric",
+          "prompt": "Calculate target-marker recovery as a percentage of input. Report exactly 3 significant figures.",
+          "options": [],
+          "unit": "%",
+          "points": 2.0
+        },
+        {
+          "id": "criterion-2",
+          "type": "single_choice",
+          "prompt": "Which design can address the current limitations?",
+          "options": [
+            "Collect all fractions and input for mass balance, multiple compartment markers and integrity controls; enrichment alone is not purity.",
+            "Treat the fraction protein mass as a count of independent cultures.",
+            "Use only the target marker and call the fraction pure."
+          ],
+          "unit": null,
+          "points": 2.0
+        }
+      ],
+      "graph_spec": null,
+      "accepted_media_types": [],
+      "max_upload_bytes": null,
+      "variant_id": null,
+      "variant_token": null,
+      "learning_objective_ids": [
+        "cell-biology-12-objective-1",
+        "cell-biology-12-objective-2"
+      ],
+      "assessment_role": "graded"
+    },
+    {
+      "id": "cell-biology-final-candidate:case-13",
+      "type": "structured",
+      "prompt": "Polarity and isotope generations. Authored form A. The template is 5-prime TACCG 3-prime. Polymerase extends a primer by adding to its 3-prime end. After heavy-to-light transfer, controlled isotope-density generation 1 has only hybrid-density DNA and generation 2 has hybrid plus light DNA; density resolution controls pass. In a resolved third generation, hybrid-to-light molecule classes are 1:3 under the stipulated ideal growth model.",
+      "options": [],
+      "unit": null,
+      "significant_figures": null,
+      "points": 4.0,
+      "selection": "single",
+      "partial_credit_policy": null,
+      "response_fields": [
+        {
+          "id": "criterion-1",
+          "type": "single_choice",
+          "prompt": "Which description correctly preserves strand polarity and synthesis?",
+          "options": [
+            "Polymerase makes the leading strand by adding to its 5-prime end.",
+            "Both aligned strands have the same 5-prime to 3-prime direction.",
+            "The aligned complement runs 3-prime to 5-prime; a newly made strand grows 5-prime to 3-prime, with fragments on the lagging side."
+          ],
+          "unit": null,
+          "points": 2.0
+        },
+        {
+          "id": "criterion-2",
+          "type": "single_choice",
+          "prompt": "Which model fits the specified resolved generations?",
+          "options": [
+            "Conservative replication predicts only hybrid DNA in generation 1.",
+            "Semiconservative replication; the second generation helps distinguish the ideal dispersive prediction.",
+            "All three models predict exactly the same resolved generations."
+          ],
+          "unit": null,
+          "points": 2.0
+        }
+      ],
+      "graph_spec": null,
+      "accepted_media_types": [],
+      "max_upload_bytes": null,
+      "variant_id": null,
+      "variant_token": null,
+      "learning_objective_ids": [
+        "cell-biology-13-objective-1",
+        "cell-biology-13-objective-2"
+      ],
+      "assessment_role": "graded"
+    },
+    {
+      "id": "cell-biology-final-candidate:case-14",
+      "type": "structured",
+      "prompt": "Lesion signal and repair. Authored form A. A bulky-adduct assay has matched input and extraction standards. At a fixed time lesion signal is 18 units in reference and 45 in a repair perturbation; rescue brings it near reference. Mutation counts, survival and independent pathway activity are unmeasured.",
+      "options": [],
+      "unit": null,
+      "significant_figures": null,
+      "points": 4.0,
+      "selection": "single",
+      "partial_credit_policy": null,
+      "response_fields": [
+        {
+          "id": "criterion-1",
+          "type": "single_choice",
+          "prompt": "Which distinction and pathway hypothesis is appropriate?",
+          "options": [
+            "Proofreading and post-replicative mismatch repair are the same timed process.",
+            "Polymerase proofreading acts during synthesis; bulky-adduct excision is a plausible different repair pathway requiring specific tests.",
+            "Every bulky lesion is removed solely by polymerase proofreading."
+          ],
+          "unit": null,
+          "points": 2.0
+        },
+        {
+          "id": "criterion-2",
+          "type": "single_choice",
+          "prompt": "What does the rescue support within these measurements?",
+          "options": [
+            "Rescue proves zero off-target effects or survival selection.",
+            "A lesion signal is directly the mutation frequency per genome.",
+            "Perturbation-associated lesion-signal change; mutation frequency and a unique native mechanism remain unmeasured."
+          ],
+          "unit": null,
+          "points": 2.0
+        }
+      ],
+      "graph_spec": null,
+      "accepted_media_types": [],
+      "max_upload_bytes": null,
+      "variant_id": null,
+      "variant_token": null,
+      "learning_objective_ids": [
+        "cell-biology-14-objective-1",
+        "cell-biology-14-objective-2"
+      ],
+      "assessment_role": "graded"
+    },
+    {
+      "id": "cell-biology-final-candidate:case-15",
+      "type": "structured",
+      "prompt": "Chromatin and independent units. Authored form A. Four independent cultures per state are each split into three technical aliquots. Accessibility rises by 35% and matched RNA by 18% between states. A histone mark also increases; no endogenous element perturbation has been done.",
+      "options": [],
+      "unit": null,
+      "significant_figures": null,
+      "points": 4.0,
+      "selection": "single",
+      "partial_credit_policy": null,
+      "response_fields": [
+        {
+          "id": "criterion-1",
+          "type": "single_choice",
+          "prompt": "Which chromatin interpretation is bounded?",
+          "options": [
+            "Any mark increase proves an irreversible transcriptional switch.",
+            "Accessibility and a mark can be associated with state; a mark is not by itself a transcriptional switch.",
+            "Nucleosomes never alter accessibility."
+          ],
+          "unit": null,
+          "points": 2.0
+        },
+        {
+          "id": "criterion-2",
+          "type": "single_choice",
+          "prompt": "Which analysis and causal follow-up fit the units?",
+          "options": [
+            "Use a plasmid alone to prove endogenous element necessity.",
+            "Treat twelve aliquots as twelve independent cultures and infer causality from correlation.",
+            "Summarize aliquots within four cultures per state and perturb the endogenous element with matched controls and RNA/readout follow-up."
+          ],
+          "unit": null,
+          "points": 2.0
+        }
+      ],
+      "graph_spec": null,
+      "accepted_media_types": [],
+      "max_upload_bytes": null,
+      "variant_id": null,
+      "variant_token": null,
+      "learning_objective_ids": [
+        "cell-biology-15-objective-1",
+        "cell-biology-15-objective-2"
+      ],
+      "assessment_role": "graded"
+    },
+    {
+      "id": "cell-biology-final-candidate:case-04",
+      "type": "data_interpretation",
+      "prompt": "Expression and controls. Authored form A. A fictional construct is transcribed to mRNA and translated to protein. Three independent cultures have background-corrected reporter values 13, 17, 21; an untreated reference mean is 14. Positive assay control and a no-reporter negative control pass; input/loading measurements are not supplied.",
+      "options": [],
+      "unit": null,
+      "significant_figures": null,
+      "points": 7.0,
+      "selection": "single",
+      "partial_credit_policy": null,
+      "response_fields": [
+        {
+          "id": "criterion-1",
+          "type": "single_choice",
+          "prompt": "Which information path fits the model?",
+          "options": [
+            "RNA synthesis and peptide synthesis are the same chemical reaction.",
+            "Protein must first be reverse translated directly into genomic DNA.",
+            "DNA is transcribed to RNA; ribosomes read an mRNA frame to synthesize a polypeptide."
+          ],
+          "unit": null,
+          "points": 3.0
+        },
+        {
+          "id": "criterion-2",
+          "type": "single_choice",
+          "prompt": "Which control is missing for an abundance-normalized comparison?",
+          "options": [
+            "No loading control is needed because the reporter is fluorescent.",
+            "A second positive control automatically replaces loading.",
+            "A matched input/loading measurement; positive and negative controls address different assay questions."
+          ],
+          "unit": null,
+          "points": 2.0
+        },
+        {
+          "id": "criterion-3",
+          "type": "numeric",
+          "prompt": "Calculate the descriptive difference between the culture mean and reference on the bare reporter scale. Report exactly 3 significant figures.",
+          "options": [],
+          "unit": "",
+          "points": 2.0
+        }
+      ],
+      "graph_spec": null,
+      "accepted_media_types": [],
+      "max_upload_bytes": null,
+      "variant_id": null,
+      "variant_token": null,
+      "learning_objective_ids": [
+        "cell-biology-4-objective-1",
+        "cell-biology-4-objective-2",
+        "cell-biology-4-objective-3"
+      ],
+      "assessment_role": "graded"
+    },
+    {
+      "id": "cell-biology-final-candidate:case-16",
+      "type": "data_interpretation",
+      "prompt": "ChIP input and cis claims. Authored form A. The measured input aliquot is fraction 0.05 of total input; Ct_input 22, Ct_IP 24. Under equal doubling efficiency use percent input=100*fraction*2^(Ct_input-Ct_IP). IgG and negative-locus controls pass. A matched plasmid deletion lowers reporter output; the endogenous locus has not been edited.",
+      "options": [],
+      "unit": null,
+      "significant_figures": null,
+      "points": 4.0,
+      "selection": "single",
+      "partial_credit_policy": null,
+      "response_fields": [
+        {
+          "id": "criterion-1",
+          "type": "numeric",
+          "prompt": "Calculate simplified ChIP percent input. Report exactly 3 significant figures.",
+          "options": [],
+          "unit": "%",
+          "points": 2.0
+        },
+        {
+          "id": "criterion-2",
+          "type": "single_choice",
+          "prompt": "Which inference separates the two assays?",
+          "options": [
+            "Enrichment supports occupancy-associated evidence and the plasmid tests sequence activity in that context; neither alone proves direct binding or endogenous necessity.",
+            "IgG controls replace input and PCR efficiency controls.",
+            "ChIP plus plasmid deletion proves direct binding and endogenous necessity."
+          ],
+          "unit": null,
+          "points": 2.0
+        }
+      ],
+      "graph_spec": null,
+      "accepted_media_types": [],
+      "max_upload_bytes": null,
+      "variant_id": null,
+      "variant_token": null,
+      "learning_objective_ids": [
+        "cell-biology-16-objective-1",
+        "cell-biology-16-objective-2"
+      ],
+      "assessment_role": "graded"
+    },
+    {
+      "id": "cell-biology-final-candidate:case-17",
+      "type": "data_interpretation",
+      "prompt": "Processing and isoform composition. Authored form A. Background-corrected mature included and skipped RNA counts are 120 and 30 in one recovered culture, with matched recovery. A common-region count measures both forms; precursor abundance is also measured. No independent transcription or decay rate is measured.",
+      "options": [],
+      "unit": null,
+      "significant_figures": null,
+      "points": 7.0,
+      "selection": "single",
+      "partial_credit_policy": null,
+      "response_fields": [
+        {
+          "id": "criterion-1",
+          "type": "single_choice",
+          "prompt": "Which processing description fits many eukaryotic pre-mRNAs?",
+          "options": [
+            "Capping, intron removal and 3-prime processing can produce mature RNAs; alternative splicing can change exon composition.",
+            "Every eukaryotic mRNA has identical processing and no exceptions.",
+            "The spliceosome translates introns into mature protein."
+          ],
+          "unit": null,
+          "points": 3.0
+        },
+        {
+          "id": "criterion-2",
+          "type": "numeric",
+          "prompt": "Calculate skipped percentage among the two measured mature forms. Report exactly 3 significant figures.",
+          "options": [],
+          "unit": "%",
+          "points": 2.0
+        },
+        {
+          "id": "criterion-3",
+          "type": "single_choice",
+          "prompt": "Which control helps separate an RNA assay artifact?",
+          "options": [
+            "A no-reverse-transcriptase control plus distinct perturbation/rescue and recovery controls; none alone identifies production versus decay.",
+            "A common-region amplicon proves a unique splicing mechanism.",
+            "A rescue automatically excludes DNA contamination."
+          ],
+          "unit": null,
+          "points": 2.0
+        }
+      ],
+      "graph_spec": null,
+      "accepted_media_types": [],
+      "max_upload_bytes": null,
+      "variant_id": null,
+      "variant_token": null,
+      "learning_objective_ids": [
+        "cell-biology-17-objective-1",
+        "cell-biology-17-objective-2",
+        "cell-biology-17-objective-3"
+      ],
+      "assessment_role": "graded"
+    },
+    {
+      "id": "cell-biology-final-candidate:case-18",
+      "type": "data_interpretation",
+      "prompt": "Translation and labeled-cohort decay. Authored form A. A fixed protein cohort has corrected label f0=100, f4=50 after 4 h, with no new label or recycling and stable detection. Assume first-order decay f(t)/f0=exp(-k*t). A separate perturbation has unchanged RNA, lower nascent-protein signal and lower steady-state protein; loading controls pass.",
+      "options": [],
+      "unit": null,
+      "significant_figures": null,
+      "points": 7.0,
+      "selection": "single",
+      "partial_credit_policy": null,
+      "response_fields": [
+        {
+          "id": "criterion-1",
+          "type": "single_choice",
+          "prompt": "Which translation statement preserves frame and direction?",
+          "options": [
+            "Ribosomes read 3-prime to 5-prime and extend peptide from carboxyl end.",
+            "Ribosomes read mRNA codons 5-prime to 3-prime and extend peptide from amino to carboxyl end until termination.",
+            "Any one-base shift leaves all downstream codons unchanged."
+          ],
+          "unit": null,
+          "points": 3.0
+        },
+        {
+          "id": "criterion-2",
+          "type": "single_choice",
+          "prompt": "Which interpretation separates synthesis and turnover?",
+          "options": [
+            "Unchanged RNA proves unchanged protein synthesis and decay.",
+            "Lower nascent signal is consistent with reduced synthesis in this assay; matched decay measurements test turnover rather than assuming it.",
+            "Lower steady-state protein alone proves a proteasome route."
+          ],
+          "unit": null,
+          "points": 2.0
+        },
+        {
+          "id": "criterion-3",
+          "type": "numeric",
+          "prompt": "Calculate the labeled-cohort half-life in h from t_half=4*ln(0.5)/ln(f4/f0). Report exactly 3 significant figures.",
+          "options": [],
+          "unit": "h",
+          "points": 2.0
+        }
+      ],
+      "graph_spec": null,
+      "accepted_media_types": [],
+      "max_upload_bytes": null,
+      "variant_id": null,
+      "variant_token": null,
+      "learning_objective_ids": [
+        "cell-biology-18-objective-1",
+        "cell-biology-18-objective-2",
+        "cell-biology-18-objective-3"
+      ],
+      "assessment_role": "graded"
+    },
+    {
+      "id": "cell-biology-final-candidate:case-19",
+      "type": "data_interpretation",
+      "prompt": "A fictional inheritance model. Authored form A. For a nonclinical fictional trait, cross A/a with a/a. Exactly half offspring inherit A; at the specified age phenotype probability is 0.6 for carriers and 0.1 otherwise. A small selected pedigree and a population association are supplied without unbiased sampling or population covariates.",
+      "options": [],
+      "unit": null,
+      "significant_figures": null,
+      "points": 7.0,
+      "selection": "single",
+      "partial_credit_policy": null,
+      "response_fields": [
+        {
+          "id": "criterion-1",
+          "type": "numeric",
+          "prompt": "Calculate offspring phenotype probability as percent under this stipulated penetrance model. Report exactly 3 significant figures.",
+          "options": [],
+          "unit": "%",
+          "points": 3.0
+        },
+        {
+          "id": "criterion-2",
+          "type": "single_choice",
+          "prompt": "What limits a small selected pedigree?",
+          "options": [
+            "Dominance means every carrier must have the same severity.",
+            "One selected pedigree proves complete penetrance in every age group.",
+            "Age, incomplete penetrance, ascertainment and sample size can alter apparent patterns; the pedigree does not establish a universal rule."
+          ],
+          "unit": null,
+          "points": 2.0
+        },
+        {
+          "id": "criterion-3",
+          "type": "single_choice",
+          "prompt": "Which association follow-up addresses alternatives?",
+          "options": [
+            "Measure linkage, population structure and environmental covariates and use a controlled mechanism test; association alone does not establish causality.",
+            "Convert the fictional model directly into clinical risk advice.",
+            "Assume association excludes all linked variants and environment."
+          ],
+          "unit": null,
+          "points": 2.0
+        }
+      ],
+      "graph_spec": null,
+      "accepted_media_types": [],
+      "max_upload_bytes": null,
+      "variant_id": null,
+      "variant_token": null,
+      "learning_objective_ids": [
+        "cell-biology-19-objective-1",
+        "cell-biology-19-objective-2",
+        "cell-biology-19-objective-3"
+      ],
+      "assessment_role": "graded"
+    },
+    {
+      "id": "cell-biology-final-candidate:case-20",
+      "type": "data_interpretation",
+      "prompt": "Isogenic cells and normalization. Authored form A. Four independently derived clones per genotype share a parent. For one clone, recovered corrected protein is 5 ug, corrected activity 40 nmol/min and viable cells 100 thousand. Recovery scales activity and protein equally. Introduction and correction were tested, but localization and native pathway function are not.",
+      "options": [],
+      "unit": null,
+      "significant_figures": null,
+      "points": 7.0,
+      "selection": "single",
+      "partial_credit_policy": null,
+      "response_fields": [
+        {
+          "id": "criterion-1",
+          "type": "single_choice",
+          "prompt": "Which evidence chain matches assay levels?",
+          "options": [
+            "A DNA sequence measurement is a direct measurement of organism function.",
+            "DNA establishes the introduced sequence, RNA its measured abundance, and biochemical/cell readouts test distinct downstream hypotheses.",
+            "A cell phenotype proves a unique protein interaction without measurement."
+          ],
+          "unit": null,
+          "points": 3.0
+        },
+        {
+          "id": "criterion-2",
+          "type": "numeric",
+          "prompt": "Calculate activity per recovered protein on a bare nmol-per-minute-per-ug scale. Report exactly 3 significant figures.",
+          "options": [],
+          "unit": "",
+          "points": 2.0
+        },
+        {
+          "id": "criterion-3",
+          "type": "single_choice",
+          "prompt": "Which design most strengthens a bounded mechanism claim?",
+          "options": [
+            "Use correction alone to declare every editing artifact impossible.",
+            "Count technical wells from one clone as independent genotypes.",
+            "Independent introduction/correction clones with editing controls, viable-cell normalization and orthogonal localization/function follow-up."
+          ],
+          "unit": null,
+          "points": 2.0
+        }
+      ],
+      "graph_spec": null,
+      "accepted_media_types": [],
+      "max_upload_bytes": null,
+      "variant_id": null,
+      "variant_token": null,
+      "learning_objective_ids": [
+        "cell-biology-20-objective-1",
+        "cell-biology-20-objective-2",
+        "cell-biology-20-objective-3"
+      ],
+      "assessment_role": "graded"
+    },
+    {
+      "id": "cell-biology-final-candidate:case-21",
+      "type": "data_interpretation",
+      "prompt": "Binding and downstream response. Authored form A. Ideal independent single-site binding has free ligand L=10 nM and Kd=10 nM; occupancy theta=L/(Kd+L). RTK phosphorylation and a later cell response are measured at different times. An alternate system uses a GPCR; no quantitative gain model is given.",
+      "options": [],
+      "unit": null,
+      "significant_figures": null,
+      "points": 7.0,
+      "selection": "single",
+      "partial_credit_policy": null,
+      "response_fields": [
+        {
+          "id": "criterion-1",
+          "type": "numeric",
+          "prompt": "Calculate ideal receptor occupancy as percent. Report exactly 3 significant figures.",
+          "options": [],
+          "unit": "%",
+          "points": 3.0
+        },
+        {
+          "id": "criterion-2",
+          "type": "single_choice",
+          "prompt": "Which relay distinction is appropriate?",
+          "options": [
+            "RTKs can relay through phosphorylation and GPCRs through heterotrimeric G proteins; branches and amplification depend on context.",
+            "Each occupied receptor must yield exactly one downstream molecule.",
+            "All GPCRs are receptor tyrosine kinases with the same branches."
+          ],
+          "unit": null,
+          "points": 2.0
+        },
+        {
+          "id": "criterion-3",
+          "type": "single_choice",
+          "prompt": "Which dose/time inference is bounded?",
+          "options": [
+            "An occupancy percentage is automatically the same cell-response percentage.",
+            "Occupancy, biochemical state and later response are distinct measurements; matching one does not guarantee matching all.",
+            "A later response uniquely identifies receptor occupancy at every prior time."
+          ],
+          "unit": null,
+          "points": 2.0
+        }
+      ],
+      "graph_spec": null,
+      "accepted_media_types": [],
+      "max_upload_bytes": null,
+      "variant_id": null,
+      "variant_token": null,
+      "learning_objective_ids": [
+        "cell-biology-21-objective-1",
+        "cell-biology-21-objective-2",
+        "cell-biology-21-objective-3"
+      ],
+      "assessment_role": "graded"
+    },
+    {
+      "id": "cell-biology-final-candidate:case-22",
+      "type": "data_interpretation",
+      "prompt": "Pulse, inhibitor and bypass. Authored form A. In each of four independent cultures a constant ligand exposure is verified. A signaling readout at 0,10,30 min is 0,80,20. An upstream perturbation lowers the output with verified target engagement; a downstream bypass restores it. Off-target effects and adaptation measurements remain missing. Use trapezoids on the stated bare readout-minute scale.",
+      "options": [],
+      "unit": null,
+      "significant_figures": null,
+      "points": 7.0,
+      "selection": "single",
+      "partial_credit_policy": null,
+      "response_fields": [
+        {
+          "id": "criterion-1",
+          "type": "numeric",
+          "prompt": "Calculate trapezoidal area from 0 to 30 min: 10*(y0+y10)/2 + 20*(y10+y30)/2. Report exactly 3 significant figures.",
+          "options": [],
+          "unit": "",
+          "points": 3.0
+        },
+        {
+          "id": "criterion-2",
+          "type": "single_choice",
+          "prompt": "What can bypass plus target engagement support?",
+          "options": [
+            "Target engagement directly proves every downstream phenotype is on-target.",
+            "Bypass proves no parallel pathway or off-target effect exists.",
+            "Consistency with the perturbed process lying upstream of the bypassed output in this model; specificity and pathway uniqueness still need tests."
+          ],
+          "unit": null,
+          "points": 2.0
+        },
+        {
+          "id": "criterion-3",
+          "type": "single_choice",
+          "prompt": "Which measurements separate adaptation alternatives?",
+          "options": [
+            "Infer feedback exclusively from a single endpoint.",
+            "Only add technical repeats of the late output.",
+            "Matched ligand availability, receptor state, feedback perturbation and orthogonal intervention/time controls in independent cultures."
+          ],
+          "unit": null,
+          "points": 2.0
+        }
+      ],
+      "graph_spec": null,
+      "accepted_media_types": [],
+      "max_upload_bytes": null,
+      "variant_id": null,
+      "variant_token": null,
+      "learning_objective_ids": [
+        "cell-biology-22-objective-1",
+        "cell-biology-22-objective-2",
+        "cell-biology-22-objective-3"
+      ],
+      "assessment_role": "graded"
+    },
+    {
+      "id": "cell-biology-final-candidate:case-23",
+      "type": "structured",
+      "prompt": "Junctions and matrix ligands. Authored form A. Cells attach to a collagen-presenting matrix. Accessible ligand density is 2 relative units. Integrin-dependent adhesion and a cadherin-dependent neighboring-cell junction are measured separately. Filament turnover and remodeling can occur; accessible density differs between two matrices.",
+      "options": [],
+      "unit": null,
+      "significant_figures": null,
+      "points": 7.0,
+      "selection": "single",
+      "partial_credit_policy": null,
+      "response_fields": [
+        {
+          "id": "criterion-1",
+          "type": "single_choice",
+          "prompt": "Which comparison correctly distinguishes filament roles?",
+          "options": [
+            "Actin, microtubules and intermediate filaments have distinct organizations and overlapping integrated functions; all require context and turnover considerations.",
+            "Microtubules are the sole component of every adhesion junction.",
+            "All three filament systems are chemically identical and static."
+          ],
+          "unit": null,
+          "points": 3.0
+        },
+        {
+          "id": "criterion-2",
+          "type": "single_choice",
+          "prompt": "Which linkage classification fits the stated readouts?",
+          "options": [
+            "Cadherin junctions are universally cell-matrix integrin adhesions.",
+            "Integrin/focal adhesions link cell to matrix and often actin; cadherin junctions link neighboring cells, with distinct actin or intermediate-filament connections by junction type.",
+            "Every cell-cell junction is a focal adhesion to collagen."
+          ],
+          "unit": null,
+          "points": 2.0
+        },
+        {
+          "id": "criterion-3",
+          "type": "single_choice",
+          "prompt": "What is needed to interpret a matrix-associated difference?",
+          "options": [
+            "Match accessible ligand and consider composition/remodeling separately from mechanics.",
+            "Declare ligand presentation irrelevant because collagen is named in both conditions.",
+            "Assume nominal matrix coating guarantees identical accessible ligand."
+          ],
+          "unit": null,
+          "points": 2.0
+        }
+      ],
+      "graph_spec": null,
+      "accepted_media_types": [],
+      "max_upload_bytes": null,
+      "variant_id": null,
+      "variant_token": null,
+      "learning_objective_ids": [
+        "cell-biology-23-objective-1",
+        "cell-biology-23-objective-2",
+        "cell-biology-23-objective-3"
+      ],
+      "assessment_role": "graded"
+    },
+    {
+      "id": "cell-biology-final-candidate:case-24",
+      "type": "data_interpretation",
+      "prompt": "Geometry, stiffness and cell readouts. Authored form A. An ideal small-strain elastic sample has area 2 mm^2, length 10 mm, extension 0.1 mm, and background-corrected force 0.0002 N. E=(force/(area*1e-6))/(extension/length). A nuclear marker rises on the stiffer matrix; traction, accessible ligand, viscoelasticity and fate are unmeasured.",
+      "options": [],
+      "unit": null,
+      "significant_figures": null,
+      "points": 7.0,
+      "selection": "single",
+      "partial_credit_policy": null,
+      "response_fields": [
+        {
+          "id": "criterion-1",
+          "type": "numeric",
+          "prompt": "Calculate E in Pa under the stated elastic assumptions. Report exactly 3 significant figures.",
+          "options": [],
+          "unit": "Pa",
+          "points": 3.0
+        },
+        {
+          "id": "criterion-2",
+          "type": "single_choice",
+          "prompt": "Which interpretation of the nuclear marker is warranted?",
+          "options": [
+            "It directly measures traction force and proves differentiation.",
+            "It is a localization-associated readout, not itself force, pathway mechanism or stable cell fate.",
+            "It proves identical cell states in both conditions."
+          ],
+          "unit": null,
+          "points": 2.0
+        },
+        {
+          "id": "criterion-3",
+          "type": "single_choice",
+          "prompt": "Which control set separates stiffness-related alternatives?",
+          "options": [
+            "Match accessible ligand and cell state, measure material time dependence and perturb force transmission with controls.",
+            "Use nominal polymer concentration as proof that all biochemical variables are matched.",
+            "Only rename matrices as soft and stiff."
+          ],
+          "unit": null,
+          "points": 2.0
+        }
+      ],
+      "graph_spec": null,
+      "accepted_media_types": [],
+      "max_upload_bytes": null,
+      "variant_id": null,
+      "variant_token": null,
+      "learning_objective_ids": [
+        "cell-biology-24-objective-1",
+        "cell-biology-24-objective-2",
+        "cell-biology-24-objective-3"
+      ],
+      "assessment_role": "graded"
+    },
+    {
+      "id": "cell-biology-final-candidate:case-25",
+      "type": "data_interpretation",
+      "prompt": "DNA content and a damage response. Authored form A. At 24 h a damage challenge yields 40 EdU-positive cells among 800 viable singlets. A separate all-recovered gate has 1000 cells and includes dead material. DNA 4N and p21 rise, but direct CDK activity and longitudinal recovery are unmeasured.",
+      "options": [],
+      "unit": null,
+      "significant_figures": null,
+      "points": 6.0,
+      "selection": "single",
+      "partial_credit_policy": null,
+      "response_fields": [
+        {
+          "id": "criterion-1",
+          "type": "single_choice",
+          "prompt": "Which checkpoint statement is bounded?",
+          "options": [
+            "p21 abundance directly reports the activity of every CDK.",
+            "Checkpoint signaling can restrain cyclin-CDK transitions; the marker pattern alone is not a direct CDK assay.",
+            "DNA 4N means every cell is currently undergoing mitosis."
+          ],
+          "unit": null,
+          "points": 2.0
+        },
+        {
+          "id": "criterion-2",
+          "type": "numeric",
+          "prompt": "Calculate EdU-positive percent with the specified viable-singlet denominator. Report exactly 3 significant figures.",
+          "options": [],
+          "unit": "%",
+          "points": 2.0
+        },
+        {
+          "id": "criterion-3",
+          "type": "single_choice",
+          "prompt": "Which follow-up tests arrest rather than cell loss?",
+          "options": [
+            "Use a single 4N peak to declare permanent arrest.",
+            "Longitudinal viable-cell counts, re-entry after challenge removal and orthogonal phase/death readouts with controls.",
+            "Replace the viable denominator with all recovered material without stating the change."
+          ],
+          "unit": null,
+          "points": 2.0
+        }
+      ],
+      "graph_spec": null,
+      "accepted_media_types": [],
+      "max_upload_bytes": null,
+      "variant_id": null,
+      "variant_token": null,
+      "learning_objective_ids": [
+        "cell-biology-25-objective-1",
+        "cell-biology-25-objective-2",
+        "cell-biology-25-objective-3"
+      ],
+      "assessment_role": "graded"
+    },
+    {
+      "id": "cell-biology-final-candidate:case-26",
+      "type": "structured",
+      "prompt": "Re-entry and apoptosis-associated evidence. Authored form A. Following withdrawal/refeeding, EdU returns to 38% in one group; in a damage group it stays low through 72 h with p21 and beta-gal-associated features. Caspase positivity is 15% among all recovered cells. Longer follow-up and joint single-cell marker identities are absent.",
+      "options": [],
+      "unit": null,
+      "significant_figures": null,
+      "points": 6.0,
+      "selection": "single",
+      "partial_credit_policy": null,
+      "response_fields": [
+        {
+          "id": "criterion-1",
+          "type": "single_choice",
+          "prompt": "Which state inference respects the observation window?",
+          "options": [
+            "Any beta-gal positivity proves permanent senescence.",
+            "Re-entry supports reversibility in the first group; persistent arrest with markers is senescence-associated evidence, not proof of permanent fate.",
+            "Failure to re-enter by 72 h proves that every cell is dead."
+          ],
+          "unit": null,
+          "points": 2.0
+        },
+        {
+          "id": "criterion-2",
+          "type": "single_choice",
+          "prompt": "Which apoptosis-route description is appropriate?",
+          "options": [
+            "Extrinsic death signaling can never activate caspases.",
+            "Caspase positivity uniquely proves a mitochondrial initiating event.",
+            "Intrinsic mitochondrial and extrinsic death-receptor routes can activate caspases; this shared readout alone does not identify the initiating route."
+          ],
+          "unit": null,
+          "points": 2.0
+        },
+        {
+          "id": "criterion-3",
+          "type": "single_choice",
+          "prompt": "Which analysis separates mixed-state alternatives?",
+          "options": [
+            "Add marginal marker percentages to claim a pure population.",
+            "Track viable loss and joint orthogonal proliferation/death markers longitudinally; separate denominators and avoid inferring marker co-occurrence from marginals.",
+            "Treat all recovered cells as viable singlets without gates."
+          ],
+          "unit": null,
+          "points": 2.0
+        }
+      ],
+      "graph_spec": null,
+      "accepted_media_types": [],
+      "max_upload_bytes": null,
+      "variant_id": null,
+      "variant_token": null,
+      "learning_objective_ids": [
+        "cell-biology-26-objective-1",
+        "cell-biology-26-objective-2",
+        "cell-biology-26-objective-3"
+      ],
+      "assessment_role": "graded"
+    },
+    {
+      "id": "cell-biology-final-candidate:case-27",
+      "type": "structured",
+      "prompt": "Clonal evidence and potency. Authored form A. A fictional cell clone serially produces cells with its original phenotype and several lineages in a restricted tissue context. A marker signature reaches 80% in a culture, but a defined mature-function assay remains below its positive-control threshold. Neighboring cells, matrix and exposure duration vary between conditions.",
+      "options": [],
+      "unit": null,
+      "significant_figures": null,
+      "points": 6.0,
+      "selection": "single",
+      "partial_credit_policy": null,
+      "response_fields": [
+        {
+          "id": "criterion-1",
+          "type": "single_choice",
+          "prompt": "Which distinction fits the clonal evidence?",
+          "options": [
+            "Marker positivity alone proves unlimited self-renewal and totipotency.",
+            "Serial maintenance tests self-renewal and lineage production tests differentiation; restricted lineages do not establish totipotency.",
+            "Differentiation and self-renewal are interchangeable measurements."
+          ],
+          "unit": null,
+          "points": 2.0
+        },
+        {
+          "id": "criterion-2",
+          "type": "single_choice",
+          "prompt": "Which identity claim is warranted?",
+          "options": [
+            "The signature proves mature tissue function regardless of the assay.",
+            "Marker-associated and clonal evidence must be separated from the measured mature-function shortfall.",
+            "A single marker universally defines every developmental lineage."
+          ],
+          "unit": null,
+          "points": 2.0
+        },
+        {
+          "id": "criterion-3",
+          "type": "single_choice",
+          "prompt": "Which environmental interpretation fits the conditions?",
+          "options": [
+            "Signals, neighboring cells, matrix and timing can each affect lineage-associated outcomes and require controlled separation.",
+            "Exposure duration is irrelevant if the same nominal ligand is used.",
+            "Only DNA sequence can affect the measured lineage outcome."
+          ],
+          "unit": null,
+          "points": 2.0
+        }
+      ],
+      "graph_spec": null,
+      "accepted_media_types": [],
+      "max_upload_bytes": null,
+      "variant_id": null,
+      "variant_token": null,
+      "learning_objective_ids": [
+        "cell-biology-27-objective-1",
+        "cell-biology-27-objective-2",
+        "cell-biology-27-objective-3"
+      ],
+      "assessment_role": "graded"
+    },
+    {
+      "id": "cell-biology-final-candidate:case-28",
+      "type": "data_interpretation",
+      "prompt": "Factorial lineage-associated comparison. Authored form A. Four independent culture preparations are split across matrix low/high and signal off/on. Preparation-mean marker percentages are low/off=10, low/on=20, high/off=15, high/on=40. Use difference-in-differences (high/on-high/off)-(low/on-low/off) in percentage points. Matched function is near background; uncertainty and longer-term safety are absent.",
+      "options": [],
+      "unit": null,
+      "significant_figures": null,
+      "points": 6.0,
+      "selection": "single",
+      "partial_credit_policy": null,
+      "response_fields": [
+        {
+          "id": "criterion-1",
+          "type": "numeric",
+          "prompt": "Calculate the descriptive interaction contrast on a bare percentage-point scale. Report exactly 3 significant figures.",
+          "options": [],
+          "unit": "",
+          "points": 2.0
+        },
+        {
+          "id": "criterion-2",
+          "type": "single_choice",
+          "prompt": "Which follow-up best separates marker association and function?",
+          "options": [
+            "Treat a marker as the positive-control threshold for an unrelated function assay.",
+            "Pool all cells across preparations to infer universal differentiation.",
+            "Match ligand presentation and cell state, retain preparation blocking, and assay marker and a defined function with independent controls."
+          ],
+          "unit": null,
+          "points": 2.0
+        },
+        {
+          "id": "criterion-3",
+          "type": "single_choice",
+          "prompt": "Which translation boundary is justified?",
+          "options": [
+            "A positive marker makes safety and clinical oversight unnecessary.",
+            "The interaction alone demonstrates clinical regeneration.",
+            "A synthetic in-vitro association cannot establish therapeutic benefit; reproducibility, function, safety and appropriate oversight would be needed for a clinical claim."
+          ],
+          "unit": null,
+          "points": 2.0
+        }
+      ],
+      "graph_spec": null,
+      "accepted_media_types": [],
+      "max_upload_bytes": null,
+      "variant_id": null,
+      "variant_token": null,
+      "learning_objective_ids": [
+        "cell-biology-28-objective-1",
+        "cell-biology-28-objective-2",
+        "cell-biology-28-objective-3",
+        "cell-biology-24-objective-1",
+        "cell-biology-24-objective-2",
+        "cell-biology-24-objective-3",
+        "cell-biology-27-objective-1",
+        "cell-biology-27-objective-2",
+        "cell-biology-27-objective-3"
+      ],
+      "assessment_role": "graded"
+    }
+  ],
+  "variant_questions": {
+    "cell-biology-final-candidate:case-01": {
+      "id": "cell-biology-final-candidate:case-01",
+      "type": "structured",
+      "prompt": "Ionizable substitution in an assembly. Authored form B. A fictional protein has a glutamate side chain on a water-exposed surface at pH 7; its measured pKa is 4.2. It is changed to alanine. Other covalent bonds remain intact; assembly has not been measured.",
+      "options": [],
+      "unit": null,
+      "significant_figures": null,
+      "points": 7.0,
+      "selection": "single",
+      "partial_credit_policy": null,
+      "response_fields": [
+        {
+          "id": "criterion-1",
+          "type": "single_choice",
+          "prompt": "Which description distinguishes the mutation from ordinary molecular association?",
+          "options": [
+            "Association necessarily changes every peptide bond.",
+            "The side-chain covalent structure changes; reversible association can occur without new covalent bonds.",
+            "The mutation only changes noncovalent contacts, never structure."
+          ],
+          "unit": null,
+          "points": 3.0
+        },
+        {
+          "id": "criterion-2",
+          "type": "single_choice",
+          "prompt": "What bounded prediction follows at the specified pH?",
+          "options": [
+            "Charge loss proves the protein cannot assemble.",
+            "Alanine adds an ionized carboxylate at pH 7.",
+            "The original side chain is predominantly negative; alanine removes that charge and may change assembly."
+          ],
+          "unit": null,
+          "points": 2.0
+        },
+        {
+          "id": "criterion-3",
+          "type": "single_choice",
+          "prompt": "Which chemical feature is directly removed by this substitution?",
+          "options": [
+            "The side-chain carboxyl group, without necessarily removing the backbone amide.",
+            "A side-chain phosphate that neither residue contains.",
+            "Every backbone amide."
+          ],
+          "unit": null,
+          "points": 2.0
+        }
+      ],
+      "graph_spec": null,
+      "accepted_media_types": [],
+      "max_upload_bytes": null,
+      "variant_id": "form-b",
+      "variant_token": null,
+      "learning_objective_ids": [
+        "cell-biology-1-objective-1",
+        "cell-biology-1-objective-2",
+        "cell-biology-1-objective-3"
+      ],
+      "assessment_role": "graded"
+    },
+    "cell-biology-final-candidate:case-05": {
+      "id": "cell-biology-final-candidate:case-05",
+      "type": "data_interpretation",
+      "prompt": "A titratable group in water. Authored form B. An isolated carboxyl group in water has pKa 6.0; the solution pH is 8.0. Use [A-]/[HA] = 10^(pH-pKa), with no coupled groups. A separate nonpolar solute aggregates in water without new covalent bonds.",
+      "options": [],
+      "unit": null,
+      "significant_figures": null,
+      "points": 4.0,
+      "selection": "single",
+      "partial_credit_policy": null,
+      "response_fields": [
+        {
+          "id": "criterion-1",
+          "type": "single_choice",
+          "prompt": "Which interpretation of the nonpolar aggregate is justified?",
+          "options": [
+            "Nonpolar solutes must become permanently charged.",
+            "Aggregation proves new peptide bonds form.",
+            "Water-mediated hydrophobic association is plausible; aggregation alone does not establish covalent bonding."
+          ],
+          "unit": null,
+          "points": 2.0
+        },
+        {
+          "id": "criterion-2",
+          "type": "numeric",
+          "prompt": "Calculate the ratio of deprotonated to protonated group on a bare ratio scale. Report exactly 3 significant figures.",
+          "options": [],
+          "unit": "",
+          "points": 2.0
+        }
+      ],
+      "graph_spec": null,
+      "accepted_media_types": [],
+      "max_upload_bytes": null,
+      "variant_id": "form-b",
+      "variant_token": null,
+      "learning_objective_ids": [
+        "cell-biology-1-objective-2",
+        "cell-biology-5-objective-1"
+      ],
+      "assessment_role": "graded"
+    },
+    "cell-biology-final-candidate:case-06": {
+      "id": "cell-biology-final-candidate:case-06",
+      "type": "data_interpretation",
+      "prompt": "Protein quantity and function. Authored form B. A buried hydrophobic residue is replaced by a charged residue. In matched recovered protein, reference abundance is 80 and variant abundance is 32 arbitrary amount units. Total activities are 640 and 256 arbitrary rate units. Folding measurements and localization are missing.",
+      "options": [],
+      "unit": null,
+      "significant_figures": null,
+      "points": 4.0,
+      "selection": "single",
+      "partial_credit_policy": null,
+      "response_fields": [
+        {
+          "id": "criterion-1",
+          "type": "single_choice",
+          "prompt": "Which prediction respects residue environment and missing measurements?",
+          "options": [
+            "A buried charge proves loss of all activity in every context.",
+            "Any charged substitution necessarily increases native folding.",
+            "A buried charge may disrupt stability or packing, but the actual fold and localization need measurement."
+          ],
+          "unit": null,
+          "points": 2.0
+        },
+        {
+          "id": "criterion-2",
+          "type": "numeric",
+          "prompt": "Calculate variant/reference specific activity: (variant activity/amount)/(reference activity/amount), a bare ratio. Report exactly 3 significant figures.",
+          "options": [],
+          "unit": "",
+          "points": 2.0
+        }
+      ],
+      "graph_spec": null,
+      "accepted_media_types": [],
+      "max_upload_bytes": null,
+      "variant_id": "form-b",
+      "variant_token": null,
+      "learning_objective_ids": [
+        "cell-biology-6-objective-1",
+        "cell-biology-6-objective-2"
+      ],
+      "assessment_role": "graded"
+    },
+    "cell-biology-final-candidate:case-02": {
+      "id": "cell-biology-final-candidate:case-02",
+      "type": "data_interpretation",
+      "prompt": "Passive potassium and transport classes. Authored form B. Only K+ is permeant in an ideal membrane. Inside K+ is 160 mM; outside is 80 mM; at 37 C use E_K = 61.5 log10(outside/inside) mV. Membrane voltage is 0 mV. A separate carrier moves a substrate uphill only when coupled to ATP hydrolysis.",
+      "options": [],
+      "unit": null,
+      "significant_figures": null,
+      "points": 4.0,
+      "selection": "single",
+      "partial_credit_policy": null,
+      "response_fields": [
+        {
+          "id": "criterion-1",
+          "type": "numeric",
+          "prompt": "Calculate E_K using the stipulated rounded coefficient. Report exactly 3 significant figures.",
+          "options": [],
+          "unit": "mV",
+          "points": 2.0
+        },
+        {
+          "id": "criterion-2",
+          "type": "single_choice",
+          "prompt": "Classify the ATP-dependent uphill carrier.",
+          "options": [
+            "Passive transport because all carriers are passive.",
+            "Simple diffusion through the lipid bilayer.",
+            "Active transport; downhill carrier-mediated flux would be facilitated diffusion."
+          ],
+          "unit": null,
+          "points": 2.0
+        }
+      ],
+      "graph_spec": null,
+      "accepted_media_types": [],
+      "max_upload_bytes": null,
+      "variant_id": "form-b",
+      "variant_token": null,
+      "learning_objective_ids": [
+        "cell-biology-2-objective-1",
+        "cell-biology-2-objective-2"
+      ],
+      "assessment_role": "graded"
+    },
+    "cell-biology-final-candidate:case-07": {
+      "id": "cell-biology-final-candidate:case-07",
+      "type": "structured",
+      "prompt": "Compartment boundary evidence. Authored form B. A fictional protein with a cleavable ER-targeting peptide enters a lumen. Intact vesicles protect 72% of its immunoreactivity from added protease; detergent plus protease removes the signal. A cytosolic marker is digested without detergent. Vesicle recovery is matched. These are biochemical aliquots, not independent living cells.",
+      "options": [],
+      "unit": null,
+      "significant_figures": null,
+      "points": 4.0,
+      "selection": "single",
+      "partial_credit_policy": null,
+      "response_fields": [
+        {
+          "id": "criterion-1",
+          "type": "single_choice",
+          "prompt": "What topology follows if the stated targeting and translocation succeed?",
+          "options": [
+            "A cleaved ER peptide necessarily places the mature protein in the nucleus.",
+            "The mature soluble protein is on the luminal side and remains topologically outside the cytosol.",
+            "The protein must cross the bilayer at every secretory step."
+          ],
+          "unit": null,
+          "points": 2.0
+        },
+        {
+          "id": "criterion-2",
+          "type": "single_choice",
+          "prompt": "What is the bounded protease conclusion?",
+          "options": [
+            "Protection proves a unique living-cell organelle and direct binding.",
+            "Protection is consistent with enclosed antigen; detergent sensitivity and markers address integrity, not exact native location by themselves.",
+            "The cytosolic digestion control is interchangeable with vesicle integrity."
+          ],
+          "unit": null,
+          "points": 2.0
+        }
+      ],
+      "graph_spec": null,
+      "accepted_media_types": [],
+      "max_upload_bytes": null,
+      "variant_id": "form-b",
+      "variant_token": null,
+      "learning_objective_ids": [
+        "cell-biology-7-objective-1",
+        "cell-biology-7-objective-2"
+      ],
+      "assessment_role": "graded"
+    },
+    "cell-biology-final-candidate:case-08": {
+      "id": "cell-biology-final-candidate:case-08",
+      "type": "structured",
+      "prompt": "Receptor recycling and cargo sorting. Authored form B. Pulse-labeled extracellular cargo binds equally to reference and perturbed cells at time zero. At a matched chase, receptor returns to the surface in both; cargo in a degradative compartment changes from 70% to 42%. Total recovered label and new synthesis are matched, but degradation fragments and spatial resolution are not measured.",
+      "options": [],
+      "unit": null,
+      "significant_figures": null,
+      "points": 4.0,
+      "selection": "single",
+      "partial_credit_policy": null,
+      "response_fields": [
+        {
+          "id": "criterion-1",
+          "type": "single_choice",
+          "prompt": "Which route preserves topology?",
+          "options": [
+            "A surface receptor and all its cargo must always share their terminal destination.",
+            "Recycling requires cargo to become cytosolic by membrane inversion.",
+            "Endocytosed luminal cargo can remain enclosed while its receptor recycles to the surface."
+          ],
+          "unit": null,
+          "points": 2.0
+        },
+        {
+          "id": "criterion-2",
+          "type": "single_choice",
+          "prompt": "What can the matched measurements support?",
+          "options": [
+            "A redistribution consistent with altered sorting; unresolved label loss and compartment assignment still need controls.",
+            "A late compartment percentage proves changed transcription.",
+            "Equal initial binding proves normal sorting and degradation."
+          ],
+          "unit": null,
+          "points": 2.0
+        }
+      ],
+      "graph_spec": null,
+      "accepted_media_types": [],
+      "max_upload_bytes": null,
+      "variant_id": "form-b",
+      "variant_token": null,
+      "learning_objective_ids": [
+        "cell-biology-8-objective-1",
+        "cell-biology-8-objective-2"
+      ],
+      "assessment_role": "graded"
+    },
+    "cell-biology-final-candidate:case-03": {
+      "id": "cell-biology-final-candidate:case-03",
+      "type": "data_interpretation",
+      "prompt": "Catalysis and coupling. Authored form B. Use v = Vmax*S/(Km+S), with Vmax 105 arbitrary rate units, Km 4 mM and S 8 mM. At matched conditions reaction X has deltaG +15 kJ/mol and coupled reaction Y has deltaG -31 kJ/mol; stoichiometry is 1:1.",
+      "options": [],
+      "unit": null,
+      "significant_figures": null,
+      "points": 4.0,
+      "selection": "single",
+      "partial_credit_policy": null,
+      "response_fields": [
+        {
+          "id": "criterion-1",
+          "type": "numeric",
+          "prompt": "Calculate v on the declared bare rate-unit scale. Report exactly 3 significant figures.",
+          "options": [],
+          "unit": "",
+          "points": 2.0
+        },
+        {
+          "id": "criterion-2",
+          "type": "numeric",
+          "prompt": "Calculate the net deltaG per mole of coupled events. Report exactly 3 significant figures.",
+          "options": [],
+          "unit": "kJ/mol",
+          "points": 2.0
+        }
+      ],
+      "graph_spec": null,
+      "accepted_media_types": [],
+      "max_upload_bytes": null,
+      "variant_id": "form-b",
+      "variant_token": null,
+      "learning_objective_ids": [
+        "cell-biology-3-objective-1",
+        "cell-biology-3-objective-2"
+      ],
+      "assessment_role": "graded"
+    },
+    "cell-biology-final-candidate:case-09": {
+      "id": "cell-biology-final-candidate:case-09",
+      "type": "data_interpretation",
+      "prompt": "Active enzyme and equilibrium. Authored form B. A purified catalyst changes the activation barrier without changing initial/final state free energies. In an ideal initial-rate assay active enzyme is 5 nM, kcat 14 per second, S 6 mM and Km 6 mM; v = kcat*E*S/(Km+S). No inhibition or enzyme loss occurs.",
+      "options": [],
+      "unit": null,
+      "significant_figures": null,
+      "points": 4.0,
+      "selection": "single",
+      "partial_credit_policy": null,
+      "response_fields": [
+        {
+          "id": "criterion-1",
+          "type": "single_choice",
+          "prompt": "Which effect is compatible with a catalyst?",
+          "options": [
+            "A catalyst makes every uphill reaction have a negative deltaG.",
+            "Faster forward and reverse equilibration with unchanged equilibrium constant for the same states.",
+            "A catalyst changes equilibrium by consuming itself irreversibly."
+          ],
+          "unit": null,
+          "points": 2.0
+        },
+        {
+          "id": "criterion-2",
+          "type": "numeric",
+          "prompt": "Calculate initial v on a bare nM-per-second scale. Report exactly 3 significant figures.",
+          "options": [],
+          "unit": "",
+          "points": 2.0
+        }
+      ],
+      "graph_spec": null,
+      "accepted_media_types": [],
+      "max_upload_bytes": null,
+      "variant_id": "form-b",
+      "variant_token": null,
+      "learning_objective_ids": [
+        "cell-biology-9-objective-1",
+        "cell-biology-9-objective-2"
+      ],
+      "assessment_role": "graded"
+    },
+    "cell-biology-final-candidate:case-10": {
+      "id": "cell-biology-final-candidate:case-10",
+      "type": "data_interpretation",
+      "prompt": "Inhibitor model and optical control. Authored form B. An initial-rate fit gives Vmax 96 and apparent Km 8 mM with inhibitor; use v=Vmax*S/(Km+S) at S 4 mM. Without inhibitor Vmax is the same and Km is smaller. Blank wells show negligible optical interference; direct binding and uncertainty estimates are unavailable.",
+      "options": [],
+      "unit": null,
+      "significant_figures": null,
+      "points": 4.0,
+      "selection": "single",
+      "partial_credit_policy": null,
+      "response_fields": [
+        {
+          "id": "criterion-1",
+          "type": "numeric",
+          "prompt": "Calculate the fitted inhibited initial rate on the bare rate-unit scale. Report exactly 3 significant figures.",
+          "options": [],
+          "unit": "",
+          "points": 2.0
+        },
+        {
+          "id": "criterion-2",
+          "type": "single_choice",
+          "prompt": "Which statement is warranted by the parameter pattern and controls?",
+          "options": [
+            "An optical blank proves a particular active-site structure.",
+            "The pattern proves irreversible enzyme destruction.",
+            "It is consistent with an ideal competitive pattern; the fit and optical blank do not prove a molecular binding route."
+          ],
+          "unit": null,
+          "points": 2.0
+        }
+      ],
+      "graph_spec": null,
+      "accepted_media_types": [],
+      "max_upload_bytes": null,
+      "variant_id": "form-b",
+      "variant_token": null,
+      "learning_objective_ids": [
+        "cell-biology-10-objective-1",
+        "cell-biology-10-objective-2"
+      ],
+      "assessment_role": "graded"
+    },
+    "cell-biology-final-candidate:case-11": {
+      "id": "cell-biology-final-candidate:case-11",
+      "type": "data_interpretation",
+      "prompt": "Sampling and overlap. Authored form B. For a conventional image estimate lateral resolution d=0.61*lambda/NA with lambda 620 nm and NA 1.25. Sample-plane pixel size is 80 nm. Two fluorescent channels overlap within the optical spot; single-label controls show measurable bleed-through.",
+      "options": [],
+      "unit": null,
+      "significant_figures": null,
+      "points": 4.0,
+      "selection": "single",
+      "partial_credit_policy": null,
+      "response_fields": [
+        {
+          "id": "criterion-1",
+          "type": "numeric",
+          "prompt": "Calculate nominal lateral resolution in nm. This estimate is distinct from pixel size. Report exactly 3 significant figures.",
+          "options": [],
+          "unit": "nm",
+          "points": 2.0
+        },
+        {
+          "id": "criterion-2",
+          "type": "single_choice",
+          "prompt": "Which follow-up and conclusion fit this image?",
+          "options": [
+            "Discard single-label controls because colors differ on screen.",
+            "Increase magnification and declare direct binding from overlap.",
+            "Correct spectral cross-talk with matched controls; overlap at optical resolution does not establish direct molecular binding."
+          ],
+          "unit": null,
+          "points": 2.0
+        }
+      ],
+      "graph_spec": null,
+      "accepted_media_types": [],
+      "max_upload_bytes": null,
+      "variant_id": "form-b",
+      "variant_token": null,
+      "learning_objective_ids": [
+        "cell-biology-11-objective-1",
+        "cell-biology-11-objective-2"
+      ],
+      "assessment_role": "graded"
+    },
+    "cell-biology-final-candidate:case-12": {
+      "id": "cell-biology-final-candidate:case-12",
+      "type": "data_interpretation",
+      "prompt": "Recovery and enrichment. Authored form B. Input target marker activity is 180 units; the collected fraction contains 54 units. Fraction total protein is 3 mg. A second compartment marker is also detected. Only one collected fraction is supplied; missing fractions and rupture controls are absent.",
+      "options": [],
+      "unit": null,
+      "significant_figures": null,
+      "points": 4.0,
+      "selection": "single",
+      "partial_credit_policy": null,
+      "response_fields": [
+        {
+          "id": "criterion-1",
+          "type": "numeric",
+          "prompt": "Calculate target-marker recovery as a percentage of input. Report exactly 3 significant figures.",
+          "options": [],
+          "unit": "%",
+          "points": 2.0
+        },
+        {
+          "id": "criterion-2",
+          "type": "single_choice",
+          "prompt": "Which design can address the current limitations?",
+          "options": [
+            "Collect all fractions and input for mass balance, multiple compartment markers and integrity controls; enrichment alone is not purity.",
+            "Treat the fraction protein mass as a count of independent cultures.",
+            "Use only the target marker and call the fraction pure."
+          ],
+          "unit": null,
+          "points": 2.0
+        }
+      ],
+      "graph_spec": null,
+      "accepted_media_types": [],
+      "max_upload_bytes": null,
+      "variant_id": "form-b",
+      "variant_token": null,
+      "learning_objective_ids": [
+        "cell-biology-12-objective-1",
+        "cell-biology-12-objective-2"
+      ],
+      "assessment_role": "graded"
+    },
+    "cell-biology-final-candidate:case-13": {
+      "id": "cell-biology-final-candidate:case-13",
+      "type": "structured",
+      "prompt": "Polarity and isotope generations. Authored form B. The template is 5-prime CGATT 3-prime. Polymerase extends a primer by adding to its 3-prime end. After heavy-to-light transfer, controlled isotope-density generation 1 has only hybrid-density DNA and generation 2 has hybrid plus light DNA; density resolution controls pass. In a resolved third generation, hybrid-to-light molecule classes are 1:3 under the stipulated ideal growth model.",
+      "options": [],
+      "unit": null,
+      "significant_figures": null,
+      "points": 4.0,
+      "selection": "single",
+      "partial_credit_policy": null,
+      "response_fields": [
+        {
+          "id": "criterion-1",
+          "type": "single_choice",
+          "prompt": "Which description correctly preserves strand polarity and synthesis?",
+          "options": [
+            "Polymerase makes the leading strand by adding to its 5-prime end.",
+            "Both aligned strands have the same 5-prime to 3-prime direction.",
+            "The aligned complement runs 3-prime to 5-prime; a newly made strand grows 5-prime to 3-prime, with fragments on the lagging side."
+          ],
+          "unit": null,
+          "points": 2.0
+        },
+        {
+          "id": "criterion-2",
+          "type": "single_choice",
+          "prompt": "Which model fits the specified resolved generations?",
+          "options": [
+            "Conservative replication predicts only hybrid DNA in generation 1.",
+            "Semiconservative replication; the second generation helps distinguish the ideal dispersive prediction.",
+            "All three models predict exactly the same resolved generations."
+          ],
+          "unit": null,
+          "points": 2.0
+        }
+      ],
+      "graph_spec": null,
+      "accepted_media_types": [],
+      "max_upload_bytes": null,
+      "variant_id": "form-b",
+      "variant_token": null,
+      "learning_objective_ids": [
+        "cell-biology-13-objective-1",
+        "cell-biology-13-objective-2"
+      ],
+      "assessment_role": "graded"
+    },
+    "cell-biology-final-candidate:case-14": {
+      "id": "cell-biology-final-candidate:case-14",
+      "type": "structured",
+      "prompt": "Lesion signal and repair. Authored form B. A bulky-adduct assay has matched input and extraction standards. At a fixed time lesion signal is 18 units in reference and 54 in a repair perturbation; rescue brings it near reference. Mutation counts, survival and independent pathway activity are unmeasured.",
+      "options": [],
+      "unit": null,
+      "significant_figures": null,
+      "points": 4.0,
+      "selection": "single",
+      "partial_credit_policy": null,
+      "response_fields": [
+        {
+          "id": "criterion-1",
+          "type": "single_choice",
+          "prompt": "Which distinction and pathway hypothesis is appropriate?",
+          "options": [
+            "Proofreading and post-replicative mismatch repair are the same timed process.",
+            "Polymerase proofreading acts during synthesis; bulky-adduct excision is a plausible different repair pathway requiring specific tests.",
+            "Every bulky lesion is removed solely by polymerase proofreading."
+          ],
+          "unit": null,
+          "points": 2.0
+        },
+        {
+          "id": "criterion-2",
+          "type": "single_choice",
+          "prompt": "What does the rescue support within these measurements?",
+          "options": [
+            "Rescue proves zero off-target effects or survival selection.",
+            "A lesion signal is directly the mutation frequency per genome.",
+            "Perturbation-associated lesion-signal change; mutation frequency and a unique native mechanism remain unmeasured."
+          ],
+          "unit": null,
+          "points": 2.0
+        }
+      ],
+      "graph_spec": null,
+      "accepted_media_types": [],
+      "max_upload_bytes": null,
+      "variant_id": "form-b",
+      "variant_token": null,
+      "learning_objective_ids": [
+        "cell-biology-14-objective-1",
+        "cell-biology-14-objective-2"
+      ],
+      "assessment_role": "graded"
+    },
+    "cell-biology-final-candidate:case-15": {
+      "id": "cell-biology-final-candidate:case-15",
+      "type": "structured",
+      "prompt": "Chromatin and independent units. Authored form B. Four independent cultures per state are each split into three technical aliquots. Accessibility rises by 25% and matched RNA by 16% between states. A histone mark also increases; no endogenous element perturbation has been done.",
+      "options": [],
+      "unit": null,
+      "significant_figures": null,
+      "points": 4.0,
+      "selection": "single",
+      "partial_credit_policy": null,
+      "response_fields": [
+        {
+          "id": "criterion-1",
+          "type": "single_choice",
+          "prompt": "Which chromatin interpretation is bounded?",
+          "options": [
+            "Any mark increase proves an irreversible transcriptional switch.",
+            "Accessibility and a mark can be associated with state; a mark is not by itself a transcriptional switch.",
+            "Nucleosomes never alter accessibility."
+          ],
+          "unit": null,
+          "points": 2.0
+        },
+        {
+          "id": "criterion-2",
+          "type": "single_choice",
+          "prompt": "Which analysis and causal follow-up fit the units?",
+          "options": [
+            "Use a plasmid alone to prove endogenous element necessity.",
+            "Treat twelve aliquots as twelve independent cultures and infer causality from correlation.",
+            "Summarize aliquots within four cultures per state and perturb the endogenous element with matched controls and RNA/readout follow-up."
+          ],
+          "unit": null,
+          "points": 2.0
+        }
+      ],
+      "graph_spec": null,
+      "accepted_media_types": [],
+      "max_upload_bytes": null,
+      "variant_id": "form-b",
+      "variant_token": null,
+      "learning_objective_ids": [
+        "cell-biology-15-objective-1",
+        "cell-biology-15-objective-2"
+      ],
+      "assessment_role": "graded"
+    },
+    "cell-biology-final-candidate:case-04": {
+      "id": "cell-biology-final-candidate:case-04",
+      "type": "data_interpretation",
+      "prompt": "Expression and controls. Authored form B. A fictional construct is transcribed to mRNA and translated to protein. Three independent cultures have background-corrected reporter values 19, 23, 27; an untreated reference mean is 18. Positive assay control and a no-reporter negative control pass; input/loading measurements are not supplied.",
+      "options": [],
+      "unit": null,
+      "significant_figures": null,
+      "points": 7.0,
+      "selection": "single",
+      "partial_credit_policy": null,
+      "response_fields": [
+        {
+          "id": "criterion-1",
+          "type": "single_choice",
+          "prompt": "Which information path fits the model?",
+          "options": [
+            "RNA synthesis and peptide synthesis are the same chemical reaction.",
+            "Protein must first be reverse translated directly into genomic DNA.",
+            "DNA is transcribed to RNA; ribosomes read an mRNA frame to synthesize a polypeptide."
+          ],
+          "unit": null,
+          "points": 3.0
+        },
+        {
+          "id": "criterion-2",
+          "type": "single_choice",
+          "prompt": "Which control is missing for an abundance-normalized comparison?",
+          "options": [
+            "No loading control is needed because the reporter is fluorescent.",
+            "A second positive control automatically replaces loading.",
+            "A matched input/loading measurement; positive and negative controls address different assay questions."
+          ],
+          "unit": null,
+          "points": 2.0
+        },
+        {
+          "id": "criterion-3",
+          "type": "numeric",
+          "prompt": "Calculate the descriptive difference between the culture mean and reference on the bare reporter scale. Report exactly 3 significant figures.",
+          "options": [],
+          "unit": "",
+          "points": 2.0
+        }
+      ],
+      "graph_spec": null,
+      "accepted_media_types": [],
+      "max_upload_bytes": null,
+      "variant_id": "form-b",
+      "variant_token": null,
+      "learning_objective_ids": [
+        "cell-biology-4-objective-1",
+        "cell-biology-4-objective-2",
+        "cell-biology-4-objective-3"
+      ],
+      "assessment_role": "graded"
+    },
+    "cell-biology-final-candidate:case-16": {
+      "id": "cell-biology-final-candidate:case-16",
+      "type": "data_interpretation",
+      "prompt": "ChIP input and cis claims. Authored form B. The measured input aliquot is fraction 0.025 of total input; Ct_input 22, Ct_IP 25. Under equal doubling efficiency use percent input=100*fraction*2^(Ct_input-Ct_IP). IgG and negative-locus controls pass. A matched plasmid deletion lowers reporter output; the endogenous locus has not been edited.",
+      "options": [],
+      "unit": null,
+      "significant_figures": null,
+      "points": 4.0,
+      "selection": "single",
+      "partial_credit_policy": null,
+      "response_fields": [
+        {
+          "id": "criterion-1",
+          "type": "numeric",
+          "prompt": "Calculate simplified ChIP percent input. Report exactly 3 significant figures.",
+          "options": [],
+          "unit": "%",
+          "points": 2.0
+        },
+        {
+          "id": "criterion-2",
+          "type": "single_choice",
+          "prompt": "Which inference separates the two assays?",
+          "options": [
+            "Enrichment supports occupancy-associated evidence and the plasmid tests sequence activity in that context; neither alone proves direct binding or endogenous necessity.",
+            "IgG controls replace input and PCR efficiency controls.",
+            "ChIP plus plasmid deletion proves direct binding and endogenous necessity."
+          ],
+          "unit": null,
+          "points": 2.0
+        }
+      ],
+      "graph_spec": null,
+      "accepted_media_types": [],
+      "max_upload_bytes": null,
+      "variant_id": "form-b",
+      "variant_token": null,
+      "learning_objective_ids": [
+        "cell-biology-16-objective-1",
+        "cell-biology-16-objective-2"
+      ],
+      "assessment_role": "graded"
+    },
+    "cell-biology-final-candidate:case-17": {
+      "id": "cell-biology-final-candidate:case-17",
+      "type": "data_interpretation",
+      "prompt": "Processing and isoform composition. Authored form B. Background-corrected mature included and skipped RNA counts are 90 and 60 in one recovered culture, with matched recovery. A common-region count measures both forms; precursor abundance is also measured. No independent transcription or decay rate is measured.",
+      "options": [],
+      "unit": null,
+      "significant_figures": null,
+      "points": 7.0,
+      "selection": "single",
+      "partial_credit_policy": null,
+      "response_fields": [
+        {
+          "id": "criterion-1",
+          "type": "single_choice",
+          "prompt": "Which processing description fits many eukaryotic pre-mRNAs?",
+          "options": [
+            "Capping, intron removal and 3-prime processing can produce mature RNAs; alternative splicing can change exon composition.",
+            "Every eukaryotic mRNA has identical processing and no exceptions.",
+            "The spliceosome translates introns into mature protein."
+          ],
+          "unit": null,
+          "points": 3.0
+        },
+        {
+          "id": "criterion-2",
+          "type": "numeric",
+          "prompt": "Calculate skipped percentage among the two measured mature forms. Report exactly 3 significant figures.",
+          "options": [],
+          "unit": "%",
+          "points": 2.0
+        },
+        {
+          "id": "criterion-3",
+          "type": "single_choice",
+          "prompt": "Which control helps separate an RNA assay artifact?",
+          "options": [
+            "A no-reverse-transcriptase control plus distinct perturbation/rescue and recovery controls; none alone identifies production versus decay.",
+            "A common-region amplicon proves a unique splicing mechanism.",
+            "A rescue automatically excludes DNA contamination."
+          ],
+          "unit": null,
+          "points": 2.0
+        }
+      ],
+      "graph_spec": null,
+      "accepted_media_types": [],
+      "max_upload_bytes": null,
+      "variant_id": "form-b",
+      "variant_token": null,
+      "learning_objective_ids": [
+        "cell-biology-17-objective-1",
+        "cell-biology-17-objective-2",
+        "cell-biology-17-objective-3"
+      ],
+      "assessment_role": "graded"
+    },
+    "cell-biology-final-candidate:case-18": {
+      "id": "cell-biology-final-candidate:case-18",
+      "type": "data_interpretation",
+      "prompt": "Translation and labeled-cohort decay. Authored form B. A fixed protein cohort has corrected label f0=100, f4=25 after 4 h, with no new label or recycling and stable detection. Assume first-order decay f(t)/f0=exp(-k*t). A separate perturbation has unchanged RNA, lower nascent-protein signal and lower steady-state protein; loading controls pass.",
+      "options": [],
+      "unit": null,
+      "significant_figures": null,
+      "points": 7.0,
+      "selection": "single",
+      "partial_credit_policy": null,
+      "response_fields": [
+        {
+          "id": "criterion-1",
+          "type": "single_choice",
+          "prompt": "Which translation statement preserves frame and direction?",
+          "options": [
+            "Ribosomes read 3-prime to 5-prime and extend peptide from carboxyl end.",
+            "Ribosomes read mRNA codons 5-prime to 3-prime and extend peptide from amino to carboxyl end until termination.",
+            "Any one-base shift leaves all downstream codons unchanged."
+          ],
+          "unit": null,
+          "points": 3.0
+        },
+        {
+          "id": "criterion-2",
+          "type": "single_choice",
+          "prompt": "Which interpretation separates synthesis and turnover?",
+          "options": [
+            "Unchanged RNA proves unchanged protein synthesis and decay.",
+            "Lower nascent signal is consistent with reduced synthesis in this assay; matched decay measurements test turnover rather than assuming it.",
+            "Lower steady-state protein alone proves a proteasome route."
+          ],
+          "unit": null,
+          "points": 2.0
+        },
+        {
+          "id": "criterion-3",
+          "type": "numeric",
+          "prompt": "Calculate the labeled-cohort half-life in h from t_half=4*ln(0.5)/ln(f4/f0). Report exactly 3 significant figures.",
+          "options": [],
+          "unit": "h",
+          "points": 2.0
+        }
+      ],
+      "graph_spec": null,
+      "accepted_media_types": [],
+      "max_upload_bytes": null,
+      "variant_id": "form-b",
+      "variant_token": null,
+      "learning_objective_ids": [
+        "cell-biology-18-objective-1",
+        "cell-biology-18-objective-2",
+        "cell-biology-18-objective-3"
+      ],
+      "assessment_role": "graded"
+    },
+    "cell-biology-final-candidate:case-19": {
+      "id": "cell-biology-final-candidate:case-19",
+      "type": "data_interpretation",
+      "prompt": "A fictional inheritance model. Authored form B. For a nonclinical fictional trait, cross A/a with a/a. Exactly half offspring inherit A; at the specified age phenotype probability is 0.7 for carriers and 0.1 otherwise. A small selected pedigree and a population association are supplied without unbiased sampling or population covariates.",
+      "options": [],
+      "unit": null,
+      "significant_figures": null,
+      "points": 7.0,
+      "selection": "single",
+      "partial_credit_policy": null,
+      "response_fields": [
+        {
+          "id": "criterion-1",
+          "type": "numeric",
+          "prompt": "Calculate offspring phenotype probability as percent under this stipulated penetrance model. Report exactly 3 significant figures.",
+          "options": [],
+          "unit": "%",
+          "points": 3.0
+        },
+        {
+          "id": "criterion-2",
+          "type": "single_choice",
+          "prompt": "What limits a small selected pedigree?",
+          "options": [
+            "Dominance means every carrier must have the same severity.",
+            "One selected pedigree proves complete penetrance in every age group.",
+            "Age, incomplete penetrance, ascertainment and sample size can alter apparent patterns; the pedigree does not establish a universal rule."
+          ],
+          "unit": null,
+          "points": 2.0
+        },
+        {
+          "id": "criterion-3",
+          "type": "single_choice",
+          "prompt": "Which association follow-up addresses alternatives?",
+          "options": [
+            "Measure linkage, population structure and environmental covariates and use a controlled mechanism test; association alone does not establish causality.",
+            "Convert the fictional model directly into clinical risk advice.",
+            "Assume association excludes all linked variants and environment."
+          ],
+          "unit": null,
+          "points": 2.0
+        }
+      ],
+      "graph_spec": null,
+      "accepted_media_types": [],
+      "max_upload_bytes": null,
+      "variant_id": "form-b",
+      "variant_token": null,
+      "learning_objective_ids": [
+        "cell-biology-19-objective-1",
+        "cell-biology-19-objective-2",
+        "cell-biology-19-objective-3"
+      ],
+      "assessment_role": "graded"
+    },
+    "cell-biology-final-candidate:case-20": {
+      "id": "cell-biology-final-candidate:case-20",
+      "type": "data_interpretation",
+      "prompt": "Isogenic cells and normalization. Authored form B. Four independently derived clones per genotype share a parent. For one clone, recovered corrected protein is 4 ug, corrected activity 24 nmol/min and viable cells 50 thousand. Recovery scales activity and protein equally. Introduction and correction were tested, but localization and native pathway function are not.",
+      "options": [],
+      "unit": null,
+      "significant_figures": null,
+      "points": 7.0,
+      "selection": "single",
+      "partial_credit_policy": null,
+      "response_fields": [
+        {
+          "id": "criterion-1",
+          "type": "single_choice",
+          "prompt": "Which evidence chain matches assay levels?",
+          "options": [
+            "A DNA sequence measurement is a direct measurement of organism function.",
+            "DNA establishes the introduced sequence, RNA its measured abundance, and biochemical/cell readouts test distinct downstream hypotheses.",
+            "A cell phenotype proves a unique protein interaction without measurement."
+          ],
+          "unit": null,
+          "points": 3.0
+        },
+        {
+          "id": "criterion-2",
+          "type": "numeric",
+          "prompt": "Calculate activity per recovered protein on a bare nmol-per-minute-per-ug scale. Report exactly 3 significant figures.",
+          "options": [],
+          "unit": "",
+          "points": 2.0
+        },
+        {
+          "id": "criterion-3",
+          "type": "single_choice",
+          "prompt": "Which design most strengthens a bounded mechanism claim?",
+          "options": [
+            "Use correction alone to declare every editing artifact impossible.",
+            "Count technical wells from one clone as independent genotypes.",
+            "Independent introduction/correction clones with editing controls, viable-cell normalization and orthogonal localization/function follow-up."
+          ],
+          "unit": null,
+          "points": 2.0
+        }
+      ],
+      "graph_spec": null,
+      "accepted_media_types": [],
+      "max_upload_bytes": null,
+      "variant_id": "form-b",
+      "variant_token": null,
+      "learning_objective_ids": [
+        "cell-biology-20-objective-1",
+        "cell-biology-20-objective-2",
+        "cell-biology-20-objective-3"
+      ],
+      "assessment_role": "graded"
+    },
+    "cell-biology-final-candidate:case-21": {
+      "id": "cell-biology-final-candidate:case-21",
+      "type": "data_interpretation",
+      "prompt": "Binding and downstream response. Authored form B. Ideal independent single-site binding has free ligand L=30 nM and Kd=10 nM; occupancy theta=L/(Kd+L). RTK phosphorylation and a later cell response are measured at different times. An alternate system uses a GPCR; no quantitative gain model is given.",
+      "options": [],
+      "unit": null,
+      "significant_figures": null,
+      "points": 7.0,
+      "selection": "single",
+      "partial_credit_policy": null,
+      "response_fields": [
+        {
+          "id": "criterion-1",
+          "type": "numeric",
+          "prompt": "Calculate ideal receptor occupancy as percent. Report exactly 3 significant figures.",
+          "options": [],
+          "unit": "%",
+          "points": 3.0
+        },
+        {
+          "id": "criterion-2",
+          "type": "single_choice",
+          "prompt": "Which relay distinction is appropriate?",
+          "options": [
+            "RTKs can relay through phosphorylation and GPCRs through heterotrimeric G proteins; branches and amplification depend on context.",
+            "Each occupied receptor must yield exactly one downstream molecule.",
+            "All GPCRs are receptor tyrosine kinases with the same branches."
+          ],
+          "unit": null,
+          "points": 2.0
+        },
+        {
+          "id": "criterion-3",
+          "type": "single_choice",
+          "prompt": "Which dose/time inference is bounded?",
+          "options": [
+            "An occupancy percentage is automatically the same cell-response percentage.",
+            "Occupancy, biochemical state and later response are distinct measurements; matching one does not guarantee matching all.",
+            "A later response uniquely identifies receptor occupancy at every prior time."
+          ],
+          "unit": null,
+          "points": 2.0
+        }
+      ],
+      "graph_spec": null,
+      "accepted_media_types": [],
+      "max_upload_bytes": null,
+      "variant_id": "form-b",
+      "variant_token": null,
+      "learning_objective_ids": [
+        "cell-biology-21-objective-1",
+        "cell-biology-21-objective-2",
+        "cell-biology-21-objective-3"
+      ],
+      "assessment_role": "graded"
+    },
+    "cell-biology-final-candidate:case-22": {
+      "id": "cell-biology-final-candidate:case-22",
+      "type": "data_interpretation",
+      "prompt": "Pulse, inhibitor and bypass. Authored form B. In each of four independent cultures a constant ligand exposure is verified. A signaling readout at 0,10,30 min is 0,60,40. An upstream perturbation lowers the output with verified target engagement; a downstream bypass restores it. Off-target effects and adaptation measurements remain missing. Use trapezoids on the stated bare readout-minute scale.",
+      "options": [],
+      "unit": null,
+      "significant_figures": null,
+      "points": 7.0,
+      "selection": "single",
+      "partial_credit_policy": null,
+      "response_fields": [
+        {
+          "id": "criterion-1",
+          "type": "numeric",
+          "prompt": "Calculate trapezoidal area from 0 to 30 min: 10*(y0+y10)/2 + 20*(y10+y30)/2. Report exactly 3 significant figures.",
+          "options": [],
+          "unit": "",
+          "points": 3.0
+        },
+        {
+          "id": "criterion-2",
+          "type": "single_choice",
+          "prompt": "What can bypass plus target engagement support?",
+          "options": [
+            "Target engagement directly proves every downstream phenotype is on-target.",
+            "Bypass proves no parallel pathway or off-target effect exists.",
+            "Consistency with the perturbed process lying upstream of the bypassed output in this model; specificity and pathway uniqueness still need tests."
+          ],
+          "unit": null,
+          "points": 2.0
+        },
+        {
+          "id": "criterion-3",
+          "type": "single_choice",
+          "prompt": "Which measurements separate adaptation alternatives?",
+          "options": [
+            "Infer feedback exclusively from a single endpoint.",
+            "Only add technical repeats of the late output.",
+            "Matched ligand availability, receptor state, feedback perturbation and orthogonal intervention/time controls in independent cultures."
+          ],
+          "unit": null,
+          "points": 2.0
+        }
+      ],
+      "graph_spec": null,
+      "accepted_media_types": [],
+      "max_upload_bytes": null,
+      "variant_id": "form-b",
+      "variant_token": null,
+      "learning_objective_ids": [
+        "cell-biology-22-objective-1",
+        "cell-biology-22-objective-2",
+        "cell-biology-22-objective-3"
+      ],
+      "assessment_role": "graded"
+    },
+    "cell-biology-final-candidate:case-23": {
+      "id": "cell-biology-final-candidate:case-23",
+      "type": "structured",
+      "prompt": "Junctions and matrix ligands. Authored form B. Cells attach to a collagen-presenting matrix. Accessible ligand density is 3 relative units. Integrin-dependent adhesion and a cadherin-dependent neighboring-cell junction are measured separately. Filament turnover and remodeling can occur; accessible density differs between two matrices.",
+      "options": [],
+      "unit": null,
+      "significant_figures": null,
+      "points": 7.0,
+      "selection": "single",
+      "partial_credit_policy": null,
+      "response_fields": [
+        {
+          "id": "criterion-1",
+          "type": "single_choice",
+          "prompt": "Which comparison correctly distinguishes filament roles?",
+          "options": [
+            "Actin, microtubules and intermediate filaments have distinct organizations and overlapping integrated functions; all require context and turnover considerations.",
+            "Microtubules are the sole component of every adhesion junction.",
+            "All three filament systems are chemically identical and static."
+          ],
+          "unit": null,
+          "points": 3.0
+        },
+        {
+          "id": "criterion-2",
+          "type": "single_choice",
+          "prompt": "Which linkage classification fits the stated readouts?",
+          "options": [
+            "Cadherin junctions are universally cell-matrix integrin adhesions.",
+            "Integrin/focal adhesions link cell to matrix and often actin; cadherin junctions link neighboring cells, with distinct actin or intermediate-filament connections by junction type.",
+            "Every cell-cell junction is a focal adhesion to collagen."
+          ],
+          "unit": null,
+          "points": 2.0
+        },
+        {
+          "id": "criterion-3",
+          "type": "single_choice",
+          "prompt": "What is needed to interpret a matrix-associated difference?",
+          "options": [
+            "Match accessible ligand and consider composition/remodeling separately from mechanics.",
+            "Declare ligand presentation irrelevant because collagen is named in both conditions.",
+            "Assume nominal matrix coating guarantees identical accessible ligand."
+          ],
+          "unit": null,
+          "points": 2.0
+        }
+      ],
+      "graph_spec": null,
+      "accepted_media_types": [],
+      "max_upload_bytes": null,
+      "variant_id": "form-b",
+      "variant_token": null,
+      "learning_objective_ids": [
+        "cell-biology-23-objective-1",
+        "cell-biology-23-objective-2",
+        "cell-biology-23-objective-3"
+      ],
+      "assessment_role": "graded"
+    },
+    "cell-biology-final-candidate:case-24": {
+      "id": "cell-biology-final-candidate:case-24",
+      "type": "data_interpretation",
+      "prompt": "Geometry, stiffness and cell readouts. Authored form B. An ideal small-strain elastic sample has area 2 mm^2, length 10 mm, extension 0.2 mm, and background-corrected force 0.0008 N. E=(force/(area*1e-6))/(extension/length). A nuclear marker rises on the stiffer matrix; traction, accessible ligand, viscoelasticity and fate are unmeasured.",
+      "options": [],
+      "unit": null,
+      "significant_figures": null,
+      "points": 7.0,
+      "selection": "single",
+      "partial_credit_policy": null,
+      "response_fields": [
+        {
+          "id": "criterion-1",
+          "type": "numeric",
+          "prompt": "Calculate E in Pa under the stated elastic assumptions. Report exactly 3 significant figures.",
+          "options": [],
+          "unit": "Pa",
+          "points": 3.0
+        },
+        {
+          "id": "criterion-2",
+          "type": "single_choice",
+          "prompt": "Which interpretation of the nuclear marker is warranted?",
+          "options": [
+            "It directly measures traction force and proves differentiation.",
+            "It is a localization-associated readout, not itself force, pathway mechanism or stable cell fate.",
+            "It proves identical cell states in both conditions."
+          ],
+          "unit": null,
+          "points": 2.0
+        },
+        {
+          "id": "criterion-3",
+          "type": "single_choice",
+          "prompt": "Which control set separates stiffness-related alternatives?",
+          "options": [
+            "Match accessible ligand and cell state, measure material time dependence and perturb force transmission with controls.",
+            "Use nominal polymer concentration as proof that all biochemical variables are matched.",
+            "Only rename matrices as soft and stiff."
+          ],
+          "unit": null,
+          "points": 2.0
+        }
+      ],
+      "graph_spec": null,
+      "accepted_media_types": [],
+      "max_upload_bytes": null,
+      "variant_id": "form-b",
+      "variant_token": null,
+      "learning_objective_ids": [
+        "cell-biology-24-objective-1",
+        "cell-biology-24-objective-2",
+        "cell-biology-24-objective-3"
+      ],
+      "assessment_role": "graded"
+    },
+    "cell-biology-final-candidate:case-25": {
+      "id": "cell-biology-final-candidate:case-25",
+      "type": "data_interpretation",
+      "prompt": "DNA content and a damage response. Authored form B. At 24 h a damage challenge yields 36 EdU-positive cells among 600 viable singlets. A separate all-recovered gate has 1000 cells and includes dead material. DNA 4N and p21 rise, but direct CDK activity and longitudinal recovery are unmeasured.",
+      "options": [],
+      "unit": null,
+      "significant_figures": null,
+      "points": 6.0,
+      "selection": "single",
+      "partial_credit_policy": null,
+      "response_fields": [
+        {
+          "id": "criterion-1",
+          "type": "single_choice",
+          "prompt": "Which checkpoint statement is bounded?",
+          "options": [
+            "p21 abundance directly reports the activity of every CDK.",
+            "Checkpoint signaling can restrain cyclin-CDK transitions; the marker pattern alone is not a direct CDK assay.",
+            "DNA 4N means every cell is currently undergoing mitosis."
+          ],
+          "unit": null,
+          "points": 2.0
+        },
+        {
+          "id": "criterion-2",
+          "type": "numeric",
+          "prompt": "Calculate EdU-positive percent with the specified viable-singlet denominator. Report exactly 3 significant figures.",
+          "options": [],
+          "unit": "%",
+          "points": 2.0
+        },
+        {
+          "id": "criterion-3",
+          "type": "single_choice",
+          "prompt": "Which follow-up tests arrest rather than cell loss?",
+          "options": [
+            "Use a single 4N peak to declare permanent arrest.",
+            "Longitudinal viable-cell counts, re-entry after challenge removal and orthogonal phase/death readouts with controls.",
+            "Replace the viable denominator with all recovered material without stating the change."
+          ],
+          "unit": null,
+          "points": 2.0
+        }
+      ],
+      "graph_spec": null,
+      "accepted_media_types": [],
+      "max_upload_bytes": null,
+      "variant_id": "form-b",
+      "variant_token": null,
+      "learning_objective_ids": [
+        "cell-biology-25-objective-1",
+        "cell-biology-25-objective-2",
+        "cell-biology-25-objective-3"
+      ],
+      "assessment_role": "graded"
+    },
+    "cell-biology-final-candidate:case-26": {
+      "id": "cell-biology-final-candidate:case-26",
+      "type": "structured",
+      "prompt": "Re-entry and apoptosis-associated evidence. Authored form B. Following withdrawal/refeeding, EdU returns to 42% in one group; in a damage group it stays low through 72 h with p21 and beta-gal-associated features. Caspase positivity is 12% among all recovered cells. Longer follow-up and joint single-cell marker identities are absent.",
+      "options": [],
+      "unit": null,
+      "significant_figures": null,
+      "points": 6.0,
+      "selection": "single",
+      "partial_credit_policy": null,
+      "response_fields": [
+        {
+          "id": "criterion-1",
+          "type": "single_choice",
+          "prompt": "Which state inference respects the observation window?",
+          "options": [
+            "Any beta-gal positivity proves permanent senescence.",
+            "Re-entry supports reversibility in the first group; persistent arrest with markers is senescence-associated evidence, not proof of permanent fate.",
+            "Failure to re-enter by 72 h proves that every cell is dead."
+          ],
+          "unit": null,
+          "points": 2.0
+        },
+        {
+          "id": "criterion-2",
+          "type": "single_choice",
+          "prompt": "Which apoptosis-route description is appropriate?",
+          "options": [
+            "Extrinsic death signaling can never activate caspases.",
+            "Caspase positivity uniquely proves a mitochondrial initiating event.",
+            "Intrinsic mitochondrial and extrinsic death-receptor routes can activate caspases; this shared readout alone does not identify the initiating route."
+          ],
+          "unit": null,
+          "points": 2.0
+        },
+        {
+          "id": "criterion-3",
+          "type": "single_choice",
+          "prompt": "Which analysis separates mixed-state alternatives?",
+          "options": [
+            "Add marginal marker percentages to claim a pure population.",
+            "Track viable loss and joint orthogonal proliferation/death markers longitudinally; separate denominators and avoid inferring marker co-occurrence from marginals.",
+            "Treat all recovered cells as viable singlets without gates."
+          ],
+          "unit": null,
+          "points": 2.0
+        }
+      ],
+      "graph_spec": null,
+      "accepted_media_types": [],
+      "max_upload_bytes": null,
+      "variant_id": "form-b",
+      "variant_token": null,
+      "learning_objective_ids": [
+        "cell-biology-26-objective-1",
+        "cell-biology-26-objective-2",
+        "cell-biology-26-objective-3"
+      ],
+      "assessment_role": "graded"
+    },
+    "cell-biology-final-candidate:case-27": {
+      "id": "cell-biology-final-candidate:case-27",
+      "type": "structured",
+      "prompt": "Clonal evidence and potency. Authored form B. A fictional cell clone serially produces cells with its original phenotype and several lineages in a restricted tissue context. A marker signature reaches 75% in a culture, but a defined mature-function assay remains below its positive-control threshold. Neighboring cells, matrix and exposure duration vary between conditions.",
+      "options": [],
+      "unit": null,
+      "significant_figures": null,
+      "points": 6.0,
+      "selection": "single",
+      "partial_credit_policy": null,
+      "response_fields": [
+        {
+          "id": "criterion-1",
+          "type": "single_choice",
+          "prompt": "Which distinction fits the clonal evidence?",
+          "options": [
+            "Marker positivity alone proves unlimited self-renewal and totipotency.",
+            "Serial maintenance tests self-renewal and lineage production tests differentiation; restricted lineages do not establish totipotency.",
+            "Differentiation and self-renewal are interchangeable measurements."
+          ],
+          "unit": null,
+          "points": 2.0
+        },
+        {
+          "id": "criterion-2",
+          "type": "single_choice",
+          "prompt": "Which identity claim is warranted?",
+          "options": [
+            "The signature proves mature tissue function regardless of the assay.",
+            "Marker-associated and clonal evidence must be separated from the measured mature-function shortfall.",
+            "A single marker universally defines every developmental lineage."
+          ],
+          "unit": null,
+          "points": 2.0
+        },
+        {
+          "id": "criterion-3",
+          "type": "single_choice",
+          "prompt": "Which environmental interpretation fits the conditions?",
+          "options": [
+            "Signals, neighboring cells, matrix and timing can each affect lineage-associated outcomes and require controlled separation.",
+            "Exposure duration is irrelevant if the same nominal ligand is used.",
+            "Only DNA sequence can affect the measured lineage outcome."
+          ],
+          "unit": null,
+          "points": 2.0
+        }
+      ],
+      "graph_spec": null,
+      "accepted_media_types": [],
+      "max_upload_bytes": null,
+      "variant_id": "form-b",
+      "variant_token": null,
+      "learning_objective_ids": [
+        "cell-biology-27-objective-1",
+        "cell-biology-27-objective-2",
+        "cell-biology-27-objective-3"
+      ],
+      "assessment_role": "graded"
+    },
+    "cell-biology-final-candidate:case-28": {
+      "id": "cell-biology-final-candidate:case-28",
+      "type": "data_interpretation",
+      "prompt": "Factorial lineage-associated comparison. Authored form B. Four independent culture preparations are split across matrix low/high and signal off/on. Preparation-mean marker percentages are low/off=10, low/on=25, high/off=15, high/on=45. Use difference-in-differences (high/on-high/off)-(low/on-low/off) in percentage points. Matched function is near background; uncertainty and longer-term safety are absent.",
+      "options": [],
+      "unit": null,
+      "significant_figures": null,
+      "points": 6.0,
+      "selection": "single",
+      "partial_credit_policy": null,
+      "response_fields": [
+        {
+          "id": "criterion-1",
+          "type": "numeric",
+          "prompt": "Calculate the descriptive interaction contrast on a bare percentage-point scale. Report exactly 3 significant figures.",
+          "options": [],
+          "unit": "",
+          "points": 2.0
+        },
+        {
+          "id": "criterion-2",
+          "type": "single_choice",
+          "prompt": "Which follow-up best separates marker association and function?",
+          "options": [
+            "Treat a marker as the positive-control threshold for an unrelated function assay.",
+            "Pool all cells across preparations to infer universal differentiation.",
+            "Match ligand presentation and cell state, retain preparation blocking, and assay marker and a defined function with independent controls."
+          ],
+          "unit": null,
+          "points": 2.0
+        },
+        {
+          "id": "criterion-3",
+          "type": "single_choice",
+          "prompt": "Which translation boundary is justified?",
+          "options": [
+            "A positive marker makes safety and clinical oversight unnecessary.",
+            "The interaction alone demonstrates clinical regeneration.",
+            "A synthetic in-vitro association cannot establish therapeutic benefit; reproducibility, function, safety and appropriate oversight would be needed for a clinical claim."
+          ],
+          "unit": null,
+          "points": 2.0
+        }
+      ],
+      "graph_spec": null,
+      "accepted_media_types": [],
+      "max_upload_bytes": null,
+      "variant_id": "form-b",
+      "variant_token": null,
+      "learning_objective_ids": [
+        "cell-biology-28-objective-1",
+        "cell-biology-28-objective-2",
+        "cell-biology-28-objective-3",
+        "cell-biology-24-objective-1",
+        "cell-biology-24-objective-2",
+        "cell-biology-24-objective-3",
+        "cell-biology-27-objective-1",
+        "cell-biology-27-objective-2",
+        "cell-biology-27-objective-3"
+      ],
+      "assessment_role": "graded"
+    }
+  },
+  "provenance": {
+    "kind": "original",
+    "license": "CC-BY-4.0",
+    "ai_assistance": "Codex authored cases and checks; no independent or qualified review occurred.",
+    "source_scope": "Existing original lessons, original synthetic measurements and explicitly stipulated models; no copied assessment or licensed asset."
+  }
+}
