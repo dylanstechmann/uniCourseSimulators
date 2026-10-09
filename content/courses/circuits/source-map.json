@@ -80,6 +80,114 @@
       "original_content": true,
       "license": "CC-BY-4.0",
       "modifications": []
+    },
+    {
+      "module_id": "circuits-module-7",
+      "lesson_id": "circuits-7",
+      "reading": "modules/07-nodal-networks-port-tests-and-power.md",
+      "source_ids": [
+        "circuits",
+        "signals",
+        "openstax-circuits-kirchhoff"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "circuits-module-8",
+      "lesson_id": "circuits-8",
+      "reading": "modules/08-feedback-finite-gain-bias-and-output-range.md",
+      "source_ids": [
+        "circuits",
+        "signals",
+        "ti-circuits-opamp-spec"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "circuits-module-9",
+      "lesson_id": "circuits-9",
+      "reading": "modules/09-differential-common-mode-and-interface-imbalance.md",
+      "source_ids": [
+        "circuits",
+        "signals"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "circuits-module-10",
+      "lesson_id": "circuits-10",
+      "reading": "modules/10-filter-loading-baseline-and-recovery.md",
+      "source_ids": [
+        "circuits",
+        "signals"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "circuits-module-11",
+      "lesson_id": "circuits-11",
+      "reading": "modules/11-noise-bandwidth-covariance-and-uncertainty.md",
+      "source_ids": [
+        "circuits",
+        "signals",
+        "nist-circuits-uncertainty"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "circuits-module-12",
+      "lesson_id": "circuits-12",
+      "reading": "modules/12-sampling-quantization-and-acquisition-settling.md",
+      "source_ids": [
+        "circuits",
+        "signals",
+        "adi-circuits-adc"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "circuits-module-13",
+      "lesson_id": "circuits-13",
+      "reading": "modules/13-calibration-clipping-residuals-and-case-evidence.md",
+      "source_ids": [
+        "circuits",
+        "signals"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "circuits-module-lab-01",
+      "lesson_id": "circuits-lab-01",
+      "reading": "labs/01-gain-clipping-and-baseline-recovery.md",
+      "source_ids": [
+        "circuits",
+        "signals"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
     }
   ]
 }

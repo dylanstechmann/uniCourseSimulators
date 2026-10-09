@@ -3696,6 +3696,122 @@
       "checksum": null,
       "imported_assets": [],
       "rights_notes": "Only links and original explanation are selected; no third-party asset reuse is cleared."
+    },
+    {
+      "id": "openstax-circuits-kirchhoff",
+      "title": "Kirchhoff’s Rules",
+      "institution": "OpenStax, Rice University",
+      "url": "https://openstax.org/books/university-physics-volume-2/pages/10-3-kirchhoffs-rules",
+      "accessed_at": "2026-10-09",
+      "license": "Link-only technical reference selected; no teaching assets imported.",
+      "reuse_mode": "link-only-reference",
+      "permissions": {
+        "linking": true,
+        "quotation": false,
+        "adaptation": false,
+        "redistribution": false
+      },
+      "attribution_requirements": [
+        "Identify OpenStax, Rice University, the document title and exact URL."
+      ],
+      "third_party_notes": "Primary document retrieved to check concepts and metadata. Original instruction, connection map, numerical examples and data do not copy source prose, problems, figures or datasets. All numerical parameters are synthetic.",
+      "mapped_courses": [
+        "circuits"
+      ],
+      "mapped_modules": [
+        "circuits-module-7"
+      ],
+      "version": "University Physics Volume 2, section 10.3; retrieved 2026-10-09",
+      "checksum": null,
+      "imported_assets": [],
+      "rights_notes": "Only linking and original explanation are selected; no third-party asset reuse is cleared."
+    },
+    {
+      "id": "ti-circuits-opamp-spec",
+      "title": "Understanding Operational Amplifier Specifications",
+      "institution": "Texas Instruments; Jim Karki",
+      "url": "https://www.ti.com/lit/an/sloa011b/sloa011b.pdf",
+      "accessed_at": "2026-10-09",
+      "license": "Link-only technical reference selected; no teaching assets imported.",
+      "reuse_mode": "link-only-reference",
+      "permissions": {
+        "linking": true,
+        "quotation": false,
+        "adaptation": false,
+        "redistribution": false
+      },
+      "attribution_requirements": [
+        "Identify Texas Instruments; Jim Karki, the document title and exact URL."
+      ],
+      "third_party_notes": "Primary document retrieved to check concepts and metadata. Original instruction, connection map, numerical examples and data do not copy source prose, problems, figures or datasets. All numerical parameters are synthetic.",
+      "mapped_courses": [
+        "circuits"
+      ],
+      "mapped_modules": [
+        "circuits-module-8"
+      ],
+      "version": "Application Report SLOA011B; revised July 2021; retrieved 2026-10-09",
+      "checksum": null,
+      "imported_assets": [],
+      "rights_notes": "Only linking and original explanation are selected; no third-party asset reuse is cleared."
+    },
+    {
+      "id": "nist-circuits-uncertainty",
+      "title": "NIST TN 1297: 5. Combined Standard Uncertainty",
+      "institution": "National Institute of Standards and Technology",
+      "url": "https://www.nist.gov/pml/nist-technical-note-1297/nist-tn-1297-5-combined-standard-uncertainty",
+      "accessed_at": "2026-10-09",
+      "license": "Link-only technical reference selected; no teaching assets imported.",
+      "reuse_mode": "link-only-reference",
+      "permissions": {
+        "linking": true,
+        "quotation": false,
+        "adaptation": false,
+        "redistribution": false
+      },
+      "attribution_requirements": [
+        "Identify National Institute of Standards and Technology, the document title and exact URL."
+      ],
+      "third_party_notes": "Primary document retrieved to check concepts and metadata. Original instruction, connection map, numerical examples and data do not copy source prose, problems, figures or datasets. All numerical parameters are synthetic.",
+      "mapped_courses": [
+        "circuits"
+      ],
+      "mapped_modules": [
+        "circuits-module-11"
+      ],
+      "version": "NIST technical guidance, section 5; retrieved 2026-10-09",
+      "checksum": null,
+      "imported_assets": [],
+      "rights_notes": "Only linking and original explanation are selected; no third-party asset reuse is cleared."
+    },
+    {
+      "id": "adi-circuits-adc",
+      "title": "Chapter 20: Analog to Digital Conversion",
+      "institution": "Analog Devices University Program",
+      "url": "https://wiki.analog.com/university/courses/electronics/text/chapter-20",
+      "accessed_at": "2026-10-09",
+      "license": "Link-only technical reference selected; no teaching assets imported.",
+      "reuse_mode": "link-only-reference",
+      "permissions": {
+        "linking": true,
+        "quotation": false,
+        "adaptation": false,
+        "redistribution": false
+      },
+      "attribution_requirements": [
+        "Identify Analog Devices University Program, the document title and exact URL."
+      ],
+      "third_party_notes": "Primary document retrieved to check concepts and metadata. Original instruction, connection map, numerical examples and data do not copy source prose, problems, figures or datasets. All numerical parameters are synthetic.",
+      "mapped_courses": [
+        "circuits"
+      ],
+      "mapped_modules": [
+        "circuits-module-12"
+      ],
+      "version": "Online teaching chapter; displayed approved version 20 January 2021; retrieved 2026-10-09",
+      "checksum": null,
+      "imported_assets": [],
+      "rights_notes": "Only linking and original explanation are selected; no third-party asset reuse is cleared."
     }
   ]
 }

@@ -145,6 +145,326 @@
         "circuits-6-objective-3"
       ],
       "license": "CC-BY-4.0"
+    },
+    {
+      "id": "circuits-7-card-1",
+      "lesson_id": "circuits-7",
+      "front": "Nodal references",
+      "back": "Current from a to b is (V_a−V_b)/R under its declared reference.",
+      "objective_ids": [
+        "circuits-7-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "circuits-7-card-2",
+      "lesson_id": "circuits-7",
+      "front": "Port boundaries",
+      "back": "An open external port leaves the internal network intact.",
+      "objective_ids": [
+        "circuits-7-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "circuits-7-card-3",
+      "lesson_id": "circuits-7",
+      "front": "Test sources",
+      "back": "Dependent-source relations remain active when finding an equivalent port resistance.",
+      "objective_ids": [
+        "circuits-7-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "circuits-7-card-4",
+      "lesson_id": "circuits-7",
+      "front": "Measurement objective",
+      "back": "Maximum power transfer differs from minimum voltage-loading error.",
+      "objective_ids": [
+        "circuits-7-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "circuits-8-card-1",
+      "lesson_id": "circuits-8",
+      "front": "Feedback assumption",
+      "back": "A virtual short follows from valid linear negative feedback; it is not a physical input connection.",
+      "objective_ids": [
+        "circuits-8-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "circuits-8-card-2",
+      "lesson_id": "circuits-8",
+      "front": "Finite gain",
+      "back": "Solve V_out=A(V_in−βV_out) before treating A as infinite.",
+      "objective_ids": [
+        "circuits-8-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "circuits-8-card-3",
+      "lesson_id": "circuits-8",
+      "front": "Bias contribution",
+      "back": "Input current direction and effective source resistances determine current-induced errors.",
+      "objective_ids": [
+        "circuits-8-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "circuits-8-card-4",
+      "lesson_id": "circuits-8",
+      "front": "Operating gates",
+      "back": "Input range, output swing and dynamic behavior are distinct checks.",
+      "objective_ids": [
+        "circuits-8-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "circuits-9-card-1",
+      "lesson_id": "circuits-9",
+      "front": "Input decomposition",
+      "back": "Differential is the input difference; common mode is their mean relative to return.",
+      "objective_ids": [
+        "circuits-9-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "circuits-9-card-2",
+      "lesson_id": "circuits-9",
+      "front": "Rejection ratio",
+      "back": "CMRR compares compatible differential/common-mode amplitude gains using 20log₁₀.",
+      "objective_ids": [
+        "circuits-9-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "circuits-9-card-3",
+      "lesson_id": "circuits-9",
+      "front": "Interface imbalance",
+      "back": "Matched bias currents can still produce unequal drops through unequal source impedances.",
+      "objective_ids": [
+        "circuits-9-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "circuits-9-card-4",
+      "lesson_id": "circuits-9",
+      "front": "Topology limits",
+      "back": "A differential topology does not guarantee input range, internal headroom or complete rejection.",
+      "objective_ids": [
+        "circuits-9-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "circuits-10-card-1",
+      "lesson_id": "circuits-10",
+      "front": "Block loading",
+      "back": "Multiply standalone transfers only when their connection assumptions remain valid.",
+      "objective_ids": [
+        "circuits-10-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "circuits-10-card-2",
+      "lesson_id": "circuits-10",
+      "front": "Passive ladder",
+      "back": "An unbuffered second RC section loads the first and changes the denominator.",
+      "objective_ids": [
+        "circuits-10-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "circuits-10-card-3",
+      "lesson_id": "circuits-10",
+      "front": "State recovery",
+      "back": "A high-pass can have a nonzero initial-step transient despite zero steady DC response.",
+      "objective_ids": [
+        "circuits-10-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "circuits-10-card-4",
+      "lesson_id": "circuits-10",
+      "front": "Information loss",
+      "back": "Later filtering does not uniquely restore amplitudes already clipped upstream.",
+      "objective_ids": [
+        "circuits-10-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "circuits-11-card-1",
+      "lesson_id": "circuits-11",
+      "front": "Noise integration",
+      "back": "Square density and transfer magnitude, integrate variance, then take the square root.",
+      "objective_ids": [
+        "circuits-11-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "circuits-11-card-2",
+      "lesson_id": "circuits-11",
+      "front": "Covariance",
+      "back": "Variance addition depends on shared contributions and correlation, not merely labels.",
+      "objective_ids": [
+        "circuits-11-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "circuits-11-card-3",
+      "lesson_id": "circuits-11",
+      "front": "Calibration sensitivity",
+      "back": "Include uncertainties and covariances of voltage, slope and intercept in inversion.",
+      "objective_ids": [
+        "circuits-11-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "circuits-11-card-4",
+      "lesson_id": "circuits-11",
+      "front": "Coverage scope",
+      "back": "Standard uncertainty, resolution, repeatability and a worst-case bound are distinct quantities.",
+      "objective_ids": [
+        "circuits-11-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "circuits-12-card-1",
+      "lesson_id": "circuits-12",
+      "front": "ADC convention",
+      "back": "State span, code boundaries and reconstruction before calculating error.",
+      "objective_ids": [
+        "circuits-12-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "circuits-12-card-2",
+      "lesson_id": "circuits-12",
+      "front": "Quantization model",
+      "back": "Half-bin error describes the selected ideal quantizer, not total accuracy.",
+      "objective_ids": [
+        "circuits-12-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "circuits-12-card-3",
+      "lesson_id": "circuits-12",
+      "front": "Acquisition state",
+      "back": "Settling depends on source impedance, sampling capacitance, initial difference and error target.",
+      "objective_ids": [
+        "circuits-12-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "circuits-12-card-4",
+      "lesson_id": "circuits-12",
+      "front": "Alias ambiguity",
+      "back": "Different analog frequencies can share samples; the exact Nyquist boundary is not a practical margin.",
+      "objective_ids": [
+        "circuits-12-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "circuits-13-card-1",
+      "lesson_id": "circuits-13",
+      "front": "Linear calibration domain",
+      "back": "Use known unsaturated points; clipping can compromise an all-point linear fit.",
+      "objective_ids": [
+        "circuits-13-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "circuits-13-card-2",
+      "lesson_id": "circuits-13",
+      "front": "Asymmetric headroom",
+      "back": "A nonzero offset makes positive and negative input margins unequal even with symmetric rails.",
+      "objective_ids": [
+        "circuits-13-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "circuits-13-card-3",
+      "lesson_id": "circuits-13",
+      "front": "Baseline excess",
+      "back": "Subtract the final baseline before normalizing an exponential decay.",
+      "objective_ids": [
+        "circuits-13-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "circuits-13-card-4",
+      "lesson_id": "circuits-13",
+      "front": "Case controls",
+      "back": "Independent differential/common-mode references and separate state conditions constrain electrical explanations without uniquely identifying real biology.",
+      "objective_ids": [
+        "circuits-13-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "circuits-lab-01-card-1",
+      "lesson_id": "circuits-lab-01",
+      "front": "Fit domain",
+      "back": "Use known unsaturated references to recover an affine slope and intercept.",
+      "objective_ids": [
+        "circuits-lab-01-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "circuits-lab-01-card-2",
+      "lesson_id": "circuits-lab-01",
+      "front": "Separate modes",
+      "back": "Differential gain, common-mode leakage and a drifting baseline are distinct model terms.",
+      "objective_ids": [
+        "circuits-lab-01-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "circuits-lab-01-card-3",
+      "lesson_id": "circuits-lab-01",
+      "front": "Headroom",
+      "back": "Offset shifts positive and negative input limits even with symmetric output rails.",
+      "objective_ids": [
+        "circuits-lab-01-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "circuits-lab-01-card-4",
+      "lesson_id": "circuits-lab-01",
+      "front": "Case inference",
+      "back": "Known synthetic controls constrain electrical explanations without unique real electrode or biological identification.",
+      "objective_ids": [
+        "circuits-lab-01-objective-3"
+      ],
+      "license": "CC-BY-4.0"
     }
   ]
 }

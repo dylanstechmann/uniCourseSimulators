@@ -619,6 +619,3091 @@
         "kind": "original",
         "modifications": []
       }
+    },
+    {
+      "id": "circuits-7:node-a",
+      "type": "numeric",
+      "prompt": "A 6 V ideal source feeds 1 kΩ to a; a has 2 kΩ to return and 1 kΩ to b; b has 1 kΩ to return. With no external load, what a voltage in V follows? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "circuits-7-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 3,
+        "unit": "",
+        "tolerance": 0.00030000000000000003,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the supplied topology, domain, sign convention and unit scale.",
+        "solution": "The stated model gives approximately 3 in the requested scale. Check its operating domain and reference assumptions before interpretation.",
+        "lesson_ids": [
+          "circuits-7"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "circuits-7:node-b",
+      "type": "numeric",
+      "prompt": "For that network, current balance at b gives V_b=V_a/2 and V_a=3 V. What b voltage in V follows? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "circuits-7-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 1.5,
+        "unit": "",
+        "tolerance": 0.00015000000000000001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the supplied topology, domain, sign convention and unit scale.",
+        "solution": "The stated model gives approximately 1.5 in the requested scale. Check its operating domain and reference assumptions before interpretation.",
+        "lesson_ids": [
+          "circuits-7"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "circuits-7:source-current",
+      "type": "numeric",
+      "prompt": "For that 6 V network with a at 3 V and 1 kΩ between source and a, what source current in mA follows? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "circuits-7-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 3,
+        "unit": "",
+        "tolerance": 0.00030000000000000003,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the supplied topology, domain, sign convention and unit scale.",
+        "solution": "The stated model gives approximately 3 in the requested scale. Check its operating domain and reference assumptions before interpretation.",
+        "lesson_ids": [
+          "circuits-7"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "circuits-7:source-power",
+      "type": "numeric",
+      "prompt": "For that ideal 6 V source delivering 3 mA, what delivered power in mW follows? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "circuits-7-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 18,
+        "unit": "",
+        "tolerance": 0.0018000000000000002,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the supplied topology, domain, sign convention and unit scale.",
+        "solution": "The stated model gives approximately 18 in the requested scale. Check its operating domain and reference assumptions before interpretation.",
+        "lesson_ids": [
+          "circuits-7"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "circuits-7:port-resistance",
+      "type": "numeric",
+      "prompt": "At port b/return of that network, suppress only the independent source. A mathematical 1 V port test gives a=0.4 V; test current is 1/1000+(1−0.4)/1000 A. What port resistance in Ω follows? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "circuits-7-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 625,
+        "unit": "",
+        "tolerance": 0.0625,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the supplied topology, domain, sign convention and unit scale.",
+        "solution": "The stated model gives approximately 625 in the requested scale. Check its operating domain and reference assumptions before interpretation.",
+        "lesson_ids": [
+          "circuits-7"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "circuits-7:loaded-port",
+      "type": "numeric",
+      "prompt": "That port has V_th=1.5 V and R_th=625 Ω. What port voltage in V follows with an additional external 1 kΩ load? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "circuits-7-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0.9230769230769231,
+        "unit": "",
+        "tolerance": 9.230769230769232e-05,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the supplied topology, domain, sign convention and unit scale.",
+        "solution": "The stated model gives approximately 0.9230769 in the requested scale. Check its operating domain and reference assumptions before interpretation.",
+        "lesson_ids": [
+          "circuits-7"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "circuits-7:port-boundary",
+      "type": "single_choice",
+      "prompt": "When the external b/return port is open, is the network’s internal b-to-return resistor removed?",
+      "points": 1,
+      "objective_ids": [
+        "circuits-7-objective-2"
+      ],
+      "options": [
+        "Yes; open circuit means removing all internal loads.",
+        "Yes; every branch touching b disappears.",
+        "No; the internal network remains part of the port model."
+      ],
+      "solution_spec": {
+        "answer": 2
+      },
+      "feedback": {
+        "hint": "Check the stated network, observation model or information limit.",
+        "solution": "No; the internal network remains part of the port model.",
+        "lesson_ids": [
+          "circuits-7"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "circuits-7:dependent-source",
+      "type": "single_choice",
+      "prompt": "When finding port resistance, how is a dependent source handled?",
+      "points": 1,
+      "objective_ids": [
+        "circuits-7-objective-3"
+      ],
+      "options": [
+        "Ignore it because only resistors affect a port.",
+        "Keep its relation active and use an appropriate test-source calculation.",
+        "Always suppress it like an independent voltage source."
+      ],
+      "solution_spec": {
+        "answer": 1
+      },
+      "feedback": {
+        "hint": "Check the stated network, observation model or information limit.",
+        "solution": "Keep its relation active and use an appropriate test-source calculation.",
+        "lesson_ids": [
+          "circuits-7"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "circuits-7:matching",
+      "type": "single_choice",
+      "prompt": "Does maximum-power matching generally minimize unloaded-voltage measurement error?",
+      "points": 1,
+      "objective_ids": [
+        "circuits-7-objective-3"
+      ],
+      "options": [
+        "No; measurement loading and delivered power are different objectives.",
+        "Yes; matching always gives the full unloaded voltage.",
+        "Yes; maximum power implies infinite input resistance."
+      ],
+      "solution_spec": {
+        "answer": 0
+      },
+      "feedback": {
+        "hint": "Check the stated network, observation model or information limit.",
+        "solution": "No; measurement loading and delivered power are different objectives.",
+        "lesson_ids": [
+          "circuits-7"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "circuits-8:ideal-gain",
+      "type": "numeric",
+      "prompt": "An ideal non-inverting feedback network has R_f=90 kΩ,R_g=10 kΩ. What closed-loop gain follows? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "circuits-8-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 10,
+        "unit": "",
+        "tolerance": 0.001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the supplied topology, domain, sign convention and unit scale.",
+        "solution": "The stated model gives approximately 10 in the requested scale. Check its operating domain and reference assumptions before interpretation.",
+        "lesson_ids": [
+          "circuits-8"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "circuits-8:finite-gain",
+      "type": "numeric",
+      "prompt": "For the same β=0.10 network, a static open-loop gain A=1000 obeys V_out=A(V_in−βV_out). What finite closed-loop gain follows? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "circuits-8-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 9.900990099009901,
+        "unit": "",
+        "tolerance": 0.0009900990099009901,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the supplied topology, domain, sign convention and unit scale.",
+        "solution": "The stated model gives approximately 9.90099 in the requested scale. Check its operating domain and reference assumptions before interpretation.",
+        "lesson_ids": [
+          "circuits-8"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "circuits-8:finite-output",
+      "type": "numeric",
+      "prompt": "For that finite model A=1000,β=0.10,V_in=50 mV with no offsets and within the stated ranges, what output in mV follows? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "circuits-8-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 495.049504950495,
+        "unit": "",
+        "tolerance": 0.04950495049504951,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the supplied topology, domain, sign convention and unit scale.",
+        "solution": "The stated model gives approximately 495.0495 in the requested scale. Check its operating domain and reference assumptions before interpretation.",
+        "lesson_ids": [
+          "circuits-8"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "circuits-8:input-difference",
+      "type": "numeric",
+      "prompt": "For the same 50 mV input and output 50×1000/101 mV, what positive-minus-negative input difference in mV follows from V_out/A? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "circuits-8-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0.49504950495049505,
+        "unit": "",
+        "tolerance": 4.950495049504951e-05,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the supplied topology, domain, sign convention and unit scale.",
+        "solution": "The stated model gives approximately 0.4950495 in the requested scale. Check its operating domain and reference assumptions before interpretation.",
+        "lesson_ids": [
+          "circuits-8"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "circuits-8:bias-shift",
+      "type": "numeric",
+      "prompt": "Isolate positive-input bias current 10 nA flowing into the amplifier through source resistance 200 kΩ. Exclude other bias terms. What signed input voltage shift in mV follows? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "circuits-8-objective-2"
+      ],
+      "solution_spec": {
+        "answer": -2,
+        "unit": "",
+        "tolerance": 0.0002,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the supplied topology, domain, sign convention and unit scale.",
+        "solution": "The stated model gives approximately −2 in the requested scale. Check its operating domain and reference assumptions before interpretation.",
+        "lesson_ids": [
+          "circuits-8"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "circuits-8:positive-limit",
+      "type": "numeric",
+      "prompt": "With finite gain 1000/101 and positive output limit +0.80 V, neglect offsets and assume input range valid. What maximum positive input in mV is compatible with the linear output bound? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "circuits-8-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 80.80000000000001,
+        "unit": "",
+        "tolerance": 0.008080000000000002,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the supplied topology, domain, sign convention and unit scale.",
+        "solution": "The stated model gives approximately 80.8 in the requested scale. Check its operating domain and reference assumptions before interpretation.",
+        "lesson_ids": [
+          "circuits-8"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "circuits-8:virtual-short",
+      "type": "single_choice",
+      "prompt": "When is nearly equal op-amp input voltage justified?",
+      "points": 1,
+      "objective_ids": [
+        "circuits-8-objective-1"
+      ],
+      "options": [
+        "Whenever the device has two inputs, including saturation.",
+        "Under appropriate negative feedback with valid linear operating and range conditions.",
+        "Because the two input pins are physically shorted."
+      ],
+      "solution_spec": {
+        "answer": 1
+      },
+      "feedback": {
+        "hint": "Check the stated network, observation model or information limit.",
+        "solution": "Under appropriate negative feedback with valid linear operating and range conditions.",
+        "lesson_ids": [
+          "circuits-8"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "circuits-8:bias-sign",
+      "type": "single_choice",
+      "prompt": "Does every input bias current create the same positive voltage error?",
+      "points": 1,
+      "objective_ids": [
+        "circuits-8-objective-2"
+      ],
+      "options": [
+        "No; current direction, source resistance and both input contributions matter.",
+        "Yes; bias current has no direction.",
+        "Yes; source impedance is irrelevant."
+      ],
+      "solution_spec": {
+        "answer": 0
+      },
+      "feedback": {
+        "hint": "Check the stated network, observation model or information limit.",
+        "solution": "No; current direction, source resistance and both input contributions matter.",
+        "lesson_ids": [
+          "circuits-8"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "circuits-8:range-check",
+      "type": "single_choice",
+      "prompt": "What should happen if a linear feedback calculation demands output beyond a stipulated rail?",
+      "points": 1,
+      "objective_ids": [
+        "circuits-8-objective-3"
+      ],
+      "options": [
+        "Keep virtual-short assumptions and report the impossible linear output.",
+        "Reject that linear operating point and use a suitable limited-output model.",
+        "Assume feedback removes every output limit."
+      ],
+      "solution_spec": {
+        "answer": 1
+      },
+      "feedback": {
+        "hint": "Check the stated network, observation model or information limit.",
+        "solution": "Reject that linear operating point and use a suitable limited-output model.",
+        "lesson_ids": [
+          "circuits-8"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "circuits-9:differential",
+      "type": "numeric",
+      "prompt": "For v_p=0.502 V and v_m=0.498 V, what differential voltage v_p−v_m in mV follows? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "circuits-9-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 4,
+        "unit": "",
+        "tolerance": 0.0004,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the supplied topology, domain, sign convention and unit scale.",
+        "solution": "The stated model gives approximately 4 in the requested scale. Check its operating domain and reference assumptions before interpretation.",
+        "lesson_ids": [
+          "circuits-9"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "circuits-9:common-mode",
+      "type": "numeric",
+      "prompt": "For those two inputs, what common-mode voltage (v_p+v_m)/2 in V follows? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "circuits-9-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0.5,
+        "unit": "",
+        "tolerance": 5e-05,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the supplied topology, domain, sign convention and unit scale.",
+        "solution": "The stated model gives approximately 0.5 in the requested scale. Check its operating domain and reference assumptions before interpretation.",
+        "lesson_ids": [
+          "circuits-9"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "circuits-9:total-output",
+      "type": "numeric",
+      "prompt": "A stipulated valid linear channel has b=0.020 V,A_d=100,A_c=0.010,v_d=0.004 V,v_c=0.50 V. What output in V follows? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "circuits-9-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0.425,
+        "unit": "",
+        "tolerance": 4.25e-05,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the supplied topology, domain, sign convention and unit scale.",
+        "solution": "The stated model gives approximately 0.425 in the requested scale. Check its operating domain and reference assumptions before interpretation.",
+        "lesson_ids": [
+          "circuits-9"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "circuits-9:common-contribution",
+      "type": "numeric",
+      "prompt": "For that channel A_c=0.010 and v_c=0.50 V, what common-mode output contribution in mV follows? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "circuits-9-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 5,
+        "unit": "",
+        "tolerance": 0.0005,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the supplied topology, domain, sign convention and unit scale.",
+        "solution": "The stated model gives approximately 5 in the requested scale. Check its operating domain and reference assumptions before interpretation.",
+        "lesson_ids": [
+          "circuits-9"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "circuits-9:rejection-db",
+      "type": "numeric",
+      "prompt": "For stipulated amplitude gains A_d=100 and A_c=0.010, what CMRR in dB follows from 20log₁₀|A_d/A_c|? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "circuits-9-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 80,
+        "unit": "",
+        "tolerance": 0.008,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the supplied topology, domain, sign convention and unit scale.",
+        "solution": "The stated model gives approximately 80 in the requested scale. Check its operating domain and reference assumptions before interpretation.",
+        "lesson_ids": [
+          "circuits-9"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "circuits-9:imbalance-output",
+      "type": "numeric",
+      "prompt": "Two inputs draw equal 5 nA into the amplifier through R_p=200 kΩ,R_m=100 kΩ. Isolate their differential shift, with A_d=100. What signed output contribution in mV follows? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "circuits-9-objective-2"
+      ],
+      "solution_spec": {
+        "answer": -50,
+        "unit": "",
+        "tolerance": 0.005,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the supplied topology, domain, sign convention and unit scale.",
+        "solution": "The stated model gives approximately −50 in the requested scale. Check its operating domain and reference assumptions before interpretation.",
+        "lesson_ids": [
+          "circuits-9"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "circuits-9:common-range",
+      "type": "single_choice",
+      "prompt": "Can nearly zero differential input guarantee valid operation when both input terminals are near 2 V but allowed input range ends at 1.5 V?",
+      "points": 1,
+      "objective_ids": [
+        "circuits-9-objective-3"
+      ],
+      "options": [
+        "Yes; only the difference ever matters.",
+        "Yes; output amplitude certifies all internal input conditions.",
+        "No; individual input/common-mode range is a separate condition."
+      ],
+      "solution_spec": {
+        "answer": 2
+      },
+      "feedback": {
+        "hint": "Check the stated network, observation model or information limit.",
+        "solution": "No; individual input/common-mode range is a separate condition.",
+        "lesson_ids": [
+          "circuits-9"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "circuits-9:matching",
+      "type": "single_choice",
+      "prompt": "Do equal input bias currents cancel differential error through unequal source resistances?",
+      "points": 1,
+      "objective_ids": [
+        "circuits-9-objective-2"
+      ],
+      "options": [
+        "Always, regardless of source resistance.",
+        "Only if every source resistance is zero.",
+        "Not necessarily; unequal current-induced drops can leave differential error."
+      ],
+      "solution_spec": {
+        "answer": 2
+      },
+      "feedback": {
+        "hint": "Check the stated network, observation model or information limit.",
+        "solution": "Not necessarily; unequal current-induced drops can leave differential error.",
+        "lesson_ids": [
+          "circuits-9"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "circuits-9:topology-evidence",
+      "type": "single_choice",
+      "prompt": "Does selecting an instrumentation topology alone validate a recording front end?",
+      "points": 1,
+      "objective_ids": [
+        "circuits-9-objective-3"
+      ],
+      "options": [
+        "Yes; the topology name guarantees all operating limits.",
+        "Yes; external resistor matching can never matter.",
+        "No; range, bias return, bandwidth, noise and internal headroom still need evidence."
+      ],
+      "solution_spec": {
+        "answer": 2
+      },
+      "feedback": {
+        "hint": "Check the stated network, observation model or information limit.",
+        "solution": "No; range, bias return, bandwidth, noise and internal headroom still need evidence.",
+        "lesson_ids": [
+          "circuits-9"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "circuits-10:lowpass-time",
+      "type": "numeric",
+      "prompt": "An ideal first-order low-pass has cutoff 10 Hz. What time constant in s follows? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "circuits-10-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0.015915494309189534,
+        "unit": "",
+        "tolerance": 1.5915494309189535e-06,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the supplied topology, domain, sign convention and unit scale.",
+        "solution": "The stated model gives approximately 0.01591549 in the requested scale. Check its operating domain and reference assumptions before interpretation.",
+        "lesson_ids": [
+          "circuits-10"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "circuits-10:lowpass-amplitude",
+      "type": "numeric",
+      "prompt": "For H_L=1/(1+jf/10), what amplitude fraction follows at f=1 Hz? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "circuits-10-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0.9950371902099893,
+        "unit": "",
+        "tolerance": 9.950371902099894e-05,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the supplied topology, domain, sign convention and unit scale.",
+        "solution": "The stated model gives approximately 0.9950372 in the requested scale. Check its operating domain and reference assumptions before interpretation.",
+        "lesson_ids": [
+          "circuits-10"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "circuits-10:highpass-time",
+      "type": "numeric",
+      "prompt": "A separate ideal first-order high-pass has cutoff 0.10 Hz. What time constant in s follows? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "circuits-10-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 1.5915494309189535,
+        "unit": "",
+        "tolerance": 0.00015915494309189535,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the supplied topology, domain, sign convention and unit scale.",
+        "solution": "The stated model gives approximately 1.591549 in the requested scale. Check its operating domain and reference assumptions before interpretation.",
+        "lesson_ids": [
+          "circuits-10"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "circuits-10:step-remainder",
+      "type": "numeric",
+      "prompt": "For the ideal initially settled high-pass driven by a unit voltage step, V_out=exp(−t/τ) V for t≥0. What output in V follows at one τ? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "circuits-10-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0.36787944117144233,
+        "unit": "",
+        "tolerance": 3.678794411714424e-05,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the supplied topology, domain, sign convention and unit scale.",
+        "solution": "The stated model gives approximately 0.3678794 in the requested scale. Check its operating domain and reference assumptions before interpretation.",
+        "lesson_ids": [
+          "circuits-10"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "circuits-10:buffered-cascade",
+      "type": "numeric",
+      "prompt": "Two identical ideal RC low-pass sections are isolated by an ideal buffer. At ωRC=1, what final amplitude fraction |1/(1+j)²| follows? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "circuits-10-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0.5,
+        "unit": "",
+        "tolerance": 5e-05,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the supplied topology, domain, sign convention and unit scale.",
+        "solution": "The stated model gives approximately 0.5 in the requested scale. Check its operating domain and reference assumptions before interpretation.",
+        "lesson_ids": [
+          "circuits-10"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "circuits-10:passive-ladder",
+      "type": "numeric",
+      "prompt": "Two identical passive RC sections drive each other without a buffer. Their final transfer is H=1/[1+3sRC+(sRC)²]. At sRC=j, what amplitude fraction follows? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "circuits-10-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0.3333333333333333,
+        "unit": "",
+        "tolerance": 3.3333333333333335e-05,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the supplied topology, domain, sign convention and unit scale.",
+        "solution": "The stated model gives approximately 0.3333333 in the requested scale. Check its operating domain and reference assumptions before interpretation.",
+        "lesson_ids": [
+          "circuits-10"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "circuits-10:cascade",
+      "type": "single_choice",
+      "prompt": "When can isolated section transfer functions be multiplied directly?",
+      "points": 1,
+      "objective_ids": [
+        "circuits-10-objective-2"
+      ],
+      "options": [
+        "For every passive ladder regardless of loading.",
+        "Only when all phases are exactly zero.",
+        "When their port/loading assumptions remain compatible, such as a declared ideal buffer."
+      ],
+      "solution_spec": {
+        "answer": 2
+      },
+      "feedback": {
+        "hint": "Check the stated network, observation model or information limit.",
+        "solution": "When their port/loading assumptions remain compatible, such as a declared ideal buffer.",
+        "lesson_ids": [
+          "circuits-10"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "circuits-10:initial-step",
+      "type": "single_choice",
+      "prompt": "Does zero steady DC gain mean an ideal high-pass has zero output at every instant after a step?",
+      "points": 1,
+      "objective_ids": [
+        "circuits-10-objective-1"
+      ],
+      "options": [
+        "No; its state-dependent transient can be nonzero.",
+        "Yes; a high-pass cannot store energy.",
+        "Yes; initial conditions never matter for a transfer model."
+      ],
+      "solution_spec": {
+        "answer": 0
+      },
+      "feedback": {
+        "hint": "Check the stated network, observation model or information limit.",
+        "solution": "No; its state-dependent transient can be nonzero.",
+        "lesson_ids": [
+          "circuits-10"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "circuits-10:lost-clipping",
+      "type": "single_choice",
+      "prompt": "Can a later linear filter uniquely recover amplitudes lost in upstream clipping?",
+      "points": 1,
+      "objective_ids": [
+        "circuits-10-objective-3"
+      ],
+      "options": [
+        "No; different larger inputs can share the same clipped report.",
+        "Yes; a flatter baseline proves complete recovery.",
+        "Yes; smoothing a plateau restores all original amplitudes."
+      ],
+      "solution_spec": {
+        "answer": 0
+      },
+      "feedback": {
+        "hint": "Check the stated network, observation model or information limit.",
+        "solution": "No; different larger inputs can share the same clipped report.",
+        "lesson_ids": [
+          "circuits-10"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "circuits-11:noise-bandwidth",
+      "type": "numeric",
+      "prompt": "For unity-DC-gain first-order low-pass cutoff f_c=100 Hz, what equivalent noise bandwidth πf_c/2 in Hz follows under the one-sided white-noise model? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "circuits-11-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 157.07963267948966,
+        "unit": "",
+        "tolerance": 0.015707963267948967,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the supplied topology, domain, sign convention and unit scale.",
+        "solution": "The stated model gives approximately 157.0796 in the requested scale. Check its operating domain and reference assumptions before interpretation.",
+        "lesson_ids": [
+          "circuits-11"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "circuits-11:input-rms",
+      "type": "numeric",
+      "prompt": "A synthetic white amplitude noise density is 6 nV/√Hz before that filter. What input-referred filtered RMS in nV follows? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "circuits-11-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 75.19884823893001,
+        "unit": "",
+        "tolerance": 0.007519884823893002,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the supplied topology, domain, sign convention and unit scale.",
+        "solution": "The stated model gives approximately 75.19885 in the requested scale. Check its operating domain and reference assumptions before interpretation.",
+        "lesson_ids": [
+          "circuits-11"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "circuits-11:output-rms",
+      "type": "numeric",
+      "prompt": "For that filtered RMS 6√(π×100/2) nV and stipulated constant gain 20, what output RMS in µV follows? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "circuits-11-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 1.5039769647786,
+        "unit": "",
+        "tolerance": 0.00015039769647786,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the supplied topology, domain, sign convention and unit scale.",
+        "solution": "The stated model gives approximately 1.503977 in the requested scale. Check its operating domain and reference assumptions before interpretation.",
+        "lesson_ids": [
+          "circuits-11"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "circuits-11:independent-sum",
+      "type": "numeric",
+      "prompt": "Independent zero-mean contributions have RMS 3 and 4 µV. What RMS of their sum in µV follows? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "circuits-11-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 5,
+        "unit": "",
+        "tolerance": 0.0005,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the supplied topology, domain, sign convention and unit scale.",
+        "solution": "The stated model gives approximately 5 in the requested scale. Check its operating domain and reference assumptions before interpretation.",
+        "lesson_ids": [
+          "circuits-11"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "circuits-11:correlated-sum",
+      "type": "numeric",
+      "prompt": "For RMS 3 and 4 µV with correlation ρ=0.50, what RMS of their sum in µV follows? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "circuits-11-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 6.082762530298219,
+        "unit": "",
+        "tolerance": 0.000608276253029822,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the supplied topology, domain, sign convention and unit scale.",
+        "solution": "The stated model gives approximately 6.082763 in the requested scale. Check its operating domain and reference assumptions before interpretation.",
+        "lesson_ids": [
+          "circuits-11"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "circuits-11:calibration-uncertainty",
+      "type": "numeric",
+      "prompt": "For x=(V−b)/g at V=2.10 V,b=0.10 V,g=0.50 V/unit and independent standard uncertainties u_V=0.020 V,u_b=0.010 V,u_g=0.005 V/unit, what first-order standard uncertainty in x units follows? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "circuits-11-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 0.06,
+        "unit": "",
+        "tolerance": 6e-06,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the supplied topology, domain, sign convention and unit scale.",
+        "solution": "The stated model gives approximately 0.06 in the requested scale. Check its operating domain and reference assumptions before interpretation.",
+        "lesson_ids": [
+          "circuits-11"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "circuits-11:bandwidth",
+      "type": "single_choice",
+      "prompt": "Is a first-order cutoff the same as an abrupt white-noise bandwidth?",
+      "points": 1,
+      "objective_ids": [
+        "circuits-11-objective-1"
+      ],
+      "options": [
+        "Yes; response is exactly zero above cutoff.",
+        "No; the transfer tail passes noise beyond cutoff.",
+        "Yes; RMS density needs no frequency integration."
+      ],
+      "solution_spec": {
+        "answer": 1
+      },
+      "feedback": {
+        "hint": "Check the stated network, observation model or information limit.",
+        "solution": "No; the transfer tail passes noise beyond cutoff.",
+        "lesson_ids": [
+          "circuits-11"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "circuits-11:covariance",
+      "type": "single_choice",
+      "prompt": "Can a shared calibration offset be assumed to average away with more repeats?",
+      "points": 1,
+      "objective_ids": [
+        "circuits-11-objective-2"
+      ],
+      "options": [
+        "Yes; every error is independent by definition.",
+        "No; shared contributions need their own correction and uncertainty model.",
+        "Yes; repeat count alone proves accuracy."
+      ],
+      "solution_spec": {
+        "answer": 1
+      },
+      "feedback": {
+        "hint": "Check the stated network, observation model or information limit.",
+        "solution": "No; shared contributions need their own correction and uncertainty model.",
+        "lesson_ids": [
+          "circuits-11"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "circuits-11:coverage",
+      "type": "single_choice",
+      "prompt": "Does a standard uncertainty automatically mean a hard worst-case bound or a 95% interval?",
+      "points": 1,
+      "objective_ids": [
+        "circuits-11-objective-3"
+      ],
+      "options": [
+        "Yes; every standard uncertainty guarantees all errors are smaller.",
+        "No; coverage interpretation needs additional justified assumptions or methods.",
+        "Yes; display resolution establishes confidence."
+      ],
+      "solution_spec": {
+        "answer": 1
+      },
+      "feedback": {
+        "hint": "Check the stated network, observation model or information limit.",
+        "solution": "No; coverage interpretation needs additional justified assumptions or methods.",
+        "lesson_ids": [
+          "circuits-11"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "circuits-12:bin-width",
+      "type": "numeric",
+      "prompt": "An ideal unipolar 10-bit ADC has 1024 equal bins over 0≤V<2 V. What bin width in mV follows? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "circuits-12-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 1.953125,
+        "unit": "",
+        "tolerance": 0.0001953125,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the supplied topology, domain, sign convention and unit scale.",
+        "solution": "The stated model gives approximately 1.953125 in the requested scale. Check its operating domain and reference assumptions before interpretation.",
+        "lesson_ids": [
+          "circuits-12"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "circuits-12:adc-code",
+      "type": "numeric",
+      "prompt": "For that ADC define code=floor(V/Δ), Δ=2/1024 V. What integer code follows at V=0.503 V? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "circuits-12-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 257,
+        "unit": "",
+        "tolerance": 0.0257,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the supplied topology, domain, sign convention and unit scale.",
+        "solution": "The stated model gives approximately 257 in the requested scale. Check its operating domain and reference assumptions before interpretation.",
+        "lesson_ids": [
+          "circuits-12"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "circuits-12:reconstruction",
+      "type": "numeric",
+      "prompt": "For code 257, define reconstruction as (code+0.5)Δ with Δ=2/1024 V. What reconstructed voltage in mV follows? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "circuits-12-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 502.9296875,
+        "unit": "",
+        "tolerance": 0.05029296875,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the supplied topology, domain, sign convention and unit scale.",
+        "solution": "The stated model gives approximately 502.9297 in the requested scale. Check its operating domain and reference assumptions before interpretation.",
+        "lesson_ids": [
+          "circuits-12"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "circuits-12:signed-error",
+      "type": "numeric",
+      "prompt": "For that bin-center reconstruction of input 0.503 V, what reconstruction-minus-input error in µV follows? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "circuits-12-objective-1"
+      ],
+      "solution_spec": {
+        "answer": -70.31250000000267,
+        "unit": "",
+        "tolerance": 0.007031250000000267,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the supplied topology, domain, sign convention and unit scale.",
+        "solution": "The stated model gives approximately −70.3125 in the requested scale. Check its operating domain and reference assumptions before interpretation.",
+        "lesson_ids": [
+          "circuits-12"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "circuits-12:acquisition-time",
+      "type": "numeric",
+      "prompt": "A separate acquisition model has R_s=100 kΩ,C_s=10 pF,initial full-span error 2 V. What minimum time in µs follows to reduce remaining error to half a 10-bit bin, 2/(2×1024) V? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "circuits-12-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 7.6246189861593985,
+        "unit": "",
+        "tolerance": 0.0007624618986159399,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the supplied topology, domain, sign convention and unit scale.",
+        "solution": "The stated model gives approximately 7.624619 in the requested scale. Check its operating domain and reference assumptions before interpretation.",
+        "lesson_ids": [
+          "circuits-12"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "circuits-12:aliased-frequency",
+      "type": "numeric",
+      "prompt": "At f_s=1000 samples/s, a 1300 Hz cosine has the same samples as a baseband cosine. What folded frequency in Hz follows? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "circuits-12-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 300,
+        "unit": "",
+        "tolerance": 0.030000000000000002,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the supplied topology, domain, sign convention and unit scale.",
+        "solution": "The stated model gives approximately 300 in the requested scale. Check its operating domain and reference assumptions before interpretation.",
+        "lesson_ids": [
+          "circuits-12"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "circuits-12:code-convention",
+      "type": "single_choice",
+      "prompt": "Does bit count alone specify every ADC transition and reconstruction rule?",
+      "points": 1,
+      "objective_ids": [
+        "circuits-12-objective-1"
+      ],
+      "options": [
+        "Yes; a reference voltage is unnecessary.",
+        "No; declare span, endpoint and code convention.",
+        "Yes; every converter uses the same floor/center map."
+      ],
+      "solution_spec": {
+        "answer": 1
+      },
+      "feedback": {
+        "hint": "Check the stated network, observation model or information limit.",
+        "solution": "No; declare span, endpoint and code convention.",
+        "lesson_ids": [
+          "circuits-12"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "circuits-12:settling",
+      "type": "single_choice",
+      "prompt": "Does high conversion rate alone prove adequate sample-capacitor acquisition settling?",
+      "points": 1,
+      "objective_ids": [
+        "circuits-12-objective-2"
+      ],
+      "options": [
+        "Yes; every conversion begins from the correct voltage.",
+        "No; available acquisition time and source/state model must also be checked.",
+        "Yes; source resistance never affects settling."
+      ],
+      "solution_spec": {
+        "answer": 1
+      },
+      "feedback": {
+        "hint": "Check the stated network, observation model or information limit.",
+        "solution": "No; available acquisition time and source/state model must also be checked.",
+        "lesson_ids": [
+          "circuits-12"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "circuits-12:nyquist-boundary",
+      "type": "single_choice",
+      "prompt": "What can an exactly half-rate sine with zero phase do at sample times?",
+      "points": 1,
+      "objective_ids": [
+        "circuits-12-objective-3"
+      ],
+      "options": [
+        "Give zero at every sample, demonstrating a boundary ambiguity.",
+        "Prove that a realizable analog filter is brick-wall.",
+        "Always preserve arbitrary amplitude and phase uniquely."
+      ],
+      "solution_spec": {
+        "answer": 0
+      },
+      "feedback": {
+        "hint": "Check the stated network, observation model or information limit.",
+        "solution": "Give zero at every sample, demonstrating a boundary ambiguity.",
+        "lesson_ids": [
+          "circuits-12"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "circuits-13:interior-gain",
+      "type": "numeric",
+      "prompt": "Known unsaturated differential inputs −5 and +5 mV at common mode zero give outputs −0.40 and +0.60 V. What gain in V/V follows? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "circuits-13-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 100,
+        "unit": "",
+        "tolerance": 0.01,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the supplied topology, domain, sign convention and unit scale.",
+        "solution": "The stated model gives approximately 100 in the requested scale. Check its operating domain and reference assumptions before interpretation.",
+        "lesson_ids": [
+          "circuits-13"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "circuits-13:interior-offset",
+      "type": "numeric",
+      "prompt": "For the same settled unsaturated affine calibration, known differential input zero gives output 0.10 V. What intercept in V follows? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "circuits-13-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0.1,
+        "unit": "",
+        "tolerance": 1e-05,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the supplied topology, domain, sign convention and unit scale.",
+        "solution": "The stated model gives approximately 0.1 in the requested scale. Check its operating domain and reference assumptions before interpretation.",
+        "lesson_ids": [
+          "circuits-13"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "circuits-13:positive-headroom",
+      "type": "numeric",
+      "prompt": "For output b+Gv_d with b=0.10 V,G=100 and upper linear bound +1 V, what maximum differential input in mV follows at common mode zero? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "circuits-13-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 9,
+        "unit": "",
+        "tolerance": 0.0009000000000000001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the supplied topology, domain, sign convention and unit scale.",
+        "solution": "The stated model gives approximately 9 in the requested scale. Check its operating domain and reference assumptions before interpretation.",
+        "lesson_ids": [
+          "circuits-13"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "circuits-13:negative-headroom",
+      "type": "numeric",
+      "prompt": "For that channel with lower linear bound −1 V, what signed minimum differential input in mV follows at common mode zero? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "circuits-13-objective-2"
+      ],
+      "solution_spec": {
+        "answer": -11,
+        "unit": "",
+        "tolerance": 0.0011,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the supplied topology, domain, sign convention and unit scale.",
+        "solution": "The stated model gives approximately −11 in the requested scale. Check its operating domain and reference assumptions before interpretation.",
+        "lesson_ids": [
+          "circuits-13"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "circuits-13:clipped-output",
+      "type": "numeric",
+      "prompt": "The declared channel reports clip(0.10+100v_d,−1,+1) V. For known v_d=+15 mV and common mode zero, what reported central output in V follows? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "circuits-13-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 1,
+        "unit": "",
+        "tolerance": 0.0001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the supplied topology, domain, sign convention and unit scale.",
+        "solution": "The stated model gives approximately 1 in the requested scale. Check its operating domain and reference assumptions before interpretation.",
+        "lesson_ids": [
+          "circuits-13"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "circuits-13:drift-half-second",
+      "type": "numeric",
+      "prompt": "A separate synthetic zero-input baseline is b(t)=0.10+0.30exp(−t/0.50) V. What baseline in V follows at t=0.50 s? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "circuits-13-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0.2103638323514327,
+        "unit": "",
+        "tolerance": 2.103638323514327e-05,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the supplied topology, domain, sign convention and unit scale.",
+        "solution": "The stated model gives approximately 0.2103638 in the requested scale. Check its operating domain and reference assumptions before interpretation.",
+        "lesson_ids": [
+          "circuits-13"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "circuits-13:fit-domain",
+      "type": "single_choice",
+      "prompt": "Should clipping plateaus be included as ordinary linear calibration points under the declared affine model?",
+      "points": 1,
+      "objective_ids": [
+        "circuits-13-objective-1"
+      ],
+      "options": [
+        "Yes; more points always improve a linear model.",
+        "No; they violate the model domain and can bias slope/intercept.",
+        "Yes; a plateau directly measures the unclipped gain."
+      ],
+      "solution_spec": {
+        "answer": 1
+      },
+      "feedback": {
+        "hint": "Check the stated network, observation model or information limit.",
+        "solution": "No; they violate the model domain and can bias slope/intercept.",
+        "lesson_ids": [
+          "circuits-13"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "circuits-13:baseline-fit",
+      "type": "single_choice",
+      "prompt": "For b(t)=0.10+0.30exp(−t/0.50), what should be normalized before fitting decay?",
+      "points": 1,
+      "objective_ids": [
+        "circuits-13-objective-2"
+      ],
+      "options": [
+        "The excess above the final 0.10 V baseline.",
+        "Only the largest output, independent of timing.",
+        "Raw b(t) without subtracting its final offset."
+      ],
+      "solution_spec": {
+        "answer": 0
+      },
+      "feedback": {
+        "hint": "Check the stated network, observation model or information limit.",
+        "solution": "The excess above the final 0.10 V baseline.",
+        "lesson_ids": [
+          "circuits-13"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "circuits-13:case-scope",
+      "type": "single_choice",
+      "prompt": "Do the synthetic clipping and baseline controls uniquely diagnose a real electrode mechanism?",
+      "points": 1,
+      "objective_ids": [
+        "circuits-13-objective-3"
+      ],
+      "options": [
+        "No; they support conditional electrical explanations under the stated model.",
+        "Yes; a fitted exponential alone validates a real recording protocol.",
+        "Yes; every movement artifact is the same mechanism."
+      ],
+      "solution_spec": {
+        "answer": 0
+      },
+      "feedback": {
+        "hint": "Check the stated network, observation model or information limit.",
+        "solution": "No; they support conditional electrical explanations under the stated model.",
+        "lesson_ids": [
+          "circuits-13"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "circuits-lab-01:summary",
+      "type": "file_upload",
+      "prompt": "Group the constructed outputs by sample. Upload exact columns sample,replicates,mean_output_v with all 16 row codes listed in the guide. Summarize raw reported outputs, including clipped groups.",
+      "points": 32,
+      "objective_ids": [
+        "circuits-lab-01-objective-1"
+      ],
+      "solution_spec": {
+        "accepted_media_types": [
+          "text/csv"
+        ],
+        "max_bytes": 32768,
+        "validation_spec": {
+          "format": "csv-numeric-table-v1",
+          "delimiter": ",",
+          "key_column": "sample",
+          "columns": [
+            "sample",
+            "replicates",
+            "mean_output_v"
+          ],
+          "checks": [
+            {
+              "id": "low_m15-replicates",
+              "row_id": "low_m15",
+              "column": "replicates",
+              "type": "numeric",
+              "answer": 3.0,
+              "unit": "",
+              "tolerance": 0,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "count",
+                "values": [
+                  -0.201,
+                  -0.2,
+                  -0.199
+                ]
+              }
+            },
+            {
+              "id": "low_m15-mean_output_v",
+              "row_id": "low_m15",
+              "column": "mean_output_v",
+              "type": "numeric",
+              "answer": -0.2,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  -0.201,
+                  -0.2,
+                  -0.199
+                ]
+              }
+            },
+            {
+              "id": "low_m5-replicates",
+              "row_id": "low_m5",
+              "column": "replicates",
+              "type": "numeric",
+              "answer": 3.0,
+              "unit": "",
+              "tolerance": 0,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "count",
+                "values": [
+                  -0.001,
+                  0.0,
+                  0.001
+                ]
+              }
+            },
+            {
+              "id": "low_m5-mean_output_v",
+              "row_id": "low_m5",
+              "column": "mean_output_v",
+              "type": "numeric",
+              "answer": 0.0,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  -0.001,
+                  0.0,
+                  0.001
+                ]
+              }
+            },
+            {
+              "id": "low_0-replicates",
+              "row_id": "low_0",
+              "column": "replicates",
+              "type": "numeric",
+              "answer": 3.0,
+              "unit": "",
+              "tolerance": 0,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "count",
+                "values": [
+                  0.099,
+                  0.1,
+                  0.101
+                ]
+              }
+            },
+            {
+              "id": "low_0-mean_output_v",
+              "row_id": "low_0",
+              "column": "mean_output_v",
+              "type": "numeric",
+              "answer": 0.1,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  0.099,
+                  0.1,
+                  0.101
+                ]
+              }
+            },
+            {
+              "id": "low_p5-replicates",
+              "row_id": "low_p5",
+              "column": "replicates",
+              "type": "numeric",
+              "answer": 3.0,
+              "unit": "",
+              "tolerance": 0,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "count",
+                "values": [
+                  0.199,
+                  0.2,
+                  0.201
+                ]
+              }
+            },
+            {
+              "id": "low_p5-mean_output_v",
+              "row_id": "low_p5",
+              "column": "mean_output_v",
+              "type": "numeric",
+              "answer": 0.2,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  0.199,
+                  0.2,
+                  0.201
+                ]
+              }
+            },
+            {
+              "id": "low_p15-replicates",
+              "row_id": "low_p15",
+              "column": "replicates",
+              "type": "numeric",
+              "answer": 3.0,
+              "unit": "",
+              "tolerance": 0,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "count",
+                "values": [
+                  0.399,
+                  0.4,
+                  0.401
+                ]
+              }
+            },
+            {
+              "id": "low_p15-mean_output_v",
+              "row_id": "low_p15",
+              "column": "mean_output_v",
+              "type": "numeric",
+              "answer": 0.4,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  0.399,
+                  0.4,
+                  0.401
+                ]
+              }
+            },
+            {
+              "id": "high_m15-replicates",
+              "row_id": "high_m15",
+              "column": "replicates",
+              "type": "numeric",
+              "answer": 3.0,
+              "unit": "",
+              "tolerance": 0,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "count",
+                "values": [
+                  -1,
+                  -1,
+                  -1
+                ]
+              }
+            },
+            {
+              "id": "high_m15-mean_output_v",
+              "row_id": "high_m15",
+              "column": "mean_output_v",
+              "type": "numeric",
+              "answer": -1.0,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  -1,
+                  -1,
+                  -1
+                ]
+              }
+            },
+            {
+              "id": "high_m5-replicates",
+              "row_id": "high_m5",
+              "column": "replicates",
+              "type": "numeric",
+              "answer": 3.0,
+              "unit": "",
+              "tolerance": 0,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "count",
+                "values": [
+                  -0.401,
+                  -0.4,
+                  -0.399
+                ]
+              }
+            },
+            {
+              "id": "high_m5-mean_output_v",
+              "row_id": "high_m5",
+              "column": "mean_output_v",
+              "type": "numeric",
+              "answer": -0.4,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  -0.401,
+                  -0.4,
+                  -0.399
+                ]
+              }
+            },
+            {
+              "id": "high_0-replicates",
+              "row_id": "high_0",
+              "column": "replicates",
+              "type": "numeric",
+              "answer": 3.0,
+              "unit": "",
+              "tolerance": 0,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "count",
+                "values": [
+                  0.099,
+                  0.1,
+                  0.101
+                ]
+              }
+            },
+            {
+              "id": "high_0-mean_output_v",
+              "row_id": "high_0",
+              "column": "mean_output_v",
+              "type": "numeric",
+              "answer": 0.1,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  0.099,
+                  0.1,
+                  0.101
+                ]
+              }
+            },
+            {
+              "id": "high_p5-replicates",
+              "row_id": "high_p5",
+              "column": "replicates",
+              "type": "numeric",
+              "answer": 3.0,
+              "unit": "",
+              "tolerance": 0,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "count",
+                "values": [
+                  0.599,
+                  0.6,
+                  0.601
+                ]
+              }
+            },
+            {
+              "id": "high_p5-mean_output_v",
+              "row_id": "high_p5",
+              "column": "mean_output_v",
+              "type": "numeric",
+              "answer": 0.6,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  0.599,
+                  0.6,
+                  0.601
+                ]
+              }
+            },
+            {
+              "id": "high_p15-replicates",
+              "row_id": "high_p15",
+              "column": "replicates",
+              "type": "numeric",
+              "answer": 3.0,
+              "unit": "",
+              "tolerance": 0,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "count",
+                "values": [
+                  1,
+                  1,
+                  1
+                ]
+              }
+            },
+            {
+              "id": "high_p15-mean_output_v",
+              "row_id": "high_p15",
+              "column": "mean_output_v",
+              "type": "numeric",
+              "answer": 1.0,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  1,
+                  1,
+                  1
+                ]
+              }
+            },
+            {
+              "id": "cm_m1-replicates",
+              "row_id": "cm_m1",
+              "column": "replicates",
+              "type": "numeric",
+              "answer": 3.0,
+              "unit": "",
+              "tolerance": 0,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "count",
+                "values": [
+                  0.089,
+                  0.09,
+                  0.091
+                ]
+              }
+            },
+            {
+              "id": "cm_m1-mean_output_v",
+              "row_id": "cm_m1",
+              "column": "mean_output_v",
+              "type": "numeric",
+              "answer": 0.09,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  0.089,
+                  0.09,
+                  0.091
+                ]
+              }
+            },
+            {
+              "id": "cm_p1-replicates",
+              "row_id": "cm_p1",
+              "column": "replicates",
+              "type": "numeric",
+              "answer": 3.0,
+              "unit": "",
+              "tolerance": 0,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "count",
+                "values": [
+                  0.109,
+                  0.11,
+                  0.111
+                ]
+              }
+            },
+            {
+              "id": "cm_p1-mean_output_v",
+              "row_id": "cm_p1",
+              "column": "mean_output_v",
+              "type": "numeric",
+              "answer": 0.11,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  0.109,
+                  0.11,
+                  0.111
+                ]
+              }
+            },
+            {
+              "id": "drift_0-replicates",
+              "row_id": "drift_0",
+              "column": "replicates",
+              "type": "numeric",
+              "answer": 3.0,
+              "unit": "",
+              "tolerance": 0,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "count",
+                "values": [
+                  0.399,
+                  0.4,
+                  0.401
+                ]
+              }
+            },
+            {
+              "id": "drift_0-mean_output_v",
+              "row_id": "drift_0",
+              "column": "mean_output_v",
+              "type": "numeric",
+              "answer": 0.4,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  0.399,
+                  0.4,
+                  0.401
+                ]
+              }
+            },
+            {
+              "id": "drift_05-replicates",
+              "row_id": "drift_05",
+              "column": "replicates",
+              "type": "numeric",
+              "answer": 3.0,
+              "unit": "",
+              "tolerance": 0,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "count",
+                "values": [
+                  0.209364,
+                  0.210364,
+                  0.211364
+                ]
+              }
+            },
+            {
+              "id": "drift_05-mean_output_v",
+              "row_id": "drift_05",
+              "column": "mean_output_v",
+              "type": "numeric",
+              "answer": 0.2104,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  0.209364,
+                  0.210364,
+                  0.211364
+                ]
+              }
+            },
+            {
+              "id": "drift_1-replicates",
+              "row_id": "drift_1",
+              "column": "replicates",
+              "type": "numeric",
+              "answer": 3.0,
+              "unit": "",
+              "tolerance": 0,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "count",
+                "values": [
+                  0.139601,
+                  0.140601,
+                  0.141601
+                ]
+              }
+            },
+            {
+              "id": "drift_1-mean_output_v",
+              "row_id": "drift_1",
+              "column": "mean_output_v",
+              "type": "numeric",
+              "answer": 0.1406,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  0.139601,
+                  0.140601,
+                  0.141601
+                ]
+              }
+            },
+            {
+              "id": "drift_2-replicates",
+              "row_id": "drift_2",
+              "column": "replicates",
+              "type": "numeric",
+              "answer": 3.0,
+              "unit": "",
+              "tolerance": 0,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "count",
+                "values": [
+                  0.104495,
+                  0.105495,
+                  0.106495
+                ]
+              }
+            },
+            {
+              "id": "drift_2-mean_output_v",
+              "row_id": "drift_2",
+              "column": "mean_output_v",
+              "type": "numeric",
+              "answer": 0.1055,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  0.104495,
+                  0.105495,
+                  0.106495
+                ]
+              }
+            }
+          ]
+        },
+        "rubric": [
+          {
+            "id": "low_m15-replicates",
+            "criterion": "low_m15: replicates",
+            "points": 1,
+            "evidence": [
+              "Recomputes replicates for low_m15 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "low_m15-mean_output_v",
+            "criterion": "low_m15: mean_output_v",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_output_v for low_m15 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "low_m5-replicates",
+            "criterion": "low_m5: replicates",
+            "points": 1,
+            "evidence": [
+              "Recomputes replicates for low_m5 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "low_m5-mean_output_v",
+            "criterion": "low_m5: mean_output_v",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_output_v for low_m5 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "low_0-replicates",
+            "criterion": "low_0: replicates",
+            "points": 1,
+            "evidence": [
+              "Recomputes replicates for low_0 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "low_0-mean_output_v",
+            "criterion": "low_0: mean_output_v",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_output_v for low_0 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "low_p5-replicates",
+            "criterion": "low_p5: replicates",
+            "points": 1,
+            "evidence": [
+              "Recomputes replicates for low_p5 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "low_p5-mean_output_v",
+            "criterion": "low_p5: mean_output_v",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_output_v for low_p5 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "low_p15-replicates",
+            "criterion": "low_p15: replicates",
+            "points": 1,
+            "evidence": [
+              "Recomputes replicates for low_p15 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "low_p15-mean_output_v",
+            "criterion": "low_p15: mean_output_v",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_output_v for low_p15 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "high_m15-replicates",
+            "criterion": "high_m15: replicates",
+            "points": 1,
+            "evidence": [
+              "Recomputes replicates for high_m15 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "high_m15-mean_output_v",
+            "criterion": "high_m15: mean_output_v",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_output_v for high_m15 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "high_m5-replicates",
+            "criterion": "high_m5: replicates",
+            "points": 1,
+            "evidence": [
+              "Recomputes replicates for high_m5 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "high_m5-mean_output_v",
+            "criterion": "high_m5: mean_output_v",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_output_v for high_m5 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "high_0-replicates",
+            "criterion": "high_0: replicates",
+            "points": 1,
+            "evidence": [
+              "Recomputes replicates for high_0 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "high_0-mean_output_v",
+            "criterion": "high_0: mean_output_v",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_output_v for high_0 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "high_p5-replicates",
+            "criterion": "high_p5: replicates",
+            "points": 1,
+            "evidence": [
+              "Recomputes replicates for high_p5 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "high_p5-mean_output_v",
+            "criterion": "high_p5: mean_output_v",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_output_v for high_p5 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "high_p15-replicates",
+            "criterion": "high_p15: replicates",
+            "points": 1,
+            "evidence": [
+              "Recomputes replicates for high_p15 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "high_p15-mean_output_v",
+            "criterion": "high_p15: mean_output_v",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_output_v for high_p15 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "cm_m1-replicates",
+            "criterion": "cm_m1: replicates",
+            "points": 1,
+            "evidence": [
+              "Recomputes replicates for cm_m1 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "cm_m1-mean_output_v",
+            "criterion": "cm_m1: mean_output_v",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_output_v for cm_m1 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "cm_p1-replicates",
+            "criterion": "cm_p1: replicates",
+            "points": 1,
+            "evidence": [
+              "Recomputes replicates for cm_p1 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "cm_p1-mean_output_v",
+            "criterion": "cm_p1: mean_output_v",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_output_v for cm_p1 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "drift_0-replicates",
+            "criterion": "drift_0: replicates",
+            "points": 1,
+            "evidence": [
+              "Recomputes replicates for drift_0 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "drift_0-mean_output_v",
+            "criterion": "drift_0: mean_output_v",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_output_v for drift_0 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "drift_05-replicates",
+            "criterion": "drift_05: replicates",
+            "points": 1,
+            "evidence": [
+              "Recomputes replicates for drift_05 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "drift_05-mean_output_v",
+            "criterion": "drift_05: mean_output_v",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_output_v for drift_05 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "drift_1-replicates",
+            "criterion": "drift_1: replicates",
+            "points": 1,
+            "evidence": [
+              "Recomputes replicates for drift_1 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "drift_1-mean_output_v",
+            "criterion": "drift_1: mean_output_v",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_output_v for drift_1 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "drift_2-replicates",
+            "criterion": "drift_2: replicates",
+            "points": 1,
+            "evidence": [
+              "Recomputes replicates for drift_2 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "drift_2-mean_output_v",
+            "criterion": "drift_2: mean_output_v",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_output_v for drift_2 from the preparation-level values."
+            ]
+          }
+        ]
+      },
+      "feedback": {
+        "hint": "Keep gain, common-mode and drifting conditions separate while summarizing.",
+        "solution": "Each group has three constructed outputs. Saturated groups remain at the exact stipulated rail because perturbations were applied before clipping.",
+        "lesson_ids": [
+          "circuits-lab-01"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "circuits-lab-01:low-gain",
+      "type": "numeric",
+      "prompt": "Settled low-gain groups at known −5 and +5 mV differential input have mean outputs 0.00 and 0.20 V with common mode zero. What gain in V/V follows? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "circuits-lab-01-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 20,
+        "unit": "",
+        "tolerance": 0.001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Divide output difference by differential-input difference expressed in volts.",
+        "solution": "Gain is (0.20−0.00)/(0.005−(−0.005))=20 V/V. These points are unsaturated.",
+        "lesson_ids": [
+          "circuits-lab-01"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "circuits-lab-01:high-gain",
+      "type": "numeric",
+      "prompt": "Settled high-gain groups at known −5 and +5 mV differential input have mean outputs −0.40 and +0.60 V. What unclipped gain in V/V follows? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "circuits-lab-01-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 100,
+        "unit": "",
+        "tolerance": 0.001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the known unsaturated interior points rather than the ±15 mV plateaus.",
+        "solution": "Gain is (0.60−(−0.40))/0.010=100 V/V. Fitting the clipped endpoints as ordinary linear points would compromise this result.",
+        "lesson_ids": [
+          "circuits-lab-01"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "circuits-lab-01:rejection",
+      "type": "numeric",
+      "prompt": "At settled differential input zero, common modes −1 and +1 V give means 0.09 and 0.11 V. Combine their common-mode gain with differential gain 100. What amplitude CMRR in dB follows? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "circuits-lab-01-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 80,
+        "unit": "",
+        "tolerance": 0.01,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Estimate common-mode gain from the symmetric common-mode difference before taking 20log₁₀ of the gain ratio.",
+        "solution": "Common-mode gain is (0.11−0.09)/2=0.010. CMRR=20log₁₀(100/0.010)=80 dB under the stipulated valid-range model.",
+        "lesson_ids": [
+          "circuits-lab-01"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "circuits-lab-01:drift-time",
+      "type": "numeric",
+      "prompt": "The separate zero-input drift condition has final baseline 0.10 V, initial mean 0.40 V and mean 0.210364 V at 0.50 s. Fit excess above baseline as Aexp(−t/τ). What τ in s follows approximately? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "circuits-lab-01-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0.5,
+        "unit": "",
+        "tolerance": 0.0001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Subtract the final baseline before forming the remaining-excess ratio and logarithm.",
+        "solution": "The excess ratio is approximately exp(−1), so τ≈0.50 s. Six-decimal report rounding produces a small difference from the exact construction.",
+        "lesson_ids": [
+          "circuits-lab-01"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "circuits-lab-01:interpretation",
+      "type": "structured",
+      "prompt": "Choose conclusions supported by the construction.",
+      "points": 3,
+      "objective_ids": [
+        "circuits-lab-01-objective-3"
+      ],
+      "response_fields": [
+        {
+          "id": "domain",
+          "type": "single_choice",
+          "prompt": "Which high-gain groups are appropriate for the declared affine gain/intercept fit?",
+          "options": [
+            "The unsaturated −5,0,+5 mV groups at settled common mode zero.",
+            "All points including rail plateaus as though fully linear.",
+            "Only the largest clipped values, because their slope is most reliable."
+          ],
+          "points": 1
+        },
+        {
+          "id": "range",
+          "type": "single_choice",
+          "prompt": "With offset 0.10 V,gain 100 and output rails ±1 V, what input limits follow at common mode zero?",
+          "options": [
+            "−11 to +9 mV for the stipulated linear range.",
+            "Exactly −10 to +10 mV regardless of offset.",
+            "Unlimited input range because feedback removes rails."
+          ],
+          "points": 1
+        },
+        {
+          "id": "cause",
+          "type": "single_choice",
+          "prompt": "What does the separately stipulated drifting condition identify?",
+          "options": [
+            "A conditional exponential baseline component, without unique real electrode-mechanism identification.",
+            "The same cause as every clipped movement signal.",
+            "A validated protocol change for a real subject."
+          ],
+          "points": 1
+        }
+      ],
+      "solution_spec": {
+        "field_specs": [
+          {
+            "id": "domain",
+            "type": "single_choice",
+            "answer": 0
+          },
+          {
+            "id": "range",
+            "type": "single_choice",
+            "answer": 0
+          },
+          {
+            "id": "cause",
+            "type": "single_choice",
+            "answer": 0
+          }
+        ],
+        "rubric": [
+          {
+            "id": "domain",
+            "criterion": "Calibration domain",
+            "points": 1,
+            "evidence": [
+              "Known interior references remain in the affine domain."
+            ]
+          },
+          {
+            "id": "range",
+            "criterion": "Headroom interpretation",
+            "points": 1,
+            "evidence": [
+              "A nonzero offset creates asymmetric input headroom."
+            ]
+          },
+          {
+            "id": "cause",
+            "criterion": "Diagnostic scope",
+            "points": 1,
+            "evidence": [
+              "The construction separates state conditions and makes no real experiment claim."
+            ]
+          }
+        ]
+      },
+      "feedback": {
+        "hint": "Keep linear-domain recovery, range constraints and causal interpretation distinct.",
+        "solution": "Interior points identify the settled affine model, offset creates asymmetric headroom, and a separate exponential baseline does not uniquely diagnose a real interface.",
+        "lesson_ids": [
+          "circuits-lab-01"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "circuits-lab-01:claims",
+      "type": "multiple_select",
+      "prompt": "Which statements about the gain-sweep, common-mode and drift outputs are supported by their declared construction? Select all that apply.",
+      "points": 2,
+      "objective_ids": [
+        "circuits-lab-01-objective-3"
+      ],
+      "options": [
+        "The settled low-gain sweep remains unsaturated over all five supplied differential inputs.",
+        "A common-mode difference test identifies a separate leakage coefficient under the valid-range assumption.",
+        "Perturbations are deterministic and added before the stipulated output clamp.",
+        "A good exponential fit uniquely identifies a biological process.",
+        "Three repeated rail values prove the unclipped input amplitudes are equal."
+      ],
+      "solution_spec": {
+        "answer": [
+          0,
+          1,
+          2
+        ],
+        "partial_credit": "correct-minus-incorrect-clamped-v1"
+      },
+      "feedback": {
+        "hint": "Use known inputs and model domains; do not infer lost information from plateaus.",
+        "solution": "The constructed perturbations, low-gain domain and separate common-mode coefficient are supported. Repeated clipped values do not recover larger inputs, and an exponential does not uniquely identify biology.",
+        "lesson_ids": [
+          "circuits-lab-01"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "circuits-lab-01:fit-comparison",
+      "type": "single_choice",
+      "prompt": "For high-gain inputs −15,−5,0,+5,+15 mV and means −1,−0.4,0.1,0.6,+1 V, what happens if all five are fit as one ordinary line?",
+      "points": 1,
+      "objective_ids": [
+        "circuits-lab-01-objective-3"
+      ],
+      "options": [
+        "The fit must recover exactly 100 because more points always improve a model.",
+        "The fit proves the settled source differential inputs changed.",
+        "The fit gives compromised gain 70 and intercept 0.06 V, unlike the interior calibration 100 and 0.10 V."
+      ],
+      "solution_spec": {
+        "answer": 2
+      },
+      "feedback": {
+        "hint": "Compare the assumed affine domain against known clipping limits.",
+        "solution": "All-point OLS slope is 70 V/V and intercept 0.06 V. The clipped endpoint data violate the affine model; the unsaturated references retain the declared gain.",
+        "lesson_ids": [
+          "circuits-lab-01"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
     }
   ]
 }

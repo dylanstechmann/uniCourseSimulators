@@ -7,7 +7,7 @@
   "domain": "Electrical engineering",
   "level": "Year 2",
   "maturity": "partial",
-  "version": "0.3.1",
+  "version": "0.4.0",
   "license": "MIT OR CC-BY-4.0",
   "content_origin": {
     "kind": "legacy-prototype",
@@ -147,12 +147,346 @@
         "circuits-outcome-2",
         "circuits-outcome-4"
       ]
+    },
+    {
+      "id": "circuits-7-objective-1",
+      "description": "Solve two-node resistive current balances.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "circuits-outcome-1"
+      ]
+    },
+    {
+      "id": "circuits-7-objective-2",
+      "description": "Determine a port equivalent with a mathematical test source.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "circuits-outcome-1"
+      ]
+    },
+    {
+      "id": "circuits-7-objective-3",
+      "description": "Check power conservation and measurement/matching objectives.",
+      "bloom": "analyze",
+      "course_outcome_ids": [
+        "circuits-outcome-4"
+      ]
+    },
+    {
+      "id": "circuits-8-objective-1",
+      "description": "Derive a finite-gain negative-feedback response.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "circuits-outcome-3"
+      ]
+    },
+    {
+      "id": "circuits-8-objective-2",
+      "description": "Calculate signed input-error and isolated bias-current effects.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "circuits-outcome-4"
+      ]
+    },
+    {
+      "id": "circuits-8-objective-3",
+      "description": "Check linear output and input-range assumptions.",
+      "bloom": "analyze",
+      "course_outcome_ids": [
+        "circuits-outcome-3"
+      ]
+    },
+    {
+      "id": "circuits-9-objective-1",
+      "description": "Decompose terminal inputs into differential/common-mode terms.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "circuits-outcome-3"
+      ]
+    },
+    {
+      "id": "circuits-9-objective-2",
+      "description": "Calculate rejection and interface-imbalance contributions.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "circuits-outcome-4"
+      ]
+    },
+    {
+      "id": "circuits-9-objective-3",
+      "description": "Evaluate range and topology-choice evidence.",
+      "bloom": "analyze",
+      "course_outcome_ids": [
+        "circuits-outcome-3"
+      ]
+    },
+    {
+      "id": "circuits-10-objective-1",
+      "description": "Calculate first-order frequency and initial-step response.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "circuits-outcome-2"
+      ]
+    },
+    {
+      "id": "circuits-10-objective-2",
+      "description": "Compare buffered blocks with a loaded passive ladder.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "circuits-outcome-2"
+      ]
+    },
+    {
+      "id": "circuits-10-objective-3",
+      "description": "Distinguish filtering, recovery and clipped information.",
+      "bloom": "analyze",
+      "course_outcome_ids": [
+        "circuits-outcome-4"
+      ]
+    },
+    {
+      "id": "circuits-11-objective-1",
+      "description": "Integrate supplied spectral density through a bandwidth model.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "circuits-outcome-4"
+      ]
+    },
+    {
+      "id": "circuits-11-objective-2",
+      "description": "Combine variance with explicit covariance assumptions.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "circuits-outcome-4"
+      ]
+    },
+    {
+      "id": "circuits-11-objective-3",
+      "description": "Propagate calibration uncertainty and qualify coverage.",
+      "bloom": "analyze",
+      "course_outcome_ids": [
+        "circuits-outcome-4"
+      ]
+    },
+    {
+      "id": "circuits-12-objective-1",
+      "description": "Calculate declared ADC bins, codes and reconstruction error.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "circuits-outcome-4"
+      ]
+    },
+    {
+      "id": "circuits-12-objective-2",
+      "description": "Check acquisition settling against a stated absolute error target.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "circuits-outcome-4"
+      ]
+    },
+    {
+      "id": "circuits-12-objective-3",
+      "description": "Evaluate alias ambiguity and sampling margins.",
+      "bloom": "analyze",
+      "course_outcome_ids": [
+        "circuits-outcome-2"
+      ]
+    },
+    {
+      "id": "circuits-13-objective-1",
+      "description": "Recover gain and offset using unsaturated references.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "circuits-outcome-4"
+      ]
+    },
+    {
+      "id": "circuits-13-objective-2",
+      "description": "Calculate asymmetric headroom and a separate baseline decay.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "circuits-outcome-4"
+      ]
+    },
+    {
+      "id": "circuits-13-objective-3",
+      "description": "Evaluate residuals and conditional diagnostic case evidence.",
+      "bloom": "analyze",
+      "course_outcome_ids": [
+        "circuits-outcome-4"
+      ]
+    },
+    {
+      "id": "circuits-lab-01-objective-1",
+      "description": "Summarize outputs and recover settled affine gain/offset from unsaturated references.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "circuits-outcome-4"
+      ]
+    },
+    {
+      "id": "circuits-lab-01-objective-2",
+      "description": "Calculate common-mode rejection and a separately stipulated baseline time scale.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "circuits-outcome-4"
+      ]
+    },
+    {
+      "id": "circuits-lab-01-objective-3",
+      "description": "Evaluate clipping domains and conditional diagnostic case evidence.",
+      "bloom": "analyze",
+      "course_outcome_ids": [
+        "circuits-outcome-4"
+      ]
     }
   ],
   "duration": {
-    "instructional_weeks": null,
-    "equivalent_structure": null,
-    "weeks": []
+    "instructional_weeks": 14,
+    "equivalent_structure": "Proposed 14-week scope retaining compact prototype readings in weeks 1,4,7,12. Workload and qualified review are absent; no semester equivalence is established.",
+    "weeks": [
+      {
+        "week": 1,
+        "title": "DC network analysis and equivalent circuits",
+        "lesson_ids": [
+          "circuits-1"
+        ],
+        "assessment_ids": [
+          "circuits-1-practice"
+        ]
+      },
+      {
+        "week": 2,
+        "title": "Nodal networks, port tests and power",
+        "lesson_ids": [
+          "circuits-7"
+        ],
+        "assessment_ids": [
+          "circuits-7-practice"
+        ]
+      },
+      {
+        "week": 3,
+        "title": "Reading a sensor without fooling yourself: voltage dividers, loading error and ADC resolution",
+        "lesson_ids": [
+          "circuits-5"
+        ],
+        "assessment_ids": [
+          "circuits-5-practice"
+        ]
+      },
+      {
+        "week": 4,
+        "title": "Operational amplifiers and analog front ends",
+        "lesson_ids": [
+          "circuits-2"
+        ],
+        "assessment_ids": [
+          "circuits-2-practice"
+        ]
+      },
+      {
+        "week": 5,
+        "title": "Feedback, finite gain, bias and output range",
+        "lesson_ids": [
+          "circuits-8"
+        ],
+        "assessment_ids": [
+          "circuits-8-practice"
+        ]
+      },
+      {
+        "week": 6,
+        "title": "Differential signals, common mode and interface imbalance",
+        "lesson_ids": [
+          "circuits-9"
+        ],
+        "assessment_ids": [
+          "circuits-9-practice"
+        ]
+      },
+      {
+        "week": 7,
+        "title": "Filters, sampling, and anti-aliasing",
+        "lesson_ids": [
+          "circuits-3"
+        ],
+        "assessment_ids": [
+          "circuits-3-practice"
+        ]
+      },
+      {
+        "week": 8,
+        "title": "First-order frequency response: an RC low-pass filter for a biological signal",
+        "lesson_ids": [
+          "circuits-6"
+        ],
+        "assessment_ids": [
+          "circuits-6-practice"
+        ]
+      },
+      {
+        "week": 9,
+        "title": "Filter loading, baseline and recovery",
+        "lesson_ids": [
+          "circuits-10"
+        ],
+        "assessment_ids": [
+          "circuits-10-practice"
+        ]
+      },
+      {
+        "week": 10,
+        "title": "Noise bandwidth, covariance and uncertainty",
+        "lesson_ids": [
+          "circuits-11"
+        ],
+        "assessment_ids": [
+          "circuits-11-practice"
+        ]
+      },
+      {
+        "week": 11,
+        "title": "Sampling, quantization and acquisition settling",
+        "lesson_ids": [
+          "circuits-12"
+        ],
+        "assessment_ids": [
+          "circuits-12-practice"
+        ]
+      },
+      {
+        "week": 12,
+        "title": "Sensors, calibration, and uncertainty",
+        "lesson_ids": [
+          "circuits-4"
+        ],
+        "assessment_ids": [
+          "circuits-4-practice"
+        ]
+      },
+      {
+        "week": 13,
+        "title": "Calibration, clipping, residuals and case evidence",
+        "lesson_ids": [
+          "circuits-13"
+        ],
+        "assessment_ids": [
+          "circuits-13-practice"
+        ]
+      },
+      {
+        "week": 14,
+        "title": "Virtual lab 1: gain, clipping, common mode and baseline recovery",
+        "lesson_ids": [
+          "circuits-lab-01"
+        ],
+        "assessment_ids": [
+          "circuits-week14-channel-lab",
+          "circuits-case"
+        ]
+      }
+    ]
   },
   "workload": {
     "estimated_total_hours": null,
@@ -341,6 +675,313 @@
           ]
         }
       ]
+    },
+    {
+      "id": "circuits-module-7",
+      "title": "Nodal networks, port tests and power",
+      "source_ids": [
+        "circuits",
+        "signals",
+        "openstax-circuits-kirchhoff"
+      ],
+      "lessons": [
+        {
+          "id": "circuits-7",
+          "title": "Nodal networks, port tests and power",
+          "reading": "modules/07-nodal-networks-port-tests-and-power.md",
+          "objectives": [
+            "circuits-7-objective-1",
+            "circuits-7-objective-2",
+            "circuits-7-objective-3"
+          ],
+          "worked_example": "Solve b in terms of a, substitute into a's current balance and recover 3 and 1.5 V. Use branch powers to verify 18 mW source delivery. Suppress only the independent source, apply a mathematical 1 V port test and calculate 1.6 mA for 625 Ω. Predict the added 1 kΩ load voltage and distinguish that measurement-loading calculation from maximum-power matching.",
+          "question_ids": [
+            "circuits-7:node-a",
+            "circuits-7:node-b",
+            "circuits-7:source-current",
+            "circuits-7:source-power",
+            "circuits-7:port-resistance",
+            "circuits-7:loaded-port",
+            "circuits-7:port-boundary",
+            "circuits-7:dependent-source",
+            "circuits-7:matching"
+          ],
+          "card_ids": [
+            "circuits-7-card-1",
+            "circuits-7-card-2",
+            "circuits-7-card-3",
+            "circuits-7-card-4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "circuits-module-8",
+      "title": "Feedback, finite gain, bias and output range",
+      "source_ids": [
+        "circuits",
+        "signals",
+        "ti-circuits-opamp-spec"
+      ],
+      "lessons": [
+        {
+          "id": "circuits-8",
+          "title": "Feedback, finite gain, bias and output range",
+          "reading": "modules/08-feedback-finite-gain-bias-and-output-range.md",
+          "objectives": [
+            "circuits-8-objective-1",
+            "circuits-8-objective-2",
+            "circuits-8-objective-3"
+          ],
+          "worked_example": "Use the divider to find β=0.10, then solve the finite open-loop equation before substituting V_in. Compare finite gain with ideal gain and calculate the residual input difference. Isolate the declared positive-input bias drop with its direction, then keep it distinct from offset voltage and the other input's bias effect. Finally check output and both input ranges before relying on linear feedback.",
+          "question_ids": [
+            "circuits-8:ideal-gain",
+            "circuits-8:finite-gain",
+            "circuits-8:finite-output",
+            "circuits-8:input-difference",
+            "circuits-8:bias-shift",
+            "circuits-8:positive-limit",
+            "circuits-8:virtual-short",
+            "circuits-8:bias-sign",
+            "circuits-8:range-check"
+          ],
+          "card_ids": [
+            "circuits-8-card-1",
+            "circuits-8-card-2",
+            "circuits-8-card-3",
+            "circuits-8-card-4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "circuits-module-9",
+      "title": "Differential signals, common mode and interface imbalance",
+      "source_ids": [
+        "circuits",
+        "signals"
+      ],
+      "lessons": [
+        {
+          "id": "circuits-9",
+          "title": "Differential signals, common mode and interface imbalance",
+          "reading": "modules/09-differential-common-mode-and-interface-imbalance.md",
+          "objectives": [
+            "circuits-9-objective-1",
+            "circuits-9-objective-2",
+            "circuits-9-objective-3"
+          ],
+          "worked_example": "Recover v_d=4 mV and v_c=0.5 V from the two supplied terminals, calculate the three output terms and obtain 0.425 V. Convert the amplitude rejection ratio to 80 dB. For the separate bias-current model, calculate both source drops before subtracting them. Finally check both terminal ranges and output range rather than only the differential amplitude.",
+          "question_ids": [
+            "circuits-9:differential",
+            "circuits-9:common-mode",
+            "circuits-9:total-output",
+            "circuits-9:common-contribution",
+            "circuits-9:rejection-db",
+            "circuits-9:imbalance-output",
+            "circuits-9:common-range",
+            "circuits-9:matching",
+            "circuits-9:topology-evidence"
+          ],
+          "card_ids": [
+            "circuits-9-card-1",
+            "circuits-9-card-2",
+            "circuits-9-card-3",
+            "circuits-9-card-4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "circuits-module-10",
+      "title": "Filter loading, baseline and recovery",
+      "source_ids": [
+        "circuits",
+        "signals"
+      ],
+      "lessons": [
+        {
+          "id": "circuits-10",
+          "title": "Filter loading, baseline and recovery",
+          "reading": "modules/10-filter-loading-baseline-and-recovery.md",
+          "objectives": [
+            "circuits-10-objective-1",
+            "circuits-10-objective-2",
+            "circuits-10-objective-3"
+          ],
+          "worked_example": "Calculate both isolated first-order responses at 1 Hz and multiply only under the declared ideal-buffer condition. Derive the passive ladder from its two node equations and compare 1/3 with 1/2 at ωRC=1. For the independent high-pass step, retain the initial transient and evaluate its remaining fraction. Keep these linear calculations separate from a saturated upstream stage.",
+          "question_ids": [
+            "circuits-10:lowpass-time",
+            "circuits-10:lowpass-amplitude",
+            "circuits-10:highpass-time",
+            "circuits-10:step-remainder",
+            "circuits-10:buffered-cascade",
+            "circuits-10:passive-ladder",
+            "circuits-10:cascade",
+            "circuits-10:initial-step",
+            "circuits-10:lost-clipping"
+          ],
+          "card_ids": [
+            "circuits-10-card-1",
+            "circuits-10-card-2",
+            "circuits-10-card-3",
+            "circuits-10-card-4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "circuits-module-11",
+      "title": "Noise bandwidth, covariance and uncertainty",
+      "source_ids": [
+        "circuits",
+        "signals",
+        "nist-circuits-uncertainty"
+      ],
+      "lessons": [
+        {
+          "id": "circuits-11",
+          "title": "Noise bandwidth, covariance and uncertainty",
+          "reading": "modules/11-noise-bandwidth-covariance-and-uncertainty.md",
+          "objectives": [
+            "circuits-11-objective-1",
+            "circuits-11-objective-2",
+            "circuits-11-objective-3"
+          ],
+          "worked_example": "Integrate squared first-order response for equivalent noise bandwidth, then multiply its square root by the supplied density. Apply the declared constant gain to RMS, not to variance without squaring. Combine 3 and 4 µV first under independence and then under ρ=0.5 to expose the covariance term. For the separate affine inversion, compute all three sensitivities and recover 0.060 x units.",
+          "question_ids": [
+            "circuits-11:noise-bandwidth",
+            "circuits-11:input-rms",
+            "circuits-11:output-rms",
+            "circuits-11:independent-sum",
+            "circuits-11:correlated-sum",
+            "circuits-11:calibration-uncertainty",
+            "circuits-11:bandwidth",
+            "circuits-11:covariance",
+            "circuits-11:coverage"
+          ],
+          "card_ids": [
+            "circuits-11-card-1",
+            "circuits-11-card-2",
+            "circuits-11-card-3",
+            "circuits-11-card-4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "circuits-module-12",
+      "title": "Sampling, quantization and acquisition settling",
+      "source_ids": [
+        "circuits",
+        "signals",
+        "adi-circuits-adc"
+      ],
+      "lessons": [
+        {
+          "id": "circuits-12",
+          "title": "Sampling, quantization and acquisition settling",
+          "reading": "modules/12-sampling-quantization-and-acquisition-settling.md",
+          "objectives": [
+            "circuits-12-objective-1",
+            "circuits-12-objective-2",
+            "circuits-12-objective-3"
+          ],
+          "worked_example": "Use 1024 equal bins to obtain Δ, take floor for the stated 0.503 V input and reconstruct its bin center. Keep the error sign explicit. For the independent sample capacitor, divide the half-bin target by the full-span step and solve the exponential inequality for 7.624619 µs. Finally compare discrete phase increments for 1300 and 300 Hz and test the exactly half-rate sine.",
+          "question_ids": [
+            "circuits-12:bin-width",
+            "circuits-12:adc-code",
+            "circuits-12:reconstruction",
+            "circuits-12:signed-error",
+            "circuits-12:acquisition-time",
+            "circuits-12:aliased-frequency",
+            "circuits-12:code-convention",
+            "circuits-12:settling",
+            "circuits-12:nyquist-boundary"
+          ],
+          "card_ids": [
+            "circuits-12-card-1",
+            "circuits-12-card-2",
+            "circuits-12-card-3",
+            "circuits-12-card-4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "circuits-module-13",
+      "title": "Calibration, clipping, residuals and case evidence",
+      "source_ids": [
+        "circuits",
+        "signals"
+      ],
+      "lessons": [
+        {
+          "id": "circuits-13",
+          "title": "Calibration, clipping, residuals and case evidence",
+          "reading": "modules/13-calibration-clipping-residuals-and-case-evidence.md",
+          "objectives": [
+            "circuits-13-objective-1",
+            "circuits-13-objective-2",
+            "circuits-13-objective-3"
+          ],
+          "worked_example": "Fit the three unsaturated points to recover G=100 and b=0.10. Compute +9 and −11 mV headroom before interpreting the ±15 mV reports. Compare the five-point compromised fit with interior calibration. For the independent drifting condition, subtract the 0.10 V final baseline and infer the exponential time scale from excess ratios. Use common-mode points to recover the separate leakage coefficient.",
+          "question_ids": [
+            "circuits-13:interior-gain",
+            "circuits-13:interior-offset",
+            "circuits-13:positive-headroom",
+            "circuits-13:negative-headroom",
+            "circuits-13:clipped-output",
+            "circuits-13:drift-half-second",
+            "circuits-13:fit-domain",
+            "circuits-13:baseline-fit",
+            "circuits-13:case-scope"
+          ],
+          "card_ids": [
+            "circuits-13-card-1",
+            "circuits-13-card-2",
+            "circuits-13-card-3",
+            "circuits-13-card-4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "circuits-module-lab-01",
+      "title": "Virtual lab 1: gain, clipping, common mode and baseline recovery",
+      "source_ids": [
+        "circuits",
+        "signals"
+      ],
+      "lessons": [
+        {
+          "id": "circuits-lab-01",
+          "title": "Virtual lab 1: gain, clipping, common mode and baseline recovery",
+          "reading": "labs/01-gain-clipping-and-baseline-recovery.md",
+          "objectives": [
+            "circuits-lab-01-objective-1",
+            "circuits-lab-01-objective-2",
+            "circuits-lab-01-objective-3"
+          ],
+          "worked_example": "Known interior points recover gain 20 or 100 and settled offset 0.10 V. High-gain ±15 mV inputs clip, compromising an all-point linear fit to gain 70/intercept 0.06. Common-mode references give nominal 80 dB CMRR; a separate baseline condition gives τ≈0.50 s.",
+          "question_ids": [
+            "circuits-lab-01:summary",
+            "circuits-lab-01:low-gain",
+            "circuits-lab-01:high-gain",
+            "circuits-lab-01:rejection",
+            "circuits-lab-01:drift-time",
+            "circuits-lab-01:interpretation",
+            "circuits-lab-01:claims",
+            "circuits-lab-01:fit-comparison"
+          ],
+          "card_ids": [
+            "circuits-lab-01-card-1",
+            "circuits-lab-01-card-2",
+            "circuits-lab-01-card-3",
+            "circuits-lab-01-card-4"
+          ]
+        }
+      ]
     }
   ],
   "assessments": [
@@ -452,6 +1093,211 @@
       "points": 6
     },
     {
+      "id": "circuits-7-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Nodal networks, port tests and power practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "circuits-7-objective-1",
+        "circuits-7-objective-2",
+        "circuits-7-objective-3",
+        "circuits-outcome-1",
+        "circuits-outcome-4"
+      ],
+      "question_ids": [
+        "circuits-7:node-a",
+        "circuits-7:node-b",
+        "circuits-7:source-current",
+        "circuits-7:source-power",
+        "circuits-7:port-resistance",
+        "circuits-7:loaded-port",
+        "circuits-7:port-boundary",
+        "circuits-7:dependent-source",
+        "circuits-7:matching"
+      ],
+      "points": 9
+    },
+    {
+      "id": "circuits-8-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Feedback, finite gain, bias and output range practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "circuits-8-objective-1",
+        "circuits-8-objective-2",
+        "circuits-8-objective-3",
+        "circuits-outcome-3",
+        "circuits-outcome-4"
+      ],
+      "question_ids": [
+        "circuits-8:ideal-gain",
+        "circuits-8:finite-gain",
+        "circuits-8:finite-output",
+        "circuits-8:input-difference",
+        "circuits-8:bias-shift",
+        "circuits-8:positive-limit",
+        "circuits-8:virtual-short",
+        "circuits-8:bias-sign",
+        "circuits-8:range-check"
+      ],
+      "points": 9
+    },
+    {
+      "id": "circuits-9-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Differential signals, common mode and interface imbalance practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "circuits-9-objective-1",
+        "circuits-9-objective-2",
+        "circuits-9-objective-3",
+        "circuits-outcome-3",
+        "circuits-outcome-4"
+      ],
+      "question_ids": [
+        "circuits-9:differential",
+        "circuits-9:common-mode",
+        "circuits-9:total-output",
+        "circuits-9:common-contribution",
+        "circuits-9:rejection-db",
+        "circuits-9:imbalance-output",
+        "circuits-9:common-range",
+        "circuits-9:matching",
+        "circuits-9:topology-evidence"
+      ],
+      "points": 9
+    },
+    {
+      "id": "circuits-10-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Filter loading, baseline and recovery practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "circuits-10-objective-1",
+        "circuits-10-objective-2",
+        "circuits-10-objective-3",
+        "circuits-outcome-2",
+        "circuits-outcome-4"
+      ],
+      "question_ids": [
+        "circuits-10:lowpass-time",
+        "circuits-10:lowpass-amplitude",
+        "circuits-10:highpass-time",
+        "circuits-10:step-remainder",
+        "circuits-10:buffered-cascade",
+        "circuits-10:passive-ladder",
+        "circuits-10:cascade",
+        "circuits-10:initial-step",
+        "circuits-10:lost-clipping"
+      ],
+      "points": 9
+    },
+    {
+      "id": "circuits-11-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Noise bandwidth, covariance and uncertainty practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "circuits-11-objective-1",
+        "circuits-11-objective-2",
+        "circuits-11-objective-3",
+        "circuits-outcome-4"
+      ],
+      "question_ids": [
+        "circuits-11:noise-bandwidth",
+        "circuits-11:input-rms",
+        "circuits-11:output-rms",
+        "circuits-11:independent-sum",
+        "circuits-11:correlated-sum",
+        "circuits-11:calibration-uncertainty",
+        "circuits-11:bandwidth",
+        "circuits-11:covariance",
+        "circuits-11:coverage"
+      ],
+      "points": 9
+    },
+    {
+      "id": "circuits-12-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Sampling, quantization and acquisition settling practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "circuits-12-objective-1",
+        "circuits-12-objective-2",
+        "circuits-12-objective-3",
+        "circuits-outcome-2",
+        "circuits-outcome-4"
+      ],
+      "question_ids": [
+        "circuits-12:bin-width",
+        "circuits-12:adc-code",
+        "circuits-12:reconstruction",
+        "circuits-12:signed-error",
+        "circuits-12:acquisition-time",
+        "circuits-12:aliased-frequency",
+        "circuits-12:code-convention",
+        "circuits-12:settling",
+        "circuits-12:nyquist-boundary"
+      ],
+      "points": 9
+    },
+    {
+      "id": "circuits-13-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Calibration, clipping, residuals and case evidence practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "circuits-13-objective-1",
+        "circuits-13-objective-2",
+        "circuits-13-objective-3",
+        "circuits-outcome-4"
+      ],
+      "question_ids": [
+        "circuits-13:interior-gain",
+        "circuits-13:interior-offset",
+        "circuits-13:positive-headroom",
+        "circuits-13:negative-headroom",
+        "circuits-13:clipped-output",
+        "circuits-13:drift-half-second",
+        "circuits-13:fit-domain",
+        "circuits-13:baseline-fit",
+        "circuits-13:case-scope"
+      ],
+      "points": 9
+    },
+    {
+      "id": "circuits-week14-channel-lab",
+      "type": "lab",
+      "mode": "practice",
+      "title": "Virtual lab 1: gain, clipping, common mode and baseline recovery (ungraded practice)",
+      "path": "question-banks/practice.json",
+      "week": 14,
+      "objective_ids": [
+        "circuits-lab-01-objective-1",
+        "circuits-lab-01-objective-2",
+        "circuits-lab-01-objective-3",
+        "circuits-outcome-4"
+      ],
+      "question_ids": [
+        "circuits-lab-01:summary",
+        "circuits-lab-01:low-gain",
+        "circuits-lab-01:high-gain",
+        "circuits-lab-01:rejection",
+        "circuits-lab-01:drift-time",
+        "circuits-lab-01:interpretation",
+        "circuits-lab-01:claims",
+        "circuits-lab-01:fit-comparison"
+      ],
+      "points": 42
+    },
+    {
       "id": "circuits-case",
       "type": "case",
       "mode": "self-assessment",
@@ -508,18 +1354,24 @@
       "version": "0.3.1",
       "date": "2026-10-08",
       "summary": "Assessments with items now also list the course outcomes those items assess, derived from each item's lesson objective and that objective's outcome links. The rubric-only case lists none, and neither do the 4 prototype-unit assessments, whose objectives are not yet linked to an outcome. No readings, items or keys changed. The syllabus was regenerated from the manifest: it states the current version, lists every lesson with its item and card counts, and describes the current practice and limitations (it still described only the four original units). The course limitations shown to learners were also updated: they still described one formative check per lesson and the original numerical rules. The package remains partial, unreviewed and formative-only."
+    },
+    {
+      "version": "0.4.0",
+      "date": "2026-10-09",
+      "summary": "Added seven original lessons on nodal/port/power analysis, finite feedback/bias/range, differential/common-mode/interface imbalance, filter loading/recovery, noise/covariance/uncertainty, ADC acquisition/aliasing and calibration/clipping evidence; one synthetic channel-diagnostic lab and a proposed weekly schedule. Developed with Codex assistance. Still partial, unreviewed and formative-only."
     }
   ],
   "limitations": [
-    "Four compact legacy units are preserved; this package is not equivalent to a full university semester.",
-    "There is no authored 12–15 week schedule, substantive homework sequence, laboratory sequence, midterm, cumulative final, or graded integrative project.",
-    "Practice items are short formative checks (two per prototype unit and six per original lesson); they do not demonstrate comprehensive outcome coverage or mastery, and objective associations remain provisional.",
-    "Bloom labels and structured prerequisite edges are initial authoring classifications awaiting subject-matter review.",
-    "Question answers and solution feedback are intentionally public practice authoring specifications, not restricted exam keys.",
-    "Of the 17 numerical answers in this package, eight require a unit, none checks significant figures and none checks dimensions; the others accept a number within a stated tolerance, with the unit optional.",
-    "Total workload and weekly duration are unknown; former nominal credit values and hardcoded reading times do not establish workload."
+    "Four compact prototype readings remain beside nine substantive original lessons and one synthetic data lab; this is not a full university semester.",
+    "The proposed 14-week sequence is unmeasured and unreviewed. Graded homework, exams, a full laboratory sequence and a cumulative graded project remain absent.",
+    "New circuits, parameters, references and reports are synthetic; selected linear, clamp, noise and converter models provide no actual hardware or human-subject procedure.",
+    "Of 63 numeric items, eight preserved items require units; none checks significant figures or dimensions. New numeric items ask for bare numbers in stated scales; choices assess selected circuit/evidence decisions, not diagrams or written diagnosis.",
+    "Public keys and feedback remain formative authoring specifications; practice points are not course grades.",
+    "Subject-matter, accessibility and workload review remain outstanding; the original text feedback map has a verbal description but no assistive-technology review.",
+    "Four primary technical documents were retrieved as link-only references; no teaching text, problem, figure or dataset was imported.",
+    "The preserved Nyquist item gives the nominal two-times threshold; exact boundary phase ambiguity, practical filter transition bands and acquisition settling remain separate checks."
   ],
   "intentionally_omitted": [
-    "Full instructional sequence and summative assessments are not authored yet; the original lessons extend a partial package."
+    "Graded assessments, complete laboratory sequence, cumulative graded project, measured workload and qualified human review remain outstanding."
   ]
 }
