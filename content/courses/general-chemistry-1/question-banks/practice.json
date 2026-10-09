@@ -623,6 +623,2605 @@
         "kind": "original",
         "modifications": []
       }
+    },
+    {
+      "id": "general-chemistry-1-7:ion-electrons",
+      "type": "numeric",
+      "prompt": "A nucleus has Z=12. How many electrons are in its ion of charge +2? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "general-chemistry-1-7-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 10,
+        "unit": "",
+        "tolerance": 0,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Positive charge represents missing electrons.",
+        "solution": "The ion has 12−2=10 electrons.",
+        "lesson_ids": [
+          "general-chemistry-1-7"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "general-chemistry-1-7:shell-capacity",
+      "type": "numeric",
+      "prompt": "What is the orbital-count capacity 2n² for the shell n=2? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "general-chemistry-1-7-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 8,
+        "unit": "",
+        "tolerance": 0,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Apply the stated shell capacity model.",
+        "solution": "2×2²=8 electrons.",
+        "lesson_ids": [
+          "general-chemistry-1-7"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "general-chemistry-1-7:isotope-average",
+      "type": "numeric",
+      "prompt": "A synthetic element has isotope masses 35.0 and 37.0 in the exercise scale, with amount fractions 0.75 and 0.25. What is the weighted mean? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "general-chemistry-1-7-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 35.5,
+        "unit": "",
+        "tolerance": 0.0001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Weight by amount fractions and check their sum.",
+        "solution": "0.75×35.0+0.25×37.0=35.5; this is not a tabulated real atomic weight.",
+        "lesson_ids": [
+          "general-chemistry-1-7"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "general-chemistry-1-7:entity-count",
+      "type": "numeric",
+      "prompt": "For 0.02500 mol of specified entities, use N_A=6.02214076 × 10²³ mol⁻¹. Report N divided by 10²², to exactly four significant figures. Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "general-chemistry-1-7-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 1.506,
+        "unit": "",
+        "tolerance": 0.001,
+        "unit_required": false,
+        "significant_figures": 4,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Multiply amount by N_A, divide by the requested scale, then round once.",
+        "solution": "N/10²²=1.50553519 before rounding, giving 1.506 to four significant figures.",
+        "lesson_ids": [
+          "general-chemistry-1-7"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "general-chemistry-1-7:photon-energy",
+      "type": "numeric",
+      "prompt": "For a 500.0 nm vacuum photon, use h=6.62607015 × 10⁻³⁴ J·s and c=299792458 m/s. Report E divided by 10⁻¹⁹ J, to exactly four significant figures. Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "general-chemistry-1-7-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 3.973,
+        "unit": "",
+        "tolerance": 0.0002,
+        "unit_required": false,
+        "significant_figures": 4,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Convert wavelength to metres and use hc/λ.",
+        "solution": "E/(10⁻¹⁹ J)=3.972892 before rounding, giving 3.973.",
+        "lesson_ids": [
+          "general-chemistry-1-7"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "general-chemistry-1-7:photon-molar-energy",
+      "type": "numeric",
+      "prompt": "Using those same h,c and N_A values for 500.0 nm photons, report energy per mole of photons to exactly four significant figures. Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "general-chemistry-1-7-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 239.3,
+        "unit": "kJ/mol",
+        "tolerance": 0.05,
+        "unit_required": true,
+        "significant_figures": 4,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Multiply the per-photon energy by N_A and convert J to kJ.",
+        "solution": "The unrounded value is about 239.253 kJ/mol, reported as 239.3 kJ/mol.",
+        "lesson_ids": [
+          "general-chemistry-1-7"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "general-chemistry-1-7:identity",
+      "type": "single_choice",
+      "prompt": "What changes when an atom forms a +2 ion without a nuclear reaction?",
+      "points": 1,
+      "objective_ids": [
+        "general-chemistry-1-7-objective-1"
+      ],
+      "options": [
+        "Proton count decreases by two.",
+        "Electron count decreases by two while proton count stays fixed.",
+        "Mass number must increase by two."
+      ],
+      "solution_spec": {
+        "answer": 1
+      },
+      "feedback": {
+        "hint": "Check the stated model and accounting conditions.",
+        "solution": "Electron count decreases by two while proton count stays fixed.",
+        "lesson_ids": [
+          "general-chemistry-1-7"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "general-chemistry-1-7:exactness",
+      "type": "single_choice",
+      "prompt": "Exact h,c and N_A remove which uncertainty?",
+      "points": 1,
+      "objective_ids": [
+        "general-chemistry-1-7-objective-3"
+      ],
+      "options": [
+        "Every uncertainty in any measurement using them.",
+        "Their defining-constant uncertainty, while sample/wavelength uncertainty remains.",
+        "The need to specify units or counted entities."
+      ],
+      "solution_spec": {
+        "answer": 1
+      },
+      "feedback": {
+        "hint": "Check the stated model and accounting conditions.",
+        "solution": "Their defining-constant uncertainty, while sample/wavelength uncertainty remains.",
+        "lesson_ids": [
+          "general-chemistry-1-7"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "general-chemistry-1-7:orbital-model",
+      "type": "single_choice",
+      "prompt": "What does the shell capacity 2n² describe?",
+      "points": 1,
+      "objective_ids": [
+        "general-chemistry-1-7-objective-1"
+      ],
+      "options": [
+        "A measured orbit radius.",
+        "A guarantee every shell fills before any higher subshell in every species.",
+        "Allowed occupancy counting, not a universal simple filling sequence for every atom."
+      ],
+      "solution_spec": {
+        "answer": 2
+      },
+      "feedback": {
+        "hint": "Check the stated model and accounting conditions.",
+        "solution": "Allowed occupancy counting, not a universal simple filling sequence for every atom.",
+        "lesson_ids": [
+          "general-chemistry-1-7"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "general-chemistry-1-8:co2-valence",
+      "type": "numeric",
+      "prompt": "How many valence electrons are counted for CO₂ in its introductory Lewis budget? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "general-chemistry-1-8-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 16,
+        "unit": "",
+        "tolerance": 0,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Add carbon and both oxygen contributions.",
+        "solution": "4+2×6=16 valence electrons.",
+        "lesson_ids": [
+          "general-chemistry-1-8"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "general-chemistry-1-8:ammonium-valence",
+      "type": "numeric",
+      "prompt": "How many valence electrons are counted for NH₄⁺? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "general-chemistry-1-8-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 8,
+        "unit": "",
+        "tolerance": 0,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Subtract one electron for the positive charge.",
+        "solution": "5+4−1=8 valence electrons.",
+        "lesson_ids": [
+          "general-chemistry-1-8"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "general-chemistry-1-8:nitrogen-formal-charge",
+      "type": "numeric",
+      "prompt": "For NH₄⁺ with four single bonds and no nitrogen lone pair, what is nitrogen formal charge? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "general-chemistry-1-8-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 1,
+        "unit": "",
+        "tolerance": 0,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use valence minus nonbonding minus half the bonding electrons.",
+        "solution": "5−0−8/2=+1.",
+        "lesson_ids": [
+          "general-chemistry-1-8"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "general-chemistry-1-8:water-lone-pairs",
+      "type": "numeric",
+      "prompt": "How many oxygen lone pairs occur in the conventional water Lewis structure? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "general-chemistry-1-8-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 2,
+        "unit": "",
+        "tolerance": 0,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Eight valence electrons supply two bonds and two lone pairs.",
+        "solution": "Two bonds use four electrons, leaving four electrons as two lone pairs.",
+        "lesson_ids": [
+          "general-chemistry-1-8"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "general-chemistry-1-8:tetrahedral-angle",
+      "type": "numeric",
+      "prompt": "What is the ideal tetrahedral angle arccos(−1/3) in degrees? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "general-chemistry-1-8-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 109.47122063449069,
+        "unit": "",
+        "tolerance": 0.0001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Convert the inverse-cosine result from radians to degrees.",
+        "solution": "The ideal angle is approximately 109.471221°; it is not a universal measured molecular angle.",
+        "lesson_ids": [
+          "general-chemistry-1-8"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "general-chemistry-1-8:bent-dipole",
+      "type": "numeric",
+      "prompt": "Two synthetic bond dipoles each have magnitude 1 and separation 104.5°. What is the resultant magnitude in their arbitrary dipole units? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "general-chemistry-1-8-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 1.2244345600688986,
+        "unit": "",
+        "tolerance": 0.0001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the vector sum of equal dipoles.",
+        "solution": "The magnitude is 2 cos(52.25°), about 1.224435, not a measured water dipole.",
+        "lesson_ids": [
+          "general-chemistry-1-8"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "general-chemistry-1-8:shape",
+      "type": "single_choice",
+      "prompt": "Which distinction is correct for water in the introductory model?",
+      "points": 1,
+      "objective_ids": [
+        "general-chemistry-1-8-objective-2"
+      ],
+      "options": [
+        "Tetrahedral electron-domain geometry and bent molecular shape.",
+        "Linear atom shape because oxygen has two bonds.",
+        "Square-planar molecular geometry from four domains."
+      ],
+      "solution_spec": {
+        "answer": 0
+      },
+      "feedback": {
+        "hint": "Check the stated model and accounting conditions.",
+        "solution": "Tetrahedral electron-domain geometry and bent molecular shape.",
+        "lesson_ids": [
+          "general-chemistry-1-8"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "general-chemistry-1-8:polarity",
+      "type": "single_choice",
+      "prompt": "Can polar bonds form a nonpolar symmetric molecule?",
+      "points": 1,
+      "objective_ids": [
+        "general-chemistry-1-8-objective-3"
+      ],
+      "options": [
+        "Yes; equal opposing bond vectors can cancel.",
+        "Only if all formal charges are nonzero.",
+        "No; every polar bond guarantees a polar molecule."
+      ],
+      "solution_spec": {
+        "answer": 0
+      },
+      "feedback": {
+        "hint": "Check the stated model and accounting conditions.",
+        "solution": "Yes; equal opposing bond vectors can cancel.",
+        "lesson_ids": [
+          "general-chemistry-1-8"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "general-chemistry-1-8:formal-charge",
+      "type": "single_choice",
+      "prompt": "What is formal charge in a Lewis model?",
+      "points": 1,
+      "objective_ids": [
+        "general-chemistry-1-8-objective-1"
+      ],
+      "options": [
+        "A direct measurement of every atomic partial charge.",
+        "Electron bookkeeping, rather than a full measured charge-density map.",
+        "A substitute for the species net charge."
+      ],
+      "solution_spec": {
+        "answer": 1
+      },
+      "feedback": {
+        "hint": "Check the stated model and accounting conditions.",
+        "solution": "Electron bookkeeping, rather than a full measured charge-density map.",
+        "lesson_ids": [
+          "general-chemistry-1-8"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "general-chemistry-1-9:ammonia-amount",
+      "type": "numeric",
+      "prompt": "For N₂+3H₂→2NH₃ with 0.8 mol N₂ and 1.8 mol H₂, assume stoichiometric completion. What theoretical NH₃ amount in mol forms? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "general-chemistry-1-9-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 1.2,
+        "unit": "",
+        "tolerance": 0.0001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Compare initial amounts divided by consumption coefficients.",
+        "solution": "ξ=min(0.8,1.8/3)=0.6 mol; NH₃ amount is 2ξ=1.2 mol.",
+        "lesson_ids": [
+          "general-chemistry-1-9"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "general-chemistry-1-9:nitrogen-left",
+      "type": "numeric",
+      "prompt": "Under that same reaction and inventory, what N₂ amount in mol remains? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "general-chemistry-1-9-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0.2,
+        "unit": "",
+        "tolerance": 0.0001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Subtract the limiting extent from the nitrogen inventory.",
+        "solution": "0.8−0.6=0.2 mol N₂ remains.",
+        "lesson_ids": [
+          "general-chemistry-1-9"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "general-chemistry-1-9:product-mass",
+      "type": "numeric",
+      "prompt": "For that theoretical 1.2 mol NH₃, use stipulated M=17.0 g/mol. What product mass in g results? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "general-chemistry-1-9-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 20.4,
+        "unit": "",
+        "tolerance": 0.0001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Convert molar amount with the supplied mass scale.",
+        "solution": "1.2×17.0=20.4 g.",
+        "lesson_ids": [
+          "general-chemistry-1-9"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "general-chemistry-1-9:percent-yield",
+      "type": "numeric",
+      "prompt": "Synthetic recovered product is 15.3 g against theoretical 20.4 g. Report percent yield to exactly three significant figures, without a unit symbol. Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "general-chemistry-1-9-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 75.0,
+        "unit": "",
+        "tolerance": 0.05,
+        "unit_required": false,
+        "significant_figures": 3,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Divide recovered by theoretical mass and multiply by 100.",
+        "solution": "100×15.3/20.4=75.0 to three significant figures.",
+        "lesson_ids": [
+          "general-chemistry-1-9"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "general-chemistry-1-9:precipitate-amount",
+      "type": "numeric",
+      "prompt": "For hypothetical M²⁺+X²⁻→MX(s), combine 100 mL of 0.020 mol/L M²⁺ with 150 mL of 0.010 mol/L X²⁻. Assume quantitative precipitation. What MX amount in mol forms? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "general-chemistry-1-9-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 0.0015,
+        "unit": "",
+        "tolerance": 1e-06,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Convert both concentration-volume products to mol and compare 1:1 amounts.",
+        "solution": "The amounts are 0.0020 and 0.0015 mol; X limits at 0.0015 mol.",
+        "lesson_ids": [
+          "general-chemistry-1-9"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "general-chemistry-1-9:remaining-ion",
+      "type": "numeric",
+      "prompt": "For that same hypothetical mixture, assume additive final volume 250 mL. What excess M²⁺ concentration in mM remains? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "general-chemistry-1-9-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 2,
+        "unit": "",
+        "tolerance": 0.0001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Subtract consumed mol before dividing by final mixed volume.",
+        "solution": "Remaining 0.0005 mol/0.250 L=0.002 mol/L=2 mM.",
+        "lesson_ids": [
+          "general-chemistry-1-9"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "general-chemistry-1-9:limiting",
+      "type": "single_choice",
+      "prompt": "How is the limiting reactant determined for a specified complete reaction?",
+      "points": 1,
+      "objective_ids": [
+        "general-chemistry-1-9-objective-1"
+      ],
+      "options": [
+        "Choose the smallest initial concentration regardless of volume.",
+        "Compare available amounts divided by consumption coefficients.",
+        "Choose the reactant with fewer grams regardless of molar mass."
+      ],
+      "solution_spec": {
+        "answer": 1
+      },
+      "feedback": {
+        "hint": "Check the stated model and accounting conditions.",
+        "solution": "Compare available amounts divided by consumption coefficients.",
+        "lesson_ids": [
+          "general-chemistry-1-9"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "general-chemistry-1-9:yield",
+      "type": "single_choice",
+      "prompt": "A synthetic recovered yield exceeds 100%. What is justified?",
+      "points": 1,
+      "objective_ids": [
+        "general-chemistry-1-9-objective-2"
+      ],
+      "options": [
+        "The reaction must violate conservation.",
+        "Investigate composition, retained material and accounting rather than infer creation of matter.",
+        "The recovered material must be pure target product."
+      ],
+      "solution_spec": {
+        "answer": 1
+      },
+      "feedback": {
+        "hint": "Check the stated model and accounting conditions.",
+        "solution": "Investigate composition, retained material and accounting rather than infer creation of matter.",
+        "lesson_ids": [
+          "general-chemistry-1-9"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "general-chemistry-1-9:precipitation",
+      "type": "single_choice",
+      "prompt": "What does quantitative precipitation mean in the hypothetical M/X calculation?",
+      "points": 1,
+      "objective_ids": [
+        "general-chemistry-1-9-objective-3"
+      ],
+      "options": [
+        "A reason to ignore spectator charge or final volume.",
+        "A stated completion assumption needing equilibrium justification in a real system.",
+        "A universal property of all ion pairs."
+      ],
+      "solution_spec": {
+        "answer": 1
+      },
+      "feedback": {
+        "hint": "Check the stated model and accounting conditions.",
+        "solution": "A stated completion assumption needing equilibrium justification in a real system.",
+        "lesson_ids": [
+          "general-chemistry-1-9"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "general-chemistry-1-10:gas-pressure",
+      "type": "numeric",
+      "prompt": "Use R=8.314 J/(mol·K), n=0.2500 mol,T=300.0 K,V=5.000 L. Report ideal pressure in Pa to exactly four significant figures. Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "general-chemistry-1-10-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 124700,
+        "unit": "Pa",
+        "tolerance": 50,
+        "unit_required": true,
+        "significant_figures": 4,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Convert volume to m³ and evaluate the pressure in SI pascals.",
+        "solution": "The result is 124710 Pa before rounding, reported as 1.247 × 10⁵ Pa to four significant figures.",
+        "lesson_ids": [
+          "general-chemistry-1-10"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "general-chemistry-1-10:mole-fraction",
+      "type": "numeric",
+      "prompt": "A nonreacting ideal mixture has 0.10 mol A and 0.15 mol B. What is the mole fraction of A? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "general-chemistry-1-10-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0.4,
+        "unit": "",
+        "tolerance": 0.0001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Divide A amount by the total amount.",
+        "solution": "0.10/(0.10+0.15)=0.4.",
+        "lesson_ids": [
+          "general-chemistry-1-10"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "general-chemistry-1-10:partial-pressure",
+      "type": "numeric",
+      "prompt": "For that ideal mixture at unrounded total pressure 124.71 kPa, what is p_A in kPa? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "general-chemistry-1-10-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 49.884,
+        "unit": "",
+        "tolerance": 0.0001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Multiply total pressure by mole fraction 0.4.",
+        "solution": "p_A=0.4×124.71=49.884 kPa.",
+        "lesson_ids": [
+          "general-chemistry-1-10"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "general-chemistry-1-10:temperature-ratio",
+      "type": "numeric",
+      "prompt": "At fixed amount and volume, temperature changes from 300 K to 600 K under the ideal model. What is P_final/P_initial? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "general-chemistry-1-10-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 2,
+        "unit": "",
+        "tolerance": 0.0001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use absolute-temperature ratio with the fixed-state constraints.",
+        "solution": "Pressure ratio is 600/300=2.",
+        "lesson_ids": [
+          "general-chemistry-1-10"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "general-chemistry-1-10:rms-speed",
+      "type": "numeric",
+      "prompt": "Use R=8.314 J/(mol·K),T=300 K and M=0.028 kg/mol. What RMS speed in m/s follows from √(3RT/M)? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "general-chemistry-1-10-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 516.9484638585498,
+        "unit": "",
+        "tolerance": 0.01,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use kilograms per mole with this gas constant.",
+        "solution": "The RMS speed is approximately 516.93 m/s; it is not bulk flow speed.",
+        "lesson_ids": [
+          "general-chemistry-1-10"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "general-chemistry-1-10:compressibility",
+      "type": "numeric",
+      "prompt": "For supplied pressure 135.0 kPa versus ideal pressure 124.71 kPa at the same n,T,V, what is Z=PV/(nRT)? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "general-chemistry-1-10-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 1.0825114265095022,
+        "unit": "",
+        "tolerance": 0.0001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Form the supplied-pressure to ideal-pressure ratio.",
+        "solution": "Z=135.0/124.71≈1.082512; the discrepancy does not identify a unique cause.",
+        "lesson_ids": [
+          "general-chemistry-1-10"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "general-chemistry-1-10:temperature",
+      "type": "single_choice",
+      "prompt": "Which temperature belongs in PV=nRT?",
+      "points": 1,
+      "objective_ids": [
+        "general-chemistry-1-10-objective-1"
+      ],
+      "options": [
+        "Absolute temperature in kelvin with compatible units.",
+        "Any Celsius value without conversion.",
+        "A temperature difference instead of state temperature."
+      ],
+      "solution_spec": {
+        "answer": 0
+      },
+      "feedback": {
+        "hint": "Check the stated model and accounting conditions.",
+        "solution": "Absolute temperature in kelvin with compatible units.",
+        "lesson_ids": [
+          "general-chemistry-1-10"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "general-chemistry-1-10:rms",
+      "type": "single_choice",
+      "prompt": "What does RMS speed represent in the model?",
+      "points": 1,
+      "objective_ids": [
+        "general-chemistry-1-10-objective-3"
+      ],
+      "options": [
+        "The mean signed velocity in a stationary gas.",
+        "A molecular-speed average, distinct from directed bulk velocity.",
+        "Every molecule moving at one identical speed."
+      ],
+      "solution_spec": {
+        "answer": 1
+      },
+      "feedback": {
+        "hint": "Check the stated model and accounting conditions.",
+        "solution": "A molecular-speed average, distinct from directed bulk velocity.",
+        "lesson_ids": [
+          "general-chemistry-1-10"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "general-chemistry-1-10:z-inference",
+      "type": "single_choice",
+      "prompt": "Does Z≈1.083 identify a unique real-gas cause?",
+      "points": 1,
+      "objective_ids": [
+        "general-chemistry-1-10-objective-3"
+      ],
+      "options": [
+        "No; state-input errors and multiple model deviations must also be considered.",
+        "Yes; it proves exactly one intermolecular mechanism.",
+        "Yes; it proves every measured input is exact."
+      ],
+      "solution_spec": {
+        "answer": 0
+      },
+      "feedback": {
+        "hint": "Check the stated model and accounting conditions.",
+        "solution": "No; state-input errors and multiple model deviations must also be considered.",
+        "lesson_ids": [
+          "general-chemistry-1-10"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "general-chemistry-1-11:internal-energy",
+      "type": "numeric",
+      "prompt": "With heat entering q=+500 J and work on the system w=−200 J, what ΔU in J results? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "general-chemistry-1-11-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 300,
+        "unit": "",
+        "tolerance": 0.0001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use ΔU=q+w with the stated sign convention.",
+        "solution": "500−200=+300 J.",
+        "lesson_ids": [
+          "general-chemistry-1-11"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "general-chemistry-1-11:expansion-work",
+      "type": "numeric",
+      "prompt": "Against constant P_ext=100 kPa, volume expands by 1.5 L. What work on the system in J results? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "general-chemistry-1-11-objective-1"
+      ],
+      "solution_spec": {
+        "answer": -150,
+        "unit": "",
+        "tolerance": 0.0001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use w=−P_extΔV and kPa·L=J.",
+        "solution": "w=−100×1.5=−150 J.",
+        "lesson_ids": [
+          "general-chemistry-1-11"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "general-chemistry-1-11:reaction-heat",
+      "type": "numeric",
+      "prompt": "A stipulated isolated exchange has solution mass 100 g,c=4.00 J/(g·K),calorimeter capacity 20.0 J/K and rise 3.00 K. What q_rxn in J results? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "general-chemistry-1-11-objective-2"
+      ],
+      "solution_spec": {
+        "answer": -1260,
+        "unit": "",
+        "tolerance": 0.0001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Add solution and calorimeter heat capacities before reversing the surroundings sign.",
+        "solution": "q_rxn=−(100×4+20)×3=−1260 J.",
+        "lesson_ids": [
+          "general-chemistry-1-11"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "general-chemistry-1-11:molar-enthalpy",
+      "type": "numeric",
+      "prompt": "For that model with m=100.0 g,c=4.00 J/(g·K),C_cal=20.0 J/K,ΔT=3.00 K and reaction extent 0.0200 mol, report reaction enthalpy to exactly three significant figures. Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "general-chemistry-1-11-objective-2"
+      ],
+      "solution_spec": {
+        "answer": -63.0,
+        "unit": "kJ/mol",
+        "tolerance": 0.05,
+        "unit_required": true,
+        "significant_figures": 3,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Divide reaction heat by extent and convert J to kJ.",
+        "solution": "−1260 J/0.0200 mol=−63.0 kJ/mol of reaction extent.",
+        "lesson_ids": [
+          "general-chemistry-1-11"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "general-chemistry-1-11:hess-total",
+      "type": "numeric",
+      "prompt": "Constructed A→B has ΔH=−40 kJ and B→C has ΔH=+15 kJ. What ΔH in kJ follows for A→C? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "general-chemistry-1-11-objective-3"
+      ],
+      "solution_spec": {
+        "answer": -25,
+        "unit": "",
+        "tolerance": 0.0001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Add compatible steps and cancel the shared intermediate.",
+        "solution": "−40+15=−25 kJ.",
+        "lesson_ids": [
+          "general-chemistry-1-11"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "general-chemistry-1-11:enthalpy-correction",
+      "type": "numeric",
+      "prompt": "For initial/final ideal-gas states at the same 300 K, use ΔU=−10.0 kJ,Δn_g=+2.0 mol,R=8.314 J/(mol·K). What ΔH in kJ follows when other PV contributions are neglected? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "general-chemistry-1-11-objective-3"
+      ],
+      "solution_spec": {
+        "answer": -5.0116000000000005,
+        "unit": "",
+        "tolerance": 0.0001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use ΔH=ΔU+Δn_gRT with matching energy units.",
+        "solution": "The gas correction is +4.9884 kJ, giving −5.0116 kJ.",
+        "lesson_ids": [
+          "general-chemistry-1-11"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "general-chemistry-1-11:calorimeter",
+      "type": "single_choice",
+      "prompt": "When the modeled surroundings warm without outside heat exchange, what reaction sign follows?",
+      "points": 1,
+      "objective_ids": [
+        "general-chemistry-1-11-objective-2"
+      ],
+      "options": [
+        "A temperature rise proves reaction completion.",
+        "Both heat signs must be positive.",
+        "Reaction heat is negative while surroundings heat is positive."
+      ],
+      "solution_spec": {
+        "answer": 2
+      },
+      "feedback": {
+        "hint": "Check the stated model and accounting conditions.",
+        "solution": "Reaction heat is negative while surroundings heat is positive.",
+        "lesson_ids": [
+          "general-chemistry-1-11"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "general-chemistry-1-11:state-function",
+      "type": "single_choice",
+      "prompt": "Which quantities are state functions rather than path-dependent energy transfers?",
+      "points": 1,
+      "objective_ids": [
+        "general-chemistry-1-11-objective-1"
+      ],
+      "options": [
+        "Internal energy and enthalpy.",
+        "Only heat, because it is stored in a system.",
+        "Heat and work."
+      ],
+      "solution_spec": {
+        "answer": 0
+      },
+      "feedback": {
+        "hint": "Check the stated model and accounting conditions.",
+        "solution": "Internal energy and enthalpy.",
+        "lesson_ids": [
+          "general-chemistry-1-11"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "general-chemistry-1-11:phase",
+      "type": "single_choice",
+      "prompt": "Why do phases matter in formation-enthalpy accounting?",
+      "points": 1,
+      "objective_ids": [
+        "general-chemistry-1-11-objective-3"
+      ],
+      "options": [
+        "Phase labels never affect enthalpy.",
+        "Liquid and vapor forms represent different states and can have different enthalpies.",
+        "Every coefficient-weighted total is identical across phases."
+      ],
+      "solution_spec": {
+        "answer": 1
+      },
+      "feedback": {
+        "hint": "Check the stated model and accounting conditions.",
+        "solution": "Liquid and vapor forms represent different states and can have different enthalpies.",
+        "lesson_ids": [
+          "general-chemistry-1-11"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "general-chemistry-1-12:equilibrium-b",
+      "type": "numeric",
+      "prompt": "For ideal A⇌B with K=[B]/[A]=4,initial [A]=1.0,[B]=0.2 mol/L and fixed volume, what equilibrium [B] in mol/L results? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "general-chemistry-1-12-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0.96,
+        "unit": "",
+        "tolerance": 0.0001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Preserve the total concentration 1.2 and impose ratio 4.",
+        "solution": "[A]=0.24 and [B]=0.96 mol/L.",
+        "lesson_ids": [
+          "general-chemistry-1-12"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "general-chemistry-1-12:equilibrium-a",
+      "type": "numeric",
+      "prompt": "For that same ideal A⇌B system, what equilibrium [A] in mol/L results? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "general-chemistry-1-12-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0.24,
+        "unit": "",
+        "tolerance": 0.0001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Divide total concentration by 1+K.",
+        "solution": "1.2/(1+4)=0.24 mol/L.",
+        "lesson_ids": [
+          "general-chemistry-1-12"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "general-chemistry-1-12:extent",
+      "type": "numeric",
+      "prompt": "For that same initial A=1.0,B=0.2 mol/L and K=4, what forward concentration extent x in mol/L results? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "general-chemistry-1-12-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0.76,
+        "unit": "",
+        "tolerance": 0.0001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use A=1−x and B=0.2+x.",
+        "solution": "Solving (0.2+x)/(1−x)=4 gives x=0.76 mol/L.",
+        "lesson_ids": [
+          "general-chemistry-1-12"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "general-chemistry-1-12:reverse-constant",
+      "type": "numeric",
+      "prompt": "A⇌B has dimensionless K=4. What is the constant for B⇌A with the same conventions? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "general-chemistry-1-12-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0.25,
+        "unit": "",
+        "tolerance": 0.0001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Reverse the activity quotient.",
+        "solution": "K_reverse=1/4=0.25.",
+        "lesson_ids": [
+          "general-chemistry-1-12"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "general-chemistry-1-12:doubled-constant",
+      "type": "numeric",
+      "prompt": "A⇌B has dimensionless K=4. What is K for 2A⇌2B at the same temperature and standard states? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "general-chemistry-1-12-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 16,
+        "unit": "",
+        "tolerance": 0.0001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Doubling coefficients squares the quotient.",
+        "solution": "K_doubled=4²=16.",
+        "lesson_ids": [
+          "general-chemistry-1-12"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "general-chemistry-1-12:activity-quotient",
+      "type": "numeric",
+      "prompt": "For A⇌B with [A]=0.5,[B]=1.0 mol/L,γ_A=0.8,γ_B=0.6 and common c°=1 mol/L, what is Q=a_B/a_A? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "general-chemistry-1-12-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 1.5,
+        "unit": "",
+        "tolerance": 0.0001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Apply both supplied activity coefficients before forming the ratio.",
+        "solution": "Q=(0.6×1.0)/(0.8×0.5)=1.5, not the concentration ratio 2.",
+        "lesson_ids": [
+          "general-chemistry-1-12"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "general-chemistry-1-12:q-k",
+      "type": "single_choice",
+      "prompt": "At fixed temperature, initial Q=0.2 for A⇌B with K=4. What is the model direction?",
+      "points": 1,
+      "objective_ids": [
+        "general-chemistry-1-12-objective-2"
+      ],
+      "options": [
+        "K decreases to 0.2 just because composition changed.",
+        "No change because equilibrium requires equal concentrations.",
+        "Net forward change toward products until Q reaches K."
+      ],
+      "solution_spec": {
+        "answer": 2
+      },
+      "feedback": {
+        "hint": "Check the stated model and accounting conditions.",
+        "solution": "Net forward change toward products until Q reaches K.",
+        "lesson_ids": [
+          "general-chemistry-1-12"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "general-chemistry-1-12:catalyst",
+      "type": "single_choice",
+      "prompt": "What can a catalyst change without changing K for the same conditions?",
+      "points": 1,
+      "objective_ids": [
+        "general-chemistry-1-12-objective-3"
+      ],
+      "options": [
+        "Rates of approach, rather than the thermodynamic equilibrium constant.",
+        "K merely by speeding the forward reaction.",
+        "Conservation of elements."
+      ],
+      "solution_spec": {
+        "answer": 0
+      },
+      "feedback": {
+        "hint": "Check the stated model and accounting conditions.",
+        "solution": "Rates of approach, rather than the thermodynamic equilibrium constant.",
+        "lesson_ids": [
+          "general-chemistry-1-12"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "general-chemistry-1-12:activity",
+      "type": "single_choice",
+      "prompt": "When must standard-state normalization be kept explicitly in a quotient?",
+      "points": 1,
+      "objective_ids": [
+        "general-chemistry-1-12-objective-3"
+      ],
+      "options": [
+        "Only when a catalyst is present.",
+        "Never, because raw mol/L is dimensionless.",
+        "Whenever concentration factors do not cancel; the thermodynamic activities are dimensionless."
+      ],
+      "solution_spec": {
+        "answer": 2
+      },
+      "feedback": {
+        "hint": "Check the stated model and accounting conditions.",
+        "solution": "Whenever concentration factors do not cancel; the thermodynamic activities are dimensionless.",
+        "lesson_ids": [
+          "general-chemistry-1-12"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "general-chemistry-1-13:activity-ph",
+      "type": "numeric",
+      "prompt": "In the stated concentration activity approximation, use [H⁺]=10⁻⁵ mol/L,γ_H=0.7 and c°=1 mol/L. What pH results? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "general-chemistry-1-13-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 5.154901959985743,
+        "unit": "",
+        "tolerance": 0.0001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Take minus the base-10 logarithm of the normalized activity.",
+        "solution": "pH=−log₁₀(0.7×10⁻⁵)≈5.154902.",
+        "lesson_ids": [
+          "general-chemistry-1-13"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "general-chemistry-1-13:initial-buffer",
+      "type": "numeric",
+      "prompt": "Use synthetic pK_a=4.8,0.050 mol HA and 0.030 mol A⁻ in a common volume. What ideal inventory-ratio pH results? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "general-chemistry-1-13-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 4.578151250383644,
+        "unit": "",
+        "tolerance": 0.0001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the base-to-acid ratio under the declared approximation.",
+        "solution": "4.8+log₁₀(0.030/0.050)=4.578151.",
+        "lesson_ids": [
+          "general-chemistry-1-13"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "general-chemistry-1-13:after-ten",
+      "type": "numeric",
+      "prompt": "For that nominal buffer, add 0.010 mol strong-acid equivalents with fixed-volume assumptions. What inventory-ratio pH results? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "general-chemistry-1-13-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 4.322878745280337,
+        "unit": "",
+        "tolerance": 0.0001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Convert A⁻ to HA before taking the ratio.",
+        "solution": "A⁻=0.020,HA=0.060 mol, giving 4.322879.",
+        "lesson_ids": [
+          "general-chemistry-1-13"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "general-chemistry-1-13:after-twenty",
+      "type": "numeric",
+      "prompt": "For the same nominal buffer after 0.020 mol acid equivalents, what inventory-ratio pH results? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "general-chemistry-1-13-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 3.954901959985743,
+        "unit": "",
+        "tolerance": 0.0001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Update both stoichiometric amounts.",
+        "solution": "The ratio is 0.010/0.070, giving 3.954902.",
+        "lesson_ids": [
+          "general-chemistry-1-13"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "general-chemistry-1-13:base-inventory",
+      "type": "numeric",
+      "prompt": "For nominal 0.030 mol A⁻, what acid-equivalent amount in mol reaches its stoichiometric exhaustion boundary? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "general-chemistry-1-13-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 0.03,
+        "unit": "",
+        "tolerance": 0.0001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the 1:1 neutralization stoichiometry.",
+        "solution": "At q=0.030 mol the nominal base inventory reaches zero and the buffer-ratio approximation fails.",
+        "lesson_ids": [
+          "general-chemistry-1-13"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "general-chemistry-1-13:exhausted-ph",
+      "type": "numeric",
+      "prompt": "For the exhausted nominal buffer C_T=0.16 mol/L,K_a,c=10^(−4.8) mol/L, neglect water and solve h²/(C_T−h)=K_a,c. What ideal pH=−log₁₀(h/(1 mol/L)) follows? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "general-chemistry-1-13-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 2.8001011965943916,
+        "unit": "",
+        "tolerance": 0.0001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Choose the positive quadratic root, not a zero inventory logarithm.",
+        "solution": "The positive root is finite and below C_T, giving pH approximately 2.80.",
+        "lesson_ids": [
+          "general-chemistry-1-13"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "general-chemistry-1-13:zero-base",
+      "type": "single_choice",
+      "prompt": "At nominal conjugate-base exhaustion, what is appropriate?",
+      "points": 1,
+      "objective_ids": [
+        "general-chemistry-1-13-objective-2"
+      ],
+      "options": [
+        "Evaluate log zero as an ordinary finite buffer pH.",
+        "Use negative base inventories as concentrations.",
+        "Replace the failed inventory-ratio logarithm with a justified equilibrium and charge balance."
+      ],
+      "solution_spec": {
+        "answer": 2
+      },
+      "feedback": {
+        "hint": "Check the stated model and accounting conditions.",
+        "solution": "Replace the failed inventory-ratio logarithm with a justified equilibrium and charge balance.",
+        "lesson_ids": [
+          "general-chemistry-1-13"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "general-chemistry-1-13:cause",
+      "type": "single_choice",
+      "prompt": "A measured pH is below a nominal prediction. What follows?",
+      "points": 1,
+      "objective_ids": [
+        "general-chemistry-1-13-objective-3"
+      ],
+      "options": [
+        "The observation alone proves a unique chemical cause.",
+        "Every discrepancy is an instrument fault.",
+        "Calibration, composition and nonideal explanations remain possible; use distinguishing evidence."
+      ],
+      "solution_spec": {
+        "answer": 2
+      },
+      "feedback": {
+        "hint": "Check the stated model and accounting conditions.",
+        "solution": "Calibration, composition and nonideal explanations remain possible; use distinguishing evidence.",
+        "lesson_ids": [
+          "general-chemistry-1-13"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "general-chemistry-1-13:ph-definition",
+      "type": "single_choice",
+      "prompt": "Which pH definition is being approximated by a normalized concentration calculation?",
+      "points": 1,
+      "objective_ids": [
+        "general-chemistry-1-13-objective-1"
+      ],
+      "options": [
+        "A direct mole ratio independent of hydrogen activity.",
+        "Minus the base-10 logarithm of hydrogen-ion activity.",
+        "The dimensional hydrogen concentration itself."
+      ],
+      "solution_spec": {
+        "answer": 1
+      },
+      "feedback": {
+        "hint": "Check the stated model and accounting conditions.",
+        "solution": "Minus the base-10 logarithm of hydrogen-ion activity.",
+        "lesson_ids": [
+          "general-chemistry-1-13"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "general-chemistry-1-lab-01:summary",
+      "type": "file_upload",
+      "prompt": "Group the CSV pH reports by sample. Upload columns sample,replicates,mean_ph with seven rows q00,q05,q10,q20,q25,q30,reference. Use arithmetic mean reported pH, before correction.",
+      "points": 14,
+      "objective_ids": [
+        "general-chemistry-1-lab-01-objective-1"
+      ],
+      "solution_spec": {
+        "accepted_media_types": [
+          "text/csv"
+        ],
+        "max_bytes": 32768,
+        "validation_spec": {
+          "format": "csv-numeric-table-v1",
+          "delimiter": ",",
+          "key_column": "sample",
+          "columns": [
+            "sample",
+            "replicates",
+            "mean_ph"
+          ],
+          "checks": [
+            {
+              "id": "q00-replicates",
+              "row_id": "q00",
+              "column": "replicates",
+              "type": "numeric",
+              "answer": 3.0,
+              "unit": "",
+              "tolerance": 0,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "count",
+                "values": [
+                  4.5025,
+                  4.5125,
+                  4.5225
+                ]
+              }
+            },
+            {
+              "id": "q00-mean_ph",
+              "row_id": "q00",
+              "column": "mean_ph",
+              "type": "numeric",
+              "answer": 4.5125,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  4.5025,
+                  4.5125,
+                  4.5225
+                ]
+              }
+            },
+            {
+              "id": "q05-replicates",
+              "row_id": "q05",
+              "column": "replicates",
+              "type": "numeric",
+              "answer": 3.0,
+              "unit": "",
+              "tolerance": 0,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "count",
+                "values": [
+                  4.3642,
+                  4.3742,
+                  4.3842
+                ]
+              }
+            },
+            {
+              "id": "q05-mean_ph",
+              "row_id": "q05",
+              "column": "mean_ph",
+              "type": "numeric",
+              "answer": 4.3742,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  4.3642,
+                  4.3742,
+                  4.3842
+                ]
+              }
+            },
+            {
+              "id": "q10-replicates",
+              "row_id": "q10",
+              "column": "replicates",
+              "type": "numeric",
+              "answer": 3.0,
+              "unit": "",
+              "tolerance": 0,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "count",
+                "values": [
+                  4.198,
+                  4.208,
+                  4.218
+                ]
+              }
+            },
+            {
+              "id": "q10-mean_ph",
+              "row_id": "q10",
+              "column": "mean_ph",
+              "type": "numeric",
+              "answer": 4.208,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  4.198,
+                  4.208,
+                  4.218
+                ]
+              }
+            },
+            {
+              "id": "q20-replicates",
+              "row_id": "q20",
+              "column": "replicates",
+              "type": "numeric",
+              "answer": 3.0,
+              "unit": "",
+              "tolerance": 0,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "count",
+                "values": [
+                  3.6075,
+                  3.6175,
+                  3.6275
+                ]
+              }
+            },
+            {
+              "id": "q20-mean_ph",
+              "row_id": "q20",
+              "column": "mean_ph",
+              "type": "numeric",
+              "answer": 3.6175,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  3.6075,
+                  3.6175,
+                  3.6275
+                ]
+              }
+            },
+            {
+              "id": "q25-replicates",
+              "row_id": "q25",
+              "column": "replicates",
+              "type": "numeric",
+              "answer": 3.0,
+              "unit": "",
+              "tolerance": 0,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "count",
+                "values": [
+                  2.6111,
+                  2.6211,
+                  2.6311
+                ]
+              }
+            },
+            {
+              "id": "q25-mean_ph",
+              "row_id": "q25",
+              "column": "mean_ph",
+              "type": "numeric",
+              "answer": 2.6211,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  2.6111,
+                  2.6211,
+                  2.6311
+                ]
+              }
+            },
+            {
+              "id": "q30-replicates",
+              "row_id": "q30",
+              "column": "replicates",
+              "type": "numeric",
+              "answer": 3.0,
+              "unit": "",
+              "tolerance": 0,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "count",
+                "values": [
+                  1.9834,
+                  1.9934,
+                  2.0034
+                ]
+              }
+            },
+            {
+              "id": "q30-mean_ph",
+              "row_id": "q30",
+              "column": "mean_ph",
+              "type": "numeric",
+              "answer": 1.9934,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  1.9834,
+                  1.9934,
+                  2.0034
+                ]
+              }
+            },
+            {
+              "id": "reference-replicates",
+              "row_id": "reference",
+              "column": "replicates",
+              "type": "numeric",
+              "answer": 3.0,
+              "unit": "",
+              "tolerance": 0,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "count",
+                "values": [
+                  4.07,
+                  4.08,
+                  4.09
+                ]
+              }
+            },
+            {
+              "id": "reference-mean_ph",
+              "row_id": "reference",
+              "column": "mean_ph",
+              "type": "numeric",
+              "answer": 4.08,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  4.07,
+                  4.08,
+                  4.09
+                ]
+              }
+            }
+          ]
+        },
+        "rubric": [
+          {
+            "id": "q00-replicates",
+            "criterion": "q00: replicates",
+            "points": 1,
+            "evidence": [
+              "Recomputes replicates for q00 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "q00-mean_ph",
+            "criterion": "q00: mean_ph",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_ph for q00 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "q05-replicates",
+            "criterion": "q05: replicates",
+            "points": 1,
+            "evidence": [
+              "Recomputes replicates for q05 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "q05-mean_ph",
+            "criterion": "q05: mean_ph",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_ph for q05 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "q10-replicates",
+            "criterion": "q10: replicates",
+            "points": 1,
+            "evidence": [
+              "Recomputes replicates for q10 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "q10-mean_ph",
+            "criterion": "q10: mean_ph",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_ph for q10 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "q20-replicates",
+            "criterion": "q20: replicates",
+            "points": 1,
+            "evidence": [
+              "Recomputes replicates for q20 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "q20-mean_ph",
+            "criterion": "q20: mean_ph",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_ph for q20 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "q25-replicates",
+            "criterion": "q25: replicates",
+            "points": 1,
+            "evidence": [
+              "Recomputes replicates for q25 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "q25-mean_ph",
+            "criterion": "q25: mean_ph",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_ph for q25 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "q30-replicates",
+            "criterion": "q30: replicates",
+            "points": 1,
+            "evidence": [
+              "Recomputes replicates for q30 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "q30-mean_ph",
+            "criterion": "q30: mean_ph",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_ph for q30 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "reference-replicates",
+            "criterion": "reference: replicates",
+            "points": 1,
+            "evidence": [
+              "Recomputes replicates for reference from the preparation-level values."
+            ]
+          },
+          {
+            "id": "reference-mean_ph",
+            "criterion": "reference: mean_ph",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_ph for reference from the preparation-level values."
+            ]
+          }
+        ]
+      },
+      "feedback": {
+        "hint": "Group by sample and average the reported pH values, not converted hydrogen concentrations.",
+        "solution": "Each group has three deliberately balanced reports, whose arithmetic pH mean equals the rounded central value.",
+        "lesson_ids": [
+          "general-chemistry-1-lab-01"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "general-chemistry-1-lab-01:reference-offset",
+      "type": "numeric",
+      "prompt": "The supplied reference has target pH 4.0000. Using its committed CSV mean, what common additive reporting offset in pH units is inferred? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "general-chemistry-1-lab-01-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0.08000000000000007,
+        "unit": "",
+        "tolerance": 0.0001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Subtract the stipulated reference target from its reported mean.",
+        "solution": "4.0800−4.0000=+0.0800; the teaching correction subtracts this from sample reports.",
+        "lesson_ids": [
+          "general-chemistry-1-lab-01"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "general-chemistry-1-lab-01:corrected-ten",
+      "type": "numeric",
+      "prompt": "Use the committed q10 mean and the offset inferred from the reference. What corrected arithmetic mean pH results? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "general-chemistry-1-lab-01-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 4.128,
+        "unit": "",
+        "tolerance": 0.0001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Subtract the common reference offset from the sample mean.",
+        "solution": "4.2080−0.0800=4.1280. This corrects reporting offset but leaves the composition difference.",
+        "lesson_ids": [
+          "general-chemistry-1-lab-01"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "general-chemistry-1-lab-01:nominal-ten",
+      "type": "numeric",
+      "prompt": "For nominal HA=0.050 mol,A⁻=0.030 mol,pK_a=4.8, update the inventories after 0.010 mol acid equivalents. What Henderson–Hasselbalch inventory-ratio pH follows? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "general-chemistry-1-lab-01-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 4.322878745280337,
+        "unit": "",
+        "tolerance": 0.0001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the nominal inventories, not the independent actual-composition values.",
+        "solution": "Nominal A⁻=0.020 and HA=0.060 mol give 4.8+log₁₀(1/3)=4.322879.",
+        "lesson_ids": [
+          "general-chemistry-1-lab-01"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "general-chemistry-1-lab-01:full-thirty",
+      "type": "numeric",
+      "prompt": "For independently supplied initial A⁻=0.024 mol,HA=0.056 mol,V=0.50 L,after 0.030 mol acid equivalents, use C_T=0.16 mol/L,S=−0.012 mol/L,K_a,c=10^(−4.8) mol/L,K_w,c=10⁻¹⁴ (mol/L)². Solve h+S−C_TK_a,c/(K_a,c+h)−K_w,c/h=0. What ideal pH=−log₁₀(h/(1 mol/L)) results? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "general-chemistry-1-lab-01-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 1.913374743185515,
+        "unit": "",
+        "tolerance": 0.0002,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Retain excess strong-acid charge and the positive equilibrium root.",
+        "solution": "The balance root gives pH 1.913375; a negative inventory ratio is not a valid buffer logarithm.",
+        "lesson_ids": [
+          "general-chemistry-1-lab-01"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "general-chemistry-1-lab-01:interpretation",
+      "type": "structured",
+      "prompt": "Choose explanations supported by the synthetic reference and composition evidence.",
+      "points": 3,
+      "objective_ids": [
+        "general-chemistry-1-lab-01-objective-3"
+      ],
+      "response_fields": [
+        {
+          "id": "reference",
+          "type": "single_choice",
+          "prompt": "What does subtracting the reference offset establish?",
+          "options": [
+            "Correction for the supplied common additive pH offset in this construction.",
+            "Proof all real pH measurements are exact.",
+            "Correction of every possible activity or temperature effect."
+          ],
+          "points": 1
+        },
+        {
+          "id": "composition",
+          "type": "single_choice",
+          "prompt": "What distinguishes the actual construction from nominal 0.030 mol base?",
+          "options": [
+            "Independent supplied composition has 0.024 mol base and 0.056 mol acid, preserving the same total.",
+            "The reference pH directly measures every acid species amount.",
+            "A pH discrepancy alone uniquely proves the base inventory."
+          ],
+          "points": 1
+        },
+        {
+          "id": "exhaustion",
+          "type": "single_choice",
+          "prompt": "What is required at q30 for the actual initial base 0.024 mol?",
+          "options": [
+            "A mass/equilibrium/charge balance including excess acid, rather than a negative buffer ratio.",
+            "A real logarithm of the negative post-neutralization inventory ratio.",
+            "Setting pH to zero whenever the formal base becomes negative."
+          ],
+          "points": 1
+        }
+      ],
+      "solution_spec": {
+        "field_specs": [
+          {
+            "id": "reference",
+            "type": "single_choice",
+            "answer": 0
+          },
+          {
+            "id": "composition",
+            "type": "single_choice",
+            "answer": 0
+          },
+          {
+            "id": "exhaustion",
+            "type": "single_choice",
+            "answer": 0
+          }
+        ],
+        "rubric": [
+          {
+            "id": "reference",
+            "criterion": "Calibration scope",
+            "points": 1,
+            "evidence": [
+              "The common offset is stipulated; a real instrument can have additional response effects."
+            ]
+          },
+          {
+            "id": "composition",
+            "criterion": "Independent composition check",
+            "points": 1,
+            "evidence": [
+              "Reference and composition evidence address different questions."
+            ]
+          },
+          {
+            "id": "exhaustion",
+            "criterion": "Invalid inventory ratio",
+            "points": 1,
+            "evidence": [
+              "The full ideal model includes a negative spectator excess and a positive hydrogen root."
+            ]
+          }
+        ]
+      },
+      "feedback": {
+        "hint": "Distinguish a reporting correction, independent composition and the model domain.",
+        "solution": "The supplied reference corrects only its stipulated offset. Composition is independently given. Beyond base exhaustion, the full balance replaces the failed inventory-ratio approximation.",
+        "lesson_ids": [
+          "general-chemistry-1-lab-01"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "general-chemistry-1-lab-01:claims",
+      "type": "multiple_select",
+      "prompt": "Which statements respect this constructed dataset? Select all that apply.",
+      "points": 2,
+      "objective_ids": [
+        "general-chemistry-1-lab-01-objective-3"
+      ],
+      "options": [
+        "Lower base inventory changes the neutralization range and remains after calibration correction.",
+        "Correcting the reference offset proves the unknown solution is ideal.",
+        "The three pH offsets deliberately balance around each synthetic central report.",
+        "Arithmetic mean pH is not generally minus log of arithmetic mean hydrogen concentration.",
+        "Three repeats establish independent Gaussian errors."
+      ],
+      "solution_spec": {
+        "answer": [
+          0,
+          2,
+          3
+        ],
+        "partial_credit": "correct-minus-incorrect-clamped-v1"
+      },
+      "feedback": {
+        "hint": "Separate log-scale arithmetic and known construction from experimental claims.",
+        "solution": "The offsets balance, logarithmic averaging conventions differ and independently supplied lower base changes the model. Neither real noise properties nor solution ideality is established.",
+        "lesson_ids": [
+          "general-chemistry-1-lab-01"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "general-chemistry-1-lab-01:residual",
+      "type": "single_choice",
+      "prompt": "After reference correction, q10 remains below the nominal buffer prediction. What is justified here?",
+      "points": 1,
+      "objective_ids": [
+        "general-chemistry-1-lab-01-objective-3"
+      ],
+      "options": [
+        "The independently supplied composition mismatch contributes; other real explanations would still need their own evidence.",
+        "The reference correction must remove every chemical-model discrepancy.",
+        "All pH discrepancies universally prove less conjugate base."
+      ],
+      "solution_spec": {
+        "answer": 0
+      },
+      "feedback": {
+        "hint": "Use the separate composition information and avoid a unique-cause claim from pH alone.",
+        "solution": "The lower base inventory is known from the synthetic construction. A real discrepancy could also involve acid load, temperature, activities or measurement response.",
+        "lesson_ids": [
+          "general-chemistry-1-lab-01"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
     }
   ]
 }

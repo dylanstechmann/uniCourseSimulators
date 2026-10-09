@@ -4,7 +4,30 @@
 
 2026-10-06; synthetic local learner data only. Milestones 1 and 2 are implemented. Milestone 3 remains partial; deterministic graders and prototype graded-assignment and review workflows are described below. A Milestone 4 curriculum-map increment is implemented and tested, while subject-matter review and map refinement remain. All 25 course packages are **partial**; zero are beta, complete or externally reviewed. Human score review is limited to saved attempts and does not constitute course-content review. No semester equivalence, university credit, security certification or public production deployment is asserted.
 
-## Current increment: Calculus III lessons, flux-balance lab and proposed schedule (0.4.0, 2026-10-09)
+## Current increment: General Chemistry I lessons, buffer lab and proposed schedule (0.4.0, 2026-10-09)
+
+Developed with Codex assistance. General Chemistry I advances from 0.3.1 to 0.4.0 while remaining partial, unreviewed and formative-only. Seven new lessons cover atom/amount/photon accounting, bonding and geometry, reaction extent, gases and model deviations, energy and calorimetry, equilibrium and activity conventions, and acid–base discrepancy checks. One synthetic buffer lab and a proposed 14-week sequence complete the increment. There are 71 new public items and 32 cards; the package contains 14 readings, 91 items and 48 cards. All 20 preexisting question objects and 16 cards are unchanged.
+
+Separate calculations check all 59 numeric keys, including 13 preserved keys, and all 14 CSV summary cells. The lab distinguishes a common reporting offset, independently supplied composition, nominal inventory approximations and full ideal charge balance beyond base exhaustion. Six authored items require significant figures, three also require units; explicit backend responses exercise conversions, precision, wrong units and near misses. The [AI-assisted check record](reviews/ai-assisted/general-chemistry-1-0.4.0.md) documents methods, repairs and source-access limits. The same AI assistant authored content and checks; this is not independent chemical or human review.
+
+Two factual references were added as link-only records with no quotation, adaptation or redistribution permissions. NIST's defining-constants page was retrieved; the official indexed IUPAC pH definition was verified, but direct page, plain-text and PDF access returned HTTP 403. This restriction is disclosed in the source record and course limitations. No full-page IUPAC access or imported teaching material is claimed.
+
+| Command/check (Linux development container, Python 3.12.3) | Result |
+|---|---|
+| `python -B tools/validate_content.py` | PASS: 25 packages, 329 lessons, 1745 questions, 1056 cards, 25 cases; 0 errors; 98 legacy-depth warnings |
+| `bash /workspace/.claude/skills/courselab-dev/scripts/verify.sh --log-dir /workspace/courselab-session-artifacts/codex-general-chemistry-1-2026-10-09/verification` | PASS: content, legacy (7), security (694 source files, 0 findings), ruff, root (1615), backend (3747 passed, 2 existing symbolic-builder skips) |
+| `python -B /workspace/courselab-session-artifacts/codex-general-chemistry-1-2026-10-09/check_grader.py` | PASS: all 91 package items earn full credit, including precision formatting and the repaired CSV specification |
+| `python -B -m pytest tests/content/test_general_chemistry_one_recalculations.py tests/content/test_new_geroscience_and_statistics_lessons.py tests/content/test_learner_visible_number_formatting.py -q -p no:cacheprovider` | PASS: 473 focused checks before the CSV output-column repair; the full run covers the repaired specification |
+| `python -B -m pytest tests/test_general_chemistry_precision.py -q -p no:cacheprovider` from `backend/` | PASS: 6 precision/unit checks |
+| `ruff check tests/content/test_general_chemistry_one_recalculations.py backend/tests/test_general_chemistry_precision.py` | PASS on the initial run; both files subsequently formatted |
+| `python -B tools/objective_coverage.py --check docs/COURSE_GAP_REPORT.md` | PASS: generated report matches |
+| `python3 -B /workspace/.claude/skills/regen-guardrails/scripts/claims_scan.py --repo uniStemCourseSimulators` | PASS: 0 HIGH, MED or LOW findings |
+
+The first two-file focused run had 87 passes and one long-decimal display failure; photon feedback was shortened without changing its rounded key. The initial precision suite had five passes and one failure because authored kPa units were outside the current explicit unit grammar. The pressure prompt/key/tolerance now use correctly rounded pascals for the same physical result, and Pa/MPa conversions pass. The first complete real-grader check rejected the uppercase output column `mean_pH`; upload instructions and specifications now use `mean_ph`, while the supplied raw-data header `reported_pH` remains unchanged. The complete grader rerun passed all 91 items. No chemical calculation key failed, and the full six-step local run passed on its first run. A preliminary report-check invocation used unavailable bare `python`; rerunning with the configured venv interpreter passed.
+
+Logs remain outside git in `courselab-session-artifacts/codex-general-chemistry-1-2026-10-09/verification`. Frontend checks, the Docker Compose application stack and Playwright were not run locally for this content increment; publication CI runs them. No person reviewed the chemistry or measured workload.
+
+## Previous increment: Calculus III lessons, flux-balance lab and proposed schedule (0.4.0, 2026-10-09)
 
 Developed with Codex assistance. Calculus III advances from 0.3.1 to 0.4.0 while remaining partial, unreviewed and formative-only. Seven new lessons cover vector geometry, partial and total derivatives, Hessians and feasible constraints, multiple integrals and Jacobians, line integrals and Green, surface flux and divergence, and Stokes with spatial conservation. One synthetic boundary-flux lab and a proposed 14-week sequence complete the increment. There are 71 new public items and 32 cards; the package contains 14 readings, 91 items and 48 cards. All 20 preexisting item objects and 16 cards are unchanged.
 

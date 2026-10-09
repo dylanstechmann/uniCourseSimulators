@@ -7,7 +7,7 @@
   "domain": "Chemistry",
   "level": "Year 1",
   "maturity": "partial",
-  "version": "0.3.1",
+  "version": "0.4.0",
   "license": "MIT OR CC-BY-4.0",
   "content_origin": {
     "kind": "legacy-prototype",
@@ -146,12 +146,362 @@
         "general-chemistry-1-outcome-3",
         "general-chemistry-1-outcome-4"
       ]
+    },
+    {
+      "id": "general-chemistry-1-7-objective-1",
+      "description": "Account for atomic and ionic electron counts in selected introductory models.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "general-chemistry-1-outcome-2"
+      ]
+    },
+    {
+      "id": "general-chemistry-1-7-objective-2",
+      "description": "Convert specified entities and synthetic isotope averages with explicit units.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "general-chemistry-1-outcome-1",
+        "general-chemistry-1-outcome-4"
+      ]
+    },
+    {
+      "id": "general-chemistry-1-7-objective-3",
+      "description": "Calculate photon energy and distinguish exact constants from measured precision.",
+      "bloom": "evaluate",
+      "course_outcome_ids": [
+        "general-chemistry-1-outcome-3",
+        "general-chemistry-1-outcome-4"
+      ]
+    },
+    {
+      "id": "general-chemistry-1-8-objective-1",
+      "description": "Count valence electrons and formal charges in Lewis structures.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "general-chemistry-1-outcome-2"
+      ]
+    },
+    {
+      "id": "general-chemistry-1-8-objective-2",
+      "description": "Relate domains, atom shape and bond-vector geometry.",
+      "bloom": "analyze",
+      "course_outcome_ids": [
+        "general-chemistry-1-outcome-2"
+      ]
+    },
+    {
+      "id": "general-chemistry-1-8-objective-3",
+      "description": "Interpret molecular polarity and interaction-model limits.",
+      "bloom": "evaluate",
+      "course_outcome_ids": [
+        "general-chemistry-1-outcome-2"
+      ]
+    },
+    {
+      "id": "general-chemistry-1-9-objective-1",
+      "description": "Balance equations and calculate limiting stoichiometric extent.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "general-chemistry-1-outcome-1"
+      ]
+    },
+    {
+      "id": "general-chemistry-1-9-objective-2",
+      "description": "Compute theoretical mass and compare synthetic recovered yield.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "general-chemistry-1-outcome-1",
+        "general-chemistry-1-outcome-4"
+      ]
+    },
+    {
+      "id": "general-chemistry-1-9-objective-3",
+      "description": "Account for remaining ions and final-mixture concentrations.",
+      "bloom": "analyze",
+      "course_outcome_ids": [
+        "general-chemistry-1-outcome-1",
+        "general-chemistry-1-outcome-4"
+      ]
+    },
+    {
+      "id": "general-chemistry-1-10-objective-1",
+      "description": "Calculate gas-state pressure with matching volume and absolute-temperature units.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "general-chemistry-1-outcome-3",
+        "general-chemistry-1-outcome-4"
+      ]
+    },
+    {
+      "id": "general-chemistry-1-10-objective-2",
+      "description": "Calculate mixture fractions and ideal partial pressures.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "general-chemistry-1-outcome-1",
+        "general-chemistry-1-outcome-3"
+      ]
+    },
+    {
+      "id": "general-chemistry-1-10-objective-3",
+      "description": "Interpret kinetic speeds and compressibility under explicit model assumptions.",
+      "bloom": "evaluate",
+      "course_outcome_ids": [
+        "general-chemistry-1-outcome-3",
+        "general-chemistry-1-outcome-4"
+      ]
+    },
+    {
+      "id": "general-chemistry-1-11-objective-1",
+      "description": "Apply first-law signs and pressure-volume work.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "general-chemistry-1-outcome-3",
+        "general-chemistry-1-outcome-4"
+      ]
+    },
+    {
+      "id": "general-chemistry-1-11-objective-2",
+      "description": "Calculate reaction heat and molar enthalpy from a stated calorimeter model.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "general-chemistry-1-outcome-3",
+        "general-chemistry-1-outcome-4"
+      ]
+    },
+    {
+      "id": "general-chemistry-1-11-objective-3",
+      "description": "Combine state functions and identify omitted energy terms.",
+      "bloom": "analyze",
+      "course_outcome_ids": [
+        "general-chemistry-1-outcome-3"
+      ]
+    },
+    {
+      "id": "general-chemistry-1-12-objective-1",
+      "description": "Solve conserved reaction extents with a stipulated equilibrium constant.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "general-chemistry-1-outcome-1",
+        "general-chemistry-1-outcome-3"
+      ]
+    },
+    {
+      "id": "general-chemistry-1-12-objective-2",
+      "description": "Transform quotients and constants consistently with reaction conventions.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "general-chemistry-1-outcome-3",
+        "general-chemistry-1-outcome-4"
+      ]
+    },
+    {
+      "id": "general-chemistry-1-12-objective-3",
+      "description": "Distinguish activity approximations, equilibrium and kinetic claims.",
+      "bloom": "evaluate",
+      "course_outcome_ids": [
+        "general-chemistry-1-outcome-3"
+      ]
+    },
+    {
+      "id": "general-chemistry-1-13-objective-1",
+      "description": "Calculate idealized activity pH and buffer ratios.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "general-chemistry-1-outcome-3",
+        "general-chemistry-1-outcome-4"
+      ]
+    },
+    {
+      "id": "general-chemistry-1-13-objective-2",
+      "description": "Apply neutralization and equilibrium balances before predicting pH.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "general-chemistry-1-outcome-1",
+        "general-chemistry-1-outcome-3"
+      ]
+    },
+    {
+      "id": "general-chemistry-1-13-objective-3",
+      "description": "Diagnose buffer-approximation domains and discriminate calibration/composition explanations.",
+      "bloom": "evaluate",
+      "course_outcome_ids": [
+        "general-chemistry-1-outcome-3",
+        "general-chemistry-1-outcome-4"
+      ]
+    },
+    {
+      "id": "general-chemistry-1-lab-01-objective-1",
+      "description": "Summarize synthetic pH reports and correct a supplied reference offset.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "general-chemistry-1-outcome-4"
+      ]
+    },
+    {
+      "id": "general-chemistry-1-lab-01-objective-2",
+      "description": "Compare nominal buffer ratios with a full ideal mass/charge-balance construction.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "general-chemistry-1-outcome-1",
+        "general-chemistry-1-outcome-3"
+      ]
+    },
+    {
+      "id": "general-chemistry-1-lab-01-objective-3",
+      "description": "Discriminate calibration and composition explanations without unique-cause overclaims.",
+      "bloom": "evaluate",
+      "course_outcome_ids": [
+        "general-chemistry-1-outcome-3",
+        "general-chemistry-1-outcome-4"
+      ]
     }
   ],
   "duration": {
-    "instructional_weeks": null,
-    "equivalent_structure": null,
-    "weeks": []
+    "instructional_weeks": 14,
+    "equivalent_structure": "Proposed 14-week scope retaining compact prototype readings in weeks 1, 4, 8 and 11. Workload and qualified review are absent; this is not evidence of semester equivalence.",
+    "weeks": [
+      {
+        "week": 1,
+        "title": "Atoms, bonding, and molecular shape",
+        "lesson_ids": [
+          "general-chemistry-1-1"
+        ],
+        "assessment_ids": [
+          "general-chemistry-1-1-practice"
+        ]
+      },
+      {
+        "week": 2,
+        "title": "Atoms, amount and photon accounting",
+        "lesson_ids": [
+          "general-chemistry-1-7"
+        ],
+        "assessment_ids": [
+          "general-chemistry-1-7-practice"
+        ]
+      },
+      {
+        "week": 3,
+        "title": "Bonding, geometry and molecular properties",
+        "lesson_ids": [
+          "general-chemistry-1-8"
+        ],
+        "assessment_ids": [
+          "general-chemistry-1-8-practice"
+        ]
+      },
+      {
+        "week": 4,
+        "title": "Stoichiometry and solution concentration",
+        "lesson_ids": [
+          "general-chemistry-1-2"
+        ],
+        "assessment_ids": [
+          "general-chemistry-1-2-practice"
+        ]
+      },
+      {
+        "week": 5,
+        "title": "Reaction extents and solution accounting",
+        "lesson_ids": [
+          "general-chemistry-1-9"
+        ],
+        "assessment_ids": [
+          "general-chemistry-1-9-practice"
+        ]
+      },
+      {
+        "week": 6,
+        "title": "Making solutions you can trust: mass, molarity, dilution and propagated error",
+        "lesson_ids": [
+          "general-chemistry-1-5"
+        ],
+        "assessment_ids": [
+          "general-chemistry-1-5-practice"
+        ]
+      },
+      {
+        "week": 7,
+        "title": "Gases, mixtures and model deviations",
+        "lesson_ids": [
+          "general-chemistry-1-10"
+        ],
+        "assessment_ids": [
+          "general-chemistry-1-10-practice"
+        ]
+      },
+      {
+        "week": 8,
+        "title": "Thermochemistry and state functions",
+        "lesson_ids": [
+          "general-chemistry-1-3"
+        ],
+        "assessment_ids": [
+          "general-chemistry-1-3-practice"
+        ]
+      },
+      {
+        "week": 9,
+        "title": "Energy signs, Hess' law and calorimeter accounting",
+        "lesson_ids": [
+          "general-chemistry-1-11"
+        ],
+        "assessment_ids": [
+          "general-chemistry-1-11-practice"
+        ]
+      },
+      {
+        "week": 10,
+        "title": "Molecular shape, polarity and where a molecule goes: solubility, partitioning and the energy of dissolving",
+        "lesson_ids": [
+          "general-chemistry-1-6"
+        ],
+        "assessment_ids": [
+          "general-chemistry-1-6-practice"
+        ]
+      },
+      {
+        "week": 11,
+        "title": "Chemical equilibrium",
+        "lesson_ids": [
+          "general-chemistry-1-4"
+        ],
+        "assessment_ids": [
+          "general-chemistry-1-4-practice"
+        ]
+      },
+      {
+        "week": 12,
+        "title": "Equilibrium extents, activities and conventions",
+        "lesson_ids": [
+          "general-chemistry-1-12"
+        ],
+        "assessment_ids": [
+          "general-chemistry-1-12-practice"
+        ]
+      },
+      {
+        "week": 13,
+        "title": "Acid–base buffers and discrepancy checks",
+        "lesson_ids": [
+          "general-chemistry-1-13"
+        ],
+        "assessment_ids": [
+          "general-chemistry-1-13-practice"
+        ]
+      },
+      {
+        "week": 14,
+        "title": "Virtual lab 1: buffer discrepancy, reference calibration and composition",
+        "lesson_ids": [
+          "general-chemistry-1-lab-01"
+        ],
+        "assessment_ids": [
+          "general-chemistry-1-week14-buffer-lab",
+          "general-chemistry-1-case"
+        ]
+      }
+    ]
   },
   "workload": {
     "estimated_total_hours": null,
@@ -334,6 +684,305 @@
           ]
         }
       ]
+    },
+    {
+      "id": "general-chemistry-1-module-7",
+      "title": "Atoms, amount and photon accounting",
+      "source_ids": [
+        "chemistry",
+        "nist-si-defining-constants"
+      ],
+      "lessons": [
+        {
+          "id": "general-chemistry-1-7",
+          "title": "Atoms, amount and photon accounting",
+          "reading": "modules/07-atoms-amount-and-photon-accounting.md",
+          "objectives": [
+            "general-chemistry-1-7-objective-1",
+            "general-chemistry-1-7-objective-2",
+            "general-chemistry-1-7-objective-3"
+          ],
+          "worked_example": "Take the synthetic 500 nm photon. Convert nanometres to metres before forming hc/λ, producing approximately 3.972892 × 10⁻¹⁹ J. Then multiply by the exact amount-count constant and convert J to kJ to obtain 239.253 kJ per mole of photons. Separately, a 0.025 mol entity sample has 1.50553519 × 10²² entities. These two conversions use the same amount-count relation but concern different specified objects. Neither number establishes an absorption probability, measured spectral line or actual sample composition.",
+          "question_ids": [
+            "general-chemistry-1-7:ion-electrons",
+            "general-chemistry-1-7:shell-capacity",
+            "general-chemistry-1-7:isotope-average",
+            "general-chemistry-1-7:entity-count",
+            "general-chemistry-1-7:photon-energy",
+            "general-chemistry-1-7:photon-molar-energy",
+            "general-chemistry-1-7:identity",
+            "general-chemistry-1-7:exactness",
+            "general-chemistry-1-7:orbital-model"
+          ],
+          "card_ids": [
+            "general-chemistry-1-7-card-1",
+            "general-chemistry-1-7-card-2",
+            "general-chemistry-1-7-card-3",
+            "general-chemistry-1-7-card-4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "general-chemistry-1-module-8",
+      "title": "Bonding, geometry and molecular properties",
+      "source_ids": [
+        "chemistry"
+      ],
+      "lessons": [
+        {
+          "id": "general-chemistry-1-8",
+          "title": "Bonding, geometry and molecular properties",
+          "reading": "modules/08-bonding-geometry-and-molecular-properties.md",
+          "objectives": [
+            "general-chemistry-1-8-objective-1",
+            "general-chemistry-1-8-objective-2",
+            "general-chemistry-1-8-objective-3"
+          ],
+          "worked_example": "For NH₄⁺, start with 8 valence electrons, assign them to four N–H bonds and calculate nitrogen formal charge +1. Four bonding domains give tetrahedral geometry in the simple model. For water, the 8-electron budget instead includes two bonds and two lone pairs, giving bent molecular shape despite tetrahedral domain geometry. Finally, combine two assigned unit dipoles at 104.5° to obtain magnitude 1.224435. Electron budget, atom shape and dipole-vector sum are separate calculations that should agree with their own assumptions.",
+          "question_ids": [
+            "general-chemistry-1-8:co2-valence",
+            "general-chemistry-1-8:ammonium-valence",
+            "general-chemistry-1-8:nitrogen-formal-charge",
+            "general-chemistry-1-8:water-lone-pairs",
+            "general-chemistry-1-8:tetrahedral-angle",
+            "general-chemistry-1-8:bent-dipole",
+            "general-chemistry-1-8:shape",
+            "general-chemistry-1-8:polarity",
+            "general-chemistry-1-8:formal-charge"
+          ],
+          "card_ids": [
+            "general-chemistry-1-8-card-1",
+            "general-chemistry-1-8-card-2",
+            "general-chemistry-1-8-card-3",
+            "general-chemistry-1-8-card-4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "general-chemistry-1-module-9",
+      "title": "Reaction extents and solution accounting",
+      "source_ids": [
+        "chemistry"
+      ],
+      "lessons": [
+        {
+          "id": "general-chemistry-1-9",
+          "title": "Reaction extents and solution accounting",
+          "reading": "modules/09-reaction-extents-and-solution-accounting.md",
+          "objectives": [
+            "general-chemistry-1-9-objective-1",
+            "general-chemistry-1-9-objective-2",
+            "general-chemistry-1-9-objective-3"
+          ],
+          "worked_example": "For N₂+3H₂→2NH₃, compare extent limits 0.8 and 0.6 mol, choose 0.6 and obtain 1.2 mol product plus 0.2 mol unused nitrogen. Convert product using the supplied 17.0 g/mol to get 20.4 g, then compare synthetic recovery 15.3 g for 75% yield. For the separate ionic example, compare 0.0020 and 0.0015 mol, form 0.0015 mol solid and divide excess 0.0005 mol by the combined 0.250 L to obtain 2 mM. No physical experiment is implied by either calculation.",
+          "question_ids": [
+            "general-chemistry-1-9:ammonia-amount",
+            "general-chemistry-1-9:nitrogen-left",
+            "general-chemistry-1-9:product-mass",
+            "general-chemistry-1-9:percent-yield",
+            "general-chemistry-1-9:precipitate-amount",
+            "general-chemistry-1-9:remaining-ion",
+            "general-chemistry-1-9:limiting",
+            "general-chemistry-1-9:yield",
+            "general-chemistry-1-9:precipitation"
+          ],
+          "card_ids": [
+            "general-chemistry-1-9-card-1",
+            "general-chemistry-1-9-card-2",
+            "general-chemistry-1-9-card-3",
+            "general-chemistry-1-9-card-4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "general-chemistry-1-module-10",
+      "title": "Gases, mixtures and model deviations",
+      "source_ids": [
+        "chemistry",
+        "nist-si-defining-constants"
+      ],
+      "lessons": [
+        {
+          "id": "general-chemistry-1-10",
+          "title": "Gases, mixtures and model deviations",
+          "reading": "modules/10-gases-mixtures-and-model-deviations.md",
+          "objectives": [
+            "general-chemistry-1-10-objective-1",
+            "general-chemistry-1-10-objective-2",
+            "general-chemistry-1-10-objective-3"
+          ],
+          "worked_example": "Convert 5 L to 0.005 m³, evaluate PV=nRT and obtain 124.71 kPa. Divide the specified A amount 0.10 mol by total 0.25 mol to obtain mole fraction 0.4, then multiply by total pressure for 49.884 kPa. Independently compare the supplied 135.0 kPa reading to ideal pressure and obtain Z≈1.082512. Finally use M=0.028 kg/mol in the RMS formula for approximately 516.93 m/s. Pressure, composition, deviation and molecular speed are related quantities but answer different questions.",
+          "question_ids": [
+            "general-chemistry-1-10:gas-pressure",
+            "general-chemistry-1-10:mole-fraction",
+            "general-chemistry-1-10:partial-pressure",
+            "general-chemistry-1-10:temperature-ratio",
+            "general-chemistry-1-10:rms-speed",
+            "general-chemistry-1-10:compressibility",
+            "general-chemistry-1-10:temperature",
+            "general-chemistry-1-10:rms",
+            "general-chemistry-1-10:z-inference"
+          ],
+          "card_ids": [
+            "general-chemistry-1-10-card-1",
+            "general-chemistry-1-10-card-2",
+            "general-chemistry-1-10-card-3",
+            "general-chemistry-1-10-card-4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "general-chemistry-1-module-11",
+      "title": "Energy signs, Hess' law and calorimeter accounting",
+      "source_ids": [
+        "chemistry"
+      ],
+      "lessons": [
+        {
+          "id": "general-chemistry-1-11",
+          "title": "Energy signs, Hess' law and calorimeter accounting",
+          "reading": "modules/11-energy-signs-hess-and-calorimeter-accounting.md",
+          "objectives": [
+            "general-chemistry-1-11-objective-1",
+            "general-chemistry-1-11-objective-2",
+            "general-chemistry-1-11-objective-3"
+          ],
+          "worked_example": "The synthetic calorimeter has solution heat capacity 100×4.00=400 J/K plus 20 J/K from the calorimeter. A 3 K rise gives surroundings heat +1260 J, so reaction heat is −1260 J. Divide by 0.0200 mol and convert J to kJ to obtain −63.0 kJ/mol of extent. Separately, add Hess steps −40 and +15 for −25 kJ. In the gas-state comparison, add the positive Δn_gRT correction to ΔU=−10 kJ for ΔH=−5.0116 kJ. These calculations use distinct assumptions even though each tracks energy.",
+          "question_ids": [
+            "general-chemistry-1-11:internal-energy",
+            "general-chemistry-1-11:expansion-work",
+            "general-chemistry-1-11:reaction-heat",
+            "general-chemistry-1-11:molar-enthalpy",
+            "general-chemistry-1-11:hess-total",
+            "general-chemistry-1-11:enthalpy-correction",
+            "general-chemistry-1-11:calorimeter",
+            "general-chemistry-1-11:state-function",
+            "general-chemistry-1-11:phase"
+          ],
+          "card_ids": [
+            "general-chemistry-1-11-card-1",
+            "general-chemistry-1-11-card-2",
+            "general-chemistry-1-11-card-3",
+            "general-chemistry-1-11-card-4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "general-chemistry-1-module-12",
+      "title": "Equilibrium extents, activities and conventions",
+      "source_ids": [
+        "chemistry"
+      ],
+      "lessons": [
+        {
+          "id": "general-chemistry-1-12",
+          "title": "Equilibrium extents, activities and conventions",
+          "reading": "modules/12-equilibrium-extents-activities-and-conventions.md",
+          "objectives": [
+            "general-chemistry-1-12-objective-1",
+            "general-chemistry-1-12-objective-2",
+            "general-chemistry-1-12-objective-3"
+          ],
+          "worked_example": "Start with A=1.0 and B=0.2 mol/L under ideal activity assumptions. Use extent x to preserve A+B=1.2, set the quotient equal to 4 and obtain x=0.76. Check final concentrations 0.24 and 0.96, their ratio 4 and their conserved sum. Reverse the equation for K=0.25 or double it for K=16. For the separate supplied nonideal composition, apply both activity coefficients and obtain Q=1.5. Mixing the ideal and nonideal conventions would compare quantities from different models.",
+          "question_ids": [
+            "general-chemistry-1-12:equilibrium-b",
+            "general-chemistry-1-12:equilibrium-a",
+            "general-chemistry-1-12:extent",
+            "general-chemistry-1-12:reverse-constant",
+            "general-chemistry-1-12:doubled-constant",
+            "general-chemistry-1-12:activity-quotient",
+            "general-chemistry-1-12:q-k",
+            "general-chemistry-1-12:catalyst",
+            "general-chemistry-1-12:activity"
+          ],
+          "card_ids": [
+            "general-chemistry-1-12-card-1",
+            "general-chemistry-1-12-card-2",
+            "general-chemistry-1-12-card-3",
+            "general-chemistry-1-12-card-4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "general-chemistry-1-module-13",
+      "title": "Acid–base buffers and discrepancy checks",
+      "source_ids": [
+        "chemistry",
+        "iupac-goldbook-ph-definition"
+      ],
+      "lessons": [
+        {
+          "id": "general-chemistry-1-13",
+          "title": "Acid–base buffers and discrepancy checks",
+          "reading": "modules/13-acid-base-buffers-and-discrepancy-checks.md",
+          "objectives": [
+            "general-chemistry-1-13-objective-1",
+            "general-chemistry-1-13-objective-2",
+            "general-chemistry-1-13-objective-3"
+          ],
+          "worked_example": "Compute nominal initial ratio 0.030/0.050 for pH 4.578151. After 0.010 mol acid, update both inventories before forming 0.020/0.060, yielding 4.322879. At 0.030 mol, reject the zero-base logarithm and solve the weak-acid balance for total concentration 0.16 mol/L instead. For a discrepancy, keep calibration and composition questions separate: a reference constrains reporting bias, while an independently supplied inventory checks the stoichiometric model. Neither step alone establishes every nonideal effect.",
+          "question_ids": [
+            "general-chemistry-1-13:activity-ph",
+            "general-chemistry-1-13:initial-buffer",
+            "general-chemistry-1-13:after-ten",
+            "general-chemistry-1-13:after-twenty",
+            "general-chemistry-1-13:base-inventory",
+            "general-chemistry-1-13:exhausted-ph",
+            "general-chemistry-1-13:zero-base",
+            "general-chemistry-1-13:cause",
+            "general-chemistry-1-13:ph-definition"
+          ],
+          "card_ids": [
+            "general-chemistry-1-13-card-1",
+            "general-chemistry-1-13-card-2",
+            "general-chemistry-1-13-card-3",
+            "general-chemistry-1-13-card-4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "general-chemistry-1-module-lab-01",
+      "title": "Virtual lab 1: buffer discrepancy, reference calibration and composition",
+      "source_ids": [
+        "chemistry",
+        "iupac-goldbook-ph-definition"
+      ],
+      "lessons": [
+        {
+          "id": "general-chemistry-1-lab-01",
+          "title": "Virtual lab 1: buffer discrepancy, reference calibration and composition",
+          "reading": "labs/01-buffer-calibration-and-composition.md",
+          "objectives": [
+            "general-chemistry-1-lab-01-objective-1",
+            "general-chemistry-1-lab-01-objective-2",
+            "general-chemistry-1-lab-01-objective-3"
+          ],
+          "worked_example": "A synthetic reference identifies an additive pH reporting offset of 0.08. After correcting it, the sample still differs from the nominal buffer prediction because independent composition information supplies less conjugate base. A full ideal mass and charge balance handles the excess-acid condition; no real reagent parameter or unique cause is inferred from pH alone.",
+          "question_ids": [
+            "general-chemistry-1-lab-01:summary",
+            "general-chemistry-1-lab-01:reference-offset",
+            "general-chemistry-1-lab-01:corrected-ten",
+            "general-chemistry-1-lab-01:nominal-ten",
+            "general-chemistry-1-lab-01:full-thirty",
+            "general-chemistry-1-lab-01:interpretation",
+            "general-chemistry-1-lab-01:claims",
+            "general-chemistry-1-lab-01:residual"
+          ],
+          "card_ids": [
+            "general-chemistry-1-lab-01-card-1",
+            "general-chemistry-1-lab-01-card-2",
+            "general-chemistry-1-lab-01-card-3",
+            "general-chemistry-1-lab-01-card-4"
+          ]
+        }
+      ]
     }
   ],
   "assessments": [
@@ -445,6 +1094,219 @@
       "points": 6
     },
     {
+      "id": "general-chemistry-1-7-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Atoms, amount and photon accounting practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "general-chemistry-1-7-objective-1",
+        "general-chemistry-1-7-objective-2",
+        "general-chemistry-1-7-objective-3",
+        "general-chemistry-1-outcome-1",
+        "general-chemistry-1-outcome-2",
+        "general-chemistry-1-outcome-3",
+        "general-chemistry-1-outcome-4"
+      ],
+      "question_ids": [
+        "general-chemistry-1-7:ion-electrons",
+        "general-chemistry-1-7:shell-capacity",
+        "general-chemistry-1-7:isotope-average",
+        "general-chemistry-1-7:entity-count",
+        "general-chemistry-1-7:photon-energy",
+        "general-chemistry-1-7:photon-molar-energy",
+        "general-chemistry-1-7:identity",
+        "general-chemistry-1-7:exactness",
+        "general-chemistry-1-7:orbital-model"
+      ],
+      "points": 9
+    },
+    {
+      "id": "general-chemistry-1-8-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Bonding, geometry and molecular properties practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "general-chemistry-1-8-objective-1",
+        "general-chemistry-1-8-objective-2",
+        "general-chemistry-1-8-objective-3",
+        "general-chemistry-1-outcome-2"
+      ],
+      "question_ids": [
+        "general-chemistry-1-8:co2-valence",
+        "general-chemistry-1-8:ammonium-valence",
+        "general-chemistry-1-8:nitrogen-formal-charge",
+        "general-chemistry-1-8:water-lone-pairs",
+        "general-chemistry-1-8:tetrahedral-angle",
+        "general-chemistry-1-8:bent-dipole",
+        "general-chemistry-1-8:shape",
+        "general-chemistry-1-8:polarity",
+        "general-chemistry-1-8:formal-charge"
+      ],
+      "points": 9
+    },
+    {
+      "id": "general-chemistry-1-9-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Reaction extents and solution accounting practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "general-chemistry-1-9-objective-1",
+        "general-chemistry-1-9-objective-2",
+        "general-chemistry-1-9-objective-3",
+        "general-chemistry-1-outcome-1",
+        "general-chemistry-1-outcome-4"
+      ],
+      "question_ids": [
+        "general-chemistry-1-9:ammonia-amount",
+        "general-chemistry-1-9:nitrogen-left",
+        "general-chemistry-1-9:product-mass",
+        "general-chemistry-1-9:percent-yield",
+        "general-chemistry-1-9:precipitate-amount",
+        "general-chemistry-1-9:remaining-ion",
+        "general-chemistry-1-9:limiting",
+        "general-chemistry-1-9:yield",
+        "general-chemistry-1-9:precipitation"
+      ],
+      "points": 9
+    },
+    {
+      "id": "general-chemistry-1-10-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Gases, mixtures and model deviations practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "general-chemistry-1-10-objective-1",
+        "general-chemistry-1-10-objective-2",
+        "general-chemistry-1-10-objective-3",
+        "general-chemistry-1-outcome-1",
+        "general-chemistry-1-outcome-3",
+        "general-chemistry-1-outcome-4"
+      ],
+      "question_ids": [
+        "general-chemistry-1-10:gas-pressure",
+        "general-chemistry-1-10:mole-fraction",
+        "general-chemistry-1-10:partial-pressure",
+        "general-chemistry-1-10:temperature-ratio",
+        "general-chemistry-1-10:rms-speed",
+        "general-chemistry-1-10:compressibility",
+        "general-chemistry-1-10:temperature",
+        "general-chemistry-1-10:rms",
+        "general-chemistry-1-10:z-inference"
+      ],
+      "points": 9
+    },
+    {
+      "id": "general-chemistry-1-11-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Energy signs, Hess' law and calorimeter accounting practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "general-chemistry-1-11-objective-1",
+        "general-chemistry-1-11-objective-2",
+        "general-chemistry-1-11-objective-3",
+        "general-chemistry-1-outcome-3",
+        "general-chemistry-1-outcome-4"
+      ],
+      "question_ids": [
+        "general-chemistry-1-11:internal-energy",
+        "general-chemistry-1-11:expansion-work",
+        "general-chemistry-1-11:reaction-heat",
+        "general-chemistry-1-11:molar-enthalpy",
+        "general-chemistry-1-11:hess-total",
+        "general-chemistry-1-11:enthalpy-correction",
+        "general-chemistry-1-11:calorimeter",
+        "general-chemistry-1-11:state-function",
+        "general-chemistry-1-11:phase"
+      ],
+      "points": 9
+    },
+    {
+      "id": "general-chemistry-1-12-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Equilibrium extents, activities and conventions practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "general-chemistry-1-12-objective-1",
+        "general-chemistry-1-12-objective-2",
+        "general-chemistry-1-12-objective-3",
+        "general-chemistry-1-outcome-1",
+        "general-chemistry-1-outcome-3",
+        "general-chemistry-1-outcome-4"
+      ],
+      "question_ids": [
+        "general-chemistry-1-12:equilibrium-b",
+        "general-chemistry-1-12:equilibrium-a",
+        "general-chemistry-1-12:extent",
+        "general-chemistry-1-12:reverse-constant",
+        "general-chemistry-1-12:doubled-constant",
+        "general-chemistry-1-12:activity-quotient",
+        "general-chemistry-1-12:q-k",
+        "general-chemistry-1-12:catalyst",
+        "general-chemistry-1-12:activity"
+      ],
+      "points": 9
+    },
+    {
+      "id": "general-chemistry-1-13-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Acid–base buffers and discrepancy checks practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "general-chemistry-1-13-objective-1",
+        "general-chemistry-1-13-objective-2",
+        "general-chemistry-1-13-objective-3",
+        "general-chemistry-1-outcome-1",
+        "general-chemistry-1-outcome-3",
+        "general-chemistry-1-outcome-4"
+      ],
+      "question_ids": [
+        "general-chemistry-1-13:activity-ph",
+        "general-chemistry-1-13:initial-buffer",
+        "general-chemistry-1-13:after-ten",
+        "general-chemistry-1-13:after-twenty",
+        "general-chemistry-1-13:base-inventory",
+        "general-chemistry-1-13:exhausted-ph",
+        "general-chemistry-1-13:zero-base",
+        "general-chemistry-1-13:cause",
+        "general-chemistry-1-13:ph-definition"
+      ],
+      "points": 9
+    },
+    {
+      "id": "general-chemistry-1-week14-buffer-lab",
+      "type": "lab",
+      "mode": "practice",
+      "title": "Virtual lab 1: buffer discrepancy, reference calibration and composition (ungraded practice)",
+      "path": "question-banks/practice.json",
+      "week": 14,
+      "objective_ids": [
+        "general-chemistry-1-lab-01-objective-1",
+        "general-chemistry-1-lab-01-objective-2",
+        "general-chemistry-1-lab-01-objective-3",
+        "general-chemistry-1-outcome-1",
+        "general-chemistry-1-outcome-3",
+        "general-chemistry-1-outcome-4"
+      ],
+      "question_ids": [
+        "general-chemistry-1-lab-01:summary",
+        "general-chemistry-1-lab-01:reference-offset",
+        "general-chemistry-1-lab-01:corrected-ten",
+        "general-chemistry-1-lab-01:nominal-ten",
+        "general-chemistry-1-lab-01:full-thirty",
+        "general-chemistry-1-lab-01:interpretation",
+        "general-chemistry-1-lab-01:claims",
+        "general-chemistry-1-lab-01:residual"
+      ],
+      "points": 24
+    },
+    {
       "id": "general-chemistry-1-case",
       "type": "case",
       "mode": "self-assessment",
@@ -501,18 +1363,24 @@
       "version": "0.3.1",
       "date": "2026-10-08",
       "summary": "Assessments with items now also list the course outcomes those items assess, derived from each item's lesson objective and that objective's outcome links. The rubric-only case lists none, and neither do the 4 prototype-unit assessments, whose objectives are not yet linked to an outcome. No readings, items or keys changed. The syllabus was regenerated from the manifest: it states the current version, lists every lesson with its item and card counts, and describes the current practice and limitations (it still described only the four original units). The course limitations shown to learners were also updated: they still described one formative check per lesson and the original numerical rules. The package remains partial, unreviewed and formative-only."
+    },
+    {
+      "version": "0.4.0",
+      "date": "2026-10-09",
+      "summary": "Added seven original lessons on atomic/amount/photon accounting, Lewis and geometry models, reaction extent, gases, energy and calorimetry, equilibrium conventions and activities, and buffer discrepancy interpretation; one synthetic calibration/composition buffer lab and a proposed 14-week schedule. Developed with Codex assistance. Two link-only factual references record SI constants and the pH definition, with direct-access limitations stated. Still partial, unreviewed and formative-only."
     }
   ],
   "limitations": [
-    "Four compact legacy units are preserved; this package is not equivalent to a full university semester.",
-    "There is no authored 12–15 week schedule, substantive homework sequence, laboratory sequence, midterm, cumulative final, or graded integrative project.",
-    "Practice items are short formative checks (two per prototype unit and six per original lesson); they do not demonstrate comprehensive outcome coverage or mastery, and objective associations remain provisional.",
-    "Bloom labels and structured prerequisite edges are initial authoring classifications awaiting subject-matter review.",
-    "Question answers and solution feedback are intentionally public practice authoring specifications, not restricted exam keys.",
-    "Of the 13 numerical answers in this package, nine require a unit, none checks significant figures and none checks dimensions; the others accept a number within a stated tolerance, with the unit optional.",
-    "Total workload and weekly duration are unknown; former nominal credit values and hardcoded reading times do not establish workload."
+    "Four compact prototype units remain alongside ten original readings including one synthetic-data lab; this is not equivalent to a full university semester.",
+    "The proposed 14-week sequence is unmeasured and unreviewed. Graded homework, exams, a laboratory sequence and a cumulative graded project remain absent.",
+    "Formative items and provisional objective associations do not establish comprehensive coverage or mastery.",
+    "All new amounts, properties, activity coefficients and observations are synthetic teaching examples; no chemical handling procedure, material recommendation or biological conclusion is supplied.",
+    "Of 59 numeric items, 12 require units and 6 check specified significant figures; none checks an explicit dimensions field. Other prompts state an output scale and use bare-number tolerances.",
+    "CSV summaries and structured choices check selected calculations and interpretations, not written reasoning or causal identification.",
+    "SI constants are checked against a primary NIST page. The IUPAC pH definition was verified from its official indexed entry; direct retrieval was blocked and no full-page access is claimed.",
+    "Approximation, ideality, stoichiometric completion, fixed-volume and calorimeter assumptions are required; qualified chemical and accessibility review and workload measurement remain outstanding."
   ],
   "intentionally_omitted": [
-    "Full instructional sequence and summative assessments are not authored yet; the original lessons extend a partial package."
+    "Graded assessments, a complete laboratory sequence, a cumulative graded project, measured workload and qualified human review remain outstanding."
   ]
 }

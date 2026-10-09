@@ -3143,6 +3143,66 @@
       "checksum": null,
       "imported_assets": [],
       "rights_notes": "This record documents link-only use and does not clear linked content for reuse."
+    },
+    {
+      "id": "nist-si-defining-constants",
+      "title": "SP 330 Section 2: SI defining constants",
+      "institution": "National Institute of Standards and Technology",
+      "url": "https://www.nist.gov/pml/special-publication-330/sp-330-section-2",
+      "accessed_at": "2026-10-09",
+      "license": "Link-only factual reference; source material is not reproduced.",
+      "reuse_mode": "link-only-reference",
+      "permissions": {
+        "linking": true,
+        "quotation": false,
+        "adaptation": false,
+        "redistribution": false
+      },
+      "attribution_requirements": [
+        "Identify SP 330 Section 2: SI defining constants, National Institute of Standards and Technology and the exact source URL."
+      ],
+      "third_party_notes": "Primary page verified the exact h, c, N_A and k values. Only factual constants and original calculations are used; no source prose, illustration or dataset is copied.",
+      "mapped_courses": [
+        "general-chemistry-1"
+      ],
+      "mapped_modules": [
+        "general-chemistry-1-module-7",
+        "general-chemistry-1-module-10"
+      ],
+      "version": "Current displayed SI definitions; primary page retrieved 2026-10-09",
+      "checksum": null,
+      "imported_assets": [],
+      "rights_notes": "This record selects links and original explanation only; it does not clear third-party assets for reuse."
+    },
+    {
+      "id": "iupac-goldbook-ph-definition",
+      "title": "IUPAC Gold Book: pH, entry P04524",
+      "institution": "International Union of Pure and Applied Chemistry",
+      "url": "https://goldbook.iupac.org/terms/view/P04524",
+      "accessed_at": "2026-10-09",
+      "license": "Link-only factual reference; source material is not reproduced.",
+      "reuse_mode": "link-only-reference",
+      "permissions": {
+        "linking": true,
+        "quotation": false,
+        "adaptation": false,
+        "redistribution": false
+      },
+      "attribution_requirements": [
+        "Identify IUPAC Gold Book: pH, entry P04524, International Union of Pure and Applied Chemistry and the exact source URL."
+      ],
+      "third_party_notes": "The official indexed definition confirms hydrogen-ion activity as the pH quantity. Direct retrieval was blocked, so no full-page-access claim is made. No source text, paper, figure or dataset is reproduced.",
+      "mapped_courses": [
+        "general-chemistry-1"
+      ],
+      "mapped_modules": [
+        "general-chemistry-1-module-13",
+        "general-chemistry-1-module-lab-01"
+      ],
+      "version": "Fifth-edition entry; official indexed definition verified 2026-10-09; direct page/PDF retrieval returned HTTP 403",
+      "checksum": null,
+      "imported_assets": [],
+      "rights_notes": "This record selects links and original explanation only; it does not clear third-party assets for reuse."
     }
   ]
 }

@@ -145,6 +145,326 @@
         "general-chemistry-1-6-objective-3"
       ],
       "license": "CC-BY-4.0"
+    },
+    {
+      "id": "general-chemistry-1-7-card-1",
+      "lesson_id": "general-chemistry-1-7",
+      "front": "Atom and ion counts",
+      "back": "Z counts protons, A−Z counts neutrons and ionic charge adjusts electron count; changing electrons does not change element identity.",
+      "objective_ids": [
+        "general-chemistry-1-7-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "general-chemistry-1-7-card-2",
+      "lesson_id": "general-chemistry-1-7",
+      "front": "Amount and entities",
+      "back": "N=nN_A counts specified entities; the same amount can correspond to different masses for different substances.",
+      "objective_ids": [
+        "general-chemistry-1-7-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "general-chemistry-1-7-card-3",
+      "lesson_id": "general-chemistry-1-7",
+      "front": "Photon energy",
+      "back": "In vacuum E=hc/λ. Convert wavelength to matching units and distinguish per-photon from per-mole energy.",
+      "objective_ids": [
+        "general-chemistry-1-7-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "general-chemistry-1-7-card-4",
+      "lesson_id": "general-chemistry-1-7",
+      "front": "Precision",
+      "back": "Defining constants are exact; measured wavelength, amount and composition still limit uncertainty and reported figures.",
+      "objective_ids": [
+        "general-chemistry-1-7-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "general-chemistry-1-8-card-1",
+      "lesson_id": "general-chemistry-1-8",
+      "front": "Lewis budget",
+      "back": "Add valence electrons and adjust for ionic charge; formal charges must sum to the net species charge.",
+      "objective_ids": [
+        "general-chemistry-1-8-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "general-chemistry-1-8-card-2",
+      "lesson_id": "general-chemistry-1-8",
+      "front": "Domains and shape",
+      "back": "Electron-domain geometry includes lone pairs; molecular shape describes atom positions. A multiple bond is one VSEPR direction.",
+      "objective_ids": [
+        "general-chemistry-1-8-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "general-chemistry-1-8-card-3",
+      "lesson_id": "general-chemistry-1-8",
+      "front": "Dipole sum",
+      "back": "Bond dipoles are vectors; equal opposing dipoles can cancel despite polar individual bonds.",
+      "objective_ids": [
+        "general-chemistry-1-8-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "general-chemistry-1-8-card-4",
+      "lesson_id": "general-chemistry-1-8",
+      "front": "Property models",
+      "back": "Interaction labels and qualitative solubility rules do not by themselves establish a measured material property.",
+      "objective_ids": [
+        "general-chemistry-1-8-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "general-chemistry-1-9-card-1",
+      "lesson_id": "general-chemistry-1-9",
+      "front": "Reaction extent",
+      "back": "n_i=n_i,0+ν_iξ with signed coefficients; all reactant amounts must remain nonnegative.",
+      "objective_ids": [
+        "general-chemistry-1-9-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "general-chemistry-1-9-card-2",
+      "lesson_id": "general-chemistry-1-9",
+      "front": "Yield comparison",
+      "back": "Percent yield is recovered target mass divided by theoretical mass times 100; composition and recovery assumptions matter.",
+      "objective_ids": [
+        "general-chemistry-1-9-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "general-chemistry-1-9-card-3",
+      "lesson_id": "general-chemistry-1-9",
+      "front": "Remaining concentration",
+      "back": "Perform reaction amount accounting before dividing by final mixture volume.",
+      "objective_ids": [
+        "general-chemistry-1-9-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "general-chemistry-1-9-card-4",
+      "lesson_id": "general-chemistry-1-9",
+      "front": "Precipitation assumption",
+      "back": "A net ionic equation omits spectators from the reaction, not from full charge balance; completion needs justification.",
+      "objective_ids": [
+        "general-chemistry-1-9-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "general-chemistry-1-10-card-1",
+      "lesson_id": "general-chemistry-1-10",
+      "front": "Gas units",
+      "back": "PV=nRT uses absolute temperature and a gas constant compatible with pressure and volume units.",
+      "objective_ids": [
+        "general-chemistry-1-10-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "general-chemistry-1-10-card-2",
+      "lesson_id": "general-chemistry-1-10",
+      "front": "Ideal mixture",
+      "back": "p_i=y_iP with y_i=n_i/n_total; mass fraction is generally different from mole fraction.",
+      "objective_ids": [
+        "general-chemistry-1-10-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "general-chemistry-1-10-card-3",
+      "lesson_id": "general-chemistry-1-10",
+      "front": "Kinetic speed",
+      "back": "u_rms=√(3RT/M) uses kg/mol with SI R and is not a directed bulk velocity.",
+      "objective_ids": [
+        "general-chemistry-1-10-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "general-chemistry-1-10-card-4",
+      "lesson_id": "general-chemistry-1-10",
+      "front": "Compressibility",
+      "back": "Z=PV/(nRT)=1 for the ideal model; a mismatch alone does not uniquely identify a real-gas mechanism.",
+      "objective_ids": [
+        "general-chemistry-1-10-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "general-chemistry-1-11-card-1",
+      "lesson_id": "general-chemistry-1-11",
+      "front": "Energy signs",
+      "back": "ΔU=q+w with heat entering and work done on the system positive; expansion work is −P_extΔV.",
+      "objective_ids": [
+        "general-chemistry-1-11-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "general-chemistry-1-11-card-2",
+      "lesson_id": "general-chemistry-1-11",
+      "front": "Calorimeter balance",
+      "back": "Reaction heat is minus all modeled surroundings heat; include stated solution and calorimeter heat capacities.",
+      "objective_ids": [
+        "general-chemistry-1-11-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "general-chemistry-1-11-card-3",
+      "lesson_id": "general-chemistry-1-11",
+      "front": "Hess scaling",
+      "back": "Add compatible reaction enthalpies, reverse signs when reversing equations and scale energies with coefficients.",
+      "objective_ids": [
+        "general-chemistry-1-11-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "general-chemistry-1-11-card-4",
+      "lesson_id": "general-chemistry-1-11",
+      "front": "State versus transfer",
+      "back": "U and H are state functions; q and w depend on the path. Phase and work assumptions matter.",
+      "objective_ids": [
+        "general-chemistry-1-11-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "general-chemistry-1-12-card-1",
+      "lesson_id": "general-chemistry-1-12",
+      "front": "Extent and equilibrium",
+      "back": "Combine the equilibrium relation with conserved amounts and reject inadmissible negative roots.",
+      "objective_ids": [
+        "general-chemistry-1-12-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "general-chemistry-1-12-card-2",
+      "lesson_id": "general-chemistry-1-12",
+      "front": "Equation conventions",
+      "back": "Reversing a reaction inverts K; doubling all coefficients squares it under the same conditions.",
+      "objective_ids": [
+        "general-chemistry-1-12-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "general-chemistry-1-12-card-3",
+      "lesson_id": "general-chemistry-1-12",
+      "front": "Activity normalization",
+      "back": "Thermodynamic quotients use dimensionless activities; raw concentration ratios cancel units only in suitable stoichiometries.",
+      "objective_ids": [
+        "general-chemistry-1-12-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "general-chemistry-1-12-card-4",
+      "lesson_id": "general-chemistry-1-12",
+      "front": "Equilibrium versus kinetics",
+      "back": "K constrains equilibrium composition, not approach time. A catalyst changes rates without changing K at fixed conditions.",
+      "objective_ids": [
+        "general-chemistry-1-12-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "general-chemistry-1-13-card-1",
+      "lesson_id": "general-chemistry-1-13",
+      "front": "pH scale",
+      "back": "pH=−log₁₀a_H; a concentration calculation requires declared normalization and ideal/activity assumptions.",
+      "objective_ids": [
+        "general-chemistry-1-13-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "general-chemistry-1-13-card-2",
+      "lesson_id": "general-chemistry-1-13",
+      "front": "Neutralization first",
+      "back": "Strong-acid equivalents reduce A⁻ and increase HA before a valid buffer-ratio approximation is applied.",
+      "objective_ids": [
+        "general-chemistry-1-13-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "general-chemistry-1-13-card-3",
+      "lesson_id": "general-chemistry-1-13",
+      "front": "Exhaustion",
+      "back": "A zero or negative formal base inventory invalidates the buffer logarithm; use mass/equilibrium/charge balance.",
+      "objective_ids": [
+        "general-chemistry-1-13-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "general-chemistry-1-13-card-4",
+      "lesson_id": "general-chemistry-1-13",
+      "front": "Discrepancy checks",
+      "back": "Reference calibration and independent composition information test different explanations; neither alone validates every nonideal effect.",
+      "objective_ids": [
+        "general-chemistry-1-13-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "general-chemistry-1-lab-01-card-1",
+      "lesson_id": "general-chemistry-1-lab-01",
+      "front": "Reference correction",
+      "back": "Reported reference mean minus stipulated target gives the common additive pH offset in this construction.",
+      "objective_ids": [
+        "general-chemistry-1-lab-01-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "general-chemistry-1-lab-01-card-2",
+      "lesson_id": "general-chemistry-1-lab-01",
+      "front": "Neutralization domain",
+      "back": "Update acid/base inventories first; zero or negative nominal base invalidates the buffer-ratio logarithm.",
+      "objective_ids": [
+        "general-chemistry-1-lab-01-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "general-chemistry-1-lab-01-card-3",
+      "lesson_id": "general-chemistry-1-lab-01",
+      "front": "Separate evidence",
+      "back": "Calibration constrains reporting bias; independently supplied composition tests chemical inventory. Neither alone establishes every real effect.",
+      "objective_ids": [
+        "general-chemistry-1-lab-01-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "general-chemistry-1-lab-01-card-4",
+      "lesson_id": "general-chemistry-1-lab-01",
+      "front": "Log-scale averaging",
+      "back": "Arithmetic mean pH and minus log of mean hydrogen concentration are generally different quantities.",
+      "objective_ids": [
+        "general-chemistry-1-lab-01-objective-3"
+      ],
+      "license": "CC-BY-4.0"
     }
   ]
 }

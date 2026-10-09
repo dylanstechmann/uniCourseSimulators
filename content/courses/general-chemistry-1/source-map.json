@@ -74,6 +74,106 @@
       "original_content": true,
       "license": "CC-BY-4.0",
       "modifications": []
+    },
+    {
+      "module_id": "general-chemistry-1-module-7",
+      "lesson_id": "general-chemistry-1-7",
+      "reading": "modules/07-atoms-amount-and-photon-accounting.md",
+      "source_ids": [
+        "chemistry",
+        "nist-si-defining-constants"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "general-chemistry-1-module-8",
+      "lesson_id": "general-chemistry-1-8",
+      "reading": "modules/08-bonding-geometry-and-molecular-properties.md",
+      "source_ids": [
+        "chemistry"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "general-chemistry-1-module-9",
+      "lesson_id": "general-chemistry-1-9",
+      "reading": "modules/09-reaction-extents-and-solution-accounting.md",
+      "source_ids": [
+        "chemistry"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "general-chemistry-1-module-10",
+      "lesson_id": "general-chemistry-1-10",
+      "reading": "modules/10-gases-mixtures-and-model-deviations.md",
+      "source_ids": [
+        "chemistry",
+        "nist-si-defining-constants"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "general-chemistry-1-module-11",
+      "lesson_id": "general-chemistry-1-11",
+      "reading": "modules/11-energy-signs-hess-and-calorimeter-accounting.md",
+      "source_ids": [
+        "chemistry"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "general-chemistry-1-module-12",
+      "lesson_id": "general-chemistry-1-12",
+      "reading": "modules/12-equilibrium-extents-activities-and-conventions.md",
+      "source_ids": [
+        "chemistry"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "general-chemistry-1-module-13",
+      "lesson_id": "general-chemistry-1-13",
+      "reading": "modules/13-acid-base-buffers-and-discrepancy-checks.md",
+      "source_ids": [
+        "chemistry",
+        "iupac-goldbook-ph-definition"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "general-chemistry-1-module-lab-01",
+      "lesson_id": "general-chemistry-1-lab-01",
+      "reading": "labs/01-buffer-calibration-and-composition.md",
+      "source_ids": [
+        "chemistry",
+        "iupac-goldbook-ph-definition"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
     }
   ]
 }

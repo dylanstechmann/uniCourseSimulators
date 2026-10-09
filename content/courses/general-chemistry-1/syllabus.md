@@ -1,12 +1,12 @@
 # General Chemistry I
 
-**Maturity: partial. Version: 0.3.1.**
+**Maturity: partial. Version: 0.4.0.** This personal hobby and learning project has substantial AI assistance and is not an accredited university course.
 
-Chemical structure, stoichiometry, thermochemistry, and equilibrium developed with explicit attention to units, assumptions, and molecular-scale interpretation.
+Chemical accounting, bonding models, energy and equilibrium are developed through original explanation and synthetic examples, with explicit units, precision and assumptions.
 
 ## Prerequisites
 
-Algebra; high-school chemistry recommended. Structured required, recommended, and concurrent relationships appear in the manifest and remain subject to author review. This package establishes no university prerequisite equivalency.
+Algebra is required; high-school chemistry is recommended. Manifest knowledge associations remain provisional and establish no university equivalency.
 
 ## Authored outcomes
 
@@ -15,27 +15,35 @@ Algebra; high-school chemistry recommended. Structured required, recommended, an
 - Use energy conservation and equilibrium models.
 - Check dimensions and significant figures in calculations.
 
-## Units and lessons
+## Proposed 14-week schedule
 
-Units 1–4 keep the short prototype readings preserved from the original project; they need substantial expansion. Units 5 and 6 are original lesson-length readings (about 830 to 860 words) with learning objectives, a worked example, common mistakes, stated limits and explicitly synthetic data. No unit has been reviewed by a qualified instructor.
+This sequence is planning scope, not measured workload or a reviewed semester. Weeks 1, 4, 8 and 11 retain compact prototype readings. Week 14 is a synthetic buffer-calibration/composition lab and revisits the original buffer discrepancy self-assessment case. All activities are public formative practice.
 
-| Unit | Lesson | Reading | Practice items | Retrieval cards |
-|---:|---|---|---:|---:|
-| 1 | Atoms, bonding, and molecular shape | short prototype | 2 | 2 |
-| 2 | Stoichiometry and solution concentration | short prototype | 2 | 2 |
-| 3 | Thermochemistry and state functions | short prototype | 2 | 2 |
-| 4 | Chemical equilibrium | short prototype | 2 | 2 |
-| 5 | Making solutions you can trust: mass, molarity, dilution and propagated error | lesson-length original | 6 | 4 |
-| 6 | Molecular shape, polarity and where a molecule goes: solubility, partitioning and the energy of dissolving | lesson-length original | 6 | 4 |
+| Week | Reading | Items | Cards |
+|---|---|---:|---:|
+| 1 | Atoms, bonding, and molecular shape | 2 | 2 |
+| 2 | Atoms, amount and photon accounting | 9 | 4 |
+| 3 | Bonding, geometry and molecular properties | 9 | 4 |
+| 4 | Stoichiometry and solution concentration | 2 | 2 |
+| 5 | Reaction extents and solution accounting | 9 | 4 |
+| 6 | Making solutions you can trust: mass, molarity, dilution and propagated error | 6 | 4 |
+| 7 | Gases, mixtures and model deviations | 9 | 4 |
+| 8 | Thermochemistry and state functions | 2 | 2 |
+| 9 | Energy signs, Hess' law and calorimeter accounting | 9 | 4 |
+| 10 | Molecular shape, polarity and where a molecule goes: solubility, partitioning and the energy of dissolving | 6 | 4 |
+| 11 | Chemical equilibrium | 2 | 2 |
+| 12 | Equilibrium extents, activities and conventions | 9 | 4 |
+| 13 | Acid–base buffers and discrepancy checks | 9 | 4 |
+| 14 | Virtual lab 1: buffer discrepancy, reference calibration and composition | 8 | 4 |
 
-## Assessment and study policy
+## Assessment policy
 
-Every lesson has public formative practice items (numeric and single-choice) tagged to its learning objectives. The practice assessments for the original lessons also list the course outcomes those objectives link to; the objectives of the prototype units are not yet linked to course outcomes, so their assessments list none. In total the package has 20 practice items and 16 retrieval cards for the review queue. A course case includes a self-assessment checklist. These are practice activities, with unlimited retries and no institutional grade, university credit, or transferable credit. Workload has not been measured.
+There are 14 readings, 91 public practice items and 48 retrieval cards, plus the preserved case. Numeric, single-choice, CSV-upload, structured-choice and multiple-select checks provide selected feedback with unlimited retries. Some numeric checks require units and specified significant figures; others state a bare-number scale and tolerance. Points are study feedback, not an institutional grade or credit. Written derivations and discussion criteria are not automatically graded. Assessment outcome lists reflect the objectives their items assess; prototype associations remain provisional.
 
-## Schedule and current limitations
+## Current limitations
 
-No full-semester calendar or 14-week structure has been authored. No substantive homework sets, laboratories, midterm, final, or graded cumulative project are included. The four short prototype readings require substantial expansion, and the newer lessons rely on explicitly synthetic data. Nothing in this package has been reviewed by a qualified instructor; qualified human review is required before this course can meet the complete-course quality standard.
+Four compact prototype readings remain. One data lab is not a laboratory sequence. No graded homework sequence, midterm, final or graded cumulative project is authored. Workload, accessibility and chemical quality await qualified review. All new observations and example parameters are synthetic and supply no handling protocol or biological recommendation. The package remains partial, unreviewed and formative-only.
 
 ## Sources and licensing
 
-Read source-map.json for module provenance and content/SOURCES_AND_LICENSES.md for the software/content license boundary. Listed source courses are public curriculum comparators; no affiliation or equivalency is implied.
+The existing MIT chemistry course remains a link-only scope comparator. NIST SI definitions support selected exact constants; the IUPAC indexed pH entry supports the activity definition, with direct access blocked during verification. Source records preserve this distinction. No third-party teaching prose, figure or dataset was copied, and no new paper identifier was introduced. Original readings and synthetic data are CC BY 4.0 with substantial AI assistance. See `source-map.json` and `content/SOURCES_AND_LICENSES.md` for source rights and the software/content license boundary. Links do not establish endorsement or review.
