@@ -1186,7 +1186,7 @@
     {
       "id": "differential-equations-8:resonance-statements",
       "type": "multiple_select",
-      "prompt": "Which statements about the damped, driven spring–mass system are appropriate? Select all that apply.",
+      "prompt": "Which statements about the directly forced spring–mass system in this lesson, with light damping ζ = 0.15, are appropriate? Select all that apply.",
       "points": 2,
       "objective_ids": [
         "differential-equations-8-objective-3"
@@ -1208,7 +1208,7 @@
       },
       "feedback": {
         "hint": "Recall the formulas for δ, the peak frequency and Q.",
-        "solution": "δ depends only on ζ, the peak lies at √(1 − 2ζ²) ωn and a lower ζ makes it taller and narrower. Far above resonance the response falls toward zero, and the damped period uses ωd, not ωn.",
+        "solution": "For this lightly damped system, δ depends only on ζ, the peak lies at √(1 − 2ζ²) ωn and a lower ζ makes it taller and narrower. A nonzero-frequency amplitude peak requires ζ < 1/√2. Far above resonance the directly forced response falls toward zero, and the damped period uses ωd, not ωn.",
         "lesson_ids": [
           "differential-equations-8"
         ],
@@ -2105,7 +2105,7 @@
     {
       "id": "differential-equations-12:positivity-limit",
       "type": "numeric",
-      "prompt": "The decay equation y′ = −50y (time in hours) is solved by explicit Euler. What is the largest step h for which the numerical solution stays positive, h ≤ 1/λ? Enter a value and unit.",
+      "prompt": "The decay equation y′ = −50y (time in hours), starting from y₀ > 0, is solved by explicit Euler. What is the largest step h for which the numerical solution stays nonnegative, h ≤ 1/λ? Enter a value and unit.",
       "points": 1,
       "objective_ids": [
         "differential-equations-12-objective-1"
@@ -2120,7 +2120,7 @@
       },
       "feedback": {
         "hint": "Require 1 − λh ≥ 0.",
-        "solution": "1/50 = 0.02 h.",
+        "solution": "1/50 = 0.02 h. At equality the first step reaches zero; a strictly positive result requires a smaller step.",
         "lesson_ids": [
           "differential-equations-12"
         ],
@@ -2287,7 +2287,7 @@
     {
       "id": "differential-equations-12:mm-positivity-step",
       "type": "numeric",
-      "prompt": "A substrate is depleted by an enzyme with dS/dt = −V_max S/(K_m + S), V_max = 2.0 mM/h and K_m = 0.5 mM. Near S = 0 the rate is about (V_max/K_m) S. What is the largest explicit Euler step that keeps S positive there, K_m/V_max? Enter a value and unit.",
+      "prompt": "A substrate is depleted by an enzyme with dS/dt = −V_max S/(K_m + S), V_max = 2.0 mM/h and K_m = 0.5 mM. Its near-zero linear approximation is dS/dt = −(V_max/K_m) S. What is the largest explicit Euler step that keeps this linear approximation nonnegative from S₀ > 0, K_m/V_max? Enter a value and unit.",
       "points": 1,
       "objective_ids": [
         "differential-equations-12-objective-3"
@@ -2302,7 +2302,7 @@
       },
       "feedback": {
         "hint": "Treat the decay as first-order with λ = V_max/K_m.",
-        "solution": "0.5/2.0 = 0.25 h.",
+        "solution": "0.5/2.0 = 0.25 h. At equality the linear approximation reaches zero in one step; this is a nonnegativity bound, not a guarantee of numerical accuracy.",
         "lesson_ids": [
           "differential-equations-12"
         ],
@@ -3251,7 +3251,7 @@
     {
       "id": "differential-equations-13:positivity-limit",
       "type": "numeric",
-      "prompt": "A decay dN/dt = −kN with k = 0.04 h⁻¹ is solved by explicit Euler. What is the largest step h for which N_(n+1) = (1 − kh)N_n stays positive? Enter a value and unit.",
+      "prompt": "A decay dN/dt = −kN with k = 0.04 h⁻¹, starting from N₀ > 0, is solved by explicit Euler. What is the largest step h for which N_(n+1) = (1 − kh)N_n stays nonnegative? Enter a value and unit.",
       "points": 1,
       "objective_ids": [
         "differential-equations-13-objective-2"
@@ -3266,7 +3266,7 @@
       },
       "feedback": {
         "hint": "Require 1 − kh ≥ 0.",
-        "solution": "1/0.04 = 25 h.",
+        "solution": "1/0.04 = 25 h. This boundary gives zero in the first step; strict positivity requires h < 25 h.",
         "lesson_ids": [
           "differential-equations-13"
         ],

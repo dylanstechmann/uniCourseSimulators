@@ -726,7 +726,7 @@ def test_differential_equations_package_gives_no_protocols_or_parameter_values_f
         text = (COURSES / "differential-equations/modules" / name).read_text(encoding="utf-8")
         assert phrase in text, name
     syllabus = (COURSES / "differential-equations/syllabus.md").read_text(encoding="utf-8")
-    assert "Version: 0.3.0." in syllabus and "Proposed 14-week schedule" in syllabus
+    assert f"Version: {manifest['version']}." in syllabus and "Proposed 14-week schedule" in syllabus
     assert all(f"- {outcome['description']}" in syllabus for outcome in manifest["outcomes"])
 
 
@@ -736,4 +736,3 @@ def test_differential_equations_lab_keys_match_the_dataset_and_the_lab_is_labell
     assert len(rows) == 21 and {int(r["hours"]) for r in rows} == {0, 6, 12, 18, 24, 36, 48}
     text = (COURSES / "differential-equations/labs/01-fitting-decay-models-and-testing-them-beyond-the-window.md").read_text(encoding="utf-8")
     assert "nothing here is evidence about any culture" in text
-

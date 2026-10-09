@@ -1,6 +1,6 @@
 # Differential Equations for Living & Engineered Systems
 
-**Maturity: partial. Version: 0.3.0.**
+**Maturity: partial. Version: 0.3.1.**
 
 Build, solve, and interpret first- and second-order differential equations, coupled systems, stability, and numerical integration for biological and robotic dynamics.
 

@@ -4,7 +4,23 @@
 
 2026-10-06; synthetic local learner data only. Milestones 1 and 2 are implemented. Milestone 3 remains partial; deterministic graders and prototype graded-assignment and review workflows are described below. A Milestone 4 curriculum-map increment is implemented and tested, while subject-matter review and map refinement remain. All 25 course packages are **partial**; zero are beta, complete or externally reviewed. Human score review is limited to saved attempts and does not constitute course-content review. No semester equivalence, university credit, security certification or public production deployment is asserted.
 
-## Current increment: differential equations gets a proposed 14-week schedule, seven lessons and a decay-fitting lab (2026-10-08, twenty-fifth pass)
+## Current patch: differential equations prompt clarification (0.3.1, 2026-10-08)
+
+Written by Codex. Three Euler-boundary prompts now ask for a nonnegative result and explain the zero value
+at equality; the resonance statements item specifies the lesson's lightly damped, directly forced system.
+No key, tolerance, points, option order or objective mapping changed, as checked against commit `2c930c9`.
+The version and syllabus advance to 0.3.1; all counts and partial/unreviewed/formative-only labels stay the same.
+Review: [differential-equations-0.3.1.md](reviews/ai-assisted/differential-equations-0.3.1.md).
+
+- `python -B /workspace/courselab-session-artifacts/codex-resume-2026-10-08/check_prompt_patch.py`: all 92 solution specifications, options, points and objective mappings unchanged; the three linear Euler boundary factors are zero.
+- `python -B tools/validate_content.py`: PASS, 0 errors, 98 legacy-depth warnings.
+- `python -B /workspace/courselab-session-artifacts/claude-resume-2026-10-08/selfcheck.py differential-equations differential-equations-`: all 92 items earn full credit.
+- `python -B -m pytest tests/content/test_new_geroscience_and_statistics_lessons.py tests/content/test_ai_assisted_checks.py -k differential_equations -q -p no:cacheprovider`: 81 passed, 967 deselected.
+
+These checks ran in the same Linux development container and courselab venv as the full preceding run below.
+The preceding commit's CI also passed both content/backend and frontend/browser jobs. No human review.
+
+## Previous increment: differential equations gets a proposed 14-week schedule, seven lessons and a decay-fitting lab (2026-10-08, twenty-fifth pass)
 
 Written by an AI coding assistant. Differential Equations for Living & Engineered Systems moves from 0.2.2 to 0.3.0 and stays `partial`, unreviewed and formative-only.
 

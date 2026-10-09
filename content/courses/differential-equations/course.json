@@ -7,7 +7,7 @@
   "domain": "Mathematics",
   "level": "Year 2",
   "maturity": "partial",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "license": "MIT OR CC-BY-4.0",
   "content_origin": {
     "kind": "legacy-prototype",
@@ -1400,6 +1400,11 @@
       "version": "0.3.0",
       "date": "2026-10-08",
       "summary": "Added a proposed 14-week schedule; seven original lessons (forced first-order systems in a perfused chamber; resonance and damping of a spring-mass-damper; phase portraits of linear systems; the exact solution, fitting and extrapolation of logistic growth; linearization and bistability in a toggle switch; stiff equations and implicit methods; and a fitted model that predicts negative counts, which prepares the course case on model structure, step size and validation); and a synthetic-data lab on fitting decay models. No new references were added. All activities remain ungraded practice; the package remains partial and unreviewed, gives no experimental protocol or parameter values for any real organism, and makes no claim about any culture or device."
+    },
+    {
+      "version": "0.3.1",
+      "date": "2026-10-08",
+      "summary": "Clarified three explicit Euler practice prompts and their feedback: the boundary permits zero, so they ask for a nonnegative result rather than a strictly positive one. Scoped the resonance statements item to the lesson's lightly damped, directly forced system. No answer key, tolerance, objective or option order changed. The package remains partial, unreviewed and formative-only."
     }
   ],
   "limitations": [
