@@ -35,7 +35,8 @@ LESSONS = [("geroscience", f"geroscience-{n}") for n in range(9, 15)] + [
     ("bioreactors", f"bioreactors-{n}") for n in range(7, 14)] + [("transport", f"transport-{n}") for n in range(7, 14)] + [
     ("cellular-biomechanics", f"cellular-biomechanics-{n}") for n in range(7, 14)] + [
     ("statics-materials", f"statics-materials-{n}") for n in range(7, 14)] + [
-    ("signals-control", f"signals-control-{n}") for n in range(7, 14)]
+    ("signals-control", f"signals-control-{n}") for n in range(7, 14)] + [
+    ("differential-equations", f"differential-equations-{n}") for n in range(7, 14)]
 
 
 def load(course):
@@ -682,4 +683,57 @@ def test_signals_control_lab_keys_match_the_dataset_and_the_lab_is_labelled_synt
     assert {r["power_w"] for r in rows} == {"10", "20", "30"}
     text = (COURSES / "signals-control/labs/01-identifying-an-incubator-from-step-tests.md").read_text(encoding="utf-8")
     assert "nothing here is evidence about any device" in text
+
+
+def test_differential_equations_schedule_places_every_lesson_once_and_stays_partial():
+    manifest = load("differential-equations")
+    weeks = manifest["duration"]["weeks"]
+    assert [w["week"] for w in weeks] == list(range(1, 15))
+    scheduled = [lesson for w in weeks for lesson in w["lesson_ids"]]
+    all_lessons = [lesson["id"] for m in manifest["modules"] for lesson in m["lessons"]]
+    assert len(all_lessons) == 14
+    assert sorted(scheduled) == sorted(all_lessons) and len(scheduled) == len(set(scheduled))
+    assessments = {a["id"]: a for a in manifest["assessments"]}
+    assert all(a in assessments for w in weeks for a in w["assessment_ids"])
+    assert all(a["mode"] != "graded" for a in manifest["assessments"])
+    assert manifest["maturity"] == "partial" and manifest["review"]["status"] == "unreviewed"
+    assert manifest["grading_policy"]["mode"] == "formative-only"
+    assert "not evidence of semester equivalence" in manifest["duration"]["equivalent_structure"]
+    prototype_weeks = {lesson: w["week"] for w in weeks for lesson in w["lesson_ids"] if lesson in {f"differential-equations-{n}" for n in range(1, 5)}}
+    assert prototype_weeks == {"differential-equations-1": 1, "differential-equations-2": 4, "differential-equations-3": 6, "differential-equations-4": 11}
+    lab_week = next(w for w in weeks if "differential-equations-lab-01" in w["lesson_ids"])
+    assert lab_week["week"] == 13 and "differential-equations-week13-fitting-lab" in lab_week["assessment_ids"]
+    assert "differential-equations-case" in weeks[-1]["assessment_ids"] and "differential-equations-13" in weeks[-1]["lesson_ids"]
+    # prerequisites come first: linear flows before the toggle switch, numerical ODEs and stiffness before the lab and capstone
+    order = {lesson: w["week"] for w in weeks for lesson in w["lesson_ids"]}
+    assert order["differential-equations-9"] < order["differential-equations-11"] < order["differential-equations-lab-01"] < order["differential-equations-13"]
+    assert order["differential-equations-4"] < order["differential-equations-12"] < order["differential-equations-13"]
+
+
+def test_differential_equations_package_gives_no_protocols_or_parameter_values_for_real_organisms():
+    manifest = load("differential-equations")
+    assert any("gives no experimental protocols, parameter values for any real organism or process, or safety advice" in item for item in manifest["limitations"])
+    limits = {
+        "07-forced-first-order-systems-in-a-perfused-chamber.md": "the amplitude and lag formulas hold only after the transient has decayed",
+        "08-resonance-and-damping-of-a-spring-mass-damper.md": "the amplitude formulas hold only in steady state",
+        "09-phase-portraits-of-linear-systems.md": "a linear portrait describes a nonlinear system only near an equilibrium",
+        "10-logistic-growth-solution-fitting-and-extrapolation.md": "The logistic equation is a minimal model",
+        "11-linearization-and-bistability-in-a-toggle-switch.md": "a stable state of a deterministic model is not a prediction about any real cell",
+        "12-stiff-equations-and-implicit-methods.md": "the stiffness ratio is only a guide",
+        "13-negative-counts-model-structure-step-size-and-validation.md": "the validation list is a minimum, not a protocol for any real experiment",
+    }
+    for name, phrase in limits.items():
+        text = (COURSES / "differential-equations/modules" / name).read_text(encoding="utf-8")
+        assert phrase in text, name
+    syllabus = (COURSES / "differential-equations/syllabus.md").read_text(encoding="utf-8")
+    assert "Version: 0.3.0." in syllabus and "Proposed 14-week schedule" in syllabus
+    assert all(f"- {outcome['description']}" in syllabus for outcome in manifest["outcomes"])
+
+
+def test_differential_equations_lab_keys_match_the_dataset_and_the_lab_is_labelled_synthetic():
+    import csv
+    rows = list(csv.DictReader((COURSES / "differential-equations/labs/cell-counts-after-growth-factor-removal.csv").open(encoding="utf-8")))
+    assert len(rows) == 21 and {int(r["hours"]) for r in rows} == {0, 6, 12, 18, 24, 36, 48}
+    text = (COURSES / "differential-equations/labs/01-fitting-decay-models-and-testing-them-beyond-the-window.md").read_text(encoding="utf-8")
+    assert "nothing here is evidence about any culture" in text
 

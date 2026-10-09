@@ -4,7 +4,33 @@
 
 2026-10-06; synthetic local learner data only. Milestones 1 and 2 are implemented. Milestone 3 remains partial; deterministic graders and prototype graded-assignment and review workflows are described below. A Milestone 4 curriculum-map increment is implemented and tested, while subject-matter review and map refinement remain. All 25 course packages are **partial**; zero are beta, complete or externally reviewed. Human score review is limited to saved attempts and does not constitute course-content review. No semester equivalence, university credit, security certification or public production deployment is asserted.
 
-## Current increment: signals and control gets a proposed 14-week schedule, seven lessons and a step-test identification lab (2026-10-08, twenty-fourth pass)
+## Current increment: differential equations gets a proposed 14-week schedule, seven lessons and a decay-fitting lab (2026-10-08, twenty-fifth pass)
+
+Written by an AI coding assistant. Differential Equations for Living & Engineered Systems moves from 0.2.2 to 0.3.0 and stays `partial`, unreviewed and formative-only.
+
+- **Proposed 14-week schedule** (`duration.weeks`) and a regenerated syllabus: the four short prototype units sit in weeks 1, 4, 6 and 11 beside the original lessons; week 13 is a lab and week 14 a lesson that prepares the existing course case. The manifest says the schedule is not evidence of semester equivalence.
+- **Seven lessons (7 to 13)**, each about 970 to 1,180 words with a worked example, common mistakes, nine items and four cards: forced first-order systems (steps, ramps, sinusoids, decaying inputs and pulses in a perfused chamber); resonance and damping of a spring–mass–damper; phase portraits of linear systems; logistic growth (exact solution, fitting, extrapolation); linearization and bistability in a toggle switch; stiff equations and implicit methods; and a fitted model that predicts negative counts (model structure, step size, validation).
+- **Virtual lab 1**: synthetic cell counts after a growth factor is removed, three wells at each of seven times (21 rows). Eight items (a 14-cell summary upload by time, the early-window decay rate, the zero crossing and the 48 h prediction of a straight-line fit, the first-order prediction at 48 h, a data-interpretation item on the ratio of observed to predicted counts, a structured item and a multiple-select item).
+- **Review record:** [differential-equations-0.3.0.md](reviews/ai-assisted/differential-equations-0.3.0.md). All 74 numeric keys in the package, including the 14 that predate this pass, agree with independent recalculation (numerical integration of the chamber, the driven oscillator, the linear flows, the logistic equation, the toggle switch and the Michaelis–Menten depletion; finite-difference Jacobians; bisection for the Euler limits), as do the lab keys against its CSV and the numbers the lessons quote without asking for them. All 71 new items earn full credit under the real grader on the first run. Seven drafting problems, including a false statement about a forecast exceeding the carrying capacity, were fixed before the commit.
+- Tests: 78 recalculation and statement checks for differential equations; the schedule, the no-protocol statements, the syllabus outcomes and the lab keys against its CSV have tests; the inventory pins moved to 289 lessons, 1,390 questions and 896 cards.
+
+Codex continued the staged pass on 2026-10-08, recovered Claude's completed verification, reread the new
+lessons and lab, and corrected five further details documented in the review record. These include the strict
+Euler stability bound (at least 251 equal steps, rather than 250), nonnegativity at the positivity boundary,
+degenerate phase portraits, the capstone's distinguishable residuals, and the resonance peak's damping
+condition and forcing mechanism. No answer key or tolerance changed. The existing recalculation test now
+checks both sides of the integer Euler step bound. A fresh full run after those corrections passed:
+
+| Command/check (this container, Python 3.12.3, 2026-10-08) | Result |
+| --- | --- |
+| `python tools/validate_content.py` | PASS: 25 packages, 289 lessons, 1390 questions, 896 cards, 25 cases; 0 errors; 98 disclosed legacy-depth warnings |
+| `bash /workspace/.claude/skills/courselab-dev/scripts/verify.sh --log-dir /workspace/courselab-session-artifacts/codex-resume-2026-10-08/de-verification` | PASS: content, legacy (7), security (637 files, 0 findings), ruff, root (1140), backend (3031 passed, 2 symbolic-builder checks skipped) |
+| `python /workspace/courselab-session-artifacts/claude-resume-2026-10-08/selfcheck.py differential-equations differential-equations-` | PASS: all 92 package items earn full credit under the real grader |
+| `python3 -B /workspace/.claude/skills/regen-guardrails/scripts/claims_scan.py --repo uniStemCourseSimulators` | PASS: 0 HIGH, MED or LOW findings |
+
+Local logs are retained outside the repository in the workspace's `courselab-session-artifacts/codex-resume-2026-10-08/de-verification` directory. Not run locally: frontend checks, the Docker Compose application stack, or Playwright for this pass. Not reviewed by a person.
+
+## Previous increment: signals and control gets a proposed 14-week schedule, seven lessons and a step-test identification lab (2026-10-08, twenty-fourth pass)
 
 Written by an AI coding assistant. Signals, Systems & Feedback Control moves from 0.3.1 to 0.4.0 and stays `partial`, unreviewed and formative-only.
 

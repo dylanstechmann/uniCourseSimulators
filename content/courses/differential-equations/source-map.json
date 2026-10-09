@@ -85,6 +85,118 @@
       "original_content": true,
       "license": "CC-BY-4.0",
       "modifications": []
+    },
+    {
+      "module_id": "differential-equations-module-7",
+      "lesson_id": "differential-equations-7",
+      "reading": "modules/07-forced-first-order-systems-in-a-perfused-chamber.md",
+      "source_ids": [
+        "diffeqs",
+        "engineeringMath",
+        "numerical"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "differential-equations-module-8",
+      "lesson_id": "differential-equations-8",
+      "reading": "modules/08-resonance-and-damping-of-a-spring-mass-damper.md",
+      "source_ids": [
+        "diffeqs",
+        "engineeringMath",
+        "numerical"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "differential-equations-module-9",
+      "lesson_id": "differential-equations-9",
+      "reading": "modules/09-phase-portraits-of-linear-systems.md",
+      "source_ids": [
+        "diffeqs",
+        "engineeringMath",
+        "numerical"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "differential-equations-module-10",
+      "lesson_id": "differential-equations-10",
+      "reading": "modules/10-logistic-growth-solution-fitting-and-extrapolation.md",
+      "source_ids": [
+        "diffeqs",
+        "engineeringMath",
+        "numerical"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "differential-equations-module-11",
+      "lesson_id": "differential-equations-11",
+      "reading": "modules/11-linearization-and-bistability-in-a-toggle-switch.md",
+      "source_ids": [
+        "diffeqs",
+        "engineeringMath",
+        "numerical"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "differential-equations-module-12",
+      "lesson_id": "differential-equations-12",
+      "reading": "modules/12-stiff-equations-and-implicit-methods.md",
+      "source_ids": [
+        "diffeqs",
+        "engineeringMath",
+        "numerical"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "differential-equations-module-lab-01",
+      "lesson_id": "differential-equations-lab-01",
+      "reading": "labs/01-fitting-decay-models-and-testing-them-beyond-the-window.md",
+      "source_ids": [
+        "diffeqs",
+        "engineeringMath",
+        "numerical"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "differential-equations-module-13",
+      "lesson_id": "differential-equations-13",
+      "reading": "modules/13-negative-counts-model-structure-step-size-and-validation.md",
+      "source_ids": [
+        "diffeqs",
+        "engineeringMath",
+        "numerical"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
     }
   ]
 }

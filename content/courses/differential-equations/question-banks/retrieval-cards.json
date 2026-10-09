@@ -145,6 +145,326 @@
         "differential-equations-6-objective-3"
       ],
       "license": "CC-BY-4.0"
+    },
+    {
+      "id": "differential-equations-7-card-1",
+      "lesson_id": "differential-equations-7",
+      "front": "Chamber equation",
+      "back": "τ dC/dt + C = c(t) with τ = V/Q; the solution is C = e^(−t/τ)[C(0) + (1/τ)∫ e^(s/τ) c(s) ds].",
+      "objective_ids": [
+        "differential-equations-7-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "differential-equations-7-card-2",
+      "lesson_id": "differential-equations-7",
+      "front": "Step and ramp",
+      "back": "Step: C = c₀(1 − e^(−t/τ)), 95% at about 3τ. Ramp a t: C → a(t − τ), a constant lag aτ.",
+      "objective_ids": [
+        "differential-equations-7-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "differential-equations-7-card-3",
+      "lesson_id": "differential-equations-7",
+      "front": "Sinusoid",
+      "back": "Amplitude ratio 1/√(1 + (ωτ)²), phase lag atan(ωτ), time lag atan(ωτ)/ω; faster variations are attenuated more.",
+      "objective_ids": [
+        "differential-equations-7-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "differential-equations-7-card-4",
+      "lesson_id": "differential-equations-7",
+      "front": "Decay and pulse",
+      "back": "Decaying input: C = c₀T/(T − τ)(e^(−t/T) − e^(−t/τ)), with a peak at ln(T/τ)/(1/τ − 1/T). Pulse = step minus delayed step (linearity).",
+      "objective_ids": [
+        "differential-equations-7-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "differential-equations-8-card-1",
+      "lesson_id": "differential-equations-8",
+      "front": "Free response",
+      "back": "m λ² + c λ + k = 0; ωn = √(k/m), ζ = c/(2√(km)); ζ < 1: λ = −ζωn ± jωd with ωd = ωn√(1 − ζ²); ζ = 1 critical; ζ > 1 two real roots.",
+      "objective_ids": [
+        "differential-equations-8-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "differential-equations-8-card-2",
+      "lesson_id": "differential-equations-8",
+      "front": "Logarithmic decrement",
+      "back": "δ = ln(x_n/x_(n+1)) = 2πζ/√(1 − ζ²); the peak after n cycles is e^(−nδ) of the start; it measures damping without m or k.",
+      "objective_ids": [
+        "differential-equations-8-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "differential-equations-8-card-3",
+      "lesson_id": "differential-equations-8",
+      "front": "Forced amplitude",
+      "back": "X = (F/k)/√((1 − r²)² + (2ζr)²), r = ω/ωn; at r = 1 it is (F/k)Q with Q = 1/(2ζ); the peak is at r = √(1 − 2ζ²); half-power width about 2ζωn.",
+      "objective_ids": [
+        "differential-equations-8-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "differential-equations-8-card-4",
+      "lesson_id": "differential-equations-8",
+      "front": "Phase and isolation",
+      "back": "Response phase goes 0° to 90° at resonance to 180°; above resonance the mass moves against the force, which is how soft mounts isolate vibration.",
+      "objective_ids": [
+        "differential-equations-8-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "differential-equations-9-card-1",
+      "lesson_id": "differential-equations-9",
+      "front": "Eigen-solution",
+      "back": "x(t) = c₁v₁e^(λ₁t) + c₂v₂e^(λ₂t); the λ are roots of λ² − Tλ + D = 0 with T = trace and D = determinant; the constants solve x(0) = c₁v₁ + c₂v₂.",
+      "objective_ids": [
+        "differential-equations-9-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "differential-equations-9-card-2",
+      "lesson_id": "differential-equations-9",
+      "front": "Trace–determinant classification",
+      "back": "D < 0: saddle. D > 0, T² − 4D ≥ 0: node (stable if T < 0). D > 0, T² − 4D < 0: spiral (stable if T < 0; center if T = 0). D = 0: line of equilibria.",
+      "objective_ids": [
+        "differential-equations-9-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "differential-equations-9-card-3",
+      "lesson_id": "differential-equations-9",
+      "front": "Spiral",
+      "back": "λ = α ± jβ: period 2π/β, shrink factor per turn e^(2πα/β); stable if α < 0.",
+      "objective_ids": [
+        "differential-equations-9-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "differential-equations-9-card-4",
+      "lesson_id": "differential-equations-9",
+      "front": "Saddle and node",
+      "back": "A saddle has one stable and one unstable direction and is very sensitive; a stable node is approached along the slow eigenvector.",
+      "objective_ids": [
+        "differential-equations-9-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "differential-equations-10-card-1",
+      "lesson_id": "differential-equations-10",
+      "front": "Logistic solution",
+      "back": "dN/dt = rN(1 − N/K) gives N(t) = K/(1 + ((K − N₀)/N₀)e^(−rt)); the logit ln(N/(K − N)) is linear in t with slope r.",
+      "objective_ids": [
+        "differential-equations-10-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "differential-equations-10-card-2",
+      "lesson_id": "differential-equations-10",
+      "front": "Key times and rates",
+      "back": "Half capacity at t = ln((K − N₀)/N₀)/r; 90% at ln(9(K − N₀)/N₀)/r; early doubling ln 2/r; maximum growth rK/4 at N = K/2.",
+      "objective_ids": [
+        "differential-equations-10-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "differential-equations-10-card-3",
+      "lesson_id": "differential-equations-10",
+      "front": "Fitting",
+      "back": "With K known, two counts give r from the logit slope; a straight line of ln N on the early window gives a rate that is slightly low.",
+      "objective_ids": [
+        "differential-equations-10-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "differential-equations-10-card-4",
+      "lesson_id": "differential-equations-10",
+      "front": "Extrapolation",
+      "back": "An exponential fit matches the early window and then overshoots, even beyond the capacity; a model must be tested beyond the window it was fitted on.",
+      "objective_ids": [
+        "differential-equations-10-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "differential-equations-11-card-1",
+      "lesson_id": "differential-equations-11",
+      "front": "Toggle switch",
+      "back": "dx/dt = a/(1 + y²) − x, dy/dt = a/(1 + x²) − y; symmetric steady state s(1 + s²) = a; other steady states have x ≠ y.",
+      "objective_ids": [
+        "differential-equations-11-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "differential-equations-11-card-2",
+      "lesson_id": "differential-equations-11",
+      "front": "Linearization",
+      "back": "Near a steady state, the perturbation obeys du/dt = J u with J the matrix of partial derivatives; eigenvalues with positive real part mean growth.",
+      "objective_ids": [
+        "differential-equations-11-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "differential-equations-11-card-3",
+      "lesson_id": "differential-equations-11",
+      "front": "Saddle test",
+      "back": "At the symmetric state J = [[−1, −m], [−m, −1]] with m = 2as/(1 + s²)²; eigenvalues −1 ± m; saddle (D = 1 − m² < 0) when m > 1, i.e. a > 2.",
+      "objective_ids": [
+        "differential-equations-11-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "differential-equations-11-card-4",
+      "lesson_id": "differential-equations-11",
+      "front": "Bistability",
+      "back": "Above the threshold there are two stable asymmetric states; a tiny difference in the start decides which is reached, giving a memory of a transient signal.",
+      "objective_ids": [
+        "differential-equations-11-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "differential-equations-12-card-1",
+      "lesson_id": "differential-equations-12",
+      "front": "Explicit Euler for decay",
+      "back": "y_(n+1) = (1 − λh) y_n: decays if h < 2/λ, stays positive if h ≤ 1/λ; between 1/λ and 2/λ it decays with sign changes; above 2/λ it grows.",
+      "objective_ids": [
+        "differential-equations-12-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "differential-equations-12-card-2",
+      "lesson_id": "differential-equations-12",
+      "front": "Implicit Euler",
+      "back": "y_(n+1) = y_n/(1 + λh): positive and decaying for any h, but only first-order accurate; nonlinear equations need an iteration at each step.",
+      "objective_ids": [
+        "differential-equations-12-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "differential-equations-12-card-3",
+      "lesson_id": "differential-equations-12",
+      "front": "Stiffness",
+      "back": "Ratio of the largest to the smallest eigenvalue magnitude; explicit methods are limited by the largest, the time scale of interest is set by the smallest.",
+      "objective_ids": [
+        "differential-equations-12-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "differential-equations-12-card-4",
+      "lesson_id": "differential-equations-12",
+      "front": "Michaelis–Menten depletion",
+      "back": "K_m ln(S₀/S) + (S₀ − S) = V_max t; initial rate V_max S₀/(K_m + S₀); explicit Euler stays positive near S = 0 only for h ≤ K_m/V_max.",
+      "objective_ids": [
+        "differential-equations-12-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "differential-equations-lab1-0",
+      "lesson_id": "differential-equations-lab-01",
+      "front": "Summarizing a time course",
+      "back": "Count the replicate wells at each time and average them; replicates are not extra time points.",
+      "objective_ids": [
+        "differential-equations-lab-01-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "differential-equations-lab1-1",
+      "lesson_id": "differential-equations-lab-01",
+      "front": "Two fits to one window",
+      "back": "A line of N on t and a line of ln N on t can both fit the early window; the line reaches zero at intercept/(−slope), the exponential never does.",
+      "objective_ids": [
+        "differential-equations-lab-01-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "differential-equations-lab1-2",
+      "lesson_id": "differential-equations-lab-01",
+      "front": "Testing beyond the window",
+      "back": "Compare predictions with later observations: a model can stay positive and still be wrong in structure, for example if part of the population decays more slowly.",
+      "objective_ids": [
+        "differential-equations-lab-01-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "differential-equations-lab1-3",
+      "lesson_id": "differential-equations-lab-01",
+      "front": "Validation habits",
+      "back": "Hold out later data, use independent later experiments, refine numerical steps and flag impossible values instead of clipping them.",
+      "objective_ids": [
+        "differential-equations-lab-01-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "differential-equations-13-card-1",
+      "lesson_id": "differential-equations-13",
+      "front": "Two kinds of cause",
+      "back": "A negative count comes from the model (a form such as constant loss that crosses zero, used beyond its window) or from the numerics (an explicit step above 1/k), and the checks differ.",
+      "objective_ids": [
+        "differential-equations-13-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "differential-equations-13-card-2",
+      "lesson_id": "differential-equations-13",
+      "front": "Zero crossing",
+      "back": "A fitted line N = a − bt reaches zero at a/b; a good fit in the window does not make the form valid outside it. Loss proportional to N never reaches zero.",
+      "objective_ids": [
+        "differential-equations-13-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "differential-equations-13-card-3",
+      "lesson_id": "differential-equations-13",
+      "front": "Explicit Euler for decay",
+      "back": "N_(n+1) = (1 − kh)N_n: nonnegative for h ≤ 1/k (zero at equality), decaying in magnitude for h < 2/k; large steps give wrong signs, moderate steps give wrong sizes; refine h until the result stops changing.",
+      "objective_ids": [
+        "differential-equations-13-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "differential-equations-13-card-4",
+      "lesson_id": "differential-equations-13",
+      "front": "Validation habits",
+      "back": "Hold out later data; refine the step; test on independent longer data; flag invariants (non-negativity, balances) instead of clipping; state the domain of the fit.",
+      "objective_ids": [
+        "differential-equations-13-objective-3"
+      ],
+      "license": "CC-BY-4.0"
     }
   ]
 }

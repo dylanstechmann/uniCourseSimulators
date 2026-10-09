@@ -2403,3 +2403,390 @@ def test_signals_control_lab_text_and_keys_agree_with_the_dataset():
     for test in gains:
         assert checks[(test, "runs")] == 2 and checks[(test, "samples")] == 61
         assert abs(checks[(test, "mean_final_rise")] - _sc_final(test)) < 1e-3
+
+
+# ---- differential equations 0.3.0 ----------------------------------------------------------------------------
+def _de_integrate(f, x0: list[float], t_end: float, dt: float) -> list[tuple[float, list[float]]]:
+    return _sc_rk4(f, x0, t_end, dt)
+
+
+def _de_at(traj: list[tuple[float, list[float]]], t: float, index: int = 0) -> float:
+    return min(traj, key=lambda p: abs(p[0] - t))[1][index]
+
+
+def _de_chamber(c_in, tau: float = 40.0, t_end: float = 400.0, dt: float = 0.02):
+    return _de_integrate(lambda t, x: [(c_in(t) - x[0]) / tau], [0.0], t_end, dt)
+
+
+def _de_sine_fit(traj, omega: float, t_start: float) -> tuple[float, float]:
+    """Amplitude and phase lag (rad) of a steady sinusoid, by projecting the last whole period on sin and cos."""
+    period = 2 * math.pi / omega
+    pts = [(t, x[0]) for t, x in traj if t >= t_start and t <= t_start + period]
+    n = len(pts)
+    a = 2 * sum(y * math.sin(omega * t) for t, y in pts) / n
+    b = 2 * sum(y * math.cos(omega * t) for t, y in pts) / n
+    return math.hypot(a, b), math.atan2(-b, a)
+
+
+def _de_forced_amplitude(r: float, zeta: float = 0.15, wn: float = 20.0, m: float = 0.2, force: float = 0.5) -> float:
+    c, k = 2 * zeta * wn * m, wn ** 2 * m
+    w = r * wn
+    traj = _de_integrate(lambda t, x: [x[1], (force * math.cos(w * t) - c * x[1] - k * x[0]) / m], [0.0, 0.0], 8.0, 5e-4)
+    return 1000 * max(abs(x[0]) for t, x in traj if t > 6.0)
+
+
+def _de_free_pan():
+    m, c, k = 0.2, 1.2, 80.0
+    traj = _de_integrate(lambda t, x: [x[1], -(c * x[1] + k * x[0]) / m], [1.0, 0.0], 2.5, 1e-4)
+    peaks = [(t, x[0]) for (t0, x0), (t, x), (t2, x2) in zip(traj, traj[1:], traj[2:]) if x[0] > x0[0] and x[0] >= x2[0] and x[0] > 0.0]
+    return peaks
+
+
+_DE_PEAKS = _de_free_pan()
+
+
+def _de_linear_flow(matrix, x0, t_end):
+    (a, b), (c, d) = matrix
+    return _de_integrate(lambda t, x: [a * x[0] + b * x[1], c * x[0] + d * x[1]], list(x0), t_end, 1e-3)
+
+
+def _de_logistic(n0: float = 0.2, k: float = 8.0, r: float = 0.05, t_end: float = 130.0):
+    return _de_integrate(lambda t, x: [r * x[0] * (1 - x[0] / k)], [n0], t_end, 0.01)
+
+
+_DE_LOGISTIC = _de_logistic()
+
+
+def _de_first_crossing(traj, level: float) -> float:
+    return next(t for t, x in traj if x[0] >= level)
+
+
+def _de_toggle_flow(x0, a: float = 3.0, t_end: float = 60.0):
+    return _de_integrate(lambda t, x: [a / (1 + x[1] ** 2) - x[0], a / (1 + x[0] ** 2) - x[1]], list(x0), t_end, 0.01)
+
+
+def _de_jacobian_eigs(a: float, point: tuple[float, float]):
+    h = 1e-6
+    def f(x, y): return (a / (1 + y ** 2) - x, a / (1 + x ** 2) - y)
+    x, y = point
+    j = [[(f(x + h, y)[i] - f(x - h, y)[i]) / (2 * h), (f(x, y + h)[i] - f(x, y - h)[i]) / (2 * h)] for i in range(2)]
+    tr, det = j[0][0] + j[1][1], j[0][0] * j[1][1] - j[0][1] * j[1][0]
+    disc = tr ** 2 - 4 * det
+    return j, det, ((tr + math.sqrt(disc)) / 2, (tr - math.sqrt(disc)) / 2) if disc >= 0 else None
+
+
+def _de_symmetric(a: float) -> float:
+    return _bisect(lambda s: a / (1 + s ** 2) - s, 0.0, 10.0)
+
+
+def _de_euler_threshold(rate: float, predicate) -> float:
+    return _bisect(lambda h: 1.0 if predicate(1 - rate * h) else -1.0, 1e-6, 500.0)
+
+
+def _de_fit_line(xs, ys):
+    xb, yb = sum(xs) / len(xs), sum(ys) / len(ys)
+    slope = sum((x - xb) * (y - yb) for x, y in zip(xs, ys)) / sum((x - xb) ** 2 for x in xs)
+    return slope, yb - slope * xb
+
+
+_DE_T = [0, 6, 12, 18, 24]
+_DE_DATA = [round(100.0 * math.exp(-0.04 * t), 1) for t in _DE_T]
+_DE_SL, _DE_IC = _de_fit_line(_DE_T, _DE_DATA)
+_DE_HOLD_SL, _DE_HOLD_IC = _de_fit_line(_DE_T[:3], _DE_DATA[:3])
+_DE_K_FIT = -_de_fit_line(_DE_T, [math.log(v) for v in _DE_DATA])[0]
+_DE_N24 = _DE_DATA[-1]
+
+
+def _de_lab_rows() -> list[dict[str, str]]:
+    import csv
+    return list(csv.DictReader((COURSES / "differential-equations/labs/cell-counts-after-growth-factor-removal.csv").open(encoding="utf-8")))
+
+
+_DE_ROWS = _de_lab_rows()
+_DE_MEAN = {t: sum(float(r["count_k"]) for r in _DE_ROWS if int(r["hours"]) == t) / 3 for t in (0, 6, 12, 18, 24, 36, 48)}
+_DE_LAB_SL, _DE_LAB_IC = _de_fit_line([0, 6, 12, 18, 24], [_DE_MEAN[t] for t in (0, 6, 12, 18, 24)])
+_DE_LAB_K = -_de_fit_line([0, 6, 12, 18, 24], [math.log(_DE_MEAN[t]) for t in (0, 6, 12, 18, 24)])[0]
+_DE_LAB_N0 = math.exp(_de_fit_line([0, 6, 12, 18, 24], [math.log(_DE_MEAN[t]) for t in (0, 6, 12, 18, 24)])[1])
+_DE_LAB_EXP48 = _DE_LAB_N0 * math.exp(-_DE_LAB_K * 48)
+
+_DE_STEP60 = _de_at(_de_chamber(lambda t: 1.0), 60.0)
+_DE_SINE = _de_chamber(lambda t: math.sin(2 * math.pi / 120 * t), t_end=1500.0)
+_DE_SINE_AMP, _DE_SINE_PHASE = _de_sine_fit(_DE_SINE, 2 * math.pi / 120, 1200.0)
+def _de_pulse(t_eval: float, width: float = 30.0, tau: float = 40.0) -> float:
+    """Pulse response integrated in two stages, switching the input exactly at the edge of the pulse."""
+    first = _de_integrate(lambda t, x: [(1.0 - x[0]) / tau], [0.0], min(t_eval, width), 0.005)
+    if t_eval <= width:
+        return first[-1][1][0]
+    second = _de_integrate(lambda t, x: [(0.0 - x[0]) / tau], first[-1][1], t_eval - width, 0.005)
+    return second[-1][1][0]
+
+
+_DE_DECAY = _de_chamber(lambda t: math.exp(-t / 100.0), t_end=200.0)
+_DE_RAMP = _de_chamber(lambda t: 0.02 * t, t_end=600.0)
+_DE_PEAK_T, _DE_PEAK_Y = max(((t, x[0]) for t, x in _DE_DECAY), key=lambda p: p[1])
+_DE_NODE1 = _de_linear_flow(((-2, 1), (1, -2)), (3.0, 1.0), 1.0)
+_DE_SADDLE2 = _de_linear_flow(((1, 2), (2, 1)), (1.1, -1.0), 2.0)
+_DE_SPIRAL = _de_linear_flow(((-0.5, 2), (-2, -0.5)), (1.0, 0.0), 8.0)
+_DE_TOGGLE_END = _de_toggle_flow((1.3, 1.1))[-1][1]
+
+
+def _de_spiral_turn() -> tuple[float, float]:
+    """Time and distance ratio at the first return of the spiral to the positive x axis, found by linear interpolation of the simulated flow."""
+    for (t0, a), (t1, b) in zip(_DE_SPIRAL, _DE_SPIRAL[1:]):
+        if t0 > 1.0 and a[1] > 0 >= b[1] and b[0] > 0:
+            f = a[1] / (a[1] - b[1])
+            x = a[0] + f * (b[0] - a[0])
+            return t0 + f * (t1 - t0), x
+    raise AssertionError('no return to the axis')
+
+
+_DE_TURN_T, _DE_TURN_R = _de_spiral_turn()
+_DE_MM = _de_integrate(lambda t, x: [-2.0 * x[0] / (0.5 + x[0])], [5.0], 3.5, 1e-4)
+
+DIFFERENTIAL_EQUATIONS_NUMERIC = {
+    # items written before 2026-10-08, recomputed from the numbers in their prompts
+    "differential-equations-1:check": 8 * math.exp(-0.25 * 4),
+    "differential-equations-2:check": math.sqrt(50 / 2),
+    "differential-equations-4:check": 3 + 0.25 * 2,
+    "differential-equations-1:characteristic-time": 1 / 0.5,
+    "differential-equations-4:euler-stability-limit": _de_euler_threshold(50.0, lambda f: abs(f) < 1),
+    "differential-equations-5:steady-state": 0.05 * 10 / (0.05 + 0.02),
+    "differential-equations-5:time-constant": 1 / (0.05 + 0.02),
+    "differential-equations-5:time-to-90": math.log(10) / 0.07,
+    "differential-equations-5:euler-step": 0.0 + 10 * (0.05 * 10 - 0.07 * 0.0),
+    "differential-equations-5:stability-limit": _de_euler_threshold(0.07, lambda f: abs(f) < 1),
+    "differential-equations-6:equilibrium": 1e6 * (1 - 0.01 / 0.03),
+    "differential-equations-6:recovery-tau": 1 / (0.03 - 0.01),
+    "differential-equations-6:msy": max(h * 1e6 * (1 - h / 0.03) for h in [i * 1e-5 for i in range(1, 3000)]),
+    "differential-equations-6:slow-eigenvalue": (-0.6 + math.sqrt(0.36 - 4 * 0.02)) / 2,
+    # differential-equations-7: forced first-order systems
+    "differential-equations-7:chamber-tau": 20 / 0.5,
+    "differential-equations-7:step-fraction": _DE_STEP60,
+    "differential-equations-7:time-to-95": _de_first_crossing(_de_chamber(lambda t: 1.0, t_end=200.0), 0.95),
+    "differential-equations-7:ramp-lag": 0.02 * 580.0 - _de_at(_DE_RAMP, 580.0),
+    "differential-equations-7:amplitude-ratio": _DE_SINE_AMP,
+    "differential-equations-7:time-lag": _DE_SINE_PHASE / (2 * math.pi / 120),
+    "differential-equations-7:pulse-response": _de_pulse(60.0),
+    "differential-equations-7:peak-time": _DE_PEAK_T,
+    # differential-equations-8: resonance and damping
+    "differential-equations-8:natural-frequency": math.sqrt(80 / 0.2),
+    "differential-equations-8:damping-ratio": 1.2 / (2 * math.sqrt(80 * 0.2)),
+    "differential-equations-8:damped-period": _DE_PEAKS[1][0] - _DE_PEAKS[0][0],
+    "differential-equations-8:log-decrement": math.log(_DE_PEAKS[0][1] / _DE_PEAKS[1][1]),
+    "differential-equations-8:after-three-cycles": _DE_PEAKS[3][1] / _DE_PEAKS[0][1],
+    "differential-equations-8:resonant-amplitude": _de_forced_amplitude(1.0),
+    "differential-equations-8:half-frequency-amplitude": _de_forced_amplitude(0.5),
+    "differential-equations-8:half-power-bandwidth": 2 * 0.15 * 20.0,
+    # differential-equations-9: phase portraits
+    "differential-equations-9:determinant": (-2) * (-2) - 1 * 1,
+    "differential-equations-9:slow-eigenvalue": (-4 + math.sqrt(16 - 12)) / 2,
+    "differential-equations-9:initial-coefficient": (3.0 + 1.0) / 2,
+    "differential-equations-9:state-at-one": _de_at(_DE_NODE1, 1.0, 0),
+    "differential-equations-9:spiral-period": _DE_TURN_T,
+    "differential-equations-9:spiral-shrink": _DE_TURN_R,
+    "differential-equations-9:unstable-eigenvalue": (2 + math.sqrt(4 + 12)) / 2,
+    "differential-equations-9:saddle-state": _de_at(_DE_SADDLE2, 2.0, 0),
+    # differential-equations-10: logistic growth
+    "differential-equations-10:half-capacity-time": _de_first_crossing(_DE_LOGISTIC, 4.0),
+    "differential-equations-10:count-at-24h": _de_at(_DE_LOGISTIC, 24.0),
+    "differential-equations-10:fraction-at-48h": _de_at(_DE_LOGISTIC, 48.0) / 8.0,
+    "differential-equations-10:doubling-time": math.log(2) / 0.05,
+    "differential-equations-10:maximum-growth-rate": max(0.05 * x[0] * (1 - x[0] / 8.0) for t, x in _DE_LOGISTIC),
+    "differential-equations-10:time-to-90": _de_first_crossing(_DE_LOGISTIC, 7.2),
+    "differential-equations-10:logit-slope": (math.log(_de_at(_DE_LOGISTIC, 24.0) / (8.0 - _de_at(_DE_LOGISTIC, 24.0))) - math.log(0.2 / 7.8)) / 24,
+    "differential-equations-10:extrapolation-error": 0.2 * math.exp(0.05 * 72) - _de_at(_DE_LOGISTIC, 72.0),
+    # differential-equations-11: toggle switch
+    "differential-equations-11:symmetric-state": _de_symmetric(3.0),
+    "differential-equations-11:coupling": -_de_jacobian_eigs(3.0, (_de_symmetric(3.0),) * 2)[0][0][1],
+    "differential-equations-11:unstable-eigenvalue": _de_jacobian_eigs(3.0, (_de_symmetric(3.0),) * 2)[2][0],
+    "differential-equations-11:high-state": _DE_TOGGLE_END[0],
+    "differential-equations-11:low-state": _DE_TOGGLE_END[1],
+    "differential-equations-11:relaxation-time": 1 / abs(_de_jacobian_eigs(3.0, tuple(_DE_TOGGLE_END))[2][0]),
+    "differential-equations-11:threshold": _bisect(lambda a: _de_jacobian_eigs(a, (_de_symmetric(a),) * 2)[2][0], 1.2, 3.0),
+    "differential-equations-11:coupling-below-threshold": -_de_jacobian_eigs(1.5, (_de_symmetric(1.5),) * 2)[0][0][1],
+    # differential-equations-12: stiff equations
+    "differential-equations-12:stability-limit": _de_euler_threshold(50.0, lambda f: abs(f) < 1),
+    "differential-equations-12:positivity-limit": _de_euler_threshold(50.0, lambda f: f >= 0),
+    "differential-equations-12:explicit-factor": abs(1 - 50 * 0.05),
+    "differential-equations-12:implicit-factor": 1 / (1 + 50 * 0.05),
+    "differential-equations-12:stiffness-ratio": abs((-50.1 - math.sqrt(50.1 ** 2 - 4 * 2.5)) / (-50.1 + math.sqrt(50.1 ** 2 - 4 * 2.5))),
+    "differential-equations-12:depletion-time": next(t for t, x in _DE_MM if x[0] <= 0.5),
+    "differential-equations-12:initial-rate": 2.0 * 5.0 / (0.5 + 5.0),
+    "differential-equations-12:mm-positivity-step": _bisect(lambda h: 1.0 if 1e-6 - h * 2.0 * 1e-6 / (0.5 + 1e-6) >= 0 else -1.0, 1e-3, 5.0),
+    # differential-equations-13: negative predicted counts
+    "differential-equations-13:line-slope": _DE_SL,
+    "differential-equations-13:zero-crossing": _DE_IC / -_DE_SL,
+    "differential-equations-13:line-prediction": _DE_IC + _DE_SL * 48,
+    "differential-equations-13:first-order-rate": _DE_K_FIT,
+    "differential-equations-13:positivity-limit": _de_euler_threshold(0.04, lambda f: f >= 0),
+    "differential-equations-13:single-step": functools.reduce(lambda n, _: n * (1 - 0.04 * 48), range(1), _DE_N24),
+    "differential-equations-13:four-steps": functools.reduce(lambda n, _: n * (1 - 0.04 * 12), range(4), _DE_N24),
+    "differential-equations-13:holdout-error": _DE_N24 - (_DE_HOLD_IC + _DE_HOLD_SL * 24),
+    # virtual lab 1, recomputed from the CSV
+    "differential-equations-lab1:early-rate": _DE_LAB_K,
+    "differential-equations-lab1:line-zero": _DE_LAB_IC / -_DE_LAB_SL,
+    "differential-equations-lab1:line-at-48": _DE_LAB_IC + _DE_LAB_SL * 48,
+    "differential-equations-lab1:exponential-at-48": _DE_LAB_EXP48,
+}
+
+
+@pytest.mark.parametrize("question_id,expected", sorted(DIFFERENTIAL_EQUATIONS_NUMERIC.items()))
+def test_differential_equations_numeric_key_matches_independent_recalculation(question_id, expected):
+    spec = bank("differential-equations")[question_id]["solution_spec"]
+    allowed = spec["tolerance"] + (spec.get("relative_tolerance") or 0) * abs(spec["answer"])
+    assert abs(spec["answer"] - expected) <= allowed, (question_id, spec["answer"], expected)
+
+
+def test_every_differential_equations_numeric_item_is_recalculated():
+    numeric = {qid for qid, item in bank("differential-equations").items() if item["type"] == "numeric"}
+    assert numeric == set(DIFFERENTIAL_EQUATIONS_NUMERIC)
+
+
+def _mn(x: float, nd: int = 2) -> str:
+    """Format with a typographic minus sign, as the lessons do."""
+    return f"{x:.{nd}f}".replace("-", "−")
+
+
+def test_differential_equations_chamber_resonance_and_phase_portrait_lessons_state_the_computed_numbers():
+    text = reading("differential-equations", "differential-equations-7")
+    t95 = _de_first_crossing(_de_chamber(lambda t: 1.0, t_end=200.0), 0.95)
+    peak_y = _DE_PEAK_Y
+    pulse30 = _de_pulse(30.0)
+    _fragments_in(text, [
+        "so τ = **40 min**", f"= **{_DE_STEP60:.4f}** of the new concentration", f"= **{t95:.1f} min**", f"the offset is 0.02 × 40 = **{0.02 * 580.0 - _de_at(_DE_RAMP, 580.0):.1f} mM**",
+        f"ω = 2π/120 = {2 * math.pi / 120:.5f} rad/min and ωτ = {2 * math.pi / 120 * 40:.3f}", f"the amplitude is multiplied by **{_DE_SINE_AMP:.4f}**", f"the phase lag is {math.degrees(_DE_SINE_PHASE):.1f}°",
+        f"the time lag is φ/ω = **{_DE_SINE_PHASE / (2 * math.pi / 120):.1f} min**", f"attenuated to {1 / math.sqrt(1 + (2 * math.pi / 10 * 40) ** 2):.3f} of its amplitude",
+        f"= **{_DE_PEAK_T:.1f} min** at {peak_y:.4f} c₀", f"the chamber has reached {pulse30:.4f} c₀", f"= **{_de_pulse(60.0):.4f} c₀**",
+    ])
+    tau2 = 15 / 0.4
+    w2 = 2 * math.pi / 90
+    traj2 = _de_chamber(lambda t: 1.0, tau=tau2, t_end=100.0)
+    sine2 = _de_chamber(lambda t: math.sin(w2 * t), tau=tau2, t_end=1200.0)
+    amp2, ph2 = _de_sine_fit(sine2, w2, 900.0)
+    _fragments_in(text, [
+        f"τ = 15/0.4 = **{tau2:.1f} min**", f"= **{_de_at(traj2, 50.0):.4f}**", f"ω = 2π/90 = {w2:.5f} rad/min, ωτ = {w2 * tau2:.3f}", f"= **{amp2:.4f}**",
+        f"φ = atan({w2 * tau2:.3f}) = {math.degrees(ph2):.1f}° and the time lag is φ/ω = **{ph2 / w2:.1f} min**",
+    ])
+    text = reading("differential-equations", "differential-equations-8")
+    wn, zeta = 20.0, 0.15
+    wd = wn * math.sqrt(1 - zeta ** 2)
+    delta = math.log(_DE_PEAKS[0][1] / _DE_PEAKS[1][1])
+    r_peak = math.sqrt(1 - 2 * zeta ** 2)
+    _fragments_in(text, [
+        f"ωn = √(80/0.2) = **{wn:.0f} rad/s** ({wn / (2 * math.pi):.2f} Hz)", f"ζ = 1.2/8 = **{zeta}**", f"ωd = {wd:.3f} rad/s, and the damped period is 2π/ωd = **{2 * math.pi / wd:.4f} s**",
+        f"= **{delta:.4f}**", f"e^(−3δ) = **{_DE_PEAKS[3][1] / _DE_PEAKS[0][1]:.4f}** of its starting value", f"after ten cycles it is {100 * _DE_PEAKS[0][1] ** 0 * math.exp(-10 * delta):.3f}% of it",
+        f"(F/k)/(2ζ) = **{_de_forced_amplitude(1.0):.2f} mm**", f"at r = √(1 − 2ζ²) = {r_peak:.4f}, where X = {_de_forced_amplitude(r_peak):.2f} mm", f"X = **{_de_forced_amplitude(0.5):.2f} mm**", "approximately 2ζωn = **6.0 rad/s**",
+    ])
+    # the half-power width of the exact amplitude curve is within 3% of the approximation 2*zeta*wn
+    amp = lambda w: 1 / math.sqrt((1 - (w / wn) ** 2) ** 2 + (2 * zeta * w / wn) ** 2)          # noqa: E731
+    pk = amp(wn * r_peak)
+    w_lo = _bisect(lambda w: amp(w) - pk / math.sqrt(2), 0.5 * wn, wn * r_peak)
+    w_hi = _bisect(lambda w: amp(w) - pk / math.sqrt(2), wn * r_peak, 1.5 * wn)
+    assert abs((w_hi - w_lo) - 6.0) / 6.0 < 0.03
+    w2n = math.sqrt(20 / 0.05)
+    wd2 = w2n * math.sqrt(1 - 0.2 ** 2)
+    _fragments_in(text, [
+        f"ωn = √(20/0.05) = **{w2n:.0f} rad/s**", f"ζ = 0.4/(2√(20 × 0.05)) = **0.2**, so ωd = {w2n:.0f} × √(1 − 0.2²) = {wd2:.3f} rad/s", f"= **{2 * math.pi * 0.2 / math.sqrt(1 - 0.04):.4f}**",
+        f"X = {1000 * 0.2 / 20:.1f}/(2 × 0.2) = **{_de_forced_amplitude(1.0, zeta=0.2, wn=w2n, m=0.05, force=0.2):.1f} mm**",
+    ])
+    text = reading("differential-equations", "differential-equations-9")
+    spiral_turn_t, spiral_turn_r = _DE_TURN_T, _DE_TURN_R
+    wflow = _de_linear_flow(((-3, 2), (1, -2)), (1.0, 2.0), 0.5)
+    _fragments_in(text, [
+        "has trace −4 and determinant **3**", "λ₁ = **−1** and λ₂ = −3", "gives c₁ = **2** and c₂ = 1", f"(**{_de_at(_DE_NODE1, 1.0, 0):.4f}**, {_de_at(_DE_NODE1, 1.0, 1):.4f})",
+        f"a period of 2π/2 = **{spiral_turn_t:.4f}**", f"e^(−0.5 × {spiral_turn_t:.4f}) = **{spiral_turn_r:.4f}**", "The eigenvalues are **3** and −1",
+        f"the state is ({_de_at(_DE_SADDLE2, 2.0, 0):.1f}, {_de_at(_DE_SADDLE2, 2.0, 1):.1f})", "T = −5 and D = **4**", f"x(0.5) = (**{_de_at(wflow, 0.5, 0):.4f}**, {_de_at(wflow, 0.5, 1):.4f})",
+    ])
+
+
+def test_differential_equations_logistic_switch_stiffness_and_capstone_lessons_state_the_computed_numbers():
+    text = reading("differential-equations", "differential-equations-10")
+    n24, n48 = _de_at(_DE_LOGISTIC, 24.0), _de_at(_DE_LOGISTIC, 48.0)
+    t_half = _de_first_crossing(_DE_LOGISTIC, 4.0)
+    t90 = _de_first_crossing(_DE_LOGISTIC, 7.2)
+    logit = lambda n: math.log(n / (8.0 - n))                                      # noqa: E731
+    exp72, log72 = 0.2 * math.exp(0.05 * 72), _de_at(_DE_LOGISTIC, 72.0)
+    _fragments_in(text, [
+        "(K − N₀)/N₀ = **39**", f"= **{n24:.4f} million**", f"N(48 h) is **{n48 / 8:.4f}** of capacity ({n48:.3f} million)", f"ln(39)/0.05 = **{t_half:.1f} h**", f"= ln(351)/0.05 = {t90:.1f} h",
+        f"ln 2/r = **{math.log(2) / 0.05:.2f} h**", f"rK/4 = **{max(0.05 * x[0] * (1 - x[0] / 8.0) for t, x in _DE_LOGISTIC):.2f} million cells per hour**",
+        f"logit(N₀) = ln(0.2/7.8) = {_mn(logit(0.2), 3)} and logit(N) = {_mn(logit(n24), 3)}", f"so the slope is **{(logit(n24) - logit(0.2)) / 24:.4f} h⁻¹**",
+        f"by {100 * (0.2 * math.exp(1.2) / n24 - 1):.1f}% ({0.2 * math.exp(1.2):.3f} against {n24:.3f} million)", f"the exponential gives {exp72:.2f} million cells, and the logistic gives {log72:.3f} million",
+        f"too high by **{exp72 - log72:.2f} million cells**, about {100 * (exp72 - log72) / log72:.0f}%", f"by 96 h it gives {0.2 * math.exp(0.05 * 96):.1f} million cells",
+    ])
+    traj2 = _de_logistic(0.1, 5.0, 0.08, 120.0)
+    _fragments_in(text, [
+        f"t₁/₂ = ln(49)/0.08 = **{_de_first_crossing(traj2, 2.5):.1f} h**", f"= **{_de_at(traj2, 36.0):.3f} million**", f"ln 2/0.08 = {math.log(2) / 0.08:.2f} h",
+        f"0.1 e^(5.76) = {0.1 * math.exp(0.08 * 72):.1f} million", f"the logistic gives {_de_at(traj2, 72.0):.2f} million",
+    ])
+    text = reading("differential-equations", "differential-equations-11")
+    s = _de_symmetric(3.0)
+    j, det, eigs = _de_jacobian_eigs(3.0, (s, s))
+    m = -j[0][1]
+    j_hi, det_hi, eigs_hi = _de_jacobian_eigs(3.0, tuple(_DE_TOGGLE_END))
+    s15 = _de_symmetric(1.5)
+    m15 = -_de_jacobian_eigs(1.5, (s15, s15))[0][0][1]
+    end_b = _de_toggle_flow((1.1, 1.3))[-1][1]
+    _fragments_in(text, [
+        f"gives **s = {s:.4f}**", f"x = (3 + √5)/2 = **{_DE_TOGGLE_END[0]:.4f}** with y = (3 − √5)/2 = {_DE_TOGGLE_END[1]:.4f}", f"= **{m:.4f}**", f"−1 − m = {_mn(eigs[1], 4)}", f"**−1 + m = {eigs[0]:.4f}**",
+        f"1 − m² = {_mn(det, 3)} < 0", f"c_y = {-j_hi[0][1]:.4f} and c_x = {-j_hi[1][0]:.4f}", f"that is **{_mn(eigs_hi[0], 4)}** and {_mn(eigs_hi[1], 4)}", f"1/{abs(eigs_hi[0]):.4f} = **{1 / abs(eigs_hi[0]):.1f}**",
+        f"m = {m15:.4f} < 1", f"the system settles at ({_DE_TOGGLE_END[0]:.3f}, {_DE_TOGGLE_END[1]:.3f})", f"mirror image ({end_b[0]:.3f}, {end_b[1]:.3f})",
+    ])
+    s4 = _de_symmetric(4.0)
+    j4, _, _ = _de_jacobian_eigs(4.0, (s4, s4))
+    m4 = -j4[0][1]
+    hi4 = _bisect(lambda x: x - 4.0 / (1 + (4.0 / (1 + x ** 2)) ** 2), s4 + 0.05, 8.0)
+    lo4 = 4.0 / (1 + hi4 ** 2)
+    eig4 = _de_jacobian_eigs(4.0, (hi4, lo4))[2]
+    _fragments_in(text, [f"gives **s = {s4:.4f}**", f"= **{m4:.4f}**", f"= **{m4 - 1:.4f}** is positive", f"x = {hi4:.4f} and y = {lo4:.4f}", f"= {_mn(eig4[0], 4)} and {_mn(eig4[1], 4)}"])
+    text = reading("differential-equations", "differential-equations-12")
+    disc = math.sqrt(50.1 ** 2 - 4 * 2.5)
+    l_slow, l_fast = (-50.1 + disc) / 2, (-50.1 - disc) / 2
+    # Use the strict stability inequality before rounding to an integer step count.
+    min_steps = math.floor(10 * abs(l_fast) / 2) + 1
+    assert abs(1 + l_fast * (10 / min_steps)) < 1
+    assert abs(1 + l_fast * (10 / (min_steps - 1))) > 1
+    mm = _de_integrate(lambda t, x: [-2.0 * x[0] / (0.5 + x[0])], [5.0], 3.5, 1e-4)
+    seq = [(1 - 50 * 0.05) ** k for k in range(4)]
+    _fragments_in(text, [
+        f"h < 2/50 = **{_de_euler_threshold(50.0, lambda f: abs(f) < 1):.2f} h**", f"h ≤ **{_de_euler_threshold(50.0, lambda f: f >= 0):.2f} h**", f"= {_mn(1 - 50 * 0.05)}, with magnitude **1.5**", ", ".join(f"{v:.3g}" for v in seq).replace("-", "−"),
+        f"= **{1 / (1 + 50 * 0.05):.4f}**", f"e^(−2.5) = {math.exp(-2.5):.4f}", f"the eigenvalues are **{_mn(l_slow, 5)}** and {_mn(l_fast, 3)} h⁻¹", f"The ratio is |{_mn(l_fast, 3)}/{_mn(l_slow, 5)}| = **{abs(l_fast / l_slow):.0f}**",
+        f"= {2 / abs(l_fast):.4f} h throughout: at least {math.floor(10 / (2 / abs(l_fast))) + 1} equal steps", f"= **{2.0 * 5.0 / 5.5:.3f} mM/h**", f"= **{next(t for t, x in mm if x[0] <= 0.5):.3f} h**", "**h ≤ K_m/V_max = 0.25 h**", "= −2.5 mM",
+    ])
+    mm3 = _de_integrate(lambda t, x: [-1.5 * x[0] / (0.8 + x[0])], [4.0], 4.5, 1e-4)
+    _fragments_in(text, ["= **0.10 h**", f"= **{_mn(1 - 20 * 0.08, 1)}**", f"= **{1 / (1 + 20 * 0.08):.4f}**", f"e^(−1.6) = {math.exp(-1.6):.4f}", f"= **{next(t for t, x in mm3 if x[0] <= 0.4):.3f} h**"])
+    text = reading("differential-equations", "differential-equations-13")
+    b_data = [round(80.0 * math.exp(-0.05 * t), 1) for t in _DE_T]
+    sl_b, ic_b = _de_fit_line(_DE_T, b_data)
+    hold_sl, hold_ic = _de_fit_line(_DE_T[:3], b_data[:3])
+    resid = [y - (_DE_IC + _DE_SL * t) for t, y in zip(_DE_T, _DE_DATA)]
+    _fragments_in(text, [
+        "**" + ", ".join(f"{v:.1f}" for v in _DE_DATA) + "**", f"slope **{_mn(_DE_SL, 4)}** per hour and intercept {_DE_IC:.2f}", f"The largest residual is {max(abs(r) for r in resid):.1f}", f"= **{_DE_IC / -_DE_SL:.1f} h**",
+        f"it predicts **{_mn(_DE_IC + _DE_SL * 48, 1)}**", f"k = **{_DE_K_FIT:.4f} h⁻¹**", f"the prediction at 48 h is {100 * math.exp(-0.04 * 48):.1f}", "h ≤ 1/k = **25 h**", "h < 2/k = 50 h", f"the exact answer is {_DE_N24 * math.exp(-0.04 * 48):.2f}",
+        f"38.3 × (1 − 1.92) = **{_mn(_DE_N24 * (1 - 0.04 * 48), 1)}**", f"give **{_DE_N24 * (1 - 0.04 * 12) ** 4:.2f}**", f"3 h steps give {_DE_N24 * (1 - 0.04 * 3) ** 16:.2f}", f"0.75 h steps give {_DE_N24 * (1 - 0.04 * 0.75) ** 64:.2f}",
+        f"predicts {_DE_HOLD_IC + _DE_HOLD_SL * 24:.2f} at 24 h, against an observed 38.3: an error of {_DE_N24 - (_DE_HOLD_IC + _DE_HOLD_SL * 24):.2f}, or {100 * (_DE_N24 - (_DE_HOLD_IC + _DE_HOLD_SL * 24)) / _DE_N24:.0f}% of the observed value",
+    ])
+    _fragments_in(text, [
+        ", ".join(f"{v:.1f}" for v in b_data), f"slope is {_mn(sl_b, 3)} per hour with intercept {ic_b:.2f}", f"**{ic_b / -sl_b:.1f} h**", f"= **{_mn(ic_b + sl_b * 48, 1)}**, impossible", "= **20 h**",
+        f"= **{_mn(b_data[-1] * (1 - 0.05 * 48), 1)}**, while the exact value is {b_data[-1] * math.exp(-0.05 * 48):.2f}", f"gives {hold_ic + hold_sl * 24:.1f} against an observed {b_data[-1]:.1f}",
+    ])
+
+
+def test_differential_equations_lab_text_and_keys_agree_with_the_dataset():
+    assert len(_DE_ROWS) == 21 and {r["time"] for r in _DE_ROWS} == {f"t{t:02d}h" for t in (0, 6, 12, 18, 24, 36, 48)}
+    assert {int(r["well"]) for r in _DE_ROWS} == {1, 2, 3}
+    # the mean counts follow N = 100 (0.94 exp(-0.08 t) + 0.06) within 0.1, and each well is within 4.2% of its mean
+    for t, mean_count in _DE_MEAN.items():
+        assert abs(mean_count - 100.0 * (0.94 * math.exp(-0.08 * t) + 0.06)) < 0.1, t
+    text = (COURSES / "differential-equations/labs/01-fitting-decay-models-and-testing-them-beyond-the-window.md").read_text(encoding="utf-8")
+    ratio = _DE_MEAN[48] / _DE_LAB_EXP48
+    _fragments_in(text, [
+        "The means are " + ", ".join(f"{_DE_MEAN[t]:.1f}" for t in (0, 6, 12, 18, 24, 36, 48)), f"has slope −{_DE_LAB_K:.4f}, so k = {_DE_LAB_K:.4f} h⁻¹, and N₀ = {_DE_LAB_N0:.1f}",
+        f"The straight line is {_DE_LAB_IC:.2f} + ({_mn(_DE_LAB_SL, 3)})t, which reaches zero at {_DE_LAB_IC / -_DE_LAB_SL:.1f} h and predicts {_mn(_DE_LAB_IC + _DE_LAB_SL * 48, 1)} at 48 h",
+        f"{_DE_LAB_N0:.1f} × e^(−{_DE_LAB_K:.4f} × 48) = {_DE_LAB_EXP48:.2f}", f"while the observed mean is {_DE_MEAN[48]:.1f}, a ratio of {ratio:.2f}", "nothing here is evidence about any culture",
+    ])
+    field = bank("differential-equations")["differential-equations-lab1:beyond-the-window"]["solution_spec"]["field_specs"][0]
+    assert abs(field["answer"] - ratio) <= field["tolerance"] and field["significant_figures"] == 3
+    checks = {(c["row_id"], c["column"]): c["answer"] for c in bank("differential-equations")["differential-equations-lab1:time-summary"]["solution_spec"]["validation_spec"]["checks"]}
+    assert len(checks) == 14
+    for t in (0, 6, 12, 18, 24, 36, 48):
+        assert checks[(f"t{t:02d}h", "wells")] == 3 and abs(checks[(f"t{t:02d}h", "mean_count")] - _DE_MEAN[t]) < 1e-3

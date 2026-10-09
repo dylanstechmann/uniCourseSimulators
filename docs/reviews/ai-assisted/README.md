@@ -19,3 +19,4 @@ review that do.
 | Cellular Biomechanics & Mechanobiology 0.3.0 (new lessons, lab and schedule) | 2026-10-08 | [cellular-biomechanics-0.3.0.md](cellular-biomechanics-0.3.0.md) |
 | Statics & Mechanics of Materials 0.4.0 (new lessons, lab and schedule) | 2026-10-08 | [statics-materials-0.4.0.md](statics-materials-0.4.0.md) |
 | Signals, Systems & Feedback Control 0.4.0 (new lessons, lab and schedule) | 2026-10-08 | [signals-control-0.4.0.md](signals-control-0.4.0.md) |
+| Differential Equations for Living & Engineered Systems 0.3.0 (new lessons, lab and schedule) | 2026-10-08 | [differential-equations-0.3.0.md](differential-equations-0.3.0.md) |

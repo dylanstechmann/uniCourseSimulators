@@ -7,7 +7,7 @@
   "domain": "Mathematics",
   "level": "Year 2",
   "maturity": "partial",
-  "version": "0.2.2",
+  "version": "0.3.0",
   "license": "MIT OR CC-BY-4.0",
   "content_origin": {
     "kind": "legacy-prototype",
@@ -147,12 +147,365 @@
         "differential-equations-outcome-3",
         "differential-equations-outcome-2"
       ]
+    },
+    {
+      "id": "differential-equations-7-objective-1",
+      "description": "Write the chamber equation for a time-varying feed and solve it by an integrating factor.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "differential-equations-outcome-1",
+        "differential-equations-outcome-2"
+      ]
+    },
+    {
+      "id": "differential-equations-7-objective-2",
+      "description": "Compute the response to a step, a ramp, a sinusoid and a decaying input, including the lag and attenuation.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "differential-equations-outcome-1",
+        "differential-equations-outcome-2"
+      ]
+    },
+    {
+      "id": "differential-equations-7-objective-3",
+      "description": "Use linearity to build the response to a pulse and to interpret how long a feed change takes to reach the culture.",
+      "bloom": "evaluate",
+      "course_outcome_ids": [
+        "differential-equations-outcome-1",
+        "differential-equations-outcome-4"
+      ]
+    },
+    {
+      "id": "differential-equations-8-objective-1",
+      "description": "Solve the free second-order equation and compute the natural frequency, damping ratio and damped period.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "differential-equations-outcome-1",
+        "differential-equations-outcome-2"
+      ]
+    },
+    {
+      "id": "differential-equations-8-objective-2",
+      "description": "Use the logarithmic decrement to relate decay to damping, and the amplitude of successive oscillations.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "differential-equations-outcome-2"
+      ]
+    },
+    {
+      "id": "differential-equations-8-objective-3",
+      "description": "Compute the steady-state amplitude of the forced oscillation across frequency and evaluate the resonance and its bandwidth.",
+      "bloom": "evaluate",
+      "course_outcome_ids": [
+        "differential-equations-outcome-2",
+        "differential-equations-outcome-4"
+      ]
+    },
+    {
+      "id": "differential-equations-9-objective-1",
+      "description": "Classify the equilibrium of x′ = A x from the trace and determinant of A.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "differential-equations-outcome-2",
+        "differential-equations-outcome-3"
+      ]
+    },
+    {
+      "id": "differential-equations-9-objective-2",
+      "description": "Compute eigenvalues, eigenvectors and the constants of the solution for a given initial condition.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "differential-equations-outcome-1",
+        "differential-equations-outcome-3"
+      ]
+    },
+    {
+      "id": "differential-equations-9-objective-3",
+      "description": "Interpret the behavior of a node, a spiral and a saddle, including the period and decay of a spiral.",
+      "bloom": "evaluate",
+      "course_outcome_ids": [
+        "differential-equations-outcome-2",
+        "differential-equations-outcome-3"
+      ]
+    },
+    {
+      "id": "differential-equations-10-objective-1",
+      "description": "Solve the logistic equation by separation of variables and evaluate the solution at a given time.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "differential-equations-outcome-1",
+        "differential-equations-outcome-2"
+      ]
+    },
+    {
+      "id": "differential-equations-10-objective-2",
+      "description": "Compute the half-capacity time, the fraction of capacity reached, the early doubling time and the maximum growth rate.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "differential-equations-outcome-2"
+      ]
+    },
+    {
+      "id": "differential-equations-10-objective-3",
+      "description": "Fit the growth rate from two counts by a logit transformation and quantify the error of an exponential extrapolation.",
+      "bloom": "evaluate",
+      "course_outcome_ids": [
+        "differential-equations-outcome-2",
+        "differential-equations-outcome-4"
+      ]
+    },
+    {
+      "id": "differential-equations-11-objective-1",
+      "description": "Find the steady states of a two-variable nonlinear system, including the symmetric one, and write the Jacobian there.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "differential-equations-outcome-2",
+        "differential-equations-outcome-3"
+      ]
+    },
+    {
+      "id": "differential-equations-11-objective-2",
+      "description": "Compute the eigenvalues of the Jacobian and interpret a positive one as an instability and a negative one as a relaxation rate.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "differential-equations-outcome-2",
+        "differential-equations-outcome-3"
+      ]
+    },
+    {
+      "id": "differential-equations-11-objective-3",
+      "description": "Explain bistability, and how a parameter crossing a threshold creates two stable states.",
+      "bloom": "evaluate",
+      "course_outcome_ids": [
+        "differential-equations-outcome-2",
+        "differential-equations-outcome-3"
+      ]
+    },
+    {
+      "id": "differential-equations-12-objective-1",
+      "description": "Compute the stability and positivity limits of explicit Euler and the amplification factors of explicit and implicit Euler for a decay equation.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "differential-equations-outcome-4"
+      ]
+    },
+    {
+      "id": "differential-equations-12-objective-2",
+      "description": "Measure the stiffness of a linear system from its eigenvalues and estimate the number of steps a stable explicit method needs.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "differential-equations-outcome-3",
+        "differential-equations-outcome-4"
+      ]
+    },
+    {
+      "id": "differential-equations-12-objective-3",
+      "description": "Solve a Michaelis–Menten depletion for the time to reach a concentration, and use it to judge a numerical result.",
+      "bloom": "evaluate",
+      "course_outcome_ids": [
+        "differential-equations-outcome-1",
+        "differential-equations-outcome-4"
+      ]
+    },
+    {
+      "id": "differential-equations-lab-01-objective-1",
+      "description": "Summarize replicate counts by time and fit a straight line and a first-order decay to the early window.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "differential-equations-outcome-1"
+      ]
+    },
+    {
+      "id": "differential-equations-lab-01-objective-2",
+      "description": "Use each fitted model to predict later times and compare the predictions with the observed means.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "differential-equations-outcome-2",
+        "differential-equations-outcome-4"
+      ]
+    },
+    {
+      "id": "differential-equations-lab-01-objective-3",
+      "description": "Evaluate what the later observations say about the structure of each model and what validation would have shown it.",
+      "bloom": "evaluate",
+      "course_outcome_ids": [
+        "differential-equations-outcome-1",
+        "differential-equations-outcome-4"
+      ]
+    },
+    {
+      "id": "differential-equations-13-objective-1",
+      "description": "Distinguish a model-structure error from a numerical error as the cause of an impossible prediction.",
+      "bloom": "analyze",
+      "course_outcome_ids": [
+        "differential-equations-outcome-1",
+        "differential-equations-outcome-4"
+      ]
+    },
+    {
+      "id": "differential-equations-13-objective-2",
+      "description": "Compute where a straight-line model crosses zero, the step-size limits of explicit Euler for a decay, and the results of Euler steps of different sizes.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "differential-equations-outcome-2",
+        "differential-equations-outcome-4"
+      ]
+    },
+    {
+      "id": "differential-equations-13-objective-3",
+      "description": "Design validation that reveals the failure early: hold-out prediction, step refinement, independent data and invariant checks.",
+      "bloom": "create",
+      "course_outcome_ids": [
+        "differential-equations-outcome-4"
+      ]
     }
   ],
   "duration": {
-    "instructional_weeks": null,
-    "equivalent_structure": null,
-    "weeks": []
+    "instructional_weeks": 14,
+    "equivalent_structure": "Proposed 14-week undergraduate scope only. The four compact prototype units sit in weeks 1, 4, 6 and 11 beside original lessons on forced first-order systems, resonance and damping, phase portraits, logistic growth, linearization and bistability, and stiff equations; week 13 is a synthetic-data lab on fitting decay models and week 14 pairs a lesson on negative predicted counts with the course case. All activities are open, ungraded practice. There are no graded homework sets, exams or project, and workload has not been measured, so this schedule is not evidence of semester equivalence.",
+    "weeks": [
+      {
+        "week": 1,
+        "title": "First-order models and time constants",
+        "lesson_ids": [
+          "differential-equations-1"
+        ],
+        "assessment_ids": [
+          "differential-equations-1-practice"
+        ]
+      },
+      {
+        "week": 2,
+        "title": "A well-mixed perfused chamber: steady state, time constants and Euler stability",
+        "lesson_ids": [
+          "differential-equations-5"
+        ],
+        "assessment_ids": [
+          "differential-equations-5-practice"
+        ]
+      },
+      {
+        "week": 3,
+        "title": "Forced first-order systems: steps, ramps, sinusoids and decaying inputs",
+        "lesson_ids": [
+          "differential-equations-7"
+        ],
+        "assessment_ids": [
+          "differential-equations-7-practice"
+        ]
+      },
+      {
+        "week": 4,
+        "title": "Second-order systems and mechanical response",
+        "lesson_ids": [
+          "differential-equations-2"
+        ],
+        "assessment_ids": [
+          "differential-equations-2-practice"
+        ]
+      },
+      {
+        "week": 5,
+        "title": "Resonance and damping: free decay and forced oscillation",
+        "lesson_ids": [
+          "differential-equations-8"
+        ],
+        "assessment_ids": [
+          "differential-equations-8-practice"
+        ]
+      },
+      {
+        "week": 6,
+        "title": "Coupled systems, equilibria and stability",
+        "lesson_ids": [
+          "differential-equations-3"
+        ],
+        "assessment_ids": [
+          "differential-equations-3-practice"
+        ]
+      },
+      {
+        "week": 7,
+        "title": "Phase portraits of linear systems: eigenvalues, eigenvectors and the flow",
+        "lesson_ids": [
+          "differential-equations-9"
+        ],
+        "assessment_ids": [
+          "differential-equations-9-practice"
+        ]
+      },
+      {
+        "week": 8,
+        "title": "Equilibria and stability: harvesting a logistic population and coupled compartments",
+        "lesson_ids": [
+          "differential-equations-6"
+        ],
+        "assessment_ids": [
+          "differential-equations-6-practice"
+        ]
+      },
+      {
+        "week": 9,
+        "title": "Logistic growth: the exact solution, fitting and extrapolation",
+        "lesson_ids": [
+          "differential-equations-10"
+        ],
+        "assessment_ids": [
+          "differential-equations-10-practice"
+        ]
+      },
+      {
+        "week": 10,
+        "title": "Nonlinear systems and linearization: a toggle switch and bistability",
+        "lesson_ids": [
+          "differential-equations-11"
+        ],
+        "assessment_ids": [
+          "differential-equations-11-practice"
+        ]
+      },
+      {
+        "week": 11,
+        "title": "Numerical ODEs and error control",
+        "lesson_ids": [
+          "differential-equations-4"
+        ],
+        "assessment_ids": [
+          "differential-equations-4-practice"
+        ]
+      },
+      {
+        "week": 12,
+        "title": "Stiff equations and implicit methods",
+        "lesson_ids": [
+          "differential-equations-12"
+        ],
+        "assessment_ids": [
+          "differential-equations-12-practice"
+        ]
+      },
+      {
+        "week": 13,
+        "title": "Virtual lab: fitting decay models and testing them beyond the window",
+        "lesson_ids": [
+          "differential-equations-lab-01"
+        ],
+        "assessment_ids": [
+          "differential-equations-week13-fitting-lab"
+        ]
+      },
+      {
+        "week": 14,
+        "title": "When a fitted population model predicts negative counts: structure, step size and validation",
+        "lesson_ids": [
+          "differential-equations-13"
+        ],
+        "assessment_ids": [
+          "differential-equations-13-practice",
+          "differential-equations-case"
+        ]
+      }
+    ]
   },
   "workload": {
     "estimated_total_hours": null,
@@ -347,6 +700,317 @@
           ]
         }
       ]
+    },
+    {
+      "id": "differential-equations-module-7",
+      "title": "Forced first-order systems",
+      "source_ids": [
+        "diffeqs",
+        "engineeringMath",
+        "numerical"
+      ],
+      "lessons": [
+        {
+          "id": "differential-equations-7",
+          "title": "Forced first-order systems: steps, ramps, sinusoids and decaying inputs in a perfused chamber",
+          "reading": "modules/07-forced-first-order-systems-in-a-perfused-chamber.md",
+          "objectives": [
+            "differential-equations-7-objective-1",
+            "differential-equations-7-objective-2",
+            "differential-equations-7-objective-3"
+          ],
+          "worked_example": "A synthetic chamber of 15 mL perfused at 0.4 mL/min has τ = 37.5 min, reaches 0.7364 of a feed step after 50 min, and attenuates a 90 min cycle to 0.3568 with a lag of 17.3 min; in the lesson, a 20 mL chamber at 0.5 mL/min has τ = 40 min and a 95% time of 119.8 min.",
+          "question_ids": [
+            "differential-equations-7:chamber-tau",
+            "differential-equations-7:step-fraction",
+            "differential-equations-7:time-to-95",
+            "differential-equations-7:ramp-lag",
+            "differential-equations-7:amplitude-ratio",
+            "differential-equations-7:time-lag",
+            "differential-equations-7:pulse-response",
+            "differential-equations-7:peak-time",
+            "differential-equations-7:forced-statements"
+          ],
+          "card_ids": [
+            "differential-equations-7-card-1",
+            "differential-equations-7-card-2",
+            "differential-equations-7-card-3",
+            "differential-equations-7-card-4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "differential-equations-module-8",
+      "title": "Resonance and damping",
+      "source_ids": [
+        "diffeqs",
+        "engineeringMath",
+        "numerical"
+      ],
+      "lessons": [
+        {
+          "id": "differential-equations-8",
+          "title": "Resonance and damping: free decay and forced oscillation of a spring–mass–damper",
+          "reading": "modules/08-resonance-and-damping-of-a-spring-mass-damper.md",
+          "objectives": [
+            "differential-equations-8-objective-1",
+            "differential-equations-8-objective-2",
+            "differential-equations-8-objective-3"
+          ],
+          "worked_example": "A synthetic mount with m 0.05 kg, k 20 N/m and c 0.4 N·s/m has ωn 20 rad/s, ζ 0.2, a log decrement of 1.2825 and a resonant amplitude of 25.0 mm (Q 2.5) under 0.2 N; in the lesson, a pan with ζ 0.15 rings down to 0.0573 of its peak after three cycles and responds 20.8 mm at resonance.",
+          "question_ids": [
+            "differential-equations-8:natural-frequency",
+            "differential-equations-8:damping-ratio",
+            "differential-equations-8:damped-period",
+            "differential-equations-8:log-decrement",
+            "differential-equations-8:after-three-cycles",
+            "differential-equations-8:resonant-amplitude",
+            "differential-equations-8:half-frequency-amplitude",
+            "differential-equations-8:half-power-bandwidth",
+            "differential-equations-8:resonance-statements"
+          ],
+          "card_ids": [
+            "differential-equations-8-card-1",
+            "differential-equations-8-card-2",
+            "differential-equations-8-card-3",
+            "differential-equations-8-card-4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "differential-equations-module-9",
+      "title": "Phase portraits",
+      "source_ids": [
+        "diffeqs",
+        "engineeringMath",
+        "numerical"
+      ],
+      "lessons": [
+        {
+          "id": "differential-equations-9",
+          "title": "Phase portraits of linear systems: eigenvalues, eigenvectors and the shape of the flow",
+          "reading": "modules/09-phase-portraits-of-linear-systems.md",
+          "objectives": [
+            "differential-equations-9-objective-1",
+            "differential-equations-9-objective-2",
+            "differential-equations-9-objective-3"
+          ],
+          "worked_example": "A system with A = [[−3, 2], [1, −2]] has trace −5 and determinant 4 (a stable node with eigenvalues −1 and −4), and from x(0) = (1, 2) it reaches (0.9207, 1.0560) at t = 0.5; in the lesson, the spiral with eigenvalues −0.5 ± 2j has a period of 3.1416 and shrinks by 0.2079 per turn.",
+          "question_ids": [
+            "differential-equations-9:determinant",
+            "differential-equations-9:slow-eigenvalue",
+            "differential-equations-9:initial-coefficient",
+            "differential-equations-9:state-at-one",
+            "differential-equations-9:spiral-period",
+            "differential-equations-9:spiral-shrink",
+            "differential-equations-9:unstable-eigenvalue",
+            "differential-equations-9:saddle-state",
+            "differential-equations-9:portrait-statements"
+          ],
+          "card_ids": [
+            "differential-equations-9-card-1",
+            "differential-equations-9-card-2",
+            "differential-equations-9-card-3",
+            "differential-equations-9-card-4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "differential-equations-module-10",
+      "title": "Logistic growth",
+      "source_ids": [
+        "diffeqs",
+        "engineeringMath",
+        "numerical"
+      ],
+      "lessons": [
+        {
+          "id": "differential-equations-10",
+          "title": "Logistic growth: the exact solution, fitting from data and the risk of extrapolating",
+          "reading": "modules/10-logistic-growth-solution-fitting-and-extrapolation.md",
+          "objectives": [
+            "differential-equations-10-objective-1",
+            "differential-equations-10-objective-2",
+            "differential-equations-10-objective-3"
+          ],
+          "worked_example": "A synthetic culture with K 5 million, N₀ 0.1 million and r 0.08 h⁻¹ reaches half capacity at 48.6 h, holds 1.333 million at 36 h and doubles every 8.66 h early on, and an exponential forecast of 31.7 million at 72 h compares with a logistic 4.33 million; in the lesson, the culture with K 8 million has half capacity at 73.3 h and an exponential overestimate of 3.45 million at 72 h.",
+          "question_ids": [
+            "differential-equations-10:half-capacity-time",
+            "differential-equations-10:count-at-24h",
+            "differential-equations-10:fraction-at-48h",
+            "differential-equations-10:doubling-time",
+            "differential-equations-10:maximum-growth-rate",
+            "differential-equations-10:time-to-90",
+            "differential-equations-10:logit-slope",
+            "differential-equations-10:extrapolation-error",
+            "differential-equations-10:logistic-statements"
+          ],
+          "card_ids": [
+            "differential-equations-10-card-1",
+            "differential-equations-10-card-2",
+            "differential-equations-10-card-3",
+            "differential-equations-10-card-4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "differential-equations-module-11",
+      "title": "Linearization and bistability",
+      "source_ids": [
+        "diffeqs",
+        "engineeringMath",
+        "numerical"
+      ],
+      "lessons": [
+        {
+          "id": "differential-equations-11",
+          "title": "Nonlinear systems and linearization: a two-gene toggle switch and bistability",
+          "reading": "modules/11-linearization-and-bistability-in-a-toggle-switch.md",
+          "objectives": [
+            "differential-equations-11-objective-1",
+            "differential-equations-11-objective-2",
+            "differential-equations-11-objective-3"
+          ],
+          "worked_example": "For the toggle switch with a = 4, the symmetric state s = 1.3788 has m = 1.3106 and a positive eigenvalue 0.3106 (a saddle), and the stable asymmetric states are x = 3.7321, y = 0.2679 and the mirror image; in the lesson, a = 3 gives s = 1.2134, a positive eigenvalue 0.1911 and stable states (2.6180, 0.3820) and its mirror image.",
+          "question_ids": [
+            "differential-equations-11:symmetric-state",
+            "differential-equations-11:coupling",
+            "differential-equations-11:unstable-eigenvalue",
+            "differential-equations-11:high-state",
+            "differential-equations-11:low-state",
+            "differential-equations-11:relaxation-time",
+            "differential-equations-11:threshold",
+            "differential-equations-11:coupling-below-threshold",
+            "differential-equations-11:switch-statements"
+          ],
+          "card_ids": [
+            "differential-equations-11-card-1",
+            "differential-equations-11-card-2",
+            "differential-equations-11-card-3",
+            "differential-equations-11-card-4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "differential-equations-module-12",
+      "title": "Stiff equations",
+      "source_ids": [
+        "diffeqs",
+        "engineeringMath",
+        "numerical"
+      ],
+      "lessons": [
+        {
+          "id": "differential-equations-12",
+          "title": "Stiff equations and implicit methods: stability limits of explicit Euler and the Michaelis–Menten depletion time",
+          "reading": "modules/12-stiff-equations-and-implicit-methods.md",
+          "objectives": [
+            "differential-equations-12-objective-1",
+            "differential-equations-12-objective-2",
+            "differential-equations-12-objective-3"
+          ],
+          "worked_example": "For y′ = −20y with h 0.08 h, explicit Euler has factor −0.6 (stable but sign-flipping; limits 0.10 and 0.05 h), implicit Euler 0.3846 and the exact step 0.2019, and a substrate with V_max 1.5, K_m 0.8 falls from 4 to 0.4 in 3.628 h; in the lesson, λ 50 h⁻¹ gives a stability limit of 0.04 h and a depletion time of 2.826 h.",
+          "question_ids": [
+            "differential-equations-12:stability-limit",
+            "differential-equations-12:positivity-limit",
+            "differential-equations-12:explicit-factor",
+            "differential-equations-12:implicit-factor",
+            "differential-equations-12:stiffness-ratio",
+            "differential-equations-12:depletion-time",
+            "differential-equations-12:initial-rate",
+            "differential-equations-12:mm-positivity-step",
+            "differential-equations-12:stiff-statements"
+          ],
+          "card_ids": [
+            "differential-equations-12-card-1",
+            "differential-equations-12-card-2",
+            "differential-equations-12-card-3",
+            "differential-equations-12-card-4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "differential-equations-module-lab-01",
+      "title": "Virtual laboratory: fitting decay models",
+      "source_ids": [
+        "diffeqs",
+        "engineeringMath",
+        "numerical"
+      ],
+      "lessons": [
+        {
+          "id": "differential-equations-lab-01",
+          "title": "Virtual lab 1: fitting decay models to a time course and testing them beyond the window",
+          "reading": "labs/01-fitting-decay-models-and-testing-them-beyond-the-window.md",
+          "objectives": [
+            "differential-equations-lab-01-objective-1",
+            "differential-equations-lab-01-objective-2",
+            "differential-equations-lab-01-objective-3"
+          ],
+          "worked_example": "In the synthetic cell counts the first-order decay fitted over 0 to 24 h has k 0.0676 h⁻¹, the straight line reaches zero at 27.5 h and predicts −66.9 at 48 h, and the first-order prediction of 3.79 at 48 h is 2.11 times lower than the observed 8.0.",
+          "question_ids": [
+            "differential-equations-lab1:time-summary",
+            "differential-equations-lab1:early-rate",
+            "differential-equations-lab1:line-zero",
+            "differential-equations-lab1:line-at-48",
+            "differential-equations-lab1:exponential-at-48",
+            "differential-equations-lab1:beyond-the-window",
+            "differential-equations-lab1:validation-reasoning",
+            "differential-equations-lab1:supported-statements"
+          ],
+          "card_ids": [
+            "differential-equations-lab1-0",
+            "differential-equations-lab1-1",
+            "differential-equations-lab1-2",
+            "differential-equations-lab1-3"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "differential-equations-module-13",
+      "title": "Case: negative predicted counts",
+      "source_ids": [
+        "diffeqs",
+        "engineeringMath",
+        "numerical"
+      ],
+      "lessons": [
+        {
+          "id": "differential-equations-13",
+          "title": "When a fitted population model predicts negative counts: model structure, extrapolation, step size and validation",
+          "reading": "modules/13-negative-counts-model-structure-step-size-and-validation.md",
+          "objectives": [
+            "differential-equations-13-objective-1",
+            "differential-equations-13-objective-2",
+            "differential-equations-13-objective-3"
+          ],
+          "worked_example": "For a second synthetic time course (N₀ 80, k 0.05 h⁻¹), the fitted line reaches zero at 32.8 h and predicts −35.2 at 48 h, a single 48 h Euler step gives −33.7 against an exact 2.19, and a hold-out fit predicts 6.9 at 24 h against an observed 24.1; in the lesson, the line for N₀ 100 and k 0.04 reaches zero at 37.6 h.",
+          "question_ids": [
+            "differential-equations-13:line-slope",
+            "differential-equations-13:zero-crossing",
+            "differential-equations-13:line-prediction",
+            "differential-equations-13:first-order-rate",
+            "differential-equations-13:positivity-limit",
+            "differential-equations-13:single-step",
+            "differential-equations-13:four-steps",
+            "differential-equations-13:holdout-error",
+            "differential-equations-13:validation-statements"
+          ],
+          "card_ids": [
+            "differential-equations-13-card-1",
+            "differential-equations-13-card-2",
+            "differential-equations-13-card-3",
+            "differential-equations-13-card-4"
+          ]
+        }
+      ]
     }
   ],
   "assessments": [
@@ -460,6 +1124,221 @@
       "points": 6
     },
     {
+      "id": "differential-equations-7-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Forced first-order systems practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "differential-equations-7-objective-1",
+        "differential-equations-7-objective-2",
+        "differential-equations-7-objective-3",
+        "differential-equations-outcome-1",
+        "differential-equations-outcome-2",
+        "differential-equations-outcome-4"
+      ],
+      "question_ids": [
+        "differential-equations-7:chamber-tau",
+        "differential-equations-7:step-fraction",
+        "differential-equations-7:time-to-95",
+        "differential-equations-7:ramp-lag",
+        "differential-equations-7:amplitude-ratio",
+        "differential-equations-7:time-lag",
+        "differential-equations-7:pulse-response",
+        "differential-equations-7:peak-time",
+        "differential-equations-7:forced-statements"
+      ],
+      "points": 10
+    },
+    {
+      "id": "differential-equations-8-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Resonance and damping practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "differential-equations-8-objective-1",
+        "differential-equations-8-objective-2",
+        "differential-equations-8-objective-3",
+        "differential-equations-outcome-1",
+        "differential-equations-outcome-2",
+        "differential-equations-outcome-4"
+      ],
+      "question_ids": [
+        "differential-equations-8:natural-frequency",
+        "differential-equations-8:damping-ratio",
+        "differential-equations-8:damped-period",
+        "differential-equations-8:log-decrement",
+        "differential-equations-8:after-three-cycles",
+        "differential-equations-8:resonant-amplitude",
+        "differential-equations-8:half-frequency-amplitude",
+        "differential-equations-8:half-power-bandwidth",
+        "differential-equations-8:resonance-statements"
+      ],
+      "points": 10
+    },
+    {
+      "id": "differential-equations-9-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Phase portraits practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "differential-equations-9-objective-1",
+        "differential-equations-9-objective-2",
+        "differential-equations-9-objective-3",
+        "differential-equations-outcome-1",
+        "differential-equations-outcome-2",
+        "differential-equations-outcome-3"
+      ],
+      "question_ids": [
+        "differential-equations-9:determinant",
+        "differential-equations-9:slow-eigenvalue",
+        "differential-equations-9:initial-coefficient",
+        "differential-equations-9:state-at-one",
+        "differential-equations-9:spiral-period",
+        "differential-equations-9:spiral-shrink",
+        "differential-equations-9:unstable-eigenvalue",
+        "differential-equations-9:saddle-state",
+        "differential-equations-9:portrait-statements"
+      ],
+      "points": 10
+    },
+    {
+      "id": "differential-equations-10-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Logistic growth practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "differential-equations-10-objective-1",
+        "differential-equations-10-objective-2",
+        "differential-equations-10-objective-3",
+        "differential-equations-outcome-1",
+        "differential-equations-outcome-2",
+        "differential-equations-outcome-4"
+      ],
+      "question_ids": [
+        "differential-equations-10:half-capacity-time",
+        "differential-equations-10:count-at-24h",
+        "differential-equations-10:fraction-at-48h",
+        "differential-equations-10:doubling-time",
+        "differential-equations-10:maximum-growth-rate",
+        "differential-equations-10:time-to-90",
+        "differential-equations-10:logit-slope",
+        "differential-equations-10:extrapolation-error",
+        "differential-equations-10:logistic-statements"
+      ],
+      "points": 10
+    },
+    {
+      "id": "differential-equations-11-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Linearization and bistability practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "differential-equations-11-objective-1",
+        "differential-equations-11-objective-2",
+        "differential-equations-11-objective-3",
+        "differential-equations-outcome-2",
+        "differential-equations-outcome-3"
+      ],
+      "question_ids": [
+        "differential-equations-11:symmetric-state",
+        "differential-equations-11:coupling",
+        "differential-equations-11:unstable-eigenvalue",
+        "differential-equations-11:high-state",
+        "differential-equations-11:low-state",
+        "differential-equations-11:relaxation-time",
+        "differential-equations-11:threshold",
+        "differential-equations-11:coupling-below-threshold",
+        "differential-equations-11:switch-statements"
+      ],
+      "points": 10
+    },
+    {
+      "id": "differential-equations-12-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Stiff equations practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "differential-equations-12-objective-1",
+        "differential-equations-12-objective-2",
+        "differential-equations-12-objective-3",
+        "differential-equations-outcome-1",
+        "differential-equations-outcome-3",
+        "differential-equations-outcome-4"
+      ],
+      "question_ids": [
+        "differential-equations-12:stability-limit",
+        "differential-equations-12:positivity-limit",
+        "differential-equations-12:explicit-factor",
+        "differential-equations-12:implicit-factor",
+        "differential-equations-12:stiffness-ratio",
+        "differential-equations-12:depletion-time",
+        "differential-equations-12:initial-rate",
+        "differential-equations-12:mm-positivity-step",
+        "differential-equations-12:stiff-statements"
+      ],
+      "points": 10
+    },
+    {
+      "id": "differential-equations-13-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Case: negative predicted counts practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "differential-equations-13-objective-1",
+        "differential-equations-13-objective-2",
+        "differential-equations-13-objective-3",
+        "differential-equations-outcome-1",
+        "differential-equations-outcome-2",
+        "differential-equations-outcome-4"
+      ],
+      "question_ids": [
+        "differential-equations-13:line-slope",
+        "differential-equations-13:zero-crossing",
+        "differential-equations-13:line-prediction",
+        "differential-equations-13:first-order-rate",
+        "differential-equations-13:positivity-limit",
+        "differential-equations-13:single-step",
+        "differential-equations-13:four-steps",
+        "differential-equations-13:holdout-error",
+        "differential-equations-13:validation-statements"
+      ],
+      "points": 10
+    },
+    {
+      "id": "differential-equations-week13-fitting-lab",
+      "type": "lab",
+      "mode": "practice",
+      "title": "Virtual lab 1: fitting decay models to a time course and testing them beyond the window (ungraded practice)",
+      "path": "question-banks/practice.json",
+      "week": 13,
+      "objective_ids": [
+        "differential-equations-lab-01-objective-1",
+        "differential-equations-lab-01-objective-2",
+        "differential-equations-lab-01-objective-3",
+        "differential-equations-outcome-1",
+        "differential-equations-outcome-2",
+        "differential-equations-outcome-4"
+      ],
+      "question_ids": [
+        "differential-equations-lab1:time-summary",
+        "differential-equations-lab1:early-rate",
+        "differential-equations-lab1:line-zero",
+        "differential-equations-lab1:line-at-48",
+        "differential-equations-lab1:exponential-at-48",
+        "differential-equations-lab1:beyond-the-window",
+        "differential-equations-lab1:validation-reasoning",
+        "differential-equations-lab1:supported-statements"
+      ],
+      "points": 25
+    },
+    {
       "id": "differential-equations-case",
       "type": "case",
       "mode": "self-assessment",
@@ -516,18 +1395,24 @@
       "version": "0.2.2",
       "date": "2026-10-08",
       "summary": "Added a common-mistakes section to 1 original lesson that lacked one (differential-equations-5); each bullet names a mistake that the lesson's own text addresses. Fixed number formatting that an earlier authoring step left in learner-visible text: raw exponent notation (a number written with the letter e and a power of ten) and floating-point artifacts (a decimal with a long run of trailing digits) in the equilibria reading. No answer key, tolerance or objective changed. The package remains partial, unreviewed and formative-only."
+    },
+    {
+      "version": "0.3.0",
+      "date": "2026-10-08",
+      "summary": "Added a proposed 14-week schedule; seven original lessons (forced first-order systems in a perfused chamber; resonance and damping of a spring-mass-damper; phase portraits of linear systems; the exact solution, fitting and extrapolation of logistic growth; linearization and bistability in a toggle switch; stiff equations and implicit methods; and a fitted model that predicts negative counts, which prepares the course case on model structure, step size and validation); and a synthetic-data lab on fitting decay models. No new references were added. All activities remain ungraded practice; the package remains partial and unreviewed, gives no experimental protocol or parameter values for any real organism, and makes no claim about any culture or device."
     }
   ],
   "limitations": [
-    "Four compact legacy units are preserved; this package is not equivalent to a full university semester.",
-    "There is no authored 12–15 week schedule, substantive homework sequence, laboratory sequence, midterm, cumulative final, or graded integrative project.",
-    "Practice items are short formative checks (two per prototype unit and six to seven per original lesson); they do not demonstrate comprehensive outcome coverage or mastery, and objective associations remain provisional.",
+    "Four compact legacy units are preserved beside ten original readings, including one synthetic-data virtual lab; this package is not equivalent to a full university semester.",
+    "A proposed 14-week schedule exists but is unmeasured and unreviewed. There is one synthetic-data virtual lab and no substantive homework sequence, laboratory sequence, midterm, cumulative final, or graded integrative project.",
+    "Practice items are short formative checks (two per prototype unit and six to nine per original lesson); they do not demonstrate comprehensive outcome coverage or mastery, and objective associations remain provisional.",
     "Bloom labels and structured prerequisite edges are initial authoring classifications awaiting subject-matter review.",
     "Question answers and solution feedback are intentionally public practice authoring specifications, not restricted exam keys.",
-    "Of the 14 numerical answers in this package, nine require a unit, none checks significant figures and none checks dimensions; the others accept a number within a stated tolerance, with the unit optional.",
-    "Total workload and weekly duration are unknown; former nominal credit values and hardcoded reading times do not establish workload."
+    "Of the 75 numerical answers in this package, 27 require a unit, one checks significant figures and none checks dimensions; the others accept a number within a stated tolerance, with the unit optional.",
+    "Total workload and weekly duration are unknown; former nominal credit values and hardcoded reading times do not establish workload.",
+    "All populations, chambers, systems and numbers are synthetic teaching examples; this package gives no experimental protocols, parameter values for any real organism or process, or safety advice and says nothing about any real culture or device. The models are simplified textbook descriptions, not fitted models of real data."
   ],
   "intentionally_omitted": [
-    "Full instructional sequence and summative assessments are not authored yet; the original lessons extend a partial package."
+    "Graded assessments and a laboratory sequence are not authored yet (one synthetic-data virtual lab exists); the original lessons extend a partial package."
   ]
 }

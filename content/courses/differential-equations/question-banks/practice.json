@@ -652,6 +652,2762 @@
         "kind": "original",
         "modifications": []
       }
+    },
+    {
+      "id": "differential-equations-7:chamber-tau",
+      "type": "numeric",
+      "prompt": "A well-mixed chamber has volume 20 mL and a perfusion flow of 0.5 mL/min. What is its time constant τ = V/Q? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "differential-equations-7-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 40.0,
+        "unit": "min",
+        "tolerance": 0.2,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Divide the volume by the flow.",
+        "solution": "20/0.5 = 40 min.",
+        "lesson_ids": [
+          "differential-equations-7"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "differential-equations-7:step-fraction",
+      "type": "numeric",
+      "prompt": "A well-mixed chamber of 20 mL is perfused at 0.5 mL/min, so τ dC/dt + C = c(t). The feed concentration steps from 0 to c₀ at t = 0 and C(0) = 0. What fraction of c₀ has the chamber reached at t = 60 min? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "differential-equations-7-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0.77687,
+        "unit": "",
+        "tolerance": 0.003,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "C/c₀ = 1 − e^(−t/τ).",
+        "solution": "1 − e^(−60/40) = 0.7769.",
+        "lesson_ids": [
+          "differential-equations-7"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "differential-equations-7:time-to-95",
+      "type": "numeric",
+      "prompt": "A well-mixed chamber of 20 mL is perfused at 0.5 mL/min, so τ dC/dt + C = c(t), with a feed step from 0. How long does the chamber take to reach 95% of the step? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "differential-equations-7-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 119.8293,
+        "unit": "min",
+        "tolerance": 0.5,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Solve 1 − e^(−t/τ) = 0.95.",
+        "solution": "t = −40 ln 0.05 = 119.8 min.",
+        "lesson_ids": [
+          "differential-equations-7"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "differential-equations-7:ramp-lag",
+      "type": "numeric",
+      "prompt": "A well-mixed chamber of 20 mL is perfused at 0.5 mL/min, so τ dC/dt + C = c(t). The feed concentration rises at a constant 0.02 mM/min. After the transient, by how much does the chamber concentration trail the feed concentration? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "differential-equations-7-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0.8,
+        "unit": "mM",
+        "tolerance": 0.01,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "The offset is a τ.",
+        "solution": "0.02 × 40 = 0.80 mM.",
+        "lesson_ids": [
+          "differential-equations-7"
+        ],
+        "misconception_ids": [
+          "ramp-tracks-with-ratio"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "differential-equations-7:amplitude-ratio",
+      "type": "numeric",
+      "prompt": "A well-mixed chamber of 20 mL is perfused at 0.5 mL/min, so τ dC/dt + C = c(t). The feed concentration oscillates sinusoidally with a period of 120 min. By what factor is the amplitude in the chamber (after the transient) smaller than in the feed? Enter the amplitude ratio 1/√(1 + (ωτ)²) as a number only.",
+      "points": 1,
+      "objective_ids": [
+        "differential-equations-7-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0.43087,
+        "unit": "",
+        "tolerance": 0.002,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "ω = 2π/period, then ωτ.",
+        "solution": "ω = 0.05236 rad/min, ωτ = 2.094, ratio = 1/√(1 + 4.386) = 0.4309.",
+        "lesson_ids": [
+          "differential-equations-7"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "differential-equations-7:time-lag",
+      "type": "numeric",
+      "prompt": "A well-mixed chamber of 20 mL is perfused at 0.5 mL/min, so τ dC/dt + C = c(t). The feed oscillates with a period of 120 min. By how many minutes does the chamber oscillation lag the feed, φ/ω with φ = atan(ωτ)? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "differential-equations-7-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 21.4924,
+        "unit": "min",
+        "tolerance": 0.2,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "φ is in radians here.",
+        "solution": "atan(2.094) = 1.1253 rad, and 1.1253/0.05236 = 21.5 min.",
+        "lesson_ids": [
+          "differential-equations-7"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "differential-equations-7:pulse-response",
+      "type": "numeric",
+      "prompt": "A well-mixed chamber of 20 mL is perfused at 0.5 mL/min, so τ dC/dt + C = c(t). A feed pulse of height c₀ lasts 30 min, starting at t = 0 (a step minus the same step delayed by 30 min). What fraction of c₀ is the chamber concentration at t = 60 min? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "differential-equations-7-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 0.24924,
+        "unit": "",
+        "tolerance": 0.003,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Subtract the delayed step response from the step response.",
+        "solution": "(1 − e^(−60/40)) − (1 − e^(−30/40)) = 0.7769 − 0.5276 = 0.2492.",
+        "lesson_ids": [
+          "differential-equations-7"
+        ],
+        "misconception_ids": [
+          "pulse-ends-response-ends"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "differential-equations-7:peak-time",
+      "type": "numeric",
+      "prompt": "A well-mixed chamber of 20 mL is perfused at 0.5 mL/min, so τ dC/dt + C = c(t). The feed decays as c₀e^(−t/T) with T = 100 min, giving C = c₀ T/(T − τ)(e^(−t/T) − e^(−t/τ)). At what time does the chamber concentration peak, t = ln(T/τ)/(1/τ − 1/T)? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "differential-equations-7-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 61.086,
+        "unit": "min",
+        "tolerance": 0.3,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Compute ln(T/τ) and 1/τ − 1/T separately.",
+        "solution": "ln(100/40) = 0.9163 and 1/40 − 1/100 = 0.0150, so t = 61.1 min.",
+        "lesson_ids": [
+          "differential-equations-7"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "differential-equations-7:forced-statements",
+      "type": "multiple_select",
+      "prompt": "Which statements about a perfused chamber driven by a time-varying feed are appropriate? Select all that apply.",
+      "points": 2,
+      "objective_ids": [
+        "differential-equations-7-objective-3"
+      ],
+      "options": [
+        "The chamber concentration always equals the feed concentration after one time constant.",
+        "A sinusoidal feed variation is attenuated more strongly the higher its frequency.",
+        "After a step in the feed, the chamber reaches about 95% of the new value after three time constants.",
+        "After a ramp in the feed, the chamber concentration ends up with the same value as the feed.",
+        "For a linear chamber, the response to a pulse can be built from a step and a delayed step."
+      ],
+      "solution_spec": {
+        "answer": [
+          1,
+          2,
+          4
+        ],
+        "partial_credit": "correct-minus-incorrect-clamped-v1"
+      },
+      "feedback": {
+        "hint": "Think about the time constant and about superposition.",
+        "solution": "Three time constants give about 95%, high-frequency variations are filtered more, and linearity allows a pulse to be built from two steps. After one time constant the chamber has reached only 63%, and after a ramp it trails the feed by aτ.",
+        "lesson_ids": [
+          "differential-equations-7"
+        ],
+        "misconception_ids": [
+          "ramp-tracks-with-ratio",
+          "pulse-ends-response-ends"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "differential-equations-8:natural-frequency",
+      "type": "numeric",
+      "prompt": "A synthetic balance pan is a spring–mass–damper with m = 0.2 kg, k = 80 N/m and c = 1.2 N·s/m. What is its natural frequency ωn = √(k/m) in rad/s? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "differential-equations-8-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 20.0,
+        "unit": "",
+        "tolerance": 0.05,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Divide k by m before taking the square root.",
+        "solution": "√(80/0.2) = 20 rad/s.",
+        "lesson_ids": [
+          "differential-equations-8"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "differential-equations-8:damping-ratio",
+      "type": "numeric",
+      "prompt": "A synthetic balance pan is a spring–mass–damper with m = 0.2 kg, k = 80 N/m and c = 1.2 N·s/m. What is its damping ratio ζ = c/(2√(km))? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "differential-equations-8-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0.15,
+        "unit": "",
+        "tolerance": 0.002,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Compute 2√(km) first.",
+        "solution": "2√(80 × 0.2) = 8, so ζ = 1.2/8 = 0.15.",
+        "lesson_ids": [
+          "differential-equations-8"
+        ],
+        "misconception_ids": [
+          "damping-coefficient-for-ratio"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "differential-equations-8:damped-period",
+      "type": "numeric",
+      "prompt": "A synthetic balance pan is a spring–mass–damper with m = 0.2 kg, k = 80 N/m and c = 1.2 N·s/m. What is the period of its free oscillation, 2π/ωd? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "differential-equations-8-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0.31775,
+        "unit": "s",
+        "tolerance": 0.002,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "ωd = ωn√(1 − ζ²).",
+        "solution": "ωd = 20 × √(1 − 0.15²) = 19.774 rad/s, so the period is 0.3178 s.",
+        "lesson_ids": [
+          "differential-equations-8"
+        ],
+        "misconception_ids": [
+          "natural-for-damped-frequency"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "differential-equations-8:log-decrement",
+      "type": "numeric",
+      "prompt": "A synthetic balance pan is a spring–mass–damper with m = 0.2 kg, k = 80 N/m and c = 1.2 N·s/m. What is the logarithmic decrement δ = 2πζ/√(1 − ζ²) of its free oscillation? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "differential-equations-8-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0.95326,
+        "unit": "",
+        "tolerance": 0.005,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use ζ = 0.15.",
+        "solution": "2π × 0.15/√(1 − 0.15²) = 0.9533.",
+        "lesson_ids": [
+          "differential-equations-8"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "differential-equations-8:after-three-cycles",
+      "type": "numeric",
+      "prompt": "A synthetic balance pan is a spring–mass–damper with m = 0.2 kg, k = 80 N/m and c = 1.2 N·s/m. After three full cycles of free oscillation, what fraction of the starting peak height remains, e^(−3δ)? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "differential-equations-8-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0.05728,
+        "unit": "",
+        "tolerance": 0.002,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Each cycle multiplies the peak by e^(−δ).",
+        "solution": "e^(−3 × 0.9533) = 0.0573.",
+        "lesson_ids": [
+          "differential-equations-8"
+        ],
+        "misconception_ids": [
+          "decrement-per-several-cycles"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "differential-equations-8:resonant-amplitude",
+      "type": "numeric",
+      "prompt": "A synthetic balance pan is a spring–mass–damper with m = 0.2 kg, k = 80 N/m and c = 1.2 N·s/m, driven by a force of 0.5 N at its natural frequency. What is the steady-state amplitude, (F/k)/(2ζ)? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "differential-equations-8-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 20.8333,
+        "unit": "mm",
+        "tolerance": 0.15,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "The static deflection F/k is 6.25 mm.",
+        "solution": "6.25 mm/(2 × 0.15) = 20.83 mm.",
+        "lesson_ids": [
+          "differential-equations-8"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "differential-equations-8:half-frequency-amplitude",
+      "type": "numeric",
+      "prompt": "A synthetic balance pan is a spring–mass–damper with m = 0.2 kg, k = 80 N/m and c = 1.2 N·s/m, driven by a force of 0.5 N at half its natural frequency (r = 0.5). What is the steady-state amplitude? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "differential-equations-8-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 8.1715,
+        "unit": "mm",
+        "tolerance": 0.05,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use (F/k)/√((1 − r²)² + (2ζr)²).",
+        "solution": "6.25/√(0.5625 + 0.0225) = 8.17 mm.",
+        "lesson_ids": [
+          "differential-equations-8"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "differential-equations-8:half-power-bandwidth",
+      "type": "numeric",
+      "prompt": "A synthetic balance pan is a spring–mass–damper with m = 0.2 kg, k = 80 N/m and c = 1.2 N·s/m. What is the approximate width of its resonance peak at half power, 2ζωn, in rad/s? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "differential-equations-8-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 6.0,
+        "unit": "",
+        "tolerance": 0.05,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Multiply 2ζ by ωn.",
+        "solution": "2 × 0.15 × 20 = 6.0 rad/s.",
+        "lesson_ids": [
+          "differential-equations-8"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "differential-equations-8:resonance-statements",
+      "type": "multiple_select",
+      "prompt": "Which statements about the damped, driven spring–mass system are appropriate? Select all that apply.",
+      "points": 2,
+      "objective_ids": [
+        "differential-equations-8-objective-3"
+      ],
+      "options": [
+        "The logarithmic decrement can be measured from the decay of a free oscillation without knowing the mass or the stiffness.",
+        "At frequencies far above resonance the response grows without limit.",
+        "The amplitude of the forced response peaks at a frequency slightly below the natural frequency.",
+        "The damped period equals 2π/ωn.",
+        "Lower damping gives a taller and narrower resonance peak."
+      ],
+      "solution_spec": {
+        "answer": [
+          0,
+          2,
+          4
+        ],
+        "partial_credit": "correct-minus-incorrect-clamped-v1"
+      },
+      "feedback": {
+        "hint": "Recall the formulas for δ, the peak frequency and Q.",
+        "solution": "δ depends only on ζ, the peak lies at √(1 − 2ζ²) ωn and a lower ζ makes it taller and narrower. Far above resonance the response falls toward zero, and the damped period uses ωd, not ωn.",
+        "lesson_ids": [
+          "differential-equations-8"
+        ],
+        "misconception_ids": [
+          "natural-for-damped-frequency"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "differential-equations-9:determinant",
+      "type": "numeric",
+      "prompt": "What is the determinant of A = [[−2, 1], [1, −2]]? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "differential-equations-9-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 3.0,
+        "unit": "",
+        "tolerance": 0.01,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "The determinant is ad − bc for the matrix [[a, b], [c, d]].",
+        "solution": "(−2)(−2) − (1)(1) = 3.",
+        "lesson_ids": [
+          "differential-equations-9"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "differential-equations-9:slow-eigenvalue",
+      "type": "numeric",
+      "prompt": "A system has x′ = A x with A = [[−2, 1], [1, −2]], whose eigenvectors are (1, 1) and (1, −1). What is the eigenvalue closer to zero (the slow one)? Enter the number only (negative).",
+      "points": 1,
+      "objective_ids": [
+        "differential-equations-9-objective-1"
+      ],
+      "solution_spec": {
+        "answer": -1.0,
+        "unit": "",
+        "tolerance": 0.01,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Solve λ² + 4λ + 3 = 0.",
+        "solution": "λ = −1 and −3; the slow one is −1.",
+        "lesson_ids": [
+          "differential-equations-9"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "differential-equations-9:initial-coefficient",
+      "type": "numeric",
+      "prompt": "A system has x′ = A x with A = [[−2, 1], [1, −2]], whose eigenvectors are (1, 1) and (1, −1). For x(0) = (3, 1), x(t) = c₁(1, 1)e^(λ₁t) + c₂(1, −1)e^(λ₂t) with λ₁ the slow eigenvalue. What is c₁? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "differential-equations-9-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 2.0,
+        "unit": "",
+        "tolerance": 0.01,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Solve c₁ + c₂ = 3 and c₁ − c₂ = 1.",
+        "solution": "Adding the equations: 2c₁ = 4, so c₁ = 2.",
+        "lesson_ids": [
+          "differential-equations-9"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "differential-equations-9:state-at-one",
+      "type": "numeric",
+      "prompt": "A system has x′ = A x with A = [[−2, 1], [1, −2]], whose eigenvectors are (1, 1) and (1, −1). For x(0) = (3, 1), what is the first component x₁(1)? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "differential-equations-9-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0.78555,
+        "unit": "",
+        "tolerance": 0.003,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "x₁(t) = c₁e^(−t) + c₂e^(−3t) with c₁ = 2 and c₂ = 1.",
+        "solution": "2e^(−1) + e^(−3) = 0.7855.",
+        "lesson_ids": [
+          "differential-equations-9"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "differential-equations-9:spiral-period",
+      "type": "numeric",
+      "prompt": "A system has x′ = A x with A = [[−0.5, 2], [−2, −0.5]], with eigenvalues −0.5 ± 2j. What is the period of one turn of the spiral, 2π/β? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "differential-equations-9-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 3.14159,
+        "unit": "",
+        "tolerance": 0.003,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "β is the imaginary part of the eigenvalue.",
+        "solution": "2π/2 = 3.1416.",
+        "lesson_ids": [
+          "differential-equations-9"
+        ],
+        "misconception_ids": [
+          "period-from-real-part"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "differential-equations-9:spiral-shrink",
+      "type": "numeric",
+      "prompt": "A system has x′ = A x with A = [[−0.5, 2], [−2, −0.5]], with eigenvalues −0.5 ± 2j. By what factor does the distance from the origin shrink in one full turn, e^(αT) with α the real part and T the period? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "differential-equations-9-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 0.20788,
+        "unit": "",
+        "tolerance": 0.002,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "α = −0.5 and T = π.",
+        "solution": "e^(−0.5π) = 0.2079.",
+        "lesson_ids": [
+          "differential-equations-9"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "differential-equations-9:unstable-eigenvalue",
+      "type": "numeric",
+      "prompt": "A system has x′ = A x with A = [[1, 2], [2, 1]], whose eigenvectors are (1, 1) and (1, −1). What is the positive eigenvalue? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "differential-equations-9-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 3.0,
+        "unit": "",
+        "tolerance": 0.01,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Solve λ² − 2λ − 3 = 0.",
+        "solution": "λ = 3 and −1.",
+        "lesson_ids": [
+          "differential-equations-9"
+        ],
+        "misconception_ids": [
+          "trace-only-stability"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "differential-equations-9:saddle-state",
+      "type": "numeric",
+      "prompt": "A system has x′ = A x with A = [[1, 2], [2, 1]], whose eigenvectors are (1, 1) and (1, −1). Starting at x(0) = (1.1, −1) = 0.05(1, 1) + 1.05(1, −1), what is x₁(2)? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "differential-equations-9-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 20.3135,
+        "unit": "",
+        "tolerance": 0.1,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "x₁(t) = 0.05e^(3t) + 1.05e^(−t).",
+        "solution": "0.05e^6 + 1.05e^(−2) = 20.17 + 0.142 = 20.3.",
+        "lesson_ids": [
+          "differential-equations-9"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "differential-equations-9:portrait-statements",
+      "type": "multiple_select",
+      "prompt": "Which statements about the phase portraits of x′ = A x are appropriate? Select all that apply.",
+      "points": 2,
+      "objective_ids": [
+        "differential-equations-9-objective-3"
+      ],
+      "options": [
+        "A negative trace together with a positive determinant gives a stable equilibrium.",
+        "A trajectory in a stable node approaches the origin along the slow eigenvector.",
+        "A zero trace and a positive determinant give a stable node.",
+        "The period of a spiral depends on the real part of the eigenvalue.",
+        "A negative determinant means a saddle, which is unstable."
+      ],
+      "solution_spec": {
+        "answer": [
+          0,
+          1,
+          4
+        ],
+        "partial_credit": "correct-minus-incorrect-clamped-v1"
+      },
+      "feedback": {
+        "hint": "Use the trace–determinant classification.",
+        "solution": "D < 0 is a saddle, T < 0 with D > 0 is stable, and the slow direction wins at late times. A zero trace with D > 0 is a center, and the period comes from the imaginary part.",
+        "lesson_ids": [
+          "differential-equations-9"
+        ],
+        "misconception_ids": [
+          "trace-only-stability",
+          "period-from-real-part"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "differential-equations-10:half-capacity-time",
+      "type": "numeric",
+      "prompt": "A synthetic culture grows logistically with K = 8 million cells, N₀ = 0.2 million cells and r = 0.05 h⁻¹. At what time does the population reach K/2? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "differential-equations-10-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 73.2712,
+        "unit": "h",
+        "tolerance": 0.2,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "N = K/2 when ((K − N₀)/N₀) e^(−rt) = 1.",
+        "solution": "ln(39)/0.05 = 73.3 h.",
+        "lesson_ids": [
+          "differential-equations-10"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "differential-equations-10:count-at-24h",
+      "type": "numeric",
+      "prompt": "A synthetic culture grows logistically with K = 8 million cells, N₀ = 0.2 million cells and r = 0.05 h⁻¹. What is the population at t = 24 h, in millions of cells? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "differential-equations-10-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0.62762,
+        "unit": "",
+        "tolerance": 0.01,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "N = K/(1 + ((K − N₀)/N₀)e^(−rt)).",
+        "solution": "8/(1 + 39e^(−1.2)) = 0.628.",
+        "lesson_ids": [
+          "differential-equations-10"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "differential-equations-10:fraction-at-48h",
+      "type": "numeric",
+      "prompt": "A synthetic culture grows logistically with K = 8 million cells, N₀ = 0.2 million cells and r = 0.05 h⁻¹. What fraction of the carrying capacity has the culture reached at t = 48 h? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "differential-equations-10-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0.22036,
+        "unit": "",
+        "tolerance": 0.003,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "N/K = 1/(1 + 39e^(−0.05 × 48)).",
+        "solution": "1/(1 + 39e^(−2.4)) = 0.2204.",
+        "lesson_ids": [
+          "differential-equations-10"
+        ],
+        "misconception_ids": [
+          "exponential-beyond-window"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "differential-equations-10:doubling-time",
+      "type": "numeric",
+      "prompt": "A synthetic culture grows logistically with K = 8 million cells, N₀ = 0.2 million cells and r = 0.05 h⁻¹. What is the doubling time while the population is still far below capacity, ln 2/r? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "differential-equations-10-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 13.8629,
+        "unit": "h",
+        "tolerance": 0.1,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the growth rate r.",
+        "solution": "ln 2/0.05 = 13.86 h.",
+        "lesson_ids": [
+          "differential-equations-10"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "differential-equations-10:maximum-growth-rate",
+      "type": "numeric",
+      "prompt": "A synthetic culture grows logistically with K = 8 million cells, N₀ = 0.2 million cells and r = 0.05 h⁻¹. What is the largest growth rate dN/dt of the population, rK/4, in millions of cells per hour? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "differential-equations-10-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0.1,
+        "unit": "",
+        "tolerance": 0.002,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "It occurs at N = K/2.",
+        "solution": "0.05 × 8/4 = 0.10 million per hour.",
+        "lesson_ids": [
+          "differential-equations-10"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "differential-equations-10:time-to-90",
+      "type": "numeric",
+      "prompt": "A synthetic culture grows logistically with K = 8 million cells, N₀ = 0.2 million cells and r = 0.05 h⁻¹. At what time does the population reach 90% of the carrying capacity, t = ln(9(K − N₀)/N₀)/r? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "differential-equations-10-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 117.2157,
+        "unit": "h",
+        "tolerance": 0.3,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Set N = 0.9K and solve for t.",
+        "solution": "ln(9 × 39)/0.05 = ln(351)/0.05 = 117.2 h.",
+        "lesson_ids": [
+          "differential-equations-10"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "differential-equations-10:logit-slope",
+      "type": "numeric",
+      "prompt": "A synthetic culture grows logistically with K = 8 million cells, N₀ = 0.2 million cells and r = 0.05 h⁻¹, with K known. The counts are N = 0.2 million at t = 0 and N = 0.628 million at t = 24 h. What growth rate r does the slope of ln(N/(K − N)) against t give? Enter the number only (h⁻¹).",
+      "points": 1,
+      "objective_ids": [
+        "differential-equations-10-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 0.05,
+        "unit": "",
+        "tolerance": 0.002,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Compute the logit at both times and divide the difference by 24.",
+        "solution": "(−2.464 − (−3.664))/24 = 0.0500 h⁻¹.",
+        "lesson_ids": [
+          "differential-equations-10"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "differential-equations-10:extrapolation-error",
+      "type": "numeric",
+      "prompt": "A synthetic culture grows logistically with K = 8 million cells, N₀ = 0.2 million cells and r = 0.05 h⁻¹. An exponential forecast N = 0.2e^(rt) is compared with the logistic solution at t = 72 h. By how many millions of cells does the exponential forecast exceed the logistic value? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "differential-equations-10-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 3.4467,
+        "unit": "",
+        "tolerance": 0.05,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Compute both values at t = 72 h.",
+        "solution": "0.2e^(3.6) = 7.32, logistic = 3.873, difference 3.45 million.",
+        "lesson_ids": [
+          "differential-equations-10"
+        ],
+        "misconception_ids": [
+          "exponential-beyond-window"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "differential-equations-10:logistic-statements",
+      "type": "multiple_select",
+      "prompt": "Which statements about the logistic model are appropriate? Select all that apply.",
+      "points": 2,
+      "objective_ids": [
+        "differential-equations-10-objective-3"
+      ],
+      "options": [
+        "The logit ln(N/(K − N)) of a logistic population grows linearly in time.",
+        "The doubling time ln 2/r holds throughout the whole growth curve.",
+        "The logistic population reaches the carrying capacity in a finite time.",
+        "An exponential fit to the early phase overestimates later counts.",
+        "The growth rate dN/dt is largest when the population is at half the carrying capacity."
+      ],
+      "solution_spec": {
+        "answer": [
+          0,
+          3,
+          4
+        ],
+        "partial_credit": "correct-minus-incorrect-clamped-v1"
+      },
+      "feedback": {
+        "hint": "Think about the shape of the S-curve and where each formula applies.",
+        "solution": "Growth is fastest at K/2, the logit is linear and the exponential overshoots. The logistic approaches K only asymptotically, and the doubling time holds only while N is far below K.",
+        "lesson_ids": [
+          "differential-equations-10"
+        ],
+        "misconception_ids": [
+          "exponential-beyond-window"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "differential-equations-11:symmetric-state",
+      "type": "numeric",
+      "prompt": "A two-gene toggle switch obeys dx/dt = a/(1 + y²) − x and dy/dt = a/(1 + x²) − y, with a = 3. What is the symmetric steady state x = y = s, the root of s³ + s − 3 = 0? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "differential-equations-11-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 1.21341,
+        "unit": "",
+        "tolerance": 0.002,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Substitute x = y = s into x = a/(1 + y²), giving s(1 + s²) = a.",
+        "solution": "s³ + s = 3 gives s = 1.2134.",
+        "lesson_ids": [
+          "differential-equations-11"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "differential-equations-11:coupling",
+      "type": "numeric",
+      "prompt": "A two-gene toggle switch obeys dx/dt = a/(1 + y²) − x and dy/dt = a/(1 + x²) − y, with a = 3 and the symmetric steady state s = 1.2134. What is the off-diagonal magnitude m = 2as/(1 + s²)² of the Jacobian there? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "differential-equations-11-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 1.19106,
+        "unit": "",
+        "tolerance": 0.003,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Compute 1 + s² first.",
+        "solution": "2 × 3 × 1.2134/(1 + 1.4724)² = 1.1911.",
+        "lesson_ids": [
+          "differential-equations-11"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "differential-equations-11:unstable-eigenvalue",
+      "type": "numeric",
+      "prompt": "A two-gene toggle switch obeys dx/dt = a/(1 + y²) − x and dy/dt = a/(1 + x²) − y, with a = 3. The Jacobian at the symmetric steady state is [[−1, −m], [−m, −1]] with m = 1.1911. What is its positive eigenvalue, −1 + m? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "differential-equations-11-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0.19106,
+        "unit": "",
+        "tolerance": 0.003,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "The eigenvalues are −1 ± m.",
+        "solution": "−1 + 1.1911 = 0.1911: the symmetric state is a saddle.",
+        "lesson_ids": [
+          "differential-equations-11"
+        ],
+        "misconception_ids": [
+          "symmetric-eigenvalue-only"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "differential-equations-11:high-state",
+      "type": "numeric",
+      "prompt": "A two-gene toggle switch obeys dx/dt = a/(1 + y²) − x and dy/dt = a/(1 + x²) − y, with a = 3. One stable steady state has x high and y low. What is x there, (3 + √5)/2? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "differential-equations-11-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 2.61803,
+        "unit": "",
+        "tolerance": 0.003,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Check that y = 3/(1 + x²) is (3 − √5)/2.",
+        "solution": "(3 + √5)/2 = 2.6180, with y = 0.3820.",
+        "lesson_ids": [
+          "differential-equations-11"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "differential-equations-11:low-state",
+      "type": "numeric",
+      "prompt": "A two-gene toggle switch obeys dx/dt = a/(1 + y²) − x and dy/dt = a/(1 + x²) − y, with a = 3. What is y in the steady state with x = (3 + √5)/2? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "differential-equations-11-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0.38197,
+        "unit": "",
+        "tolerance": 0.003,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "y = a/(1 + x²).",
+        "solution": "3/(1 + 2.6180²) = 0.3820.",
+        "lesson_ids": [
+          "differential-equations-11"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "differential-equations-11:relaxation-time",
+      "type": "numeric",
+      "prompt": "A two-gene toggle switch obeys dx/dt = a/(1 + y²) − x and dy/dt = a/(1 + x²) − y, with a = 3. At the stable state (x, y) = (2.618, 0.382) the Jacobian eigenvalues are −1/3 and −5/3. What is the relaxation time constant along the slow direction, in units of the protein lifetime? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "differential-equations-11-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 3.0,
+        "unit": "",
+        "tolerance": 0.02,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "The time constant is the reciprocal of the magnitude of the slow eigenvalue.",
+        "solution": "1/(1/3) = 3.0.",
+        "lesson_ids": [
+          "differential-equations-11"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "differential-equations-11:threshold",
+      "type": "numeric",
+      "prompt": "A two-gene toggle switch obeys dx/dt = a/(1 + y²) − x and dy/dt = a/(1 + x²) − y. At what value of a does the symmetric steady state become a saddle (m = 1, where s = 1)? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "differential-equations-11-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 2.0,
+        "unit": "",
+        "tolerance": 0.02,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "With s = 1, a = s(1 + s²).",
+        "solution": "s = 1 gives a = 1 × (1 + 1) = 2, and m = 2 × 2 × 1/(1 + 1)² = 1.",
+        "lesson_ids": [
+          "differential-equations-11"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "differential-equations-11:coupling-below-threshold",
+      "type": "numeric",
+      "prompt": "A two-gene toggle switch obeys dx/dt = a/(1 + y²) − x and dy/dt = a/(1 + x²) − y, with a = 1.5 and symmetric steady state s = 0.8612. What is m = 2as/(1 + s²)²? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "differential-equations-11-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 0.8517,
+        "unit": "",
+        "tolerance": 0.003,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "A value below 1 means the symmetric state is stable.",
+        "solution": "2 × 1.5 × 0.8612/(1 + 0.7417)² = 0.8517 < 1.",
+        "lesson_ids": [
+          "differential-equations-11"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "differential-equations-11:switch-statements",
+      "type": "multiple_select",
+      "prompt": "Which statements about the toggle switch are appropriate? Select all that apply.",
+      "points": 2,
+      "objective_ids": [
+        "differential-equations-11-objective-3"
+      ],
+      "options": [
+        "For a = 3 the symmetric steady state is a saddle, so it is not observed.",
+        "For a = 1.5 the symmetric steady state is the only one and it is stable.",
+        "A very small initial difference between x and y decides which stable state is reached.",
+        "For a = 3 there are two stable steady states, related by swapping x and y.",
+        "A negative trace of the Jacobian is enough to show the symmetric state is stable."
+      ],
+      "solution_spec": {
+        "answer": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "partial_credit": "correct-minus-incorrect-clamped-v1"
+      },
+      "feedback": {
+        "hint": "Use the determinant and the sign of m − 1.",
+        "solution": "For a = 3 the symmetric state is a saddle and the two asymmetric ones are stable, and which one is reached depends on a small difference. For a = 1.5 the single state is stable. The trace is negative in both cases, so it cannot tell them apart; the determinant does.",
+        "lesson_ids": [
+          "differential-equations-11"
+        ],
+        "misconception_ids": [
+          "symmetric-eigenvalue-only",
+          "trace-only-stability"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "differential-equations-12:stability-limit",
+      "type": "numeric",
+      "prompt": "The decay equation y′ = −50y (time in hours) is solved by explicit Euler. What is the largest step h for which the numerical solution decays, h < 2/λ? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "differential-equations-12-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0.04,
+        "unit": "h",
+        "tolerance": 0.0005,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Require |1 − λh| < 1.",
+        "solution": "2/50 = 0.04 h.",
+        "lesson_ids": [
+          "differential-equations-12"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "differential-equations-12:positivity-limit",
+      "type": "numeric",
+      "prompt": "The decay equation y′ = −50y (time in hours) is solved by explicit Euler. What is the largest step h for which the numerical solution stays positive, h ≤ 1/λ? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "differential-equations-12-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0.02,
+        "unit": "h",
+        "tolerance": 0.0005,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Require 1 − λh ≥ 0.",
+        "solution": "1/50 = 0.02 h.",
+        "lesson_ids": [
+          "differential-equations-12"
+        ],
+        "misconception_ids": [
+          "stable-means-accurate"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "differential-equations-12:explicit-factor",
+      "type": "numeric",
+      "prompt": "The decay equation y′ = −50y (time in hours) is solved by explicit Euler, with step h = 0.05 h. What is the magnitude of the amplification factor |1 − λh| per step? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "differential-equations-12-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 1.5,
+        "unit": "",
+        "tolerance": 0.01,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Compute 1 − 50 × 0.05.",
+        "solution": "|1 − 2.5| = 1.5, greater than 1, so the solution grows.",
+        "lesson_ids": [
+          "differential-equations-12"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "differential-equations-12:implicit-factor",
+      "type": "numeric",
+      "prompt": "The decay equation y′ = −50y is solved by implicit Euler with step h = 0.05 h. What is the factor 1/(1 + λh) per step? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "differential-equations-12-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0.28571,
+        "unit": "",
+        "tolerance": 0.001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Compute 1 + 50 × 0.05 first.",
+        "solution": "1/(1 + 2.5) = 0.2857.",
+        "lesson_ids": [
+          "differential-equations-12"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "differential-equations-12:stiffness-ratio",
+      "type": "numeric",
+      "prompt": "A system has the eigenvalues −0.04995 and −50.050 h⁻¹. What is its stiffness ratio, the magnitude of the larger eigenvalue divided by the magnitude of the smaller? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "differential-equations-12-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 1002.003,
+        "unit": "",
+        "tolerance": 2.0,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Divide the larger magnitude by the smaller.",
+        "solution": "50.050/0.04995 = 1002.",
+        "lesson_ids": [
+          "differential-equations-12"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "differential-equations-12:depletion-time",
+      "type": "numeric",
+      "prompt": "A substrate is depleted by an enzyme with dS/dt = −V_max S/(K_m + S), V_max = 2.0 mM/h and K_m = 0.5 mM. Starting from S₀ = 5 mM, how long does it take to fall to 0.5 mM, from K_m ln(S₀/S) + (S₀ − S) = V_max t? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "differential-equations-12-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 2.8256,
+        "unit": "h",
+        "tolerance": 0.01,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Compute K_m ln(S₀/S) and S₀ − S separately.",
+        "solution": "(0.5 ln(10) + 4.5)/2.0 = 2.826 h.",
+        "lesson_ids": [
+          "differential-equations-12"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "differential-equations-12:initial-rate",
+      "type": "numeric",
+      "prompt": "A substrate is depleted by an enzyme with dS/dt = −V_max S/(K_m + S), V_max = 2.0 mM/h and K_m = 0.5 mM. What is the initial depletion rate at S₀ = 5 mM, in mM/h? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "differential-equations-12-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 1.8182,
+        "unit": "",
+        "tolerance": 0.01,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "V_max S₀/(K_m + S₀).",
+        "solution": "2.0 × 5/(0.5 + 5) = 1.818 mM/h.",
+        "lesson_ids": [
+          "differential-equations-12"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "differential-equations-12:mm-positivity-step",
+      "type": "numeric",
+      "prompt": "A substrate is depleted by an enzyme with dS/dt = −V_max S/(K_m + S), V_max = 2.0 mM/h and K_m = 0.5 mM. Near S = 0 the rate is about (V_max/K_m) S. What is the largest explicit Euler step that keeps S positive there, K_m/V_max? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "differential-equations-12-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 0.25,
+        "unit": "h",
+        "tolerance": 0.002,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Treat the decay as first-order with λ = V_max/K_m.",
+        "solution": "0.5/2.0 = 0.25 h.",
+        "lesson_ids": [
+          "differential-equations-12"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "differential-equations-12:stiff-statements",
+      "type": "multiple_select",
+      "prompt": "Which statements about stiff equations and implicit methods are appropriate? Select all that apply.",
+      "points": 2,
+      "objective_ids": [
+        "differential-equations-12-objective-3"
+      ],
+      "options": [
+        "A step between 1/λ and 2/λ gives a numerical solution that decays but changes sign.",
+        "Implicit Euler is stable for the decay equation at any step size.",
+        "Explicit Euler needs a step set by the fastest decay rate, even after that process has finished.",
+        "A negative concentration from a numerical solution is always a rounding error.",
+        "An implicit method is more accurate than an explicit one of the same order at any step size."
+      ],
+      "solution_spec": {
+        "answer": [
+          0,
+          1,
+          2
+        ],
+        "partial_credit": "correct-minus-incorrect-clamped-v1"
+      },
+      "feedback": {
+        "hint": "Think about stability, positivity and accuracy as separate properties.",
+        "solution": "Explicit Euler is limited by the fastest mode, implicit Euler is stable at any step, and between 1/λ and 2/λ the explicit solution oscillates in sign. Stability is not accuracy, and a negative concentration signals a step-size or model failure.",
+        "lesson_ids": [
+          "differential-equations-12"
+        ],
+        "misconception_ids": [
+          "stable-means-accurate"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "differential-equations-lab1:time-summary",
+      "type": "file_upload",
+      "prompt": "Using the synthetic cell-count CSV, summarize each time point. Upload a table with one row per time (key column `time`: t00h, t06h, t12h, t18h, t24h, t36h and t48h) and columns `wells` (the number of wells) and `mean_count` (the mean count in thousands of cells per well).",
+      "points": 14,
+      "objective_ids": [
+        "differential-equations-lab-01-objective-1"
+      ],
+      "solution_spec": {
+        "accepted_media_types": [
+          "text/csv"
+        ],
+        "max_bytes": 32768,
+        "validation_spec": {
+          "format": "csv-numeric-table-v1",
+          "delimiter": ",",
+          "key_column": "time",
+          "columns": [
+            "time",
+            "wells",
+            "mean_count"
+          ],
+          "checks": [
+            {
+              "id": "t00h-wells",
+              "row_id": "t00h",
+              "column": "wells",
+              "type": "numeric",
+              "answer": 3.0,
+              "unit": "",
+              "tolerance": 0,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "count",
+                "values": [
+                  96.0,
+                  100.0,
+                  104.0
+                ]
+              }
+            },
+            {
+              "id": "t00h-mean_count",
+              "row_id": "t00h",
+              "column": "mean_count",
+              "type": "numeric",
+              "answer": 100.0,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  96.0,
+                  100.0,
+                  104.0
+                ]
+              }
+            },
+            {
+              "id": "t06h-wells",
+              "row_id": "t06h",
+              "column": "wells",
+              "type": "numeric",
+              "answer": 3.0,
+              "unit": "",
+              "tolerance": 0,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "count",
+                "values": [
+                  64.2,
+                  66.7,
+                  61.6
+                ]
+              }
+            },
+            {
+              "id": "t06h-mean_count",
+              "row_id": "t06h",
+              "column": "mean_count",
+              "type": "numeric",
+              "answer": 64.1667,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  64.2,
+                  66.7,
+                  61.6
+                ]
+              }
+            },
+            {
+              "id": "t12h-wells",
+              "row_id": "t12h",
+              "column": "wells",
+              "type": "numeric",
+              "answer": 3.0,
+              "unit": "",
+              "tolerance": 0,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "count",
+                "values": [
+                  43.7,
+                  40.3,
+                  42.0
+                ]
+              }
+            },
+            {
+              "id": "t12h-mean_count",
+              "row_id": "t12h",
+              "column": "mean_count",
+              "type": "numeric",
+              "answer": 42.0,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  43.7,
+                  40.3,
+                  42.0
+                ]
+              }
+            },
+            {
+              "id": "t18h-wells",
+              "row_id": "t18h",
+              "column": "wells",
+              "type": "numeric",
+              "answer": 3.0,
+              "unit": "",
+              "tolerance": 0,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "count",
+                "values": [
+                  27.1,
+                  28.3,
+                  29.4
+                ]
+              }
+            },
+            {
+              "id": "t18h-mean_count",
+              "row_id": "t18h",
+              "column": "mean_count",
+              "type": "numeric",
+              "answer": 28.2667,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  27.1,
+                  28.3,
+                  29.4
+                ]
+              }
+            },
+            {
+              "id": "t24h-wells",
+              "row_id": "t24h",
+              "column": "wells",
+              "type": "numeric",
+              "answer": 3.0,
+              "unit": "",
+              "tolerance": 0,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "count",
+                "values": [
+                  19.8,
+                  20.6,
+                  19.0
+                ]
+              }
+            },
+            {
+              "id": "t24h-mean_count",
+              "row_id": "t24h",
+              "column": "mean_count",
+              "type": "numeric",
+              "answer": 19.8,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  19.8,
+                  20.6,
+                  19.0
+                ]
+              }
+            },
+            {
+              "id": "t36h-wells",
+              "row_id": "t36h",
+              "column": "wells",
+              "type": "numeric",
+              "answer": 3.0,
+              "unit": "",
+              "tolerance": 0,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "count",
+                "values": [
+                  11.7,
+                  10.8,
+                  11.3
+                ]
+              }
+            },
+            {
+              "id": "t36h-mean_count",
+              "row_id": "t36h",
+              "column": "mean_count",
+              "type": "numeric",
+              "answer": 11.2667,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  11.7,
+                  10.8,
+                  11.3
+                ]
+              }
+            },
+            {
+              "id": "t48h-wells",
+              "row_id": "t48h",
+              "column": "wells",
+              "type": "numeric",
+              "answer": 3.0,
+              "unit": "",
+              "tolerance": 0,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "count",
+                "values": [
+                  7.7,
+                  8.0,
+                  8.3
+                ]
+              }
+            },
+            {
+              "id": "t48h-mean_count",
+              "row_id": "t48h",
+              "column": "mean_count",
+              "type": "numeric",
+              "answer": 8.0,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  7.7,
+                  8.0,
+                  8.3
+                ]
+              }
+            }
+          ]
+        },
+        "rubric": [
+          {
+            "id": "t00h-wells",
+            "criterion": "t00h: wells",
+            "points": 1,
+            "evidence": [
+              "Recomputes wells for t00h from the preparation-level values."
+            ]
+          },
+          {
+            "id": "t00h-mean_count",
+            "criterion": "t00h: mean_count",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_count for t00h from the preparation-level values."
+            ]
+          },
+          {
+            "id": "t06h-wells",
+            "criterion": "t06h: wells",
+            "points": 1,
+            "evidence": [
+              "Recomputes wells for t06h from the preparation-level values."
+            ]
+          },
+          {
+            "id": "t06h-mean_count",
+            "criterion": "t06h: mean_count",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_count for t06h from the preparation-level values."
+            ]
+          },
+          {
+            "id": "t12h-wells",
+            "criterion": "t12h: wells",
+            "points": 1,
+            "evidence": [
+              "Recomputes wells for t12h from the preparation-level values."
+            ]
+          },
+          {
+            "id": "t12h-mean_count",
+            "criterion": "t12h: mean_count",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_count for t12h from the preparation-level values."
+            ]
+          },
+          {
+            "id": "t18h-wells",
+            "criterion": "t18h: wells",
+            "points": 1,
+            "evidence": [
+              "Recomputes wells for t18h from the preparation-level values."
+            ]
+          },
+          {
+            "id": "t18h-mean_count",
+            "criterion": "t18h: mean_count",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_count for t18h from the preparation-level values."
+            ]
+          },
+          {
+            "id": "t24h-wells",
+            "criterion": "t24h: wells",
+            "points": 1,
+            "evidence": [
+              "Recomputes wells for t24h from the preparation-level values."
+            ]
+          },
+          {
+            "id": "t24h-mean_count",
+            "criterion": "t24h: mean_count",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_count for t24h from the preparation-level values."
+            ]
+          },
+          {
+            "id": "t36h-wells",
+            "criterion": "t36h: wells",
+            "points": 1,
+            "evidence": [
+              "Recomputes wells for t36h from the preparation-level values."
+            ]
+          },
+          {
+            "id": "t36h-mean_count",
+            "criterion": "t36h: mean_count",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_count for t36h from the preparation-level values."
+            ]
+          },
+          {
+            "id": "t48h-wells",
+            "criterion": "t48h: wells",
+            "points": 1,
+            "evidence": [
+              "Recomputes wells for t48h from the preparation-level values."
+            ]
+          },
+          {
+            "id": "t48h-mean_count",
+            "criterion": "t48h: mean_count",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_count for t48h from the preparation-level values."
+            ]
+          }
+        ]
+      },
+      "feedback": {
+        "hint": "Count the wells at each time and average their counts.",
+        "solution": "Each time point has 3 wells. The means are 0 h 100.0, 6 h 64.2, 12 h 42.0, 18 h 28.3, 24 h 19.8, 36 h 11.3, 48 h 8.0 thousand cells per well.",
+        "lesson_ids": [
+          "differential-equations-lab-01",
+          "differential-equations-12",
+          "differential-equations-13"
+        ],
+        "misconception_ids": [
+          "wells-as-time-points"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "differential-equations-lab1:early-rate",
+      "type": "numeric",
+      "prompt": "Fit a straight line to ln(mean count) against time over the early window, 0 to 24 h (five time points). What is the decay rate k, the negative of the slope? Enter the number only (h⁻¹).",
+      "points": 1,
+      "objective_ids": [
+        "differential-equations-lab-01-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0.06765,
+        "unit": "",
+        "tolerance": 0.002,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Take natural logarithms of the five means first.",
+        "solution": "The slope of ln(mean) against t is −0.0676, so k = 0.0676 h⁻¹.",
+        "lesson_ids": [
+          "differential-equations-lab-01",
+          "differential-equations-12",
+          "differential-equations-13"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "differential-equations-lab1:line-zero",
+      "type": "numeric",
+      "prompt": "Fit a straight line to the mean count against time over the early window, 0 to 24 h. At what time does the line reach zero? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "differential-equations-lab-01-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 27.542,
+        "unit": "h",
+        "tolerance": 0.4,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Zero crossing = intercept/(−slope).",
+        "solution": "The line is 90.11 + (−3.272)t, which reaches zero at 27.5 h.",
+        "lesson_ids": [
+          "differential-equations-lab-01",
+          "differential-equations-12",
+          "differential-equations-13"
+        ],
+        "misconception_ids": [
+          "fit-quality-means-valid"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "differential-equations-lab1:line-at-48",
+      "type": "numeric",
+      "prompt": "Use the straight line fitted over 0 to 24 h to predict the mean count at 48 h. Enter the number only (thousands of cells per well).",
+      "points": 1,
+      "objective_ids": [
+        "differential-equations-lab-01-objective-2"
+      ],
+      "solution_spec": {
+        "answer": -66.933,
+        "unit": "",
+        "tolerance": 0.5,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Evaluate intercept + slope × 48.",
+        "solution": "90.11 + (−3.272) × 48 = −66.9: an impossible negative count.",
+        "lesson_ids": [
+          "differential-equations-lab-01",
+          "differential-equations-12",
+          "differential-equations-13"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "differential-equations-lab1:exponential-at-48",
+      "type": "numeric",
+      "prompt": "Use the first-order decay fitted over 0 to 24 h, N = N₀e^(−kt) with N₀ the exponential of the fitted intercept of ln N, to predict the mean count at 48 h. Enter the number only (thousands of cells per well).",
+      "points": 1,
+      "objective_ids": [
+        "differential-equations-lab-01-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 3.785,
+        "unit": "",
+        "tolerance": 0.3,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "N₀ and k come from the same straight line of ln N against t.",
+        "solution": "97.3 × e^(−0.0676 × 48) = 3.79.",
+        "lesson_ids": [
+          "differential-equations-lab-01",
+          "differential-equations-12",
+          "differential-equations-13"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "differential-equations-lab1:beyond-the-window",
+      "type": "data_interpretation",
+      "prompt": "The observed mean at 48 h is 8.0 and the first-order prediction from the early fit is 3.79 (thousands of cells per well). Compute the ratio of the observed mean to the prediction.",
+      "points": 2,
+      "objective_ids": [
+        "differential-equations-lab-01-objective-3"
+      ],
+      "response_fields": [
+        {
+          "id": "value",
+          "type": "numeric",
+          "prompt": "What is the ratio? Report exactly 3 significant figures.",
+          "unit": "",
+          "points": 1
+        },
+        {
+          "id": "inference",
+          "type": "single_choice",
+          "prompt": "What does the ratio suggest about the first-order model?",
+          "options": [
+            "It under-predicts the late counts by a clear factor, although it never goes negative, which suggests a part of the population that does not decay at the early rate; the structure is missing something.",
+            "It is exact, so the first-order model is validated beyond the window.",
+            "It over-predicts the late counts, so the decay is faster than the model says.",
+            "It shows that the wells differ at random, so nothing can be concluded."
+          ],
+          "points": 1
+        }
+      ],
+      "solution_spec": {
+        "field_specs": [
+          {
+            "id": "value",
+            "type": "numeric",
+            "answer": 2.11,
+            "unit": "",
+            "tolerance": 0.02,
+            "relative_tolerance": 0,
+            "unit_required": false,
+            "significant_figures": 3,
+            "dimensions": null
+          },
+          {
+            "id": "inference",
+            "type": "single_choice",
+            "answer": 0
+          }
+        ]
+      },
+      "feedback": {
+        "hint": "Divide the observed mean at 48 h by the predicted value.",
+        "solution": "8.0/3.79 = 2.11: the late counts are about 2.1 times the prediction, so the decay slows down after the early window.",
+        "lesson_ids": [
+          "differential-equations-lab-01",
+          "differential-equations-12",
+          "differential-equations-13"
+        ],
+        "misconception_ids": [
+          "fit-quality-means-valid"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "differential-equations-lab1:validation-reasoning",
+      "type": "structured",
+      "prompt": "Answer each part about the validation of the two models.",
+      "points": 3,
+      "objective_ids": [
+        "differential-equations-lab-01-objective-3"
+      ],
+      "response_fields": [
+        {
+          "id": "holdout",
+          "type": "single_choice",
+          "prompt": "How would a hold-out check have shown the problem with the line?",
+          "options": [
+            "Fitting only the first three time points and predicting 18 and 24 h would show the line departing from the observed counts inside the data.",
+            "A hold-out check cannot be done with replicate wells.",
+            "It would show that the line fits the early window well, so nothing is wrong.",
+            "It would require a second incubator."
+          ],
+          "points": 1
+        },
+        {
+          "id": "structure",
+          "type": "single_choice",
+          "prompt": "What does the 48 h observation say about the first-order model?",
+          "options": [
+            "It never goes negative, but it under-predicts, so it also lacks structure, for example a population that decays more slowly.",
+            "It is validated, since it stays positive.",
+            "It shows that the line was right after all.",
+            "It shows that the counts are measured with error only."
+          ],
+          "points": 1
+        },
+        {
+          "id": "next",
+          "type": "single_choice",
+          "prompt": "What would improve the model?",
+          "options": [
+            "A model with two populations or a floor, fitted to data that run beyond 24 h, and tested on an independent later experiment.",
+            "Clipping the line at zero.",
+            "Using a smaller Euler step on the first-order model.",
+            "Dropping the 36 and 48 h points."
+          ],
+          "points": 1
+        }
+      ],
+      "solution_spec": {
+        "field_specs": [
+          {
+            "id": "holdout",
+            "type": "single_choice",
+            "answer": 0
+          },
+          {
+            "id": "structure",
+            "type": "single_choice",
+            "answer": 0
+          },
+          {
+            "id": "next",
+            "type": "single_choice",
+            "answer": 0
+          }
+        ],
+        "rubric": [
+          {
+            "id": "holdout",
+            "criterion": "Hold-out: evidence reasoning",
+            "points": 1,
+            "evidence": [
+              "Uses held-out later points to test the model."
+            ]
+          },
+          {
+            "id": "structure",
+            "criterion": "Structure: evidence reasoning",
+            "points": 1,
+            "evidence": [
+              "Separates sign errors from structure errors."
+            ]
+          },
+          {
+            "id": "next",
+            "criterion": "Next step: evidence reasoning",
+            "points": 1,
+            "evidence": [
+              "Proposes a model change and independent validation."
+            ]
+          }
+        ]
+      },
+      "feedback": {
+        "hint": "For each part, ask what a prediction beyond the window can show that the fit within it cannot.",
+        "solution": "A hold-out fit exposes the line early, the first-order model fails by under-predicting, and a better model needs later data and an independent test.",
+        "lesson_ids": [
+          "differential-equations-lab-01",
+          "differential-equations-12",
+          "differential-equations-13"
+        ],
+        "misconception_ids": [
+          "fit-quality-means-valid",
+          "clipping-hides-failure"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "differential-equations-lab1:supported-statements",
+      "type": "multiple_select",
+      "prompt": "Which statements about these synthetic counts are supported? Select all that apply.",
+      "points": 2,
+      "objective_ids": [
+        "differential-equations-lab-01-objective-3"
+      ],
+      "options": [
+        "The straight line fitted to 0 to 24 h fits the early points well but predicts a negative count at 48 h.",
+        "The first-order model fitted to 0 to 24 h stays positive but under-predicts the 36 and 48 h means.",
+        "A fit that matches the early window cannot by itself show that a model holds at later times.",
+        "Replacing the negative prediction by zero would make the line a valid model.",
+        "The mean of three wells at one time point is three independent time points."
+      ],
+      "solution_spec": {
+        "answer": [
+          0,
+          1,
+          2
+        ],
+        "partial_credit": "correct-minus-incorrect-clamped-v1"
+      },
+      "feedback": {
+        "hint": "Keep each statement inside what the data and the fits show.",
+        "solution": "The first three follow from the table and the fits. Clipping hides the structural failure, and the three wells are replicates at one time.",
+        "lesson_ids": [
+          "differential-equations-lab-01",
+          "differential-equations-12",
+          "differential-equations-13"
+        ],
+        "misconception_ids": [
+          "clipping-hides-failure",
+          "wells-as-time-points"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "differential-equations-13:line-slope",
+      "type": "numeric",
+      "prompt": "A synthetic cell count (thousands per well) is 100.0, 78.7, 61.9, 48.7, 38.3 at 0, 6, 12, 18 and 24 h. What is the least-squares slope of N against t, in thousands of cells per hour? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "differential-equations-13-objective-1"
+      ],
+      "solution_spec": {
+        "answer": -2.5567,
+        "unit": "",
+        "tolerance": 0.02,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the five points; the mean time is 12 h and Σ(t − 12)² = 360.",
+        "solution": "Slope = Σ(t − t̄)(N − N̄)/Σ(t − t̄)² = −2.5567.",
+        "lesson_ids": [
+          "differential-equations-13"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "differential-equations-13:zero-crossing",
+      "type": "numeric",
+      "prompt": "A synthetic cell count (thousands per well) is 100.0, 78.7, 61.9, 48.7, 38.3 at 0, 6, 12, 18 and 24 h. A least-squares line has slope −2.5567 per hour and intercept 96.20. At what time does it reach zero? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "differential-equations-13-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 37.6271,
+        "unit": "h",
+        "tolerance": 0.2,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Solve intercept + slope × t = 0.",
+        "solution": "96.20/2.5567 = 37.6 h.",
+        "lesson_ids": [
+          "differential-equations-13"
+        ],
+        "misconception_ids": [
+          "fit-quality-means-valid"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "differential-equations-13:line-prediction",
+      "type": "numeric",
+      "prompt": "A synthetic cell count (thousands per well) is 100.0, 78.7, 61.9, 48.7, 38.3 at 0, 6, 12, 18 and 24 h. A least-squares line has slope −2.5567 per hour and intercept 96.20. What count does it predict at 48 h? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "differential-equations-13-objective-1"
+      ],
+      "solution_spec": {
+        "answer": -26.52,
+        "unit": "",
+        "tolerance": 0.1,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Evaluate the line at t = 48.",
+        "solution": "96.20 + (−2.5567) × 48 = −26.5: impossible.",
+        "lesson_ids": [
+          "differential-equations-13"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "differential-equations-13:first-order-rate",
+      "type": "numeric",
+      "prompt": "A synthetic cell count (thousands per well) is 100.0, 78.7, 61.9, 48.7, 38.3 at 0, 6, 12, 18 and 24 h. The decay dN/dt = −kN means ln N is linear in t with slope −k. What k (in h⁻¹) does a least-squares line of ln N against t give? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "differential-equations-13-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0.03999,
+        "unit": "",
+        "tolerance": 0.002,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Take natural logarithms of the five counts first.",
+        "solution": "The slope of ln N against t is −0.0400, so k = 0.0400 h⁻¹.",
+        "lesson_ids": [
+          "differential-equations-13"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "differential-equations-13:positivity-limit",
+      "type": "numeric",
+      "prompt": "A decay dN/dt = −kN with k = 0.04 h⁻¹ is solved by explicit Euler. What is the largest step h for which N_(n+1) = (1 − kh)N_n stays positive? Enter a value and unit.",
+      "points": 1,
+      "objective_ids": [
+        "differential-equations-13-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 25.0,
+        "unit": "h",
+        "tolerance": 0.2,
+        "unit_required": true,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Require 1 − kh ≥ 0.",
+        "solution": "1/0.04 = 25 h.",
+        "lesson_ids": [
+          "differential-equations-13"
+        ],
+        "misconception_ids": [
+          "stable-means-positive"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "differential-equations-13:single-step",
+      "type": "numeric",
+      "prompt": "A decay dN/dt = −kN with k = 0.04 h⁻¹ starts from N = 38.3 at 24 h. What does a single explicit Euler step of 48 h give for N at 72 h? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "differential-equations-13-objective-2"
+      ],
+      "solution_spec": {
+        "answer": -35.236,
+        "unit": "",
+        "tolerance": 0.1,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "N = N₀(1 − kh) with kh = 1.92.",
+        "solution": "38.3 × (1 − 1.92) = −35.2: negative, although the equation is right.",
+        "lesson_ids": [
+          "differential-equations-13"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "differential-equations-13:four-steps",
+      "type": "numeric",
+      "prompt": "The same decay (k = 0.04 h⁻¹, N = 38.3 at 24 h) is advanced to 72 h by four explicit Euler steps of 12 h. What is N at 72 h? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "differential-equations-13-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 2.8003,
+        "unit": "",
+        "tolerance": 0.03,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Multiply by (1 − 0.04 × 12) four times.",
+        "solution": "38.3 × 0.52⁴ = 2.80, against an exact 5.62.",
+        "lesson_ids": [
+          "differential-equations-13"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "differential-equations-13:holdout-error",
+      "type": "numeric",
+      "prompt": "The line fitted to the first three counts (100.0, 78.7, 61.9) predicts a count at 24 h. By how much does the observed 38.3 exceed that prediction? The fitted line has slope −3.175 per hour and intercept 99.25; enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "differential-equations-13-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 15.25,
+        "unit": "",
+        "tolerance": 0.15,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Predict 99.25 − 3.175 × 24 first.",
+        "solution": "The line predicts 23.05; 38.3 − 23.05 = 15.25.",
+        "lesson_ids": [
+          "differential-equations-13"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "differential-equations-13:validation-statements",
+      "type": "multiple_select",
+      "prompt": "Which practices would reveal the failure of the fitted model before its prediction is used? Select all that apply.",
+      "points": 2,
+      "objective_ids": [
+        "differential-equations-13-objective-3"
+      ],
+      "options": [
+        "Compare the prediction with a second experiment that ran longer.",
+        "Repeat the numerical solution with a smaller step and check that the result stops changing.",
+        "Replace negative predicted counts by zero and continue.",
+        "Judge the model by how closely it passes through the fitted points.",
+        "Fit on the early points and compare the prediction with the later observed points."
+      ],
+      "solution_spec": {
+        "answer": [
+          0,
+          1,
+          4
+        ],
+        "partial_credit": "correct-minus-incorrect-clamped-v1"
+      },
+      "feedback": {
+        "hint": "Ask which practices test the model or the solver outside what was fitted.",
+        "solution": "Hold-out prediction, step refinement and independent longer data test the model and the solver. Clipping hides the failure, and a good fit inside the window says nothing outside it.",
+        "lesson_ids": [
+          "differential-equations-13"
+        ],
+        "misconception_ids": [
+          "fit-quality-means-valid"
+        ]
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
     }
   ]
 }
