@@ -1,0 +1,304 @@
+{
+  "candidate_id": "cell-biology-h4-review-v1",
+  "course_id": "cell-biology",
+  "content_version": "0.23.0",
+  "state": "inactive-review-candidate",
+  "title": "Homework 4 candidate: ChIP denominators and reporter claim boundaries",
+  "instruction_path": "assessment-specs/homework-04-candidate.md",
+  "dataset_path": "assessment-specs/homework-04-candidate-chip.csv",
+  "additional_dataset_paths": [
+    "assessment-specs/homework-04-candidate-reporter.csv"
+  ],
+  "private_source_ref": "private://assignments/homework-04-review-v1.json",
+  "private_source_sha256": "3cd05d46ef86be8a17679b530533d04332f75b2451cf5e395a092bffdf583441",
+  "points": 25,
+  "lesson_ids": [
+    "cell-biology-15",
+    "cell-biology-16"
+  ],
+  "objective_ids": [
+    "cell-biology-15-objective-2",
+    "cell-biology-16-objective-1",
+    "cell-biology-16-objective-2"
+  ],
+  "course_outcome_ids": [
+    "cell-biology-outcome-2",
+    "cell-biology-outcome-3",
+    "cell-biology-outcome-4"
+  ],
+  "prerequisite_sha256": {
+    "modules/07a-chromatin-accessibility-and-regulatory-dna.md": "f183cf089f4cd924cb5c1e42dd54df4d84736c86066aec1796e953ca31391c73",
+    "modules/07b-transcription-occupancy-and-reporter-evidence.md": "7a54429020dfbe72fa4d06a91688b1d2b2d498348a3464dd1f3396bb019428c6"
+  },
+  "review": {
+    "status": "unreviewed",
+    "reviewers": []
+  },
+  "activation_gates": [
+    "independent-recalculation",
+    "grader-mutation-review",
+    "subject-matter-review",
+    "assessment-review",
+    "accessibility-review",
+    "measured-workload",
+    "operator-provisioning-and-release-policy"
+  ],
+  "questions": [
+    {
+      "id": "cell-biology-h4-candidate:specific-input",
+      "type": "numeric",
+      "prompt": "For control culture c01 at the candidate locus, average its two technical Cq values separately for input and specific IP. Use the listed input fraction and amplification factor to estimate specific-IP percent input. Report exactly three significant figures with a percent unit.",
+      "options": [],
+      "unit": "%",
+      "significant_figures": 3,
+      "points": 2.0,
+      "selection": "single",
+      "partial_credit_policy": null,
+      "response_fields": [],
+      "graph_spec": null,
+      "accepted_media_types": [],
+      "max_upload_bytes": null,
+      "variant_id": null,
+      "variant_token": null,
+      "learning_objective_ids": [
+        "cell-biology-16-objective-1"
+      ],
+      "assessment_role": "graded"
+    },
+    {
+      "id": "cell-biology-h4-candidate:igg-enrichment",
+      "type": "numeric",
+      "prompt": "For control c01 at the candidate locus, divide its specific-IP percent input by its matched IgG percent input, both calculated after technical Cq averaging. Report exactly three significant figures as a bare fold enrichment, not a percent.",
+      "options": [],
+      "unit": "",
+      "significant_figures": 3,
+      "points": 2.0,
+      "selection": "single",
+      "partial_credit_policy": null,
+      "response_fields": [],
+      "graph_spec": null,
+      "accepted_media_types": [],
+      "max_upload_bytes": null,
+      "variant_id": null,
+      "variant_token": null,
+      "learning_objective_ids": [
+        "cell-biology-16-objective-1",
+        "cell-biology-16-objective-2"
+      ],
+      "assessment_role": "graded"
+    },
+    {
+      "id": "cell-biology-h4-candidate:reporter-wt",
+      "type": "numeric",
+      "prompt": "For control reporter preparation rc01, subtract each channel's listed background, calculate WT and promoter-only firefly/renilla ratios, then divide WT by the matched promoter-only ratio. Report exactly three significant figures as a bare dimensionless normalized reporter value.",
+      "options": [],
+      "unit": "",
+      "significant_figures": 3,
+      "points": 2.0,
+      "selection": "single",
+      "partial_credit_policy": null,
+      "response_fields": [],
+      "graph_spec": null,
+      "accepted_media_types": [],
+      "max_upload_bytes": null,
+      "variant_id": null,
+      "variant_token": null,
+      "learning_objective_ids": [
+        "cell-biology-16-objective-2"
+      ],
+      "assessment_role": "graded"
+    },
+    {
+      "id": "cell-biology-h4-candidate:reporter-contrast",
+      "type": "numeric",
+      "prompt": "For each reporter preparation subtract backgrounds, normalize WT and mutant ratios to its own promoter-only ratio, then calculate WT minus mutant. Report the mean knockdown contrast minus the mean control contrast as a bare signed difference in normalized reporter units. This is not a relative percent change.",
+      "options": [],
+      "unit": "",
+      "significant_figures": null,
+      "points": 2.0,
+      "selection": "single",
+      "partial_credit_policy": null,
+      "response_fields": [],
+      "graph_spec": null,
+      "accepted_media_types": [],
+      "max_upload_bytes": null,
+      "variant_id": null,
+      "variant_token": null,
+      "learning_objective_ids": [
+        "cell-biology-16-objective-2"
+      ],
+      "assessment_role": "graded"
+    },
+    {
+      "id": "cell-biology-h4-candidate:summary",
+      "type": "file_upload",
+      "prompt": "Upload exact columns condition,chip_cultures,mean_specific_pct_input,mean_reporter_motif_contrast with rows control,knockdown,restored. Use the candidate ChIP locus only, averaging technical Cq before percent input and cultures before group means. Independently summarize WT-minus-mutant reporter contrasts after within-preparation normalization. ChIP cultures and reporter preparations are different samples, matched only by condition. Counts are exact; numerical means have absolute tolerance 0.005 in their declared column scales.",
+      "options": [],
+      "unit": null,
+      "significant_figures": null,
+      "points": 9.0,
+      "selection": "single",
+      "partial_credit_policy": null,
+      "response_fields": [],
+      "graph_spec": null,
+      "accepted_media_types": [
+        "text/csv"
+      ],
+      "max_upload_bytes": 32768,
+      "variant_id": null,
+      "variant_token": null,
+      "learning_objective_ids": [
+        "cell-biology-16-objective-1",
+        "cell-biology-16-objective-2"
+      ],
+      "assessment_role": "graded"
+    },
+    {
+      "id": "cell-biology-h4-candidate:reporter-inference",
+      "type": "data_interpretation",
+      "prompt": "Compare the mean WT normalized reporter value in control and knockdown preparations.",
+      "options": [],
+      "unit": null,
+      "significant_figures": null,
+      "points": 2.0,
+      "selection": "single",
+      "partial_credit_policy": null,
+      "response_fields": [
+        {
+          "id": "decrease_pct",
+          "type": "numeric",
+          "prompt": "Report the relative decrease from the control mean to the knockdown mean as a percent. Report exactly 3 significant figures.",
+          "options": [],
+          "unit": "%",
+          "points": 1.0
+        },
+        {
+          "id": "inference",
+          "type": "single_choice",
+          "prompt": "Which claim is supported by this reporter comparison?",
+          "options": [
+            "It proves that the candidate element directly activates the nearest endogenous gene.",
+            "It describes reduced activity of this engineered reporter under knockdown; endogenous target identity and direct binding remain untested.",
+            "It measures the percentage of candidate chromatin occupied by the factor."
+          ],
+          "unit": null,
+          "points": 1.0
+        }
+      ],
+      "graph_spec": null,
+      "accepted_media_types": [],
+      "max_upload_bytes": null,
+      "variant_id": null,
+      "variant_token": null,
+      "learning_objective_ids": [
+        "cell-biology-16-objective-2"
+      ],
+      "assessment_role": "graded"
+    },
+    {
+      "id": "cell-biology-h4-candidate:control-logic",
+      "type": "structured",
+      "prompt": "Select one response for each distinct assay or endogenous-evidence criterion.",
+      "options": [],
+      "unit": null,
+      "significant_figures": null,
+      "points": 4.0,
+      "selection": "single",
+      "partial_credit_policy": null,
+      "response_fields": [
+        {
+          "id": "input",
+          "type": "single_choice",
+          "prompt": "What do input and IgG separately address?",
+          "options": [
+            "Input estimates nonspecific antibody pull-down, while IgG measures starting chromatin.",
+            "Input normalizes the represented starting chromatin; matched IgG estimates nonspecific pull-down.",
+            "Both measure the number of cells expressing the target gene."
+          ],
+          "unit": null,
+          "points": 1.0
+        },
+        {
+          "id": "efficiency",
+          "type": "single_choice",
+          "prompt": "Which checks support the Cq transformation and contamination boundary?",
+          "options": [
+            "Matched amplicon efficiency and linear-range checks, plus a separate no-template qPCR control.",
+            "The positive locus replaces input, IgG and no-template controls.",
+            "Technical duplicate wells are independent cultures."
+          ],
+          "unit": null,
+          "points": 1.0
+        },
+        {
+          "id": "reference",
+          "type": "single_choice",
+          "prompt": "When does a co-reporter remove a shared loading/recovery factor?",
+          "options": [
+            "Whenever its signal is nonzero, even if knockdown regulates it independently.",
+            "Only when reporter DNA is integrated at the native locus.",
+            "Under linear channels with applicable background correction and a reference whose biological meaning is not independently altered by the perturbation."
+          ],
+          "unit": null,
+          "points": 1.0
+        },
+        {
+          "id": "endogenous",
+          "type": "single_choice",
+          "prompt": "Which follow-up tests contribution at the proposed endogenous target?",
+          "options": [
+            "Repeat the same plasmid assay with more technical wells only.",
+            "Use verified independent native-element perturbations and matched neutral controls, measure endogenous/nearby RNA and cell state, and assess rescue.",
+            "Assign the nearest gene as the target because ChIP enriched the region."
+          ],
+          "unit": null,
+          "points": 1.0
+        }
+      ],
+      "graph_spec": null,
+      "accepted_media_types": [],
+      "max_upload_bytes": null,
+      "variant_id": null,
+      "variant_token": null,
+      "learning_objective_ids": [
+        "cell-biology-15-objective-2",
+        "cell-biology-16-objective-2"
+      ],
+      "assessment_role": "graded"
+    },
+    {
+      "id": "cell-biology-h4-candidate:claim-boundaries",
+      "type": "multiple_select",
+      "prompt": "Select all supported statements. Scoring is two points times (correct selections minus incorrect selections) divided by the number of correct options, clamped from zero to two.",
+      "options": [
+        "The regulatory DNA sequence is cis-acting, while the factor whose abundance is reduced acts in trans.",
+        "Cross-linked ChIP enrichment proves direct base-specific binding by the recovered factor.",
+        "More technical qPCR wells establish more independent biological cultures.",
+        "A motif change can alter overlapping motifs or DNA structure; reporter evidence alone does not identify the native target gene.",
+        "Similar positive-locus recovery proves that the reference reporter is unaffected by knockdown."
+      ],
+      "unit": null,
+      "significant_figures": null,
+      "points": 2.0,
+      "selection": "multiple",
+      "partial_credit_policy": "correct-minus-incorrect-clamped-v1",
+      "response_fields": [],
+      "graph_spec": null,
+      "accepted_media_types": [],
+      "max_upload_bytes": null,
+      "variant_id": null,
+      "variant_token": null,
+      "learning_objective_ids": [
+        "cell-biology-15-objective-2",
+        "cell-biology-16-objective-2"
+      ],
+      "assessment_role": "graded"
+    }
+  ],
+  "provenance": {
+    "kind": "original",
+    "license": "CC-BY-4.0",
+    "ai_assistance": "Codex authored the candidate and checks. No independent or qualified human review occurred.",
+    "source_scope": "Existing original lessons and explicit synthetic measurement assumptions only; no outside source, identifier, prose, problem, figure or dataset imported."
+  }
+}

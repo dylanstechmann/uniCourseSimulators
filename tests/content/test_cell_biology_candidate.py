@@ -115,6 +115,50 @@ def test_public_data_keep_observation_units_and_series_consistent(candidate):
     CANDIDATE = candidate
     with (COURSE / CANDIDATE["dataset_path"]).open(newline="") as stream:
         rows = list(csv.DictReader(stream))
+    if "amplification_factor" in rows[0]:
+        assert len(rows) == 72
+        groups = {}
+        for row in rows:
+            groups.setdefault((row["culture"], row["locus"]), []).append(row)
+            assert 0 < float(row["input_fraction"]) <= 1
+            assert 1 < float(row["amplification_factor"]) <= 2
+            assert all(
+                math.isfinite(float(row[key]))
+                for key in ("cq_input", "cq_specific", "cq_igg")
+            )
+        assert len(groups) == 36
+        for observations in groups.values():
+            assert {row["technical_well"] for row in observations} == {"1", "2"}
+            assert (
+                len(
+                    {
+                        (
+                            row["condition"],
+                            row["input_fraction"],
+                            row["amplification_factor"],
+                        )
+                        for row in observations
+                    }
+                )
+                == 1
+            )
+        assert len(CANDIDATE["additional_dataset_paths"]) == 1
+        with (COURSE / CANDIDATE["additional_dataset_paths"][0]).open(
+            newline=""
+        ) as stream:
+            reporters = list(csv.DictReader(stream))
+        assert len(reporters) == 12
+        assert len({row["preparation"] for row in reporters}) == 12
+        assert not {row["preparation"] for row in reporters}.intersection(
+            row["culture"] for row in rows
+        )
+        for row in reporters:
+            for construct in ("promoter", "wt", "mutant", "positive"):
+                for channel in ("firefly", "renilla"):
+                    assert float(row[f"{construct}_{channel}_au"]) > float(
+                        row[f"{construct}_{channel}_background_au"]
+                    )
+        return
     if "dna_reference_au" in rows[0]:
         assert len(rows) == 36
         groups = {}

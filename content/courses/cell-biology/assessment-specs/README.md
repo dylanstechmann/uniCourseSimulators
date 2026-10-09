@@ -21,3 +21,7 @@ Nothing here is graded, reviewed or complete. Blueprints were generated from `co
 ## Homework 3 candidate (2026-10-09)
 
 [Instructions](homework-03-candidate.md), [lesion/reference observations](homework-03-candidate-lesion-reference.csv) and [answer-free metadata/item DTOs](homework-03-candidate.json) form an inactive eight-item, 25-point review candidate. Its key is outside Git. Matched normalization, synthesis-label and survivor-selection limits precede repair inference; a separate stipulated copying model tests density predictions. Earlier candidate files, versions and key bindings remain unchanged. None is activated or independently/qualified reviewed.
+
+## Homework 4 candidate (2026-10-09)
+
+[Instructions](homework-04-candidate.md), [ChIP technical wells](homework-04-candidate-chip.csv), [separate reporter preparations](homework-04-candidate-reporter.csv) and [answer-free metadata/DTOs](homework-04-candidate.json) form an inactive eight-item, 25-point review candidate. It distinguishes dilution, amplification efficiency, matched reference correction and causal claim boundaries. Its key stays outside Git. Earlier candidates retain their files, versions and bindings. None is independently/qualified reviewed or activated; workload and operator release evidence remain absent.

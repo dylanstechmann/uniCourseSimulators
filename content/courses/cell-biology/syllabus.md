@@ -1,8 +1,8 @@
 # Foundations of Cell and Molecular Biology
 
-**Maturity: partial. Version: 0.22.0.**
+**Maturity: partial. Version: 0.23.0.**
 
-This original course package develops mechanistic reasoning from molecular structure to cell behavior. It is still not a completed 14-week university course: weeks 1–7 have two original topic lessons each, while weeks 4 and 7 retain short prototype readings in addition; week 5 adds one original virtual fluorescence data-analysis lab and week 11 adds a second signaling-data lab; week 8 has an ungraded cumulative practice set; weeks 9–14 have original lesson pairs and formative practice. No semester equivalency, university credit, or prerequisite equivalency is claimed.
+This original course package develops mechanistic reasoning from molecular structure to cell behavior. It is still not a completed 14-week university course: weeks 1–7 have two original topic lessons each, while weeks 4 and 7 retain short prototype readings in addition; weeks 5, 11 and 14 include three original virtual data-analysis labs; week 8 has an ungraded cumulative practice set; weeks 9–14 have original lesson pairs and formative practice. No semester equivalency, university credit, or prerequisite equivalency is claimed.
 
 ## Prerequisites
 
@@ -55,3 +55,7 @@ A separate [calibrated-rate candidate](assessment-specs/homework-02-candidate.md
 ## Inactive Homework 3 review candidate
 
 A separate [replication and repair candidate](assessment-specs/homework-03-candidate.md) adds eight item stems and matched lesion/background/reference observations. Keys stay outside Git. The earlier candidates keep their authored versions and hash bindings. All three await independent and qualified review, workload evidence and operator release decisions; no course-grade policy is activated.
+
+## Inactive Homework 4 review candidate
+
+A separate [ChIP and reporter candidate](assessment-specs/homework-04-candidate.md) has eight items, 25 proposed points, synthetic ChIP technical wells and independently prepared matched reporter measurements. It has no live submission route; its key is outside Git. Earlier candidates retain their authored versions and key bindings. Independent review, measured workload and operator release decisions remain absent.

@@ -108,7 +108,8 @@ def test_assessment_specifications_contain_no_items_or_keys_and_say_so():
     assert {path.name for path in other} == {
         "homework-01-candidate-pulse-chase.csv", "homework-01-candidate.json",
         "homework-02-candidate-fluorescence.csv", "homework-02-candidate.json",
-        "homework-03-candidate-lesion-reference.csv", "homework-03-candidate.json"
+        "homework-03-candidate-lesion-reference.csv", "homework-03-candidate.json",
+        "homework-04-candidate-chip.csv", "homework-04-candidate-reporter.csv", "homework-04-candidate.json"
     }, f"unexpected non-document files beside the specifications: {other}"
 
 

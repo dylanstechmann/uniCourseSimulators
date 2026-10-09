@@ -1,0 +1,13 @@
+condition,preparation,promoter_firefly_au,promoter_firefly_background_au,promoter_renilla_au,promoter_renilla_background_au,wt_firefly_au,wt_firefly_background_au,wt_renilla_au,wt_renilla_background_au,mutant_firefly_au,mutant_firefly_background_au,mutant_renilla_au,mutant_renilla_background_au,positive_firefly_au,positive_firefly_background_au,positive_renilla_au,positive_renilla_background_au
+control,rc01,61.0,11,53.0,3,401.0,11,68.0,3,81.0,11,38.0,3,451.0,11,58.0,3
+control,rc02,108.0,12,84.0,4,636.0,12,108.0,4,112.8,12,60.0,4,751.2,12,92.0,4
+control,rc03,61.0,13,65.0,5,449.8,13,83.0,5,97.0,13,47.0,5,488.2,13,71.0,5
+control,rc04,135.0,14,116.0,6,957.8,14,149.0,6,183.4,14,83.0,6,1078.8,14,127.0,6
+knockdown,rk01,51.0,11,43.0,3,115.0,11,55.0,3,50.2,11,31.0,3,363.0,11,47.0,3
+knockdown,rk02,88.8,12,68.0,4,261.6,12,87.2,4,92.64,12,48.8,4,603.36,12,74.4,4
+knockdown,rk03,51.4,13,53.0,5,87.88,13,67.4,5,56.008,13,38.6,5,393.16,13,57.8,5
+knockdown,rk04,110.8,14,94.0,6,265.68,14,120.4,6,115.64,14,67.6,6,865.84,14,102.8,6
+restored,rs01,56.0,11,48.0,3,303.5,11,61.5,3,67.7,11,34.5,3,407.0,11,52.5,3
+restored,rs02,98.4,12,76.0,4,461.28,12,97.6,4,108.768,12,54.4,4,677.28,12,83.2,4
+restored,rs03,56.2,13,59.0,5,349.96,13,75.2,5,79.528,13,42.8,5,440.68,13,64.4,5
+restored,rs04,122.9,14,105.0,6,721.85,14,134.7,6,166.46,14,75.3,6,972.32,14,114.9,6
