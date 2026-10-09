@@ -7,7 +7,7 @@
   "domain": "Mathematics",
   "level": "Year 1",
   "maturity": "partial",
-  "version": "0.3.2",
+  "version": "0.4.0",
   "license": "MIT OR CC-BY-4.0",
   "content_origin": {
     "kind": "legacy-prototype",
@@ -147,12 +147,358 @@
       "course_outcome_ids": [
         "calculus-2-outcome-4"
       ]
+    },
+    {
+      "id": "calculus-2-7-objective-1",
+      "description": "Select integration methods from derivative structure.",
+      "bloom": "evaluate",
+      "course_outcome_ids": [
+        "calculus-2-outcome-1"
+      ]
+    },
+    {
+      "id": "calculus-2-7-objective-2",
+      "description": "Evaluate definite integrals with consistent bounds and domains.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "calculus-2-outcome-1",
+        "calculus-2-outcome-2"
+      ]
+    },
+    {
+      "id": "calculus-2-7-objective-3",
+      "description": "Verify antiderivatives and diagnose missing factors or poles.",
+      "bloom": "analyze",
+      "course_outcome_ids": [
+        "calculus-2-outcome-1"
+      ]
+    },
+    {
+      "id": "calculus-2-8-objective-1",
+      "description": "Evaluate improper integrals through explicit limits.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "calculus-2-outcome-1"
+      ]
+    },
+    {
+      "id": "calculus-2-8-objective-2",
+      "description": "Apply endpoint power and nonnegative comparison criteria.",
+      "bloom": "evaluate",
+      "course_outcome_ids": [
+        "calculus-2-outcome-1",
+        "calculus-2-outcome-3"
+      ]
+    },
+    {
+      "id": "calculus-2-8-objective-3",
+      "description": "Distinguish ordinary convergence from principal-value cancellation.",
+      "bloom": "analyze",
+      "course_outcome_ids": [
+        "calculus-2-outcome-1",
+        "calculus-2-outcome-2"
+      ]
+    },
+    {
+      "id": "calculus-2-9-objective-1",
+      "description": "Distinguish term limits and partial-sum convergence.",
+      "bloom": "analyze",
+      "course_outcome_ids": [
+        "calculus-2-outcome-3"
+      ]
+    },
+    {
+      "id": "calculus-2-9-objective-2",
+      "description": "Select positive-series convergence tests and state their hypotheses.",
+      "bloom": "evaluate",
+      "course_outcome_ids": [
+        "calculus-2-outcome-3"
+      ]
+    },
+    {
+      "id": "calculus-2-9-objective-3",
+      "description": "Calculate exact or bounded tails and sufficient truncation lengths.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "calculus-2-outcome-3",
+        "calculus-2-outcome-4"
+      ]
+    },
+    {
+      "id": "calculus-2-10-objective-1",
+      "description": "Classify absolute, conditional and failed convergence.",
+      "bloom": "analyze",
+      "course_outcome_ids": [
+        "calculus-2-outcome-3"
+      ]
+    },
+    {
+      "id": "calculus-2-10-objective-2",
+      "description": "Calculate alternating partial sums and first-omitted bounds.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "calculus-2-outcome-3",
+        "calculus-2-outcome-4"
+      ]
+    },
+    {
+      "id": "calculus-2-10-objective-3",
+      "description": "Interpret remainder signs and sufficient versus actual accuracy.",
+      "bloom": "evaluate",
+      "course_outcome_ids": [
+        "calculus-2-outcome-4"
+      ]
+    },
+    {
+      "id": "calculus-2-11-objective-1",
+      "description": "Determine power-series radii and endpoint inclusion.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "calculus-2-outcome-3"
+      ]
+    },
+    {
+      "id": "calculus-2-11-objective-2",
+      "description": "Integrate and differentiate series on justified interior intervals.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "calculus-2-outcome-1",
+        "calculus-2-outcome-4"
+      ]
+    },
+    {
+      "id": "calculus-2-11-objective-3",
+      "description": "Track centers and domains in transformed expansions.",
+      "bloom": "analyze",
+      "course_outcome_ids": [
+        "calculus-2-outcome-3",
+        "calculus-2-outcome-4"
+      ]
+    },
+    {
+      "id": "calculus-2-12-objective-1",
+      "description": "Construct Taylor polynomials with correct degrees and coefficients.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "calculus-2-outcome-4"
+      ]
+    },
+    {
+      "id": "calculus-2-12-objective-2",
+      "description": "Compare valid remainder bounds and actual errors.",
+      "bloom": "analyze",
+      "course_outcome_ids": [
+        "calculus-2-outcome-4"
+      ]
+    },
+    {
+      "id": "calculus-2-12-objective-3",
+      "description": "Integrate remainder bounds and select a sufficient approximation order.",
+      "bloom": "evaluate",
+      "course_outcome_ids": [
+        "calculus-2-outcome-2",
+        "calculus-2-outcome-4"
+      ]
+    },
+    {
+      "id": "calculus-2-13-objective-1",
+      "description": "Set up geometric and parametric integrals with correct elements.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "calculus-2-outcome-1",
+        "calculus-2-outcome-2"
+      ]
+    },
+    {
+      "id": "calculus-2-13-objective-2",
+      "description": "Calculate annular totals and area averages for radial profiles.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "calculus-2-outcome-2"
+      ]
+    },
+    {
+      "id": "calculus-2-13-objective-3",
+      "description": "Interpret units, traversal multiplicity and model limits.",
+      "bloom": "analyze",
+      "course_outcome_ids": [
+        "calculus-2-outcome-2"
+      ]
+    },
+    {
+      "id": "calculus-2-lab-01-objective-1",
+      "description": "Summarize synthetic force observations and calculate numerical work.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "calculus-2-outcome-1",
+        "calculus-2-outcome-2"
+      ]
+    },
+    {
+      "id": "calculus-2-lab-01-objective-2",
+      "description": "Compute integrated geometric approximations and certify their tails.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "calculus-2-outcome-3",
+        "calculus-2-outcome-4"
+      ]
+    },
+    {
+      "id": "calculus-2-lab-01-objective-3",
+      "description": "Separate offset, sampling and truncation errors under stated assumptions.",
+      "bloom": "evaluate",
+      "course_outcome_ids": [
+        "calculus-2-outcome-2",
+        "calculus-2-outcome-4"
+      ]
     }
   ],
   "duration": {
-    "instructional_weeks": null,
-    "equivalent_structure": null,
-    "weeks": []
+    "instructional_weeks": 14,
+    "equivalent_structure": "Proposed 14-week scope, retaining compact prototype readings in weeks 1, 4, 7 and 10. Workload and human review are absent; this is not evidence of semester equivalence.",
+    "weeks": [
+      {
+        "week": 1,
+        "title": "Integration techniques and improper integrals",
+        "lesson_ids": [
+          "calculus-2-1"
+        ],
+        "assessment_ids": [
+          "calculus-2-1-practice"
+        ]
+      },
+      {
+        "week": 2,
+        "title": "Integration methods and domain checks",
+        "lesson_ids": [
+          "calculus-2-7"
+        ],
+        "assessment_ids": [
+          "calculus-2-7-practice"
+        ]
+      },
+      {
+        "week": 3,
+        "title": "Improper integrals, singularities and comparison",
+        "lesson_ids": [
+          "calculus-2-8"
+        ],
+        "assessment_ids": [
+          "calculus-2-8-practice"
+        ]
+      },
+      {
+        "week": 4,
+        "title": "Applications of integration: work and accumulation",
+        "lesson_ids": [
+          "calculus-2-3"
+        ],
+        "assessment_ids": [
+          "calculus-2-3-practice"
+        ]
+      },
+      {
+        "week": 5,
+        "title": "Geometry, parametric curves and radial amounts",
+        "lesson_ids": [
+          "calculus-2-13"
+        ],
+        "assessment_ids": [
+          "calculus-2-13-practice"
+        ]
+      },
+      {
+        "week": 6,
+        "title": "Integrals as accumulation: total consumption from rate data, numerical rules with error bounds and improper integrals",
+        "lesson_ids": [
+          "calculus-2-5"
+        ],
+        "assessment_ids": [
+          "calculus-2-5-practice"
+        ]
+      },
+      {
+        "week": 7,
+        "title": "Sequences, series, and approximation error",
+        "lesson_ids": [
+          "calculus-2-2"
+        ],
+        "assessment_ids": [
+          "calculus-2-2-practice"
+        ]
+      },
+      {
+        "week": 8,
+        "title": "Positive series and convergence tests",
+        "lesson_ids": [
+          "calculus-2-9"
+        ],
+        "assessment_ids": [
+          "calculus-2-9-practice"
+        ]
+      },
+      {
+        "week": 9,
+        "title": "Alternating series and error certificates",
+        "lesson_ids": [
+          "calculus-2-10"
+        ],
+        "assessment_ids": [
+          "calculus-2-10-practice"
+        ]
+      },
+      {
+        "week": 10,
+        "title": "Power series and Taylor error",
+        "lesson_ids": [
+          "calculus-2-4"
+        ],
+        "assessment_ids": [
+          "calculus-2-4-practice"
+        ]
+      },
+      {
+        "week": 11,
+        "title": "Power series, radius and endpoints",
+        "lesson_ids": [
+          "calculus-2-11"
+        ],
+        "assessment_ids": [
+          "calculus-2-11-practice"
+        ]
+      },
+      {
+        "week": 12,
+        "title": "Taylor approximations with an error bound: when \"approximately\" is good enough",
+        "lesson_ids": [
+          "calculus-2-6"
+        ],
+        "assessment_ids": [
+          "calculus-2-6-practice"
+        ]
+      },
+      {
+        "week": 13,
+        "title": "Taylor polynomials and integrated error",
+        "lesson_ids": [
+          "calculus-2-12"
+        ],
+        "assessment_ids": [
+          "calculus-2-12-practice"
+        ]
+      },
+      {
+        "week": 14,
+        "title": "Virtual lab 1: force integration, geometric tails and sensor offset",
+        "lesson_ids": [
+          "calculus-2-lab-01"
+        ],
+        "assessment_ids": [
+          "calculus-2-week14-force-lab",
+          "calculus-2-case"
+        ]
+      }
+    ]
   },
   "workload": {
     "estimated_total_hours": null,
@@ -335,6 +681,309 @@
           ]
         }
       ]
+    },
+    {
+      "id": "calculus-2-module-7",
+      "title": "Integration methods and domain checks",
+      "source_ids": [
+        "calculus",
+        "engineeringMath"
+      ],
+      "lessons": [
+        {
+          "id": "calculus-2-7",
+          "title": "Integration methods and domain checks",
+          "reading": "modules/07-integration-methods-and-domain-checks.md",
+          "objectives": [
+            "calculus-2-7-objective-1",
+            "calculus-2-7-objective-2",
+            "calculus-2-7-objective-3"
+          ],
+          "worked_example": "Compare the three structures 2t/(1+t²), xeˣ and 1/((x+1)(x+2)). The first matches a derivative divided by its original function and gives ln 5 on [0,2]. The second combines a polynomial and exponential; parts gives 1 on [0,1]. The third separates into reciprocal linear terms and gives ln(4/3) on [0,1]. Different numerical results are expected because these are three different integrands. For each, differentiate the proposed primitive, verify every denominator on the interval and only then evaluate the endpoints. A calculator value alone would not reveal a missing chain factor or an interval crossing a pole.",
+          "question_ids": [
+            "calculus-2-7:substitution",
+            "calculus-2-7:parts-product",
+            "calculus-2-7:parts-log",
+            "calculus-2-7:partial-fractions",
+            "calculus-2-7:trig-substitution",
+            "calculus-2-7:arctangent",
+            "calculus-2-7:parts-sign",
+            "calculus-2-7:pole",
+            "calculus-2-7:method"
+          ],
+          "card_ids": [
+            "calculus-2-7-card-1",
+            "calculus-2-7-card-2",
+            "calculus-2-7-card-3",
+            "calculus-2-7-card-4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "calculus-2-module-8",
+      "title": "Improper integrals, singularities and comparison",
+      "source_ids": [
+        "calculus",
+        "engineeringMath"
+      ],
+      "lessons": [
+        {
+          "id": "calculus-2-8",
+          "title": "Improper integrals, singularities and comparison",
+          "reading": "modules/08-improper-integrals-and-comparison.md",
+          "objectives": [
+            "calculus-2-8-objective-1",
+            "calculus-2-8-objective-2",
+            "calculus-2-8-objective-3"
+          ],
+          "worked_example": "For q(t)=6/(1+t)², integrate first on [0,b]. The antiderivative is −6/(1+t), so the finite total is 6−6/(1+b). Taking b to infinity gives 6. If observations stop at t=3, the observed-window integral is 4.5 and the model-based remaining tail is 1.5. Their sum matches the total. Contrast this with q(t)=6/(1+t), whose finite-window integral is 6 ln(1+b). Its rate also tends to zero, but its unlimited total diverges. The difference comes from the tail exponent, not from whether the curve appears nearly flat on a finite plot.",
+          "question_ids": [
+            "calculus-2-8:power-tail-total",
+            "calculus-2-8:endpoint-root",
+            "calculus-2-8:shifted-total",
+            "calculus-2-8:shifted-tail",
+            "calculus-2-8:cutoff-tail",
+            "calculus-2-8:comparison-exact",
+            "calculus-2-8:endpoint-rule",
+            "calculus-2-8:comparison",
+            "calculus-2-8:principal-value"
+          ],
+          "card_ids": [
+            "calculus-2-8-card-1",
+            "calculus-2-8-card-2",
+            "calculus-2-8-card-3",
+            "calculus-2-8-card-4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "calculus-2-module-9",
+      "title": "Positive series and convergence tests",
+      "source_ids": [
+        "calculus",
+        "engineeringMath"
+      ],
+      "lessons": [
+        {
+          "id": "calculus-2-9",
+          "title": "Positive series and convergence tests",
+          "reading": "modules/09-positive-series-and-convergence-tests.md",
+          "objectives": [
+            "calculus-2-9-objective-1",
+            "calculus-2-9-objective-2",
+            "calculus-2-9-objective-3"
+          ],
+          "worked_example": "Suppose a constructed repeated contribution is 0.4ⁿ for n beginning at zero. Add four terms to get 1+0.4+0.16+0.064=1.624. The exact remainder is 0.4⁴/0.6=0.042667. For a tighter tolerance of 0.001, compare N=7 and N=8: their tail bounds straddle the target. Keep terms through N=8, meaning nine contributions. Unlike a measurement uncertainty estimate, this tail comes entirely from the specified geometric mathematical model. Unmodeled changes in the ratio would require a separate argument.",
+          "question_ids": [
+            "calculus-2-9:geometric-sum",
+            "calculus-2-9:geometric-partial",
+            "calculus-2-9:geometric-tail",
+            "calculus-2-9:geometric-index",
+            "calculus-2-9:p-tail-bound",
+            "calculus-2-9:telescoping",
+            "calculus-2-9:zero-limit",
+            "calculus-2-9:ratio-one",
+            "calculus-2-9:finite-prefix"
+          ],
+          "card_ids": [
+            "calculus-2-9-card-1",
+            "calculus-2-9-card-2",
+            "calculus-2-9-card-3",
+            "calculus-2-9-card-4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "calculus-2-module-10",
+      "title": "Alternating series and error certificates",
+      "source_ids": [
+        "calculus",
+        "engineeringMath"
+      ],
+      "lessons": [
+        {
+          "id": "calculus-2-10",
+          "title": "Alternating series and error certificates",
+          "reading": "modules/10-alternating-series-and-error-certificates.md",
+          "objectives": [
+            "calculus-2-10-objective-1",
+            "calculus-2-10-objective-2",
+            "calculus-2-10-objective-3"
+          ],
+          "worked_example": "Evaluate the four-term logarithm approximation at x=0.5 using exact fractions before rounding. Its value is 77/192, or 0.401042. Add the first omitted term 1/160 to obtain the upper enclosing partial sum. Since the signs start positive and four terms end negative, the omitted fifth term is positive, so the approximation is below ln 1.5. The interval width is 0.00625, and the actual error is 0.004423. This reasoning supplies a sign, a magnitude guarantee and an explicit partial-sum convention; reporting only “approximately 0.4” would omit all three.",
+          "question_ids": [
+            "calculus-2-10:log-partial",
+            "calculus-2-10:log-bound",
+            "calculus-2-10:log-term-count",
+            "calculus-2-10:arctan-partial",
+            "calculus-2-10:arctan-bound",
+            "calculus-2-10:endpoint-count",
+            "calculus-2-10:conditional",
+            "calculus-2-10:decrease",
+            "calculus-2-10:error-sign"
+          ],
+          "card_ids": [
+            "calculus-2-10-card-1",
+            "calculus-2-10-card-2",
+            "calculus-2-10-card-3",
+            "calculus-2-10-card-4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "calculus-2-module-11",
+      "title": "Power series, radius and endpoints",
+      "source_ids": [
+        "calculus",
+        "engineeringMath"
+      ],
+      "lessons": [
+        {
+          "id": "calculus-2-11",
+          "title": "Power series, radius and endpoints",
+          "reading": "modules/11-power-series-radius-and-endpoints.md",
+          "objectives": [
+            "calculus-2-11-objective-1",
+            "calculus-2-11-objective-2",
+            "calculus-2-11-objective-3"
+          ],
+          "worked_example": "Analyze Σ_(n=1)∞(x−2)ⁿ/(n3ⁿ). The ratio calculation gives a radius of 3. Substitute x=−1 to obtain an alternating harmonic series and x=5 to obtain a positive harmonic series. The resulting interval is [−1,5). Evaluate x=2.5 using the dimensionless argument z=1/6 and the identity −ln(1−z), giving 0.182322. These are three separate tasks: finding the radius, classifying endpoints and computing an interior value. A single ratio inequality solves only the first task.",
+          "question_ids": [
+            "calculus-2-11:radius",
+            "calculus-2-11:interior-value",
+            "calculus-2-11:geometric-polynomial",
+            "calculus-2-11:geometric-error",
+            "calculus-2-11:derivative-series",
+            "calculus-2-11:integrated-series",
+            "calculus-2-11:endpoints",
+            "calculus-2-11:operation",
+            "calculus-2-11:outside"
+          ],
+          "card_ids": [
+            "calculus-2-11-card-1",
+            "calculus-2-11-card-2",
+            "calculus-2-11-card-3",
+            "calculus-2-11-card-4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "calculus-2-module-12",
+      "title": "Taylor polynomials and integrated error",
+      "source_ids": [
+        "calculus",
+        "engineeringMath"
+      ],
+      "lessons": [
+        {
+          "id": "calculus-2-12",
+          "title": "Taylor polynomials and integrated error",
+          "reading": "modules/12-taylor-polynomials-and-integrated-error.md",
+          "objectives": [
+            "calculus-2-12-objective-1",
+            "calculus-2-12-objective-2",
+            "calculus-2-12-objective-3"
+          ],
+          "worked_example": "Approximate the accumulation ∫₀^0.4 e^(−x)dx by integrating the cubic polynomial. The result is 0.3296. Establish the pointwise error x⁴/24 using alternating terms decreasing throughout [0,0.4], then integrate that bound to get 8.5333 × 10⁻⁵. Compare the exact value 0.329680 only after constructing the certificate. The actual error falls below the guarantee. This sequence separates an approximation, a theorem-based error statement and a reference check; knowing the reference value was not necessary for the bound.",
+          "question_ids": [
+            "calculus-2-12:decay-cubic",
+            "calculus-2-12:decay-bound",
+            "calculus-2-12:growth-bound",
+            "calculus-2-12:sine-polynomial",
+            "calculus-2-12:integrated-bound",
+            "calculus-2-12:degree-choice",
+            "calculus-2-12:lagrange",
+            "calculus-2-12:integral-error",
+            "calculus-2-12:certificate"
+          ],
+          "card_ids": [
+            "calculus-2-12-card-1",
+            "calculus-2-12-card-2",
+            "calculus-2-12-card-3",
+            "calculus-2-12-card-4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "calculus-2-module-13",
+      "title": "Geometry, parametric curves and radial amounts",
+      "source_ids": [
+        "calculus",
+        "engineeringMath"
+      ],
+      "lessons": [
+        {
+          "id": "calculus-2-13",
+          "title": "Geometry, parametric curves and radial amounts",
+          "reading": "modules/13-geometry-parametric-curves-and-radial-amounts.md",
+          "objectives": [
+            "calculus-2-13-objective-1",
+            "calculus-2-13-objective-2",
+            "calculus-2-13-objective-3"
+          ],
+          "worked_example": "Use synthetic R=2 cm and c₀=6 arbitrary amount units per cm². Then Q=∫₀²6(1−r²/4)2πr dr. Integrate 12π(r−r³/4) to obtain 12π[r²/2−r⁴/16]₀²=12π, about 37.699112 amount units. The disk area is 4π cm², giving average density 3 amount units per cm². The center-density shortcut gives 24π amount units and doubles the correct total. An unweighted radial average would answer a different question because each radius would receive equal weight despite occupying unequal area.\n\nThe same calculation can be checked by changing variable s=r²/R². Then 2r dr=R² ds, and Q=πc₀R²∫₀¹(1−s)ds. This gives the same half factor and reveals why normalizing the radius simplifies the shape dependence. It also verifies the annular Jacobian without repeating the original polynomial integration.",
+          "question_ids": [
+            "calculus-2-13:strip-area",
+            "calculus-2-13:disk-volume",
+            "calculus-2-13:parametric-length",
+            "calculus-2-13:polar-area",
+            "calculus-2-13:radial-total",
+            "calculus-2-13:radial-average",
+            "calculus-2-13:annulus",
+            "calculus-2-13:traversal",
+            "calculus-2-13:density-units"
+          ],
+          "card_ids": [
+            "calculus-2-13-card-1",
+            "calculus-2-13-card-2",
+            "calculus-2-13-card-3",
+            "calculus-2-13-card-4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "calculus-2-module-lab-01",
+      "title": "Virtual lab 1: force integration, geometric tails and sensor offset",
+      "source_ids": [
+        "calculus",
+        "engineeringMath"
+      ],
+      "lessons": [
+        {
+          "id": "calculus-2-lab-01",
+          "title": "Virtual lab 1: force integration, geometric tails and sensor offset",
+          "reading": "labs/01-force-work-and-series.md",
+          "objectives": [
+            "calculus-2-lab-01-objective-1",
+            "calculus-2-lab-01-objective-2",
+            "calculus-2-lab-01-objective-3"
+          ],
+          "worked_example": "The synthetic corrected force readings support trapezoidal and Simpson work calculations. A four-term geometric force expansion underestimates the exact model work by about 0.261 J, within an integrated tail bound of about 0.284 J. A known constant sensor offset contributes separately to work and is removed before numerical integration.",
+          "question_ids": [
+            "calculus-2-lab-01:summary",
+            "calculus-2-lab-01:trapezoid",
+            "calculus-2-lab-01:simpson",
+            "calculus-2-lab-01:series-work",
+            "calculus-2-lab-01:tail-bound",
+            "calculus-2-lab-01:interpretation",
+            "calculus-2-lab-01:claims",
+            "calculus-2-lab-01:convexity"
+          ],
+          "card_ids": [
+            "calculus-2-lab-01-card-1",
+            "calculus-2-lab-01-card-2",
+            "calculus-2-lab-01-card-3",
+            "calculus-2-lab-01-card-4"
+          ]
+        }
+      ]
     }
   ],
   "assessments": [
@@ -445,6 +1094,218 @@
       "points": 6
     },
     {
+      "id": "calculus-2-7-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Integration methods and domain checks practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "calculus-2-7-objective-1",
+        "calculus-2-7-objective-2",
+        "calculus-2-7-objective-3",
+        "calculus-2-outcome-1",
+        "calculus-2-outcome-2"
+      ],
+      "question_ids": [
+        "calculus-2-7:substitution",
+        "calculus-2-7:parts-product",
+        "calculus-2-7:parts-log",
+        "calculus-2-7:partial-fractions",
+        "calculus-2-7:trig-substitution",
+        "calculus-2-7:arctangent",
+        "calculus-2-7:parts-sign",
+        "calculus-2-7:pole",
+        "calculus-2-7:method"
+      ],
+      "points": 9
+    },
+    {
+      "id": "calculus-2-8-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Improper integrals, singularities and comparison practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "calculus-2-8-objective-1",
+        "calculus-2-8-objective-2",
+        "calculus-2-8-objective-3",
+        "calculus-2-outcome-1",
+        "calculus-2-outcome-2",
+        "calculus-2-outcome-3"
+      ],
+      "question_ids": [
+        "calculus-2-8:power-tail-total",
+        "calculus-2-8:endpoint-root",
+        "calculus-2-8:shifted-total",
+        "calculus-2-8:shifted-tail",
+        "calculus-2-8:cutoff-tail",
+        "calculus-2-8:comparison-exact",
+        "calculus-2-8:endpoint-rule",
+        "calculus-2-8:comparison",
+        "calculus-2-8:principal-value"
+      ],
+      "points": 9
+    },
+    {
+      "id": "calculus-2-9-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Positive series and convergence tests practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "calculus-2-9-objective-1",
+        "calculus-2-9-objective-2",
+        "calculus-2-9-objective-3",
+        "calculus-2-outcome-3",
+        "calculus-2-outcome-4"
+      ],
+      "question_ids": [
+        "calculus-2-9:geometric-sum",
+        "calculus-2-9:geometric-partial",
+        "calculus-2-9:geometric-tail",
+        "calculus-2-9:geometric-index",
+        "calculus-2-9:p-tail-bound",
+        "calculus-2-9:telescoping",
+        "calculus-2-9:zero-limit",
+        "calculus-2-9:ratio-one",
+        "calculus-2-9:finite-prefix"
+      ],
+      "points": 9
+    },
+    {
+      "id": "calculus-2-10-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Alternating series and error certificates practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "calculus-2-10-objective-1",
+        "calculus-2-10-objective-2",
+        "calculus-2-10-objective-3",
+        "calculus-2-outcome-3",
+        "calculus-2-outcome-4"
+      ],
+      "question_ids": [
+        "calculus-2-10:log-partial",
+        "calculus-2-10:log-bound",
+        "calculus-2-10:log-term-count",
+        "calculus-2-10:arctan-partial",
+        "calculus-2-10:arctan-bound",
+        "calculus-2-10:endpoint-count",
+        "calculus-2-10:conditional",
+        "calculus-2-10:decrease",
+        "calculus-2-10:error-sign"
+      ],
+      "points": 9
+    },
+    {
+      "id": "calculus-2-11-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Power series, radius and endpoints practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "calculus-2-11-objective-1",
+        "calculus-2-11-objective-2",
+        "calculus-2-11-objective-3",
+        "calculus-2-outcome-1",
+        "calculus-2-outcome-3",
+        "calculus-2-outcome-4"
+      ],
+      "question_ids": [
+        "calculus-2-11:radius",
+        "calculus-2-11:interior-value",
+        "calculus-2-11:geometric-polynomial",
+        "calculus-2-11:geometric-error",
+        "calculus-2-11:derivative-series",
+        "calculus-2-11:integrated-series",
+        "calculus-2-11:endpoints",
+        "calculus-2-11:operation",
+        "calculus-2-11:outside"
+      ],
+      "points": 9
+    },
+    {
+      "id": "calculus-2-12-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Taylor polynomials and integrated error practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "calculus-2-12-objective-1",
+        "calculus-2-12-objective-2",
+        "calculus-2-12-objective-3",
+        "calculus-2-outcome-2",
+        "calculus-2-outcome-4"
+      ],
+      "question_ids": [
+        "calculus-2-12:decay-cubic",
+        "calculus-2-12:decay-bound",
+        "calculus-2-12:growth-bound",
+        "calculus-2-12:sine-polynomial",
+        "calculus-2-12:integrated-bound",
+        "calculus-2-12:degree-choice",
+        "calculus-2-12:lagrange",
+        "calculus-2-12:integral-error",
+        "calculus-2-12:certificate"
+      ],
+      "points": 9
+    },
+    {
+      "id": "calculus-2-13-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Geometry, parametric curves and radial amounts practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "calculus-2-13-objective-1",
+        "calculus-2-13-objective-2",
+        "calculus-2-13-objective-3",
+        "calculus-2-outcome-1",
+        "calculus-2-outcome-2"
+      ],
+      "question_ids": [
+        "calculus-2-13:strip-area",
+        "calculus-2-13:disk-volume",
+        "calculus-2-13:parametric-length",
+        "calculus-2-13:polar-area",
+        "calculus-2-13:radial-total",
+        "calculus-2-13:radial-average",
+        "calculus-2-13:annulus",
+        "calculus-2-13:traversal",
+        "calculus-2-13:density-units"
+      ],
+      "points": 9
+    },
+    {
+      "id": "calculus-2-week14-force-lab",
+      "type": "lab",
+      "mode": "practice",
+      "title": "Virtual lab 1: force integration, geometric tails and sensor offset (ungraded practice)",
+      "path": "question-banks/practice.json",
+      "week": 14,
+      "objective_ids": [
+        "calculus-2-lab-01-objective-1",
+        "calculus-2-lab-01-objective-2",
+        "calculus-2-lab-01-objective-3",
+        "calculus-2-outcome-1",
+        "calculus-2-outcome-2",
+        "calculus-2-outcome-3",
+        "calculus-2-outcome-4"
+      ],
+      "question_ids": [
+        "calculus-2-lab-01:summary",
+        "calculus-2-lab-01:trapezoid",
+        "calculus-2-lab-01:simpson",
+        "calculus-2-lab-01:series-work",
+        "calculus-2-lab-01:tail-bound",
+        "calculus-2-lab-01:interpretation",
+        "calculus-2-lab-01:claims",
+        "calculus-2-lab-01:convexity"
+      ],
+      "points": 20
+    },
+    {
       "id": "calculus-2-case",
       "type": "case",
       "mode": "self-assessment",
@@ -511,18 +1372,24 @@
       "version": "0.3.2",
       "date": "2026-10-08",
       "summary": "Fixed number formatting that an earlier authoring step left in learner-visible text: raw exponent notation (a number written with the letter e and a power of ten) and floating-point artifacts (a decimal with a long run of trailing digits) in item calculus-2-6:p2-value. No answer key, tolerance or objective changed. The package remains partial, unreviewed and formative-only."
+    },
+    {
+      "version": "0.4.0",
+      "date": "2026-10-09",
+      "summary": "Added seven original lessons covering integration structure, improper-integral limits, positive and alternating series, power-series domains, Taylor and integrated error, and geometric/radial integrals; one synthetic force-work lab and a proposed 14-week schedule. Developed with Codex assistance, using existing scope references only. Still partial, unreviewed and formative-only."
     }
   ],
   "limitations": [
-    "Four compact legacy units are preserved; this package is not equivalent to a full university semester.",
-    "There is no authored 12–15 week schedule, substantive homework sequence, laboratory sequence, midterm, cumulative final, or graded integrative project.",
-    "Practice items are short formative checks (two per prototype unit and six per original lesson); they do not demonstrate comprehensive outcome coverage or mastery, and objective associations remain provisional.",
-    "Bloom labels and structured prerequisite edges are initial authoring classifications awaiting subject-matter review.",
-    "Question answers and solution feedback are intentionally public practice authoring specifications, not restricted exam keys.",
-    "Of the 16 numerical answers in this package, eight require a unit, none checks significant figures and none checks dimensions; the others accept a number within a stated tolerance, with the unit optional.",
-    "Total workload and weekly duration are unknown; former nominal credit values and hardcoded reading times do not establish workload."
+    "Four compact prototype units remain alongside ten original readings including one synthetic-data lab; this is not equivalent to a full university semester.",
+    "The proposed 14-week sequence is unmeasured and unreviewed. Graded homework, exams, a laboratory sequence and a cumulative project are absent.",
+    "Formative item and objective links are provisional and do not establish comprehensive coverage or mastery.",
+    "All examples and observations are synthetic. Mathematical force and radial concentration models establish no device behavior, experimental protocol or biological mechanism.",
+    "New numeric prompts state their output scale and request a bare number; existing unit-entry requirements are retained. Significant figures and dimensions are not automatically assessed.",
+    "CSV and structured choices check selected calculations and distinctions; written derivations and model identification are not automatically graded.",
+    "Convergence and error bounds require their stated domains, smoothness, sign and monotonicity assumptions.",
+    "Qualified human mathematical review, accessibility review and workload measurement remain outstanding."
   ],
   "intentionally_omitted": [
-    "Full instructional sequence and summative assessments are not authored yet; the original lessons extend a partial package."
+    "Graded assessments, measured workload, a laboratory sequence, a cumulative graded project and named qualified review remain outstanding."
   ]
 }

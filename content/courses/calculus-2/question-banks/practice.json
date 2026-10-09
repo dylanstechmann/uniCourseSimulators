@@ -620,6 +620,2497 @@
         "kind": "original",
         "modifications": []
       }
+    },
+    {
+      "id": "calculus-2-7:substitution",
+      "type": "numeric",
+      "prompt": "Evaluate ∫₀² 2t/(1+t²)dt for dimensionless t. Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "calculus-2-7-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 1.6094379124341003,
+        "unit": "",
+        "tolerance": 0.0001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use u=1+t² and transform both bounds.",
+        "solution": "The transformed integral is ∫₁⁵du/u=ln 5.",
+        "lesson_ids": [
+          "calculus-2-7"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-2-7:parts-product",
+      "type": "numeric",
+      "prompt": "Evaluate ∫₀¹ x eˣ dx. Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "calculus-2-7-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 1,
+        "unit": "",
+        "tolerance": 0.0001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Take u=x and dv=eˣdx in integration by parts.",
+        "solution": "[(x−1)eˣ]₀¹=0−(−1)=1.",
+        "lesson_ids": [
+          "calculus-2-7"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-2-7:parts-log",
+      "type": "numeric",
+      "prompt": "Evaluate ∫₁ᵉ ln x dx. Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "calculus-2-7-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 1,
+        "unit": "",
+        "tolerance": 0.0001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Integrate by parts with u=ln x and dv=dx.",
+        "solution": "[x ln x−x]₁ᵉ=0−(−1)=1; x is positive on the interval.",
+        "lesson_ids": [
+          "calculus-2-7"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-2-7:partial-fractions",
+      "type": "numeric",
+      "prompt": "Evaluate ∫₀¹ 1/((x+1)(x+2))dx. Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "calculus-2-7-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0.28768207245178085,
+        "unit": "",
+        "tolerance": 0.0001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Decompose into 1/(x+1)−1/(x+2).",
+        "solution": "[ln(x+1)−ln(x+2)]₀¹=ln(4/3); neither pole lies in the interval.",
+        "lesson_ids": [
+          "calculus-2-7"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-2-7:trig-substitution",
+      "type": "numeric",
+      "prompt": "Evaluate ∫₀^(π/2) sin³θ cosθ dθ, with θ in radians. Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "calculus-2-7-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0.25,
+        "unit": "",
+        "tolerance": 0.0001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Set u=sinθ, du=cosθ dθ.",
+        "solution": "The transformed bounds are 0 and 1; ∫₀¹u³du=1/4.",
+        "lesson_ids": [
+          "calculus-2-7"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-2-7:arctangent",
+      "type": "numeric",
+      "prompt": "Evaluate ∫₀¹ 1/(1+x²)dx. Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "calculus-2-7-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 0.7853981633974483,
+        "unit": "",
+        "tolerance": 0.0001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Differentiate arctan x to verify the primitive.",
+        "solution": "[arctan x]₀¹=π/4; a logarithm substitution lacks the needed factor 2x.",
+        "lesson_ids": [
+          "calculus-2-7"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-2-7:parts-sign",
+      "type": "single_choice",
+      "prompt": "Which antiderivative differentiates to xeˣ?",
+      "points": 1,
+      "objective_ids": [
+        "calculus-2-7-objective-3"
+      ],
+      "options": [
+        "x eˣ+C.",
+        "(x−1)eˣ+C.",
+        "(x+1)eˣ+C."
+      ],
+      "solution_spec": {
+        "answer": 1
+      },
+      "feedback": {
+        "hint": "Check the conditions as well as the displayed formula.",
+        "solution": "(x−1)eˣ+C.",
+        "lesson_ids": [
+          "calculus-2-7"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-2-7:pole",
+      "type": "single_choice",
+      "prompt": "Does evaluating ln|x| at −1 and 1 establish ∫_(−1)¹1/x dx?",
+      "points": 1,
+      "objective_ids": [
+        "calculus-2-7-objective-2"
+      ],
+      "options": [
+        "Yes; any finite endpoints remove the singularity.",
+        "No; the internal singularity requires separate improper limits.",
+        "Yes; equal endpoint values prove the integral is zero."
+      ],
+      "solution_spec": {
+        "answer": 1
+      },
+      "feedback": {
+        "hint": "Check the conditions as well as the displayed formula.",
+        "solution": "No; the internal singularity requires separate improper limits.",
+        "lesson_ids": [
+          "calculus-2-7"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-2-7:method",
+      "type": "single_choice",
+      "prompt": "Why is u=1+x² insufficient by itself for ∫1/(1+x²)dx?",
+      "points": 1,
+      "objective_ids": [
+        "calculus-2-7-objective-1"
+      ],
+      "options": [
+        "All rational functions have logarithmic primitives only.",
+        "The required derivative factor 2x is absent; an arctangent primitive works.",
+        "The integrand is undefined at x=0."
+      ],
+      "solution_spec": {
+        "answer": 1
+      },
+      "feedback": {
+        "hint": "Check the conditions as well as the displayed formula.",
+        "solution": "The required derivative factor 2x is absent; an arctangent primitive works.",
+        "lesson_ids": [
+          "calculus-2-7"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-2-8:power-tail-total",
+      "type": "numeric",
+      "prompt": "Evaluate ∫₁∞ x⁻² dx. Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "calculus-2-8-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 1,
+        "unit": "",
+        "tolerance": 0.0001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Integrate to a finite upper cutoff, then take its limit.",
+        "solution": "[−1/x]₁ᵇ=1−1/b tends to 1.",
+        "lesson_ids": [
+          "calculus-2-8"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-2-8:endpoint-root",
+      "type": "numeric",
+      "prompt": "Evaluate ∫₀¹ x⁻¹ᐟ² dx as an improper integral. Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "calculus-2-8-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 2,
+        "unit": "",
+        "tolerance": 0.0001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use a positive lower cutoff and then let it approach zero.",
+        "solution": "[2√x]ₐ¹=2−2√a tends to 2 despite the endpoint singularity.",
+        "lesson_ids": [
+          "calculus-2-8"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-2-8:shifted-total",
+      "type": "numeric",
+      "prompt": "The synthetic rate is q(t)=6/(1+t)² amount units/h, with t numerically in hours and 1 representing the one-hour scale. What is its total on [0,∞) in amount units? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "calculus-2-8-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 6,
+        "unit": "",
+        "tolerance": 0.0001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Evaluate the finite-window primitive −6/(1+t).",
+        "solution": "The total is lim_(b→∞)(6−6/(1+b))=6 amount units.",
+        "lesson_ids": [
+          "calculus-2-8"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-2-8:shifted-tail",
+      "type": "numeric",
+      "prompt": "For the same specified q(t)=6/(1+t)², what amount remains after t=3 h? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "calculus-2-8-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 1.5,
+        "unit": "",
+        "tolerance": 0.0001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Integrate −6/(1+t) from 3 to a finite cutoff.",
+        "solution": "The remaining amount tends to 6/(1+3)=1.5.",
+        "lesson_ids": [
+          "calculus-2-8"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-2-8:cutoff-tail",
+      "type": "numeric",
+      "prompt": "For ∫₁∞ x⁻²dx, what exact amount is omitted by cutting off at x=100? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "calculus-2-8-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 0.01,
+        "unit": "",
+        "tolerance": 1e-05,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Compute the integral from 100 to infinity.",
+        "solution": "The exact omitted tail is lim_(b→∞)(1/100−1/b)=0.01.",
+        "lesson_ids": [
+          "calculus-2-8"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-2-8:comparison-exact",
+      "type": "numeric",
+      "prompt": "Evaluate ∫₁∞1/(1+x²)dx. Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "calculus-2-8-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0.7853981633974483,
+        "unit": "",
+        "tolerance": 0.0001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use arctangent and its limit π/2 at infinity.",
+        "solution": "The result is π/2−π/4=π/4; comparison to x⁻² also proves convergence.",
+        "lesson_ids": [
+          "calculus-2-8"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-2-8:endpoint-rule",
+      "type": "single_choice",
+      "prompt": "Which power criteria are correct?",
+      "points": 1,
+      "objective_ids": [
+        "calculus-2-8-objective-2"
+      ],
+      "options": [
+        "Both endpoints need p>1.",
+        "Both endpoints need p<1.",
+        "At infinity x⁻ᵖ needs p>1; near zero it needs p<1."
+      ],
+      "solution_spec": {
+        "answer": 2
+      },
+      "feedback": {
+        "hint": "Check the conditions as well as the displayed formula.",
+        "solution": "At infinity x⁻ᵖ needs p>1; near zero it needs p<1.",
+        "lesson_ids": [
+          "calculus-2-8"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-2-8:comparison",
+      "type": "single_choice",
+      "prompt": "If 0≤f≤g on a tail and ∫g converges, what follows?",
+      "points": 1,
+      "objective_ids": [
+        "calculus-2-8-objective-2"
+      ],
+      "options": [
+        "The tail integral of f must diverge.",
+        "The total integrals must be equal.",
+        "The tail integral of f converges."
+      ],
+      "solution_spec": {
+        "answer": 2
+      },
+      "feedback": {
+        "hint": "Check the conditions as well as the displayed formula.",
+        "solution": "The tail integral of f converges.",
+        "lesson_ids": [
+          "calculus-2-8"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-2-8:principal-value",
+      "type": "single_choice",
+      "prompt": "What is the status of ∫_(−1)¹1/x dx?",
+      "points": 1,
+      "objective_ids": [
+        "calculus-2-8-objective-3"
+      ],
+      "options": [
+        "Its positive and negative divergent parts can be added as ordinary real numbers.",
+        "The ordinary improper integral diverges; its symmetric principal value is zero.",
+        "The ordinary integral equals zero by endpoint cancellation."
+      ],
+      "solution_spec": {
+        "answer": 1
+      },
+      "feedback": {
+        "hint": "Check the conditions as well as the displayed formula.",
+        "solution": "The ordinary improper integral diverges; its symmetric principal value is zero.",
+        "lesson_ids": [
+          "calculus-2-8"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-2-9:geometric-sum",
+      "type": "numeric",
+      "prompt": "For Σ_(n=0)∞0.4ⁿ, what is the infinite sum? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "calculus-2-9-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 1.6666666666666667,
+        "unit": "",
+        "tolerance": 0.0001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Include the constant term because the initial index is zero.",
+        "solution": "The sum is 1/(1−0.4)=5/3.",
+        "lesson_ids": [
+          "calculus-2-9"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-2-9:geometric-partial",
+      "type": "numeric",
+      "prompt": "For Σ_(n=0)³0.4ⁿ, what is the partial sum? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "calculus-2-9-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 1.624,
+        "unit": "",
+        "tolerance": 0.0001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "There are four terms, indices zero through three.",
+        "solution": "1+0.4+0.16+0.064=1.624.",
+        "lesson_ids": [
+          "calculus-2-9"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-2-9:geometric-tail",
+      "type": "numeric",
+      "prompt": "For Σ_(n=0)∞0.4ⁿ after including indices 0 through 3, what is the exact remaining tail? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "calculus-2-9-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 0.04266666666666668,
+        "unit": "",
+        "tolerance": 1e-05,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "The first omitted index is four; add the whole geometric tail.",
+        "solution": "The tail is 0.4⁴/(1−0.4), not merely 0.4⁴.",
+        "lesson_ids": [
+          "calculus-2-9"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-2-9:geometric-index",
+      "type": "numeric",
+      "prompt": "What is the smallest final index N in Σ_(n=0)^N0.4ⁿ guaranteeing tail at most 0.001? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "calculus-2-9-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 8,
+        "unit": "",
+        "tolerance": 0,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Test the chosen final index and its predecessor.",
+        "solution": "N=7 gives tail 0.001092; N=8 gives 0.000437. Thus final index 8, with nine terms, is first sufficient.",
+        "lesson_ids": [
+          "calculus-2-9"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-2-9:p-tail-bound",
+      "type": "numeric",
+      "prompt": "For Σ_(n=1)∞1/n², what integral-test upper bound applies to the tail after 100 terms? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "calculus-2-9-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0.01,
+        "unit": "",
+        "tolerance": 1e-05,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Integrate the positive decreasing function from N, not N+1, for the upper bound.",
+        "solution": "∫₁₀₀∞x⁻²dx=1/100=0.01. The lower bound would be 1/101.",
+        "lesson_ids": [
+          "calculus-2-9"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-2-9:telescoping",
+      "type": "numeric",
+      "prompt": "For Σ_(n=1)^9 1/(n²+n), what is the partial sum? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "calculus-2-9-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0.9,
+        "unit": "",
+        "tolerance": 0.0001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use 1/(n²+n)=1/n−1/(n+1).",
+        "solution": "The finite telescoping sum is 1−1/10=0.9.",
+        "lesson_ids": [
+          "calculus-2-9"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-2-9:zero-limit",
+      "type": "single_choice",
+      "prompt": "The terms 1/n tend to zero. What follows for their series?",
+      "points": 1,
+      "objective_ids": [
+        "calculus-2-9-objective-1"
+      ],
+      "options": [
+        "Every series with zero term limit converges.",
+        "This necessary condition alone is insufficient; the harmonic series diverges.",
+        "Positive terms cannot have zero limit."
+      ],
+      "solution_spec": {
+        "answer": 1
+      },
+      "feedback": {
+        "hint": "Check the conditions as well as the displayed formula.",
+        "solution": "This necessary condition alone is insufficient; the harmonic series diverges.",
+        "lesson_ids": [
+          "calculus-2-9"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-2-9:ratio-one",
+      "type": "single_choice",
+      "prompt": "A ratio-test limit equals 1. What does that test conclude?",
+      "points": 1,
+      "objective_ids": [
+        "calculus-2-9-objective-2"
+      ],
+      "options": [
+        "The series always diverges.",
+        "The series always converges.",
+        "It is inconclusive; another argument is needed."
+      ],
+      "solution_spec": {
+        "answer": 2
+      },
+      "feedback": {
+        "hint": "Check the conditions as well as the displayed formula.",
+        "solution": "It is inconclusive; another argument is needed.",
+        "lesson_ids": [
+          "calculus-2-9"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-2-9:finite-prefix",
+      "type": "single_choice",
+      "prompt": "How does changing finitely many terms affect convergence of a numerical series?",
+      "points": 1,
+      "objective_ids": [
+        "calculus-2-9-objective-1"
+      ],
+      "options": [
+        "It has no effect on the sum.",
+        "It can change the sum but not whether the tail converges.",
+        "It always changes convergence into divergence."
+      ],
+      "solution_spec": {
+        "answer": 1
+      },
+      "feedback": {
+        "hint": "Check the conditions as well as the displayed formula.",
+        "solution": "It can change the sum but not whether the tail converges.",
+        "lesson_ids": [
+          "calculus-2-9"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-2-10:log-partial",
+      "type": "numeric",
+      "prompt": "At x=0.5, calculate the four-term ln(1+x) approximation x−x²/2+x³/3−x⁴/4. Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "calculus-2-10-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0.4010416666666667,
+        "unit": "",
+        "tolerance": 1e-05,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use indices one through four and retain the alternating signs.",
+        "solution": "0.5−0.125+1/24−1/64=77/192, approximately 0.401042.",
+        "lesson_ids": [
+          "calculus-2-10"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-2-10:log-bound",
+      "type": "numeric",
+      "prompt": "For that four-term logarithm expansion at x=0.5, what is the first-omitted magnitude bound? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "calculus-2-10-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0.00625,
+        "unit": "",
+        "tolerance": 1e-06,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "The first omitted index is five.",
+        "solution": "The decreasing alternating magnitudes give bound 0.5⁵/5=0.00625.",
+        "lesson_ids": [
+          "calculus-2-10"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-2-10:log-term-count",
+      "type": "numeric",
+      "prompt": "How many terms of ln(1+0.5)=Σ_(n=1)∞(−1)^(n+1)0.5ⁿ/n are first sufficient for a first-omitted bound at most 0.0001? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "calculus-2-10-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 9,
+        "unit": "",
+        "tolerance": 0,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Compare first-omitted magnitudes for successive included counts.",
+        "solution": "N=8 gives 0.000217, while N=9 gives 9.765625 × 10⁻⁵. Nine terms first certify the target.",
+        "lesson_ids": [
+          "calculus-2-10"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-2-10:arctan-partial",
+      "type": "numeric",
+      "prompt": "For arctan(0.5), evaluate x−x³/3+x⁵/5 at x=0.5. Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "calculus-2-10-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0.4645833333333333,
+        "unit": "",
+        "tolerance": 1e-05,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Three terms reach degree five because only odd powers appear.",
+        "solution": "0.5−0.5³/3+0.5⁵/5 is approximately 0.464583.",
+        "lesson_ids": [
+          "calculus-2-10"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-2-10:arctan-bound",
+      "type": "numeric",
+      "prompt": "For the preceding three-term arctan(0.5) approximation, what is the first-omitted magnitude bound? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "calculus-2-10-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0.0011160714285714285,
+        "unit": "",
+        "tolerance": 1e-06,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "The first omitted power and denominator are both seven.",
+        "solution": "The error magnitude is at most 0.5⁷/7, approximately 0.001116.",
+        "lesson_ids": [
+          "calculus-2-10"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-2-10:endpoint-count",
+      "type": "numeric",
+      "prompt": "For ln 2=Σ_(n=1)∞(−1)^(n+1)/n, what minimum number of included terms gives the first-omitted bound at most 0.01? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "calculus-2-10-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 99,
+        "unit": "",
+        "tolerance": 0,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Solve 1/(N+1)≤0.01 for the included term count.",
+        "solution": "N≥99; 99 terms give the bound 1/100=0.01.",
+        "lesson_ids": [
+          "calculus-2-10"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-2-10:conditional",
+      "type": "single_choice",
+      "prompt": "How does Σ_(n=1)∞(−1)^(n+1)/n converge?",
+      "points": 1,
+      "objective_ids": [
+        "calculus-2-10-objective-1"
+      ],
+      "options": [
+        "Conditionally: signed convergence with divergent absolute-value series.",
+        "Absolutely: alternating signs make magnitudes summable.",
+        "It diverges because the harmonic magnitudes diverge."
+      ],
+      "solution_spec": {
+        "answer": 0
+      },
+      "feedback": {
+        "hint": "Check the conditions as well as the displayed formula.",
+        "solution": "Conditionally: signed convergence with divergent absolute-value series.",
+        "lesson_ids": [
+          "calculus-2-10"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-2-10:decrease",
+      "type": "single_choice",
+      "prompt": "Which conditions support the displayed alternating remainder bound?",
+      "points": 1,
+      "objective_ids": [
+        "calculus-2-10-objective-2"
+      ],
+      "options": [
+        "Nonnegative magnitudes decreasing to zero throughout the omitted tail.",
+        "A positive first term with no information about later terms.",
+        "Alternating signs with fixed nonzero magnitudes."
+      ],
+      "solution_spec": {
+        "answer": 0
+      },
+      "feedback": {
+        "hint": "Check the conditions as well as the displayed formula.",
+        "solution": "Nonnegative magnitudes decreasing to zero throughout the omitted tail.",
+        "lesson_ids": [
+          "calculus-2-10"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-2-10:error-sign",
+      "type": "single_choice",
+      "prompt": "The four-term approximation to ln(1.5) ends with a negative term. What follows under the alternating conditions?",
+      "points": 1,
+      "objective_ids": [
+        "calculus-2-10-objective-3"
+      ],
+      "options": [
+        "The approximation is necessarily above the true value.",
+        "The true value lies above it, by at most the positive first omitted magnitude.",
+        "The first omitted term is exactly equal to the error."
+      ],
+      "solution_spec": {
+        "answer": 1
+      },
+      "feedback": {
+        "hint": "Check the conditions as well as the displayed formula.",
+        "solution": "The true value lies above it, by at most the positive first omitted magnitude.",
+        "lesson_ids": [
+          "calculus-2-10"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-2-11:radius",
+      "type": "numeric",
+      "prompt": "What is the radius of Σ_(n=1)∞(x−2)ⁿ/(n3ⁿ)? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "calculus-2-11-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 3,
+        "unit": "",
+        "tolerance": 0,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "The limiting absolute ratio is |x−2|/3.",
+        "solution": "Interior convergence requires |x−2|<3, so the radius is 3. Endpoint brackets need separate tests.",
+        "lesson_ids": [
+          "calculus-2-11"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-2-11:interior-value",
+      "type": "numeric",
+      "prompt": "Evaluate Σ_(n=1)∞(x−2)ⁿ/(n3ⁿ) at x=2.5. Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "calculus-2-11-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 0.1823215567939546,
+        "unit": "",
+        "tolerance": 1e-05,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Set z=(2.5−2)/3=1/6.",
+        "solution": "Σzⁿ/n=−ln(1−z)=−ln(5/6).",
+        "lesson_ids": [
+          "calculus-2-11"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-2-11:geometric-polynomial",
+      "type": "numeric",
+      "prompt": "Evaluate 1+x/2+x²/4, the quadratic truncation for 1/(1−x/2), at x=0.5. Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "calculus-2-11-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 1.3125,
+        "unit": "",
+        "tolerance": 0.0001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "The three included powers correspond to ratio x/2=0.25.",
+        "solution": "1+0.25+0.0625=1.3125.",
+        "lesson_ids": [
+          "calculus-2-11"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-2-11:geometric-error",
+      "type": "numeric",
+      "prompt": "For the preceding quadratic truncation at x=0.5, what is the positive geometric tail? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "calculus-2-11-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 0.020833333333333332,
+        "unit": "",
+        "tolerance": 1e-05,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Sum all omitted geometric powers starting at degree three.",
+        "solution": "The tail is 0.25³/(1−0.25)=1/48.",
+        "lesson_ids": [
+          "calculus-2-11"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-2-11:derivative-series",
+      "type": "numeric",
+      "prompt": "Evaluate Σ_(n=1)∞ n x^(n−1) at x=0.5. Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "calculus-2-11-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 4,
+        "unit": "",
+        "tolerance": 0.0001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Differentiate the geometric series inside |x|<1.",
+        "solution": "Σn x^(n−1)=1/(1−x)², which equals 4 at x=0.5.",
+        "lesson_ids": [
+          "calculus-2-11"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-2-11:integrated-series",
+      "type": "numeric",
+      "prompt": "Evaluate Σ_(n=0)∞x^(n+1)/(n+1) at x=0.5. Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "calculus-2-11-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0.6931471805599453,
+        "unit": "",
+        "tolerance": 1e-05,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Integrate the geometric series from zero to x.",
+        "solution": "The result is −ln(1−x), hence ln 2 at x=0.5.",
+        "lesson_ids": [
+          "calculus-2-11"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-2-11:endpoints",
+      "type": "single_choice",
+      "prompt": "For Σ_(n=1)∞(x−2)ⁿ/(n3ⁿ), which real interval is correct?",
+      "points": 1,
+      "objective_ids": [
+        "calculus-2-11-objective-1"
+      ],
+      "options": [
+        "[−1,5], since the ratio test includes equality.",
+        "[−1,5), with conditional convergence at −1 and divergence at 5.",
+        "(−1,5), since no power series can converge at an endpoint."
+      ],
+      "solution_spec": {
+        "answer": 1
+      },
+      "feedback": {
+        "hint": "Check the conditions as well as the displayed formula.",
+        "solution": "[−1,5), with conditional convergence at −1 and divergence at 5.",
+        "lesson_ids": [
+          "calculus-2-11"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-2-11:operation",
+      "type": "single_choice",
+      "prompt": "Where do termwise integration and differentiation have the standard power-series justification?",
+      "points": 1,
+      "objective_ids": [
+        "calculus-2-11-objective-2"
+      ],
+      "options": [
+        "Inside the radius, with endpoint behavior checked separately.",
+        "At every point where a finite polynomial can be evaluated.",
+        "Only at the center."
+      ],
+      "solution_spec": {
+        "answer": 0
+      },
+      "feedback": {
+        "hint": "Check the conditions as well as the displayed formula.",
+        "solution": "Inside the radius, with endpoint behavior checked separately.",
+        "lesson_ids": [
+          "calculus-2-11"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-2-11:outside",
+      "type": "single_choice",
+      "prompt": "For 1/(1−x/2), what happens to its zero-centered geometric series at x=3?",
+      "points": 1,
+      "objective_ids": [
+        "calculus-2-11-objective-3"
+      ],
+      "options": [
+        "The function is finite but this series diverges.",
+        "The series converges because the function is finite.",
+        "Both the function and every polynomial truncation are undefined."
+      ],
+      "solution_spec": {
+        "answer": 0
+      },
+      "feedback": {
+        "hint": "Check the conditions as well as the displayed formula.",
+        "solution": "The function is finite but this series diverges.",
+        "lesson_ids": [
+          "calculus-2-11"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-2-12:decay-cubic",
+      "type": "numeric",
+      "prompt": "Evaluate 1−x+x²/2−x³/6 at x=0.4. Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "calculus-2-12-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0.6693333333333332,
+        "unit": "",
+        "tolerance": 1e-05,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use all four terms of the cubic polynomial.",
+        "solution": "1−0.4+0.4²/2−0.4³/6=0.669333.",
+        "lesson_ids": [
+          "calculus-2-12"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-2-12:decay-bound",
+      "type": "numeric",
+      "prompt": "At x=0.4, what first-omitted magnitude bounds the cubic exponential-decay polynomial error? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "calculus-2-12-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0.001066666666666667,
+        "unit": "",
+        "tolerance": 1e-06,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "The alternating decay series has decreasing magnitudes at 0.4.",
+        "solution": "The first omitted term is 0.4⁴/4!=0.001067 approximately.",
+        "lesson_ids": [
+          "calculus-2-12"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-2-12:growth-bound",
+      "type": "numeric",
+      "prompt": "For the cubic Taylor approximation to eˣ at x=0.5, use max fourth derivative e^0.5 on [0,0.5] to compute the Lagrange bound. Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "calculus-2-12-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0.004293544975781584,
+        "unit": "",
+        "tolerance": 1e-06,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "A cubic remainder uses the fourth derivative, bounded throughout the interval.",
+        "solution": "The Lagrange bound is e^0.5×0.5⁴/24, approximately 0.004294.",
+        "lesson_ids": [
+          "calculus-2-12"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-2-12:sine-polynomial",
+      "type": "numeric",
+      "prompt": "Evaluate x−x³/6+x⁵/120 at x=0.6 in radians. Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "calculus-2-12-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0.5646479999999999,
+        "unit": "",
+        "tolerance": 1e-06,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use radians and the odd powers through degree five.",
+        "solution": "0.6−0.6³/6+0.6⁵/120=0.564648.",
+        "lesson_ids": [
+          "calculus-2-12"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-2-12:integrated-bound",
+      "type": "numeric",
+      "prompt": "For ∫₀^0.4 e^(−x)dx approximated by integrating its cubic polynomial, integrate the pointwise bound x⁴/24. What is the accumulated-error bound? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "calculus-2-12-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 8.533333333333335e-05,
+        "unit": "",
+        "tolerance": 1e-07,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Integrate the bound itself rather than using only its endpoint value.",
+        "solution": "∫₀^0.4 x⁴/24 dx=0.4⁵/120, approximately 8.5333 × 10⁻⁵.",
+        "lesson_ids": [
+          "calculus-2-12"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-2-12:degree-choice",
+      "type": "numeric",
+      "prompt": "At x=0.8, what is the smallest degree n for the exponential-decay Taylor polynomial giving bound 0.8^(n+1)/(n+1)! at most 0.0001? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "calculus-2-12-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 6,
+        "unit": "",
+        "tolerance": 0,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Compare degrees five and six using the stated bound.",
+        "solution": "Degree five gives 0.000364; degree six gives 0.00004161 and is first sufficient.",
+        "lesson_ids": [
+          "calculus-2-12"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-2-12:lagrange",
+      "type": "single_choice",
+      "prompt": "Which derivative bound supports the cubic remainder for eˣ at 0.5?",
+      "points": 1,
+      "objective_ids": [
+        "calculus-2-12-objective-2"
+      ],
+      "options": [
+        "A bound on the first derivative at 0.5 only.",
+        "A bound on the fourth derivative throughout [0,0.5].",
+        "Only the fourth derivative at 0."
+      ],
+      "solution_spec": {
+        "answer": 1
+      },
+      "feedback": {
+        "hint": "Check the conditions as well as the displayed formula.",
+        "solution": "A bound on the fourth derivative throughout [0,0.5].",
+        "lesson_ids": [
+          "calculus-2-12"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-2-12:integral-error",
+      "type": "single_choice",
+      "prompt": "If |f(x)−P(x)|≤B(x) on [a,b], what accumulated bound is justified?",
+      "points": 1,
+      "objective_ids": [
+        "calculus-2-12-objective-3"
+      ],
+      "options": [
+        "The integrated error equals B(b) without interval factors.",
+        "|∫(f−P)|≤∫B over the interval.",
+        "Integration eliminates all approximation error."
+      ],
+      "solution_spec": {
+        "answer": 1
+      },
+      "feedback": {
+        "hint": "Check the conditions as well as the displayed formula.",
+        "solution": "|∫(f−P)|≤∫B over the interval.",
+        "lesson_ids": [
+          "calculus-2-12"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-2-12:certificate",
+      "type": "single_choice",
+      "prompt": "A sufficient remainder bound exceeds a target tolerance. What follows?",
+      "points": 1,
+      "objective_ids": [
+        "calculus-2-12-objective-3"
+      ],
+      "options": [
+        "The bound does not certify the target; actual error might still be smaller.",
+        "The approximation must be outside the real function domain.",
+        "The actual error must exceed the target."
+      ],
+      "solution_spec": {
+        "answer": 0
+      },
+      "feedback": {
+        "hint": "Check the conditions as well as the displayed formula.",
+        "solution": "The bound does not certify the target; actual error might still be smaller.",
+        "lesson_ids": [
+          "calculus-2-12"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-2-13:strip-area",
+      "type": "numeric",
+      "prompt": "What is the geometric area between y=x and y=x² on [0,1] in dimensionless coordinates? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "calculus-2-13-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0.16666666666666666,
+        "unit": "",
+        "tolerance": 1e-05,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Subtract the lower curve from the upper curve on this interval.",
+        "solution": "∫₀¹(x−x²)dx=1/2−1/3=1/6.",
+        "lesson_ids": [
+          "calculus-2-13"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-2-13:disk-volume",
+      "type": "numeric",
+      "prompt": "Rotate y=x² on [0,1] around the x-axis. What volume results in dimensionless cubic units? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "calculus-2-13-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0.6283185307179586,
+        "unit": "",
+        "tolerance": 0.0001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "The disk radius is x², so its squared radius is x⁴.",
+        "solution": "V=π∫₀¹x⁴dx=π/5.",
+        "lesson_ids": [
+          "calculus-2-13"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-2-13:parametric-length",
+      "type": "numeric",
+      "prompt": "For x=3t, y=4t on 0≤t≤2, what is the traced length in coordinate units? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "calculus-2-13-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 10,
+        "unit": "",
+        "tolerance": 0.0001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Integrate speed √(3²+4²) over the parameter interval.",
+        "solution": "Constant speed 5 over width 2 gives length 10.",
+        "lesson_ids": [
+          "calculus-2-13"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-2-13:polar-area",
+      "type": "numeric",
+      "prompt": "For polar r=2 and 0≤θ≤π/2, what is the area in coordinate-square units? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "calculus-2-13-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 3.141592653589793,
+        "unit": "",
+        "tolerance": 0.0001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use polar sector area r²dθ/2.",
+        "solution": "Area=(1/2)×4×(π/2)=π.",
+        "lesson_ids": [
+          "calculus-2-13"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-2-13:radial-total",
+      "type": "numeric",
+      "prompt": "For c(r)=6(1−r²/4) amount units/cm² on a disk R=2 cm, what is ∫₀²c(r)2πr dr in amount units? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "calculus-2-13-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 37.69911184307752,
+        "unit": "",
+        "tolerance": 0.0001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use annular area 2πr dr rather than an unweighted radius.",
+        "solution": "Q=12π[r²/2−r⁴/16]₀²=12π amount units.",
+        "lesson_ids": [
+          "calculus-2-13"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-2-13:radial-average",
+      "type": "numeric",
+      "prompt": "For c(r)=6(1−r²/4) amount units/cm² on a disk R=2 cm, what is its area-average density in amount units/cm²? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "calculus-2-13-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 3,
+        "unit": "",
+        "tolerance": 0.0001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Divide the radial amount by the disk area.",
+        "solution": "The total is 12π and the area is 4π, giving average density 3 amount units/cm².",
+        "lesson_ids": [
+          "calculus-2-13"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-2-13:annulus",
+      "type": "single_choice",
+      "prompt": "What element weights a radially symmetric cross-sectional density?",
+      "points": 1,
+      "objective_ids": [
+        "calculus-2-13-objective-2"
+      ],
+      "options": [
+        "dA=πr²dr; disk area is already a thin annulus.",
+        "dA=2πr dr; outer annuli occupy more area.",
+        "dA=dr; every radius occupies equal area."
+      ],
+      "solution_spec": {
+        "answer": 1
+      },
+      "feedback": {
+        "hint": "Check the conditions as well as the displayed formula.",
+        "solution": "dA=2πr dr; outer annuli occupy more area.",
+        "lesson_ids": [
+          "calculus-2-13"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-2-13:traversal",
+      "type": "single_choice",
+      "prompt": "The curve x=2cos t, y=2sin t is traced for 0≤t≤4π. What does the arc-length integral count?",
+      "points": 1,
+      "objective_ids": [
+        "calculus-2-13-objective-3"
+      ],
+      "options": [
+        "Zero because the endpoint equals the starting point.",
+        "Two traversals, so distance traveled is twice the circumference.",
+        "One circumference regardless of parameter bounds."
+      ],
+      "solution_spec": {
+        "answer": 1
+      },
+      "feedback": {
+        "hint": "Check the conditions as well as the displayed formula.",
+        "solution": "Two traversals, so distance traveled is twice the circumference.",
+        "lesson_ids": [
+          "calculus-2-13"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-2-13:density-units",
+      "type": "single_choice",
+      "prompt": "If c(r) is amount per volume, what units does ∫c(r)2πr dr have?",
+      "points": 1,
+      "objective_ids": [
+        "calculus-2-13-objective-3"
+      ],
+      "options": [
+        "Amount, automatically, without a length.",
+        "Amount per area.",
+        "Amount per length; multiply by cylinder length for total amount under the stated symmetry."
+      ],
+      "solution_spec": {
+        "answer": 2
+      },
+      "feedback": {
+        "hint": "Check the conditions as well as the displayed formula.",
+        "solution": "Amount per length; multiply by cylinder length for total amount under the stated symmetry.",
+        "lesson_ids": [
+          "calculus-2-13"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-2-lab-01:summary",
+      "type": "file_upload",
+      "prompt": "Group the committed force CSV by position code. Upload columns position,replicates,mean_force with five rows p0,p1,p2,p3,p4. Mean force includes the offset.",
+      "points": 10,
+      "objective_ids": [
+        "calculus-2-lab-01-objective-1"
+      ],
+      "solution_spec": {
+        "accepted_media_types": [
+          "text/csv"
+        ],
+        "max_bytes": 32768,
+        "validation_spec": {
+          "format": "csv-numeric-table-v1",
+          "delimiter": ",",
+          "key_column": "position",
+          "columns": [
+            "position",
+            "replicates",
+            "mean_force"
+          ],
+          "checks": [
+            {
+              "id": "p0-replicates",
+              "row_id": "p0",
+              "column": "replicates",
+              "type": "numeric",
+              "answer": 3.0,
+              "unit": "",
+              "tolerance": 0,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "count",
+                "values": [
+                  0.95,
+                  1.0,
+                  1.05
+                ]
+              }
+            },
+            {
+              "id": "p0-mean_force",
+              "row_id": "p0",
+              "column": "mean_force",
+              "type": "numeric",
+              "answer": 1.0,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  0.95,
+                  1.0,
+                  1.05
+                ]
+              }
+            },
+            {
+              "id": "p1-replicates",
+              "row_id": "p1",
+              "column": "replicates",
+              "type": "numeric",
+              "answer": 3.0,
+              "unit": "",
+              "tolerance": 0,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "count",
+                "values": [
+                  6.5056,
+                  6.5556,
+                  6.6056
+                ]
+              }
+            },
+            {
+              "id": "p1-mean_force",
+              "row_id": "p1",
+              "column": "mean_force",
+              "type": "numeric",
+              "answer": 6.5556,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  6.5056,
+                  6.5556,
+                  6.6056
+                ]
+              }
+            },
+            {
+              "id": "p2-replicates",
+              "row_id": "p2",
+              "column": "replicates",
+              "type": "numeric",
+              "answer": 3.0,
+              "unit": "",
+              "tolerance": 0,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "count",
+                "values": [
+                  13.45,
+                  13.5,
+                  13.55
+                ]
+              }
+            },
+            {
+              "id": "p2-mean_force",
+              "row_id": "p2",
+              "column": "mean_force",
+              "type": "numeric",
+              "answer": 13.5,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  13.45,
+                  13.5,
+                  13.55
+                ]
+              }
+            },
+            {
+              "id": "p3-replicates",
+              "row_id": "p3",
+              "column": "replicates",
+              "type": "numeric",
+              "answer": 3.0,
+              "unit": "",
+              "tolerance": 0,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "count",
+                "values": [
+                  22.3786,
+                  22.4286,
+                  22.4786
+                ]
+              }
+            },
+            {
+              "id": "p3-mean_force",
+              "row_id": "p3",
+              "column": "mean_force",
+              "type": "numeric",
+              "answer": 22.4286,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  22.3786,
+                  22.4286,
+                  22.4786
+                ]
+              }
+            },
+            {
+              "id": "p4-replicates",
+              "row_id": "p4",
+              "column": "replicates",
+              "type": "numeric",
+              "answer": 3.0,
+              "unit": "",
+              "tolerance": 0,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "count",
+                "values": [
+                  34.2833,
+                  34.3333,
+                  34.3833
+                ]
+              }
+            },
+            {
+              "id": "p4-mean_force",
+              "row_id": "p4",
+              "column": "mean_force",
+              "type": "numeric",
+              "answer": 34.3333,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  34.2833,
+                  34.3333,
+                  34.3833
+                ]
+              }
+            }
+          ]
+        },
+        "rubric": [
+          {
+            "id": "p0-replicates",
+            "criterion": "p0: replicates",
+            "points": 1,
+            "evidence": [
+              "Recomputes replicates for p0 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "p0-mean_force",
+            "criterion": "p0: mean_force",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_force for p0 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "p1-replicates",
+            "criterion": "p1: replicates",
+            "points": 1,
+            "evidence": [
+              "Recomputes replicates for p1 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "p1-mean_force",
+            "criterion": "p1: mean_force",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_force for p1 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "p2-replicates",
+            "criterion": "p2: replicates",
+            "points": 1,
+            "evidence": [
+              "Recomputes replicates for p2 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "p2-mean_force",
+            "criterion": "p2: mean_force",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_force for p2 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "p3-replicates",
+            "criterion": "p3: replicates",
+            "points": 1,
+            "evidence": [
+              "Recomputes replicates for p3 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "p3-mean_force",
+            "criterion": "p3: mean_force",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_force for p3 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "p4-replicates",
+            "criterion": "p4: replicates",
+            "points": 1,
+            "evidence": [
+              "Recomputes replicates for p4 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "p4-mean_force",
+            "criterion": "p4: mean_force",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_force for p4 from the preparation-level values."
+            ]
+          }
+        ]
+      },
+      "feedback": {
+        "hint": "Average the three readings at each position.",
+        "solution": "Each position has three deliberately balanced readings, so their arithmetic mean equals the stated rounded central value.",
+        "lesson_ids": [
+          "calculus-2-lab-01"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-2-lab-01:trapezoid",
+      "type": "numeric",
+      "prompt": "Subtract the known 1 N offset from the committed CSV mean forces, then apply composite trapezoids with h=0.5 m over 0 to 2 m. What work in J results? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "calculus-2-lab-01-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 28.075425000000003,
+        "unit": "",
+        "tolerance": 0.001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use corrected means and half weights at the two endpoints.",
+        "solution": "T=0.5×[F₀/2+F₁+F₂+F₃+F₄/2]=28.075425 J. The raw estimate would be larger by 2 J.",
+        "lesson_ids": [
+          "calculus-2-lab-01"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-2-lab-01:simpson",
+      "type": "numeric",
+      "prompt": "Using the same corrected CSV mean forces, calculate composite Simpson work with h=0.5 m and four panels. Enter the number in J only.",
+      "points": 1,
+      "objective_ids": [
+        "calculus-2-lab-01-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 27.711683333333333,
+        "unit": "",
+        "tolerance": 0.001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use weights 1,4,2,4,1 and multiply by h/3.",
+        "solution": "S=(0.5/3)×[F₀+4F₁+2F₂+4F₃+F₄]=27.711683 J.",
+        "lesson_ids": [
+          "calculus-2-lab-01"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-2-lab-01:series-work",
+      "type": "numeric",
+      "prompt": "For the exact model F(x)=10x/(1−0.2x) N with x numerically in m, expand through geometric index n=3: 10xΣ_(n=0)³(0.2x)ⁿ. Integrate from 0 to 2 m. What work in J results? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "calculus-2-lab-01-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 27.445333333333334,
+        "unit": "",
+        "tolerance": 0.001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Integrate every polynomial term, including the initial 10x term.",
+        "solution": "W₃=20+16/3+1.6+0.512=27.445333 J, below the exact positive-tail total.",
+        "lesson_ids": [
+          "calculus-2-lab-01"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-2-lab-01:tail-bound",
+      "type": "numeric",
+      "prompt": "For that geometric truncation through n=3 on [0,2], bound 1/(1−0.2x) by 1/0.6 in the exact remaining force 10x(0.2x)⁴/(1−0.2x). Integrate the resulting bound. What error bound in J results? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "calculus-2-lab-01-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0.28444444444444456,
+        "unit": "",
+        "tolerance": 0.0001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "The bounded tail force is (10×0.2⁴/0.6)x⁵.",
+        "solution": "Bound=(10×0.2⁴/0.6)×2⁶/6=0.284444 J. The exact truncation error is 0.261073 J.",
+        "lesson_ids": [
+          "calculus-2-lab-01"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-2-lab-01:interpretation",
+      "type": "structured",
+      "prompt": "Choose statements supported by the force-work construction.",
+      "points": 3,
+      "objective_ids": [
+        "calculus-2-lab-01-objective-3"
+      ],
+      "response_fields": [
+        {
+          "id": "offset",
+          "type": "single_choice",
+          "prompt": "What work does a constant +1 N offset add over 2 m?",
+          "options": [
+            "2 J, because its integral is offset times displacement.",
+            "1 J regardless of interval length.",
+            "Zero because it cancels when averaging repeats."
+          ],
+          "points": 1
+        },
+        {
+          "id": "bound",
+          "type": "single_choice",
+          "prompt": "What does the integrated geometric-tail bound control?",
+          "options": [
+            "Truncating the exact mathematical force expansion on the stated interval.",
+            "All sensor uncertainty and physical-model error.",
+            "The Simpson sampling error for any measured force."
+          ],
+          "points": 1
+        },
+        {
+          "id": "outside",
+          "type": "single_choice",
+          "prompt": "Could the same zero-centered geometric expansion justify work through x=6 m?",
+          "options": [
+            "No; it crosses the model pole at 5 m and exceeds the radius of convergence.",
+            "Yes; adding enough terms always repairs any domain problem.",
+            "Yes; a finite polynomial has no pole."
+          ],
+          "points": 1
+        }
+      ],
+      "solution_spec": {
+        "field_specs": [
+          {
+            "id": "offset",
+            "type": "single_choice",
+            "answer": 0
+          },
+          {
+            "id": "bound",
+            "type": "single_choice",
+            "answer": 0
+          },
+          {
+            "id": "outside",
+            "type": "single_choice",
+            "answer": 0
+          }
+        ],
+        "rubric": [
+          {
+            "id": "offset",
+            "criterion": "Constant offset contribution",
+            "points": 1,
+            "evidence": [
+              "A systematic offset remains in every mean."
+            ]
+          },
+          {
+            "id": "bound",
+            "criterion": "Scope of the tail guarantee",
+            "points": 1,
+            "evidence": [
+              "The tail formula belongs to the specified rational model."
+            ]
+          },
+          {
+            "id": "outside",
+            "criterion": "Series validity domain",
+            "points": 1,
+            "evidence": [
+              "Finite polynomials do not extend the underlying model or infinite series."
+            ]
+          }
+        ]
+      },
+      "feedback": {
+        "hint": "Separate offset, approximation and domain conditions.",
+        "solution": "A constant offset adds 2 J. The tail certificate applies to series truncation of the exact model; the model and expansion cannot be extended through the pole.",
+        "lesson_ids": [
+          "calculus-2-lab-01"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-2-lab-01:claims",
+      "type": "multiple_select",
+      "prompt": "Which conclusions respect this synthetic lab? Select all that apply.",
+      "points": 2,
+      "objective_ids": [
+        "calculus-2-lab-01-objective-3"
+      ],
+      "options": [
+        "Geometric tail terms are positive on [0,2], so the polynomial work is low.",
+        "The known calibration offset persists through averaging and integration unless corrected.",
+        "The offsets at each position deliberately balance around a constructed mean.",
+        "The three repeats establish independent Gaussian sensor noise.",
+        "Closer agreement with the exact construction proves the model fits a real actuator."
+      ],
+      "solution_spec": {
+        "answer": [
+          0,
+          1,
+          2
+        ],
+        "partial_credit": "correct-minus-incorrect-clamped-v1"
+      },
+      "feedback": {
+        "hint": "Use what the construction specifies, without inventing experimental evidence.",
+        "solution": "The repeat offsets balance, the known constant offset adds systematic work, and the positive omitted series terms make the polynomial underestimate. No real device or noise distribution is established.",
+        "lesson_ids": [
+          "calculus-2-lab-01"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-2-lab-01:convexity",
+      "type": "single_choice",
+      "prompt": "The exact model F(x)=10x/(1−0.2x) is convex on [0,2]. What is the trapezoidal sign for unrounded exact samples?",
+      "points": 1,
+      "objective_ids": [
+        "calculus-2-lab-01-objective-1"
+      ],
+      "options": [
+        "The chords lie above the curve, so the trapezoidal work overestimates.",
+        "The trapezoidal rule underestimates every positive force.",
+        "The trapezoidal rule is exact for every rational curve."
+      ],
+      "solution_spec": {
+        "answer": 0
+      },
+      "feedback": {
+        "hint": "Use convexity to compare each chord with the curve.",
+        "solution": "Convexity makes the piecewise linear interpolation lie above the exact force; rounded observations add a separate small effect.",
+        "lesson_ids": [
+          "calculus-2-lab-01"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
     }
   ]
 }

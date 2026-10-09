@@ -145,6 +145,326 @@
         "calculus-2-6-objective-3"
       ],
       "license": "CC-BY-4.0"
+    },
+    {
+      "id": "calculus-2-7-card-1",
+      "lesson_id": "calculus-2-7",
+      "front": "Method selection",
+      "back": "Substitution reverses the chain rule; parts reverses the product rule; partial fractions separates a rational integrand after division if needed.",
+      "objective_ids": [
+        "calculus-2-7-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "calculus-2-7-card-2",
+      "lesson_id": "calculus-2-7",
+      "front": "Definite substitution",
+      "back": "Transform both endpoint bounds or return to the original variable before evaluating. Keep domains and units consistent.",
+      "objective_ids": [
+        "calculus-2-7-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "calculus-2-7-card-3",
+      "lesson_id": "calculus-2-7",
+      "front": "Verification",
+      "back": "Differentiate a candidate primitive and compare it with the original integrand; check poles separately.",
+      "objective_ids": [
+        "calculus-2-7-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "calculus-2-7-card-4",
+      "lesson_id": "calculus-2-7",
+      "front": "Logarithmic primitive",
+      "back": "ln|x| has derivative 1/x on each nonzero interval; it does not justify endpoint cancellation across zero.",
+      "objective_ids": [
+        "calculus-2-7-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "calculus-2-8-card-1",
+      "lesson_id": "calculus-2-8",
+      "front": "Improper definition",
+      "back": "Integrate on a finite nonsingular interval and take the required endpoint limit. Every improper part must converge separately.",
+      "objective_ids": [
+        "calculus-2-8-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "calculus-2-8-card-2",
+      "lesson_id": "calculus-2-8",
+      "front": "Power criteria",
+      "back": "∫₁∞x⁻ᵖ converges for p>1; ∫₀¹x⁻ᵖ converges for p<1.",
+      "objective_ids": [
+        "calculus-2-8-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "calculus-2-8-card-3",
+      "lesson_id": "calculus-2-8",
+      "front": "Positive comparison",
+      "back": "A convergent nonnegative upper bound guarantees convergence below it; a divergent lower bound guarantees divergence above it.",
+      "objective_ids": [
+        "calculus-2-8-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "calculus-2-8-card-4",
+      "lesson_id": "calculus-2-8",
+      "front": "Principal value",
+      "back": "Symmetric cancellation is a separate definition. It does not replace convergence of each ordinary improper part.",
+      "objective_ids": [
+        "calculus-2-8-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "calculus-2-9-card-1",
+      "lesson_id": "calculus-2-9",
+      "front": "Terms versus sums",
+      "back": "aₙ→0 is necessary for Σaₙ to converge but not sufficient; inspect partial sums or use a justified test.",
+      "objective_ids": [
+        "calculus-2-9-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "calculus-2-9-card-2",
+      "lesson_id": "calculus-2-9",
+      "front": "Ratio test",
+      "back": "A limiting absolute ratio below 1 gives absolute convergence; above 1 gives divergence; equal to 1 is inconclusive.",
+      "objective_ids": [
+        "calculus-2-9-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "calculus-2-9-card-3",
+      "lesson_id": "calculus-2-9",
+      "front": "Geometric tail",
+      "back": "For indices 0 through N and |r|<1, the exact tail is r^(N+1)/(1−r). Count indices explicitly.",
+      "objective_ids": [
+        "calculus-2-9-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "calculus-2-9-card-4",
+      "lesson_id": "calculus-2-9",
+      "front": "Integral-test tail",
+      "back": "For positive decreasing f with a convergent tail, ∫_(N+1)∞f≤Σ_(n=N+1)∞f(n)≤∫_N∞f.",
+      "objective_ids": [
+        "calculus-2-9-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "calculus-2-10-card-1",
+      "lesson_id": "calculus-2-10",
+      "front": "Absolute and conditional",
+      "back": "Absolute convergence means Σ|aₙ| converges. Conditional convergence means the signed series converges while the magnitudes do not.",
+      "objective_ids": [
+        "calculus-2-10-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "calculus-2-10-card-2",
+      "lesson_id": "calculus-2-10",
+      "front": "Alternating guarantee",
+      "back": "For nonnegative decreasing magnitudes tending to zero, the error after N terms is at most the first omitted magnitude.",
+      "objective_ids": [
+        "calculus-2-10-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "calculus-2-10-card-3",
+      "lesson_id": "calculus-2-10",
+      "front": "Error sign",
+      "back": "Under those conditions, the exact sum lies between consecutive partial sums; the remainder has the first omitted sign.",
+      "objective_ids": [
+        "calculus-2-10-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "calculus-2-10-card-4",
+      "lesson_id": "calculus-2-10",
+      "front": "Sufficient bound",
+      "back": "A bound that fails a tolerance is inconclusive about actual error. A successful bound is deterministic, not a confidence interval.",
+      "objective_ids": [
+        "calculus-2-10-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "calculus-2-11-card-1",
+      "lesson_id": "calculus-2-11",
+      "front": "Radius and endpoints",
+      "back": "The radius defines interior absolute convergence. Test each real endpoint separately to determine brackets.",
+      "objective_ids": [
+        "calculus-2-11-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "calculus-2-11-card-2",
+      "lesson_id": "calculus-2-11",
+      "front": "Series operations",
+      "back": "Power series can be integrated and differentiated inside their radius; endpoints can change convergence behavior.",
+      "objective_ids": [
+        "calculus-2-11-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "calculus-2-11-card-3",
+      "lesson_id": "calculus-2-11",
+      "front": "Center and index",
+      "back": "Track x−c, normalized arguments and the first term when shifting indices or substituting variables.",
+      "objective_ids": [
+        "calculus-2-11-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "calculus-2-11-card-4",
+      "lesson_id": "calculus-2-11",
+      "front": "Function versus series domain",
+      "back": "A function may be defined outside an expansion radius; its finite polynomial is evaluable there but need not approximate it.",
+      "objective_ids": [
+        "calculus-2-11-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "calculus-2-12-card-1",
+      "lesson_id": "calculus-2-12",
+      "front": "Taylor coefficients",
+      "back": "The coefficient of (x−a)ʲ is f^(j)(a)/j!. Degree and number of nonzero terms are distinct.",
+      "objective_ids": [
+        "calculus-2-12-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "calculus-2-12-card-2",
+      "lesson_id": "calculus-2-12",
+      "front": "Lagrange bound",
+      "back": "Bound the next derivative over the entire interval connecting center and evaluation point, then multiply by distance power divided by factorial.",
+      "objective_ids": [
+        "calculus-2-12-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "calculus-2-12-card-3",
+      "lesson_id": "calculus-2-12",
+      "front": "Integrated error",
+      "back": "A pointwise bound B(x) yields accumulated error at most ∫B; output units include the interval units.",
+      "objective_ids": [
+        "calculus-2-12-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "calculus-2-12-card-4",
+      "lesson_id": "calculus-2-12",
+      "front": "Error budget",
+      "back": "Separate truncation, rounding, uncertain inputs and model discrepancy. A Taylor remainder controls only the stated mathematical truncation.",
+      "objective_ids": [
+        "calculus-2-12-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "calculus-2-13-card-1",
+      "lesson_id": "calculus-2-13",
+      "front": "Geometry elements",
+      "back": "Area uses strip or sector area; volume uses cross-sectional area or shells; arc length uses √((x′)²+(y′)²)dt.",
+      "objective_ids": [
+        "calculus-2-13-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "calculus-2-13-card-2",
+      "lesson_id": "calculus-2-13",
+      "front": "Annular weight",
+      "back": "A radial cross-sectional integral needs 2πr dr. Dividing by πR² gives an area average.",
+      "objective_ids": [
+        "calculus-2-13-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "calculus-2-13-card-3",
+      "lesson_id": "calculus-2-13",
+      "front": "Traversal",
+      "back": "Parametric length counts the traced distance over the specified bounds, including repeated traversals.",
+      "objective_ids": [
+        "calculus-2-13-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "calculus-2-13-card-4",
+      "lesson_id": "calculus-2-13",
+      "front": "Dimensional total",
+      "back": "Cross-sectional integration of a volumetric concentration gives amount per length; a cylinder length is required for total amount.",
+      "objective_ids": [
+        "calculus-2-13-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "calculus-2-lab-01-card-1",
+      "lesson_id": "calculus-2-lab-01",
+      "front": "Work from sampled force",
+      "back": "Integrate force over displacement; composite rules need the correct spacing and weights. N·m is J.",
+      "objective_ids": [
+        "calculus-2-lab-01-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "calculus-2-lab-01-card-2",
+      "lesson_id": "calculus-2-lab-01",
+      "front": "Integrated geometric tail",
+      "back": "On a valid interval, bound the exact remaining integrand and integrate that bound. Positive omitted terms give an underestimate.",
+      "objective_ids": [
+        "calculus-2-lab-01-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "calculus-2-lab-01-card-3",
+      "lesson_id": "calculus-2-lab-01",
+      "front": "Systematic offset",
+      "back": "A constant force offset contributes offset times displacement to work. Averaging balanced repeats does not remove it.",
+      "objective_ids": [
+        "calculus-2-lab-01-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "calculus-2-lab-01-card-4",
+      "lesson_id": "calculus-2-lab-01",
+      "front": "Reference versus validation",
+      "back": "Agreement with a known synthetic generating formula checks the calculation, not whether a real device follows that model.",
+      "objective_ids": [
+        "calculus-2-lab-01-objective-3"
+      ],
+      "license": "CC-BY-4.0"
     }
   ]
 }

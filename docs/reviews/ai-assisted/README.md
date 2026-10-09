@@ -23,3 +23,4 @@ review that do.
 | Differential Equations for Living & Engineered Systems 0.3.1 (Euler-boundary and resonance prompt clarification) | 2026-10-08 | [differential-equations-0.3.1.md](differential-equations-0.3.1.md) |
 | Linear Algebra for Modeling & Robotics 0.3.0 (new lessons, lab and schedule) | 2026-10-09 | [linear-algebra-0.3.0.md](linear-algebra-0.3.0.md) |
 | Calculus I 0.4.0 (new lessons, washout lab and schedule) | 2026-10-09 | [calculus-1-0.4.0.md](calculus-1-0.4.0.md) |
+| Calculus II 0.4.0 (new lessons, force-work lab and schedule) | 2026-10-09 | [calculus-2-0.4.0.md](calculus-2-0.4.0.md) |

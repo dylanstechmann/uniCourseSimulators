@@ -38,7 +38,8 @@ LESSONS = [("geroscience", f"geroscience-{n}") for n in range(9, 15)] + [
     ("signals-control", f"signals-control-{n}") for n in range(7, 14)] + [
     ("differential-equations", f"differential-equations-{n}") for n in range(7, 14)] + [
     ("linear-algebra", f"linear-algebra-{n}") for n in range(7, 14)] + [
-    ("calculus-1", f"calculus-1-{n}") for n in range(7, 14)]
+    ("calculus-1", f"calculus-1-{n}") for n in range(7, 14)] + [
+    ("calculus-2", f"calculus-2-{n}") for n in range(7, 14)]
 
 
 def load(course):

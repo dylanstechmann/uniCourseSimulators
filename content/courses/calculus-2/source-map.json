@@ -76,6 +76,110 @@
       "original_content": true,
       "license": "CC-BY-4.0",
       "modifications": []
+    },
+    {
+      "module_id": "calculus-2-module-7",
+      "lesson_id": "calculus-2-7",
+      "reading": "modules/07-integration-methods-and-domain-checks.md",
+      "source_ids": [
+        "calculus",
+        "engineeringMath"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "calculus-2-module-8",
+      "lesson_id": "calculus-2-8",
+      "reading": "modules/08-improper-integrals-and-comparison.md",
+      "source_ids": [
+        "calculus",
+        "engineeringMath"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "calculus-2-module-9",
+      "lesson_id": "calculus-2-9",
+      "reading": "modules/09-positive-series-and-convergence-tests.md",
+      "source_ids": [
+        "calculus",
+        "engineeringMath"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "calculus-2-module-10",
+      "lesson_id": "calculus-2-10",
+      "reading": "modules/10-alternating-series-and-error-certificates.md",
+      "source_ids": [
+        "calculus",
+        "engineeringMath"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "calculus-2-module-11",
+      "lesson_id": "calculus-2-11",
+      "reading": "modules/11-power-series-radius-and-endpoints.md",
+      "source_ids": [
+        "calculus",
+        "engineeringMath"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "calculus-2-module-12",
+      "lesson_id": "calculus-2-12",
+      "reading": "modules/12-taylor-polynomials-and-integrated-error.md",
+      "source_ids": [
+        "calculus",
+        "engineeringMath"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "calculus-2-module-13",
+      "lesson_id": "calculus-2-13",
+      "reading": "modules/13-geometry-parametric-curves-and-radial-amounts.md",
+      "source_ids": [
+        "calculus",
+        "engineeringMath"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "calculus-2-module-lab-01",
+      "lesson_id": "calculus-2-lab-01",
+      "reading": "labs/01-force-work-and-series.md",
+      "source_ids": [
+        "calculus",
+        "engineeringMath"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
     }
   ]
 }
