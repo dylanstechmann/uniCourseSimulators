@@ -1,0 +1,310 @@
+{
+  "candidate_id": "cell-biology-h1-review-v1",
+  "course_id": "cell-biology",
+  "content_version": "0.20.0",
+  "state": "inactive-review-candidate",
+  "title": "Homework 1 candidate: pulse-chase sorting and recovery evidence",
+  "instruction_path": "assessment-specs/homework-01-candidate.md",
+  "dataset_path": "assessment-specs/homework-01-candidate-pulse-chase.csv",
+  "private_source_ref": "private://assignments/homework-01-review-v1.json",
+  "private_source_sha256": "a37cc829637d40275815a4de44e103ab648e3f32b46066c260faf5c5098d8da3",
+  "points": 25,
+  "lesson_ids": [
+    "cell-biology-7",
+    "cell-biology-8"
+  ],
+  "objective_ids": [
+    "cell-biology-7-objective-1",
+    "cell-biology-7-objective-2",
+    "cell-biology-8-objective-1",
+    "cell-biology-8-objective-2"
+  ],
+  "course_outcome_ids": [
+    "cell-biology-outcome-1",
+    "cell-biology-outcome-3",
+    "cell-biology-outcome-4"
+  ],
+  "review": {
+    "status": "unreviewed",
+    "reviewers": []
+  },
+  "activation_gates": [
+    "independent-recalculation",
+    "grader-mutation-review",
+    "subject-matter-review",
+    "assessment-review",
+    "accessibility-review",
+    "measured-workload",
+    "operator-provisioning-and-release-policy"
+  ],
+  "questions": [
+    {
+      "id": "cell-biology-h1-candidate:recovered-amount",
+      "type": "numeric",
+      "prompt": "For wt preparation w01 at 90 min, sum the intact lysosome, medium, other and fragment amounts. Report recovered label in an amount unit with exactly three significant figures.",
+      "options": [],
+      "unit": "nmol",
+      "significant_figures": 3,
+      "points": 2.0,
+      "selection": "single",
+      "partial_credit_policy": null,
+      "response_fields": [],
+      "graph_spec": null,
+      "accepted_media_types": [],
+      "max_upload_bytes": null,
+      "variant_id": null,
+      "variant_token": null,
+      "learning_objective_ids": [
+        "cell-biology-8-objective-1",
+        "cell-biology-8-objective-2"
+      ],
+      "assessment_role": "graded"
+    },
+    {
+      "id": "cell-biology-h1-candidate:paired-late-contrast",
+      "type": "numeric",
+      "prompt": "For each preparation calculate the 90-minus-30 min lysosome percentage-point increment using its pulse input. Average those increments within each condition. Report mutant mean increment minus wt mean increment as a bare signed number in percentage points (not a relative percent change).",
+      "options": [],
+      "unit": "",
+      "significant_figures": null,
+      "points": 2.0,
+      "selection": "single",
+      "partial_credit_policy": null,
+      "response_fields": [],
+      "graph_spec": null,
+      "accepted_media_types": [],
+      "max_upload_bytes": null,
+      "variant_id": null,
+      "variant_token": null,
+      "learning_objective_ids": [
+        "cell-biology-8-objective-1",
+        "cell-biology-8-objective-2"
+      ],
+      "assessment_role": "graded"
+    },
+    {
+      "id": "cell-biology-h1-candidate:relative-endpoint-change",
+      "type": "numeric",
+      "prompt": "Calculate 100 times (mean wt lysosome percentage at 90 min minus mean mutant lysosome percentage at 90 min) divided by mean wt lysosome percentage at 90 min. Report the descriptive relative decrease with a percent unit and exactly four significant figures.",
+      "options": [],
+      "unit": "%",
+      "significant_figures": 4,
+      "points": 2.0,
+      "selection": "single",
+      "partial_credit_policy": null,
+      "response_fields": [],
+      "graph_spec": null,
+      "accepted_media_types": [],
+      "max_upload_bytes": null,
+      "variant_id": null,
+      "variant_token": null,
+      "learning_objective_ids": [
+        "cell-biology-8-objective-1",
+        "cell-biology-8-objective-2"
+      ],
+      "assessment_role": "graded"
+    },
+    {
+      "id": "cell-biology-h1-candidate:summary",
+      "type": "file_upload",
+      "prompt": "At 90 min, normalize each amount to its own preparation pulse input before averaging. Upload a UTF-8 CSV with exact columns condition,preparations,mean_lysosome_pct,mean_medium_pct and one row each for wt,motif_mutant,motif_repaired. Counts are exact; mean tolerance is 0.005 percentage points. The three chase times are repeated observations of each preparation, not additional independent cultures.",
+      "options": [],
+      "unit": null,
+      "significant_figures": null,
+      "points": 9.0,
+      "selection": "single",
+      "partial_credit_policy": null,
+      "response_fields": [],
+      "graph_spec": null,
+      "accepted_media_types": [
+        "text/csv"
+      ],
+      "max_upload_bytes": 32768,
+      "variant_id": null,
+      "variant_token": null,
+      "learning_objective_ids": [
+        "cell-biology-8-objective-1",
+        "cell-biology-8-objective-2"
+      ],
+      "assessment_role": "graded"
+    },
+    {
+      "id": "cell-biology-h1-candidate:topology",
+      "type": "multiple_select",
+      "prompt": "Select all statements compatible with the declared soluble M6P-bearing cargo and receptor route. Scoring is two points times (the number of correct options selected minus the number of incorrect options selected) divided by the total number of correct options, clamped from zero to two.",
+      "options": [
+        "The lumen-facing ligand-binding part of the receptor and its cytosolic tail occupy different membrane sides.",
+        "Every vesicle transport step requires soluble lumenal cargo to cross the lipid bilayer.",
+        "A tail-motif change must abolish the receptor ligand-binding site even if binding measurements are similar.",
+        "A receptor can recycle after cargo release while the hydrolase proceeds toward a degradative compartment.",
+        "Similar binding values prove a particular cytosolic adaptor binds the receptor directly."
+      ],
+      "unit": null,
+      "significant_figures": null,
+      "points": 2.0,
+      "selection": "multiple",
+      "partial_credit_policy": "correct-minus-incorrect-clamped-v1",
+      "response_fields": [],
+      "graph_spec": null,
+      "accepted_media_types": [],
+      "max_upload_bytes": null,
+      "variant_id": null,
+      "variant_token": null,
+      "learning_objective_ids": [
+        "cell-biology-7-objective-1",
+        "cell-biology-7-objective-2",
+        "cell-biology-8-objective-1",
+        "cell-biology-8-objective-2"
+      ],
+      "assessment_role": "graded"
+    },
+    {
+      "id": "cell-biology-h1-candidate:control-logic",
+      "type": "structured",
+      "prompt": "Choose one response for each independent criterion about controls in this pulse-chase construction.",
+      "options": [],
+      "unit": null,
+      "significant_figures": null,
+      "points": 4.0,
+      "selection": "single",
+      "partial_credit_policy": null,
+      "response_fields": [
+        {
+          "id": "normalization",
+          "type": "single_choice",
+          "prompt": "Which denominator matches each outcome?",
+          "options": [
+            "The largest pulse input in the dataset.",
+            "That preparation's time-zero pulse input.",
+            "Its lysosome-marker recovery percentage."
+          ],
+          "unit": null,
+          "points": 1.0
+        },
+        {
+          "id": "replication",
+          "type": "single_choice",
+          "prompt": "What is the biological replicate unit?",
+          "options": [
+            "Each culture preparation; its chase observations are repeated measures.",
+            "Each chase row is a new independent culture.",
+            "Each measurement column is an independent culture."
+          ],
+          "unit": null,
+          "points": 1.0
+        },
+        {
+          "id": "fraction",
+          "type": "single_choice",
+          "prompt": "What does a similar marker-recovery percentage support?",
+          "options": [
+            "It makes every fraction pure.",
+            "It proves cargo recovery equals marker recovery.",
+            "It checks one aspect of fraction processing without proving purity or cargo-specific recovery."
+          ],
+          "unit": null,
+          "points": 1.0
+        },
+        {
+          "id": "missing",
+          "type": "single_choice",
+          "prompt": "How should an unexplained difference between input and recovered label be described?",
+          "options": [
+            "It is automatically secreted cargo.",
+            "It is missing from the displayed recovery ledger; additional accounting is needed.",
+            "It proves receptor degradation."
+          ],
+          "unit": null,
+          "points": 1.0
+        }
+      ],
+      "graph_spec": null,
+      "accepted_media_types": [],
+      "max_upload_bytes": null,
+      "variant_id": null,
+      "variant_token": null,
+      "learning_objective_ids": [
+        "cell-biology-8-objective-1",
+        "cell-biology-8-objective-2"
+      ],
+      "assessment_role": "graded"
+    },
+    {
+      "id": "cell-biology-h1-candidate:inference",
+      "type": "structured",
+      "prompt": "Choose one response per criterion for a bounded interpretation and discriminating follow-up.",
+      "options": [],
+      "unit": null,
+      "significant_figures": null,
+      "points": 4.0,
+      "selection": "single",
+      "partial_credit_policy": null,
+      "response_fields": [
+        {
+          "id": "repair",
+          "type": "single_choice",
+          "prompt": "What does movement toward the wt pattern after motif repair add?",
+          "options": [
+            "Evidence consistent with a contribution of the altered locus in this construction; independent repaired clones remain useful.",
+            "Proof that all trafficking abnormalities share this mechanism.",
+            "Proof of direct adaptor binding."
+          ],
+          "unit": null,
+          "points": 1.0
+        },
+        {
+          "id": "mechanism",
+          "type": "single_choice",
+          "prompt": "Which additional study addresses direct tail-adaptor interaction most directly?",
+          "options": [
+            "A higher viability percentage alone.",
+            "A declared binding assay with tail/adaptor controls and independent replication, considered alongside cell trafficking.",
+            "Another endpoint mean with no adaptor measurement."
+          ],
+          "unit": null,
+          "points": 1.0
+        },
+        {
+          "id": "timecourse",
+          "type": "single_choice",
+          "prompt": "What does the paired late increment describe?",
+          "options": [
+            "A constant microscopic transport rate with no competing destinations.",
+            "A validated lysosomal functional activity.",
+            "A descriptive net change in the measured fraction across that interval, with transport, turnover and recovery alternatives."
+          ],
+          "unit": null,
+          "points": 1.0
+        },
+        {
+          "id": "design",
+          "type": "single_choice",
+          "prompt": "Which follow-up best addresses the incomplete recovery ledger?",
+          "options": [
+            "Measure intact and fragment label across cell-associated and medium pools over time with recovery controls and independent cultures.",
+            "Set every missing amount to zero and call it secretion.",
+            "Pool all chase rows as independent biological replicates."
+          ],
+          "unit": null,
+          "points": 1.0
+        }
+      ],
+      "graph_spec": null,
+      "accepted_media_types": [],
+      "max_upload_bytes": null,
+      "variant_id": null,
+      "variant_token": null,
+      "learning_objective_ids": [
+        "cell-biology-8-objective-1",
+        "cell-biology-8-objective-2"
+      ],
+      "assessment_role": "graded"
+    }
+  ],
+  "provenance": {
+    "kind": "original",
+    "license": "CC-BY-4.0",
+    "ai_assistance": "Codex authored the candidate and automated checks. No independent or qualified human review occurred.",
+    "source_scope": "Existing course lessons only; no new outside source, identifier, prose, problem, figure or dataset imported."
+  }
+}

@@ -100,12 +100,14 @@ def test_assessment_specifications_contain_no_items_or_keys_and_say_so():
     for path in documents:
         text = path.read_text(encoding="utf-8")
         assert '"solution_spec"' not in text and '"answer"' not in text, path.name
-        if path.name != "README.md":
+        if path.name.endswith("-specification.md"):
             assert "not authored" in text.lower()
             assert "No question, answer key" in text
             assert "No reviewer has examined this specification" in text
     other = [p for p in folder.iterdir() if p.suffix not in {".md"}]
-    assert not other, f"unexpected non-document files beside the specifications: {other}"
+    assert {path.name for path in other} == {
+        "homework-01-candidate-pulse-chase.csv", "homework-01-candidate.json"
+    }, f"unexpected non-document files beside the specifications: {other}"
 
 
 def test_no_answer_package_files_are_committed_anywhere_in_the_course_tree():

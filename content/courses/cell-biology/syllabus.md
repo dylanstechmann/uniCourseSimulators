@@ -1,6 +1,6 @@
 # Foundations of Cell and Molecular Biology
 
-**Maturity: partial. Version: 0.19.1.**
+**Maturity: partial. Version: 0.20.0.**
 
 This original course package develops mechanistic reasoning from molecular structure to cell behavior. It is still not a completed 14-week university course: weeks 1–7 have two original topic lessons each, while weeks 4 and 7 retain short prototype readings in addition; week 5 adds one original virtual fluorescence data-analysis lab and week 11 adds a second signaling-data lab; week 8 has an ungraded cumulative practice set; weeks 9–14 have original lesson pairs and formative practice. No semester equivalency, university credit, or prerequisite equivalency is claimed.
 
@@ -43,3 +43,7 @@ The full proposal and objective-to-assessment crosswalk are in [assessment-cross
 ## Assessment and study policy
 
 All currently delivered items are public formative practice. Learners may retry them, inspect feedback, and use retrieval cards; this package has no weighted course grade, deadlines, midterm, cumulative final, or graded project. Week 3 includes an open formative homework companion with a synthetic trafficking dataset, five interactive practice items, and answer specifications that are public in this repository; it is not grade-bearing coursework or a protected exam. Week 5 contains one virtual fluorescence data-analysis lab with an eight-row synthetic CSV and 13 ungraded practice points. Week 11 contains a second lab with 120 synthetic observations, a replicate-aware summary upload, 15 fixed-axis graph coordinates, a baseline-adjusted numeric contrast, and five structured choices; its 20 points are ungraded practice feedback. Both display public answers and do not contribute to a course grade. Week 8 contains a 12-question cumulative formative review of weeks 1–7. Week 9 provides eight questions on RNA processing, translation, and protein turnover; weeks 10–14 each provide seven questions on their selected topics. These are self-paced practice, not exams, and give immediate per-question feedback. Open ungraded companions for Homework 1 to 8 and three virtual labs (weeks 5, 11 and 14) are delivered; each has a synthetic dataset and public answer specifications and none contributes to a grade. The midterm, cumulative final and integrative project exist only as specification documents under `assessment-specs/`, with no items, keys or review. See the crosswalk for the planned assessment sequence and current evidence gaps.
+
+## Inactive Homework 1 review candidate
+
+A separate [pulse-chase candidate](assessment-specs/homework-01-candidate.md) has seven original item stems, new synthetic observations and an answer package outside Git. It is not enrolled or served as graded coursework. Independent numerical review, scientific/assessment/accessibility review, workload evidence and an operator release policy remain required. The eight open formative homework companions retain their current practice roles.

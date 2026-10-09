@@ -7,7 +7,7 @@
   "domain": "Life sciences",
   "level": "Year 1",
   "maturity": "partial",
-  "version": "0.19.1",
+  "version": "0.20.0",
   "license": "MIT OR CC-BY-4.0",
   "content_origin": {
     "kind": "legacy-prototype",
@@ -2746,6 +2746,11 @@
       "version": "0.19.1",
       "date": "2026-10-08",
       "summary": "Assessments with items now also list the course outcomes those items assess, derived from each item's lesson objective and that objective's outcome links. The rubric-only case lists none. No readings, items or keys changed. The syllabus version line was updated. One course limitation shown to learners was also updated: it said some lesson objectives were unassessed, which is no longer true. The package remains partial, unreviewed and formative-only."
+    },
+    {
+      "version": "0.20.0",
+      "date": "2026-10-09",
+      "summary": "Prepared an inactive Homework 1 review candidate with new original pulse-chase data, seven answer-free public item DTOs and an external private answer package. Candidate checks are same-AI evidence; independent and qualified review, workload and operator release gates remain. No graded assessment or course-grade policy was activated. Developed with Codex assistance."
     }
   ],
   "limitations": [
@@ -2759,7 +2764,8 @@
     "CSV upload checks fixed numeric summary cells only; the virtual lab does not grade arbitrary data analysis, uncertainty estimation, free-response reasoning, or causal inference.",
     "Homework 1 to 8 are openly licensed formative practice with publicly inspectable solution specifications; they are not suitable as protected exams, do not contribute to a course grade, and are not graded homework sets. The datasets are synthetic and every software check scores deterministic numeric, coordinate or choice cells only.",
     "Virtual lab 2 uses synthetic phospho-ERK-to-total-ERK relative values and constrained deterministic checks. Its graph task scores points on fixed axes and does not assess axis selection, statistical uncertainty, or biological interpretation; neither the inhibitor nor bypass result alone establishes pathway specificity, normal physiology, or cell fate.",
-    "Virtual lab 3 uses synthetic marker percentages and cell numbers. Its checks score summary cells, graph coordinates and structured choices only; it does not assess lineage tracing, potency, function or any clinical claim, and marker patterns do not establish them."
+    "Virtual lab 3 uses synthetic marker percentages and cell numbers. Its checks score summary cells, graph coordinates and structured choices only; it does not assess lineage tracing, potency, function or any clinical claim, and marker patterns do not establish them.",
+    "Homework 1 has a separate inactive review candidate under assessment-specs: seven items and new synthetic pulse-chase data, with keys outside Git. It is not enrolled or served as graded coursework; independent and qualified review, workload measurement and operator release gates remain outstanding."
   ],
   "intentionally_omitted": [
     "Lessons and assessments for most proposed weeks, summative course assessments, and the complete semester workflow are intentionally not represented as finished content."
