@@ -82,6 +82,116 @@
       "original_content": true,
       "license": "CC-BY-4.0",
       "modifications": []
+    },
+    {
+      "module_id": "organic-chemistry-module-7",
+      "lesson_id": "organic-chemistry-7",
+      "reading": "modules/07-structure-electron-flow-and-acid-base-balance.md",
+      "source_ids": [
+        "organic",
+        "chemistry",
+        "openstax-organic-resonance"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "organic-chemistry-module-8",
+      "lesson_id": "organic-chemistry-8",
+      "reading": "modules/08-conformations-fischer-maps-and-stereochemical-labels.md",
+      "source_ids": [
+        "organic",
+        "chemistry",
+        "openstax-organic-fischer"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "organic-chemistry-module-9",
+      "lesson_id": "organic-chemistry-9",
+      "reading": "modules/09-substitution-elimination-and-competing-pathways.md",
+      "source_ids": [
+        "organic",
+        "chemistry",
+        "openstax-organic-sn2"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "organic-chemistry-module-10",
+      "lesson_id": "organic-chemistry-10",
+      "reading": "modules/10-carbonyl-addition-acyl-transfer-and-proton-bookkeeping.md",
+      "source_ids": [
+        "organic",
+        "chemistry"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "organic-chemistry-module-11",
+      "lesson_id": "organic-chemistry-11",
+      "reading": "modules/11-enolate-aldol-connectivity-and-atom-balance.md",
+      "source_ids": [
+        "organic",
+        "chemistry",
+        "openstax-organic-aldol"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "organic-chemistry-module-12",
+      "lesson_id": "organic-chemistry-12",
+      "reading": "modules/12-spectroscopic-constraints-and-product-identity.md",
+      "source_ids": [
+        "organic",
+        "chemistry",
+        "openstax-organic-nmr-splitting",
+        "openstax-organic-proton-equivalence"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "organic-chemistry-module-13",
+      "lesson_id": "organic-chemistry-13",
+      "reading": "modules/13-reaction-networks-selectivity-and-evidence.md",
+      "source_ids": [
+        "organic",
+        "chemistry"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "organic-chemistry-module-lab-01",
+      "lesson_id": "organic-chemistry-lab-01",
+      "reading": "labs/01-calibrated-peak-amounts-and-excess.md",
+      "source_ids": [
+        "organic",
+        "chemistry"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
     }
   ]
 }

@@ -3290,6 +3290,180 @@
       "checksum": null,
       "imported_assets": [],
       "rights_notes": "Link-only selection does not clear imported third-party teaching assets."
+    },
+    {
+      "id": "openstax-organic-resonance",
+      "title": "Organic Chemistry: 2.5 Rules for Resonance Forms",
+      "institution": "OpenStax, Rice University; John McMurry",
+      "url": "https://openstax.org/books/organic-chemistry/pages/2-5-rules-for-resonance-forms",
+      "accessed_at": "2026-10-09",
+      "license": "Link-only factual reference selected; no teaching assets imported.",
+      "reuse_mode": "link-only-reference",
+      "permissions": {
+        "linking": true,
+        "quotation": false,
+        "adaptation": false,
+        "redistribution": false
+      },
+      "attribution_requirements": [
+        "Identify OpenStax Organic Chemistry, the section title and exact URL."
+      ],
+      "third_party_notes": "Primary section retrieved to check standard conceptual relations. Original instruction and text diagrams do not copy source prose, worked problems, drawings or datasets. No third-party assets are imported.",
+      "mapped_courses": [
+        "organic-chemistry"
+      ],
+      "mapped_modules": [
+        "organic-chemistry-module-7"
+      ],
+      "version": "Organic Chemistry; primary section retrieved 2026-10-09",
+      "checksum": null,
+      "imported_assets": [],
+      "rights_notes": "Only links and original explanation are selected; no third-party asset reuse is cleared."
+    },
+    {
+      "id": "openstax-organic-fischer",
+      "title": "Organic Chemistry: 25.2 Fischer Projections",
+      "institution": "OpenStax, Rice University; John McMurry",
+      "url": "https://openstax.org/books/organic-chemistry/pages/25-2-representing-carbohydrate-stereochemistry-fischer-projections",
+      "accessed_at": "2026-10-09",
+      "license": "Link-only factual reference selected; no teaching assets imported.",
+      "reuse_mode": "link-only-reference",
+      "permissions": {
+        "linking": true,
+        "quotation": false,
+        "adaptation": false,
+        "redistribution": false
+      },
+      "attribution_requirements": [
+        "Identify OpenStax Organic Chemistry, the section title and exact URL."
+      ],
+      "third_party_notes": "Primary section retrieved to check standard conceptual relations. Original instruction and text diagrams do not copy source prose, worked problems, drawings or datasets. No third-party assets are imported.",
+      "mapped_courses": [
+        "organic-chemistry"
+      ],
+      "mapped_modules": [
+        "organic-chemistry-module-8"
+      ],
+      "version": "Organic Chemistry; primary section retrieved 2026-10-09",
+      "checksum": null,
+      "imported_assets": [],
+      "rights_notes": "Only links and original explanation are selected; no third-party asset reuse is cleared."
+    },
+    {
+      "id": "openstax-organic-sn2",
+      "title": "Organic Chemistry: 11.2 The SN2 Reaction",
+      "institution": "OpenStax, Rice University; John McMurry",
+      "url": "https://openstax.org/books/organic-chemistry/pages/11-2-the-sn2-reaction",
+      "accessed_at": "2026-10-09",
+      "license": "Link-only factual reference selected; no teaching assets imported.",
+      "reuse_mode": "link-only-reference",
+      "permissions": {
+        "linking": true,
+        "quotation": false,
+        "adaptation": false,
+        "redistribution": false
+      },
+      "attribution_requirements": [
+        "Identify OpenStax Organic Chemistry, the section title and exact URL."
+      ],
+      "third_party_notes": "Primary section retrieved to check standard conceptual relations. Original instruction and text diagrams do not copy source prose, worked problems, drawings or datasets. No third-party assets are imported.",
+      "mapped_courses": [
+        "organic-chemistry"
+      ],
+      "mapped_modules": [
+        "organic-chemistry-module-9"
+      ],
+      "version": "Organic Chemistry; primary section retrieved 2026-10-09",
+      "checksum": null,
+      "imported_assets": [],
+      "rights_notes": "Only links and original explanation are selected; no third-party asset reuse is cleared."
+    },
+    {
+      "id": "openstax-organic-aldol",
+      "title": "Organic Chemistry: 23.1 The Aldol Reaction",
+      "institution": "OpenStax, Rice University; John McMurry",
+      "url": "https://openstax.org/books/organic-chemistry/pages/23-1-carbonyl-condensations-the-aldol-reaction",
+      "accessed_at": "2026-10-09",
+      "license": "Link-only factual reference selected; no teaching assets imported.",
+      "reuse_mode": "link-only-reference",
+      "permissions": {
+        "linking": true,
+        "quotation": false,
+        "adaptation": false,
+        "redistribution": false
+      },
+      "attribution_requirements": [
+        "Identify OpenStax Organic Chemistry, the section title and exact URL."
+      ],
+      "third_party_notes": "Primary section retrieved to check standard conceptual relations. Original instruction and text diagrams do not copy source prose, worked problems, drawings or datasets. No third-party assets are imported.",
+      "mapped_courses": [
+        "organic-chemistry"
+      ],
+      "mapped_modules": [
+        "organic-chemistry-module-11"
+      ],
+      "version": "Organic Chemistry; primary section retrieved 2026-10-09",
+      "checksum": null,
+      "imported_assets": [],
+      "rights_notes": "Only links and original explanation are selected; no third-party asset reuse is cleared."
+    },
+    {
+      "id": "openstax-organic-nmr-splitting",
+      "title": "Organic Chemistry: 13.6 Spin–Spin Splitting",
+      "institution": "OpenStax, Rice University; John McMurry",
+      "url": "https://openstax.org/books/organic-chemistry/pages/13-6-spin-spin-splitting-in-1h-nmr-spectra",
+      "accessed_at": "2026-10-09",
+      "license": "Link-only factual reference selected; no teaching assets imported.",
+      "reuse_mode": "link-only-reference",
+      "permissions": {
+        "linking": true,
+        "quotation": false,
+        "adaptation": false,
+        "redistribution": false
+      },
+      "attribution_requirements": [
+        "Identify OpenStax Organic Chemistry, the section title and exact URL."
+      ],
+      "third_party_notes": "Primary section retrieved to check standard conceptual relations. Original instruction and text diagrams do not copy source prose, worked problems, drawings or datasets. No third-party assets are imported.",
+      "mapped_courses": [
+        "organic-chemistry"
+      ],
+      "mapped_modules": [
+        "organic-chemistry-module-12"
+      ],
+      "version": "Organic Chemistry; primary section retrieved 2026-10-09",
+      "checksum": null,
+      "imported_assets": [],
+      "rights_notes": "Only links and original explanation are selected; no third-party asset reuse is cleared."
+    },
+    {
+      "id": "openstax-organic-proton-equivalence",
+      "title": "Organic Chemistry: 13.7 Proton Equivalence",
+      "institution": "OpenStax, Rice University; John McMurry",
+      "url": "https://openstax.org/books/organic-chemistry/pages/13-7-1h-nmr-spectroscopy-and-proton-equivalence",
+      "accessed_at": "2026-10-09",
+      "license": "Link-only factual reference selected; no teaching assets imported.",
+      "reuse_mode": "link-only-reference",
+      "permissions": {
+        "linking": true,
+        "quotation": false,
+        "adaptation": false,
+        "redistribution": false
+      },
+      "attribution_requirements": [
+        "Identify OpenStax Organic Chemistry, the section title and exact URL."
+      ],
+      "third_party_notes": "Primary section retrieved to check standard conceptual relations. Original instruction and text diagrams do not copy source prose, worked problems, drawings or datasets. No third-party assets are imported.",
+      "mapped_courses": [
+        "organic-chemistry"
+      ],
+      "mapped_modules": [
+        "organic-chemistry-module-12"
+      ],
+      "version": "Organic Chemistry; primary section retrieved 2026-10-09",
+      "checksum": null,
+      "imported_assets": [],
+      "rights_notes": "Only links and original explanation are selected; no third-party asset reuse is cleared."
     }
   ]
 }

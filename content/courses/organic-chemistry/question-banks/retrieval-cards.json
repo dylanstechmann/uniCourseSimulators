@@ -145,6 +145,326 @@
         "organic-chemistry-6-objective-3"
       ],
       "license": "CC-BY-4.0"
+    },
+    {
+      "id": "organic-chemistry-7-card-1",
+      "lesson_id": "organic-chemistry-7",
+      "front": "Formula constraints",
+      "back": "Valence-electron and unsaturation counts constrain candidates without uniquely identifying one structure.",
+      "objective_ids": [
+        "organic-chemistry-7-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "organic-chemistry-7-card-2",
+      "lesson_id": "organic-chemistry-7",
+      "front": "Resonance flow",
+      "back": "Keep atoms/sigma connectivity fixed and move paired electrons without exceeding valence.",
+      "objective_ids": [
+        "organic-chemistry-7-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "organic-chemistry-7-card-3",
+      "lesson_id": "organic-chemistry-7",
+      "front": "Proton transfer",
+      "back": "K=10^(pK_a conjugate acid of base − pK_a donor acid) requires matching conventions.",
+      "objective_ids": [
+        "organic-chemistry-7-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "organic-chemistry-7-card-4",
+      "lesson_id": "organic-chemistry-7",
+      "front": "Basicity and rate",
+      "back": "Proton-transfer favorability and nucleophilic reaction rate are distinct comparisons.",
+      "objective_ids": [
+        "organic-chemistry-7-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "organic-chemistry-8-card-1",
+      "lesson_id": "organic-chemistry-8",
+      "front": "Conformer weights",
+      "back": "Normalize each state weight and include equivalent-state degeneracy.",
+      "objective_ids": [
+        "organic-chemistry-8-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "organic-chemistry-8-card-2",
+      "lesson_id": "organic-chemistry-8",
+      "front": "Fischer convention",
+      "back": "Horizontal groups point toward and vertical groups away; reverse apparent traversal when priority four is toward.",
+      "objective_ids": [
+        "organic-chemistry-8-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "organic-chemistry-8-card-3",
+      "lesson_id": "organic-chemistry-8",
+      "front": "Descriptors and sign",
+      "back": "R/S does not predict optical-rotation sign; changed product priorities can alter descriptor behavior after spatial inversion.",
+      "objective_ids": [
+        "organic-chemistry-8-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "organic-chemistry-8-card-4",
+      "lesson_id": "organic-chemistry-8",
+      "front": "Symmetry counts",
+      "back": "2ⁿ is an upper bound; actual symmetry can identify configurations such as a meso form.",
+      "objective_ids": [
+        "organic-chemistry-8-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "organic-chemistry-9-card-1",
+      "lesson_id": "organic-chemistry-9",
+      "front": "Selected pair movements",
+      "back": "SN2 forms/leaves bonds together; E2 connects beta proton removal, new π bonding and leaving-pair departure.",
+      "objective_ids": [
+        "organic-chemistry-9-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "organic-chemistry-9-card-2",
+      "lesson_id": "organic-chemistry-9",
+      "front": "Parallel rates",
+      "back": "Constant effective rates add for substrate disappearance and normalize for branch fractions.",
+      "objective_ids": [
+        "organic-chemistry-9-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "organic-chemistry-9-card-3",
+      "lesson_id": "organic-chemistry-9",
+      "front": "Chair access",
+      "back": "For conventional chair E2, check an axial leaving group and opposite axial beta H in the same conformation.",
+      "objective_ids": [
+        "organic-chemistry-9-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "organic-chemistry-9-card-4",
+      "lesson_id": "organic-chemistry-9",
+      "front": "Inference scope",
+      "back": "An empirical time law or substrate category alone does not uniquely establish an elementary mechanism.",
+      "objective_ids": [
+        "organic-chemistry-9-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "organic-chemistry-10-card-1",
+      "lesson_id": "organic-chemistry-10",
+      "front": "Carbonyl bookkeeping",
+      "back": "Donor pair to carbon and π pair to oxygen preserve carbon valence and require explicit charge accounting.",
+      "objective_ids": [
+        "organic-chemistry-10-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "organic-chemistry-10-card-2",
+      "lesson_id": "organic-chemistry-10",
+      "front": "Acyl collapse",
+      "back": "O pair restores C=O while the C–Z pair leaves with the declared outgoing group.",
+      "objective_ids": [
+        "organic-chemistry-10-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "organic-chemistry-10-card-3",
+      "lesson_id": "organic-chemistry-10",
+      "front": "Activation case",
+      "back": "A net acid/amine condensation equation omits activation, proton and competing-pathway questions.",
+      "objective_ids": [
+        "organic-chemistry-10-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "organic-chemistry-10-card-4",
+      "lesson_id": "organic-chemistry-10",
+      "front": "Adduct condition",
+      "back": "Fixed free donor and closed total donor are different amount constraints.",
+      "objective_ids": [
+        "organic-chemistry-10-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "organic-chemistry-11-card-1",
+      "lesson_id": "organic-chemistry-11",
+      "front": "Enolate contributors",
+      "back": "Carbon- and oxygen-centered forms represent one delocalized species, not proton-transfer isomers.",
+      "objective_ids": [
+        "organic-chemistry-11-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "organic-chemistry-11-card-2",
+      "lesson_id": "organic-chemistry-11",
+      "front": "Aldol mapping",
+      "back": "Donor alpha carbon joins acceptor carbonyl carbon; acceptor oxygen becomes the alcohol after proton transfer.",
+      "objective_ids": [
+        "organic-chemistry-11-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "organic-chemistry-11-card-3",
+      "lesson_id": "organic-chemistry-11",
+      "front": "Addition versus dehydration",
+      "back": "The selected addition retains both carbonyl inventories; water loss belongs to a separate transformation.",
+      "objective_ids": [
+        "organic-chemistry-11-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "organic-chemistry-11-card-4",
+      "lesson_id": "organic-chemistry-11",
+      "front": "Selectivity scope",
+      "back": "Possible crossed partners and alpha sites require explicit accounting rather than one desired drawing.",
+      "objective_ids": [
+        "organic-chemistry-11-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "organic-chemistry-12-card-1",
+      "lesson_id": "organic-chemistry-12",
+      "front": "Orthogonal constraints",
+      "back": "Formula, vibrational and proton patterns constrain different aspects of candidate identity.",
+      "objective_ids": [
+        "organic-chemistry-12-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "organic-chemistry-12-card-2",
+      "lesson_id": "organic-chemistry-12",
+      "front": "Splitting domain",
+      "back": "n+1 is a selected equivalent-neighbor first-order model, not a universal multiplet rule.",
+      "objective_ids": [
+        "organic-chemistry-12-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "organic-chemistry-12-card-3",
+      "lesson_id": "organic-chemistry-12",
+      "front": "Amount calibration",
+      "back": "Integral or peak area needs species counts and a justified response model before becoming amount.",
+      "objective_ids": [
+        "organic-chemistry-12-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "organic-chemistry-12-card-4",
+      "lesson_id": "organic-chemistry-12",
+      "front": "Chiral evidence",
+      "back": "Shared achiral spectra do not distinguish enantiomers; retention or optical sign alone does not assign R/S.",
+      "objective_ids": [
+        "organic-chemistry-12-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "organic-chemistry-13-card-1",
+      "lesson_id": "organic-chemistry-13",
+      "front": "Conversion and branch",
+      "back": "Target product equals branch fraction times converted amount in the constant parallel network.",
+      "objective_ids": [
+        "organic-chemistry-13-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "organic-chemistry-13-card-2",
+      "lesson_id": "organic-chemistry-13",
+      "front": "Distinct processes",
+      "back": "Reaction branching, subsequent recovery and detector reporting are separate operations.",
+      "objective_ids": [
+        "organic-chemistry-13-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "organic-chemistry-13-card-3",
+      "lesson_id": "organic-chemistry-13",
+      "front": "Calibrated excess",
+      "back": "Signed excess uses calibrated A/B amounts; unequal reporting gains bias an area-only ratio.",
+      "objective_ids": [
+        "organic-chemistry-13-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "organic-chemistry-13-card-4",
+      "lesson_id": "organic-chemistry-13",
+      "front": "Identity evidence",
+      "back": "A proposed activation route and a new signal still need independent structural and material checks.",
+      "objective_ids": [
+        "organic-chemistry-13-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "organic-chemistry-lab-01-card-1",
+      "lesson_id": "organic-chemistry-lab-01",
+      "front": "Blank and gain",
+      "back": "Blank subtraction corrects an additive offset; separate standard normalization corrects each channel gain.",
+      "objective_ids": [
+        "organic-chemistry-lab-01-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "organic-chemistry-lab-01-card-2",
+      "lesson_id": "organic-chemistry-lab-01",
+      "front": "Calibrated amounts",
+      "back": "Convert each reporting channel to amount before calculating pair fractions or excess.",
+      "objective_ids": [
+        "organic-chemistry-lab-01-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "organic-chemistry-lab-01-card-3",
+      "lesson_id": "organic-chemistry-lab-01",
+      "front": "Signed excess",
+      "back": "(A−B)/(A+B) distinguishes imbalance from major fraction and retains the declared A/B sign.",
+      "objective_ids": [
+        "organic-chemistry-lab-01-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "organic-chemistry-lab-01-card-4",
+      "lesson_id": "organic-chemistry-lab-01",
+      "front": "Identity limits",
+      "back": "Given optical identities do not assign R/S; response calibration does not prove real purity, coelution absence or linearity.",
+      "objective_ids": [
+        "organic-chemistry-lab-01-objective-3"
+      ],
+      "license": "CC-BY-4.0"
     }
   ]
 }

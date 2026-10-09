@@ -7,7 +7,7 @@
   "domain": "Chemistry",
   "level": "Year 2",
   "maturity": "partial",
-  "version": "0.3.2",
+  "version": "0.4.0",
   "license": "MIT OR CC-BY-4.0",
   "content_origin": {
     "kind": "legacy-prototype",
@@ -148,12 +148,346 @@
         "organic-chemistry-outcome-3",
         "organic-chemistry-outcome-4"
       ]
+    },
+    {
+      "id": "organic-chemistry-7-objective-1",
+      "description": "Check formula, valence-electron and unsaturation constraints.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "organic-chemistry-outcome-1"
+      ]
+    },
+    {
+      "id": "organic-chemistry-7-objective-2",
+      "description": "Trace valid resonance and electron-pair movements.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "organic-chemistry-outcome-1"
+      ]
+    },
+    {
+      "id": "organic-chemistry-7-objective-3",
+      "description": "Compare acid/base equilibrium with rate-based reactivity.",
+      "bloom": "analyze",
+      "course_outcome_ids": [
+        "organic-chemistry-outcome-1"
+      ]
+    },
+    {
+      "id": "organic-chemistry-8-objective-1",
+      "description": "Normalize conformer populations with stated degeneracy.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "organic-chemistry-outcome-3"
+      ]
+    },
+    {
+      "id": "organic-chemistry-8-objective-2",
+      "description": "Assign and transform the supplied Fischer configuration.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "organic-chemistry-outcome-3"
+      ]
+    },
+    {
+      "id": "organic-chemistry-8-objective-3",
+      "description": "Distinguish descriptors, optical sign and symmetry-reduced counts.",
+      "bloom": "analyze",
+      "course_outcome_ids": [
+        "organic-chemistry-outcome-3"
+      ]
+    },
+    {
+      "id": "organic-chemistry-9-objective-1",
+      "description": "Track selected substitution/elimination pairs and stereoelectronic conditions.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "organic-chemistry-outcome-2"
+      ]
+    },
+    {
+      "id": "organic-chemistry-9-objective-2",
+      "description": "Calculate competing-route rates, branching and conversion.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "organic-chemistry-outcome-2"
+      ]
+    },
+    {
+      "id": "organic-chemistry-9-objective-3",
+      "description": "Qualify mechanism inference under fixed-environment assumptions.",
+      "bloom": "analyze",
+      "course_outcome_ids": [
+        "organic-chemistry-outcome-2"
+      ]
+    },
+    {
+      "id": "organic-chemistry-10-objective-1",
+      "description": "Track carbonyl addition/collapse and donor charge/proton changes.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "organic-chemistry-outcome-1"
+      ]
+    },
+    {
+      "id": "organic-chemistry-10-objective-2",
+      "description": "Calculate stipulated adduct and hydrolysis balances.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "organic-chemistry-outcome-4"
+      ]
+    },
+    {
+      "id": "organic-chemistry-10-objective-3",
+      "description": "Evaluate activation and product evidence in the preserved case.",
+      "bloom": "analyze",
+      "course_outcome_ids": [
+        "organic-chemistry-outcome-4"
+      ]
+    },
+    {
+      "id": "organic-chemistry-11-objective-1",
+      "description": "Identify alpha positions and resonance-compatible enolate flow.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "organic-chemistry-outcome-1"
+      ]
+    },
+    {
+      "id": "organic-chemistry-11-objective-2",
+      "description": "Map aldol atom connectivity and addition/dehydration inventories.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "organic-chemistry-outcome-4"
+      ]
+    },
+    {
+      "id": "organic-chemistry-11-objective-3",
+      "description": "Evaluate stereochemical and crossed-selectivity limits.",
+      "bloom": "analyze",
+      "course_outcome_ids": [
+        "organic-chemistry-outcome-3"
+      ]
+    },
+    {
+      "id": "organic-chemistry-12-objective-1",
+      "description": "Combine formula and constructed spectral constraints.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "organic-chemistry-outcome-4"
+      ]
+    },
+    {
+      "id": "organic-chemistry-12-objective-2",
+      "description": "Calculate integrals/splitting within their model domain.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "organic-chemistry-outcome-4"
+      ]
+    },
+    {
+      "id": "organic-chemistry-12-objective-3",
+      "description": "Distinguish identity, amount, purity and stereochemical evidence.",
+      "bloom": "analyze",
+      "course_outcome_ids": [
+        "organic-chemistry-outcome-3"
+      ]
+    },
+    {
+      "id": "organic-chemistry-13-objective-1",
+      "description": "Calculate conversion and competing product amounts.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "organic-chemistry-outcome-4"
+      ]
+    },
+    {
+      "id": "organic-chemistry-13-objective-2",
+      "description": "Distinguish branching, recovery and calibrated stereochemical amounts.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "organic-chemistry-outcome-3"
+      ]
+    },
+    {
+      "id": "organic-chemistry-13-objective-3",
+      "description": "Evaluate product claims with independent structural/material evidence.",
+      "bloom": "analyze",
+      "course_outcome_ids": [
+        "organic-chemistry-outcome-4"
+      ]
+    },
+    {
+      "id": "organic-chemistry-lab-01-objective-1",
+      "description": "Summarize raw peak reports and determine supplied baseline/gain calibration.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "organic-chemistry-outcome-3"
+      ]
+    },
+    {
+      "id": "organic-chemistry-lab-01-objective-2",
+      "description": "Calculate calibrated pair amounts, signed excess and amount ratios.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "organic-chemistry-outcome-3"
+      ]
+    },
+    {
+      "id": "organic-chemistry-lab-01-objective-3",
+      "description": "Distinguish reporting response, optical identity, absolute configuration and purity evidence.",
+      "bloom": "analyze",
+      "course_outcome_ids": [
+        "organic-chemistry-outcome-3"
+      ]
     }
   ],
   "duration": {
-    "instructional_weeks": null,
-    "equivalent_structure": null,
-    "weeks": []
+    "instructional_weeks": 14,
+    "equivalent_structure": "Proposed 14-week scope retaining compact prototype readings in weeks 1,5,7,9. Workload and qualified review are absent; no semester equivalence is established.",
+    "weeks": [
+      {
+        "week": 1,
+        "title": "Structure, resonance, and acid-base reactivity",
+        "lesson_ids": [
+          "organic-chemistry-1"
+        ],
+        "assessment_ids": [
+          "organic-chemistry-1-practice"
+        ]
+      },
+      {
+        "week": 2,
+        "title": "Structure, electron flow and acid–base balance",
+        "lesson_ids": [
+          "organic-chemistry-7"
+        ],
+        "assessment_ids": [
+          "organic-chemistry-7-practice"
+        ]
+      },
+      {
+        "week": 3,
+        "title": "Conformations, Fischer maps and stereochemical labels",
+        "lesson_ids": [
+          "organic-chemistry-8"
+        ],
+        "assessment_ids": [
+          "organic-chemistry-8-practice"
+        ]
+      },
+      {
+        "week": 4,
+        "title": "Substitution mechanisms and stereochemistry: predicting SN1 versus SN2 and tracking what happens at a stereocenter",
+        "lesson_ids": [
+          "organic-chemistry-6"
+        ],
+        "assessment_ids": [
+          "organic-chemistry-6-practice"
+        ]
+      },
+      {
+        "week": 5,
+        "title": "Substitution mechanisms: SN1 and SN2",
+        "lesson_ids": [
+          "organic-chemistry-2"
+        ],
+        "assessment_ids": [
+          "organic-chemistry-2-practice"
+        ]
+      },
+      {
+        "week": 6,
+        "title": "Substitution, elimination and competing pathways",
+        "lesson_ids": [
+          "organic-chemistry-9"
+        ],
+        "assessment_ids": [
+          "organic-chemistry-9-practice"
+        ]
+      },
+      {
+        "week": 7,
+        "title": "Elimination, alkenes, and stereochemical control",
+        "lesson_ids": [
+          "organic-chemistry-3"
+        ],
+        "assessment_ids": [
+          "organic-chemistry-3-practice"
+        ]
+      },
+      {
+        "week": 8,
+        "title": "Carbonyl addition, acyl transfer and proton bookkeeping",
+        "lesson_ids": [
+          "organic-chemistry-10"
+        ],
+        "assessment_ids": [
+          "organic-chemistry-10-practice"
+        ]
+      },
+      {
+        "week": 9,
+        "title": "Carbonyl chemistry and acyl transfer",
+        "lesson_ids": [
+          "organic-chemistry-4"
+        ],
+        "assessment_ids": [
+          "organic-chemistry-4-practice"
+        ]
+      },
+      {
+        "week": 10,
+        "title": "Enolates, aldol connectivity and atom balance",
+        "lesson_ids": [
+          "organic-chemistry-11"
+        ],
+        "assessment_ids": [
+          "organic-chemistry-11-practice"
+        ]
+      },
+      {
+        "week": 11,
+        "title": "Functional groups at work in biomolecules: acyl reactivity, ionization and slow chemical damage",
+        "lesson_ids": [
+          "organic-chemistry-5"
+        ],
+        "assessment_ids": [
+          "organic-chemistry-5-practice"
+        ]
+      },
+      {
+        "week": 12,
+        "title": "Spectroscopic constraints and product identity",
+        "lesson_ids": [
+          "organic-chemistry-12"
+        ],
+        "assessment_ids": [
+          "organic-chemistry-12-practice"
+        ]
+      },
+      {
+        "week": 13,
+        "title": "Reaction networks, selectivity and evidence",
+        "lesson_ids": [
+          "organic-chemistry-13"
+        ],
+        "assessment_ids": [
+          "organic-chemistry-13-practice"
+        ]
+      },
+      {
+        "week": 14,
+        "title": "Virtual lab 1: calibrated peak amounts and enantiomeric excess",
+        "lesson_ids": [
+          "organic-chemistry-lab-01"
+        ],
+        "assessment_ids": [
+          "organic-chemistry-week14-calibrated-excess-lab",
+          "organic-chemistry-case"
+        ]
+      }
+    ]
   },
   "workload": {
     "estimated_total_hours": null,
@@ -342,6 +676,315 @@
           ]
         }
       ]
+    },
+    {
+      "id": "organic-chemistry-module-7",
+      "title": "Structure, electron flow and acid–base balance",
+      "source_ids": [
+        "organic",
+        "chemistry",
+        "openstax-organic-resonance"
+      ],
+      "lessons": [
+        {
+          "id": "organic-chemistry-7",
+          "title": "Structure, electron flow and acid–base balance",
+          "reading": "modules/07-structure-electron-flow-and-acid-base-balance.md",
+          "objectives": [
+            "organic-chemistry-7-objective-1",
+            "organic-chemistry-7-objective-2",
+            "organic-chemistry-7-objective-3"
+          ],
+          "worked_example": "Start from C₅H₉NO and independently count 40 valence electrons and two unsaturation units. Do not select a unique structure yet. For a carboxylate contributor exchange, identify the two simultaneous electron-pair movements and verify unchanged atom positions, net charge and carbon valence. For the separate synthetic acid/base pair, subtract the pK_a values in the correct direction to obtain K=10⁴. At imposed pH 6, normalize acid and base ratio 1:10 for the deprotonated fraction 10/11.",
+          "question_ids": [
+            "organic-chemistry-7:electron-budget",
+            "organic-chemistry-7:unsaturation",
+            "organic-chemistry-7:proton-transfer",
+            "organic-chemistry-7:base-fraction",
+            "organic-chemistry-7:resonance-pairs",
+            "organic-chemistry-7:arrow-tail",
+            "organic-chemistry-7:tautomer",
+            "organic-chemistry-7:basicity",
+            "organic-chemistry-7:formula"
+          ],
+          "card_ids": [
+            "organic-chemistry-7-card-1",
+            "organic-chemistry-7-card-2",
+            "organic-chemistry-7-card-3",
+            "organic-chemistry-7-card-4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "organic-chemistry-module-8",
+      "title": "Conformations, Fischer maps and stereochemical labels",
+      "source_ids": [
+        "organic",
+        "chemistry",
+        "openstax-organic-fischer"
+      ],
+      "lessons": [
+        {
+          "id": "organic-chemistry-8",
+          "title": "Conformations, Fischer maps and stereochemical labels",
+          "reading": "modules/08-conformations-fischer-maps-and-stereochemical-labels.md",
+          "objectives": [
+            "organic-chemistry-8-objective-1",
+            "organic-chemistry-8-objective-2",
+            "organic-chemistry-8-objective-3"
+          ],
+          "worked_example": "Normalize conformer weights 1 and w to get the single higher-state fraction, then replace the higher weight by 2w when two equivalent arrangements are supplied. For the text Fischer map, rank OH,COOH,CH₃,H; determine the clockwise page traversal and reverse because H points toward the viewer. Swapping the horizontal groups reverses the arrangement. Separately count four configurations without symmetry and three in the stipulated meso case. Keep these spatial and statistical examples distinct.",
+          "question_ids": [
+            "organic-chemistry-8:conformer-weight",
+            "organic-chemistry-8:degenerate-population",
+            "organic-chemistry-8:no-symmetry-count",
+            "organic-chemistry-8:meso-count",
+            "organic-chemistry-8:fischer",
+            "organic-chemistry-8:swap",
+            "organic-chemistry-8:rotation",
+            "organic-chemistry-8:descriptor",
+            "organic-chemistry-8:optical-sign"
+          ],
+          "card_ids": [
+            "organic-chemistry-8-card-1",
+            "organic-chemistry-8-card-2",
+            "organic-chemistry-8-card-3",
+            "organic-chemistry-8-card-4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "organic-chemistry-module-9",
+      "title": "Substitution, elimination and competing pathways",
+      "source_ids": [
+        "organic",
+        "chemistry",
+        "openstax-organic-sn2"
+      ],
+      "lessons": [
+        {
+          "id": "organic-chemistry-9",
+          "title": "Substitution, elimination and competing pathways",
+          "reading": "modules/09-substitution-elimination-and-competing-pathways.md",
+          "objectives": [
+            "organic-chemistry-9-objective-1",
+            "organic-chemistry-9-objective-2",
+            "organic-chemistry-9-objective-3"
+          ],
+          "worked_example": "Identify the two SN2 pair movements and the three E2 pair movements, checking that leaving and forming bonds match adjacent atoms. For the synthetic parallel network, multiply each second-order constant by its stipulated free reactant concentration to get a=b=0.0020 s⁻¹. Multiply by S₀ for the initial rates, add a+b for substrate decay and normalize a by that sum for the substitution branch. Check product sum against consumed S before interpreting selectivity.",
+          "question_ids": [
+            "organic-chemistry-9:substitution-rate",
+            "organic-chemistry-9:elimination-rate",
+            "organic-chemistry-9:substitution-branch",
+            "organic-chemistry-9:substrate-half",
+            "organic-chemistry-9:sn2-pairs",
+            "organic-chemistry-9:e2-pairs",
+            "organic-chemistry-9:chair",
+            "organic-chemistry-9:branching",
+            "organic-chemistry-9:mechanism-inference"
+          ],
+          "card_ids": [
+            "organic-chemistry-9-card-1",
+            "organic-chemistry-9-card-2",
+            "organic-chemistry-9-card-3",
+            "organic-chemistry-9-card-4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "organic-chemistry-module-10",
+      "title": "Carbonyl addition, acyl transfer and proton bookkeeping",
+      "source_ids": [
+        "organic",
+        "chemistry"
+      ],
+      "lessons": [
+        {
+          "id": "organic-chemistry-10",
+          "title": "Carbonyl addition, acyl transfer and proton bookkeeping",
+          "reading": "modules/10-carbonyl-addition-acyl-transfer-and-proton-bookkeeping.md",
+          "objectives": [
+            "organic-chemistry-10-objective-1",
+            "organic-chemistry-10-objective-2",
+            "organic-chemistry-10-objective-3"
+          ],
+          "worked_example": "Describe donor-to-carbon and carbonyl-pair-to-oxygen movements for addition, then distinguish collapse with a declared outgoing Z group from an unsupported alkyl expulsion. For the independent adduct model, set D/C=10×0.20=2 and normalize the total 0.10. For the separate time model, calculate remaining 0.100exp(−0.9) and product by subtraction. Finally examine whether a proposed amide mechanism supplies activation, valid proton bookkeeping and product evidence.",
+          "question_ids": [
+            "organic-chemistry-10:adduct-amount",
+            "organic-chemistry-10:free-carbonyl",
+            "organic-chemistry-10:hydrolysis-remaining",
+            "organic-chemistry-10:hydrolysis-product",
+            "organic-chemistry-10:addition",
+            "organic-chemistry-10:neutral-donor",
+            "organic-chemistry-10:collapse",
+            "organic-chemistry-10:amide-case",
+            "organic-chemistry-10:donor-boundary"
+          ],
+          "card_ids": [
+            "organic-chemistry-10-card-1",
+            "organic-chemistry-10-card-2",
+            "organic-chemistry-10-card-3",
+            "organic-chemistry-10-card-4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "organic-chemistry-module-11",
+      "title": "Enolates, aldol connectivity and atom balance",
+      "source_ids": [
+        "organic",
+        "chemistry",
+        "openstax-organic-aldol"
+      ],
+      "lessons": [
+        {
+          "id": "organic-chemistry-11",
+          "title": "Enolates, aldol connectivity and atom balance",
+          "reading": "modules/11-enolate-aldol-connectivity-and-atom-balance.md",
+          "objectives": [
+            "organic-chemistry-11-objective-1",
+            "organic-chemistry-11-objective-2",
+            "organic-chemistry-11-objective-3"
+          ],
+          "worked_example": "Identify ethanal's three alpha hydrogens and distinguish its aldehydic hydrogen. Apply the synthetic pK_a difference for reference proton transfer K=100. Label donor C1/C2 and acceptor C3/C4, then connect C2–C3 and retain donor C=O while converting acceptor C=O into the alcohol after proton transfer. Sum formulas for C₄H₈O₂, then subtract H₂O only for the separate dehydration to obtain C₄H₆O. Check the stereocenter and unsaturation count independently.",
+          "question_ids": [
+            "organic-chemistry-11:alpha-hydrogens",
+            "organic-chemistry-11:proton-transfer",
+            "organic-chemistry-11:aldol-carbons",
+            "organic-chemistry-11:dehydrated-unsaturation",
+            "organic-chemistry-11:new-bond",
+            "organic-chemistry-11:alcohol-oxygen",
+            "organic-chemistry-11:water-balance",
+            "organic-chemistry-11:enolate",
+            "organic-chemistry-11:crossed"
+          ],
+          "card_ids": [
+            "organic-chemistry-11-card-1",
+            "organic-chemistry-11-card-2",
+            "organic-chemistry-11-card-3",
+            "organic-chemistry-11-card-4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "organic-chemistry-module-12",
+      "title": "Spectroscopic constraints and product identity",
+      "source_ids": [
+        "organic",
+        "chemistry",
+        "openstax-organic-nmr-splitting",
+        "openstax-organic-proton-equivalence"
+      ],
+      "lessons": [
+        {
+          "id": "organic-chemistry-12",
+          "title": "Spectroscopic constraints and product identity",
+          "reading": "modules/12-spectroscopic-constraints-and-product-identity.md",
+          "objectives": [
+            "organic-chemistry-12-objective-1",
+            "organic-chemistry-12-objective-2",
+            "organic-chemistry-12-objective-3"
+          ],
+          "worked_example": "Compute one unsaturation unit from C₄H₈O₂. Sum synthetic integrals 3+2+3=8 and normalize the first to 3/8. For the selected ethyl ester model, identify three equivalent neighboring methyl protons for the methylene quartet, then two methylene neighbors for the terminal methyl triplet. Check connectivity against the formula and the qualitative carbonyl observation. Finally state which claims remain unresolved: absolute configuration, complete purity and quantitative amount need their own evidence.",
+          "question_ids": [
+            "organic-chemistry-12:formula-unsaturation",
+            "organic-chemistry-12:integral-fraction",
+            "organic-chemistry-12:methylene-lines",
+            "organic-chemistry-12:methyl-lines",
+            "organic-chemistry-12:candidate",
+            "organic-chemistry-12:splitting-domain",
+            "organic-chemistry-12:integration",
+            "organic-chemistry-12:achiral",
+            "organic-chemistry-12:identity"
+          ],
+          "card_ids": [
+            "organic-chemistry-12-card-1",
+            "organic-chemistry-12-card-2",
+            "organic-chemistry-12-card-3",
+            "organic-chemistry-12-card-4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "organic-chemistry-module-13",
+      "title": "Reaction networks, selectivity and evidence",
+      "source_ids": [
+        "organic",
+        "chemistry"
+      ],
+      "lessons": [
+        {
+          "id": "organic-chemistry-13",
+          "title": "Reaction networks, selectivity and evidence",
+          "reading": "modules/13-reaction-networks-selectivity-and-evidence.md",
+          "objectives": [
+            "organic-chemistry-13-objective-1",
+            "organic-chemistry-13-objective-2",
+            "organic-chemistry-13-objective-3"
+          ],
+          "worked_example": "Add effective rates to obtain 0.050 min⁻¹, calculate I at 20 min and subtract from one for conversion. Normalize a by the sum for target branching and multiply that branch by converted amount for P. Recover H from the other branch and check I+P+H=1. Apply recovery only after formation if that additional assumption is supplied. Separately compare the true 7:3 enantiomer amounts with the biased 14:3 peak-channel areas.",
+          "question_ids": [
+            "organic-chemistry-13:target-branch",
+            "organic-chemistry-13:intermediate-half",
+            "organic-chemistry-13:intermediate-twenty",
+            "organic-chemistry-13:target-twenty",
+            "organic-chemistry-13:conversion",
+            "organic-chemistry-13:recovery",
+            "organic-chemistry-13:area-excess",
+            "organic-chemistry-13:orthogonal",
+            "organic-chemistry-13:perturbation"
+          ],
+          "card_ids": [
+            "organic-chemistry-13-card-1",
+            "organic-chemistry-13-card-2",
+            "organic-chemistry-13-card-3",
+            "organic-chemistry-13-card-4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "organic-chemistry-module-lab-01",
+      "title": "Virtual lab 1: calibrated peak amounts and enantiomeric excess",
+      "source_ids": [
+        "organic",
+        "chemistry"
+      ],
+      "lessons": [
+        {
+          "id": "organic-chemistry-lab-01",
+          "title": "Virtual lab 1: calibrated peak amounts and enantiomeric excess",
+          "reading": "labs/01-calibrated-peak-amounts-and-excess.md",
+          "objectives": [
+            "organic-chemistry-lab-01-objective-1",
+            "organic-chemistry-lab-01-objective-2",
+            "organic-chemistry-lab-01-objective-3"
+          ],
+          "worked_example": "Synthetic blanks identify 3-unit offsets, and two 10 µmol pure standards identify separate reporting gains 2 and 1. Mix_2 calibrated amounts 7 and 3 µmol give signed A excess 40%; blank-corrected areas alone give about 64.7059%. Optical labels do not establish R/S or real sample purity.",
+          "question_ids": [
+            "organic-chemistry-lab-01:summary",
+            "organic-chemistry-lab-01:blank-offset",
+            "organic-chemistry-lab-01:a-gain",
+            "organic-chemistry-lab-01:mix-two-excess",
+            "organic-chemistry-lab-01:mix-four-ratio",
+            "organic-chemistry-lab-01:interpretation",
+            "organic-chemistry-lab-01:claims",
+            "organic-chemistry-lab-01:racemate"
+          ],
+          "card_ids": [
+            "organic-chemistry-lab-01-card-1",
+            "organic-chemistry-lab-01-card-2",
+            "organic-chemistry-lab-01-card-3",
+            "organic-chemistry-lab-01-card-4"
+          ]
+        }
+      ]
     }
   ],
   "assessments": [
@@ -453,6 +1096,211 @@
       "points": 6
     },
     {
+      "id": "organic-chemistry-7-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Structure, electron flow and acid–base balance practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "organic-chemistry-7-objective-1",
+        "organic-chemistry-7-objective-2",
+        "organic-chemistry-7-objective-3",
+        "organic-chemistry-outcome-1"
+      ],
+      "question_ids": [
+        "organic-chemistry-7:electron-budget",
+        "organic-chemistry-7:unsaturation",
+        "organic-chemistry-7:proton-transfer",
+        "organic-chemistry-7:base-fraction",
+        "organic-chemistry-7:resonance-pairs",
+        "organic-chemistry-7:arrow-tail",
+        "organic-chemistry-7:tautomer",
+        "organic-chemistry-7:basicity",
+        "organic-chemistry-7:formula"
+      ],
+      "points": 9
+    },
+    {
+      "id": "organic-chemistry-8-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Conformations, Fischer maps and stereochemical labels practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "organic-chemistry-8-objective-1",
+        "organic-chemistry-8-objective-2",
+        "organic-chemistry-8-objective-3",
+        "organic-chemistry-outcome-3"
+      ],
+      "question_ids": [
+        "organic-chemistry-8:conformer-weight",
+        "organic-chemistry-8:degenerate-population",
+        "organic-chemistry-8:no-symmetry-count",
+        "organic-chemistry-8:meso-count",
+        "organic-chemistry-8:fischer",
+        "organic-chemistry-8:swap",
+        "organic-chemistry-8:rotation",
+        "organic-chemistry-8:descriptor",
+        "organic-chemistry-8:optical-sign"
+      ],
+      "points": 9
+    },
+    {
+      "id": "organic-chemistry-9-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Substitution, elimination and competing pathways practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "organic-chemistry-9-objective-1",
+        "organic-chemistry-9-objective-2",
+        "organic-chemistry-9-objective-3",
+        "organic-chemistry-outcome-2"
+      ],
+      "question_ids": [
+        "organic-chemistry-9:substitution-rate",
+        "organic-chemistry-9:elimination-rate",
+        "organic-chemistry-9:substitution-branch",
+        "organic-chemistry-9:substrate-half",
+        "organic-chemistry-9:sn2-pairs",
+        "organic-chemistry-9:e2-pairs",
+        "organic-chemistry-9:chair",
+        "organic-chemistry-9:branching",
+        "organic-chemistry-9:mechanism-inference"
+      ],
+      "points": 9
+    },
+    {
+      "id": "organic-chemistry-10-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Carbonyl addition, acyl transfer and proton bookkeeping practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "organic-chemistry-10-objective-1",
+        "organic-chemistry-10-objective-2",
+        "organic-chemistry-10-objective-3",
+        "organic-chemistry-outcome-1",
+        "organic-chemistry-outcome-4"
+      ],
+      "question_ids": [
+        "organic-chemistry-10:adduct-amount",
+        "organic-chemistry-10:free-carbonyl",
+        "organic-chemistry-10:hydrolysis-remaining",
+        "organic-chemistry-10:hydrolysis-product",
+        "organic-chemistry-10:addition",
+        "organic-chemistry-10:neutral-donor",
+        "organic-chemistry-10:collapse",
+        "organic-chemistry-10:amide-case",
+        "organic-chemistry-10:donor-boundary"
+      ],
+      "points": 9
+    },
+    {
+      "id": "organic-chemistry-11-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Enolates, aldol connectivity and atom balance practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "organic-chemistry-11-objective-1",
+        "organic-chemistry-11-objective-2",
+        "organic-chemistry-11-objective-3",
+        "organic-chemistry-outcome-1",
+        "organic-chemistry-outcome-3",
+        "organic-chemistry-outcome-4"
+      ],
+      "question_ids": [
+        "organic-chemistry-11:alpha-hydrogens",
+        "organic-chemistry-11:proton-transfer",
+        "organic-chemistry-11:aldol-carbons",
+        "organic-chemistry-11:dehydrated-unsaturation",
+        "organic-chemistry-11:new-bond",
+        "organic-chemistry-11:alcohol-oxygen",
+        "organic-chemistry-11:water-balance",
+        "organic-chemistry-11:enolate",
+        "organic-chemistry-11:crossed"
+      ],
+      "points": 9
+    },
+    {
+      "id": "organic-chemistry-12-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Spectroscopic constraints and product identity practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "organic-chemistry-12-objective-1",
+        "organic-chemistry-12-objective-2",
+        "organic-chemistry-12-objective-3",
+        "organic-chemistry-outcome-3",
+        "organic-chemistry-outcome-4"
+      ],
+      "question_ids": [
+        "organic-chemistry-12:formula-unsaturation",
+        "organic-chemistry-12:integral-fraction",
+        "organic-chemistry-12:methylene-lines",
+        "organic-chemistry-12:methyl-lines",
+        "organic-chemistry-12:candidate",
+        "organic-chemistry-12:splitting-domain",
+        "organic-chemistry-12:integration",
+        "organic-chemistry-12:achiral",
+        "organic-chemistry-12:identity"
+      ],
+      "points": 9
+    },
+    {
+      "id": "organic-chemistry-13-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Reaction networks, selectivity and evidence practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "organic-chemistry-13-objective-1",
+        "organic-chemistry-13-objective-2",
+        "organic-chemistry-13-objective-3",
+        "organic-chemistry-outcome-3",
+        "organic-chemistry-outcome-4"
+      ],
+      "question_ids": [
+        "organic-chemistry-13:target-branch",
+        "organic-chemistry-13:intermediate-half",
+        "organic-chemistry-13:intermediate-twenty",
+        "organic-chemistry-13:target-twenty",
+        "organic-chemistry-13:conversion",
+        "organic-chemistry-13:recovery",
+        "organic-chemistry-13:area-excess",
+        "organic-chemistry-13:orthogonal",
+        "organic-chemistry-13:perturbation"
+      ],
+      "points": 9
+    },
+    {
+      "id": "organic-chemistry-week14-calibrated-excess-lab",
+      "type": "lab",
+      "mode": "practice",
+      "title": "Virtual lab 1: calibrated peak amounts and enantiomeric excess (ungraded practice)",
+      "path": "question-banks/practice.json",
+      "week": 14,
+      "objective_ids": [
+        "organic-chemistry-lab-01-objective-1",
+        "organic-chemistry-lab-01-objective-2",
+        "organic-chemistry-lab-01-objective-3",
+        "organic-chemistry-outcome-3"
+      ],
+      "question_ids": [
+        "organic-chemistry-lab-01:summary",
+        "organic-chemistry-lab-01:blank-offset",
+        "organic-chemistry-lab-01:a-gain",
+        "organic-chemistry-lab-01:mix-two-excess",
+        "organic-chemistry-lab-01:mix-four-ratio",
+        "organic-chemistry-lab-01:interpretation",
+        "organic-chemistry-lab-01:claims",
+        "organic-chemistry-lab-01:racemate"
+      ],
+      "points": 31
+    },
+    {
       "id": "organic-chemistry-case",
       "type": "case",
       "mode": "self-assessment",
@@ -519,18 +1367,23 @@
       "version": "0.3.2",
       "date": "2026-10-08",
       "summary": "Added a common-mistakes section to 1 original lesson that lacked one (organic-chemistry-5); each bullet names a mistake that the lesson's own text addresses. No answer key, tolerance or objective changed. The package remains partial, unreviewed and formative-only."
+    },
+    {
+      "version": "0.4.0",
+      "date": "2026-10-09",
+      "summary": "Added seven original lessons on structure/electron flow, conformation/Fischer mapping, competing substitution/elimination, carbonyl/acyl accounting, enolate/aldol mapping, spectroscopic constraints and reaction-network evidence; one synthetic peak-calibration/enantiomeric-excess lab and a proposed weekly schedule. Developed with Codex assistance. Still partial, unreviewed and formative-only."
     }
   ],
   "limitations": [
-    "Four compact legacy units are preserved; this package is not equivalent to a full university semester.",
-    "There is no authored 12–15 week schedule, substantive homework sequence, laboratory sequence, midterm, cumulative final, or graded integrative project.",
-    "Practice items are short formative checks (two per prototype unit and six per original lesson); they do not demonstrate comprehensive outcome coverage or mastery, and objective associations remain provisional.",
-    "Bloom labels and structured prerequisite edges are initial authoring classifications awaiting subject-matter review.",
-    "Question answers and solution feedback are intentionally public practice authoring specifications, not restricted exam keys.",
-    "Of the 8 numerical answers in this package, four require a unit, none checks significant figures and none checks dimensions; the others accept a number within a stated tolerance, with the unit optional.",
-    "Total workload and weekly duration are unknown; former nominal credit values and hardcoded reading times do not establish workload."
+    "Four compact prototype readings remain beside nine substantive original lessons and one synthetic data lab; this is not a full university semester.",
+    "The proposed 14-week sequence is unmeasured and unreviewed. Graded homework, exams, a full laboratory sequence and a cumulative graded project remain absent.",
+    "New parameters and observations are synthetic; selected electron-flow, conformation, ideal-kinetic and reporting models provide no synthesis or handling procedure or biological recommendation.",
+    "Of 40 numeric items, four preserved items require units; none checks significant figures or dimensions. New numeric items ask for bare numbers in stated scales; conceptual choices assess selected mechanism/spatial/evidence decisions, not drawn mechanisms or proof quality.",
+    "Public keys and feedback remain formative authoring specifications; practice points are not course grades.",
+    "Subject-matter, accessibility and workload review remain outstanding; the original text Fischer diagram has a verbal description but no assistive-technology review.",
+    "Six primary OpenStax pages were retrieved as link-only references; no teaching text, problem, figure or dataset was imported."
   ],
   "intentionally_omitted": [
-    "Full instructional sequence and summative assessments are not authored yet; the original lessons extend a partial package."
+    "Graded assessments, complete laboratory sequence, cumulative graded project, measured workload and qualified human review remain outstanding."
   ]
 }

@@ -1,12 +1,12 @@
 # Organic Chemistry I for Life Sciences
 
-**Maturity: partial. Version: 0.3.2.**
+**Maturity: partial. Version: 0.4.0.** Personal hobby and learning project with substantial AI assistance; no university equivalence or institutional credit.
 
-Structure, stereochemistry, substitution, elimination, and carbonyl chemistry taught through mechanism and reactivity rather than reaction memorization.
+Original instruction develops structure, electron flow, stereochemistry, carbonyl connectivity, reaction competition and analytical evidence with declared synthetic examples. One original text Fischer diagram includes a verbal description.
 
 ## Prerequisites
 
-General Chemistry I and II. Structured required, recommended, and concurrent relationships appear in the manifest and remain subject to author review. This package establishes no university prerequisite equivalency.
+General Chemistry I and II. Structured manifest relationships remain provisional and establish no university prerequisite equivalency.
 
 ## Authored outcomes
 
@@ -15,27 +15,35 @@ General Chemistry I and II. Structured required, recommended, and concurrent rel
 - Track stereochemistry and regiochemistry.
 - Relate functional-group reactivity to biomolecular synthesis and degradation.
 
-## Units and lessons
+## Proposed 14-week schedule
 
-Units 1–4 keep the short prototype readings preserved from the original project; they need substantial expansion. Units 5 and 6 are original lesson-length readings (about 870 to 900 words) with learning objectives, a worked example, common mistakes, stated limits and explicitly synthetic data. No unit has been reviewed by a qualified instructor.
+This is planning scope, not measured workload or a reviewed semester. Compact prototype readings remain in weeks 1,5,7,9. Week 14 is a synthetic peak-calibration/excess lab and revisits the preserved amide self-assessment case. All activities are public formative practice.
 
-| Unit | Lesson | Reading | Practice items | Retrieval cards |
-|---:|---|---|---:|---:|
-| 1 | Structure, resonance, and acid-base reactivity | short prototype | 2 | 2 |
-| 2 | Substitution mechanisms: SN1 and SN2 | short prototype | 2 | 2 |
-| 3 | Elimination, alkenes, and stereochemical control | short prototype | 2 | 2 |
-| 4 | Carbonyl chemistry and acyl transfer | short prototype | 2 | 2 |
-| 5 | Functional groups at work in biomolecules: acyl reactivity, ionization and slow chemical damage | lesson-length original | 6 | 4 |
-| 6 | Substitution mechanisms and stereochemistry: predicting SN1 versus SN2 and tracking what happens at a stereocenter | lesson-length original | 6 | 4 |
+| Week | Reading | Items | Cards |
+|---|---|---:|---:|
+| 1 | Structure, resonance, and acid-base reactivity | 2 | 2 |
+| 2 | Structure, electron flow and acid–base balance | 9 | 4 |
+| 3 | Conformations, Fischer maps and stereochemical labels | 9 | 4 |
+| 4 | Substitution mechanisms and stereochemistry: predicting SN1 versus SN2 and tracking what happens at a stereocenter | 6 | 4 |
+| 5 | Substitution mechanisms: SN1 and SN2 | 2 | 2 |
+| 6 | Substitution, elimination and competing pathways | 9 | 4 |
+| 7 | Elimination, alkenes, and stereochemical control | 2 | 2 |
+| 8 | Carbonyl addition, acyl transfer and proton bookkeeping | 9 | 4 |
+| 9 | Carbonyl chemistry and acyl transfer | 2 | 2 |
+| 10 | Enolates, aldol connectivity and atom balance | 9 | 4 |
+| 11 | Functional groups at work in biomolecules: acyl reactivity, ionization and slow chemical damage | 6 | 4 |
+| 12 | Spectroscopic constraints and product identity | 9 | 4 |
+| 13 | Reaction networks, selectivity and evidence | 9 | 4 |
+| 14 | Virtual lab 1: calibrated peak amounts and enantiomeric excess | 8 | 4 |
 
-## Assessment and study policy
+## Assessment policy
 
-Every lesson has public formative practice items (numeric and single-choice) tagged to its learning objectives. The practice assessments for the original lessons also list the course outcomes those objectives link to; the objectives of the prototype units are not yet linked to course outcomes, so their assessments list none. In total the package has 20 practice items and 16 retrieval cards for the review queue. A course case includes a self-assessment checklist. These are practice activities, with unlimited retries and no institutional grade, university credit, or transferable credit. Workload has not been measured.
+There are 14 readings, 91 public practice items and 48 retrieval cards, plus the preserved case. Each new lesson has four numeric and five conceptual choices; the lab includes CSV, numeric, structured-choice and multiple-select checks. Numeric items request a number in a stated scale except four preserved unit-required items. Significant figures, dimensions, drawn mechanisms and written arguments are not automatically scored. Unlimited retries provide study feedback, not a course grade. Outcome links still need qualified review.
 
-## Schedule and current limitations
+## Current limitations
 
-No full-semester calendar or 14-week structure has been authored. No substantive homework sets, laboratories, midterm, final, or graded cumulative project are included. The four short prototype readings require substantial expansion, and the newer lessons rely on explicitly synthetic data. Nothing in this package has been reviewed by a qualified instructor; qualified human review is required before this course can meet the complete-course quality standard.
+Four compact readings remain. One data lab is not a laboratory sequence, and no graded homework, exams or cumulative graded project is authored. Workload, accessibility and chemical quality await review. New examples provide no chemical handling or synthesis procedure. Peak factors represent synthetic reporting gains, not an intrinsic enantiomer absorbance difference. The package remains partial, unreviewed and formative-only.
 
 ## Sources and licensing
 
-Read source-map.json for module provenance and content/SOURCES_AND_LICENSES.md for the software/content license boundary. Listed source courses are public curriculum comparators; no affiliation or equivalency is implied.
+Existing MIT organic/general chemistry links remain scope comparators. Six OpenStax Organic Chemistry pages were retrieved as link-only factual references for resonance, Fischer maps, SN2, aldol connectivity and NMR model distinctions. No teaching prose, problem, figure or dataset was copied, and no new paper identifier was introduced. Original readings, text diagram and synthetic data are CC BY 4.0 with substantial AI assistance. See source-map.json and content/SOURCES_AND_LICENSES.md for rights and the software/content boundary. Links establish no endorsement or review.

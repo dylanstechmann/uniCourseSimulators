@@ -632,6 +632,2795 @@
         "kind": "original",
         "modifications": []
       }
+    },
+    {
+      "id": "organic-chemistry-7:electron-budget",
+      "type": "numeric",
+      "prompt": "For neutral closed-shell C₅H₉NO, use valence counts C=4,H=1,N=5,O=6. How many valence electrons are available? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "organic-chemistry-7-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 40,
+        "unit": "",
+        "tolerance": 0,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the stated inventory, equation and model conditions.",
+        "solution": "The selected model gives approximately 40 in the requested scale. Check conservation and conditions before interpreting it.",
+        "lesson_ids": [
+          "organic-chemistry-7"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "organic-chemistry-7:unsaturation",
+      "type": "numeric",
+      "prompt": "For the same neutral C₅H₉NO formula, what degree of unsaturation (2C+2+N−H)/2 follows? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "organic-chemistry-7-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 2,
+        "unit": "",
+        "tolerance": 0,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the stated inventory, equation and model conditions.",
+        "solution": "The selected model gives approximately 2 in the requested scale. Check conservation and conditions before interpreting it.",
+        "lesson_ids": [
+          "organic-chemistry-7"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "organic-chemistry-7:proton-transfer",
+      "type": "numeric",
+      "prompt": "Under matching activity conventions, synthetic HA has pK_a=5 and BH⁺ pK_a=9. What K=10^(pK_a(BH⁺)−pK_a(HA)) follows for HA+B⇌A⁻+BH⁺? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "organic-chemistry-7-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 10000.0,
+        "unit": "",
+        "tolerance": 0,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the stated inventory, equation and model conditions.",
+        "solution": "The selected model gives approximately 10000 in the requested scale. Check conservation and conditions before interpreting it.",
+        "lesson_ids": [
+          "organic-chemistry-7"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "organic-chemistry-7:base-fraction",
+      "type": "numeric",
+      "prompt": "At externally imposed pH 6, synthetic HA has pK_a=5. What ideal deprotonated fraction 10/(1+10) follows? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "organic-chemistry-7-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 0.9090909090909091,
+        "unit": "",
+        "tolerance": 9.090909090909092e-05,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the stated inventory, equation and model conditions.",
+        "solution": "The selected model gives approximately 0.909091 in the requested scale. Check conservation and conditions before interpreting it.",
+        "lesson_ids": [
+          "organic-chemistry-7"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "organic-chemistry-7:resonance-pairs",
+      "type": "single_choice",
+      "prompt": "Which carboxylate contributor exchange preserves carbon valence?",
+      "points": 1,
+      "objective_ids": [
+        "organic-chemistry-7-objective-2"
+      ],
+      "options": [
+        "A hydrogen atom moves to the other oxygen while calling it only resonance.",
+        "An O⁻ lone pair forms the alternate C=O while the existing C=O π pair moves to the other oxygen.",
+        "An O⁻ lone pair forms an extra C=O with no outgoing pair."
+      ],
+      "solution_spec": {
+        "answer": 1
+      },
+      "feedback": {
+        "hint": "Track the supplied electron flow, spatial convention or observation assumptions.",
+        "solution": "An O⁻ lone pair forms the alternate C=O while the existing C=O π pair moves to the other oxygen.",
+        "lesson_ids": [
+          "organic-chemistry-7"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "organic-chemistry-7:arrow-tail",
+      "type": "single_choice",
+      "prompt": "Where does an electron-pair arrow start?",
+      "points": 1,
+      "objective_ids": [
+        "organic-chemistry-7-objective-2"
+      ],
+      "options": [
+        "At any atom label regardless of electrons.",
+        "At the positive charge that attracts electrons.",
+        "At the donating lone pair or bond."
+      ],
+      "solution_spec": {
+        "answer": 2
+      },
+      "feedback": {
+        "hint": "Track the supplied electron flow, spatial convention or observation assumptions.",
+        "solution": "At the donating lone pair or bond.",
+        "lesson_ids": [
+          "organic-chemistry-7"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "organic-chemistry-7:tautomer",
+      "type": "single_choice",
+      "prompt": "Which change represents an actual connectivity/proton change rather than only resonance?",
+      "points": 1,
+      "objective_ids": [
+        "organic-chemistry-7-objective-2"
+      ],
+      "options": [
+        "Moving only a carboxylate π pair and lone pair with atoms fixed.",
+        "Redrawing the same sigma connectivity with charge redistributed.",
+        "Moving a proton between carbon and oxygen in a keto/enol comparison."
+      ],
+      "solution_spec": {
+        "answer": 2
+      },
+      "feedback": {
+        "hint": "Track the supplied electron flow, spatial convention or observation assumptions.",
+        "solution": "Moving a proton between carbon and oxygen in a keto/enol comparison.",
+        "lesson_ids": [
+          "organic-chemistry-7"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "organic-chemistry-7:basicity",
+      "type": "single_choice",
+      "prompt": "Does basicity alone rank every nucleophilic rate?",
+      "points": 1,
+      "objective_ids": [
+        "organic-chemistry-7-objective-3"
+      ],
+      "options": [
+        "Yes; the strongest base is always fastest toward every electrophile.",
+        "Yes; steric access and solvation never matter.",
+        "No; proton-transfer equilibrium and reaction rate depend on different comparisons and conditions."
+      ],
+      "solution_spec": {
+        "answer": 2
+      },
+      "feedback": {
+        "hint": "Track the supplied electron flow, spatial convention or observation assumptions.",
+        "solution": "No; proton-transfer equilibrium and reaction rate depend on different comparisons and conditions.",
+        "lesson_ids": [
+          "organic-chemistry-7"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "organic-chemistry-7:formula",
+      "type": "single_choice",
+      "prompt": "What does two unsaturation units establish for the constructed formula?",
+      "points": 1,
+      "objective_ids": [
+        "organic-chemistry-7-objective-1"
+      ],
+      "options": [
+        "A structural constraint, without unique identification of rings or functional groups.",
+        "A unique carbonyl position.",
+        "Exactly two rings regardless of bonding."
+      ],
+      "solution_spec": {
+        "answer": 0
+      },
+      "feedback": {
+        "hint": "Track the supplied electron flow, spatial convention or observation assumptions.",
+        "solution": "A structural constraint, without unique identification of rings or functional groups.",
+        "lesson_ids": [
+          "organic-chemistry-7"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "organic-chemistry-8:conformer-weight",
+      "type": "numeric",
+      "prompt": "At 300 K with R=8.314 J/(mol·K), a synthetic higher conformer is 5.0 kJ/mol above the lower. What relative weight w=exp(−5000/(RT)) follows? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "organic-chemistry-8-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0.1347073286516485,
+        "unit": "",
+        "tolerance": 1.347073286516485e-05,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the stated inventory, equation and model conditions.",
+        "solution": "The selected model gives approximately 0.134707 in the requested scale. Check conservation and conditions before interpreting it.",
+        "lesson_ids": [
+          "organic-chemistry-8"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "organic-chemistry-8:degenerate-population",
+      "type": "numeric",
+      "prompt": "Under that same model, two distinct higher arrangements each have weight w=exp(−5000/(8.314×300)), and the lower has weight 1. What total higher fraction 2w/(1+2w) follows? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "organic-chemistry-8-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0.21223534465533328,
+        "unit": "",
+        "tolerance": 2.122353446553333e-05,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the stated inventory, equation and model conditions.",
+        "solution": "The selected model gives approximately 0.212235 in the requested scale. Check conservation and conditions before interpreting it.",
+        "lesson_ids": [
+          "organic-chemistry-8"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "organic-chemistry-8:no-symmetry-count",
+      "type": "numeric",
+      "prompt": "Two independent stereocenters have no internal symmetry. What maximum stereoisomer count follows? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "organic-chemistry-8-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 4,
+        "unit": "",
+        "tolerance": 0,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the stated inventory, equation and model conditions.",
+        "solution": "The selected model gives approximately 4 in the requested scale. Check conservation and conditions before interpreting it.",
+        "lesson_ids": [
+          "organic-chemistry-8"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "organic-chemistry-8:meso-count",
+      "type": "numeric",
+      "prompt": "For the stipulated symmetric two-center case with one meso form and one enantiomeric pair, how many distinct stereoisomers occur? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "organic-chemistry-8-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 3,
+        "unit": "",
+        "tolerance": 0,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the stated inventory, equation and model conditions.",
+        "solution": "The selected model gives approximately 3 in the requested scale. Check conservation and conditions before interpreting it.",
+        "lesson_ids": [
+          "organic-chemistry-8"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "organic-chemistry-8:fischer",
+      "type": "single_choice",
+      "prompt": "In the supplied Fischer map, COOH is top, CH₃ bottom, OH left and H right; horizontal bonds point toward the viewer. What configuration follows with priorities OH>COOH>CH₃>H?",
+      "points": 1,
+      "objective_ids": [
+        "organic-chemistry-8-objective-2"
+      ],
+      "options": [
+        "R, because H direction is irrelevant.",
+        "S, because the clockwise page traversal is reversed with H toward the viewer.",
+        "Achiral, because every cross drawing has a symmetry plane."
+      ],
+      "solution_spec": {
+        "answer": 1
+      },
+      "feedback": {
+        "hint": "Track the supplied electron flow, spatial convention or observation assumptions.",
+        "solution": "S, because the clockwise page traversal is reversed with H toward the viewer.",
+        "lesson_ids": [
+          "organic-chemistry-8"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "organic-chemistry-8:swap",
+      "type": "single_choice",
+      "prompt": "Exchange only OH and H in that Fischer map. What happens?",
+      "points": 1,
+      "objective_ids": [
+        "organic-chemistry-8-objective-2"
+      ],
+      "options": [
+        "The configuration reverses to R.",
+        "The same S configuration is preserved by one swap.",
+        "It becomes a meso compound with only one center."
+      ],
+      "solution_spec": {
+        "answer": 0
+      },
+      "feedback": {
+        "hint": "Track the supplied electron flow, spatial convention or observation assumptions.",
+        "solution": "The configuration reverses to R.",
+        "lesson_ids": [
+          "organic-chemistry-8"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "organic-chemistry-8:rotation",
+      "type": "single_choice",
+      "prompt": "Which page operation preserves a one-center Fischer configuration?",
+      "points": 1,
+      "objective_ids": [
+        "organic-chemistry-8-objective-2"
+      ],
+      "options": [
+        "Any odd interchange of two groups.",
+        "90° rotation under the same Fischer convention.",
+        "180° rotation under the same Fischer convention."
+      ],
+      "solution_spec": {
+        "answer": 2
+      },
+      "feedback": {
+        "hint": "Track the supplied electron flow, spatial convention or observation assumptions.",
+        "solution": "180° rotation under the same Fischer convention.",
+        "lesson_ids": [
+          "organic-chemistry-8"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "organic-chemistry-8:descriptor",
+      "type": "single_choice",
+      "prompt": "Does spatial inversion always force an R-to-S descriptor change?",
+      "points": 1,
+      "objective_ids": [
+        "organic-chemistry-8-objective-3"
+      ],
+      "options": [
+        "Only if optical rotation is positive.",
+        "Yes; the priorities can never change.",
+        "No; reassess product priorities when substitution changes the groups."
+      ],
+      "solution_spec": {
+        "answer": 2
+      },
+      "feedback": {
+        "hint": "Track the supplied electron flow, spatial convention or observation assumptions.",
+        "solution": "No; reassess product priorities when substitution changes the groups.",
+        "lesson_ids": [
+          "organic-chemistry-8"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "organic-chemistry-8:optical-sign",
+      "type": "single_choice",
+      "prompt": "What does an R descriptor alone establish about optical rotation?",
+      "points": 1,
+      "objective_ids": [
+        "organic-chemistry-8-objective-3"
+      ],
+      "options": [
+        "No sign; rotation sign needs a specified compound and conditions.",
+        "It guarantees positive rotation.",
+        "It guarantees negative rotation."
+      ],
+      "solution_spec": {
+        "answer": 0
+      },
+      "feedback": {
+        "hint": "Track the supplied electron flow, spatial convention or observation assumptions.",
+        "solution": "No sign; rotation sign needs a specified compound and conditions.",
+        "lesson_ids": [
+          "organic-chemistry-8"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "organic-chemistry-9:substitution-rate",
+      "type": "numeric",
+      "prompt": "Synthetic r_sub=k_sub[S][Nu] with k_sub=0.020 L/(mol·s), S=0.050 mol/L, free Nu=0.10 mol/L. What initial rate in mol/(L·s) follows? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "organic-chemistry-9-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0.0001,
+        "unit": "",
+        "tolerance": 1e-08,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the stated inventory, equation and model conditions.",
+        "solution": "The selected model gives approximately 1.00000 × 10⁻⁴ in the requested scale. Check conservation and conditions before interpreting it.",
+        "lesson_ids": [
+          "organic-chemistry-9"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "organic-chemistry-9:elimination-rate",
+      "type": "numeric",
+      "prompt": "Synthetic r_elim=k_elim[S][B] with k_elim=0.010 L/(mol·s), S=0.050 mol/L, free B=0.20 mol/L. What initial rate in mol/(L·s) follows? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "organic-chemistry-9-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0.0001,
+        "unit": "",
+        "tolerance": 1e-08,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the stated inventory, equation and model conditions.",
+        "solution": "The selected model gives approximately 1.00000 × 10⁻⁴ in the requested scale. Check conservation and conditions before interpreting it.",
+        "lesson_ids": [
+          "organic-chemistry-9"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "organic-chemistry-9:substitution-branch",
+      "type": "numeric",
+      "prompt": "Two irreversible parallel routes have constant effective rates a=0.0020,b=0.0020 s⁻¹. What substitution branch fraction a/(a+b) follows? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "organic-chemistry-9-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0.5,
+        "unit": "",
+        "tolerance": 5e-05,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the stated inventory, equation and model conditions.",
+        "solution": "The selected model gives approximately 0.5 in the requested scale. Check conservation and conditions before interpreting it.",
+        "lesson_ids": [
+          "organic-chemistry-9"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "organic-chemistry-9:substrate-half",
+      "type": "numeric",
+      "prompt": "For that parallel network with total loss constant a+b=0.0040 s⁻¹, what substrate half-life in s follows? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "organic-chemistry-9-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 173.2867951399863,
+        "unit": "",
+        "tolerance": 0.01732867951399863,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the stated inventory, equation and model conditions.",
+        "solution": "The selected model gives approximately 173.287 in the requested scale. Check conservation and conditions before interpreting it.",
+        "lesson_ids": [
+          "organic-chemistry-9"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "organic-chemistry-9:sn2-pairs",
+      "type": "single_choice",
+      "prompt": "Which pair movements describe the selected concerted SN2 step?",
+      "points": 1,
+      "objective_ids": [
+        "organic-chemistry-9-objective-1"
+      ],
+      "options": [
+        "Donor pair toward reacting carbon and C–leaving-group pair toward the leaving group.",
+        "Carbon receives a new bond while the leaving bond remains unchanged.",
+        "Leaving group forms a free carbocation, then backside capture in the same elementary SN2 claim."
+      ],
+      "solution_spec": {
+        "answer": 0
+      },
+      "feedback": {
+        "hint": "Track the supplied electron flow, spatial convention or observation assumptions.",
+        "solution": "Donor pair toward reacting carbon and C–leaving-group pair toward the leaving group.",
+        "lesson_ids": [
+          "organic-chemistry-9"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "organic-chemistry-9:e2-pairs",
+      "type": "single_choice",
+      "prompt": "Which selected E2 sequence conserves electron bookkeeping?",
+      "points": 1,
+      "objective_ids": [
+        "organic-chemistry-9-objective-1"
+      ],
+      "options": [
+        "Base removes any hydrogen with no adjacent bond change.",
+        "Base pair to beta H, beta C–H pair to the new C=C, and C–leaving-group pair to the leaving group.",
+        "An alpha carbon retains all old bonds and receives a fifth bond."
+      ],
+      "solution_spec": {
+        "answer": 1
+      },
+      "feedback": {
+        "hint": "Track the supplied electron flow, spatial convention or observation assumptions.",
+        "solution": "Base pair to beta H, beta C–H pair to the new C=C, and C–leaving-group pair to the leaving group.",
+        "lesson_ids": [
+          "organic-chemistry-9"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "organic-chemistry-9:chair",
+      "type": "single_choice",
+      "prompt": "For the conventional chair E2 pathway, which arrangement is reactive?",
+      "points": 1,
+      "objective_ids": [
+        "organic-chemistry-9-objective-1"
+      ],
+      "options": [
+        "Any equatorial leaving group with any H elsewhere.",
+        "Axial leaving group and adjacent axial beta H directed oppositely.",
+        "Only two equatorial groups regardless of relative direction."
+      ],
+      "solution_spec": {
+        "answer": 1
+      },
+      "feedback": {
+        "hint": "Track the supplied electron flow, spatial convention or observation assumptions.",
+        "solution": "Axial leaving group and adjacent axial beta H directed oppositely.",
+        "lesson_ids": [
+          "organic-chemistry-9"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "organic-chemistry-9:branching",
+      "type": "single_choice",
+      "prompt": "At finite conversion, a constant branch fraction of 0.5 means what?",
+      "points": 1,
+      "objective_ids": [
+        "organic-chemistry-9-objective-2"
+      ],
+      "options": [
+        "Half of consumed substrate takes that route, not necessarily half of initial substrate.",
+        "Half the initial substrate is always product at every time.",
+        "Total conversion must be complete."
+      ],
+      "solution_spec": {
+        "answer": 0
+      },
+      "feedback": {
+        "hint": "Track the supplied electron flow, spatial convention or observation assumptions.",
+        "solution": "Half of consumed substrate takes that route, not necessarily half of initial substrate.",
+        "lesson_ids": [
+          "organic-chemistry-9"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "organic-chemistry-9:mechanism-inference",
+      "type": "single_choice",
+      "prompt": "An observed first-order decay identifies which claim on its own?",
+      "points": 1,
+      "objective_ids": [
+        "organic-chemistry-9-objective-3"
+      ],
+      "options": [
+        "An apparent time law, which can also arise with a nearly constant excess reactant.",
+        "No competing routes under every condition.",
+        "A uniquely proven unimolecular elementary mechanism."
+      ],
+      "solution_spec": {
+        "answer": 0
+      },
+      "feedback": {
+        "hint": "Track the supplied electron flow, spatial convention or observation assumptions.",
+        "solution": "An apparent time law, which can also arise with a nearly constant excess reactant.",
+        "lesson_ids": [
+          "organic-chemistry-9"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "organic-chemistry-10:adduct-amount",
+      "type": "numeric",
+      "prompt": "For C+N⇌D with K_c=10 L/mol, externally fixed free N=0.20 mol/L and C_T=C+D=0.10 mol/L, what D concentration in mol/L follows? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "organic-chemistry-10-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0.06666666666666667,
+        "unit": "",
+        "tolerance": 6.666666666666667e-06,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the stated inventory, equation and model conditions.",
+        "solution": "The selected model gives approximately 0.0666667 in the requested scale. Check conservation and conditions before interpreting it.",
+        "lesson_ids": [
+          "organic-chemistry-10"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "organic-chemistry-10:free-carbonyl",
+      "type": "numeric",
+      "prompt": "For that same single-adduct fixed-free-donor model, what free C concentration in mol/L remains? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "organic-chemistry-10-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0.03333333333333333,
+        "unit": "",
+        "tolerance": 3.3333333333333333e-06,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the stated inventory, equation and model conditions.",
+        "solution": "The selected model gives approximately 0.0333333 in the requested scale. Check conservation and conditions before interpreting it.",
+        "lesson_ids": [
+          "organic-chemistry-10"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "organic-chemistry-10:hydrolysis-remaining",
+      "type": "numeric",
+      "prompt": "For a separate synthetic pseudo-first-order loss k=0.030 min⁻¹ and initial compound amount 0.100 mol, what amount in mol remains after 30 min? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "organic-chemistry-10-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0.04065696597405991,
+        "unit": "",
+        "tolerance": 4.0656965974059915e-06,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the stated inventory, equation and model conditions.",
+        "solution": "The selected model gives approximately 0.040657 in the requested scale. Check conservation and conditions before interpreting it.",
+        "lesson_ids": [
+          "organic-chemistry-10"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "organic-chemistry-10:hydrolysis-product",
+      "type": "numeric",
+      "prompt": "For that separate loss model, assume one product per consumed molecule and no competing/reverse routes. What product amount in mol follows at 30 min? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "organic-chemistry-10-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0.05934303402594009,
+        "unit": "",
+        "tolerance": 5.934303402594009e-06,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the stated inventory, equation and model conditions.",
+        "solution": "The selected model gives approximately 0.059343 in the requested scale. Check conservation and conditions before interpreting it.",
+        "lesson_ids": [
+          "organic-chemistry-10"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "organic-chemistry-10:addition",
+      "type": "single_choice",
+      "prompt": "During selected anionic nucleophile addition to a neutral carbonyl, where does the π pair move?",
+      "points": 1,
+      "objective_ids": [
+        "organic-chemistry-10-objective-1"
+      ],
+      "options": [
+        "Onto oxygen as the new C–Nu bond forms.",
+        "Onto carbon while all old bonds remain, exceeding valence.",
+        "Away without assigning charge to any species."
+      ],
+      "solution_spec": {
+        "answer": 0
+      },
+      "feedback": {
+        "hint": "Track the supplied electron flow, spatial convention or observation assumptions.",
+        "solution": "Onto oxygen as the new C–Nu bond forms.",
+        "lesson_ids": [
+          "organic-chemistry-10"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "organic-chemistry-10:neutral-donor",
+      "type": "single_choice",
+      "prompt": "If neutral NH₃ adds and becomes four-bonded nitrogen, what formal-charge pattern can accompany oxygen alkoxide?",
+      "points": 1,
+      "objective_ids": [
+        "organic-chemistry-10-objective-1"
+      ],
+      "options": [
+        "Net −2 from a neutral starting pair.",
+        "N positive and O negative, preserving the original net charge.",
+        "Both neutral without any proton transfer."
+      ],
+      "solution_spec": {
+        "answer": 1
+      },
+      "feedback": {
+        "hint": "Track the supplied electron flow, spatial convention or observation assumptions.",
+        "solution": "N positive and O negative, preserving the original net charge.",
+        "lesson_ids": [
+          "organic-chemistry-10"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "organic-chemistry-10:collapse",
+      "type": "single_choice",
+      "prompt": "What describes valid acyl-derivative collapse with an outgoing Z group?",
+      "points": 1,
+      "objective_ids": [
+        "organic-chemistry-10-objective-1"
+      ],
+      "options": [
+        "O pair reforms C=O and C–Z bond pair leaves with Z.",
+        "Carbon keeps every tetrahedral bond and also forms a double bond.",
+        "An ordinary ketone must expel an alkyl carbanion in every addition."
+      ],
+      "solution_spec": {
+        "answer": 0
+      },
+      "feedback": {
+        "hint": "Track the supplied electron flow, spatial convention or observation assumptions.",
+        "solution": "O pair reforms C=O and C–Z bond pair leaves with Z.",
+        "lesson_ids": [
+          "organic-chemistry-10"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "organic-chemistry-10:amide-case",
+      "type": "single_choice",
+      "prompt": "Why is acid+amine→amide+water alone insufficient for the preserved case?",
+      "points": 1,
+      "objective_ids": [
+        "organic-chemistry-10-objective-3"
+      ],
+      "options": [
+        "Every acid spontaneously gives an amide in neutral water.",
+        "A balanced equation proves a practical mechanism.",
+        "It omits a justified activation/leaving pathway and acid/base competition."
+      ],
+      "solution_spec": {
+        "answer": 2
+      },
+      "feedback": {
+        "hint": "Track the supplied electron flow, spatial convention or observation assumptions.",
+        "solution": "It omits a justified activation/leaving pathway and acid/base competition.",
+        "lesson_ids": [
+          "organic-chemistry-10"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "organic-chemistry-10:donor-boundary",
+      "type": "single_choice",
+      "prompt": "What changes if only a closed donor total is given instead of externally fixed free donor?",
+      "points": 1,
+      "objective_ids": [
+        "organic-chemistry-10-objective-2"
+      ],
+      "options": [
+        "Free donor remains equal to total automatically.",
+        "Carbonyl conservation no longer matters.",
+        "A donor amount balance is required as adduct formation consumes it."
+      ],
+      "solution_spec": {
+        "answer": 2
+      },
+      "feedback": {
+        "hint": "Track the supplied electron flow, spatial convention or observation assumptions.",
+        "solution": "A donor amount balance is required as adduct formation consumes it.",
+        "lesson_ids": [
+          "organic-chemistry-10"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "organic-chemistry-11:alpha-hydrogens",
+      "type": "numeric",
+      "prompt": "In ethanal CH₃CHO, how many hydrogens are on the alpha carbon adjacent to the carbonyl carbon? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "organic-chemistry-11-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 3,
+        "unit": "",
+        "tolerance": 0,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the stated inventory, equation and model conditions.",
+        "solution": "The selected model gives approximately 3 in the requested scale. Check conservation and conditions before interpreting it.",
+        "lesson_ids": [
+          "organic-chemistry-11"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "organic-chemistry-11:proton-transfer",
+      "type": "numeric",
+      "prompt": "For a synthetic carbonyl acid family pK_a=20 and base conjugate acid pK_a=22 under matching conventions, what reference deprotonation K follows? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "organic-chemistry-11-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 100,
+        "unit": "",
+        "tolerance": 0,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the stated inventory, equation and model conditions.",
+        "solution": "The selected model gives approximately 100 in the requested scale. Check conservation and conditions before interpreting it.",
+        "lesson_ids": [
+          "organic-chemistry-11"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "organic-chemistry-11:aldol-carbons",
+      "type": "numeric",
+      "prompt": "A paper aldol addition joins two ethanal C₂H₄O units without losing atoms. How many carbon atoms are in the addition product? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "organic-chemistry-11-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 4,
+        "unit": "",
+        "tolerance": 0,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the stated inventory, equation and model conditions.",
+        "solution": "The selected model gives approximately 4 in the requested scale. Check conservation and conditions before interpreting it.",
+        "lesson_ids": [
+          "organic-chemistry-11"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "organic-chemistry-11:dehydrated-unsaturation",
+      "type": "numeric",
+      "prompt": "After a separate dehydration, that mapped chain has formula C₄H₆O. What degree of unsaturation follows? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "organic-chemistry-11-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 2,
+        "unit": "",
+        "tolerance": 0,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the stated inventory, equation and model conditions.",
+        "solution": "The selected model gives approximately 2 in the requested scale. Check conservation and conditions before interpreting it.",
+        "lesson_ids": [
+          "organic-chemistry-11"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "organic-chemistry-11:new-bond",
+      "type": "single_choice",
+      "prompt": "In the supplied ethanal mapping, donor C1 is carbonyl, C2 alpha; acceptor C3 is carbonyl,C4 methyl. Which new aldol bond forms?",
+      "points": 1,
+      "objective_ids": [
+        "organic-chemistry-11-objective-2"
+      ],
+      "options": [
+        "Oxygen–oxygen as the defining carbon–carbon addition.",
+        "C2–C3.",
+        "C1–C4 with no other electron movement."
+      ],
+      "solution_spec": {
+        "answer": 1
+      },
+      "feedback": {
+        "hint": "Track the supplied electron flow, spatial convention or observation assumptions.",
+        "solution": "Connect donor alpha carbon C2 to acceptor carbonyl carbon C3; the new bond is C2–C3.",
+        "lesson_ids": [
+          "organic-chemistry-11"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "organic-chemistry-11:alcohol-oxygen",
+      "type": "single_choice",
+      "prompt": "Which carbonyl oxygen becomes the alcohol oxygen in the selected addition?",
+      "points": 1,
+      "objective_ids": [
+        "organic-chemistry-11-objective-2"
+      ],
+      "options": [
+        "The donor oxygen while its carbonyl is claimed unchanged.",
+        "The acceptor oxygen whose π pair moved onto it.",
+        "A newly created oxygen absent from the inventory."
+      ],
+      "solution_spec": {
+        "answer": 1
+      },
+      "feedback": {
+        "hint": "Track the supplied electron flow, spatial convention or observation assumptions.",
+        "solution": "The acceptor oxygen whose π pair moved onto it.",
+        "lesson_ids": [
+          "organic-chemistry-11"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "organic-chemistry-11:water-balance",
+      "type": "single_choice",
+      "prompt": "Does the selected addition of two C₂H₄O units itself lose water?",
+      "points": 1,
+      "objective_ids": [
+        "organic-chemistry-11-objective-2"
+      ],
+      "options": [
+        "Yes; oxygen disappears without a product.",
+        "No; C₄H₈O₂ retains the atoms, and dehydration is a separate change.",
+        "Yes; every carbonyl addition eliminates one water."
+      ],
+      "solution_spec": {
+        "answer": 1
+      },
+      "feedback": {
+        "hint": "Track the supplied electron flow, spatial convention or observation assumptions.",
+        "solution": "No; C₄H₈O₂ retains the atoms, and dehydration is a separate change.",
+        "lesson_ids": [
+          "organic-chemistry-11"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "organic-chemistry-11:enolate",
+      "type": "single_choice",
+      "prompt": "How do the carbon-centered and oxygen-centered enolate contributors relate?",
+      "points": 1,
+      "objective_ids": [
+        "organic-chemistry-11-objective-1"
+      ],
+      "options": [
+        "Different total charges without another species.",
+        "One delocalized species with fixed atom/sigma connectivity.",
+        "Two separate molecules interconverting by moving a proton."
+      ],
+      "solution_spec": {
+        "answer": 1
+      },
+      "feedback": {
+        "hint": "Track the supplied electron flow, spatial convention or observation assumptions.",
+        "solution": "One delocalized species with fixed atom/sigma connectivity.",
+        "lesson_ids": [
+          "organic-chemistry-11"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "organic-chemistry-11:crossed",
+      "type": "single_choice",
+      "prompt": "Does mixing two enolizable carbonyls establish one selective crossed product?",
+      "points": 1,
+      "objective_ids": [
+        "organic-chemistry-11-objective-3"
+      ],
+      "options": [
+        "Only if every product has the same formula.",
+        "Yes; the desired drawing excludes all alternatives.",
+        "No; donor/acceptor alternatives and other routes require evidence."
+      ],
+      "solution_spec": {
+        "answer": 2
+      },
+      "feedback": {
+        "hint": "Track the supplied electron flow, spatial convention or observation assumptions.",
+        "solution": "No; donor/acceptor alternatives and other routes require evidence.",
+        "lesson_ids": [
+          "organic-chemistry-11"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "organic-chemistry-12:formula-unsaturation",
+      "type": "numeric",
+      "prompt": "A constructed candidate has formula C₄H₈O₂. What degree of unsaturation follows under the usual neutral closed-shell formula rule? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "organic-chemistry-12-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 1,
+        "unit": "",
+        "tolerance": 0,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the stated inventory, equation and model conditions.",
+        "solution": "The selected model gives approximately 1 in the requested scale. Check conservation and conditions before interpreting it.",
+        "lesson_ids": [
+          "organic-chemistry-12"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "organic-chemistry-12:integral-fraction",
+      "type": "numeric",
+      "prompt": "A selected single-molecule proton model has integral ratio 3:2:3. What fraction of total proton integral is in its first signal? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "organic-chemistry-12-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0.375,
+        "unit": "",
+        "tolerance": 3.7500000000000003e-05,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the stated inventory, equation and model conditions.",
+        "solution": "The selected model gives approximately 0.375 in the requested scale. Check conservation and conditions before interpreting it.",
+        "lesson_ids": [
+          "organic-chemistry-12"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "organic-chemistry-12:methylene-lines",
+      "type": "numeric",
+      "prompt": "Under the stated first-order n+1 model, a methylene is coupled to three equivalent neighboring methyl protons. How many quartet lines follow? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "organic-chemistry-12-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 4,
+        "unit": "",
+        "tolerance": 0,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the stated inventory, equation and model conditions.",
+        "solution": "The selected model gives approximately 4 in the requested scale. Check conservation and conditions before interpreting it.",
+        "lesson_ids": [
+          "organic-chemistry-12"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "organic-chemistry-12:methyl-lines",
+      "type": "numeric",
+      "prompt": "Under that same model, a methyl is coupled to two equivalent neighboring methylene protons. How many triplet lines follow? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "organic-chemistry-12-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 3,
+        "unit": "",
+        "tolerance": 0,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the stated inventory, equation and model conditions.",
+        "solution": "The selected model gives approximately 3 in the requested scale. Check conservation and conditions before interpreting it.",
+        "lesson_ids": [
+          "organic-chemistry-12"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "organic-chemistry-12:candidate",
+      "type": "single_choice",
+      "prompt": "Which selected candidate matches the stipulated oxygen-adjacent CH₂ quartet, terminal CH₃ triplet and acyl CH₃ singlet?",
+      "points": 1,
+      "objective_ids": [
+        "organic-chemistry-12-objective-1"
+      ],
+      "options": [
+        "A formula alone uniquely determines every ester structure.",
+        "Three separate molecules inferred solely from three signals.",
+        "CH₃–C(=O)–O–CH₂–CH₃ under the stated simple model."
+      ],
+      "solution_spec": {
+        "answer": 2
+      },
+      "feedback": {
+        "hint": "Track the supplied electron flow, spatial convention or observation assumptions.",
+        "solution": "CH₃–C(=O)–O–CH₂–CH₃ under the stated simple model.",
+        "lesson_ids": [
+          "organic-chemistry-12"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "organic-chemistry-12:splitting-domain",
+      "type": "single_choice",
+      "prompt": "When is n+1 an appropriate simple splitting model?",
+      "points": 1,
+      "objective_ids": [
+        "organic-chemistry-12-objective-2"
+      ],
+      "options": [
+        "For the stated equivalent-neighbor first-order conditions, with complications checked separately.",
+        "For every spectrum regardless of equivalence or overlap.",
+        "For every atom of any spin or coupling type."
+      ],
+      "solution_spec": {
+        "answer": 0
+      },
+      "feedback": {
+        "hint": "Track the supplied electron flow, spatial convention or observation assumptions.",
+        "solution": "For the stated equivalent-neighbor first-order conditions, with complications checked separately.",
+        "lesson_ids": [
+          "organic-chemistry-12"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "organic-chemistry-12:integration",
+      "type": "single_choice",
+      "prompt": "What does a 3/8 intramolecular proton integral fraction establish here?",
+      "points": 1,
+      "objective_ids": [
+        "organic-chemistry-12-objective-2"
+      ],
+      "options": [
+        "A fraction of proton signal in one selected molecule, not a separate component mole fraction.",
+        "A proof the sample has no impurity.",
+        "The first signal is always 37.5% of sample molecules."
+      ],
+      "solution_spec": {
+        "answer": 0
+      },
+      "feedback": {
+        "hint": "Track the supplied electron flow, spatial convention or observation assumptions.",
+        "solution": "A fraction of proton signal in one selected molecule, not a separate component mole fraction.",
+        "lesson_ids": [
+          "organic-chemistry-12"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "organic-chemistry-12:achiral",
+      "type": "single_choice",
+      "prompt": "Can ordinary achiral NMR alone distinguish a matched enantiomeric pair?",
+      "points": 1,
+      "objective_ids": [
+        "organic-chemistry-12-objective-3"
+      ],
+      "options": [
+        "Yes; R always has twice the integral of S.",
+        "Yes; positive rotation always changes every proton count.",
+        "Not from their shared ordinary achiral chemical environment."
+      ],
+      "solution_spec": {
+        "answer": 2
+      },
+      "feedback": {
+        "hint": "Track the supplied electron flow, spatial convention or observation assumptions.",
+        "solution": "Not from their shared ordinary achiral chemical environment.",
+        "lesson_ids": [
+          "organic-chemistry-12"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "organic-chemistry-12:identity",
+      "type": "single_choice",
+      "prompt": "What does one compatible new chromatographic peak establish?",
+      "points": 1,
+      "objective_ids": [
+        "organic-chemistry-12-objective-3"
+      ],
+      "options": [
+        "A signal needing identity and response evidence before target amount or purity claims.",
+        "Definitive amide identity and quantitative yield.",
+        "Absolute configuration solely from retention order."
+      ],
+      "solution_spec": {
+        "answer": 0
+      },
+      "feedback": {
+        "hint": "Track the supplied electron flow, spatial convention or observation assumptions.",
+        "solution": "A signal needing identity and response evidence before target amount or purity claims.",
+        "lesson_ids": [
+          "organic-chemistry-12"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "organic-chemistry-13:target-branch",
+      "type": "numeric",
+      "prompt": "A synthetic activated intermediate follows irreversible I→P with a=0.040 and I→H with b=0.010 min⁻¹. What target branch fraction follows? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "organic-chemistry-13-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0.8,
+        "unit": "",
+        "tolerance": 8e-05,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the stated inventory, equation and model conditions.",
+        "solution": "The selected model gives approximately 0.8 in the requested scale. Check conservation and conditions before interpreting it.",
+        "lesson_ids": [
+          "organic-chemistry-13"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "organic-chemistry-13:intermediate-half",
+      "type": "numeric",
+      "prompt": "For that constant parallel network, what intermediate half-life in minutes follows? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "organic-chemistry-13-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 13.862943611198904,
+        "unit": "",
+        "tolerance": 0.0013862943611198904,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the stated inventory, equation and model conditions.",
+        "solution": "The selected model gives approximately 13.8629 in the requested scale. Check conservation and conditions before interpreting it.",
+        "lesson_ids": [
+          "organic-chemistry-13"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "organic-chemistry-13:intermediate-twenty",
+      "type": "numeric",
+      "prompt": "For that network, initial I=1.0 arbitrary amount units and no products, what I amount remains after 20 min? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "organic-chemistry-13-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0.36787944117144233,
+        "unit": "",
+        "tolerance": 3.678794411714424e-05,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the stated inventory, equation and model conditions.",
+        "solution": "The selected model gives approximately 0.367879 in the requested scale. Check conservation and conditions before interpreting it.",
+        "lesson_ids": [
+          "organic-chemistry-13"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "organic-chemistry-13:target-twenty",
+      "type": "numeric",
+      "prompt": "Under that same network, what P amount in the initial amount scale follows after 20 min? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "organic-chemistry-13-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0.5056964470628461,
+        "unit": "",
+        "tolerance": 5.056964470628461e-05,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the stated inventory, equation and model conditions.",
+        "solution": "The selected model gives approximately 0.505696 in the requested scale. Check conservation and conditions before interpreting it.",
+        "lesson_ids": [
+          "organic-chemistry-13"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "organic-chemistry-13:conversion",
+      "type": "single_choice",
+      "prompt": "For constant parallel I→P/I→H, what is target amount at finite time?",
+      "points": 1,
+      "objective_ids": [
+        "organic-chemistry-13-objective-1"
+      ],
+      "options": [
+        "The detector area regardless of calibration.",
+        "Target branch fraction times consumed I under the model.",
+        "Branch fraction times initial I at every time."
+      ],
+      "solution_spec": {
+        "answer": 1
+      },
+      "feedback": {
+        "hint": "Track the supplied electron flow, spatial convention or observation assumptions.",
+        "solution": "Target branch fraction times consumed I under the model.",
+        "lesson_ids": [
+          "organic-chemistry-13"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "organic-chemistry-13:recovery",
+      "type": "single_choice",
+      "prompt": "How does target recovery differ from reaction branching?",
+      "points": 1,
+      "objective_ids": [
+        "organic-chemistry-13-objective-2"
+      ],
+      "options": [
+        "It is a subsequent amount process and must be applied to formed target.",
+        "It is always the same numerical fraction.",
+        "It changes the balanced equation to create more product."
+      ],
+      "solution_spec": {
+        "answer": 0
+      },
+      "feedback": {
+        "hint": "Track the supplied electron flow, spatial convention or observation assumptions.",
+        "solution": "It is a subsequent amount process and must be applied to formed target.",
+        "lesson_ids": [
+          "organic-chemistry-13"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "organic-chemistry-13:area-excess",
+      "type": "single_choice",
+      "prompt": "For supplied A=7,B=3 µmol but channel gains 2 and 1, what happens if corrected areas are used directly for ee?",
+      "points": 1,
+      "objective_ids": [
+        "organic-chemistry-13-objective-2"
+      ],
+      "options": [
+        "They give exact 40% automatically.",
+        "They give a biased area excess because amounts require gain correction.",
+        "They determine R/S from their relative sizes."
+      ],
+      "solution_spec": {
+        "answer": 1
+      },
+      "feedback": {
+        "hint": "Track the supplied electron flow, spatial convention or observation assumptions.",
+        "solution": "They give a biased area excess because amounts require gain correction.",
+        "lesson_ids": [
+          "organic-chemistry-13"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "organic-chemistry-13:orthogonal",
+      "type": "single_choice",
+      "prompt": "What helps evaluate the proposed amide beyond a new peak?",
+      "points": 1,
+      "objective_ids": [
+        "organic-chemistry-13-objective-3"
+      ],
+      "options": [
+        "Assuming every activated intermediate is the target.",
+        "Treating disappearance as product identity.",
+        "Independent structural evidence and a calibrated material balance."
+      ],
+      "solution_spec": {
+        "answer": 2
+      },
+      "feedback": {
+        "hint": "Track the supplied electron flow, spatial convention or observation assumptions.",
+        "solution": "Independent structural evidence and a calibrated material balance.",
+        "lesson_ids": [
+          "organic-chemistry-13"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "organic-chemistry-13:perturbation",
+      "type": "single_choice",
+      "prompt": "Doubling target rate a while claiming b fixed requires what?",
+      "points": 1,
+      "objective_ids": [
+        "organic-chemistry-13-objective-3"
+      ],
+      "options": [
+        "Evidence or an explicit model assumption that the perturbation does not change the competing rate or observations.",
+        "No constraint because all rates respond identically.",
+        "Proof that recovery becomes 100%."
+      ],
+      "solution_spec": {
+        "answer": 0
+      },
+      "feedback": {
+        "hint": "Track the supplied electron flow, spatial convention or observation assumptions.",
+        "solution": "Evidence or an explicit model assumption that the perturbation does not change the competing rate or observations.",
+        "lesson_ids": [
+          "organic-chemistry-13"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "organic-chemistry-lab-01:summary",
+      "type": "file_upload",
+      "prompt": "Group synthetic peak reports by sample. Upload exact columns sample,replicates,mean_area_a,mean_area_b with rows blank,std_a,std_b,mix_1,mix_2,mix_3,mix_4. Use raw arithmetic areas before correction.",
+      "points": 21,
+      "objective_ids": [
+        "organic-chemistry-lab-01-objective-1"
+      ],
+      "solution_spec": {
+        "accepted_media_types": [
+          "text/csv"
+        ],
+        "max_bytes": 32768,
+        "validation_spec": {
+          "format": "csv-numeric-table-v1",
+          "delimiter": ",",
+          "key_column": "sample",
+          "columns": [
+            "sample",
+            "replicates",
+            "mean_area_a",
+            "mean_area_b"
+          ],
+          "checks": [
+            {
+              "id": "blank-replicates",
+              "row_id": "blank",
+              "column": "replicates",
+              "type": "numeric",
+              "answer": 3.0,
+              "unit": "",
+              "tolerance": 0,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "count",
+                "values": [
+                  2.8,
+                  3,
+                  3.2
+                ]
+              }
+            },
+            {
+              "id": "blank-mean_area_a",
+              "row_id": "blank",
+              "column": "mean_area_a",
+              "type": "numeric",
+              "answer": 3.0,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  2.8,
+                  3,
+                  3.2
+                ]
+              }
+            },
+            {
+              "id": "blank-mean_area_b",
+              "row_id": "blank",
+              "column": "mean_area_b",
+              "type": "numeric",
+              "answer": 3.0,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  2.8,
+                  3,
+                  3.2
+                ]
+              }
+            },
+            {
+              "id": "std_a-replicates",
+              "row_id": "std_a",
+              "column": "replicates",
+              "type": "numeric",
+              "answer": 3.0,
+              "unit": "",
+              "tolerance": 0,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "count",
+                "values": [
+                  22.8,
+                  23,
+                  23.2
+                ]
+              }
+            },
+            {
+              "id": "std_a-mean_area_a",
+              "row_id": "std_a",
+              "column": "mean_area_a",
+              "type": "numeric",
+              "answer": 23.0,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  22.8,
+                  23,
+                  23.2
+                ]
+              }
+            },
+            {
+              "id": "std_a-mean_area_b",
+              "row_id": "std_a",
+              "column": "mean_area_b",
+              "type": "numeric",
+              "answer": 3.0,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  2.8,
+                  3,
+                  3.2
+                ]
+              }
+            },
+            {
+              "id": "std_b-replicates",
+              "row_id": "std_b",
+              "column": "replicates",
+              "type": "numeric",
+              "answer": 3.0,
+              "unit": "",
+              "tolerance": 0,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "count",
+                "values": [
+                  2.8,
+                  3,
+                  3.2
+                ]
+              }
+            },
+            {
+              "id": "std_b-mean_area_a",
+              "row_id": "std_b",
+              "column": "mean_area_a",
+              "type": "numeric",
+              "answer": 3.0,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  2.8,
+                  3,
+                  3.2
+                ]
+              }
+            },
+            {
+              "id": "std_b-mean_area_b",
+              "row_id": "std_b",
+              "column": "mean_area_b",
+              "type": "numeric",
+              "answer": 13.0,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  12.8,
+                  13,
+                  13.2
+                ]
+              }
+            },
+            {
+              "id": "mix_1-replicates",
+              "row_id": "mix_1",
+              "column": "replicates",
+              "type": "numeric",
+              "answer": 3.0,
+              "unit": "",
+              "tolerance": 0,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "count",
+                "values": [
+                  20.8,
+                  21,
+                  21.2
+                ]
+              }
+            },
+            {
+              "id": "mix_1-mean_area_a",
+              "row_id": "mix_1",
+              "column": "mean_area_a",
+              "type": "numeric",
+              "answer": 21.0,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  20.8,
+                  21,
+                  21.2
+                ]
+              }
+            },
+            {
+              "id": "mix_1-mean_area_b",
+              "row_id": "mix_1",
+              "column": "mean_area_b",
+              "type": "numeric",
+              "answer": 4.0,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  3.8,
+                  4,
+                  4.2
+                ]
+              }
+            },
+            {
+              "id": "mix_2-replicates",
+              "row_id": "mix_2",
+              "column": "replicates",
+              "type": "numeric",
+              "answer": 3.0,
+              "unit": "",
+              "tolerance": 0,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "count",
+                "values": [
+                  16.8,
+                  17,
+                  17.2
+                ]
+              }
+            },
+            {
+              "id": "mix_2-mean_area_a",
+              "row_id": "mix_2",
+              "column": "mean_area_a",
+              "type": "numeric",
+              "answer": 17.0,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  16.8,
+                  17,
+                  17.2
+                ]
+              }
+            },
+            {
+              "id": "mix_2-mean_area_b",
+              "row_id": "mix_2",
+              "column": "mean_area_b",
+              "type": "numeric",
+              "answer": 6.0,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  5.8,
+                  6,
+                  6.2
+                ]
+              }
+            },
+            {
+              "id": "mix_3-replicates",
+              "row_id": "mix_3",
+              "column": "replicates",
+              "type": "numeric",
+              "answer": 3.0,
+              "unit": "",
+              "tolerance": 0,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "count",
+                "values": [
+                  12.8,
+                  13,
+                  13.2
+                ]
+              }
+            },
+            {
+              "id": "mix_3-mean_area_a",
+              "row_id": "mix_3",
+              "column": "mean_area_a",
+              "type": "numeric",
+              "answer": 13.0,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  12.8,
+                  13,
+                  13.2
+                ]
+              }
+            },
+            {
+              "id": "mix_3-mean_area_b",
+              "row_id": "mix_3",
+              "column": "mean_area_b",
+              "type": "numeric",
+              "answer": 8.0,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  7.8,
+                  8,
+                  8.2
+                ]
+              }
+            },
+            {
+              "id": "mix_4-replicates",
+              "row_id": "mix_4",
+              "column": "replicates",
+              "type": "numeric",
+              "answer": 3.0,
+              "unit": "",
+              "tolerance": 0,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "count",
+                "values": [
+                  6.8,
+                  7,
+                  7.2
+                ]
+              }
+            },
+            {
+              "id": "mix_4-mean_area_a",
+              "row_id": "mix_4",
+              "column": "mean_area_a",
+              "type": "numeric",
+              "answer": 7.0,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  6.8,
+                  7,
+                  7.2
+                ]
+              }
+            },
+            {
+              "id": "mix_4-mean_area_b",
+              "row_id": "mix_4",
+              "column": "mean_area_b",
+              "type": "numeric",
+              "answer": 11.0,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  10.8,
+                  11,
+                  11.2
+                ]
+              }
+            }
+          ]
+        },
+        "rubric": [
+          {
+            "id": "blank-replicates",
+            "criterion": "blank: replicates",
+            "points": 1,
+            "evidence": [
+              "Recomputes replicates for blank from the preparation-level values."
+            ]
+          },
+          {
+            "id": "blank-mean_area_a",
+            "criterion": "blank: mean_area_a",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_area_a for blank from the preparation-level values."
+            ]
+          },
+          {
+            "id": "blank-mean_area_b",
+            "criterion": "blank: mean_area_b",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_area_b for blank from the preparation-level values."
+            ]
+          },
+          {
+            "id": "std_a-replicates",
+            "criterion": "std_a: replicates",
+            "points": 1,
+            "evidence": [
+              "Recomputes replicates for std_a from the preparation-level values."
+            ]
+          },
+          {
+            "id": "std_a-mean_area_a",
+            "criterion": "std_a: mean_area_a",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_area_a for std_a from the preparation-level values."
+            ]
+          },
+          {
+            "id": "std_a-mean_area_b",
+            "criterion": "std_a: mean_area_b",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_area_b for std_a from the preparation-level values."
+            ]
+          },
+          {
+            "id": "std_b-replicates",
+            "criterion": "std_b: replicates",
+            "points": 1,
+            "evidence": [
+              "Recomputes replicates for std_b from the preparation-level values."
+            ]
+          },
+          {
+            "id": "std_b-mean_area_a",
+            "criterion": "std_b: mean_area_a",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_area_a for std_b from the preparation-level values."
+            ]
+          },
+          {
+            "id": "std_b-mean_area_b",
+            "criterion": "std_b: mean_area_b",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_area_b for std_b from the preparation-level values."
+            ]
+          },
+          {
+            "id": "mix_1-replicates",
+            "criterion": "mix_1: replicates",
+            "points": 1,
+            "evidence": [
+              "Recomputes replicates for mix_1 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "mix_1-mean_area_a",
+            "criterion": "mix_1: mean_area_a",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_area_a for mix_1 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "mix_1-mean_area_b",
+            "criterion": "mix_1: mean_area_b",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_area_b for mix_1 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "mix_2-replicates",
+            "criterion": "mix_2: replicates",
+            "points": 1,
+            "evidence": [
+              "Recomputes replicates for mix_2 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "mix_2-mean_area_a",
+            "criterion": "mix_2: mean_area_a",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_area_a for mix_2 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "mix_2-mean_area_b",
+            "criterion": "mix_2: mean_area_b",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_area_b for mix_2 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "mix_3-replicates",
+            "criterion": "mix_3: replicates",
+            "points": 1,
+            "evidence": [
+              "Recomputes replicates for mix_3 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "mix_3-mean_area_a",
+            "criterion": "mix_3: mean_area_a",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_area_a for mix_3 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "mix_3-mean_area_b",
+            "criterion": "mix_3: mean_area_b",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_area_b for mix_3 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "mix_4-replicates",
+            "criterion": "mix_4: replicates",
+            "points": 1,
+            "evidence": [
+              "Recomputes replicates for mix_4 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "mix_4-mean_area_a",
+            "criterion": "mix_4: mean_area_a",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_area_a for mix_4 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "mix_4-mean_area_b",
+            "criterion": "mix_4: mean_area_b",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_area_b for mix_4 from the preparation-level values."
+            ]
+          }
+        ]
+      },
+      "feedback": {
+        "hint": "Group by sample and average both supplied reporting channels.",
+        "solution": "Each group has three balanced reports; raw means retain reporting offset and channel gain.",
+        "lesson_ids": [
+          "organic-chemistry-lab-01"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "organic-chemistry-lab-01:blank-offset",
+      "type": "numeric",
+      "prompt": "Both channels in the independent blank have true amount zero. What peak A additive reporting offset in arbitrary area units follows from its CSV mean? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "organic-chemistry-lab-01-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 3,
+        "unit": "",
+        "tolerance": 0.001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the blank mean; do not call its area material amount.",
+        "solution": "Blank mean area A is 3.0 units, identifying its stipulated additive offset.",
+        "lesson_ids": [
+          "organic-chemistry-lab-01"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "organic-chemistry-lab-01:a-gain",
+      "type": "numeric",
+      "prompt": "Independent std_a contains 10.0 µmol A and no B. After subtracting the blank A area from its mean, what peak A gain in area units per µmol follows? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "organic-chemistry-lab-01-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 2,
+        "unit": "",
+        "tolerance": 0.001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Divide blank-corrected pure-standard area by its known amount.",
+        "solution": "(23−3)/10=2 area units per µmol. This is a synthetic reporting gain, not an intrinsic enantiomer absorptivity difference.",
+        "lesson_ids": [
+          "organic-chemistry-lab-01"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "organic-chemistry-lab-01:mix-two-excess",
+      "type": "numeric",
+      "prompt": "Calibrate both channels using their separate 10.0 µmol standards and blank. What signed A enantiomeric excess, 100(n_A−n_B)/(n_A+n_B), in percent follows for mix_2? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "organic-chemistry-lab-01-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 40,
+        "unit": "",
+        "tolerance": 0.01,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Convert blank-corrected areas to amounts with each channel gain before normalizing.",
+        "solution": "Amounts are A=7 and B=3 µmol, giving signed A excess 40%. Area-only excess is different.",
+        "lesson_ids": [
+          "organic-chemistry-lab-01"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "organic-chemistry-lab-01:mix-four-ratio",
+      "type": "numeric",
+      "prompt": "Using the same two standards and blank, what calibrated amount ratio n_B/n_A follows for mix_4? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "organic-chemistry-lab-01-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 4,
+        "unit": "",
+        "tolerance": 0.001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use each channel calibration independently; retain the stated B/A order.",
+        "solution": "A=(7−3)/2=2 and B=(11−3)/1=8 µmol, so B/A=4.",
+        "lesson_ids": [
+          "organic-chemistry-lab-01"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "organic-chemistry-lab-01:interpretation",
+      "type": "structured",
+      "prompt": "Select conclusions supported by the supplied identities and calibration.",
+      "points": 3,
+      "objective_ids": [
+        "organic-chemistry-lab-01-objective-3"
+      ],
+      "response_fields": [
+        {
+          "id": "offset",
+          "type": "single_choice",
+          "prompt": "What does the blank identify?",
+          "options": [
+            "The stipulated additive reporting offset in each channel.",
+            "Every possible coeluting compound in any real sample.",
+            "A nonzero amount of both enantiomers."
+          ],
+          "points": 1
+        },
+        {
+          "id": "gain",
+          "type": "single_choice",
+          "prompt": "What do unequal gains mean in this construction?",
+          "options": [
+            "Peak-specific reporting/recovery factors, not a claimed intrinsic UV absorption difference in an achiral environment.",
+            "All enantiomers have different intrinsic UV absorption in the same achiral environment.",
+            "Raw area is already amount regardless of calibration."
+          ],
+          "points": 1
+        },
+        {
+          "id": "identity",
+          "type": "single_choice",
+          "prompt": "The standards independently identify A as positive and B as negative optical enantiomers under matched conditions. What can be inferred about R/S here?",
+          "options": [
+            "No absolute descriptor from optical sign or retention order alone.",
+            "Positive A must be R.",
+            "The larger peak must be S."
+          ],
+          "points": 1
+        }
+      ],
+      "solution_spec": {
+        "field_specs": [
+          {
+            "id": "offset",
+            "type": "single_choice",
+            "answer": 0
+          },
+          {
+            "id": "gain",
+            "type": "single_choice",
+            "answer": 0
+          },
+          {
+            "id": "identity",
+            "type": "single_choice",
+            "answer": 0
+          }
+        ],
+        "rubric": [
+          {
+            "id": "offset",
+            "criterion": "Blank scope",
+            "points": 1,
+            "evidence": [
+              "A zero-amount reference identifies its reporting baseline under the declared model."
+            ]
+          },
+          {
+            "id": "gain",
+            "criterion": "Response interpretation",
+            "points": 1,
+            "evidence": [
+              "The model explicitly assigns observation-channel gains."
+            ]
+          },
+          {
+            "id": "identity",
+            "criterion": "Configuration scope",
+            "points": 1,
+            "evidence": [
+              "Optical sign and retention identity do not supply an absolute configuration."
+            ]
+          }
+        ]
+      },
+      "feedback": {
+        "hint": "Keep reporting calibration, peak identity and absolute configuration separate.",
+        "solution": "The supplied blank and pure standards constrain the linear reporting model. Optical identities are independently given; no R/S assignment follows.",
+        "lesson_ids": [
+          "organic-chemistry-lab-01"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "organic-chemistry-lab-01:claims",
+      "type": "multiple_select",
+      "prompt": "Which statements respect the synthetic reports? Select all that apply.",
+      "points": 2,
+      "objective_ids": [
+        "organic-chemistry-lab-01-objective-3"
+      ],
+      "options": [
+        "The three offsets deliberately balance around each constructed mean.",
+        "A chromatographic peak alone proves complete molecular purity.",
+        "Each channel needs its own standard factor before amount comparison.",
+        "Three repeats prove independent Gaussian instrument errors.",
+        "Mix_3 has equal calibrated A/B amounts despite unequal blank-corrected areas."
+      ],
+      "solution_spec": {
+        "answer": [
+          0,
+          2,
+          4
+        ],
+        "partial_credit": "correct-minus-incorrect-clamped-v1"
+      },
+      "feedback": {
+        "hint": "Separate constructed response and amounts from real instrument or purity claims.",
+        "solution": "Balanced reports, separately calibrated gains and the equal-amount mix_3 are supported. Noise independence and complete purity are not established.",
+        "lesson_ids": [
+          "organic-chemistry-lab-01"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "organic-chemistry-lab-01:racemate",
+      "type": "single_choice",
+      "prompt": "For mix_3, what does the declared two-enantiomer model establish after calibration?",
+      "points": 1,
+      "objective_ids": [
+        "organic-chemistry-lab-01-objective-3"
+      ],
+      "options": [
+        "A excess must remain because every larger peak means more molecules.",
+        "A meso compound is created by mixing enantiomers.",
+        "Equal A and B amounts and zero excess; raw area inequality reflects the assigned gains."
+      ],
+      "solution_spec": {
+        "answer": 2
+      },
+      "feedback": {
+        "hint": "Use calibrated amounts and distinguish a mixture from an internally achiral molecule.",
+        "solution": "The calibrated amounts are 5 and 5 µmol. A racemic pair differs from a meso molecule; the response model does not prove real sample purity.",
+        "lesson_ids": [
+          "organic-chemistry-lab-01"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
     }
   ]
 }
