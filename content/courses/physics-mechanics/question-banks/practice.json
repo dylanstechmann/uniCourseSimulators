@@ -619,6 +619,2713 @@
         "kind": "original",
         "modifications": []
       }
+    },
+    {
+      "id": "physics-mechanics-7:x-position",
+      "type": "numeric",
+      "prompt": "For x=1+2t+t² and y=3−t+0.5t², positions in m and time in s, what x position in m follows at t=2 s? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "physics-mechanics-7-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 9,
+        "unit": "",
+        "tolerance": 0.0009000000000000001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the stated model, axes and unit scale before interpreting the result.",
+        "solution": "The stated model gives approximately 9 in the requested scale. Check the system boundary and assumptions used in the balance.",
+        "lesson_ids": [
+          "physics-mechanics-7"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physics-mechanics-7:y-position",
+      "type": "numeric",
+      "prompt": "For the same path x=1+2t+t² and y=3−t+0.5t², what y position in m follows at t=2 s? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "physics-mechanics-7-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 3,
+        "unit": "",
+        "tolerance": 0.00030000000000000003,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the stated model, axes and unit scale before interpreting the result.",
+        "solution": "The stated model gives approximately 3 in the requested scale. Check the system boundary and assumptions used in the balance.",
+        "lesson_ids": [
+          "physics-mechanics-7"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physics-mechanics-7:speed",
+      "type": "numeric",
+      "prompt": "For that path at t=2 s, what speed in m/s follows from velocity components 6 and 1 m/s? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "physics-mechanics-7-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 6.082762530298219,
+        "unit": "",
+        "tolerance": 0.000608276253029822,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the stated model, axes and unit scale before interpreting the result.",
+        "solution": "The stated model gives approximately 6.082763 in the requested scale. Check the system boundary and assumptions used in the balance.",
+        "lesson_ids": [
+          "physics-mechanics-7"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physics-mechanics-7:x-acceleration",
+      "type": "numeric",
+      "prompt": "For x=1+2t+t² in metres with t in seconds, what x acceleration in m/s² follows? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "physics-mechanics-7-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 2,
+        "unit": "",
+        "tolerance": 0.0002,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the stated model, axes and unit scale before interpreting the result.",
+        "solution": "The stated model gives approximately 2 in the requested scale. Check the system boundary and assumptions used in the balance.",
+        "lesson_ids": [
+          "physics-mechanics-7"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physics-mechanics-7:landing-time",
+      "type": "numeric",
+      "prompt": "A separate point projectile starts at y=1 m with upward speed 3 m/s and constant downward g=9.81 m/s². With y=1+3t−0.5gt², what positive landing time in s follows at y=0? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "physics-mechanics-7-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0.8511484556613763,
+        "unit": "",
+        "tolerance": 8.511484556613764e-05,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the stated model, axes and unit scale before interpreting the result.",
+        "solution": "The stated model gives approximately 0.8511485 in the requested scale. Check the system boundary and assumptions used in the balance.",
+        "lesson_ids": [
+          "physics-mechanics-7"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physics-mechanics-7:range",
+      "type": "numeric",
+      "prompt": "For that separate projectile, y₀=1 m, v_y₀=3 m/s, v_x=2 m/s and g=9.81 m/s² with no drag, what horizontal displacement in m follows at landing y=0? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "physics-mechanics-7-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 1.7022969113227526,
+        "unit": "",
+        "tolerance": 0.00017022969113227528,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the stated model, axes and unit scale before interpreting the result.",
+        "solution": "The stated model gives approximately 1.702297 in the requested scale. Check the system boundary and assumptions used in the balance.",
+        "lesson_ids": [
+          "physics-mechanics-7"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physics-mechanics-7:apex-velocity",
+      "type": "single_choice",
+      "prompt": "At the apex of the specified projectile with nonzero horizontal velocity, what vanishes?",
+      "points": 1,
+      "objective_ids": [
+        "physics-mechanics-7-objective-2"
+      ],
+      "options": [
+        "Both velocity components and acceleration.",
+        "Only the vertical velocity component; speed remains nonzero.",
+        "Gravity because vertical velocity is zero."
+      ],
+      "solution_spec": {
+        "answer": 1
+      },
+      "feedback": {
+        "hint": "Check the declared body, constraint or observation model.",
+        "solution": "Only the vertical velocity component; speed remains nonzero.",
+        "lesson_ids": [
+          "physics-mechanics-7"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physics-mechanics-7:event-domain",
+      "type": "single_choice",
+      "prompt": "Why reject the negative root of the declared post-launch landing equation?",
+      "points": 1,
+      "objective_ids": [
+        "physics-mechanics-7-objective-3"
+      ],
+      "options": [
+        "It lies outside the supplied event interval t≥0.",
+        "Negative time is never allowed in any coordinate system.",
+        "The two roots should always be averaged."
+      ],
+      "solution_spec": {
+        "answer": 0
+      },
+      "feedback": {
+        "hint": "Check the declared body, constraint or observation model.",
+        "solution": "It lies outside the supplied event interval t≥0.",
+        "lesson_ids": [
+          "physics-mechanics-7"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physics-mechanics-7:sampled-motion",
+      "type": "single_choice",
+      "prompt": "Do two sampled endpoint positions uniquely determine instantaneous acceleration between them?",
+      "points": 1,
+      "objective_ids": [
+        "physics-mechanics-7-objective-3"
+      ],
+      "options": [
+        "Yes; divide the last position by elapsed time twice.",
+        "Yes; every sampled path has constant acceleration.",
+        "No; different intervening trajectories can share those endpoints."
+      ],
+      "solution_spec": {
+        "answer": 2
+      },
+      "feedback": {
+        "hint": "Check the declared body, constraint or observation model.",
+        "solution": "No; different intervening trajectories can share those endpoints.",
+        "lesson_ids": [
+          "physics-mechanics-7"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physics-mechanics-8:normal",
+      "type": "numeric",
+      "prompt": "A 2 kg block rests on a level surface with only vertical weight and normal force; g=9.81 m/s². What normal force magnitude in N follows? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "physics-mechanics-8-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 19.62,
+        "unit": "",
+        "tolerance": 0.001962,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the stated model, axes and unit scale before interpreting the result.",
+        "solution": "The stated model gives approximately 19.62 in the requested scale. Check the system boundary and assumptions used in the balance.",
+        "lesson_ids": [
+          "physics-mechanics-8"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physics-mechanics-8:static-friction",
+      "type": "numeric",
+      "prompt": "For that stationary level block with μ_s=0.40, a horizontal 6 N push acts. What static friction magnitude in N is needed if the block stays at rest? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "physics-mechanics-8-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 6,
+        "unit": "",
+        "tolerance": 0.0006000000000000001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the stated model, axes and unit scale before interpreting the result.",
+        "solution": "The stated model gives approximately 6 in the requested scale. Check the system boundary and assumptions used in the balance.",
+        "lesson_ids": [
+          "physics-mechanics-8"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physics-mechanics-8:static-limit",
+      "type": "numeric",
+      "prompt": "For the level 2 kg block with μ_s=0.40 and g=9.81 m/s², what maximum static friction magnitude in N follows? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "physics-mechanics-8-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 7.848000000000001,
+        "unit": "",
+        "tolerance": 0.0007848000000000001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the stated model, axes and unit scale before interpreting the result.",
+        "solution": "The stated model gives approximately 7.848 in the requested scale. Check the system boundary and assumptions used in the balance.",
+        "lesson_ids": [
+          "physics-mechanics-8"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physics-mechanics-8:kinetic-friction",
+      "type": "numeric",
+      "prompt": "For the level 2 kg block sliding right with μ_k=0.20 and g=9.81 m/s², what kinetic friction magnitude in N follows? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "physics-mechanics-8-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 3.9240000000000004,
+        "unit": "",
+        "tolerance": 0.00039240000000000005,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the stated model, axes and unit scale before interpreting the result.",
+        "solution": "The stated model gives approximately 3.924 in the requested scale. Check the system boundary and assumptions used in the balance.",
+        "lesson_ids": [
+          "physics-mechanics-8"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physics-mechanics-8:sliding-acceleration",
+      "type": "numeric",
+      "prompt": "An 8 N rightward push acts on that level 2 kg block sliding right, with μ_k=0.20 and g=9.81 m/s². What rightward acceleration in m/s² follows? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "physics-mechanics-8-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 2.038,
+        "unit": "",
+        "tolerance": 0.0002038,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the stated model, axes and unit scale before interpreting the result.",
+        "solution": "The stated model gives approximately 2.038 in the requested scale. Check the system boundary and assumptions used in the balance.",
+        "lesson_ids": [
+          "physics-mechanics-8"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physics-mechanics-8:incline-acceleration",
+      "type": "numeric",
+      "prompt": "A 2 kg block slides downward on a 30° incline with μ_k=0.20 and g=9.81 m/s². What downslope acceleration in m/s² follows? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "physics-mechanics-8-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 3.205858157774931,
+        "unit": "",
+        "tolerance": 0.0003205858157774931,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the stated model, axes and unit scale before interpreting the result.",
+        "solution": "The stated model gives approximately 3.205858 in the requested scale. Check the system boundary and assumptions used in the balance.",
+        "lesson_ids": [
+          "physics-mechanics-8"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physics-mechanics-8:third-law",
+      "type": "single_choice",
+      "prompt": "The upward normal and downward weight of the block act on the same block. Are they a Newton third-law pair?",
+      "points": 1,
+      "objective_ids": [
+        "physics-mechanics-8-objective-1"
+      ],
+      "options": [
+        "Yes; every balanced force pair is a third-law pair.",
+        "No; third-law partners act on different interacting bodies.",
+        "Yes; equal magnitudes identify partners regardless of bodies."
+      ],
+      "solution_spec": {
+        "answer": 1
+      },
+      "feedback": {
+        "hint": "Check the declared body, constraint or observation model.",
+        "solution": "No; third-law partners act on different interacting bodies.",
+        "lesson_ids": [
+          "physics-mechanics-8"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physics-mechanics-8:static-bound",
+      "type": "single_choice",
+      "prompt": "For a level stationary block, what is the role of μ_sN?",
+      "points": 1,
+      "objective_ids": [
+        "physics-mechanics-8-objective-2"
+      ],
+      "options": [
+        "It is always the actual static friction magnitude.",
+        "It is the kinetic force for every sliding state.",
+        "It bounds static friction; the needed force can be smaller."
+      ],
+      "solution_spec": {
+        "answer": 2
+      },
+      "feedback": {
+        "hint": "Check the declared body, constraint or observation model.",
+        "solution": "It bounds static friction; the needed force can be smaller.",
+        "lesson_ids": [
+          "physics-mechanics-8"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physics-mechanics-8:contact-net",
+      "type": "single_choice",
+      "prompt": "A suspended 2 kg mass accelerates upward at 1 m/s² under tension and weight, with g=9.81 m/s². Which is consistent?",
+      "points": 1,
+      "objective_ids": [
+        "physics-mechanics-8-objective-3"
+      ],
+      "options": [
+        "Tension and net force are both 2 N.",
+        "Tension is 21.62 N while upward net force is 2 N.",
+        "Tension is 17.62 N because weight adds to upward acceleration."
+      ],
+      "solution_spec": {
+        "answer": 1
+      },
+      "feedback": {
+        "hint": "Check the declared body, constraint or observation model.",
+        "solution": "Tension is 21.62 N while upward net force is 2 N.",
+        "lesson_ids": [
+          "physics-mechanics-8"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physics-mechanics-9:collision-velocity",
+      "type": "numeric",
+      "prompt": "Two carts stick together in one dimension with negligible external impulse: m₁=0.20 kg,v₁=+3 m/s,m₂=0.30 kg,v₂=−1 m/s. What shared signed velocity in m/s follows? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "physics-mechanics-9-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0.6,
+        "unit": "",
+        "tolerance": 6e-05,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the stated model, axes and unit scale before interpreting the result.",
+        "solution": "The stated model gives approximately 0.6 in the requested scale. Check the system boundary and assumptions used in the balance.",
+        "lesson_ids": [
+          "physics-mechanics-9"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physics-mechanics-9:collision-energy-loss",
+      "type": "numeric",
+      "prompt": "For that sticking collision with masses 0.20 and 0.30 kg and initial velocities +3 and −1 m/s, what reduction in translational kinetic energy in J follows? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "physics-mechanics-9-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0.96,
+        "unit": "",
+        "tolerance": 9.6e-05,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the stated model, axes and unit scale before interpreting the result.",
+        "solution": "The stated model gives approximately 0.96 in the requested scale. Check the system boundary and assumptions used in the balance.",
+        "lesson_ids": [
+          "physics-mechanics-9"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physics-mechanics-9:net-average-force",
+      "type": "numeric",
+      "prompt": "A separate 2 kg mass changes upward-positive velocity from −5 to 0 m/s in 0.10 s. What upward average net force in N follows? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "physics-mechanics-9-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 100,
+        "unit": "",
+        "tolerance": 0.01,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the stated model, axes and unit scale before interpreting the result.",
+        "solution": "The stated model gives approximately 100 in the requested scale. Check the system boundary and assumptions used in the balance.",
+        "lesson_ids": [
+          "physics-mechanics-9"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physics-mechanics-9:contact-average-force",
+      "type": "numeric",
+      "prompt": "For that separate vertical stop of 2 kg from −5 to 0 m/s in 0.10 s, with g=9.81 m/s² and only weight plus contact, what upward average contact force in N follows? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "physics-mechanics-9-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 119.62,
+        "unit": "",
+        "tolerance": 0.011962,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the stated model, axes and unit scale before interpreting the result.",
+        "solution": "The stated model gives approximately 119.62 in the requested scale. Check the system boundary and assumptions used in the balance.",
+        "lesson_ids": [
+          "physics-mechanics-9"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physics-mechanics-9:variable-force-work",
+      "type": "numeric",
+      "prompt": "A horizontal force F_x=4+2x N acts from x=0 to x=3 m in the positive x direction. What work in J follows? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "physics-mechanics-9-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 21,
+        "unit": "",
+        "tolerance": 0.0021000000000000003,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the stated model, axes and unit scale before interpreting the result.",
+        "solution": "The stated model gives approximately 21 in the requested scale. Check the system boundary and assumptions used in the balance.",
+        "lesson_ids": [
+          "physics-mechanics-9"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physics-mechanics-9:work-speed",
+      "type": "numeric",
+      "prompt": "For a separate 2 kg particle initially at rest with no other work, F_x=4+2x N acts from x=0 to x=3 m. What final speed in m/s follows? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "physics-mechanics-9-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 4.58257569495584,
+        "unit": "",
+        "tolerance": 0.000458257569495584,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the stated model, axes and unit scale before interpreting the result.",
+        "solution": "The stated model gives approximately 4.582576 in the requested scale. Check the system boundary and assumptions used in the balance.",
+        "lesson_ids": [
+          "physics-mechanics-9"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physics-mechanics-9:sticking-conservation",
+      "type": "single_choice",
+      "prompt": "For the defined isolated sticking-cart system, which combination applies?",
+      "points": 1,
+      "objective_ids": [
+        "physics-mechanics-9-objective-1"
+      ],
+      "options": [
+        "Both momentum and translational kinetic energy must be conserved.",
+        "Total momentum is conserved while translational kinetic energy decreases.",
+        "Neither is conserved because an internal collision force acts."
+      ],
+      "solution_spec": {
+        "answer": 1
+      },
+      "feedback": {
+        "hint": "Check the declared body, constraint or observation model.",
+        "solution": "Total momentum is conserved while translational kinetic energy decreases.",
+        "lesson_ids": [
+          "physics-mechanics-9"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physics-mechanics-9:averages",
+      "type": "single_choice",
+      "prompt": "What does an impulse-derived average contact force establish?",
+      "points": 1,
+      "objective_ids": [
+        "physics-mechanics-9-objective-3"
+      ],
+      "options": [
+        "A time average under the declared force balance, without a unique peak.",
+        "The same quantity as displacement-weighted average force in every stop.",
+        "A unique force maximum and injury threshold."
+      ],
+      "solution_spec": {
+        "answer": 0
+      },
+      "feedback": {
+        "hint": "Check the declared body, constraint or observation model.",
+        "solution": "A time average under the declared force balance, without a unique peak.",
+        "lesson_ids": [
+          "physics-mechanics-9"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physics-mechanics-9:system-boundary",
+      "type": "single_choice",
+      "prompt": "Can the contact force be obtained from Δp/Δt alone for a vertical stop with significant weight?",
+      "points": 1,
+      "objective_ids": [
+        "physics-mechanics-9-objective-3"
+      ],
+      "options": [
+        "No; include weight in the net force balance before isolating contact.",
+        "Yes; contact always equals net force.",
+        "Yes; gravity disappears whenever the velocity reaches zero."
+      ],
+      "solution_spec": {
+        "answer": 0
+      },
+      "feedback": {
+        "hint": "Check the declared body, constraint or observation model.",
+        "solution": "No; include weight in the net force balance before isolating contact.",
+        "lesson_ids": [
+          "physics-mechanics-9"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physics-mechanics-10:torque",
+      "type": "numeric",
+      "prompt": "About the origin, r=(0.20,0.10,0) m and F=(10,30,0) N. What signed z torque in N·m follows? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "physics-mechanics-10-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 5,
+        "unit": "",
+        "tolerance": 0.0005,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the stated model, axes and unit scale before interpreting the result.",
+        "solution": "The stated model gives approximately 5 in the requested scale. Check the system boundary and assumptions used in the balance.",
+        "lesson_ids": [
+          "physics-mechanics-10"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physics-mechanics-10:disk-inertia",
+      "type": "numeric",
+      "prompt": "A uniform disk has mass 2 kg and radius 0.10 m. What moment of inertia in kg·m² follows about its central perpendicular axis? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "physics-mechanics-10-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0.01,
+        "unit": "",
+        "tolerance": 1.0000000000000002e-06,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the stated model, axes and unit scale before interpreting the result.",
+        "solution": "The stated model gives approximately 0.01 in the requested scale. Check the system boundary and assumptions used in the balance.",
+        "lesson_ids": [
+          "physics-mechanics-10"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physics-mechanics-10:angular-acceleration",
+      "type": "numeric",
+      "prompt": "That disk with central inertia 0.010 kg·m² experiences net torque +5 N·m about the same fixed axis. What angular acceleration in rad/s² follows? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "physics-mechanics-10-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 500,
+        "unit": "",
+        "tolerance": 0.05,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the stated model, axes and unit scale before interpreting the result.",
+        "solution": "The stated model gives approximately 500 in the requested scale. Check the system boundary and assumptions used in the balance.",
+        "lesson_ids": [
+          "physics-mechanics-10"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physics-mechanics-10:rotational-energy",
+      "type": "numeric",
+      "prompt": "A separate uniform disk m=2 kg,R=0.10 m rotates at 20 rad/s about its central perpendicular axis. What rotational kinetic energy in J follows? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "physics-mechanics-10-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 2,
+        "unit": "",
+        "tolerance": 0.0002,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the stated model, axes and unit scale before interpreting the result.",
+        "solution": "The stated model gives approximately 2 in the requested scale. Check the system boundary and assumptions used in the balance.",
+        "lesson_ids": [
+          "physics-mechanics-10"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physics-mechanics-10:angular-momentum",
+      "type": "numeric",
+      "prompt": "For that separate disk with I=0.010 kg·m² and ω=+20 rad/s about its fixed central axis, what axial angular momentum in kg·m²/s follows? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "physics-mechanics-10-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0.2,
+        "unit": "",
+        "tolerance": 2e-05,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the stated model, axes and unit scale before interpreting the result.",
+        "solution": "The stated model gives approximately 0.2 in the requested scale. Check the system boundary and assumptions used in the balance.",
+        "lesson_ids": [
+          "physics-mechanics-10"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physics-mechanics-10:rolling-speed",
+      "type": "numeric",
+      "prompt": "A uniform solid cylinder starts at rest and rolls without slip down a vertical height 0.50 m on a fixed incline, with adequate static friction, no losses and g=9.81 m/s². What center speed in m/s follows? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "physics-mechanics-10-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 2.5573423705088842,
+        "unit": "",
+        "tolerance": 0.00025573423705088844,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the stated model, axes and unit scale before interpreting the result.",
+        "solution": "The stated model gives approximately 2.557342 in the requested scale. Check the system boundary and assumptions used in the balance.",
+        "lesson_ids": [
+          "physics-mechanics-10"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physics-mechanics-10:axis",
+      "type": "single_choice",
+      "prompt": "What must accompany a quoted moment of inertia?",
+      "points": 1,
+      "objective_ids": [
+        "physics-mechanics-10-objective-1"
+      ],
+      "options": [
+        "Only angular velocity; geometry is irrelevant.",
+        "Only mass; the axis never changes inertia.",
+        "The body mass distribution and the axis about which it is defined."
+      ],
+      "solution_spec": {
+        "answer": 2
+      },
+      "feedback": {
+        "hint": "Check the declared body, constraint or observation model.",
+        "solution": "The body mass distribution and the axis about which it is defined.",
+        "lesson_ids": [
+          "physics-mechanics-10"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physics-mechanics-10:angular-versus-energy",
+      "type": "single_choice",
+      "prompt": "Does zero external torque about a suitable fixed axis imply constant rotational kinetic energy under every internal rearrangement?",
+      "points": 1,
+      "objective_ids": [
+        "physics-mechanics-10-objective-3"
+      ],
+      "options": [
+        "No; angular momentum can remain fixed while inertia and rotational energy change.",
+        "Yes; inertia cannot change for a rearranging system.",
+        "Yes; torque and energy are interchangeable."
+      ],
+      "solution_spec": {
+        "answer": 0
+      },
+      "feedback": {
+        "hint": "Check the declared body, constraint or observation model.",
+        "solution": "No; angular momentum can remain fixed while inertia and rotational energy change.",
+        "lesson_ids": [
+          "physics-mechanics-10"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physics-mechanics-10:rolling-feasibility",
+      "type": "single_choice",
+      "prompt": "When using v=Rω for downhill rolling, what also needs checking?",
+      "points": 1,
+      "objective_ids": [
+        "physics-mechanics-10-objective-3"
+      ],
+      "options": [
+        "Static friction must be zero because it does no ideal contact work.",
+        "Any surface permits no-slip rolling regardless of friction.",
+        "Static friction and contact must support the assumed no-slip motion."
+      ],
+      "solution_spec": {
+        "answer": 2
+      },
+      "feedback": {
+        "hint": "Check the declared body, constraint or observation model.",
+        "solution": "Static friction and contact must support the assumed no-slip motion.",
+        "lesson_ids": [
+          "physics-mechanics-10"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physics-mechanics-11:natural-frequency",
+      "type": "numeric",
+      "prompt": "For m x″+c x′+kx=0 with m=0.50 kg,k=50 N/m,c=0.80 N·s/m, what undamped natural angular frequency in rad/s follows? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "physics-mechanics-11-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 10,
+        "unit": "",
+        "tolerance": 0.001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the stated model, axes and unit scale before interpreting the result.",
+        "solution": "The stated model gives approximately 10 in the requested scale. Check the system boundary and assumptions used in the balance.",
+        "lesson_ids": [
+          "physics-mechanics-11"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physics-mechanics-11:damped-frequency",
+      "type": "numeric",
+      "prompt": "For that oscillator, ω₀=10 rad/s and decay rate δ=0.80 s⁻¹. What underdamped angular frequency √(ω₀²−δ²) in rad/s follows? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "physics-mechanics-11-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 9.96794863550169,
+        "unit": "",
+        "tolerance": 0.0009967948635501692,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the stated model, axes and unit scale before interpreting the result.",
+        "solution": "The stated model gives approximately 9.967949 in the requested scale. Check the system boundary and assumptions used in the balance.",
+        "lesson_ids": [
+          "physics-mechanics-11"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physics-mechanics-11:damped-period",
+      "type": "numeric",
+      "prompt": "For that underdamped oscillator with m=0.50 kg,k=50 N/m,c=0.80 N·s/m, what damped period in s follows? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "physics-mechanics-11-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0.6303388527506544,
+        "unit": "",
+        "tolerance": 6.303388527506544e-05,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the stated model, axes and unit scale before interpreting the result.",
+        "solution": "The stated model gives approximately 0.6303389 in the requested scale. Check the system boundary and assumptions used in the balance.",
+        "lesson_ids": [
+          "physics-mechanics-11"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physics-mechanics-11:critical-damping",
+      "type": "numeric",
+      "prompt": "For m=0.50 kg and k=50 N/m, what critical damping coefficient 2√(mk) in N·s/m follows? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "physics-mechanics-11-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 10,
+        "unit": "",
+        "tolerance": 0.001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the stated model, axes and unit scale before interpreting the result.",
+        "solution": "The stated model gives approximately 10 in the requested scale. Check the system boundary and assumptions used in the balance.",
+        "lesson_ids": [
+          "physics-mechanics-11"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physics-mechanics-11:initial-energy",
+      "type": "numeric",
+      "prompt": "For the oscillator m=0.50 kg,k=50 N/m with equilibrium displacement x₀=0.020 m and initial velocity zero, what initial mechanical energy in J follows? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "physics-mechanics-11-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0.01,
+        "unit": "",
+        "tolerance": 1.0000000000000002e-06,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the stated model, axes and unit scale before interpreting the result.",
+        "solution": "The stated model gives approximately 0.01 in the requested scale. Check the system boundary and assumptions used in the balance.",
+        "lesson_ids": [
+          "physics-mechanics-11"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physics-mechanics-11:envelope-half",
+      "type": "numeric",
+      "prompt": "For an underdamped envelope proportional to exp(−0.80t), what envelope half-time in s follows? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "physics-mechanics-11-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0.8664339756999315,
+        "unit": "",
+        "tolerance": 8.664339756999315e-05,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the stated model, axes and unit scale before interpreting the result.",
+        "solution": "The stated model gives approximately 0.866434 in the requested scale. Check the system boundary and assumptions used in the balance.",
+        "lesson_ids": [
+          "physics-mechanics-11"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physics-mechanics-11:initial-condition",
+      "type": "single_choice",
+      "prompt": "For x(0)=x₀ and v(0)=0 with nonzero damping, why is x₀exp(−δt)cos(ω_dt) alone insufficient?",
+      "points": 1,
+      "objective_ids": [
+        "physics-mechanics-11-objective-1"
+      ],
+      "options": [
+        "Damping eliminates all initial-condition requirements.",
+        "Its derivative at zero is −δx₀; a sine term is needed to satisfy the stated initial velocity.",
+        "Its derivative is always zero at zero."
+      ],
+      "solution_spec": {
+        "answer": 1
+      },
+      "feedback": {
+        "hint": "Check the declared body, constraint or observation model.",
+        "solution": "Its derivative at zero is −δx₀; a sine term is needed to satisfy the stated initial velocity.",
+        "lesson_ids": [
+          "physics-mechanics-11"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physics-mechanics-11:energy-rate",
+      "type": "single_choice",
+      "prompt": "For linear viscous damping with force −cv, what instantaneous mechanical energy balance follows?",
+      "points": 1,
+      "objective_ids": [
+        "physics-mechanics-11-objective-2"
+      ],
+      "options": [
+        "dE/dt=+cv² because damping creates mechanical energy.",
+        "dE/dt=−cv²; exact energy need not be a pure exponential at every instant.",
+        "Energy is constant whenever the displacement envelope decays."
+      ],
+      "solution_spec": {
+        "answer": 1
+      },
+      "feedback": {
+        "hint": "Check the declared body, constraint or observation model.",
+        "solution": "dE/dt=−cv²; exact energy need not be a pure exponential at every instant.",
+        "lesson_ids": [
+          "physics-mechanics-11"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physics-mechanics-11:inference",
+      "type": "single_choice",
+      "prompt": "Does one observed oscillation period uniquely identify both stiffness and damping when mass is supplied?",
+      "points": 1,
+      "objective_ids": [
+        "physics-mechanics-11-objective-3"
+      ],
+      "options": [
+        "Yes; damping has no effect on the period.",
+        "Yes; one scalar observation determines any number of unknown parameters.",
+        "No; the damped frequency constrains a combination of parameters."
+      ],
+      "solution_spec": {
+        "answer": 2
+      },
+      "feedback": {
+        "hint": "Check the declared body, constraint or observation model.",
+        "solution": "No; the damped frequency constrains a combination of parameters.",
+        "lesson_ids": [
+          "physics-mechanics-11"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physics-mechanics-12:stress",
+      "type": "numeric",
+      "prompt": "A stipulated specimen has force 10 N and initial area 0.000002 m². What engineering stress in MPa follows? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "physics-mechanics-12-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 5,
+        "unit": "",
+        "tolerance": 0.0005,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the stated model, axes and unit scale before interpreting the result.",
+        "solution": "The stated model gives approximately 5 in the requested scale. Check the system boundary and assumptions used in the balance.",
+        "lesson_ids": [
+          "physics-mechanics-12"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physics-mechanics-12:strain",
+      "type": "numeric",
+      "prompt": "A specimen has initial gauge length 0.020 m and measured gauge extension 0.00020 m. What engineering strain as a fraction follows? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "physics-mechanics-12-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0.01,
+        "unit": "",
+        "tolerance": 1.0000000000000002e-06,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the stated model, axes and unit scale before interpreting the result.",
+        "solution": "The stated model gives approximately 0.01 in the requested scale. Check the system boundary and assumptions used in the balance.",
+        "lesson_ids": [
+          "physics-mechanics-12"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physics-mechanics-12:secant-modulus",
+      "type": "numeric",
+      "prompt": "For engineering stress 5 MPa and engineering strain 0.010 within a stipulated linear specimen model, what modulus in MPa follows? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "physics-mechanics-12-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 500,
+        "unit": "",
+        "tolerance": 0.05,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the stated model, axes and unit scale before interpreting the result.",
+        "solution": "The stated model gives approximately 500 in the requested scale. Check the system boundary and assumptions used in the balance.",
+        "lesson_ids": [
+          "physics-mechanics-12"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physics-mechanics-12:spring-dashpot-stress",
+      "type": "numeric",
+      "prompt": "A synthetic parallel spring/dashpot model uses σ=Eε+ηε′ with E=100000 Pa,η=50000 Pa·s,ε=0.020 and ε′=0.010 s⁻¹. What stress in Pa follows? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "physics-mechanics-12-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 2500,
+        "unit": "",
+        "tolerance": 0.25,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the stated model, axes and unit scale before interpreting the result.",
+        "solution": "The stated model gives approximately 2500 in the requested scale. Check the system boundary and assumptions used in the balance.",
+        "lesson_ids": [
+          "physics-mechanics-12"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physics-mechanics-12:creep-time",
+      "type": "numeric",
+      "prompt": "For that model E=100000 Pa and η=50000 Pa·s under constant imposed stress, what relaxation-to-equilibrium time scale η/E in s follows? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "physics-mechanics-12-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0.5,
+        "unit": "",
+        "tolerance": 5e-05,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the stated model, axes and unit scale before interpreting the result.",
+        "solution": "The stated model gives approximately 0.5 in the requested scale. Check the system boundary and assumptions used in the balance.",
+        "lesson_ids": [
+          "physics-mechanics-12"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physics-mechanics-12:creep-limit",
+      "type": "numeric",
+      "prompt": "For that parallel model E=100000 Pa,η=50000 Pa·s and imposed constant stress 3000 Pa, what equilibrium strain as a fraction follows? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "physics-mechanics-12-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0.03,
+        "unit": "",
+        "tolerance": 3e-06,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the stated model, axes and unit scale before interpreting the result.",
+        "solution": "The stated model gives approximately 0.03 in the requested scale. Check the system boundary and assumptions used in the balance.",
+        "lesson_ids": [
+          "physics-mechanics-12"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physics-mechanics-12:geometry",
+      "type": "single_choice",
+      "prompt": "What does σ=F/A₀ and ε=ΔL/L₀ specify?",
+      "points": 1,
+      "objective_ids": [
+        "physics-mechanics-12-objective-1"
+      ],
+      "options": [
+        "A complete anisotropic constitutive tensor.",
+        "Engineering definitions using initial geometry, with secant or fitted slope requiring further definition.",
+        "True stress and true strain for every large deformation."
+      ],
+      "solution_spec": {
+        "answer": 1
+      },
+      "feedback": {
+        "hint": "Check the declared body, constraint or observation model.",
+        "solution": "Engineering definitions using initial geometry, with secant or fitted slope requiring further definition.",
+        "lesson_ids": [
+          "physics-mechanics-12"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physics-mechanics-12:crosshead",
+      "type": "single_choice",
+      "prompt": "When can crosshead displacement differ from specimen gauge extension?",
+      "points": 1,
+      "objective_ids": [
+        "physics-mechanics-12-objective-3"
+      ],
+      "options": [
+        "Only when force is exactly zero.",
+        "When grips, machine compliance or slip contribute to reported motion.",
+        "Never; both are identical by definition."
+      ],
+      "solution_spec": {
+        "answer": 1
+      },
+      "feedback": {
+        "hint": "Check the declared body, constraint or observation model.",
+        "solution": "When grips, machine compliance or slip contribute to reported motion.",
+        "lesson_ids": [
+          "physics-mechanics-12"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physics-mechanics-12:constitutive-scope",
+      "type": "single_choice",
+      "prompt": "What does the supplied one-dimensional spring/dashpot law identify?",
+      "points": 1,
+      "objective_ids": [
+        "physics-mechanics-12-objective-3"
+      ],
+      "options": [
+        "A unique microscopic cause of every measured contrast.",
+        "A universal law for all tissue orientations and rates.",
+        "A stipulated scalar response model over stated conditions, not a full tissue mechanism."
+      ],
+      "solution_spec": {
+        "answer": 2
+      },
+      "feedback": {
+        "hint": "Check the declared body, constraint or observation model.",
+        "solution": "A stipulated scalar response model over stated conditions, not a full tissue mechanism.",
+        "lesson_ids": [
+          "physics-mechanics-12"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physics-mechanics-13:reported-displacement",
+      "type": "numeric",
+      "prompt": "A synthetic series model has d_report=d₀+C_mF+F/k_s, d₀=0.002 m,C_m=0.001 m/N,k_s=1000 N/m,F=0.30 N. What reported displacement in mm follows? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "physics-mechanics-13-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 2.6,
+        "unit": "",
+        "tolerance": 0.00026000000000000003,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the stated model, axes and unit scale before interpreting the result.",
+        "solution": "The stated model gives approximately 2.6 in the requested scale. Check the system boundary and assumptions used in the balance.",
+        "lesson_ids": [
+          "physics-mechanics-13"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physics-mechanics-13:apparent-stiffness",
+      "type": "numeric",
+      "prompt": "For that series model C_m=0.001 m/N,k_s=1000 N/m, what apparent stiffness in N/m follows after subtracting the constant baseline? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "physics-mechanics-13-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 500,
+        "unit": "",
+        "tolerance": 0.05,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the stated model, axes and unit scale before interpreting the result.",
+        "solution": "The stated model gives approximately 500 in the requested scale. Check the system boundary and assumptions used in the balance.",
+        "lesson_ids": [
+          "physics-mechanics-13"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physics-mechanics-13:machine-compliance",
+      "type": "numeric",
+      "prompt": "An independent ideal zero-compliance reference has measured displacement slope 0.001 m/N. What machine compliance in mm/N follows under that assumption? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "physics-mechanics-13-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 1,
+        "unit": "",
+        "tolerance": 0.0001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the stated model, axes and unit scale before interpreting the result.",
+        "solution": "The stated model gives approximately 1 in the requested scale. Check the system boundary and assumptions used in the balance.",
+        "lesson_ids": [
+          "physics-mechanics-13"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physics-mechanics-13:gauge-extension",
+      "type": "numeric",
+      "prompt": "For that series model at F=0.30 N with k_s=1000 N/m, what specimen gauge extension in mm remains after baseline and machine-compliance correction? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "physics-mechanics-13-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0.3,
+        "unit": "",
+        "tolerance": 3e-05,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the stated model, axes and unit scale before interpreting the result.",
+        "solution": "The stated model gives approximately 0.3 in the requested scale. Check the system boundary and assumptions used in the balance.",
+        "lesson_ids": [
+          "physics-mechanics-13"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physics-mechanics-13:corrected-modulus",
+      "type": "numeric",
+      "prompt": "Corrected specimen stiffness is 1000 N/m, gauge length 0.020 m and initial area 0.000001 m². What modulus in MPa follows in the stipulated linear model? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "physics-mechanics-13-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 20,
+        "unit": "",
+        "tolerance": 0.002,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the stated model, axes and unit scale before interpreting the result.",
+        "solution": "The stated model gives approximately 20 in the requested scale. Check the system boundary and assumptions used in the balance.",
+        "lesson_ids": [
+          "physics-mechanics-13"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physics-mechanics-13:apparent-modulus",
+      "type": "numeric",
+      "prompt": "For apparent stiffness 500 N/m, gauge length 0.020 m and area 0.000001 m², what apparent modulus in MPa follows if machine deformation is treated as specimen extension? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "physics-mechanics-13-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 10,
+        "unit": "",
+        "tolerance": 0.001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the stated model, axes and unit scale before interpreting the result.",
+        "solution": "The stated model gives approximately 10 in the requested scale. Check the system boundary and assumptions used in the balance.",
+        "lesson_ids": [
+          "physics-mechanics-13"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physics-mechanics-13:offset-slope",
+      "type": "single_choice",
+      "prompt": "Does subtracting a constant displacement offset remove a positive force-dependent machine compliance?",
+      "points": 1,
+      "objective_ids": [
+        "physics-mechanics-13-objective-1"
+      ],
+      "options": [
+        "No; the intercept changes while the force slope retains that compliance.",
+        "Yes; all observation effects are additive constants.",
+        "Yes; subtracting a constant reverses the slope."
+      ],
+      "solution_spec": {
+        "answer": 0
+      },
+      "feedback": {
+        "hint": "Check the declared body, constraint or observation model.",
+        "solution": "No; the intercept changes while the force slope retains that compliance.",
+        "lesson_ids": [
+          "physics-mechanics-13"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physics-mechanics-13:series-model",
+      "type": "single_choice",
+      "prompt": "In the declared series arrangement, which quantities add?",
+      "points": 1,
+      "objective_ids": [
+        "physics-mechanics-13-objective-2"
+      ],
+      "options": [
+        "Machine and specimen stiffnesses directly.",
+        "Machine and specimen compliances under the same force.",
+        "Stress and displacement because their units match."
+      ],
+      "solution_spec": {
+        "answer": 1
+      },
+      "feedback": {
+        "hint": "Check the declared body, constraint or observation model.",
+        "solution": "Machine and specimen compliances under the same force.",
+        "lesson_ids": [
+          "physics-mechanics-13"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physics-mechanics-13:case-cause",
+      "type": "single_choice",
+      "prompt": "Does a calibrated orientation stiffness contrast prove one unique tendon microstructural explanation?",
+      "points": 1,
+      "objective_ids": [
+        "physics-mechanics-13-objective-3"
+      ],
+      "options": [
+        "Yes; matching equipment removes every material-model limitation.",
+        "Yes; calibration makes every biological explanation unique.",
+        "No; geometry, rate, history and constitutive definitions still matter."
+      ],
+      "solution_spec": {
+        "answer": 2
+      },
+      "feedback": {
+        "hint": "Check the declared body, constraint or observation model.",
+        "solution": "No; geometry, rate, history and constitutive definitions still matter.",
+        "lesson_ids": [
+          "physics-mechanics-13"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physics-mechanics-lab-01:summary",
+      "type": "file_upload",
+      "prompt": "Group the synthetic displacement reports by sample. Upload exact columns sample,replicates,mean_displacement_mm with all nine sample codes a00,a02,a04,b00,b02,b04,ref00,ref02,ref04. Summarize raw displacement before correction.",
+      "points": 18,
+      "objective_ids": [
+        "physics-mechanics-lab-01-objective-1"
+      ],
+      "solution_spec": {
+        "accepted_media_types": [
+          "text/csv"
+        ],
+        "max_bytes": 32768,
+        "validation_spec": {
+          "format": "csv-numeric-table-v1",
+          "delimiter": ",",
+          "key_column": "sample",
+          "columns": [
+            "sample",
+            "replicates",
+            "mean_displacement_mm"
+          ],
+          "checks": [
+            {
+              "id": "a00-replicates",
+              "row_id": "a00",
+              "column": "replicates",
+              "type": "numeric",
+              "answer": 3.0,
+              "unit": "",
+              "tolerance": 0,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "count",
+                "values": [
+                  0.99,
+                  1,
+                  1.01
+                ]
+              }
+            },
+            {
+              "id": "a00-mean_displacement_mm",
+              "row_id": "a00",
+              "column": "mean_displacement_mm",
+              "type": "numeric",
+              "answer": 1.0,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  0.99,
+                  1,
+                  1.01
+                ]
+              }
+            },
+            {
+              "id": "a02-replicates",
+              "row_id": "a02",
+              "column": "replicates",
+              "type": "numeric",
+              "answer": 3.0,
+              "unit": "",
+              "tolerance": 0,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "count",
+                "values": [
+                  1.19,
+                  1.2,
+                  1.21
+                ]
+              }
+            },
+            {
+              "id": "a02-mean_displacement_mm",
+              "row_id": "a02",
+              "column": "mean_displacement_mm",
+              "type": "numeric",
+              "answer": 1.2,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  1.19,
+                  1.2,
+                  1.21
+                ]
+              }
+            },
+            {
+              "id": "a04-replicates",
+              "row_id": "a04",
+              "column": "replicates",
+              "type": "numeric",
+              "answer": 3.0,
+              "unit": "",
+              "tolerance": 0,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "count",
+                "values": [
+                  1.39,
+                  1.4,
+                  1.41
+                ]
+              }
+            },
+            {
+              "id": "a04-mean_displacement_mm",
+              "row_id": "a04",
+              "column": "mean_displacement_mm",
+              "type": "numeric",
+              "answer": 1.4,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  1.39,
+                  1.4,
+                  1.41
+                ]
+              }
+            },
+            {
+              "id": "b00-replicates",
+              "row_id": "b00",
+              "column": "replicates",
+              "type": "numeric",
+              "answer": 3.0,
+              "unit": "",
+              "tolerance": 0,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "count",
+                "values": [
+                  0.99,
+                  1.0,
+                  1.01
+                ]
+              }
+            },
+            {
+              "id": "b00-mean_displacement_mm",
+              "row_id": "b00",
+              "column": "mean_displacement_mm",
+              "type": "numeric",
+              "answer": 1.0,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  0.99,
+                  1.0,
+                  1.01
+                ]
+              }
+            },
+            {
+              "id": "b02-replicates",
+              "row_id": "b02",
+              "column": "replicates",
+              "type": "numeric",
+              "answer": 3.0,
+              "unit": "",
+              "tolerance": 0,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "count",
+                "values": [
+                  1.29,
+                  1.3,
+                  1.31
+                ]
+              }
+            },
+            {
+              "id": "b02-mean_displacement_mm",
+              "row_id": "b02",
+              "column": "mean_displacement_mm",
+              "type": "numeric",
+              "answer": 1.3,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  1.29,
+                  1.3,
+                  1.31
+                ]
+              }
+            },
+            {
+              "id": "b04-replicates",
+              "row_id": "b04",
+              "column": "replicates",
+              "type": "numeric",
+              "answer": 3.0,
+              "unit": "",
+              "tolerance": 0,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "count",
+                "values": [
+                  1.59,
+                  1.6,
+                  1.61
+                ]
+              }
+            },
+            {
+              "id": "b04-mean_displacement_mm",
+              "row_id": "b04",
+              "column": "mean_displacement_mm",
+              "type": "numeric",
+              "answer": 1.6,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  1.59,
+                  1.6,
+                  1.61
+                ]
+              }
+            },
+            {
+              "id": "ref00-replicates",
+              "row_id": "ref00",
+              "column": "replicates",
+              "type": "numeric",
+              "answer": 3.0,
+              "unit": "",
+              "tolerance": 0,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "count",
+                "values": [
+                  0.99,
+                  1.0,
+                  1.01
+                ]
+              }
+            },
+            {
+              "id": "ref00-mean_displacement_mm",
+              "row_id": "ref00",
+              "column": "mean_displacement_mm",
+              "type": "numeric",
+              "answer": 1.0,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  0.99,
+                  1.0,
+                  1.01
+                ]
+              }
+            },
+            {
+              "id": "ref02-replicates",
+              "row_id": "ref02",
+              "column": "replicates",
+              "type": "numeric",
+              "answer": 3.0,
+              "unit": "",
+              "tolerance": 0,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "count",
+                "values": [
+                  1.09,
+                  1.1,
+                  1.11
+                ]
+              }
+            },
+            {
+              "id": "ref02-mean_displacement_mm",
+              "row_id": "ref02",
+              "column": "mean_displacement_mm",
+              "type": "numeric",
+              "answer": 1.1,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  1.09,
+                  1.1,
+                  1.11
+                ]
+              }
+            },
+            {
+              "id": "ref04-replicates",
+              "row_id": "ref04",
+              "column": "replicates",
+              "type": "numeric",
+              "answer": 3.0,
+              "unit": "",
+              "tolerance": 0,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "count",
+                "values": [
+                  1.19,
+                  1.2,
+                  1.21
+                ]
+              }
+            },
+            {
+              "id": "ref04-mean_displacement_mm",
+              "row_id": "ref04",
+              "column": "mean_displacement_mm",
+              "type": "numeric",
+              "answer": 1.2,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  1.19,
+                  1.2,
+                  1.21
+                ]
+              }
+            }
+          ]
+        },
+        "rubric": [
+          {
+            "id": "a00-replicates",
+            "criterion": "a00: replicates",
+            "points": 1,
+            "evidence": [
+              "Recomputes replicates for a00 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "a00-mean_displacement_mm",
+            "criterion": "a00: mean_displacement_mm",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_displacement_mm for a00 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "a02-replicates",
+            "criterion": "a02: replicates",
+            "points": 1,
+            "evidence": [
+              "Recomputes replicates for a02 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "a02-mean_displacement_mm",
+            "criterion": "a02: mean_displacement_mm",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_displacement_mm for a02 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "a04-replicates",
+            "criterion": "a04: replicates",
+            "points": 1,
+            "evidence": [
+              "Recomputes replicates for a04 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "a04-mean_displacement_mm",
+            "criterion": "a04: mean_displacement_mm",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_displacement_mm for a04 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "b00-replicates",
+            "criterion": "b00: replicates",
+            "points": 1,
+            "evidence": [
+              "Recomputes replicates for b00 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "b00-mean_displacement_mm",
+            "criterion": "b00: mean_displacement_mm",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_displacement_mm for b00 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "b02-replicates",
+            "criterion": "b02: replicates",
+            "points": 1,
+            "evidence": [
+              "Recomputes replicates for b02 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "b02-mean_displacement_mm",
+            "criterion": "b02: mean_displacement_mm",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_displacement_mm for b02 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "b04-replicates",
+            "criterion": "b04: replicates",
+            "points": 1,
+            "evidence": [
+              "Recomputes replicates for b04 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "b04-mean_displacement_mm",
+            "criterion": "b04: mean_displacement_mm",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_displacement_mm for b04 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "ref00-replicates",
+            "criterion": "ref00: replicates",
+            "points": 1,
+            "evidence": [
+              "Recomputes replicates for ref00 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "ref00-mean_displacement_mm",
+            "criterion": "ref00: mean_displacement_mm",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_displacement_mm for ref00 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "ref02-replicates",
+            "criterion": "ref02: replicates",
+            "points": 1,
+            "evidence": [
+              "Recomputes replicates for ref02 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "ref02-mean_displacement_mm",
+            "criterion": "ref02: mean_displacement_mm",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_displacement_mm for ref02 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "ref04-replicates",
+            "criterion": "ref04: replicates",
+            "points": 1,
+            "evidence": [
+              "Recomputes replicates for ref04 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "ref04-mean_displacement_mm",
+            "criterion": "ref04: mean_displacement_mm",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_displacement_mm for ref04 from the preparation-level values."
+            ]
+          }
+        ]
+      },
+      "feedback": {
+        "hint": "Average within each sample code and retain the raw offset.",
+        "solution": "All nine groups have three balanced reports. Their raw means include the common 1 mm displacement offset.",
+        "lesson_ids": [
+          "physics-mechanics-lab-01"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physics-mechanics-lab-01:offset",
+      "type": "numeric",
+      "prompt": "The ideal reference has zero specimen compliance. What additive displacement offset in mm follows from the mean ref00 report at zero force? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "physics-mechanics-lab-01-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 1,
+        "unit": "",
+        "tolerance": 0.001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the zero-force mean, not the force-dependent slope.",
+        "solution": "At zero force both series-compliance terms vanish, leaving a 1 mm reporting offset.",
+        "lesson_ids": [
+          "physics-mechanics-lab-01"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physics-mechanics-lab-01:machine-compliance",
+      "type": "numeric",
+      "prompt": "Using the ideal zero-compliance reference, what machine compliance in mm/N follows from (mean ref04−mean ref00)/0.40 N? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "physics-mechanics-lab-01-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0.5,
+        "unit": "",
+        "tolerance": 0.001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Subtract the common offset before comparing the reference displacements.",
+        "solution": "The reference slope (1.2−1.0)/0.40=0.5 mm/N is machine compliance because reference compliance is stipulated zero.",
+        "lesson_ids": [
+          "physics-mechanics-lab-01"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physics-mechanics-lab-01:a-stiffness",
+      "type": "numeric",
+      "prompt": "Orientation A has total raw slope 1.0 mm/N; the ideal reference gives machine slope 0.5 mm/N. What corrected specimen stiffness in N/m follows? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "physics-mechanics-lab-01-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 2000,
+        "unit": "",
+        "tolerance": 0.1,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Subtract compliances, convert mm/N to m/N, then invert.",
+        "solution": "A specimen compliance is (1.0−0.5) mm/N=0.0005 m/N, so corrected stiffness is 2000 N/m.",
+        "lesson_ids": [
+          "physics-mechanics-lab-01"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physics-mechanics-lab-01:b-stiffness",
+      "type": "numeric",
+      "prompt": "Orientation B has total raw slope 1.5 mm/N; the ideal reference gives machine slope 0.5 mm/N. What corrected specimen stiffness in N/m follows? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "physics-mechanics-lab-01-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 1000,
+        "unit": "",
+        "tolerance": 0.1,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Series compliances add; stiffnesses do not add in this arrangement.",
+        "solution": "B specimen compliance is (1.5−0.5) mm/N=0.001 m/N, so corrected stiffness is 1000 N/m.",
+        "lesson_ids": [
+          "physics-mechanics-lab-01"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physics-mechanics-lab-01:interpretation",
+      "type": "structured",
+      "prompt": "Choose claims supported by the declared series model and reference.",
+      "points": 3,
+      "objective_ids": [
+        "physics-mechanics-lab-01-objective-3"
+      ],
+      "response_fields": [
+        {
+          "id": "baseline",
+          "type": "single_choice",
+          "prompt": "What does subtracting the zero-force baseline accomplish?",
+          "options": [
+            "It removes the additive offset while leaving machine compliance in the force-dependent displacement.",
+            "It removes every machine effect including force-dependent compliance.",
+            "It changes the force slope even when the offset is constant."
+          ],
+          "points": 1
+        },
+        {
+          "id": "reference",
+          "type": "single_choice",
+          "prompt": "If a real reference has known nonzero compliance C_ref, how should its slope be used?",
+          "options": [
+            "Subtract C_ref from the measured reference slope to estimate machine compliance.",
+            "Treat the entire reference slope as machine compliance regardless of C_ref.",
+            "Add C_ref to the measured slope to obtain machine compliance."
+          ],
+          "points": 1
+        },
+        {
+          "id": "orientation",
+          "type": "single_choice",
+          "prompt": "After matched geometry and calibration, does a stiffness contrast identify a unique microscopic tendon mechanism?",
+          "options": [
+            "No; orientation, history and material-model metadata still constrain competing explanations.",
+            "Yes; the contrast proves one particular fiber-recruitment mechanism.",
+            "Yes; a synthetic reference validates any real tissue measurement."
+          ],
+          "points": 1
+        }
+      ],
+      "solution_spec": {
+        "field_specs": [
+          {
+            "id": "baseline",
+            "type": "single_choice",
+            "answer": 0
+          },
+          {
+            "id": "reference",
+            "type": "single_choice",
+            "answer": 0
+          },
+          {
+            "id": "orientation",
+            "type": "single_choice",
+            "answer": 0
+          }
+        ],
+        "rubric": [
+          {
+            "id": "baseline",
+            "criterion": "Offset versus compliance",
+            "points": 1,
+            "evidence": [
+              "A constant offset changes an intercept; compliance changes a slope."
+            ]
+          },
+          {
+            "id": "reference",
+            "criterion": "Reference assumption",
+            "points": 1,
+            "evidence": [
+              "The measured reference slope contains both series compliances."
+            ]
+          },
+          {
+            "id": "orientation",
+            "criterion": "Case interpretation",
+            "points": 1,
+            "evidence": [
+              "The declared scalar model supports a conditional comparison, not a unique biological cause."
+            ]
+          }
+        ]
+      },
+      "feedback": {
+        "hint": "Separate intercept correction, reference-model correction and causal interpretation.",
+        "solution": "The baseline leaves the slope unchanged; finite reference compliance must be subtracted; a contrast alone does not identify a microscopic material mechanism.",
+        "lesson_ids": [
+          "physics-mechanics-lab-01"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physics-mechanics-lab-01:claims",
+      "type": "multiple_select",
+      "prompt": "Which statements are supported by this construction? Select all that apply.",
+      "points": 2,
+      "objective_ids": [
+        "physics-mechanics-lab-01-objective-3"
+      ],
+      "options": [
+        "The three reports prove independent Gaussian measurement errors.",
+        "The shared machine compliance compresses the apparent A/B stiffness contrast.",
+        "The three report offsets deliberately balance around each group mean.",
+        "A negative corrected compliance is incompatible with the stipulated passive positive-stiffness series model.",
+        "This synthetic comparison proves a real tendon mechanism."
+      ],
+      "solution_spec": {
+        "answer": [
+          1,
+          2,
+          3
+        ],
+        "partial_credit": "correct-minus-incorrect-clamped-v1"
+      },
+      "feedback": {
+        "hint": "Check model feasibility and the provenance of the supplied reports.",
+        "solution": "Balanced reports and positive-compliance feasibility follow from the construction. Shared compliance compresses the contrast; real noise or tissue mechanisms are not demonstrated.",
+        "lesson_ids": [
+          "physics-mechanics-lab-01"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "physics-mechanics-lab-01:contrast",
+      "type": "single_choice",
+      "prompt": "Under matched geometry, what happens to the A/B stiffness ratio when the common machine compliance is removed?",
+      "points": 1,
+      "objective_ids": [
+        "physics-mechanics-lab-01-objective-3"
+      ],
+      "options": [
+        "It increases from apparent 1.5 to corrected 2 under the stipulated model.",
+        "It stays 1.5 because only the additive offset matters.",
+        "It becomes 1 because both specimens use the same machine."
+      ],
+      "solution_spec": {
+        "answer": 0
+      },
+      "feedback": {
+        "hint": "Invert each corrected compliance rather than dividing raw displacements.",
+        "solution": "Raw slopes give apparent stiffnesses 1000 and 666.667 N/m; corrected values 2000 and 1000 N/m give ratio 2.",
+        "lesson_ids": [
+          "physics-mechanics-lab-01"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
     }
   ]
 }

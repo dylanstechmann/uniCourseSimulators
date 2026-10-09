@@ -80,6 +80,114 @@
       "original_content": true,
       "license": "CC-BY-4.0",
       "modifications": []
+    },
+    {
+      "module_id": "physics-mechanics-module-7",
+      "lesson_id": "physics-mechanics-7",
+      "reading": "modules/07-vector-kinematics-frames-and-constraints.md",
+      "source_ids": [
+        "mechanics",
+        "engineeringMath"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "physics-mechanics-module-8",
+      "lesson_id": "physics-mechanics-8",
+      "reading": "modules/08-free-body-diagrams-contact-and-friction.md",
+      "source_ids": [
+        "mechanics",
+        "engineeringMath",
+        "openstax-physics-friction"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "physics-mechanics-module-9",
+      "lesson_id": "physics-mechanics-9",
+      "reading": "modules/09-work-momentum-and-system-boundaries.md",
+      "source_ids": [
+        "mechanics",
+        "engineeringMath"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "physics-mechanics-module-10",
+      "lesson_id": "physics-mechanics-10",
+      "reading": "modules/10-torque-angular-momentum-and-rolling.md",
+      "source_ids": [
+        "mechanics",
+        "engineeringMath",
+        "openstax-physics-rolling"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "physics-mechanics-module-11",
+      "lesson_id": "physics-mechanics-11",
+      "reading": "modules/11-oscillations-damping-and-energy-balance.md",
+      "source_ids": [
+        "mechanics",
+        "engineeringMath",
+        "openstax-physics-damping"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "physics-mechanics-module-12",
+      "lesson_id": "physics-mechanics-12",
+      "reading": "modules/12-stress-strain-orientation-and-time-dependence.md",
+      "source_ids": [
+        "mechanics",
+        "engineeringMath",
+        "openstax-physics-stress-strain"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "physics-mechanics-module-13",
+      "lesson_id": "physics-mechanics-13",
+      "reading": "modules/13-machine-compliance-calibration-and-model-inference.md",
+      "source_ids": [
+        "mechanics",
+        "engineeringMath"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "physics-mechanics-module-lab-01",
+      "lesson_id": "physics-mechanics-lab-01",
+      "reading": "labs/01-machine-compliance-and-orientation.md",
+      "source_ids": [
+        "mechanics",
+        "engineeringMath"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
     }
   ]
 }

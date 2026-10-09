@@ -3464,6 +3464,122 @@
       "checksum": null,
       "imported_assets": [],
       "rights_notes": "Only links and original explanation are selected; no third-party asset reuse is cleared."
+    },
+    {
+      "id": "openstax-physics-friction",
+      "title": "University Physics Volume 1: 6.2 Friction",
+      "institution": "OpenStax, Rice University",
+      "url": "https://openstax.org/books/university-physics-volume-1/pages/6-2-friction",
+      "accessed_at": "2026-10-09",
+      "license": "Link-only factual reference selected; no teaching assets imported.",
+      "reuse_mode": "link-only-reference",
+      "permissions": {
+        "linking": true,
+        "quotation": false,
+        "adaptation": false,
+        "redistribution": false
+      },
+      "attribution_requirements": [
+        "Identify OpenStax University Physics Volume 1, the section title and exact URL."
+      ],
+      "third_party_notes": "Primary section retrieved to check standard conceptual relations. Original instruction, diagram, examples and data do not copy source prose, problems, figures or datasets.",
+      "mapped_courses": [
+        "physics-mechanics"
+      ],
+      "mapped_modules": [
+        "physics-mechanics-module-8"
+      ],
+      "version": "University Physics Volume 1; primary section retrieved 2026-10-09",
+      "checksum": null,
+      "imported_assets": [],
+      "rights_notes": "Only links and original explanation are selected; no third-party asset reuse is cleared."
+    },
+    {
+      "id": "openstax-physics-rolling",
+      "title": "University Physics Volume 1: 11.1 Rolling Motion",
+      "institution": "OpenStax, Rice University",
+      "url": "https://openstax.org/books/university-physics-volume-1/pages/11-1-rolling-motion",
+      "accessed_at": "2026-10-09",
+      "license": "Link-only factual reference selected; no teaching assets imported.",
+      "reuse_mode": "link-only-reference",
+      "permissions": {
+        "linking": true,
+        "quotation": false,
+        "adaptation": false,
+        "redistribution": false
+      },
+      "attribution_requirements": [
+        "Identify OpenStax University Physics Volume 1, the section title and exact URL."
+      ],
+      "third_party_notes": "Primary section retrieved to check standard conceptual relations. Original instruction, diagram, examples and data do not copy source prose, problems, figures or datasets.",
+      "mapped_courses": [
+        "physics-mechanics"
+      ],
+      "mapped_modules": [
+        "physics-mechanics-module-10"
+      ],
+      "version": "University Physics Volume 1; primary section retrieved 2026-10-09",
+      "checksum": null,
+      "imported_assets": [],
+      "rights_notes": "Only links and original explanation are selected; no third-party asset reuse is cleared."
+    },
+    {
+      "id": "openstax-physics-damping",
+      "title": "University Physics Volume 1: 15.5 Damped Oscillations",
+      "institution": "OpenStax, Rice University",
+      "url": "https://openstax.org/books/university-physics-volume-1/pages/15-5-damped-oscillations",
+      "accessed_at": "2026-10-09",
+      "license": "Link-only factual reference selected; no teaching assets imported.",
+      "reuse_mode": "link-only-reference",
+      "permissions": {
+        "linking": true,
+        "quotation": false,
+        "adaptation": false,
+        "redistribution": false
+      },
+      "attribution_requirements": [
+        "Identify OpenStax University Physics Volume 1, the section title and exact URL."
+      ],
+      "third_party_notes": "Primary section retrieved to check standard conceptual relations. Original instruction, diagram, examples and data do not copy source prose, problems, figures or datasets.",
+      "mapped_courses": [
+        "physics-mechanics"
+      ],
+      "mapped_modules": [
+        "physics-mechanics-module-11"
+      ],
+      "version": "University Physics Volume 1; primary section retrieved 2026-10-09",
+      "checksum": null,
+      "imported_assets": [],
+      "rights_notes": "Only links and original explanation are selected; no third-party asset reuse is cleared."
+    },
+    {
+      "id": "openstax-physics-stress-strain",
+      "title": "University Physics Volume 1: 12.3 Stress, Strain, and Elastic Modulus",
+      "institution": "OpenStax, Rice University",
+      "url": "https://openstax.org/books/university-physics-volume-1/pages/12-3-stress-strain-and-elastic-modulus",
+      "accessed_at": "2026-10-09",
+      "license": "Link-only factual reference selected; no teaching assets imported.",
+      "reuse_mode": "link-only-reference",
+      "permissions": {
+        "linking": true,
+        "quotation": false,
+        "adaptation": false,
+        "redistribution": false
+      },
+      "attribution_requirements": [
+        "Identify OpenStax University Physics Volume 1, the section title and exact URL."
+      ],
+      "third_party_notes": "Primary section retrieved to check standard conceptual relations. Original instruction, diagram, examples and data do not copy source prose, problems, figures or datasets.",
+      "mapped_courses": [
+        "physics-mechanics"
+      ],
+      "mapped_modules": [
+        "physics-mechanics-module-12"
+      ],
+      "version": "University Physics Volume 1; primary section retrieved 2026-10-09",
+      "checksum": null,
+      "imported_assets": [],
+      "rights_notes": "Only links and original explanation are selected; no third-party asset reuse is cleared."
     }
   ]
 }

@@ -1,12 +1,12 @@
 # Physics: Mechanics for Biomedical Engineers
 
-**Maturity: partial. Version: 0.3.1.**
+**Maturity: partial. Version: 0.4.0.** Personal hobby and learning project with substantial AI assistance; no university equivalence or institutional credit.
 
-Kinematics, forces, energy, momentum, rotation, and material response taught through free-body diagrams and experimental checks.
+Original instruction develops vector motion, free-body balances, contact, conservation laws, rotation, damping and material inference using declared models. An original text free-body diagram includes a verbal description. Preserved impact and centrifuge lessons remain alongside the new readings.
 
 ## Prerequisites
 
-Algebra and trigonometry; calculus taken concurrently. Structured required, recommended, and concurrent relationships appear in the manifest and remain subject to author review. This package establishes no university prerequisite equivalency.
+Algebra and trigonometry; Calculus I taken concurrently. Manifest relationships remain provisional and establish no university prerequisite equivalency.
 
 ## Authored outcomes
 
@@ -15,27 +15,35 @@ Algebra and trigonometry; calculus taken concurrently. Structured required, reco
 - Quantify torque, angular momentum, and rotational energy.
 - Check mechanical predictions against units and limiting cases.
 
-## Units and lessons
+## Proposed 14-week schedule
 
-Units 1–4 keep the short prototype readings preserved from the original project; they need substantial expansion. Units 5 and 6 are original lesson-length readings (about 830 to 880 words) with learning objectives, a worked example, common mistakes, stated limits and explicitly synthetic data. No unit has been reviewed by a qualified instructor.
+This is planning scope, not measured workload or a reviewed semester. Compact prototype readings remain in weeks 1,4,6,9. Week 14 is a synthetic machine-compliance/orientation lab and revisits the preserved tendon self-assessment case. All activities are public formative practice.
 
-| Unit | Lesson | Reading | Practice items | Retrieval cards |
-|---:|---|---|---:|---:|
-| 1 | Kinematics and force balance | short prototype | 2 | 2 |
-| 2 | Work, energy, and power | short prototype | 2 | 2 |
-| 3 | Momentum, collisions, and impulse | short prototype | 2 | 2 |
-| 4 | Rotation, torque, and material response | short prototype | 2 | 2 |
-| 5 | Impact forces: impulse, work–energy and why stopping more slowly protects tissue | lesson-length original | 6 | 4 |
-| 6 | Rotation in the lab: the centrifuge, relative centrifugal force, moment of inertia and why balance matters | lesson-length original | 6 | 4 |
+| Week | Reading | Items | Cards |
+|---|---|---:|---:|
+| 1 | Kinematics and force balance | 2 | 2 |
+| 2 | Vector kinematics, frames and constraints | 9 | 4 |
+| 3 | Free-body diagrams, contact and friction | 9 | 4 |
+| 4 | Work, energy, and power | 2 | 2 |
+| 5 | Work, momentum and system boundaries | 9 | 4 |
+| 6 | Momentum, collisions, and impulse | 2 | 2 |
+| 7 | Impact forces: impulse, work–energy and why stopping more slowly protects tissue | 6 | 4 |
+| 8 | Torque, angular momentum and rolling | 9 | 4 |
+| 9 | Rotation, torque, and material response | 2 | 2 |
+| 10 | Rotation in the lab: the centrifuge, relative centrifugal force, moment of inertia and why balance matters | 6 | 4 |
+| 11 | Oscillations, damping and energy balance | 9 | 4 |
+| 12 | Stress, strain, orientation and time dependence | 9 | 4 |
+| 13 | Machine compliance, calibration and model inference | 9 | 4 |
+| 14 | Virtual lab 1: machine compliance and orientation-dependent stiffness | 8 | 4 |
 
-## Assessment and study policy
+## Assessment policy
 
-Every lesson has public formative practice items (numeric and single-choice) tagged to its learning objectives. The practice assessments for the original lessons also list the course outcomes those objectives link to; the objectives of the prototype units are not yet linked to course outcomes, so their assessments list none. In total the package has 20 practice items and 16 retrieval cards for the review queue. A course case includes a self-assessment checklist. These are practice activities, with unlimited retries and no institutional grade, university credit, or transferable credit. Workload has not been measured.
+There are 14 readings, 91 public practice items and 48 retrieval cards, plus the preserved case. Each new lesson has six numeric and three conceptual choices. The lab includes CSV summaries, numerical compliance correction, structured choices and multiple-select interpretation. Eight preserved numeric items require units; new items request a bare number in an explicit scale. Significant figures, dimensions, drawings, written arguments and uncertainty analyses are not automatically scored. Unlimited retries provide study feedback, not course grades. Outcome links still need qualified review.
 
-## Schedule and current limitations
+## Current limitations
 
-No full-semester calendar or 14-week structure has been authored. No substantive homework sets, laboratories, midterm, final, or graded cumulative project are included. The four short prototype readings require substantial expansion, and the newer lessons rely on explicitly synthetic data. Nothing in this package has been reviewed by a qualified instructor; qualified human review is required before this course can meet the complete-course quality standard.
+Four compact readings remain. One data lab is not a laboratory sequence; graded homework, exams and a cumulative graded project remain absent. Workload, accessibility and mechanical quality await review. The synthetic lab uses an ideal reference and a supplied linear series model; it does not validate equipment, tissue measurements or unique material mechanisms. Preserved impact approximations are supplemented by a new explicit net/contact force balance, without changing their public questions or keys. The package remains partial, unreviewed and formative-only.
 
 ## Sources and licensing
 
-Read source-map.json for module provenance and content/SOURCES_AND_LICENSES.md for the software/content license boundary. Listed source courses are public curriculum comparators; no affiliation or equivalency is implied.
+Existing MIT mechanics and engineering-mathematics links remain scope comparators. Four OpenStax University Physics Volume 1 sections were retrieved as link-only references for friction, rolling, damping and stress/strain definitions. No teaching prose, problem, figure or dataset was copied, and no new paper identifier was introduced. Original readings, text diagram and synthetic data are CC BY 4.0 with substantial AI assistance. See source-map.json and content/SOURCES_AND_LICENSES.md for rights and the software/content boundary. Links establish no endorsement or review.

@@ -145,6 +145,326 @@
         "physics-mechanics-6-objective-3"
       ],
       "license": "CC-BY-4.0"
+    },
+    {
+      "id": "physics-mechanics-7-card-1",
+      "lesson_id": "physics-mechanics-7",
+      "front": "Vector derivatives",
+      "back": "Differentiate each position component; speed is the magnitude of velocity.",
+      "objective_ids": [
+        "physics-mechanics-7-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "physics-mechanics-7-card-2",
+      "lesson_id": "physics-mechanics-7",
+      "front": "Event constraints",
+      "back": "Solve the specified final-height equation and retain roots in the declared interval.",
+      "objective_ids": [
+        "physics-mechanics-7-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "physics-mechanics-7-card-3",
+      "lesson_id": "physics-mechanics-7",
+      "front": "Frames",
+      "back": "Constant-velocity frames change velocity but preserve acceleration under the stated Galilean model.",
+      "objective_ids": [
+        "physics-mechanics-7-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "physics-mechanics-7-card-4",
+      "lesson_id": "physics-mechanics-7",
+      "front": "Sampling limits",
+      "back": "Endpoint positions do not uniquely determine intervening instantaneous acceleration.",
+      "objective_ids": [
+        "physics-mechanics-7-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "physics-mechanics-8-card-1",
+      "lesson_id": "physics-mechanics-8",
+      "front": "Free-body boundaries",
+      "back": "List forces acting on the chosen body; third-law partners act on different bodies.",
+      "objective_ids": [
+        "physics-mechanics-8-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "physics-mechanics-8-card-2",
+      "lesson_id": "physics-mechanics-8",
+      "front": "Static friction",
+      "back": "Use the friction required for equilibrium and check it does not exceed μ_sN.",
+      "objective_ids": [
+        "physics-mechanics-8-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "physics-mechanics-8-card-3",
+      "lesson_id": "physics-mechanics-8",
+      "front": "Contact feasibility",
+      "back": "Normal contact cannot pull in the simple unilateral-contact model; reassess a negative calculated normal.",
+      "objective_ids": [
+        "physics-mechanics-8-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "physics-mechanics-8-card-4",
+      "lesson_id": "physics-mechanics-8",
+      "front": "Net versus contact",
+      "back": "Contact forces contribute to net force together with weight and other interactions.",
+      "objective_ids": [
+        "physics-mechanics-8-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "physics-mechanics-9-card-1",
+      "lesson_id": "physics-mechanics-9",
+      "front": "Collision system",
+      "back": "Internal collision forces cancel for total momentum; translational kinetic energy need not be conserved.",
+      "objective_ids": [
+        "physics-mechanics-9-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "physics-mechanics-9-card-2",
+      "lesson_id": "physics-mechanics-9",
+      "front": "Impulse and work",
+      "back": "Impulse integrates force over time; work integrates its component along displacement.",
+      "objective_ids": [
+        "physics-mechanics-9-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "physics-mechanics-9-card-3",
+      "lesson_id": "physics-mechanics-9",
+      "front": "Average limits",
+      "back": "Time and displacement averages differ and neither uniquely identifies a peak force.",
+      "objective_ids": [
+        "physics-mechanics-9-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "physics-mechanics-9-card-4",
+      "lesson_id": "physics-mechanics-9",
+      "front": "Gravity correction",
+      "back": "Use net force balance before interpreting momentum change as a contact load.",
+      "objective_ids": [
+        "physics-mechanics-9-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "physics-mechanics-10-card-1",
+      "lesson_id": "physics-mechanics-10",
+      "front": "Torque and axis",
+      "back": "Use r×F about a declared origin and mass distribution about the specified rotation axis.",
+      "objective_ids": [
+        "physics-mechanics-10-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "physics-mechanics-10-card-2",
+      "lesson_id": "physics-mechanics-10",
+      "front": "Rolling energy",
+      "back": "No-slip rolling includes center translation and rotation; static friction must support the constraint.",
+      "objective_ids": [
+        "physics-mechanics-10-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "physics-mechanics-10-card-3",
+      "lesson_id": "physics-mechanics-10",
+      "front": "Angular momentum",
+      "back": "Scalar L=Iω is limited to the stated axis/symmetry conditions.",
+      "objective_ids": [
+        "physics-mechanics-10-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "physics-mechanics-10-card-4",
+      "lesson_id": "physics-mechanics-10",
+      "front": "Contact power",
+      "back": "Ideal static contact on a fixed surface has zero local contact-point velocity; a moving support changes the power analysis.",
+      "objective_ids": [
+        "physics-mechanics-10-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "physics-mechanics-11-card-1",
+      "lesson_id": "physics-mechanics-11",
+      "front": "Oscillator scales",
+      "back": "ω₀=√(k/m),δ=c/(2m) and ω_d=√(ω₀²−δ²) apply to the stated underdamped model.",
+      "objective_ids": [
+        "physics-mechanics-11-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "physics-mechanics-11-card-2",
+      "lesson_id": "physics-mechanics-11",
+      "front": "Energy balance",
+      "back": "Mechanical energy decreases at rate cv²; integrate this loss to check the energy ledger.",
+      "objective_ids": [
+        "physics-mechanics-11-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "physics-mechanics-11-card-3",
+      "lesson_id": "physics-mechanics-11",
+      "front": "Initial velocity",
+      "back": "The sine coefficient must satisfy the initial derivative when an exponential envelope is present.",
+      "objective_ids": [
+        "physics-mechanics-11-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "physics-mechanics-11-card-4",
+      "lesson_id": "physics-mechanics-11",
+      "front": "Inference limits",
+      "back": "A period constrains parameter combinations; more independent observations are needed to recover damping and stiffness.",
+      "objective_ids": [
+        "physics-mechanics-11-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "physics-mechanics-12-card-1",
+      "lesson_id": "physics-mechanics-12",
+      "front": "Engineering quantities",
+      "back": "Use initial area and gauge length for engineering stress and strain; state how modulus is defined.",
+      "objective_ids": [
+        "physics-mechanics-12-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "physics-mechanics-12-card-2",
+      "lesson_id": "physics-mechanics-12",
+      "front": "Parallel spring/dashpot",
+      "back": "σ=Eε+ηε′ combines elastic and rate terms in the supplied scalar model.",
+      "objective_ids": [
+        "physics-mechanics-12-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "physics-mechanics-12-card-3",
+      "lesson_id": "physics-mechanics-12",
+      "front": "Gauge measurement",
+      "back": "Crosshead motion can include machine and grip deformation or slip beyond specimen extension.",
+      "objective_ids": [
+        "physics-mechanics-12-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "physics-mechanics-12-card-4",
+      "lesson_id": "physics-mechanics-12",
+      "front": "Orientation metadata",
+      "back": "Record orientation, geometry, hydration, temperature, rate, history and modulus definition before comparing material values.",
+      "objective_ids": [
+        "physics-mechanics-12-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "physics-mechanics-13-card-1",
+      "lesson_id": "physics-mechanics-13",
+      "front": "Observation model",
+      "back": "An additive displacement offset changes the intercept; series compliance changes the force slope.",
+      "objective_ids": [
+        "physics-mechanics-13-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "physics-mechanics-13-card-2",
+      "lesson_id": "physics-mechanics-13",
+      "front": "Corrected stiffness",
+      "back": "Subtract independently known machine compliance from total compliance and invert after consistent unit conversion.",
+      "objective_ids": [
+        "physics-mechanics-13-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "physics-mechanics-13-card-3",
+      "lesson_id": "physics-mechanics-13",
+      "front": "Reference requirements",
+      "back": "Measured reference slope includes reference compliance unless that contribution is stipulated zero or corrected.",
+      "objective_ids": [
+        "physics-mechanics-13-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "physics-mechanics-13-card-4",
+      "lesson_id": "physics-mechanics-13",
+      "front": "Case inference",
+      "back": "A residual orientation contrast under matched conditions does not uniquely identify a microscopic tissue mechanism.",
+      "objective_ids": [
+        "physics-mechanics-13-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "physics-mechanics-lab-01-card-1",
+      "lesson_id": "physics-mechanics-lab-01",
+      "front": "Baseline and slope",
+      "back": "Subtracting a constant zero-force offset leaves force-dependent machine compliance.",
+      "objective_ids": [
+        "physics-mechanics-lab-01-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "physics-mechanics-lab-01-card-2",
+      "lesson_id": "physics-mechanics-lab-01",
+      "front": "Series correction",
+      "back": "Subtract independently estimated machine compliance from total compliance, then invert in consistent units.",
+      "objective_ids": [
+        "physics-mechanics-lab-01-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "physics-mechanics-lab-01-card-3",
+      "lesson_id": "physics-mechanics-lab-01",
+      "front": "Reference scope",
+      "back": "A finite-compliance reference needs its independently known compliance removed from its observed slope.",
+      "objective_ids": [
+        "physics-mechanics-lab-01-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "physics-mechanics-lab-01-card-4",
+      "lesson_id": "physics-mechanics-lab-01",
+      "front": "Orientation inference",
+      "back": "Matched corrected stiffnesses support a conditional contrast; they do not uniquely identify a real tissue mechanism.",
+      "objective_ids": [
+        "physics-mechanics-lab-01-objective-3"
+      ],
+      "license": "CC-BY-4.0"
     }
   ]
 }

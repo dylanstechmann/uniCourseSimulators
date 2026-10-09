@@ -7,7 +7,7 @@
   "domain": "Physics",
   "level": "Year 1",
   "maturity": "partial",
-  "version": "0.3.1",
+  "version": "0.4.0",
   "license": "MIT OR CC-BY-4.0",
   "content_origin": {
     "kind": "legacy-prototype",
@@ -148,12 +148,346 @@
         "physics-mechanics-outcome-3",
         "physics-mechanics-outcome-4"
       ]
+    },
+    {
+      "id": "physics-mechanics-7-objective-1",
+      "description": "Differentiate a position vector and distinguish speed from velocity.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "physics-mechanics-outcome-4"
+      ]
+    },
+    {
+      "id": "physics-mechanics-7-objective-2",
+      "description": "Calculate a constrained projectile event in consistent axes.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "physics-mechanics-outcome-2"
+      ]
+    },
+    {
+      "id": "physics-mechanics-7-objective-3",
+      "description": "Check frame, sampling and event-domain assumptions.",
+      "bloom": "analyze",
+      "course_outcome_ids": [
+        "physics-mechanics-outcome-4"
+      ]
+    },
+    {
+      "id": "physics-mechanics-8-objective-1",
+      "description": "Identify body-specific forces, contact and consistent axes.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "physics-mechanics-outcome-1"
+      ]
+    },
+    {
+      "id": "physics-mechanics-8-objective-2",
+      "description": "Apply static-friction inequalities and sliding force balances.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "physics-mechanics-outcome-2"
+      ]
+    },
+    {
+      "id": "physics-mechanics-8-objective-3",
+      "description": "Distinguish contact force, net force and third-law partners.",
+      "bloom": "analyze",
+      "course_outcome_ids": [
+        "physics-mechanics-outcome-4"
+      ]
+    },
+    {
+      "id": "physics-mechanics-9-objective-1",
+      "description": "Apply system momentum balance and distinguish kinetic energy loss.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "physics-mechanics-outcome-2"
+      ]
+    },
+    {
+      "id": "physics-mechanics-9-objective-2",
+      "description": "Calculate impulse and variable-force work with explicit boundaries.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "physics-mechanics-outcome-2"
+      ]
+    },
+    {
+      "id": "physics-mechanics-9-objective-3",
+      "description": "Qualify force averages and contact/gravity assumptions.",
+      "bloom": "analyze",
+      "course_outcome_ids": [
+        "physics-mechanics-outcome-4"
+      ]
+    },
+    {
+      "id": "physics-mechanics-10-objective-1",
+      "description": "Compute torque and axis-specific inertia.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "physics-mechanics-outcome-3"
+      ]
+    },
+    {
+      "id": "physics-mechanics-10-objective-2",
+      "description": "Relate angular momentum, energy and constrained rolling speed.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "physics-mechanics-outcome-3"
+      ]
+    },
+    {
+      "id": "physics-mechanics-10-objective-3",
+      "description": "Check angular and rolling constraint assumptions.",
+      "bloom": "analyze",
+      "course_outcome_ids": [
+        "physics-mechanics-outcome-4"
+      ]
+    },
+    {
+      "id": "physics-mechanics-11-objective-1",
+      "description": "Calculate oscillator frequencies and impose initial conditions.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "physics-mechanics-outcome-2"
+      ]
+    },
+    {
+      "id": "physics-mechanics-11-objective-2",
+      "description": "Relate envelope decay to mechanical energy and dissipation.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "physics-mechanics-outcome-2"
+      ]
+    },
+    {
+      "id": "physics-mechanics-11-objective-3",
+      "description": "Check parameter inference and damping-regime limits.",
+      "bloom": "analyze",
+      "course_outcome_ids": [
+        "physics-mechanics-outcome-4"
+      ]
+    },
+    {
+      "id": "physics-mechanics-12-objective-1",
+      "description": "Calculate stress, strain and defined modulus with consistent geometry.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "physics-mechanics-outcome-4"
+      ]
+    },
+    {
+      "id": "physics-mechanics-12-objective-2",
+      "description": "Apply a supplied scalar time-dependent constitutive law.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "physics-mechanics-outcome-2"
+      ]
+    },
+    {
+      "id": "physics-mechanics-12-objective-3",
+      "description": "Evaluate measurement and orientation-model scope.",
+      "bloom": "analyze",
+      "course_outcome_ids": [
+        "physics-mechanics-outcome-4"
+      ]
+    },
+    {
+      "id": "physics-mechanics-13-objective-1",
+      "description": "Distinguish baseline, machine compliance and specimen compliance.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "physics-mechanics-outcome-4"
+      ]
+    },
+    {
+      "id": "physics-mechanics-13-objective-2",
+      "description": "Recover specimen stiffness and modulus from a supplied reference.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "physics-mechanics-outcome-2"
+      ]
+    },
+    {
+      "id": "physics-mechanics-13-objective-3",
+      "description": "Evaluate conditional material inference and metadata needs.",
+      "bloom": "analyze",
+      "course_outcome_ids": [
+        "physics-mechanics-outcome-4"
+      ]
+    },
+    {
+      "id": "physics-mechanics-lab-01-objective-1",
+      "description": "Summarize raw displacement reports and distinguish baseline from compliance.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "physics-mechanics-outcome-4"
+      ]
+    },
+    {
+      "id": "physics-mechanics-lab-01-objective-2",
+      "description": "Recover machine compliance and specimen stiffness using a supplied reference.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "physics-mechanics-outcome-2"
+      ]
+    },
+    {
+      "id": "physics-mechanics-lab-01-objective-3",
+      "description": "Evaluate positive-compliance feasibility and conditional orientation comparisons.",
+      "bloom": "analyze",
+      "course_outcome_ids": [
+        "physics-mechanics-outcome-4"
+      ]
     }
   ],
   "duration": {
-    "instructional_weeks": null,
-    "equivalent_structure": null,
-    "weeks": []
+    "instructional_weeks": 14,
+    "equivalent_structure": "Proposed 14-week scope retaining compact prototype readings in weeks 1,4,6,9. Workload and qualified review are absent; no semester equivalence is established.",
+    "weeks": [
+      {
+        "week": 1,
+        "title": "Kinematics and force balance",
+        "lesson_ids": [
+          "physics-mechanics-1"
+        ],
+        "assessment_ids": [
+          "physics-mechanics-1-practice"
+        ]
+      },
+      {
+        "week": 2,
+        "title": "Vector kinematics, frames and constraints",
+        "lesson_ids": [
+          "physics-mechanics-7"
+        ],
+        "assessment_ids": [
+          "physics-mechanics-7-practice"
+        ]
+      },
+      {
+        "week": 3,
+        "title": "Free-body diagrams, contact and friction",
+        "lesson_ids": [
+          "physics-mechanics-8"
+        ],
+        "assessment_ids": [
+          "physics-mechanics-8-practice"
+        ]
+      },
+      {
+        "week": 4,
+        "title": "Work, energy, and power",
+        "lesson_ids": [
+          "physics-mechanics-2"
+        ],
+        "assessment_ids": [
+          "physics-mechanics-2-practice"
+        ]
+      },
+      {
+        "week": 5,
+        "title": "Work, momentum and system boundaries",
+        "lesson_ids": [
+          "physics-mechanics-9"
+        ],
+        "assessment_ids": [
+          "physics-mechanics-9-practice"
+        ]
+      },
+      {
+        "week": 6,
+        "title": "Momentum, collisions, and impulse",
+        "lesson_ids": [
+          "physics-mechanics-3"
+        ],
+        "assessment_ids": [
+          "physics-mechanics-3-practice"
+        ]
+      },
+      {
+        "week": 7,
+        "title": "Impact forces: impulse, work–energy and why stopping more slowly protects tissue",
+        "lesson_ids": [
+          "physics-mechanics-5"
+        ],
+        "assessment_ids": [
+          "physics-mechanics-5-practice"
+        ]
+      },
+      {
+        "week": 8,
+        "title": "Torque, angular momentum and rolling",
+        "lesson_ids": [
+          "physics-mechanics-10"
+        ],
+        "assessment_ids": [
+          "physics-mechanics-10-practice"
+        ]
+      },
+      {
+        "week": 9,
+        "title": "Rotation, torque, and material response",
+        "lesson_ids": [
+          "physics-mechanics-4"
+        ],
+        "assessment_ids": [
+          "physics-mechanics-4-practice"
+        ]
+      },
+      {
+        "week": 10,
+        "title": "Rotation in the lab: the centrifuge, relative centrifugal force, moment of inertia and why balance matters",
+        "lesson_ids": [
+          "physics-mechanics-6"
+        ],
+        "assessment_ids": [
+          "physics-mechanics-6-practice"
+        ]
+      },
+      {
+        "week": 11,
+        "title": "Oscillations, damping and energy balance",
+        "lesson_ids": [
+          "physics-mechanics-11"
+        ],
+        "assessment_ids": [
+          "physics-mechanics-11-practice"
+        ]
+      },
+      {
+        "week": 12,
+        "title": "Stress, strain, orientation and time dependence",
+        "lesson_ids": [
+          "physics-mechanics-12"
+        ],
+        "assessment_ids": [
+          "physics-mechanics-12-practice"
+        ]
+      },
+      {
+        "week": 13,
+        "title": "Machine compliance, calibration and model inference",
+        "lesson_ids": [
+          "physics-mechanics-13"
+        ],
+        "assessment_ids": [
+          "physics-mechanics-13-practice"
+        ]
+      },
+      {
+        "week": 14,
+        "title": "Virtual lab 1: machine compliance and orientation-dependent stiffness",
+        "lesson_ids": [
+          "physics-mechanics-lab-01"
+        ],
+        "assessment_ids": [
+          "physics-mechanics-week14-compliance-lab",
+          "physics-mechanics-case"
+        ]
+      }
+    ]
   },
   "workload": {
     "estimated_total_hours": null,
@@ -342,6 +676,313 @@
           ]
         }
       ]
+    },
+    {
+      "id": "physics-mechanics-module-7",
+      "title": "Vector kinematics, frames and constraints",
+      "source_ids": [
+        "mechanics",
+        "engineeringMath"
+      ],
+      "lessons": [
+        {
+          "id": "physics-mechanics-7",
+          "title": "Vector kinematics, frames and constraints",
+          "reading": "modules/07-vector-kinematics-frames-and-constraints.md",
+          "objectives": [
+            "physics-mechanics-7-objective-1",
+            "physics-mechanics-7-objective-2",
+            "physics-mechanics-7-objective-3"
+          ],
+          "worked_example": "Differentiate each polynomial component before inserting t=2, giving velocity (6,1) and acceleration (2,1). Compute speed by the vector norm and compare it with average displacement divided by two seconds. In the separate projectile model, impose the landing condition y=0, retain the positive-time root and multiply by horizontal speed for range. At the apex, set only v_y to zero. Finally subtract the supplied observer velocity for the constant-frame comparison.",
+          "question_ids": [
+            "physics-mechanics-7:x-position",
+            "physics-mechanics-7:y-position",
+            "physics-mechanics-7:speed",
+            "physics-mechanics-7:x-acceleration",
+            "physics-mechanics-7:landing-time",
+            "physics-mechanics-7:range",
+            "physics-mechanics-7:apex-velocity",
+            "physics-mechanics-7:event-domain",
+            "physics-mechanics-7:sampled-motion"
+          ],
+          "card_ids": [
+            "physics-mechanics-7-card-1",
+            "physics-mechanics-7-card-2",
+            "physics-mechanics-7-card-3",
+            "physics-mechanics-7-card-4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "physics-mechanics-module-8",
+      "title": "Free-body diagrams, contact and friction",
+      "source_ids": [
+        "mechanics",
+        "engineeringMath",
+        "openstax-physics-friction"
+      ],
+      "lessons": [
+        {
+          "id": "physics-mechanics-8",
+          "title": "Free-body diagrams, contact and friction",
+          "reading": "modules/08-free-body-diagrams-contact-and-friction.md",
+          "objectives": [
+            "physics-mechanics-8-objective-1",
+            "physics-mechanics-8-objective-2",
+            "physics-mechanics-8-objective-3"
+          ],
+          "worked_example": "For the level block, calculate N=19.62 and the static limit 7.848 N. Compare the required friction under a 6 N push with that limit before selecting a model. For 8 N and rightward sliding, use kinetic friction 3.924 and net force 4.076. In the inclined example, project weight, test the static inequality and then compute the downhill acceleration. Finally distinguish tension 21.62 N from the 2 N net force in the suspended example.",
+          "question_ids": [
+            "physics-mechanics-8:normal",
+            "physics-mechanics-8:static-friction",
+            "physics-mechanics-8:static-limit",
+            "physics-mechanics-8:kinetic-friction",
+            "physics-mechanics-8:sliding-acceleration",
+            "physics-mechanics-8:incline-acceleration",
+            "physics-mechanics-8:third-law",
+            "physics-mechanics-8:static-bound",
+            "physics-mechanics-8:contact-net"
+          ],
+          "card_ids": [
+            "physics-mechanics-8-card-1",
+            "physics-mechanics-8-card-2",
+            "physics-mechanics-8-card-3",
+            "physics-mechanics-8-card-4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "physics-mechanics-module-9",
+      "title": "Work, momentum and system boundaries",
+      "source_ids": [
+        "mechanics",
+        "engineeringMath"
+      ],
+      "lessons": [
+        {
+          "id": "physics-mechanics-9",
+          "title": "Work, momentum and system boundaries",
+          "reading": "modules/09-work-momentum-and-system-boundaries.md",
+          "objectives": [
+            "physics-mechanics-9-objective-1",
+            "physics-mechanics-9-objective-2",
+            "physics-mechanics-9-objective-3"
+          ],
+          "worked_example": "Sum signed initial momenta for the sticking pair, divide by total mass and check the final momentum. Calculate kinetic energies separately and retain the 0.96 J reduction as a mechanical-energy change. For the vertical stop, find net impulse from Δp, then add back the opposing gravitational contribution to recover contact impulse. For the separate variable-force particle, integrate in position for 21 J and solve the positive speed from kinetic energy.",
+          "question_ids": [
+            "physics-mechanics-9:collision-velocity",
+            "physics-mechanics-9:collision-energy-loss",
+            "physics-mechanics-9:net-average-force",
+            "physics-mechanics-9:contact-average-force",
+            "physics-mechanics-9:variable-force-work",
+            "physics-mechanics-9:work-speed",
+            "physics-mechanics-9:sticking-conservation",
+            "physics-mechanics-9:averages",
+            "physics-mechanics-9:system-boundary"
+          ],
+          "card_ids": [
+            "physics-mechanics-9-card-1",
+            "physics-mechanics-9-card-2",
+            "physics-mechanics-9-card-3",
+            "physics-mechanics-9-card-4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "physics-mechanics-module-10",
+      "title": "Torque, angular momentum and rolling",
+      "source_ids": [
+        "mechanics",
+        "engineeringMath",
+        "openstax-physics-rolling"
+      ],
+      "lessons": [
+        {
+          "id": "physics-mechanics-10",
+          "title": "Torque, angular momentum and rolling",
+          "reading": "modules/10-torque-angular-momentum-and-rolling.md",
+          "objectives": [
+            "physics-mechanics-10-objective-1",
+            "physics-mechanics-10-objective-2",
+            "physics-mechanics-10-objective-3"
+          ],
+          "worked_example": "Use the cross product component 0.20×30−0.10×10 for torque +5.0. Calculate I from the supplied disk geometry, then obtain α, rotational energy and angular momentum with their distinct units and speed dependence. For the separate cylinder, impose v=Rω and include both energy terms before solving for center speed. Finally check whether the required static friction fits the bound instead of assuming rolling without slip automatically.",
+          "question_ids": [
+            "physics-mechanics-10:torque",
+            "physics-mechanics-10:disk-inertia",
+            "physics-mechanics-10:angular-acceleration",
+            "physics-mechanics-10:rotational-energy",
+            "physics-mechanics-10:angular-momentum",
+            "physics-mechanics-10:rolling-speed",
+            "physics-mechanics-10:axis",
+            "physics-mechanics-10:angular-versus-energy",
+            "physics-mechanics-10:rolling-feasibility"
+          ],
+          "card_ids": [
+            "physics-mechanics-10-card-1",
+            "physics-mechanics-10-card-2",
+            "physics-mechanics-10-card-3",
+            "physics-mechanics-10-card-4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "physics-mechanics-module-11",
+      "title": "Oscillations, damping and energy balance",
+      "source_ids": [
+        "mechanics",
+        "engineeringMath",
+        "openstax-physics-damping"
+      ],
+      "lessons": [
+        {
+          "id": "physics-mechanics-11",
+          "title": "Oscillations, damping and energy balance",
+          "reading": "modules/11-oscillations-damping-and-energy-balance.md",
+          "objectives": [
+            "physics-mechanics-11-objective-1",
+            "physics-mechanics-11-objective-2",
+            "physics-mechanics-11-objective-3"
+          ],
+          "worked_example": "Calculate ω₀=10 and δ=0.80, confirm the underdamped inequality and obtain ω_d from their squared difference. Divide 2π by ω_d for period and ln2 by δ for envelope half-time. Use the zero-velocity initial condition to retain the sine term. Independently compute initial energy 0.0100 J and verify that any integrated trajectory loses exactly the modeled drag energy. Compare c with 10 N·s/m before deciding which regime formula applies.",
+          "question_ids": [
+            "physics-mechanics-11:natural-frequency",
+            "physics-mechanics-11:damped-frequency",
+            "physics-mechanics-11:damped-period",
+            "physics-mechanics-11:critical-damping",
+            "physics-mechanics-11:initial-energy",
+            "physics-mechanics-11:envelope-half",
+            "physics-mechanics-11:initial-condition",
+            "physics-mechanics-11:energy-rate",
+            "physics-mechanics-11:inference"
+          ],
+          "card_ids": [
+            "physics-mechanics-11-card-1",
+            "physics-mechanics-11-card-2",
+            "physics-mechanics-11-card-3",
+            "physics-mechanics-11-card-4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "physics-mechanics-module-12",
+      "title": "Stress, strain, orientation and time dependence",
+      "source_ids": [
+        "mechanics",
+        "engineeringMath",
+        "openstax-physics-stress-strain"
+      ],
+      "lessons": [
+        {
+          "id": "physics-mechanics-12",
+          "title": "Stress, strain, orientation and time dependence",
+          "reading": "modules/12-stress-strain-orientation-and-time-dependence.md",
+          "objectives": [
+            "physics-mechanics-12-objective-1",
+            "physics-mechanics-12-objective-2",
+            "physics-mechanics-12-objective-3"
+          ],
+          "worked_example": "Divide 10 N by 2.0×10⁻⁶ m² for 5 MPa, then divide 0.00020 by 0.020 for strain 0.010 and form 500 MPa. For the independent spring–dashpot construction, add Eε and η times strain rate for 2500 Pa. Under the stipulated constant stress, solve the first-order balance for τ=0.50 and limiting strain 0.030, then evaluate its fraction at one time constant. Keep geometry-based stiffness, orientation and time-dependent model parameters distinct.",
+          "question_ids": [
+            "physics-mechanics-12:stress",
+            "physics-mechanics-12:strain",
+            "physics-mechanics-12:secant-modulus",
+            "physics-mechanics-12:spring-dashpot-stress",
+            "physics-mechanics-12:creep-time",
+            "physics-mechanics-12:creep-limit",
+            "physics-mechanics-12:geometry",
+            "physics-mechanics-12:crosshead",
+            "physics-mechanics-12:constitutive-scope"
+          ],
+          "card_ids": [
+            "physics-mechanics-12-card-1",
+            "physics-mechanics-12-card-2",
+            "physics-mechanics-12-card-3",
+            "physics-mechanics-12-card-4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "physics-mechanics-module-13",
+      "title": "Machine compliance, calibration and model inference",
+      "source_ids": [
+        "mechanics",
+        "engineeringMath"
+      ],
+      "lessons": [
+        {
+          "id": "physics-mechanics-13",
+          "title": "Machine compliance, calibration and model inference",
+          "reading": "modules/13-machine-compliance-calibration-and-model-inference.md",
+          "objectives": [
+            "physics-mechanics-13-objective-1",
+            "physics-mechanics-13-objective-2",
+            "physics-mechanics-13-objective-3"
+          ],
+          "worked_example": "At 0.30 N, add offset 2.0 mm, machine elongation 0.30 mm and specimen elongation 0.30 mm for reported 2.60 mm. Fit total compliance independently of the intercept, subtract the known reference contribution to obtain machine compliance and remove it before inversion. Convert corrected 1000 N/m to 20 MPa with the stated geometry, versus apparent 10 MPa. In the separate lab orientation pair, recover the two-to-one corrected ratio while preserving the shared reporting terms.",
+          "question_ids": [
+            "physics-mechanics-13:reported-displacement",
+            "physics-mechanics-13:apparent-stiffness",
+            "physics-mechanics-13:machine-compliance",
+            "physics-mechanics-13:gauge-extension",
+            "physics-mechanics-13:corrected-modulus",
+            "physics-mechanics-13:apparent-modulus",
+            "physics-mechanics-13:offset-slope",
+            "physics-mechanics-13:series-model",
+            "physics-mechanics-13:case-cause"
+          ],
+          "card_ids": [
+            "physics-mechanics-13-card-1",
+            "physics-mechanics-13-card-2",
+            "physics-mechanics-13-card-3",
+            "physics-mechanics-13-card-4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "physics-mechanics-module-lab-01",
+      "title": "Virtual lab 1: machine compliance and orientation-dependent stiffness",
+      "source_ids": [
+        "mechanics",
+        "engineeringMath"
+      ],
+      "lessons": [
+        {
+          "id": "physics-mechanics-lab-01",
+          "title": "Virtual lab 1: machine compliance and orientation-dependent stiffness",
+          "reading": "labs/01-machine-compliance-and-orientation.md",
+          "objectives": [
+            "physics-mechanics-lab-01-objective-1",
+            "physics-mechanics-lab-01-objective-2",
+            "physics-mechanics-lab-01-objective-3"
+          ],
+          "worked_example": "Synthetic reference slope 0.5 mm/N identifies machine compliance under an ideal zero-compliance reference. Corrected specimen slopes give stiffnesses 2000 and 1000 N/m; apparent stiffness ratio 1.5 becomes corrected ratio 2 with matched geometry.",
+          "question_ids": [
+            "physics-mechanics-lab-01:summary",
+            "physics-mechanics-lab-01:offset",
+            "physics-mechanics-lab-01:machine-compliance",
+            "physics-mechanics-lab-01:a-stiffness",
+            "physics-mechanics-lab-01:b-stiffness",
+            "physics-mechanics-lab-01:interpretation",
+            "physics-mechanics-lab-01:claims",
+            "physics-mechanics-lab-01:contrast"
+          ],
+          "card_ids": [
+            "physics-mechanics-lab-01-card-1",
+            "physics-mechanics-lab-01-card-2",
+            "physics-mechanics-lab-01-card-3",
+            "physics-mechanics-lab-01-card-4"
+          ]
+        }
+      ]
     }
   ],
   "assessments": [
@@ -454,6 +1095,215 @@
       "points": 6
     },
     {
+      "id": "physics-mechanics-7-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Vector kinematics, frames and constraints practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "physics-mechanics-7-objective-1",
+        "physics-mechanics-7-objective-2",
+        "physics-mechanics-7-objective-3",
+        "physics-mechanics-outcome-2",
+        "physics-mechanics-outcome-4"
+      ],
+      "question_ids": [
+        "physics-mechanics-7:x-position",
+        "physics-mechanics-7:y-position",
+        "physics-mechanics-7:speed",
+        "physics-mechanics-7:x-acceleration",
+        "physics-mechanics-7:landing-time",
+        "physics-mechanics-7:range",
+        "physics-mechanics-7:apex-velocity",
+        "physics-mechanics-7:event-domain",
+        "physics-mechanics-7:sampled-motion"
+      ],
+      "points": 9
+    },
+    {
+      "id": "physics-mechanics-8-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Free-body diagrams, contact and friction practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "physics-mechanics-8-objective-1",
+        "physics-mechanics-8-objective-2",
+        "physics-mechanics-8-objective-3",
+        "physics-mechanics-outcome-1",
+        "physics-mechanics-outcome-2",
+        "physics-mechanics-outcome-4"
+      ],
+      "question_ids": [
+        "physics-mechanics-8:normal",
+        "physics-mechanics-8:static-friction",
+        "physics-mechanics-8:static-limit",
+        "physics-mechanics-8:kinetic-friction",
+        "physics-mechanics-8:sliding-acceleration",
+        "physics-mechanics-8:incline-acceleration",
+        "physics-mechanics-8:third-law",
+        "physics-mechanics-8:static-bound",
+        "physics-mechanics-8:contact-net"
+      ],
+      "points": 9
+    },
+    {
+      "id": "physics-mechanics-9-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Work, momentum and system boundaries practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "physics-mechanics-9-objective-1",
+        "physics-mechanics-9-objective-2",
+        "physics-mechanics-9-objective-3",
+        "physics-mechanics-outcome-2",
+        "physics-mechanics-outcome-4"
+      ],
+      "question_ids": [
+        "physics-mechanics-9:collision-velocity",
+        "physics-mechanics-9:collision-energy-loss",
+        "physics-mechanics-9:net-average-force",
+        "physics-mechanics-9:contact-average-force",
+        "physics-mechanics-9:variable-force-work",
+        "physics-mechanics-9:work-speed",
+        "physics-mechanics-9:sticking-conservation",
+        "physics-mechanics-9:averages",
+        "physics-mechanics-9:system-boundary"
+      ],
+      "points": 9
+    },
+    {
+      "id": "physics-mechanics-10-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Torque, angular momentum and rolling practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "physics-mechanics-10-objective-1",
+        "physics-mechanics-10-objective-2",
+        "physics-mechanics-10-objective-3",
+        "physics-mechanics-outcome-3",
+        "physics-mechanics-outcome-4"
+      ],
+      "question_ids": [
+        "physics-mechanics-10:torque",
+        "physics-mechanics-10:disk-inertia",
+        "physics-mechanics-10:angular-acceleration",
+        "physics-mechanics-10:rotational-energy",
+        "physics-mechanics-10:angular-momentum",
+        "physics-mechanics-10:rolling-speed",
+        "physics-mechanics-10:axis",
+        "physics-mechanics-10:angular-versus-energy",
+        "physics-mechanics-10:rolling-feasibility"
+      ],
+      "points": 9
+    },
+    {
+      "id": "physics-mechanics-11-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Oscillations, damping and energy balance practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "physics-mechanics-11-objective-1",
+        "physics-mechanics-11-objective-2",
+        "physics-mechanics-11-objective-3",
+        "physics-mechanics-outcome-2",
+        "physics-mechanics-outcome-4"
+      ],
+      "question_ids": [
+        "physics-mechanics-11:natural-frequency",
+        "physics-mechanics-11:damped-frequency",
+        "physics-mechanics-11:damped-period",
+        "physics-mechanics-11:critical-damping",
+        "physics-mechanics-11:initial-energy",
+        "physics-mechanics-11:envelope-half",
+        "physics-mechanics-11:initial-condition",
+        "physics-mechanics-11:energy-rate",
+        "physics-mechanics-11:inference"
+      ],
+      "points": 9
+    },
+    {
+      "id": "physics-mechanics-12-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Stress, strain, orientation and time dependence practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "physics-mechanics-12-objective-1",
+        "physics-mechanics-12-objective-2",
+        "physics-mechanics-12-objective-3",
+        "physics-mechanics-outcome-2",
+        "physics-mechanics-outcome-4"
+      ],
+      "question_ids": [
+        "physics-mechanics-12:stress",
+        "physics-mechanics-12:strain",
+        "physics-mechanics-12:secant-modulus",
+        "physics-mechanics-12:spring-dashpot-stress",
+        "physics-mechanics-12:creep-time",
+        "physics-mechanics-12:creep-limit",
+        "physics-mechanics-12:geometry",
+        "physics-mechanics-12:crosshead",
+        "physics-mechanics-12:constitutive-scope"
+      ],
+      "points": 9
+    },
+    {
+      "id": "physics-mechanics-13-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Machine compliance, calibration and model inference practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "physics-mechanics-13-objective-1",
+        "physics-mechanics-13-objective-2",
+        "physics-mechanics-13-objective-3",
+        "physics-mechanics-outcome-2",
+        "physics-mechanics-outcome-4"
+      ],
+      "question_ids": [
+        "physics-mechanics-13:reported-displacement",
+        "physics-mechanics-13:apparent-stiffness",
+        "physics-mechanics-13:machine-compliance",
+        "physics-mechanics-13:gauge-extension",
+        "physics-mechanics-13:corrected-modulus",
+        "physics-mechanics-13:apparent-modulus",
+        "physics-mechanics-13:offset-slope",
+        "physics-mechanics-13:series-model",
+        "physics-mechanics-13:case-cause"
+      ],
+      "points": 9
+    },
+    {
+      "id": "physics-mechanics-week14-compliance-lab",
+      "type": "lab",
+      "mode": "practice",
+      "title": "Virtual lab 1: machine compliance and orientation-dependent stiffness (ungraded practice)",
+      "path": "question-banks/practice.json",
+      "week": 14,
+      "objective_ids": [
+        "physics-mechanics-lab-01-objective-1",
+        "physics-mechanics-lab-01-objective-2",
+        "physics-mechanics-lab-01-objective-3",
+        "physics-mechanics-outcome-2",
+        "physics-mechanics-outcome-4"
+      ],
+      "question_ids": [
+        "physics-mechanics-lab-01:summary",
+        "physics-mechanics-lab-01:offset",
+        "physics-mechanics-lab-01:machine-compliance",
+        "physics-mechanics-lab-01:a-stiffness",
+        "physics-mechanics-lab-01:b-stiffness",
+        "physics-mechanics-lab-01:interpretation",
+        "physics-mechanics-lab-01:claims",
+        "physics-mechanics-lab-01:contrast"
+      ],
+      "points": 28
+    },
+    {
       "id": "physics-mechanics-case",
       "type": "case",
       "mode": "self-assessment",
@@ -510,18 +1360,23 @@
       "version": "0.3.1",
       "date": "2026-10-08",
       "summary": "Assessments with items now also list the course outcomes those items assess, derived from each item's lesson objective and that objective's outcome links. The rubric-only case lists none, and neither do the 4 prototype-unit assessments, whose objectives are not yet linked to an outcome. No readings, items or keys changed. The syllabus was regenerated from the manifest: it states the current version, lists every lesson with its item and card counts, and describes the current practice and limitations (it still described only the four original units). The course limitations shown to learners were also updated: they still described one formative check per lesson and the original numerical rules. The package remains partial, unreviewed and formative-only."
+    },
+    {
+      "version": "0.4.0",
+      "date": "2026-10-09",
+      "summary": "Added seven original lessons on vector/frame kinematics, contact/friction, work/momentum boundaries, rotation/rolling, damping/energy, scalar time-dependent materials and machine-compliance inference; one synthetic orientation/compliance lab and a proposed weekly schedule. Developed with Codex assistance. Still partial, unreviewed and formative-only."
     }
   ],
   "limitations": [
-    "Four compact legacy units are preserved; this package is not equivalent to a full university semester.",
-    "There is no authored 12–15 week schedule, substantive homework sequence, laboratory sequence, midterm, cumulative final, or graded integrative project.",
-    "Practice items are short formative checks (two per prototype unit and six per original lesson); they do not demonstrate comprehensive outcome coverage or mastery, and objective associations remain provisional.",
-    "Bloom labels and structured prerequisite edges are initial authoring classifications awaiting subject-matter review.",
-    "Question answers and solution feedback are intentionally public practice authoring specifications, not restricted exam keys.",
-    "Of the 17 numerical answers in this package, eight require a unit, none checks significant figures and none checks dimensions; the others accept a number within a stated tolerance, with the unit optional.",
-    "Total workload and weekly duration are unknown; former nominal credit values and hardcoded reading times do not establish workload."
+    "Four compact prototype readings remain beside nine substantive original lessons and one synthetic data lab; this is not a full university semester.",
+    "The proposed 14-week sequence is unmeasured and unreviewed. Graded homework, exams, a full laboratory sequence and a cumulative graded project remain absent.",
+    "New parameters and reports are synthetic; selected point-particle, rigid-body, contact and scalar material models provide no real equipment or specimen-testing procedure.",
+    "Of 63 numeric items, eight preserved items require units; none checks significant figures or dimensions. New numeric items ask for bare numbers in stated scales; choices assess selected force/constraint/evidence decisions, not free-body drawings or proof quality.",
+    "Public keys and feedback remain formative authoring specifications; practice points are not course grades.",
+    "Subject-matter, accessibility and workload review remain outstanding; the original text free-body diagram has a verbal description but no assistive-technology review.",
+    "Four primary OpenStax sections were retrieved as link-only references; no teaching text, problem, figure or dataset was imported."
   ],
   "intentionally_omitted": [
-    "Full instructional sequence and summative assessments are not authored yet; the original lessons extend a partial package."
+    "Graded assessments, complete laboratory sequence, cumulative graded project, measured workload and qualified human review remain outstanding."
   ]
 }
