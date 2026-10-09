@@ -1,12 +1,12 @@
 # Calculus III: Multivariable & Vector Calculus
 
-**Maturity: partial. Version: 0.3.1.**
+**Maturity: partial. Version: 0.4.0.** This personal hobby and learning project is developed with substantial AI assistance. It is not an accredited university course.
 
-Vector-valued geometry, partial derivatives, constrained optimization, multiple integrals, and vector calculus for fields, flux, and spatially distributed biological systems.
+Multivariable functions, geometry and vector fields describe spatial change and accumulation. Synthetic constructions develop coordinate measures, optimization, circulation, transfer and conservation.
 
 ## Prerequisites
 
-Calculus II; Linear Algebra recommended. Structured required, recommended, and concurrent relationships appear in the manifest and remain subject to author review. This package establishes no university prerequisite equivalency.
+Calculus II is required; linear algebra is recommended. Manifest prerequisites are provisional authoring associations and establish no university equivalency. Vector and coordinate calculations use the stated Cartesian scales and angle conventions.
 
 ## Authored outcomes
 
@@ -15,27 +15,35 @@ Calculus II; Linear Algebra recommended. Structured required, recommended, and c
 - Set up multiple integrals in appropriate coordinates.
 - Relate line and surface integrals to vector-field theorems.
 
-## Units and lessons
+## Proposed 14-week schedule
 
-Units 1–4 keep the short prototype readings preserved from the original project; they need substantial expansion. Units 5 and 6 are original lesson-length readings (about 810 to 840 words) with learning objectives, a worked example, common mistakes, stated limits and explicitly synthetic data. No unit has been reviewed by a qualified instructor.
+This is planning scope, not measured workload or a reviewed semester. Weeks 1, 5, 8 and 10 retain compact prototype readings. Week 14 uses a synthetic box-boundary flux lab and revisits the preserved oxygen-transfer self-assessment case. All activities are public formative practice.
 
-| Unit | Lesson | Reading | Practice items | Retrieval cards |
-|---:|---|---|---:|---:|
-| 1 | Vectors, partial derivatives, and gradients | short prototype | 2 | 2 |
-| 2 | Multivariable optimization and constraints | short prototype | 2 | 2 |
-| 3 | Multiple integrals and coordinate transforms | short prototype | 2 | 2 |
-| 4 | Line integrals, flux, and integral theorems | short prototype | 2 | 2 |
-| 5 | Gradients in a concentration field: partial derivatives, directional derivatives and what a cell can sense | lesson-length original | 6 | 4 |
-| 6 | Optimizing with and without constraints, and integrating over a disk in polar coordinates | lesson-length original | 6 | 4 |
+| Week | Reading | Items | Cards |
+|---|---|---:|---:|
+| 1 | Vectors, partial derivatives, and gradients | 2 | 2 |
+| 2 | Vectors, planes and spatial curves | 9 | 4 |
+| 3 | Partial derivatives and total change | 9 | 4 |
+| 4 | Gradients in a concentration field: partial derivatives, directional derivatives and what a cell can sense | 6 | 4 |
+| 5 | Multivariable optimization and constraints | 2 | 2 |
+| 6 | Hessians, constraints and boundary optima | 9 | 4 |
+| 7 | Optimizing with and without constraints, and integrating over a disk in polar coordinates | 6 | 4 |
+| 8 | Multiple integrals and coordinate transforms | 2 | 2 |
+| 9 | Multiple integrals and Jacobian measures | 9 | 4 |
+| 10 | Line integrals, flux, and integral theorems | 2 | 2 |
+| 11 | Line integrals, potentials and Green's theorem | 9 | 4 |
+| 12 | Surface flux and the divergence theorem | 9 | 4 |
+| 13 | Stokes' theorem and spatial balances | 9 | 4 |
+| 14 | Virtual lab 1: oriented boundary flux and a steady volume balance | 8 | 4 |
 
-## Assessment and study policy
+## Assessment policy
 
-Every lesson has public formative practice items (numeric and single-choice) tagged to its learning objectives. The practice assessments for the original lessons also list the course outcomes those objectives link to; the objectives of the prototype units are not yet linked to course outcomes, so their assessments list none. In total the package has 20 practice items and 16 retrieval cards for the review queue. A course case includes a self-assessment checklist. These are practice activities, with unlimited retries and no institutional grade, university credit, or transferable credit. Workload has not been measured.
+There are 14 readings, 91 public practice items and 48 retrieval cards, plus the original self-assessment case. Numeric, single-choice, CSV-upload, structured-choice and multiple-select checks provide selected feedback with unlimited retries. Points are practice feedback, with no institutional grade or credit. Written derivations, theorem proofs and discussion criteria are not automatically graded. Assessment outcome lists reflect the lesson objectives their items assess; prototype associations remain provisional.
 
-## Schedule and current limitations
+## Current limitations
 
-No full-semester calendar or 14-week structure has been authored. No substantive homework sets, laboratories, midterm, final, or graded cumulative project are included. The four short prototype readings require substantial expansion, and the newer lessons rely on explicitly synthetic data. Nothing in this package has been reviewed by a qualified instructor; qualified human review is required before this course can meet the complete-course quality standard.
+Four short prototype readings remain. One synthetic lab is not a laboratory sequence. There is no graded homework sequence, midterm, final or graded cumulative project. Mathematical quality, accessibility and workload await qualified review. Theorem conditions, orientations, coordinate domains and source/storage assumptions must be stated explicitly. All flux and concentration examples are constructed, with no real oxygen-demand measurement or experimental protocol. The package remains partial, unreviewed and formative-only.
 
 ## Sources and licensing
 
-Read source-map.json for module provenance and content/SOURCES_AND_LICENSES.md for the software/content license boundary. Listed source courses are public curriculum comparators; no affiliation or equivalency is implied.
+Existing multivariable-calculus and transport scope references are mapped through `source-map.json`. No new source identifier, third-party text, figure or dataset was added. New readings and constructed observations are original CC BY 4.0 content with substantial AI assistance. See `content/SOURCES_AND_LICENSES.md` for provenance and the software/content license boundary. Source links do not establish endorsement or review.

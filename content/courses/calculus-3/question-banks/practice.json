@@ -621,6 +621,2551 @@
         "kind": "original",
         "modifications": []
       }
+    },
+    {
+      "id": "calculus-3-7:vector-length",
+      "type": "numeric",
+      "prompt": "What is the length of displacement (1,2,2) m in metres? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "calculus-3-7-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 3,
+        "unit": "",
+        "tolerance": 0.0001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the Euclidean norm in the stated Cartesian frame.",
+        "solution": "√(1²+2²+2²)=3 m.",
+        "lesson_ids": [
+          "calculus-3-7"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-3-7:cross-z",
+      "type": "numeric",
+      "prompt": "For a=(1,0,0) m and b=(0,2,0) m, what is the z component of a×b in m²? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "calculus-3-7-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 2,
+        "unit": "",
+        "tolerance": 0.0001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the right-handed cross-product order.",
+        "solution": "a×b=(0,0,2) m², so its z component is 2.",
+        "lesson_ids": [
+          "calculus-3-7"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-3-7:helix-speed",
+      "type": "numeric",
+      "prompt": "For r(t)=(3 cos t,3 sin t,4t) m with dimensionless t, what is |r′(t)| in m per parameter unit? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "calculus-3-7-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 5,
+        "unit": "",
+        "tolerance": 0.0001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Differentiate all three coordinates and take the norm.",
+        "solution": "Squared speed is 9 sin²t+9 cos²t+16=25.",
+        "lesson_ids": [
+          "calculus-3-7"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-3-7:helix-length",
+      "type": "numeric",
+      "prompt": "For that helix on 0≤t≤2, what traced length in m results? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "calculus-3-7-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 10,
+        "unit": "",
+        "tolerance": 0.0001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Integrate the constant speed over the parameter range.",
+        "solution": "∫₀²5dt=10 m.",
+        "lesson_ids": [
+          "calculus-3-7"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-3-7:plane-distance",
+      "type": "numeric",
+      "prompt": "What is the unsigned distance in m from the origin to 2x−y+2z=6, with coordinates numerically in metres? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "calculus-3-7-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 2,
+        "unit": "",
+        "tolerance": 0.0001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Divide the absolute plane residual by the normal length.",
+        "solution": "The residual magnitude is 6 and |(2,−1,2)|=3, giving 2 m.",
+        "lesson_ids": [
+          "calculus-3-7"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-3-7:tangent-z",
+      "type": "numeric",
+      "prompt": "For the preceding helix r(t)=(3 cos t,3 sin t,4t), what is the z component of its unit tangent? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "calculus-3-7-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0.8,
+        "unit": "",
+        "tolerance": 0.0001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Normalize r′ by its length 5.",
+        "solution": "The vertical derivative is 4; its unit-tangent component is 4/5=0.8.",
+        "lesson_ids": [
+          "calculus-3-7"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-3-7:zero-direction",
+      "type": "single_choice",
+      "prompt": "Can the zero vector define a unit direction?",
+      "points": 1,
+      "objective_ids": [
+        "calculus-3-7-objective-1"
+      ],
+      "options": [
+        "No; normalization requires nonzero length.",
+        "Yes; every direction has the same zero vector.",
+        "Yes; divide every component by zero."
+      ],
+      "solution_spec": {
+        "answer": 0
+      },
+      "feedback": {
+        "hint": "Check geometry, domains and the stated assumptions.",
+        "solution": "No; normalization requires nonzero length.",
+        "lesson_ids": [
+          "calculus-3-7"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-3-7:cross-order",
+      "type": "single_choice",
+      "prompt": "What happens when cross-product order is reversed?",
+      "points": 1,
+      "objective_ids": [
+        "calculus-3-7-objective-3"
+      ],
+      "options": [
+        "The normal direction reverses, while its magnitude is preserved.",
+        "Both direction and magnitude stay identical.",
+        "The result becomes a dot product."
+      ],
+      "solution_spec": {
+        "answer": 0
+      },
+      "feedback": {
+        "hint": "Check geometry, domains and the stated assumptions.",
+        "solution": "The normal direction reverses, while its magnitude is preserved.",
+        "lesson_ids": [
+          "calculus-3-7"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-3-7:parameter",
+      "type": "single_choice",
+      "prompt": "Reparameterize the helix by t=2s,0≤s≤1. What changes?",
+      "points": 1,
+      "objective_ids": [
+        "calculus-3-7-objective-2"
+      ],
+      "options": [
+        "Derivative magnitude doubles and interval halves, preserving traced length.",
+        "The coordinates stay fixed because s is dimensionless.",
+        "The traced length necessarily halves."
+      ],
+      "solution_spec": {
+        "answer": 0
+      },
+      "feedback": {
+        "hint": "Check geometry, domains and the stated assumptions.",
+        "solution": "Derivative magnitude doubles and interval halves, preserving traced length.",
+        "lesson_ids": [
+          "calculus-3-7"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-3-8:partial-x",
+      "type": "numeric",
+      "prompt": "For f=x²y+sin y, what is f_x at (2,0), using radians? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "calculus-3-8-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0,
+        "unit": "",
+        "tolerance": 0.0001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Hold y fixed while differentiating.",
+        "solution": "f_x=2xy, which is zero at (2,0).",
+        "lesson_ids": [
+          "calculus-3-8"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-3-8:partial-y",
+      "type": "numeric",
+      "prompt": "For f=x²y+sin y, what is f_y at (2,0)? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "calculus-3-8-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 5,
+        "unit": "",
+        "tolerance": 0.0001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Hold x fixed and differentiate sine in radians.",
+        "solution": "f_y=x²+cos y=4+1=5.",
+        "lesson_ids": [
+          "calculus-3-8"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-3-8:mixed",
+      "type": "numeric",
+      "prompt": "For that smooth f=x²y+sin y, what is f_xy at (2,0)? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "calculus-3-8-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 4,
+        "unit": "",
+        "tolerance": 0.0001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Differentiate f_x=2xy with respect to y.",
+        "solution": "f_xy=2x=4; smoothness also supports equality with f_yx.",
+        "lesson_ids": [
+          "calculus-3-8"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-3-8:path-rate",
+      "type": "numeric",
+      "prompt": "For f=x²y+sin y along x=1+t,y=t², what is df/dt at t=1? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "calculus-3-8-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 13.08060461173628,
+        "unit": "",
+        "tolerance": 0.0001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Evaluate both partials at (2,1) and include both path rates.",
+        "solution": "f_x x′+f_y y′=4+(4+cos 1)×2=12+2 cos 1.",
+        "lesson_ids": [
+          "calculus-3-8"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-3-8:tangent-prediction",
+      "type": "numeric",
+      "prompt": "For f=x²y+sin y, use its tangent plane at (2,0) to predict f(2.1,0.02). Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "calculus-3-8-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0.1,
+        "unit": "",
+        "tolerance": 0.0001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use f(a)+∇f(a)·h rather than the exact nonlinear field.",
+        "solution": "At the center f=0 and ∇f=(0,5); the prediction is 5×0.02=0.1.",
+        "lesson_ids": [
+          "calculus-3-8"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-3-8:quadratic-error",
+      "type": "numeric",
+      "prompt": "For q=x²+y², what exact tangent-plane error occurs at center (1,2) with displacement (0.1,−0.2)? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "calculus-3-8-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 0.05,
+        "unit": "",
+        "tolerance": 0.0001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "The exact remainder is the displacement squared norm.",
+        "solution": "h_x²+h_y²=0.01+0.04=0.05; the Hessian bound with M=2 agrees.",
+        "lesson_ids": [
+          "calculus-3-8"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-3-8:partials-only",
+      "type": "single_choice",
+      "prompt": "Both origin partials exist for g=xy/(x²+y²),extended by g(0,0)=0. What follows?",
+      "points": 1,
+      "objective_ids": [
+        "calculus-3-8-objective-3"
+      ],
+      "options": [
+        "They prove the function is zero on every path.",
+        "They do not guarantee continuity; along y=x the nearby value is 1/2.",
+        "They prove differentiability with zero gradient."
+      ],
+      "solution_spec": {
+        "answer": 1
+      },
+      "feedback": {
+        "hint": "Check geometry, domains and the stated assumptions.",
+        "solution": "They do not guarantee continuity; along y=x the nearby value is 1/2.",
+        "lesson_ids": [
+          "calculus-3-8"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-3-8:explicit-time",
+      "type": "single_choice",
+      "prompt": "For f(x(t),y(t),t), which total derivative is appropriate?",
+      "points": 1,
+      "objective_ids": [
+        "calculus-3-8-objective-2"
+      ],
+      "options": [
+        "Only f_t, regardless of motion.",
+        "Only f_x+f_y, with no path velocities.",
+        "f_x x′+f_y y′+f_t, evaluated on the path."
+      ],
+      "solution_spec": {
+        "answer": 2
+      },
+      "feedback": {
+        "hint": "Check geometry, domains and the stated assumptions.",
+        "solution": "f_x x′+f_y y′+f_t, evaluated on the path.",
+        "lesson_ids": [
+          "calculus-3-8"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-3-8:hessian-bound",
+      "type": "single_choice",
+      "prompt": "What supports the stated quadratic remainder bound M|h|²/2?",
+      "points": 1,
+      "objective_ids": [
+        "calculus-3-8-objective-3"
+      ],
+      "options": [
+        "Existence of two coordinate partials at one point.",
+        "Only the Hessian at one endpoint for every arbitrary function.",
+        "A Hessian norm bound throughout the segment and the required differentiability."
+      ],
+      "solution_spec": {
+        "answer": 2
+      },
+      "feedback": {
+        "hint": "Check geometry, domains and the stated assumptions.",
+        "solution": "A Hessian norm bound throughout the segment and the required differentiability.",
+        "lesson_ids": [
+          "calculus-3-8"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-3-9:stationary-x",
+      "type": "numeric",
+      "prompt": "For f=x²+2xy+3y²−4x−8y on the whole plane, what x coordinate solves both stationary equations? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "calculus-3-9-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 1,
+        "unit": "",
+        "tolerance": 0.0001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Solve 2x+2y=4 and 2x+6y=8 together.",
+        "solution": "Subtracting gives y=1, then x=1.",
+        "lesson_ids": [
+          "calculus-3-9"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-3-9:stationary-y",
+      "type": "numeric",
+      "prompt": "For the same stated quadratic f=x²+2xy+3y²−4x−8y, what is its stationary y coordinate? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "calculus-3-9-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 1,
+        "unit": "",
+        "tolerance": 0.0001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use both partial equations, not just one.",
+        "solution": "The equations differ by 4y=4, giving y=1.",
+        "lesson_ids": [
+          "calculus-3-9"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-3-9:hessian-determinant",
+      "type": "numeric",
+      "prompt": "What is the Hessian determinant of f=x²+2xy+3y²−4x−8y? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "calculus-3-9-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 8,
+        "unit": "",
+        "tolerance": 0.0001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use second partials 2,6 and mixed partial 2.",
+        "solution": "D=2×6−2²=8; the positive leading entry supports a minimum.",
+        "lesson_ids": [
+          "calculus-3-9"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-3-9:circle-maximum",
+      "type": "numeric",
+      "prompt": "What is the maximum value of xy on x²+y²=1, allowing both signs? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "calculus-3-9-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 0.5,
+        "unit": "",
+        "tolerance": 0.0001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the inequality 2xy≤x²+y² and check equality.",
+        "solution": "The maximum is 1/2 at both diagonal points with x=y=±1/√2.",
+        "lesson_ids": [
+          "calculus-3-9"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-3-9:boundary-x",
+      "type": "numeric",
+      "prompt": "Minimize f=x²+2xy+3y²−4x−8y over 0≤x≤0.5,0≤y≤2. What is the minimizing x coordinate? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "calculus-3-9-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 0.5,
+        "unit": "",
+        "tolerance": 0.0001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Discard the infeasible stationary point and compare all edges.",
+        "solution": "The best edge candidate is (0.5,7/6), so x=0.5.",
+        "lesson_ids": [
+          "calculus-3-9"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-3-9:boundary-value",
+      "type": "numeric",
+      "prompt": "For that quadratic on 0≤x≤0.5,0≤y≤2, what is the minimum value? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "calculus-3-9-objective-3"
+      ],
+      "solution_spec": {
+        "answer": -5.833333333333333,
+        "unit": "",
+        "tolerance": 0.0001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Evaluate and compare the four edge minima.",
+        "solution": "At (0.5,7/6), f=−35/6, below the other feasible edge candidates.",
+        "lesson_ids": [
+          "calculus-3-9"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-3-9:degenerate",
+      "type": "single_choice",
+      "prompt": "The stationary Hessian determinant is zero. What does that test conclude?",
+      "points": 1,
+      "objective_ids": [
+        "calculus-3-9-objective-1"
+      ],
+      "options": [
+        "It is inconclusive; higher-order or other analysis is needed.",
+        "The point must be a strict minimum.",
+        "The point must be a saddle."
+      ],
+      "solution_spec": {
+        "answer": 0
+      },
+      "feedback": {
+        "hint": "Check geometry, domains and the stated assumptions.",
+        "solution": "It is inconclusive; higher-order or other analysis is needed.",
+        "lesson_ids": [
+          "calculus-3-9"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-3-9:regularity",
+      "type": "single_choice",
+      "prompt": "What condition accompanies the standard single-equality Lagrange rule?",
+      "points": 1,
+      "objective_ids": [
+        "calculus-3-9-objective-2"
+      ],
+      "options": [
+        "Every candidate is automatically a global optimum.",
+        "Every constraint gradient must be zero.",
+        "The constraint gradient is nonzero locally, with the needed smoothness."
+      ],
+      "solution_spec": {
+        "answer": 2
+      },
+      "feedback": {
+        "hint": "Check geometry, domains and the stated assumptions.",
+        "solution": "The constraint gradient is nonzero locally, with the needed smoothness.",
+        "lesson_ids": [
+          "calculus-3-9"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-3-9:boundary",
+      "type": "single_choice",
+      "prompt": "What is required for the quadratic on the stated rectangle?",
+      "points": 1,
+      "objective_ids": [
+        "calculus-3-9-objective-3"
+      ],
+      "options": [
+        "Use the infeasible whole-plane stationary point anyway.",
+        "Require the unconstrained gradient to vanish at every boundary optimum.",
+        "Compare feasible interior and all edge/corner candidates."
+      ],
+      "solution_spec": {
+        "answer": 2
+      },
+      "feedback": {
+        "hint": "Check geometry, domains and the stated assumptions.",
+        "solution": "Compare feasible interior and all edge/corner candidates.",
+        "lesson_ids": [
+          "calculus-3-9"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-3-10:triangle-area",
+      "type": "numeric",
+      "prompt": "What is the area of x≥0,y≥0,x+y≤1 in coordinate-square units? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "calculus-3-10-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0.5,
+        "unit": "",
+        "tolerance": 0.0001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use inner y bounds 0 to 1−x.",
+        "solution": "∫₀¹(1−x)dx=1/2.",
+        "lesson_ids": [
+          "calculus-3-10"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-3-10:triangle-total",
+      "type": "numeric",
+      "prompt": "Integrate density x+y over that same unit right triangle. Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "calculus-3-10-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0.3333333333333333,
+        "unit": "",
+        "tolerance": 0.0001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Integrate y from 0 to 1−x before integrating x.",
+        "solution": "The double integral is 1/3; replacing the triangle by a square would change the total.",
+        "lesson_ids": [
+          "calculus-3-10"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-3-10:ellipse-area",
+      "type": "numeric",
+      "prompt": "What is the area of x²/4+y²/9≤1 in coordinate-square units? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "calculus-3-10-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 18.84955592153876,
+        "unit": "",
+        "tolerance": 0.0001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Transform x=2u,y=3v and include determinant 6.",
+        "solution": "Area is 6 times the unit disk area, giving 6π.",
+        "lesson_ids": [
+          "calculus-3-10"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-3-10:annular-total",
+      "type": "numeric",
+      "prompt": "Integrate density r² over the annulus 1≤r≤2 and 0≤θ≤2π, including polar area. Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "calculus-3-10-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 23.561944901923447,
+        "unit": "",
+        "tolerance": 0.0001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "The radial integrand includes an additional factor r.",
+        "solution": "2π∫₁²r³dr=2π(16−1)/4=15π/2.",
+        "lesson_ids": [
+          "calculus-3-10"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-3-10:ball-volume",
+      "type": "numeric",
+      "prompt": "What volume does a ball of radius 2 have in coordinate-cubic units? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "calculus-3-10-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 33.510321638291124,
+        "unit": "",
+        "tolerance": 0.0001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Include spherical measure ρ² sinφ.",
+        "solution": "The angular integral is 4π and radial integral is 8/3.",
+        "lesson_ids": [
+          "calculus-3-10"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-3-10:ball-density-total",
+      "type": "numeric",
+      "prompt": "Integrate density ρ² over a ball of radius 2 using spherical coordinates. Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "calculus-3-10-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 80.4247719318987,
+        "unit": "",
+        "tolerance": 0.0001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Multiply the density by spherical volume measure.",
+        "solution": "The total is 4π∫₀²ρ⁴dρ=128π/5; average density is 12/5.",
+        "lesson_ids": [
+          "calculus-3-10"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-3-10:triangle-bounds",
+      "type": "single_choice",
+      "prompt": "Which bounds describe x≥0,y≥0,x+y≤1?",
+      "points": 1,
+      "objective_ids": [
+        "calculus-3-10-objective-1"
+      ],
+      "options": [
+        "0≤x≤1−y with no bounds on y.",
+        "0≤x≤1 and 0≤y≤1.",
+        "0≤x≤1 and 0≤y≤1−x."
+      ],
+      "solution_spec": {
+        "answer": 2
+      },
+      "feedback": {
+        "hint": "Check geometry, domains and the stated assumptions.",
+        "solution": "0≤x≤1 and 0≤y≤1−x.",
+        "lesson_ids": [
+          "calculus-3-10"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-3-10:absolute-jacobian",
+      "type": "single_choice",
+      "prompt": "What multiplies unsigned area under a regular coordinate map?",
+      "points": 1,
+      "objective_ids": [
+        "calculus-3-10-objective-2"
+      ],
+      "options": [
+        "The determinant twice because there are two coordinates.",
+        "A signed determinant that makes reflected area negative.",
+        "The absolute Jacobian determinant, with mapping multiplicity checked."
+      ],
+      "solution_spec": {
+        "answer": 2
+      },
+      "feedback": {
+        "hint": "Check geometry, domains and the stated assumptions.",
+        "solution": "The absolute Jacobian determinant, with mapping multiplicity checked.",
+        "lesson_ids": [
+          "calculus-3-10"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-3-10:spherical-angle",
+      "type": "single_choice",
+      "prompt": "Using φ as polar angle from the positive z axis, what is spherical volume measure?",
+      "points": 1,
+      "objective_ids": [
+        "calculus-3-10-objective-3"
+      ],
+      "options": [
+        "ρ²sinφ dρ dφ dθ.",
+        "ρ dρ dφ dθ without an angular factor.",
+        "ρ²sinθ dρ dφ dθ, regardless of angle convention."
+      ],
+      "solution_spec": {
+        "answer": 0
+      },
+      "feedback": {
+        "hint": "Check geometry, domains and the stated assumptions.",
+        "solution": "ρ²sinφ dρ dφ dθ.",
+        "lesson_ids": [
+          "calculus-3-10"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-3-11:potential-work",
+      "type": "numeric",
+      "prompt": "For F=(2xy,x²), calculate work from (0,0) to (2,1) along any smooth path in the plane. Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "calculus-3-11-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 4,
+        "unit": "",
+        "tolerance": 0.0001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use potential φ=x²y.",
+        "solution": "φ(2,1)−φ(0,0)=4.",
+        "lesson_ids": [
+          "calculus-3-11"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-3-11:curved-work",
+      "type": "numeric",
+      "prompt": "For F=(2xy,x²) along r(t)=(t,t²),0≤t≤1, what vector line integral results? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "calculus-3-11-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 1,
+        "unit": "",
+        "tolerance": 0.0001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Substitute the curve into F and dot with r′.",
+        "solution": "F·r′=2t³+2t³=4t³, whose integral is 1.",
+        "lesson_ids": [
+          "calculus-3-11"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-3-11:scalar-length",
+      "type": "numeric",
+      "prompt": "For scalar C(x,y)=x along r(t)=(3t,4t),0≤t≤1, evaluate ∫C ds. Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "calculus-3-11-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 7.5,
+        "unit": "",
+        "tolerance": 0.0001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use speed 5 in the scalar arc-length integral.",
+        "solution": "∫₀¹(3t)×5dt=7.5.",
+        "lesson_ids": [
+          "calculus-3-11"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-3-11:circle-circulation",
+      "type": "numeric",
+      "prompt": "For F=(−y,x), what is circulation around the counterclockwise unit circle? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "calculus-3-11-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 6.283185307179586,
+        "unit": "",
+        "tolerance": 0.0001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use scalar curl 2 and unit disk area.",
+        "solution": "Green gives 2π; direct parameterization has integrand 1 over a full turn.",
+        "lesson_ids": [
+          "calculus-3-11"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-3-11:rectangle-circulation",
+      "type": "numeric",
+      "prompt": "For F=(−y,x), what is counterclockwise circulation around [0,2]×[0,1]? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "calculus-3-11-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 4,
+        "unit": "",
+        "tolerance": 0.0001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Multiply constant scalar curl 2 by rectangle area 2.",
+        "solution": "The circulation is 4; reversing the boundary would negate it.",
+        "lesson_ids": [
+          "calculus-3-11"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-3-11:vortex-circulation",
+      "type": "numeric",
+      "prompt": "For F=(−y/(x²+y²),x/(x²+y²)), what is counterclockwise circulation on the unit circle? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "calculus-3-11-objective-3"
+      ],
+      "solution_spec": {
+        "answer": 6.283185307179586,
+        "unit": "",
+        "tolerance": 0.0001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Parameterize the circle directly; the field is singular inside it.",
+        "solution": "The integrand is 1, giving 2π. Zero curl away from the origin does not justify Green on the disk.",
+        "lesson_ids": [
+          "calculus-3-11"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-3-11:reverse",
+      "type": "single_choice",
+      "prompt": "What happens under reversal of a single path traversal?",
+      "points": 1,
+      "objective_ids": [
+        "calculus-3-11-objective-1"
+      ],
+      "options": [
+        "Neither integral can change sign.",
+        "Vector work changes sign; scalar arc-length accumulation is preserved.",
+        "Both integrals always change sign."
+      ],
+      "solution_spec": {
+        "answer": 1
+      },
+      "feedback": {
+        "hint": "Check geometry, domains and the stated assumptions.",
+        "solution": "Vector work changes sign; scalar arc-length accumulation is preserved.",
+        "lesson_ids": [
+          "calculus-3-11"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-3-11:potential-domain",
+      "type": "single_choice",
+      "prompt": "Zero planar curl supports a global potential under which standard sufficient conditions?",
+      "points": 1,
+      "objective_ids": [
+        "calculus-3-11-objective-2"
+      ],
+      "options": [
+        "A simply connected open region with the required smoothness.",
+        "No domain conditions are needed.",
+        "Every punctured region, regardless of holes."
+      ],
+      "solution_spec": {
+        "answer": 0
+      },
+      "feedback": {
+        "hint": "Check geometry, domains and the stated assumptions.",
+        "solution": "A simply connected open region with the required smoothness.",
+        "lesson_ids": [
+          "calculus-3-11"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-3-11:vortex-hole",
+      "type": "single_choice",
+      "prompt": "Why cannot Green on the full disk set the vortex circulation to zero?",
+      "points": 1,
+      "objective_ids": [
+        "calculus-3-11-objective-3"
+      ],
+      "options": [
+        "The unit circle has no valid parameterization.",
+        "The field is singular at the enclosed origin, violating its region smoothness condition.",
+        "Green requires every field to have nonzero curl."
+      ],
+      "solution_spec": {
+        "answer": 1
+      },
+      "feedback": {
+        "hint": "Check geometry, domains and the stated assumptions.",
+        "solution": "The field is singular at the enclosed origin, violating its region smoothness condition.",
+        "lesson_ids": [
+          "calculus-3-11"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-3-12:graph-area",
+      "type": "numeric",
+      "prompt": "For z=x+y over 0≤x,y≤1, what is the unsigned surface area? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "calculus-3-12-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 1.7320508075688772,
+        "unit": "",
+        "tolerance": 0.0001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the magnitude of (−1,−1,1).",
+        "solution": "The constant area factor is √3 over a unit parameter square.",
+        "lesson_ids": [
+          "calculus-3-12"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-3-12:vertical-flux",
+      "type": "numeric",
+      "prompt": "For J=(0,0,z), what is upward flux through z=x+y over the unit square? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "calculus-3-12-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 1,
+        "unit": "",
+        "tolerance": 0.0001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use upward area vector (−1,−1,1)dxdy.",
+        "solution": "The flux integrand is z=x+y and its double integral is 1.",
+        "lesson_ids": [
+          "calculus-3-12"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-3-12:constant-flux",
+      "type": "numeric",
+      "prompt": "For J=(2,0,5), what is upward flux through the same graph patch z=x+y over the unit square? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "calculus-3-12-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 3,
+        "unit": "",
+        "tolerance": 0.0001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Dot the field into the full oriented area vector.",
+        "solution": "(2,0,5)·(−1,−1,1)=3, integrated over unit parameter area.",
+        "lesson_ids": [
+          "calculus-3-12"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-3-12:sphere-flux",
+      "type": "numeric",
+      "prompt": "For J=(x,y,z), what is outward flux through the unit sphere? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "calculus-3-12-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 12.566370614359172,
+        "unit": "",
+        "tolerance": 0.0001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use divergence 3 or the unit-sphere normal density.",
+        "solution": "Divergence times volume gives 3×4π/3=4π.",
+        "lesson_ids": [
+          "calculus-3-12"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-3-12:box-flux",
+      "type": "numeric",
+      "prompt": "For J=(x²,y,z), what is outward flux through the box [0,2]×[0,1]×[0,1]? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "calculus-3-12-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 8,
+        "unit": "",
+        "tolerance": 0.0001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Integrate divergence 2x+2 or add all six signed face contributions.",
+        "solution": "∫₀²(2x+2)dx=8, agreeing with face contributions 4+2+2.",
+        "lesson_ids": [
+          "calculus-3-12"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-3-12:diffusion-flux",
+      "type": "numeric",
+      "prompt": "For J=(−x,−y,−z) in amount/(m²·s), with x,y,z numerically in m, what outward transfer in amount/s crosses a sphere of radius 2 m? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "calculus-3-12-objective-3"
+      ],
+      "solution_spec": {
+        "answer": -100.53096491487338,
+        "unit": "",
+        "tolerance": 0.0001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Outward normal density is −2, so net transfer is inward.",
+        "solution": "The outward density −2 times sphere area 16π gives −32π amount/s.",
+        "lesson_ids": [
+          "calculus-3-12"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-3-12:area-convention",
+      "type": "single_choice",
+      "prompt": "Which flux convention avoids double-counting area?",
+      "points": 1,
+      "objective_ids": [
+        "calculus-3-12-objective-1"
+      ],
+      "options": [
+        "Use only the unit normal with parameter area for every surface.",
+        "Use either a unit normal times scalar area or the full oriented area vector.",
+        "Use the full cross product and multiply its magnitude in again."
+      ],
+      "solution_spec": {
+        "answer": 1
+      },
+      "feedback": {
+        "hint": "Check geometry, domains and the stated assumptions.",
+        "solution": "Use either a unit normal times scalar area or the full oriented area vector.",
+        "lesson_ids": [
+          "calculus-3-12"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-3-12:closed",
+      "type": "single_choice",
+      "prompt": "Which boundary supports the displayed divergence theorem?",
+      "points": 1,
+      "objective_ids": [
+        "calculus-3-12-objective-2"
+      ],
+      "options": [
+        "Only faces with positive transfer.",
+        "The entire closed outward-oriented boundary of the volume.",
+        "Any one open face alone."
+      ],
+      "solution_spec": {
+        "answer": 1
+      },
+      "feedback": {
+        "hint": "Check geometry, domains and the stated assumptions.",
+        "solution": "The entire closed outward-oriented boundary of the volume.",
+        "lesson_ids": [
+          "calculus-3-12"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-3-12:variable-diffusion",
+      "type": "single_choice",
+      "prompt": "If scalar diffusivity D varies spatially, how is divergence of −D∇C handled?",
+      "points": 1,
+      "objective_ids": [
+        "calculus-3-12-objective-3"
+      ],
+      "options": [
+        "Use only −D times the Laplacian for every variable D.",
+        "Include derivatives of D as well as concentration curvature.",
+        "Set it to zero because diffusion is conservative."
+      ],
+      "solution_spec": {
+        "answer": 1
+      },
+      "feedback": {
+        "hint": "Check geometry, domains and the stated assumptions.",
+        "solution": "Include derivatives of D as well as concentration curvature.",
+        "lesson_ids": [
+          "calculus-3-12"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-3-13:stokes-circle",
+      "type": "numeric",
+      "prompt": "For F=(−y/2,x/2,z), what is counterclockwise circulation around the unit circle at z=0? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "calculus-3-13-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 3.141592653589793,
+        "unit": "",
+        "tolerance": 0.0001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use curl (0,0,1) and upward disk orientation.",
+        "solution": "The curl flux is unit disk area π.",
+        "lesson_ids": [
+          "calculus-3-13"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-3-13:stokes-disk",
+      "type": "numeric",
+      "prompt": "For the same F=(−y/2,x/2,z), what circulation follows on the counterclockwise radius-2 circle at z=0? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "calculus-3-13-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 12.566370614359172,
+        "unit": "",
+        "tolerance": 0.0001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use constant upward curl flux over the radius-2 disk.",
+        "solution": "The circulation is disk area 4π.",
+        "lesson_ids": [
+          "calculus-3-13"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-3-13:tilted-triangle",
+      "type": "numeric",
+      "prompt": "For F=(−y/2,x/2,z), what circulation results on A→B→C→A with A=(0,0,0),B=(1,0,0),C=(0,1,1)? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "calculus-3-13-objective-1"
+      ],
+      "solution_spec": {
+        "answer": 0.5,
+        "unit": "",
+        "tolerance": 0.0001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use the oriented triangle area vector, not just unsigned area.",
+        "solution": "The area vector is (0,−1/2,1/2); dotting curl (0,0,1) gives 1/2.",
+        "lesson_ids": [
+          "calculus-3-13"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-3-13:balance-transfer",
+      "type": "numeric",
+      "prompt": "For J=(−2x,−3y,−4z) on [0,2]×[0,1]×[0,1] in the stated amount/time scale, what net outward transfer results? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "calculus-3-13-objective-2"
+      ],
+      "solution_spec": {
+        "answer": -18,
+        "unit": "",
+        "tolerance": 0.0001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Integrate constant divergence −9 over volume 2.",
+        "solution": "The result is −18; negative outward transfer means net inward supply.",
+        "lesson_ids": [
+          "calculus-3-13"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-3-13:steady-sink",
+      "type": "numeric",
+      "prompt": "For that box with outward transfer −18 amount/s, no source and steady storage, what uniform sink rate in amount/(m³·s) balances it? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "calculus-3-13-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 9,
+        "unit": "",
+        "tolerance": 0.0001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use Q_out=−rV at steady state, with V=2 m³.",
+        "solution": "−18=−2r gives r=9.",
+        "lesson_ids": [
+          "calculus-3-13"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-3-13:storage-rate",
+      "type": "numeric",
+      "prompt": "For that box with Q_out=−18 amount/s, no source and uniform sink 12 amount/(m³·s), what is dM/dt in amount/s? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "calculus-3-13-objective-3"
+      ],
+      "solution_spec": {
+        "answer": -6,
+        "unit": "",
+        "tolerance": 0.0001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Use storage = integrated source minus sink minus outward transfer.",
+        "solution": "dM/dt=−12×2−(−18)=−6 amount/s.",
+        "lesson_ids": [
+          "calculus-3-13"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-3-13:stokes-orientation",
+      "type": "single_choice",
+      "prompt": "How are Stokes surface normal and boundary direction related?",
+      "points": 1,
+      "objective_ids": [
+        "calculus-3-13-objective-1"
+      ],
+      "options": [
+        "Every boundary is clockwise for an upward normal.",
+        "By the compatible right-hand orientation; reversing one requires reversing the other.",
+        "They can be selected independently without changing the equality."
+      ],
+      "solution_spec": {
+        "answer": 1
+      },
+      "feedback": {
+        "hint": "Check geometry, domains and the stated assumptions.",
+        "solution": "By the compatible right-hand orientation; reversing one requires reversing the other.",
+        "lesson_ids": [
+          "calculus-3-13"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-3-13:inference",
+      "type": "single_choice",
+      "prompt": "Can a boundary flux alone identify a tissue sink?",
+      "points": 1,
+      "objective_ids": [
+        "calculus-3-13-objective-2"
+      ],
+      "options": [
+        "Yes; any negative flux proves a unique reaction mechanism.",
+        "Yes; net outward flux is always the sink density.",
+        "No; source, storage, geometry and model assumptions must also be specified."
+      ],
+      "solution_spec": {
+        "answer": 2
+      },
+      "feedback": {
+        "hint": "Check geometry, domains and the stated assumptions.",
+        "solution": "No; source, storage, geometry and model assumptions must also be specified.",
+        "lesson_ids": [
+          "calculus-3-13"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-3-13:singularity",
+      "type": "single_choice",
+      "prompt": "A radial field has zero divergence away from an enclosed point singularity. What is justified?",
+      "points": 1,
+      "objective_ids": [
+        "calculus-3-13-objective-3"
+      ],
+      "options": [
+        "A finite outer-surface integral proves smoothness inside.",
+        "Ignore the singularity because it occupies one point.",
+        "The ordinary theorem on the whole ball needs additional analysis; excluding the singularity adds an inner boundary."
+      ],
+      "solution_spec": {
+        "answer": 2
+      },
+      "feedback": {
+        "hint": "Check geometry, domains and the stated assumptions.",
+        "solution": "The ordinary theorem on the whole ball needs additional analysis; excluding the singularity adds an inner boundary.",
+        "lesson_ids": [
+          "calculus-3-13"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-3-lab-01:summary",
+      "type": "file_upload",
+      "prompt": "Group the boundary CSV by face. Upload columns face,replicates,mean_normal_flux with six rows x0,x2,y0,y1,z0,z1. The mean is the reported signed outward-normal density, before offset correction.",
+      "points": 12,
+      "objective_ids": [
+        "calculus-3-lab-01-objective-1"
+      ],
+      "solution_spec": {
+        "accepted_media_types": [
+          "text/csv"
+        ],
+        "max_bytes": 32768,
+        "validation_spec": {
+          "format": "csv-numeric-table-v1",
+          "delimiter": ",",
+          "key_column": "face",
+          "columns": [
+            "face",
+            "replicates",
+            "mean_normal_flux"
+          ],
+          "checks": [
+            {
+              "id": "x0-replicates",
+              "row_id": "x0",
+              "column": "replicates",
+              "type": "numeric",
+              "answer": 3.0,
+              "unit": "",
+              "tolerance": 0,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "count",
+                "values": [
+                  0.9,
+                  1,
+                  1.1
+                ]
+              }
+            },
+            {
+              "id": "x0-mean_normal_flux",
+              "row_id": "x0",
+              "column": "mean_normal_flux",
+              "type": "numeric",
+              "answer": 1.0,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  0.9,
+                  1,
+                  1.1
+                ]
+              }
+            },
+            {
+              "id": "x2-replicates",
+              "row_id": "x2",
+              "column": "replicates",
+              "type": "numeric",
+              "answer": 3.0,
+              "unit": "",
+              "tolerance": 0,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "count",
+                "values": [
+                  -3.1,
+                  -3,
+                  -2.9
+                ]
+              }
+            },
+            {
+              "id": "x2-mean_normal_flux",
+              "row_id": "x2",
+              "column": "mean_normal_flux",
+              "type": "numeric",
+              "answer": -3.0,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  -3.1,
+                  -3,
+                  -2.9
+                ]
+              }
+            },
+            {
+              "id": "y0-replicates",
+              "row_id": "y0",
+              "column": "replicates",
+              "type": "numeric",
+              "answer": 3.0,
+              "unit": "",
+              "tolerance": 0,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "count",
+                "values": [
+                  0.9,
+                  1,
+                  1.1
+                ]
+              }
+            },
+            {
+              "id": "y0-mean_normal_flux",
+              "row_id": "y0",
+              "column": "mean_normal_flux",
+              "type": "numeric",
+              "answer": 1.0,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  0.9,
+                  1,
+                  1.1
+                ]
+              }
+            },
+            {
+              "id": "y1-replicates",
+              "row_id": "y1",
+              "column": "replicates",
+              "type": "numeric",
+              "answer": 3.0,
+              "unit": "",
+              "tolerance": 0,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "count",
+                "values": [
+                  -2.1,
+                  -2,
+                  -1.9
+                ]
+              }
+            },
+            {
+              "id": "y1-mean_normal_flux",
+              "row_id": "y1",
+              "column": "mean_normal_flux",
+              "type": "numeric",
+              "answer": -2.0,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  -2.1,
+                  -2,
+                  -1.9
+                ]
+              }
+            },
+            {
+              "id": "z0-replicates",
+              "row_id": "z0",
+              "column": "replicates",
+              "type": "numeric",
+              "answer": 3.0,
+              "unit": "",
+              "tolerance": 0,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "count",
+                "values": [
+                  0.9,
+                  1,
+                  1.1
+                ]
+              }
+            },
+            {
+              "id": "z0-mean_normal_flux",
+              "row_id": "z0",
+              "column": "mean_normal_flux",
+              "type": "numeric",
+              "answer": 1.0,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  0.9,
+                  1,
+                  1.1
+                ]
+              }
+            },
+            {
+              "id": "z1-replicates",
+              "row_id": "z1",
+              "column": "replicates",
+              "type": "numeric",
+              "answer": 3.0,
+              "unit": "",
+              "tolerance": 0,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "count",
+                "values": [
+                  -3.1,
+                  -3,
+                  -2.9
+                ]
+              }
+            },
+            {
+              "id": "z1-mean_normal_flux",
+              "row_id": "z1",
+              "column": "mean_normal_flux",
+              "type": "numeric",
+              "answer": -3.0,
+              "unit": "",
+              "tolerance": 0.005,
+              "relative_tolerance": 0,
+              "unit_required": false,
+              "calculation": {
+                "operation": "mean",
+                "values": [
+                  -3.1,
+                  -3,
+                  -2.9
+                ]
+              }
+            }
+          ]
+        },
+        "rubric": [
+          {
+            "id": "x0-replicates",
+            "criterion": "x0: replicates",
+            "points": 1,
+            "evidence": [
+              "Recomputes replicates for x0 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "x0-mean_normal_flux",
+            "criterion": "x0: mean_normal_flux",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_normal_flux for x0 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "x2-replicates",
+            "criterion": "x2: replicates",
+            "points": 1,
+            "evidence": [
+              "Recomputes replicates for x2 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "x2-mean_normal_flux",
+            "criterion": "x2: mean_normal_flux",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_normal_flux for x2 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "y0-replicates",
+            "criterion": "y0: replicates",
+            "points": 1,
+            "evidence": [
+              "Recomputes replicates for y0 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "y0-mean_normal_flux",
+            "criterion": "y0: mean_normal_flux",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_normal_flux for y0 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "y1-replicates",
+            "criterion": "y1: replicates",
+            "points": 1,
+            "evidence": [
+              "Recomputes replicates for y1 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "y1-mean_normal_flux",
+            "criterion": "y1: mean_normal_flux",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_normal_flux for y1 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "z0-replicates",
+            "criterion": "z0: replicates",
+            "points": 1,
+            "evidence": [
+              "Recomputes replicates for z0 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "z0-mean_normal_flux",
+            "criterion": "z0: mean_normal_flux",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_normal_flux for z0 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "z1-replicates",
+            "criterion": "z1: replicates",
+            "points": 1,
+            "evidence": [
+              "Recomputes replicates for z1 from the preparation-level values."
+            ]
+          },
+          {
+            "id": "z1-mean_normal_flux",
+            "criterion": "z1: mean_normal_flux",
+            "points": 1,
+            "evidence": [
+              "Recomputes mean_normal_flux for z1 from the preparation-level values."
+            ]
+          }
+        ]
+      },
+      "feedback": {
+        "hint": "Group by face and average the three signed reported values.",
+        "solution": "Each group has three deliberately balanced readings; the mean equals the model normal density plus the known offset 1.",
+        "lesson_ids": [
+          "calculus-3-lab-01"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-3-lab-01:raw-transfer",
+      "type": "numeric",
+      "prompt": "Using raw CSV mean normal densities and supplied face areas, sum mean×area over all six faces. What net outward transfer in amount/s results? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "calculus-3-lab-01-objective-1"
+      ],
+      "solution_spec": {
+        "answer": -8,
+        "unit": "",
+        "tolerance": 0.001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Retain the signed densities and multiply each by its own face area.",
+        "solution": "Raw transfer is 1−3+2−4+2−6=−8 amount/s. This includes a systematic offset contribution of 10 amount/s.",
+        "lesson_ids": [
+          "calculus-3-lab-01"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-3-lab-01:corrected-transfer",
+      "type": "numeric",
+      "prompt": "Subtract the known +1 amount/(m²·s) offset from every mean normal density, then sum corrected mean×face area. What net outward transfer in amount/s results? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "calculus-3-lab-01-objective-1"
+      ],
+      "solution_spec": {
+        "answer": -18,
+        "unit": "",
+        "tolerance": 0.001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Correct densities before area weighting; negative outward transfer means inward supply.",
+        "solution": "Corrected face contributions are 0,−4,0,−6,0,−8, totaling −18 amount/s.",
+        "lesson_ids": [
+          "calculus-3-lab-01"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-3-lab-01:steady-sink",
+      "type": "numeric",
+      "prompt": "Using corrected transfer −18 amount/s, volume 2 m³, no source and steady storage, calculate the uniform sink in amount/(m³·s). Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "calculus-3-lab-01-objective-2"
+      ],
+      "solution_spec": {
+        "answer": 9,
+        "unit": "",
+        "tolerance": 0.001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "At steady state with no source, Q_out=−rV.",
+        "solution": "−18=−2r gives r=9 amount/(m³·s). This inference depends on the stated source and storage assumptions.",
+        "lesson_ids": [
+          "calculus-3-lab-01"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-3-lab-01:rescaled-box",
+      "type": "numeric",
+      "prompt": "For the same exact field J=(−2x,−3y,−4z), rescale the box to [0,3]×[0,1]×[0,1] m. What net outward transfer in amount/s does the model predict? Enter the number only.",
+      "points": 1,
+      "objective_ids": [
+        "calculus-3-lab-01-objective-2"
+      ],
+      "solution_spec": {
+        "answer": -27,
+        "unit": "",
+        "tolerance": 0.001,
+        "unit_required": false,
+        "significant_figures": null,
+        "dimensions": null
+      },
+      "feedback": {
+        "hint": "Divergence stays −9 while volume becomes 3 m³.",
+        "solution": "The predicted transfer is −9×3=−27 amount/s. It is a model calculation, not a new observation.",
+        "lesson_ids": [
+          "calculus-3-lab-01"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-3-lab-01:interpretation",
+      "type": "structured",
+      "prompt": "Choose interpretations supported by the oriented boundary analysis.",
+      "points": 3,
+      "objective_ids": [
+        "calculus-3-lab-01-objective-3"
+      ],
+      "response_fields": [
+        {
+          "id": "orientation",
+          "type": "single_choice",
+          "prompt": "What does corrected Q_out=−18 mean?",
+          "options": [
+            "Net inward supply of 18 amount/s under the outward-normal convention.",
+            "A negative stored amount inside the volume.",
+            "A sink density of −18 independent of volume."
+          ],
+          "points": 1
+        },
+        {
+          "id": "storage",
+          "type": "single_choice",
+          "prompt": "When does the calculated uniform sink 9 follow?",
+          "options": [
+            "When the region is fixed, source is zero and storage is steady, with the supplied volume and field model.",
+            "From flux alone without storage or source information.",
+            "Whenever three readings are available per face."
+          ],
+          "points": 1
+        },
+        {
+          "id": "offset",
+          "type": "single_choice",
+          "prompt": "If the common offset were estimated with uncertainty, what follows?",
+          "options": [
+            "Its effect is shared across faces and contributes total-area times offset uncertainty to transfer.",
+            "Averaging three readings removes every common calibration error.",
+            "The geometric theorem guarantees a noiseless sensor."
+          ],
+          "points": 1
+        }
+      ],
+      "solution_spec": {
+        "field_specs": [
+          {
+            "id": "orientation",
+            "type": "single_choice",
+            "answer": 0
+          },
+          {
+            "id": "storage",
+            "type": "single_choice",
+            "answer": 0
+          },
+          {
+            "id": "offset",
+            "type": "single_choice",
+            "answer": 0
+          }
+        ],
+        "rubric": [
+          {
+            "id": "orientation",
+            "criterion": "Signed transfer convention",
+            "points": 1,
+            "evidence": [
+              "A negative signed outward rate denotes net inward transfer."
+            ]
+          },
+          {
+            "id": "storage",
+            "criterion": "Assumptions for consumption",
+            "points": 1,
+            "evidence": [
+              "Conservation includes source, sink and storage separately."
+            ]
+          },
+          {
+            "id": "offset",
+            "criterion": "Calibration uncertainty",
+            "points": 1,
+            "evidence": [
+              "The common offset contributes through the sum of all face areas."
+            ]
+          }
+        ]
+      },
+      "feedback": {
+        "hint": "Separate orientation, conservation and calibration effects.",
+        "solution": "The inward rate is 18. The sink calculation needs source/storage assumptions; a common estimated offset creates a shared error weighted by total boundary area.",
+        "lesson_ids": [
+          "calculus-3-lab-01"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-3-lab-01:claims",
+      "type": "multiple_select",
+      "prompt": "Which statements respect the synthetic construction? Select all that apply.",
+      "points": 2,
+      "objective_ids": [
+        "calculus-3-lab-01-objective-3"
+      ],
+      "options": [
+        "Face area is required to turn normal density into transfer rate.",
+        "The three repeats establish independent Gaussian errors.",
+        "All six faces belong to the closed boundary, including those with zero true normal density.",
+        "The repeat offsets deliberately balance around each constructed face mean.",
+        "The data prove an actual tissue has uniform oxygen consumption."
+      ],
+      "solution_spec": {
+        "answer": [
+          0,
+          2,
+          3
+        ],
+        "partial_credit": "correct-minus-incorrect-clamped-v1"
+      },
+      "feedback": {
+        "hint": "Distinguish geometric requirements and supplied construction from real experimental evidence.",
+        "solution": "Balanced synthetic offsets, a complete boundary and area weighting are specified. No real tissue parameter or noise distribution is established.",
+        "lesson_ids": [
+          "calculus-3-lab-01"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
+    },
+    {
+      "id": "calculus-3-lab-01:theorem",
+      "type": "single_choice",
+      "prompt": "Why is the divergence theorem valid for the exact field on this teaching box?",
+      "points": 1,
+      "objective_ids": [
+        "calculus-3-lab-01-objective-2"
+      ],
+      "options": [
+        "Every field is valid on a box even with an interior singularity.",
+        "The field is continuously differentiable on its neighborhood and the full box boundary is closed, piecewise smooth and outward-oriented.",
+        "A negative net transfer removes the need for surface orientation."
+      ],
+      "solution_spec": {
+        "answer": 1
+      },
+      "feedback": {
+        "hint": "Check the field throughout the volume and include every boundary face.",
+        "solution": "The linear field is smooth everywhere and the six-face box satisfies the required boundary conditions; signs remain essential.",
+        "lesson_ids": [
+          "calculus-3-lab-01"
+        ],
+        "misconception_ids": []
+      },
+      "visibility": "public-practice-authoring",
+      "provenance": {
+        "kind": "original",
+        "modifications": []
+      }
     }
   ]
 }

@@ -80,6 +80,110 @@
       "original_content": true,
       "license": "CC-BY-4.0",
       "modifications": []
+    },
+    {
+      "module_id": "calculus-3-module-7",
+      "lesson_id": "calculus-3-7",
+      "reading": "modules/07-vectors-planes-and-spatial-curves.md",
+      "source_ids": [
+        "multivariable",
+        "transport"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "calculus-3-module-8",
+      "lesson_id": "calculus-3-8",
+      "reading": "modules/08-partial-derivatives-and-total-change.md",
+      "source_ids": [
+        "multivariable",
+        "transport"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "calculus-3-module-9",
+      "lesson_id": "calculus-3-9",
+      "reading": "modules/09-hessians-constraints-and-boundary-optima.md",
+      "source_ids": [
+        "multivariable",
+        "transport"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "calculus-3-module-10",
+      "lesson_id": "calculus-3-10",
+      "reading": "modules/10-multiple-integrals-and-jacobian-measures.md",
+      "source_ids": [
+        "multivariable",
+        "transport"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "calculus-3-module-11",
+      "lesson_id": "calculus-3-11",
+      "reading": "modules/11-line-integrals-potentials-and-green.md",
+      "source_ids": [
+        "multivariable",
+        "transport"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "calculus-3-module-12",
+      "lesson_id": "calculus-3-12",
+      "reading": "modules/12-surface-flux-and-divergence.md",
+      "source_ids": [
+        "multivariable",
+        "transport"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "calculus-3-module-13",
+      "lesson_id": "calculus-3-13",
+      "reading": "modules/13-stokes-theorem-and-spatial-balances.md",
+      "source_ids": [
+        "multivariable",
+        "transport"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
+    },
+    {
+      "module_id": "calculus-3-module-lab-01",
+      "lesson_id": "calculus-3-lab-01",
+      "reading": "labs/01-boundary-flux-and-balance.md",
+      "source_ids": [
+        "multivariable",
+        "transport"
+      ],
+      "relationship": "original-instruction-with-explicitly-synthetic-data-and-link-only-scientific-references",
+      "original_content": true,
+      "license": "CC-BY-4.0",
+      "modifications": []
     }
   ]
 }

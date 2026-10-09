@@ -7,7 +7,7 @@
   "domain": "Mathematics",
   "level": "Year 2",
   "maturity": "partial",
-  "version": "0.3.1",
+  "version": "0.4.0",
   "license": "MIT OR CC-BY-4.0",
   "content_origin": {
     "kind": "legacy-prototype",
@@ -146,12 +146,356 @@
       "course_outcome_ids": [
         "calculus-3-outcome-3"
       ]
+    },
+    {
+      "id": "calculus-3-7-objective-1",
+      "description": "Compute vector lengths, projections and cross products in a stated frame.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "calculus-3-outcome-1",
+        "calculus-3-outcome-3"
+      ]
+    },
+    {
+      "id": "calculus-3-7-objective-2",
+      "description": "Calculate speeds, unit tangents and traced curve lengths.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "calculus-3-outcome-1",
+        "calculus-3-outcome-4"
+      ]
+    },
+    {
+      "id": "calculus-3-7-objective-3",
+      "description": "Interpret normal directions, distances and coordinate units.",
+      "bloom": "analyze",
+      "course_outcome_ids": [
+        "calculus-3-outcome-1",
+        "calculus-3-outcome-3"
+      ]
+    },
+    {
+      "id": "calculus-3-8-objective-1",
+      "description": "Calculate partial and mixed derivatives with fixed-coordinate conditions.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "calculus-3-outcome-1"
+      ]
+    },
+    {
+      "id": "calculus-3-8-objective-2",
+      "description": "Apply tangent planes and path chain rules.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "calculus-3-outcome-1"
+      ]
+    },
+    {
+      "id": "calculus-3-8-objective-3",
+      "description": "Distinguish differentiability and bound a local linearization remainder.",
+      "bloom": "analyze",
+      "course_outcome_ids": [
+        "calculus-3-outcome-1",
+        "calculus-3-outcome-2"
+      ]
+    },
+    {
+      "id": "calculus-3-9-objective-1",
+      "description": "Solve stationary equations and classify a Hessian.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "calculus-3-outcome-2"
+      ]
+    },
+    {
+      "id": "calculus-3-9-objective-2",
+      "description": "Evaluate regular equality-constraint candidates and multiplier conventions.",
+      "bloom": "analyze",
+      "course_outcome_ids": [
+        "calculus-3-outcome-2"
+      ]
+    },
+    {
+      "id": "calculus-3-9-objective-3",
+      "description": "Compare feasible stationary and boundary candidates.",
+      "bloom": "evaluate",
+      "course_outcome_ids": [
+        "calculus-3-outcome-2"
+      ]
+    },
+    {
+      "id": "calculus-3-10-objective-1",
+      "description": "Set up bounded multiple integrals from slice geometry.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "calculus-3-outcome-3"
+      ]
+    },
+    {
+      "id": "calculus-3-10-objective-2",
+      "description": "Calculate transformed totals with absolute Jacobian factors.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "calculus-3-outcome-3"
+      ]
+    },
+    {
+      "id": "calculus-3-10-objective-3",
+      "description": "Interpret measure, coordinate conventions and density averages.",
+      "bloom": "analyze",
+      "course_outcome_ids": [
+        "calculus-3-outcome-3"
+      ]
+    },
+    {
+      "id": "calculus-3-11-objective-1",
+      "description": "Calculate scalar arc-length and oriented vector line integrals.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "calculus-3-outcome-4"
+      ]
+    },
+    {
+      "id": "calculus-3-11-objective-2",
+      "description": "Use potential differences and test conservative-field conditions.",
+      "bloom": "analyze",
+      "course_outcome_ids": [
+        "calculus-3-outcome-1",
+        "calculus-3-outcome-4"
+      ]
+    },
+    {
+      "id": "calculus-3-11-objective-3",
+      "description": "Relate planar circulation and curl under valid Green conditions.",
+      "bloom": "evaluate",
+      "course_outcome_ids": [
+        "calculus-3-outcome-4"
+      ]
+    },
+    {
+      "id": "calculus-3-12-objective-1",
+      "description": "Construct oriented surface area vectors and integrate flux.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "calculus-3-outcome-3",
+        "calculus-3-outcome-4"
+      ]
+    },
+    {
+      "id": "calculus-3-12-objective-2",
+      "description": "Compare direct boundary and divergence-volume transfer.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "calculus-3-outcome-4"
+      ]
+    },
+    {
+      "id": "calculus-3-12-objective-3",
+      "description": "Interpret flux signs, smoothness and closed-boundary conditions.",
+      "bloom": "analyze",
+      "course_outcome_ids": [
+        "calculus-3-outcome-1",
+        "calculus-3-outcome-4"
+      ]
+    },
+    {
+      "id": "calculus-3-13-objective-1",
+      "description": "Use compatible boundary orientation in Stokes circulation.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "calculus-3-outcome-4"
+      ]
+    },
+    {
+      "id": "calculus-3-13-objective-2",
+      "description": "Calculate source, sink and storage balances from signed transfer.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "calculus-3-outcome-3",
+        "calculus-3-outcome-4"
+      ]
+    },
+    {
+      "id": "calculus-3-13-objective-3",
+      "description": "Select vector-field theorems with domain and model checks.",
+      "bloom": "evaluate",
+      "course_outcome_ids": [
+        "calculus-3-outcome-4"
+      ]
+    },
+    {
+      "id": "calculus-3-lab-01-objective-1",
+      "description": "Summarize synthetic outward-normal densities and calculate area-weighted transfer.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "calculus-3-outcome-3",
+        "calculus-3-outcome-4"
+      ]
+    },
+    {
+      "id": "calculus-3-lab-01-objective-2",
+      "description": "Compare boundary and divergence balances under source and storage assumptions.",
+      "bloom": "apply",
+      "course_outcome_ids": [
+        "calculus-3-outcome-4"
+      ]
+    },
+    {
+      "id": "calculus-3-lab-01-objective-3",
+      "description": "Interpret calibration effects, orientation and limits of sink identification.",
+      "bloom": "evaluate",
+      "course_outcome_ids": [
+        "calculus-3-outcome-1",
+        "calculus-3-outcome-4"
+      ]
     }
   ],
   "duration": {
-    "instructional_weeks": null,
-    "equivalent_structure": null,
-    "weeks": []
+    "instructional_weeks": 14,
+    "equivalent_structure": "Proposed 14-week scope retaining compact prototype readings in weeks 1, 5, 8 and 10. Workload and qualified review are absent; this is not evidence of semester equivalence.",
+    "weeks": [
+      {
+        "week": 1,
+        "title": "Vectors, partial derivatives, and gradients",
+        "lesson_ids": [
+          "calculus-3-1"
+        ],
+        "assessment_ids": [
+          "calculus-3-1-practice"
+        ]
+      },
+      {
+        "week": 2,
+        "title": "Vectors, planes and spatial curves",
+        "lesson_ids": [
+          "calculus-3-7"
+        ],
+        "assessment_ids": [
+          "calculus-3-7-practice"
+        ]
+      },
+      {
+        "week": 3,
+        "title": "Partial derivatives and total change",
+        "lesson_ids": [
+          "calculus-3-8"
+        ],
+        "assessment_ids": [
+          "calculus-3-8-practice"
+        ]
+      },
+      {
+        "week": 4,
+        "title": "Gradients in a concentration field: partial derivatives, directional derivatives and what a cell can sense",
+        "lesson_ids": [
+          "calculus-3-5"
+        ],
+        "assessment_ids": [
+          "calculus-3-5-practice"
+        ]
+      },
+      {
+        "week": 5,
+        "title": "Multivariable optimization and constraints",
+        "lesson_ids": [
+          "calculus-3-2"
+        ],
+        "assessment_ids": [
+          "calculus-3-2-practice"
+        ]
+      },
+      {
+        "week": 6,
+        "title": "Hessians, constraints and boundary optima",
+        "lesson_ids": [
+          "calculus-3-9"
+        ],
+        "assessment_ids": [
+          "calculus-3-9-practice"
+        ]
+      },
+      {
+        "week": 7,
+        "title": "Optimizing with and without constraints, and integrating over a disk in polar coordinates",
+        "lesson_ids": [
+          "calculus-3-6"
+        ],
+        "assessment_ids": [
+          "calculus-3-6-practice"
+        ]
+      },
+      {
+        "week": 8,
+        "title": "Multiple integrals and coordinate transforms",
+        "lesson_ids": [
+          "calculus-3-3"
+        ],
+        "assessment_ids": [
+          "calculus-3-3-practice"
+        ]
+      },
+      {
+        "week": 9,
+        "title": "Multiple integrals and Jacobian measures",
+        "lesson_ids": [
+          "calculus-3-10"
+        ],
+        "assessment_ids": [
+          "calculus-3-10-practice"
+        ]
+      },
+      {
+        "week": 10,
+        "title": "Line integrals, flux, and integral theorems",
+        "lesson_ids": [
+          "calculus-3-4"
+        ],
+        "assessment_ids": [
+          "calculus-3-4-practice"
+        ]
+      },
+      {
+        "week": 11,
+        "title": "Line integrals, potentials and Green's theorem",
+        "lesson_ids": [
+          "calculus-3-11"
+        ],
+        "assessment_ids": [
+          "calculus-3-11-practice"
+        ]
+      },
+      {
+        "week": 12,
+        "title": "Surface flux and the divergence theorem",
+        "lesson_ids": [
+          "calculus-3-12"
+        ],
+        "assessment_ids": [
+          "calculus-3-12-practice"
+        ]
+      },
+      {
+        "week": 13,
+        "title": "Stokes' theorem and spatial balances",
+        "lesson_ids": [
+          "calculus-3-13"
+        ],
+        "assessment_ids": [
+          "calculus-3-13-practice"
+        ]
+      },
+      {
+        "week": 14,
+        "title": "Virtual lab 1: oriented boundary flux and a steady volume balance",
+        "lesson_ids": [
+          "calculus-3-lab-01"
+        ],
+        "assessment_ids": [
+          "calculus-3-week14-flux-lab",
+          "calculus-3-case"
+        ]
+      }
+    ]
   },
   "workload": {
     "estimated_total_hours": null,
@@ -340,6 +684,309 @@
           ]
         }
       ]
+    },
+    {
+      "id": "calculus-3-module-7",
+      "title": "Vectors, planes and spatial curves",
+      "source_ids": [
+        "multivariable",
+        "transport"
+      ],
+      "lessons": [
+        {
+          "id": "calculus-3-7",
+          "title": "Vectors, planes and spatial curves",
+          "reading": "modules/07-vectors-planes-and-spatial-curves.md",
+          "objectives": [
+            "calculus-3-7-objective-1",
+            "calculus-3-7-objective-2",
+            "calculus-3-7-objective-3"
+          ],
+          "worked_example": "For the helix, differentiate all three coordinates rather than treating z as constant. The horizontal contribution to squared speed is 9(sin²t+cos²t)=9, and the vertical contribution is 16. Thus speed is constantly 5 and length over [0,2] is 10. Divide the derivative by 5 to obtain the unit tangent, with vertical component 0.8. For a plane calculation, use the independent normal (2,−1,2), divide its residual by length 3, and obtain an origin-to-plane distance of 2. The same normalization principle supports both calculations, but tangent and plane normal are different geometric objects.",
+          "question_ids": [
+            "calculus-3-7:vector-length",
+            "calculus-3-7:cross-z",
+            "calculus-3-7:helix-speed",
+            "calculus-3-7:helix-length",
+            "calculus-3-7:plane-distance",
+            "calculus-3-7:tangent-z",
+            "calculus-3-7:zero-direction",
+            "calculus-3-7:cross-order",
+            "calculus-3-7:parameter"
+          ],
+          "card_ids": [
+            "calculus-3-7-card-1",
+            "calculus-3-7-card-2",
+            "calculus-3-7-card-3",
+            "calculus-3-7-card-4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "calculus-3-module-8",
+      "title": "Partial derivatives and total change",
+      "source_ids": [
+        "multivariable",
+        "transport"
+      ],
+      "lessons": [
+        {
+          "id": "calculus-3-8",
+          "title": "Partial derivatives and total change",
+          "reading": "modules/08-partial-derivatives-and-total-change.md",
+          "objectives": [
+            "calculus-3-8-objective-1",
+            "calculus-3-8-objective-2",
+            "calculus-3-8-objective-3"
+          ],
+          "worked_example": "For f=x²y+sin y, compute coordinate derivatives before evaluating them. At (2,0), f_x=0, f_y=5 and f_xy=4. The displacement (0.1,0.02) gives a tangent prediction of 0.1. Along the different path x=1+t,y=t² at t=1, evaluate the partials at (2,1) and include both path velocities, giving 13.080605. These values differ because the derivative questions differ. One concerns a local plane near (2,0), and the other concerns a moving point at (2,1).",
+          "question_ids": [
+            "calculus-3-8:partial-x",
+            "calculus-3-8:partial-y",
+            "calculus-3-8:mixed",
+            "calculus-3-8:path-rate",
+            "calculus-3-8:tangent-prediction",
+            "calculus-3-8:quadratic-error",
+            "calculus-3-8:partials-only",
+            "calculus-3-8:explicit-time",
+            "calculus-3-8:hessian-bound"
+          ],
+          "card_ids": [
+            "calculus-3-8-card-1",
+            "calculus-3-8-card-2",
+            "calculus-3-8-card-3",
+            "calculus-3-8-card-4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "calculus-3-module-9",
+      "title": "Hessians, constraints and boundary optima",
+      "source_ids": [
+        "multivariable",
+        "transport"
+      ],
+      "lessons": [
+        {
+          "id": "calculus-3-9",
+          "title": "Hessians, constraints and boundary optima",
+          "reading": "modules/09-hessians-constraints-and-boundary-optima.md",
+          "objectives": [
+            "calculus-3-9-objective-1",
+            "calculus-3-9-objective-2",
+            "calculus-3-9-objective-3"
+          ],
+          "worked_example": "First solve the unconstrained quadratic equations to get (1,1), classify it using D=8 and record value −6. Then impose the rectangle. Discard the infeasible stationary point, solve all four edge problems, and compare −35/6, −16/3, −1.75 and −4. The smallest is −35/6 at (0.5,7/6). The constrained minimum is higher than the unconstrained one, as expected when a feasible set is made smaller. This scale check catches an alleged constrained value below −6 for this particular objective.",
+          "question_ids": [
+            "calculus-3-9:stationary-x",
+            "calculus-3-9:stationary-y",
+            "calculus-3-9:hessian-determinant",
+            "calculus-3-9:circle-maximum",
+            "calculus-3-9:boundary-x",
+            "calculus-3-9:boundary-value",
+            "calculus-3-9:degenerate",
+            "calculus-3-9:regularity",
+            "calculus-3-9:boundary"
+          ],
+          "card_ids": [
+            "calculus-3-9-card-1",
+            "calculus-3-9-card-2",
+            "calculus-3-9-card-3",
+            "calculus-3-9-card-4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "calculus-3-module-10",
+      "title": "Multiple integrals and Jacobian measures",
+      "source_ids": [
+        "multivariable",
+        "transport"
+      ],
+      "lessons": [
+        {
+          "id": "calculus-3-10",
+          "title": "Multiple integrals and Jacobian measures",
+          "reading": "modules/10-multiple-integrals-and-jacobian-measures.md",
+          "objectives": [
+            "calculus-3-10-objective-1",
+            "calculus-3-10-objective-2",
+            "calculus-3-10-objective-3"
+          ],
+          "worked_example": "For the elliptical region, substitute x=2u,y=3v, find determinant 6 and transform the boundary into u²+v²≤1. Integrate 6 over the unit disk to obtain 6π. For the ball, integrate the spherical angular factor sinφ from zero to π, giving 2, and azimuth over a full turn, giving 2π. The remaining radial integrals are ∫₀²ρ²dρ for volume and ∫₀²ρ⁴dρ for the density total. The common angular factor is 4π, while the different radial powers answer different questions.",
+          "question_ids": [
+            "calculus-3-10:triangle-area",
+            "calculus-3-10:triangle-total",
+            "calculus-3-10:ellipse-area",
+            "calculus-3-10:annular-total",
+            "calculus-3-10:ball-volume",
+            "calculus-3-10:ball-density-total",
+            "calculus-3-10:triangle-bounds",
+            "calculus-3-10:absolute-jacobian",
+            "calculus-3-10:spherical-angle"
+          ],
+          "card_ids": [
+            "calculus-3-10-card-1",
+            "calculus-3-10-card-2",
+            "calculus-3-10-card-3",
+            "calculus-3-10-card-4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "calculus-3-module-11",
+      "title": "Line integrals, potentials and Green's theorem",
+      "source_ids": [
+        "multivariable",
+        "transport"
+      ],
+      "lessons": [
+        {
+          "id": "calculus-3-11",
+          "title": "Line integrals, potentials and Green's theorem",
+          "reading": "modules/11-line-integrals-potentials-and-green.md",
+          "objectives": [
+            "calculus-3-11-objective-1",
+            "calculus-3-11-objective-2",
+            "calculus-3-11-objective-3"
+          ],
+          "worked_example": "Compare the gradient field (2xy,x²) and rotation field (−y,x). For the first, identify φ=x²y and use endpoint differences, obtaining 4 for (0,0) to (2,1). For the second, a counterclockwise unit circle has curl integral 2 times disk area, or 2π, and a direct parameter calculation agrees. Now change to the vortex field: the circle integral still equals 2π, although local curl is zero away from the origin. The missing origin prevents using the disk as a smooth theorem region. Formula, orientation and domain all contribute to the answer.",
+          "question_ids": [
+            "calculus-3-11:potential-work",
+            "calculus-3-11:curved-work",
+            "calculus-3-11:scalar-length",
+            "calculus-3-11:circle-circulation",
+            "calculus-3-11:rectangle-circulation",
+            "calculus-3-11:vortex-circulation",
+            "calculus-3-11:reverse",
+            "calculus-3-11:potential-domain",
+            "calculus-3-11:vortex-hole"
+          ],
+          "card_ids": [
+            "calculus-3-11-card-1",
+            "calculus-3-11-card-2",
+            "calculus-3-11-card-3",
+            "calculus-3-11-card-4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "calculus-3-module-12",
+      "title": "Surface flux and the divergence theorem",
+      "source_ids": [
+        "multivariable",
+        "transport"
+      ],
+      "lessons": [
+        {
+          "id": "calculus-3-12",
+          "title": "Surface flux and the divergence theorem",
+          "reading": "modules/12-surface-flux-and-divergence.md",
+          "objectives": [
+            "calculus-3-12-objective-1",
+            "calculus-3-12-objective-2",
+            "calculus-3-12-objective-3"
+          ],
+          "worked_example": "For the sloped patch z=x+y, compute the cross product of (1,0,1) and (0,1,1) to get (−1,−1,1). Its magnitude is √3, establishing area √3 over a unit parameter square. Dot the vertical field (0,0,z) into that area vector to obtain integrand x+y and total 1. For the diffusion sphere, use the outward normal r/2, so J·n=−2. Integrate over area 16π to obtain −32π and compare with the divergence-volume result. The first surface is open and oriented upward; the second is closed and oriented outward.",
+          "question_ids": [
+            "calculus-3-12:graph-area",
+            "calculus-3-12:vertical-flux",
+            "calculus-3-12:constant-flux",
+            "calculus-3-12:sphere-flux",
+            "calculus-3-12:box-flux",
+            "calculus-3-12:diffusion-flux",
+            "calculus-3-12:area-convention",
+            "calculus-3-12:closed",
+            "calculus-3-12:variable-diffusion"
+          ],
+          "card_ids": [
+            "calculus-3-12-card-1",
+            "calculus-3-12-card-2",
+            "calculus-3-12-card-3",
+            "calculus-3-12-card-4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "calculus-3-module-13",
+      "title": "Stokes' theorem and spatial balances",
+      "source_ids": [
+        "multivariable",
+        "transport"
+      ],
+      "lessons": [
+        {
+          "id": "calculus-3-13",
+          "title": "Stokes' theorem and spatial balances",
+          "reading": "modules/13-stokes-theorem-and-spatial-balances.md",
+          "objectives": [
+            "calculus-3-13-objective-1",
+            "calculus-3-13-objective-2",
+            "calculus-3-13-objective-3"
+          ],
+          "worked_example": "For J=(−2x,−3y,−4z), the three positive-coordinate faces of the box contribute −4, −6 and −8; the zero-coordinate faces contribute zero. Their sum is −18, matching divergence −9 times volume 2. Insert this signed result into storage balance. A uniform sink 9 gives steady storage, while sink 12 gives storage loss 6. For the tilted triangle and the separate circulation field F, use its oriented area vector rather than unsigned area to obtain 1/2. Transfer and circulation use related geometric machinery but represent different integrals.",
+          "question_ids": [
+            "calculus-3-13:stokes-circle",
+            "calculus-3-13:stokes-disk",
+            "calculus-3-13:tilted-triangle",
+            "calculus-3-13:balance-transfer",
+            "calculus-3-13:steady-sink",
+            "calculus-3-13:storage-rate",
+            "calculus-3-13:stokes-orientation",
+            "calculus-3-13:inference",
+            "calculus-3-13:singularity"
+          ],
+          "card_ids": [
+            "calculus-3-13-card-1",
+            "calculus-3-13-card-2",
+            "calculus-3-13-card-3",
+            "calculus-3-13-card-4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "calculus-3-module-lab-01",
+      "title": "Virtual lab 1: oriented boundary flux and a steady volume balance",
+      "source_ids": [
+        "multivariable",
+        "transport"
+      ],
+      "lessons": [
+        {
+          "id": "calculus-3-lab-01",
+          "title": "Virtual lab 1: oriented boundary flux and a steady volume balance",
+          "reading": "labs/01-boundary-flux-and-balance.md",
+          "objectives": [
+            "calculus-3-lab-01-objective-1",
+            "calculus-3-lab-01-objective-2",
+            "calculus-3-lab-01-objective-3"
+          ],
+          "worked_example": "The six-face synthetic boundary has corrected outward transfer −18 amount units per second, matching divergence −9 times volume 2. A known density offset contributes 10 separately. Interpreting the inward supply as a uniform sink of 9 additionally requires steady storage and no source; the field alone establishes no real tissue consumption.",
+          "question_ids": [
+            "calculus-3-lab-01:summary",
+            "calculus-3-lab-01:raw-transfer",
+            "calculus-3-lab-01:corrected-transfer",
+            "calculus-3-lab-01:steady-sink",
+            "calculus-3-lab-01:rescaled-box",
+            "calculus-3-lab-01:interpretation",
+            "calculus-3-lab-01:claims",
+            "calculus-3-lab-01:theorem"
+          ],
+          "card_ids": [
+            "calculus-3-lab-01-card-1",
+            "calculus-3-lab-01-card-2",
+            "calculus-3-lab-01-card-3",
+            "calculus-3-lab-01-card-4"
+          ]
+        }
+      ]
     }
   ],
   "assessments": [
@@ -450,6 +1097,215 @@
       "points": 6
     },
     {
+      "id": "calculus-3-7-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Vectors, planes and spatial curves practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "calculus-3-7-objective-1",
+        "calculus-3-7-objective-2",
+        "calculus-3-7-objective-3",
+        "calculus-3-outcome-1",
+        "calculus-3-outcome-3",
+        "calculus-3-outcome-4"
+      ],
+      "question_ids": [
+        "calculus-3-7:vector-length",
+        "calculus-3-7:cross-z",
+        "calculus-3-7:helix-speed",
+        "calculus-3-7:helix-length",
+        "calculus-3-7:plane-distance",
+        "calculus-3-7:tangent-z",
+        "calculus-3-7:zero-direction",
+        "calculus-3-7:cross-order",
+        "calculus-3-7:parameter"
+      ],
+      "points": 9
+    },
+    {
+      "id": "calculus-3-8-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Partial derivatives and total change practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "calculus-3-8-objective-1",
+        "calculus-3-8-objective-2",
+        "calculus-3-8-objective-3",
+        "calculus-3-outcome-1",
+        "calculus-3-outcome-2"
+      ],
+      "question_ids": [
+        "calculus-3-8:partial-x",
+        "calculus-3-8:partial-y",
+        "calculus-3-8:mixed",
+        "calculus-3-8:path-rate",
+        "calculus-3-8:tangent-prediction",
+        "calculus-3-8:quadratic-error",
+        "calculus-3-8:partials-only",
+        "calculus-3-8:explicit-time",
+        "calculus-3-8:hessian-bound"
+      ],
+      "points": 9
+    },
+    {
+      "id": "calculus-3-9-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Hessians, constraints and boundary optima practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "calculus-3-9-objective-1",
+        "calculus-3-9-objective-2",
+        "calculus-3-9-objective-3",
+        "calculus-3-outcome-2"
+      ],
+      "question_ids": [
+        "calculus-3-9:stationary-x",
+        "calculus-3-9:stationary-y",
+        "calculus-3-9:hessian-determinant",
+        "calculus-3-9:circle-maximum",
+        "calculus-3-9:boundary-x",
+        "calculus-3-9:boundary-value",
+        "calculus-3-9:degenerate",
+        "calculus-3-9:regularity",
+        "calculus-3-9:boundary"
+      ],
+      "points": 9
+    },
+    {
+      "id": "calculus-3-10-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Multiple integrals and Jacobian measures practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "calculus-3-10-objective-1",
+        "calculus-3-10-objective-2",
+        "calculus-3-10-objective-3",
+        "calculus-3-outcome-3"
+      ],
+      "question_ids": [
+        "calculus-3-10:triangle-area",
+        "calculus-3-10:triangle-total",
+        "calculus-3-10:ellipse-area",
+        "calculus-3-10:annular-total",
+        "calculus-3-10:ball-volume",
+        "calculus-3-10:ball-density-total",
+        "calculus-3-10:triangle-bounds",
+        "calculus-3-10:absolute-jacobian",
+        "calculus-3-10:spherical-angle"
+      ],
+      "points": 9
+    },
+    {
+      "id": "calculus-3-11-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Line integrals, potentials and Green's theorem practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "calculus-3-11-objective-1",
+        "calculus-3-11-objective-2",
+        "calculus-3-11-objective-3",
+        "calculus-3-outcome-1",
+        "calculus-3-outcome-4"
+      ],
+      "question_ids": [
+        "calculus-3-11:potential-work",
+        "calculus-3-11:curved-work",
+        "calculus-3-11:scalar-length",
+        "calculus-3-11:circle-circulation",
+        "calculus-3-11:rectangle-circulation",
+        "calculus-3-11:vortex-circulation",
+        "calculus-3-11:reverse",
+        "calculus-3-11:potential-domain",
+        "calculus-3-11:vortex-hole"
+      ],
+      "points": 9
+    },
+    {
+      "id": "calculus-3-12-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Surface flux and the divergence theorem practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "calculus-3-12-objective-1",
+        "calculus-3-12-objective-2",
+        "calculus-3-12-objective-3",
+        "calculus-3-outcome-1",
+        "calculus-3-outcome-3",
+        "calculus-3-outcome-4"
+      ],
+      "question_ids": [
+        "calculus-3-12:graph-area",
+        "calculus-3-12:vertical-flux",
+        "calculus-3-12:constant-flux",
+        "calculus-3-12:sphere-flux",
+        "calculus-3-12:box-flux",
+        "calculus-3-12:diffusion-flux",
+        "calculus-3-12:area-convention",
+        "calculus-3-12:closed",
+        "calculus-3-12:variable-diffusion"
+      ],
+      "points": 9
+    },
+    {
+      "id": "calculus-3-13-practice",
+      "type": "practice",
+      "mode": "practice",
+      "title": "Stokes' theorem and spatial balances practice",
+      "path": "question-banks/practice.json",
+      "objective_ids": [
+        "calculus-3-13-objective-1",
+        "calculus-3-13-objective-2",
+        "calculus-3-13-objective-3",
+        "calculus-3-outcome-3",
+        "calculus-3-outcome-4"
+      ],
+      "question_ids": [
+        "calculus-3-13:stokes-circle",
+        "calculus-3-13:stokes-disk",
+        "calculus-3-13:tilted-triangle",
+        "calculus-3-13:balance-transfer",
+        "calculus-3-13:steady-sink",
+        "calculus-3-13:storage-rate",
+        "calculus-3-13:stokes-orientation",
+        "calculus-3-13:inference",
+        "calculus-3-13:singularity"
+      ],
+      "points": 9
+    },
+    {
+      "id": "calculus-3-week14-flux-lab",
+      "type": "lab",
+      "mode": "practice",
+      "title": "Virtual lab 1: oriented boundary flux and a steady volume balance (ungraded practice)",
+      "path": "question-banks/practice.json",
+      "week": 14,
+      "objective_ids": [
+        "calculus-3-lab-01-objective-1",
+        "calculus-3-lab-01-objective-2",
+        "calculus-3-lab-01-objective-3",
+        "calculus-3-outcome-1",
+        "calculus-3-outcome-3",
+        "calculus-3-outcome-4"
+      ],
+      "question_ids": [
+        "calculus-3-lab-01:summary",
+        "calculus-3-lab-01:raw-transfer",
+        "calculus-3-lab-01:corrected-transfer",
+        "calculus-3-lab-01:steady-sink",
+        "calculus-3-lab-01:rescaled-box",
+        "calculus-3-lab-01:interpretation",
+        "calculus-3-lab-01:claims",
+        "calculus-3-lab-01:theorem"
+      ],
+      "points": 22
+    },
+    {
       "id": "calculus-3-case",
       "type": "case",
       "mode": "self-assessment",
@@ -506,18 +1362,24 @@
       "version": "0.3.1",
       "date": "2026-10-08",
       "summary": "Assessments with items now also list the course outcomes those items assess, derived from each item's lesson objective and that objective's outcome links. The rubric-only case lists none, and neither do the 4 prototype-unit assessments, whose objectives are not yet linked to an outcome. No readings, items or keys changed. The syllabus was regenerated from the manifest: it states the current version, lists every lesson with its item and card counts, and describes the current practice and limitations (it still described only the four original units). The course limitations shown to learners were also updated: they still described one formative check per lesson and the original numerical rules. The package remains partial, unreviewed and formative-only."
+    },
+    {
+      "version": "0.4.0",
+      "date": "2026-10-09",
+      "summary": "Added seven original lessons on vector geometry, total multivariable change, Hessians and constrained boundaries, Jacobian measures, line integrals and Green, surface flux and divergence, and Stokes with spatial balances; one synthetic flux-balance lab and a proposed 14-week schedule. Developed with Codex assistance using existing scope references only. Still partial, unreviewed and formative-only."
     }
   ],
   "limitations": [
-    "Four compact legacy units are preserved; this package is not equivalent to a full university semester.",
-    "There is no authored 12–15 week schedule, substantive homework sequence, laboratory sequence, midterm, cumulative final, or graded integrative project.",
-    "Practice items are short formative checks (two per prototype unit and six per original lesson); they do not demonstrate comprehensive outcome coverage or mastery, and objective associations remain provisional.",
-    "Bloom labels and structured prerequisite edges are initial authoring classifications awaiting subject-matter review.",
-    "Question answers and solution feedback are intentionally public practice authoring specifications, not restricted exam keys.",
-    "Of the 16 numerical answers in this package, three require a unit, none checks significant figures and none checks dimensions; the others accept a number within a stated tolerance, with the unit optional.",
-    "Total workload and weekly duration are unknown; former nominal credit values and hardcoded reading times do not establish workload."
+    "Four compact prototype units remain alongside ten original readings including one synthetic flux-balance lab; this package is not equivalent to a full university semester.",
+    "The proposed 14-week schedule is unmeasured and unreviewed. Graded homework, exams, a laboratory sequence and a cumulative graded project remain absent.",
+    "Formative items and provisional objective associations do not establish comprehensive coverage or mastery.",
+    "All numerical fields, observations and balance rates are synthetic. They establish no tissue oxygen demand, device specification, unique biological mechanism or experimental protocol.",
+    "New numeric prompts state their scales and request a bare number. Existing unit-entry requirements are preserved; significant figures and dimensions are not automatically assessed.",
+    "CSV summaries and structured choices check selected calculations and interpretations, not written proofs or causal model identification.",
+    "Theorems and error bounds require their stated domains, smoothness, orientations, coordinate conventions and regularity conditions.",
+    "Qualified mathematical review, accessibility review and total/weekly workload measurement remain outstanding."
   ],
   "intentionally_omitted": [
-    "Full instructional sequence and summative assessments are not authored yet; the original lessons extend a partial package."
+    "Graded assessments, a full laboratory sequence, a cumulative graded project, measured workload and qualified human review remain outstanding."
   ]
 }

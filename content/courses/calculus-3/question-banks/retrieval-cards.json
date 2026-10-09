@@ -145,6 +145,326 @@
         "calculus-3-6-objective-3"
       ],
       "license": "CC-BY-4.0"
+    },
+    {
+      "id": "calculus-3-7-card-1",
+      "lesson_id": "calculus-3-7",
+      "front": "Vector operations",
+      "back": "In an orthonormal frame, dot products measure projections; cross products encode oriented parallelogram area.",
+      "objective_ids": [
+        "calculus-3-7-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "calculus-3-7-card-2",
+      "lesson_id": "calculus-3-7",
+      "front": "Curve length",
+      "back": "Integrate |r′| over the stated parameter range; repeated traversals count repeatedly.",
+      "objective_ids": [
+        "calculus-3-7-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "calculus-3-7-card-3",
+      "lesson_id": "calculus-3-7",
+      "front": "Normalization",
+      "back": "Unit tangents and unit normals are dimensionless directions. Zero vectors cannot be normalized.",
+      "objective_ids": [
+        "calculus-3-7-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "calculus-3-7-card-4",
+      "lesson_id": "calculus-3-7",
+      "front": "Frames and units",
+      "back": "Components depend on frame; coordinate scales must be consistent before Euclidean norms are interpreted.",
+      "objective_ids": [
+        "calculus-3-7-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "calculus-3-8-card-1",
+      "lesson_id": "calculus-3-8",
+      "front": "Partial derivative",
+      "back": "Change one variable with the others fixed. Existing coordinate partials alone do not guarantee differentiability.",
+      "objective_ids": [
+        "calculus-3-8-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "calculus-3-8-card-2",
+      "lesson_id": "calculus-3-8",
+      "front": "Total path change",
+      "back": "df/dt=∇f·r′ for a static field; add explicit f_t when the field also evolves in time.",
+      "objective_ids": [
+        "calculus-3-8-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "calculus-3-8-card-3",
+      "lesson_id": "calculus-3-8",
+      "front": "Local plane",
+      "back": "Differentiability supplies a linear approximation with remainder small relative to displacement length.",
+      "objective_ids": [
+        "calculus-3-8-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "calculus-3-8-card-4",
+      "lesson_id": "calculus-3-8",
+      "front": "Remainder bound",
+      "back": "A Hessian norm bound M throughout the connecting segment gives linearization error at most M|h|²/2.",
+      "objective_ids": [
+        "calculus-3-8-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "calculus-3-9-card-1",
+      "lesson_id": "calculus-3-9",
+      "front": "Hessian test",
+      "back": "At a stationary point, positive determinant and positive leading entry give a minimum; negative determinant gives a saddle; zero is inconclusive.",
+      "objective_ids": [
+        "calculus-3-9-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "calculus-3-9-card-2",
+      "lesson_id": "calculus-3-9",
+      "front": "Equality candidates",
+      "back": "Lagrange conditions require a regular constraint and yield candidates, not an automatic global guarantee.",
+      "objective_ids": [
+        "calculus-3-9-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "calculus-3-9-card-3",
+      "lesson_id": "calculus-3-9",
+      "front": "Feasible boundaries",
+      "back": "Discard infeasible stationary points and compare every relevant edge and corner.",
+      "objective_ids": [
+        "calculus-3-9-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "calculus-3-9-card-4",
+      "lesson_id": "calculus-3-9",
+      "front": "Multiplier convention",
+      "back": "A multiplier's numerical sensitivity depends on the exact constraint scaling and sign convention.",
+      "objective_ids": [
+        "calculus-3-9-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "calculus-3-10-card-1",
+      "lesson_id": "calculus-3-10",
+      "front": "Region bounds",
+      "back": "Describe slices of the actual region before integrating; reconstruct bounds when reversing order.",
+      "objective_ids": [
+        "calculus-3-10-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "calculus-3-10-card-2",
+      "lesson_id": "calculus-3-10",
+      "front": "Jacobian measure",
+      "back": "Unsigned area or volume uses the absolute determinant, with the transformation domain and multiplicity checked.",
+      "objective_ids": [
+        "calculus-3-10-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "calculus-3-10-card-3",
+      "lesson_id": "calculus-3-10",
+      "front": "Coordinate factors",
+      "back": "Polar and cylindrical measure include r; spherical measure includes ρ²sinφ for the stated polar-angle convention.",
+      "objective_ids": [
+        "calculus-3-10-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "calculus-3-10-card-4",
+      "lesson_id": "calculus-3-10",
+      "front": "Density average",
+      "back": "Divide total by region measure; for a bounded nonnegative density, the average lies between its extrema.",
+      "objective_ids": [
+        "calculus-3-10-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "calculus-3-11-card-1",
+      "lesson_id": "calculus-3-11",
+      "front": "Path integrals",
+      "back": "Scalar accumulation uses C ds; oriented work uses F·dr. Reversal affects their signs differently.",
+      "objective_ids": [
+        "calculus-3-11-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "calculus-3-11-card-2",
+      "lesson_id": "calculus-3-11",
+      "front": "Potential difference",
+      "back": "For F=∇φ, line work is endpoint potential difference along admissible paths.",
+      "objective_ids": [
+        "calculus-3-11-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "calculus-3-11-card-3",
+      "lesson_id": "calculus-3-11",
+      "front": "Green circulation",
+      "back": "Counterclockwise outer boundary circulation equals the region integral of Q_x−P_y under the required smoothness.",
+      "objective_ids": [
+        "calculus-3-11-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "calculus-3-11-card-4",
+      "lesson_id": "calculus-3-11",
+      "front": "Holes and singularities",
+      "back": "Zero local curl does not prove global path independence on a punctured domain; all region boundaries and field conditions matter.",
+      "objective_ids": [
+        "calculus-3-11-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "calculus-3-12-card-1",
+      "lesson_id": "calculus-3-12",
+      "front": "Surface element",
+      "back": "n dA equals the oriented parameter cross product; choose one convention and avoid double-counting area.",
+      "objective_ids": [
+        "calculus-3-12-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "calculus-3-12-card-2",
+      "lesson_id": "calculus-3-12",
+      "front": "Divergence theorem",
+      "back": "Net outward transfer over the full closed boundary equals the volume integral of divergence under its smoothness conditions.",
+      "objective_ids": [
+        "calculus-3-12-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "calculus-3-12-card-3",
+      "lesson_id": "calculus-3-12",
+      "front": "Flux sign",
+      "back": "Negative outward transfer is net inward supply; flux density and total transfer have different units.",
+      "objective_ids": [
+        "calculus-3-12-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "calculus-3-12-card-4",
+      "lesson_id": "calculus-3-12",
+      "front": "Variable diffusivity",
+      "back": "Divergence of −D∇C includes ∇D terms when D varies; −D∇²C alone requires constant scalar D.",
+      "objective_ids": [
+        "calculus-3-12-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "calculus-3-13-card-1",
+      "lesson_id": "calculus-3-13",
+      "front": "Stokes compatibility",
+      "back": "Choose the spanning-surface normal and boundary direction with the right-hand rule; circulation equals curl flux.",
+      "objective_ids": [
+        "calculus-3-13-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "calculus-3-13-card-2",
+      "lesson_id": "calculus-3-13",
+      "front": "Conservation sign",
+      "back": "Storage change = integrated source minus sink minus net outward transfer for a fixed volume.",
+      "objective_ids": [
+        "calculus-3-13-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "calculus-3-13-card-3",
+      "lesson_id": "calculus-3-13",
+      "front": "Steady sink",
+      "back": "With no source or storage change, outward transfer equals minus integrated consumption.",
+      "objective_ids": [
+        "calculus-3-13-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "calculus-3-13-card-4",
+      "lesson_id": "calculus-3-13",
+      "front": "Theorem conditions",
+      "back": "Check the whole field region for singularities. Excluding an interior singularity can add a necessary inner boundary.",
+      "objective_ids": [
+        "calculus-3-13-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "calculus-3-lab-01-card-1",
+      "lesson_id": "calculus-3-lab-01",
+      "front": "Normal density to transfer",
+      "back": "Multiply signed outward-normal density by area, then sum the whole boundary. Negative net outward transfer means inward supply.",
+      "objective_ids": [
+        "calculus-3-lab-01-objective-1"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "calculus-3-lab-01-card-2",
+      "lesson_id": "calculus-3-lab-01",
+      "front": "Boundary and volume",
+      "back": "For a smooth field and closed outward boundary, net transfer equals the integral of divergence over the enclosed volume.",
+      "objective_ids": [
+        "calculus-3-lab-01-objective-2"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "calculus-3-lab-01-card-3",
+      "lesson_id": "calculus-3-lab-01",
+      "front": "Sink assumptions",
+      "back": "A sink inferred from boundary transfer requires source and storage assumptions; steady, zero-source balance gives Q_out=−rV.",
+      "objective_ids": [
+        "calculus-3-lab-01-objective-3"
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "calculus-3-lab-01-card-4",
+      "lesson_id": "calculus-3-lab-01",
+      "front": "Shared offset",
+      "back": "A common normal-density offset contributes offset times total boundary area; averaging repeats does not remove it.",
+      "objective_ids": [
+        "calculus-3-lab-01-objective-3"
+      ],
+      "license": "CC-BY-4.0"
     }
   ]
 }

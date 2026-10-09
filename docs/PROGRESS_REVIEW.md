@@ -1,5 +1,9 @@
 # Progress review: uniStemCourseSimulators
 
+## Update after the Calculus III schedule (2026-10-09, twenty-ninth pass)
+
+Developed with Codex assistance. Calculus III is the seventeenth package with a proposed weekly structure: 14 readings including one synthetic boundary-flux lab. Seven new lessons develop vector geometry, partial/total derivatives, Hessians and feasible optimization, Jacobian measures, line integrals and Green, surface flux and divergence, and Stokes with conservation signs. The lab constructs 18 outward-normal observations on six box faces; offset correction changes transfer from −8 to −18, which matches the divergence-volume result. Sink interpretation requires the supplied source and storage assumptions. All 62 numeric keys and 12 CSV cells are recalculated separately. The package remains partial, unreviewed and formative-only. Eight packages still lack a full proposed weekly sequence. See the [AI-assisted check record](reviews/ai-assisted/calculus-3-0.4.0.md).
+
 ## Update after the Calculus II schedule (2026-10-09, twenty-eighth pass)
 
 Developed with Codex assistance. Calculus II is the sixteenth package with a proposed week-by-week structure: 14 readings including one synthetic force-work lab. Seven new lessons develop integration methods and domains, improper limits and comparison, positive and alternating series, power-series radii and endpoints, Taylor and integrated error, and geometry for the preserved radial-density case. The lab uses 15 constructed force readings, a known offset, numerical work estimates and a four-term geometric approximation with an integrated positive-tail guarantee. All 62 numeric item keys and ten CSV checks are recalculated separately. The package remains partial, unreviewed and formative-only. Nine packages still lack a full proposed sequence. See the [AI-assisted check record](reviews/ai-assisted/calculus-2-0.4.0.md).

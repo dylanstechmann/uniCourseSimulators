@@ -4,7 +4,27 @@
 
 2026-10-06; synthetic local learner data only. Milestones 1 and 2 are implemented. Milestone 3 remains partial; deterministic graders and prototype graded-assignment and review workflows are described below. A Milestone 4 curriculum-map increment is implemented and tested, while subject-matter review and map refinement remain. All 25 course packages are **partial**; zero are beta, complete or externally reviewed. Human score review is limited to saved attempts and does not constitute course-content review. No semester equivalence, university credit, security certification or public production deployment is asserted.
 
-## Current increment: Calculus II lessons, force-work lab and proposed schedule (0.4.0, 2026-10-09)
+## Current increment: Calculus III lessons, flux-balance lab and proposed schedule (0.4.0, 2026-10-09)
+
+Developed with Codex assistance. Calculus III advances from 0.3.1 to 0.4.0 while remaining partial, unreviewed and formative-only. Seven new lessons cover vector geometry, partial and total derivatives, Hessians and feasible constraints, multiple integrals and Jacobians, line integrals and Green, surface flux and divergence, and Stokes with spatial conservation. One synthetic boundary-flux lab and a proposed 14-week sequence complete the increment. There are 71 new public items and 32 cards; the package contains 14 readings, 91 items and 48 cards. All 20 preexisting item objects and 16 cards are unchanged.
+
+Separate calculations check all 62 numeric keys, including 16 preserved keys, and all 12 CSV summary checks. The lab distinguishes signed outward transfer, face-area weighting, a common offset and the source/storage assumptions required for a sink interpretation. The [AI-assisted check record](reviews/ai-assisted/calculus-3-0.4.0.md) documents methods and repairs. The same AI assistant authored content and checks; this is not independent mathematical or human review.
+
+| Command/check (Linux development container, Python 3.12.3) | Result |
+|---|---|
+| `python -B tools/validate_content.py` | PASS: 25 packages, 321 lessons, 1674 questions, 1024 cards, 25 cases; 0 errors; 98 legacy-depth warnings |
+| `bash /workspace/.claude/skills/courselab-dev/scripts/verify.sh --log-dir /workspace/courselab-session-artifacts/codex-calculus-3-2026-10-09/verification` | PASS: content, legacy (7), security (682 source files, 0 findings), ruff, root (1516), backend (3599 passed, 2 existing symbolic-builder skips) |
+| `python -B /workspace/courselab-session-artifacts/codex-calculus-3-2026-10-09/check_grader.py` | PASS: all 91 package items earn full credit |
+| `python -B -m pytest tests/content/test_calculus_three_recalculations.py tests/content/test_new_geroscience_and_statistics_lessons.py tests/content/test_learner_visible_number_formatting.py -q -p no:cacheprovider` | PASS: 459 focused checks |
+| `ruff check tests/content/test_calculus_three_recalculations.py` | PASS after style repairs and formatting |
+| `python -B tools/objective_coverage.py --check docs/COURSE_GAP_REPORT.md` | PASS: generated report matches |
+| `python3 -B /workspace/.claude/skills/regen-guardrails/scripts/claims_scan.py --repo uniStemCourseSimulators` | PASS: 0 HIGH, MED or LOW findings |
+
+An authoring-script quoted-apostrophe syntax error was repaired before mutation. A provisional box total was corrected to 8 before integration by comparing faces and volume divergence. The initial lint run autofixed 13 assigned lambdas and still failed on one ambiguous variable name, then passed after its repair. The first two-file focused suite passed 88 checks. Stronger numerical methods were added before the full run; the first expanded suite then had 458 passes and one exact floating-point equality failure in parameter invariance. A tight tolerance repaired that assertion; the final suite passed 459. No authored mathematical key failed, and the full six-step local run passed on its first run.
+
+Logs remain outside git in `courselab-session-artifacts/codex-calculus-3-2026-10-09/verification`. Frontend checks, the Docker Compose application stack and Playwright were not run locally for this content increment; publication CI runs them. No person reviewed the mathematics or measured workload.
+
+## Previous increment: Calculus II lessons, force-work lab and proposed schedule (0.4.0, 2026-10-09)
 
 Developed with Codex assistance. Calculus II advances from 0.3.2 to 0.4.0, retaining partial, unreviewed and formative-only status. Seven new lessons cover integration structure and domains, improper limits and comparison, positive and alternating series, power-series radii/endpoints, Taylor and accumulated error, and geometric/radial integrals. One synthetic force-work lab and a proposed 14-week sequence complete this increment. There are 71 new items and 32 cards; the package contains 14 readings, 91 items and 48 cards. All 20 preexisting items and 16 preexisting cards are unchanged.
 
