@@ -106,7 +106,8 @@ def test_assessment_specifications_contain_no_items_or_keys_and_say_so():
             assert "No reviewer has examined this specification" in text
     other = [p for p in folder.iterdir() if p.suffix not in {".md"}]
     assert {path.name for path in other} == {
-        "homework-01-candidate-pulse-chase.csv", "homework-01-candidate.json"
+        "homework-01-candidate-pulse-chase.csv", "homework-01-candidate.json",
+        "homework-02-candidate-fluorescence.csv", "homework-02-candidate.json"
     }, f"unexpected non-document files beside the specifications: {other}"
 
 

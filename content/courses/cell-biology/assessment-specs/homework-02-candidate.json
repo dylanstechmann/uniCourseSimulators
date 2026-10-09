@@ -1,0 +1,307 @@
+{
+  "candidate_id": "cell-biology-h2-review-v1",
+  "course_id": "cell-biology",
+  "content_version": "0.21.0",
+  "state": "inactive-review-candidate",
+  "title": "Homework 2 candidate: calibrated initial rates and inhibition evidence",
+  "instruction_path": "assessment-specs/homework-02-candidate.md",
+  "dataset_path": "assessment-specs/homework-02-candidate-fluorescence.csv",
+  "private_source_ref": "private://assignments/homework-02-review-v1.json",
+  "private_source_sha256": "3415b6699a0aeed1d6deb238958838fd879eed3ed4185b1c01495f5d30faba6b",
+  "points": 25,
+  "lesson_ids": [
+    "cell-biology-9",
+    "cell-biology-10"
+  ],
+  "objective_ids": [
+    "cell-biology-9-objective-1",
+    "cell-biology-9-objective-2",
+    "cell-biology-10-objective-1",
+    "cell-biology-10-objective-2"
+  ],
+  "course_outcome_ids": [
+    "cell-biology-outcome-2",
+    "cell-biology-outcome-4"
+  ],
+  "prerequisite_sha256": {
+    "modules/04a-enzyme-catalysis-and-free-energy.md": "9dafddf1546d361d1a2bd2979c8c3277e5cb04fdac42a8af09140ee096fb9ee8",
+    "modules/04b-initial-rates-and-enzyme-inhibition.md": "d8b4a01483c57c56b4d063f13756ca1ad9be3bb36468cd35fe34804d4312a18e"
+  },
+  "review": {
+    "status": "unreviewed",
+    "reviewers": []
+  },
+  "activation_gates": [
+    "independent-recalculation",
+    "grader-mutation-review",
+    "subject-matter-review",
+    "assessment-review",
+    "accessibility-review",
+    "measured-workload",
+    "operator-provisioning-and-release-policy"
+  ],
+  "questions": [
+    {
+      "id": "cell-biology-h2-candidate:calibrated-product",
+      "type": "numeric",
+      "prompt": "Using the compound_b product standards on day d01, convert a separate static signal of 35.0 arbitrary units to product concentration. Report a compatible concentration unit and exactly three significant figures.",
+      "options": [],
+      "unit": "nM",
+      "significant_figures": 3,
+      "points": 2.0,
+      "selection": "single",
+      "partial_credit_policy": null,
+      "response_fields": [],
+      "graph_spec": null,
+      "accepted_media_types": [],
+      "max_upload_bytes": null,
+      "variant_id": null,
+      "variant_token": null,
+      "learning_objective_ids": [
+        "cell-biology-10-objective-1",
+        "cell-biology-10-objective-2"
+      ],
+      "assessment_role": "graded"
+    },
+    {
+      "id": "cell-biology-h2-candidate:early-rate",
+      "type": "numeric",
+      "prompt": "At substrate 45 µM for compound_b, calculate each day's ordinary least-squares slope over 0, 2 and 4 seconds for reaction and its matched blank. Subtract the blank slope, divide by that day/condition's calibration gain, then average the four day rates. Report concentration per time with exactly three significant figures.",
+      "options": [],
+      "unit": "nM/s",
+      "significant_figures": 3,
+      "points": 2.0,
+      "selection": "single",
+      "partial_credit_policy": null,
+      "response_fields": [],
+      "graph_spec": null,
+      "accepted_media_types": [],
+      "max_upload_bytes": null,
+      "variant_id": null,
+      "variant_token": null,
+      "learning_objective_ids": [
+        "cell-biology-10-objective-1",
+        "cell-biology-10-objective-2"
+      ],
+      "assessment_role": "graded"
+    },
+    {
+      "id": "cell-biology-h2-candidate:apparent-km",
+      "type": "numeric",
+      "prompt": "In a separately stipulated simple competitive model, Km is 15 µM, inhibitor concentration is 30 µM and Ki is 15 µM. Calculate Km,app=(1+[I]/Ki)Km. Report concentration with exactly two significant figures. These supplied model constants are not a fit to the displayed observations.",
+      "options": [],
+      "unit": "µM",
+      "significant_figures": 2,
+      "points": 2.0,
+      "selection": "single",
+      "partial_credit_policy": null,
+      "response_fields": [],
+      "graph_spec": null,
+      "accepted_media_types": [],
+      "max_upload_bytes": null,
+      "variant_id": null,
+      "variant_token": null,
+      "learning_objective_ids": [
+        "cell-biology-9-objective-2",
+        "cell-biology-10-objective-1"
+      ],
+      "assessment_role": "graded"
+    },
+    {
+      "id": "cell-biology-h2-candidate:substrate-consumed",
+      "type": "numeric",
+      "prompt": "For vehicle day d01 at starting substrate 5 µM, calculate blank-corrected product accumulated from 0 to 4 seconds using the matched gain. Under the separately stipulated one-to-one substrate-to-product accounting, express that amount as a percent of the starting substrate concentration. Report a percent unit and exactly four significant figures.",
+      "options": [],
+      "unit": "%",
+      "significant_figures": 4,
+      "points": 2.0,
+      "selection": "single",
+      "partial_credit_policy": null,
+      "response_fields": [],
+      "graph_spec": null,
+      "accepted_media_types": [],
+      "max_upload_bytes": null,
+      "variant_id": null,
+      "variant_token": null,
+      "learning_objective_ids": [
+        "cell-biology-10-objective-1",
+        "cell-biology-10-objective-2"
+      ],
+      "assessment_role": "graded"
+    },
+    {
+      "id": "cell-biology-h2-candidate:summary",
+      "type": "file_upload",
+      "prompt": "Summarize the four independently prepared assay days after matched blank subtraction and day/condition calibration. Use only the 0, 2 and 4 second slope window. Upload exact columns condition,days,mean_rate_15_nm_s,mean_rate_135_nm_s with rows vehicle,compound_a,compound_b. Counts are exact; rate-cell tolerance is 0.005 nM/s. Time observations, substrate levels and calibration standards do not add independent assay days.",
+      "options": [],
+      "unit": null,
+      "significant_figures": null,
+      "points": 9.0,
+      "selection": "single",
+      "partial_credit_policy": null,
+      "response_fields": [],
+      "graph_spec": null,
+      "accepted_media_types": [
+        "text/csv"
+      ],
+      "max_upload_bytes": 32768,
+      "variant_id": null,
+      "variant_token": null,
+      "learning_objective_ids": [
+        "cell-biology-10-objective-1",
+        "cell-biology-10-objective-2"
+      ],
+      "assessment_role": "graded"
+    },
+    {
+      "id": "cell-biology-h2-candidate:window-check",
+      "type": "data_interpretation",
+      "prompt": "For vehicle d01 at 135 µM, compare the blank-corrected calibrated endpoint slope from 0 to 10 seconds with the ordinary least-squares slope over 0, 2 and 4 seconds.",
+      "options": [],
+      "unit": null,
+      "significant_figures": null,
+      "points": 2.0,
+      "selection": "single",
+      "partial_credit_policy": null,
+      "response_fields": [
+        {
+          "id": "ratio",
+          "type": "numeric",
+          "prompt": "Report late endpoint slope divided by early slope as a bare dimensionless ratio. Report exactly 2 significant figures.",
+          "options": [],
+          "unit": "",
+          "points": 1.0
+        },
+        {
+          "id": "inference",
+          "type": "single_choice",
+          "prompt": "Which conclusion follows from this window comparison?",
+          "options": [
+            "The later window proves irreversible inhibition at a named active-site residue.",
+            "The rate estimate depends on the window; curvature alone does not identify depletion, inactivation or another cause.",
+            "Every late endpoint is an initial rate when its time axis starts at zero."
+          ],
+          "unit": null,
+          "points": 1.0
+        }
+      ],
+      "graph_spec": null,
+      "accepted_media_types": [],
+      "max_upload_bytes": null,
+      "variant_id": null,
+      "variant_token": null,
+      "learning_objective_ids": [
+        "cell-biology-10-objective-1",
+        "cell-biology-10-objective-2"
+      ],
+      "assessment_role": "graded"
+    },
+    {
+      "id": "cell-biology-h2-candidate:control-logic",
+      "type": "structured",
+      "prompt": "Select one response for each independent calibration, blank, replication and inference criterion.",
+      "options": [],
+      "unit": null,
+      "significant_figures": null,
+      "points": 4.0,
+      "selection": "single",
+      "partial_credit_policy": null,
+      "response_fields": [
+        {
+          "id": "matrix",
+          "type": "single_choice",
+          "prompt": "Which calibration should convert compound_b day d02 signal?",
+          "options": [
+            "Vehicle standards pooled across days.",
+            "Compound_b product standards from day d02, subject to the stated linearity/matrix assumptions.",
+            "The compound_a curve at the highest substrate."
+          ],
+          "unit": null,
+          "points": 1.0
+        },
+        {
+          "id": "blank",
+          "type": "single_choice",
+          "prompt": "How should background drift be handled before rate conversion?",
+          "options": [
+            "Subtract the blank's initial offset only and ignore its slope.",
+            "Use the blank as extra independent enzyme replicates.",
+            "Subtract the same-day, same-condition, same-substrate no-enzyme slope in the selected window."
+          ],
+          "unit": null,
+          "points": 1.0
+        },
+        {
+          "id": "unit",
+          "type": "single_choice",
+          "prompt": "What is the independent replicate unit in this construction?",
+          "options": [
+            "Each separately prepared assay day, with conditions/substrates/time points paired within the day.",
+            "Every detector time point and standard is a separate biological replicate.",
+            "Each column in the input file."
+          ],
+          "unit": null,
+          "points": 1.0
+        },
+        {
+          "id": "scope",
+          "type": "single_choice",
+          "prompt": "What does overlap with vehicle after calibrated blank correction support?",
+          "options": [
+            "Proof that the compound has no molecular interaction under any condition.",
+            "Consistency with no resolved catalytic-rate difference in this synthetic assay; other effects need separate tests.",
+            "Proof of the compound's therapeutic safety."
+          ],
+          "unit": null,
+          "points": 1.0
+        }
+      ],
+      "graph_spec": null,
+      "accepted_media_types": [],
+      "max_upload_bytes": null,
+      "variant_id": null,
+      "variant_token": null,
+      "learning_objective_ids": [
+        "cell-biology-10-objective-1",
+        "cell-biology-10-objective-2"
+      ],
+      "assessment_role": "graded"
+    },
+    {
+      "id": "cell-biology-h2-candidate:model-limits",
+      "type": "multiple_select",
+      "prompt": "Select all statements justified by the stated single-substrate model and measurement limits. Scoring is two points times (correct options selected minus incorrect options selected) divided by the total number of correct options, clamped from zero to two.",
+      "options": [
+        "A competitive-looking rate curve proves occupancy of the substrate-binding pocket.",
+        "An enzyme can speed approach to equilibrium without changing the reaction equilibrium constant.",
+        "A fluorescent product standard by itself measures the amount of active enzyme.",
+        "Km is always the substrate-binding dissociation constant.",
+        "With kcat and other model conditions fixed, doubling active enzyme concentration doubles Vmax."
+      ],
+      "unit": null,
+      "significant_figures": null,
+      "points": 2.0,
+      "selection": "multiple",
+      "partial_credit_policy": "correct-minus-incorrect-clamped-v1",
+      "response_fields": [],
+      "graph_spec": null,
+      "accepted_media_types": [],
+      "max_upload_bytes": null,
+      "variant_id": null,
+      "variant_token": null,
+      "learning_objective_ids": [
+        "cell-biology-9-objective-1",
+        "cell-biology-9-objective-2",
+        "cell-biology-10-objective-1",
+        "cell-biology-10-objective-2"
+      ],
+      "assessment_role": "graded"
+    }
+  ],
+  "provenance": {
+    "kind": "original",
+    "license": "CC-BY-4.0",
+    "ai_assistance": "Codex authored the candidate and automated checks. No independent or qualified human review occurred.",
+    "source_scope": "Existing original course lessons only; no new external source, identifier, prose, problem, figure or dataset imported."
+  }
+}

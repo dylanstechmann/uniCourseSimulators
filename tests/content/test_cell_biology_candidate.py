@@ -1,16 +1,25 @@
 """Public inactive-candidate integrity; no protected answers belong in these tests."""
 
 import csv
+import hashlib
 import json
+import math
 import re
 from pathlib import Path
 
+import pytest
+
 ROOT = Path(__file__).resolve().parents[2]
 COURSE = ROOT / "content/courses/cell-biology"
-CANDIDATE = json.loads(
-    (COURSE / "assessment-specs/homework-01-candidate.json").read_text()
-)
 MANIFEST = json.loads((COURSE / "course.json").read_text())
+
+
+@pytest.fixture(
+    params=sorted((COURSE / "assessment-specs").glob("homework-??-candidate.json")),
+    ids=lambda path: path.stem,
+)
+def candidate(request):
+    return json.loads(request.param.read_text())
 
 
 def nested_keys(value):
@@ -23,8 +32,16 @@ def nested_keys(value):
             yield from nested_keys(item)
 
 
-def test_candidate_is_version_bound_and_blocked_on_real_review():
-    assert CANDIDATE["content_version"] == MANIFEST["version"]
+def test_candidate_is_version_bound_and_blocked_on_real_review(candidate):
+    CANDIDATE = candidate
+    assert CANDIDATE["content_version"] in {
+        entry["version"] for entry in MANIFEST["history"]
+    }
+    assert tuple(map(int, CANDIDATE["content_version"].split("."))) <= tuple(
+        map(int, MANIFEST["version"].split("."))
+    )
+    for name, digest in CANDIDATE.get("prerequisite_sha256", {}).items():
+        assert hashlib.sha256((COURSE / name).read_bytes()).hexdigest() == digest
     assert CANDIDATE["state"] == "inactive-review-candidate"
     assert CANDIDATE["review"] == {"status": "unreviewed", "reviewers": []}
     assert {
@@ -39,7 +56,8 @@ def test_candidate_is_version_bound_and_blocked_on_real_review():
     assert CANDIDATE["private_source_ref"].startswith("private://assignments/")
 
 
-def test_public_candidate_has_only_answer_free_item_fields():
+def test_public_candidate_has_only_answer_free_item_fields(candidate):
+    CANDIDATE = candidate
     assert not {
         "solution_spec",
         "answer",
@@ -73,7 +91,8 @@ def test_public_candidate_has_only_answer_free_item_fields():
     assert all(set(q) <= allowed for q in questions)
 
 
-def test_candidate_maps_to_existing_instruction_and_actual_outcome_links():
+def test_candidate_maps_to_existing_instruction_and_actual_outcome_links(candidate):
+    CANDIDATE = candidate
     lessons = {
         lesson["id"] for module in MANIFEST["modules"] for lesson in module["lessons"]
     }
@@ -92,9 +111,36 @@ def test_candidate_maps_to_existing_instruction_and_actual_outcome_links():
     )
 
 
-def test_public_pulse_chase_data_keep_preparations_and_ledger_consistent():
+def test_public_data_keep_observation_units_and_series_consistent(candidate):
+    CANDIDATE = candidate
     with (COURSE / CANDIDATE["dataset_path"]).open(newline="") as stream:
         rows = list(csv.DictReader(stream))
+    if "series" in rows[0]:
+        assert len(rows) == 420
+        assert len({tuple(row.values())[:-1] for row in rows}) == len(rows)
+        blocks = {}
+        for row in rows:
+            assert math.isfinite(float(row["signal_au"]))
+            blocks.setdefault((row["day"], row["condition"]), []).append(row)
+        assert len(blocks) == 12
+        for observations in blocks.values():
+            standards = [row for row in observations if row["series"] == "standard"]
+            assert {float(row["product_standard_nm"]) for row in standards} == {
+                0,
+                500,
+                1000,
+            }
+            for series in ("blank", "reaction"):
+                selected = [row for row in observations if row["series"] == series]
+                assert len(selected) == 16
+                assert {float(row["substrate_um"]) for row in selected} == {
+                    5,
+                    15,
+                    45,
+                    135,
+                }
+                assert {float(row["time_s"]) for row in selected} == {0, 2, 4, 10}
+        return
     groups = {}
     for row in rows:
         groups.setdefault(row["preparation"], []).append(row)
@@ -116,7 +162,8 @@ def test_public_pulse_chase_data_keep_preparations_and_ledger_consistent():
         assert len({r["pulse_input_nmol"] for r in observations}) == 1
 
 
-def test_handout_contains_all_stems_fields_and_explicit_inactive_scope():
+def test_handout_contains_all_stems_fields_and_explicit_inactive_scope(candidate):
+    CANDIDATE = candidate
     text = (COURSE / CANDIDATE["instruction_path"]).read_text()
     assert "inactive candidate" in text
     assert "workload has not been measured" in text
@@ -130,7 +177,8 @@ def test_handout_contains_all_stems_fields_and_explicit_inactive_scope():
             assert all(option in text for option in field["options"])
 
 
-def test_candidate_does_not_activate_any_catalog_grade_or_private_source():
+def test_candidate_does_not_activate_any_catalog_grade_or_private_source(candidate):
+    CANDIDATE = candidate
     assert CANDIDATE["candidate_id"] not in {a["id"] for a in MANIFEST["assessments"]}
     for path in (ROOT / "content/courses").glob("*/course.json"):
         course = json.loads(path.read_text())

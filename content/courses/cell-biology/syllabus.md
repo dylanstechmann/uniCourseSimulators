@@ -1,6 +1,6 @@
 # Foundations of Cell and Molecular Biology
 
-**Maturity: partial. Version: 0.20.0.**
+**Maturity: partial. Version: 0.21.0.**
 
 This original course package develops mechanistic reasoning from molecular structure to cell behavior. It is still not a completed 14-week university course: weeks 1–7 have two original topic lessons each, while weeks 4 and 7 retain short prototype readings in addition; week 5 adds one original virtual fluorescence data-analysis lab and week 11 adds a second signaling-data lab; week 8 has an ungraded cumulative practice set; weeks 9–14 have original lesson pairs and formative practice. No semester equivalency, university credit, or prerequisite equivalency is claimed.
 
@@ -47,3 +47,7 @@ All currently delivered items are public formative practice. Learners may retry 
 ## Inactive Homework 1 review candidate
 
 A separate [pulse-chase candidate](assessment-specs/homework-01-candidate.md) has seven original item stems, new synthetic observations and an answer package outside Git. It is not enrolled or served as graded coursework. Independent numerical review, scientific/assessment/accessibility review, workload evidence and an operator release policy remain required. The eight open formative homework companions retain their current practice roles.
+
+## Inactive Homework 2 review candidate
+
+A separate [calibrated-rate candidate](assessment-specs/homework-02-candidate.md) adds eight new item stems and synthetic product standards, matched blanks and reaction observations. Its key stays outside Git, and no course-grade policy or live assessment is activated. Homework 1's candidate retains its authored 0.20.0 version and key binding. Both candidates await independent and qualified review, measured workload and operator release decisions.
